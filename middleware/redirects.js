@@ -8,6 +8,8 @@ export default function(context) {
             context.redirect('https://vault.assessments24x7.com/virtualtour.asp');
         } else if (context.req.url === '/webinar-archive.asp') {
             context.redirect('https://vault.assessments24x7.com/webinar-archive.asp');
+        } else if (context.req.url.match(/(\/reports\/)[\w- ]+\.pdf/gi)) {
+            context.redirect('https://www.assessments24x7.com/sample-reports');
         } else {
             const redirect = redirects.find(r => r.from === context.req.url);
 

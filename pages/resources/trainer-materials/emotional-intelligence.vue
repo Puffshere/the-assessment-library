@@ -38,17 +38,17 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ%20Debrief%20Guide-certified_vs3%209.pdf" target="_blank">Emotional Intelligence Debrief Guide</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ%20Debrief%20Guide-certified_vs3%209.pdf" target="_blank">Emotional Intelligence Debrief Guide</a>
                             <small>Overview and Guide to debrief the assessment report</small></td></tr>
-                            <tr v-else><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ%20Debrief%20Guide_nc-vs3%209.pdf" target="_blank">Emotional Intelligence Debrief Guide</nuxt-link>
+                            <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ%20Debrief%20Guide_nc-vs3%209.pdf" target="_blank">Emotional Intelligence Debrief Guide</a>
                             <small>Overview and Guide to debrief the assessment report</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/Overview%20of%20EIQ-graphic.pdf" target="_blank">EIQ Graphic</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/Overview%20of%20EIQ-graphic.pdf" target="_blank">EIQ Graphic</a>
                             <small>Overview of the EIQ model in a single page graphic outlining priorities and impact</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ_DISCIntegration.pdf" target="_blank">EI and DISC Expressions</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_DISCIntegration.pdf" target="_blank">EI and DISC Expressions</a>
                             <small>One-page document showing DISC styles and corresponding expression for high and low EIQ</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ_PlatRule%20Integration.pdf" target="_blank">EI and Platinum Rule Expressions</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_PlatRule%20Integration.pdf" target="_blank">EI and Platinum Rule Expressions</a>
                             <small>One-page document showing Platinum Rule and corresponding expression for high and low EIQ</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EmotionCharts.pdf" target="_blank">Emotion Charts</nuxt-link>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EmotionCharts.pdf" target="_blank">Emotion Charts</a>
                             <small>a single PDF document including:
 Pg 1. Feelings Word Vocabulary - A list of intensities for the 5 common emotions: Happy, Sad, Angry, Scared and Confused. These are listed by strong, mild, and weak emotions.
 Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories to help broaden our emotional understanding and language.</small></td></tr>
@@ -63,15 +63,15 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/MM%20Manuscript.pdf" target="_blank">Mind Matters Manuscript</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/MM%20Manuscript.pdf" target="_blank">Mind Matters Manuscript</a>
                             <small>The foundational manuscript by Robert Jerus underscoring the details and supporting the uses of the EIQ-2 assessment</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ_Understanding%20Emotional%20Intelligence.pdf" target="_blank">Understanding Emotional Intelligence</nuxt-link>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20Emotional%20Intelligence.pdf" target="_blank">Understanding Emotional Intelligence</a>
                             <small>A short article introduction to Emotional Intelligence</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ_Understanding%20the%20Emotions_Feelings.pdf" target="_blank">Understanding Emotions and Feelings</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20the%20Emotions_Feelings.pdf" target="_blank">Understanding Emotions and Feelings</a>
                             <small>A short article discussing emotions and feelings</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ_Understanding%20the%20Brain.pdf" target="_blank">Understanding the Brain</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20the%20Brain.pdf" target="_blank">Understanding the Brain</a>
                             <small>A short article introduction to the mechanics of the brain and how it relates to EIQ</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIArticle.pdf" target="_blank">Critical Skills for the Future Workforce</nuxt-link>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIArticle.pdf" target="_blank">Critical Skills for the Future Workforce</a>
                             <small>Bill Benjamin examines how EI is becoming the key differentiator in achieving excellence in individual and organizational engagement, product innovation, and customer experience.</small></td></tr>
                         </tbody>
                     </table>
@@ -94,21 +94,21 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ2Hour.pdf" target="_blank">2-Hour Facilitator Guide</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ2Hour.pdf" target="_blank">2-Hour Facilitator Guide</a>
                             <small>Step-by-step instructions for facilitating 2-hour workshop</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ2HourPres.pptx" target="_blank">2-Hour Presentation</nuxt-link>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ2HourPres.pptx" target="_blank">2-Hour Presentation</a>
                             <small>Overview of Emotional Intelligence and report debrief opportunity</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ%202%20hour_%20Agenda.docx" target="_blank">2-Hour Agenda for Presentation Workshop</nuxt-link>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ%202%20hour_%20Agenda.docx" target="_blank">2-Hour Agenda for Presentation Workshop</a>
                             <small>Overview of timeline for presentation</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ4Hour.pdf" target="_blank">4-Hour Facilitator Guide</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ4Hour.pdf" target="_blank">4-Hour Facilitator Guide</a>
                             <small>Step-by-step instructions for facilitating 4-hour workshop</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ4HourPres.pptx" target="_blank">4-Hour Presentation</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ4HourPres.pptx" target="_blank">4-Hour Presentation</a>
                             <small>Overview of Emotional Intelligence and report debrief opportunity</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQSageAdviceObservations.pptx" target="_blank">EIQ Sage Advice and Observations</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQSageAdviceObservations.pptx" target="_blank">EIQ Sage Advice and Observations</a>
                             <small>A series of PPT memorable and meaningful quotes from well-recognized people</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/DISC%20EIQ%20slide.pptx" target="_blank">EI and DISC Expressions PPT slide</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/DISC%20EIQ%20slide.pptx" target="_blank">EI and DISC Expressions PPT slide</a>
                             <small>Single PowerPoint Slide showing DISC styles and corresponding expression for high and low EIQ</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/DISC%20EIQ_integration.pptx" target="_blank">Emotional Intelligence and DISC Integration PowerPoint</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/DISC%20EIQ_integration.pptx" target="_blank">Emotional Intelligence and DISC Integration PowerPoint</a>
                             <small>PowerPoint deck with integrations of EIQ and DISC</small></td></tr>
                         </tbody>
                     </table>
@@ -133,15 +133,15 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQActivities.pdf" target="_blank">EIQ Workshop Activities</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQActivities.pdf" target="_blank">EIQ Workshop Activities</a>
                             <small>Group activities to bring engagement and movement in EIQ sessions.</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQQuotes.pdf" target="_blank">EIQ Quote List</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQQuotes.pdf" target="_blank">EIQ Quote List</a>
                             <small>A list of popular EIQ quotes for reflection and discussion</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQWordSearch.pdf" target="_blank">EIQ Word Search</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQWordSearch.pdf" target="_blank">EIQ Word Search</a>
                             <small>A simple word search for classroom activity use</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/Rapid%20Skill%20Builder%20EMOTIONAL%20INTELLIGENCE.pdf" target="_blank">Emotional Intelligence Rapid Skill Builder</nuxt-link>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/Rapid%20Skill%20Builder%20EMOTIONAL%20INTELLIGENCE.pdf" target="_blank">Emotional Intelligence Rapid Skill Builder</a>
                             <small>Optional activity for 4-hour workshop, or individual development use</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ_Reflection_brain_emotions.pdf" target="_blank">EIQ Reflection</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Reflection_brain_emotions.pdf" target="_blank">EIQ Reflection</a>
                             <small>A reflection worksheet corresponding to the Understand the Brain and Understanding Emotions and Feelings articles</small></td></tr>
                         </tbody>
                     </table>
@@ -179,7 +179,7 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/52WaystoImproveEIQ.pdf" target="_blank">52 Ways to Improve EIQ</nuxt-link>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/52WaystoImproveEIQ.pdf" target="_blank">52 Ways to Improve EIQ</a>
                             <small>A simple list of ways to continue to improve EIQ, arranged by the 4 quotients</small></td></tr>
                         </tbody>
                     </table>
@@ -202,7 +202,7 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/EIQ%20Resources_Web_Books.docx" target="_blank">EIQ Resource List</nuxt-link>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ%20Resources_Web_Books.docx" target="_blank">EIQ Resource List</a>
                             <small>A comprehensive list of additional web resources, books and articles to learn more about EIQ</small></td></tr>
                         </tbody>
                     </table>
@@ -225,15 +225,15 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/PeerFeedbackForm.pdf" target="_blank">Peer Feedback Form</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/PeerFeedbackForm.pdf" target="_blank">Peer Feedback Form</a>
                             <small>For providing peer feedback during facilitator/trainer observations</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/FacilitationFeedbackGuide.pdf" target="_blank">Facilitator Feedback Guide</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/FacilitationFeedbackGuide.pdf" target="_blank">Facilitator Feedback Guide</a>
                             <small>To guide facilitator 1:1 feedback sessions with supervisor</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/CoachingGuideQuestions.pdf" target="_blank">Coaching Guide Questions</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/CoachingGuideQuestions.pdf" target="_blank">Coaching Guide Questions</a>
                             <small>Questions to coach/develop facilitators and trainers in a variety of areas including presentation skills, facilitation skills, content awareness, audience management, presence, administration, general coaching.</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/SelfFeedbackForm.pdf" target="_blank">Self-Feedback Form</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/SelfFeedbackForm.pdf" target="_blank">Self-Feedback Form</a>
                             <small>To be used to create self-awareness and growth by review of logistics and self-evaluation of training after live session or while observing recordings</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/eiq-trainer-materials/DevelopmentPlan.docx" target="_blank">Development Plan Sample</nuxt-link>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/DevelopmentPlan.docx" target="_blank">Development Plan Sample</a>
                             <small>General development form to explore strengths and challenges and create action plans for growth.</small></td></tr>
                         </tbody>
                     </table>

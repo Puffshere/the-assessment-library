@@ -20,7 +20,7 @@
                 <div class="col-12">
                     <h2 style="margin-bottom: 0px">Watch the Full Webinar:</h2>
                     <h4 style="float:left">HBest Practices for Virtual Workshops (35 minutes)<br/>Uploaded April 15th, 2020</h4>
-                    <a target="_blank" href="/A24x7_WEBINAR_Conducting_Workshops_Online.pdf" class="button" style="float:right"><img class="pdf-icon" src="~/assets/pdf-icon.svg"> Download the Slide Deck</a>
+                    <a target="_blank" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_Conducting_Workshops_Online.pdf" class="button" style="float:right"><img class="pdf-icon" src="~/assets/pdf-icon.svg"> Download the Slide Deck</a>
                     <iframe style="width:100%" height="515" src="https://www.youtube.com/embed/d2A6HeLCYVE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>

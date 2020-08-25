@@ -108,7 +108,7 @@
                                 </div>
                             </a>
 
-                            <a href="/validity/EIQ-2-Validity-Study.pdf">
+                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/EIQ-2-Validity-Study.pdf">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> EIQ-2 Validity Study
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">

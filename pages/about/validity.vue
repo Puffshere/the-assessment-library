@@ -66,7 +66,7 @@
                 <div class="col-6">
                     <div class="sample-reports">
                         <h2>ASI Validation Reports</h2>
-                        <a href="/validity/validitydisc.pdf">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/validitydisc.pdf">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> DISC Reliability & Construct Validity
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -78,7 +78,7 @@
                             </div>
                         </a>
 
-                        <a href="/validity/A24x7-DISC-Disparate-Impact191009.pdf">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/A24x7-DISC-Disparate-Impact191009.pdf">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> DISC Disparate Impact
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -90,7 +90,7 @@
                             </div>
                         </a>
 
-                        <a href="/validity/motivators-construct-validity.pdf">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/motivators-construct-validity.pdf">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> Motivators Construct Validity
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -102,7 +102,7 @@
                             </div>
                         </a>
 
-                        <a href="/validity/motivators-reliability.pdf">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/motivators-reliability.pdf">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> Motivators Reliability
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -114,7 +114,7 @@
                             </div>
                         </a>
 
-                        <a href="/validity/Motivators-Disparate-Impact.pdf">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/Motivators-Disparate-Impact.pdf">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> Motivators Disparate Impact
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -126,7 +126,7 @@
                             </div>
                         </a>
 
-                        <a href="/validity/EIQ-2-Validity-Study.pdf">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/EIQ-2-Validity-Study.pdf">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> EIQ-2 Validity Study
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">

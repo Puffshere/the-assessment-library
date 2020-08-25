@@ -20,7 +20,7 @@
                 <div class="col-12">
                     <h2 style="margin-bottom: 0px">Watch the Full Webinar:</h2>
                     <h4 style="float:left">Virtual Tools & Tips to Succeed in Uncertain Times (39 minutes)<br/>Uploaded March 25th, 2020</h4>
-                    <a target="_blank" href="/A24x7_WEBINAR_Virtual_Tools_Tips.pdf" class="button" style="float:right"><img class="pdf-icon" src="~/assets/pdf-icon.svg"> Download the Slide Deck</a>
+                    <a target="_blank" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_Virtual_Tools_Tips.pdf" class="button" style="float:right"><img class="pdf-icon" src="~/assets/pdf-icon.svg"> Download the Slide Deck</a>
                     <iframe style="width:100%" height="515" src="https://www.youtube.com/embed/oF3Us5PEDWc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
