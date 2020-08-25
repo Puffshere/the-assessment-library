@@ -1,0 +1,23 @@
+@import './fonts';
+@import './vars';
+@import './grid';
+@import './animate';
+@import './button';
+@import './form';
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.plyr--video {
+    border-radius: 20px;
+}
+
+@media screen and (max-width: $breakpoint-small) {
+    .button {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}

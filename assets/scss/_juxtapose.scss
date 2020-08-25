@@ -1,0 +1,120 @@
+@import '~assets/scss/vars';
+
+.juxtapose {
+    padding: 100px 0;
+
+    h3 {
+        font-size: 30pt;
+        line-height: 34pt;
+        font-weight: 700;
+        margin: 0 0 8px;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+
+    .image {
+        width: 200%;
+        margin-left: -100%;
+        border-radius: 10px;
+        box-shadow: 0 30px 30px rgba(0,0,0,.1);
+    }
+
+    &.right {
+        .image {
+            margin-left: 0;
+            margin-right: -100%;
+        }
+    }
+
+    &.left {
+        background: #f5f7f9 !important;
+    }
+
+    .languages {
+        margin-bottom: 40px;
+        margin-top: -29px;
+
+        img {
+            width: 14px;
+        }
+
+        span {
+            font-size: 9pt;
+            margin-bottom: 5px;
+            display: inline-block;
+            background: #eaeaea;
+            padding: 0 7px 0 0;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+    }
+
+    @mixin badge($color) {
+        background: $color;
+    }
+
+    .badge {
+        border-radius: 50px;
+        font-family: $font-alt;
+        text-transform: uppercase;
+        font-size: 8pt;
+        padding: 5px 10px;
+        color: $white;
+        margin-right: 3px;
+
+        &.disc-d { @include badge($color-d) }
+        &.disc-i { @include badge($color-i) }
+        &.disc-s { @include badge($color-s) }
+        &.disc-c { @include badge($color-c) }
+
+        &.mot-aes { @include badge($color-mot-aes) }
+        &.mot-eco { @include badge($color-mot-eco) }
+        &.mot-ind { @include badge($color-mot-ind) }
+        &.mot-pow { @include badge($color-mot-pow) }
+        &.mot-alt { @include badge($color-mot-alt) }
+        &.mot-reg { @include badge($color-mot-reg) }
+        &.mot-the { @include badge($color-mot-the) }
+
+        &.eiq-self-rec { @include badge($color-eiq-self-rec) }
+        &.eiq-self-man { @include badge($color-eiq-self-man) }
+        &.eiq-soc-rec { @include badge($color-eiq-soc-rec) }
+        &.eiq-soc-man { @include badge($color-eiq-soc-man) }
+
+        &.values-people { @include badge($color-values-people) }
+        &.values-tasks { @include badge($color-values-tasks) }
+        &.values-systems { @include badge($color-values-systems) }
+
+        &.learning-att { @include badge($color-learning-att) }
+        &.learning-tra { @include badge($color-learning-tra) }
+        &.learning-rel { @include badge($color-learning-rel) }
+        &.learning-und { @include badge($color-learning-und) }
+    }
+
+    @media screen and (max-width: $breakpoint-med) {
+        padding: 50px 0;
+
+        .image {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        padding: 20px 0;
+
+        .image {
+            display: none;
+        }
+
+        .button {
+            display: block;
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+
+        .badge {
+            display: inline-block;
+        }
+    }
+}

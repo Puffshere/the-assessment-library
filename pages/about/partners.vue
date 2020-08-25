@@ -1,0 +1,381 @@
+<template>
+    <section class="partners">
+        <main-nav/>
+
+        <section class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="section-title">Assessments 24x7 Partners</h1>
+                        <p>
+                            Our partnerships are one of the cornerstones of our company and we are pleased to feature a few of them here. They've taken our 
+                            assessment customization to the next level in some very creative ways, and they all provide the high quality assessment 
+                            products that you would expect from an Assessments 24x7 partner.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img class="report-spread-image" src="~/assets/partner-sample-report-spread.png" alt="Assessments 24x7 Partners">
+                </div>
+            </div>
+        </div>
+
+        <section class="partner-list">
+            <div class="container">
+                <div class="row">
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/take-flight-learning.png" alt="Take Flight Learning partners with Assessments 24x7">
+
+                            <p class="bio">
+                                Take Flight Learning has taken the DISC model and infused some bird wisdom. By linking the four styles, Eagles (D), Parrots 
+                                (I), Doves (S), and Owls (C), the styles are easy to remember and simple to apply. In addition to their Taking Flight with DISC 
+                                foundational session, they have four addition programs that allow people to apply the styles into a variety of aspects of their 
+                                work life. These include: Chameleon Leadership, Chameleon Selling, Innovating IDEAs, and ReDISCovering Conflict.
+                            </p>
+
+                            <p class="quote">
+                                "Assessments 24x7 defines what it means to a partner. Their people are amazing. Their technology is simple to use and their 
+                                profiles provide the foundation for transformation. We see them as an extension of our organization.”
+                            </p>
+
+                            <div class="cite">Merrick Rosenberg, CEO, Take Flight Learning</div>
+
+                            <a class="sample-link" href="/partner-sample-reports/TakingFlightSample.pdf" target="_blank">
+                                <div class="sample">
+                                    <img src="~/assets/pdf-icon-light.svg"> Taking Flight With DISC Sample Report
+
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
+                                        <path d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
+                                            l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
+                                            c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z" style="fill:#05bbff;">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </a>
+
+                            <a class="hyperlink" target="_blank" href="https://www.takeflightlearning.com/">Visit Take Flight Learning &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/truecolors.jpg" alt="True Colors partners with Assessments 24x7">
+
+                            <p class="bio">
+                                True Colors is a global training and consulting company with a proven model for maximizing organizational performance 
+                                through better people performance. For more than 40 years, True Colors has helped millions of people find greater personal 
+                                awareness and dramatically improve their inter-personal relationships. Our user-friendly programs help people of all ages 
+                                understand and learn to recognize the unique differences that lead to miscommunication and conflict.
+                            </p>
+
+                            <p class="quote">
+                                True Colors has been happily partnered with Assessments 24x7 for over a decade. For us- its all about service. The team at 
+                                A 24x7 couldn’t possibly be more responsive to our dynamic needs- whether it be new product development or standard service 
+                                we are always taken care of.
+                            </p>
+
+                            <div class="cite">Robert Cook, CEO, True Colors International</div>
+
+                            <a class="sample-link" href="/partner-sample-reports/TrueColorsSample.pdf" target="_blank">
+                                <div class="sample">
+                                    <img src="~/assets/pdf-icon-light.svg"> True Colors Sample Report
+
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
+                                        <path d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
+                                            l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
+                                            c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z" style="fill:#05bbff;">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </a>
+
+                            <a class="hyperlink" target="_blank" href="https://truecolorsintl.com/">Visit True Colors &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/lead-like-jesus.png" alt="Biblical DISC partners with Assessments 24x7">
+
+                            <p class="bio">
+                                We've expanded the world renowned Classic DISC model of human behavior to include a biblical perspective on your behavioral 
+                                style. By blending the knowledge from Scripture and understanding your God-given behavioral style you can become the person 
+                                God created you to be.  Biblical DISC provides insights into learning how to love and serve one another as Jesus did. Lead 
+                                like Jesus is a global, non-profit, faith-based organization that provides leadership training based on Biblical truths.
+                            </p>
+
+                            <p class="quote">
+                                "Assessments 24x7 provided the Platform we needed to introduce the online Biblical DISC® Assessment into the ministry and 
+                                faith-based marketplace. Our experience working with Assessments 24x7 has been an answer to prayer. They provide innovative 
+                                solutions to on-going product development, excellent customer service, valid and reliable assessments - always with 
+                                integrity and professionalism."
+                            </p>
+
+                            <div class="cite">Barbara Meiss, Director of Leadership Development, Lead Like Jesus</div>
+
+                            <a class="sample-link" href="/partner-sample-reports/LeadLikeJesusSample.pdf" target="_blank">
+                                <div class="sample">
+                                    <img src="~/assets/pdf-icon-light.svg"> Biblical DISC Assessment Sample Report
+
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
+                                        <path d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
+                                            l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
+                                            c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z" style="fill:#05bbff;">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </a>
+
+                            <a class="hyperlink" target="_blank" href="https://www.leadlikejesus.com/disc">Visit Lead Like Jesus &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/athlete-assessments.png" alt="Athlete Assessments partners with Assessments 24x7">
+
+                            <p class="bio">
+                                Sports are played by people, coached by people and managed by people, so it’s imperative to get the people side of sport 
+                                right. We are experts in the ‘people side’ of elite sports. We work with you, strengthening what you’ve already established 
+                                to further develop the performance of your people. While we’re best known for our AthleteDISC, CoachDISC and Sports 
+                                ManagerDISC Profiles, we do more than just assessments.
+                            </p>
+
+                            <p class="quote">
+                                "Our relationship with Assessments 24x7 is our most valued business partnership. With over a decade of working together, 
+                                they have been consistent with their high level of service and reliability. Their team all have an incredible ‘can do’ 
+                                approach to any opportunity or challenge, their professionalism is unmatched and their pursuit of excellence relentless.
+                                Thank you Tony, Brandon, Steve and your phenomenal team."
+                            </p>
+
+                            <div class="cite">Liz Masen, CEO Athlete Assessments</div>
+
+                            <a class="sample-link" href="/partner-sample-reports/AthleteAssessmentsSample.pdf" target="_blank">
+                                <div class="sample">
+                                    <img src="~/assets/pdf-icon-light.svg"> Athlete Assessment Sample Report
+
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
+                                        <path d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
+                                            l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
+                                            c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z" style="fill:#05bbff;">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </a>
+
+                            <a class="hyperlink" target="_blank" href="https://athleteassessments.com/">Visit Athlete Assessments &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/bank.png" alt="Codebreaker Technologies partners with Assessments 24x7">
+
+                            <p class="bio">
+                                Codebreaker Technologies is the world leader in personality coding technology for sales, powered by the B.A.N.K. 
+                                methodology. B.A.N.K. is scientifically validated to predict buying behavior in nanoseconds and close more sales in less 
+                                time. Rather than using psychology, B.A.N.K. reverse-engineered personality science and built the world’s first assessment 
+                                based in buyology - the science of buying behavior.
+                            </p>
+
+                            <p class="quote">
+                                The synergy between Codebreaker Technologies and Assessments 24x7 is powerful. Our partnership allows us to serve the 
+                                business community in a greater way to help them grow revenues and maximize their results. They are a fantastic team to 
+                                work with and are committed to providing the best tools in the marketplace to their clients.
+                            </p>
+
+                            <div class="cite">Cheri Tree, Founder & Chairman, Codebreaker Technologies</div>
+
+                            <a class="hyperlink" target="_blank" href="http://crackmycode.com/a24x7">Visit Codebreaker Technologies &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/hiring-steps.png" alt="Hiring Steps partners with Assessments 24x7">
+
+                            <p class="bio">
+                                Employees are a company's most important asset. Yet, the hiring process is a time consuming and often expensive fragmented 
+                                system consisting of various team members screening, emailing, calling, preparing spreadsheets and printing resumes. But 
+                                the hard work and money spent often does not lead to the best results. At Hiring Steps, we have simplified that process.
+                            </p>
+
+                            <p class="quote">
+                                "Partnering with Tony and Brandon at Assessments 24x7 has brought us closer to achieving our vision of becoming the 
+                                matchmaker of hiring.  We are truly excited about the work we are doing together to revolutionize the industry!"
+                            </p>
+
+                            <div class="cite">Danny Ing, Co-Founder, Hiring Steps</div>
+
+                            <a class="hyperlink" target="_blank" href="https://www.hiringsteps.com/">Visit Hiring Steps &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/five-four.png" alt="FiveFour partners with Assessments 24x7">
+
+                            <p class="bio">
+                                FiveFour helps companies with disengaged employees and disgruntled customers ignite a culture of customer success. Our 
+                                process is ideal for businesses that have grown to the point where the founder or leader no longer has direct contact with 
+                                front-line employees. That disconnect leads to undefined expectations for the customer experience. We help them design a 
+                                world-class customer experience and define a culture of learning and development that gets them back on the path to growth.   
+                            </p>
+
+                            <p class="quote">
+                                The behavioral assessments from Assessments247 are an invaluable tool in our process of helping the leaders of the company 
+                                lead in a new way. The assessments provide a vital window for each person to see themselves, how they interact with others 
+                                and how they perform as a team. Every leadership group we assess gains self-awareness and sees new opportunities for better 
+                                team alignment.
+                            </p>
+
+                            <div class="cite">Nathan Schock, Co-Founder and President, FiveFour</div>
+
+                            <a class="hyperlink" target="_blank" href="https://fivefourtraining.com/">Visit FiveFour &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <stats style="margin-bottom: 0"/>
+        <footer-fold/>
+    </section>
+</template>
+
+<script>
+    import Nav from '@/components/Nav';
+    import Stats from '@/components/Stats';
+    import Footer from '@/components/Footer';
+
+    export default {
+        components: {
+            'main-nav': Nav,
+            'stats': Stats,
+            'footer-fold': Footer
+        },
+        head() {
+            return {
+                title: 'Assessments 24x7 Partners | Assessments 24x7',
+                meta: [
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: 'Our partnerships are one of the cornerstones of our company and we are pleased to feature a few of them here. They\'ve taken our assessment customization to the next level in some very creative ways, and they all provide the high quality assessment products.'
+                    }
+                ]
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+    .partners {
+        .header {
+            background: url('~assets/about.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 70px 0;
+            margin-bottom: 30px;
+
+            .section-title {
+                font-size: 30pt;
+                margin-top: 0;
+            }
+        }
+
+        h1 {
+            font-size: 30pt;
+            line-height: 34pt;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 20pt;
+            line-height: 24pt;
+        }
+
+        .report-spread-image {
+            width: 100%;
+            max-width: 620px;
+            margin: -130px auto -20px;
+            display: block;
+        }
+
+        .partner-list {
+            margin: 30px 0 80px;
+
+            .partner {
+                margin-bottom: 40px;
+
+                .logo {
+                    width: 100%;
+                    display: block;
+                    margin: 0 auto 10px;
+                    max-width: 400px;
+                }
+
+                .bio {
+                    margin-bottom: 20px;
+                    margin-top: 0;
+                }
+
+                .quote {
+                    border-left: 4px solid  #0033c5;
+                    padding: 10px;
+                    background: #f9f9f9;
+                }
+
+                .cite {
+                    font-size: 10pt;
+                    font-weight: 600;
+                    color: #444;
+                    margin: -10px 0 20px 14px;
+
+                    &:before {
+                        content: '- ';
+                    }
+                }
+
+                .sample-link {
+                    color: #000;
+                    text-decoration: none;
+                }
+
+                .sample {
+                    border: 2px solid #f1f1f1;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                    transition: background .3s ease;
+                    cursor: pointer;
+
+                    img {
+                        width: 24px;
+                        margin-right: 5px;
+                    }
+
+                    svg {
+                        width: 17px;
+                        float: right;
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+    }
+</style>

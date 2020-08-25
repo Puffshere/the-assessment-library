@@ -1,0 +1,411 @@
+<template>
+    <section class="skeleton">
+        <main-nav/>
+
+        <section class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="section-title">Critical Thinking (HVP) Trainer Materials</h1>
+                        <p>
+                            The Training Materials library is your comprehensive resource for coaching and debriefing tools, additional insight & information on the assessment, 
+                            reports and models, and gives quick access to class/workshop materials you may need. Explore these at your leisure - you will find there are many 
+                            useful and valuable resources to support your continued development, understanding and application!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container" v-if="unlocked">
+            <div class="row">
+                <div class="col-6">
+                    <h2>
+                        <img class="icon" src="~/assets/trainer-materials-icons/2-hour-presentation.png" alt="Educational Materials">
+                        Educational Materials
+                    </h2><br/>
+
+                    <p>
+                        These resources are designed to help you with debrief, coaching and your own continued development of your Critical Thinking (HVP) 
+                        knowledge.
+                    </p>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Debrief & Coaching Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPDebriefGuide.pdf" target="_blank">HVP Debrief Guide</nuxt-link>
+                            <small>Overview and Guide for what is included in the assessment report</small></td></tr>
+                            <tr v-else><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVP Report Debrief Guide-NonCert_v4.pdf" target="_blank">HVP Debrief Guide</nuxt-link>
+                            <small>Overview and Guide for what is included in the assessment report</small></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Clarity.pdf" target="_blank">Clarity</nuxt-link>
+                            <small>Definitions of clarity scores</small></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Attention.pdf" target="_blank">Attention</nuxt-link>
+                            <small>Definitions of attention scores</small></td></tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>HVP Development Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/lowhvpscores.pdf" target="_blank">Coaching to Low HVP scores</nuxt-link>
+                            <small>Suggestions for coaching lower Clarity and Attention scores</small></td></tr>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPViewpoints.pdf" target="_blank">Alternative Definitions for HVP Viewpoints</nuxt-link>
+                            <small>Additional language to support your explanations</small></td></tr>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPStatementExamples.pdf" target="_blank">HVP Statement Samples</nuxt-link>
+                            <small>Different statement samples for the results of clarity and attention score combinations</small></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/MeasurementValueRobertHartman.pdf" target="_blank">The Measurement of Value</nuxt-link></td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>
+                        <img class="icon" src="~/assets/trainer-materials-icons/presenting-resources.png" alt="Presentation Resources">
+                        Presentation Resources
+                    </h2><br/>
+
+                    <p>
+                        These resources are designed to help you provide training sessions and workshops of varying lengths to different audiences with a 
+                        variety of needs. We encourage you to customize and tailor these resources to fit your training needs.
+                    </p>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Training Presentations</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVP2hourFG.pdf" target="_blank">2-Hour Facilitator Guide</nuxt-link>
+                            <small>Step-by-step instructions for facilitating 2-hour workshop.</small></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVP2HourWorkshop.pptx" target="_blank">2-Hour Presentation</nuxt-link>
+                            <small>Overview of Hartman Value Profile, discussion and activity and report debrief opportunity.</small></td></tr>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPProcess.pptx" target="_blank">HVP Process Presentation</nuxt-link>
+                            <small>An overview PPT resource with notes that further explains what HVP is all about</small></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-6">
+                    <h2>
+                        <img class="icon" src="~/assets/trainer-materials-icons/know-disc.png" alt="Activities for Trainers">
+                        Activities for Trainers
+                    </h2><br/>
+
+                    <p>
+                        These resources are designed to help foster application and interaction with groups. There are some HVP specific activities and 
+                        tools and general team building and group engagement resources.
+                    </p>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>HVP Specific Exercises</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Alien Baseball.pdf" target="_blank">Alien Baseball</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Fact or Opinion.pdf" target="_blank">Fact or Opinion</nuxt-link></td></tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>General Group Exercises</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/40icebreakers.pdf" target="_blank">40 Icebreakers for Small Groups</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostOnTheMoonExercise.pdf" target="_blank">Lost on the Moon Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostatSeaExercise.pdf" target="_blank">Lost at Sea Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/PaperTowerExercise.pdf" target="_blank">Paper Tower Exercise</a></td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>
+                        <img class="icon" src="~/assets/trainer-materials-icons/background-materials.png" alt="Implementation Resources">
+                        Implementation Resources
+                    </h2><br/>
+
+                    <p>
+                        These resources are designed to help you support continued engagement with the HVP model and assessment resources. We encourage you 
+                        to share them as frequently as you can.
+                    </p>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Implementation Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Critical Thinking Action Plan.docx" target="_blank">Critical Thinking Action Plan</nuxt-link></td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>
+                        <img class="icon" src="~/assets/trainer-materials-icons/debrief-guide.png" alt="DISC Debrief Resources">
+                        Other Materials
+                    </h2><br/>
+
+                    <p>
+                        These resources are designed to further enhance your learning journey. Some of them are historical versions of resources previously 
+                        used and others are from other sources that we found helpful or interesting.
+                    </p>
+                    
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Implementation Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/UnderstandingHartmanValueProfile.pdf" target="_blank">Understanding Hartman Value Profile Excerpt</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPValidityResearch.pdf" target="_blank">HVP Validity and Research</nuxt-link></td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2 v-if="certified">
+                        <img class="icon" src="~/assets/trainer-materials-icons/powerpoint-slides.png" alt="Training & Presenting Resources">
+                        Training & Presenting Resources
+                    </h2><br/>
+
+                    <p v-if="certified">
+                        These resources are designed for trainers, facilitators, and presenters to help grow facilitation and presentation skills. They are 
+                        useful for both new and experienced individuals who wish to continue to develop their skills in this area.
+                    </p>
+
+                    <table style="width:100%" v-if="certified">
+                        <thead>
+                            <tr>
+                                <th>Training & Presenting Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/PeerFeedbackForm.pdf" target="_blank">Peer Feedback Form</nuxt-link>
+                            <small>For providing peer feedback during facilitator/trainer observations</small></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/FacilitationFeedbackGuide.pdf" target="_blank">Facilitator Feedback Guide</nuxt-link>
+                            <small>To guide facilitator 1:1 feedback sessions with supervisor</small></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/CoachingGuideQuestions.pdf" target="_blank">Coaching Guide Questions</nuxt-link>
+                            <small>Questions to coach/develop facilitators and trainers in a variety of areas including presentation skills, facilitation skills, content awareness, audience management, presence, administration, general coaching.</small></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/SelfFeedbackForm.pdf" target="_blank">Self-Feedback Form</nuxt-link>
+                            <small>To be used to create self-awareness and growth by review of logistics and self-evaluation of training after live session or while observing recordings</small></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/DevelopmentPlan.docx" target="_blank">Development Plan Sample</nuxt-link>
+                            <small>General development form to explore strengths and challenges and create action plans for growth.</small></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" v-else>
+            <div class="row">
+                <div class="col-12">
+                    <div class="password-prompt">
+                        <div class="info">
+                            <h3>This resource is password protected</h3>
+                            <p>
+                                These trainer material resources are only available for Assessments 24x7 account holders. Please use the password provided to you in your Resource Center.
+                            </p>
+                        </div>
+
+                        <div v-if="validationError" class="error">
+                            <p>
+                                The password you have entered is invalid. Please try again.
+                            </p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" v-model="password">
+                        </div>
+
+                        <p style="margin-top:-10px;font-size:10pt;margin-bottom:30px">
+                            Having trouble? <a class="hyperlink" href="mailto:support@assessments24x7.com">Contact our support team &rarr;</a>
+                        </p>
+
+                        <button class="button" style="width:100%" @click="unlock">Authenticate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+
+        <footer-fold></footer-fold>
+    </section>
+</template>
+
+<script>
+    import Nav from '@/components/Nav';
+    import Footer from '@/components/Footer';
+
+    export default {
+        components: {
+            'main-nav': Nav,
+            'footer-fold': Footer
+        },
+        data() {
+            return {
+                unlocked: false,
+                password: '',
+                certified: false,
+                validationError: false
+            }
+        },
+        methods: {
+            unlock() {
+                if (this.password === 'trainhvp2020') {
+                    this.unlocked = true;
+                    this.validationError = false;
+                } else if (this.password === 'HVPcertified' || this.password === 'hvpcertified') {
+                    this.unlocked = true;
+                    this.certified = true;
+                    this.validationError = false;
+                } else {
+                    this.validationError = true;
+                    this.password = '';
+                }
+            }
+        },
+        head() {
+            return {
+                title: 'Critical Thinking (HVP) Trainer Materials | Assessments 24x7',
+                meta: [
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: 'The Critical Thinking (HVP) Training Materials library is your comprehensive resource for coaching and debriefing tools, additional insight & information on the assessment, reports and models, and gives quick access to class/workshop materials you may need.'
+                    }
+                ]
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+    .skeleton {
+        .header {
+            background: url('~assets/about.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 70px 0;
+            margin-bottom: 30px;
+
+            .section-title {
+                font-size: 30pt;
+                margin-top: 0;
+            }
+        }
+
+        h1 {
+            font-size: 30pt;
+            line-height: 34pt;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 20pt;
+            line-height: 24pt;
+            margin-bottom: -20px;
+        }
+
+        .icon {
+            width: 60px;
+            vertical-align: text-bottom;
+        }
+
+        .password-prompt {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            margin: 60px auto;
+            display: block;
+
+            .info {
+                background: rgba(255,189,7,.2);
+                padding: 20px;
+                border-radius: 10px;
+                border: 1px solid rgba(255,189,7,.3);
+                margin-bottom: 18px;
+
+                h3 {
+                    margin: 0 0 5px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 11pt;
+                }
+            }
+
+            .error {
+                background: rgba(255,0,0,.2);
+                padding: 20px;
+                border-radius: 10px;
+                border: 1px solid rgba(255,0,0,.3);
+                margin-bottom: 18px;
+
+                p {
+                    margin: 0;
+                    font-size: 11pt;
+                }
+            }
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 30px 0 60px;
+            text-align: left;
+
+            thead {
+                background: #1e222d;
+                color: #fff;
+
+                th {
+                    border: 1px solid #58617d;
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        border: 1px solid #ddd;
+
+                        small {
+                            display: block;
+                        }
+
+                        a {
+                            font-weight: 700;
+                            color: #1e222d;
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        background-color: #f5f5f5;
+                    }
+                }
+            }
+
+            td, th {
+                padding: 8px;
+            }
+        }
+    }
+</style>

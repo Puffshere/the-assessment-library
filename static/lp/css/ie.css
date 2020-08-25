@@ -1,0 +1,36 @@
+
+input.inp-txt { padding:4px 2px 0 4px; }
+.button { padding:0; }
+.button1 { padding:0 0 2px 0; }
+
+.side-nav { box-shadow:0 1px 3px #999; }
+.contact-form { box-shadow:0 1px 3px #999; }
+
+.button,
+.main-form,
+.form-box,
+.form-content,
+.form-content div.error,
+input.inp-txt,
+textarea,
+select,
+.contact-form,
+.side-nav  { 
+	position:relative;
+	behavior:url(css/PIE.htc);
+}
+
+.form-content .check-field input { margin:0 4px 0 0; }
+.ftr-field1 input { margin:-2px 4px 0 -3px; }
+.ftr-field2 .ftr-inp input { margin:-2px 3px 0 -3px; }
+
+*+html hr { margin:5px 0 15px 0; }
+
+/* IE6 only */
+* html .main-container { width:expression(((document.compatMode && document.compatMode=='CSS1Compat') ? document.documentElement.clientWidth : document.body.clientWidth) < 990 ? "990px" : "auto"); }
+* html .home-content-container {height:423px;}
+* html .content-container {height:200px;}
+* html .form-content {height:610px;}
+* html .bottom-container {height:105px;}
+* html .side-nav { height:18px; }
+* html hr { margin:5px 0 15px 0; }

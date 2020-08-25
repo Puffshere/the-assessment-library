@@ -1,0 +1,68 @@
+.button {
+    background: $primary;
+    border: 2px solid $primary;
+    border-radius: 5px;
+    padding: 11px 24px;
+    font-family: $font-family;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 17px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    font-size: 10pt;
+    text-align: center;
+
+    &:hover {
+        background: lighten($primary, 5);
+    }
+
+    &.link {
+        background: transparent;
+        margin-left: -17px;
+        color: #000;
+
+        &.light {
+            color: #fff;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.outline {
+        background: transparent;
+        color: #444;
+        border: 2px solid #444;
+
+        &.light {
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        &:hover {
+            border: 2px solid $secondary;
+            color: $secondary;
+        }
+    }
+
+    &.tiny {
+        font-size: 8pt;
+        padding: 7px 20px;
+    }
+
+    &.inline {
+        margin-left: 5px;
+        vertical-align: bottom;
+        float: right;
+        margin-right: 0;
+    }
+
+    &.secondary { background: $secondary; border: 2px solid $secondary; }
+    &.success { background: $success; border: 2px solid $success;  }
+    &.info { background: $info; border: 2px solid $info;  }
+    &.warning { background: $warning; border: 2px solid $warning;  }
+    &.danger { background: $danger; border: 2px solid $danger;  }
+    &.disabled { opacity: 0.5; }
+}

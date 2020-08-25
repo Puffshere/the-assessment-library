@@ -1,0 +1,46 @@
+$width: 96%;
+$gutter: 4%;
+$breakpoint-xs: 400px;  
+$breakpoint-small: 540px;
+$breakpoint-med: 960px;
+$breakpoint-large: 1140px;
+
+$primary:       #0033c5 !default;
+$secondary:     #00a8ff !default;
+$success:       #0dab49 !default;
+$info:          #1666ff !default;
+$warning:       #ffbd05 !default;
+$danger:        #e93d2f !default;
+$sub-background:#f6f9fc !default;
+$white:         #ffffff !default;
+
+$color-d: #e93d2f;
+$color-i: #ffbd05;
+$color-s: #0dab49;
+$color-c: #1666ff;
+
+$color-mot-aes: #0dab49;
+$color-mot-eco: #1666ff;
+$color-mot-ind: #f9690e;
+$color-mot-pow: #e93d2f;
+$color-mot-alt: #ffbd05;
+$color-mot-reg: #000000;
+$color-mot-the: #7E4C2B;
+
+$color-eiq-self-rec: #e93d2f;
+$color-eiq-self-man: #0dab49;
+$color-eiq-soc-rec: #8E44AD;
+$color-eiq-soc-man: #1666ff;
+
+$color-values-people: #1666ff;
+$color-values-tasks: #ffbd05;
+$color-values-systems: #e93d2f;
+
+$color-learning-att: #8E44AD;
+$color-learning-tra: #1666ff;
+$color-learning-rel: #e93d2f;
+$color-learning-und: #0dab49;
+
+$system-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family: 'Poppins', $system-font-stack;
+$font-alt: 'Poppins', $system-font-stack;
