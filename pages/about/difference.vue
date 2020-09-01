@@ -29,7 +29,7 @@
                             </li>
                             <li>
                                 You control and manage a branded dashboard accessible from any device, including our 
-                                <a href="https://app.assessments24x7.com/" target="_blank" class="hyperlink">mobile app</a>. 
+                                <a href="https://app.assessments24x7.com/" target="_blank" rel="noopener" class="hyperlink">mobile app</a>. 
                             </li>
                             <li>
                                 Access to all training materials at no charge, including coaching materials, workshop facilitator materials, free & 

@@ -46,7 +46,7 @@
 
                             <div class="cite">Merrick Rosenberg, CEO, Take Flight Learning</div>
 
-                            <a class="sample-link" href="/partner-sample-reports/TakingFlightSample.pdf" target="_blank">
+                            <a class="sample-link" href="/partner-sample-reports/TakingFlightSample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~/assets/pdf-icon-light.svg"> Taking Flight With DISC Sample Report
 
@@ -59,7 +59,7 @@
                                 </div>
                             </a>
 
-                            <a class="hyperlink" target="_blank" href="https://www.takeflightlearning.com/">Visit Take Flight Learning &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://www.takeflightlearning.com/">Visit Take Flight Learning &rarr;</a>
                         </div>
                     </div>
 
@@ -82,7 +82,7 @@
 
                             <div class="cite">Robert Cook, CEO, True Colors International</div>
 
-                            <a class="sample-link" href="/partner-sample-reports/TrueColorsSample.pdf" target="_blank">
+                            <a class="sample-link" href="/partner-sample-reports/TrueColorsSample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~/assets/pdf-icon-light.svg"> True Colors Sample Report
 
@@ -95,7 +95,7 @@
                                 </div>
                             </a>
 
-                            <a class="hyperlink" target="_blank" href="https://truecolorsintl.com/">Visit True Colors &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://truecolorsintl.com/">Visit True Colors &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
 
                             <div class="cite">Barbara Meiss, Director of Leadership Development, Lead Like Jesus</div>
 
-                            <a class="sample-link" href="/partner-sample-reports/LeadLikeJesusSample.pdf" target="_blank">
+                            <a class="sample-link" href="/partner-sample-reports/LeadLikeJesusSample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~/assets/pdf-icon-light.svg"> Biblical DISC Assessment Sample Report
 
@@ -134,7 +134,7 @@
                                 </div>
                             </a>
 
-                            <a class="hyperlink" target="_blank" href="https://www.leadlikejesus.com/disc">Visit Lead Like Jesus &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://www.leadlikejesus.com/disc">Visit Lead Like Jesus &rarr;</a>
                         </div>
                     </div>
 
@@ -158,7 +158,7 @@
 
                             <div class="cite">Liz Masen, CEO Athlete Assessments</div>
 
-                            <a class="sample-link" href="/partner-sample-reports/AthleteAssessmentsSample.pdf" target="_blank">
+                            <a class="sample-link" href="/partner-sample-reports/AthleteAssessmentsSample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~/assets/pdf-icon-light.svg"> Athlete Assessment Sample Report
 
@@ -171,7 +171,7 @@
                                 </div>
                             </a>
 
-                            <a class="hyperlink" target="_blank" href="https://athleteassessments.com/">Visit Athlete Assessments &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://athleteassessments.com/">Visit Athlete Assessments &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
 
                             <div class="cite">Cheri Tree, Founder & Chairman, Codebreaker Technologies</div>
 
-                            <a class="hyperlink" target="_blank" href="http://crackmycode.com/a24x7">Visit Codebreaker Technologies &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="http://crackmycode.com/a24x7">Visit Codebreaker Technologies &rarr;</a>
                         </div>
                     </div>
 
@@ -217,7 +217,7 @@
 
                             <div class="cite">Danny Ing, Co-Founder, Hiring Steps</div>
 
-                            <a class="hyperlink" target="_blank" href="https://www.hiringsteps.com/">Visit Hiring Steps &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://www.hiringsteps.com/">Visit Hiring Steps &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -243,7 +243,7 @@
 
                             <div class="cite">Nathan Schock, Co-Founder and President, FiveFour</div>
 
-                            <a class="hyperlink" target="_blank" href="https://fivefourtraining.com/">Visit FiveFour &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://fivefourtraining.com/">Visit FiveFour &rarr;</a>
                         </div>
                     </div>
                 </div>

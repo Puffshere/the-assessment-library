@@ -33,10 +33,10 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="http://www.teachersource.com/category/engineering" target="_blank">Educational Innovations</a>
+                            <tr><td><a class="hyperlink" href="http://www.teachersource.com/category/engineering" target="_blank" rel="noopener">Educational Innovations</a>
                             <small>A wonderful place to find ideas for your team-building sessions and workshops. This link points to just one of the categories, but you can look at all of them on the sidebar.</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/SalesIQPlus-Managers-Coaching-Guide.pdf" target="_blank">Download Managers Guide</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/reports/SalesIQPlus.pdf" target="_blank">Download Sample Team Report</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/SalesIQPlus-Managers-Coaching-Guide.pdf" target="_blank" rel="noopener">Download Managers Guide</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/reports/SalesIQPlus.pdf" target="_blank" rel="noopener">Download Sample Team Report</nuxt-link></td></tr>
                         </tbody>
                     </table>
 
@@ -53,27 +53,27 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/49%20Marketing%20Secrets%20298-page%20PDF%20eBook.pdf" target="_blank">49 Marketing Secrets</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Art%20of%20Asking%20Questions%206-page%20eReport.pdf" target="_blank">Art of Asking Questions</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Collaborative%20Selling%2066-page%20PDF%20eWorkbook.pdf" target="_blank">Collaborative Selling</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Connecting%20With%20Your%20Customer%20-%20Understanding%20the%20Buyer's%20Needs.pdf" target="_blank">Connecting With Your Customer - Understanding the Buyer's Needs</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Cross%20Selling%2026-page%20PDF%20eWorkbook.pdf" target="_blank">Cross Selling</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Customer%20Loyalty%20-%20Assure%20That%20Your%20Customers%20are%20Satisfied%20Now%20and%20Loyal%20Forever.pdf" target="_blank">Customer Loyalty - Assure That Your Customers are Satisfied Now and Loyal Forever</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Customer-Driven%20Service%2053-page%20PDF%20eWorkbook.pdf" target="_blank">Customer-Driven Service</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Finding%20the%20Buyers%20-%20How%20to%20Reach%20Those%20Who%20Want%20What%20You've%20Got.pdf" target="_blank">Finding the Buyers - How to Reach Those Who Want What You've Got</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Getting%20the%20Sale%20-%20Confirming%20the%20Commitment%20to%20Buy.pdf" target="_blank">Getting the Sale - Confirming the Commitment to Buy</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Introduction%20to%20Relationship%20Selling.pdf" target="_blank">Introduction to Relationship Selling</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Making%20Sure%20with%20Feedback%207-page%20eReport.pdf" target="_blank">Making Sure with Feedback</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Nonverbal%20Communications%2010-page%20PDF%20eReport.pdf" target="_blank">Nonverbal Communications</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Power%20of%20Listening%2050-page%20PDF%20eWorkbook.pdf" target="_blank">Power of Listening</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Presentation%20Skills%209-page%20PDF%20eReport.pdf" target="_blank">Presentation Skills</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Sales%20Presentations%20-%20Solving%20Problems%20and%20Filling%20Needs.pdf" target="_blank">Sales Presentations - Solving Problems and Filling Needs</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Sales%20Psychology%20-%20Understanding%20the%20Mind%20of%20the%20Buyer.pdf" target="_blank">Sales Psychology - Understanding the Mind of the Buyer</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Sales%20Readiness%20-%20How%20Preparation%20Leads%20to%20Opportunity.pdf" target="_blank">Sales Readiness - How Preparation Leads to Opportunity</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Silent%20Messages%2014-page%20PDF%20eReport.pdf" target="_blank">Silent Messages</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Stairs%20Of%20Customer%20Loyalty%205-page%20PDF%20eReport.pdf" target="_blank">Stairs Of Customer Loyalty</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Telephone%20Skills%205-page%20PDF%20eReport.pdf" target="_blank">Telephone Skills</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Time%20Management%2037-page%20PDF%20eWorkbook.pdf" target="_blank">Time Management</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/49%20Marketing%20Secrets%20298-page%20PDF%20eBook.pdf" target="_blank" rel="noopener">49 Marketing Secrets</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Art%20of%20Asking%20Questions%206-page%20eReport.pdf" target="_blank" rel="noopener">Art of Asking Questions</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Collaborative%20Selling%2066-page%20PDF%20eWorkbook.pdf" target="_blank" rel="noopener">Collaborative Selling</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Connecting%20With%20Your%20Customer%20-%20Understanding%20the%20Buyer's%20Needs.pdf" target="_blank" rel="noopener">Connecting With Your Customer - Understanding the Buyer's Needs</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Cross%20Selling%2026-page%20PDF%20eWorkbook.pdf" target="_blank" rel="noopener">Cross Selling</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Customer%20Loyalty%20-%20Assure%20That%20Your%20Customers%20are%20Satisfied%20Now%20and%20Loyal%20Forever.pdf" target="_blank" rel="noopener">Customer Loyalty - Assure That Your Customers are Satisfied Now and Loyal Forever</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Customer-Driven%20Service%2053-page%20PDF%20eWorkbook.pdf" target="_blank" rel="noopener">Customer-Driven Service</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Finding%20the%20Buyers%20-%20How%20to%20Reach%20Those%20Who%20Want%20What%20You've%20Got.pdf" target="_blank" rel="noopener">Finding the Buyers - How to Reach Those Who Want What You've Got</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Getting%20the%20Sale%20-%20Confirming%20the%20Commitment%20to%20Buy.pdf" target="_blank" rel="noopener">Getting the Sale - Confirming the Commitment to Buy</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Introduction%20to%20Relationship%20Selling.pdf" target="_blank" rel="noopener">Introduction to Relationship Selling</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Making%20Sure%20with%20Feedback%207-page%20eReport.pdf" target="_blank" rel="noopener">Making Sure with Feedback</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Nonverbal%20Communications%2010-page%20PDF%20eReport.pdf" target="_blank" rel="noopener">Nonverbal Communications</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Power%20of%20Listening%2050-page%20PDF%20eWorkbook.pdf" target="_blank" rel="noopener">Power of Listening</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Presentation%20Skills%209-page%20PDF%20eReport.pdf" target="_blank" rel="noopener">Presentation Skills</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Sales%20Presentations%20-%20Solving%20Problems%20and%20Filling%20Needs.pdf" target="_blank" rel="noopener">Sales Presentations - Solving Problems and Filling Needs</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Sales%20Psychology%20-%20Understanding%20the%20Mind%20of%20the%20Buyer.pdf" target="_blank" rel="noopener">Sales Psychology - Understanding the Mind of the Buyer</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Sales%20Readiness%20-%20How%20Preparation%20Leads%20to%20Opportunity.pdf" target="_blank" rel="noopener">Sales Readiness - How Preparation Leads to Opportunity</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Silent%20Messages%2014-page%20PDF%20eReport.pdf" target="_blank" rel="noopener">Silent Messages</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Stairs%20Of%20Customer%20Loyalty%205-page%20PDF%20eReport.pdf" target="_blank" rel="noopener">Stairs Of Customer Loyalty</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Telephone%20Skills%205-page%20PDF%20eReport.pdf" target="_blank" rel="noopener">Telephone Skills</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/Time%20Management%2037-page%20PDF%20eWorkbook.pdf" target="_blank" rel="noopener">Time Management</nuxt-link></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -92,22 +92,22 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=9B7SBjT_pbo&feature=youtu.be" target="_blank">Sales Preparation</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=4t7NWFq55SY&index=1&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank">Self Preparation</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=8idC0LsV1pw&index=3&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank">Targeting the Right Markets</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=DHJSKxuZiYE&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=7" target="_blank">Targeting the Right Methods</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=esW67U0cmv0&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=12" target="_blank">Connecting with the Head</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=5fUUvQai81c&index=9&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank">Connecting with the Heart</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=ObYkBrmmD_g&index=6&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank">Assessing the Person</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=TbTrQ8zcRJY&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=8" target="_blank">Assessing the Situation</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=j8KBuoiZrMM&index=10&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank">Collaborating with the Buyer</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=BBwA3YbaVZo&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=2" target="_blank">Educating the Buyer</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=EEv6cQ7bUcM&index=15&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank">Confirming the Solution</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=QFz41dqOYYc&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=16" target="_blank">Confirming the Purchase</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=Pitexhag3qQ&index=11&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank">Assuring Current Satisfaction</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=p8td401u_ww&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=4" target="_blank">Assuring Continuing Loyalty</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=etImw5omYP8&index=14&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank">Managing Sales</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=Pgo6MhXYuu8&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=5" target="_blank">Managing Yourself</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=9B7SBjT_pbo&feature=youtu.be" target="_blank" rel="noopener">Sales Preparation</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=4t7NWFq55SY&index=1&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank" rel="noopener">Self Preparation</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=8idC0LsV1pw&index=3&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank" rel="noopener">Targeting the Right Markets</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=DHJSKxuZiYE&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=7" target="_blank" rel="noopener">Targeting the Right Methods</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=esW67U0cmv0&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=12" target="_blank" rel="noopener">Connecting with the Head</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=5fUUvQai81c&index=9&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank" rel="noopener">Connecting with the Heart</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=ObYkBrmmD_g&index=6&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank" rel="noopener">Assessing the Person</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=TbTrQ8zcRJY&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=8" target="_blank" rel="noopener">Assessing the Situation</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=j8KBuoiZrMM&index=10&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank" rel="noopener">Collaborating with the Buyer</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=BBwA3YbaVZo&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=2" target="_blank" rel="noopener">Educating the Buyer</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=EEv6cQ7bUcM&index=15&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank" rel="noopener">Confirming the Solution</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=QFz41dqOYYc&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=16" target="_blank" rel="noopener">Confirming the Purchase</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=Pitexhag3qQ&index=11&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank" rel="noopener">Assuring Current Satisfaction</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=p8td401u_ww&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=4" target="_blank" rel="noopener">Assuring Continuing Loyalty</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=etImw5omYP8&index=14&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank" rel="noopener">Managing Sales</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=Pgo6MhXYuu8&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=5" target="_blank" rel="noopener">Managing Yourself</a></td></tr>
                         </tbody>
                     </table>
 
@@ -124,9 +124,9 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="http://alessandra.com/tony-alessandra.asp" target="_blank">Dr. Tony Alessandra</a></td></tr>
-                            <tr><td><a class="hyperlink" href="http://cathcart.com/about-jim-cathcart/" target="_blank">Jim Cathcart</a></td></tr>
-                            <tr><td><a class="hyperlink" href="http://premierespeakers.com/jeffrey_gitomer/bio" target="_blank">Jeffery Gitomer</a></td></tr>
+                            <tr><td><a class="hyperlink" href="http://alessandra.com/tony-alessandra.asp" target="_blank" rel="noopener">Dr. Tony Alessandra</a></td></tr>
+                            <tr><td><a class="hyperlink" href="http://cathcart.com/about-jim-cathcart/" target="_blank" rel="noopener">Jim Cathcart</a></td></tr>
+                            <tr><td><a class="hyperlink" href="http://premierespeakers.com/jeffrey_gitomer/bio" target="_blank" rel="noopener">Jeffery Gitomer</a></td></tr>
                         </tbody>
                     </table>
                 </div>

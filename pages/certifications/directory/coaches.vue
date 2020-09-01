@@ -61,7 +61,7 @@
                             <tr v-for="acpCoach in acpCoaches" :key="acpCoach.name">
                                 <td data-label="ACP Rank" width="5%"><span v-if="acpCoach['ACP Rank'] != 9999">{{ acpCoach["ACP Rank"] }}</span><span v-else style="color:#cfcfcf;">N/A</span></td>
                                 <td data-label="Name" width="20%" style="text-align: left">
-                                    <a v-if="acpCoach.Website" class="hyperlink" :href="acpCoach.Website" target="_blank">
+                                    <a v-if="acpCoach.Website" class="hyperlink" :href="acpCoach.Website" target="_blank" rel="noopener">
                                         {{ acpCoach.Name }}
                                     </a>
                                     <span v-else>{{ acpCoach.Name }}</span>
@@ -207,7 +207,7 @@
                         <tbody>
                             <tr v-for="coach in item" :key="coach.Name">
                                 <td data-label="Name" width="20%" style="text-align: left">
-                                    <a v-if="coach.Website" class="hyperlink" :href="coach.Website" target="_blank">
+                                    <a v-if="coach.Website" class="hyperlink" :href="coach.Website" target="_blank" rel="noopener">
                                         {{ coach.Name }}
                                     </a>
                                     <span v-else>{{ coach.Name }}</span>

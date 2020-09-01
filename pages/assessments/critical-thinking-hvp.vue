@@ -57,7 +57,7 @@
                     <div class="col-6">
                         <div class="sample-reports">
                             <h2>HVP Sample Reports</h2>
-                            <a href="/reports/tsselfsample.pdf" target="_blank">
+                            <a href="/reports/tsselfsample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Hartman Value Profile - Self
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -69,7 +69,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/tssalessample.pdf" target="_blank">
+                            <a href="/reports/tssalessample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Hartman Value Profile - Sales
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -81,7 +81,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/tsmanagesample.pdf" target="_blank">
+                            <a href="/reports/tsmanagesample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Hartman Value Profile - Leadership
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -391,7 +391,7 @@
                             <br/><br/>
                             Our hiring & selection resources are an integration of three Core Assessments: DISC, Motivators, and Critical Thinking (Hartman), 
                             providing detailed insight into what will help a candidate be successful in their new role or what might be required to support them. 
-                            Learn more about our <a href="/hiring-and-selection/" class="hyperlink" target="_blank">hiring and selection products and services.</a>
+                            Learn more about our <a href="/hiring-and-selection/" class="hyperlink" target="_blank" rel="noopener">hiring and selection products and services.</a>
                         </p>
                     </div>
                 </div>

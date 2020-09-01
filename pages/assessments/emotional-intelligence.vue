@@ -60,7 +60,7 @@
                     <div class="col-6">
                         <div class="sample-reports">
                             <h2>EIQ Sample Reports</h2>
-                            <a href="/reports/EIQSampleReport.pdf" target="_blank">
+                            <a href="/reports/EIQSampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Emotional Intelligence (EIQ-2)
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -72,7 +72,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/EIQ360SampleReport.pdf" target="_blank">
+                            <a href="/reports/EIQ360SampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Emotional Intelligence 360
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -84,7 +84,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/DISCandEIQ.pdf" target="_blank">
+                            <a href="/reports/DISCandEIQ.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC + EIQ-2 Combination
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -96,7 +96,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/DISCLeadandEIQ.pdf" target="_blank">
+                            <a href="/reports/DISCLeadandEIQ.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC Leadership + EIQ-2 Combination
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -108,7 +108,7 @@
                                 </div>
                             </a>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/EIQ-2-Validity-Study.pdf">
+                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/EIQ-2-Validity-Study.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> EIQ-2 Validity Study
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">

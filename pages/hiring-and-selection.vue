@@ -36,7 +36,7 @@
                         hiring and selection product that looks behind the interview mask to see what’s missing from the resume.
                     </p>
 
-                    <a href="https://us02web.zoom.us/webinar/register/WN_x3JOpnjiR6Cm-mniReUUmw" target="_blank" class="hyperlink">Free Webinar Registration &rarr;</a>
+                    <a href="https://us02web.zoom.us/webinar/register/WN_x3JOpnjiR6Cm-mniReUUmw" target="_blank" rel="noopener" class="hyperlink">Free Webinar Registration &rarr;</a>
                 </div>
 
                 <div class="col-4">

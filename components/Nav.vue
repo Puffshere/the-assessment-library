@@ -2,7 +2,7 @@
     <header v-if="!hidden">
         <div class="info-bar">
             <p>
-                <strong>Upcoming Event:</strong> Join us for an overview of our exciting new product, HireSense! <a class="hyperlink light" href="https://us02web.zoom.us/webinar/register/WN_x3JOpnjiR6Cm-mniReUUmw" target="_blank">Free Webinar Registration &rarr;</a>
+                <strong>Upcoming Event:</strong> Join us for an overview of our exciting new product, HireSense! <a class="hyperlink light" href="https://us02web.zoom.us/webinar/register/WN_x3JOpnjiR6Cm-mniReUUmw" target="_blank" rel="noopener">Free Webinar Registration &rarr;</a>
             </p>
         </div>
 
@@ -383,7 +383,7 @@
         transition: all .3s ease-in-out;
 
         .info-bar {
-            background-color: #00a8ff;
+            background-color: #363d52;
             text-align: center;
             padding: 10px;
             color: #fff;

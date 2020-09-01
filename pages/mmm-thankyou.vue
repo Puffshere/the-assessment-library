@@ -24,7 +24,7 @@
                         or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
                     </p><br/>
 
-                    <a target="_blank" href="https://www.assessments123.com/?R*o!%27%5bUs==R" class="button" style="display:block;">Click Here to Take Your Free Assessment</a>
+                    <a target="_blank" rel="noopener" href="https://www.assessments123.com/?R*o!%27%5bUs==R" class="button" style="display:block;">Click Here to Take Your Free Assessment</a>
                 </div>
             </div>
         </div><br/><br/><br/><br/>

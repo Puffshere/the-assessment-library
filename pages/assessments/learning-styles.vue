@@ -59,7 +59,7 @@
                     <div class="col-6">
                         <div class="sample-reports">
                             <h2>Learning Styles Sample Reports</h2>
-                            <a href="/reports/LearningStylesSampleReport.pdf" target="_blank">
+                            <a href="/reports/LearningStylesSampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Learning Styles
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -71,7 +71,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/SampleDISCandLS.pdf" target="_blank">
+                            <a href="/reports/SampleDISCandLS.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC + Learning Styles
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -83,7 +83,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/SampleDISCSalesandLS.pdf" target="_blank">
+                            <a href="/reports/SampleDISCSalesandLS.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC Sales + Learning Styles
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -95,7 +95,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/SampleDISCLeadandLS.pdf" target="_blank">
+                            <a href="/reports/SampleDISCLeadandLS.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC Leadership + Learning Styles
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">

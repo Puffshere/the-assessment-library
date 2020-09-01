@@ -16,7 +16,7 @@
 
                 <div class="col-9">
                     <p>
-                        <b><a class="hyperlink" href="https://assessmentinstitute.org" target="_blank">The Assessment Standards Institute (ASI) reports</a> 
+                        <b><a class="hyperlink" href="https://assessmentinstitute.org" target="_blank" rel="noopener">The Assessment Standards Institute (ASI) reports</a> 
                         the overwhelming majority of assessments sold today lack the studies & reporting to verify their accuracy and 
                         fairness.</b> Of the small minority which do claim this reporting, most of those were conducted privately 
                         - not openly by an objective and qualified third party. Assessments 24x7 is raising the bar within this 

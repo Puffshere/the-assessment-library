@@ -38,9 +38,9 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LSdebriefguideCert.pdf" target="_blank">Learning Styles Debriefing Guide</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LSdebriefguideCert.pdf" target="_blank" rel="noopener">Learning Styles Debriefing Guide</nuxt-link>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
-                            <tr v-else><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LSdebriefguide.pdf" target="_blank">Learning Styles Debriefing Guide</nuxt-link>
+                            <tr v-else><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LSdebriefguide.pdf" target="_blank" rel="noopener">Learning Styles Debriefing Guide</nuxt-link>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
                         </tbody>
                     </table>
@@ -53,9 +53,9 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/VAKdevelopment.pdf" target="_blank">VAK Development</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/VAKdevelopment.pdf" target="_blank" rel="noopener">VAK Development</nuxt-link>
                             <small>Provides suggestions for increasing skills in Visual, Auditory and Kinesthetic learning</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/VAKsupport.pdf" target="_blank">VAK Support Information</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/VAKsupport.pdf" target="_blank" rel="noopener">VAK Support Information</nuxt-link>
                             <small>Additional resource information on VAK</small></td></tr>
                         </tbody>
                     </table>
@@ -78,13 +78,13 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS2hour.pdf" target="_blank">2 Hour Facilitator Guide</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS2hour.pdf" target="_blank" rel="noopener">2 Hour Facilitator Guide</nuxt-link>
                             <small>Step-by-step instructions for facilitating 2-hour workshop</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS2hour.pptx" target="_blank">PowerPoint Presentation 2 Hour Workshop</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS2hour.pptx" target="_blank" rel="noopener">PowerPoint Presentation 2 Hour Workshop</nuxt-link>
                             <small>Overview of Learning Styles and report debrief opportunity</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS4hour.pdf" target="_blank">4 Hour Facilitator Guide</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS4hour.pdf" target="_blank" rel="noopener">4 Hour Facilitator Guide</nuxt-link>
                             <small>Step-by-step instructions for facilitating 4-hour workshop</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS4hour.pptx" target="_blank">PowerPoint Presentation 4 Hour Workshop</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS4hour.pptx" target="_blank" rel="noopener">PowerPoint Presentation 4 Hour Workshop</nuxt-link>
                             <small>Overview of Learning Styles discussion and activity, and report debrief opportunity</small></td></tr>
                         </tbody>
                     </table>
@@ -107,15 +107,15 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/PeerFeedbackForm.pdf" target="_blank">Peer Feedback Form</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/PeerFeedbackForm.pdf" target="_blank" rel="noopener">Peer Feedback Form</nuxt-link>
                             <small>For providing peer feedback during facilitator/trainer observations</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/FacilitationFeedbackGuide.pdf" target="_blank">Facilitator Feedback Guide</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/FacilitationFeedbackGuide.pdf" target="_blank" rel="noopener">Facilitator Feedback Guide</nuxt-link>
                             <small>To guide facilitator 1:1 feedback sessions with supervisor</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/CoachingGuideQuestions.pdf" target="_blank">Coaching Guide Questions</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/CoachingGuideQuestions.pdf" target="_blank" rel="noopener">Coaching Guide Questions</nuxt-link>
                             <small>Questions to coach/develop facilitators and trainers in a variety of areas including presentation skills, facilitation skills, content awareness, audience management, presence, administration, general coaching.</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/SelfFeedbackForm.pdf" target="_blank">Self-Feedback Form</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/SelfFeedbackForm.pdf" target="_blank" rel="noopener">Self-Feedback Form</nuxt-link>
                             <small>To be used to create self-awareness and growth by review of logistics and self-evaluation of training after live session or while observing recordings</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/DevelopmentPlan.docx" target="_blank">Development Plan Sample</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/DevelopmentPlan.docx" target="_blank" rel="noopener">Development Plan Sample</nuxt-link>
                             <small>General development form to explore strengths and challenges and create action plans for growth.</small></td></tr>
                         </tbody>
                     </table>
@@ -140,9 +140,9 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/VAKchart.pdf" target="_blank">VAK Chart</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/VAKchart.pdf" target="_blank" rel="noopener">VAK Chart</nuxt-link>
                             <small>For use in 4-hour workshop, a VAK Activity checklist</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LSrsb.pdf" target="_blank">Rapid Skill Building: Learning Styles</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LSrsb.pdf" target="_blank" rel="noopener">Rapid Skill Building: Learning Styles</nuxt-link>
                             <small>Overview of Learning Styles workbook (aligns directly with recorded vignettes)</small></td></tr>
                         </tbody>
                     </table>
@@ -155,10 +155,10 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/40icebreakers.pdf" target="_blank">40 Icebreakers for Small Groups</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostOnTheMoonExercise.pdf" target="_blank">Lost on the Moon Exercise</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostatSeaExercise.pdf" target="_blank">Lost at Sea Exercise</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/PaperTowerExercise.pdf" target="_blank">Paper Tower Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/40icebreakers.pdf" target="_blank" rel="noopener">40 Icebreakers for Small Groups</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostOnTheMoonExercise.pdf" target="_blank" rel="noopener">Lost on the Moon Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostatSeaExercise.pdf" target="_blank" rel="noopener">Lost at Sea Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/PaperTowerExercise.pdf" target="_blank" rel="noopener">Paper Tower Exercise</a></td></tr>
                         </tbody>
                     </table>
 
@@ -180,7 +180,7 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS Certified Trainer Materials_Reflection.docx" target="_blank">Learning Styles Reflection</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/LS Certified Trainer Materials_Reflection.docx" target="_blank" rel="noopener">Learning Styles Reflection</nuxt-link></td></tr>
                         </tbody>
                     </table>
 
@@ -202,7 +202,7 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/howdowelearn.jpg" target="_blank">How Do We Learn?</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/learning-styles-trainer-materials/howdowelearn.jpg" target="_blank" rel="noopener">How Do We Learn?</nuxt-link>
                             <small>William Glasser’s pyramid shows simply and clearly the ways in which we engage in learning.</small></td></tr>
                         </tbody>
                     </table>

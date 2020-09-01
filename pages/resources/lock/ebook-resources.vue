@@ -33,31 +33,31 @@
             <div class="row">
                 <div class="col-6">
                     <ul class="resources">
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Collaborative Selling 143-page PDF eBook.pdf" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Collaborative Selling 143-page PDF eBook.pdf" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Collaborative Selling
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Game-Changing_Life_Strategies_eBook.pdf" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Game-Changing_Life_Strategies_eBook.pdf" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Game Changing Life Strategies
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Non-Manipulative Selling 179-page PDF eBook.pdf" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Non-Manipulative Selling 179-page PDF eBook.pdf" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Non-Manipulative Selling
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/People Smart in Business 220-page eBook.pdf" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/People Smart in Business 220-page eBook.pdf" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 People Smart in Business
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/People Smart with Family and Friends eBook.pdf" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/People Smart with Family and Friends eBook.pdf" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 People Smart with Family and Friends
                             </li>
@@ -67,25 +67,25 @@
 
                 <div class="col-6">
                     <ul class="resources">
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum Rule 163-page PDF eBook.pdf" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum Rule 163-page PDF eBook.pdf" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Platinum Rule
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum Rule for DISC Sales Mastery eBook.pdf" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum Rule for DISC Sales Mastery eBook.pdf" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Platinum Rule for DISC Sales Mastery
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum Rule for Small Business Mastery 176-page PDF eBook.pdf" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum Rule for Small Business Mastery 176-page PDF eBook.pdf" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Platinum Rule for Small Business Mastery
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum Rule for Trade Show Mastery 224-page PDF eBook.pdf" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum Rule for Trade Show Mastery 224-page PDF eBook.pdf" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Platinum Rule for Trade Show Mastery
                             </li>

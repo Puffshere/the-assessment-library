@@ -20,7 +20,7 @@
                 <div class="col-8">
                     <h2 style="margin-bottom: 0px">Watch the Full Webinar:</h2>
                     <h4 style="float:left">Financial Strategies for the<br/>COVID-19 Crisis (55 minutes)<br/>Uploaded April 8th, 2020</h4>
-                    <a target="_blank" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_Financial_Strategies_for_the_Covid-19_Crisis.pdf" class="button" style="float:right"><img class="pdf-icon" src="~/assets/pdf-icon.svg"> Download the Slide Deck</a>
+                    <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_Financial_Strategies_for_the_Covid-19_Crisis.pdf" class="button" style="float:right"><img class="pdf-icon" src="~/assets/pdf-icon.svg"> Download the Slide Deck</a>
                     <iframe style="width:100%" height="515" src="https://www.youtube.com/embed/4jjK9O4eFU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 

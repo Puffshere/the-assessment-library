@@ -305,8 +305,8 @@
                     </p>
                     <ul>
                         <li>What is the technology provided by the DISC profile provider to purchase, deliver, and manage the assessments?</li>
-                        <li>Which validated DISC profile providers offer certification programs that are independently recognized and accredited by continuing education institutions like <a href="https://coachfederation.org" class="hyperlink" target="_blank">ICF</a>, 
-                        <a href="https://www.shrm.org" class="hyperlink" target="_blank">SHRM</a>, <a href="https://www.hrci.org" class="hyperlink" target="_blank">HRCI</a> and <a href="https://www.td.org" class="hyperlink" target="_blank">ATD</a>?</li>
+                        <li>Which validated DISC profile providers offer certification programs that are independently recognized and accredited by continuing education institutions like <a href="https://coachfederation.org" class="hyperlink" target="_blank" rel="noopener">ICF</a>, 
+                        <a href="https://www.shrm.org" class="hyperlink" target="_blank" rel="noopener">SHRM</a>, <a href="https://www.hrci.org" class="hyperlink" target="_blank" rel="noopener">HRCI</a> and <a href="https://www.td.org" class="hyperlink" target="_blank" rel="noopener">ATD</a>?</li>
                         <li>What are the DISC profile costs?</li>
                         <li>Are DISC profile team reports and trainer materials included?</li>
                     </ul>
@@ -390,7 +390,7 @@
                         provide clear interpretations and feedback based on the individual’s self-perception score that is then confirmed with face validity (to ensure the assessment measures what it says it will measure).
                     </p>
                         <p>We also practice a philosophy of transparency and openly share our rigorous reporting, research, and validation information to ensure a high degree of confidence for use in business, non-profit, 
-                            coaching, or counseling. Our research reports are publicly <a href="/about/validity" class="hyperlink" target="_blank">available here.</a>
+                            coaching, or counseling. Our research reports are publicly <a href="/about/validity" class="hyperlink" target="_blank" rel="noopener">available here.</a>
                             </p>
                     </p>
                 </div>
@@ -464,8 +464,8 @@
 
                     <p>
                         Assessments 24x7’s DISC system has multiple products and services available for purchase. These include: Assessments and Profiles, Facilitation Kits, Group Reports, Starter Packages, Continuing 
-                        Education Credits (<a href="https://coachfederation.org" class="hyperlink" target="_blank">ICF</a>, 
-                        <a href="https://www.shrm.org" class="hyperlink" target="_blank">SHRM</a>, <a href="https://www.hrci.org" class="hyperlink" target="_blank">HRCI</a> and <a href="https://www.td.org" class="hyperlink" target="_blank">ATD</a>), Books, Training Tools and, Certification options, and more.
+                        Education Credits (<a href="https://coachfederation.org" class="hyperlink" target="_blank" rel="noopener">ICF</a>, 
+                        <a href="https://www.shrm.org" class="hyperlink" target="_blank" rel="noopener">SHRM</a>, <a href="https://www.hrci.org" class="hyperlink" target="_blank" rel="noopener">HRCI</a> and <a href="https://www.td.org" class="hyperlink" target="_blank" rel="noopener">ATD</a>), Books, Training Tools and, Certification options, and more.
                     </p>
                     
                     <p>

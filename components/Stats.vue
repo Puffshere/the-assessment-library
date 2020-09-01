@@ -12,7 +12,7 @@
                         For decades, we have partnered with companies both big and small, coaches, consultants,
                         and trainers to give them the tools to succeed. 
                     </p>
-                    <nuxt-link to="/assessments" class="button">Learn More</nuxt-link>
+                    <nuxt-link to="/assessments" class="button">Online Assessment Solutions</nuxt-link>
                 </div>
 
                 <div class="col-4">

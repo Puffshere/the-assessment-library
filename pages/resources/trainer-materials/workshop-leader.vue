@@ -54,14 +54,14 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/FacilitationBestPractices_Session1.mp4" target="_blank">Facilitation and Best Practices Session One</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/FaciliationBestPractices_Session2.mp4" target="_blank">Facilitation and Best Practices Session Two</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/self-awareness-module-1-session.mp4" target="_blank">Self-Awareness and Communication</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/module-2-peer-to-leader-webinar.mp4" target="_blank">Transitioning From Peer to Leader</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Trust-Based%20Leadership.mp4" target="_blank">Trust-Based Leadership</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/making-teams-work-session-1.mp4" target="_blank">Making Teams Work Session 1</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/making-teams-work-session-2.mp4" target="_blank">Making Teams Work Session 2</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Sales-Optimization.mp4" target="_blank">Sales Optimization</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/FacilitationBestPractices_Session1.mp4" target="_blank" rel="noopener">Facilitation and Best Practices Session One</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/FaciliationBestPractices_Session2.mp4" target="_blank" rel="noopener">Facilitation and Best Practices Session Two</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/self-awareness-module-1-session.mp4" target="_blank" rel="noopener">Self-Awareness and Communication</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/module-2-peer-to-leader-webinar.mp4" target="_blank" rel="noopener">Transitioning From Peer to Leader</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Trust-Based%20Leadership.mp4" target="_blank" rel="noopener">Trust-Based Leadership</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/making-teams-work-session-1.mp4" target="_blank" rel="noopener">Making Teams Work Session 1</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/making-teams-work-session-2.mp4" target="_blank" rel="noopener">Making Teams Work Session 2</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Sales-Optimization.mp4" target="_blank" rel="noopener">Sales Optimization</a></td></tr>
                         </tbody>
                     </table>
 
@@ -78,11 +78,11 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/New-Leadership.docx" target="_blank">New Leadership (Word)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Keeping-it-Fresh-February-13-2019.mp4" target="_blank">Bi-Monthly Webinar 1 – Keeping it Fresh, February 13, 2019</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/5-Top-Tips-for-Exceptional-Workshop-Promotions.mp4" target="_blank">5 Top Tips for Exceptional Workshop Promotions.</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DWL-Bi-Monthly-4-24-19.pdf" target="_blank">Notes from 5 Tips to Exceptional Workshop Promotions Webinar</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshop-Leader-In-Action.mp4" target="_blank">DISC Workshop Leader In Action</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/New-Leadership.docx" target="_blank" rel="noopener">New Leadership (Word)</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Keeping-it-Fresh-February-13-2019.mp4" target="_blank" rel="noopener">Bi-Monthly Webinar 1 – Keeping it Fresh, February 13, 2019</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/5-Top-Tips-for-Exceptional-Workshop-Promotions.mp4" target="_blank" rel="noopener">5 Top Tips for Exceptional Workshop Promotions.</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DWL-Bi-Monthly-4-24-19.pdf" target="_blank" rel="noopener">Notes from 5 Tips to Exceptional Workshop Promotions Webinar</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshop-Leader-In-Action.mp4" target="_blank" rel="noopener">DISC Workshop Leader In Action</a></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -101,14 +101,14 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshop-Leader-Facilitation-Session-1.pdf" target="_blank">Facilitation and Best Practices</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/self-awareness-and-communication.zip" target="_blank">Self-Awareness and Communication</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/transitioning-from-peer-to-leader.zip" target="_blank">Transitioning from Peer to Leader</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/trust-based-leadership.zip" target="_blank">Trust-Based Leadership</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/making-teams-work.zip" target="_blank">Making Teams Work</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/sales-optimization.zip" target="_blank">Sales Optimization</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Updated-Card-Deck-DWL.pdf" target="_blank">DWL Personality Poker Cards (PDF)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Updated-Card-Deck-DWL.docx" target="_blank">DWL Personality Poker Cards (Word)</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshop-Leader-Facilitation-Session-1.pdf" target="_blank" rel="noopener">Facilitation and Best Practices</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/self-awareness-and-communication.zip" target="_blank" rel="noopener">Self-Awareness and Communication</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/transitioning-from-peer-to-leader.zip" target="_blank" rel="noopener">Transitioning from Peer to Leader</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/trust-based-leadership.zip" target="_blank" rel="noopener">Trust-Based Leadership</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/making-teams-work.zip" target="_blank" rel="noopener">Making Teams Work</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/sales-optimization.zip" target="_blank" rel="noopener">Sales Optimization</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Updated-Card-Deck-DWL.pdf" target="_blank" rel="noopener">DWL Personality Poker Cards (PDF)</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Updated-Card-Deck-DWL.docx" target="_blank" rel="noopener">DWL Personality Poker Cards (Word)</a></td></tr>
                         </tbody>
                     </table>
                     
@@ -125,9 +125,9 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshops-one-sheet.pdf" target="_blank">Marketing one-sheet PDF (#1)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshops-600x400.jpg" target="_blank">Social Media display ad (#1)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshops-1200x800.jpg" target="_blank">Email/Newsletter display ad (#1)</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshops-one-sheet.pdf" target="_blank" rel="noopener">Marketing one-sheet PDF (#1)</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshops-600x400.jpg" target="_blank" rel="noopener">Social Media display ad (#1)</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/DISC-Workshops-1200x800.jpg" target="_blank" rel="noopener">Email/Newsletter display ad (#1)</a></td></tr>
                         </tbody>
                     </table>
                 </div>

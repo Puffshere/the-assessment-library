@@ -37,13 +37,13 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Certified Debrief Guide 6.20.docx" target="_blank">Motivators Debrief Guide</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Certified Debrief Guide 6.20.docx" target="_blank" rel="noopener">Motivators Debrief Guide</a>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
-                            <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsDebriefGuide.pdf" target="_blank">Motivators Debrief Guide</a>
+                            <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsDebriefGuide.pdf" target="_blank" rel="noopener">Motivators Debrief Guide</a>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsCoachingandQuestions.pdf" target="_blank">Motivators Coaching and Questions</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsCoachingandQuestions.pdf" target="_blank" rel="noopener">Motivators Coaching and Questions</a>
                             <small>Open ended and purposeful follow-up questions to uncover opportunities and reveal areas for support, including action planning and coaching suggestions.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Update Nov 2018.docx" target="_blank">Motivators Update</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Update Nov 2018.docx" target="_blank" rel="noopener">Motivators Update</a>
                             <small>November 2018 - An explanation of updated graphs and report additions to help you navigate, understand and explain the most recent changes in the Motivators report.</small></td></tr>
                         </tbody>
                     </table>
@@ -56,29 +56,29 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/ValuesOrigins.pdf" target="_blank">Values Origins Article</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsAssessmentHistory.pdf" target="_blank">Values Overview & Motivators History Article</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="http://www.assessmentdownloads.com/mt/training.html" target="_blank">Motivators Virtual Training</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Certification Notes 6.15.20.docx" target="_blank">Certification Notes</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators - Scoring Guide_vs2_6.20.docx" target="_blank">Motivators Scoring Guide</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/ValuesOrigins.pdf" target="_blank" rel="noopener">Values Origins Article</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsAssessmentHistory.pdf" target="_blank" rel="noopener">Values Overview & Motivators History Article</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="http://www.assessmentdownloads.com/mt/training.html" target="_blank" rel="noopener">Motivators Virtual Training</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Certification Notes 6.15.20.docx" target="_blank" rel="noopener">Certification Notes</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators - Scoring Guide_vs2_6.20.docx" target="_blank" rel="noopener">Motivators Scoring Guide</a>
                             <small>Shares overview of scoring and characteristics of high and low scores in each Motivator</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AgreementsConflictsCombinations.pdf" target="_blank">Agreements, Conflicts and Interesting Combinations</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AgreementsConflictsCombinations.pdf" target="_blank" rel="noopener">Agreements, Conflicts and Interesting Combinations</a>
                             <small>Describes common agreements, conflicts and interesting combinations of motivators with charts and details</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/WordMatrixMotivatorsRanges.pdf" target="_blank">Word Matrix Ranges</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Risk Measurements 6.20.pdf" target="_blank">Risk Measurements</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/WordMatrixMotivatorsRanges.pdf" target="_blank" rel="noopener">Word Matrix Ranges</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Risk Measurements 6.20.pdf" target="_blank" rel="noopener">Risk Measurements</a>
                             <small>Shows all risk scales for motivators in one document</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MOT Alternative Words_Matrix descriptors 6.20.docx" target="_blank">Matrix Alternative Words</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Extensions.pdf" target="_blank">Extensions</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MOT Alternative Words_Matrix descriptors 6.20.docx" target="_blank" rel="noopener">Matrix Alternative Words</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Extensions.pdf" target="_blank" rel="noopener">Extensions</a>
                             <small>Short guide to understanding scoring extensions.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AttitudeIngredients.pdf" target="_blank">Attitude Ingredients</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AttitudeIngredients.pdf" target="_blank" rel="noopener">Attitude Ingredients</a>
                             <small>Reveals Identifiers, Dissatisfies/Stressors, Difficulties in relating, Possible Jobs, TV Shows/Magazines, Ideal vacations for each Motivator</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AestheticAttractor.pdf" target="_blank">Aesthetic Motivator Overview</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/EconomicAttractor.pdf" target="_blank">Economic Motivator Overview</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/IndividualisticAttractor.pdf" target="_blank">Individualistic Motivator Overview</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/PowerAttractor.pdf" target="_blank">Power Motivator Overview</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AltruisticAttractor.pdf" target="_blank">Altruistic Motivator Overview</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/RegulatoryAttractor.pdf" target="_blank">Regulatory Motivator Overview</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/TheoreticalAttractor.pdf" target="_blank">Theoretical Motivator Overview</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AestheticAttractor.pdf" target="_blank" rel="noopener">Aesthetic Motivator Overview</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/EconomicAttractor.pdf" target="_blank" rel="noopener">Economic Motivator Overview</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/IndividualisticAttractor.pdf" target="_blank" rel="noopener">Individualistic Motivator Overview</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/PowerAttractor.pdf" target="_blank" rel="noopener">Power Motivator Overview</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AltruisticAttractor.pdf" target="_blank" rel="noopener">Altruistic Motivator Overview</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/RegulatoryAttractor.pdf" target="_blank" rel="noopener">Regulatory Motivator Overview</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/TheoreticalAttractor.pdf" target="_blank" rel="noopener">Theoretical Motivator Overview</a></td></tr>
                         </tbody>
                     </table>
 
@@ -90,8 +90,8 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/DISC and MOTIVATORS 1 page Combos.docx" target="_blank">DISC & Motivators Integration - 1 page</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/DISC_MOT 2 page Combos.docx" target="_blank">DISC & Motivators Integration - 2 page</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/DISC and MOTIVATORS 1 page Combos.docx" target="_blank" rel="noopener">DISC & Motivators Integration - 1 page</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/DISC_MOT 2 page Combos.docx" target="_blank" rel="noopener">DISC & Motivators Integration - 2 page</a></td></tr>
                         </tbody>
                     </table>
 
@@ -113,15 +113,15 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotFGCertified.pdf" target="_blank">2-Hour Facilitator Guide</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotFGCertified.pdf" target="_blank" rel="noopener">2-Hour Facilitator Guide</a>
                             <small>Step-by-step instructions for facilitating 2-hour workshop</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT2hour.pptx" target="_blank">2-Hour Presentation</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT2hour.pptx" target="_blank" rel="noopener">2-Hour Presentation</a>
                             <small>Overview of Motivators, discussion and activity and report debrief opportunity.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsFG4hour.pdf" target="_blank">4-Hour Facilitator Guide</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsFG4hour.pdf" target="_blank" rel="noopener">4-Hour Facilitator Guide</a>
                             <small>Step-by-step instructions for facilitating 4-hour workshop</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT4hour.pptx" target="_blank">4-Hour Presentation</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT4hour.pptx" target="_blank" rel="noopener">4-Hour Presentation</a>
                             <small>Motivators, strengths and limitations, discussion and activities, and report debrief opportunity.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MOT Mini Presentation 2020.pptx" target="_blank">Mini-Motivators Presentation</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MOT Mini Presentation 2020.pptx" target="_blank" rel="noopener">Mini-Motivators Presentation</a>
                             <small>15 to 20 minute overview of Motivators introducing the what and why behind the model and highlighting the main concepts.</small></td></tr>
                         </tbody>
                     </table>
@@ -134,7 +134,7 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsCertifiedDebriefGuide.pdf" target="_blank">Motivators Debrief Example</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsCertifiedDebriefGuide.pdf" target="_blank" rel="noopener">Motivators Debrief Example</a>
                             <small>Password: jseeeva - Motivators Example Debrief Call - Steve Sisler performs an example Debrief call (includes DISC graphs as well). Review Steve’s Sample DISC & Motivators Call.</small></td></tr>
                         </tbody>
                     </table>
@@ -159,12 +159,12 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopActivities.pptx" target="_blank">Motivators Activities for Training Workshops</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Strengths_Limitations.pptx" target="_blank">Motivators Strengths and Limitations</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopActivities.pptx" target="_blank" rel="noopener">Motivators Activities for Training Workshops</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Strengths_Limitations.pptx" target="_blank" rel="noopener">Motivators Strengths and Limitations</a>
                             <small>Reveals some strengths and limitations associated with each Motivator for both High and Low scores to help further understanding and awareness for each dimension.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsAdaptability.pdf" target="_blank">Motivators Adaptability Guide</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsAdaptability.pdf" target="_blank" rel="noopener">Motivators Adaptability Guide</a>
                             <small>Questions for each of the 7 Motivator Dimensions to guide your discovery of understanding another person’s values and drivers.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Wheel_6.20.pptx" target="_blank">Motivators Wheel</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Wheel_6.20.pptx" target="_blank" rel="noopener">Motivators Wheel</a></td></tr>
                         </tbody>
                     </table>
 
@@ -176,10 +176,10 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/40icebreakers.pdf" target="_blank">40 Icebreakers for Small Groups</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostOnTheMoonExercise.pdf" target="_blank">Lost on the Moon Exercise</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostatSeaExercise.pdf" target="_blank">Lost at Sea Exercise</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/PaperTowerExercise.pdf" target="_blank">Paper Tower Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/40icebreakers.pdf" target="_blank" rel="noopener">40 Icebreakers for Small Groups</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostOnTheMoonExercise.pdf" target="_blank" rel="noopener">Lost on the Moon Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostatSeaExercise.pdf" target="_blank" rel="noopener">Lost at Sea Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/PaperTowerExercise.pdf" target="_blank" rel="noopener">Paper Tower Exercise</a></td></tr>
                         </tbody>
                     </table>
 
@@ -201,18 +201,18 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/What are Motivators_EM1_6.20.docx" target="_blank">What are Motivators?</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Aesthetic Motivator.docx" target="_blank">The Aesthetic Motivator</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Economic Motivator.docx" target="_blank">The Economic Motivator</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Individualistic Motivator.docx" target="_blank">The Individualistic Motivator</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Power Motivator.docx" target="_blank">The Power Motivator</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Altruistic Motivator.docx" target="_blank">The Altruistic Motivator</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Regulatory Motivator.docx" target="_blank">The Regulatory Motivator</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Theoretical Motivator.docx" target="_blank">The Theoretical Motivator</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Agreements_Conflicts EM.docx" target="_blank">Agreements and Conflicts</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Norms,Intensities,Risks EM.docx" target="_blank">Norms, Intensities, & Risks</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Coaching for Motivators EM.docx" target="_blank">Coaching for Motivators</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/DISCandMotivators EM.docx" target="_blank">DISC & Motivators</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/What are Motivators_EM1_6.20.docx" target="_blank" rel="noopener">What are Motivators?</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Aesthetic Motivator.docx" target="_blank" rel="noopener">The Aesthetic Motivator</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Economic Motivator.docx" target="_blank" rel="noopener">The Economic Motivator</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Individualistic Motivator.docx" target="_blank" rel="noopener">The Individualistic Motivator</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Power Motivator.docx" target="_blank" rel="noopener">The Power Motivator</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Altruistic Motivator.docx" target="_blank" rel="noopener">The Altruistic Motivator</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Regulatory Motivator.docx" target="_blank" rel="noopener">The Regulatory Motivator</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Theoretical Motivator.docx" target="_blank" rel="noopener">The Theoretical Motivator</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Agreements_Conflicts EM.docx" target="_blank" rel="noopener">Agreements and Conflicts</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Norms,Intensities,Risks EM.docx" target="_blank" rel="noopener">Norms, Intensities, & Risks</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Coaching for Motivators EM.docx" target="_blank" rel="noopener">Coaching for Motivators</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/DISCandMotivators EM.docx" target="_blank" rel="noopener">DISC & Motivators</a></td></tr>
                         </tbody>
                     </table>
 
@@ -234,7 +234,7 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="/blog" target="_blank">DISC & Other Assessment Articles</a></td></tr>
+                            <tr><td><a class="hyperlink" href="/blog" target="_blank" rel="noopener">DISC & Other Assessment Articles</a></td></tr>
                         </tbody>
                     </table>
 
@@ -256,15 +256,15 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/PeerFeedbackForm.pdf" target="_blank">Peer Feedback Form</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/PeerFeedbackForm.pdf" target="_blank" rel="noopener">Peer Feedback Form</a>
                             <small>For providing peer feedback during facilitator/trainer observations</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/FacilitationFeedbackGuide.pdf" target="_blank">Facilitator Feedback Guide</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/FacilitationFeedbackGuide.pdf" target="_blank" rel="noopener">Facilitator Feedback Guide</a>
                             <small>To guide facilitator 1:1 feedback sessions with supervisor</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/CoachingGuideQuestions.pdf" target="_blank">Coaching Guide Questions</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/CoachingGuideQuestions.pdf" target="_blank" rel="noopener">Coaching Guide Questions</a>
                             <small>Questions to coach/develop facilitators and trainers in a variety of areas including presentation skills, facilitation skills, content awareness, audience management, presence, administration, general coaching.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/SelfFeedbackForm.pdf" target="_blank">Self-Feedback Form</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/SelfFeedbackForm.pdf" target="_blank" rel="noopener">Self-Feedback Form</a>
                             <small>To be used to create self-awareness and growth by review of logistics and self-evaluation of training after live session or while observing recordings</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/DevelopmentPlan.docx" target="_blank">Development Plan Sample</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/DevelopmentPlan.docx" target="_blank" rel="noopener">Development Plan Sample</a>
                             <small>General development form to explore strengths and challenges and create action plans for growth.</small></td></tr>
                         </tbody>
                     </table>

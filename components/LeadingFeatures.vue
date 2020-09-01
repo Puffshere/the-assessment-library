@@ -49,8 +49,8 @@
                     <h4>Training Solutions</h4>
                     <p>
                         Get certified and become an assessments expert.  
-                        Earn continuing education credits through <a href="https://coachfederation.org" class="hyperlink" target="_blank">ICF,</a> 
-                        <a href="https://www.shrm.org" class="hyperlink" target="_blank">SHRM,</a> <a href="https://www.hrci.org" class="hyperlink" target="_blank">HRCI,</a> and <a href="https://www.td.org" class="hyperlink" target="_blank">ATD.</a> 
+                        Earn continuing education credits through <a href="https://coachfederation.org" class="hyperlink" target="_blank" rel="noopener">ICF,</a> 
+                        <a href="https://www.shrm.org" class="hyperlink" target="_blank" rel="noopener">SHRM,</a> <a href="https://www.hrci.org" class="hyperlink" target="_blank" rel="noopener">HRCI,</a> and <a href="https://www.td.org" class="hyperlink" target="_blank" rel="noopener">ATD.</a> 
                         Become a subject matter expert, build a positive leadership reputation, 
                         and more.
                     </p>

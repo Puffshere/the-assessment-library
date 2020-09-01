@@ -51,7 +51,7 @@
                     <div class="col-6">
                         <div class="sample-reports">
                             <h2>DISC Sample Reports</h2>
-                            <a href="/reports/DISCselfSampleReport.pdf" target="_blank">
+                            <a href="/reports/DISCselfSampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC Self
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -63,7 +63,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/DISCLeadershipSampleReport.pdf" target="_blank">
+                            <a href="/reports/DISCLeadershipSampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC Leadership
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -75,7 +75,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/SalesDISCselfSampleReport.pdf" target="_blank">
+                            <a href="/reports/SalesDISCselfSampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC Sales
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -87,7 +87,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/DISCService.pdf" target="_blank">
+                            <a href="/reports/DISCService.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC Service
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -350,7 +350,7 @@
                         <p class="answer">
                             Assessments 24x7 is proud that its DISC assessment may currently be the world’s only assessment independently tested - by a qualified 
                             third party - for Construct Validity, Reliability, and Disparate Impact. Our DISC assessment meets APA, EEOC, AREA, and 
-                            NCME standards. Our DISC assessment’s independent test results are transparently <a href="/about/validity" class="hyperlink" target="_blank">shared here</a>. A recent study by the 
+                            NCME standards. Our DISC assessment’s independent test results are transparently <a href="/about/validity" class="hyperlink" target="_blank" rel="noopener">shared here</a>. A recent study by the 
                             Assessment Standards Institute (ASI) concluded the great majority of assessments being produced and sold today lack 
                             testing to substantiate their scientific claims. While it’s important to compare sample reports, we strongly encourage 
                             consumers to request the assessment provider’s Construct Validity, Reliability, and Disparate Impact reporting. If this 
@@ -379,7 +379,7 @@
                         <h6 class="question">Who Owns DISC?</h6>
                         <p class="answer">
                             It’s a common misconception that DISC is the intellectual property of only one company. DISC is the byproduct of psychologist 
-                            <a class="hyperlink" href="https://en.wikipedia.org/wiki/DISC_assessment" target="_blank"> Moulton Marston’s research</a>, and his book, Emotions of Normal People. In the decades that have followed, Marston’s 
+                            <a class="hyperlink" href="https://en.wikipedia.org/wiki/DISC_assessment" target="_blank" rel="noopener"> Moulton Marston’s research</a>, and his book, Emotions of Normal People. In the decades that have followed, Marston’s 
                             research has spawned a number of behavioral assessments. DISC is what is commonly referred to as “open-source research.” 
                             This means that anyone can produce a questionnaire with report, and call it a DISC assessment - whether it’s been scientifically 
                             validated or not. Assessments 24x7 is one of the world’s few “source providers” of DISC that has been validated by an independent 

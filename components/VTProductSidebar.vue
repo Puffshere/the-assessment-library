@@ -12,7 +12,7 @@
             Rule eWorkbook by Dr. Tony Alessandra for 50% off!
         </p>
 
-        <a target="_blank" href="https://rz189.infusionsoft.app/app/orderForms/DISC-Virtual-Training--82-Page-DISC-Platinum-Rule-eWorkbook" class="button danger">Redeem Bonus Offer</a>
+        <a target="_blank" rel="noopener" href="https://rz189.infusionsoft.app/app/orderForms/DISC-Virtual-Training--82-Page-DISC-Platinum-Rule-eWorkbook" class="button danger">Redeem Bonus Offer</a>
     </section>
 </template>
 

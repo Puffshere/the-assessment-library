@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="col-9">
-                    <h3>Chad Brown, <a href="https://profile.team/" class="hyperlink" target="_blank">Profile, LLC</a></h3>
+                    <h3>Chad Brown, <a href="https://profile.team/" class="hyperlink" target="_blank" rel="noopener">Profile, LLC</a></h3>
                     <p>
                         Chad is the president & CEO of Profile, LLC, a behavioral consulting firm with an expertise in the corporate and athletic arenas. 
                         Profile provides powerful strategic frameworks and distinct talent strategies led by proprietary assessment technology through its 
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="col-9">
-                    <h3>Gary Coulson, <a href="https://www.thetorocompany.com/" class="hyperlink" target="_blank">The Toro Company</a></h3>
+                    <h3>Gary Coulson, <a href="https://www.thetorocompany.com/" class="hyperlink" target="_blank" rel="noopener">The Toro Company</a></h3>
                     <p>
                         The Toro Company is a leading worldwide provider of innovative solutions for the outdoor environment including turf and landscape 
                         maintenance, snow and ice management, underground utility construction, rental and specialty construction, and irrigation and 
@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="col-9">
-                    <h3>Curtis E Johnson, Jr, <a href="https://thecuveygroup.com/" class="hyperlink" target="_blank">The CUVEY Group, LLC</a></h3>
+                    <h3>Curtis E Johnson, Jr, <a href="https://thecuveygroup.com/" class="hyperlink" target="_blank" rel="noopener">The CUVEY Group, LLC</a></h3>
                     <p>
                         As founder & CEO of the Cuvey Group, Curtis is utilizing assessments to help businesses, organizations, and people accelerate the 
                         performance of their human capital investment.

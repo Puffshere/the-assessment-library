@@ -50,7 +50,7 @@
                                 <span v-if="id !== 'ccc'">Don't have an account? <a href="#" class="hyperlink" @click="$nuxt.$emit('openAccountModal')">Click here</a></span>
                             </p>
 
-                            <a class="link" :href="`https://${url}`" target="_blank">https://{{url}}</a>
+                            <a class="link" :href="`https://${url}`" target="_blank" rel="noopener">https://{{url}}</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/b0ee18iEhkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=b0ee18iEhkU&feature=emb_logo" target="_blank">
+                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=b0ee18iEhkU&feature=emb_logo" target="_blank" rel="noopener">
                                         General Account Settings (2:00)
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
@@ -87,7 +87,7 @@
 
                                 <div class="col-6">
                                     <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/0XRVr4fc8sc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=0XRVr4fc8sc&feature=emb_logo" target="_blank">
+                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=0XRVr4fc8sc&feature=emb_logo" target="_blank" rel="noopener">
                                         Features on Your Home Page (5:07)
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
@@ -101,7 +101,7 @@
 
                                 <div class="col-6">
                                     <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/-wcs-p1FFps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=-wcs-p1FFps&feature=emb_logo" target="_blank">
+                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=-wcs-p1FFps&feature=emb_logo" target="_blank" rel="noopener">
                                         Setting Up Assessment Access Links (8:05)
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
@@ -115,7 +115,7 @@
 
                                 <div class="col-6">
                                     <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/outCzOuSXXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=outCzOuSXXg&feature=emb_logo" target="_blank">
+                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=outCzOuSXXg&feature=emb_logo" target="_blank" rel="noopener">
                                         Managing Assessment Users and Reports (5:02)
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
@@ -146,7 +146,7 @@
                                 This Admin Quick Setup Steps PDF gives you 3 quick steps to get your admin dashboard configured.
                             </p>
 
-                            <a class="link" href="https://drive.google.com/file/d/1oBrb95DWABjZH1LqSoKWOsJgpMuyy3Nr/view" target="_blank">
+                            <a class="link" href="https://drive.google.com/file/d/1oBrb95DWABjZH1LqSoKWOsJgpMuyy3Nr/view" target="_blank" rel="noopener">
                                 <img style="width:30px;margin-right:6px" src="~/assets/pdf-icon.svg" alt="Download the Quick Start Guide PDF">Download the Quick Start Guide
                             </a>
                         </div>
@@ -229,7 +229,7 @@
                 <div class="col-6">
                     <div class="sample-reports">
                         <h2>Additional Resources</h2>
-                        <a href="https://www.assessments24x7.com/pdfs/DISC-eWorkbook-INTERACTIVE.pdf" target="_blank">
+                        <a href="https://www.assessments24x7.com/pdfs/DISC-eWorkbook-INTERACTIVE.pdf" target="_blank" rel="noopener">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> DISC eWorkbook
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -241,7 +241,7 @@
                             </div>
                         </a>
 
-                        <a href="https://www.assessments24x7.com/PSEBook.pdf" target="_blank">
+                        <a href="https://www.assessments24x7.com/PSEBook.pdf" target="_blank" rel="noopener">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> People Smart in Business eBook
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -253,7 +253,7 @@
                             </div>
                         </a>
 
-                        <a href="https://www.assessments123.com/EndUserAdmin/RegisterMobile.aspx?mU%40e" target="_blank">
+                        <a href="https://www.assessments123.com/EndUserAdmin/RegisterMobile.aspx?mU%40e" target="_blank" rel="noopener">
                             <div class="sample">
                                 <img src="~assets/internet-icon.svg"> DISC Virtual Training
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -265,7 +265,7 @@
                             </div>
                         </a>
 
-                        <a href="https://youtu.be/wqXCukZr9LI" target="_blank">
+                        <a href="https://youtu.be/wqXCukZr9LI" target="_blank" rel="noopener">
                             <div class="sample">
                                 <img src="~assets/youtube-icon.svg"> Dr. Tony Alessandra's DISC Speech
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -277,7 +277,7 @@
                             </div>
                         </a>
 
-                        <a v-if="noframe" href="/resources/relationship-strategies-audio-program?noframe=1" target="_blank">
+                        <a v-if="noframe" href="/resources/relationship-strategies-audio-program?noframe=1" target="_blank" rel="noopener">
                             <div class="sample">
                                 <img src="~assets/internet-icon.svg"> DISC Relationship Strategies Audio Program
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -288,7 +288,7 @@
                                 </svg>
                             </div>
                         </a>
-                        <a v-else href="/resources/relationship-strategies-audio-program" target="_blank">
+                        <a v-else href="/resources/relationship-strategies-audio-program" target="_blank" rel="noopener">
                             <div class="sample">
                                 <img src="~assets/internet-icon.svg"> DISC Relationship Strategies Audio Program
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">

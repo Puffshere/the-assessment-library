@@ -29,7 +29,7 @@
                         security, data integrity, access, and 
                         enforcement. To learn more about the 
                         Safe Harbor program, and to view A24X7's 
-                        certification, please visit <a class="hyperlink" href="http://www.export.gov/safeharbor/" target="_blank">http://www.export.gov/safeharbor/</font></a>
+                        certification, please visit <a class="hyperlink" href="http://www.export.gov/safeharbor/" target="_blank" rel="noopener">http://www.export.gov/safeharbor/</font></a>
                     </p>
 
                     <h2>SAFE HARBOR</h2>
@@ -304,7 +304,7 @@
                         receive timely acknowledgment of your 
                         complaint, or if your complaint is not 
                         satisfactorily addressed by A24x7, please visit the BBB EU 
-                        SAFE HARBOR web site at <a class="hyperlink" href="https://www.auto.bbb.org/EU-Safe-Harbor-Complaint-Form/" target="_blank">
+                        SAFE HARBOR web site at <a class="hyperlink" href="https://www.auto.bbb.org/EU-Safe-Harbor-Complaint-Form/" target="_blank" rel="noopener">
                         https://www.auto.bbb.org/EU-Safe-Harbor-Complaint-Form/</a> 
                         for more information and to file a 
                         complaint.<br/><br/>

@@ -56,7 +56,7 @@
                     <div class="col-6">
                         <div class="sample-reports">
                             <h2>Motivators Sample Reports</h2>
-                            <a href="/reports/valuessamplereport.pdf" target="_blank">
+                            <a href="/reports/valuessamplereport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Motivators
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -68,7 +68,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/SampleDISCandMOT.pdf" target="_blank">
+                            <a href="/reports/SampleDISCandMOT.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> DISC + Motivators Combination
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -80,7 +80,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/motgroupgraphs.pdf" target="_blank">
+                            <a href="/reports/motgroupgraphs.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Motivators Group Graphs
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -92,7 +92,7 @@
                                 </div>
                             </a>
 
-                            <a href="/reports/motteamwheel.pdf" target="_blank">
+                            <a href="/reports/motteamwheel.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Motivators Team Wheel
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">

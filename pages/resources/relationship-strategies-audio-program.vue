@@ -46,37 +46,37 @@
             <div class="row">
                 <div class="col-6">
                     <ul class="resources">
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/01_DISC Relationship Strategies Introduction.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/01_DISC Relationship Strategies Introduction.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 01 - DISC Relationship Strategies Introduction
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/02_Open vs. Guarded Behaviors.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/02_Open vs. Guarded Behaviors.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 02 - Open vs. Guarded Behaviors
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/03_Direct vs. Indirect Behaviors.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/03_Direct vs. Indirect Behaviors.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 03 - Direct vs. Indirect Behaviors
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/04_Describing the Four DISC Styles.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/04_Describing the Four DISC Styles.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 04 - Describing the Four DISC Styles
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/05_Compatibility Among DISC Styles.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/05_Compatibility Among DISC Styles.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 05 - Compatibility Among DISC Styles
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/06_Adaptability with all Four DISC Styles.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/06_Adaptability with all Four DISC Styles.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 06 - Adaptability with all Four DISC Styles
                             </li>
@@ -86,37 +86,37 @@
 
                 <div class="col-6">
                     <ul class="resources">
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/07_Flexibility & Versatility.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/07_Flexibility & Versatility.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 07 - Flexibility & Versatility
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/08_DISC Styles and Teams.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/08_DISC Styles and Teams.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 08 - DISC Styles and Teams
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/09_Managing the Four Styles.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/09_Managing the Four Styles.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 09 - Managing the Four Styles
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/10_DISC Styles and the Sales Process – Part 1.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/10_DISC Styles and the Sales Process – Part 1.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 10 - DISC Styles and the Sales Process – Part I
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/11_DISC Styles and the Sales Process – Part 2.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/11_DISC Styles and the Sales Process – Part 2.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 11 - DISC Styles and the Sales Process – Part II
                             </li>
                         </a>
 
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/12_DISC Relationship Strategies Summary.mp3" target="_blank">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/12_DISC Relationship Strategies Summary.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 12 - DISC Relationship Strategies Summary
                             </li>

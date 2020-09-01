@@ -59,7 +59,7 @@
                     <div class="col-6">
                         <div class="sample-reports">
                             <h2>Sample Report</h2>
-                            <a href="/reports/SampleLE360.pdf" target="_blank">
+                            <a href="/reports/SampleLE360.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Leadership Effectiveness 360° (Sample Report)
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">

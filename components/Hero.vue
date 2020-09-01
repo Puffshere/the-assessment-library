@@ -70,7 +70,7 @@
                             </div>
                             
                             <div class="infusion-submit">
-                                <button type="submit" style="width: 100%; margin-top: 10px;" class="button danger">Schedule a Consultation</button>
+                                <button type="submit" style="width: 100%; margin-top: 10px;" class="button">Schedule a Consultation</button>
                             </div>
 
                             <span class="legal-form-text">
@@ -212,14 +212,7 @@
             display: block;
             font-size: 9pt;
             font-weight: 600;
-
-            &.reseller {
-                background: #0033c5;
-            }
-
-            &.corporate {
-                background: #0bab49;
-            }
+            background: #0033c5;
 
             input {
                 vertical-align: baseline;

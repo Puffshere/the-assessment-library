@@ -40,7 +40,7 @@
                 <div class="col-6">
                     <div class="sample-reports">
                         <h2>Sales IQ Sample Reports</h2>
-                        <a href="/reports/SalesIQPlus.pdf" target="_blank">
+                        <a href="/reports/SalesIQPlus.pdf" target="_blank" rel="noopener">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> Sales IQ Plus
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -52,7 +52,7 @@
                             </div>
                         </a>
 
-                        <a href="/reports/SampleDISCandMOT.pdf" target="_blank">
+                        <a href="/reports/SampleDISCandMOT.pdf" target="_blank" rel="noopener">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> Sales IQ Team Report
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
@@ -202,8 +202,8 @@
                     <div class="col-8">
                         <h3>Top Rated Assessment Tool 4 Years in a Row</h3>
                         <p>
-                            This award-winning sales skill assessment was jointly developed by best-selling authors <a href="https://cathcart.com" class="hyperlink" target="_blank" style="color:#fff">Jim Cathcart (Relationship Selling)</a>, 
-                            <a href="https://www.gitomer.com" class="hyperlink" target="_blank" style="color:#fff">Jeffrey Gitomer (The Sales Bible)</a>, and <a href="https://alessandra.com" class="hyperlink" target="_blank" style="color:#fff">Dr. Tony Alessandra (The Platinum Rule for DISC Sales Mastery)</a>. Borrowing upon the 
+                            This award-winning sales skill assessment was jointly developed by best-selling authors <a href="https://cathcart.com" class="hyperlink" target="_blank" rel="noopener" style="color:#fff">Jim Cathcart (Relationship Selling)</a>, 
+                            <a href="https://www.gitomer.com" class="hyperlink" target="_blank" rel="noopener" style="color:#fff">Jeffrey Gitomer (The Sales Bible)</a>, and <a href="https://alessandra.com" class="hyperlink" target="_blank" rel="noopener" style="color:#fff">Dr. Tony Alessandra (The Platinum Rule for DISC Sales Mastery)</a>. Borrowing upon the 
                             wisdom and experience of these three authorities, Sales IQ Plus measures a sales professional’s understanding of the 
                             strategies required to sell successfully in any environment.
                         </p><br/>

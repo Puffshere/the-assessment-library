@@ -38,13 +38,13 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPDebriefGuide.pdf" target="_blank">HVP Debrief Guide</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPDebriefGuide.pdf" target="_blank" rel="noopener">HVP Debrief Guide</nuxt-link>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
-                            <tr v-else><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVP Report Debrief Guide-NonCert_v4.pdf" target="_blank">HVP Debrief Guide</nuxt-link>
+                            <tr v-else><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVP Report Debrief Guide-NonCert_v4.pdf" target="_blank" rel="noopener">HVP Debrief Guide</nuxt-link>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Clarity.pdf" target="_blank">Clarity</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Clarity.pdf" target="_blank" rel="noopener">Clarity</nuxt-link>
                             <small>Definitions of clarity scores</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Attention.pdf" target="_blank">Attention</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Attention.pdf" target="_blank" rel="noopener">Attention</nuxt-link>
                             <small>Definitions of attention scores</small></td></tr>
                         </tbody>
                     </table>
@@ -57,13 +57,13 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/lowhvpscores.pdf" target="_blank">Coaching to Low HVP scores</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/lowhvpscores.pdf" target="_blank" rel="noopener">Coaching to Low HVP scores</nuxt-link>
                             <small>Suggestions for coaching lower Clarity and Attention scores</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPViewpoints.pdf" target="_blank">Alternative Definitions for HVP Viewpoints</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPViewpoints.pdf" target="_blank" rel="noopener">Alternative Definitions for HVP Viewpoints</nuxt-link>
                             <small>Additional language to support your explanations</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPStatementExamples.pdf" target="_blank">HVP Statement Samples</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPStatementExamples.pdf" target="_blank" rel="noopener">HVP Statement Samples</nuxt-link>
                             <small>Different statement samples for the results of clarity and attention score combinations</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/MeasurementValueRobertHartman.pdf" target="_blank">The Measurement of Value</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/MeasurementValueRobertHartman.pdf" target="_blank" rel="noopener">The Measurement of Value</nuxt-link></td></tr>
                         </tbody>
                     </table>
 
@@ -85,11 +85,11 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVP2hourFG.pdf" target="_blank">2-Hour Facilitator Guide</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVP2hourFG.pdf" target="_blank" rel="noopener">2-Hour Facilitator Guide</nuxt-link>
                             <small>Step-by-step instructions for facilitating 2-hour workshop.</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVP2HourWorkshop.pptx" target="_blank">2-Hour Presentation</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVP2HourWorkshop.pptx" target="_blank" rel="noopener">2-Hour Presentation</nuxt-link>
                             <small>Overview of Hartman Value Profile, discussion and activity and report debrief opportunity.</small></td></tr>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPProcess.pptx" target="_blank">HVP Process Presentation</nuxt-link>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPProcess.pptx" target="_blank" rel="noopener">HVP Process Presentation</nuxt-link>
                             <small>An overview PPT resource with notes that further explains what HVP is all about</small></td></tr>
                         </tbody>
                     </table>
@@ -114,8 +114,8 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Alien Baseball.pdf" target="_blank">Alien Baseball</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Fact or Opinion.pdf" target="_blank">Fact or Opinion</nuxt-link></td></tr>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Alien Baseball.pdf" target="_blank" rel="noopener">Alien Baseball</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Fact or Opinion.pdf" target="_blank" rel="noopener">Fact or Opinion</nuxt-link></td></tr>
                         </tbody>
                     </table>
 
@@ -127,10 +127,10 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/40icebreakers.pdf" target="_blank">40 Icebreakers for Small Groups</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostOnTheMoonExercise.pdf" target="_blank">Lost on the Moon Exercise</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostatSeaExercise.pdf" target="_blank">Lost at Sea Exercise</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/PaperTowerExercise.pdf" target="_blank">Paper Tower Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/40icebreakers.pdf" target="_blank" rel="noopener">40 Icebreakers for Small Groups</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostOnTheMoonExercise.pdf" target="_blank" rel="noopener">Lost on the Moon Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostatSeaExercise.pdf" target="_blank" rel="noopener">Lost at Sea Exercise</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/PaperTowerExercise.pdf" target="_blank" rel="noopener">Paper Tower Exercise</a></td></tr>
                         </tbody>
                     </table>
 
@@ -152,7 +152,7 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Critical Thinking Action Plan.docx" target="_blank">Critical Thinking Action Plan</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/Critical Thinking Action Plan.docx" target="_blank" rel="noopener">Critical Thinking Action Plan</nuxt-link></td></tr>
                         </tbody>
                     </table>
 
@@ -174,8 +174,8 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/UnderstandingHartmanValueProfile.pdf" target="_blank">Understanding Hartman Value Profile Excerpt</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPValidityResearch.pdf" target="_blank">HVP Validity and Research</nuxt-link></td></tr>
+                            <tr v-if="certified"><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/UnderstandingHartmanValueProfile.pdf" target="_blank" rel="noopener">Understanding Hartman Value Profile Excerpt</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/HVPValidityResearch.pdf" target="_blank" rel="noopener">HVP Validity and Research</nuxt-link></td></tr>
                         </tbody>
                     </table>
 
@@ -197,15 +197,15 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/PeerFeedbackForm.pdf" target="_blank">Peer Feedback Form</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/PeerFeedbackForm.pdf" target="_blank" rel="noopener">Peer Feedback Form</nuxt-link>
                             <small>For providing peer feedback during facilitator/trainer observations</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/FacilitationFeedbackGuide.pdf" target="_blank">Facilitator Feedback Guide</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/FacilitationFeedbackGuide.pdf" target="_blank" rel="noopener">Facilitator Feedback Guide</nuxt-link>
                             <small>To guide facilitator 1:1 feedback sessions with supervisor</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/CoachingGuideQuestions.pdf" target="_blank">Coaching Guide Questions</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/CoachingGuideQuestions.pdf" target="_blank" rel="noopener">Coaching Guide Questions</nuxt-link>
                             <small>Questions to coach/develop facilitators and trainers in a variety of areas including presentation skills, facilitation skills, content awareness, audience management, presence, administration, general coaching.</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/SelfFeedbackForm.pdf" target="_blank">Self-Feedback Form</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/SelfFeedbackForm.pdf" target="_blank" rel="noopener">Self-Feedback Form</nuxt-link>
                             <small>To be used to create self-awareness and growth by review of logistics and self-evaluation of training after live session or while observing recordings</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/DevelopmentPlan.docx" target="_blank">Development Plan Sample</nuxt-link>
+                            <tr><td><nuxt-link class="hyperlink" to="/hvp-trainer-materials/DevelopmentPlan.docx" target="_blank" rel="noopener">Development Plan Sample</nuxt-link>
                             <small>General development form to explore strengths and challenges and create action plans for growth.</small></td></tr>
                         </tbody>
                     </table>

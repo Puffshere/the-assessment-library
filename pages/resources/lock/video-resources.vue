@@ -33,37 +33,37 @@
             <div class="row">
                 <div class="col-6">
                     <ul class="resources">
-                        <a href="https://www.youtube.com/watch?v=_78TmA_Y-h8" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=_78TmA_Y-h8" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Using Space and Time
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=XeDe485iZXg" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=XeDe485iZXg" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Time Management Skills
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=-3UqsxgnRZ0" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=-3UqsxgnRZ0" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 The Power of Nonverbal Communication
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=aA7n9Y5XzSo" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=aA7n9Y5XzSo" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 The Power of Listening
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=nEh1hIXlcbM" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=nEh1hIXlcbM" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Silent Messages
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=GRmidQEzUUU" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=GRmidQEzUUU" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Goal Setting
                             </li>
@@ -73,31 +73,31 @@
 
                 <div class="col-6">
                     <ul class="resources">
-                        <a href="https://www.youtube.com/watch?v=dnlnz6eaMRM" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=dnlnz6eaMRM" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Expanding Your Vision &amp; Ideas
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=qfD6ZFWUAKY" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=qfD6ZFWUAKY" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Effective Presentation Skills
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=JiNvF-FB2jU" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=JiNvF-FB2jU" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 10 Versatility Traits
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=mw0iTwGNRFU" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=mw0iTwGNRFU" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 10 Flexibility Traits
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=o4is7gYDMY0" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=o4is7gYDMY0" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Developing Your Charisma
                             </li>

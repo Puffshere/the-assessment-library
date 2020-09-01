@@ -31,7 +31,7 @@
                        by example in this otherwise unregulated industry. How are we doing this? By submitting our 
                        assessments to an objective, independently conducted battery of tests: Construct Validity, 
                        Reliability, and Disparate Impact - all by a qualified scientific authority 
-                       <a class="hyperlink" href="https://assessmentinstitute.org" target="_blank">(Assessment Standards Institute)</a>. Our goal? Ensuring the trust and confidence of our users by 
+                       <a class="hyperlink" href="https://assessmentinstitute.org" target="_blank" rel="noopener">(Assessment Standards Institute)</a>. Our goal? Ensuring the trust and confidence of our users by 
                        producing the industry’s most accurate and class protected assessments. 
                     </p>
                 </div>
@@ -143,9 +143,9 @@
                 <div class="col-12">
                     <h3>Independent & Verifiable Testing by a Qualified Institution</h3>
                     <p>
-                        The <a class="hyperlink" href="https://assessmentinstitute.org" target="_blank">Assessment Standards Institute (ASI)</a> provides our assessments with verifiably objective 
-                        testing and reporting that meet standards set by the <a class="hyperlink" href="https://apa.org" target="_blank">American Psychological 
-                        Association (APA)</a> and the <a class="hyperlink" href="https://eeoc.gov" target="_blank">Equal Employment Opportunity Commission (EEOC)</a>.
+                        The <a class="hyperlink" href="https://assessmentinstitute.org" target="_blank" rel="noopener">Assessment Standards Institute (ASI)</a> provides our assessments with verifiably objective 
+                        testing and reporting that meet standards set by the <a class="hyperlink" href="https://apa.org" target="_blank" rel="noopener">American Psychological 
+                        Association (APA)</a> and the <a class="hyperlink" href="https://eeoc.gov" target="_blank" rel="noopener">Equal Employment Opportunity Commission (EEOC)</a>.
                         This battery of tests is both voluntary and verifiably transparent. Our goal? To ensure this assessment’s professional merit 
                         and scientific accuracy for you, the user. These reports are readily available upon request and include:
                     </p>

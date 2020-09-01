@@ -23,7 +23,7 @@
                         <div class="domain" v-for="domain in domains" :key="domain.name">
                             <div class="icon" :style="`background: url('/domains/${domain.icon}')`"></div>
                             <div class="info">
-                                <a class="link" :href="domain.url" target="_blank">
+                                <a class="link" :href="domain.url" target="_blank" rel="noopener">
                                     <h2 class="name">{{ domain.name }}</h2>
                                     <p class="url">{{ domain.url }}</p>
                                 </a>
