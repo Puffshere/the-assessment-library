@@ -2,7 +2,7 @@
     <header v-if="!hidden">
         <div class="info-bar">
             <p>
-                <strong>Important Update:</strong> Please visit our <nuxt-link class="hyperlink" to="/resources/covid">COVID-19 Resources</nuxt-link> page for useful information and updates.
+                <strong>Upcoming Event:</strong> Join us for an overview of our exciting new product, HireSense! <a class="hyperlink light" href="https://us02web.zoom.us/webinar/register/WN_x3JOpnjiR6Cm-mniReUUmw" target="_blank">Free Webinar Registration &rarr;</a>
             </p>
         </div>
 
@@ -383,12 +383,13 @@
         transition: all .3s ease-in-out;
 
         .info-bar {
-            background-color: #ffbd07;
+            background-color: #00a8ff;
             text-align: center;
-            padding: 10px 0;
+            padding: 10px;
+            color: #fff;
 
             .hyperlink {
-                box-shadow: inset 0 -3px 0 0 rgba(51, 51, 51, .3);
+                box-shadow: inset 0 -3px 0 0 rgba(255, 255, 255, .3);
             }
             
             p {

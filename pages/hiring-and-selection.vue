@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img style="max-width: 500px;width: 100%;" src="~/assets/insights-gps.png">
+                        <img style="max-width: 500px;width: 100%;" src="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/logo-white.svg">
                     </div>
                 </div>
             </div>
@@ -15,25 +15,32 @@
         <div class="container" style="margin-bottom: 60px">
             <div class="row">
                 <div class="col-8">
-                    <iframe style="width:100%" height="360" src="https://www.youtube.com/embed/GcBW8qkUCUg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
                     <h1 class="title">Revolutionary Hiring &amp; Selection Service</h1>
                     <h2 class="sub-title">Hire the right person, for the right job, the first time.</h2>
 
                     <p>
-                        Leverage our team's 20+ years' experience and revolutionary Insights GPS (Global Perspective System) technology 
-                        to identify the RIGHT PERSON, for the RIGHT JOB, the FIRST TIME. Insights GPS integrates our scientifically 
+                        Leverage our team's 20+ years' experience and revolutionary HireSense technology 
+                        to identify the RIGHT PERSON, for the RIGHT JOB, the FIRST TIME. HireSense integrates our scientifically 
                         validated DISC, Motivators, and Critical Thinking assessments for a "Global Perspective" of every candidate's 
                         Behavioral Style, Motivational Style, and Thinking Style. 
-                    </p>
-                    <br/>
-
+                    </p><br/>
                     <nuxt-link to="/contact" class="button">Schedule a Free Consultation</nuxt-link>
                     <nuxt-link to="/assessments" class="button secondary">Assessment Solutions</nuxt-link>
+
+                    <h2 class="sub-title" style="font-weight:600;font-size:16pt;margin-bottom:-10px;margin-top:60px">
+                        <img src="~/assets/zoom-icon.png" style="width:40px;"> Join the Zoom Webinar 9/16/20
+                    </h2>
+
+                    <p>
+                        Join us for an overview of our exciting new product, HireSense! We’ve leveraged our years of profiling experience to create a 
+                        hiring and selection product that looks behind the interview mask to see what’s missing from the resume.
+                    </p>
+
+                    <a href="https://us02web.zoom.us/webinar/register/WN_x3JOpnjiR6Cm-mniReUUmw" target="_blank" class="hyperlink">Free Webinar Registration &rarr;</a>
                 </div>
 
                 <div class="col-4">
-                    <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="~/assets/insights-gps-screenshots/ss1.PNG">
+                    <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/screenshots/hiresense-ss-1.png">
                 </div>
             </div>
         </div>
@@ -46,9 +53,9 @@
                     </div>
 
                     <div class="col-7">
-                        <h3>Finding the Right Talent Is Hard. Insights GPS Makes It Easier.</h3>
+                        <h3>Finding the Right Talent Is Hard. HireSense Makes It Easier.</h3>
                         <p>
-                            Using our Insights GPS technology combined with our 30+ years of experience, we can help make selecting the 
+                            Using our HireSense technology combined with our 30+ years of experience, we can help make selecting the 
                             ideal candidate more efficient, cost less, and save time. More importantly, you'll be confident that you've 
                             found the best fit for your company.
                         </p><br/>
@@ -138,7 +145,7 @@
                     <div class="col-12">
                         <h3>Amazing Insights On-The-Go</h3>
                         <p>
-                            When you begin to use Insights GPS as part of your hiring and selection process, you will have access to our mobile app that puts all of the data 
+                            When you begin to use HireSense as part of your hiring and selection process, you will have access to our mobile app that puts all of the data 
                             from the candidate's reports in the palm of your hand. You can access everything you need to make an informed decision or examine important 
                             insights anywhere and anytime from your mobile device. There are even suggested interview questions to help you learn more about each candidate's 
                             skills, experience, behavior, motivation, and critical thinking capacities.
@@ -148,19 +155,19 @@
 
                 <div class="row">
                     <div class="col-3">
-                        <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="~/assets/insights-gps-screenshots/ss2.PNG">
+                        <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/screenshots/hiresense-ss-6.png">
                     </div>
 
                     <div class="col-3">
-                        <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="~/assets/insights-gps-screenshots/ss3.PNG">
+                        <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/screenshots/hiresense-ss-3.png">
                     </div>
 
                     <div class="col-3">
-                        <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="~/assets/insights-gps-screenshots/ss4.PNG">
+                        <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/screenshots/hiresense-ss-4.png">
                     </div>
 
                     <div class="col-3">
-                        <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="~/assets/insights-gps-screenshots/ss5.PNG">
+                        <img style="margin:0 auto;display:block;width:250px;box-shadow:0 0 20px rgba(0,0,0,0.1);border-radius:20px" src="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/screenshots/hiresense-ss-5.png">
                     </div>
                 </div>
             </div>
@@ -176,16 +183,13 @@
                     <div class="col-7">
                         <h3>What People Are Saying</h3>
                         <p>
-                            <em>"We are very happy with Insights GPS. Not only did we save a significant amount of money, but more importantly it saved us time in the hiring process to 
-                            find the right employee for what we needed. All our future candidates will now be going through Insights GPS first."</em><br/>
+                            <em>"We are very happy with HireSense. Not only did we save a significant amount of money, but more importantly it saved us time in the hiring process to 
+                            find the right employee for what we needed. All our future candidates will now be going through HireSense first."</em><br/>
                         </p>
                         <p>
-                            <strong>
-                                Brian Jones</strong><br/>
-                                AV Department Manager | IES Communications, LLC
-
-                            
-                            </p>
+                            <strong>Brian Jones</strong><br/>
+                            AV Department Manager | IES Communications, LLC
+                        </p>
                     </div>
                 </div>
             </div>
@@ -226,12 +230,12 @@
         },
         head() {
             return {
-                title: 'Insights GPS Hiring & Selection Service | Assessments 24x7',
+                title: 'HireSense Hiring & Selection Service | Assessments 24x7',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Leverage our team\'s 30+ years experience and revolutionary Insights GPS (Global Perspective System) technology to identify the RIGHT PERSON, for the RIGHT JOB, the FIRST TIME.'
+                        content: 'Leverage our team\'s 30+ years experience and revolutionary HireSense technology to identify the RIGHT PERSON, for the RIGHT JOB, the FIRST TIME.'
                     }
                 ],
                 __dangerouslyDisableSanitizers: ['script'],
@@ -249,8 +253,9 @@
 <style lang="scss" scoped>
     .hiring-and-selection {
         .header {
-            background: url('~assets/about.jpg');
+            background: url('~assets/header.jpg');
             background-size: cover;
+            background-position-y: 70%;
             color: #fff;
             text-align: center;
             padding: 70px 0;
