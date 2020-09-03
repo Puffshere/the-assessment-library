@@ -37,6 +37,7 @@
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCPlus.pdf" target="_blank" rel="noopener">DISC Plus</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf" target="_blank" rel="noopener">DISC 360</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySampleReport.pdf" target="_blank" rel="noopener">DISC Summary</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SAMPLE-DISC-SALES-SUMMARY.pdf" target="_blank" rel="noopener">DISC Sales Summary</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/BiblicalSample.pdf" target="_blank" rel="noopener">Biblical DISC</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TakeFlightSample.pdf" target="_blank" rel="noopener">Taking Flight with DISC - Birds</a></td></tr>
                         </tbody>
