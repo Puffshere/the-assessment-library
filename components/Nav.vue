@@ -2,7 +2,7 @@
     <header v-if="!hidden">
         <div class="info-bar">
             <p>
-                <strong>Upcoming Event:</strong> Join us for an overview of our exciting new product, HireSense! <a class="hyperlink light" href="https://us02web.zoom.us/webinar/register/WN_x3JOpnjiR6Cm-mniReUUmw" target="_blank" rel="noopener">Free Webinar Registration &rarr;</a>
+                <strong>Introducing Our New Product:</strong> HireSense! Identify the right person, for the right job, the first time. <a class="hyperlink light" href="https://www.hiresense.com" target="_blank" rel="noopener">Hire better with HireSense &rarr;</a>
             </p>
         </div>
 
