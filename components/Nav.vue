@@ -67,24 +67,8 @@
                                 </ul>
                             </li>
 
-                            <!--<li class="nav-item" @mouseover="hover.selection = true" @mouseleave="hover.selection = false">
-                                <a href="/" :class="{ active: active == 'hiring' }">Hiring & Selection</a>
-
-                                <ul :class="{ active: hover.selection, 'sub-nav-category': true }">
-                                    <span class="title">Insights Products</span>
-                                    
-                                    <li class="sub-nav-item">
-                                        <a href="/assessments/insights-gps">Insights GPS</a>
-                                    </li>
-
-                                    <li class="sub-nav-item">
-                                        <a href="/assessments/insights-gps">Insights Selection & Screening</a>
-                                    </li>
-                                </ul>
-                            </li>-->
-
                             <li class="nav-item">
-                                <a href="/hiring-and-selection" :class="{ active: active == 'hiring' }">Hiring &amp; Selection</a>
+                                <a href="https://www.hiresense.com" target="_blank" rel="noopener">Hiring &amp; Selection</a>
                             </li>
                             
                             <li class="nav-item" @mouseover="hover.training = true" @mouseleave="hover.training = false">
@@ -241,7 +225,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a href="/hiring-and-selection">Hiring & Selection</a>
+                    <a href="https://www.hiresense.com" target="_blank" rel="noopener">Hiring & Selection</a>
                 </li>
 
                 <li class="nav-item">
