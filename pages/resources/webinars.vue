@@ -8,7 +8,7 @@
                     <div class="col-12">
                         <h1 class="section-title">Assessments 24x7 Webinars</h1>
                         <p>
-                            For 20+ years, we have provided consultants, coaches, and corporations the tools to optimize hiring processes, and maximize 
+                            For 20+ years, we have provided consultants, coaches, and corporations the tools to optimize hiring processes and maximize 
                             performance. Our validated assessments, flexible platform, and exceptional support have positioned us as a "Global Leader in 
                             Assessment Technology."
                         </p>

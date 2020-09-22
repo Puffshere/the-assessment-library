@@ -6,7 +6,7 @@
                     <img class="logo" src="~assets/logo-footer.png" alt="Assessments 24x7 - Global Leader in Assessment Technology">
                     <p class="about-text">
                         For 20+ years, we have provided consultants, 
-                        coaches, and corporations the tools to optimize hiring processes, 
+                        coaches, and corporations the tools to optimize hiring processes 
                         and maximize performance. Our validated assessments, 
                         flexible platform, and exceptional support have positioned us as 
                         a "Global Leader in Assessment Technology."

@@ -307,20 +307,22 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf" target="_blank" rel="noopener">Team Dynamics Report</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportDutch.pdf" target="_blank" rel="noopener">Team Dynamics Report - Dutch</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupFrenchSampleReport.pdf" target="_blank" rel="noopener">Team Dynamics Report - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportPort.pdf" target="_blank" rel="noopener">Team Dynamics Report - Portuguese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportSwedish.pdf" target="_blank" rel="noopener">Team Dynamics Report - Swedish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportVietnamese.pdf" target="_blank" rel="noopener">Team Dynamics Report - Vietnamese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf" target="_blank" rel="noopener">Team Summary Report</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportDutch.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - Dutch</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupFrenchSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - French</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportPort.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - Portuguese</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportSwedish.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - Swedish</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportVietnamese.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - Vietnamese</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportGraphs.pdf" target="_blank" rel="noopener">DISC Group Graphs</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motgroupgraphs.pdf" target="_blank" rel="noopener">Motivators Group Graphs</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportBT.pdf" target="_blank" rel="noopener">Behavioral Tendencies</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportIntegratedBehaviors.pdf" target="_blank" rel="noopener">Integrated Behaviors</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportBT.pdf" target="_blank" rel="noopener">DISC Behavioral Tendencies</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportIntegratedBehaviors.pdf" target="_blank" rel="noopener">DISC Integrated Behaviors</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">DISC Team Wheel</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf" target="_blank" rel="noopener">Motivators Team Wheel</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCMatching.pdf" target="_blank" rel="noopener">DISC Collaboration</a></td></tr>
+
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motgroupgraphs.pdf" target="_blank" rel="noopener">Motivators Group Graphs</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf" target="_blank" rel="noopener">Motivators Team Wheel</a></td></tr>
+                            
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf" target="_blank" rel="noopener">Sales IQ Team Report - French</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf" target="_blank" rel="noopener">Sales IQ Team Report - Turkish</a></td></tr>
