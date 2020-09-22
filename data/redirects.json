@@ -294,5 +294,9 @@
     {
         "from": "/core-assessment-certifications.asp",
         "to": "/certifications/assessment"
+    },
+    {
+        "from": "/resources/covid",
+        "to": "/resources/webinars"
     }
 ]

@@ -149,6 +149,10 @@
                                     </li>
 
                                     <li class="sub-nav-item">
+                                        <a href="/resources/webinars">Webinars</a>
+                                    </li>
+
+                                    <li class="sub-nav-item">
                                         <a href="/store/disc-profiler-deck">Profiler Card Deck</a>
                                     </li>
 
@@ -295,6 +299,10 @@
 
                 <li class="nav-item indent">
                     <a href="/about/validity">Validity Studies</a>
+                </li>
+
+                <li class="nav-item indent">
+                    <a href="/resources/webinars">Webinars</a>
                 </li>
 
                 <li class="nav-item indent">

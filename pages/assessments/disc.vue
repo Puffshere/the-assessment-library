@@ -336,6 +336,8 @@
             </div>
         </section>
 
+        <rebecca-maxwell style="margin-top:-80px;margin-bottom:80px;"/>
+
         <section class="faq">
             <div class="container">
                 <div class="row">
@@ -477,12 +479,14 @@
 <script>
     import Nav from '../../components/Nav';
     import ValidationMini from '../../components/ValidationMini';
+    import RebeccaMaxwell from '../../components/testimonials/RebeccaMaxwell';
     import Footer from '../../components/Footer';
 
     export default {
         components: {
             'main-nav': Nav,
             'validation-mini': ValidationMini,
+            'rebecca-maxwell': RebeccaMaxwell,
             'footer-fold': Footer
         },
         head() {

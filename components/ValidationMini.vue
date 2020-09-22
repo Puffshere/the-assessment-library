@@ -24,6 +24,72 @@
                     <nuxt-link to="/about/validity" class="hyperlink">Learn More About Our Assessment Validation &rarr;</nuxt-link>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="review-container">
+                        <div class="col-4">
+                            <div class="review">
+                                <div class="review-avatar ellie-gates lazyload"></div>
+                                <div class="social-icon">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                </div>
+                                <div class="review-stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <p class="review-name"><strong>Ellie Gates</strong> - ActionCOACH Partner</p>
+                                <p class="review-body">They provide great assessments to help you understand deeper facets of who you are so you can lead more effectively!</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="review">
+                                <div class="review-avatar felicia-miller-johnson lazyload"></div>
+                                <div class="social-icon">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                </div>
+                                <div class="review-stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <p class="review-name"><strong>Felicia Miller Johnson</strong> - Sevenfold Coaching</p>
+                                <p class="review-body">I enjoy the quality of assessments, ease of administering them, and their customer service. It is a great resource for my business.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="review">
+                                <div class="review-avatar lorraine-terry lazyload"></div>
+                                <div class="social-icon">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                </div>
+                                <div class="review-stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <p class="review-name"><strong>Lorraine Terry</strong> - LivingByDesign</p>
+                                <p class="review-body">I highly recommend Assessments 24x7 LLC for their invaluable Assessments, excellent training & exceptional customer service! I am proud to be their #18 Advanced Certified Practitioner.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <nuxt-link to="/about/testimonials" class="button outline light">More Customer Reviews &rarr;</nuxt-link>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -54,6 +120,68 @@
             text-align: center;
             margin-top: 0;
             margin-bottom: 10px;
+        }
+
+        .review-container {
+            margin-top: 20px;
+
+            .review {
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                border-radius: 10px;
+                padding: 5px 10px;
+                background: #fff;
+                position: relative;
+                min-height: 210px;
+                max-height: 210px;
+                margin-bottom: 26px;
+
+                .review-avatar {
+                    width: 62px;
+                    height: 62px;
+                    background-size: cover !important;
+                    border-radius: 50%;
+                    position: absolute;
+                    margin-left: -18px;
+                    margin-top: -11px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                    border: 2px solid #fff;
+                }
+
+                .lazyloaded {
+                    &.ellie-gates { background: url('~assets/review-avatars/ellie-gates.jpg'); }
+                    &.felicia-miller-johnson { background: url('~assets/review-avatars/felicia-miller-johnson.jpg'); }
+                    &.lorraine-terry { background: url('~assets/review-avatars/lorraine-terry.jpeg'); }
+                }
+
+                .social-icon img {
+                    width: 24px;
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                }
+
+                .review-stars {
+                    margin-left: 56px;
+                    margin-top: 8px;
+
+                    .star {
+                        color: #ffffff;
+                        font-size: 14pt;
+                        background: $color-i;
+                        padding: 0 5px;
+                    }
+                }
+
+                .review-name {
+                    margin: 22px 0 0;
+                    font-size: 11pt;
+                }
+
+                .review-body {
+                    font-size: 10pt;
+                    margin-top: 6px;
+                }
+            }
         }
     }
 </style>

@@ -141,6 +141,36 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
+                            <img class="image" src="~/assets/testimonials/rebecca-maxwell.jpg" alt="Rebecca Maxwell">
+                        </div>
+
+                        <div class="col-9">
+                            <div class="review-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <h3 class="name">Rebecca Maxwell</h3>
+                            <p class="attribution">
+                                Asentiv New York
+                            </p>
+                            <p class="quote">
+                                Having online assessments available at the touch of a button has added even greater depth to our coaching & consulting work 
+                                and - most importantly - better results for our clients. We're delighted to be partnering with Assessments 24x7 as we 
+                                expand our services - and our team!
+                            </p>
+                            <br/><br/>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="review">
+                        <div class="col-3">
                             <img class="image" src="~/assets/testimonials/kevin-mccarthy.jpg" alt="Kevin McCarthy">
                         </div>
 
