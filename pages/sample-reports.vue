@@ -297,7 +297,7 @@
                         </tbody>
                     </table>
 
-                    <h2>Team Reports</h2>
+                    <h2>DISC Team Reports</h2>
 
                     <table style="width:100%">
                         <thead>
@@ -319,10 +319,34 @@
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportIntegratedBehaviors.pdf" target="_blank" rel="noopener">DISC Integrated Behaviors</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">DISC Team Wheel</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCMatching.pdf" target="_blank" rel="noopener">DISC Collaboration</a></td></tr>
+                        </tbody>
+                    </table>
 
+                    <h2>Motivators Team Reports</h2>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Sample Report</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motgroupgraphs.pdf" target="_blank" rel="noopener">Motivators Group Graphs</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf" target="_blank" rel="noopener">Motivators Team Wheel</a></td></tr>
-                            
+                        </tbody>
+                    </table>
+
+                    <h2>Sales IQ Team Reports</h2>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Sample Report</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>                            
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf" target="_blank" rel="noopener">Sales IQ Team Report - French</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf" target="_blank" rel="noopener">Sales IQ Team Report - Turkish</a></td></tr>
