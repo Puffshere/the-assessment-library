@@ -32,6 +32,7 @@
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCselfSampleReport.pdf" target="_blank" rel="noopener">DISC Self</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesDISCselfSampleReport.pdf" target="_blank" rel="noopener">DISC Sales</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipSampleReport.pdf" target="_blank" rel="noopener">DISC Leadership</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipSummary.pdf" target="_blank" rel="noopener">DISC Leadership Summary</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCoaching.pdf" target="_blank" rel="noopener">DISC Coaching</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCService.pdf" target="_blank" rel="noopener">DISC Service</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCPlus.pdf" target="_blank" rel="noopener">DISC Plus</a></td></tr>
