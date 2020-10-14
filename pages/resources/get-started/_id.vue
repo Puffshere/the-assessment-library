@@ -1,7 +1,7 @@
 <template>
     <section class="get-started">
         <main-nav/>
-        <account-modal v-if="id !== 'ccc'" :id="id"/>
+        <account-modal v-if="id !== 'ccc' && id !== 'tonyrobbins'" :id="id"/>
 
         <section class="header">
             <div class="container">
@@ -13,7 +13,11 @@
                         <img v-else-if="id === 'engageandgrow'" src="~/assets/get-started/engage-and-grow.png" alt="Engage and Grow" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png" alt="Southwestern Consulting" class="partner-logo">
                         <h1 class="section-title">Get Started</h1>
-                        <p>
+
+                        <p v-if="id === 'tonyrobbins'">
+                            Welcome to your personal Tony Robbins DISC and Motivators assessment dashboard. Here are the steps for getting started. 
+                        </p>
+                        <p v-else>
                             Welcome to your personal coaching dashboard! We invite you to view any and all materials that look interesting to you, 
                             but if you’d like some guidance, follow our suggested steps below.
                         </p>
@@ -27,7 +31,12 @@
                 <div class="col-12">
                     <h2>Quick Start Guide</h2>
 
-                    <p>
+                    <p v-if="id === 'tonyrobbins'">
+                        Welcome to your personal Tony Robbins DISC and Motivators assessment dashboard! Be sure to have a look at the announcements on the 
+                        left side of your dashboard. We invite you to view any and all materials that look interesting to you, but if you’d like some 
+                        guidance, follow our suggested steps below.
+                    </p>
+                    <p v-else>
                         Welcome to your personal coaching dashboard! Be sure to have a look at the announcements on the left side of your dashboard. 
                         We invite you to view any and all materials that look interesting to you, but if you’d like some guidance, follow our 
                         suggested steps below.
@@ -35,187 +44,318 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="step">
-                        <div class="icon">1</div>
-                        
-                        <div class="body">
-                            <h3 class="title">
-                                Sign in to your account
-                            </h3>
+            <section v-if="id === 'tonyrobbins'" class="steps">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">1</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Don't have an account yet?
+                                </h3>
 
-                            <p class="text">
-                                Is this your first time logging in? You will need to update your password!
-                                <span v-if="id !== 'ccc'">Don't have an account? <a href="#" class="hyperlink" @click="$nuxt.$emit('openAccountModal')">Click here</a></span>
-                            </p>
+                                <p class="text">
+                                    Don't have an account yet? Set your account up and it will be available immediately. Already have an account? You can sign in using the button below.
+                                </p><br/>
 
-                            <a class="link" :href="`https://${url}`" target="_blank" rel="noopener">https://{{url}}</a>
+                                <a class="button" href="https://assessment.tonyrobbins.com/register_acct.aspx" target="_blank" rel="noopener">Set up your account</a>
+                                <a class="button secondary" href="https://assessment.tonyrobbins.com/account" target="_blank" rel="noopener">Already have an account? Sign in</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="step">
-                        <div class="icon">2</div>
-                        
-                        <div class="body">
-                            <h3 class="title">
-                                Watch the “Virtual Tour of Your Account” videos
-                            </h3>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">2</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Quick start video
+                                </h3>
 
-                            <p class="text">
-                                These videos can also be found in the "Resource Center" on your account dashboard page.
-                            </p><br/>
+                                <p class="text">
+                                    Log in and send DISC and Motivator assessments. <a class="hyperlink" href="#" target="_blank" rel="noopener">Download 
+                                    the quick start guide</a> for a PDF version of these instructions.
+                                </p><br/>
 
-                            <div class="row">
-                                <div class="col-6">
-                                    <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/b0ee18iEhkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=b0ee18iEhkU&feature=emb_logo" target="_blank" rel="noopener">
-                                        General Account Settings (2:00)
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
-                                                <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
-                                                    <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/b0ee18iEhkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <a class="hyperlink" href="https://www.youtube.com/watch?v=b0ee18iEhkU&feature=emb_logo" target="_blank" rel="noopener">
+                                            Quick Start Video (2:00)
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
+                                                    <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
+                                                        <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
+                                                    </g>
                                                 </g>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </div>
+                                            </svg>
+                                        </a>&nbsp;&nbsp;
 
-                                <div class="col-6">
-                                    <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/0XRVr4fc8sc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=0XRVr4fc8sc&feature=emb_logo" target="_blank" rel="noopener">
-                                        Features on Your Home Page (5:07)
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
-                                                <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
-                                                    <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
+                                        <a class="hyperlink" href="#" target="_blank" rel="noopener">
+                                            Quick Start PDF
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
+                                                    <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
+                                                        <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
+                                                    </g>
                                                 </g>
-                                            </g>
-                                        </svg>    
-                                    </a>
-                                </div>
-
-                                <div class="col-6">
-                                    <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/-wcs-p1FFps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=-wcs-p1FFps&feature=emb_logo" target="_blank" rel="noopener">
-                                        Setting Up Assessment Access Links (8:05)
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
-                                                <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
-                                                    <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </div>
-
-                                <div class="col-6">
-                                    <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/outCzOuSXXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=outCzOuSXXg&feature=emb_logo" target="_blank" rel="noopener">
-                                        Managing Assessment Users and Reports (5:02)
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
-                                                <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
-                                                    <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </a>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="step">
-                        <div class="icon">3</div>
-                        
-                        <div class="body">
-                            <h3 class="title">
-                                Download the Admin Quick Setup Steps
-                            </h3>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">3</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Assessment dashboard
+                                </h3>
 
-                            <p class="text">
-                                This Admin Quick Setup Steps PDF gives you 3 quick steps to get your admin dashboard configured.
-                            </p>
+                                <p class="text">
+                                    Run Group and Team Reports. Personalize your branding. Create Collaboration reports. Set up additional assessment links.
+                                </p><br/>
 
-                            <a class="link" href="https://drive.google.com/file/d/1oBrb95DWABjZH1LqSoKWOsJgpMuyy3Nr/view" target="_blank" rel="noopener">
-                                <img style="width:30px;margin-right:6px" src="~/assets/pdf-icon.svg" alt="Download the Quick Start Guide PDF">Download the Quick Start Guide
-                            </a>
+                                <a class="button" href="https://vault.assessments24x7.com/virtualtour.asp" target="_blank" rel="noopener">Take the full virtual tour</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="step">
-                        <div class="icon">4</div>
-                        
-                        <div class="body">
-                            <h3 class="title">
-                                Review Trainer Resources
-                            </h3>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">4</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    FREE DISC and Motivator training materials
+                                </h3>
 
-                            <p class="text">
-                                In the Resource Center module, review the available training materials. These materials are for your education and can also be used as marketing 
-                                and training materials for your clients. These educational materials are a great opportunity for you to run sessions for your clients.
-                            </p>
+                                <p class="text">
+                                    Access to DISC and Motivator training materials are located on your account dashboard. These are full of PowerPoints, 
+                                    group exercises, debrief guides, videos, audio recordings, and etc.
+                                </p>
 
-                            <img style="width:100%;max-width:700px;margin:20px auto 0;display:block" src="~/assets/resource-center-ss.jpg">
+                                <img style="width:100%;max-width:700px;margin:20px auto 0;display:block" src="~/assets/resource-center-ss-tr.png">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="step">
-                        <div class="icon">5</div>
-                        
-                        <div class="body">
-                            <h3 class="title">
-                                Take Demo Assessment(s)
-                            </h3>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">5</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Need more guidance?
+                                </h3>
 
-                            <p class="text">
-                                We recommend taking demo assessments to learn more about a particular assessment. You can do this by clicking on the DEMO ASSESSMENTS button in your 
-                                resource center on the home page of your account.
-                            </p>
-
-                            <img style="width:100%;max-width:700px;margin:20px auto 0;display:block" src="~/assets/demo-assessments-ss.jpg">
+                                <p class="text">
+                                    If you require further information or need assistance about your account, schedule time with your Assessments 24x7 
+                                    Coach or email <a class="hyperlink" href="mailto:support@assessments.ws">support@assessments.ws</a>.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="step">
-                        <div class="icon">6</div>
-                        
-                        <div class="body">
-                            <h3 class="title">
-                                Get Started
-                            </h3>
+            <section v-else class="steps">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">1</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Sign in to your account
+                                </h3>
 
-                            <p class="text">
-                                Identify at least one customer who you believe can benefit from one or more of your assessments and send them a sample link to take it.
-                                Would you like a personalized dashboard tour? Contact us at <a href="mailto:support@assessments.ws" class="hyperlink">support@assessments.ws</a>
-                            </p>
+                                <p class="text">
+                                    Is this your first time logging in? You will need to update your password!
+                                    <span v-if="id !== 'ccc'">Don't have an account? <a href="#" class="hyperlink" @click="$nuxt.$emit('openAccountModal')">Click here</a></span>
+                                </p>
+
+                                <a class="link" :href="`https://${url}`" target="_blank" rel="noopener">https://{{url}}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">2</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Watch the “Virtual Tour of Your Account” videos
+                                </h3>
+
+                                <p class="text">
+                                    These videos can also be found in the "Resource Center" on your account dashboard page.
+                                </p><br/>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/b0ee18iEhkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <a class="hyperlink" href="https://www.youtube.com/watch?v=b0ee18iEhkU&feature=emb_logo" target="_blank" rel="noopener">
+                                            General Account Settings (2:00)
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
+                                                    <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
+                                                        <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/0XRVr4fc8sc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <a class="hyperlink" href="https://www.youtube.com/watch?v=0XRVr4fc8sc&feature=emb_logo" target="_blank" rel="noopener">
+                                            Features on Your Home Page (5:07)
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
+                                                    <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
+                                                        <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
+                                                    </g>
+                                                </g>
+                                            </svg>    
+                                        </a>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/-wcs-p1FFps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <a class="hyperlink" href="https://www.youtube.com/watch?v=-wcs-p1FFps&feature=emb_logo" target="_blank" rel="noopener">
+                                            Setting Up Assessment Access Links (8:05)
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
+                                                    <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
+                                                        <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/outCzOuSXXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <a class="hyperlink" href="https://www.youtube.com/watch?v=outCzOuSXXg&feature=emb_logo" target="_blank" rel="noopener">
+                                            Managing Assessment Users and Reports (5:02)
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
+                                                    <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
+                                                        <path d="M73.7883228,16 L44.56401,45.2243128 C42.8484762,46.9398466 42.8459918,49.728257 44.5642987,51.4465639 C46.2791092,53.1613744 49.0684023,53.1650001 50.7865498,51.4468526 L80,22.2334024 L80,32.0031611 C80,34.2058797 81.790861,36 84,36 C86.2046438,36 88,34.2105543 88,32.0031611 L88,11.9968389 C88,10.8960049 87.5527117,9.89722307 86.8294627,9.17343595 C86.1051125,8.44841019 85.1063303,8 84.0031611,8 L63.9968389,8 C61.7941203,8 60,9.790861 60,12 C60,14.2046438 61.7894457,16 63.9968389,16 L73.7883228,16 L73.7883228,16 Z M88,56 L88,36.9851507 L88,78.0296986 C88,83.536144 84.0327876,88 79.1329365,88 L16.8670635,88 C11.9699196,88 8,83.5274312 8,78.0296986 L8,17.9703014 C8,12.463856 11.9672124,8 16.8670635,8 L59.5664682,8 L40,8 C42.209139,8 44,9.790861 44,12 C44,14.209139 42.209139,16 40,16 L18.2777939,16 C17.0052872,16 16,17.1947367 16,18.668519 L16,77.331481 C16,78.7786636 17.0198031,80 18.2777939,80 L77.7222061,80 C78.9947128,80 80,78.8052633 80,77.331481 L80,56 C80,53.790861 81.790861,52 84,52 C86.209139,52 88,53.790861 88,56 L88,56 Z" sketch:type="MSShapeGroup" data-v-738fae98=""></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">3</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Download the Admin Quick Setup Steps
+                                </h3>
+
+                                <p class="text">
+                                    This Admin Quick Setup Steps PDF gives you 3 quick steps to get your admin dashboard configured.
+                                </p>
+
+                                <a class="link" href="https://drive.google.com/file/d/1oBrb95DWABjZH1LqSoKWOsJgpMuyy3Nr/view" target="_blank" rel="noopener">
+                                    <img style="width:30px;margin-right:6px" src="~/assets/pdf-icon.svg" alt="Download the Quick Start Guide PDF">Download the Quick Start Guide
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">4</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Review Trainer Resources
+                                </h3>
+
+                                <p class="text">
+                                    In the Resource Center module, review the available training materials. These materials are for your education and can also be used as marketing 
+                                    and training materials for your clients. These educational materials are a great opportunity for you to run sessions for your clients.
+                                </p>
+
+                                <img style="width:100%;max-width:700px;margin:20px auto 0;display:block" src="~/assets/resource-center-ss.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">5</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Take Demo Assessment(s)
+                                </h3>
+
+                                <p class="text">
+                                    We recommend taking demo assessments to learn more about a particular assessment. You can do this by clicking on the DEMO ASSESSMENTS button in your 
+                                    resource center on the home page of your account.
+                                </p>
+
+                                <img style="width:100%;max-width:700px;margin:20px auto 0;display:block" src="~/assets/demo-assessments-ss.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">6</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Get Started
+                                </h3>
+
+                                <p class="text">
+                                    Identify at least one customer who you believe can benefit from one or more of your assessments and send them a sample link to take it.
+                                    Would you like a personalized dashboard tour? Contact us at <a href="mailto:support@assessments.ws" class="hyperlink">support@assessments.ws</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div v-if="id !== 'tonyrobbins'" class="row">
                 <div class="col-6">
                     <h2>Want even more resources to help get you started?</h2>
                     <p>
@@ -303,7 +443,7 @@
                 </div>
             </div>
 
-            <section v-if="cert" class="certifications">
+            <section v-if="cert && id !== 'tonyrobbins'" class="certifications">
                 <div class="row">
                     <div class="col-12">
                         <div class="images">
