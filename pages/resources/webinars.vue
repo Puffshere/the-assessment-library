@@ -35,6 +35,12 @@
                     <h3>Previously Recorded Webinars</h3>
 
                     <ul class="resources">
+                        <nuxt-link to="/resources/scale-up">
+                            <li class="resource a24x7">
+                                Scale Up Your Coaching Business with DISC
+                            </li>
+                        </nuxt-link>
+
                         <nuxt-link to="/resources/hiresense-webinar">
                             <li class="resource a24x7">
                                 HireSense - Hiring and Selection Done Right!
