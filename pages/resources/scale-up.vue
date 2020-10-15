@@ -25,7 +25,8 @@
                     <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_Coaching_Scale.pdf" class="button" style="float:right"><img class="pdf-icon" src="~/assets/pdf-icon.svg"> Download the Slide Deck</a>
                 </div>
 
-                <div class="col-12" style="margin-top:-10px;">
+                <div class="col-12" style="margin-top:-10px;margin-bottom:20px">
+                    <h4 style="font-size:16pt;margin-bottom:0">Downloadable Webinar Resources:</h4>
                     <a target="_blank" rel="noopener" href="https://calendly.com/angiemfairbanks" class="hyperlink">Schedule a Meeting with Angie</a>&nbsp;&nbsp;
                     <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/scale-up/DISC Lead Generation Program .pdf" class="hyperlink">DISC Lead Generation PDF</a>&nbsp;&nbsp;
                     <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/scale-up/SampleReport-DISC Lead Gen.pdf" class="hyperlink">Sample Report</a>&nbsp;&nbsp;
