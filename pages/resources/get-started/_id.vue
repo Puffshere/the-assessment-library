@@ -59,7 +59,7 @@
                                     Don't have an account yet? Set your account up and it will be available immediately. Already have an account? You can sign in using the button below.
                                 </p><br/>
 
-                                <a class="button" href="https://assessment.tonyrobbins.com/register_acct.aspx" target="_blank" rel="noopener">Set up your account</a>
+                                <a class="button" href="https://tonyrobbinsassessments.com/register_acct.aspx" target="_blank" rel="noopener">Set up your account</a>
                                 <a class="button secondary" href="https://assessment.tonyrobbins.com/account" target="_blank" rel="noopener">Already have an account? Sign in</a>
                             </div>
                         </div>
@@ -83,9 +83,9 @@
 
                                 <div class="row">
                                     <div class="col-6">
-                                        <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/b0ee18iEhkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <a class="hyperlink" href="https://www.youtube.com/watch?v=b0ee18iEhkU&feature=emb_logo" target="_blank" rel="noopener">
-                                            Quick Start Video (2:00)
+                                        <iframe style="width:100%" height="239" src="https://www.youtube.com/embed/W9mA3GuxqC4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <a class="hyperlink" href="https://youtu.be/W9mA3GuxqC4" target="_blank" rel="noopener">
+                                            Quick Start Video (3:15)
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
                                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
                                                     <g sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)" fill="#000000" data-v-738fae98="">
@@ -95,7 +95,7 @@
                                             </svg>
                                         </a>&nbsp;&nbsp;
 
-                                        <a class="hyperlink" href="#" target="_blank" rel="noopener">
+                                        <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/tony-robbins/TR+Quick+Steps.pdf" target="_blank" rel="noopener">
                                             Quick Start PDF
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px" fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px" data-v-738fae98="">
                                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" data-v-738fae98="">
