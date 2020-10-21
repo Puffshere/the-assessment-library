@@ -77,7 +77,7 @@
                                 </h3>
 
                                 <p class="text">
-                                    Log in and send DISC and Motivator assessments. <a class="hyperlink" href="#" target="_blank" rel="noopener">Download 
+                                    Log in and send DISC and Motivator assessments. <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/tony-robbins/TR+Quick+Steps.pdf" target="_blank" rel="noopener">Download 
                                     the quick start guide</a> for a PDF version of these instructions.
                                 </p><br/>
 
