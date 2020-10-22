@@ -153,10 +153,6 @@
                                     </li>
 
                                     <li class="sub-nav-item">
-                                        <a href="/store/disc-profiler-deck">Profiler Card Deck</a>
-                                    </li>
-
-                                    <li class="sub-nav-item">
                                         <a href="/about/faq">FAQs</a>
                                     </li>
                                 </ul>
@@ -303,10 +299,6 @@
 
                 <li class="nav-item indent">
                     <a href="/resources/webinars">Webinars</a>
-                </li>
-
-                <li class="nav-item indent">
-                    <a href="/store/disc-profiler-deck">Profiler Card Deck</a>
                 </li>
 
                 <li class="nav-item indent">

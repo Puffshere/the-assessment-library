@@ -85,7 +85,7 @@
                         You can only imagine all the stories that could be told over these years— the countless tradeshows, phone conversations, negotiations, 
                         learning opportunities, difficult decisions, conferences, life-changing moments, etc. The one thing that has always stayed solid is the 
                         bond created by Tony and Brandon. It has been one of the great stories in business. The company has become one of the top assessment 
-                        providers and platforms in the industry. We employee people across the US and cover all the needs in the assessment, training, hiring 
+                        providers and platforms in the industry. We employ people across the US and cover all the needs in the assessment, training, hiring 
                         and selection environments.
                     </p>
 
