@@ -56,6 +56,17 @@
                             </li><br/>
 
                             <li>
+                                <strong>Update to the Motivators Graph</strong><br/>
+                                Your individual graph has changed slightly, based on the new population scores. The white line is the median, grey box is 
+                                average, the colored box is the majority of the population, and shows 2 standard deviations from the median.<br/><br/>
+
+                                If your score falls in the grey box, your score is average. If your score falls in the color-shaded box you are like most 
+                                of the population, and within 2 standard deviations and therefore, not extreme in your Motivator. If your score is in the 
+                                white space either to the right or left of the color-shaded box, you are more intense in those motivators, whether high or 
+                                low.
+                            </li><br/>
+
+                            <li>
                                 <strong>Updated Word Matrix Page</strong><br/>
                                 The Word Matrix has been modified to include some visual elements to make it more straightforward and user-friendly. You’ll 
                                 notice the Dimension names have moved to the middle of the Word Matrix, a “0” and “100” score bubble located at the top and the 

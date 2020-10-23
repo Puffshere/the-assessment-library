@@ -160,12 +160,12 @@
         },
         head() {
             return {
-                title: 'HireSense Webinar | Assessments 24x7',
+                title: 'Scale Up Your Coaching Business with DISC | Assessments 24x7',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'In this webinar, we give an overview of HireSense and all the fantastic features that will streamline your hiring and selection process.'
+                        content: 'Whether you’re just getting started in your coaching business or you’re an established coach with a large client base, implementing DISC assessments correctly could be a game changer for your business.'
                     }
                 ]
             }
