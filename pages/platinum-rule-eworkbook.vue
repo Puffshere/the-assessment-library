@@ -189,9 +189,23 @@
             'contact-sidebar': () => import('@/components/ContactSidebar'),
             'footer-fold': Footer
         },
-        data() {
+        head() {
             return {
-
+                title: 'DISC Platinum Rule eWorkbook | Assessments 24x7',
+                meta: [
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: 'The DISC Platinum Rule workbook is what you need to understand what people REALLY want. With this discovery you’ll understand how to spot each behavioral style.'
+                    }
+                ],
+                __dangerouslyDisableSanitizers: ['script'],
+                script: [
+                    {
+                        innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
+                        type: 'application/ld+json'
+                    }
+                ]
             }
         }
     }
