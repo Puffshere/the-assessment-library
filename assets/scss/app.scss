@@ -4,10 +4,12 @@
 @import './animate';
 @import './button';
 @import './form';
+@import "./blog";
 
 html {
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .plyr--video {

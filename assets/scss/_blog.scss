@@ -1,0 +1,14 @@
+.blog-post {
+    .kg-image {
+        margin: 0 auto;
+        display: block;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 800px;
+        height: 480px;
+        margin: 40px auto;
+        display: block;
+    }
+}

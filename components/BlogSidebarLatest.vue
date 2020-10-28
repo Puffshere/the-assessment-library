@@ -3,10 +3,10 @@
         <h4>Latest News from our <span>Blog</span></h4>
         <div v-for="post in posts" :key="post.id" class="col-12 post">
             <nuxt-link :to="`/blog/${post.slug}`">
-                <img class="image" :src="post._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url">
+                <img class="image" :src="post.feature_image">
 
-                <p class="date">Posted {{ post.date | moment('from') }}</p>
-                <h5 class="title">{{ post.title.rendered }}</h5>
+                <p class="date">Posted {{ post.published_at | moment('from') }}</p>
+                <h5 class="title">{{ post.title }}</h5>
             </nuxt-link>
         </div>
     </section>
@@ -27,8 +27,8 @@
             }
         },
         async created() {
-            const response = await this.$axios.get(`posts?_embed&per_page=${this.count}`);
-            this.posts = response.data;
+            const response = await this.$axios.get(`posts/?key=1cd8f26ccc1cb09274574d0e00&limit=${this.count}`);
+            this.posts = response.data.posts;
             this.loading = false;
         }
     }

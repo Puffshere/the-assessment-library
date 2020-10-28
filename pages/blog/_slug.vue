@@ -3,41 +3,19 @@
         <LazyHydrate when-visible><main-nav active="blog"></main-nav></LazyHydrate>
 
         <div v-if="post">
-            <svg class="svg1" xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
-                <filter id="blur-filter" width="110%" height="100%">
-                    <feColorMatrix type="saturate" in="SourceGraphic" values="3"/>
-                    <feGaussianBlur stdDeviation="20" result="blur" />
-                </filter>
-            </svg>
-
-            <svg 
-                class="svg2"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                :style="`
-                    width: 105%;
-                    height: 400px;
-                    margin-left: -30px;
-                    margin-top: -25px;
-                    z-index: -1;
-                    position: relative;
-                `"> 
-                <image x="0" class="bg-blur" width="100%" height="400px" :xlink:href="post._embedded['wp:featuredmedia'][0].source_url"/>
-            </svg>
-
-            <img class="blog-header" :src="post._embedded['wp:featuredmedia'][0].source_url">
+            <div class="blog-header" :style="`background: url('${post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'}')`"></div>
 
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="title">{{ post.title.rendered }}</h1>
-                        <p class="date">Posted {{ post.date | moment('from') }}</p>
+                        <h1 class="title">{{ post.title }}</h1>
+                        <p class="date">Posted {{ post.published_at | moment('from') }}</p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                        <p class="body wp" v-html="post.content.rendered"></p>
+                        <p class="body wp" v-html="post.html"></p>
                     </div>
                 </div>
 
@@ -68,17 +46,9 @@
             }
         },
         async created() {
-            const response = await this.$axios.get(`/posts?slug=${this.$route.params.slug}&_embed`);
-            let post = response.data[0];
-
-            // Replace Wordpress Dropcap tag
-            post.content.rendered = post.content.rendered
-                .replace('[dropcap type=&#8221;square or circle&#8221;]', '<span class="dropcap">')
-                .replace('[/dropcap]', '</span>');
-
-            this.post = post;
+            const response = await this.$axios.get(`/posts/slug/${this.$route.params.slug}?key=1cd8f26ccc1cb09274574d0e00`);
+            this.post = response.data.posts[0];
             
-            // 
             var disqus_config = function () {
                 this.page.url = `https://www.assessments24x7.com${this.$route.path}`;
                 this.page.identifier = this.post.slug;
@@ -98,20 +68,13 @@
     @import '~assets/scss/vars';
 
     .blog-post {
-        .bg-blur {
-            filter: url('#blur-filter');
-            height: auto;
-            opacity: .55;
-            margin-top:-20px;
-        }
-
         .blog-header {
-            margin: -300px auto 0;
+            margin: 0 auto;
             display: block;
-            box-shadow: 0 0 20px rgba(0,0,0,.4);
-            border-radius: 20px;
             width: 100%;
-            max-width: fit-content;
+            height: 600px;
+            background-size: cover !important;
+            background-position: center !important;
         }
 
         .date, .title {
@@ -133,7 +96,7 @@
             }
 
             .blog-header {
-                border-radius: 0;
+                height: 400px;
             }
         }
     }

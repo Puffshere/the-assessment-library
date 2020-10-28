@@ -8,8 +8,11 @@ import contactController from './controllers/contactController';
 import workshopLeaderController from './controllers/workshopLeaderController';
 import coachesController from './controllers/coachesController';
 import directoryController from './controllers/directoryController';
+import GhostSearch from './ghost-search';
 
 const app = express();
+
+GhostSearch.start();
 
 const cosmos = {
     name: 'website',
@@ -93,6 +96,8 @@ app.get('/coaches/acp', (req, res) => {
 app.get('/coaches', (req, res) => {
     directoryController.getAllOther(req, res);
 });
+
+app.get('/blog/search', GhostSearch.search);
 
 app.use((req, res, next) => {
     res.status(404).json({

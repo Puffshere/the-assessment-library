@@ -105,7 +105,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    baseURL: process.env.PUBLISHING_API_ENDPOINT || 'https://publishing.assessments24x7.com/index.php/wp-json/wp/v2'
+    baseURL: process.env.PUBLISHING_API_ENDPOINT || 'https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/'
   },
 
   /*

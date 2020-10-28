@@ -27,9 +27,9 @@
                     <p class="posts-title">Recent Posts with the Tag <span class="tag">Learning Styles</span></p>
                     <div class="col-3 col-6-sm post" v-for="post in posts" :key="post.id">
                         <nuxt-link :to="`/blog/${post.slug}`">
-                            <img class="image" :src="post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url">
+                            <img class="image" :src="post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'">
 
-                            <h3 class="title" v-html="post.title.rendered"></h3>
+                            <h3 class="title" v-html="post.title"></h3>
                         </nuxt-link>
                     </div>
                 </div>
@@ -516,8 +516,8 @@
             }
         },
         async created() {
-            const response = await this.$axios.get('posts?_embed&per_page=4&tags=331');
-            this.posts = response.data;
+            const response = await this.$axios.get(`posts/?key=1cd8f26ccc1cb09274574d0e00&limit=4&filter=tag:learning-styles`);
+            this.posts = response.data.posts;
             this.loading = false;
         },
         methods: {
