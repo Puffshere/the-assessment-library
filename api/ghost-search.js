@@ -44,11 +44,9 @@ function updateIndex_impl(resolve,reject) {
         indexWillUpdate = true;
         console.log('updating index');
         return blog.posts.browse({limit:'all',formats:'html,plaintext'}).then(posts=>{
-            console.log('got posts from blog');
             posts.forEach(post=>index.addDoc(post));//If docRef already exist, then update doc. <--taken straight from elasticlunr docs
             indexWillUpdate=false;
             indexReady = true;
-            console.log('index updated');
             resolve();
         })
         .catch(err=>{

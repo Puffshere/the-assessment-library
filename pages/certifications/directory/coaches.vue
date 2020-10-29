@@ -424,6 +424,13 @@
             let response = await axios.get('/api/coaches/acp');
             this.acpCoaches = response.data.coaches;
 
+            this.acpCoaches.sort(function (a, b) {
+                const aRank = parseInt(a['ACP Rank']);
+                const bRank = parseInt(b['ACP Rank']);
+
+                return (aRank < bRank) ? -1 : (aRank > bRank) ? 1 : 0;
+            });
+
             response = await axios.get('/api/coaches');
 
             let tmp = response.data.coaches.sort((a, b) => {
