@@ -64,6 +64,39 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
+                            <img class="image" src="~/assets/testimonials/will-mahon.jpg" alt="Will Mahon">
+                        </div>
+
+                        <div class="col-9">
+                            <div class="review-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <h3 class="name">Will Mahon</h3>
+                            <p class="attribution">
+                                Talent Development Manager<br/>
+                                <a class="hyperlink" href="https://www.draftkings.com/about" target="_blank" rel="noopener">DraftKings</a>
+                            </p>
+                            <p class="quote">
+                                I am happy to say that we use Assessments 24x7 as our global DISC solution. We started to work with Assessments 24x7 because we were interested in 
+                                the breadth of instruments that they offer. There are instruments for a large variety of cases and lots of different team
+                                dynamics. Since then, we have been really happy with the ease of using their platform. We have also been happy with the 
+                                customer service that we have been provided. Every question that we have ever asked the team has been responded to really 
+                                quickly and professionally. That gives Assessments 24x7 our highest recommendation.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=A52Getj1sdg" class="hyperlink" target="_blank" rel="noopener">Watch the Video Testimonial &rarr;</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="review">
+                        <div class="col-3">
                             <img class="image" src="~/assets/testimonials/roel-schaart.jpg" alt="Roel Schaart">
                         </div>
 

@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-12">
                     <h2>Subprocessors</h2>
-                    <p>Last updated: <b>01/23/2020</b></p>
+                    <p>Last updated: <b>11/02/2020</b></p>
 
                     <table style="width:100%">
                         <thead>
@@ -33,11 +33,6 @@
 
                         <tbody>
                             <tr>
-                                <td>Zayo Group, LLC</td>
-                                <td>Zayo Group, LLC provides the primary infrastructure used by the Processor to host our Assessments platform.</td>
-                                <td>United States</td>
-                            </tr>
-                            <tr>
                                 <td>PayPal</td>
                                 <td>Used by Processor for payments and Invoicing.</td>
                                 <td>United States</td>
@@ -47,14 +42,18 @@
                                 <td>Facebook is used by the Processor to provide chat based Support to customers, engagement and advertising using the Facebook tracking pixel.</td>
                                 <td>United States</td>
                             </tr>
-
                             <tr>
                                 <td>LinkedIn</td>
                                 <td>LinkedIn is used by the Processor to provide advertising using the LinkedIn Insights tracking pixel.</td>
                                 <td>United States</td>
                             </tr>
                             <tr>
-                                <td>Google Inc</td>
+                                <td>Reddit</td>
+                                <td>Reddit is used by the Processor to provide advertising using the Reddit tracking pixel.</td>
+                                <td>United States</td>
+                            </tr>
+                            <tr>
+                                <td>Google</td>
                                 <td>Google provides email services and document management services used by the Processor to facilitate general business processes and communications with customers and third parties. Google also provides Analytics and Marketing Tools that are utilized.</td>
                                 <td>United States</td>
                             </tr>
@@ -89,11 +88,6 @@
                                 <td>United States</td>
                             </tr>
                             <tr>
-                                <td>Hotjar</td>
-                                <td>Web Analytics and Mapping used by Processor.</td>
-                                <td>Ireland</td>
-                            </tr>
-                            <tr>
                                 <td>Zoom</td>
                                 <td>Zoom is a web conference service used by the Processor to provide support.</td>
                                 <td>United States</td>
@@ -113,12 +107,16 @@
                                 <td>Payments and Invoicing used by Processor.</td>
                                 <td>India</td>
                             </tr>
-                                                        <tr>
+                            <tr>
                                 <td>WaveApps</td>
                                 <td>Payments and Invoicing used by Processor.</td>
                                 <td>Canada</td>
                             </tr>
-
+                            <tr>
+                                <td>Stripe</td>
+                                <td>Payments and Invoicing used by Processor.</td>
+                                <td>United States</td>
+                            </tr>
                             <tr>
                                 <td>RingCentral</td>
                                 <td>Phone Systems and Software used by Processor.</td>
@@ -137,6 +135,26 @@
                             <tr>
                                 <td>GoDaddy Operating Company, LLC.</td>
                                 <td>GoDaddy Operating Company, LLC provides website hosting services for our website as well as marketing materials.</td>
+                                <td>United States</td>
+                            </tr>
+                            <tr>
+                                <td>Heroku</td>
+                                <td>Heroku is a cloud based hosting infrastructure provider used by Processor for hosting select services.</td>
+                                <td>United States</td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft Clarity</td>
+                                <td>Web Analytics and traffic mapping used by Processor for internal product development purposes.</td>
+                                <td>United States</td>
+                            </tr>
+                            <tr>
+                                <td>Tawk.to</td>
+                                <td>Live chat and customer support platform used by Processor.</td>
+                                <td>United States</td>
+                            </tr>
+                            <tr>
+                                <td>Cloudflare</td>
+                                <td>Cloud based DNS services and security platform used by Processor.</td>
                                 <td>United States</td>
                             </tr>
                         </tbody>

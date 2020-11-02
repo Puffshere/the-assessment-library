@@ -8,6 +8,7 @@
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
         <LazyHydrate when-visible><keyword-fold></keyword-fold></LazyHydrate>
         <LazyHydrate when-visible><validation></validation></LazyHydrate>
+        <LazyHydrate when-visible><draft-kings/></LazyHydrate>
         <LazyHydrate when-visible><reviews></reviews></LazyHydrate>
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
     </div>
@@ -27,6 +28,7 @@
             'client-logos': () => import('@/components/ClientLogos'),
             'keyword-fold': () => import('@/components/KeywordFold'),
             'validation': () => import('@/components/ASIValidation'),
+            'draft-kings': () => import('@/components/DraftKingsFold'),
             'reviews': () => import('@/components/Reviews'),
             'footer-fold': () => import('@/components/Footer')
         },
