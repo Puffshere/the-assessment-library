@@ -45,6 +45,25 @@
                 post: null
             }
         },
+        head() {
+            return {
+                title: this.post ? `${this.post.meta_title} | Assessments 24x7` : 'Latest Assessment News & Resources | Assessments 24x7',
+                meta: [
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: this.post ? this.post.meta_description : 'Articles, how-to guides, and industry news from the global leader in assessment technology.'
+                    }
+                ],
+                __dangerouslyDisableSanitizers: ['script'],
+                script: [
+                    {
+                        innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
+                        type: 'application/ld+json'
+                    }
+                ]
+            }
+        },
         async created() {
             const response = await this.$axios.get(`/posts/slug/${this.$route.params.slug}?key=1cd8f26ccc1cb09274574d0e00`);
             this.post = response.data.posts[0];
@@ -74,7 +93,7 @@
             width: 100%;
             height: 600px;
             background-size: cover !important;
-            background-position: center !important;
+            background-position-y: 65% !important;
         }
 
         .date, .title {
