@@ -47,12 +47,12 @@
         },
         head() {
             return {
-                title: this.post ? `${this.post.meta_title} | Assessments 24x7` : 'Latest Assessment News & Resources | Assessments 24x7',
+                title: this.post ? `${this.post.meta_title || this.post.title} | Assessments 24x7` : 'Latest Assessment News & Resources | Assessments 24x7',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: this.post ? this.post.meta_description : 'Articles, how-to guides, and industry news from the global leader in assessment technology.'
+                        content: this.post ? this.post.meta_description || 'Articles, how-to guides, and industry news from the global leader in assessment technology.' : 'Articles, how-to guides, and industry news from the global leader in assessment technology.'
                     }
                 ],
                 __dangerouslyDisableSanitizers: ['script'],
