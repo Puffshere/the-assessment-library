@@ -87,7 +87,38 @@
                                 customer service that we have been provided. Every question that we have ever asked the team has been responded to really 
                                 quickly and professionally. That gives Assessments 24x7 our highest recommendation.
                             </p>
-                            <a href="https://www.youtube.com/watch?v=A52Getj1sdg" class="hyperlink" target="_blank" rel="noopener">Watch the Video Testimonial &rarr;</a>
+                            <a href="https://www.youtube.com/watch?v=A52Getj1sdg" class="hyperlink" target="_blank" rel="noopener">Watch the Full Video Testimonial &rarr;</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="review">
+                        <div class="col-3">
+                            <img class="image" src="~/assets/testimonials/kyle-gillette.jpg" alt="Kyle Gillette">
+                        </div>
+
+                        <div class="col-9">
+                            <div class="review-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <h3 class="name">Kyle Gillette</h3>
+                            <p class="attribution">
+                                Owner<br/>
+                                <a class="hyperlink" href="https://gillettesolutions.com/" target="_blank" rel="noopener">Gillette Solutions</a>
+                            </p>
+                            <p class="quote">
+                                One of the main reasons that I chose Assessments 24x7 is that I found their tools to be extremely powerful, intuitive to 
+                                use, and effective. DISC is amazing. Assessments 24x7 provides what I need and what my clients need to make a big 
+                                difference and ultimately for the bottom line.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=v1gnw-yVRw0" class="hyperlink" target="_blank" rel="noopener">Watch the Full Video Testimonial &rarr;</a>
                             </div>
                     </div>
                 </div>
