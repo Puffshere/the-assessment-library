@@ -192,6 +192,10 @@
         "to": "/about/what-is-disc"
     },
     {
+        "from": "/what-is-disc",
+        "to": "/about/what-is-disc"
+    },
+    {
         "from": "/news-and-articles.asp",
         "to": "/blog"
     },
