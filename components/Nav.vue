@@ -131,6 +131,10 @@
                                     </li>
 
                                     <li class="sub-nav-item">
+                                        <a href="/about/account-plus">Account Plus</a>
+                                    </li>
+
+                                    <li class="sub-nav-item">
                                         <a href="/about/partners">Partners</a>
                                     </li>
 
@@ -279,6 +283,10 @@
                             </g>
                         </svg>
                     </a>
+                </li>
+
+                <li class="nav-item indent">
+                    <a href="/about/account-plus">Account Plus</a>
                 </li>
 
                 <li class="nav-item indent">

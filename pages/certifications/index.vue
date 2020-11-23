@@ -25,11 +25,15 @@
                     <h2>Assessment Certifications &amp; Training</h2>
 
                     <p>
-                        Assessments 24x7 developed a variety of robust assessment certification programs, designed specifically for coaches, 
-                        consultants and trainers to take their businesses to the next level. Each of our certification programs are blended 
-                        learning modalities, including self-paced learning for your convenience and 1-on-1 instructor-led sessions (via Zoom 
-                        or Skype). These are not cookie-cutter online classes, but flexible training curriculums tailored to your specific 
-                        needs and goals.
+                        Assessments 24x7 offers robust assessment certification programs designed specifically for coaches, consultants, and trainers to 
+                        take their businesses to the next level. 
+                    </p>
+
+                    <h4>Self-paced, 100% Online Training</h4>
+                    
+                    <p>
+                        Our certification programs are one-on-one, instructor-led sessions. They are fully online and self-paced. These are not 
+                        cookie-cutter online classes. They are flexible training curriculums tailored to your specific needs and goals.
                     </p>
                         <br/>
 

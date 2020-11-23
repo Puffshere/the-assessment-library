@@ -73,7 +73,6 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@bazzite/nuxt-optimized-images',
     '@nuxtjs/gtm'
   ],
   gtm: {
@@ -82,24 +81,6 @@ module.exports = {
     dev: true,
     pageTracking: true,
     scriptDefer: true
-  },
-  optimizedImages: {
-    inlineImageLimit: -1,
-    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
-    optimizeImages: true,
-    optimizeImagesInDev: true,
-    defaultImageLoader: 'img-loader',
-    mozjpeg: {
-      quality: 85
-    },
-    optipng: false,
-    pngquant: {
-      speed: 7,
-      quality: [0.65, 0.8]
-    },
-    webp: {
-      quality: 85
-    }
   },
   /*
   ** Axios module configuration

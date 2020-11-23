@@ -21,17 +21,29 @@
                     <h2 style="margin-top: 50px">Assessment Certification</h2>
 
                     <p>
-                        Become an expert with our internationally accredited certification training. Designed specifically to foster a deeper understanding, you’ll 
-                        discover how each assessment can be used to build more effective personal and professional relationships. Through one-on-one instructor-led sessions and self-study, 
-                        you will learn to use the assessment results with supportive, comprehensive resources that are available when you need them. As a bonus, if you are 
-                        certified in multiple assessments, your instructor will train you to combine the assessment results for a holistic understanding of how they work 
-                        together.
+                        Become an expert with our internationally accredited certification training. With training explicitly designed to foster a deeper 
+                        understanding of the core assessments, you’ll discover how each assessment can be used to build more effective personal and 
+                        professional relationships. 
+                    </p>
+
+                    <h4>100% Virtual Training. On Your Schedule.</h4>
+
+                    <p>
+                        Get certified at your pace with one of our Master Certified Practitioners. All certification programs are one-on-one, 
+                        instructor-led sessions, and entirely online. We tailor these flexible training curriculums to meet your specific needs and goals.
                     </p>
 
                     <p>
-                        Each certification program includes additional benefits such as exclusive access to our Certified Trainer Materials library, discounted pricing, 
-                        continuing education credits, 10 complimentary assessments when you finish the program, and a listing on our International Directory of Practitioners.
+                        Through one-on-one, instructor-led sessions and self-study, learn to use the assessment results with supportive, comprehensive 
+                        resources available when you need them. As a bonus, if you are certified in multiple assessments, your instructor will train you to 
+                        combine the assessment results for a holistic understanding of how they work together.
                     </p>
+
+                    <p>
+                        Each certification program includes additional benefits such as exclusive access to our Certified Trainer Materials library, 
+                        discounted pricing, continuing education credits, 10 complimentary assessments when you finish the program, and a listing on our 
+                        International Directory of Practitioners.
+                    </p><br/>
 
                     <nuxt-link to="/contact" class="button">Talk to a Specialist</nuxt-link>
                     <nuxt-link to="/assessments" class="button outline">Learn More About Assessments</nuxt-link><br/><br/>

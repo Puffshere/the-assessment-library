@@ -21,17 +21,18 @@
             <div class="row">
                 <div class="col-12">
                     <h2>Workshop Leader Certification</h2>
-                    <p>The quest to ensure our members are the most knowledgeable and best-equipped in the business continues with our innovative Workshop 
-                        Leader Certification program! Developed by a combination of assessment industry professionals with over 80 collective years of 
-                        experience in public speaking, training, and curriculum development, our Workshop Leader Certification programs equip you with the 
-                        know-how and tools to confidently lead live, immersive workshops. Whether your next workshop is for a group of 5 or 500, get the 
-                        confidence and content quickly that normally only comes after months or years of research and development.
-
+                    <p>
+                        The quest to ensure our members are the most knowledgeable and best-equipped in the business continues with our innovative Workshop 
+                        Leader Certification program! Developed by assessment industry leaders and public speaking professionals, the Workshop Leader 
+                        Certification program equips you with the tools needed to lead live, immersive workshops. Whether your next workshop is for a group 
+                        of 5 or 500, you’ll have the confidence and content that typically takes months or years of research and development.
                     </p>
-                    <p>The goal of these training-in-a-box certifications is to bridge the gap further between assessment content and interactive application 
-                        through workshops and facilitation. These experienced trainers have been selected for their abilities to engage, teach, and wow learners 
-                        by challenging participants to think differently, focus new ideas in a way that really works, and leave training sessions eager to apply 
-                        their new skills.
+
+                    <h4>Online Training. On YOUR Schedule.</h4>
+
+                    <p>
+                        Each Workshop Leader Certification is a one-on-one online course with a Master Certified Practitioner. You determine the pace of 
+                        the coursework and schedule the online sessions at your convenience.
                     </p><br/>
 
                     <nuxt-link to="/about/why-use-assessments" class="button">Why Use Assessments?</nuxt-link>

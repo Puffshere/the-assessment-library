@@ -41,7 +41,7 @@
     .client-logos {
         margin: 0px 0 0;
         padding: 30px 0;
-        background: url('~assets/artifacts/content-bg.png');
+        background: url('~assets/artifacts/content-bg.jpg');
         background-size: cover !important;
         background-position: center;
 

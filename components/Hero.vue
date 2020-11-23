@@ -5,7 +5,7 @@
                 <div class="col-7 col-12-md">
                     <div class="hero-content">
                         <h1 class="title">Global Leader In Assessment Technology</h1>
-                        <h2>We provide the world's most advanced online assessment platform.</h2>
+                        <h2>DISC & behavioral assessments to power decision making.</h2>
 
                         <nuxt-link to="/assessments" class="button">Assessment Products</nuxt-link>
                         <nuxt-link to="/about/why-use-assessments" class="button outline light">Why Use Assessments?</nuxt-link>

@@ -31,7 +31,7 @@
 
 <style lang="scss" scoped>
     .testimonial {
-        background: url('~assets/artifacts/content-bg.png');
+        background: url('~assets/artifacts/content-bg.jpg');
         background-size: cover !important;
         background-position: center;
         padding: 40px 0;

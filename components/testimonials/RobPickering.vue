@@ -5,23 +5,21 @@
                 <div class="col-8">
                     <blockquote>
                         <p>
-                            "I am truly satisfied with the professionalism, expertise and friendliness of everyone I've worked 
-                            with at Assessments 24x7. They have provided me with excellent assessment tools and exquisite 
-                            certification training, and have satisfactorily responded to all my questions and requests with 
-                            great dispatch and care. My partnership with Assessments 24x7 is a critical success factor in my 
-                            business and I wouldn't have it any other way."
+                            "After using the standard account for years, our conversion to Account Plus has created freedom for us and our clients. We’ve 
+                            been able to create sub-accounts for our clients and liberate from waiting for us to set things up and run reports. Now our 
+                            clients simply buy reports and use them as they need to. Often the first we know about it is when the payment arrives into our 
+                            account! The ease of use for our clients has meant that they use a wider range of reports and more of them - win:win!"
                         </p>
 
                         <footer>
-                            <cite>Steven Lozada</cite>
-                            President<br/>
-                            Upward Mindset
+                            <cite>Rob Pickering</cite>
+                            <a class="hyperlink" href="https://reading.actioncoach.co.uk/">Senior Partner & Coach - ActionCOACH Reading (UK)</a>
                         </footer>
                     </blockquote>
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/banner/steven-lozada.jpg" alt="Steven Lozada">
+                    <img class="image" src="~/assets/testimonials/banner/rob-pickering.jpg" alt="Rob Pickering">
                 </div>
             </div>
         </div>
