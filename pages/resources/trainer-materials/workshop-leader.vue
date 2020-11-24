@@ -59,8 +59,7 @@
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/self-awareness-module-1-session.mp4" target="_blank" rel="noopener">Self-Awareness and Communication</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/module-2-peer-to-leader-webinar.mp4" target="_blank" rel="noopener">Transitioning From Peer to Leader</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Trust-Based%20Leadership.mp4" target="_blank" rel="noopener">Trust-Based Leadership</a></td></tr>
-                            <!--<tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/making-teams-work-session-1.mp4" target="_blank" rel="noopener">Making Teams Work Session 1</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/making-teams-work-session-2.mp4" target="_blank" rel="noopener">Making Teams Work Session 2</a></td></tr>-->
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/making-teams-work.mp4" target="_blank" rel="noopener">Making Teams Work</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/dwl-trainer-materials/Sales-Optimization.mp4" target="_blank" rel="noopener">Sales Optimization</a></td></tr>
                         </tbody>
                     </table>
