@@ -58,7 +58,7 @@
                         
                                 <div class="form-check">
                                     <input class="form-check-input" id="inf_option_Whichbestdescribesyourneedforassessments_2387" name="inf_option_Whichbestdescribesyourneedforassessments" type="radio" value="2387" />
-                                    <label class="form-check-label" for="inf_option_Whichbestdescribesyourneedforassessments_2387">I am an independent coach, trainer, or consultant who uses assessments with my clients</label>
+                                    <label class="form-check-label" for="inf_option_Whichbestdescribesyourneedforassessments_2387">I am a coach, trainer, or consultant who uses assessments with my clients</label>
                                 </div>
 
                                 <div class="form-check">
