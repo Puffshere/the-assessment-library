@@ -15,13 +15,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <p class="body wp" v-html="post.html"></p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <div id="disqus_thread"></div>
+                        <div class="body wp" v-html="post.html"></div>
                     </div>
                 </div>
             </div>
@@ -104,21 +98,12 @@
                 ]
             }
         },
-        async created() {
-            const response = await this.$axios.get(`/posts/slug/${this.$route.params.slug}?key=1cd8f26ccc1cb09274574d0e00`);
-            this.post = response.data.posts[0];
-            
-            var disqus_config = function () {
-                this.page.url = `https://www.assessments24x7.com${this.$route.path}`;
-                this.page.identifier = this.post.slug;
-            };
-            
-            (function() {
-                var d = document, s = d.createElement('script');
-                s.src = 'https://assessments-24x7.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
+        async asyncData({ params, app }) {
+            const response = await app.$axios.get(`/posts/slug/${params.slug}?key=1cd8f26ccc1cb09274574d0e00`);
+
+            return {
+                post: response.data.posts[0]
+            }
         }
     }
 </script>
