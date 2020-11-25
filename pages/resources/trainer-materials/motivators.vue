@@ -64,8 +64,12 @@
                             <small>Shares overview of scoring and characteristics of high and low scores in each Motivator</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AgreementsConflictsCombinations.pdf" target="_blank" rel="noopener">Agreements, Conflicts and Interesting Combinations</a>
                             <small>Describes common agreements, conflicts and interesting combinations of motivators with charts and details</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Ranges_Standard Deviations Scores.pptx" target="_blank" rel="noopener">Word Matrix Ranges and Standard Deviations</a>
-                            <small>Shares Word Matrix scoring ranges that match descriptors, and shares the median and standard deviations for each dimension.</small></td></tr>
+
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Word Matrix Scoring Information_Mot.pptx" target="_blank" rel="noopener">Word Matrix Ranges</a>
+                            <small>Shares Word Matrix scoring ranges that match descriptors.</small></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Ranges_Standard Deviations Scores - HireSenseMot.pptx" target="_blank" rel="noopener">Standard Deviations</a>
+                            <small>Shares the median and standard deviations for each dimension.</small></td></tr>
+
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Risk Measurements 6.20.pdf" target="_blank" rel="noopener">Risk Measurements</a>
                             <small>Shows all risk scales for motivators in one document</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MOT Alternative Words_Matrix descriptors 6.20.docx" target="_blank" rel="noopener">Matrix Alternative Words</a></td></tr>

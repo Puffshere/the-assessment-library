@@ -42,7 +42,6 @@ function updateIndex_impl(resolve,reject) {
         setTimeout(()=>updateIndex_impl(resolve,reject),22);//just keep passing the original arguments
     }else{
         indexWillUpdate = true;
-        console.log('updating index');
         return blog.posts.browse({limit:'all',formats:'html,plaintext'}).then(posts=>{
             posts.forEach(post=>index.addDoc(post));//If docRef already exist, then update doc. <--taken straight from elasticlunr docs
             indexWillUpdate=false;

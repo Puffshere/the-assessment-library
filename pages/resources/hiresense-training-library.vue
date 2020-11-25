@@ -90,9 +90,9 @@
                                 </p>
 
                                 <ul>
-                                    <li><a href="#" class="hyperlink">Sample 1</a></li>
-                                    <li><a href="#" class="hyperlink">Sample 2</a></li>
-                                    <li><a href="#" class="hyperlink">Sample 3</a></li>
+                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Sample 1</a></li>
+                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Sample 2</a></li>
+                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Sample 3</a></li>
                                 </ul><br/>
 
                                 <a href="#" class="button">HireSense Integration</a>
@@ -116,13 +116,22 @@
                                 </p>
 
                                 <ul>
-                                    <li><a href="#" class="hyperlink">Preset Scores (3:56)</a></li>
-                                    <li><a href="#" class="hyperlink">User Scores (5:22)</a></li>
-                                    <li><a href="#" class="hyperlink">Group Average (2:53)</a></li>
-                                    <li><a href="#" class="hyperlink">Job Questionnaire (2:51)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/IGFitnessBenchmarks_HowTo.pdf" target="_blank" rel="noopener" class="hyperlink">Instructions to set and review Benchmarks</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarking+Sample_HighMatch.pdf" target="_blank" rel="noopener" class="hyperlink">Sample Benchmark Report High Match</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarking+Sample_LowMatch.pdf" target="_blank" rel="noopener" class="hyperlink">Sample Benchmark Report Low Match</a></li>
+                                </ul>
+
+                                <p class="indented-text">Click to watch each video segment:</p>
+
+                                <ul>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Preset+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">Preset Scores (3:56)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+User+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">User Scores (5:22)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Group+Average.mp4" target="_blank" rel="noopener" class="hyperlink">Group Average (2:53)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Job+Questionnaire.mp4" target="_blank" rel="noopener" class="hyperlink">Job Questionnaire (2:51)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Reporting+-+Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">HireSense Reporting (7:41)</a></li>
                                 </ul><br/>
 
-                                <a href="#" class="button">HireSense Benchmarks Introduction</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarks+Introduction.pdf" target="_blank" rel="noopener" class="button">HireSense Benchmarks Introduction</a>
                             </div>
                         </div>
                     </div>
@@ -142,12 +151,12 @@
                                 </p>
 
                                 <ul>
-                                    <li><a href="#" class="hyperlink">Onboarding & Developing</a></li>
-                                    <li><a href="#" class="hyperlink">Coaching</a></li>
-                                    <li><a href="#" class="hyperlink">Other Reports</a></li>
+                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Onboarding & Developing</a></li>
+                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Coaching</a></li>
+                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Other Reports</a></li>
                                 </ul><br/>
 
-                                <a href="#" class="button">Beyond HireSense Introduction</a>
+                                <a href="#" target="_blank" rel="noopener" class="button">Beyond HireSense Introduction</a>
                             </div>
                         </div>
                     </div>
@@ -247,6 +256,11 @@
             .text {
                 font-size: 12pt;
                 margin: 0;
+            }
+            
+            .indented-text {
+                margin-left: 20px;
+                margin-bottom: -10px;
             }
 
             .link {
