@@ -53,7 +53,47 @@
                         hid: 'description',
                         name: 'description',
                         content: this.post ? this.post.meta_description || 'Articles, how-to guides, and industry news from the global leader in assessment technology.' : 'Articles, how-to guides, and industry news from the global leader in assessment technology.'
-                    }
+                    },
+                    {
+                        property: 'og:type',
+                        content: 'website'
+                    },
+                    {
+                        property: 'og:url',
+                        content: `https://assessments24x7.com${this.$route.path}`
+                    },
+                    {
+                        property: 'og:title',
+                        content: this.post ? this.post.og_title || this.post.title : 'Latest Assessment News & Resources | Assessments 24x7'
+                    },
+                    {
+                        property: 'og:description',
+                        content: this.post ? this.post.og_description || this.post.meta_description || 'Articles, how-to guides, and industry news from the global leader in assessment technology.' : 'Articles, how-to guides, and industry news from the global leader in assessment technology.'
+                    },
+                    {
+                        property: 'og:image',
+                        content: this.post ? this.post.og_image || this.post.feature_image : ''
+                    },
+                    {
+                        property: 'twitter:card',
+                        content: 'summary_large_image'
+                    },
+                    {
+                        property: 'twitter:url',
+                        content: `https://assessments24x7.com${this.$route.path}`
+                    },
+                    {
+                        property: 'twitter:title',
+                        content: this.post ? this.post.og_title || this.post.title : 'Latest Assessment News & Resources | Assessments 24x7'
+                    },
+                    {
+                        property: 'twitter:description',
+                        content: this.post ? this.post.og_description || this.post.meta_description || 'Articles, how-to guides, and industry news from the global leader in assessment technology.' : 'Articles, how-to guides, and industry news from the global leader in assessment technology.'
+                    },
+                    {
+                        property: 'twitter:image',
+                        content: this.post ? this.post.og_image || this.post.feature_image : ''
+                    },
                 ],
                 __dangerouslyDisableSanitizers: ['script'],
                 script: [
