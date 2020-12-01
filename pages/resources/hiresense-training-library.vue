@@ -20,6 +20,19 @@
             <section class="steps">
                 <div class="row">
                     <div class="col-12">
+                        <div class="coming-soon-prompt">
+                            <div class="info">
+                                <p>
+                                    Watch for the next 3 parts of HireSense&trade; Virtual Training Materials coming the week of December 7th. If you have any 
+                                    questions, please email your coach at <a href="mailto:training@assessments24x7.com" class="hyperlink">training@assessments24x7.com</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
                         <div class="step">
                             <div class="icon">1</div>
                             
@@ -33,7 +46,7 @@
                                     Relevancies, the App Technology and Reports
                                 </p><br/>
 
-                                <a href="#" class="button">HireSense Orientation</a>
+                                <a href="#" class="button">HireSense Orientation &rarr;</a><br/><br/>
                             </div>
                         </div>
                     </div>
@@ -76,7 +89,7 @@
                                     <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+3+-+Links_Alerts_Saved+Results.mp4" target="_blank" rel="noopener" class="hyperlink">Part 3: Links, Alerts & Saved Results (5:25)</a></li>
                                 </ul><br/>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Step+2.pptx" target="_blank" rel="noopener" class="button">HireSense Navigation</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Step+2.pptx" target="_blank" rel="noopener" class="button">HireSense Navigation PowerPoint and Notes &rarr;</a><br/><br/>
                             </div>
                         </div>
                     </div>
@@ -156,7 +169,7 @@
                                     <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Reporting+-+Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">HireSense Reporting (7:41)</a></li>
                                 </ul><br/>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarks+Introduction.pdf" target="_blank" rel="noopener" class="button">HireSense Benchmarks Introduction</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarks+Introduction.pdf" target="_blank" rel="noopener" class="button">HireSense Benchmark Introduction Guide &rarr;</a><br/><br/>
                             </div>
                         </div>
                     </div>
@@ -338,9 +351,32 @@
             }
         }
 
+        .coming-soon-prompt {
+            width: 100%;
+            margin: 0px auto;
+            display: block;
+
+            .info {
+                background: rgba(255,189,7,.2);
+                padding: 20px;
+                border-radius: 10px;
+                border: 1px solid rgba(255,189,7,.3);
+                margin-bottom: 18px;
+
+                h3 {
+                    margin: 0 0 5px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 11pt;
+                }
+            }
+        }
+
         .step {
             background: #f5f7f9;
-            padding: 20px;
+            padding: 20px 30px;
             border-radius: 10px;
             position: relative;
             margin: 10px 0 20px;
@@ -349,7 +385,7 @@
                 position: absolute;
                 left: -16px;
                 top: -16px;
-                background: #0033c5;
+                background: #00bbff;
                 border-radius: 50%;
                 color: #fff;
                 text-align: center;
