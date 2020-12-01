@@ -8,7 +8,7 @@
                         <h2>DISC & behavioral assessments to power decision making.</h2>
 
                         <nuxt-link to="/assessments" class="button">Assessment Products</nuxt-link>
-                        <nuxt-link to="/about/why-use-assessments" class="button outline light">Why Use Assessments?</nuxt-link>
+                        <nuxt-link to="/assessments/disc" class="button outline light">Explore DISC</nuxt-link>
                     </div>
                 </div>
 

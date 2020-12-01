@@ -33,9 +33,10 @@
                     <div class="col-12">
                         <h6 class="question">Does A24x7 have account sign-up fees and annual renewal fees?</h6>
                         <p class="answer">
-                            NO FEES! There are no account setup or monthly fees of any kind. However, because these accounts include thousands 
-                            of dollars in free multimedia DISC training materials, we do require a small initial assessment purchase to get started.
-
+                            NO FEES! There are no account setup or monthly fees of any kind. However, because these accounts include thousands of dollars 
+                            in free multimedia DISC training materials, we do require a small initial assessment purchase to get started. We do offer our 
+                            optional <nuxt-link to="/about/account-plus" class="hyperlink">Account Plus</nuxt-link> subscription for a recurring monthly 
+                            fee. Contact us for details about our Account Plus option.
                         </p>
                     </div>
                 </div>

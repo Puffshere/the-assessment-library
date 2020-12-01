@@ -406,14 +406,18 @@
                     <div class="col-12">
                         <h6 class="question">Can Motivators be used to benchmark new hires?</h6>
                         <p class="answer">
-                            Assessments can play a vital role in employee selection when used appropriately. At Assessments 24x7, our Motivators assessment meets 
-                            EEOC standards for class protection and is frequently used as part of the selection process. We never recommend making a hiring decision 
-                            based only on assessment data, but when used in combination with other factors (interviews, referrals, skills and experience, etc.), 
-                            assessments can bring insight to selection decisions. </p>
+                            Assessments can play a vital role in employee selection when used appropriately. At Assessments 24x7, our Motivators assessment 
+                            meets EEOC standards for class protection and is frequently used as part of the selection process. See our Hiring and Selection 
+                            service, <a href="https://www.hiresense.com" class="hyperlink" target="_blank" rel="noopener">HireSense</a>, to learn more. We 
+                            never recommend making a hiring decision based only on assessment data, but when used in combination with other factors 
+                            (interviews, referrals, skills and experience, etc.), assessments can bring insight to selection decisions.
+                        </p>
 
-                        <p>Our hiring & selection resources are an integration of three Core Assessments: DISC, Motivators, and Critical Thinking (Hartman), 
-                            providing detailed insight into what will help a candidate be successful in their new role or what might be required to support them. 
-                            <a class="hyperlink" href="/hiring-and-selection/"> Learn more about our hiring and selection products and services.</a>
+                        <p>
+                            HireSense is an integration of three Assessments: DISC, Motivators, and Critical Thinking (Hartman), providing detailed insight 
+                            into what will help a candidate be successful in their new role or what might be required to support them. Learn more about our 
+                            <a href="https://www.hiresense.com" class="hyperlink" target="_blank" rel="noopener">hiring and selection</a> products and 
+                            services.
                         </p>
                     </div>
                 </div>
@@ -445,7 +449,9 @@
 
                             <h3>Available Languages</h3>
                             <p>
-                                Our internationally accredited Motivators assessment, and its all-purpose Self report is currently available in 12 languages. 
+                                Our internationally accredited Motivators assessment is currently available in multiple languages. See our 
+                                <nuxt-link to="/sample-reports" class="hyperlink light">sample reports</nuxt-link> page for the list of available languages 
+                                and to view sample results. 
                             </p>
                         </div>
 

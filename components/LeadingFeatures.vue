@@ -3,13 +3,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="section-title">The Leading Online Assessment Solution for 20+ Years</h3>
+                    <h3 class="section-title">The Leading DISC and Motivators Assessment Solution</h3>
                     <p>
-                        For more than 20 years, Assessments 24x7 has powered business consultants, 
-                        executive coaches, and Fortune 500s with the tools to optimize hiring processes, 
-                        boost employee productivity, and maximize performance. Our validated assessments, 
-                        flexible platform, and exceptional customer support have positioned us as a
-                        <em>"Global Leader in Assessment Technology."</em>
+                        For more than 20 years, Assessments 24x7 has powered business consultants, executive coaches, and Fortune 500s with the tools to 
+                        optimize hiring processes, boost employee productivity, and maximize performance, using our DISC, Motivators and additional 
+                        assessment tools. Our validated assessments, flexible platform, and exceptional customer support have positioned us as a 
+                        <i>"Global Leader in Assessment Technology."</i>
                     </p>
                 </div>
             </div>
@@ -20,7 +19,7 @@
 
                     <h4>Online Assessments</h4>
                     <p>
-                        Our five core assessments have been developed to explore 
+                        Our core assessments have been developed to explore 
                         the “whole person.” Each is scientifically validated to enrich your 
                         organization or business with the best online tools and training materials
                         in the industry.

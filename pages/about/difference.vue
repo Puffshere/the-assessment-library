@@ -32,16 +32,16 @@
                                 <a href="https://app.assessments24x7.com/" target="_blank" rel="noopener" class="hyperlink">mobile app</a>. 
                             </li>
                             <li>
-                                Access to all training materials at no charge, including coaching materials, workshop facilitator materials, free & 
-                                unlimited team reports, onscreen DISC benchmarking, and 52-week email series.
+                                Access to all training materials at no charge, including coaching materials, workshop facilitator materials, free & 
+                                unlimited team reports, and 52-week email series.
                             </li>
                             <li>
                                 No annual purchase requirements or membership fees.
                             </li>
                             <li>
-                                We offer certification in the Five Core Assessments: DISC, Motivators, Emotional Intelligence (EIQ-2), Critical Thinking 
-                                (HVP), and Learning Styles. They include Continuing Education Credits with ICF, SHRM, HRCI, and ATD, and are 100% 
-                                self-paced and virtual.
+                                We offer certifications in DISC, Motivators, HireSense (our hiring and selection product), and Emotional Intelligence 
+                                (EIQ-2). They include Continuing Education Credits with ICF, SHRM, HRCI, and ATD. All certifications are 100% self-paced 
+                                and virtual.
                             </li>
                         </ul>
                     </div>
@@ -107,8 +107,8 @@
                         </p>
 
                         <p>
-                            We have the best back-end assessment platform - period! Our tech motto is: "keeping it simple and practical… is smart". We are 
-                            proud to employ in-house developers using the most current technology to power our assessments platform.
+                            We have the best assessment platform - period! Our tech motto is: "keeping it simple and practical… is smart". We are proud to 
+                            employ in-house developers using the most current technology to power our assessments platform.
                         </p>
                     </div>
 
@@ -120,7 +120,7 @@
                             </li>
 
                             <li class="topic customer-service">
-                                We have the best back-end assessment platform - period! It was built by a sales & marketing expert who has been in the 
+                                We have the best assessment platform - period! It was built by a sales & marketing expert who has been in the 
                                 assessment business since 1974 (along with his IT staff) rather than just by IT people. Our tech motto is: "keeping it 
                                 simple and practical… is smart".
                             </li>
@@ -255,12 +255,15 @@
 
                         <p>
                             The world’s most comprehensive, one-stop assessment solution wouldn’t be complete without providing you customizable coaching 
-                            materials. Every Core Assessment, including DISC, has its own dedicated folder on member dashboards complete with multimedia 
-                            materials, including: PowerPoints/slide-decks, debrief guides, facilitator guides, group exercises, handouts, videos, MP3s, 
-                            prewritten email series, sales collateral, and more!</p>
+                            materials. Every Assessment has its own dedicated folder on member dashboards complete with multimedia materials, including: 
+                            PowerPoints/slide-decks, debrief guides, facilitator guides, group exercises, handouts, videos, MP3s, prewritten email series, 
+                            sales collateral, and more!
+                        </p>
 
-                        <p>When you become certified in DISC, you will receive access to a certified version of each folder, containing exclusive and 
-                            upgraded materials that our Master Certified Practitioners use.<p>
+                        <p>
+                            When you become certified in DISC, Motivators, HireSense or Emotional Intelligence, you will receive access to a certified 
+                            version of each folder, containing exclusive and upgraded materials that our Master Certified Practitioners use.
+                        <p>
 
                         </p><br/>
 

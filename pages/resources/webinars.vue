@@ -8,9 +8,9 @@
                     <div class="col-12">
                         <h1 class="section-title">Assessments 24x7 Webinars</h1>
                         <p>
-                            For 20+ years, we have provided consultants, coaches, and corporations the tools to optimize hiring processes and maximize 
-                            performance. Our validated assessments, flexible platform, and exceptional support have positioned us as a "Global Leader in 
-                            Assessment Technology."
+                            Based on your feedback, we committed to providing frequent webinars on topics that will continue to support your businesses. 
+                            Our partnership with you is extremely important to us. Enjoy the replays of our past webinars and look for the upcoming ones in 
+                            the future. 
                         </p>
                     </div>
                 </div>

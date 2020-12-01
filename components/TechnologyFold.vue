@@ -5,11 +5,10 @@
                 <div class="col-12">
                     <h4 class="section-title">We Partner with Consultants to Provide<Br/>Assessments to Their Clients and Empower Them</h4>
                     <p class="section-subtitle">
-                        We have partnered with <u>thousands</u> of coaches and consultants to power their businesses. Our white-labeled dashboard 
-                        comes fully equipped to deliver 50+ assessments and reports, while also providing the tools to take a
-                        business to the next level. Members receive access to our entire suite of validated assessments and reports, including our 
-                        proprietary "whole person" methodology of the five Core Assessments: DISC, Motivators, Hartman Value Profile, Emotional 
-                        Intelligence, and Learning Styles.
+                        We have partnered with <u>thousands</u> of coaches and consultants to power their businesses. Our white-labeled dashboard comes 
+                        fully equipped to deliver 50+ assessments and reports, while also providing the tools to take a business to the next level. Members 
+                        receive access to our entire suite of validated products and reports, including our most productive and foundational DISC and 
+                        Motivator assessment.
                     </p>
                 </div>
             </div>

@@ -8,8 +8,8 @@
                     <div class="col-12">
                         <h1 class="section-title">Why Should You Use Assessments?</h1>
                         <p>
-                            Assessments work because they bring scientific measurement to a variety of criteria including intellectual ability, 
-                            thinking and processing, skill proficiency, work style, personality characteristics, and personal values.
+                            Assessments work because they bring scientific measurement to a variety of criteria including personality characteristics, 
+                            personal values, thinking and processing, skill proficiency, and work style. A great baseline for improvement. 
                         </p>
                     </div>
                 </div>

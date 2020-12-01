@@ -8,8 +8,9 @@
                     <div class="col-12">
                         <h1 class="section-title">Assessment Certification</h1>
                         <p>
-                            Join an elite group that have chosen to take their assessment knowledge to the next level with one of our Core Assessment Practitioner Certifications.
-                            </p>
+                            Join an elite group that have chosen to take their assessment knowledge to the next level with one of our Assessment 
+                            Practitioner Certifications.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -36,7 +37,7 @@
                     <p>
                         Through one-on-one, instructor-led sessions and self-study, learn to use the assessment results with supportive, comprehensive 
                         resources available when you need them. As a bonus, if you are certified in multiple assessments, your instructor will train you to 
-                        combine the assessment results for a holistic understanding of how they work together.
+                        combine the assessment results for a powerful understanding of how they work together.
                     </p>
 
                     <p>
@@ -292,157 +293,6 @@
                     <div class="col-3 col-6-sm">
                         <img class="provider-image" src="~assets/icf-dark.png" alt="icf">
                         <span class="credit">8.25/6.75</span>
-                        <p class="institute">Core/RD ICF</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * The use of this official seal confirms that this Activity has met HR Certification Institute's® 
-                            (HRCI®) criteria for recertification credit pre-approval.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="row">
-                <div class="col-12">
-                    <h2>Critical Thinking (HVP) Certification</h2>
-
-                    <div class="col-3">
-                        <img class="image" src="~/assets/badges/new/hartman-cert-badge-color.png" alt="">
-                    </div>
-
-                    <div class="col-9">
-                        <p>
-                            Based on Robert S. Hartman’s formal science of axiology, the Critical Thinking (HVP) Certification explores how individual’s 
-                            unique thinking strengths and abilities and critical processing patterns are defined by the capacity for understanding, strengths 
-                            and struggles, and blind spots associated with situational bias that may influence making balanced, effective decisions. 
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <h3 style="margin-bottom: -10px">Course Summary (10 hours):</h3>
-
-                    <div class="col-6">
-                        <ul class="course-summary">
-                            <li class="topic hvp">Take the Online Critical Thinking (HVP) Assessment</li>
-                            <li class="topic hvp">Independent Review of Select Self-Study Documents</li>
-                            <li class="topic hvp">Receive a personal report debrief from a trainer</li>
-
-                        </ul>
-                    </div>
-
-                    <div class="col-6">
-                        <ul class="course-summary">
-                            <li class="topic hvp">Review the online Resources for Trainers</li>
-                            <li class="topic hvp">Critical Thinking (HVP) Final Knowledge Check</li>
-                            <li class="topic hvp">Final Certification Call and discuss strategy for use</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <section class="credits">
-                <div class="row">
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/shrm-dark.png" alt="shrm">
-                        <span class="credit">7.5 Credits</span>
-                        <p class="institute">SHRM</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/hrci.png" alt="hrci">
-                        <span class="credit">6.5 Credits</span>
-                        <p class="institute">HRCI*</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/atd-dark.png" alt="atd">
-                        <span class="credit">7.5 Credits</span>
-                        <p class="institute">ATD</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/icf-dark.png" alt="icf">
-                        <span class="credit">5.5/9.6</span>
-                        <p class="institute">Core/RD ICF</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * The use of this official seal confirms that this Activity has met HR Certification Institute's® 
-                            (HRCI®) criteria for recertification credit pre-approval.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="row">
-                <div class="col-12">
-                    <h2>Learning Styles Certification</h2>
-
-                    <div class="col-3">
-                        <img class="image" src="~/assets/badges/new/learning-cert-badge-color.png" alt="">
-                    </div>
-
-                    <div class="col-9">
-                        <p>
-                          Coaches, consultants and trainers with expertise in Learning Styles can optimize the training processes and practices while heightening 
-                          learner self-awareness. When people understand how they learn best and retain new information, they can unlock new efficiencies to help 
-                          them create the best learning experience, as learners or when sharing information with others.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <h3 style="margin-bottom: -10px">Course Summary (10 hours):</h3>
-
-                    <div class="col-6">
-                        <ul class="course-summary">
-                            <li class="topic learning">Take the Online Learning Styles Assessment</li>
-                            <li class="topic learning">Independent Review of Select Self-Study Documents</li>
-                            <li class="topic learning">Receive a personal Learning Styles report debrief</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6">
-                        <ul class="course-summary">
-                            <li class="topic learning">Review the online Resources for Learning Styles Trainers</li>
-                            <li class="topic learning">Learning Styles Final Knowledge Check</li>
-                            <li class="topic learning">Final Certification Call and discuss strategy for use</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <section class="credits">
-                <div class="row">
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/shrm-dark.png" alt="shrm">
-                        <span class="credit">10 Credits</span>
-                        <p class="institute">SHRM</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/hrci.png" alt="hrci">
-                        <span class="credit">7 Credits</span>
-                        <p class="institute">HRCI*</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/atd-dark.png" alt="atd">
-                        <span class="credit">10 Credits</span>
-                        <p class="institute">ATD</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/icf-dark.png" alt="icf">
-                        <span class="credit">4/13.5</span>
                         <p class="institute">Core/RD ICF</p>
                     </div>
                 </div>

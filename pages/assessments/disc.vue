@@ -41,10 +41,10 @@
                     <div class="col-6">
                         <h2>Customized DISC Report Options for Every Professional</h2>
                         <p>
-                            Our internationally awarded DISC assessment produces more than a dozen highly customizable individual and team reports. 
-                            Our members can select from several user report options: general development for behavioral self-awareness (Self), executive 
-                            coaching & development (Leadership), behavioral profiling for sales training (Sales), enhancing customer service communication 
-                            (Service), or behavioral insights of one’s self in consulting (Coaching).
+                            Our internationally awarded DISC assessment produces a variety of customizable individual and team reports. Our members can 
+                            select from several user report options: general development for behavioral self-awareness (Self), executive coaching & 
+                            development (Leadership), behavioral profiling for sales training (Sales), enhancing customer service communication (Service), 
+                            or behavioral insights of one’s self in consulting (Coaching).
                         </p>
                     </div>
 
@@ -200,12 +200,15 @@
 
                         <p>
                             The world’s most comprehensive, one-stop assessment solution wouldn’t be complete without providing you customizable coaching 
-                            materials. Every Core Assessment, including DISC, has its own dedicated folder on member dashboards complete with multimedia 
-                            materials, including: PowerPoints/slide-decks, debrief guides, facilitator guides, group exercises, handouts, videos, MP3s, 
-                            prewritten email series, sales collateral, and more!</p>
+                            materials. Our Core DISC and Motivator assessments have their own dedicated folders on member dashboards. They are complete 
+                            with multimedia materials, including: PowerPoints/slide-decks, debrief guides, facilitator guides, group exercises, handouts, 
+                            videos, MP3s, prewritten email series, sales collateral, and more!
+                        </p>
 
-                        <p>When you become certified in DISC, you will receive access to a certified version of each folder, containing exclusive and 
-                            upgraded materials that our Master Certified Practitioners use.<p>
+                        <p>
+                            When you become certified in DISC, you will receive access to a certified version of each folder, containing exclusive and 
+                            upgraded materials that our Master Certified Practitioners use.
+                        <p>
 
                         </p><br/>
 
@@ -367,11 +370,11 @@
                         <h6 class="question">Can DISC be used to benchmark for New Hires?</h6>
                         <p class="answer">
                             DISC plays a vital role in employee selection. At Assessments 24x7, our DISC assessment meets EEOC standards for class 
-                            protection and is frequently used as one part of the employee selection process. Our proprietary white-label dashboard 
-                            also includes a complimentary DISC Benchmark System, where our members can benchmark applicants’ DISC styles against 
-                            hundreds of preexisting job benchmarks. Our DISC Benchmark System also allows users to create custom benchmarks. 
-                            Additionally, our hiring & selection reports are an integration of the first three Core Assessments: DISC, Motivators, 
-                            and Critical Thinking (Hartman).
+                            protection and is frequently used as one part of the employee selection process. See our Hiring and Selection service, 
+                            <a href="https://www.hiresense.com" class="hyperlink" target="_blank" rel="noopener">HireSense</a>, to learn more. HireSense 
+                            includes our DISC Benchmark System, where our members can benchmark applicants’ DISC styles against hundreds of preexisting job 
+                            benchmarks. Our DISC Benchmark System also allows users to create custom benchmarks. Additionally, our HireSense technology and 
+                            reports are an integration three Assessments: DISC, Motivators, and Critical Thinking (Hartman).
                         </p>
                     </div>
                 </div>
@@ -419,8 +422,9 @@
 
                             <h3>Available Languages</h3>
                             <p>
-                                Our internationally accredited DISC assessment and its all-purpose Self report is currently available in 18 languages. Our popular DISC Leadership report has been translated into 10 languages, 
-                                and the Sales report is available in six. 
+                                Our internationally accredited DISC assessments are currently available in multiple languages. See our 
+                                <nuxt-link to="/sample-reports" class="hyperlink light">sample reports</nuxt-link> page for the list of available languages 
+                                and to view sample results. 
                             </p>
                         </div>
 

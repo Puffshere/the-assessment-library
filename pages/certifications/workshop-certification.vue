@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>Workshop Leader Certification</h2>
+                    <h2>DISC Workshop Leader Certification</h2>
                     <p>
                         The quest to ensure our members are the most knowledgeable and best-equipped in the business continues with our innovative Workshop 
                         Leader Certification program! Developed by assessment industry leaders and public speaking professionals, the Workshop Leader 
@@ -161,7 +161,7 @@
                     <h2>DISC Workshop Leader</h2>
 
                     <p>
-                        Currently, the Workshop Leader program specializes in the DISC model. Our DISC Workshop Leaders are assessment certified practitioners, 
+                        The DISC Workshop Leader program specializes in the DISC model. Our DISC Workshop Leaders are assessment certified practitioners, 
                         qualified to deliver a variety of full or half-day, training workshops including:
                     </p>
 

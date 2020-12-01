@@ -29,9 +29,10 @@
                 </div>
         <juxtapose-left
             title="DISC"
-            body="Our most popular assessment and the world’s #1 behavioral profiling tool, DISC provides a highly-detailed analysis of each individual’s Natural and Adapted behavioral 
-            styles and emotions. DISC reveals how a person will behave within a given environment, situation, or relationship. It offers prescriptive lessons designed to highlight and maximize 
-            self-awareness, intentionality, and interpersonal communication, personally and professionally."
+            body="Our most popular assessment and the world’s #1 behavioral tool, DISC provides a highly-detailed analysis of each individual’s Natural and 
+            Adapted behavioral styles. DISC reveals how a person will most likely behave within a given environment, situation, or relationship. It offers 
+            prescriptive lessons designed to highlight and maximize self-awareness, intentionality, and interpersonal communication, personally and 
+            professionally. "
             image="disc"
             alt="DISC"
             href="/assessments/disc"

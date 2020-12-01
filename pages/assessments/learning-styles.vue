@@ -415,7 +415,9 @@
 
                             <h3>Available Languages</h3>
                             <p>
-                                Our internationally accredited Learning Styles assessment, and its all-purpose Self report is currently available in 15 languages. 
+                                Our internationally accredited Learning Styles assessment is currently available in multiple languages. See our 
+                                <nuxt-link to="/sample-reports" class="hyperlink light">sample reports</nuxt-link> page for the list of available languages 
+                                and to view sample results. 
                             </p>
                         </div>
 

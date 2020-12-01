@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title"> In Their Own Words: How We Help Our Customers Succeed</h1>
+                        <h1 class="section-title"> In Their Own Words:<br/>How We Help Our Customers Succeed</h1>
                         <p>
                             Hear firsthand from some of the world's top Coaches, HR Managers, and Corporate 
                             Trainers about why they've chosen us as their assessment solution. 

@@ -30,18 +30,6 @@
                                     </li>
 
                                     <li class="sub-nav-item">
-                                        <a href="/assessments/emotional-intelligence">Emotional Intelligence</a>
-                                    </li>
-
-                                    <li class="sub-nav-item">
-                                        <a href="/assessments/critical-thinking-hvp">Critical Thinking (HVP)</a>
-                                    </li>
-
-                                    <li class="sub-nav-item">
-                                        <a href="/assessments/learning-styles">Learning Styles</a>
-                                    </li>
-
-                                    <li class="sub-nav-item">
                                         <a href="/sample-reports">Sample Reports</a>
                                     </li>
 
@@ -60,6 +48,14 @@
                                     </li>
 
                                     <span class="title">Additional Assessments</span>
+
+                                    <li class="sub-nav-item">
+                                        <a href="/assessments/emotional-intelligence">Emotional Intelligence</a>
+                                    </li>
+
+                                    <li class="sub-nav-item">
+                                        <a href="/assessments/learning-styles">Learning Styles</a>
+                                    </li>
 
                                     <li class="sub-nav-item">
                                         <a href="/assessments/sales-iq">Sales IQ Plus</a>
@@ -198,10 +194,6 @@
 
                 <li class="nav-item indent">
                     <a href="/assessments/emotional-intelligence">Emotional Intelligence</a>
-                </li>
-
-                <li class="nav-item indent">
-                    <a href="/assessments/critical-thinking-hvp">Critical Thinking (HVP)</a>
                 </li>
 
                 <li class="nav-item indent">

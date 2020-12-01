@@ -16,10 +16,10 @@
             </div>
         </section>
 
-        <div class="container">
+        <div class="container" v-if="unlocked">
             <section class="steps">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12">
                         <div class="step">
                             <div class="icon">1</div>
                             
@@ -38,7 +38,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <!--<div class="col-6">
                         <div class="step">
                             <div class="icon">4</div>
                             
@@ -54,10 +54,35 @@
                                 <a href="#" class="button">Critical Thinking for HireSense</a>
                             </div>
                         </div>
+                    </div>-->
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">2</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    HireSense Navigation
+                                </h3>
+
+                                <p class="text">
+                                    Instructions to use the App technology for running HireSense
+                                </p>
+
+                                <p class="indented-text">Click to watch each video segment:</p>
+
+                                <ul>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+1+-+Intro_Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">Part 1: Intro & Benchmarks (7:34)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+2+-+Insights_Interview+Questions.mp4" target="_blank" rel="noopener" class="hyperlink">Part 2: Insights & Interview Questions (6:42)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+3+-+Links_Alerts_Saved+Results.mp4" target="_blank" rel="noopener" class="hyperlink">Part 3: Links, Alerts & Saved Results (5:25)</a></li>
+                                </ul><br/>
+
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Step+2.pptx" target="_blank" rel="noopener" class="button">HireSense Navigation</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <!--<div class="row">
                     <div class="col-6">
                         <div class="step">
                             <div class="icon">2</div>
@@ -99,10 +124,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12">
                         <div class="step">
                             <div class="icon">3</div>
                             
@@ -136,7 +161,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <!--<div class="col-6">
                         <div class="step">
                             <div class="icon">6</div>
                             
@@ -159,9 +184,41 @@
                                 <a href="#" target="_blank" rel="noopener" class="button">Beyond HireSense Introduction</a>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </section>
+        </div>
+
+        <div class="container" v-else>
+            <div class="row">
+                <div class="col-12">
+                    <div class="password-prompt">
+                        <div class="info">
+                            <h3>This resource is password protected</h3>
+                            <p>
+                                These trainer material resources are only available for Assessments 24x7 account holders. Please use the password provided to you in your Resource Center.
+                            </p>
+                        </div>
+
+                        <div v-if="validationError" class="error">
+                            <p>
+                                The password you have entered is invalid. Please try again.
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" v-model="password">
+                        </div>
+
+                        <p style="margin-top:-10px;font-size:10pt;margin-bottom:30px">
+                            Having trouble? <a class="hyperlink" href="mailto:support@assessments24x7.com">Contact our support team &rarr;</a>
+                        </p>
+
+                        <button class="button" style="width:100%" @click="unlock">Authenticate</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <br/><br/><br/><footer-fold></footer-fold>
@@ -176,6 +233,24 @@
         components: {
             'main-nav': Nav,
             'footer-fold': Footer
+        },
+        data() {
+            return {
+                unlocked: false,
+                password: '',
+                validationError: false
+            }
+        },
+        methods: {
+            unlock() {
+                if (this.password === 'hscertified') {
+                    this.unlocked = true;
+                    this.validationError = false;
+                } else {
+                    this.validationError = true;
+                    this.password = '';
+                }
+            }
         },
         head() {
             return {
@@ -223,6 +298,44 @@
             font-size: 20pt;
             line-height: 24pt;
             margin-bottom: 0;
+        }
+
+        .password-prompt {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            margin: 60px auto;
+            display: block;
+
+            .info {
+                background: rgba(255,189,7,.2);
+                padding: 20px;
+                border-radius: 10px;
+                border: 1px solid rgba(255,189,7,.3);
+                margin-bottom: 18px;
+
+                h3 {
+                    margin: 0 0 5px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 11pt;
+                }
+            }
+
+            .error {
+                background: rgba(255,0,0,.2);
+                padding: 20px;
+                border-radius: 10px;
+                border: 1px solid rgba(255,0,0,.3);
+                margin-bottom: 18px;
+
+                p {
+                    margin: 0;
+                    font-size: 11pt;
+                }
+            }
         }
 
         .step {

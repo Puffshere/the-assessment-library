@@ -205,9 +205,10 @@
                         <h5 class="section-title">Trainer & Facilitator Materials 100% Included</h5>
 
                         <p>
-                            The world’s most comprehensive, one-stop assessment solution wouldn’t be complete without providing you customizable coaching materials. Every Core Assessment, including EIQ, has its own 
-                            dedicated folder on member dashboards complete with multimedia materials, including: PowerPoints/slide-decks, debrief guides, facilitator guides, group exercises, handouts, videos, MP3s, 
-                            prewritten email series, sales collateral, and more!
+                            The world’s most comprehensive, one-stop assessment solution wouldn’t be complete without providing you customizable coaching 
+                            materials. EIQ has its own dedicated folder on member dashboards complete with multimedia materials, including: 
+                            PowerPoints/slide-decks, debrief guides, facilitator guides, group exercises, handouts, videos, MP3s, prewritten email series, 
+                            sales collateral, and more!
                         </p><br/>
 
                         <nuxt-link to="/contact" class="button">Book a Demo</nuxt-link>
@@ -412,7 +413,9 @@
 
                             <h3>Available Languages</h3>
                             <p>
-                                Our internationally accredited EIQ assessment, and its all-purpose Self report is currently available in 6 languages. 
+                                Our internationally accredited EIQ assessment is currently available in multiple languages. See our 
+                                <nuxt-link to="/sample-reports" class="hyperlink light">sample reports</nuxt-link> page for the list of available languages 
+                                and to view sample results. 
                             </p>
                         </div>
 
