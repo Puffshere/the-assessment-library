@@ -8,8 +8,9 @@
                     <div class="col-12">
                         <h1 class="section-title">HireSense™ Training Library</h1>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, dignissimos, officiis voluptas quaerat fugiat a explicabo 
-                            vitae quod, tempora possimus ducimus ratione et inventore eveniet nihil excepturi. Blanditiis, ipsam. Suscipit.
+                            The HireSense training materials library is your comprehensive resource for getting started with HireSense. Explore these at 
+                            your leisure - you will find there are many useful and valuable resources to support your continued development, understanding 
+                            and application!
                         </p>
                     </div>
                 </div>
@@ -44,9 +45,15 @@
                                 <p class="text">
                                     Important things to know about HireSense, the Process for Practitioners, Clients and Candidates, Alerts, Risks and 
                                     Relevancies, the App Technology and Reports
-                                </p><br/>
+                                </p>
 
-                                <a href="#" class="button">HireSense Orientation &rarr;</a><br/><br/>
+                                <p class="indented-text">Click to watch the video segment:</p>
+
+                                <ul>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/orientation/HireSense+Orientation.mp4" target="_blank" rel="noopener" class="hyperlink">Orientation Introduction (12:05)</a></li>
+                                </ul><br/>
+
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/orientation/HireSense+Initial+Orientation_Training+Presentation_Step+1.pptx" target="_blank" rel="noopener" class="button">HireSense Orientation PowerPoint & Notes &rarr;</a><br/><br/>
                             </div>
                         </div>
                     </div>
@@ -89,7 +96,7 @@
                                     <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+3+-+Links_Alerts_Saved+Results.mp4" target="_blank" rel="noopener" class="hyperlink">Part 3: Links, Alerts & Saved Results (5:25)</a></li>
                                 </ul><br/>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Step+2.pptx" target="_blank" rel="noopener" class="button">HireSense Navigation PowerPoint and Notes &rarr;</a><br/><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Step+2.pptx" target="_blank" rel="noopener" class="button">HireSense Navigation PowerPoint & Notes &rarr;</a><br/><br/>
                             </div>
                         </div>
                     </div>
