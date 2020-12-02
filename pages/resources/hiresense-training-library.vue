@@ -8,9 +8,9 @@
                     <div class="col-12">
                         <h1 class="section-title">HireSense™ Training Library</h1>
                         <p>
-                            The HireSense training materials library is your comprehensive resource for getting started with HireSense. Explore these at 
-                            your leisure - you will find there are many useful and valuable resources to support your continued development, understanding 
-                            and application!
+                            The HireSense training materials library is your comprehensive resource for certification in HireSense. Explore these in order 
+                            the first time, and then as needed at your leisure. You will find there are many useful and valuable resources to support your 
+                            continued development, understanding, and application.
                         </p>
                     </div>
                 </div>
