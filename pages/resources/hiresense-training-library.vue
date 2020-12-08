@@ -24,8 +24,8 @@
                         <div class="coming-soon-prompt">
                             <div class="info">
                                 <p>
-                                    Watch for the next 3 parts of HireSense&trade; Virtual Training Materials coming the week of December 7th. If you have any 
-                                    questions, please email your coach at <a href="mailto:training@assessments24x7.com" class="hyperlink">training@assessments24x7.com</a>.
+                                    Watch for part 6 of HireSense&trade; Virtual Training Materials coming soon. If you have any questions, please email 
+                                    your coach at <a href="mailto:training@assessments24x7.com" class="hyperlink">training@assessments24x7.com</a>.
                                 </p>
                             </div>
                         </div>
@@ -57,24 +57,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!--<div class="col-6">
-                        <div class="step">
-                            <div class="icon">4</div>
-                            
-                            <div class="body">
-                                <h3 class="title">
-                                    Bridging HVP and Critical Thinking
-                                </h3>
-
-                                <p class="text">
-                                    Making connections from HVP to Critical Thinking for HireSense
-                                </p><br/>
-
-                                <a href="#" class="button">Critical Thinking for HireSense</a>
-                            </div>
-                        </div>
-                    </div>-->
+                <div class="row">
                     <div class="col-12">
                         <div class="step">
                             <div class="icon">2</div>
@@ -101,50 +86,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!--<div class="row">
-                    <div class="col-6">
-                        <div class="step">
-                            <div class="icon">2</div>
-                            
-                            <div class="body">
-                                <h3 class="title">
-                                    HireSense Navigation
-                                </h3>
-
-                                <p class="text">
-                                    Instructions to use the App technology for running HireSense
-                                </p><br/>
-
-                                <a href="#" class="button">HireSense Navigation</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="step">
-                            <div class="icon">5</div>
-                            
-                            <div class="body">
-                                <h3 class="title">
-                                    HireSense Integration 
-                                </h3>
-
-                                <p class="text">
-                                    Bringing all parts of the technology together to read HireSense results
-                                </p>
-
-                                <ul>
-                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Sample 1</a></li>
-                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Sample 2</a></li>
-                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Sample 3</a></li>
-                                </ul><br/>
-
-                                <a href="#" class="button">HireSense Integration</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
                 
                 <div class="row">
                     <div class="col-12">
@@ -180,8 +121,79 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!--<div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">4</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Bridging HVP and Critical Thinking
+                                </h3>
+
+                                <p class="text">
+                                    Making connections from HVP to Critical Thinking for HireSense
+                                </p>
+
+                                <ul>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking-Building+Awareness_HireSense_+PPT-pb.pptx" target="_blank" rel="noopener" class="hyperlink">Critical Thinking for HireSense™ Building Awareness PowerPoint</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking-Bridging+the+Gap_HireSense_+pb+PPT.pptx" target="_blank" rel="noopener" class="hyperlink">Critical Thinking for HireSense™ Bridging the Gap PowerPoint</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking_HVP+Self+Side+Calculations+vs2.pdf" target="_blank" rel="noopener" class="hyperlink">Self-Side Support Information PDF</a></li>
+                                </ul>
+
+                                <p class="indented-text">Click to watch each video segment:</p>
+
+                                <ul>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking+Building+Awareness.mp4" target="_blank" rel="noopener" class="hyperlink">Building Awareness (18:53)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Crticial+Thinking+Bridging+the+Gap.mp4" target="_blank" rel="noopener" class="hyperlink">Bridging the Gap (17:54)</a></li>
+                                </ul><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">5</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    HireSense Integration 
+                                </h3>
+
+                                <p class="text">
+                                    Bringing all parts of the technology together to read HireSense results
+                                </p>
+
+                                <p class="indented-text">Click to watch each video segment:</p>
+
+                                <ul>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/Integration+Introduction.mp4" target="_blank" rel="noopener" class="hyperlink">Integration Introduction (2:22)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/Thinking+Insights.mp4" target="_blank" rel="noopener" class="hyperlink">Thinking Insights & Style (14:54)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/Behavioral+Insights.mp4" target="_blank" rel="noopener" class="hyperlink">Behavioral Insights & Style (11:06)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/MotivationInsights.mp4" target="_blank" rel="noopener" class="hyperlink">Motivational Insights (14:47)</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense-MotivationStyle.mp4" target="_blank" rel="noopener" class="hyperlink">Motivational Style (7:28)</a></li>
+                                </ul>
+
+                                <p class="indented-text">
+                                    For each Sample below, provide a summary to your coach using the blank worksheet below (see the example worksheet for 
+                                    guidance):
+                                </p>
+
+                                <ul>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense+Feedback+Example.docx" target="_blank" rel="noopener" class="hyperlink">Feedback Worksheet Example</a></li>
+                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense+Feedback+Summary+Worksheet.docx" target="_blank" rel="noopener" class="hyperlink">Feedback Worksheet Blank</a></li>
+                                </ul><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="row">
+                    <div class="col-12">
                         <div class="step">
                             <div class="icon">6</div>
                             
@@ -204,8 +216,8 @@
                                 <a href="#" target="_blank" rel="noopener" class="button">Beyond HireSense Introduction</a>
                             </div>
                         </div>
-                    </div>-->
-                </div>
+                    </div>
+                </div>-->
             </section>
         </div>
 
