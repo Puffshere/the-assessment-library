@@ -35,6 +35,12 @@
                     <h3>Previously Recorded Webinars</h3>
 
                     <ul class="resources">
+                        <nuxt-link to="/resources/best-of-2020-webinar">
+                            <li class="resource a24x7">
+                                The Best of 2020 & How to Apply The Concepts in 2021
+                            </li>
+                        </nuxt-link>
+
                         <nuxt-link to="/resources/scale-up">
                             <li class="resource a24x7">
                                 Scale Up Your Coaching Business with DISC
