@@ -410,6 +410,7 @@
                             <tr><td><a class="hyperlink" href="/about/validity" target="_blank" rel="noopener">Reliability Analysis DISC Online Assessment</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HistoryChart.pdf" target="_blank" rel="noopener">History Chart</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/AreYouMadatMe.pdf" target="_blank" rel="noopener">Are You Mad at Me? Article</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/DISC+World+Map.jpg" target="_blank" rel="noopener">DISC World Map</a></td></tr>
                         </tbody>
                     </table>
 
