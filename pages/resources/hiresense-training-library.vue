@@ -6,11 +6,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">HireSense™ Training Library</h1>
+                        <h1 class="section-title">HireSense™ Training Program and<br/>Materials Library</h1>
                         <p>
-                            The HireSense training materials library is your comprehensive resource for certification in HireSense. Explore these in order 
-                            the first time, and then as needed at your leisure. You will find there are many useful and valuable resources to support your 
-                            continued development, understanding, and application.
+                            This is your comprehensive resource for certification in HireSense. Explore these in order the first time, and then as needed 
+                            at your leisure. You will find there are many useful and valuable resources to support your continued development, 
+                            understanding, and application.
                         </p>
                     </div>
                 </div>
@@ -24,8 +24,11 @@
                         <div class="coming-soon-prompt">
                             <div class="info">
                                 <p>
-                                    Watch for part 6 of HireSense&trade; Virtual Training Materials coming soon. If you have any questions, please email 
-                                    your coach at <a href="mailto:training@assessments24x7.com" class="hyperlink">training@assessments24x7.com</a>.
+                                    Below are the required steps to complete the HireSense certification process. Please begin these steps <i>within 30 
+                                    days</i> of registration. <b>Complete the steps in order</b>, reviewing each step, each video, and each resource that is 
+                                    included before moving on to the next piece. <b>Remember</b>: You may come back at any time to review any part of the 
+                                    content if you desire. If you have any questions, please email your coach at 
+                                    <a href="mailto:training@assessments24x7.com" class="hyperlink">training@assessments24x7.com</a>.
                                 </p>
                             </div>
                         </div>
@@ -34,26 +37,73 @@
 
                 <div class="row">
                     <div class="col-12">
+                        <h2>Pre-Work and Preperation</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <h3>Take the Assessments</h3>
+                        <p>
+                            The first pre-work step is to spend approximately 30 minutes and complete the 3 required <a href="https://www.assessments123.com/?R*o%28%7c%5bgF==R" target="_blank" rel="noopener" class="hyperlink">HireSense assessments</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-4">
+                        <h3>Orientation & Training</h3>
+                        <p>
+                            Once your HireSense assessments have been completed, you will be ready to complete your 
+                            <a href="https://www.scheduleyou.in/eA5wbe" target="_blank" rel="noopener" class="hyperlink">orientation & 
+                            personal training call</a> (1 hour).
+                        </p>
+                    </div>
+
+                    <div class="col-4">
+                        <h3>Practice Using the System</h3>
+                        <p>
+                            Begin practicing! Log into your Dashboard under Managing Assessments, locate HireSense, the Benchmarks and Reporting options.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
                         <div class="step">
                             <div class="icon">1</div>
                             
-                            <div class="body">
-                                <h3 class="title">
-                                    HireSense Orientation
-                                </h3>
+                            <div class="row" style="display: flex">
+                                <div class="col-3 special-col">
+                                    <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/orientation.jpg')"></div>
+                                </div>
 
-                                <p class="text">
-                                    Important things to know about HireSense, the Process for Practitioners, Clients and Candidates, Alerts, Risks and 
-                                    Relevancies, the App Technology and Reports
-                                </p>
+                                <div class="col-9">
+                                    <div class="body">
+                                        <h3 class="title">
+                                            HireSense Orientation
+                                        </h3>
 
-                                <p class="indented-text">Click to watch the video segment:</p>
+                                        <p class="text">
+                                            Important things to know about HireSense, the Process for Practitioners, Clients and Candidates, Alerts, Risks and 
+                                            Relevancies, the App Technology and Reports
+                                        </p>
 
-                                <ul>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/orientation/HireSense+Orientation.mp4" target="_blank" rel="noopener" class="hyperlink">Orientation Introduction (12:05)</a></li>
-                                </ul><br/>
+                                        <ul>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/orientation/HireSense+Initial+Orientation_Training+Presentation_Step+1.pptx" target="_blank" rel="noopener" class="hyperlink">HireSense Orientation PowerPoint & Notes</a></li>
+                                        </ul>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/orientation/HireSense+Initial+Orientation_Training+Presentation_Step+1.pptx" target="_blank" rel="noopener" class="button">HireSense Orientation PowerPoint & Notes &rarr;</a><br/><br/>
+                                        <p class="indented-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#eb1700" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="video-icon">
+                                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                            </svg>
+                                            Click to watch the video segment:
+                                        </p>
+
+                                        <ul>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/orientation/HireSense+Orientation.mp4" target="_blank" rel="noopener" class="hyperlink">Orientation Introduction (12:05)</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -63,25 +113,41 @@
                     <div class="col-12">
                         <div class="step">
                             <div class="icon">2</div>
-                            
-                            <div class="body">
-                                <h3 class="title">
-                                    HireSense Navigation
-                                </h3>
 
-                                <p class="text">
-                                    Instructions to use the App technology for running HireSense
-                                </p>
+                            <div class="row" style="display: flex">
+                                <div class="col-3 special-col">
+                                    <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/navigation.jpg')"></div>
+                                </div>
 
-                                <p class="indented-text">Click to watch each video segment:</p>
+                                <div class="col-9">
+                                    <div class="body">
+                                        <h3 class="title">
+                                            HireSense Navigation
+                                        </h3>
 
-                                <ul>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+1+-+Intro_Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">Part 1: Intro & Benchmarks (7:34)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+2+-+Insights_Interview+Questions.mp4" target="_blank" rel="noopener" class="hyperlink">Part 2: Insights & Interview Questions (6:42)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+3+-+Links_Alerts_Saved+Results.mp4" target="_blank" rel="noopener" class="hyperlink">Part 3: Links, Alerts & Saved Results (5:25)</a></li>
-                                </ul><br/>
+                                        <p class="text">
+                                            Instructions to use the App technology for running HireSense
+                                        </p>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Step+2.pptx" target="_blank" rel="noopener" class="button">HireSense Navigation PowerPoint & Notes &rarr;</a><br/><br/>
+                                        <ul>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Step+2.pptx" target="_blank" rel="noopener" class="hyperlink">HireSense Navigation PowerPoint & Notes</a></li>
+                                        </ul>
+
+                                        <p class="indented-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#eb1700" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="video-icon">
+                                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                            </svg>
+                                            Click to watch each video segment:
+                                        </p>
+
+                                        <ul>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+1+-+Intro_Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">Part 1: Intro & Benchmarks (7:34)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+2+-+Insights_Interview+Questions.mp4" target="_blank" rel="noopener" class="hyperlink">Part 2: Insights & Interview Questions (6:42)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+3+-+Links_Alerts_Saved+Results.mp4" target="_blank" rel="noopener" class="hyperlink">Part 3: Links, Alerts & Saved Results (5:25)</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -92,32 +158,45 @@
                         <div class="step">
                             <div class="icon">3</div>
                             
-                            <div class="body">
-                                <h3 class="title">
-                                    HireSense Benchmarks
-                                </h3>
+                            <div class="row" style="display: flex">
+                                <div class="col-3 special-col">
+                                    <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/benchmarks.jpg')"></div>
+                                </div>
 
-                                <p class="text">
-                                    Instructions to set HireSense Benchmarks
-                                </p>
+                                <div class="col-9">
+                                    <div class="body">
+                                        <h3 class="title">
+                                            HireSense Benchmarks
+                                        </h3>
 
-                                <ul>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/IGFitnessBenchmarks_HowTo.pdf" target="_blank" rel="noopener" class="hyperlink">Instructions to set and review Benchmarks</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarking+Sample_HighMatch.pdf" target="_blank" rel="noopener" class="hyperlink">Sample Benchmark Report High Match</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarking+Sample_LowMatch.pdf" target="_blank" rel="noopener" class="hyperlink">Sample Benchmark Report Low Match</a></li>
-                                </ul>
+                                        <p class="text">
+                                            Instructions to set HireSense Benchmarks
+                                        </p>
 
-                                <p class="indented-text">Click to watch each video segment:</p>
+                                        <ul>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarks+Introduction.pdf" target="_blank" rel="noopener" class="hyperlink">HireSense Benchmark Introduction Guide</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/IGFitnessBenchmarks_HowTo.pdf" target="_blank" rel="noopener" class="hyperlink">Instructions to set and review Benchmarks</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarking+Sample_HighMatch.pdf" target="_blank" rel="noopener" class="hyperlink">Sample Benchmark Report High Match</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarking+Sample_LowMatch.pdf" target="_blank" rel="noopener" class="hyperlink">Sample Benchmark Report Low Match</a></li>
+                                        </ul>
 
-                                <ul>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Preset+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">Preset Scores (3:56)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+User+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">User Scores (5:22)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Group+Average.mp4" target="_blank" rel="noopener" class="hyperlink">Group Average (2:53)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Job+Questionnaire.mp4" target="_blank" rel="noopener" class="hyperlink">Job Questionnaire (2:51)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Reporting+-+Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">HireSense Reporting (7:41)</a></li>
-                                </ul><br/>
+                                        <p class="indented-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#eb1700" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="video-icon">
+                                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                            </svg>
+                                            Click to watch each video segment:
+                                        </p>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarks+Introduction.pdf" target="_blank" rel="noopener" class="button">HireSense Benchmark Introduction Guide &rarr;</a><br/><br/>
+                                        <ul>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Preset+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">Preset Scores (3:56)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+User+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">User Scores (5:22)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Group+Average.mp4" target="_blank" rel="noopener" class="hyperlink">Group Average (2:53)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Job+Questionnaire.mp4" target="_blank" rel="noopener" class="hyperlink">Job Questionnaire (2:51)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Reporting+-+Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">HireSense Reporting (7:41)</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -128,27 +207,41 @@
                         <div class="step">
                             <div class="icon">4</div>
                             
-                            <div class="body">
-                                <h3 class="title">
-                                    Bridging HVP and Critical Thinking
-                                </h3>
+                            <div class="row" style="display: flex">
+                                <div class="col-3 special-col">
+                                    <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/hvp-crit-think.jpg')"></div>
+                                </div>
 
-                                <p class="text">
-                                    Making connections from HVP to Critical Thinking for HireSense
-                                </p>
+                                <div class="col-9">
+                                    <div class="body">
+                                        <h3 class="title">
+                                            HVP and Critical Thinking
+                                        </h3>
 
-                                <ul>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking-Building+Awareness_HireSense_+PPT-pb.pptx" target="_blank" rel="noopener" class="hyperlink">Critical Thinking for HireSense™ Building Awareness PowerPoint</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking-Bridging+the+Gap_HireSense_+pb+PPT.pptx" target="_blank" rel="noopener" class="hyperlink">Critical Thinking for HireSense™ Bridging the Gap PowerPoint</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking_HVP+Self+Side+Calculations+vs2.pdf" target="_blank" rel="noopener" class="hyperlink">Self-Side Support Information PDF</a></li>
-                                </ul>
+                                        <p class="text">
+                                            Making connections from HVP to Critical Thinking for HireSense
+                                        </p>
 
-                                <p class="indented-text">Click to watch each video segment:</p>
+                                        <ul>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking-Building+Awareness_HireSense_+PPT-pb.pptx" target="_blank" rel="noopener" class="hyperlink">Critical Thinking for HireSense™ Building Awareness PowerPoint</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking-Bridging+the+Gap_HireSense_+pb+PPT.pptx" target="_blank" rel="noopener" class="hyperlink">Critical Thinking for HireSense™ Bridging the Gap PowerPoint</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking_HVP+Self+Side+Calculations+vs2.pdf" target="_blank" rel="noopener" class="hyperlink">Self-Side Support Information PDF</a></li>
+                                        </ul>
 
-                                <ul>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking+Building+Awareness.mp4" target="_blank" rel="noopener" class="hyperlink">Building Awareness (18:53)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Crticial+Thinking+Bridging+the+Gap.mp4" target="_blank" rel="noopener" class="hyperlink">Bridging the Gap (17:54)</a></li>
-                                </ul><br/>
+                                        <p class="indented-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#eb1700" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="video-icon">
+                                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                            </svg>
+                                            Click to watch each video segment:
+                                        </p>
+
+                                        <ul>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking+Building+Awareness.mp4" target="_blank" rel="noopener" class="hyperlink">Building Awareness (18:53)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Crticial+Thinking+Bridging+the+Gap.mp4" target="_blank" rel="noopener" class="hyperlink">Bridging the Gap (17:54)</a></li>
+                                        </ul><br/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -159,65 +252,80 @@
                         <div class="step">
                             <div class="icon">5</div>
                             
-                            <div class="body">
-                                <h3 class="title">
-                                    HireSense Integration 
-                                </h3>
+                            <div class="row" style="display: flex">
+                                <div class="col-3 special-col">
+                                    <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/integration.jpg')"></div>
+                                </div>
 
-                                <p class="text">
-                                    Bringing all parts of the technology together to read HireSense results
-                                </p>
+                                <div class="col-9">
+                                    <div class="body">
+                                        <h3 class="title">
+                                            HireSense Integration 
+                                        </h3>
 
-                                <p class="indented-text">Click to watch each video segment:</p>
+                                        <p class="text">
+                                            Bringing all parts of the technology together to read HireSense results
+                                        </p>
 
-                                <ul>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/Integration+Introduction.mp4" target="_blank" rel="noopener" class="hyperlink">Integration Introduction (2:22)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/Thinking+Insights.mp4" target="_blank" rel="noopener" class="hyperlink">Thinking Insights & Style (14:54)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/Behavioral+Insights.mp4" target="_blank" rel="noopener" class="hyperlink">Behavioral Insights & Style (11:06)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/MotivationInsights.mp4" target="_blank" rel="noopener" class="hyperlink">Motivational Insights (14:47)</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense-MotivationStyle.mp4" target="_blank" rel="noopener" class="hyperlink">Motivational Style (7:28)</a></li>
-                                </ul>
+                                        <p class="indented-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#eb1700" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="video-icon">
+                                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                            </svg>
+                                            Click to watch each video segment:
+                                        </p>
 
-                                <p class="indented-text">
-                                    For each Sample below, provide a summary to your coach using the blank worksheet below (see the example worksheet for 
-                                    guidance):
-                                </p>
+                                        <ul>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/Integration+Introduction.mp4" target="_blank" rel="noopener" class="hyperlink">Integration Introduction (2:22)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/Thinking+Insights.mp4" target="_blank" rel="noopener" class="hyperlink">Thinking Insights & Style (14:54)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/Behavioral+Insights.mp4" target="_blank" rel="noopener" class="hyperlink">Behavioral Insights & Style (11:06)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/MotivationInsights.mp4" target="_blank" rel="noopener" class="hyperlink">Motivational Insights (14:47)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense-MotivationStyle.mp4" target="_blank" rel="noopener" class="hyperlink">Motivational Style (7:28)</a></li>
+                                        </ul>
 
-                                <ul>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense+Feedback+Example.docx" target="_blank" rel="noopener" class="hyperlink">Feedback Worksheet Example</a></li>
-                                    <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense+Feedback+Summary+Worksheet.docx" target="_blank" rel="noopener" class="hyperlink">Feedback Worksheet Blank</a></li>
-                                </ul><br/>
+                                        <p class="indented-text">
+                                            For each Sample below, provide a summary to your coach using the blank worksheet below (see the example worksheet for 
+                                            guidance):
+                                        </p>
+
+                                        <ul>
+                                            <li>
+                                                <a href="https://www.assessments247.net/hiresense.aspx?lvfrGaMtI96tuuELCoqAoqv2fthdkX1tnvWqCwn0e6A1" target="_blank" rel="noopener" class="hyperlink">Sample 1</a>,&nbsp;
+                                                <a href="https://www.assessments247.net/hiresense.aspx?VPny9tVOy1o_HiRRlvxV5MrRoGTlk8FUDabGdc_1frM1" target="_blank" rel="noopener" class="hyperlink">Sample 2</a>,&nbsp;
+                                                <a href="https://www.assessments247.net/hiresense.aspx?FKNkph1moTXnea-Y5Uw26omYY9YPDcPJT-UOfZ3wZ3w1" target="_blank" rel="noopener" class="hyperlink">Sample 3</a>
+                                            </li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense+Feedback+Example.docx" target="_blank" rel="noopener" class="hyperlink">Feedback Worksheet Example</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense+Feedback+Summary+Worksheet.docx" target="_blank" rel="noopener" class="hyperlink">Feedback Worksheet Blank</a></li>
+                                        </ul><br/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!--<div class="row">
+                <div class="row">
                     <div class="col-12">
-                        <div class="step">
-                            <div class="icon">6</div>
-                            
-                            <div class="body">
-                                <h3 class="title">
-                                    Beyond HireSense
-                                </h3>
-
-                                <p class="text">
-                                    Creating a foundation for what comes after hiring and selection, including onboarding, developing, coaching and using 
-                                    other reports. 
-                                </p>
-
-                                <ul>
-                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Onboarding & Developing</a></li>
-                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Coaching</a></li>
-                                    <li><a href="#" target="_blank" rel="noopener" class="hyperlink">Other Reports</a></li>
-                                </ul><br/>
-
-                                <a href="#" target="_blank" rel="noopener" class="button">Beyond HireSense Introduction</a>
-                            </div>
-                        </div>
+                        <h2>Final Work and Follow-up</h2>
                     </div>
-                </div>-->
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Required Knowledge Check</h3>
+                        <p>
+                            To complete your HireSense Certification, must must complete the 30 minute <a href="https://forms.gle/siv4Cii3dYrpsVbd6" target="_blank" rel="noopener" class="hyperlink">HireSense Knowledge Check</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <h3>Final Knowledge Check Call</h3>
+                        <p>
+                            Schedule a 30 minute <a href="https://www.appointmentcore.com/app/freeslots/hUxLbtBtm" target="_blank" rel="noopener" class="hyperlink">Final Knowledge Check Call</a>,
+                            if desired, to review results and answer any questions you may have.
+                        </p>
+                    </div>
+                </div>
             </section>
         </div>
 
@@ -268,7 +376,7 @@
         },
         data() {
             return {
-                unlocked: false,
+                unlocked: true,
                 password: '',
                 validationError: false
             }
@@ -286,7 +394,7 @@
         },
         head() {
             return {
-                title: 'HireSense Training Library | Assessments 24x7',
+                title: 'HireSense™ Training Program and Materials Library | Assessments 24x7',
                 meta: [
                     {
                         hid: 'description',
@@ -330,6 +438,10 @@
             font-size: 20pt;
             line-height: 24pt;
             margin-bottom: 0;
+        }
+
+        .video-icon {
+            vertical-align: middle;
         }
 
         .password-prompt {
@@ -394,17 +506,36 @@
         }
 
         .step {
-            background: #f5f7f9;
-            padding: 20px 30px;
+            background: #fdfdfd;
+            border: 2px solid #eceeef;
             border-radius: 10px;
             position: relative;
             margin: 10px 0 20px;
+
+            .special-col {
+                margin: 0;
+                border-radius: 10px 0 0 10px;
+                display: flex;
+                flex: 1;
+
+                .feature-image {
+                    flex: 1;
+                    background-size: cover !important;
+                    background-position: center !important;
+                    border-radius: 10px 0 0 10px;
+                    min-height: 350px;
+                }
+            }
+
+            .body {
+                padding: 20px 30px;
+            }
 
             .icon {
                 position: absolute;
                 left: -16px;
                 top: -16px;
-                background: #00bbff;
+                background: #027bfe;
                 border-radius: 50%;
                 color: #fff;
                 text-align: center;
@@ -413,6 +544,7 @@
                 line-height: 40px;
                 font-size: 16pt;
                 font-weight: 600;
+                z-index: 1;
             }
             
             .title {

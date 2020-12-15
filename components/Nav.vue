@@ -2,7 +2,7 @@
     <header v-if="!hidden">
         <div class="info-bar">
             <p>
-                <strong>Introducing Our New Product:</strong> HireSense! Identify the right person, for the right job, the first time. <a class="hyperlink light" href="https://www.hiresense.com" target="_blank" rel="noopener">Hire better with HireSense &rarr;</a>
+                <strong>Introducing Our New Product:</strong> HireSense&trade;! Identify the right person, for the right job, the first time. <a class="hyperlink light" href="https://www.hiresense.com" target="_blank" rel="noopener">Hire better with HireSense &rarr;</a>
             </p>
         </div>
 
