@@ -37,20 +37,20 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <h2>Pre-Work and Preparation</h2>
+                        <h2><div class="step-icon">A</div> Pre-Work and Preparation</h2>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-4">
-                        <h3>Take the Assessments</h3>
+                        <h3><div class="step-icon small">1</div> Take the Assessments</h3>
                         <p>
                             The first pre-work step is to spend approximately 30 minutes and complete the 3 required <a href="https://www.assessments123.com/?R*o%28%7c%5bgF==R" target="_blank" rel="noopener" class="hyperlink">HireSense assessments</a>.
                         </p>
                     </div>
 
                     <div class="col-4">
-                        <h3>Orientation & Training</h3>
+                        <h3><div class="step-icon small">2</div> Orientation & Training</h3>
                         <p>
                             Once your HireSense assessments have been completed, you will be ready to complete your 
                             <a href="https://www.scheduleyou.in/eA5wbe" target="_blank" rel="noopener" class="hyperlink">orientation & 
@@ -59,18 +59,22 @@
                     </div>
 
                     <div class="col-4">
-                        <h3>Practice Using the System</h3>
+                        <h3><div class="step-icon small">3</div> Practice Using the System</h3>
                         <p>
                             Begin practicing! Log into your Dashboard under Managing Assessments, locate HireSense, the Benchmarks and Reporting options.
                         </p>
+                    </div>
+                </div><br/>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h2><div class="step-icon">B</div> Virtual Training Materials</h2>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                        <div class="step">
-                            <div class="icon">1</div>
-                            
+                        <div class="step">                            
                             <div class="row" style="display: flex">
                                 <div class="col-3 special-col">
                                     <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/orientation.jpg')"></div>
@@ -79,6 +83,7 @@
                                 <div class="col-9">
                                     <div class="body">
                                         <h3 class="title">
+                                            <div class="step-icon small">1</div>
                                             HireSense Orientation
                                         </h3>
 
@@ -112,8 +117,6 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="step">
-                            <div class="icon">2</div>
-
                             <div class="row" style="display: flex">
                                 <div class="col-3 special-col">
                                     <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/navigation.jpg')"></div>
@@ -122,6 +125,7 @@
                                 <div class="col-9">
                                     <div class="body">
                                         <h3 class="title">
+                                            <div class="step-icon small">2</div>
                                             HireSense Navigation
                                         </h3>
 
@@ -155,9 +159,7 @@
                 
                 <div class="row">
                     <div class="col-12">
-                        <div class="step">
-                            <div class="icon">3</div>
-                            
+                        <div class="step">                            
                             <div class="row" style="display: flex">
                                 <div class="col-3 special-col">
                                     <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/benchmarks.jpg')"></div>
@@ -166,6 +168,7 @@
                                 <div class="col-9">
                                     <div class="body">
                                         <h3 class="title">
+                                            <div class="step-icon small">3</div>
                                             HireSense Benchmarks
                                         </h3>
 
@@ -204,9 +207,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <div class="step">
-                            <div class="icon">4</div>
-                            
+                        <div class="step">                            
                             <div class="row" style="display: flex">
                                 <div class="col-3 special-col">
                                     <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/hvp-crit-think.jpg')"></div>
@@ -215,6 +216,7 @@
                                 <div class="col-9">
                                     <div class="body">
                                         <h3 class="title">
+                                            <div class="step-icon small">4</div>
                                             HVP and Critical Thinking
                                         </h3>
 
@@ -239,7 +241,7 @@
                                         <ul>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking+Building+Awareness.mp4" target="_blank" rel="noopener" class="hyperlink">Building Awareness (18:53)</a></li>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Crticial+Thinking+Bridging+the+Gap.mp4" target="_blank" rel="noopener" class="hyperlink">Bridging the Gap (17:54)</a></li>
-                                        </ul><br/>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -249,9 +251,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <div class="step">
-                            <div class="icon">5</div>
-                            
+                        <div class="step">                            
                             <div class="row" style="display: flex">
                                 <div class="col-3 special-col">
                                     <div class="feature-image" style="background:url('https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/banners/integration.jpg')"></div>
@@ -260,6 +260,7 @@
                                 <div class="col-9">
                                     <div class="body">
                                         <h3 class="title">
+                                            <div class="step-icon small">5</div>
                                             HireSense Integration 
                                         </h3>
 
@@ -296,30 +297,30 @@
                                             </li>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense+Feedback+Example.docx" target="_blank" rel="noopener" class="hyperlink">Feedback Worksheet Example</a></li>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/integration/HireSense+Feedback+Summary+Worksheet.docx" target="_blank" rel="noopener" class="hyperlink">Feedback Worksheet Blank</a></li>
-                                        </ul><br/>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br/>
 
                 <div class="row">
                     <div class="col-12">
-                        <h2>Final Work and Follow-up</h2>
+                        <h2><div class="step-icon">C</div> Final Work and Follow-up</h2>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-6">
-                        <h3>Required Knowledge Check</h3>
+                        <h3><div class="step-icon small">1</div> Required Knowledge Check</h3>
                         <p>
                             To complete your HireSense Certification, must must complete the 30 minute <a href="https://forms.gle/siv4Cii3dYrpsVbd6" target="_blank" rel="noopener" class="hyperlink">HireSense Knowledge Check</a>.
                         </p>
                     </div>
 
                     <div class="col-6">
-                        <h3>Final Knowledge Check Call</h3>
+                        <h3><div class="step-icon small">2</div> Final Knowledge Check Call</h3>
                         <p>
                             Schedule a 30 minute <a href="https://www.appointmentcore.com/app/freeslots/hUxLbtBtm" target="_blank" rel="noopener" class="hyperlink">Final Knowledge Check Call</a>,
                             if desired, to review results and answer any questions you may have.
@@ -376,7 +377,7 @@
         },
         data() {
             return {
-                unlocked: false,
+                unlocked: true,
                 password: '',
                 validationError: false
             }
@@ -505,12 +506,47 @@
             }
         }
 
+        .step-icon {
+            display: inline-block;
+            background: #027bfe;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-weight: 600;
+
+            &.small {
+                background: #b9b9b9;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+            }
+        }
+
         .step {
             background: #fdfdfd;
             border: 2px solid #eceeef;
             border-radius: 10px;
             position: relative;
             margin: 10px 0 20px;
+
+            .icon {
+                position: absolute;
+                background: #027bfe;
+                border-radius: 50%;
+                color: #fff;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 16pt;
+                font-weight: 600;
+                z-index: 1;
+                left: -16px;
+                top: -16px;
+            }
 
             .special-col {
                 margin: 0;
@@ -523,28 +559,11 @@
                     background-size: cover !important;
                     background-position: center !important;
                     border-radius: 10px 0 0 10px;
-                    min-height: 350px;
                 }
             }
 
             .body {
-                padding: 20px 30px;
-            }
-
-            .icon {
-                position: absolute;
-                left: -16px;
-                top: -16px;
-                background: #027bfe;
-                border-radius: 50%;
-                color: #fff;
-                text-align: center;
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
-                font-size: 16pt;
-                font-weight: 600;
-                z-index: 1;
+                padding: 20px 30px 20px 8px;
             }
             
             .title {
@@ -555,7 +574,7 @@
 
             .text {
                 font-size: 12pt;
-                margin: 0;
+                margin: 0 0 0 37px;
             }
             
             .indented-text {
@@ -615,19 +634,6 @@
                     width: 17px;
                     float: right;
                     margin-top: 7px;
-                }
-            }
-        }
-
-        .certifications {
-            .images {
-                text-align: center;
-                margin-top: 30px;
-
-                .image {
-                    width: 100%;
-                    max-width: 160px;
-                    margin: 0 8px;
                 }
             }
         }
