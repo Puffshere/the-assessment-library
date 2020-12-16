@@ -377,7 +377,7 @@
         },
         data() {
             return {
-                unlocked: true,
+                unlocked: false,
                 password: '',
                 validationError: false
             }
