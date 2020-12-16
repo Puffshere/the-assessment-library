@@ -92,7 +92,7 @@
                                 <div class="options-container">
                                     <div class="infusion-option">
                                         <input id="inf_option_Imlookingformoreinformationon_2952" name="inf_option_Imlookingformoreinformationon" type="radio" value="2952" />
-                                        <label for="inf_option_Imlookingformoreinformationon_2952">Using assessments with my clients as an independent coach, trainer, or consultant coach, trainer, or consultant</label>
+                                        <label for="inf_option_Imlookingformoreinformationon_2952">Using assessments with my clients as an independent coach, trainer, or consultant</label>
                                     </div>
 
                                     <div class="infusion-option">
