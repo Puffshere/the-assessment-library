@@ -37,7 +37,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <h2>Pre-Work and Preperation</h2>
+                        <h2>Pre-Work and Preparation</h2>
                     </div>
                 </div>
 

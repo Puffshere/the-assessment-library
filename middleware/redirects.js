@@ -24,6 +24,8 @@ export default function(context) {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/valuessamplereport.pdf');
         } else if (context.req.url == '/reports/DISCselfSampleReport.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCselfSampleReport.pdf');
+        } else if (context.req.url == '/reports/DISCLeadershipSampleReport.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipSampleReport.pdf');
         } else if (context.req.url.match(/(\/reports\/)[\w- ]+\.pdf/gi)) {
             context.redirect('https://www.assessments24x7.com/sample-reports');
         } else {
