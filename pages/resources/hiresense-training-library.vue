@@ -315,7 +315,7 @@
                             and <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/follow-up/HireSense+Certification+Feedback+Worksheet.docx" target="_blank" rel="noopener" class="hyperlink">Certification Sample Review</a>.<br/>
                             <a href="https://www.assessments247.net/hiresense.aspx?lvfrGaMtI96tuuELCoqAoqv2fthdkX1tnvWqCwn0e6A1" target="_blank" rel="noopener" class="hyperlink">Sample 1</a>,&nbsp;
                             <a href="https://www.assessments247.net/hiresense.aspx?VPny9tVOy1o_HiRRlvxV5MrRoGTlk8FUDabGdc_1frM1" target="_blank" rel="noopener" class="hyperlink">Sample 2</a>,&nbsp;
-                            <a href="https://www.assessments247.net/hiresense.aspx?FKNkph1moTXnea-Y5Uw26omYY9YPDcPJT-UOfZ3wZ3w1" target="_blank" rel="noopener" class="hyperlink">Sample 3</a>
+                            <a href="https://www.assessments247.net/hiresense.aspx?ubN6W8N2IHzCrBqVjAO6g6r_4YCs_Kjr89wmoWT3MC15x0rUUbahSSVp1J4vzgvq0" target="_blank" rel="noopener" class="hyperlink">Sample 3</a>
                         </p>
                     </div>
 
@@ -400,7 +400,7 @@
                     {
                         hid: 'description',
                         name: 'description',
-                        content: ''
+                        content: 'This is your comprehensive resource for certification in HireSense™. Explore these in order the first time, and then as needed at your leisure.'
                     }
                 ]
             }
