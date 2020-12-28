@@ -39,6 +39,7 @@
                         </thead>
 
                         <tbody>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener">Debriefing the DISC Report Video Series</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDebriefingGuideCert3.pdf" target="_blank" rel="noopener">DISC Debrief Guide</a>
                             <small>Overview and Guide for what is included on each page of our 3 Part DISC assessment report. You can confirm your version of the report by checking the table of contents.</small></td></tr>
                             <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDebriefingGuide3.pdf" target="_blank" rel="noopener">DISC Debrief Guide</a>
