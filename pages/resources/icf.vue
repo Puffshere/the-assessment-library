@@ -1,12 +1,12 @@
 <template>
-    <section class="ebook-resources">
+    <section class="icf-resources">
         <main-nav/>
 
         <section class="header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img class="icf-logo" src="~/assets/icf.png" alt="ICF Free eBooks | Assessments 24x7">
+                        <img class="icf-logo" src="~/assets/icf.png" alt="ICF Free Business Resources by Assessments 24x7">
                     </div>
                 </div>
             </div>
@@ -15,8 +15,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img class="banner-image" src="~/assets/ebook-resources.jpg"><br/>
-                    <h2 class="subtitle">ICF Coaches - Get 9 Full-Length eBooks by Dr. Tony Alessandra</h2>
+                    <img class="banner-image" src="~/assets/business-resources.jpg" alt="20 Free Business Resources"><br/>
+                    <h2 class="subtitle">Is Financial Success on YOUR List of 2021 Goals?</h2>
+
+                    <p>
+                        We’ve curated these resources specifically for ICF coaches that want to step up their OWN financial game. With over 4 hours of 
+                        video and 1600+ pages of premium content, you’re sure to find resources that will put both you and your clients on the road to 
+                        financial success in 2021.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row flex-center">
+                <div class="col-5">
+                    <a href="#contact" class="button danger" style="display:block;margin-bottom:20px;">Download 20 Free Business Resources &rarr;</a>
                 </div>
             </div>
 
@@ -62,6 +74,46 @@
                         has the answers.
                         <br/><span class="badge">Pages: <strong>240</strong></span>
                     </p>
+
+                    <h4>Sending Out Your Best Silent Message</h4>
+                    <p>
+                        This video program identifies the key elements of a first impression and offers some skill-building tips on how to 
+                        jumpstart your way to a better image. <br/><span class="badge">Duration: <strong>20:51</strong></span>
+                    </p>
+
+                    <h4>The Power of Listening Attentively</h4>
+                    <p>
+                        This video program offers a powerful set of tools to help you build your listening skills up to maximum effectiveness. 
+                        Topics covered include roadblocks to effective listening, the different levels of listening and the six skills of active listening.
+                        <br/><span class="badge">Duration: <strong>21:46</strong></span>
+                    </p>
+
+                    <h4>Goal Setting</h4>
+                    <p>
+                        “Most people aim at nothing in life... and hit it with amazing accuracy." This video 
+                        program introduces several suggested processes to follow that can lead to both a more successful career and a happier life in 
+                        general. <br/><span class="badge">Duration: <strong>21:43</strong></span>
+                    </p>
+
+                    <h4>Expanding Your Vision & Ideas</h4>
+                    <p>
+                        This video program explores the concept of vision—how to define it, how to attain it, and how to use it to become more 
+                        inspiring to others. <br/><span class="badge">Duration: <strong>21:49</strong></span>
+                    </p>
+
+                    <h4>Using Space &amp; Time</h4>
+                    <p>
+                        This video program helps you communicate your message more skillfully and how to understand the signals others send. 
+                        You’ll see how to use space and time to repair communications that somehow get off track, as well as how to create the greatest 
+                        advantage for yourself while giving the most comfort to others. <br/><span class="badge">Duration: <strong>21:16</strong></span>
+                    </p>
+
+                    <h4>The Power of Nonverbal Communication</h4>
+                    <p>
+                        This video program helps you understand how to create a powerful nonverbal message that will support your verbal content. 
+                        You will learn how to interpret and use body language to deliver the message you intend and how to project a vocal quality that 
+                        matches your message. <br/><span class="badge">Duration: <strong>21:33</strong></span>
+                    </p>
                 </div>
 
                 <div class="col-6">
@@ -95,16 +147,55 @@
                         buzzword for "Show me the money!" So, ask yourself this question: "Can I show anyone the money (ROI) for my trade show investment?" 
                         <br/><span class="badge">Pages: <strong>224</strong></span>
                     </p>
+
+                    <h4>Developing Your Charisma</h4>
+                    <p>
+                        What impact could you have on your family, friends, or colleagues, if you decided to unleash your 
+                        TRUE Charisma? How would it feel to be in command of such influence? Can you imagine just how much this would enhance your life? 
+                        Charisma is not based on genetics, I.Q., social position, or luck. Charisma is a skill that you can learn and master with the right 
+                        information and tools. From business meetings, to sales calls, to getting your kids to do their homework, to getting help from a 
+                        store clerk…charisma gives you an edge in life that few people have. <br/><span class="badge">Duration: <strong>21:44</strong></span>
+                    </p>
+
+                    <h4>Effective Presentation Skills</h4>
+                    <p>
+                        This video program helps you present confidently, which is one of the most marketable skills you can acquire. 
+                        Organizations continually seek individuals who can sell products, present proposals, report findings, and explain ideas effectively.
+                        <br/><span class="badge">Duration: <strong>21:18</strong></span>
+                    </p>
+
+                    <h4>10 Versatility Traits</h4>
+                    <p>
+                        This video program helps you change some of your habitual behaviors and knee-jerk reactions in order to become more 
+                        versatile - and therefore increase your chances of success in any given situation, regardless of circumstances.
+                        <br/><span class="badge">Duration: <strong>42:33</strong></span>
+                    </p>
+
+                    <h4>10 Flexibility Traits</h4>
+                    <p>
+                        This video program helps you reduce predetermined views, conclusions, or patterns of behavior that are driving your 
+                        actions - and impairing your flexibility. When you voluntarily refrain from participating in certain situations or interacting with 
+                        certain people because of your lack of flexibility - therefore limiting your horizons - you decrease your chances of personal and 
+                        professional success. <br/><span class="badge">Duration: <strong>43:16</strong></span>
+                    </p>
+
+                    <h4>Time Management</h4>
+                    <p>
+                        This video program helps you determine your current time usage so you can find out where your time goes now, and how you 
+                        can use it better. This video program will help you determine how you can improve your success through the productive use of your 
+                        time. <br/><span class="badge">Duration: <strong>21:24</strong></span>
+                    </p>
                 </div>
             </div><br/>
 
-            <div class="row">
+            <div class="row" id="contact">
                 <div class="col-8">
                     <h3>Get Your <span>Free eBook Resources</span></h3>
-                    <form accept-charset="UTF-8" action="https://rz189.infusionsoft.com/app/form/process/9c93e6b6f60b708b648c14d21a6b504a" class="infusion-form" id="inf_form_9c93e6b6f60b708b648c14d21a6b504a" method="POST">
-                        <input name="inf_form_xid" type="hidden" value="9c93e6b6f60b708b648c14d21a6b504a" />
-                        <input name="inf_form_name" type="hidden" value="ICFAustralasia Optin" />
-                        <input name="infusionsoft_version" type="hidden" value="1.70.0.287213" />
+
+                    <form accept-charset="UTF-8" action="https://rz189.infusionsoft.com/app/form/process/c51c6a560383acb88400056933543c94" class="infusion-form" id="inf_form_c51c6a560383acb88400056933543c94" method="POST">
+                        <input name="inf_form_xid" type="hidden" value="c51c6a560383acb88400056933543c94" />
+                        <input name="inf_form_name" type="hidden" value="Business Resources" />
+                        <input name="infusionsoft_version" type="hidden" value="1.70.0.312271" />
 
                         <div class="infusion-field form-group">
                             <input class="infusion-field-input" id="inf_field_FirstName" name="inf_field_FirstName" placeholder="First Name *" type="text" />
@@ -134,18 +225,18 @@
                             <div class="infusion-radio">
                                 <div class="options-container">
                                     <div class="infusion-option">
-                                        <input id="inf_option_Imlookingformoreinformationon_3174" name="inf_option_Imlookingformoreinformationon" type="radio" value="3174" />
-                                        <label for="inf_option_Imlookingformoreinformationon_3174">Using assessments with my clients as an </label>
+                                        <input id="inf_option_Imlookingformoreinformationon_3254" name="inf_option_Imlookingformoreinformationon" type="radio" value="3254" />
+                                        <label for="inf_option_Imlookingformoreinformationon_3254">Using assessments with my clients as a coach, trainer, or consultant</label>
                                     </div>
 
                                     <div class="infusion-option">
-                                        <input id="inf_option_Imlookingformoreinformationon_3176" name="inf_option_Imlookingformoreinformationon" type="radio" value="3176" />
-                                        <label for="inf_option_Imlookingformoreinformationon_3176">Using assessments internally with our team as a part of our organization (corporation, association, etc.)</label>
+                                        <input id="inf_option_Imlookingformoreinformationon_3256" name="inf_option_Imlookingformoreinformationon" type="radio" value="3256" />
+                                        <label for="inf_option_Imlookingformoreinformationon_3256">Using assessments internally with our team as a part of our organization (corporation, association, etc.)</label>
                                     </div>
                                 </div>
                             </div>
                         </div><br/>
-                        
+
                         <div class="title">
                             <b>Join our exclusive mailing list?</b>
                         </div>
@@ -154,13 +245,13 @@
                             <div class="infusion-radio">
                                 <div class="options-container">
                                     <span class="infusion-option">
-                                        <input id="inf_option_Pleaseselect_3178" name="inf_option_Pleaseselect" type="radio" value="3178" />
-                                        <label for="inf_option_Pleaseselect_3178">Yes please!</label>
+                                        <input id="inf_option_Pleaseselect_3258" name="inf_option_Pleaseselect" type="radio" value="3258" />
+                                        <label for="inf_option_Pleaseselect_3258">Yes please!</label>
                                     </span>
 
                                     <span class="infusion-option">
-                                        <input id="inf_option_Pleaseselect_3180" name="inf_option_Pleaseselect" type="radio" value="3180" />
-                                        <label for="inf_option_Pleaseselect_3180">No, thank you</label>
+                                        <input id="inf_option_Pleaseselect_3260" name="inf_option_Pleaseselect" type="radio" value="3260" />
+                                        <label for="inf_option_Pleaseselect_3260">No, thank you</label>
                                     </span>
                                 </div>
                             </div>
@@ -169,7 +260,7 @@
                         <div class="infusion-field">
                             <span class="infusion-option">
                                 <label for="inf_option_IagreetothePrivacyPolicyandgivemyconsent">
-                                    <input id="inf_option_IagreetothePrivacyPolicyandgivemyconsent" name="inf_option_IagreetothePrivacyPolicyandgivemyconsent" type="checkbox" value="3182" />
+                                    <input id="inf_option_IagreetothePrivacyPolicyandgivemyconsent" name="inf_option_IagreetothePrivacyPolicyandgivemyconsent" type="checkbox" value="3262" />
                                     <span class="label-body">I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy Policy</nuxt-link> and <nuxt-link to="/legal/compliance" class="hyperlink">GDPR Policy</nuxt-link> and give my consent. *</span>
                                 </label>
                             </span>
@@ -181,7 +272,7 @@
                     </form>
 
                     <script type="text/javascript" src="https://rz189.infusionsoft.app/app/webTracking/getTrackingCode"></script>
-                    <script type="text/javascript" src="https://rz189.infusionsoft.com/app/timezone/timezoneInputJs?xid=9c93e6b6f60b708b648c14d21a6b504a"></script>
+                    <script type="text/javascript" src="https://rz189.infusionsoft.com/app/timezone/timezoneInputJs?xid=c51c6a560383acb88400056933543c94"></script>
                 </div>
 
                 <div class="col-4">
@@ -189,6 +280,76 @@
                 </div>
             </div>
         </div><br/><br/>
+
+        <section class="certification">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <h5 class="title">Get DISC Certified and Master DISC</h5>
+                        <p>
+                            Become a DISC expert with our self-paced, internationally accredited certification training. Designed specifically for 
+                            coaches and corporate trainers, our one-on-one instructor-led sessions will teach you how to use DISC completely online 
+                            and at your own pace.</p>
+
+                        <p> 
+                            Our certifications also include many benefits such as exclusive access to our DISC Certified Trainer Materials, discounted 
+                            SILVER LEVEL PRICING, and 10 complimentary DISC assessments when you begin.  
+                        </p><br/>
+
+                        <nuxt-link to="/certifications/assessment" class="button outline light">Get DISC Certified</nuxt-link>
+
+                        <br/><br/><br/><br/><br/>
+
+                    </div>
+
+                    <div class="col-4">
+                        <img class="image" src="~/assets/badges/new/disc-cert-badge-color.png" alt="placeholder">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="credits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-sm">
+                        <img class="provider-image" src="~assets/shrm.png" alt="shrm">
+                        <span class="credit">12 Credits</span>
+                        <p class="institute">SHRM</p>
+                    </div>
+
+                    <div class="col-3 col-6-sm">
+                        <img class="provider-image" src="~assets/hrci.png" alt="hrci">
+                        <span class="credit">10 Credits</span>
+                        <p class="institute">HRCI*</p>
+                    </div>
+
+                    <div class="col-3 col-6-sm">
+                        <img class="provider-image" src="~assets/atd.png" alt="atd">
+                        <span class="credit">12 Credits</span>
+                        <p class="institute">ATD</p>
+                    </div>
+
+                    <div class="col-3 col-6-sm">
+                        <img class="provider-image" src="~assets/icf.png" alt="icf">
+                        <span class="credit">5.25/12.5</span>
+                        <p class="institute">Core/RD ICF</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
+                            * The use of this official seal confirms that this Activity has met HR Certification Institute's® 
+                            (HRCI®) criteria for recertification credit pre-approval.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <LazyHydrate when-visible><validation-mini></validation-mini></LazyHydrate>
+        <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
 
         <footer-fold/>
     </section>
@@ -204,16 +365,24 @@
             LazyHydrate,
             'main-nav': Nav,
             'contact-sidebar': () => import('@/components/ContactSidebar'),
+            'validation-mini': () => import('@/components/ValidationMini'),
+            'client-logos': () => import('@/components/ClientLogos'),
             'footer-fold': Footer
         },
         head() {
             return {
-                title: 'ICF Free Business eBooks | Assessments 24x7',
+                title: 'ICF 20 Free Business Resources | Assessments 24x7',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Here are 9 full published business eBooks by Dr. Tony Alessandra free for ICF coaches!'
+                        content: 'Here are 20 business resources by Dr. Tony Alessandra and Assessments 24x7, 100% free for ICF coaches!'
+                    }
+                ],
+                link: [
+                    {
+                        rel: 'canonical',
+                        href: 'https://www.assessments24x7.com/resources/business-resources'
                     }
                 ]
             }
@@ -222,7 +391,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .ebook-resources {
+    .icf-resources {
         .header {
             background: url('~assets/assessment-bg.jpg');
             background-size: cover;
@@ -288,6 +457,61 @@
             font-size: 9pt;
             font-weight: 500;
             padding: 1px 8px;
+        }
+
+        .credits {
+            padding: 34px 0 10px;
+            background: linear-gradient(90deg, rgba(30,34,45,1) 0%, rgba(48,53,66,1) 100%);
+            margin-bottom: 0px;
+
+            .credit {
+                font-size: 23pt;
+                text-align: center;
+                color: #fff;
+                display: block;
+                font-weight: 700;
+            }
+
+            .institute {
+                text-align: center;
+                font-size: 18pt;
+                margin-top: -2px;
+                color: #fff;
+            }
+
+            .provider-image {
+                margin: 0 auto 14px;
+                display: block;
+                height: 100px;
+            }
+        }
+
+        .certification {
+            background: rgb(0,51,197);
+            background: url('~assets/artifacts/ribbon.png'), linear-gradient(218deg, #0999fe, #0249ec, #0999fe);
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0 0;
+
+            .title {
+                font-size: 24pt;
+                margin: 20px 0 0;
+                position: relative;
+                color: #fff;
+            }
+            
+            p {
+                color: #fff;
+            }
+
+            p, .button {
+                position: relative;
+            }
+
+            .image {
+                width: 100%;
+                margin-bottom: -8px;
+            }
         }
     }
 </style>

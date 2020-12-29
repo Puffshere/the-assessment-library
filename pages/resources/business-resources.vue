@@ -1,12 +1,12 @@
 <template>
-    <section class="atd-resources">
+    <section class="business-resources">
         <main-nav/>
 
         <section class="header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img class="atd-logo" src="~/assets/atd-alt.png" alt="ATD Free Business Resources by Assessments 24x7">
+                        <img class="logo" src="~/assets/logo-footer.png" alt="Free Business Resources by Assessments 24x7">
                     </div>
                 </div>
             </div>
@@ -19,9 +19,9 @@
                     <h2 class="subtitle">Is Financial Success on YOUR List of 2021 Goals?</h2>
 
                     <p>
-                        We’ve curated these resources specifically for ATD members that want to step up their OWN financial game while Creating a World 
-                        That Works Better. With over 4 hours of video and 1600+ pages of premium content, you’re sure to find resources that will put both 
-                        you and your clients on the road to financial success in 2021.
+                        We’ve curated these resources specifically for those who want to step up their OWN financial game. With over 4 hours of video and 
+                        1600+ pages of premium content, you’re sure to find resources that will put both you and your clients on the road to financial 
+                        success in 2021.
                     </p>
                 </div>
             </div>
@@ -371,12 +371,12 @@
         },
         head() {
             return {
-                title: 'ATD 20 Free Business Resources | Assessments 24x7',
+                title: '20 Free Business Resources | Assessments 24x7',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Here are 20 business resources by Dr. Tony Alessandra and Assessments 24x7, 100% free for ATD members!'
+                        content: 'Here are 20 business resources by Dr. Tony Alessandra and Assessments 24x7, 100% free!'
                     }
                 ],
                 link: [
@@ -391,7 +391,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .atd-resources {
+    .business-resources {
         .header {
             background: url('~assets/assessment-bg.jpg');
             background-size: cover;
@@ -406,9 +406,9 @@
                 margin-top: 0;
             }
 
-            .atd-logo {
+            .logo {
                 width: 100%;
-                max-width: 240px;
+                max-width: 400px;
             }
         }
 
