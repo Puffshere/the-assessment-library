@@ -96,15 +96,14 @@
                                         </p>
 
                                         <ul>
-                                            <li>The Different DISC Styles</li>
-                                            <li>How to Identify Each DISC Style</li>
-                                            <li>Describing the Four DISC Styles</li>
-                                            <li>Adaptability with all Four DISC Styles</li>
-                                            <li>Building Effective Teams</li>
-                                            <li>Leadership and the Four DISC Styles</li>
-                                            <li>The Sales & Services Process</li>
-                                            <li>DISC Communication Coach</li>
-                                            <li>Summary</li>
+                                            <li><a href="https://www.youtube.com/watch?v=u6H6NBPU1LA&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">The Different DISC Styles</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=r2TKr9yThAo&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">How to Identify Each DISC Style</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=R8h67_WHm9M&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Describing the Four DISC Styles</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=stwMjKrqxdk&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Adaptability with all Four DISC Styles</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=-7vNaF_We5I&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Building Effective Teams</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=HbnD_9mDmGc&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Leadership and the Four DISC Styles</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=aV_bi0hfkII&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">The Sales & Services Process</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=c_RU6N-makI&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Summary - DISC Styles and Assessments 24x7</a></li>
                                         </ul>
                                     </div>
                                 </div>
