@@ -27,7 +27,14 @@
 
                 <div class="row">
                     <div class="col-4">
-                        <h3><div class="step-icon small">1</div> Account Confirmation Form</h3>
+                        <h3><div class="step-icon small">1</div> Orientation Video</h3>
+                        <p>
+                            <strong style="color:green">START HERE:</strong><br/>Watch the <a href="https://videos.lightspeedvt.com/video_files/alessandra/cat_disc_plat_rule/disc_eworkbook.pdf" target="_blank" rel="noopener" class="hyperlink">DISC Orientation Video</a> presentation.
+                        </p>
+                    </div>
+
+                    <div class="col-4">
+                        <h3><div class="step-icon small">2</div> Account Confirmation Form</h3>
                         <p>
                             Submit your <a href="https://rz189.infusionsoft.app/app/form/practitioner-certification-verification?cookieUUID=4ba5323a-1f0d-438c-a551-dec107d69bb8" target="_blank" rel="noopener" class="hyperlink">Account Confirmation Form</a>* so that we can create your assessment dashboard account and confirm your contact 
                             information is accurate.
@@ -35,23 +42,16 @@
                     </div>
 
                     <div class="col-4">
-                        <h3><div class="step-icon small">2</div> Online Assessment</h3>
+                        <h3><div class="step-icon small">3</div> Online Assessment</h3>
                         <p>
                             Complete the <a href="https://assessments123.com/EndUserAdmin/RegisterMobile.aspx?T%5dbOTG" target="_blank" rel="noopener" class="hyperlink">Online DISC Assessment.</a> You’ll receive a copy of your report in an email as will the training team.
                         </p>
-                    </div>
-
-                    <div class="col-4">
-                        <h3><div class="step-icon small">3</div> Orientation Video</h3>
-                        <p>
-                            Watch the <a href="" target="_blank" rel="noopener" class="hyperlink">DISC Orientation Video</a> presentation.
-                        </p>
-                    </div>
+                    </div>                    
 
                     <div class="col-12">
                         <small>
                             *If you are currently enrolled in more than one certification program and completed this form within the past 3 months, you do 
-                            not need to repeat <u>step 1</u>.
+                            not need to repeat <u>step 2</u>.
                         </small>
                     </div>
                 </div><br/>
@@ -84,7 +84,8 @@
 
                                         <p class="text">
                                             A series of short presentations viewed at your pace. Part 1 focuses on providing instruction regarding the core 
-                                            concepts of DISC and the Virtual Training Part 1 knowledge check.
+                                            concepts of DISC and the Virtual Training Part 1 knowledge check. You may also download the <a href="#" target="_blank" rel="noopener" class="hyperlink">DISC eWorkbook</a> as a supplement
+                                            to use as you wish.
                                         </p>
 
                                         <p class="indented-text">
@@ -103,7 +104,6 @@
                                             <li><a href="https://www.youtube.com/watch?v=-7vNaF_We5I&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Building Effective Teams</a></li>
                                             <li><a href="https://www.youtube.com/watch?v=HbnD_9mDmGc&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Leadership and the Four DISC Styles</a></li>
                                             <li><a href="https://www.youtube.com/watch?v=aV_bi0hfkII&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">The Sales & Services Process</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=c_RU6N-makI&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Summary - DISC Styles and Assessments 24x7</a></li>
                                         </ul>
                                     </div>
                                 </div>
