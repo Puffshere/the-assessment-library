@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="col-4">
-                        <h3><div class="step-icon small">3</div> Online Assessment</h3>
+                        <h3><div class="step-icon small">3</div> Online Assessment <span class="time-badge">10-15 mins</span></h3>
                         <p>
                             Complete the <a href="https://assessments123.com/EndUserAdmin/RegisterMobile.aspx?T%5dbOTG" target="_blank" rel="noopener" class="hyperlink">Online DISC Assessment.</a> You’ll receive a copy of your report in an email as will the training team.
                         </p>
@@ -60,9 +60,7 @@
                     <div class="col-12">
                         <h2><div class="step-icon">B</div> Virtual Training Materials</h2>
                         <p>
-                            <strong>All videos in this step must be completed prior to your 1-hour debrief with your coach.</strong> NOTE: You will have 
-                            access to the Part 1 Virtual Training videos for one year after you register, to revisit and review as needed. Part 2 Videos 
-                            will be available to you indefinitely so you may continue to reference them if needed as you work with clients.
+                            <strong>All videos in this step must be completed prior to your 1-hour debrief with your coach.</strong>
                         </p>
                     </div>
                 </div>
@@ -79,7 +77,7 @@
                                     <div class="body">
                                         <h3 class="title">
                                             <div class="step-icon small">1</div>
-                                            DISC Virtual Training - Part 1
+                                            DISC Virtual Training - Part 1 <span class="time-badge">2-3 hours</span>
                                         </h3>
 
                                         <p class="text">
@@ -93,17 +91,17 @@
                                                 <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
                                                 <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                                             </svg>
-                                            Register and complete the <a href="https://www.assessments123.com/EndUserAdmin/RegisterMobile.aspx?mU%40e" target="_blank" rel="noopener" class="hyperlink">DISC Virtual Training</a> online, including:
+                                            Click to access the full <a href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">DISC Virtual Training</a> video series at once, or click each individual link below:
                                         </p>
 
                                         <ul>
-                                            <li><a href="https://www.youtube.com/watch?v=u6H6NBPU1LA&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">The Different DISC Styles</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=r2TKr9yThAo&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">How to Identify Each DISC Style</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=R8h67_WHm9M&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Describing the Four DISC Styles</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=stwMjKrqxdk&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Adaptability with all Four DISC Styles</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=-7vNaF_We5I&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Building Effective Teams</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=HbnD_9mDmGc&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Leadership and the Four DISC Styles</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=aV_bi0hfkII&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">The Sales & Services Process</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=u6H6NBPU1LA&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">The Different DISC Styles</a> <span class="time-badge">16 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=r2TKr9yThAo&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">How to Identify Each DISC Style</a> <span class="time-badge">28 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=R8h67_WHm9M&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Describing the Four DISC Styles</a> <span class="time-badge">14 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=stwMjKrqxdk&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Adaptability with all Four DISC Styles</a> <span class="time-badge">21 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=-7vNaF_We5I&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Building Effective Teams</a> <span class="time-badge">9 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=HbnD_9mDmGc&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">Leadership and the Four DISC Styles</a> <span class="time-badge">25 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=aV_bi0hfkII&list=PLTNKuyfaKqLbCwGVqyfFRQghFoRFaQQjr" target="_blank" rel="noopener" class="hyperlink">The Sales & Services Process</a> <span class="time-badge">29 mins</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -124,7 +122,7 @@
                                     <div class="body">
                                         <h3 class="title">
                                             <div class="step-icon small">2</div>
-                                            DISC Virtual Training - Part 2
+                                            DISC Virtual Training - Part 2 <span class="time-badge">2-3 hours</span>
                                         </h3>
 
                                         <p class="text">
@@ -138,18 +136,18 @@
                                                 <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
                                                 <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                                             </svg>
-                                            Click each link below to complete the series on debriefing the DISC Report:
+                                            Click to access the full <a href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener" class="hyperlink">Debriefing the DISC Report</a> video series at once, or click each individual link below:
                                         </p>
 
                                         <ul>
-                                            <li><a href="https://www.youtube.com/watch?v=vdUawpWjFw0" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Intro & Part 1</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=w1dlyhzV5us" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Understanding Self General Characteristics</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=6i0muIEwwcE" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Word Sketches</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=YP3Ju8H5s4I" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Graphs</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=_bFErDcBXuc" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Behavioral Pattern View</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=TkUIzhc9HRI" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Bullet Point Pages</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=l6eJAAHqSXM" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Behavioral Tendencies</a></li>
-                                            <li><a href="https://www.youtube.com/watch?v=3d6IkwDTjMY" target="_blank" rel="noopener" class="hyperlink">DISC Report Training Adaptability</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=vdUawpWjFw0&list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Intro & Part 1</a> <span class="time-badge">8 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=w1dlyhzV5us&list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Understanding Self General Characteristics</a> <span class="time-badge">5 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=6i0muIEwwcE&list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Word Sketches</a> <span class="time-badge">17 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=YP3Ju8H5s4I&list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Graphs</a> <span class="time-badge">19 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=_bFErDcBXuc&list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Behavioral Pattern View</a> <span class="time-badge">4 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=TkUIzhc9HRI&list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Bullet Point Pages</a> <span class="time-badge">6 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=l6eJAAHqSXM&list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener" class="hyperlink">Debriefing DISC Behavioral Tendencies</a> <span class="time-badge">6 mins</span></li>
+                                            <li><a href="https://www.youtube.com/watch?v=3d6IkwDTjMY&list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener" class="hyperlink">DISC Report Training Adaptability</a> <span class="time-badge">7 mins</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -175,7 +173,8 @@
 
                                         <p class="text">
                                             Using what you learned in the DISC Virtual Training portion of this program, we will go over your report as 
-                                            further preparation for debriefing clients.<br/><br/>
+                                            further preparation for debriefing clients. It is ok to get this scheduled on the calendar and then go back and 
+                                            complete all prior work.<br/><br/>
                                             <strong>
                                                 <i>
                                                     "I certify that I have completed all training videos in the DISC Virtual Training Part 1 & Part 2 prior 
@@ -219,7 +218,7 @@
                                             </li>
                                             <li>
                                                 Watch the <a href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaNM956tOMqirauvqe885Qc" target="_blank" rel="noopener" class="hyperlink">Practice Graph Debriefs</a>
-                                                example videos (44m). Watch at least 3 of the 5 videos in the series <strong>prior</strong> to completing 
+                                                example videos <span class="time-badge">44 mins</span>. Watch at least 3 of the 5 videos in the series <strong>prior</strong> to completing 
                                                 your Final Knowledge Check (we recommend watching them all).
                                             </li>
                                         </ul>
@@ -370,6 +369,16 @@
         }
 
         .video-icon {
+            vertical-align: middle;
+        }
+
+        .time-badge {
+            background: #b9e4ff;
+            color: #0233c6;
+            font-weight: 600;
+            font-size: 9pt;
+            padding: 2px 7px;
+            border-radius: 14px;
             vertical-align: middle;
         }
 
