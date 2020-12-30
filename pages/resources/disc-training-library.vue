@@ -82,7 +82,7 @@
 
                                         <p class="text">
                                             A series of short presentations viewed at your pace. Part 1 focuses on providing instruction regarding the core 
-                                            concepts of DISC and the Virtual Training Part 1 knowledge check. You may also download the <a href="#" target="_blank" rel="noopener" class="hyperlink">DISC eWorkbook</a> as a supplement
+                                            concepts of DISC and the Virtual Training Part 1 knowledge check. You may also download the <a href="https://videos.lightspeedvt.com/video_files/alessandra/cat_disc_plat_rule/disc_eworkbook.pdf" target="_blank" rel="noopener" class="hyperlink">DISC eWorkbook</a> as a supplement
                                             to use as you wish.
                                         </p>
 
