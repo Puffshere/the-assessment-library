@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">DISC Training Program and<br/>Materials Library</h1>
+                        <h1 class="section-title">DISC Training Program and<br/><a href="#materials" class="hyperlink light">Materials Library</a></h1>
                         <p>
                             This is your comprehensive resource for certification in DISC. Explore these in order the first time, and then as needed 
                             at your leisure. You will find there are many useful and valuable resources to support your continued development, 
@@ -27,9 +27,9 @@
 
                 <div class="row">
                     <div class="col-4">
-                        <h3><div class="step-icon small">1</div> Orientation Video</h3>
+                        <h3><div class="step-icon small">1</div> Orientation Video <span class="time-badge">6 mins</span></h3>
                         <p>
-                            <strong style="color:green">START HERE:</strong><br/>Watch the <a href="https://videos.lightspeedvt.com/video_files/alessandra/cat_disc_plat_rule/disc_eworkbook.pdf" target="_blank" rel="noopener" class="hyperlink">DISC Orientation Video</a> presentation.
+                            <strong style="color:green">START HERE:</strong><br/>Watch the <a href="https://us02web.zoom.us/rec/share/aSAmZ-N54B6hQvvBxghsY0MHvNrj0o4IYvlQjyWaBn2QzTldR_RXCFKkg9GfatXh.weZGuyGXvbLZPOQi?startTime=1609368903000" target="_blank" rel="noopener" class="hyperlink">DISC Orientation Video</a> presentation.
                         </p>
                     </div>
 
@@ -60,7 +60,7 @@
                     <div class="col-12">
                         <h2><div class="step-icon">B</div> Virtual Training Materials</h2>
                         <p>
-                            <strong>All videos in this step must be completed prior to your 1-hour debrief with your coach.</strong>
+                            <strong>All videos in these steps must be completed prior to your 1-hour debrief with your coach.</strong> <span class="time-badge">4-5 hours</span>
                         </p>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                                     <div class="body">
                                         <h3 class="title">
                                             <div class="step-icon small">1</div>
-                                            DISC Virtual Training - Part 1 <span class="time-badge">2-3 hours</span>
+                                            DISC Virtual Training - Part 1
                                         </h3>
 
                                         <p class="text">
@@ -122,7 +122,7 @@
                                     <div class="body">
                                         <h3 class="title">
                                             <div class="step-icon small">2</div>
-                                            DISC Virtual Training - Part 2 <span class="time-badge">2-3 hours</span>
+                                            DISC Virtual Training - Part 2
                                         </h3>
 
                                         <p class="text">
@@ -191,7 +191,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="materials">
                     <div class="col-12">
                         <div class="step">                            
                             <div class="row" style="display: flex">
