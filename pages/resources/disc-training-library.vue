@@ -239,7 +239,7 @@
                     <div class="col-6">
                         <h3><div class="step-icon small">1</div> Final Knowledge Check - Part 1</h3>
                         <p>
-                            Part 1, <a href="https://docs.google.com/forms/u/2/d/14K-yRnSHpCg3QrZGi1fuSTT8TBkjcR8SbOiyoOXTm2Q/viewform" target="_blank" rel="noopener" class="hyperlink">DISC Knowledge Check Q & A</a>, 
+                            Part 1, <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5yPHdAkAi5nzXDZ2juXl4yA7rr6nVhHDDxrFXT2gNbys2bg/viewform" target="_blank" rel="noopener" class="hyperlink">DISC Knowledge Check Q & A</a>, 
                             is a series of 10 multiple choice questions that may be taken multiple times if necessary, and requires 80% accuracy to 
                             pass.
                         </p>
@@ -248,7 +248,7 @@
                     <div class="col-6">
                         <h3><div class="step-icon small">2</div> Final Knowledge Check - Part 2</h3>
                         <p>
-                            Part 2, <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6moAX608r-eExPIPnlaJZkPYg2Ge-gfZdDldkvPUpX26GSg/viewform" target="_blank" rel="noopener" class="hyperlink">DISC Knowledge Check Analysis of Graphs</a>, 
+                            Part 2, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGVNQbIKm8Nwrtdk7459WfTc45Xcl9oJP9j93g1c1YxS6dQ/viewform" target="_blank" rel="noopener" class="hyperlink">DISC Knowledge Check Analysis of Graphs</a>, 
                             asks you to provide an analysis of provided graphs based on your newly acquired skills. Your coach will receive your 
                             submitted responses and will contact you with feedback within 48 business hours.
                         </p>
