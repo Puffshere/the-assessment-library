@@ -80,7 +80,7 @@
                         </svg>
                     </a>
                     
-                    <p class="contact-legal">&copy; 2020 Assessments 24x7. All Rights Reserved.</p>
+                    <p class="contact-legal">&copy; 2021 Assessments 24x7. All Rights Reserved.</p>
                     <p class="contact-privacy">
                         <a href="/legal/privacy">Privacy Policy</a> &nbsp;|&nbsp; <a href="/legal/compliance">GDPR Compliance</a>
                     </p>
