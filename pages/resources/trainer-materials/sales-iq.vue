@@ -188,7 +188,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'trainsiq2020') {
+                if (this.password === 'a24x7siq2021') {
                     this.unlocked = true;
                 } else {
                     this.validationError = true;

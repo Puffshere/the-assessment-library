@@ -505,7 +505,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'traindisc2020') {
+                if (this.password === 'a24x7disc2021') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'certified') {

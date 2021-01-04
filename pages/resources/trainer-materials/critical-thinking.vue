@@ -269,7 +269,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'trainhvp2020') {
+                if (this.password === 'a24x7hvp2021') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'HVPcertified' || this.password === 'hvpcertified') {
