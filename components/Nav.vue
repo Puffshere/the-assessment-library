@@ -1,5 +1,7 @@
 <template>
     <header v-if="!hidden">
+        <cart-modal/>
+
         <div class="info-bar">
             <p>
                 <strong>Introducing Our New Product:</strong> HireSense&trade;! Identify the right person, for the right job, the first time. <a class="hyperlink light" href="https://www.hiresense.com" target="_blank" rel="noopener">Hire better with HireSense &rarr;</a>
@@ -153,6 +155,10 @@
                                     </li>
 
                                     <li class="sub-nav-item">
+                                        <a href="/store">Store</a>
+                                    </li>
+
+                                    <li class="sub-nav-item">
                                         <a href="/about/faq">FAQs</a>
                                     </li>
                                 </ul>
@@ -165,6 +171,16 @@
                             <li class="nav-item">
                                 <a href="/contact" :class="{ active: active == 'contact' }">Contact</a>
                             </li>
+
+                            <li class="nav-item shopping-cart desktop" @click="openCart" v-show="cartTotalProducts">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="#fff" stroke-width="2" class="cart-icon">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+
+                                <span class="cart-total-items" v-show="cartTotalProducts">{{ cartTotalProducts }}</span>
+                            </li>
                         </ul>
                     </div>
 
@@ -173,6 +189,16 @@
                         <span></span>
                         <span></span>
                         <span></span>
+                    </div>
+
+                    <div class="shopping-cart mobile" @click="openCart" v-show="cartTotalProducts">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="#fff" stroke-width="2" class="cart-icon">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+
+                        <span class="cart-total-items" v-show="cartTotalProducts">{{ cartTotalProducts }}</span>
                     </div>
                 </div>
             </div>
@@ -302,6 +328,10 @@
                 </li>
 
                 <li class="nav-item indent">
+                    <a href="/store">Store</a>
+                </li>
+
+                <li class="nav-item indent">
                     <a href="/about/faq">FAQs</a>
                 </li>
                 
@@ -319,11 +349,15 @@
 
 <script>
     import Logo from './Logo';
+    import CartModal from '@/components/CartModal';
+
+    import { mapGetters } from 'vuex';
 
     export default {
         props: ['active'],
         components: {
-            'logo': Logo
+            'logo': Logo,
+            'cart-modal': CartModal
         },
         data() {
             return {
@@ -349,8 +383,14 @@
                 } else {
                     this.showMobileMenu = true;
                 }
+            },
+            openCart() {
+                $nuxt.$emit('openCartModal');
             }
-        }
+        },
+        computed: mapGetters({
+            cartTotalProducts: 'cart/getNumberOfCartItems'
+        })
     }
 </script>
 
@@ -519,6 +559,43 @@
                     }
                 }
             }
+            
+            .shopping-cart {
+                position: relative;
+                cursor: pointer;
+
+                .cart-total-items {
+                    background: #e93d2f;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 21px;
+                    right: -16px;
+                    line-height: 20px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 7pt;
+                }
+
+                &.mobile {
+                    display: none;
+                    position: absolute;
+                    top: 11px;
+                    right: 82px;
+                    z-index: 1;
+
+                    .cart-total-items {
+                        top: -10px
+                    }
+                }
+
+                &.desktop {
+                    .cart-icon {
+                        vertical-align: middle;
+                    }
+                }
+            }
         }
 
         .mobile-menu {
@@ -582,6 +659,10 @@
                 }
 
                 .hamburger {
+                    display: block;
+                }
+
+                .shopping-cart.mobile {
                     display: block;
                 }
             }

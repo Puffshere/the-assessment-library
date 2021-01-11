@@ -41,7 +41,8 @@
     "vue-mapbox": "^0.4.1",
     "vue-moment": "^4.0.0",
     "vue-plyr": "^6.0.4",
-    "vuejs-paginate": "^2.1.0"
+    "vuejs-paginate": "^2.1.0",
+    "vuex-persistedstate": "^4.0.0-beta.2"
   },
   "devDependencies": {
     "@bazzite/nuxt-optimized-images": "^0.2.1",

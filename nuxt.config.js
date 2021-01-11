@@ -52,6 +52,8 @@ module.exports = {
       ssr: false
     },
     '~plugins/lazysizes.client.js',
+    '~plugins/persisted-state.client.js',
+    '~plugins/filters.js',
     {
       src: '~plugins/webp-modernizr.js',
       ssr: false

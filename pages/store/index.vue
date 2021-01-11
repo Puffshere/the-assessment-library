@@ -23,54 +23,19 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-3">
+            <div class="row flex-wrap">
+                <div class="col-3" v-for="product in products" :key="product.id">
                     <div class="product">
-                        <nuxt-link to="/store/disc-profiler-deck" class="link">
-                            <img class="image" src="~/assets/shop/disc-cards-1.jpg" alt="DISC Profiler Card Deck">
-                            <h3 class="title">DISC Profiler Card Deck</h3>
-                        </nuxt-link>
+                        <img class="image" :src="require(`~/assets/shop/${product.slug}.jpg`)" :alt="product.name">
+                        <h3 class="title">{{ product.name }}</h3>
 
-                        <p class="price"><span class="discount">$99.00</span> $34.95</p>
+                        <p class="price">{{ product.price | currencyFromCents }}</p>
                         
-                        <nuxt-link to="/store/disc-profiler-deck" class="button primary">View Details</nuxt-link>
-                    </div>
-                </div>
-
-                <div class="col-3">
-                    <div class="product">
-                        <img class="image" src="~/assets/shop/coming-soon.jpg" alt="Coming Soon">
-                        <h3 class="title">Product Coming Soon</h3>
-
-                        <p class="price">$0.00</p>
-                        
-                        <button class="button primary disabled">Not Available</button>
-                    </div>
-                </div>
-
-                <div class="col-3">
-                    <div class="product">
-                        <img class="image" src="~/assets/shop/coming-soon.jpg" alt="Coming Soon">
-                        <h3 class="title">Product Coming Soon</h3>
-
-                        <p class="price">$0.00</p>
-                        
-                        <button class="button primary disabled">Not Available</button>
-                    </div>
-                </div>
-
-                <div class="col-3">
-                    <div class="product">
-                        <img class="image" src="~/assets/shop/coming-soon.jpg" alt="Coming Soon">
-                        <h3 class="title">Product Coming Soon</h3>
-
-                        <p class="price">$0.00</p>
-                        
-                        <button class="button primary disabled">Not Available</button>
+                        <button class="button primary" @click="addToCart(product)">Add to Cart</button>
                     </div>
                 </div>
             </div>
-        </div><br/>
+        </div><br/><br/><br/>
 
         <footer-fold></footer-fold>
     </section>
@@ -80,10 +45,20 @@
     import Nav from '@/components/Nav';
     import Footer from '@/components/Footer';
 
+    import { mapGetters, mapActions } from 'vuex';
+
     export default {
         components: {
             'main-nav': Nav,
             'footer-fold': Footer
+        },
+        computed: mapGetters({
+            products: 'cart/allProducts'
+        }),
+        methods: {
+            ...mapActions({
+                addToCart: 'cart/addToCart'
+            })
         }
     }
 </script>
@@ -127,6 +102,8 @@
                 max-width: 300px;
                 margin: 0 auto;
                 display: block;
+                border-radius: 5px;
+                box-shadow: 0 10px 20px rgba(0,0,0,.1);
             }
 
             .title {
@@ -138,7 +115,7 @@
             .price {
                 font-weight: 600;
                 font-size: 13pt;
-                margin-top: 0;
+                margin-top: 10px;
 
                 .discount {
                     color: red;
