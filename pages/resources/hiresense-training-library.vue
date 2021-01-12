@@ -135,6 +135,7 @@
 
                                         <ul>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Step+2.pptx" target="_blank" rel="noopener" class="hyperlink">HireSense Navigation PowerPoint & Notes</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense_Running+Reports+from+the+App.pdf" target="_blank" rel="noopener" class="hyperlink">Accessing Electronic Results and Paper Reports</a></li>
                                         </ul>
 
                                         <p class="indented-text">

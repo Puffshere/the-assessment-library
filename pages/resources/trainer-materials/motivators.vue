@@ -139,7 +139,7 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsCertifiedDebriefGuide.pdf" target="_blank" rel="noopener">Motivators Debrief Example</a>
+                            <tr><td><a class="hyperlink" href="https://vimeo.com/131926299" target="_blank" rel="noopener">Motivators Debrief Example</a>
                             <small>Password: jseeeva - Motivators Example Debrief Call - Steve Sisler performs an example Debrief call (includes DISC graphs as well). Review Steve’s Sample DISC & Motivators Call.</small></td></tr>
                         </tbody>
                     </table>
