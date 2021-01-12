@@ -56,9 +56,15 @@
             products: 'cart/allProducts'
         }),
         methods: {
-            ...mapActions({
-                addToCart: 'cart/addToCart'
-            })
+            addToCart(product) {
+                this.$toast.open({
+                    message: `${product.name} has been added to your shopping cart.`,
+                    onClick: () => {
+                        $nuxt.$emit('openCartModal');
+                    }
+                });
+                this.$store.dispatch('cart/addToCart', product);
+            }
         }
     }
 </script>

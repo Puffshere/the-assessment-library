@@ -66,7 +66,8 @@ module.exports = {
     {
       src: '~/plugins/vue-plyr',
       ssr: false
-    }
+    },
+    '~/plugins/vue-toast-notification.js',
   ],
 
   /*
