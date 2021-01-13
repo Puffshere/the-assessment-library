@@ -65,6 +65,18 @@
                 });
                 this.$store.dispatch('cart/addToCart', product);
             }
+        },
+        head() {
+            return {
+                title: 'Product Shop | Assessments 24x7',
+                meta: [
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: 'As the global leader in assessment technology, we know there is still a need for physical assessment products. These useful physical tools can be helpful for almost any business looking for something extra.'
+                    }
+                ]
+            }
         }
     }
 </script>
