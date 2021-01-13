@@ -302,5 +302,13 @@
     {
         "from": "/resources/covid",
         "to": "/resources/webinars"
+    },
+    {
+        "from": "/virtualtour.asp",
+        "to": "/virtual-tour"
+    },
+    {
+        "from": "/virtualtour",
+        "to": "/virtual-tour"
     }
 ]
