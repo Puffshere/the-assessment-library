@@ -70,6 +70,7 @@
                     successUrl: 'https://www.assessments24x7.com/store',
                     cancelUrl: 'https://www.assessments24x7.com/store',
                     billingAddressCollection: 'required',
+                    clientReferenceId: 'physical',
                     shippingAddressCollection: {
                         allowedCountries: ['US']
                     }
