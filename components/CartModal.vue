@@ -67,7 +67,7 @@
                 const {error} = await this.stripe.redirectToCheckout({
                     lineItems: this.lineItems,
                     mode: 'payment',
-                    successUrl: 'https://www.assessments24x7.com/store',
+                    successUrl: 'https://www.assessments24x7.com/store/purchase-confirmation',
                     cancelUrl: 'https://www.assessments24x7.com/store',
                     billingAddressCollection: 'required',
                     clientReferenceId: 'physical',
