@@ -7,20 +7,18 @@
                                     <div class="col-12">
                                         <br/><br/>
 
-                                        <h2>The Five Core Behavioral Assessments</h2>
+                                        <h2>DISC and Motivators – The Foundation Assessments</h2>
                                         <p>
-                                            After decades of work and research within the assessment industry, founder Dr. Tony Alessandra noticed the single assessment approach, 
-                                            that had been so highly regarded, often ignored the complexity of human beings. The assessment industry lacked a powerful solution 
-                                            that offered a more comprehensive, “whole person” methodology to understanding people and performance.
+                                            Whether they are used individually or in combination with each other, DISC and Motivators continue to be two of 
+                                            the most impactful assessments in the industry. They are used by coaches, managers, and leaders around the 
+                                            world to provide immediate insights and in-depth knowledge that might not be obvious from a simple conversation 
+                                            or interview.
                                         </p>
                                         <p>
-                                            By identifying five core styles of human behavior and cognition that have the greatest impact on personal and professional performance, 
-                                            Assessments 24x7 compiled the first complementary series of assessments to evaluate the whole person - behavioral, motivational, thinking, 
-                                            emotional, and learning styles. Used individually or in a variety of combinations, the five Core Assessments offer individuals and 
-                                            organizations the opportunity for enhancing self-awareness and boosting performance beyond anything previously available within the assessment industry.
-                                        </p>
-                                        <p>
-                                            Each of the five Core Assessments measures a different, yet important, dimension of human behavior or cognition.
+                                            Utilizing the DISC and Motivators assessments provides a path for people to learn more about their own 
+                                            communication styles and the underlying motivations that drive behavior and decision-making. Coaches use them 
+                                            to create powerful moments of self-awareness for clients, and managers apply them to develop more insightful, 
+                                            empathetic leaders.
                                         </p>
 
                                         <br/><br/>
@@ -95,88 +93,7 @@
                     label: 'THEORETICAL'
                 },
             ]"/>
-        <juxtapose-left
-            title="Emotional Intelligence"
-            body="Emotional Intelligence (EIQ-2) is designed to highlight and examine one’s self-perception of their current EIQ and the effect it has on 
-            interactions with others. By understanding our own emotions and how to manage them effectively, we can improve our decision-making, 
-            leadership skill, and effectiveness as individuals, as well as accurately reading the emotions in others and engaging in mutually 
-            beneficial interactions in a healthy way. With increased understanding of the impact of our emotions, we can be more intentional 
-            with our expression to do what works."
-            image="eiq"
-            alt="Emotional Intelligence"
-            href="/assessments/emotional-intelligence"
-            linkText="Emotional Intelligence Assessment"
-            :lang="['english', 'spanish', 'french', 'japanese', 'portugese', 'vietnamese']"
-            :badges="[
-                {
-                    class: 'eiq-self-rec',
-                    label: 'SELF-RECOGNITION'
-                },
-                {
-                    class: 'eiq-self-man',
-                    label: 'SELF-MANAGEMENT'
-                },
-                {
-                    class: 'eiq-soc-rec',
-                    label: 'SOCIAL RECOGNITION'
-                },
-                {
-                    class: 'eiq-soc-man',
-                    label: 'SOCIAL MANAGEMENT'
-                }
-            ]"/>
-        <juxtapose-right
-            title="Critical Thinking (HVP)"
-            body="The Critical Thinking (HVP) assessment, based upon the research of Robert S. Hartman’s formal axiology, is a unique assessment measuring each individual’s problem solving skills 
-            and their ability to avoid the blind spots associated with situational bias. In essence, the assessment measures, with uncanny accuracy, an individual’s critical processing 
-            patterns, thinking strengths and abilities, and overall judgment skill."
-            image="critical-thinking"
-            alt="Critical Thinking (HVP)"
-            href="/assessments/critical-thinking-hvp"
-            linkText="Hartman Value Profile"
-            :badges="[
-                {
-                    class: 'values-people',
-                    label: 'INTUITIVE'
-                },
-                {
-                    class: 'values-tasks',
-                    label: 'PRACTICAL'
-                },
-                {
-                    class: 'values-systems',
-                    label: 'SYSTEMS / CONCEPTUAL'
-                }
-            ]"/>
-        <juxtapose-left
-            title="Learning Styles"
-            body="Learning Styles identifies each individual’s preferred method for taking in, retaining, and recalling new information while engaging with the whole brain. 
-            Because there is no one way to learn most effectively, everyone values different ways of interacting with their learning experience. Understanding how the whole 
-            brain influences learning style offers the key to maximizing an individual’s learning transfer and gives an organization insight into training efficiencies designed 
-            to meet learner’s needs."
-            image="learning-styles"
-            alt="Learning Styles"
-            href="/assessments/learning-styles"
-            linkText="Learning Styles Assessment"
-            :lang="['english', 'vietnamese']"
-            :badges="[
-                {
-                    class: 'learning-att',
-                    label: 'ATTENDING'
-                },
-                {
-                    class: 'learning-tra',
-                    label: 'TRANSLATING'
-                },
-                {
-                    class: 'learning-rel',
-                    label: 'RELATING'
-                },
-                {
-                    class: 'learning-und',
-                    label: 'UNDERSTANDING'
-                }
-            ]"/>
+        
         <overview-360></overview-360>
         <corina-lorenzi></corina-lorenzi>
         <footer-fold></footer-fold>

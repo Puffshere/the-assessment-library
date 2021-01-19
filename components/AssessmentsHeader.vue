@@ -5,10 +5,11 @@
                 <div class="col-12">
                     <h1 class="section-title">Assessment Solutions</h1>
                     <p class="section-subtitle">
-                        Assessments 24x7 specializes in a wide range of solutions to fit all your personality assessment needs. With comprehensive personal and professional tools, you can feel 
-                        confident that we have just the right resource to support your goals and strategic plans. While our specialty is behavioral, motivational, critical thinking, emotional 
-                        intelligence, and learning styles tools, we also have assessments specifically designed for use in sales, service, coaching, leadership, and a variety of industries, 
-                        roles, and environments.
+                        Our DISC and Motivators assessments are two of the most powerful tools in the industry. With 20+ years in business and millions of 
+                        completed assessments, Assessments 24x7 has the knowledge and experience a business needs for integrating assessments into their 
+                        organization. While DISC and Motivators are our recommended foundational assessments, we also have an extensive library of 
+                        specialized assessments available via our industry-leading online platform to meet your needs from sales to coaching to leadership 
+                        and much more.
                     </p>
                 </div>
             </div>
@@ -38,9 +39,10 @@
 
                         <h3>Why Assessments?</h3>
                         <p>
-                            Assessments work by introducing scientific measurements to someone's critical thinking and processing abilities, motivation, skill proficiencies, learning styles, 
-                            behavioral characteristics, emotional intelligence, and personal values. Our assessments are constructed to evaluate and reveal someone's holistic 
-                            makeup to help build self-awareness and intentionality in all areas of life, personal and professional. 
+                            Using assessments provides a laser-focused method for quickly achieving deeper insights that might otherwise take months or 
+                            years to bring to light. Assessments can yield considerable gains in self-awareness and self-perception that clients and 
+                            employees can use to better understand themselves and others. Coaches and managers can use those insights for more actionable 
+                            goal-setting and relationship building.
                         </p>
                     </div>
 
@@ -51,11 +53,12 @@
                             <polyline points="17 11 19 13 23 9"></polyline>
                         </svg>
 
-                        <h3>What are the Core Assessments?</h3>
+                        <h3>Why DISC and Motivators?</h3>
                         <p>
-                            Each of the five Core Assessments offers a unique assessment instrument, with  its own set of reports, validity studies, coaching materials, workshop materials, certification 
-                            training, and more. Whether you want to develop more self-aware leaders, assemble top-performing teams, improve sales and service results, enhance training initiatives, 
-                            or select top-performing employees, the Core Assessments provide the foundation for dependable human performance answers.
+                            DISC and Motivators individually are two of the most powerful assessments available today, and the result of combining the two 
+                            offers results FAR greater than simply taking two assessments. Each assessment is unique and scientifically validated, with its 
+                            own reports, coaching and workshop materials, certification training, and more. Use them individually or together to develop 
+                            more self-aware leaders, assemble top-performing teams, improve sales and service results, and more.
                         </p>
                     </div>
                 </div>

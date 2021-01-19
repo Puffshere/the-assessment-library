@@ -155,45 +155,39 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">What is the benefit of a 360 versus a self-assessment?</h6>
+                        <h6 class="question">What is the benefit of a 360° assessment versus a self-assessment?</h6>
                         <p class="answer">
-                           The Leadership Effectiveness 360 report is designed to give you a holistic view of your own perception of your Leadership abilities and 
-                           skills and to compare and contrast them with observer data. Through collecting information from a variety of relationships and roles, 
-                           you have a unique opportunity to examine how others perceive you as a leader in 8 key areas. Once you’ve opened yourself up to receiving 
-                           candid feedback, you can determine if your leadership intentions and skills are as effective as possible.
-
-
+                           The Leadership Effectiveness 360° report is designed to compare the results of individual and peer perceptions in 8 Key 
+                           Leadership areas. By collecting observer data from a variety of relationships and roles, a unique opportunity is created to 
+                           evaluate leadership skills. The Leadership Effectiveness 360° improves the ability to adapt with a better understanding of both 
+                           self and others.
                         </p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">Leadership Effectiveness 360 gives me general information about what others think about me, but doesn’t really go into details about why 
-                            they think that. How can I find out more about why they rated me this way?</h6>
+                        <h6 class="question">
+                            Leadership Effectiveness 360° gives general information about others’ perceptions of me, but I’d like to know specifics about 
+                            why they think that. How can I learn more?
+                        </h6>
                         <p class="answer">
-                            Ask them! The report is a compilation of your raters’ perceptions. Using that information as a starting point for discussion, if you are not sure about 
-                            what you do or don’t do and how it works, that’s a great place to ask for clarity. Remember, sometimes feedback is not objective, and while it may not 
-                            seem true, others perceptions are their reality, and it is important that you acknowledge the feedback and appreciate their willingness to share. <br/><br/>
-
-                            The key to this conversation is that it must be safe for feedback to be shared openly. If you are unwilling to hear the feedback or become defensive, 
-                            the conversation will not be as helpful or honest as it could be. However, if you come to the conversation with an authentic curiosity and a desire to 
-                            learn more about what others are experiencing, you will find a wealth of information that you can use to build stronger, healthier relationships.
-
+                            Ask! The Leadership Effectiveness 360° is intended to focus on perceptions in the 8 key leadership areas and to reveal 
+                            potential areas for improvement. The information in the report can be used as a starting point for discussion to ask clarifying 
+                            questions. The key to this conversation is that it must be safe for feedback to be shared. Come to the conversation with 
+                            authentic curiosity and a desire to understand what others are experiencing.
                         </p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">Will the information in the 360 be anonymous? How many raters do I need?</h6>
+                        <h6 class="question">Is the feedback provided in the 360° anonymous? How many observer responses are needed?</h6>
                         <p class="answer">
-                            The feedback presented to you will be anonymous in terms of rater name, but the report structures the feedback by role. You will see supervisor, peer, 
-                            direct report, other and an observer average category with scores noted for each of the 8 competencies.<br/><br/>
-
-                            You must have a minimum number of raters to maintain anonymity, so a 360 report will not generate if you have not received enough feedback from others. 
-                            We always recommend having as many people rate you as possible. The more information you receive, the better snapshot you have of how different individuals 
-                            in various roles perceive you and respond to you.   
+                            The feedback presented in the report is anonymous. A minimum of three observer responses are needed to maintain anonymity, and 
+                            the 360° report will not generate until three responses are received. An unlimited number of observers can be invited to 
+                            participate, and the cost is the same whether you have three observer responses or 300. We recommend inviting as many observers 
+                            as possible for the best overall snapshot.  
                         </p>
                     </div>
                 </div>

@@ -8,8 +8,8 @@
                     <div class="col-12">
                         <h1 class="section-title">DISC 360° Assessments</h1>
                         <p>
-                            Imagine investing in your personal awareness with the rich data of our popular DISC self-assessment, and taking the opportunity to compare it with observer 
-                            data collected from your colleagues, managers, direct reports, or anyone who would share an honest, thoughtful perspective on how they perceive you.  
+                            Take self-awareness to the next level with the DISC 360° assessment. Utilize anonymous feedback from colleagues, managers, and 
+                            direct reports to understand how others perceive you and add to your personal growth toolbox.
                         </p>
                     </div>
                 </div>
@@ -25,10 +25,11 @@
                 <div class="col-8">
                     <h2>DISC 360° Assessment</h2>
                     <p>
-                        Often the way we perceive ourselves and the way others perceive us can be two very different things. Even experienced business leaders will persist in communication 
-                        and organizational practices with a belief that everyone recognizes their "obvious" intentions, while overlooking costly misinterpretations from different behavioral 
-                        styles, communication preferences and emotional expression. What if you had an enhanced 360° view to tell you how others perceive you? With the help of honest and 
-                        candid feedback, you can be confident that your intentions match your behavior and that others interpret your actions as they were intended.
+                        Are you fully aware of how your actions (and associated motives) are perceived by co-workers, colleagues, and direct reports? 
+                        Complete a DISC 360° assessment with observer feedback. You might be surprised by the results! Many experienced leaders believe 
+                        that the intentions of their communication and organizational practices are “obvious” to those around them, often overlooking 
+                        costly misinterpretations of their actions. Our DISC 360° provides a complete picture with the help of anonymously submitted honest 
+                        and candid feedback.
                     </p>
                 </div>
             </div>
@@ -38,14 +39,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h2>No Observer Maximums & <br/> One Low Price</h2>
+                        <h2>One Price for Unlimited Observer Responses</h2>
                         <p>
-                            Our DISC 360º allows individuals to enhance the traditional DISC self-assessment with observer data. Using the same questionnaire process, observers are asked to provide their perspective of 
-                            your behavior and emotions, helping you discover disconnects between your intention and their experience. The feedback is intended as a way to open conversations, 
-                            highlighting areas of your personal interactions that may offer an opportunity to build greater effectiveness.</P>
+                            Enhance the traditional DISC self-assessment with anonymous observer data. Using the same questionnaire process, observers are 
+                            asked to provide their perspective on your behaviors and communication style. This feedback assists the individual in 
+                            uncovering the disconnects between intentions and experience. 
+                        </p>
                             
-                            <p>As with all of our 360º assessments, the DISC 360º allows users to collect an unlimited number of observer assessments at no additional cost. Whether you add the minimum 5 observers or 300,
-                                 you only pay the same low wholesale price.
+                        <p>
+                            As with all of our 360º assessments, the DISC 360º includes an unlimited number of observer assessments. Add the minimum three 
+                            observers or 300; the cost is the same.
                         </p>
                     </div>
 
@@ -101,40 +104,36 @@
                     <div class="col-12">
                         <h6 class="question">What is the benefit of a 360 versus a self-assessment?</h6>
                         <p class="answer">
-                            The DISC 360 report is designed to give you a holistic view of your own perceptions of behavior and emotions and to compare 
-                            and contrast them with observer data. By collecting data from a variety of relationships and roles, you have a unique 
-                            opportunity to evaluate and examine how your behavior and emotions are perceived by others. By opening yourself up to 
-                            receiving feedback from colleagues, employees, direct reports, clients, leadership, friends, family, and anyone else you 
-                            value feedback from, you are also able to determine if you are adapting your style in ways that are as effective as 
-                            possible, based on environment, situation, and relationship. 
+                            A self-assessment is from a single perspective - yours. The DISC 360° is designed to reveal the bigger picture of how those 
+                            around you perceive your actions. By opening yourself up to receiving feedback, you’ll know how effectively (or not) you’re 
+                            adapting your style.
                         </p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">DISC 360 gives me general information about what others think about me, but doesn’t really go into 
-                            details about why they think that. How can I find out more about why they rated me this way?</h6>
+                        <h6 class="question">
+                            DISC 360° gives general information about others’ perceptions of me, but I’d like to know specifics about why they think that. 
+                            How can I learn more?
+                        </h6>
                         <p class="answer">
-                            Ask them! The DISC 360 is intended to highlight the places in your behavioral and emotional expression that are 
-                            being perceived as you intended, and to reveal areas where your actions may be misunderstood. 
-                            Use this information as a starting point for discussion and ask for clarifying questions. The key to this conversation is that it must be safe for feedback to be shared. 
-                            If you are unwilling to hear the feedback or become defensive, the conversation will not be as helpful or honest as it could be. 
-                            However, if you come to the conversation with authentic curiosity and a desire to learn more about what others are 
-                            experiencing, you will find a wealth of information that you can use to build stronger relationships. 
+                            Ask! The DISC 360° is intended to offer you an overall view of how those around you perceive your actions. The information in 
+                            the report can be used as a starting point for discussion to ask clarifying questions. The key to this conversation is that it 
+                            must be safe for feedback to be shared. Come to the conversation with authentic curiosity and a desire to understand what 
+                            others are experiencing.
                         </p>
                     </div>
                 </div>
 
                  <div class="row">
                     <div class="col-12">
-                        <h6 class="question">Will the information in the 360 be anonymous? How many raters do I need? </h6>
+                        <h6 class="question">Is the feedback provided in the 360° anonymous? How many observer responses are needed?</h6>
                         <p class="answer">
-                            The feedback presented to you will be anonymous. You must have a minimum number of raters to maintain anonymity, 
-                            so a 360 report will not generate if you have not received enough feedback from others. You can, however, 
-                            invite as many people as you wish to provide their perceptions. There is no maximum, and the cost is the same 
-                            whether you have 5 responses or 300. We always recommend having as many people rate you as possible. The more 
-                            information, the better snapshot you have of how different individuals in various roles perceive you and respond to you.   
+                            The feedback presented in the report is anonymous. A minimum of three observer responses are needed to maintain anonymity, and 
+                            the 360° report will not generate until three responses are received. An unlimited number of observers can be invited to 
+                            participate, and the cost is the same whether you have three observer responses or 300. We recommend inviting as many observers 
+                            as possible for the best overall snapshot.
                         </p>
                     </div>
                 </div>

@@ -91,10 +91,6 @@
                                         <a href="/certifications/directory/workshop-leaders">Workshop Leaders</a>
                                     </li>
 
-                                    <li class="sub-nav-item">
-                                        <a href="/certifications/disc-virtual-training">DISC Virtual Training</a>
-                                    </li>
-
                                     <!--<li class="sub-nav-item">
                                         <a href="/certifications/continuing-education">Continuing Education</a>
                                     </li>-->
@@ -268,10 +264,6 @@
 
                 <li class="nav-item indent">
                     <a href="/certifications/directory/workshop-leaders">Workshop Leaders</a>
-                </li>
-
-                <li class="nav-item indent">
-                    <a href="/certifications/disc-virtual-training">DISC Virtual Training</a>
                 </li>
 
                 <!--<li class="nav-item indent">

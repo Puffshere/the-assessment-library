@@ -8,10 +8,8 @@
                     <div class="col-12">
                         <h1 class="section-title">Emotional Intelligence 360°</h1>
                         <p>
-                            Imagine investing in deeper personal awareness with the detailed information from the Emotional Intelligence 
-                            self-assessment, and taking the opportunity to compare it with observer data collected from your colleagues, 
-                            managers, direct reports, or anyone who would share an honest, thoughtful perspective on how they perceive you.  
-                            How might that transform your relationships? 
+                            Invest in deeper personal awareness with the Emotional Intelligence self-assessment, and compare it with observer data 
+                            collected from colleagues, managers, and direct reports. Transform your relationships with the EIQ 360° assessment.
                         </p>
                     </div>
                 </div>
@@ -25,19 +23,17 @@
                     <nuxt-link to="/contact" class="button cta">Schedule An Appointment</nuxt-link>
                 </div>
                 <div class="col-8">
-                    <h2>EIQ-2 360º Assessment</h2>
+                    <h2>Emotional Intelligence (EIQ-2) 360º Assessment</h2>
                     <p>
-                        EIQ-2 assessments help users understand the correlation between the way they apply their emotional intelligence and the outcome of their interactions with others.
+                        The EIQ-2 assessment is a measure of your understanding of how your behavior affects those around you. However, there is often a 
+                        disconnect between how we think others perceive us and the reality of how our actions are perceived. This disconnect is where the 
+                        EIQ-2 360° assessment fills in the gaps.
                     </p>
 
                     <p>
-                        Often the way we perceive ourselves and the way others perceive us can be two very different things. Even experienced business leaders will persist in communication 
-                        and organizational practices with a belief that everyone recognizes their "obvious" intentions, while overlooking costly misinterpretations from different behavioral
-                        styles, communication preferences and emotional expression.  
-                    </p>
-                    <p>
-                    What if you had an enhanced 360° view to tell you how others perceive you? With the help of honest and candid feedback, you can work to be sure that your intentions 
-                    match your behavior and that others interpret your expression in the way you anticipate.
+                        Even the best, most self-aware manager may have blind spots in emotional awareness. With the anonymous, honest, and candid feedback 
+                        from our EIQ-2 360° providing the bigger picture, behaviors can be modified to support intentions, and your actions can be 
+                        interpreted as they were intended.
                     </p>
                 </div>
             </div>
@@ -47,16 +43,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h2>No Observer Maximums & One Low Price</h2>
+                        <h2>One Price for Unlimited Observer Responses</h2>
                         <p>
-                            The EIQ-2 360º allows individuals to enhance the traditional EIQ-2 self-assessment. Using the same questionnaire process, 
-                            observers are asked to provide their perspective of your Emotional Intelligence to help you compare and contrast what you 
-                            think you are doing and what they experience. The feedback is intended as a way to open conversations, highlighting areas 
-                            of your personal interactions that may be an opportunity to build greater effectiveness. 
+                            Enhance the traditional EIQ-2 self-assessment with unlimited, anonymous observer data. Using the same questionnaire process, 
+                            observers are asked to provide their perspective of your emotional intelligence. In the report, the observer experience is 
+                            compared to your intent to highlight the differences between them.
                         </p>
                         <p>
-                            All of our 360º assessments allow users to run an unlimited number of observer assessments without any additional cost. 
-                            You must have a minimum number, but whether you add ten observers or 300, you only pay the same low wholesale price.
+                            As with all of our 360º assessments, the EIQ-2 360º includes an unlimited number of observer assessments. Add a minimum of 
+                            three observers or 300; the cost is the same.
                         </p>
                     </div>
 
@@ -108,40 +103,39 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">What is the benefit of a 360 versus a self-assessment?</h6>
+                        <h6 class="question">What is the benefit of a 360° assessment versus a self-assessment?</h6>
                         <p class="answer">
-                           The EIQ 360 report is designed to give you a holistic view of your own perceptions of your Emotional Intelligence abilities and skills and to 
-                           compare and contrast them with observer data. Through collecting data from a variety of relationships and roles, you have a unique opportunity 
-                           to examine how your EIQ is perceived by others. By opening yourself up to receiving candid feedback from colleagues, direct reports, clients, 
-                           leadership, friends, family and anyone else you value feedback from, you can determine if you are expressing yourself, recognizing and managing 
-                           your emotions and the emotions of others in ways that are as effective as possible.
+                           A self-assessment is from a single perspective - yours. The EIQ-2 360° is designed to reveal the bigger picture of how those 
+                           around you perceive your Emotional Intelligence. By opening yourself up to receiving feedback, you can examine the differences 
+                           between your intentions and others’ perceptions. The EIQ-2 360 improves your ability to adapt, as an understanding of both self 
+                           and others is achieved.
                         </p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">EIQ-2 360 gives me general information about what others think about me, but doesn’t really go into details about why 
-                            they think that. How can I find out more about why they rated me this way?</h6>
+                        <h6 class="question">
+                            EIQ-2 360° gives general information about others’ perceptions of me, but I’d like to know specifics about why they think that. 
+                            How can I learn more?
+                        </h6>
                         <p class="answer">
-                            Ask them! The report is intended to highlight the places in your emotional expression that are being perceived the way you hope, and to 
-                            reveal places where things may be understood differently than you anticipate. Using that information as a starting point for discussion, 
-                            if you are not sure about what you do or don’t do and how it works, that’s a great place to ask for clarity. The key to this conversation 
-                            is that it must be safe for feedback to be shared. If you are unwilling to hear the feedback or become defensive, the conversation will 
-                            not be as helpful or honest as it could be. However, if you come to the conversation with an authentic curiosity and a desire to learn more 
-                            about what others are experiencing, you will find a wealth of information that you can use to build stronger, healthier relationships. 
+                            Ask! The EIQ-2 360° is intended to offer you an overall view of how those around you perceive your Emotional Intelligence and 
+                            actions and reveal areas where they may be misunderstood. The information in the report can be used as a starting point for 
+                            discussion to ask clarifying questions. The key to this conversation is that it must be safe for feedback to be shared. Come to 
+                            the conversation with authentic curiosity and a desire to understand what others are experiencing.
                         </p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">Will the information in the 360 be anonymous? How many raters do I need? </h6>
+                        <h6 class="question">Is the feedback provided in the 360° anonymous? How many observer responses are needed?</h6>
                         <p class="answer">
-                            The feedback presented to you will be anonymous. You must have a minimum number of raters to maintain anonymity, so a 360 report will not 
-                            generate if you have not received enough feedback from others. You can, however, invite as many people as you wish to provide their perceptions. 
-                            There is no maximum, and the cost is the same whether you have 10 responses or 300. We always recommend having as many people rate you as possible. 
-                            The more information, the better snapshot you have of how different individuals in various roles perceive you and respond to you.   
+                            The feedback presented in the report is anonymous. A minimum of three observer responses are needed to maintain anonymity, and 
+                            the 360° report will not generate until three responses are received. An unlimited number of observers can be invited to 
+                            participate, and the cost is the same whether you have three observer responses or 300. We recommend inviting as many observers 
+                            as possible for the best overall snapshot.
                         </p>
                     </div>
                 </div>
