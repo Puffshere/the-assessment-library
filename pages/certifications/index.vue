@@ -86,40 +86,6 @@
                 </div>
             </div>
 
-            <div class="row" style="margin-bottom: 30px;">
-                <div class="col-2"></div>
-                
-                <div class="col-4">
-                    <img class="image" src="~/assets/badges/new/hartman-cert-badge-color.png" alt="">
-
-                    <h3>Critical Thinking (HVP) Certification</h3>
-
-                    <p>
-                        Based on Robert S. Hartman’s formal science of axiology, the Critical Thinking (HVP) Certification explores how an individual’s 
-                        unique thinking strengths and abilities and critical processing patterns are defined by their capacity for understanding, 
-                        their strengths, struggles, and blind spots associated with situational bias that may influence making balanced, effective decisions. 
-                    </p>
-
-                    <nuxt-link class="hyperlink" to="/certifications/assessment">Assessment Certifications &rarr;</nuxt-link>
-                </div>
-
-                <div class="col-4">
-                    <img class="image" src="~/assets/badges/new/learning-cert-badge-color.png" alt="">
-
-                    <h3>Learning Styles Certification</h3>
-
-                    <p>
-                        Coaches, consultants and trainers with expertise in Learning Styles can optimize the training processes and practices while heightening 
-                        learner self-awareness. When people understand how they learn best and retain new information, they can unlock new efficiencies to help 
-                        them create the best learning experience, as learners or when sharing information with others.
-                    </p>
-
-                    <nuxt-link class="hyperlink" to="/certifications/assessment">Assessment Certifications &rarr;</nuxt-link>
-                </div>
-
-                <div class="col-2"></div>
-            </div>
-
             <div class="row" style="margin-bottom: 70px;">
                 <div class="col-12">
                     <h2>Workshop Leader Certification</h2>
