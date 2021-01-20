@@ -18,8 +18,12 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12">
                     <h2>DISC</h2>
+                    <span class="badge disc-d">DOMINANCE</span>
+                    <span class="badge disc-i">INFLUENCE</span>
+                    <span class="badge disc-s">STEADINESS</span>
+                    <span class="badge disc-c">CONSCIENTIOUS</span>
 
                     <table style="width:100%">
                         <thead>
@@ -191,7 +195,7 @@
                     </table>
                 </div>
 
-                <div class="col-6">
+                <div class="col-12">
                     <h2>Combined Reports</h2>
 
                     <table style="width:100%">
@@ -389,6 +393,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '~assets/scss/vars';
+
     .sample-reports {
         .header {
             background: url('~assets/about.jpg');
@@ -411,9 +417,27 @@
         }
 
         h2 {
-            font-size: 20pt;
-            line-height: 24pt;
-            margin-bottom: -20px;
+            font-size: 30pt;
+            line-height: 34pt;
+            margin-bottom: 0;
+        }
+
+        @mixin badge($color) {
+            background: $color;
+        }
+
+        .badge {
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-size: 8pt;
+            padding: 5px 10px;
+            color: $white;
+            margin-right: 3px;
+
+            &.disc-d { @include badge($color-d) }
+            &.disc-i { @include badge($color-i) }
+            &.disc-s { @include badge($color-s) }
+            &.disc-c { @include badge($color-c) }
         }
 
         table {
