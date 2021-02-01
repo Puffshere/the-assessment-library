@@ -26,7 +26,7 @@
                             <option value="zh">Chinese (Mandarin) - 3</option>
                             <option value="nl">Dutch - 4</option>
                             <option value="en-gb">English (UK) - 2</option>
-                            <option value="en-us" selected>English (US) - 32</option>
+                            <option value="en-us" selected>English (US) - 31</option>
                             <option value="fr">French - 9</option>
                             <option value="de">German - 3</option>
                             <option value="id">Indonesian - 1</option>
@@ -68,7 +68,7 @@
                 <div class="col-3">
                     <div class="samples-container">
                         <h3>DISC Self</h3>
-                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCselfSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'ar'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCArabic.pdf" target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf" target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'nl'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfDutch.pdf" target="_blank" rel="noopener">DISC Self Report</a>
@@ -209,7 +209,7 @@
                     <div class="section-hero other">
                         <img class="globe-tex" src="~assets/globe-bg.png">
 
-                        <h2>Speciality Assessments</h2>
+                        <h2>Specialty Assessments</h2>
 
                         <p>
                             Our library of specialized assessments were designed to address a wide range of issues experienced by both coaches and 
@@ -361,9 +361,6 @@
                                 
                                 <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCMatching.pdf" target="_blank" rel="noopener">DISC Collaboration</a>
                                 <a v-else class="hyperlink disabled">DISC Collaboration</a><br/>
-
-                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCollaborationRelationships.pdf" target="_blank" rel="noopener">DISC Collaboration Relationships</a>
-                                <a v-else class="hyperlink disabled">DISC Collaboration Relationships</a><br/>
                             </div>
                         </div>
                     </div>
