@@ -192,12 +192,10 @@
                 <div class="col-8">
                     <h3>Get Your <span>Free eBook Resources</span></h3>
 
-
-
-                    <form accept-charset="UTF-8" action="https://rz189.infusionsoft.com/app/form/process/a899b9705767979d18ddd8d6be25eff9" class="infusion-form" id="inf_form_a899b9705767979d18ddd8d6be25eff9" method="POST">
-                        <input name="inf_form_xid" type="hidden" value="a899b9705767979d18ddd8d6be25eff9" />
-                        <input name="inf_form_name" type="hidden" value="Bank Code Referral" />
-                        <input name="infusionsoft_version" type="hidden" value="1.70.0.317544" />
+                    <form accept-charset="UTF-8" action="https://rz189.infusionsoft.com/app/form/process/c51c6a560383acb88400056933543c94" class="infusion-form" id="inf_form_c51c6a560383acb88400056933543c94" method="POST">
+                        <input name="inf_form_xid" type="hidden" value="c51c6a560383acb88400056933543c94" />
+                        <input name="inf_form_name" type="hidden" value="Business Resources" />
+                        <input name="infusionsoft_version" type="hidden" value="1.70.0.312271" />
 
                         <div class="infusion-field form-group">
                             <input class="infusion-field-input" id="inf_field_FirstName" name="inf_field_FirstName" placeholder="First Name *" type="text" />
@@ -227,18 +225,18 @@
                             <div class="infusion-radio">
                                 <div class="options-container">
                                     <div class="infusion-option">
-                                        <input id="inf_option_Imlookingformoreinformationon_3266" name="inf_option_Imlookingformoreinformationon" type="radio" value="3266" />
-                                        <label for="inf_option_Imlookingformoreinformationon_3266">Using assessments with my clients as an independent coach, trainer, or consultant</label>
+                                        <input id="inf_option_Imlookingformoreinformationon_3254" name="inf_option_Imlookingformoreinformationon" type="radio" value="3254" />
+                                        <label for="inf_option_Imlookingformoreinformationon_3254">Using assessments with my clients as a coach, trainer, or consultant</label>
                                     </div>
 
-                                    <span class="infusion-option">
-                                        <input id="inf_option_Imlookingformoreinformationon_3268" name="inf_option_Imlookingformoreinformationon" type="radio" value="3268" />
-                                        <label for="inf_option_Imlookingformoreinformationon_3268">Using assessments internally with our team as a part of our organization (corporation, association, etc.)</label>
-                                    </span>
+                                    <div class="infusion-option">
+                                        <input id="inf_option_Imlookingformoreinformationon_3256" name="inf_option_Imlookingformoreinformationon" type="radio" value="3256" />
+                                        <label for="inf_option_Imlookingformoreinformationon_3256">Using assessments internally with our team as a part of our organization (corporation, association, etc.)</label>
+                                    </div>
                                 </div>
                             </div>
                         </div><br/>
-                        
+
                         <div class="title">
                             <b>Join our exclusive mailing list?</b>
                         </div>
@@ -247,13 +245,13 @@
                             <div class="infusion-radio">
                                 <div class="options-container">
                                     <span class="infusion-option">
-                                        <input id="inf_option_Pleaseselect_3270" name="inf_option_Pleaseselect" type="radio" value="3270" />
-                                        <label for="inf_option_Pleaseselect_3270">Yes please!</label>
+                                        <input id="inf_option_Pleaseselect_3258" name="inf_option_Pleaseselect" type="radio" value="3258" />
+                                        <label for="inf_option_Pleaseselect_3258">Yes please!</label>
                                     </span>
 
                                     <span class="infusion-option">
-                                        <input id="inf_option_Pleaseselect_3272" name="inf_option_Pleaseselect" type="radio" value="3272" />
-                                        <label for="inf_option_Pleaseselect_3272">No, thank you</label>
+                                        <input id="inf_option_Pleaseselect_3260" name="inf_option_Pleaseselect" type="radio" value="3260" />
+                                        <label for="inf_option_Pleaseselect_3260">No, thank you</label>
                                     </span>
                                 </div>
                             </div>
@@ -262,7 +260,7 @@
                         <div class="infusion-field">
                             <span class="infusion-option">
                                 <label for="inf_option_IagreetothePrivacyPolicyandgivemyconsent">
-                                    <input id="inf_option_IagreetothePrivacyPolicyandgivemyconsent" name="inf_option_IagreetothePrivacyPolicyandgivemyconsent" type="checkbox" value="3274" />
+                                    <input id="inf_option_IagreetothePrivacyPolicyandgivemyconsent" name="inf_option_IagreetothePrivacyPolicyandgivemyconsent" type="checkbox" value="3262" />
                                     <span class="label-body">I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy Policy</nuxt-link> and <nuxt-link to="/legal/compliance" class="hyperlink">GDPR Policy</nuxt-link> and give my consent. *</span>
                                 </label>
                             </span>
@@ -274,7 +272,7 @@
                     </form>
 
                     <script type="text/javascript" src="https://rz189.infusionsoft.app/app/webTracking/getTrackingCode"></script>
-                    <script type="text/javascript" src="https://rz189.infusionsoft.com/app/timezone/timezoneInputJs?xid=a899b9705767979d18ddd8d6be25eff9"></script>
+                    <script type="text/javascript" src="https://rz189.infusionsoft.com/app/timezone/timezoneInputJs?xid=c51c6a560383acb88400056933543c94"></script>
                 </div>
 
                 <div class="col-4">
