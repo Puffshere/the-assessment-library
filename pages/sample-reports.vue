@@ -18,350 +18,381 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2>DISC</h2>
-                    <span class="badge disc-d">DOMINANCE</span>
-                    <span class="badge disc-i">INFLUENCE</span>
-                    <span class="badge disc-s">STEADINESS</span>
-                    <span class="badge disc-c">CONSCIENTIOUS</span>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCselfSampleReport.pdf" target="_blank" rel="noopener">DISC Self</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesDISCselfSampleReport.pdf" target="_blank" rel="noopener">DISC Sales</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipSampleReport.pdf" target="_blank" rel="noopener">DISC Leadership</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipSummary.pdf" target="_blank" rel="noopener">DISC Leadership Summary</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCoaching.pdf" target="_blank" rel="noopener">DISC Coaching</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCService.pdf" target="_blank" rel="noopener">DISC Service</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCPlus.pdf" target="_blank" rel="noopener">DISC Plus</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf" target="_blank" rel="noopener">DISC 360</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySampleReport.pdf" target="_blank" rel="noopener">DISC Summary</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SAMPLE-DISC-SALES-SUMMARY.pdf" target="_blank" rel="noopener">DISC Sales Summary</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationships.pdf" target="_blank" rel="noopener">DISC Relationships</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/BiblicalSample.pdf" target="_blank" rel="noopener">Biblical DISC</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TakeFlightSample.pdf" target="_blank" rel="noopener">Taking Flight with DISC - Birds</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>DISC Languages</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCArabic.pdf" target="_blank" rel="noopener">DISC Self - Arabic</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf" target="_blank" rel="noopener">DISC Self - Mandarin (Chinese)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfDutch.pdf" target="_blank" rel="noopener">DISC Self - Dutch</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfFrench.pdf" target="_blank" rel="noopener">DISC Self - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfGerman.pdf" target="_blank" rel="noopener">DISC Self - German</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfIndonesian.pdf" target="_blank" rel="noopener">DISC Self - Indonesian</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCSelfItalian.pdf" target="_blank" rel="noopener">DISC Self - Italian</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCJapanese.pdf" target="_blank" rel="noopener">DISC Self - Japanese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCKhmer.pdf" target="_blank" rel="noopener">DISC Self - Khmer (Cambodian)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfKorean.pdf" target="_blank" rel="noopener">DISC Self - Korean</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfMalaysian.pdf" target="_blank" rel="noopener">DISC Self - Malaysian</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfNorwegian.pdf" target="_blank" rel="noopener">DISC Self - Norwegian</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfPort.pdf" target="_blank" rel="noopener">DISC Self - Portuguese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfPortBrazil.pdf" target="_blank" rel="noopener">DISC Self - Portuguese (Brazil)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCRussian.pdf" target="_blank" rel="noopener">DISC Self - Russian</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_Espanol.pdf" target="_blank" rel="noopener">DISC Self - Spanish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSwedish.pdf" target="_blank" rel="noopener">DISC Self - Swedish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfTurkish.pdf" target="_blank" rel="noopener">DISC Self - Turkish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfUK.pdf" target="_blank" rel="noopener">DISC Self - UK</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCVietnamese.pdf" target="_blank" rel="noopener">DISC Self - Vietnamese</a></td></tr>
-
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipChinese.pdf" target="_blank" rel="noopener">DISC Leadership - Mandarin (Chinese)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadDutch.pdf" target="_blank" rel="noopener">DISC Leadership - Dutch</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipFrench.pdf" target="_blank" rel="noopener">DISC Leadership - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipGerman.pdf" target="_blank" rel="noopener">DISC Leadership - German</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipJapanese.pdf" target="_blank" rel="noopener">DISC Leadership - Japanese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipKorean.pdf" target="_blank" rel="noopener">DISC Leadership - Korean</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_Leadership_Espanol.pdf" target="_blank" rel="noopener">DISC Leadership - Spanish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipSwedish.pdf" target="_blank" rel="noopener">DISC Leadership - Swedish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipTurkish.pdf" target="_blank" rel="noopener">DISC Leadership - Turkish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadershipVietnamese.pdf" target="_blank" rel="noopener">DISC Leadership - Vietnamese</a></td></tr>
-
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSalesDutch.pdf" target="_blank" rel="noopener">DISC Sales - Dutch</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSalesFrench.pdf" target="_blank" rel="noopener">DISC Sales - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSalesNorwegian.pdf" target="_blank" rel="noopener">DISC Sales - Norwegian</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_Sales_Espanol.pdf" target="_blank" rel="noopener">DISC Sales - Spanish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSalesSwedish.pdf" target="_blank" rel="noopener">DISC Sales - Swedish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSalesTurkish.pdf" target="_blank" rel="noopener">DISC Sales - Turkish</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Motivators</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/valuessamplereport.pdf" target="_blank" rel="noopener">Motivators Assessment</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Motivators Languages</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Arabic.pdf" target="_blank" rel="noopener">Motivators - Arabic</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Dutch.pdf" target="_blank" rel="noopener">Motivators - Dutch</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_French.pdf" target="_blank" rel="noopener">Motivators - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsItalian.pdf" target="_blank" rel="noopener">Motivators - Italian</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Japanese.pdf" target="_blank" rel="noopener">Motivators - Japanese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_German.pdf" target="_blank" rel="noopener">Motivators - German</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsPortuguese.pdf" target="_blank" rel="noopener">Motivators - Portuguese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsRussian.pdf" target="_blank" rel="noopener">Motivators - Russian</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Swedish.pdf" target="_blank" rel="noopener">Motivators - Swedish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Espanol.pdf" target="_blank" rel="noopener">Motivators - Spanish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSampleTurkish.pdf" target="_blank" rel="noopener">Motivators - Turkish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSampleUK.pdf" target="_blank" rel="noopener">Motivators - UK</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Vietnamese.pdf" target="_blank" rel="noopener">Motivators - Vietnamese</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Hartman Value Profile</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/tsselfsample.pdf" target="_blank" rel="noopener">Hartman Value Profile - Self</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/tssalessample.pdf" target="_blank" rel="noopener">Hartman Value Profile - Sales</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/tsmanagesample.pdf" target="_blank" rel="noopener">Hartman Value Profile - Leadership</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Emotional Intelligence</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence (EIQ)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence (EIQ) 360</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence (EIQ) - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence (EIQ) - Japanese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence (EIQ) - Portuguese (Brazil)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportSpanish.pdf" target="_blank" rel="noopener">Emotional Intelligence (EIQ) - Spanish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportVietnamese.pdf" target="_blank" rel="noopener">Emotional Intelligence (EIQ) - Vietnamese</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Learning Styles</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesSampleReport.pdf" target="_blank" rel="noopener">Learning Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesFrench.pdf" target="_blank" rel="noopener">Learning Styles - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf" target="_blank" rel="noopener">Learning Styles - Japanese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf" target="_blank" rel="noopener">Learning Styles - Portuguese (Brazil)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLSVietnamese.pdf" target="_blank" rel="noopener">Learning Styles - Vietnamese</a></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="col-12">
-                    <h2>Combined Reports</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTLite.pdf" target="_blank" rel="noopener">DISC and Motivators - Lite</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOT.pdf" target="_blank" rel="noopener">DISC and Motivators</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTFrench.pdf" target="_blank" rel="noopener">DISC and Motivators - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTGerman.pdf" target="_blank" rel="noopener">DISC and Motivators - German</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf" target="_blank" rel="noopener">DISC and Motivators - Portuguese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMOTRussianSample.pdf" target="_blank" rel="noopener">DISC and Motivators - Russian</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf" target="_blank" rel="noopener">DISC and Motivators - Spanish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCLeadandMOT.pdf" target="_blank" rel="noopener">DISC Leadership and Motivators</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCLeadandMOTGerman.pdf" target="_blank" rel="noopener">DISC Leadership and Motivators - German</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCLeadandMOTFrench.pdf" target="_blank" rel="noopener">DISC Leadership and Motivators - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCLeadMotSpanish.pdf" target="_blank" rel="noopener">DISC Leadership and Motivators - Spanish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCSalesandMOT.pdf" target="_blank" rel="noopener">DISC Sales and Motivators</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCSalesandMOTFrench.pdf" target="_blank" rel="noopener">DISC Sales and Motivators - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCServiceandMOT.pdf" target="_blank" rel="noopener">DISC Service and Motivators</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCoachingandMOT.pdf" target="_blank" rel="noopener">DISC Coaching and Motivators</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandEIQ.pdf" target="_blank" rel="noopener">DISC and EIQ-2</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadandEIQ.pdf" target="_blank" rel="noopener">DISC Leadership and EIQ-2</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSalesandEIQ.pdf" target="_blank" rel="noopener">DISC Sales and EIQ-2</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf" target="_blank" rel="noopener">DISC and Learning Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCSalesandLS.pdf" target="_blank" rel="noopener">DISC Sales and Learning Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCLeadandLS.pdf" target="_blank" rel="noopener">DISC Leadership and Learning Styles</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Specialty Reports</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/CCISample.pdf" target="_blank" rel="noopener">Core Competency Index</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf" target="_blank" rel="noopener">Sales IQ</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf" target="_blank" rel="noopener">Sales IQ - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPortuguese.pdf" target="_blank" rel="noopener">Sales IQ - Portuguese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQSwedish.pdf" target="_blank" rel="noopener">Sales IQ - Swedish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQTurkish.pdf" target="_blank" rel="noopener">Sales IQ - Turkish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQVietnamese.pdf" target="_blank" rel="noopener">Sales IQ - Vietnamese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/criticalthinking.pdf" target="_blank" rel="noopener">Critical Thinking Report</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Talent Development</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/ESDevSampleReport.pdf" target="_blank" rel="noopener">Executive Summary - Development</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>360 Behavioral Profiles</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf" target="_blank" rel="noopener">DISC 360</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence (EIQ) 360</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLE360.pdf" target="_blank" rel="noopener">Leadership Effectiveness 360</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/CommunicationStylesIISample.pdf" target="_blank" rel="noopener">Communication Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/CommunicationStylesPlusSample.pdf" target="_blank" rel="noopener">Communication Styles Plus</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Hiring &amp; Selection</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/ESSampleReport.pdf" target="_blank" rel="noopener">Executive Summary - General</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/ESSampleSales.pdf" target="_blank" rel="noopener">Executive Summary - Sales</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/ESSampleManage.pdf" target="_blank" rel="noopener">Executive Summary - Leadership</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/ESSampleCust.pdf" target="_blank" rel="noopener">Executive Summary - Customer Service</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSample.pdf" target="_blank" rel="noopener">HireSense</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf" target="_blank" rel="noopener">HireSense - Summary</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/WorkplaceStrengthsSampleReport.pdf" target="_blank" rel="noopener">Workplace Strengths</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>DISC Team Reports</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportDutch.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - Dutch</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupFrenchSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportPort.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - Portuguese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportSwedish.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - Swedish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportVietnamese.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report - Vietnamese</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportGraphs.pdf" target="_blank" rel="noopener">DISC Group Graphs</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportBT.pdf" target="_blank" rel="noopener">DISC Behavioral Tendencies</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportIntegratedBehaviors.pdf" target="_blank" rel="noopener">DISC Integrated Behaviors</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">DISC Team Wheel</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCMatching.pdf" target="_blank" rel="noopener">DISC Collaboration</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCollaborationRelationships.pdf" target="_blank" rel="noopener">DISC Collaboration Relationships</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Motivators Team Reports</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motgroupgraphs.pdf" target="_blank" rel="noopener">Motivators Group Graphs</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf" target="_blank" rel="noopener">Motivators Team Wheel</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Sales IQ Team Reports</h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Sample Report</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>                            
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf" target="_blank" rel="noopener">Sales IQ Team Report - French</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf" target="_blank" rel="noopener">Sales IQ Team Report - Turkish</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf" target="_blank" rel="noopener">Sales IQ Team Report - Vietnamese</a></td></tr>
-                        </tbody>
-                    </table>
+                <div class="col-3">
+                    <div class="language-selection form-group">
+                        <label for="lang">Filter by Language:</label>
+                        <select class="input" id="lang" v-model="lang">
+                            <option value="ar">Arabic - 2</option>
+                            <option value="zh">Chinese (Mandarin) - 3</option>
+                            <option value="nl">Dutch - 4</option>
+                            <option value="en-gb">English (UK) - 2</option>
+                            <option value="en-us" selected>English (US) - 32</option>
+                            <option value="fr">French - 9</option>
+                            <option value="de">German - 3</option>
+                            <option value="id">Indonesian - 1</option>
+                            <option value="it">Italian - 2</option>
+                            <option value="ja">Japanese - 4</option>
+                            <option value="km">Khmer (Cambodian) - 1</option>
+                            <option value="ko">Korean - 1</option>
+                            <option value="ms">Malaysian - 1</option>
+                            <option value="no">Norwegian - 1</option>
+                            <option value="pt">Portugese - 5</option>
+                            <option value="pt-br">Portugese (Brazil) - 2</option>
+                            <option value="ru">Russian - 4</option>
+                            <option value="es">Spanish - 6</option>
+                            <option value="sv">Swedish - 6</option>
+                            <option value="tr">Turkish - 7</option>
+                            <option value="vi">Vietnamese - 9</option>
+                        </select>
+                    </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-hero disc">
+                        <img class="globe-tex" src="~assets/globe-bg.png">
+
+                        <h2>DISC Sample Reports</h2>
+
+                        <p>
+                            Our most popular assessment and the world’s #1 behavioral tool, DISC provides a highly-detailed analysis of each individual’s 
+                            Natural and Adapted behavioral styles. DISC reveals how a person will most likely behave within a given environment, situation, or 
+                            relationship. It offers prescriptive lessons designed to highlight and maximize self-awareness, intentionality, and interpersonal 
+                            communication, personally and professionally.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>DISC Self</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCselfSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'ar'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCArabic.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'nl'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfDutch.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfFrench.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'de'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfGerman.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'id'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfIndonesian.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'it'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCSelfItalian.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'ja'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCJapanese.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'km'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCKhmer.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'ko'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfKorean.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'ms'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfMalaysian.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'no'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfNorwegian.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'pt'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfPort.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'pt-br'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfPortBrazil.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'ru'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCRussian.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_Espanol.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'sv'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSwedish.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfTurkish.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'en-gb'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfUK.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCVietnamese.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else class="hyperlink disabled">DISC Self Report</a><br/>
+
+                        <a v-if="lang === 'en-us' || lang === 'nl' || lang === 'fr' || lang === 'pt' || lang === 'sv' || lang === 'vi' || lang === 'tr' || lang === 'es'" @click="discTeamReportModal = true" class="hyperlink" target="_blank" rel="noopener">DISC Team Reports &rsaquo;</a>
+                        <a v-else class="hyperlink disabled">DISC Team Reports</a><br/>
+
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
+                        <a v-else-if="lang === 'nl'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryDutchSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
+                        <a v-else-if="lang === 'fr'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryFrenchSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
+                        <a v-else-if="lang === 'pt'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryPortuguesePortugalSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
+                        <a v-else-if="lang === 'es'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
+                        <a v-else-if="lang === 'sv'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
+                        <a v-else-if="lang === 'en-gb'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryUKSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
+                        <a v-else class="hyperlink disabled">DISC Summary</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <div class="coming-soon">Coming Soon!</div>
+
+                        <h3>DISC Kids</h3>
+                        <a class="hyperlink disabled" target="_blank" rel="noopener">DISC Parent Report</a><br/>
+                        <a class="hyperlink disabled" target="_blank" rel="noopener">DISC Kid Report</a><br/>
+                        <a class="hyperlink disabled" target="_blank" rel="noopener">DISC Teacher Report</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>DISC 360&deg;</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
+                        <a v-else-if="lang === 'sv'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
+                        <a v-else-if="lang === 'vi'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
+                        <a v-else class="hyperlink disabled">DISC 360&deg; Report</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>DISC Relationships</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationships.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Relationship Self</a>
+                        <a v-else class="hyperlink disabled">DISC Relationship Self</a><br/>
+
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipCouplesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Relationship Couples</a>
+                        <a v-else class="hyperlink disabled">DISC Relationship Couples</a><br/>
+                    </div>
+                </div>
+            </div>
+
+            <br/><br/><br/>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-hero mot">
+                        <img class="globe-tex" src="~assets/globe-bg.png">
+
+                        <h2>Motivators Sample Reports</h2>
+
+                        <p>
+                            The perfect companion to DISC, Motivators measures seven Dimensions of Motivation that drive our behavior and decisions: Aesthetic, 
+                            Economic, Individualistic, Power, Altruistic, Regulatory, and Theoretical. Just as DISC reveals how a person will likely behave, 
+                            Motivators explores why we are driven to do what we do and what we value at our core.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>Motivators Self</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/valuessamplereport.pdf" class="hyperlink" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'ar'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Arabic.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'nl'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Dutch.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_French.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'it'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsItalian.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'ja'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Japanese.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'de'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_German.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'pt'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsPortuguese.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'ru'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsRussian.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'sv'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Swedish.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Espanol.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSampleTurkish.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'us-gb'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSampleUK.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Vietnamese.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else class="hyperlink disabled">Motivators Self Report</a><br/>
+
+                        <a v-if="lang === 'en-us'" @click="motTeamReportModal = true" class="hyperlink" target="_blank" rel="noopener">Motivators Team Reports &rsaquo;</a>
+                        <a v-else class="hyperlink disabled">Motivators Team Reports</a><br/>
+                        
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSummarySampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Motivators Summary</a>
+                        <a v-else class="hyperlink disabled">Motivators Summary</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>DISC + Motivators</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOT.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTFrench.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else-if="lang === 'de'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTGerman.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else-if="lang === 'pt'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else-if="lang === 'ru'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMOTRussianSample.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMotivatorsChineseSampleReport.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else class="hyperlink disabled">DISC + Motivators Report</a><br/>
+
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTLite.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Motivators Lite</a>
+                        <a v-else class="hyperlink disabled">DISC + Motivators Lite</a><br/>
+                    </div>
+                </div>
+            </div>
+
+            <br/><br/><br/>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-hero other">
+                        <img class="globe-tex" src="~assets/globe-bg.png">
+
+                        <h2>Speciality Assessments</h2>
+
+                        <p>
+                            Our library of specialized assessments were designed to address a wide range of issues experienced by both coaches and 
+                            corporate trainers. We offer assessments to encourage positive outcomes in personal and professional life, including employee 
+                            selection, leadership development, team-building, conflict resolution, succession planning, and more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>HireSense</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf" class="hyperlink" target="_blank" rel="noopener">HireSense Summary</a>
+                        <a v-else class="hyperlink disabled">HireSense Summary</a><br/>
+
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSample.pdf" class="hyperlink" target="_blank" rel="noopener">HireSense Full Report</a>
+                        <a v-else class="hyperlink disabled">HireSense Full Report</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>Emotional Intelligence</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence Report</a>
+                        <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
+                        <a v-else-if="lang === 'ja'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
+                        <a v-else-if="lang === 'pt-br'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
+                        <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportSpanish.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
+                        <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportVietnamese.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
+                        <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQChineseSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
+                        <a v-else class="hyperlink disabled">Emotional Intelligence Report</a><br/>
+                        
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandEIQ.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Emotional Intelligence</a>
+                        <a v-else class="hyperlink disabled">DISC + Emotional Intelligence</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>Emotional Intelligence 360&deg;</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence 360&deg;</a>
+                        <a v-else-if="lang === 'ru'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence 360&deg;</a>
+                        <a v-else class="hyperlink disabled">Emotional Intelligence 360&deg;</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>Core Competency Index</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/CCISample.pdf" class="hyperlink" target="_blank" rel="noopener">Core Competency Index Report</a>
+                        <a v-else class="hyperlink disabled">Core Competency Index Report</a><br/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>Learning Styles</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Learning Styles Report</a>
+                        <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesFrench.pdf" target="_blank" rel="noopener">Learning Styles Report</a>
+                        <a v-else-if="lang === 'ja'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf" target="_blank" rel="noopener">Learning Styles Report</a>
+                        <a v-else-if="lang === 'pt-br'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf" target="_blank" rel="noopener">Learning Styles Report</a>
+                        <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLSVietnamese.pdf" target="_blank" rel="noopener">Learning Styles Report</a>
+                        <a v-else class="hyperlink disabled">Learning Styles Report</a><br/>
+                        
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Learning Styles</a>
+                        <a v-else class="hyperlink disabled">DISC + Learning Styles</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>Sales IQ</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf" class="hyperlink" target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'pt'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPortuguese.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'sv'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQSwedish.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQTurkish.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQVietnamese.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else class="hyperlink disabled">Sales IQ Report</a><br/>
+
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf" class="hyperlink" target="_blank" rel="noopener">Sales IQ Team Report</a>
+                        <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a>
+                        <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a>
+                        <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a>
+                        <a v-else class="hyperlink disabled">Sales IQ Team Report</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>Leadership Effectiveness 360&deg;</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLE360.pdf" class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
+                        <a v-else-if="lang === 'vi'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
+                        <a v-else class="hyperlink disabled">Leadership Effectiveness 360&deg;</a><br/>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="samples-container">
+                        <h3>5 Disciplines</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/5DisciplinesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">5 Disciplines Report</a>
+                        <a v-else class="hyperlink disabled">5 Disciplines Report</a><br/>
+                    </div>
+                </div>
+            </div>
+
+            <br/><br/><br/>
+
+            <!-- DISC TEAM REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="discTeamReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="discTeamReportModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>DISC Team Reports</h1>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
+                                <a v-else-if="lang === 'nl'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportDutch.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
+                                <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupFrenchSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
+                                <a v-else-if="lang === 'pt'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportPort.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
+                                <a v-else-if="lang === 'sv'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportSwedish.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
+                                <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportVietnamese.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
+                                <a v-else class="hyperlink disabled"></a><br/>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a>
+                                <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySpanishSampleReport.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a>
+                                <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummaryTurkishSampleReport.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a>
+                                <a v-else class="hyperlink disabled">DISC Team Summary Report</a><br/>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportGraphs.pdf" target="_blank" rel="noopener">DISC Group Graphs</a>
+                                <a v-else class="hyperlink disabled">DISC Group Graphs</a><br/>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportBT.pdf" target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
+                                <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCBehTendenciesTeamTurkishSampleReport.pdf" target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
+                                <a v-else class="hyperlink disabled">DISC Behavioral Tendencies</a><br/>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportIntegratedBehaviors.pdf" target="_blank" rel="noopener">DISC Integrated Behaviors</a>
+                                <a v-else class="hyperlink disabled">DISC Integrated Behaviors</a><br/>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
+                                <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelTurkishSampleReport.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
+                                <a v-else class="hyperlink disabled">DISC Team Wheel</a><br/>
+                                
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCMatching.pdf" target="_blank" rel="noopener">DISC Collaboration</a>
+                                <a v-else class="hyperlink disabled">DISC Collaboration</a><br/>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCollaborationRelationships.pdf" target="_blank" rel="noopener">DISC Collaboration Relationships</a>
+                                <a v-else class="hyperlink disabled">DISC Collaboration Relationships</a><br/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
+            <!-- MOTIVATORS TEAM REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="motTeamReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="motTeamReportModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Motivators Team Reports</h1>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReport.pdf" target="_blank" rel="noopener">Motivators Team Report</a>
+                                <a v-else class="hyperlink disabled">Motivators Team Report</a><br/>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motgroupgraphs.pdf" target="_blank" rel="noopener">Motivators Group Graphs</a>
+                                <a v-else class="hyperlink disabled">Motivators Group Graphs</a><br/>
+
+                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf" target="_blank" rel="noopener">Motivators Team Wheel</a>
+                                <a v-else class="hyperlink disabled">Motivators Team Wheel</a><br/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
         </div>
 
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
@@ -376,6 +407,13 @@
             LazyHydrate,
             'main-nav': () => import('@/components/Nav'),
             'footer-fold': () => import('@/components/Footer')
+        },
+        data() {
+            return {
+                lang: 'en-us',
+                discTeamReportModal: false,
+                motTeamReportModal: false
+            }
         },
         head() {
             return {
@@ -410,6 +448,86 @@
             }
         }
 
+        .section-hero {
+            background-size: 200% 200%;
+            animation: GradientFade 10s ease infinite;
+            z-index: 0;
+            position: relative;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            @keyframes GradientFade { 
+                0% { background-position: 88% 0%; }
+                50% { background-position: 13% 100%; }
+                100% { background-position: 88% 0%; }
+            }
+
+            color: #fff;
+            padding: 30px 24px 20px 24px;
+
+            .globe-tex {
+                position: absolute;
+                z-index: -1;
+                top: 0px;
+                right: -350px;
+                opacity: .5;
+            }
+
+            &.disc {
+                background: #0249ec;
+                background: linear-gradient(218deg, #0999fe, #0249ec, #0999fe);
+            }
+
+            &.mot {
+                background: #fc542a;
+                background: linear-gradient(218deg, #ffa518, #fc542a, #ffa518);
+            }
+
+            &.other {
+                background: #1e222d;
+                background: linear-gradient(218deg, #303542, #1e222d, #303542);
+            }
+        }
+
+        .samples-container {
+            position: relative;
+            background: #fff;
+            border-radius: 20px;
+            padding: 24px 16px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+            min-height: 200px;
+
+            .coming-soon {
+                background: #e93d2f;
+                border-radius: 50%;
+                color: #fff;
+                width: 50px;
+                height: 50px;
+                font-size: 6pt;
+                font-weight: 700;
+                line-height: 7pt;
+                text-align: center;
+                padding-top: 16px;
+                position: absolute;
+                top: -10px;
+                right: -10px;
+            }
+
+            .hyperlink {
+                display: inline-block;
+                margin-bottom: 8px;
+                box-shadow: none;
+                font-weight: 400;
+                line-height: 13pt;
+                cursor: pointer;
+
+                &.disabled {
+                    opacity: .1;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
         h1 {
             font-size: 30pt;
             line-height: 34pt;
@@ -417,63 +535,82 @@
         }
 
         h2 {
-            font-size: 30pt;
-            line-height: 34pt;
-            margin-bottom: 0;
+            font-size: 24pt;
+            line-height: 24pt;
+            margin-bottom: 8px;
+            margin-top: 0;
         }
 
-        @mixin badge($color) {
-            background: $color;
+        h3 {
+            font-size: 17pt;
+            line-height: 18pt;
+            margin-bottom: 12px;
+            margin-top: 0;
         }
 
-        .badge {
-            border-radius: 50px;
-            text-transform: uppercase;
-            font-size: 8pt;
-            padding: 5px 10px;
-            color: $white;
-            margin-right: 3px;
+        .modal-window {
+            position: fixed;
+            background-color: rgba(0,0,0,.6);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 999999;
+            transition: all 0.25s;
 
-            &.disc-d { @include badge($color-d) }
-            &.disc-i { @include badge($color-i) }
-            &.disc-s { @include badge($color-s) }
-            &.disc-c { @include badge($color-c) }
-        }
+            .container {
+                width: 100%;
+                max-width: 600px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 40px 20px;
+                background: #fff;
 
-        table {
-            border-collapse: collapse;
-            margin: 30px 0 60px;
-            text-align: left;
+                .modal-close {
+                    color: #aaa;
+                    line-height: 50px;
+                    font-size: 12pt;
+                    position: absolute;
+                    right: 0;
+                    text-align: center;
+                    top: 0;
+                    width: 70px;
+                    text-decoration: none;
+                    cursor: pointer;
 
-            thead {
-                background: #1e222d;
-                color: #fff;
-
-                th {
-                    border: 1px solid #58617d;
-                }
-            }
-
-            tbody {
-                tr {
-                    td {
-                        border: 1px solid #ddd;
-
-                        a {
-                            font-weight: 700;
-                            color: #1e222d;
-                        }
-                    }
-
-                    &:nth-child(even) {
-                        background-color: #f5f5f5;
+                    &:hover {
+                        color: #000;
                     }
                 }
-            }
 
-            td, th {
-                padding: 8px;
+                h1 {
+                    margin: 0;
+                    font-size: 18pt;
+                }
+
+                .hyperlink {
+                    display: inline-block;
+                    margin-bottom: 8px;
+                    box-shadow: none;
+                    font-weight: 400;
+                    line-height: 13pt;
+
+                    &.disabled {
+                        opacity: .1;
+                        cursor: not-allowed;
+                    }
+                }
             }
+        }
+
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity .5s;
+        }
+        
+        .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+            opacity: 0;
         }
     }
 </style>
