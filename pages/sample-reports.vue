@@ -36,8 +36,8 @@
                             <option value="ko">Korean - 1</option>
                             <option value="ms">Malaysian - 1</option>
                             <option value="no">Norwegian - 1</option>
-                            <option value="pt">Portugese - 5</option>
-                            <option value="pt-br">Portugese (Brazil) - 2</option>
+                            <option value="pt">Portugese - 6</option>
+                            <option value="pt-br">Portugese (Brazil) - 3</option>
                             <option value="ru">Russian - 4</option>
                             <option value="es">Spanish - 6</option>
                             <option value="sv">Swedish - 6</option>
@@ -212,7 +212,7 @@
                         <h2>Specialty Assessments</h2>
 
                         <p>
-                            Our library of specialized assessments were designed to address a wide range of issues experienced by both coaches and 
+                            Our library of specialized assessments was designed to address a wide range of issues experienced by both coaches and 
                             corporate trainers. We offer assessments to encourage positive outcomes in personal and professional life, including employee 
                             selection, leadership development, team-building, conflict resolution, succession planning, and more.
                         </p>
