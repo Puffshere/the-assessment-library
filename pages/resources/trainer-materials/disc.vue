@@ -86,40 +86,6 @@
                         </tbody>
                     </table>
 
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>KnowDISC Introductory Videos</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-D.mp4" target="_blank" rel="noopener">D Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-I.mp4" target="_blank" rel="noopener">I Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-S.mp4" target="_blank" rel="noopener">S Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-C.mp4" target="_blank" rel="noopener">C Style</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>DISC Specific Appendices</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/coaching.pdf" target="_blank" rel="noopener">DISC Coaching</a>
-                            <small>This document provides the appendix at the end of the DISC Coaching report and covers DISC as a coach - Ask, Listen, Coach, Praise and Challenge.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Sales.pdf" target="_blank" rel="noopener">DISC Sales</a>
-                            <small>This document provides the appendix at the end of the DISC Sales report and covers the five stages to the selling cycle – Connecting, Assessing, Solving, Confirming and Assuring</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Leadership.pdf" target="_blank" rel="noopener">DISC Leadership</a>
-                            <small>This document provides the appendix at the end of the DISC Leadership report and covers DISC as a leader - Developing, Adapting, Helping, Motivating, Complimenting, Counseling, Correcting, Delegating, & Acknowledging.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Service.pdf" target="_blank" rel="noopener">DISC Service</a>
-                            <small>This document provides the appendix at the end of the DISC Service report and covers communicating effectively in the service process – Greet, Value, Ask, Listen, Help, Invite.</small></td></tr>
-                        </tbody>
-                    </table>
-
                     <h2>
                         <img class="icon" src="~/assets/trainer-materials-icons/presenting-resources.png" alt="Presentation Resources">
                         Presentation Resources
@@ -325,58 +291,7 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-1-t.html" target="_blank" rel="noopener">The Four Behavioral Styles - Summary of Behaviors</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-2-t.html" target="_blank" rel="noopener">The Four Behavioral Styles - Strengths</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-3-t.html" target="_blank" rel="noopener">The Four Behavioral Styles - Weaknesses</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-4-t.html" target="_blank" rel="noopener">The Four Behavioral Styles - Goals</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-5-t.html" target="_blank" rel="noopener">The Four Behavioral Styles - Fears</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-6-t.html" target="_blank" rel="noopener">Understanding DISC Cultures</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-7-t.html" target="_blank" rel="noopener">Leaving Voicemails &amp; Sending Emails - Summary of Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-8-t.html" target="_blank" rel="noopener">Preferred Careers For Each Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-9-t.html" target="_blank" rel="noopener">The Chemistry of "Likes" vs. "Opposites"</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-10-t.html" target="_blank" rel="noopener">Social Compatibility</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-11-t.html" target="_blank" rel="noopener">Task Compatibility</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-12-t.html" target="_blank" rel="noopener">How Will You Know A Style When You See One? (Part One)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-13-t.html" target="_blank" rel="noopener">How Will You Know A Style When You See One? (Part Two)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-14-t.html" target="_blank" rel="noopener">How Will You Know A Style By Phone? (Part One)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-15-t.html" target="_blank" rel="noopener">How Will You Know A Style By Phone? (Part Two)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-16-t.html" target="_blank" rel="noopener">How Will You Know A Style By Letter? (Part One)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-17-t.html" target="_blank" rel="noopener">How Will You Know A Style By Letter? (Part Two)</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-18-t.html" target="_blank" rel="noopener">Adapting To Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-19-t.html" target="_blank" rel="noopener">How The Four Styles Communicate In Groups</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-20-t.html" target="_blank" rel="noopener">How The Four Styles Set Goals In Groups</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-21-t.html" target="_blank" rel="noopener">How The Four Styles Use Influence In Groups</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-22-t.html" target="_blank" rel="noopener">How The Four Styles Involve Others In Groups</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-23-t.html" target="_blank" rel="noopener">How The Four Styles Make Decisions In Groups</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-24-t.html" target="_blank" rel="noopener">Adjusting To Other People's Styles - Prescriptions For Flexibility</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-25-t.html" target="_blank" rel="noopener">Four Styles - Just Acting Themselves</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-26-t.html" target="_blank" rel="noopener">How To Question The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-27-t.html" target="_blank" rel="noopener">How To Listen To The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-28-t.html" target="_blank" rel="noopener">How To Coach The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-29-t.html" target="_blank" rel="noopener">How To Praise The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-30-t.html" target="_blank" rel="noopener">How To Challenge The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-31-t.html" target="_blank" rel="noopener">How To Develop The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-32-t.html" target="_blank" rel="noopener">Adapting Your Communication Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-33-t.html" target="_blank" rel="noopener">Helping People Reach Decisions</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-34-t.html" target="_blank" rel="noopener">Motivating The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-35-t.html" target="_blank" rel="noopener">Complimenting The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-36-t.html" target="_blank" rel="noopener">Counseling The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-37-t.html" target="_blank" rel="noopener">Correcting The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-38-t.html" target="_blank" rel="noopener">Delegating To The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-39-t.html" target="_blank" rel="noopener">Acknowledging The Four Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-40-t.html" target="_blank" rel="noopener">Adapting Your Leadership Style When You Are The:</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-41-t.html" target="_blank" rel="noopener">Adapting Your Leadership Style To Help People When They Are The:</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-42-t.html" target="_blank" rel="noopener">Building Rapport During Initial Contact - How To Connect With:</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-43-t.html" target="_blank" rel="noopener">Maintaining Rapport In The Exploring Stage - How To Explore With:</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-44-t.html" target="_blank" rel="noopener">Maintaining Rapport In The Collaborating Stage - How To Collaborate With:</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-45-t.html" target="_blank" rel="noopener">Maintaining Rapport In The Confirming Stage - How To Confirm With:</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-46-t.html" target="_blank" rel="noopener">Maintaining Rapport In The Assuring Stage - How To Assure:</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-47-t.html" target="_blank" rel="noopener">Greeting Each Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-48-t.html" target="_blank" rel="noopener">Valuing Each Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-49-t.html" target="_blank" rel="noopener">Asking To Understand Needs</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-50-t.html" target="_blank" rel="noopener">Listening To People</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-51-t.html" target="_blank" rel="noopener">Helping People</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-nl-52-t.html" target="_blank" rel="noopener">Inviting People Back And Following Up</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/52+Week+DISC+email+series+updated+12-2020.pdf" target="_blank" rel="noopener">52 Week Email Series PDF</a></td></tr>
                         </tbody>
                     </table>
 
@@ -412,6 +327,8 @@
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HistoryChart.pdf" target="_blank" rel="noopener">History Chart</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/AreYouMadatMe.pdf" target="_blank" rel="noopener">Are You Mad at Me? Article</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/DISC+World+Map.jpg" target="_blank" rel="noopener">DISC World Map</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+CAREERS.pdf" target="_blank" rel="noopener">DISC Careers</a>
+                            <small>A one-page list of some of the most common job roles behaviorally-aligned with each primary DISC style.</small></td></tr>
                         </tbody>
                     </table>
 
@@ -443,6 +360,40 @@
                             <small>To be used to create self-awareness and growth by review of logistics and self-evaluation of training after live session or while observing recordings (video or live session)</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DevelopmentPlan.docx" target="_blank" rel="noopener">Development Plan Sample</a>
                             <small>General development form to explore strengths and challenges and create action plans for growth.</small></td></tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>KnowDISC Introductory Videos</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-D.mp4" target="_blank" rel="noopener">D Style</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-I.mp4" target="_blank" rel="noopener">I Style</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-S.mp4" target="_blank" rel="noopener">S Style</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-C.mp4" target="_blank" rel="noopener">C Style</a></td></tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>DISC Specific Appendices</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/coaching.pdf" target="_blank" rel="noopener">DISC Coaching</a>
+                            <small>This document provides the appendix at the end of the DISC Coaching report and covers DISC as a coach - Ask, Listen, Coach, Praise and Challenge.</small></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Sales.pdf" target="_blank" rel="noopener">DISC Sales</a>
+                            <small>This document provides the appendix at the end of the DISC Sales report and covers the five stages to the selling cycle – Connecting, Assessing, Solving, Confirming and Assuring</small></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Leadership.pdf" target="_blank" rel="noopener">DISC Leadership</a>
+                            <small>This document provides the appendix at the end of the DISC Leadership report and covers DISC as a leader - Developing, Adapting, Helping, Motivating, Complimenting, Counseling, Correcting, Delegating, & Acknowledging.</small></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Service.pdf" target="_blank" rel="noopener">DISC Service</a>
+                            <small>This document provides the appendix at the end of the DISC Service report and covers communicating effectively in the service process – Greet, Value, Ask, Listen, Help, Invite.</small></td></tr>
                         </tbody>
                     </table>
                 </div>
