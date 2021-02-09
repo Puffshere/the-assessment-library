@@ -2,12 +2,9 @@ import express from 'express';
 import helmet from 'helmet';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import coordinatesController from './controllers/coordinatesController';
-import reviewController from './controllers/reviewController';
-import contactController from './controllers/contactController';
 import workshopLeaderController from './controllers/workshopLeaderController';
-import coachesController from './controllers/coachesController';
 import directoryController from './controllers/directoryController';
+import communicationCoachController from './controllers/communicationCoachController';
 import GhostSearch from './ghost-search';
 
 const app = express();
@@ -37,50 +34,6 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/coords', (req, res) => {
-    coordinatesController.getCoordinates(req, res);
-});
-
-app.get('/reviews', (req, res) => {
-    reviewController.getAllReviews(req, res);
-});
-
-app.get('/reviews/featured', (req, res) => {
-    reviewController.getFeaturedReviews(req, res);
-});
-
-app.post('/review', (req, res) => {
-    reviewController.createReview(req, res);
-});
-
-app.put('/review/:reviewId/approved', (req, res) => {
-    reviewController.setReviewApproved(req, res);
-});
-
-app.put('/review/:reviewId/featured', (req, res) => {
-    reviewController.setReviewFeatured(req, res);
-});
-
-app.delete('/review/:reviewId', (req, res) => {
-    reviewController.deleteReview(req, res);
-});
-
-app.get('/isAuth', (req, res) => {
-    contactController.ISAuth(req, res);
-});
-
-app.post('/contact/step/1', (req, res) => {
-    contactController.processStep1(req, res);
-});
-
-app.post('/contact/step/2', (req, res) => {
-    contactController.processStep2(req, res);
-});
-
-app.post('/contact/step/3', (req, res) => {
-    contactController.processStep3(req, res);
-});
-
 app.get('/workshop-leaders', (req, res) => {
     workshopLeaderController.getAllWorkshopLeaders(req, res);
 });
@@ -98,6 +51,10 @@ app.get('/coaches', (req, res) => {
 });
 
 app.get('/blog/search', GhostSearch.search);
+
+app.get('/communication-coach/categories', (req, res) => {
+    communicationCoachController.getCategories(req, res);
+});
 
 app.use((req, res, next) => {
     res.status(404).json({

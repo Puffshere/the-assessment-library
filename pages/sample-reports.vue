@@ -24,7 +24,7 @@
                         <select class="input" id="lang" v-model="lang">
                             <option value="ar">Arabic - 2</option>
                             <option value="zh">Chinese (Mandarin) - 3</option>
-                            <option value="nl">Dutch - 4</option>
+                            <option value="nl">Dutch - 5</option>
                             <option value="en-gb">English (UK) - 2</option>
                             <option value="en-us" selected>English (US) - 31</option>
                             <option value="fr">French - 9</option>
@@ -194,6 +194,7 @@
                         <a v-else-if="lang === 'ru'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMOTRussianSample.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMotivatorsChineseSampleReport.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else-if="lang === 'nl'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_DutchSampleReport.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else class="hyperlink disabled">DISC + Motivators Report</a><br/>
 
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTLite.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Motivators Lite</a>
