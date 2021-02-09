@@ -308,13 +308,13 @@
 
                     <div class="col-3 col-6-sm">
                         <img class="provider-image" src="~assets/atd.png" alt="atd">
-                        <span class="credit">12 Credits</span>
+                        <span class="credit">7.5 Credits</span>
                         <p class="institute">ATD</p>
                     </div>
 
                     <div class="col-3 col-6-sm">
                         <img class="provider-image" src="~assets/icf.png" alt="icf">
-                        <span class="credit">8.25/7.75</span>
+                        <span class="credit">8.25/6.75</span>
                         <p class="institute">Core/RD ICF</p>
                     </div>
                 </div>

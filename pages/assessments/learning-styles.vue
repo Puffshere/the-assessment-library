@@ -311,7 +311,7 @@
 
                     <div class="col-3 col-6-sm">
                         <img class="provider-image" src="~assets/atd.png" alt="atd">
-                        <span class="credit">10 Credits</span>
+                        <span class="credit">7 Credits</span>
                         <p class="institute">ATD</p>
                     </div>
 

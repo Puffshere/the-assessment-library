@@ -191,7 +191,7 @@
 
                     <div class="col-3 col-6-sm">
                         <img class="provider-image" src="~assets/atd-dark.png" alt="atd">
-                        <span class="credit">15 Credits</span>
+                        <span class="credit">11.5 Credits</span>
                         <p class="institute">ATD</p>
                     </div>
 
