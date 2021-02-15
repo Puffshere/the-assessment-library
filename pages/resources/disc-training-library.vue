@@ -29,7 +29,7 @@
                     <div class="col-4">
                         <h3><div class="step-icon small">1</div> Orientation Video <span class="time-badge">6 mins</span></h3>
                         <p>
-                            <strong style="color:green">START HERE:</strong><br/>Watch the <a href="https://us02web.zoom.us/rec/share/aSAmZ-N54B6hQvvBxghsY0MHvNrj0o4IYvlQjyWaBn2QzTldR_RXCFKkg9GfatXh.weZGuyGXvbLZPOQi?startTime=1609368903000" target="_blank" rel="noopener" class="hyperlink">DISC Orientation Video</a> presentation.
+                            <strong style="color:green">START HERE:</strong><br/>Watch the <a href="https://youtu.be/6T9uBBHko78" target="_blank" rel="noopener" class="hyperlink">DISC Orientation Video</a> presentation.
                         </p>
                     </div>
 
