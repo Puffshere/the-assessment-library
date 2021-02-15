@@ -56,6 +56,14 @@ app.get('/communication-coach/categories', (req, res) => {
     communicationCoachController.getCategories(req, res);
 });
 
+app.get('/communication-coach/topics', (req, res) => {
+    communicationCoachController.getTopics(req, res);
+});
+
+app.get('/communication-coach/sections/:topicId/:style', (req, res) => {
+    communicationCoachController.getSections(req, res);
+});
+
 app.use((req, res, next) => {
     res.status(404).json({
         status: 404,
