@@ -38,6 +38,7 @@
     "nuxt": "latest",
     "vue-cool-lightbox": "^2.1.1",
     "vue-lazy-hydration": "^1.0.0-beta.9",
+    "vue-loading-overlay": "^3.4.2",
     "vue-mapbox": "^0.4.1",
     "vue-moment": "^4.0.0",
     "vue-plyr": "^6.0.4",

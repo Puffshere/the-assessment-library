@@ -17,6 +17,8 @@
         </section>
 
         <div class="container">
+            <loading :active.sync="isLoading" :can-cancel="false" :is-full-page="false"></loading>
+
             <div class="row">
                 <div class="col-12">
                     <h2>DISC Communication Coach</h2>
@@ -35,18 +37,18 @@
                         </li>
                     </ol>
 
-                    <a href="#" v-if="step !== '1'" class="hyperlink" @click="step = '1'">&#8635; Start Over</a>
+                    <a href="#" v-if="step !== '1'" class="hyperlink" @click="restart()">&#8635; Start Over</a>
 
                     <section class="section-container" v-if="step === '1'">
                         <h3>Do you know the person's DISC style?</h3>
 
                         <div class="row">
                             <div class="col-6-sm">
-                                <button class="button large success" @click="step = '2a'">Yes</button>
+                                <button class="button large success" @click="navigate('2a')">Yes</button>
                             </div>
 
                             <div class="col-6-sm">
-                                <button class="button large danger" @click="step = '2b'">No</button>
+                                <button class="button large danger" @click="navigate('2b')">No</button>
                             </div>
                         </div>
                     </section>
@@ -54,25 +56,25 @@
                     <section class="section-container" v-if="step === '2a'">
                         <h3>Select the person's DISC style.</h3>
 
-                        <div class="disc-badge d selectable" @click="style = 'D'; step = '3'">
+                        <div class="disc-badge d selectable" @click="style = 'D'; navigate('3')">
                             <span class="floating-badge">D</span>
                             <strong>Dominant</strong>
                             <p>Direct, Assertive, Decisive</p>
                         </div>
 
-                        <div class="disc-badge i selectable" @click="style = 'I'; step = '3'">
+                        <div class="disc-badge i selectable" @click="style = 'I'; navigate('3')">
                             <span class="floating-badge">I</span>
                             <strong>Influencing</strong>
                             <p>Expressive, Likeable, Life of the Party</p>
                         </div>
 
-                        <div class="disc-badge s selectable" @click="style = 'S'; step = '3'">
+                        <div class="disc-badge s selectable" @click="style = 'S'; navigate('3')">
                             <span class="floating-badge">S</span>
                             <strong>Steady</strong>
                             <p>Friendly, Team Player, Friends/Family Focused</p>
                         </div>
 
-                        <div class="disc-badge c selectable" @click="style = 'C'; step = '3'">
+                        <div class="disc-badge c selectable" @click="style = 'C'; navigate('3')">
                             <span class="floating-badge">C</span>
                             <strong>Conscientious</strong>
                             <p>Correct, Critical, Quiet</p>
@@ -85,11 +87,11 @@
 
                             <div class="row">
                                 <div class="col-6-sm">
-                                    <button class="button large" @click="assessment.direct = 1">Direct</button>
+                                    <button class="button large" @click="assessment.direct = 1; navigate('2b')">Direct</button>
                                 </div>
 
                                 <div class="col-6-sm">
-                                    <button class="button secondary large" @click="assessment.indirect = 1">Indirect</button>
+                                    <button class="button secondary large" @click="assessment.indirect = 1; navigate('2b')">Indirect</button>
                                 </div>
                             </div>
 
@@ -340,13 +342,16 @@
 
 <script>
     import axios from 'axios';
+    import Loading from 'vue-loading-overlay';
+    import 'vue-loading-overlay/dist/vue-loading.css';
     import Nav from '@/components/Nav';
     import Footer from '@/components/Footer';
 
     export default {
         components: {
             'main-nav': Nav,
-            'footer-fold': Footer
+            'footer-fold': Footer,
+            Loading
         },
         data() {
             return {
@@ -370,7 +375,8 @@
                         c: ''
                     }
                 },
-                sectionModal: false
+                sectionModal: false,
+                isLoading: false
             }
         },
         async created() {
@@ -392,7 +398,7 @@
                     this.style = 'C';
                 }
 
-                this.step = '3';
+                this.navigate('3');
             },
             async selectTopic(topic) {
                 this.selectedTopic = topic;
@@ -401,6 +407,24 @@
                 this.sections = response.data.sections;
 
                 this.sectionModal = true;
+            },
+            restart() {
+                this.style = '';
+                this.assessment = {
+                    direct: 0,
+                    indirect: 0,
+                    open: 0,
+                    guarded: 0
+                };
+
+                this.navigate('1');
+            },
+            navigate(step) {
+                this.isLoading = true;
+                setTimeout(() => {
+                    this.isLoading = false;
+                    this.step = step;
+                }, 250);
             }
         },
         computed: {
