@@ -413,6 +413,25 @@
                     return category;
                 });
             }
+        },
+        head() {
+            return {
+                __dangerouslyDisableSanitizers: ['script'],
+                script: [
+                    {
+                        innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
+                        type: 'application/ld+json'
+                    }
+                ],
+                title: 'Communication Coach | Assessments 24x7',
+                meta: [
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: 'This is your online DISC interactive communications tool known as the Assessments 24x7 Communication Coach. Use this tool to quickly identify any person\'s DISC style and learn how to communicate with them in various situations.'
+                    }
+                ]
+            }
         }
     }
 </script>
