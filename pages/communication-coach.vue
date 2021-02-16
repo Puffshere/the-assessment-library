@@ -19,6 +19,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <h2>DISC Communication Coach</h2>
+                    <p>
+                        The DISC Communication Coach is an all-in-one solution to identify and adapt to each communication style. Use the DISC 
+                        Communication Coach in two ways:
+                    </p>
+
+                    <ol>
+                        <li>
+                            Don’t know your associate’s communication style? Answer 2 key questions to quickly establish their basic style. 
+                        </li>
+                        <li>
+                            Need help adapting your style to improve your communication? Once you’ve identified your associate’s DISC style, let Dr. Tony 
+                            Alessandra direct you in adapting your communication in specific situations via the video library provided for each style. 
+                        </li>
+                    </ol>
+
+                    <a href="#" v-if="step !== '1'" class="hyperlink" @click="step = '1'">&#8635; Start Over</a>
+
                     <section class="section-container" v-if="step === '1'">
                         <h3>Do you know the person's DISC style?</h3>
 
@@ -282,11 +300,8 @@
                             </ul>
                         </div>
                     </section>
-
-                    <button v-if="step === '1'" class="button disabled" disabled>&#8635; Start Over</button>
-                    <button v-else class="button" @click="step = '1'">&#8635; Start Over</button>
                     
-                    <br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/>
                 </div>
             </div>
         </div>
