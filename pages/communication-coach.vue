@@ -210,7 +210,7 @@
                                     </div>
 
                                     <div class="trait">
-                                        Tends to focus primarily on relationshps over tasks
+                                        Tends to focus primarily on relationships over tasks
                                     </div>
 
                                     <div class="trait">
