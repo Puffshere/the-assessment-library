@@ -86,6 +86,40 @@
                         </tbody>
                     </table>
 
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>KnowDISC Introductory Videos</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-D.mp4" target="_blank" rel="noopener">D Style</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-I.mp4" target="_blank" rel="noopener">I Style</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-S.mp4" target="_blank" rel="noopener">S Style</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-C.mp4" target="_blank" rel="noopener">C Style</a></td></tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>DISC Target Applications</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/coaching.pdf" target="_blank" rel="noopener">DISC Coaching</a>
+                            <small>This document covers DISC as a coach - Ask, Listen, Coach, Praise and Challenge.</small></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Sales.pdf" target="_blank" rel="noopener">DISC Sales</a>
+                            <small>This document covers the five stages to the selling cycle – Connecting, Assessing, Solving, Confirming and Assuring</small></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Leadership.pdf" target="_blank" rel="noopener">DISC Leadership</a>
+                            <small>This document covers DISC as a leader - Developing, Adapting, Helping, Motivating, Complimenting, Counseling, Correcting, Delegating, & Acknowledging.</small></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Service.pdf" target="_blank" rel="noopener">DISC Service</a>
+                            <small>This document covers communicating effectively in the service process – Greet, Value, Ask, Listen, Help, Invite.</small></td></tr>
+                        </tbody>
+                    </table>
+
                     <h2>
                         <img class="icon" src="~/assets/trainer-materials-icons/presenting-resources.png" alt="Presentation Resources">
                         Presentation Resources
@@ -360,40 +394,6 @@
                             <small>To be used to create self-awareness and growth by review of logistics and self-evaluation of training after live session or while observing recordings (video or live session)</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DevelopmentPlan.docx" target="_blank" rel="noopener">Development Plan Sample</a>
                             <small>General development form to explore strengths and challenges and create action plans for growth.</small></td></tr>
-                        </tbody>
-                    </table>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>KnowDISC Introductory Videos</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-D.mp4" target="_blank" rel="noopener">D Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-I.mp4" target="_blank" rel="noopener">I Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-S.mp4" target="_blank" rel="noopener">S Style</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-Behavorial-Videos-Hi-C.mp4" target="_blank" rel="noopener">C Style</a></td></tr>
-                        </tbody>
-                    </table>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>DISC Specific Appendices</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/coaching.pdf" target="_blank" rel="noopener">DISC Coaching</a>
-                            <small>This document provides the appendix at the end of the DISC Coaching report and covers DISC as a coach - Ask, Listen, Coach, Praise and Challenge.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Sales.pdf" target="_blank" rel="noopener">DISC Sales</a>
-                            <small>This document provides the appendix at the end of the DISC Sales report and covers the five stages to the selling cycle – Connecting, Assessing, Solving, Confirming and Assuring</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Leadership.pdf" target="_blank" rel="noopener">DISC Leadership</a>
-                            <small>This document provides the appendix at the end of the DISC Leadership report and covers DISC as a leader - Developing, Adapting, Helping, Motivating, Complimenting, Counseling, Correcting, Delegating, & Acknowledging.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Service.pdf" target="_blank" rel="noopener">DISC Service</a>
-                            <small>This document provides the appendix at the end of the DISC Service report and covers communicating effectively in the service process – Greet, Value, Ask, Listen, Help, Invite.</small></td></tr>
                         </tbody>
                     </table>
                 </div>
