@@ -120,7 +120,7 @@
                                     <div class="body">
                                         <h3 class="title">
                                             <div class="step-icon small">2</div>
-                                            Motivators Video Training - Part 2
+                                            Motivators Training - Part 2
                                         </h3>
 
                                         <p class="text">
