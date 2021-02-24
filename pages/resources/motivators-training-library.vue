@@ -27,9 +27,9 @@
 
                 <div class="row">
                     <div class="col-4">
-                        <h3><div class="step-icon small">1</div> Orientation Video <span class="time-badge">X mins</span></h3>
+                        <h3><div class="step-icon small">1</div> Orientation Video <span class="time-badge">7 mins</span></h3>
                         <p>
-                            <strong style="color:green">START HERE:</strong><br/>Watch the <a href="https://youtu.be/6T9uBBHko78" target="_blank" rel="noopener" class="hyperlink">Motivators Orientation Video</a> presentation.
+                            <strong style="color:green">START HERE:</strong><br/>Watch the <a href="https://youtu.be/HnSbNOUz9FU" target="_blank" rel="noopener" class="hyperlink">Motivators Orientation Video</a> presentation.
                         </p>
                     </div>
 
