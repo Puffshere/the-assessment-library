@@ -225,7 +225,7 @@
                     <div class="col-6">
                         <h3><div class="step-icon small">1</div> Final Knowledge Check - Part 1</h3>
                         <p>
-                            Part 1, <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5yPHdAkAi5nzXDZ2juXl4yA7rr6nVhHDDxrFXT2gNbys2bg/viewform" target="_blank" rel="noopener" class="hyperlink">Motivators Knowledge Check Q & A</a>, 
+                            Part 1, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpsqmXvMVCDV23zcJ9mcQ99mPYDf4Sst0LxHc3ERfVyB0RGA/viewform" target="_blank" rel="noopener" class="hyperlink">Motivators Knowledge Check Q & A</a>, 
                             is a series of T/F, short answer and short narrative questions. The graph analysis portion of this assessment will take time. 
                             You may wish to type out your answers separately, then copy/paste your answers accordingly to submit. You will not be able to 
                             start, stop and save as you go.
