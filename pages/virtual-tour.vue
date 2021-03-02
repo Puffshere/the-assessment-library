@@ -135,7 +135,7 @@
 
                     <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/IFEiJmud3WI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br/><br/>
-                    <a href="https://vault.assessments24x7.com/pdfs/360-Instructions-2020.pdf" class="hyperlink" target="_blank">Download 360 assessment full instruction PDF</a>
+                    <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2021.pdf" class="hyperlink" target="_blank">Download 360 assessment full instruction PDF</a>
                     <br/><br/>
                 </div>
             </div>

@@ -51,8 +51,21 @@
                             <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaNM956tOMqirauvqe885Qc" target="_blank" rel="noopener">Practice Videos for Debriefing Graphs</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCfaq.pdf" target="_blank" rel="noopener">DISC FAQs</a>
                             <small>Provide answers to Frequently Asked Questions regarding the DISC model, the DISC Assessment and Report, Reading DISC Graphs, DISC History, Hiring and Selection, and other assessments.</small></td></tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>DISC 360 Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC360 Debrief Guide.pdf" target="_blank" rel="noopener">DISC 360 Debrief Guide</a>
                             <small>A synopsis of how to use the DISC 360 report to be used in conjunction with the DISC Debrief Guide. </small></td></tr>
+                            <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=IFEiJmud3WI" target="_blank" rel="noopener">Setting up a 360 Assessment Link in the Dashboard (Video)</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2021.pdf" target="_blank" rel="noopener">Setting up a 360 Assessment Link in the Dashboard (PDF)</a></td></tr>
                         </tbody>
                     </table>
 
