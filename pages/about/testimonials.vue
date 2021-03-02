@@ -929,7 +929,48 @@
                 </div>
             </div>
 
-           <div class="row">
+            <div class="row">
+                <div class="col-12">
+                    <div class="review">
+                        <div class="col-3">
+                            <img class="image" src="~/assets/testimonials/brad-yoho.jpg" alt="Brad Yoho">
+                        </div>
+
+                        <div class="col-9">
+                            <div class="review-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <h3 class="name">Brad Yoho</h3>
+                            <p class="attribution">
+                                Director of Marketing<br/>
+                                <a class="hyperlink" href="https://www.daveyoho.com/" target="_blank" rel="noopener">Dave Yoho Associates</a>
+                            </p>
+                            <p class="quote">
+                                We have utilized the DISC Profile in our business for over 40 years. We have had several providers during this time and 
+                                have for the most part been satisfied, but in 2015 a situation arose where we had to find a new provider immediately. Tony 
+                                Alessandra and his team sold us on their custom solution and consequently it was one of the best business decisions we have 
+                                ever made. Our current customers were thrilled at the ease-of-use of the new system, and as a result, it has been incredibly easy to 
+                                onboard new customers.<br/><br/>
+
+                                However, the best part of Assessments 24x7 is the people who work for the company. Tony is an excellent businessman, but 
+                                more importantly he always goes the extra mile to treat us as a valued customer. He makes himself available by phone on a 
+                                consistent basis, which is unusual of CEO’s, and we have brought him to our industry seminars as a thought leader and 
+                                resource because the information he presents to our customers is extremely valuable. The rest of his team follows suit, and 
+                                when a rare technical issue arises, it is almost always resolved the same day.<br/><br/>
+
+                                The proof is in the results - - our revenue from assessments has nearly doubled since we partnered with Assessments 24x7. 
+                                We are excited to see what the future holds in our partnership.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
