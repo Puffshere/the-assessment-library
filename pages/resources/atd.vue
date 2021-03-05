@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img class="atd-logo" src="~/assets/atd-alt.png" alt="ATD Free Business Resources by Assessments 24x7">
+                        <img class="atd-logo" src="~/assets/atd-seal.png" alt="ATD Free Business Resources by Assessments 24x7">
                     </div>
                 </div>
             </div>
@@ -398,7 +398,7 @@
             background-position: center;
             color: #fff;
             text-align: center;
-            padding: 70px 0;
+            padding: 40px 0;
             margin-bottom: 30px;
 
             .section-title {
@@ -408,7 +408,7 @@
 
             .atd-logo {
                 width: 100%;
-                max-width: 240px;
+                max-width: 280px;
             }
         }
 
