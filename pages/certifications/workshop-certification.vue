@@ -6,11 +6,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">Workshop Leader Certification</h1>
+                        <h1 class="section-title">Workshop Leader Programs </h1>
                         <p>
-                            These experienced trainers have been selected for their abilities to engage, teach, and wow learners by challenging 
-                            participants to think differently, focus new ideas in a way that really works, and leave training sessions eager 
-                            to apply their new skills.
+                            The quest to ensure our members are the most knowledgeable and best-equipped in the business continues with our innovative 
+                            Workshop Leader Certification program! Developed by assessment industry leaders and public speaking professionals, Workshop 
+                            Leader programs equip you with the tools needed to lead engaging, immersive workshops.
                         </p>
                     </div>
                 </div>
@@ -20,19 +20,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>DISC Workshop Leader Certification</h2>
+                    <h2>DISC Workshop Leader Program</h2>
                     <p>
-                        The quest to ensure our members are the most knowledgeable and best-equipped in the business continues with our innovative Workshop 
-                        Leader Certification program! Developed by assessment industry leaders and public speaking professionals, the Workshop Leader 
-                        Certification program equips you with the tools needed to lead live, immersive workshops. Whether your next workshop is for a group 
-                        of 5 or 500, you’ll have the confidence and content that typically takes months or years of research and development.
-                    </p>
-
-                    <h4>Online Training. On YOUR Schedule.</h4>
-
-                    <p>
-                        Each Workshop Leader Certification is a one-on-one online course with a Master Certified Practitioner. You determine the pace of 
-                        the coursework and schedule the online sessions at your convenience.
+                        The DISC Workshop Leader program specializes in using the DISC model with ready-to-train workshop resources and content. Whether 
+                        your workshop is for a group of 5 or 500, you’ll have the confidence and content that typically takes months or years of research 
+                        and development. 
                     </p><br/>
 
                     <nuxt-link to="/about/why-use-assessments" class="button">Why Use Assessments?</nuxt-link>
@@ -44,17 +36,33 @@
                 <div class="col-12">
                     <h3 style="margin-bottom: -10px">Course Summary</h3>
 
+                    <p>
+                        Our DISC Workshop Leaders are DISC certified practitioners, who have received mentorship and instruction from a Master Certified 
+                        Practitioner. This workshop series training program takes it up a notch by providing everything needed to deliver a variety of full 
+                        or half-day, training workshops in these 5 areas:
+                    </p>
+
+                    <ul>
+                        <li>Self-Awareness & Communication</li>
+                        <li>Transitioning from Peer to Leader</li>
+                        <li>Trust Based Leadership</li>
+                        <li>Making Teams Work</li>
+                        <li>Sales Optimization</li>
+                    </ul>
+
                     <div class="col-6">
                         <ul class="course-summary">
-                            <li class="topic disc">Complete Introductory Orientation call (30 mins)</li>
+                            <li class="topic disc">Complete orientation call (30 mins)</li>
                             <li class="topic disc">Submit bio and head shot</li>
+                            <li class="topic disc">Review each workshop webinar</li>
                         </ul>
                     </div>
 
                     <div class="col-6">
                         <ul class="course-summary">
-                            <li class="topic disc">Review Training Materials, Webinars and Resources</li>
+                            <li class="topic disc">Study training materials and other resources</li>
                             <li class="topic disc">Complete final knowledge check</li>
+                            <li class="topic disc">Complete follow up call</li>
                         </ul>
                     </div>
                 </div>
@@ -153,25 +161,6 @@
                         these relationships, in order to transform buyers into brand advocates. Other topics covered in this course include: 
                         identifying client needs, managing client expectations, and a complete exploration of the sales process from A to Z.
                     </p><br/>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <h2>DISC Workshop Leader</h2>
-
-                    <p>
-                        The DISC Workshop Leader program specializes in the DISC model. Our DISC Workshop Leaders are assessment certified practitioners, 
-                        qualified to deliver a variety of full or half-day, training workshops including:
-                    </p>
-
-                    <ul>
-                        <li>Self-Awareness & Communication</li>
-                        <li>Transitioning from Peer to Leader</li>
-                        <li>Trust Based Leadership</li>
-                        <li>Making Teams Work</li>
-                        <li>Sales Optimization</li>
-                    </ul>
                 </div>
             </div>
 

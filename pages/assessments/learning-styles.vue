@@ -268,27 +268,25 @@
         <section class="certification">
             <div class="container">
                 <div class="row">
-                    <div class="col-8">
-                        <h5 class="title">Get Learning Styles Certified</h5>
+                    <div class="col-6">
+                        <h5 class="title">Using Learning Styles with DISC</h5>
                         <p>
-                            Become an expert with our internationally accredited certification training. Designed specifically to foster a 
-                            deeper understanding of the model, you’ll discover how it can be used to build more effective personal and 
-                            professional relationships. Through one-on-one instructor-led sessions and self-study, you will learn to use 
-                            the assessment results with supportive, comprehensive resources that are available when you need them. As a 
-                            bonus, if you are certified in multiple assessments, your instructor will show you how to combine the assessment results for a holistic understanding of how they work together.
+                            Through combination assessments, two valuable tools are offered in one report. DISC will support understanding behavior, 
+                            emotion and communication style and Learning Styles reveals how learning preferences affect the ability to take in new 
+                            information, process and make it meaningful, and store and retrieve it to apply when needed. 
                         </p>
                         <p>
-                            Each certification program includes additional benefits such as exclusive access to our Certified Trainer 
-                            Materials library, discounted pricing, continuing education credits, 10 complimentary assessments when you 
-                            finish the program, and a listing on our International Directory of Practitioners.
+                            This combination of resources provides beneficial insight to help anyone become more intentional with their communication and 
+                            to advocate for their own learning, ensuring every interaction and learning experience is effective and useful. We offer three 
+                            DISC and Learning Styles combination reports: the DISC Self, DISC Sales and DISC Leadership. 
                         </p><br/>
 
                         <nuxt-link to="/assessments" class="button outline light">More Assessments</nuxt-link>
                         <br/><br/><br/><br/><br/><br/>
                     </div>
 
-                    <div class="col-4">
-                        <img class="image" src="~/assets/badges/new/learning-cert-badge-color.png" alt="placeholder">
+                    <div class="col-6">
+                        <img class="image" src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80" alt="placeholder">
                     </div>
                 </div>
             </div>
@@ -847,7 +845,9 @@
 
         .image {
             width: 100%;
+            margin-top: 30px;
             margin-bottom: -8px;
+            border-radius: 20px;
         }
     }
 

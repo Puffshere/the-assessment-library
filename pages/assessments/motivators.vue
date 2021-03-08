@@ -222,20 +222,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h5 class="section-title">Learn What Motivates Employees and People</h5>
+                        <h5 class="section-title">What Motivates People?</h5>
 
                         <p>
-                            The Motivators assessment offers an in-depth identification and exploration of seven dimensions and how they uniquely combine to influence behavior, decision and actions: 
+                            Motivators are all about passion and satisfaction. Essentially, they are the reasons we do anything – they drive our behaviors, 
+                            decisions, and actions.
                         </p>
-                        <ul>
-                            <li><strong>Aesthetic</strong> is a drive for balance, harmony and form.</li>
-                            <li><strong>Economic</strong> is a drive for return on investment (including time, money, resources).</li>
-                            <li><strong>Individualistic</strong> is a drive to stand out as independent and unique.</li>
-                            <li><strong>Power</strong> is a drive to be in control or have influence.</li>
-                            <li><strong>Altruistic</strong> is a drive to help others at the expense of self.</li>
-                            <li><strong>Regulatory</strong> is a drive to establish order, routine and structure.</li>
-                            <li><strong>Theoretical</strong> is the drive for knowledge, learning and understanding.</li>
-                        </ul>
+                        <p>
+                            The Motivators Assessment highlights individually how each of the 7 Motivators impacts our choices. However, exploring the 
+                            dimensions one-by-one is not enough; we must combine them to see how they influence one another and interact as a whole. The 
+                            combination is the key to understanding how Motivators will likely drive passions and behavior. 
+                        </p>
+                        <p>
+                            Furthermore, if our Motivators and behavior don’t always align, the assessment can reveal areas of tension. This is useful in 
+                            helping us to find the best way to satisfy our passions and manage our energy through behavioral expression.
+                        </p>
                         <br/>
 
                         <nuxt-link to="/contact" class="button">Book a Demo Now</nuxt-link>

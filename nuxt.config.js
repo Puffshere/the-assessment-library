@@ -22,11 +22,6 @@ module.exports = {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
-      },
-      {
-        rel: "preconnect",
-        href: "https://publishing.assessments24x7.com",
-        crossorigin: true
       }
     ]
   },

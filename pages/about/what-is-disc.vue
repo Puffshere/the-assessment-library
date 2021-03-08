@@ -8,8 +8,8 @@
                     <div class="col-12">
                         <h1 class="section-title">What is DISC?</h1>
                         <p>
-                            DISC has been one of the most widely-used performance enhancement tools for many decades, by companies large and small, to achieve their goals. 
-                            It’s the leading self-assessment tool used by millions of people annually to improve productivity, teamwork, and communication.
+                            DISC is one of the most widely-used performance enhancement tools, by companies large and small, to achieve their goals. As the 
+                            leading self-assessment tool, millions of people use it annually to improve productivity, teamwork, and communication.
                         </p>
                     </div>
                 </div>
@@ -25,9 +25,9 @@
                         motivation, clearly communicated and understood objectives, and much more to reach optimum performance.
                     </blockquote>
                     <p>
-                        The DISC profile is a simple, practical, and easy-to-remember model that focuses on individual patterns of external, 
-                        observable behavior and emotions. It measures the intensity of characteristics using scales of directness and openness 
-                        to create a unique blend of four behavioral styles.  They are:
+                        The DISC profile is a simple, practical, and easy-to-remember model that focuses on individual patterns of observable behavior and 
+                        emotions. It measures the intensity of characteristics using scales of directness, openness, pace, and priority to create a unique 
+                        blend of four behavioral styles:
                     </p>
                     
                         <ul>
@@ -43,10 +43,11 @@
                         other business and personal relationships.
                     </p>
                     <p>
-                        Using DISC can provide insight into motivations, causes of stress, problem-solving processes, and ways to respond more effectively 
-                        to conflict. When these items are identified for each team member, it leads to better working relationships both internally and 
-                        externally. For example, salespeople using DISC develop finely-tuned selling skills based on identifying and responding to a 
-                        customer's style.
+                        Using DISC can provide insight into behavioral tensions, causes of stress, problem-solving, and ways to respond more effectively to 
+                        conflict. When these items are identified for each individual, it leads to better relationships, both personally and professional. 
+                        For example, salespeople using DISC can develop finely-tuned selling skills based on identifying and responding to a customer's 
+                        style. In personal relationships, understanding the needs, emotions, and fears of others can help us build mutually-beneficial 
+                        partnerships.
                     </p>
                 </div>
 
@@ -59,7 +60,7 @@
                     <ul>
                         <li>All DISC styles are equally valuable and everyone is a blend of all four styles.</li>
                         <li>All DISC styles have unique strengths and challenges and no one style is better than another.</li>
-                        <li>Your work style is also influenced by other factors such as life experiences, education, <a href="/assessments/emotional-intelligence/" class="hyperlink">Emotional Intelligence</a>, and maturity.</li>
+                        <li>Your work style is also influenced by other factors that are not measured by DISC such as life experiences, education, <a href="/assessments/motivators/" class="hyperlink">Motivations</a>, <a href="/assessments/emotional-intelligence/" class="hyperlink">Emotional Intelligence</a>, and maturity level.</li>
                         <li>Understanding yourself better is the first step to becoming more effective when working with others.</li>
                         <li>Learning about the DISC styles of other people can help you understand their priorities, needs and fears, and how they may differ from your own.</li>
                         <li>You can improve the quality of your workplace interactions by using DISC to build more effective, mutually-beneficial relationships.</li>
@@ -349,7 +350,7 @@
                 </div>    
                 
                 <div class="col-12">
-                    <h3 class="title">What Does DISC Measure</h3>
+                    <h3 class="title">What Does DISC Measure?</h3>
 
                     <p>
                         DISC measures observable behavior and emotions. It does not measure intelligence, education, experience, aptitude, mental health, or values.
