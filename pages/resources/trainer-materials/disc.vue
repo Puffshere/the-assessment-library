@@ -51,7 +51,7 @@
                             <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaNM956tOMqirauvqe885Qc" target="_blank" rel="noopener">Practice Videos for Debriefing Graphs</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCfaq.pdf" target="_blank" rel="noopener">DISC FAQs</a>
                             <small>Provide answers to Frequently Asked Questions regarding the DISC model, the DISC Assessment and Report, Reading DISC Graphs, DISC History, Hiring and Selection, and other assessments.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLbO8-2-hhuZ4-XZJJJME0sp" target="_blank" rel="noopener">Understanding Your DISC Report (for clients)</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLbO8-2-hhuZ4-XZJJJME0sp" target="_blank" rel="noopener">Understanding Your DISC Report (for clients)</a>
                             <small>A series of four videos to walk your clients through the report in preparation for a one-on-one or group conversation. Your client will gain a foundational understanding of the report and should be able to generate questions for the coaching conversation. In total, the series is less than 50 minutes long.</small></td></tr>
                         </tbody>
                     </table>
