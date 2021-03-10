@@ -60,7 +60,11 @@ export default function(context) {
         
         else if (context.req.url == '/clientrequests') {
             context.redirect('https://form.asana.com/?k=8wVHOZo8OayfLFz9UhjCbA&d=460673300006490');
-        } 
+        }
+
+        else if (context.req.url == '/360_Instructions_2020.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2021.pdf');
+        }
         
         else if (context.req.url.match(/(\/reports\/)[\w- ]+\.pdf/gi)) {
             context.redirect('https://www.assessments24x7.com/sample-reports');

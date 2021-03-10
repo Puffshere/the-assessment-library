@@ -310,5 +310,9 @@
     {
         "from": "/virtualtour",
         "to": "/virtual-tour"
+    },
+    {
+        "from": "/virtualtours12.asp",
+        "to": "/virtual-tour"
     }
 ]
