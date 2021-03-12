@@ -21,7 +21,7 @@
                 <div class="col-12">
                     <h2>Testing for APA Standards & EEOC Compliance</h2>
 
-                    <img class="image" src="https://vault.assessments24x7.com/images/asi-certified.png" alt="">
+                    <img class="image" src="~assets/asi-certified.png" alt="">
 
                     <p>
                        A recent review revealed <strong>a significant majority of assessments available today lacked

@@ -126,7 +126,7 @@
                                     Run Group and Team Reports. Personalize your branding. Create Collaboration reports. Set up additional assessment links.
                                 </p><br/>
 
-                                <a class="button" href="https://vault.assessments24x7.com/virtualtour.asp" target="_blank" rel="noopener">Take the full virtual tour</a>
+                                <a class="button" href="https://www.assessments24x7.com/virtual-tour" target="_blank" rel="noopener">Take the full virtual tour</a>
                             </div>
                         </div>
                     </div>
