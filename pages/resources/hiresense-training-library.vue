@@ -147,9 +147,7 @@
                                         </p>
 
                                         <ul>
-                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+1+-+Intro_Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">Part 1: Intro & Benchmarks (7:34)</a></li>
-                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+2+-+Insights_Interview+Questions.mp4" target="_blank" rel="noopener" class="hyperlink">Part 2: Insights & Interview Questions (6:42)</a></li>
-                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Navigation+Training+Part+3+-+Links_Alerts_Saved+Results.mp4" target="_blank" rel="noopener" class="hyperlink">Part 3: Links, Alerts & Saved Results (5:25)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/NAV+Video1_Reviewing+Results.mp4" target="_blank" rel="noopener" class="hyperlink">Part 1: Navigation - Reviewing Results in HireSense (13:04)</a></li>
                                         </ul>
                                     </div>
                                 </div>
