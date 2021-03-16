@@ -135,6 +135,7 @@
 
                                         <ul>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Step+2.pptx" target="_blank" rel="noopener" class="hyperlink">HireSense Navigation PowerPoint & Notes</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense+Navigation_Training+Presentation_Sending+Links.Setting+Alerts_3.21.pptx" target="_blank" rel="noopener" class="hyperlink">HireSense Sending Links & Setting Alerts</a></li>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/HireSense_Running+Reports+from+the+App.pdf" target="_blank" rel="noopener" class="hyperlink">Accessing Electronic Results and Paper Reports</a></li>
                                         </ul>
 
@@ -148,6 +149,7 @@
 
                                         <ul>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/NAV+Video1_Reviewing+Results.mp4" target="_blank" rel="noopener" class="hyperlink">Part 1: Navigation - Reviewing Results in HireSense (13:04)</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/navigation/Nav+2+Sending+Links.setting+alerts.mp4" target="_blank" rel="noopener" class="hyperlink">Part 2: Navigation - Sending Links & Setting Alerts (08:09)</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -180,22 +182,6 @@
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/IGFitnessBenchmarks_HowTo.pdf" target="_blank" rel="noopener" class="hyperlink">Instructions to set and review Benchmarks</a></li>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarking+Sample_HighMatch.pdf" target="_blank" rel="noopener" class="hyperlink">Sample Benchmark Report High Match</a></li>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/Benchmarking+Sample_LowMatch.pdf" target="_blank" rel="noopener" class="hyperlink">Sample Benchmark Report Low Match</a></li>
-                                        </ul>
-
-                                        <p class="indented-text">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#eb1700" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="video-icon">
-                                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                                            </svg>
-                                            Click to watch each video segment:
-                                        </p>
-
-                                        <ul>
-                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Preset+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">Preset Scores (3:56)</a></li>
-                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+User+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">User Scores (5:22)</a></li>
-                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Group+Average.mp4" target="_blank" rel="noopener" class="hyperlink">Group Average (2:53)</a></li>
-                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Job+Questionnaire.mp4" target="_blank" rel="noopener" class="hyperlink">Job Questionnaire (2:51)</a></li>
-                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Reporting+-+Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">HireSense Reporting (7:41)</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -324,6 +310,35 @@
                             Schedule a 30 minute <a href="https://www.appointmentcore.com/app/freeslots/hUxLbtBtm" target="_blank" rel="noopener" class="hyperlink">Final Knowledge Check Call</a>,
                             if desired, to review results and answer any questions you may have.
                         </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h2><div class="step-icon">D</div> Additional Resources for HireSense</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h3><div class="step-icon small">1</div> Benchmarks in Action</h3>
+
+                        <p class="indented-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#eb1700" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="video-icon">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                            Click to watch each video segment:
+                        </p>
+
+                        <ul>
+                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Preset+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">Preset Scores (3:56)</a></li>
+                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+User+Scores.mp4" target="_blank" rel="noopener" class="hyperlink">User Scores (5:22)</a></li>
+                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Group+Average.mp4" target="_blank" rel="noopener" class="hyperlink">Group Average (2:53)</a></li>
+                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Benchmarks+Job+Questionnaire.mp4" target="_blank" rel="noopener" class="hyperlink">Job Questionnaire (2:51)</a></li>
+                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmarking/HireSense+Reporting+-+Benchmarks.mp4" target="_blank" rel="noopener" class="hyperlink">HireSense Reporting (7:41)</a></li>
+                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/benchmark-action/L7M26+Motivation+Benchmark+Guidance.mp4" target="_blank" rel="noopener" class="hyperlink">Motivational Benchmark Guide (Group Reporting) (13:44)</a></li>
+                        </ul>
                     </div>
                 </div>
             </section>
