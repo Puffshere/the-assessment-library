@@ -26,7 +26,7 @@ export const state = () => ({
             id: '4',
             stripeId: 'price_1I8SIABPiAffrwryszKH9TO0',
             name: 'The Platinum Rule Scoring Booklet',
-            price: '1000',
+            price: '1200',
             slug: 'platinum-rule-scoring-booklet'
         },
         {
