@@ -169,7 +169,7 @@
                     <div class="col-3 col-6-sm">
                         <img class="provider-image" src="~assets/shrm-dark.png" alt="shrm">
                         <span class="credit">15 Credits</span>
-                        <p class="institute">SHRM</p>
+                        <p class="institute">SHRM**</p>
                     </div>
 
                     <div class="col-3 col-6-sm">
@@ -194,8 +194,9 @@
                 <div class="row">
                     <div class="col-12">
                         <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * The use of this official seal confirms that this Activity has met HR Certification Institute's® 
-                            (HRCI®) criteria for recertification credit pre-approval.
+                            * HRCertification Institute's®️ (www.HRCI.org) official seal confirms that Assessments 24x7 meets the criteria for pre-approved 
+                            recertification credit(s) for any of HRCI’s eight credentials, including SPHR®️ and PHR®️. ** Assessments 24x7 is recognized by 
+                            SHRM to offer Professional Development Credits (PDCs) for SHRM-CP®️ or SHRM-SCP®️.
                         </p>
                     </div>
                 </div>
