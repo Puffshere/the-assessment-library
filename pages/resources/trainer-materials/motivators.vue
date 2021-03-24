@@ -45,7 +45,7 @@
                             <small>Open ended and purposeful follow-up questions to uncover opportunities and reveal areas for support, including action planning and coaching suggestions.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Update Nov 2018.docx" target="_blank" rel="noopener">Motivators Update</a>
                             <small>November 2018 - An explanation of updated graphs and report additions to help you navigate, understand and explain the most recent changes in the Motivators report.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLZzztXwhu8s9IwOjgISdakL" target="_blank" rel="noopener">Understanding Your Motivators Report (for clients)</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLZzztXwhu8s9IwOjgISdakL" target="_blank" rel="noopener">Understanding Your Motivators Report (for your clients)</a>
                             <small>A series of four videos to walk your clients through the report in preparation for a one-on-one or group conversation. Your client will gain a foundational understanding of the report and should be able to generate questions for the coaching conversation. In total, the series is less than 25 minutes long.</small></td></tr>
                         </tbody>
                     </table>
