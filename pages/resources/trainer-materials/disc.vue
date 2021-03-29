@@ -39,19 +39,25 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDebriefingGuideCert.docx" target="_blank" rel="noopener">DISC Debrief Guide</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDebriefingGuideCert.pdf" target="_blank" rel="noopener">DISC Debrief Guide</a>
                             <small>Overview and Guide for what is included on each page of our 3 Part DISC assessment report. You can confirm your version of the report by checking the table of contents.</small></td></tr>
                             <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDebriefingGuide3.pdf" target="_blank" rel="noopener">DISC Debrief Guide</a>
                             <small>Overview and Guide for what is included on each page of our DISC assessment report. </small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCReportHighlights3.pdf" target="_blank" rel="noopener">DISC Report Highlights</a>
                             <small>When there is not the opportunity to debrief the entire report page by page, which pages should be focused on? This outlines the most significant pages needing debrief support. This is designed to be used with the DISC Debrief Guide for the 3 Part report which can be confirmed by checking the report table of contents.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaNM956tOMqirauvqe885Qc" target="_blank" rel="noopener">Practice Videos for Debriefing Graphs</a></td></tr>
+                            
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCfaq.pdf" target="_blank" rel="noopener">DISC FAQs</a>
                             <small>Provide answers to Frequently Asked Questions regarding the DISC model, the DISC Assessment and Report, Reading DISC Graphs, DISC History, Hiring and Selection, and other assessments.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener">Debriefing the DISC Report Video Series</a>
-                            <small>A series of short presentations focusing on the Assessments 24x7 DISC report in detail so that as a practitioner, you will understand how to utilize each section specifically and how to effectively interpret information for clients.</small></td></tr>
+                            
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/NaturalandAdaptedGraphs.pptx" target="_blank" rel="noopener">Natural and Adapted DISC Graphs</a>
                             <small>A series of short DISC graph debrief videos to help you practice the flow of the conversation, understand what to focus on in the debrief, and how to discuss it in a way that your client can understand.</small></td></tr>
+
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener">Debriefing the DISC Report Video Series</a>
+                            <small>A series of short presentations focusing on the Assessments 24x7 DISC report in detail so that as a practitioner, you will understand how to utilize each section specifically and how to effectively interpret information for clients.</small></td></tr>
+
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaNM956tOMqirauvqe885Qc" target="_blank" rel="noopener">Practice Videos for Debriefing Graphs</a>
+                            <small>A series of short DISC graph debrief videos to help you practice the flow of the conversation, understand what to focus on in the debrief, and how to discuss it in a way that your client can understand. </small></td></tr>
+                            
                             <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLbO8-2-hhuZ4-XZJJJME0sp" target="_blank" rel="noopener">Understanding Your DISC Report (for your clients)</a>
                             <small>A series of four videos to walk your clients through the report in preparation for a one-on-one or group conversation. Your client will gain a foundational understanding of the report and should be able to generate questions for the coaching conversation. In total, the series is less than 50 minutes long.</small></td></tr>
                         </tbody>
