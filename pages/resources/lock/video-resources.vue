@@ -39,7 +39,7 @@
                             </li>
                         </a>
 
-                        <a href="https://www.youtube.com/watch?v=XeDe485iZXg" target="_blank" rel="noopener">
+                        <a href="https://www.youtube.com/watch?v=ExjcKNwVkHQ" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 Time Management Skills
                             </li>
