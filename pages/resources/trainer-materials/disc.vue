@@ -131,13 +131,13 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/coaching.pdf" target="_blank" rel="noopener">DISC Coaching</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCCoachingTargetApplication.pdf" target="_blank" rel="noopener">DISC Coaching</a>
                             <small>This document covers DISC as a coach - Ask, Listen, Coach, Praise and Challenge.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Sales.pdf" target="_blank" rel="noopener">DISC Sales</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSalesTargetApplication.pdf" target="_blank" rel="noopener">DISC Sales</a>
                             <small>This document covers the five stages to the selling cycle – Connecting, Assessing, Solving, Confirming and Assuring</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Leadership.pdf" target="_blank" rel="noopener">DISC Leadership</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCLeadershipTargetApplication.pdf" target="_blank" rel="noopener">DISC Leadership</a>
                             <small>This document covers DISC as a leader - Developing, Adapting, Helping, Motivating, Complimenting, Counseling, Correcting, Delegating, & Acknowledging.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Service.pdf" target="_blank" rel="noopener">DISC Service</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCServiceTargetApplication.pdf" target="_blank" rel="noopener">DISC Service</a>
                             <small>This document covers communicating effectively in the service process – Greet, Value, Ask, Listen, Help, Invite.</small></td></tr>
                         </tbody>
                     </table>
