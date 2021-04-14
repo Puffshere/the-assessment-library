@@ -52,6 +52,10 @@
                                     <span class="title">Additional Assessments</span>
 
                                     <li class="sub-nav-item">
+                                        <a href="/assessments/kids-disc">Kids DISC</a>
+                                    </li>
+
+                                    <li class="sub-nav-item">
                                         <a href="/assessments/emotional-intelligence">Emotional Intelligence</a>
                                     </li>
 
@@ -220,6 +224,10 @@
 
                 <li class="nav-item indent">
                     <a href="/assessments/learning-styles">Learning Styles</a>
+                </li>
+
+                <li class="nav-item indent">
+                    <a href="/assessments/kids-disc">Kids DISC</a>
                 </li>
 
                 <li class="nav-item indent">
