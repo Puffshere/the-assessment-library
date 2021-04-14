@@ -229,14 +229,14 @@
                         
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" v-model="password">
+                            <input type="password" class="form-control" id="password" v-model="password" v-on:keyup.enter="unlock">
                         </div>
 
                         <p style="margin-top:-10px;font-size:10pt;margin-bottom:30px">
                             Having trouble? <a class="hyperlink" href="mailto:support@assessments24x7.com">Contact our support team &rarr;</a>
                         </p>
 
-                        <button class="button" style="width:100%" @click="unlock">Authenticate</button>
+                        <button class="button" style="width:100%" @click="unlock">Access the Trainer Materials</button>
                     </div>
                 </div>
             </div>
