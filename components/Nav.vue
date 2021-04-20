@@ -4,7 +4,7 @@
 
         <div class="info-bar">
             <p>
-                <strong>Introducing Our New Product:</strong> HireSense&trade;! Identify the right person, for the right job, the first time. <a class="hyperlink light" href="https://www.hiresense.com" target="_blank" rel="noopener">Hire better with HireSense &rarr;</a>
+                <strong>Introducing Our New Product:</strong> Kids DISC! Each child's bird style is their superpower. <nuxt-link class="hyperlink light" to="/assessments/kids-disc">Discover Kids DISC &rarr;</nuxt-link>
             </p>
         </div>
 
@@ -344,12 +344,15 @@
                 </li>
             </ul>
         </div>
+
+        <modal />
     </header>
 </template>
 
 <script>
     import Logo from './Logo';
     import CartModal from '@/components/CartModal';
+    import Modal from '@/components/Modal';
 
     import { mapGetters } from 'vuex';
 
@@ -357,6 +360,7 @@
         props: ['active'],
         components: {
             'logo': Logo,
+            'modal': Modal,
             'cart-modal': CartModal
         },
         data() {
@@ -407,7 +411,7 @@
         transition: all .3s ease-in-out;
 
         .info-bar {
-            background-color: #363d52;
+            background-color: #01a8ff;
             text-align: center;
             padding: 10px;
             color: #fff;

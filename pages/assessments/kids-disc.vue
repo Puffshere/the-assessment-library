@@ -8,11 +8,11 @@
                     <div class="col-6">
                         <h1><img class="ass-icon" data-aos="zoom-in" src="~/assets/disc-kids-icon.png" alt="Kids DISC by Assessments 24x7"> Kids DISC</h1>
                         <p>
-                            The Kids DISC assessment is a chance for children to learn about themselves! Inside the report, kids will discover how special and 
-                            unique they are. Each child's bird style is their superpower, and the Kids DISC assessment by Assessments 24x7 helps them be 
-                            the best that they can be.
+                            The Kids DISC assessment is an opportunity for children to learn more about themselves! Inside the report, kids, and the adults 
+                            around them, will discover how special and unique they are. Each child’s bird style is their superpower, and the Kids DISC 
+                            assessment by Assessments 24x7 helps them be the best that they can be.
                         </p>
-                        <nuxt-link to="/contact" class="button">Download Sample Report</nuxt-link>
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" target="_blank" rel="noopener" class="button">Download Sample Report</a>
                         <nuxt-link to="/contact" class="button secondary">Learn More</nuxt-link>
                     </div>
 
@@ -143,16 +143,68 @@
             </div>
         </section>
 
+        <div class="about-assess">
+            <div class="container">
+                <div class="row">
+                    <div class="col-7">
+                        <h2>Kids DISC was designed for kids, parents, teachers, and more</h2>
+                        <p>
+                            Gain a deeper understanding of a child and their behavior with the Kids DISC assessment. Created especially for kids, using 
+                            language that they understand, the Kids DISC report offers significant insights based on the assessment. With three distinct 
+                            sections for kids, parents, and teachers, this report contains helpful information for the child and the adults in their lives.
+                        </p>
+
+                        <div class="sample-reports">
+                            <h2>Sample Reports</h2>
+                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" target="_blank" rel="noopener">
+                                <div class="sample">
+                                    <img src="~assets/pdf-icon.svg"> Kids DISC Sample Report
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
+                                        <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
+                                            l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
+                                            c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z"
+                                        />
+                                    </svg>
+                                </div>
+                            </a>
+
+                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/AdultDISC-Birds.pdf" target="_blank" rel="noopener">
+                                <div class="sample">
+                                    <img src="~assets/pdf-icon.svg"> Adult Birds Sample Report
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
+                                        <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
+                                            l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
+                                            c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z"
+                                        />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <nuxt-link to="/sample-reports" class="hyperlink">View All Sample Reports &rarr;</nuxt-link>
+
+                        <div class="languages">
+                            <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments"> English</span>
+                        </div>
+                    </div>
+
+                    <div class="col-5">
+                        <img class="image" data-aos="fade-left" data-aos-duration="2000" src="~/assets/kids-disc-parenting.png" alt="Kids DISC for parenting and leading children">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="about-the-report">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h4 class="title">At school, with friends, and around family...</h4>
+                        <h4 class="title">At school, with friends, and around family</h4>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorem! Laborum nesciunt velit consequatur! Error rem ipsum 
-                            consequatur expedita sunt molestiae dolorem dolor vero obcaecati in velit labore, molestias itaque! Lorem ipsum dolor sit amet 
-                            consectetur adipisicing elit. Debitis sunt modi a. Veniam corporis beatae maiores dignissimos ipsam provident incidunt expedita 
-                            voluptatem enim adipisci reiciendis libero assumenda illum, quidem odio!
+                            The Kids DISC report is far more than simply an examination of a single child’s behavioral style. It is packed with details 
+                            designed to teach children to adapt, interact, and better communicate with their peers, teachers, and families. In the parent 
+                            and teacher sections, you’ll discover what the child needs from you to thrive and specific suggestions to support them in ways 
+                            they will understand.
                         </p><br/>
 
                         <nuxt-link to="/contact" class="button">Learn More</nuxt-link>
@@ -162,27 +214,48 @@
             </div>
         </section>
 
-        <validation-mini />
+        <validation-mini :birdVersion="true" />
+
+        <section class="testimonial">
+        <div class="container">
+            <div class="row">                
+                <div class="col-8">
+                    <blockquote>
+                        <p>
+                            "Everyone working with children should incorporate the What is your Bird Style? - Kids DISC assessment from Assessments 24x7! 
+                            Understanding the basic foundation of differences in behavioral styles was an eye opener for our staff. Then applying this to 
+                            the various styles of our students has dramatically improved the overall communication, and specifically one on one 
+                            instruction. We even watch the kids talk amongst themselves regarding their Bird Styles. Exceptional, thank you!"
+                        </p>
+
+                        <footer>
+                            <cite>Julie Sand</cite>
+                            Pioneer Junior High School
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <div class="col-4">
+                    <img class="image" src="~/assets/testimonials/banner/julie-sand.png" alt="Julie Sand">
+                </div>
+            </div>
+        </div>
+    </section>
 
         <section class="call-to-action">
             <div class="container">
                 <div class="row">
                     <div class="col-5">
-                        <img class="image" src="~/assets/kids-disc-teach-coach.png" alt="DISC Kids for teaching and coaching children">
+                        <img class="image" data-aos="fade-right" data-aos-duration="2000" src="~/assets/kids-disc-teach-coach.png" alt="Kids DISC for teaching and coaching children">
                     </div>
 
                     <div class="col-7">
                         <h5 class="title">Strong foundations help support a bright future.</h5>
                         
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorem! Laborum nesciunt velit consequatur! Error rem ipsum 
-                            consequatur expedita sunt molestiae dolorem dolor vero obcaecati in velit labore, molestias itaque! Lorem ipsum dolor sit amet 
-                            consectetur adipisicing elit. Debitis sunt modi a. Veniam corporis beatae maiores dignissimos ipsam provident incidunt expedita 
-                            voluptatem enim adipisci reiciendis libero assumenda illum, quidem odio!
-                        </p>
-
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta consequatur, provident sed hic quisquam.
+                            Birds represent the behavioral styles of Kids DISC, and just like our internationally recognized DISC Self assessment, no 
+                            single Bird (DISC Style) is the “right” one to be. All the Birds have strengths and challenges. However, one thing is certain; 
+                            they help make up who we are, enabling each of us to lead happy and productive lives. 
                         </p><br/>
 
                         <nuxt-link to="/contact" class="button">Learn More</nuxt-link>
@@ -213,7 +286,7 @@
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Each child\'s bird style is their superpower, and the Kids DISC assessment by Assessments 24x7 helps them be the best that they can be.'
+                        content: 'Each child’s bird style is their superpower, and the Kids DISC assessment by Assessments 24x7 helps them be the best that they can be.'
                     }
                 ],
                 __dangerouslyDisableSanitizers: ['script'],
@@ -265,6 +338,123 @@
 
 <style lang="scss" scoped>
     @import '~assets/scss/vars';
+
+    .testimonial {
+        background: url('~assets/kids-disc-bg-3.jpg');
+        background-size: cover;
+        background-position: bottom;
+        padding: 40px 0;
+        color: #fff;
+        margin: 10px 0 100px;
+
+        .image {
+            width: 100%;
+            max-width: 250px;
+            margin: 20px auto 0;
+            display: block;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        blockquote {
+            margin-top: 40px;
+            display: block;
+
+            footer {
+                font-size: 10pt;
+
+                cite {
+                    font-weight: 800;
+                    display: block;
+                    font-size: 12pt;
+                }
+
+                .hyperlink {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .about-assess {
+        margin: 70px 0;
+
+        .sample-reports {
+            background: #1f222d;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #fff;
+
+            h2 {
+                font-size: 18pt;
+                margin: 5px 0 16px 0;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .sample {
+                border: 2px solid #2d3040;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                font-weight: 500;
+                transition: background .3s ease;
+                cursor: pointer;
+
+                &:hover {
+                    background: #2d3040;
+                }
+
+                img {
+                    width: 24px;
+                    margin-right: 5px;
+                }
+
+                svg {
+                    width: 17px;
+                    float: right;
+                    margin-top: 7px;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 24pt;
+            margin-bottom: 0;
+            line-height: 28pt;
+        }
+
+        .image {
+            width: 150%;
+            max-width: 800px;
+            margin: 40px auto 0;
+            display: block;
+        }
+    }
+
+    .languages {
+        margin-top: 10px;
+        
+        img {
+            width: 14px;
+        }
+
+        span {
+            font-size: 9pt;
+            margin-bottom: 5px;
+            display: inline-block;
+            background: #eaeaea;
+            padding: 0 7px 0 0;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+    }
 
     .call-to-action {
         margin-bottom: 100px;
@@ -343,13 +533,20 @@
         }
 
         &.right {
+            background: url('~assets/tree-right.png');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position-x: right;
+
             .bird-image {
                 right: 0;
             }
         }
 
         &.left {
-            background: #f7f7f7;
+            background: url('~assets/tree-left.png') #f7f7f7;
+            background-size: 50%;
+            background-repeat: no-repeat;
 
             .bird-image {
                 left: 0;
@@ -438,7 +635,8 @@
 
         .hero-image {
             position: absolute;
-            top: -190px;
+            top: -155px;
+            max-height: 750px;
         }
 
         p {
@@ -446,17 +644,29 @@
         }
     }
 
+    @media screen and (max-width: 1375px) {
+        .bird-explainer {
+            .bird-image {
+                width: 40%;
+            }
+        }
+    }
+
     @media screen and (max-width: $breakpoint-med) {
         .hero {
-            h1 {
-                font-size: 23pt;
-                text-align: center;
-                line-height: 25pt;
+            padding: 80px 0 90px 0;
 
-                img {
-                    width: 40px !important;
-                    margin-right: 0 !important;
+            h1 {
+                text-align: center;
+                font-size: 28pt;
+
+                .ass-icon {
+                    width: 65px;
                 }
+            }
+
+            .hero-image {
+                display: none;
             }
         }
 
@@ -477,6 +687,31 @@
                         font-size: 11pt !important;
                     }
                 }
+            }
+        }
+
+        .bird-explainer {
+            .bird-image {
+                position: relative;
+                width: 60%;
+            }
+
+            &.right .bird-image {
+                float: right;
+                margin-bottom: -30px;
+            }
+        }
+
+        .about-assess {
+            .image {
+                width: 100%;
+            }
+        }
+
+        .call-to-action {
+            .image {
+                margin-left: 0;
+                width: 100%;
             }
         }
     }
