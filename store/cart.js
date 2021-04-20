@@ -1,7 +1,7 @@
 export const state = () => ({
     added: [],
     all: [
-        {
+        /**{
             id: '1',
             stripeId: 'price_1I6dd4BPiAffrwry1TMNJ3YR',
             name: 'DISCStyles Assessment (5 Pack)',
@@ -35,7 +35,14 @@ export const state = () => ({
             name: 'The Platinum Rule Reminder Card',
             price: '600',
             slug: 'platinum-rule-reminder-card'
-        },
+        },**/
+        {
+            id: '1',
+            stripeId: 'price_1IgzSLBPiAffrwryjZblkFhM',
+            name: 'DISC Group Certification',
+            price: '159500',
+            slug: 'disc-group-certification'
+        }
     ]
 });
 

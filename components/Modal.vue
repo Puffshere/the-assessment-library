@@ -44,58 +44,7 @@
                 </p>
                 <h3>Live Group Certification - May 11th & 12th<br/>Registration Deadline - May 3rd</h3>
 
-                <!-- Load Stripe.js on your website. -->
-                <script src="https://js.stripe.com/v3"></script>
-
-                <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-                <button
-                    class="button danger"
-                    id="checkout-button-price_1IgzSLBPiAffrwryjZblkFhM"
-                    role="link"
-                    type="button"
-                    style="width:100%"
-                >
-                Get DISC Certified
-                </button>
-
-                <div id="error-message"></div>
-
-                <script>
-                (function() {
-                var stripe = Stripe('pk_live_6Jq66rYmJ3XnKRrThahwThER00vVN8K8hW');
-
-                var checkoutButton = document.getElementById('checkout-button-price_1IgzSLBPiAffrwryjZblkFhM');
-                checkoutButton.addEventListener('click', function () {
-                    /*
-                    * When the customer clicks on the button, redirect
-                    * them to Checkout.
-                    */
-                    stripe.redirectToCheckout({
-                    lineItems: [{price: 'price_1IgzSLBPiAffrwryjZblkFhM', quantity: 1}],
-                    mode: 'payment',
-                    /*
-                    * Do not rely on the redirect to the successUrl for fulfilling
-                    * purchases, customers may not always reach the success_url after
-                    * a successful payment.
-                    * Instead use one of the strategies described in
-                    * https://stripe.com/docs/payments/checkout/fulfill-orders
-                    */
-                    successUrl: window.location.protocol + '//assessments24x7.com/success',
-                    cancelUrl: window.location.protocol + '//assessments24x7.com/canceled',
-                    })
-                    .then(function (result) {
-                    if (result.error) {
-                        /*
-                        * If `redirectToCheckout` fails due to a browser or network
-                        * error, display the localized error message to your customer.
-                        */
-                        var displayError = document.getElementById('error-message');
-                        displayError.textContent = result.error.message;
-                    }
-                    });
-                });
-                })();
-                </script>
+                <a href="/store" @click="close" class="button danger" style="width:100%">Get DISC Certified</a>
             </div>
         </section>
     </transition>
