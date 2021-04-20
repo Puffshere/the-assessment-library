@@ -63,6 +63,10 @@ module.exports = {
       ssr: false
     },
     '~/plugins/vue-toast-notification.js',
+    {
+      src: '~/plugins/aos',
+      ssr: false
+    }
   ],
 
   /*

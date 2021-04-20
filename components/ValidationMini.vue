@@ -3,7 +3,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img class="image" src="~assets/asi-certified.png" alt="Scientifically Validated Assessments by ASI">
+                    <img v-if="birdVersion" class="image" src="~assets/asi-certified-birds.png" alt="Scientifically Validated Assessments by ASI">
+                    <img v-else class="image" src="~assets/asi-certified.png" alt="Scientifically Validated Assessments by ASI">
                     <h3 class="section-title">Validated. Reliable. Compliant.</h3>
                     <p class="section-subtitle"><strong>A Scientific Solution for Professionals.</strong></p>
                 </div>
@@ -29,7 +30,7 @@
                 <div class="col-12">
                     <div class="review-container">
                         <div class="col-4">
-                            <div class="review">
+                            <div class="review" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="review-avatar ellie-gates lazyload"></div>
                                 <div class="social-icon">
                                     <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
@@ -47,7 +48,7 @@
                         </div>
 
                         <div class="col-4">
-                            <div class="review">
+                            <div class="review" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="review-avatar felicia-miller-johnson lazyload"></div>
                                 <div class="social-icon">
                                     <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
@@ -65,7 +66,7 @@
                         </div>
 
                         <div class="col-4">
-                            <div class="review">
+                            <div class="review" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="review-avatar lorraine-terry lazyload"></div>
                                 <div class="social-icon">
                                     <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
@@ -93,6 +94,12 @@
         </div>
     </section>
 </template>
+
+<script>
+    export default {
+        props: ['birdVersion']
+    }
+</script>
 
 <style lang="scss" scoped>
     @import '~assets/scss/vars';
