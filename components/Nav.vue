@@ -4,7 +4,7 @@
 
         <div class="info-bar">
             <p>
-                <strong>Introducing Our New Product:</strong> Kids DISC! Each child's bird style is their superpower. <nuxt-link class="hyperlink light" to="/assessments/kids-disc">Discover Kids DISC &rarr;</nuxt-link>
+                <strong>Coming May 17th:</strong> Kids DISC! Each child's bird style is their superpower. <nuxt-link class="hyperlink light" to="/assessments/kids-disc">Discover Kids DISC &rarr;</nuxt-link>
             </p>
         </div>
 
