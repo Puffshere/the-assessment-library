@@ -61,17 +61,22 @@
 				days: 0,
 				hours: 0,
 				minutes: 0,
-				seconds: 0
+				seconds: 0,
+                routeBlacklist: [
+                    '/resources/disc-training-library'
+                ]
             }
         },
         created() {
             if (process.browser) {
-                setTimeout(() => {
-                    if (!localStorage.getItem('promo:shown4')) {
-                        this.isOpen = true;
-                        this.seen();
-                    }
-                }, 2000);
+                if (!this.routeBlacklist.includes(this.$route.path)) {
+                    setTimeout(() => {
+                        if (!localStorage.getItem('promo:shown4')) {
+                            this.isOpen = true;
+                            this.seen();
+                        }
+                    }, 2000);
+                }
             }
 
             this.compute();
