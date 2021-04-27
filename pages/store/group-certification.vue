@@ -9,7 +9,7 @@
                         <h1 class="section-title">DISC Group Certification</h1>
                         <p>
                             This training is an excellent opportunity to get DISC certified in a live, virtual, interactive setting with a specific time to 
-                            focus on your learning and development. Class size is limited and there will be some required pre-work, so get registered today!
+                            focus on your learning and development. Class size is limited, and there will be some required pre-work, so get registered today!
                         </p>
                     </div>
                 </div>
