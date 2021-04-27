@@ -44,7 +44,7 @@
                 </p>
                 <h3>Live Group Certification - May 11th & 12th<br/>Registration Deadline - May 3rd</h3>
 
-                <a href="/store" @click="close" class="button danger" style="width:100%">Get DISC Certified</a>
+                <a href="/store/group-certification" @click="close" class="button danger" style="width:100%">Get DISC Certified</a>
             </div>
         </section>
     </transition>
