@@ -26,7 +26,7 @@
                             <option value="zh">Chinese (Mandarin) - 3</option>
                             <option value="nl">Dutch - 5</option>
                             <option value="en-gb">English (UK) - 2</option>
-                            <option value="en-us" selected>English (US) - 31</option>
+                            <option value="en-us" selected>English (US) - 34</option>
                             <option value="fr">French - 9</option>
                             <option value="de">German - 3</option>
                             <option value="id">Indonesian - 1</option>
@@ -110,9 +110,14 @@
                         <div class="coming-soon">Coming Soon!</div>
 
                         <h3>DISC Kids</h3>
-                        <a class="hyperlink disabled" target="_blank" rel="noopener">DISC Parent Report</a><br/>
-                        <a class="hyperlink disabled" target="_blank" rel="noopener">DISC Kid Report</a><br/>
-                        <a class="hyperlink disabled" target="_blank" rel="noopener">DISC Teacher Report</a><br/>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink disabled" target="_blank" rel="noopener">DISC Kids - Full Report</a><br/>
+                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">DISC Kids - Full Report</a><br/>
+                        
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-ChildOnly.pdf" class="hyperlink disabled" target="_blank" rel="noopener">DISC Kids - Child Only</a><br/>
+                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">DISC Kids - Child Only</a><br/>
+
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/AdultDISC-Birds.pdf" class="hyperlink disabled" target="_blank" rel="noopener">DISC Adult Birds</a><br/>
+                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">DISC Adult Birds</a><br/>
                     </div>
                 </div>
 
