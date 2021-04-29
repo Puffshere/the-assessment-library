@@ -50,7 +50,7 @@
                             <small>Provide answers to Frequently Asked Questions regarding the DISC model, the DISC Assessment and Report, Reading DISC Graphs, DISC History, Hiring and Selection, and other assessments.</small></td></tr>
                             
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/NaturalandAdaptedGraphs.pptx" target="_blank" rel="noopener">Natural and Adapted DISC Graphs</a>
-                            <small>A series of short DISC graph debrief videos to help you practice the flow of the conversation, understand what to focus on in the debrief, and how to discuss it in a way that your client can understand.</small></td></tr>
+                            <small>A short PowerPoint presentation describing the various elements of the Natural and Adapted DISC graphs</small></td></tr>
 
                             <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaQlF2vJ1PSTBRg98K8f5G8" target="_blank" rel="noopener">Debriefing the DISC Report Video Series</a>
                             <small>A series of short presentations focusing on the Assessments 24x7 DISC report in detail so that as a practitioner, you will understand how to utilize each section specifically and how to effectively interpret information for clients.</small></td></tr>
