@@ -45,6 +45,8 @@
                             <small>Open ended and purposeful follow-up questions to uncover opportunities and reveal areas for support, including action planning and coaching suggestions.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Update Nov 2018.docx" target="_blank" rel="noopener">Motivators Update</a>
                             <small>November 2018 - An explanation of updated graphs and report additions to help you navigate, understand and explain the most recent changes in the Motivators report.</small></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLa7POFr6UTjzja60Q-oI18s" target="_blank" rel="noopener">Motivators Virtual Training</a>
+                            <small>A series of short presentations viewed at your pace. This series provides instruction on the core concepts the A24x7 Motivators Model, how to accurately interpret the report, and how to use it effectively and accurately with your clients.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLZ2vu_xOVEelx6PrKbIjE_r" target="_blank" rel="noopener">Practice Graphs for Debriefs</a>
                             <small>A series of short Motivators and some DISC/Motivators combined graphs debrief videos to help you practice the flow of the conversation, understand what to focus on in the debrief, and how to discuss it in a way that your client can understand.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLZzztXwhu8s9IwOjgISdakL" target="_blank" rel="noopener">Understanding Your Motivators Report (for your clients)</a>
@@ -63,7 +65,7 @@
                         <tbody>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/ValuesOrigins.pdf" target="_blank" rel="noopener">Values Origins Article</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsAssessmentHistory.pdf" target="_blank" rel="noopener">Values Overview & Motivators History Article</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="http://www.assessmentdownloads.com/mt/training.html" target="_blank" rel="noopener">Motivators Virtual Training</a></td></tr>
+                            
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Certification Notes 6.15.20.docx" target="_blank" rel="noopener">Certification Notes</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators - Scoring Guide_vs2_6.20.docx" target="_blank" rel="noopener">Motivators Scoring Guide</a>
                             <small>Shares overview of scoring and characteristics of high and low scores in each Motivator</small></td></tr>
