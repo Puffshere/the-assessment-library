@@ -189,14 +189,14 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DirDesc.wmv" target="_blank" rel="noopener">Description for High D Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/SocDesc.wmv" target="_blank" rel="noopener">Description for High I Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/RelDesc.wmv" target="_blank" rel="noopener">Description for High S Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ThinkDesc.wmv" target="_blank" rel="noopener">Description for High C Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DirAdapt.wmv" target="_blank" rel="noopener">Adaptability for High D Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/SocAdapt.wmv" target="_blank" rel="noopener">Adaptability for High I Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/RelAdapt.wmv" target="_blank" rel="noopener">Adaptability for High S Styles</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ThinkAdapt.wmv" target="_blank" rel="noopener">Adaptability for High C Styles</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DirDesc.mp4" target="_blank" rel="noopener">Description for High D Styles</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/SocDesc.mp4" target="_blank" rel="noopener">Description for High I Styles</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/RelDesc.mp4" target="_blank" rel="noopener">Description for High S Styles</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ThinkDesc.mp4" target="_blank" rel="noopener">Description for High C Styles</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DirAdapt.mp4" target="_blank" rel="noopener">Adaptability for High D Styles</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/SocAdapt.mp4" target="_blank" rel="noopener">Adaptability for High I Styles</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/RelAdapt.mp4" target="_blank" rel="noopener">Adaptability for High S Styles</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ThinkAdapt.mp4" target="_blank" rel="noopener">Adaptability for High C Styles</a></td></tr>
                         </tbody>
                     </table>
 

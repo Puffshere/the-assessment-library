@@ -21,7 +21,7 @@ const cosmos = {
 }
 
 const connectionString = `mongodb://${cosmos.username}:${cosmos.password}@${cosmos.host}:${cosmos.port}/${cosmos.name}${cosmos.opts}`;
-mongoose.connect(connectionString, {useNewUrlParser: true});
+mongoose.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));

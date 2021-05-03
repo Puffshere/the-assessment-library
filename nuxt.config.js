@@ -2,8 +2,6 @@ const pkg = require('./package')
 
 
 module.exports = {
-  mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -32,13 +30,6 @@ module.exports = {
   loading: { color: '#fff' },
 
   /*
-  ** Global CSS
-  */
-  css: [
-    'plyr/dist/plyr.css'
-  ],
-
-  /*
   ** Plugins to load before mounting the App
   */
   plugins: [
@@ -59,10 +50,9 @@ module.exports = {
       mode: 'client'
     },
     {
-      src: '~/plugins/vue-plyr',
-      ssr: false
+      src: '~/plugins/vue-toast-notification.js',
+      mode: 'client'
     },
-    '~/plugins/vue-toast-notification.js',
     {
       src: '~/plugins/aos',
       ssr: false
@@ -80,7 +70,6 @@ module.exports = {
   gtm: {
     id: 'GTM-NR3GL66',
     autoInit: true,
-    dev: true,
     pageTracking: true,
     scriptDefer: true
   },
@@ -105,7 +94,12 @@ module.exports = {
         fs: 'empty'
       }
     },
-    transpile: ['vue-mapbox', 'vue-plyr', '@nuxtjs/axios']
+    transpile: ['vue-mapbox', '@nuxtjs/axios'],
+    babel:{
+      plugins: [
+        ['@babel/plugin-proposal-private-methods', { loose: true }]
+      ]
+    }
   },
 
   serverMiddleware: [
