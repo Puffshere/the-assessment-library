@@ -344,15 +344,12 @@
                 </li>
             </ul>
         </div>
-
-        <modal />
     </header>
 </template>
 
 <script>
     import Logo from './Logo';
     import CartModal from '@/components/CartModal';
-    import Modal from '@/components/Modal';
 
     import { mapGetters } from 'vuex';
 
@@ -360,7 +357,6 @@
         props: ['active'],
         components: {
             'logo': Logo,
-            'modal': Modal,
             'cart-modal': CartModal
         },
         data() {
