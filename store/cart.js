@@ -3,41 +3,34 @@ export const state = () => ({
     all: [
         {
             id: '1',
-            stripeId: 'price_1IgzSLBPiAffrwryjZblkFhM',
-            name: 'DISC Group Certification',
-            price: '159500',
-            slug: 'disc-group-certification'
-        },
-        {
-            id: '2',
             stripeId: 'price_1I6dd4BPiAffrwry1TMNJ3YR',
             name: 'DISCStyles Assessment (5 Pack)',
             price: '7500',
             slug: 'hrd-press-discstyles'
         },
         {
-            id: '3',
+            id: '2',
             stripeId: 'price_1I6ddRBPiAffrwryvXYASANa',
             name: 'The DISC Laminated Summary Card',
             price: '600',
             slug: 'disc-summary-card'
         },
         {
-            id: '4',
+            id: '3',
             stripeId: 'price_1I8SHeBPiAffrwrybwJPSTrr',
             name: 'The Platinum Rule Paper Assessment',
             price: '1000',
             slug: 'platinum-rule-assessment'
         },
         {
-            id: '5',
+            id: '4',
             stripeId: 'price_1I8SIABPiAffrwryszKH9TO0',
             name: 'The Platinum Rule Scoring Booklet',
             price: '1200',
             slug: 'platinum-rule-scoring-booklet'
         },
         {
-            id: '6',
+            id: '5',
             stripeId: 'price_1I8SIVBPiAffrwryc6vmDBM7',
             name: 'The Platinum Rule Reminder Card',
             price: '600',
