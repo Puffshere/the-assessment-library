@@ -108,5 +108,6 @@ module.exports = {
 
   router: {
     middleware: 'redirects'
-  }
+  },
+  telemetry: false
 }

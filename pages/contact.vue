@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-8">
-                    <client-only>
+                    <!--<client-only>
                         <form accept-charset="UTF-8" :action="action" class="infusion-form" id="inf_form_15eb1d4945f8c9be32755e675097c33d" method="POST">
                             <input name="inf_form_xid" type="hidden" value="15eb1d4945f8c9be32755e675097c33d" />
                             <input name="inf_form_name" type="hidden" value="Contact Us Webform" />
@@ -141,6 +141,9 @@
                     
                     <script type="text/javascript" src="https://rz189.infusionsoft.app/app/webTracking/getTrackingCode"></script>
                     <script type="text/javascript" src="https://rz189.infusionsoft.com/app/timezone/timezoneInputJs?xid=15eb1d4945f8c9be32755e675097c33d"></script>
+                    -->
+
+                    <contact-form />
                 </div>
             
                 <div class="col-4">
@@ -167,7 +170,8 @@
             'contact-header': () => import('@/components/ContactHeader'),
             'reviews': () => import('@/components/Reviews'),
             'blog-sidebar': () => import('@/components/BlogSidebarLatest'),
-            'contact-sidebar': () => import('@/components/ContactSidebar')
+            'contact-sidebar': () => import('@/components/ContactSidebar'),
+            'contact-form': () => import('@/components/ContactForm')
         },
         data() {
             return {
@@ -220,19 +224,3 @@
         },
     }
 </script>
-
-<style lang="scss" scoped>
-    .contact {
-        .contact-form {
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-bottom: 10px !important;
-        }
-
-        .form-group.website {
-            position: absolute;
-            left: -91234px;
-        }
-    }
-</style>
