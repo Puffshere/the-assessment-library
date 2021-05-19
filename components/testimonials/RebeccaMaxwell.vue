@@ -5,11 +5,11 @@
                 <div class="col-8">
                     <blockquote>
                         <p>
-                            "When it comes to partnering, at Asentiv New York we're fussy who we work with! It's important that the services we provide to 
+                            "When it comes to partnering, at Asentiv New York we're fussy about who we work with! It's important that the services we provide to 
                             our business consulting & leadership development clients are highly professional, strongly customer focused & flexible to 
                             individual needs.<br/><br/>
 
-                            With Assessments 24x7 we found the same attention to detail - from set up to operation the team have been outstanding, 
+                            With Assessments 24x7 we found the same attention to detail - from set up to operation the team has been outstanding, 
                             providing quick response to our (many!) questions & a slick professional turnaround on all of the technical logistics we 
                             encountered."
                         </p>
