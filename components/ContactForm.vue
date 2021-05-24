@@ -1,116 +1,159 @@
 <template>
     <section class="contact-form">
         <form class="form">
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="firstName">First Name *</label>
-                    <input id="firstName" name="firstName" type="text" v-model="form.firstName" />
-                </div>
+            <ValidationObserver ref="form">
+                <loading :active="loading" :is-full-page="false" />
 
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input id="email" name="email" type="email" />
-                </div>
-
-                <div class="form-group">
-                    <label for="company">Company/Organization *</label>
-                    <input id="company" name="company" type="text" />
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="lastName">Last Name *</label>
-                    <input id="lastName" name="lastName" type="text" v-model="form.lastName" />
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input id="phone" name="inf_field_Phone1" type="tel" />
-                </div>
-
-                <div class="form-group">
-                    <label for="source">How did you hear about us? *</label>
-
-                    <select id="source" name="source" v-model="form.source">
-                        <option v-for="source in sources" :key="source.id" :value="source.value">{{ source.label }}</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="col-12">                    
-                <div class="form-group" v-if="form.source === 'Other (select and enter below)'">
-                    <label for="sourceOther">If "Other" above, list here:</label>
-                    <input id="sourceOther" name="sourceOther" type="text" />
-                </div>
-
-                <div class="form-group">
-                    <label for="comments">Questions/Comments:</label>
-                    <textarea cols="24" rows="5" id="comments" name="comments"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label>Which best describes your need for assessments?  *</label>
-            
-                    <div class="form-check">
-                        <input class="form-check-input" id="reseller" name="clientType" type="radio" value="8" v-model="form.clientType" />
-                        <label class="form-check-label" for="reseller">I am a coach, trainer, or consultant who uses assessments with my clients</label>
+                <div class="col-6">
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <label for="firstName">First Name *</label>
+                            <input id="firstName" name="firstName" type="text" v-model="form.firstName" tabindex="1" />
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
                     </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" id="corporate" name="clientType" type="radio" value="49" v-model="form.clientType" />
-                        <label class="form-check-label" for="corporate">I am part of an organization (corporation, association, etc.) that uses assessments internally with our team</label>
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required|email">
+                            <label for="email">Email Address *</label>
+                            <input id="email" name="email" type="email" tabindex="3" v-model="form.email" />
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>Are you affiliated with one of the following organizations?</label>
 
-                    <div class="form-check" v-for="affiliation in affiliations" :key="affiliation.id">
-                        <input class="form-check-input" :id="`affiliation${affiliation.id}`" type="checkbox" :value="affiliation.id" v-model="form.affiliation" />
-                        <label class="form-check-label" :for="`affiliation${affiliation.id}`">{{ affiliation.label }}</label>
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <label for="company">Company/Organization *</label>
+                            <input id="company" name="company" type="text" tabindex="5" v-model="form.company" />
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
                     </div>
                 </div>
-                
-                <div class="form-group">
-                    <label data-mce-mark="1">Join our exclusive mailing list?</label>
+
+                <div class="col-6">
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <label for="lastName">Last Name *</label>
+                            <input id="lastName" name="lastName" type="text" v-model="form.lastName" tabindex="2" />
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
+
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required|numeric">
+                            <label for="phone">Phone Number *</label>
+                            <input id="phone" name="phone" type="tel" tabindex="4" v-model="form.phone" />
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
+
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <label for="source">How did you hear about us? *</label>
+
+                            <select id="source" name="source" v-model="form.source" tabindex="6">
+                                <option v-for="source in sources" :key="source.id" :value="source.value">{{ source.label }}</option>
+                            </select>
+
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-group" v-if="form.source === 'Other (select and enter below)'">
+                        <label for="sourceOther">If "Other" above, list here:</label>
+                        <input id="sourceOther" name="sourceOther" type="text" tabindex="7" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Questions/Comments:</label>
+                        <textarea cols="24" rows="5" id="comments" name="comments" tabindex="8" v-model="form.comments"></textarea>
+                    </div>
                     
-                    <div class="form-check">
-                        <input class="form-check-input" id="optinYes" name="newsletter" type="radio" value="45" v-model="newsletter" checked/>
-                        <label class="form-check-label" for="optinYes">Yes please!</label>
-                    </div>
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <label>Which best describes your need for assessments?  *</label>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" id="reseller" name="clientType" type="radio" value="8" v-model="form.clientType" tabindex="9" />
+                                <label class="form-check-label" for="reseller">I am a coach, trainer, or consultant who uses assessments with my clients</label>
+                            </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" id="optinNo" name="newsletter" type="radio" value="46" v-model="newsletter" />
-                        <label class="form-check-label" for="optinNo">No, thank you</label>
+                            <div class="form-check">
+                                <input class="form-check-input" id="corporate" name="clientType" type="radio" value="49" v-model="form.clientType" tabindex="10" />
+                                <label class="form-check-label" for="corporate">I am part of an organization (corporation, association, etc.) that uses assessments internally with our team</label>
+                            </div>
+
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Are you affiliated with one of the following organizations?</label>
+
+                        <select id="source" name="source" v-model="form.affiliation" style="max-width: 310px;" tabindex="11">
+                            <option v-for="affiliation in affiliations" :key="affiliation.id" :value="affiliation.value">{{ affiliation.label }}</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <label>Join our exclusive mailing list? *</label>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" id="optinYes" name="newsletter" type="radio" value="45" v-model="form.newsletter" tabindex="12"/>
+                                <label class="form-check-label" for="optinYes">Yes please!</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" id="optinNo" name="newsletter" type="radio" value="46" v-model="form.newsletter" tabindex="13" />
+                                <label class="form-check-label" for="optinNo">No, thank you</label>
+                            </div>
+
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
+                    
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <span class="form-check">
+                                <input class="form-check-input" id="consent" name="consent" type="checkbox" tabindex="14" v-model="form.consent" />
+                                <label class="form-check-label" for="consent">
+                                    I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy Policy</nuxt-link> and 
+                                    <nuxt-link to="/legal/compliance" class="hyperlink">GDPR Policy</nuxt-link> and give my consent.*
+                                </label>
+
+                                <span class="error">{{ v.errors[0] }}</span>
+                            </span>
+                        </ValidationProvider>
                     </div>
                 </div>
                 
-                <div class="infusion-field form-group">
-                    <span class="form-check">
-                        <input class="form-check-input" id="consent" name="consent" type="checkbox" />
-                        <label class="form-check-label" for="consent">
-                            I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy Policy</nuxt-link> and 
-                            <nuxt-link to="/legal/compliance" class="hyperlink">GDPR Policy</nuxt-link> and give my consent.*
-                        </label>
-                    </span>
-                </div>
-            </div>
-            
-            <button class="button" type="submit">Submit</button>
+                <button class="button" type="button" @click="process" tabindex="15">Submit</button>
+            </ValidationObserver>
         </form>
     </section>
 </template>
 
 <script>
     import axios from 'axios';
+    import Loading from 'vue-loading-overlay';
+    import 'vue-loading-overlay/dist/vue-loading.css';
+    import { ValidationProvider, ValidationObserver } from 'vee-validate';
 
     export default {
         props: [
             'redirect'
         ],
+        components: {
+            Loading,
+            ValidationObserver,
+            ValidationProvider
+        },
         data() {
             return {
+                loading: true,
                 sources: [],
                 affiliations: [],
                 form: {
@@ -124,74 +167,88 @@
                     comments: '',
                     clientType: '',
                     affiliation: '',
-                    newsletter: ''
-                },
-                newsletter: 'true'
+                    newsletter: '45',
+                    consent: ''
+                }
             }
         },
         async created() {
             let response = await axios.get('/api/contact/custom-field/21');
             this.sources = response.data.fieldOptions;
 
-            response = await axios.get('/api/contact/custom-field/5');
+            response = await axios.get('/api/contact/custom-field/64');
             this.affiliations = response.data.fieldOptions;
 
-            response = await axios.get('/api/contact/custom-fields');
+            /*response = await axios.get('/api/contact/custom-fields');
+            console.log(response);*/
 
-            console.log(response);
-            console.log(this.affiliations);
+            this.loading = false;
         },
         methods: {
             async process() {
-                try {
-                    const { data } = await axios.post('/api/contact', {
-                        contact: {
-                            email: this.form.email,
-                            firstName: this.form.firstName,
-                            lastName: this.form.lastName,
-                            phone: this.form.phone,
-                            fieldValues: [
-                                {
-                                    field: '21', // How did you hear about us?
-                                    value: this.form.source
-                                },
-                                {
-                                    field: '22', // How did you hear about us? (Other),
-                                    value: this.form.sourceOther
-                                },
-                                {
-                                    field: '20', // Questions/Comments,
-                                    value: this.form.comments
-                                },
-                                {
-                                    field: '4', // Client type (reseller vs corporate),
-                                    value: this.form.clientType
-                                },
-                                {
-                                    field: '5', // Affiliation,
-                                    value: this.form.affiliation
-                                },
-                                {
-                                    field: '10', // Newsletter opt-in,
-                                    value: this.form.newsletter
-                                }
-                            ]
+                const validated = await this.$refs.form.validate();
+
+                if (validated) {
+                    this.loading = true;
+
+                    try {
+                        const { data } = await axios.post('/api/contact', {
+                            contact: {
+                                email: this.form.email,
+                                firstName: this.form.firstName,
+                                lastName: this.form.lastName,
+                                phone: this.form.phone,
+                                fieldValues: [
+                                    {
+                                        field: '21', // How did you hear about us?
+                                        value: this.form.source
+                                    },
+                                    {
+                                        field: '22', // How did you hear about us? (Other),
+                                        value: this.form.sourceOther
+                                    },
+                                    {
+                                        field: '20', // Questions/Comments,
+                                        value: this.form.comments
+                                    },
+                                    {
+                                        field: '4', // Client type (reseller vs corporate),
+                                        value: this.form.clientType
+                                    },
+                                    {
+                                        field: '64', // Affiliation,
+                                        value: this.form.affiliation
+                                    },
+                                    {
+                                        field: '10', // Newsletter opt-in,
+                                        value: this.form.newsletter
+                                    }
+                                ]
+                            }
+                        });
+
+                        // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
+                        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+                        // Create an account and associate the contact to it
+                        await axios.post(`/api/contact/${data.contact.id}/account`, {
+                            company: this.form.company
+                        });
+                        
+                        // Check to see if this contact wants to subscribe to our newsletter
+                        if (this.newsletter === '45') {
+                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
                         }
-                    });
 
-                    // TODO: inspect this response and pass in the correct contactId below
-                    console.log(data);
+                        this.loading = false;
+                    } catch(err) {
+                        this.loading = false;
 
-                    // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
-                    await axios.post(`/api/contact/${data.id}/tag/43`);
-                    
-                    // Check to see if this contact wants to subscribe to our newsletter
-                    if (this.newsletter === '45') {
-                        await axios.post(`/api/contact/${data.id}/subscribe`);
+                        // TODO: error handling
+                        console.log(err);
                     }
-                } catch(err) {
-                    // TODO: error handling
-                    console.log(err);
+                } else {
+                    console.log('Not validated yet...');
                 }
             }
         }

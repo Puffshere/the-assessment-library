@@ -85,7 +85,11 @@ app.post('/contact/:contactId/subscribe', (req, res) => {
 
 app.post('/contact/:contactId/tag/:tagId', (req, res) => {
     contactController.applyTag(req, res);
-})
+});
+
+app.post('/contact/:contactId/account', (req, res) => {
+    contactController.createAccountAndAssociateContact(req, res);
+});
 
 app.use((req, res, next) => {
     res.status(404).json({

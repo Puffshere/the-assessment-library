@@ -34,6 +34,10 @@ module.exports = {
   */
   plugins: [
     {
+      src: '~plugins/validation.js',
+      ssr: false
+    },
+    {
       src: '~plugins/tag-manager.js',
       ssr: false
     },

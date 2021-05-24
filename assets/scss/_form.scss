@@ -5,6 +5,7 @@
         display: block;
         font-size: 11pt;
         font-weight: 400;
+        margin-bottom: 8px;
 
         &.form-check-label {
             margin-left: 28px;
@@ -17,10 +18,16 @@
         border-radius: 4px;
         padding: 9px;
         border: 2px solid #dcdfe6;
+        font-family: inherit;
 
         &.form-check-input {
             position: absolute;
             width: inherit;
+
+            &:focus, &:active {
+                outline: 2px solid #409eff;
+                outline-style: auto;
+            }
         }
         
         &:focus, &:active {
@@ -35,6 +42,7 @@
         border-radius: 4px;
         padding: 9px;
         border: 2px solid #dcdfe6;
+        font-family: inherit;
 
         &:focus, &:active {
             outline: 0;
@@ -48,12 +56,22 @@
         border-radius: 4px;
         padding: 9px;
         border: 2px solid #dcdfe6;
-        height: 36px;
+        height: 42px;
         background: #fff;
+        font-family: inherit;
+
+        &:focus, &:active {
+            border-color: #409eff !important;
+        }
     }
 
     .form-check {
         margin: 10px 0px;
+    }
+
+    .error {
+        font-size: 9pt;
+        color: red;
     }
 }
 
