@@ -35,6 +35,12 @@
                     <h3>Previously Recorded Webinars</h3>
 
                     <ul class="resources">
+                        <nuxt-link to="/resources/kids-disc-webinar">
+                            <li class="resource a24x7">
+                                Kids DISC
+                            </li>
+                        </nuxt-link>
+
                         <nuxt-link to="/resources/relationship-based-sales">
                             <li class="resource a24x7">
                                 Stop, Collaborate, & Listen - Relationship-Based Sales

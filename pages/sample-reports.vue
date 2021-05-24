@@ -109,12 +109,12 @@
                     <div class="samples-container">
                         <div class="coming-soon">Coming Soon!</div>
 
-                        <h3>DISC Kids</h3>
-                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Kids - Full Report</a>
-                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">DISC Kids - Full Report</a><br/>
+                        <h3>Kids DISC</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report</a>
+                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Full Report</a><br/>
                         
-                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-ChildOnly.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Kids - Child Only</a>
-                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">DISC Kids - Child Only</a><br/>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-ChildOnly.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Child Only</a>
+                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Child Only</a><br/>
 
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/AdultDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Adult Birds</a>
                         <a v-else class="hyperlink disabled" target="_blank" rel="noopener">DISC Adult Birds</a><br/>
