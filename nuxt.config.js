@@ -34,10 +34,6 @@ module.exports = {
   */
   plugins: [
     {
-      src: '~plugins/validation.js',
-      ssr: false
-    },
-    {
       src: '~plugins/tag-manager.js',
       ssr: false
     },
@@ -98,7 +94,7 @@ module.exports = {
         fs: 'empty'
       }
     },
-    transpile: ['vue-mapbox', '@nuxtjs/axios'],
+    transpile: ['vue-mapbox', '@nuxtjs/axios', 'vee-validate/dist/rules'],
     babel:{
       plugins: [
         ['@babel/plugin-proposal-private-methods', { loose: true }]

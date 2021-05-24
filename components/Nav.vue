@@ -435,7 +435,7 @@
                 .nav-bar {
                     float: right;
                     margin: -12px 0;
-                    z-index: 999999;
+                    z-index: 1000;
                     position: relative;
 
                     .nav-item {

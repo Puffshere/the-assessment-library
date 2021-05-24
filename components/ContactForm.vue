@@ -76,12 +76,12 @@
                             <label>Which best describes your need for assessments?  *</label>
                             
                             <div class="form-check">
-                                <input class="form-check-input" id="reseller" name="clientType" type="radio" value="8" v-model="form.clientType" tabindex="9" />
+                                <input class="form-check-input" id="reseller" name="clientType" type="radio" value="Reseller" v-model="form.clientType" tabindex="9" />
                                 <label class="form-check-label" for="reseller">I am a coach, trainer, or consultant who uses assessments with my clients</label>
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" id="corporate" name="clientType" type="radio" value="49" v-model="form.clientType" tabindex="10" />
+                                <input class="form-check-input" id="corporate" name="clientType" type="radio" value="Corporate" v-model="form.clientType" tabindex="10" />
                                 <label class="form-check-label" for="corporate">I am part of an organization (corporation, association, etc.) that uses assessments internally with our team</label>
                             </div>
 
@@ -92,7 +92,7 @@
                     <div class="form-group">
                         <label>Are you affiliated with one of the following organizations?</label>
 
-                        <select id="source" name="source" v-model="form.affiliation" style="max-width: 310px;" tabindex="11">
+                        <select id="affiliation" name="affiliation" v-model="form.affiliation" style="max-width: 310px;" tabindex="11">
                             <option v-for="affiliation in affiliations" :key="affiliation.id" :value="affiliation.value">{{ affiliation.label }}</option>
                         </select>
                     </div>
@@ -140,7 +140,16 @@
     import axios from 'axios';
     import Loading from 'vue-loading-overlay';
     import 'vue-loading-overlay/dist/vue-loading.css';
-    import { ValidationProvider, ValidationObserver } from 'vee-validate';
+    import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
+    import * as rules from 'vee-validate/dist/rules';
+    import { messages } from 'vee-validate/dist/locale/en.json';
+
+    Object.keys(rules).forEach(rule => {
+        extend(rule, {
+            ...rules[rule],
+            message: messages[rule]
+        });
+    });
 
     export default {
         props: [
@@ -178,9 +187,6 @@
 
             response = await axios.get('/api/contact/custom-field/64');
             this.affiliations = response.data.fieldOptions;
-
-            /*response = await axios.get('/api/contact/custom-fields');
-            console.log(response);*/
 
             this.loading = false;
         },
@@ -241,11 +247,24 @@
                         }
 
                         this.loading = false;
+
+                        this.$toast.open({
+                            message: 'Your information has been successfully submitted!',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'success'
+                        });
+
+                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}`);
+                        
                     } catch(err) {
                         this.loading = false;
-
-                        // TODO: error handling
-                        console.log(err);
+                        this.$toast.open({
+                            message: 'An unexpected error has occured. Please try again later.',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'error'
+                        });
                     }
                 } else {
                     console.log('Not validated yet...');

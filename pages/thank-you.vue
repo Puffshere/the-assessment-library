@@ -56,18 +56,16 @@
             const suzette = '<iframe src="https://www.appointmentcore.com/app/freeslots/SBgnWt?iframe-view=SlotsV2" style="width: 100%;height: 900px;border: 0px none;" frameborder="0"></iframe>';
 
             let agent = monica;
-            let filter = this.$route.query.inf_option_Whichbestdescribesyourneedforassessments;
-            let filter2 = this.$route.query.inf_option_Imlookingformoreinformationon;
+            const clientType = this.$route.query.clientType;
 
-            if (filter === '2387' || filter2 === '2778') {
+            if (clientType === 'Reseller') {
                 // Reseller
                 agent = suzette;
-            } else if (filter === '2389') {
+                console.log('Suzette');
+            } else if (clientType === 'Corporate') {
                 // Corporate
                 agent = monica;
-            } else if (filter === '2391') {
-                // Other/not sure
-                agent = monica;
+                console.log('Monica');
             }
 
             this.iframe = agent;

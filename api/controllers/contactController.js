@@ -14,7 +14,7 @@ const getCustomFields = async (req, res) => {
 
         res.json(data);
     } catch(err) {
-        console.log(err);
+        console.log(err.response.data);
         res.sendStatus(500);
     }
 };
@@ -28,15 +28,13 @@ const getCustomField = async (req, res) => {
 
         res.json(data);
     } catch(err) {
-        console.log(err);
+        console.log(err.response.data);
         res.sendStatus(500);
     }
 };
 
 const createContact = async (req, res) => {
     try {
-        console.log(req.body);
-
         const { data } = await axios.post(`${api}/contact/sync`, req.body, { headers });
 
         res.json(data);
@@ -74,29 +72,44 @@ const applyTag = async (req, res) => {
 
         res.sendStatus(200);
     } catch(err) {
-        console.log(err);
+        console.log(err.response.data);
         res.sendStatus(500);
     }
 }
 
 const createAccountAndAssociateContact = async (req, res) => {
     try {
-        const { data } = await axios.post(`${api}/accounts`, {
-            account: {
-                name: req.body.company
-            }
-        }, { headers });
+        let response = await axios.get(`${api}/accounts?search=${req.body.company}`, {
+            method: 'GET',
+            headers
+        });
+
+        let accountId = '';
+
+        // Check to see if any accounts exist in the search
+        if (response.data.meta.total === '0') {
+            // No accounts exist, let's create a new one
+            const { data } = await axios.post(`${api}/accounts`, {
+                account: {
+                    name: req.body.company
+                }
+            }, { headers });
+
+            accountId = data.account.id;
+        } else {
+            accountId = response.data.accounts[0].id;
+        }        
 
         await axios.post(`${api}/accountContacts`, {
             accountContact: {
                 contact: req.params.contactId,
-                account: data.account.id
+                account: accountId
             }
         }, { headers });
 
         res.sendStatus(200);
     } catch(err) {
-        console.log(err);
+        console.log(err.response.data);
         res.sendStatus(200);
     }
 }
