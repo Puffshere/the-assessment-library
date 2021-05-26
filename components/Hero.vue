@@ -13,6 +13,8 @@
                 </div>
 
                 <div class="col-5 col-12-md" style="position:relative">
+                    <contact-form-mini />
+
                     <client-only>
                         <form accept-charset="UTF-8" :action="action" class="infusion-form" id="inf_form_7d7779344f1c9e17b42f44880c44b92b" method="POST" _lpchecked="1">
                             <input name="inf_form_xid" type="hidden" value="7d7779344f1c9e17b42f44880c44b92b">
@@ -87,6 +89,9 @@
 
 <script>
     export default {
+        components: {
+            'contact-form-mini': () => import('@/components/ContactFormMini')
+        },
         data() {
             return {
                 firstName: '',
@@ -208,7 +213,6 @@
         .pill {
             border-radius: 21px;
             padding: 10px;
-            width: 100%;
             display: block;
             font-size: 9pt;
             font-weight: 600;
@@ -217,6 +221,8 @@
             input {
                 vertical-align: baseline;
             }
+
+            
         }
 
         .legal-form-text {
