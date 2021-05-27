@@ -66,7 +66,7 @@
                         <input id="sourceOther" name="sourceOther" type="text" tabindex="7" />
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" v-if="!isShort">
                         <label for="comments">Questions/Comments:</label>
                         <textarea cols="24" rows="5" id="comments" name="comments" tabindex="8" v-model="form.comments"></textarea>
                     </div>
@@ -89,7 +89,7 @@
                         </ValidationProvider>
                     </div>
                     
-                    <div class="form-group">
+                    <div class="form-group" v-if="!isShort">
                         <label>Are you affiliated with one of the following organizations?</label>
 
                         <select id="affiliation" name="affiliation" v-model="form.affiliation" style="max-width: 310px;" tabindex="11">
@@ -128,9 +128,9 @@
                             </span>
                         </ValidationProvider>
                     </div>
+
+                    <button class="button" type="button" @click="process" tabindex="15">{{ buttonText || 'Submit' }}</button>
                 </div>
-                
-                <button class="button" type="button" @click="process" tabindex="15">Submit</button>
             </ValidationObserver>
         </form>
     </section>
@@ -153,7 +153,9 @@
 
     export default {
         props: [
-            'redirect'
+            'redirect',
+            'buttonText',
+            'isShort'
         ],
         components: {
             Loading,
