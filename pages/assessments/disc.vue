@@ -124,7 +124,7 @@
                                 <div :class="{'icon c': true, 'active': active === 'c'}" @mouseover="changeActive('c')">C</div>
                                 <div :class="{'content': true, 'active': active === 'c'}">
                                     <h4>Conscientious</h4>
-                                    <p>Data, fact & analysis based. Precise & accurate, trusts in the value of structure & order. Sees the value of “rules”.</p>
+                                    <p>Data, fact & analysis based. Precise & accurate, trusts in the value of structure & order. Sees the value of “rules.”</p>
                                 </div>
                             </div>
                         </div>
