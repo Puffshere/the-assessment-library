@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-12">
                     <p>
-                        Our assessments are leading by example with independent validation meeting APA, EEOC, AREA, and NCME 
+                        Our assessments are leading by example with independent validation meeting APA, EEOC, AERA, and NCME 
                         standards. Our goal is to ensure the trust of both our members and end-users alike by providing the 
                         most accurate and reliable assessments available. This is why we 
                         believe in a policy of total transparency, with every study's report available for your review, and 

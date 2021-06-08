@@ -22,7 +22,7 @@
                         - not openly by an objective and qualified third party. Assessments 24x7 is raising the bar within this 
                         otherwise unregulated industry. Our assessments are leading by example, 
                         with independently conducted validity, reliability, and disparate impact reporting that meets 
-                        <b>APA, EEOC, AREA, and NCME</b> standards for excellence and professional compliance.
+                        <b>APA, EEOC, AERA, and NCME</b> standards for excellence and professional compliance.
                     </p>
 
                     <p>

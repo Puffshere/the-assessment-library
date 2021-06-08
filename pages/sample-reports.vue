@@ -107,7 +107,7 @@
 
                 <div class="col-3">
                     <div class="samples-container">
-                        <div class="coming-soon">Coming Soon!</div>
+                        <div class="coming-soon">New!</div>
 
                         <h3>Kids DISC</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report</a>
@@ -506,9 +506,9 @@
                 color: #fff;
                 width: 50px;
                 height: 50px;
-                font-size: 6pt;
+                font-size: 9pt;
                 font-weight: 700;
-                line-height: 7pt;
+                line-height: 18px;
                 text-align: center;
                 padding-top: 16px;
                 position: absolute;

@@ -319,7 +319,7 @@
                         <h6 class="question">How Accurate Is DISC?</h6>
                         <p class="answer">
                             Assessments 24x7 is proud that its DISC assessment may currently be the world’s only assessment independently tested - by a qualified 
-                            third party - for Construct Validity, Reliability, and Disparate Impact. Our DISC assessment meets APA, EEOC, AREA, and 
+                            third party - for Construct Validity, Reliability, and Disparate Impact. Our DISC assessment meets APA, EEOC, AERA, and 
                             NCME standards. Our DISC assessment’s independent test results are transparently <a href="/about/validity" class="hyperlink" target="_blank" rel="noopener">shared here</a>. A recent study by the 
                             Assessment Standards Institute (ASI) concluded the great majority of assessments being produced and sold today lack 
                             testing to substantiate their scientific claims. While it’s important to compare sample reports, we strongly encourage 
