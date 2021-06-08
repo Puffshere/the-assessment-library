@@ -13,74 +13,12 @@
                 </div>
 
                 <div class="col-5 col-12-md" style="position:relative">
-                    <contact-form-mini />
+                    <contact-form-mini buttonText="Schedule a Consultation" acFormId="12" />
 
-                    <client-only>
-                        <form accept-charset="UTF-8" :action="action" class="infusion-form" id="inf_form_7d7779344f1c9e17b42f44880c44b92b" method="POST" _lpchecked="1">
-                            <input name="inf_form_xid" type="hidden" value="7d7779344f1c9e17b42f44880c44b92b">
-                            <input name="inf_form_name" type="hidden" value="Homepage Header">
-                            <input name="infusionsoft_version" type="hidden" value="1.70.0.76906">
-                            
-                            <div class="col-6">
-                                <div class="infusion-field form-group" style="margin-bottom:0">
-                                    <input class="infusion-field-input" id="inf_field_FirstName" name="inf_field_FirstName" placeholder="First Name *" type="text" v-model="firstName">
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="infusion-field form-group" style="margin-bottom:0">
-                                    <input class="infusion-field-input" id="inf_field_LastName" name="inf_field_LastName" placeholder="Last Name *" type="text" v-model="lastName">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="infusion-field form-group" style="margin-bottom:0">
-                                    <input class="infusion-field-input" id="inf_field_Email" name="inf_field_Email" placeholder="Email *" type="text">
-                                </div>
-                            </div>
-                                
-                            <div class="col-12">
-                                <div class="infusion-field form-group" style="margin-bottom:0">
-                                    <input class="infusion-field-input" id="inf_field_Phone1" name="inf_field_Phone1" placeholder="Phone *" type="text">
-                                </div>
-                            </div>
-                                
-                            <div class="col-12">
-                                <div class="infusion-field form-group" style="margin-bottom:0">
-                                    <input class="infusion-field-input" id="inf_field_Company" name="inf_field_Company" placeholder="Company/Organization *" type="text">
-                                </div>
-                            </div>
-
-                            <div class="infusion-field">
-                                <div class="infusion-radio">
-                                    <div class="options-container">
-                                        <div class="col-6">
-                                            <label class="reseller pill" for="inf_option_Imlookingformoreinformationon_2778">
-                                                <input id="inf_option_Imlookingformoreinformationon_2778" name="inf_option_Imlookingformoreinformationon" type="radio" value="2778">
-                                                <span class="label-body">I'm a Coach</span>
-                                            </label>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <label class="corporate pill" for="inf_option_Imlookingformoreinformationon_2780">
-                                                <input id="inf_option_Imlookingformoreinformationon_2780" name="inf_option_Imlookingformoreinformationon" type="radio" value="2780">
-                                                <span class="label-body">We're a Company</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="infusion-submit">
-                                <button type="submit" style="width: 100%; margin-top: 10px;" class="button">Schedule a Consultation</button>
-                            </div>
-
-                            <span class="legal-form-text">
-                                By submitting this form, I agree to the <nuxt-link to="/legal/privacy" class="hyperlink light">Privacy Policy</nuxt-link> and 
-                                <nuxt-link to="/legal/compliance" class="hyperlink light">GDPR Policy</nuxt-link> and give my consent.
-                            </span>
-                        </form>
-                    </client-only>
+                    <span class="legal-form-text">
+                        By submitting this form, I agree to the <nuxt-link to="/legal/privacy" class="hyperlink light">Privacy Policy</nuxt-link> and 
+                        <nuxt-link to="/legal/compliance" class="hyperlink light">GDPR Policy</nuxt-link> and give my consent.
+                    </span>
                 </div>
             </div>
         </div>

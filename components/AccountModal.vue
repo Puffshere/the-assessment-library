@@ -9,7 +9,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <contact-form buttonText="Request an Account" redirect="/get-started-thankyou" :isShort="true" />
+                        <contact-form buttonText="Request an Account" redirect="/get-started-thankyou" :isShort="true" acFormId="2" />
                     </div>
                 </div>
             </div>

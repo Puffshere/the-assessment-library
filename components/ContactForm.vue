@@ -155,7 +155,8 @@
         props: [
             'redirect',
             'buttonText',
-            'isShort'
+            'isShort',
+            'acFormId'
         ],
         components: {
             Loading,
@@ -235,6 +236,11 @@
                             }
                         });
 
+                        // Check to see if this contact wants to subscribe to our newsletter
+                        if (this.form.newsletter === '45') {
+                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                        }
+
                         // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
                         await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
@@ -242,11 +248,8 @@
                         await axios.post(`/api/contact/${data.contact.id}/account`, {
                             company: this.form.company
                         });
-                        
-                        // Check to see if this contact wants to subscribe to our newsletter
-                        if (this.newsletter === '45') {
-                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
-                        }
+
+                        this.trackConversion();
 
                         this.loading = false;
 
@@ -271,6 +274,19 @@
                 } else {
                     console.log('Not validated yet...');
                 }
+            },
+            trackConversion() {
+                if (process.browser) {
+                    let event = '';
+
+                    if (localStorage.getItem('ppc_event')) {
+                        event = localStorage.getItem('ppc_event');
+                    } else {
+                        event = `contact_${this.acFormId || '1'}`;
+                    }
+
+                    axios.post('/api/tracking-event', { event });
+                }
             }
         }
     }
@@ -278,6 +294,7 @@
 
 <style lang="scss" scoped>
     .contact-form {
+        display: flex;
         border-radius: 20px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         padding: 20px;

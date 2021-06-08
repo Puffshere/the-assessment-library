@@ -18,6 +18,7 @@
                     <h2 style="text-align:center">We Will Contact You Shortly</h2>
 
                     <p style="text-align:center">
+                        Here is the link to download the <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/DISC+eWorkbook+INTERACTIVE.pdf">Platinum Rule eWorkbook</a>.<br/><br/>
                         You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
                         or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
                     </p>

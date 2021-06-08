@@ -114,11 +114,33 @@ const createAccountAndAssociateContact = async (req, res) => {
     }
 }
 
+const triggerTrackingEvent = async (req, res) => {
+    try {
+        const params = new URLSearchParams();
+        params.append('actid', '476736767');
+        params.append('key', '29b97a819ccf02a4436ae6e0d6ff73ce6cd8bf19');
+        params.append('event', req.body.event);
+
+        const { data } = await axios.post('https://trackcmp.net/event', params, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        });
+
+        console.log(data);
+        res.sendStatus(200);
+    } catch(err) {
+        console.log(err.response.data);
+        res.sendStatus(200);
+    }
+};
+
 export default {
     getCustomFields,
     getCustomField,
     createContact,
     subscribeContact,
     applyTag,
-    createAccountAndAssociateContact
+    createAccountAndAssociateContact,
+    triggerTrackingEvent
 };

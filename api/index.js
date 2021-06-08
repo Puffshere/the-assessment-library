@@ -91,6 +91,10 @@ app.post('/contact/:contactId/account', (req, res) => {
     contactController.createAccountAndAssociateContact(req, res);
 });
 
+app.post('/tracking-event', (req, res) => {
+    contactController.triggerTrackingEvent(req, res);
+});
+
 app.use((req, res, next) => {
     res.status(404).json({
         status: 404,

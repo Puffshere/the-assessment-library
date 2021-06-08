@@ -5,7 +5,7 @@
                 <loading :active="loading" :is-full-page="false" />
 
                 <div class="col-6">
-                    <div class="form-group">
+                    <div class="form-group" style="margin-top: 16px">
                         <ValidationProvider v-slot="v" rules="required">
                             <input id="firstName" name="firstName" type="text" v-model="form.firstName" tabindex="1" placeholder="First Name *" />
                             <span class="error">{{ v.errors[0] }}</span>
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="col-6">
-                    <div class="form-group">
+                    <div class="form-group" style="margin-top: 16px">
                         <ValidationProvider v-slot="v" rules="required">
                             <input id="lastName" name="lastName" type="text" v-model="form.lastName" tabindex="2" placeholder="Last Name *" />
                             <span class="error">{{ v.errors[0] }}</span>
@@ -37,14 +37,14 @@
                 </div>
 
                 <div class="col-12">
-                    <div class="form-group">
+                    <div class="form-group" style="margin-top: -16px">
                         <ValidationProvider v-slot="v" rules="required">
                             <input id="company" name="company" type="text" tabindex="5" v-model="form.company" placeholder="Company/Organization *"/>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" style="margin-top: -20px">
                         <ValidationProvider v-slot="v" rules="required">                            
                             <div class="col-6">
                                 <div class="form-check pill">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 
-                <button class="button" type="button" @click="process" tabindex="15">Submit</button>
+                <button class="button" type="button" @click="process" tabindex="15" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{ buttonText || 'Submit' }}</button>
             </ValidationObserver>
         </form>
     </section>
@@ -88,7 +88,8 @@
 
     export default {
         props: [
-            'redirect'
+            'redirect',
+            'buttonText'
         ],
         components: {
             Loading,
@@ -124,6 +125,8 @@
             this.affiliations = response.data.fieldOptions;
 
             this.loading = false;
+
+            this.enableConversionTracking();
         },
         methods: {
             async process() {
@@ -168,6 +171,11 @@
                             }
                         });
 
+                        // Check to see if this contact wants to subscribe to our newsletter
+                        if (this.form.newsletter === '45') {
+                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                        }
+
                         // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
                         await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
@@ -175,11 +183,8 @@
                         await axios.post(`/api/contact/${data.contact.id}/account`, {
                             company: this.form.company
                         });
-                        
-                        // Check to see if this contact wants to subscribe to our newsletter
-                        if (this.newsletter === '45') {
-                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
-                        }
+
+                        this.trackConversion();
 
                         this.loading = false;
 
@@ -203,6 +208,29 @@
                     }
                 } else {
                     console.log('Not validated yet...');
+                }
+            },
+            enableConversionTracking() {
+                var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
+                document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
+            },
+            trackConversion() {
+                var trackcmp_email = this.form.email || '';
+                var trackcmp_conversion = this.acFormId || '1';
+                var trackcmp_conversion_value = '';
+                var trackcmp = document.createElement("script");
+
+                trackcmp.async = true;
+                trackcmp.type = 'text/javascript';
+                trackcmp.src = '//trackcmp.net/convert?actid=476736767&e='+encodeURIComponent(trackcmp_email)+'&c='+trackcmp_conversion+'&v='+trackcmp_conversion_value+
+                                '&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+                var trackcmp_s = document.getElementsByTagName("script");
+
+                if (trackcmp_s.length) {
+                    trackcmp_s[0].parentNode.appendChild(trackcmp);
+                } else {
+                    var trackcmp_h = document.getElementsByTagName("head");
+                    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
                 }
             }
         }

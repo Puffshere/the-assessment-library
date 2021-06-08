@@ -168,7 +168,7 @@
                                             </strong>
                                         </p><br/>
 
-                                        <a href="https://www.appointmentcore.com/app/freeslots/gCbTMey" target="_blank" rel="noopener" class="hyperlink">Schedule your 1-Hour Motivators Debrief &rarr;</a>
+                                        <a href="https://calendly.com/cathy24x7/1hourmotivators" target="_blank" rel="noopener" class="hyperlink">Schedule your 1-Hour Motivators Debrief &rarr;</a>
                                     </div>
                                 </div>
                             </div>

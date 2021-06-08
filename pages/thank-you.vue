@@ -24,7 +24,8 @@
                         or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
                     </p><br/>
 
-                    <div v-html="iframe" style="margin:0 auto;display:block;text-align:center;"></div>
+                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/${agent}?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 </div>
             </div>
         </div>
@@ -44,7 +45,7 @@
         },
         data() {
             return {
-                iframe: ''
+                agent: ''
             }
         },
         created() {
@@ -52,23 +53,19 @@
                 this.$gtm.push({ event: 'Thank You' });
             }
 
-            const monica = '<iframe src="https://www.appointmentcore.com/app/freeslots/fEjwvK?iframe-view=SlotsV2" width="640" height="660" style="border:none;" frameborder="0"></iframe>';
-            const suzette = '<iframe src="https://www.appointmentcore.com/app/freeslots/SBgnWt?iframe-view=SlotsV2" style="width: 100%;height: 900px;border: 0px none;" frameborder="0"></iframe>';
+            const monica = 'monica-saare/30min';
+            const suzette = 'suzette-247/30min';
 
-            let agent = monica;
+            this.agent = monica;
             const clientType = this.$route.query.clientType;
 
             if (clientType === 'Reseller') {
                 // Reseller
-                agent = suzette;
-                console.log('Suzette');
+                this.agent = suzette;
             } else if (clientType === 'Corporate') {
                 // Corporate
-                agent = monica;
-                console.log('Monica');
+                this.agent = monica;
             }
-
-            this.iframe = agent;
         }
     }
 </script>

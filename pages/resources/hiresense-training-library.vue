@@ -53,7 +53,7 @@
                         <h3><div class="step-icon small">2</div> Orientation & Training</h3>
                         <p>
                             Once your HireSense assessments have been completed, you will be ready to complete your 
-                            <a href="https://www.scheduleyou.in/eA5wbe" target="_blank" rel="noopener" class="hyperlink">orientation & 
+                            <a href="https://calendly.com/jen24x7/1hourhsorientation" target="_blank" rel="noopener" class="hyperlink">orientation & 
                             personal training call</a> (1 hour).
                         </p>
                     </div>
@@ -307,7 +307,7 @@
                     <div class="col-6">
                         <h3><div class="step-icon small">2</div> Final Knowledge Check Call</h3>
                         <p>
-                            Schedule a 30 minute <a href="https://www.appointmentcore.com/app/freeslots/hUxLbtBtm" target="_blank" rel="noopener" class="hyperlink">Final Knowledge Check Call</a>,
+                            Schedule a 30 minute <a href="https://calendly.com/jen24x7/30minfinalcertcall" target="_blank" rel="noopener" class="hyperlink">Final Knowledge Check Call</a>,
                             if desired, to review results and answer any questions you may have.
                         </p>
                     </div>
