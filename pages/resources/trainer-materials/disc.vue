@@ -97,6 +97,10 @@
                             <small>This powerful tool adds a visual representation allowing you to view your natural behavior style (circle) and your adapted behavioral style (star). It also shares additional insight about unusual graphs – Tight, Over Shift and Under Shift patterns.</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15DISCstyleBehavioralPatterns.pdf" target="_blank" rel="noopener">The 15 DISCstyle Behavioral Patterns</a>
                             <small>This is a detailed description of the 15 most common workplace patterns along with some insights into how they typically function in their day-to-day interpersonal dynamics.</small></td></tr>
+
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMapPDFVersion.pdf" target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PDF)</a></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap.pptx" target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PowerPoint)</a></td></tr>
+
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ComDoandDonts.pdf" target="_blank" rel="noopener">Communication Dos and Don’ts by Classical Styles</a>
                             <small>A quick overview of the dos and don’ts found in the DISC report for each of the 15 Classical Patterns.</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDirectandIndirect.pdf" target="_blank" rel="noopener">DISC Direct & Indirect</a>
