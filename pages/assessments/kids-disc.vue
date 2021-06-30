@@ -12,8 +12,14 @@
                             around them, will discover how special and unique they are. Each child’s bird style is their superpower, and the Kids DISC 
                             assessment by Assessments 24x7 helps them be the best that they can be.
                         </p>
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" target="_blank" rel="noopener" class="button">Download Sample Report</a>
-                        <nuxt-link to="/contact" class="button secondary">Learn More</nuxt-link>
+                        <a href="https://assessments247.net/?R*5iy*lt==R" target="_blank" rel="noopener" class="button">Take the Assessment</a>
+                        <nuxt-link to="/contact" class="button secondary">Questions? Bulk Order?</nuxt-link>
+
+                        <br/><br/>
+
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" target="_blank" rel="noopener" class="button pdf" style="display:inline-block; width:424px;">
+                            <img src="~assets/pdf-icon.svg" style="width:30px; width: 25px; margin-right: 2px;"> Download Sample Report
+                        </a>
                     </div>
 
                     <div class="col-6">
@@ -58,7 +64,7 @@
                             charge and take action. They make quick decisions and aren’t afraid of risks. They love to win and hate to lose.
                         </p>
 
-                        <nuxt-link to="/contact" class="hyperlink">Learn more about the Eagle &rarr;</nuxt-link>
+                        <a href="https://assessments247.net/?R*5iy*lt==R" target="_blank" class="hyperlink">Take the Assessment &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +91,7 @@
                             try new things and come up with wild ideas. To be a Parrot is to be the life of the party—and a bit of a mischief maker!
                         </p>
 
-                        <nuxt-link to="/contact" class="hyperlink">Learn more about the Parrot &rarr;</nuxt-link>
+                        <nuxt-link to="/contact" class="hyperlink">Questions? Bulk Order? &rarr;</nuxt-link>
                     </div>
                 </div>
             </div>
@@ -110,7 +116,7 @@
                             others feel and always try to serve their needs. Doves have big hearts and share their love freely.
                         </p>
 
-                        <nuxt-link to="/contact" class="hyperlink">Learn more about the Dove &rarr;</nuxt-link>
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" target="_blank" class="hyperlink">Download the Report &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -137,7 +143,7 @@
                             organized and consistent. They like to plan ahead and learn everything they can before making decisions.
                         </p>
 
-                        <nuxt-link to="/contact" class="hyperlink">Learn more about the Owl &rarr;</nuxt-link>
+                        <nuxt-link to="/contact" class="hyperlink">Learn more about Kids DISC &rarr;</nuxt-link>
                     </div>
                 </div>
             </div>
@@ -219,7 +225,7 @@
                             they will understand.
                         </p><br/>
 
-                        <nuxt-link to="/contact" class="button">Learn More</nuxt-link>
+                        <nuxt-link to="/contact" class="button">Questions? Bulk Order?</nuxt-link>
                         <nuxt-link to="/assessments" class="button secondary">See Our Other Assessments</nuxt-link>
                     </div>
                 </div>
@@ -270,7 +276,7 @@
                             they help make up who we are, enabling each of us to lead happy and productive lives. 
                         </p><br/>
 
-                        <nuxt-link to="/contact" class="button">Learn More</nuxt-link>
+                        <nuxt-link to="/contact" class="button">Questions? Bulk Order?</nuxt-link>
                     </div>
                 </div>
             </div>
