@@ -183,7 +183,7 @@
                                             </strong>
                                         </p><br/>
 
-                                        <a href="https://www.appointmentcore.com/app/freeslots/gCbTMey" target="_blank" rel="noopener" class="hyperlink">Schedule your 1-Hour DISC Debrief &rarr;</a>
+                                        <a href="https://calendly.com/cathy24x7/1hourdisc" target="_blank" rel="noopener" class="hyperlink">Schedule your 1-Hour DISC Debrief &rarr;</a>
                                     </div>
                                 </div>
                             </div>

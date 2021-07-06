@@ -15,18 +15,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 style="text-align:center">Your Free DISC eWorkbook is Ready!</h2>
+                    <h2 style="text-align:center">We Will Contact You Shortly</h2>
 
                     <p style="text-align:center">
-                        The DISC Platinum Rule workbook is what you need to understand what people REALLY want. With this discovery you’ll understand 
-                            how to spot each behavioral style. You start seeing your family and friends, as well as your customers and co-workers, in a 
-                            whole new—more understanding—way.<br/><br/>
-                        
-                        You can email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
-                        or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a> if you have any questions.
-                    </p><br/>
-
-                    <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/DISC+eWorkbook+INTERACTIVE.pdf" class="button" style="display:block;">Click Here to Download Your DISC eWorkbook</a>
+                        Here is the link to download the <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/DISC+eWorkbook+INTERACTIVE.pdf">Platinum Rule eWorkbook</a>.<br/><br/>
+                        You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
+                        or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                    </p>
                 </div>
             </div>
         </div><br/><br/><br/><br/>

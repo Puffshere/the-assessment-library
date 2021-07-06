@@ -86,91 +86,11 @@
                 <div class="col-8">
                     <h3>Get Your <span>Free DISC eWorkbook</span></h3>
 
-                    <form accept-charset="UTF-8" action="https://rz189.infusionsoft.com/app/form/process/c5a96bf99f9bb912fd954b56f56d08ac" class="infusion-form" id="inf_form_c5a96bf99f9bb912fd954b56f56d08ac" method="POST">
-                        <input name="inf_form_xid" type="hidden" value="c5a96bf99f9bb912fd954b56f56d08ac" />
-                        <input name="inf_form_name" type="hidden" value="Platinum Rule eWorkbook Download" />
-                        <input name="infusionsoft_version" type="hidden" value="1.70.0.291307" />
-
-                        <div class="infusion-field form-group">
-                            <input class="infusion-field-input" id="inf_field_FirstName" name="inf_field_FirstName" placeholder="First Name *" type="text" />
-                        </div>
-                        
-                        <div class="infusion-field form-group">
-                            <input class="infusion-field-input" id="inf_field_LastName" name="inf_field_LastName" placeholder="Last Name *" type="text" />
-                        </div>
-                        
-                        <div class="infusion-field form-group">
-                            <input class="infusion-field-input" id="inf_field_Email" name="inf_field_Email" placeholder="Email *" type="text" />
-                        </div>
-                        
-                        <div class="infusion-field form-group">
-                            <input class="infusion-field-input" id="inf_field_Phone1" name="inf_field_Phone1" placeholder="Phone *" type="text" />
-                        </div>
-                        
-                        <div class="infusion-field form-group">
-                            <input class="infusion-field-input" id="inf_field_Company" name="inf_field_Company" placeholder="Company/Organization *" type="text" />
-                        </div>
-                        
-                        <div class="title">
-                            <b>I'm looking for more information on:</b>
-                        </div>
-
-                        <div class="infusion-field">
-                            <div class="infusion-radio">
-                                <div class="options-container">
-                                    <div class="infusion-option">
-                                        <input id="inf_option_Imlookingformoreinformationon_3196" name="inf_option_Imlookingformoreinformationon" type="radio" value="3196" />
-                                        <label for="inf_option_Imlookingformoreinformationon_3196">Using assessments with my clients as an independent coach, trainer, or consultant</label>
-                                    </div>
-
-                                    <span class="infusion-option">
-                                        <input id="inf_option_Imlookingformoreinformationon_3198" name="inf_option_Imlookingformoreinformationon" type="radio" value="3198" />
-                                        <label for="inf_option_Imlookingformoreinformationon_3198">Using assessments internally with our team as a part of our organization (corporation, association, etc.)</label>
-                                    </span>
-                                </div>
-                            </div>
-                        </div><br/>
-                        
-                        <div class="title">
-                            <b>Join our exclusive mailing list?</b>
-                        </div>
-
-                        <div class="infusion-field">
-                            <div class="infusion-radio">
-                                <div class="options-container">
-                                    <span class="infusion-option">
-                                        <input id="inf_option_Pleaseselect_3200" name="inf_option_Pleaseselect" type="radio" value="3200" />
-                                        <label for="inf_option_Pleaseselect_3200">Yes please!</label>
-                                    </span>
-
-                                    <span class="infusion-option">
-                                        <input id="inf_option_Pleaseselect_3202" name="inf_option_Pleaseselect" type="radio" value="3202" />
-                                        <label for="inf_option_Pleaseselect_3202">No, thank you</label>
-                                    </span>
-                                </div>
-                            </div>
-                        </div><br/>
-                        
-                        <div class="infusion-field">
-                            <span class="infusion-option">
-                                <label for="inf_option_IagreetothePrivacyPolicyandgivemyconsent">
-                                    <input id="inf_option_IagreetothePrivacyPolicyandgivemyconsent" name="inf_option_IagreetothePrivacyPolicyandgivemyconsent" type="checkbox" value="3204" />
-                                    <span class="label-body">I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy Policy</nuxt-link> and <nuxt-link to="/legal/compliance" class="hyperlink">GDPR Policy</nuxt-link> and give my consent. *</span>
-                                </label>
-                            </span>
-                        </div><br/>
-                        
-                        <div class="infusion-submit">
-                            <button type="submit" style="width: 100%" class="button button-success">Submit</button>
-                        </div>
-                    </form>
-
-                    <script type="text/javascript" src="https://rz189.infusionsoft.app/app/webTracking/getTrackingCode"></script>
-                    <script type="text/javascript" src="https://rz189.infusionsoft.com/app/timezone/timezoneInputJs?xid=c5a96bf99f9bb912fd954b56f56d08ac"></script>
+                    <contact-form redirect="/platinum-rule-eworkbook-thankyou" acFormId="4" />
                 </div>
 
                 <div class="col-4">
-                    <LazyHydrate when-visible><contact-sidebar></contact-sidebar></LazyHydrate>
+                    <contact-sidebar></contact-sidebar>
                 </div>
             </div>
         </div><br/><br/>
@@ -186,6 +106,7 @@
     export default {
         components: {
             'main-nav': Nav,
+            'contact-form': () => import('@/components/ContactForm'),
             'contact-sidebar': () => import('@/components/ContactSidebar'),
             'footer-fold': Footer
         },

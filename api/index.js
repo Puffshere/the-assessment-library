@@ -5,7 +5,9 @@ import bodyParser from 'body-parser';
 import workshopLeaderController from './controllers/workshopLeaderController';
 import directoryController from './controllers/directoryController';
 import communicationCoachController from './controllers/communicationCoachController';
+import contactController from './controllers/contactController';
 import GhostSearch from './ghost-search';
+import cors from 'cors';
 
 const app = express();
 
@@ -24,6 +26,7 @@ const connectionString = `mongodb://${cosmos.username}:${cosmos.password}@${cosm
 mongoose.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(helmet());
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -62,6 +65,34 @@ app.get('/communication-coach/topics', (req, res) => {
 
 app.get('/communication-coach/sections/:topicId/:style', (req, res) => {
     communicationCoachController.getSections(req, res);
+});
+
+app.get('/contact/custom-fields', (req, res) => {
+    contactController.getCustomFields(req, res);
+});
+
+app.get('/contact/custom-field/:fieldId', (req, res) => {
+    contactController.getCustomField(req, res);
+});
+
+app.post('/contact', (req, res) => {
+    contactController.createContact(req, res);
+});
+
+app.post('/contact/:contactId/subscribe', (req, res) => {
+    contactController.subscribeContact(req, res);
+});
+
+app.post('/contact/:contactId/tag/:tagId', (req, res) => {
+    contactController.applyTag(req, res);
+});
+
+app.post('/contact/:contactId/account', (req, res) => {
+    contactController.createAccountAndAssociateContact(req, res);
+});
+
+app.post('/tracking-event', (req, res) => {
+    contactController.triggerTrackingEvent(req, res);
 });
 
 app.use((req, res, next) => {

@@ -375,6 +375,12 @@
             if (this.$route.query.noframe) {
                 this.hidden = true;
             }
+
+            if (process.browser) {
+                if (this.$route.query.utm_campaign) {
+                    localStorage.setItem('ppc_event', `ppc_${this.$route.query.utm_campaign}`);
+                }
+            }
         },
         methods: {
             toggleMobileMenu() {
@@ -435,7 +441,7 @@
                 .nav-bar {
                     float: right;
                     margin: -12px 0;
-                    z-index: 999999;
+                    z-index: 1000;
                     position: relative;
 
                     .nav-item {
