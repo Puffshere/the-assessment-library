@@ -285,7 +285,7 @@
                         event = `contact_${this.acFormId || '1'}`;
                     }
 
-                    axios.post('/api/tracking-event', { event });
+                    axios.post('/api/tracking-event', { event, email: this.form.email });
                 }
             }
         }

@@ -89,7 +89,8 @@
     export default {
         props: [
             'redirect',
-            'buttonText'
+            'buttonText',
+            'acFormId'
         ],
         components: {
             Loading,
@@ -125,8 +126,6 @@
             this.affiliations = response.data.fieldOptions;
 
             this.loading = false;
-
-            this.enableConversionTracking();
         },
         methods: {
             async process() {
@@ -210,27 +209,17 @@
                     console.log('Not validated yet...');
                 }
             },
-            enableConversionTracking() {
-                var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
-                document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
-            },
             trackConversion() {
-                var trackcmp_email = this.form.email || '';
-                var trackcmp_conversion = this.acFormId || '1';
-                var trackcmp_conversion_value = '';
-                var trackcmp = document.createElement("script");
+                if (process.browser) {
+                    let event = '';
 
-                trackcmp.async = true;
-                trackcmp.type = 'text/javascript';
-                trackcmp.src = '//trackcmp.net/convert?actid=476736767&e='+encodeURIComponent(trackcmp_email)+'&c='+trackcmp_conversion+'&v='+trackcmp_conversion_value+
-                                '&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
-                var trackcmp_s = document.getElementsByTagName("script");
+                    if (localStorage.getItem('ppc_event')) {
+                        event = localStorage.getItem('ppc_event');
+                    } else {
+                        event = `contact_${this.acFormId || '1'}`;
+                    }
 
-                if (trackcmp_s.length) {
-                    trackcmp_s[0].parentNode.appendChild(trackcmp);
-                } else {
-                    var trackcmp_h = document.getElementsByTagName("head");
-                    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+                    axios.post('/api/tracking-event', { event, email: this.form.email });
                 }
             }
         }

@@ -1,5 +1,5 @@
 const axios = require('axios');
-
+const qs = require('qs');
 const api = 'https://assessments247.api-us1.com/api/3';
 const headers = {
     'Api-Token': '071d9714f760a26a9cafa491d39d1696803ed0920d3a22fc2e409117c479f03871c3c680'
@@ -116,18 +116,19 @@ const createAccountAndAssociateContact = async (req, res) => {
 
 const triggerTrackingEvent = async (req, res) => {
     try {
-        const params = new URLSearchParams();
-        params.append('actid', '476736767');
-        params.append('key', '29b97a819ccf02a4436ae6e0d6ff73ce6cd8bf19');
-        params.append('event', req.body.event);
+        const params = {
+            actid: '476736767',
+            key: '29b97a819ccf02a4436ae6e0d6ff73ce6cd8bf19',
+            event: req.body.event,
+            visit: `{"email":"${req.body.email}"}`
+        };
 
-        const { data } = await axios.post('https://trackcmp.net/event', params, {
+        const { data } = await axios.post('https://trackcmp.net/event', qs.stringify(params), {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
         });
 
-        console.log(data);
         res.sendStatus(200);
     } catch(err) {
         console.log(err.response.data);
