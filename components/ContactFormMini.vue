@@ -194,7 +194,7 @@
                             type: 'success'
                         });
 
-                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}`);
+                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
                         
                     } catch(err) {
                         this.loading = false;

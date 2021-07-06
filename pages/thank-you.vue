@@ -34,6 +34,7 @@
 </template>
 
 <script>
+    import axios from 'axios';
     import Nav from '@/components/Nav';
     import Footer from '@/components/Footer';
 
@@ -57,6 +58,12 @@
                 agent: ''
             }
         },
+        mounted() {
+            window.addEventListener('message', this.onCalendlyEvent);
+        },
+        destroyed() {
+            window.removeEventListener('message', this.onCalendlyEvent);
+        },
         created() {
             if (process.browser) {
                 this.$gtm.push({ event: 'Thank You' });
@@ -74,6 +81,15 @@
             } else if (clientType === 'Corporate') {
                 // Corporate
                 this.agent = monica;
+            }
+        },
+        methods: {
+            onCalendlyEvent(e) {
+                if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+                    if (e.data.event === 'calendly.event_scheduled') {
+                        axios.post(`/api/contact/${this.$route.query.contactId}/tag/7`);
+                    }
+                }
             }
         }
     }
