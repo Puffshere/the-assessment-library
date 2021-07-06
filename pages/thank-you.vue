@@ -25,7 +25,6 @@
                     </p><br/>
 
                     <div class="calendly-inline-widget" :data-url="`https://calendly.com/${agent}?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>
-                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 </div>
             </div>
         </div>
@@ -39,6 +38,16 @@
     import Footer from '@/components/Footer';
 
     export default {
+        head() {
+            return {
+                script: [
+                    {
+                        src: 'https://assets.calendly.com/assets/external/widget.js',
+                        async: true
+                    }
+                ]
+            }
+        },
         components: {
             'main-nav': Nav,
             'footer-fold': Footer
