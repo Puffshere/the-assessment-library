@@ -156,6 +156,17 @@
 
         <validation-mini></validation-mini>
 
+        <section class="contact-form">
+            <div class="container">
+                <div class="row flex-center">
+                    <div class="col-8">
+                        <h5 class="section-title">Meet with an Expert to Learn More About our DISC Assessment</h5>
+                        <contact-form :isShort="true" buttonText="Learn More About DISC" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="assessment-content">
             <div class="container">
                 <div class="row">
@@ -450,11 +461,13 @@
     import ValidationMini from '../../components/ValidationMini';
     import RebeccaMaxwell from '../../components/testimonials/RebeccaMaxwell';
     import Footer from '../../components/Footer';
+    import ContactForm from '../../components/ContactForm.vue';
 
     export default {
         components: {
             'main-nav': Nav,
             'validation-mini': ValidationMini,
+            'contact-form': ContactForm,
             'rebecca-maxwell': RebeccaMaxwell,
             'footer-fold': Footer
         },
@@ -694,6 +707,15 @@
         .side-img {
             width: 100%;
             border-radius: 20px;
+        }
+    }
+
+    .contact-form {
+        .section-title {
+            text-align: center;
+            font-size: 24pt;
+            margin: 0 0 47px;
+            line-height: 28pt;
         }
     }
 
