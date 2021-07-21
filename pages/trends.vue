@@ -15,14 +15,15 @@
         <div class="container" style="margin-bottom: 90px">
             <div class="row">
                 <div class="col-7">
-                    <h1 class="title">Whitelabel HR Assessment Software</h1>
-                    <h2 class="sub-title">Trusted by brands all over the globe.</h2>
+                    <h1 class="title">White-label HR Assessment Software</h1>
+                    <h2 class="sub-title">Trusted by brands around the world</h2>
 
                     <p>
-                        For more than 20 years, Assessments 24x7 has powered business consultants, executive coaches, and Fortune 500s with the tools to 
-                        optimize hiring processes, boost employee productivity, and maximize performance, using our DISC, Motivators and additional 
-                        assessment tools. Our validated assessments, flexible platform, and exceptional customer support have positioned us as a "Global 
-                        Leader in Assessment Technology."
+                        For over 20 years, Assessments 24x7 has powered business consultants, executive coaches, and Fortune 500s with the tools 
+                        to optimize hiring processes, boost employee productivity, and maximize performance. Our validated DISC and Motivators 
+                        assessment tools, flexible platform, and exceptional customer support have set our clients up for success and positioned 
+                        us as a Global Leader in Assessment Technology.
+
                     </p><br/>
                     <a href="#contact" class="button">Try our DISC Assessment For Free</a>
                     <nuxt-link to="/assessments/disc" class="button secondary">Learn More</nuxt-link>
@@ -42,11 +43,11 @@
                     </div>
 
                     <div class="col-7">
-                        <h3>We Offer the World's Most Advanced Assessment Reseller Dashboard</h3>
+                        <h3>The World’s Most Advanced Assessment Reseller Dashboard</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eius vel dolor neque unde ad doloremque quod sed tempore facilis 
-                            ullam recusandae delectus placeat soluta illo, eaque earum ducimus suscipit? Lorem ipsum dolor sit amet, consectetur 
-                            adipisicing elit.
+                            Our online dashboard is a one-stop solution for all your assessment needs. Purchase and distribute assessments with the 
+                            click of a button. Every online questionnaire and report is branded with your logo. Even the reports’ page footers have 
+                            your business name, website and phone number.
                         </p><br/>
 
                         <a href="#contact" class="button outline light">Try our DISC Assessment For Free</a>
@@ -61,8 +62,8 @@
                     <div class="col-12">
                         <h3>How it Works</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eius vel dolor neque unde ad doloremque quod sed tempore facilis 
-                            ullam recusandae delectus placeat soluta illo, eaque earum ducimus suscipit?
+                            Coaches, trainers, and organizations of all sizes benefit from the insights available from a DISC assessment. Use them to 
+                            coach single clients or guide and develop a full team! Getting started is easy.
                         </p>
                     </div>
                 </div>
@@ -73,8 +74,9 @@
                         <div class="step-content">
                             <h4>Try our DISC Assessment for Free</h4>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eius vel dolor neque unde ad doloremque quod sed tempore facilis 
-                                ullam recusandae delectus placeat soluta illo, eaque earum ducimus suscipit?
+                                DISC offers a simple solution with profound results. Learn to identify the behavioral styles of others and adapt your 
+                                communication to increase sales, assemble teams, and more.
+
                             </p>
                         </div>
                     </div>
@@ -86,8 +88,8 @@
                         <div class="step-content">
                             <h4>Phone Consultation</h4>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eius vel dolor neque unde ad doloremque quod sed tempore facilis 
-                                ullam recusandae delectus placeat soluta illo, eaque earum ducimus suscipit?
+                                Discuss your assessment needs with one of our world-class support experts. With years of industry experience, you’ll 
+                                get the kick-start you need to effectively use assessments as an income stream for your business.
                             </p>
                         </div>
                     </div>
@@ -97,10 +99,10 @@
                     <div class="col-12">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                        <h4>Set Up Your White-Label Assessment Dashboard</h4>
+                        <h4>Set Up Your White-labeled Assessment Dashboard</h4>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eius vel dolor neque unde ad doloremque quod sed tempore facilis 
-                                ullam recusandae delectus placeat soluta illo, eaque earum ducimus suscipit?
+                                Every online questionnaire and report is branded with your logo including areas in the footer for your business name, 
+                                website, and phone number.
                             </p>
                         </div>
                     </div>
@@ -112,8 +114,7 @@
                         <div class="step-content">
                             <h4>Start Selling Assessments</h4>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eius vel dolor neque unde ad doloremque quod sed tempore facilis 
-                                ullam recusandae delectus placeat soluta illo, eaque earum ducimus suscipit?
+                                Purchase and distribute assessments with the click of a button, then track user progress and assessment completion.
                             </p>
                         </div>
                     </div>
@@ -126,10 +127,6 @@
                 <div class="row">
                     <div class="col-12">
                         <h3>Try our DISC Assessment for Free</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eius vel dolor neque unde ad doloremque quod sed tempore facilis 
-                            ullam recusandae delectus placeat soluta illo, eaque earum ducimus suscipit?
-                        </p>
                     </div>
                 </div>
 
