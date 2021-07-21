@@ -132,7 +132,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <contact-form redirect="https://assessments123.com/?R*oHo%5bv%5b==R" acFormId="18" buttonText="Start DISC Assessment" :isShort="true" />
+                        <contact-form redirect="/trends-thankyou" acFormId="18" buttonText="Start DISC Assessment" :isShort="true" />
                         <br/><br/>
                     </div>
                 </div>
