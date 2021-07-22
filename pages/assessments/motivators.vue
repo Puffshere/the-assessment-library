@@ -218,6 +218,8 @@
 
         <validation-mini></validation-mini>
 
+        <mamawa-daboh />
+
         <section class="assessment-content">
             <div class="container">
                 <div class="row">
@@ -505,12 +507,14 @@
 <script>
     import Nav from '../../components/Nav';
     import ValidationMini from '../../components/ValidationMini';
+    import MamawaDaboh from '../../components/testimonials/MamawaDaboh.vue';
     import Footer from '../../components/Footer';
 
     export default {
         components: {
             'main-nav': Nav,
             'validation-mini': ValidationMini,
+            'mamawa-daboh': MamawaDaboh,
             'footer-fold': Footer
         },
         head() {
@@ -962,7 +966,7 @@
         background: url('~assets/artifacts/left-rings.png') no-repeat, linear-gradient(90deg, rgba(30,34,45,1) 0%, rgba(48,53,66,1) 100%);
         background-position: left;
         padding: 100px 0 90px;
-        margin: 80px 0;
+        margin: 0 0 80px 0;
         color: #fff;
 
         .section-title {
