@@ -24,7 +24,7 @@
                         or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
                     </p><br/>
 
-                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>
+                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/suzette-247?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>
                 </div>
             </div>
         </div>

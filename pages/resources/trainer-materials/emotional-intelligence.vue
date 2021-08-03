@@ -225,15 +225,15 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/PeerFeedbackForm.pdf" target="_blank" rel="noopener">Peer Feedback Form</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/PeerFeedbackForm.pdf" target="_blank" rel="noopener">Peer Feedback Form</a>
                             <small>For providing peer feedback during facilitator/trainer observations</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/FacilitationFeedbackGuide.pdf" target="_blank" rel="noopener">Facilitator Feedback Guide</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/FacilitationFeedbackGuide.pdf" target="_blank" rel="noopener">Facilitator Feedback Guide</a>
                             <small>To guide facilitator 1:1 feedback sessions with supervisor</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/CoachingGuideQuestions.pdf" target="_blank" rel="noopener">Coaching Guide Questions</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/CoachingGuideQuestions.pdf" target="_blank" rel="noopener">Coaching Guide Questions</a>
                             <small>Questions to coach/develop facilitators and trainers in a variety of areas including presentation skills, facilitation skills, content awareness, audience management, presence, administration, general coaching.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/SelfFeedbackForm.pdf" target="_blank" rel="noopener">Self-Feedback Form</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/SelfFeedbackForm.pdf" target="_blank" rel="noopener">Self-Feedback Form</a>
                             <small>To be used to create self-awareness and growth by review of logistics and self-evaluation of training after live session or while observing recordings</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/DevelopmentPlan.docx" target="_blank" rel="noopener">Development Plan Sample</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/DevelopmentPlan.docx" target="_blank" rel="noopener">Development Plan Sample</a>
                             <small>General development form to explore strengths and challenges and create action plans for growth.</small></td></tr>
                         </tbody>
                     </table>
