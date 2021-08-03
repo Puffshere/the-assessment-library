@@ -14,17 +14,28 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2 style="text-align:center">Schedule a Meeting with Suzette Chaparro</h2>
+                <div class="col-6">
+                    <h2>Schedule a Meeting with<br/>Suzette Chaparro</h2>
 
-                    <p style="text-align:center">
-                        We’d like the opportunity to discuss your assessment and certification needs in detail. Choose a time slot from the calendar and we’ll get the conversation started!<br/><br/>
+                    <p>
+                        <strong>About Me: </strong>Hello, I’m Suzette Chaparro, VP of client success here at Assessments 24x7. My business experience includes working in the client 
+                        support/service, and hospitality business for over 10 years. My primary role with Assessments 24x7 since I joined this company in 
+                        2014 have been client success driven. I am available for all of your assessment, certification, and dashboard questions and 
+                        strategies. I primarily work with our clients to ensure 100% satisfaction with their assessments, accounts, training, and more.
+                        <br/><br/>
+
+                        <strong>Hobbies & Fun Facts: </strong>When I am not working, you can find me hiking in the back country, cooking new and exciting 
+                        meals for loved ones, or hanging out with my two sweet dogs.<br/><br/>
+
+                        My DISC Style is: <strong>Di</strong><br/><br/>
                         
                         You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
                         or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
-                    </p><br/>
+                    </p>
+                </div>
 
-                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/suzette-247?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>
+                <div class="col-6">
+                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/suzette-247?text_color=000000&primary_color=0033c5`" style="height:700px;"></div>
                 </div>
             </div>
         </div>

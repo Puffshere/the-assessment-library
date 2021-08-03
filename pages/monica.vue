@@ -14,17 +14,27 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2 style="text-align:center">Schedule a Meeting with Monica Saare</h2>
+                <div class="col-6">
+                    <h2>Schedule a Meeting with<br/>Monica Saare</h2>
 
-                    <p style="text-align:center">
-                        We’d like the opportunity to discuss your assessment and certification needs in detail. Choose a time slot from the calendar and we’ll get the conversation started!<br/><br/>
+                    <p>
+                        <strong>About Me: </strong>Hello! I'm Monica Saare, President of the Corporate Division at Assessments 24x7 and passionate about working with my clients from 
+                        around the world. With extensive experience in corporate sales, account management, program creation and innovation, I've happily 
+                        used assessments, especially DISC with sales initiatives, team building and business expansion. We are a family and friends 
+                        business and I look forward to working with you!
+                        <br/><br/>
+
+                        <strong>Hobbies & Fun Facts: </strong>I play pickle ball, love to travel, have two adorable cats who are sisters and I love to sing.<br/><br/>
+
+                        My DISC Style is: <strong>ISc</strong><br/><br/>
                         
                         You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
                         or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
                     </p><br/>
+                </div>
 
-                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>
+                <div class="col-6">
+                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5`" style="height:700px;"></div>
                 </div>
             </div>
         </div>
