@@ -44,20 +44,16 @@
                         </ValidationProvider>
                     </div>
 
-                    <div class="form-group" style="margin-top: -20px">
-                        <ValidationProvider v-slot="v" rules="required">                            
-                            <div class="col-6">
-                                <div class="form-check pill">
-                                    <input class="form-check-input" id="reseller" name="clientType" type="radio" value="Reseller" v-model="form.clientType" tabindex="9" />
-                                    <label class="form-check-label" for="reseller">I am a coach</label>
-                                </div>
+                    <div class="form-group" style="margin-top: -0px">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <div class="form-check pill">
+                                <input class="form-check-input" id="reseller" name="clientType" type="radio" value="Reseller" v-model="form.clientType" tabindex="9" />
+                                <label class="form-check-label" for="reseller">I am a coach or trainer looking to use assessments with clients</label>
                             </div>
 
-                            <div class="col-6">
-                                <div class="form-check pill">
-                                    <input class="form-check-input" id="corporate" name="clientType" type="radio" value="Corporate" v-model="form.clientType" tabindex="10" />
-                                    <label class="form-check-label" for="corporate">We're a company</label>
-                                </div>
+                            <div class="form-check pill">
+                                <input class="form-check-input" id="corporate" name="clientType" type="radio" value="Corporate" v-model="form.clientType" tabindex="10" />
+                                <label class="form-check-label" for="corporate">I am part of a company looking to use assessments internally</label>
                             </div>
 
                             <span class="error">{{ v.errors[0] }}</span>
@@ -65,7 +61,7 @@
                     </div>
                 </div>
                 
-                <button class="button" type="button" @click="process" tabindex="15" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{ buttonText || 'Submit' }}</button>
+                <button class="button secondary" type="button" @click="process" tabindex="15" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{ buttonText || 'Submit' }}</button>
             </ValidationObserver>
         </form>
     </section>
@@ -234,12 +230,10 @@
         }
 
         .pill {
-            border-radius: 21px;
-            padding: 10px;
+            border-radius: 5px;
             display: block;
             font-size: 9pt;
             font-weight: 600;
-            background: #0033c5;
 
             input {
                 vertical-align: baseline;

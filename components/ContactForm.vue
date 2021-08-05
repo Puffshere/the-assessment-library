@@ -77,12 +77,12 @@
                             
                             <div class="form-check">
                                 <input class="form-check-input" id="reseller" name="clientType" type="radio" value="Reseller" v-model="form.clientType" tabindex="9" />
-                                <label class="form-check-label" for="reseller">I am a coach, trainer, or consultant who uses assessments with my clients</label>
+                                <label class="form-check-label" for="reseller">I am a coach or trainer looking to use assessments with clients</label>
                             </div>
 
                             <div class="form-check">
                                 <input class="form-check-input" id="corporate" name="clientType" type="radio" value="Corporate" v-model="form.clientType" tabindex="10" />
-                                <label class="form-check-label" for="corporate">I am part of an organization (corporation, association, etc.) that uses assessments internally with our team</label>
+                                <label class="form-check-label" for="corporate">I am part of a company looking to use assessments internally for team building, hiring, & etc</label>
                             </div>
 
                             <span class="error">{{ v.errors[0] }}</span>
