@@ -156,7 +156,8 @@
             'redirect',
             'buttonText',
             'isShort',
-            'acFormId'
+            'acFormId',
+            'isGetStarted'
         ],
         components: {
             Loading,
@@ -239,6 +240,11 @@
                         // Check to see if this contact wants to subscribe to our newsletter
                         if (this.form.newsletter === '45') {
                             await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                        }
+
+                        // If this is a the Get Started flow, we need to add a special tag to trigger email alerts
+                        if (this.isGetStarted) {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/149`);
                         }
 
                         // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
