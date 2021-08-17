@@ -16,11 +16,11 @@
             <div class="row">
                 <div class="col-12">
                     <img class="banner-image" src="~/assets/communication-coach-resource.jpg" alt="Communication Coach"><br/>
-                    <h2 class="subtitle">Access the free interactive Communication Coach tool</h2>
+                    <h2 class="subtitle">Access the free, interactive DISC Communication Coach tool</h2>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cupiditate facere quae magnam quos eos dignissimos porro ipsa. 
-                        Officia voluptatum ex tempora veniam expedita! Deserunt expedita nisi repellat temporibus quam.
+                        This online, interactive tool can help identify any person's DISC style quickly and offer immediate suggestions for adapting to 
+                        their preferred communication style.
                     </p>
                 </div>
             </div>
@@ -45,11 +45,12 @@
                     </ol>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda deserunt, fuga doloremque dicta aut accusantium atque esse 
-                        voluptatum incidunt provident voluptatibus sint maxime aperiam. Animi, architecto natus. Sequi, inventore excepturi! Cum, dolore? 
-                        Deserunt libero non quaerat molestias? Laborum, voluptatum. Optio amet, tempore et voluptatum eius aspernatur incidunt delectus 
-                        accusamus ab, sit adipisci.
+                        Use the DISC Interactive Communications Coach regularly, and you’ll notice your ability to adapt to others’ communication styles 
+                        improving rapidly. Whether it's sales situations, managing direct reports, negotiating with vendors, or dealing with friends new 
+                        and old in social settings, using this interactive communications tool will raise you to a new level of relationship success.
                     </p>
+
+                    <strong>Choose from four major adaptability categories in your interactions:</strong>
                 </div>
 
                 <div class="col-4">
@@ -60,15 +61,15 @@
             <div class="row">
                 <div class="col-6">
                     <ul class="summary">
-                        <li class="topic">Testing 123</li>
-                        <li class="topic">Foo bar 456</li>
+                        <li class="topic">1. General Action Plan</li>
+                        <li class="topic">2. Selling Strategies</li>
                     </ul>
                 </div>
 
                 <div class="col-6">
                     <ul class="summary">
-                        <li class="topic">Testing 123</li>
-                        <li class="topic">Foo bar 456</li>
+                        <li class="topic">3. Managing/Leading Your Team</li>
+                        <li class="topic">4. Social Settings</li>
                     </ul>
                 </div>
             </div><br/><br/>
@@ -183,13 +184,13 @@
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Here are 20 business resources by Dr. Tony Alessandra and Assessments 24x7, 100% free for ICF coaches!'
+                        content: 'This online, interactive tool can help identify any person\'s DISC style quickly and offer immediate suggestions for adapting to their preferred communication style.'
                     }
                 ],
                 link: [
                     {
                         rel: 'canonical',
-                        href: 'https://www.assessments24x7.com/resources/business-resources'
+                        href: 'https://www.assessments24x7.com/resources/icf-communication-coach'
                     }
                 ]
             }
