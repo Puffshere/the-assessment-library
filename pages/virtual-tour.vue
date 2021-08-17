@@ -24,7 +24,7 @@
                     </p>
 
                     <p>
-                        Schedule with <a href="https://www.appointmentcore.com/app/freeslots/zZbJZE" class="hyperlink" target="_blank">Suzette Chaparro</a>
+                        Schedule with <nuxt-link to="/suzette" class="hyperlink">Suzette Chaparro</nuxt-link>
                     </p>
 
                     <p>
