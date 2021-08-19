@@ -21,26 +21,6 @@
             <div class="row">
                 <div class="col-6">
                     <h2>
-                        <img class="icon" src="~/assets/trainer-materials-icons/debrief-guide.png" alt="DISC Debrief Resources">
-                        Sales IQ Training Resources
-                    </h2>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Resource</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td><a class="hyperlink" href="http://www.teachersource.com/category/engineering" target="_blank" rel="noopener">Educational Innovations</a>
-                            <small>A wonderful place to find ideas for your team-building sessions and workshops. This link points to just one of the categories, but you can look at all of them on the sidebar.</small></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/SalesIQPlus-Managers-Coaching-Guide.pdf" target="_blank" rel="noopener">Download Managers Guide</nuxt-link></td></tr>
-                            <tr><td><nuxt-link class="hyperlink" to="/reports/SalesIQPlus.pdf" target="_blank" rel="noopener">Download Sample Team Report</nuxt-link></td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>
                         <img class="icon" src="~/assets/trainer-materials-icons/background-materials.png" alt="eBooks">
                         eBooks
                     </h2>
@@ -79,7 +59,7 @@
                 </div>
 
                 <div class="col-6">
-                    <h2>
+                    <!---<h2>
                         <img class="icon" src="~/assets/trainer-materials-icons/video.png" alt="Sales IQ Videos">
                         Sales IQ Videos
                     </h2>
@@ -108,6 +88,26 @@
                             <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=p8td401u_ww&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=4" target="_blank" rel="noopener">Assuring Continuing Loyalty</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=etImw5omYP8&index=14&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7" target="_blank" rel="noopener">Managing Sales</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://www.youtube.com/watch?v=Pgo6MhXYuu8&list=PLABzl3mL7BBaDiDJJQMRffbx_qEzuBEh7&index=5" target="_blank" rel="noopener">Managing Yourself</a></td></tr>
+                        </tbody>
+                    </table>-->
+
+                    <h2>
+                        <img class="icon" src="~/assets/trainer-materials-icons/debrief-guide.png" alt="DISC Debrief Resources">
+                        Sales IQ Training Resources
+                    </h2>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Resource</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td><a class="hyperlink" href="http://www.teachersource.com/category/engineering" target="_blank" rel="noopener">Educational Innovations</a>
+                            <small>A wonderful place to find ideas for your team-building sessions and workshops. This link points to just one of the categories, but you can look at all of them on the sidebar.</small></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/sales-iq-trainer-materials/SalesIQPlus-Managers-Coaching-Guide.pdf" target="_blank" rel="noopener">Download Managers Guide</nuxt-link></td></tr>
+                            <tr><td><nuxt-link class="hyperlink" to="/reports/SalesIQPlus.pdf" target="_blank" rel="noopener">Download Sample Team Report</nuxt-link></td></tr>
                         </tbody>
                     </table>
 
