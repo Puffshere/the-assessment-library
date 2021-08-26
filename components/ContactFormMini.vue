@@ -95,7 +95,7 @@
         },
         data() {
             return {
-                loading: true,
+                loading: false,
                 sources: [],
                 affiliations: [],
                 form: {
@@ -104,24 +104,11 @@
                     email: '',
                     phone: '',
                     company: '',
-                    source: '',
-                    sourceOther: '',
-                    comments: '',
                     clientType: '',
-                    affiliation: '',
                     newsletter: '45',
                     consent: ''
                 }
             }
-        },
-        async created() {
-            let response = await axios.get('/api/contact/custom-field/21');
-            this.sources = response.data.fieldOptions;
-
-            response = await axios.get('/api/contact/custom-field/64');
-            this.affiliations = response.data.fieldOptions;
-
-            this.loading = false;
         },
         methods: {
             async process() {
@@ -139,24 +126,8 @@
                                 phone: this.form.phone,
                                 fieldValues: [
                                     {
-                                        field: '21', // How did you hear about us?
-                                        value: this.form.source
-                                    },
-                                    {
-                                        field: '22', // How did you hear about us? (Other),
-                                        value: this.form.sourceOther
-                                    },
-                                    {
-                                        field: '20', // Questions/Comments,
-                                        value: this.form.comments
-                                    },
-                                    {
                                         field: '4', // Client type (reseller vs corporate),
                                         value: this.form.clientType
-                                    },
-                                    {
-                                        field: '64', // Affiliation,
-                                        value: this.form.affiliation
                                     },
                                     {
                                         field: '10', // Newsletter opt-in,
