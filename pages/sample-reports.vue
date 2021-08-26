@@ -36,8 +36,8 @@
                             <option value="ko">Korean - 1</option>
                             <option value="ms">Malaysian - 1</option>
                             <option value="no">Norwegian - 1</option>
-                            <option value="pt">Portugese - 6</option>
-                            <option value="pt-br">Portugese (Brazil) - 3</option>
+                            <option value="pt">Portuguese - 6</option>
+                            <option value="pt-br">Portuguese (Brazil) - 3</option>
                             <option value="ru">Russian - 4</option>
                             <option value="es">Spanish - 6</option>
                             <option value="sv">Swedish - 6</option>
@@ -362,8 +362,8 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfKorean.pdf" target="_blank" rel="noopener">Korean</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfMalaysian.pdf" target="_blank" rel="noopener">Malaysian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfNorwegian.pdf" target="_blank" rel="noopener">Norwegian</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfPort.pdf" target="_blank" rel="noopener">Portugese</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfPortBrazil.pdf" target="_blank" rel="noopener">Portugese (Brazil)</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfPort.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfPortBrazil.pdf" target="_blank" rel="noopener">Portuguese (Brazil)</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCRussian.pdf" target="_blank" rel="noopener">Russian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_Espanol.pdf" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSwedish.pdf" target="_blank" rel="noopener">Swedish</a><br/>
@@ -438,7 +438,7 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryDutchSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Dutch</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryFrenchSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">French</a><br/>
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryPortuguesePortugalSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Portugese</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryPortuguesePortugalSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryUKSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English (UK)</a>
@@ -480,7 +480,7 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportDutch.pdf" target="_blank" rel="noopener">Dutch</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupFrenchSampleReport.pdf" target="_blank" rel="noopener">French</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportPort.pdf" target="_blank" rel="noopener">Portugese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportPort.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportSwedish.pdf" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportVietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
                             </div>
@@ -585,7 +585,7 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsItalian.pdf" target="_blank" rel="noopener">Italian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Japanese.pdf" target="_blank" rel="noopener">Japanese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_German.pdf" target="_blank" rel="noopener">German</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsPortuguese.pdf" target="_blank" rel="noopener">Portugese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsPortuguese.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsRussian.pdf" target="_blank" rel="noopener">Russian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Swedish.pdf" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Espanol.pdf" target="_blank" rel="noopener">Spanish</a><br/>
@@ -613,7 +613,7 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_DutchSampleReport.pdf" target="_blank" rel="noopener">Dutch</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTFrench.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTGerman.pdf" target="_blank" rel="noopener">German</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf" target="_blank" rel="noopener">Portugese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMOTRussianSample.pdf" target="_blank" rel="noopener">Russian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf" target="_blank" rel="noopener">Spanish</a><br/>
                             </div>
@@ -636,7 +636,7 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQChineseSampleReport.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf" target="_blank" rel="noopener">Japanese</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Portugese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportSpanish.pdf" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportVietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
                             </div>
@@ -676,7 +676,7 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesFrench.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf" target="_blank" rel="noopener">Japanese</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf" target="_blank" rel="noopener">Portugese (Brazil)</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf" target="_blank" rel="noopener">Portuguese (Brazil)</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLSVietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
                             </div>
                         </div>
@@ -696,7 +696,7 @@
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf" target="_blank" rel="noopener">French</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPortuguese.pdf" target="_blank" rel="noopener">Portugese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPortuguese.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQSwedish.pdf" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQTurkish.pdf" target="_blank" rel="noopener">Turkish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQVietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
