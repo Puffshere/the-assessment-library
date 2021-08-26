@@ -303,7 +303,7 @@
                 </div>
             </div>
 
-            <section v-if="cert" class="certifications">
+            <section class="certifications">
                 <div class="row">
                     <div class="col-12">
                         <div class="images">
