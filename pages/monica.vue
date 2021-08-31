@@ -26,15 +26,23 @@
 
                         <strong>Hobbies & Fun Facts: </strong>I play pickle ball, love to travel, have two adorable cats who are sisters and I love to sing.<br/><br/>
 
-                        My DISC Style is: <strong>ISc</strong><br/><br/>
-                        
-                        You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
-                        or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                        My DISC Style is: <strong>ISc</strong>
                     </p><br/>
                 </div>
 
                 <div class="col-6">
                     <div class="calendly-inline-widget" :data-url="`https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5`" style="height:700px;"></div>
+                
+                    <p style="text-align: center; font-size: 10pt;">
+                        You can also email me at <a class="hyperlink" href="mailto:monica@assessments24x7.com">monica@assessments24x7.com</a><br/>
+                        or call <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    
                 </div>
             </div>
         </div>

@@ -19,12 +19,14 @@
 
                     <p style="text-align:center">
                         We’d like the opportunity to discuss your assessment and certification needs in detail. Choose a time slot from the calendar and we’ll get the conversation started!<br/><br/>
-                        
-                        You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
-                        or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
                     </p><br/>
 
                     <div class="calendly-inline-widget" :data-url="`https://calendly.com/jen24x7?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>
+                
+                    <p style="text-align: center; font-size: 10pt;">
+                        You can also email me at <a class="hyperlink" href="mailto:training@assessments24x7.com">training@assessments24x7.com</a><br/>
+                        or call <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a><br/><br/>
+                    </p>
                 </div>
             </div>
         </div>

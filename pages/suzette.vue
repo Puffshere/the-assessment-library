@@ -27,15 +27,17 @@
                         <strong>Hobbies & Fun Facts: </strong>When I am not working, you can find me hiking in the back country, cooking new and exciting 
                         meals for loved ones, or hanging out with my two sweet dogs.<br/><br/>
 
-                        My DISC Style is: <strong>Di</strong><br/><br/>
-                        
-                        You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
-                        or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                        My DISC Style is: <strong>Di</strong>
                     </p>
                 </div>
 
                 <div class="col-6">
-                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/suzette-247?text_color=000000&primary_color=0033c5`" style="height:700px;"></div>
+                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/suzette-247?text_color=000000&primary_color=0033c5`" style="height:600px;"></div>
+                
+                    <p style="text-align: center; font-size: 10pt;">
+                        You can also email me at <a class="hyperlink" href="mailto:suzette@assessments24x7.com">suzette@assessments24x7.com</a><br/>
+                        or call <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                    </p>
                 </div>
             </div>
         </div>
