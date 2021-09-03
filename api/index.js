@@ -6,9 +6,12 @@ import workshopLeaderController from './controllers/workshopLeaderController';
 import directoryController from './controllers/directoryController';
 import communicationCoachController from './controllers/communicationCoachController';
 import contactController from './controllers/contactController';
+import uploadController from './controllers/uploadController';
 import GhostSearch from './ghost-search';
+import multer from 'multer';
 import cors from 'cors';
 
+const upload = multer();
 const app = express();
 
 GhostSearch.start();
@@ -93,6 +96,10 @@ app.post('/contact/:contactId/account', (req, res) => {
 
 app.post('/tracking-event', (req, res) => {
     contactController.triggerTrackingEvent(req, res);
+});
+
+app.post('/upload', upload.single('file'), (req, res) => {
+    uploadController.upload(req, res);
 });
 
 app.use((req, res, next) => {
