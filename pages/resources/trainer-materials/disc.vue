@@ -99,7 +99,9 @@
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BehaviorPatternView.pdf" target="_blank" rel="noopener">Behavior Pattern View (PDF)</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BehaviorPatternView.pptx" target="_blank" rel="noopener">Behavior Pattern View (PPT Slide)</a></td></tr>
 
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15DISCstyleBehavioralPatterns.pdf" target="_blank" rel="noopener">The 15 DISCstyle Behavioral Patterns</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylePatternsComplete.pptx" target="_blank" rel="noopener">15 Classical DISCstyle Behavioral Patterns</a>
+                            <small>This is a detailed description of the 15 most common workplace patterns along with some insights into how they typically function in their day-to-day interpersonal dynamics.</small></td></tr>
+                            <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15DISCstyleBehavioralPatterns.pdf" target="_blank" rel="noopener">The 15 DISCstyle Behavioral Patterns</a>
                             <small>This is a detailed description of the 15 most common workplace patterns along with some insights into how they typically function in their day-to-day interpersonal dynamics.</small></td></tr>
 
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMapPDFVersion.pdf" target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PDF)</a></td></tr>
