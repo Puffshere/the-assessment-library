@@ -18,7 +18,7 @@
                     <h2 style="text-align:center">Schedule a Meeting with Angie Fairbanks</h2>
 
                     <p style="text-align:center">
-                        We’d like the opportunity to discuss your assessment and certification needs in detail. Choose a time slot from the calendar and we’ll get the conversation started!<br/><br/>
+                        I’d like the opportunity to discuss your assessment and certification needs in detail. Choose a time slot from the calendar and we’ll get the conversation started!<br/><br/>
                     </p>
 
                     <div class="calendly-inline-widget" :data-url="`https://calendly.com/angiemfairbanks/assessment-coaching-website?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-top:-40px"></div>
