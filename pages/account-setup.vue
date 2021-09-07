@@ -7,10 +7,6 @@
                 <div class="row">
                     <div class="col-12">
                         <h1 class="section-title">Account Setup</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus suscipit necessitatibus eligendi inventore dolorem hic 
-                            molestias debitis provident nam voluptatibus corrupti ea, tempora non distinctio illum aut reprehenderit velit?
-                        </p>
                     </div>
                 </div>
             </div>
@@ -24,15 +20,29 @@
                             <loading :active="loading" :is-full-page="false" />
 
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-6">
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
-                                            <label for="contact">Main Contact Name *</label>
-                                            <input id="contact" type="text" v-model="form.contact" tabindex="1" />
+                                            <label for="firstName">First Name *</label>
+                                            <input id="firstName" type="text" v-model="form.firstName" tabindex="1" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
+                                </div>
 
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <ValidationProvider v-slot="v" rules="required">
+                                            <label for="lastName">Last Name *</label>
+                                            <input id="lastName" type="text" v-model="form.lastName" tabindex="1" />
+                                            <span class="error">{{ v.errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12" style="margin-top:0">
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="company">Company Name *</label>
@@ -128,7 +138,7 @@
                                             :averageColor="false"
                                             theme="list"
                                             @select="selectLogo($event)"
-                                            v-model="form.logo">
+                                            v-model="logoToBeUploaded">
                                         </vue-file-agent>
                                     </div>
                                 </div>
@@ -188,8 +198,13 @@
                     website: '',
                     logo: ''
                 },
+                logoToBeUploaded: '',
                 isLogoValid: true
             }
+        },
+        async created() {
+            const response = await axios.get('/api/contact/custom-fields');
+            console.log(response.data);
         },
         methods: {
             selectLogo(file) {
@@ -197,9 +212,77 @@
                     this.isLogoValid = false;
                 }
             },
-            process() {
-                if (this.form.logo) {
+            async process() {
+                if (this.logoToBeUploaded && this.isLogoValid) {
+                    const response = await this.$refs.fileUploader.upload('/api/upload', { 'X-Test-Header': 'vue-file-agent' }, [this.logoToBeUploaded]);
+                    this.form.logo = `https://f002.backblazeb2.com/file/a24x7-client-logos/${response[0].data.fileName}`;
+                }
 
+                const validated = await this.$refs.form.validate();
+
+                if (validated) {
+                    this.loading = true;
+
+                    try {
+                        const { data } = await axios.post('/api/contact', {
+                            contact: {
+                                email: this.form.email,
+                                firstName: this.form.firstName,
+                                lastName: this.form.lastName,
+                                phone: this.form.phone,
+                                fieldValues: [
+                                    {
+                                        field: '65', // Company Address
+                                        value: this.form.address
+                                    },
+                                    {
+                                        field: '66', // Company City
+                                        value: this.form.city
+                                    },
+                                    {
+                                        field: '67', // Company State
+                                        value: this.form.state
+                                    },
+                                    {
+                                        field: '70', // Company Website
+                                        value: this.form.website
+                                    },
+                                    {
+                                        field: '77', // Logo
+                                        value: this.form.logo
+                                    }
+                                ]
+                            }
+                        });
+
+                        // TODO: there will probably be some sort of tag that needs automatically added here
+                        await axios.post(`/api/contact/${data.contact.id}/tag/826`);
+
+                        // Create an account and associate the contact to it
+                        await axios.post(`/api/contact/${data.contact.id}/account`, {
+                            company: this.form.company
+                        });
+
+                        this.loading = false;
+
+                        this.$toast.open({
+                            message: 'Your information has been successfully submitted!',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'success'
+                        });
+
+                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+                        
+                    } catch(err) {
+                        this.loading = false;
+                        this.$toast.open({
+                            message: 'An unexpected error has occured. Please try again later.',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'error'
+                        });
+                    }
                 }
             }
         }
