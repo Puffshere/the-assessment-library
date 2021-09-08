@@ -50,10 +50,10 @@
                             <p class="quote">
                                 One of the best business decisions I made as a certified coach was to explore the solutions offered by Assessments 24x7. 
                                 The online certification courses, forums, training materials and support are world-class. Additionally, the assessment 
-                                reports are personally branded and easy to assess. Working with Assessments 24x7 has supercharged my coaching practice 
-                                and they've become an integral extension of my professional service offering. I highly recommend Assessments 24x7 to 
-                                any coach, consultant, or corporate trainer looking for a one-stop solution that will ensure their business continues 
-                                to innovate and stay forward-thinking.
+                                reports are personally branded and easy to assess. Working with Assessments 24x7 has supercharged my coaching practice and 
+                                they've become an integral extension of my professional service offering. I highly recommend Assessments 24x7 to any coach, 
+                                consultant, or corporate trainer looking for a one-stop solution that will ensure their business continues to innovate and 
+                                stay forward-thinking.
                             </p>
                             </div>
                     </div>
@@ -81,11 +81,11 @@
                                 <a class="hyperlink" href="https://www.draftkings.com/about" target="_blank" rel="noopener">DraftKings</a>
                             </p>
                             <p class="quote">
-                                I am happy to say that we use Assessments 24x7 as our global DISC solution. We started to work with Assessments 24x7 because we were interested in 
-                                the breadth of instruments that they offer. There are instruments for a large variety of cases and lots of different team
-                                dynamics. Since then, we have been really happy with the ease of using their platform. We have also been happy with the 
-                                customer service that we have been provided. Every question that we have ever asked the team has been responded to really 
-                                quickly and professionally. That gives Assessments 24x7 our highest recommendation.
+                                I am happy to say that we use Assessments 24x7 as our global DISC solution. We started to work with Assessments 24x7 
+                                because we were interested in the breadth of instruments that they offer. There are instruments for a large variety of 
+                                cases and lots of different team dynamics. Since then, we have been really happy with the ease of using their platform. We 
+                                have also been happy with the customer service that we have been provided. Every question that we have ever asked the team 
+                                has been responded to really quickly and professionally. That gives Assessments 24x7 our highest recommendation.
                             </p>
                             <a href="https://www.youtube.com/watch?v=A52Getj1sdg" class="hyperlink" target="_blank" rel="noopener">Watch the Full Video Testimonial &rarr;</a>
                             </div>
@@ -145,28 +145,21 @@
                                 <a class="hyperlink" href="https://vitae-coaching.com " target="_blank" rel="noopener">Vitae-Coaching</a>
                             </p>
                             <p class="quote">
-                                    As an international peak performance impact coach and International Coach Federation
-                                    Master Certified Coach, I help leaders and entrepreneurs in having more impact of what
-                                    they do.
+                                As an international peak performance impact coach and International Coach Federation Master Certified Coach, I help leaders 
+                                and entrepreneurs have more impact in what they do. Before starting a coaching project, I always have clients complete an 
+                                assessment in one of the evidence-based coaching solutions to better understand their behavior and their internal 
+                                motivators.
                             </p>
                             <p>
-                                    Before staring a coaching project, I always let them do an assessment in one of the most
-                                    power evidence based coaching solutions to understand their behavior and their internal
-                                    motivators.
+                                The best known, highest quality provider is Assessments24x7. They offer several amazing assessments, and they support me as 
+                                a Master Certified Practitioner in DISC & Motivators with multiple languages and training and mentoring.
                             </p>  
                             <p>      
-                                    The best known, with the highest quality, provider is Assessments24x7.
-                                    Assessments24x7 offers not only several amazing assessments, they also support me as a
-                                    Master Certified practitioner in DISC &amp; Motivators with my language needs, training and
-                                    mentoring.
-                                    </p>
-                            <p>
-                                    The knowledge I gained by their training and mentoring helped me in having several
-                                    workshops and speaking opportunities, training coaches and leaders in using DISC &amp;
-                                    Motivators and having more impact with my own coaching projects.
-                                    I highly recommend Assements24x7!
+                                The knowledge I gained through their training and mentoring helped me obtain several workshops and speaking opportunities. 
+                                I'm also able to train coaches and leaders in the use of DISC & Motivators, and it has had a big impact on my own coaching 
+                                projects. I highly recommend Assements24x7!
                             </p>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,11 +185,11 @@
                                 <a class="hyperlink" href="https://grantcardone.com/" target="_blank" rel="noopener">Grant Cardone Enterprises</a>
                             </p>
                             <p class="quote">
-                                We believe so strongly in the value of Dr. Tony Alessandra’s program within an organization, that we have added it as a supplement 
-                                to all of our clients in Grant Cardone Sales Training University!
+                                We believe so strongly in the value of Dr. Tony Alessandra’s program within an organization, that we have added it as a 
+                                supplement to all of our clients in Grant Cardone Sales Training University!
                             </p>
                             <br/><br/>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -226,7 +219,7 @@
                                 expand our services - and our team!
                             </p>
                             <br/><br/>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -251,9 +244,9 @@
                                 Keynote Speaker / Author / Trainer / Coach
                             </p>
                             <p class="quote">
-                                I researched many assessment companies and worked with two others over the years. But when I discovered Assessments 24x7 
+                                I researched many assessment companies and worked with two others over the years, but when I discovered Assessments 24x7 
                                 and the breadth and depth of tools available, I decided to go all-in. Working with Dr. Tony Alessandra and his team can be 
-                                summed up in one word: awesome! If you are looking for assessments and want great resources and support, look no further 
+                                summed up in one word: Awesome! If you are looking for assessments and want great resources and support, look no further 
                                 than Assessments 24x7.
                             </p>
                             <br/><br/>
@@ -283,11 +276,13 @@
                                 <a class="hyperlink" href="https://workmansuccess.com" target="_blank" rel="noopener">Workman Success Systems</a>
                             </p>
                             <p class="quote">
-                                I have been using the Assessments 24x7 DISC assessment for almost a year now and wow, what a difference it has made in my speaking and coaching business! As a coaching 
-                                company with 17 coaches we all help our clients hire people for their teams, each client is given a specific URL that allows their coach as well as the client to review 
-                                DISC assessments. It has been tremendous in streamlining our clients' hiring processes and while keeping each coach involved.<br/><br/>
+                                I have been using the Assessments 24x7 DISC assessment for almost a year now and wow, what a difference it has made in my 
+                                speaking and coaching business! As a coaching company with 17 coaches, we all help our clients hire people for their teams. 
+                                Each client receives a unique URL that allows their coach as well as the client to review the results of DISC assessments. 
+                                It has been tremendous in streamlining our clients' hiring processes while keeping each coach involved.<br/><br/>
 
-                                As a company the service has been invaluable and has been worth every penny to be able to provide these great assessments to our audiences as well as our coaching clients!
+                                As a company, the service has been invaluable and has been worth every penny to be able to provide these great assessments 
+                                to our audiences as well as our coaching clients!
                             </p>
                             </div>
                     </div>
@@ -323,13 +318,13 @@
                                 meetings comfortable and pressure free. It was as if we'd already met at least four times. I appreciated the ease and 
                                 integrity of his communication style.<br/><br/>
 
-                                (3) The PDFs designed to showcase their process was user friendly, to the point, and detailed enough. Enough for me 
-                                comfortably make the decision to quickly purchase.<br/><br/>
+                                (3) The PDFs designed to showcase their process were user-friendly, to the point, and detailed enough for me to comfortably 
+                                make the decision to quickly purchase.<br/><br/>
 
-                                (4) Most importantly, the support and guidance the entire Assessments 24x7 team offers newbies. I appreciate not being 
-                                thrown to the wolves! They ensured my comfort throughout their simple and streamlined process.<br/><br/>
+                                (4) Most importantly, I value the support and guidance the entire Assessments 24x7 team offers newbies. I appreciate not 
+                                being thrown to the wolves! They ensured my comfort throughout their simple and streamlined process.<br/><br/>
 
-                                Again, thank you Assessments 24x7. I'm looking forward to your certification training and a lifelong partnership!
+                                Again, thank you, Assessments 24x7. I'm looking forward to your certification training and a lifelong partnership!
                             </p>
                         </div>
                     </div>
@@ -355,12 +350,12 @@
                                 Fortune 100 Insurance Company
                             </p>
                             <p class="quote">
-                                Our Fortune 100 Insurance Company uses Assessments 24x7 Leadership Assessments for our premier Leadership Development program, 
-                                which all new leaders are invited to attend. The reports are in-depth and thorough, and provide an exceptional foundation of
-                                self-awareness for our participants. Assessments 24x7 has been a tremendous partner to work with on this project and has bent 
-                                over backwards to help us customize the reports to our specifications and create an efficient administration process. 
-                                The level of responsiveness, dedication and service have been above and beyond, and we highly recommend Assessments 24x7 to 
-                                others who may be searching for an assessment provider.
+                                Our Fortune 100 Insurance Company uses Assessments 24x7 Leadership Assessments for our premier Leadership Development 
+                                program which all new leaders are invited to attend. The reports are in-depth and thorough and provide an exceptional 
+                                foundation of self-awareness for our participants. Assessments 24x7 has been a tremendous partner to work with on this 
+                                project and has bent over backward to help us customize the reports to our specifications and create an efficient 
+                                administration process. The level of responsiveness, dedication, and service has been above and beyond, and we highly 
+                                recommend Assessments 24x7 to others who may be searching for an assessment provider.
                             </p>
                         </div>
                     </div>
@@ -388,10 +383,10 @@
                                 Behavioral Resource Group
                             </p>
                             <p class="quote">
-                                Assessments 24x7's DISC & Motivators assessment service and customization is the best framework I have ever used. Their flexibility and terrific 
-                                customer service allows you to look like a champ without revealing the secrets to your success! Their customer service is frankly unmatched in 
-                                the industry. They have bent over backwards for me and helped me become more efficient than ever! And you can personally brand your own assessments 
-                                too! Simply unbelievable!
+                                Assessments 24x7's DISC & Motivators assessment service and customization is the best framework I have ever used. Their 
+                                flexibility and terrific customer service allow you to look like a champ without revealing the secrets to your success! 
+                                Their customer service is frankly unmatched in the industry. They have bent over backward for me and helped me become more 
+                                efficient than ever! And you can personally brand your own assessments too! Simply unbelievable!
                             </p>
                             </div>
                     </div>
@@ -418,13 +413,13 @@
                             </p>
                             <p class="quote">
                                 Partnering with Assessments 24x7 is what got my business off the ground. I can still recall my first contact with the 
-                                company. Jenifer Larson, VP of Instructional Design and Education, talked with me, heard me, and came up with just what 
-                                I needed to move my business to the next step. Getting certified in all 5 assessments and being included in their group 
-                                of Advanced Certified Practitioners, not only gave me clout, it gave me exposure too; it was just like free marketing 
-                                from a bigger, more established company. The customer service was, and continues to be, above and beyond. At my first 
-                                workshop, they sent Mark to come help get the bugs out and actually present with me. It is those acts of attention that 
-                                built my confidence, my presentation skills and my reputation. I have had many needs and each one has been met - every 
-                                time! I credit Assessments 24x7 staff, products and customer service, with my success.
+                                company. Jennifer Larsen, VP of Instructional Design and Education, talked with me, heard me, and came up with just what I 
+                                needed to move my business to the next step. Getting certified in all five assessments and being included in their group of 
+                                Advanced Certified Practitioners not only gave me clout, it gave me exposure too; it was like free marketing from a bigger, 
+                                more established company. The customer service was, and continues to be, above and beyond. For my first workshop, they sent 
+                                Mark to help me work the bugs out and actually present with me! It is those acts of attention that built my confidence, my 
+                                presentation skills, and my reputation. I have had many needs, and each one has been met - every time! I credit Assessments 
+                                24x7 staff, products, and customer service, with my success.
                             </p>
                         </div>
                     </div>
@@ -451,9 +446,10 @@
                                 Play To Your Strengths, <a class="hyperlink" href="https://talentquiz.com" target="_blank" rel="noopener">Talentquiz.com</a>
                             </p>
                             <p class="quote">
-                                Assessments 24x7 is an incredible resource for business owners who want to offer assessments to their customers. They offer an array of high-quality 
-                                assessment instruments. Plus they provide exceptional customer service and IT support to host your own assessments. After YEARS of struggling to 
-                                develop this capability myself, I’m extremely happy Assessments 24x7 offers this easy-to-use service!
+                                Assessments 24x7 is an incredible resource for business owners who want to offer assessments to their customers. They offer 
+                                an array of high-quality assessment instruments. Plus they provide exceptional customer service and IT support to host your 
+                                own assessments. After YEARS of struggling to develop this capability myself, I’m extremely happy Assessments 24x7 offers 
+                                this easy-to-use service!
                             </p>
                         </div>
                     </div>
@@ -479,9 +475,9 @@
                                 Northstar Coaching, LLC
                             </p>
                             <p class="quote">
-                                As an Executive Coach, I enrolled in the DISC certification to offer more assessment options for my clients. I found the 
+                                As an Executive Coach, I enrolled in the DISC Certification to offer more assessment options for my clients. I found the 
                                 course engaging, accessible, and thorough in its approach to communication styles and how to adapt for better 
-                                conversations. The debriefing and mentoring was also top notch and your support continues to be much more than I expected. 
+                                conversations. The debriefing and mentoring were also top-notch and the support continues to be much more than I expected. 
                                 Besides getting more than my money's worth, I feel very inspired to use these tools with my clients. Thank you!
                             </p>
                         </div>
@@ -510,8 +506,8 @@
                                 Professional Learning System
                             </p>
                             <p class="quote">
-                                Assessments 24x7 has set up an amazing center that provides consultants like myself with tools to help others improve their effectiveness. 
-                                I’ve known Dr. Alessandra for the past five years, and his company has been very responsive to my needs!
+                                Assessments 24x7 has set up an amazing center that provides consultants like myself with tools to help others improve their 
+                                effectiveness. I’ve known Dr. Alessandra for the past five years, and his company has been very responsive to my needs!
                             </p>
                             </div>
                     </div>
@@ -537,10 +533,10 @@
                                 Business Coaching Melbourne
                             </p>
                             <p class="quote">
-                                I wanted to share with you the amazing breakthroughs I am achieving with your Hartman Value Profile report so far. I had one of my most 
-                                difficult clients take this assessment. When he gave me feedback, he said he was surprised at how accurate it was. He actually came forth 
-                                and highlighted the areas he felt were his greatest personal challenges. From a coaching point of view this was a major breakthrough 
-                                in his self-awareness. It's given me added credibility.
+                                I wanted to share with you the amazing breakthroughs I am achieving with your Hartman Value Profile report so far. I had 
+                                one of my most difficult clients take this assessment. When he gave me feedback, he said he was surprised at how accurate 
+                                it was. He actually came forth and highlighted the areas he felt were his greatest personal challenges. From a coaching 
+                                point of view this was a major breakthrough in his self-awareness. It's given me added credibility.
                             </p>
                         </div>
                     </div>
@@ -567,10 +563,11 @@
                                 Team Parodi at Realty Associates
                             </p>
                             <p class="quote">
-                                That time with you changed my life. It is amazing how just really acknowledging what is going on with my world made it all change. 
-                                Within a month I quit the team I was on, made big changes in my effort for work and what I expect from people. I had let altruism 
-                                go way too far with way too many people and I was just miserable (yet feeling like I was helping...crazy !). My boundaries are stronger, 
-                                my vision clearer, and my life more on track. Huge!!! I want everyone to be armed that way and in control of their own destiny. What a gift!
+                                The time spent with you changed my life. It is amazing how just really acknowledging what is going on with my world made it 
+                                all change. Within a month I quit the team I was on and made big changes in my effort for work and what I expect from 
+                                people. I had let altruism go way too far with way too many people and I was just miserable (yet feeling like I was 
+                                helping...crazy!). My boundaries are stronger, my vision clearer, and my life more on track. Huge!!! I want everyone to be 
+                                armed that way and in control of their own destiny. What a gift!
                             </p>
                         </div>
                     </div>
@@ -597,9 +594,9 @@
                                 Athlete Assessments
                             </p>
                             <p class="quote">
-                                Confidence — that is what I love about working with Assessments 24x7 — the confidence I have in their team, their back office, their excellence in 
-                                support-and-service and their "can do" approach to our requests! Our business relies on them and I always know that we are in very capable hands. 
-                                Thank you Assessments 24x7!
+                                Confidence — that is what I love about working with Assessments 24x7 — the confidence I have in their team, their back 
+                                office, their excellence in support and service, and their "can do" approach to our requests! Our business relies on them 
+                                and I always know that we are in very capable hands. Thank you Assessments 24x7!
                             </p>
                         </div>
                     </div>
@@ -627,10 +624,12 @@
                                 Joshua Tree Coaching & Consulting, LLC
                             </p>
                             <p class="quote">
-                                Assessments 24x7 gets it! From the moment I found them, read through their website and spoke with their CMO, it’s crystal clear they have a unique vision to 
-                                help coaches focus on what they do best, while Assessments 24x7 takes care of providing the training & marketing tools to enhance your business. 
-                                They strive to create a mutually beneficial relationship by offering lower prices with cumulative purchases, free white-label accounts, an extensive catalog 
-                                of validated assessments and some of the best customer service I’ve experienced — but that's just the tip of the proverbial iceberg. I can’t wait to see what’s next!
+                                Assessments 24x7 gets it! From the moment I found them, read through their website and spoke with their CMO, it’s crystal 
+                                clear they have a unique vision to help coaches focus on what they do best, while Assessments 24x7 takes care of providing 
+                                the training & marketing tools to enhance your business. They strive to create a mutually beneficial relationship by 
+                                offering lower prices with cumulative purchases, free white-label accounts, an extensive catalog of validated assessments 
+                                and some of the best customer service I’ve experienced — but that's just the tip of the proverbial iceberg. I can’t wait to 
+                                see what’s next!
                             </p>
                         </div>
                     </div>
@@ -660,8 +659,9 @@
                             <p class="quote">
                                 Assessments 24x7 has been BETTER than excellent to work with. When they say they are going to do something- they do it!<br/>
 
-                                The assessments focused on hiring and selection, team building, and sales training are very valuable. Their purchasing, delivering, taking and reporting processes 
-                                are all very streamlined and SIMPLE. I am very pleased that Assessments 24X7 and ActionCOACH have developed this relationship!
+                                The assessments focused on hiring and selection, team building, and sales training are very valuable. Their purchasing, 
+                                delivering, taking and reporting processes are all very streamlined and SIMPLE. I am very pleased that Assessments 24X7 and 
+                                ActionCOACH have developed this relationship!
                             </p>
                         </div>
                     </div>
@@ -688,15 +688,16 @@
                                 ActionCOACH
                             </p>
                             <p class="quote">
-                                Assessments 24x7 exceeded my expectations. When I was in need of credible and affordable assessment training, they delivered. I consider them a business partner. 
-                                Assessments 24x7 provided credible resources for me as a business coach and as a workplace learning professional!
+                                Assessments 24x7 exceeded my expectations. When I was in need of credible and affordable assessment training, they 
+                                delivered. I consider them a business partner. Assessments 24x7 provided credible resources for me as a business coach and 
+                                as a workplace learning professional!
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
@@ -722,7 +723,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="row">
                 <div class="col-12">
@@ -773,11 +774,11 @@
                                 Business & Executive Coach, ActionCOACH<br/>
                             </p>
                             <p class="quote">
-                                I have been using Assessments 24x7 with ActionCOACH for some time. My investment with Assessments 24x7 has been far cheaper than other 
-                                options and everything they offer can be pesonalized to your brand. They also offer a variety of assessments to choose from. Even their 
-                                online admin pages are straightforward and easy use. End users find it simple to access the link and complete their assessments. 
-                                Each report is very detailed, yet straightforward and presented simply for the user to understand. Therefore, I can highly recommend 
-                                the use of Assessments 24x7!
+                                I have been using Assessments 24x7 with ActionCOACH for some time. My investment with Assessments 24x7 has been far cheaper 
+                                than other options and everything they offer can be personalized to your brand. They also offer a variety of assessments to 
+                                choose from. Even their online admin pages are straightforward and easy to use.  End-users find it simple to access the 
+                                link and complete their assessments. Each report is very detailed, yet straightforward and presented simply for the user to 
+                                understand. Therefore, I can highly recommend the use of Assessments 24x7!
                             </p>
                         </div>
                     </div>
@@ -804,9 +805,10 @@
                                 <a class="hyperlink" href="https://www.kenblanchard.com" target="_blank" rel="noopener">The Ken Blanchard Companies</a>
                             </p>
                             <p class="quote">
-                                We originally contacted Assessments 24x7 to explore migrating one of our key assessments from a big-name platform to a leaner, more flexible one. Assessments 24x7 worked out all 
-                                the details for us and we were very pleased to see how their team managed the migration. Eight years later, we are still working with Assessments 24x7. They have always been 
-                                flexible and pleasant when accommodating our unique needs!
+                                We originally contacted Assessments 24x7 to explore migrating one of our key assessments from a big-name platform to a 
+                                leaner, more flexible one. Assessments 24x7 worked out all the details for us and we were very pleased to see how their 
+                                team managed the migration. Eight years later, we are still working with Assessments 24x7. They have always been flexible 
+                                and pleasant when accommodating our unique needs!
                             </p>
                         </div>
                     </div>
@@ -833,10 +835,12 @@
                                 Silver Arrow Technologies
                             </p>
                             <p class="quote">
-                                As an entrepreneur, it’s important that I find business solutions that are the right fit for my company. Assessments 24x7 was exactly what I was looking for! From the moment I 
-                                reached out to them, they were quick to answer my questions and understood my business vision. As a company that focuses on data algorithms and analytics, I can appreciate their 
-                                “science and technology” based solutions. Their DISC and Motivators assessments will help me manage my current staff, as well as make strategic hiring decisions for my clients. 
-                                On top of everything else, their flexible assessment pricing makes them a great solution even as my business continues to grow.
+                                As an entrepreneur, it’s important that I find business solutions that are the right fit for my company. Assessments 24x7 
+                                was exactly what I was looking for! From the moment I reached out to them, they were quick to answer my questions and 
+                                understood my business vision. As a company that focuses on data algorithms and analytics, I can appreciate their “science 
+                                and technology” based solutions. Their DISC and Motivators assessments will help me manage my current staff, as well as 
+                                make strategic hiring decisions for my clients. On top of everything else, their flexible assessment pricing makes them a 
+                                great solution even as my business continues to grow.
                             </p>
                         </div>
                     </div>
@@ -863,9 +867,10 @@
                                 Best–selling Author, Managing Partner at ActionCOACH Tampa Bay ('highest performing firm' award in 2011).
                             </p>
                             <p class="quote">
-                                I highly recommend Assessments 24/7 and Dr. Tony’s super customer-service focused team of professionals. The assessments tools that they've developed are 
-                                amazing and effective for getting to the root of the communication challenges that individuals and team members experience. As a result of their innovation, collaboration and abundant-thinking, I have developed yet another vertical in my business’ offerings…career 
-                                coaching. Here is to your success!
+                                I highly recommend Assessments 24x7 and Dr. Tony’s super customer-service-focused team of professionals. The assessment 
+                                tools that they've developed are amazing and effective for getting to the root of the communication challenges that 
+                                individuals and team members experience. As a result of their innovation, collaboration, and abundance-thinking, I have 
+                                developed yet another vertical in my business’ offerings…career coaching. Here is to your success!
                             </p>
                         </div>
                     </div>
@@ -891,8 +896,9 @@
                                 Certified Business Coach & DISC Practitioner
                             </p>
                             <p class="quote">
-                                The Assessments 24x7 DISC assessment is one of the most useful coaching tools I've ever used. My clients see them as being very beneficial to their future development 
-                                (both on a personal and professional level). Additionally, the support I continue to receive from the Assessments 24x7 team is tremendous!
+                                The Assessments 24x7 DISC assessment is one of the most useful coaching tools I've ever used. My clients see them as being 
+                                very beneficial to their future development (both on a personal and professional level). Additionally, the support I 
+                                continue to receive from the Assessments 24x7 team is tremendous!
                             </p>
                         </div>
                     </div>
@@ -953,12 +959,12 @@
                                 We have utilized the DISC Profile in our business for over 40 years. We have had several providers during this time and 
                                 have for the most part been satisfied, but in 2015 a situation arose where we had to find a new provider immediately. Tony 
                                 Alessandra and his team sold us on their custom solution and consequently it was one of the best business decisions we have 
-                                ever made. Our current customers were thrilled at the ease-of-use of the new system, and as a result, it has been incredibly easy to 
-                                onboard new customers.<br/><br/>
+                                ever made. Our current customers were thrilled at the ease of use of the new system, and as a result, it has been 
+                                incredibly easy to onboard new customers.<br/><br/>
 
                                 However, the best part of Assessments 24x7 is the people who work for the company. Tony is an excellent businessman, but 
-                                more importantly he always goes the extra mile to treat us as a valued customer. He makes himself available by phone on a 
-                                consistent basis, which is unusual of CEO’s, and we have brought him to our industry seminars as a thought leader and 
+                                more importantly, he always goes the extra mile to treat us as a valued customer. He makes himself available by phone on a 
+                                consistent basis, which is unusual for CEO’s, and we have brought him to our industry seminars as a thought leader and 
                                 resource because the information he presents to our customers is extremely valuable. The rest of his team follows suit, and 
                                 when a rare technical issue arises, it is almost always resolved the same day.<br/><br/>
 
@@ -991,8 +997,8 @@
                                 Author & Speaker
                             </p>
                             <p class="quote">
-                                Looking for a one-stop-shop for all your business assessment needs? I recommend that you check out Assessments 24x7 for the tools 
-                                you can use in your organization.
+                                Looking for a one-stop-shop for all your business assessment needs? I recommend that you check out Assessments 24x7 for the 
+                                tools you can use in your organization.
                             </p>
                         </div>
                     </div>
@@ -1020,10 +1026,9 @@
                                 <a class="hyperlink" href="https://www.iamyourcoach.pt" target="_blank" rel="noopener">I Am Your Coach</a>
                             </p>
                             <p class="quote">
-                                Working with everyone at Assessments 24x7 was a terrific experience. I felt supported throughout the training, especially the wide 
-                                variety of examples provided in the debriefs of each assessment. This, to me, was paramount to bounce back ideas, and have a more 
-                                in-depth overall exposure to different scenarios.
-
+                                Working with everyone at Assessments 24x7 was a terrific experience. I felt supported throughout the training, especially 
+                                the wide variety of examples provided in the debriefs of each assessment. This, to me, was paramount to exchange ideas, and 
+                                have a more in-depth overall exposure to different scenarios.
                             </p>
                         </div>
                     </div>
@@ -1052,8 +1057,8 @@
                                 The Ovation Group
                             </p>
                             <p class="quote">
-                                Assessments 24x7 is the gold standard for assessment technology. Their interfaces are intuitive, their support is best in class and their staff are 
-                                remarkably knowledgable.
+                                Assessments 24x7 is the gold standard for assessment technology. Their interfaces are intuitive, their support is best in 
+                                class, and their staff is remarkably knowledgeable.
                             </p>
                         </div>
                     </div>
@@ -1081,11 +1086,11 @@
                                 ActionCOACH
                             </p>
                             <p class="quote">
-                                We began using the Assessments 24x7 'Unlimited DISC Plan' as a way to simplify our assessment offering. 
-                                It has made it much easier to offer assessments to our clients, as well as using them in our marketing campaigns. 
-                                For our clients who use our assessments regularly, we are now able to offer them an Annual Subscription with quantity pricing. 
-                                We just send them a code, and can easily monitor their usage. No more billing and collecting for one-off assessments. 
-                                Thanks Dr. Tony for this valuable offering!
+                                We began using Assessments 24x7 as a way to simplify our assessment offering. It has made it much easier to offer 
+                                assessments to our clients, as well as using them in our marketing campaigns. For our clients who use our assessments 
+                                regularly, we are now able to offer them an Annual Subscription with quantity pricing. We just send them a code, and can 
+                                easily monitor their usage. No more billing and collecting for one-off assessments. Thanks Dr. Tony for this valuable 
+                                offering!
                             </p>
                         </div>
                     </div>
@@ -1114,10 +1119,10 @@
                             </p>
                             <p class="quote">
                                 Quality and professionalism are hallmarks of my business, so I extensively researched the world's leading DISC providers 
-                                before choosing the Assessments 24x7 DISC assessment. Their reports are superior in both content and presentation. 
-                                I was especially impressed with the quality of the reports' modern design and engaging graphics. This is a product I 
-                                am proud to offer as part of my consulting work. The "icing on the cake" is I can fully personalize the reports with 
-                                my business name and logo. Thank you Assessments 24x7 for a great tool!
+                                before choosing the Assessments 24x7 DISC assessment. Their reports are superior in both content and presentation. I was 
+                                especially impressed with the quality of the reports' modern design and engaging graphics. This is a product I am proud to 
+                                offer as part of my consulting work. The "icing on the cake" is that I can fully personalize the reports with my business 
+                                name and logo. Thank you Assessments 24x7 for a great tool!
                             </p>
                         </div>
                     </div>
@@ -1146,15 +1151,15 @@
                                 <a class="hyperlink" href="https://www.whitworth.edu/" target="_blank" rel="noopener">Whitworth University</a> | Hawthorne Hall
                             </p>
                             <p class="quote">
-                                As part of the departmental leadership team at my university, I had the pleasure of taking the DISC assessment.  Not only 
-                                did I learn about my own style, but about my colleagues' styles.  Since our time debriefing our results, we have 
-                                developed a common language to talk through our strengths and weaknesses as a group.  Seeing the power it had to unify and 
-                                develop our leadership group, I had my own team take the DISC assessment.  We had positive results again! We found the 
-                                debrief with our practitioner to be engaging and informative.  Two weeks later, we shared our DISC results in a team 
-                                meeting. Again, having the common language of DISC helped us achieve a level of vulnerability and understanding we 
-                                hadn't had in the past. As a fairly new leader, I have been so pleased with the  DISC tool to help my team learn about 
-                                themselves and one another.  I know it's my job to understand the natural style of each of my team members and help them 
-                                develop into the best they can be.  Using the DISC gave me insight as a leader that I couldn't find anywhere else.   
+                                As part of the departmental leadership team at my university, I had the pleasure of taking the DISC assessment. Not only 
+                                did I learn about my own style, but about my colleagues' styles. Since our time debriefing our results, we have developed a 
+                                common language to talk through our strengths and weaknesses as a group. Seeing the power it had to unify and develop our 
+                                leadership group, I had my own team take the DISC assessment. We had positive results again! We found the debrief with our 
+                                practitioner to be engaging and informative. Two weeks later, we shared our DISC results in a team meeting. Again, having 
+                                the common language of DISC helped us achieve a level of vulnerability and understanding we hadn't had in the past. As a 
+                                fairly new leader, I have been so pleased with the DISC tool to help my team learn about themselves and one another. I know 
+                                it's my job to understand the natural style of each of my team members and help them develop into the best they can be. 
+                                Using the DISC gave me insight as a leader that I couldn't find anywhere else. 
                             </p>
                         </div>
                     </div>
