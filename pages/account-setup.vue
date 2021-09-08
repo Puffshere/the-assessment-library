@@ -58,7 +58,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="email">Email Address *</label>
-                                            <input id="email" type="text" v-model="form.email" tabindex="1" />
+                                            <input id="email" type="text" v-model="form.email" tabindex="1" :readonly="$route.query.email" :disabled="$route.query.email" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -203,6 +203,10 @@
             }
         },
         async created() {
+            if (this.$route.query.email) {
+                this.form.email = this.$route.query.email;
+            }
+
             const response = await axios.get('/api/contact/custom-fields');
             console.log(response.data);
         },
