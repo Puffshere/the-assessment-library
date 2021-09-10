@@ -1159,7 +1159,7 @@
                                 the common language of DISC helped us achieve a level of vulnerability and understanding we hadn't had in the past. As a 
                                 fairly new leader, I have been so pleased with the DISC tool to help my team learn about themselves and one another. I know 
                                 it's my job to understand the natural style of each of my team members and help them develop into the best they can be. 
-                                Using the DISC gave me insight as a leader that I couldn't find anywhere else. 
+                                Using the DISC gave me insight as a leader that I couldn't find anywhere else.
                             </p>
                         </div>
                     </div>
