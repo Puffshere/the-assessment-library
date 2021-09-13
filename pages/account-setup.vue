@@ -76,7 +76,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-12" style="margin-top:0">
+                                <div class="col-6" style="margin-top:0">
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="address">Street Address *</label>
@@ -85,10 +85,8 @@
                                         </ValidationProvider>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-4" style="margin-top:0">
+                                <div class="col-6" style="margin-top:0">
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="country">Country *</label>
@@ -97,7 +95,9 @@
                                         </ValidationProvider>
                                     </div>
                                 </div>
+                            </div>
 
+                            <div class="row">
                                 <div class="col-4" style="margin-top:0">
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
@@ -117,12 +117,22 @@
                                         </ValidationProvider>
                                     </div>
                                 </div>
+
+                                <div class="col-4" style="margin-top:0">
+                                    <div class="form-group">
+                                        <ValidationProvider v-slot="v" rules="required">
+                                            <label for="postalCode">Postal Code *</label>
+                                            <input id="postalCode" type="text" v-model="form.postalCode" tabindex="1" />
+                                            <span class="error">{{ v.errors[0] }}</span>
+                                        </ValidationProvider>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-12" style="margin-top:0">
                                     <div class="form-group">
-                                        <ValidationProvider v-slot="v" rules="required">
+                                        <ValidationProvider v-slot="v">
                                             <label for="website">Website</label>
                                             <input id="website" type="text" v-model="form.website" tabindex="1" />
                                             <span class="error">{{ v.errors[0] }}</span>
@@ -193,6 +203,7 @@
                     phone: '',
                     address: '',
                     country: 'US',
+                    postalCode: '',
                     city: '',
                     state: '',
                     website: '',
@@ -248,6 +259,14 @@
                                         value: this.form.state
                                     },
                                     {
+                                        field: '68', // Company Postal Code
+                                        value: this.form.postalCode
+                                    },
+                                    {
+                                        field: '69', // Company Country
+                                        value: this.form.country
+                                    },
+                                    {
                                         field: '70', // Company Website
                                         value: this.form.website
                                     },
@@ -276,7 +295,7 @@
                             type: 'success'
                         });
 
-                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+                        this.$router.push('/account-setup-thank-you');
                         
                     } catch(err) {
                         this.loading = false;

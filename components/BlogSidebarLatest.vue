@@ -85,6 +85,10 @@
                     margin-left: 70px;
                 }
             }
+
+            &:last-of-type {
+                margin-bottom: 60px;
+            }
         }
     }
 </style>
