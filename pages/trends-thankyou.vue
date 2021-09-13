@@ -84,8 +84,6 @@
                 // Corporate
                 this.agent = monica;
             }
-
-            this.agent = monica;
         },
         methods: {
             onCalendlyEvent(e) {
