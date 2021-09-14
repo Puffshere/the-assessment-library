@@ -34,7 +34,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="lastName">Last Name *</label>
-                                            <input id="lastName" type="text" v-model="form.lastName" tabindex="1" />
+                                            <input id="lastName" type="text" v-model="form.lastName" tabindex="2" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -46,7 +46,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="company">Company Name *</label>
-                                            <input id="company" type="text" v-model="form.company" tabindex="1" />
+                                            <input id="company" type="text" v-model="form.company" tabindex="3" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -58,7 +58,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="email">Email Address *</label>
-                                            <input id="email" type="text" v-model="form.email" tabindex="1" :readonly="$route.query.email" :disabled="$route.query.email" />
+                                            <input id="email" type="text" v-model="form.email" tabindex="4" :readonly="$route.query.email" :disabled="$route.query.email" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -68,7 +68,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="phone">Phone Number *</label>
-                                            <input id="phone" type="text" v-model="form.phone" tabindex="1" />
+                                            <input id="phone" type="text" v-model="form.phone" tabindex="5" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -80,7 +80,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="address">Street Address *</label>
-                                            <input id="address" type="text" v-model="form.address" tabindex="1" />
+                                            <input id="address" type="text" v-model="form.address" tabindex="6" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -90,7 +90,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="country">Country *</label>
-                                            <country-select v-model="form.country" :country="form.country" topCountry="US" />
+                                            <country-select v-model="form.country" :country="form.country" topCountry="US" tabindex="7" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -102,7 +102,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="city">City *</label>
-                                            <input id="city" type="text" v-model="form.city" tabindex="1" />
+                                            <input id="city" type="text" v-model="form.city" tabindex="8" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -112,7 +112,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="state">State *</label>
-                                            <region-select v-model="form.state" :country="form.country" :region="form.state" />
+                                            <region-select v-model="form.state" :country="form.country" :region="form.state" tabindex="9" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -122,7 +122,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v" rules="required">
                                             <label for="postalCode">Postal Code *</label>
-                                            <input id="postalCode" type="text" v-model="form.postalCode" tabindex="1" />
+                                            <input id="postalCode" type="text" v-model="form.postalCode" tabindex="10" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -134,7 +134,7 @@
                                     <div class="form-group">
                                         <ValidationProvider v-slot="v">
                                             <label for="website">Website</label>
-                                            <input id="website" type="text" v-model="form.website" tabindex="1" />
+                                            <input id="website" type="text" v-model="form.website" tabindex="11" />
                                             <span class="error">{{ v.errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
@@ -148,14 +148,15 @@
                                             :averageColor="false"
                                             theme="list"
                                             @select="selectLogo($event)"
-                                            v-model="logoToBeUploaded">
+                                            v-model="logoToBeUploaded"
+                                            tabindex="12">
                                         </vue-file-agent>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-12">
-                                <button class="button" type="button" @click="process" tabindex="15">Submit Account Information</button><br/><br/>
+                                <button class="button" type="button" @click="process" tabindex="13">Submit Account Information</button><br/><br/>
                             </div>
                         </ValidationObserver>
                     </form>
@@ -192,6 +193,18 @@
             Loading,
             ValidationProvider,
             ValidationObserver
+        },
+        head() {
+            return {
+                title: 'Account Setup | Assessments 24x7',
+                meta: [
+                    {
+                        hid: 'robots',
+                        name: 'robots',
+                        content: 'noindex'
+                    }
+                ]
+            }
         },
         data() {
             return {

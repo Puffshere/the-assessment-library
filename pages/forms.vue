@@ -69,11 +69,18 @@
             'main-nav': Nav,
             'footer-fold': Footer
         },
-        data() {
+        head() {
             return {
-
+                title: 'Forms | Assessments 24x7',
+                meta: [
+                    {
+                        hid: 'robots',
+                        name: 'robots',
+                        content: 'noindex'
+                    }
+                ]
             }
-        }
+        },
     }
 </script>
 
