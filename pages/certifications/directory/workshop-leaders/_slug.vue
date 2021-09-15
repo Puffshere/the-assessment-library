@@ -6,20 +6,28 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img class="image" :src="`/workshop-leaders/${leader.stub}.jpg`">
+                        <img class="image" :src="`/workshop-leaders/${leader.stub}.jpg`" :alt="leader.name">
                         <h1 class="section-title">{{ leader.name }}</h1>
                         <p>
                             {{ leader.city }}<span v-if="leader.state"> {{ leader.state }}</span>, {{ leader.country }}
                             
                             <span v-if="leader.country === 'United States'">🇺🇸</span>
-                            <span v-else-if="leader.country === 'Canada'">🇨🇦</span>
+                            <span v-else-if="leader.country === 'Canada' || leader.country === 'Nova Scotia'">🇨🇦</span>
                             <span v-else-if="leader.country === 'United Kingdom'">🇬🇧</span>
-                            <span v-else-if="leader.country === 'Vietnam'">🇻🇳</span><br/>
+                            <span v-else-if="leader.country === 'Vietnam'">🇻🇳</span>
+                            <span v-else-if="leader.country === 'Australia' || leader.country === 'Western Australia'">🇦🇺</span>
+                            <span v-else-if="leader.country === 'India'">🇮🇳</span><br/>
                             
                             <span v-if="leader.website">
-                                <a style="color: #fff" :href="leader.website">
+                                <a style="color: #fff" :href="leader.website" target="blank" rel="noopener">
                                     <b>{{ leader.website }}</b>
-                                </a>
+                                </a><br/>
+                            </span>
+
+                            <span v-if="leader.linkedin">
+                                <a style="color: #fff" :href="leader.linkedin" target="blank" rel="noopener">
+                                    <b>{{ leader.linkedin }}</b>
+                                </a><br/>
                             </span>
                             
                             {{ leader.email }}
