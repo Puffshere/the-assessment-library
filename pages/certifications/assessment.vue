@@ -8,8 +8,8 @@
                     <div class="col-12">
                         <h1 class="section-title">Assessment Certification</h1>
                         <p>
-                            Join an elite group that have chosen to take their assessment knowledge to the next level with one of our Assessment 
-                            Practitioner Certifications.
+                            Gain a competitive edge while you build your resume and portfolio with a professional certification that sets you apart from 
+                            others in the assessment industry.
                         </p>
                     </div>
                 </div>
@@ -19,56 +19,52 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 style="margin-top: 50px">Assessment Certification</h2>
+                    <h2 style="margin-top: 50px">Learn From The Top Assessment Experts In The Industry</h2>
 
                     <p>
-                        Become an expert with our internationally accredited certification training. With training explicitly designed to foster a deeper 
-                        understanding of the core assessments, you’ll discover how each assessment can be used to build more effective personal and 
-                        professional relationships. 
+                        Do you want to use assessments to build better personal and professional relationships?
+                    </p>
+
+                    <p>
+                        Our assessment certification programs help people become experts at understanding and using assessments. Our training is designed 
+                        to foster a deeper understanding of the core assessments so that you can discover how each assessment can be used to be more 
+                        effective in your communication, leadership, and decision-making.
                     </p>
 
                     <h4>100% Virtual Training. On Your Schedule.</h4>
 
                     <p>
-                        Get certified at your pace with one of our Master Certified Practitioners. All certification programs are one-on-one, 
-                        instructor-led sessions, and entirely online. We tailor these flexible training curriculums to meet your specific needs and goals.
+                        Our assessment certification works with your schedule. Work through the courses online at any time of day or night. Work at your 
+                        own pace with no time constraints or schedules to worry about. Thinking about a change? Our core assessments can be used in any 
+                        industry or role, so your certification will benefit you as you move up the ladder, change companies, or even change industries. 
                     </p>
 
                     <p>
-                        Through one-on-one, instructor-led sessions and self-study, learn to use the assessment results with supportive, comprehensive 
-                        resources available when you need them. As a bonus, if you are certified in multiple assessments, your instructor will train you to 
-                        combine the assessment results for a powerful understanding of how they work together.
-                    </p>
-
-                    <p>
-                        Each certification program includes additional benefits such as exclusive access to our Certified Trainer Materials library, 
-                        discounted pricing, continuing education credits, 10 complimentary assessments when you finish the program, and a listing on our 
-                        International Directory of Practitioners.
+                        Click below now to get started on your assessment certification!
                     </p><br/>
 
                     <nuxt-link to="/contact" class="button">Talk to a Specialist</nuxt-link>
                     <nuxt-link to="/assessments" class="button outline">Learn More About Assessments</nuxt-link><br/><br/>
 
-                    <h3 style="margin-bottom: -10px; margin-top: 50px;">All Assessment Certifications come with these great benefits:</h3>
+                    <h3 style="margin-bottom: -10px; margin-top: 50px;">Become A Certified Assessment Practitioner</h3>
                     <div class="col-6">
                         <ul>
-                        <li>Our in-house coaches are available to provide you with ongoing, situational support — even after you've completed your certification training</li>
-                            <li>Receive your assessment & a report debrief by your coach</li>
-                            <li>Gain access to Trainer Materials (including an assessment specific Debrief Guide and PowerPoint presentation) that you can use in your coaching/training business</li>
-                            <li>A personalized listing on our online International Directory of Certified Practitioners.</li>
-                            
-
+                            <li>Improve relationships with colleagues and clients</li>
+                            <li>Gain deeper insights into yourself</li>
+                            <li>Enhance your critical thinking skills</li>
+                            <li>Ongoing, situational support from an Assessments 24x7 Master Certified Practitioner</li>
+                            <li>Receive an assessment & an in-depth, professional debrief by your Master Certified Trainer</li>
                         </ul>
                     </div>
 
                     <div class="col-6">
                         <ul>
-                            <li>A PDF Certificate of Completion</li>
-                            <li>A Badge of Certification for your website, email signature and digital marketing assets</li>
-                            <li>Consultant Admin Account (CAA) if you don’t have one already.</li>
-                            <li>Receive discounted SILVER level pricing to purchase any assessments (or any certification).</li> 
-                            <li>10 Core Assessments that you can immediately use or re-sell to offset your certification investment.</li>
-
+                            <li>Access Certified Trainer Material to use in your coaching/training business, including a Debrief Guide, PowerPoint presentations, and marketing materials</li>
+                            <li>SILVER level pricing on assessment purchases</li>
+                            <li>Receive 10 Core Assessments credits on completion of your certification</li>
+                            <li>Get listed on our International Directory of Certified Practitioners linked to your website</li> 
+                            <li>Debrief clients with confidence</li>
+                            <li>Maximize the effectiveness of your assessment debriefs</li>
                         </ul>
                     </div>
                 </div>
@@ -90,9 +86,11 @@
 
                     <div class="col-9">
                         <p>
-                            Are you looking for mastery level understanding of DISC with the expertise and training to differentiate you from other coaches, 
-                            consultants and trainers? Our DISC Assessment Certification is designed to provide you with the ability to debrief a 
-                            client’s DISC report with confidence and accuracy and use the assessments for a variety of client needs. 
+                            Do you want to significantly improve your understanding of DISC and your ability to debrief DISC reports? Have you ever 
+                            struggled to figure out how to use the assessments for different client needs? Clear up those questions and more with 
+                            Assessments 24x7 DISC Certification program. This is an exceptional investment for every coach, HR specialist, and leadership 
+                            development professional. DISC Certification will give you the knowledge to debrief reports without hesitation- which means 
+                            even more satisfied clients for you!
                         </p>
                     </div>
                 </div>
@@ -167,9 +165,11 @@
 
                     <div class="col-9">
                         <p>
-                            The Motivators Assessment Certification program will substantially enhance your knowledge of the seven Dimensions of Motivation, 
-                            showing core values individually and how they interact together to drive our satisfaction. Through a curriculum designed to help 
-                            guide implementation of this remarkable tool, you can take a deeper dive into the “why” behind behavior and emotions. 
+                            The Motivators Assessment Certification Program provides a fresh perspective into human motivation. With this understanding, 
+                            organizations and workplaces can more effectively motivate employees to increase productivity, strengthen collaboration, and 
+                            produce exceptional results. The curriculum teaches the seven Dimensions of Motivation individually so that you learn how they 
+                            affect interactions with others. When you better understand what motivates your workforce – or yourself! – there’s no limit to 
+                            what you can achieve.
                         </p>
                     </div>
                 </div>
@@ -244,9 +244,9 @@
 
                     <div class="col-9">
                         <p>
-                            The EIQ-2 Certification examines at a much more comprehensive level how people perceive and apply their Emotional Intelligence. 
-                            Developed with author Robert Jerus (Mind Matters), the EIQ-2 Certification empowers practitioners with enhanced clarity and 
-                            insights necessary to consistently support and share what’s needed for creating beneficial interpersonal outcomes with strong EIQ.
+                            EIQ-2 Certification provides enhanced clarity on how people perceive and apply their Emotional Intelligence, empowering 
+                            practitioners with the necessary insights to coach in a way that creates beneficial interpersonal outcomes. Boost your 
+                            interpersonal conflict management skills as well, and learn to tactfully deal with difficult people during stressful situations.
                         </p>
                     </div>
                 </div>
@@ -358,7 +358,7 @@
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Join an elite group that have chosen to take their assessment knowledge to the next level with one of our Core Assessment Practitioner Certifications.'
+                        content: 'Gain a competitive edge while you build your resume and portfolio with a professional certification that sets you apart from others in the assessment industry.'
                     }
                 ],
                 __dangerouslyDisableSanitizers: ['script'],
