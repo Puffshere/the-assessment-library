@@ -379,8 +379,6 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/12IntegratedDISCStyleRelationships.pdf" target="_blank" rel="noopener">The 12 Integrated DISC Style Relationships</a>
-                            <small>The 4 Primary DISC factors of Dominance, Influence, Steadiness and Conscientiousness are presented in a unique way to show how the strength of each is impacted by the strength of the other three.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/12IntegratedDISCStyleRelationshipsAdvanced.pdf" target="_blank" rel="noopener">The 12 Integrated DISC Style Relationships - Advanced</a>
                             <small>A more comprehensive resource providing alternative definitions and further development of each of the 12 integrated relations including various behaviors associated with high and low scores in each relationship and examining how the styles being integrated influence one another even more thoroughly.</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCInterviewGuide.pdf" target="_blank" rel="noopener">DISC Behavioral Style Interview Guide</a></td></tr>
