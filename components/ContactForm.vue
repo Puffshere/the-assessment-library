@@ -82,7 +82,7 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" id="corporate" name="clientType" type="radio" value="Corporate" v-model="form.clientType" tabindex="10" />
-                                <label class="form-check-label" for="corporate">I am part of a company looking to use assessments internally for team building, hiring, & etc</label>
+                                <label class="form-check-label" for="corporate">I am part of a company looking to use assessments internally for team building, hiring, etc.</label>
                             </div>
 
                             <span class="error">{{ v.errors[0] }}</span>
@@ -103,7 +103,7 @@
                             
                             <div class="form-check">
                                 <input class="form-check-input" id="optinYes" name="newsletter" type="radio" value="45" v-model="form.newsletter" tabindex="12"/>
-                                <label class="form-check-label" for="optinYes">Yes please!</label>
+                                <label class="form-check-label" for="optinYes">Yes, please!</label>
                             </div>
 
                             <div class="form-check">

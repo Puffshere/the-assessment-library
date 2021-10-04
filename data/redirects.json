@@ -68,22 +68,6 @@
         "to": "/assessments/360/leadership-effectiveness"
     },
     {
-        "from": "/hiring-and-selection-assessments.asp",
-        "to": "/hiring-and-selection"
-    },
-    {
-        "from": "/executive-summary-series.asp",
-        "to": "/hiring-and-selection"
-    },
-    {
-        "from": "/workplace-strengths.asp",
-        "to": "/hiring-and-selection"
-    },
-    {
-        "from": "/disc-fitness-benchmarking.asp",
-        "to": "/hiring-and-selection"
-    },
-    {
         "from": "/become-certified.asp",
         "to": "/certifications"
     },

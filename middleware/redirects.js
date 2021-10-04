@@ -65,10 +65,30 @@ export default function(context) {
         else if (context.req.url == '/360_Instructions_2020.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2021.pdf');
         }
+
+        else if (context.req.url == '/hiring-and-selection') {
+            context.redirect('https://hiresense.com');
+        }
+
+        else if (context.req.url == '/hiring-and-selection-assessments.asp') {
+            context.redirect('https://hiresense.com');
+        }
+
+        else if (context.req.url == '/executive-summary-series.asp') {
+            context.redirect('https://hiresense.com');
+        }
+
+        else if (context.req.url == '/workplace-strengths.asp') {
+            context.redirect('https://hiresense.com');
+        }
+
+        else if (context.req.url == '/disc-fitness-benchmarking.asp') {
+            context.redirect('https://hiresense.com');
+        }
         
         else if (context.req.url.match(/(\/reports\/)[\w- ]+\.pdf/gi)) {
             context.redirect('https://www.assessments24x7.com/sample-reports');
-        } 
+        }
         
         else {
             const redirect = redirects.find(r => r.from === context.req.url);

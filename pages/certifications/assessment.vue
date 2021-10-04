@@ -61,7 +61,7 @@
                         <ul>
                             <li>Access Certified Trainer Material to use in your coaching/training business, including a Debrief Guide, PowerPoint presentations, and marketing materials</li>
                             <li>SILVER level pricing on assessment purchases</li>
-                            <li>Receive 10 Core Assessments credits on completion of your certification</li>
+                            <li>Receive 10 Core Assessment credits upon completion of your certification</li>
                             <li>Get listed on our International Directory of Certified Practitioners linked to your website</li> 
                             <li>Debrief clients with confidence</li>
                             <li>Maximize the effectiveness of your assessment debriefs</li>
@@ -88,7 +88,7 @@
                         <p>
                             Do you want to significantly improve your understanding of DISC and your ability to debrief DISC reports? Have you ever 
                             struggled to figure out how to use the assessments for different client needs? Clear up those questions and more with 
-                            Assessments 24x7 DISC Certification program. This is an exceptional investment for every coach, HR specialist, and leadership 
+                            Assessments 24x7's DISC Certification program. This is an exceptional investment for every coach, HR specialist, and leadership 
                             development professional. DISC Certification will give you the knowledge to debrief reports without hesitation- which means 
                             even more satisfied clients for you!
                         </p>
