@@ -23,9 +23,9 @@
                         We’d like the opportunity to discuss your assessment and certification needs in detail. Please use the calendar below to schedule a 
                         quick call. You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
                         or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
-                    </p><br/><br/><br/>
+                    </p><br/><br/>
 
-                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/${agent}?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>
+                    <iframe v-if="agent !== ''" style="width:100%;border:1px solid #eaeaea;border-radius:8px;min-width:320px;height:700px;margin-bottom:60px;margin-top:-30px" :src="`https://calendly.com/${agent}?text_color=000000&primary_color=0033c5`"></iframe>
                 </div>
             </div>
         </div>
