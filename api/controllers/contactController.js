@@ -19,6 +19,20 @@ const getCustomFields = async (req, res) => {
     }
 };
 
+const getContact = async (req, res) => {
+    try {
+        const { data } = await axios.get(`${api}/contacts/${req.params.contactId}`, {
+            method: 'GET',
+            headers
+        });
+
+        res.json(data);
+    } catch (err) {
+        console.log(err.response.data);
+        res.sendStatus(500);
+    }
+};
+
 const getCustomField = async (req, res) => {
     try {
         const { data } = await axios.get(`${api}/fields/${req.params.fieldId}`, {
@@ -140,6 +154,7 @@ export default {
     getCustomFields,
     getCustomField,
     createContact,
+    getContact,
     subscribeContact,
     applyTag,
     createAccountAndAssociateContact,

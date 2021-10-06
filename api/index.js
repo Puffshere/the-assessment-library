@@ -82,6 +82,10 @@ app.post('/contact', (req, res) => {
     contactController.createContact(req, res);
 });
 
+app.get('/contact/:contactId', (req, res) => {
+    contactController.getContact(req, res);
+});
+
 app.post('/contact/:contactId/subscribe', (req, res) => {
     contactController.subscribeContact(req, res);
 });

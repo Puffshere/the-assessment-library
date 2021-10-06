@@ -20,12 +20,12 @@
                     <h2 style="text-align:center">Your information has been submitted</h2>
 
                     <p style="text-align:center">
-                        We’d like the opportunity to discuss your assessment and certification needs in detail. You will receive an email with a link to 
-                        choose a time slot on our calendar. You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
+                        We’d like the opportunity to discuss your assessment and certification needs in detail. Please use the calendar below to schedule a 
+                        quick call. You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
                         or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
                     </p><br/><br/><br/>
 
-                    <!--<div class="calendly-inline-widget" :data-url="`https://calendly.com/${agent}?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>-->
+                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/${agent}?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-bottom:60px;margin-top:-40px"></div>
                 </div>
             </div>
         </div>
@@ -65,23 +65,27 @@
         destroyed() {
             window.removeEventListener('message', this.onCalendlyEvent);
         },
-        created() {
+        async created() {
             if (process.browser) {
                 this.$gtm.push({ event: 'Thank You' });
             }
 
+            const { data } = await axios.get(`/api/contact/${this.$route.query.contactId}`);
+            const salesPersonInt = data.fieldValues.find(obj => {
+                return obj.field === '79'; // 79 is the field id for Sales Person Assignment in AC
+            });
+
             const monica = 'monica-saare/30min';
             const suzette = 'suzette-247/30min';
+            const angie = 'angiew-1/30min';
 
             this.agent = monica;
-            const clientType = this.$route.query.clientType;
 
-            if (clientType === 'Reseller') {
-                // Reseller
+            if (salesPersonInt.value === '1') {
                 this.agent = suzette;
-            } else if (clientType === 'Corporate') {
+            } else if (clientType === '2') {
                 // Corporate
-                this.agent = monica;
+                this.agent = angie;
             }
         },
         methods: {
