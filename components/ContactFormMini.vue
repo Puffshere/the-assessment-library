@@ -132,6 +132,10 @@
                                     {
                                         field: '10', // Newsletter opt-in,
                                         value: this.form.newsletter
+                                    },
+                                    {
+                                        field: '79', // Sales Person Assignment,
+                                        value: Math.floor(Math.random() * 3) + 1
                                     }
                                 ]
                             }
