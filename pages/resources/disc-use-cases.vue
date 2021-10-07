@@ -21,12 +21,12 @@
             <div class="row">
                 <div class="col-12">
                     <h2 style="margin-bottom: 0px">Watch the Full Webinar:</h2>
-                    <h4 style="float:left">Solution-Driven Applications with DISC (62 minutes)<br/>Uploaded October 6th, 2021</h4>
-                    <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_Kids_DISC.pptx" class="button" style="float:right">Download the Slide Deck</a>
+                    <h4 style="float:left">Solution-Driven Applications with DISC (44 minutes)<br/>Uploaded October 6th, 2021</h4>
+                    <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_DISC_Use_Cases.pdf" class="button" style="float:right">Download the Slide Deck</a>
                 </div>
 
                 <div class="col-12">
-                    <iframe style="width:100%" height="515" src="https://www.youtube.com/embed/yvXtXOdx4pQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe style="width:100%" height="515" src="https://www.youtube.com/embed/LY0C7McoJlo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

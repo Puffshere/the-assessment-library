@@ -35,11 +35,11 @@
                     <h3>Previously Recorded Webinars</h3>
 
                     <ul class="resources">
-                        <!--<nuxt-link to="/resources/disc-use-cases">
+                        <nuxt-link to="/resources/disc-use-cases">
                             <li class="resource a24x7">
                                 Solution-Driven Applications with DISC
                             </li>
-                        </nuxt-link>-->
+                        </nuxt-link>
 
                         <nuxt-link to="/resources/kids-disc-webinar">
                             <li class="resource a24x7">
