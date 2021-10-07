@@ -83,7 +83,7 @@
 
             if (salesPersonInt.value === '1') {
                 this.agent = suzette;
-            } else if (clientType === '2') {
+            } else if (salesPersonInt.value === '2') {
                 // Corporate
                 this.agent = angie;
             }
