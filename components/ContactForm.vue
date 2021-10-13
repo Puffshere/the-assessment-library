@@ -259,7 +259,7 @@
                             company: this.form.company
                         });
 
-                        this.trackConversion();
+                        this.trackConversion(data.contact.id);
 
                         this.loading = false;
 
@@ -285,12 +285,18 @@
                     console.log('Not validated yet...');
                 }
             },
-            trackConversion() {
+            async trackConversion(contactId) {
                 if (process.browser) {
                     let event = '';
 
                     if (localStorage.getItem('ppc_event')) {
                         event = localStorage.getItem('ppc_event');
+
+                        if (event === 'ppc_disc_assessment') {
+                            await axios.post(`/api/contact/${contactId}/tag/850`);
+                        } else if (event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
+                            await axios.post(`/api/contact/${contactId}/tag/851`);
+                        }
                     } else {
                         event = `contact_${this.acFormId || '1'}`;
                     }
