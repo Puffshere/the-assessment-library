@@ -46,6 +46,12 @@
                             </li>
                         </a>
 
+                        <a target="_blank" href="https://form.asana.com/?k=-yxazr6big4-S5muOfIHXw&d=460673300006490">
+                            <li class="resource development">
+                                Development Team Request Form
+                            </li>
+                        </a>
+
                         <a target="_blank" href="https://form.asana.com/?k=8wVHOZo8OayfLFz9UhjCbA&d=460673300006490">
                             <li class="resource custom">
                                 Custom Work (Client Facing)
@@ -138,6 +144,10 @@
 
                 &.support {
                     background: linear-gradient(268deg, #fa4ca6, #ff2f4c);
+                }
+
+                &.development {
+                    background: linear-gradient(268deg, #303542, #1e222d);
                 }
 
                 &.custom {
