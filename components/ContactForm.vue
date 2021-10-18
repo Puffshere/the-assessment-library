@@ -157,7 +157,8 @@
             'buttonText',
             'isShort',
             'acFormId',
-            'isGetStarted'
+            'isGetStarted',
+            'getStartedId'
         ],
         components: {
             Loading,
@@ -169,6 +170,7 @@
                 loading: true,
                 sources: [],
                 affiliations: [],
+                getStartedAccountName: 'Assessments 24x7',
                 form: {
                     firstName: '',
                     lastName: '',
@@ -191,6 +193,24 @@
 
             response = await axios.get('/api/contact/custom-field/64');
             this.affiliations = response.data.fieldOptions;
+
+            switch (this.getStartedId) {
+                case 'ccc':
+                    this.getStartedAccountName = 'Center for Coaching Certification';
+                    break;
+                case 'actioncoach':
+                    this.getStartedAccountName = 'ActionCOACH';
+                    break;
+                case 'tonyrobbins':
+                    this.getStartedAccountName = 'Tony Robbins';
+                    break;
+                case 'engageandgrow':
+                    this.getStartedAccountName = 'Engage and Grow';
+                    break;
+                case 'swc':
+                    this.getStartedAccountName = 'South Western Consulting';
+                    break;
+            }
 
             this.loading = false;
         },
@@ -236,6 +256,10 @@
                                     {
                                         field: '79', // Sales Person Assignment,
                                         value: Math.floor(Math.random() * 3) + 1
+                                    },
+                                    {
+                                        field: '80', // Get Started Account Affiliation
+                                        value: this.isGetStarted ? this.getStartedAccountName : ''
                                     }
                                 ]
                             }
