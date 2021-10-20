@@ -1,5 +1,5 @@
-const pkg = require('./package')
-
+const pkg = require('./package');
+const axios = require('axios');
 
 module.exports = {
   /*
@@ -67,8 +67,50 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/gtm'
+    '@nuxtjs/gtm',
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    hostname: 'https://assessments24x7.com',
+    gzip: true,
+    routes: async () => {
+      const { data } = await axios.get('https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/posts/?key=1cd8f26ccc1cb09274574d0e00&limit=all&fields=slug');
+      return data.posts.map(post => `/blog/${post.slug}`);
+    },
+    exclude: [
+      '/account-setup',
+      '/account-setup-thank-you',
+      '/thank-you',
+      '/get-started',
+      '/get-started-thankyou',
+      '/resources/trainer-materials',
+      '//resources/trainer-materials/**',
+      '/badge',
+      '/disc-workshop-leader-badge',
+      '/eiq-2-badge',
+      '/motivators-badge',
+      '/pgi-badge',
+      '/platinum-rule-badge',
+      '/platinum-rule-eworkbook-thankyou',
+      '/trends-thankyou',
+      '/forms',
+      '/hs-badge',
+      '/hvp-badge',
+      '/learning-styles-badge',
+      '/logos',
+      '/login',
+      '/resources/lock/**',
+      '/cardone-communication-coach',
+      '/store/purchase-confirmation',
+      '/resources/hiresense-training-library',
+      '/angie',
+      '/angie-w',
+      '/jennifer',
+      '/monica',
+      '/suzette',
+      '/cathy'
+    ]
+  },
   gtm: {
     id: 'GTM-NR3GL66',
     autoInit: true,
