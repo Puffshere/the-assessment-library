@@ -84,7 +84,7 @@ module.exports = {
       '/get-started',
       '/get-started-thankyou',
       '/resources/trainer-materials',
-      '//resources/trainer-materials/**',
+      '/resources/trainer-materials/**',
       '/badge',
       '/disc-workshop-leader-badge',
       '/eiq-2-badge',
