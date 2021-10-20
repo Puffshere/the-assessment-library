@@ -78,7 +78,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>DISC Assessment Certification</h2>
+                    <h2 id="disc">DISC Assessment Certification</h2>
 
                     <div class="col-3">
                         <img class="image" src="~/assets/badges/new/disc-cert-badge-color.png" alt="">
@@ -157,7 +157,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <h2>Motivators Assessment Certification</h2>
+                    <h2 id="motivators">Motivators Assessment Certification</h2>
 
                     <div class="col-3">
                         <img class="image" src="~/assets/badges/new/mot-cert-badge-color.png" alt="">
@@ -236,7 +236,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <h2>Emotional Intelligence Certification</h2>
+                    <h2 id="eiq">Emotional Intelligence Certification</h2>
 
                     <div class="col-3">
                         <img class="image" src="~/assets/badges/new/eiq-cert-badge-color.png" alt="">

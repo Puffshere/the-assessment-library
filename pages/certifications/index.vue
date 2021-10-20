@@ -54,7 +54,7 @@
                         to debrief a client’s DISC report with confidence and accuracy and use the assessments for a variety of client needs. 
                     </p>
 
-                    <nuxt-link class="hyperlink" to="/certifications/assessment">Assessment Certifications &rarr;</nuxt-link>
+                    <nuxt-link class="hyperlink" to="/certifications/assessment#disc">DISC Assessment Certification &rarr;</nuxt-link>
                 </div>
 
                 <div class="col-4">
@@ -68,7 +68,7 @@
                         guide implementation of this remarkable tool, you can take a deeper dive into the “why” behind behavior and emotions. 
                     </p>
 
-                    <nuxt-link class="hyperlink" to="/certifications/assessment">Assessment Certifications &rarr;</nuxt-link>
+                    <nuxt-link class="hyperlink" to="/certifications/assessment#motivators">Motivators Assessment Certification &rarr;</nuxt-link>
                 </div>
 
                 <div class="col-4">
@@ -78,11 +78,11 @@
 
                     <p>
                         The EIQ-2 Certification examines at a much more comprehensive level how people perceive and apply their Emotional Intelligence. 
-                        Developed with author Robert Jerus (Mind Matters), the EIQ-2 Certification empowers practitioners with enhanced clarity and 
+                        Developed with author Robert Jerus, the EIQ-2 Certification empowers practitioners with enhanced clarity and 
                         insights necessary to consistently support and share what’s needed for creating beneficial interpersonal outcomes with strong EIQ.
                     </p>
 
-                    <nuxt-link class="hyperlink" to="/certifications/assessment">Assessment Certifications &rarr;</nuxt-link>
+                    <nuxt-link class="hyperlink" to="/certifications/assessment#eiq">EIQ Assessment Certification &rarr;</nuxt-link>
                 </div>
             </div>
 
