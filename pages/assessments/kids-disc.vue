@@ -19,7 +19,10 @@
 
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" target="_blank" rel="noopener" class="button pdf" style="display:inline-block; width:424px;">
                             <img src="~assets/pdf-icon.svg" style="width:30px; width: 25px; margin-right: 2px;"> Download Sample Report
-                        </a>
+                        </a><br/><br/>
+
+                        <img style="width: 32px;" src="~/assets/zoom-icon.png" alt="Watch the Kids DISC Zoom webinar">
+                        <nuxt-link to="/resources/kids-disc-webinar" class="hyperlink light">Watch the Kids DISC webinar &rarr;</nuxt-link>
                     </div>
 
                     <div class="col-6">

@@ -43,6 +43,20 @@
                                 and virtual.
                             </li>
                         </ul>
+
+                        <img style="width:120px;margin-left:-11px;margin-top:20px" src="~/assets/step-3-consulting-logo.jpg" alt="Step 3 Consulting uses Assessments 24x7">
+
+                        <blockquote style="margin:14px 0 0 0">
+                            "The best part of working with Assessments 24x7 has been the excellent customer support! Whenever I need anything, A24x7 is 
+                            there to help. The quality of the program stood out among the competition. They are really engaged  in seeing you succeed in 
+                            your business."
+                        </blockquote>
+
+                        <div class="testimonial-attr" style="position:relative;margin-top:10px">
+                            <img style="width:34px;margin-right:4px" src="~/assets/testimonials/cameron-starnes.png" alt="Cameron Starnes Assessments 24x7 Testimonial">
+                            <h4 style="display:inline-block;margin-top:10px">Cameron Starnes</h4>
+                            <p style="position:absolute;left:42px;top:18px;font-size:10pt">Certified DISC Practitioner - Step 3 Consulting</p>
+                        </div>
                     </div>
 
                     <div class="col-4">
