@@ -23,7 +23,7 @@
                         <label for="lang">Filter by Language:</label>
                         <select class="input" id="lang" v-model="lang">
                             <option value="ar">Arabic - 2</option>
-                            <option value="zh">Chinese (Mandarin) - 3</option>
+                            <option value="zh">Chinese (Mandarin) - 5</option>
                             <option value="nl">Dutch - 5</option>
                             <option value="en-gb">English (UK) - 2</option>
                             <option value="en-us" selected>English (US) - 34</option>
@@ -114,7 +114,9 @@
 
                         <h3>Kids DISC</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report</a>
+                        <a v-else-if="lang === 'zh'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISCChinese.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report</a>
                         <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Full Report</a><br/>
+                        <a class="language-button disc" @click="kidsDISCReportModal = true">2 languages</a><br/>
                         
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-ChildOnly.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Child Only</a>
                         <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Child Only</a><br/>
@@ -302,6 +304,7 @@
                     <div class="samples-container">
                         <h3>Sales IQ</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf" class="hyperlink" target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusChinese.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'pt'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPortuguese.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'sv'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQSwedish.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
@@ -442,6 +445,24 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryUKSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English (UK)</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
+            <!-- KIDS DISC FULL REPORT REPORT MODAL -->
+            <transition name="fade">
+                <section v-if="kidsDISCReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="kidsDISCReportModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Kids DISC - Full Report</h1>
+
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISCChinese.pdf" class="hyperlink" target="_blank" rel="noopener">Chinese</a><br/>
                             </div>
                         </div>
                     </div>
@@ -695,6 +716,7 @@
                                 <h1>Sales IQ Reports</h1>
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusChinese.pdf" class="hyperlink" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPortuguese.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQSwedish.pdf" target="_blank" rel="noopener">Swedish</a><br/>
@@ -764,6 +786,7 @@
                 discSelfModal: false,
                 discTeamReportModal: false,
                 discSummaryReportModal: false,
+                kidsDISCReportModal: false,
                 discTeamDynamicsReportModal: false,
                 discTeamSummaryReportModal: false,
                 discBehavioralTendenciesReportModal: false,
