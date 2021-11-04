@@ -570,12 +570,12 @@
 
                     <p>
                         Our postal address is:<br/>
-                        Assessments 24X7 LLC - 2873 W Bainbridge Road - San Diego, CA 92106<br/>
+                        Global Assessment Technologies LLC - 2840 Mikayla Ln, East Wenatchee, WA 98802<br/>
                         Our phone number is: <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a><br/>
                         Our Fax number is: <a class="hyperlink" href="tel:8587775531">(858) 777-5531</a><br/><br/>
 
                         Should you have other questions or concerns about these privacy policies, please email us with your contact information at: 
-                        <a class="hyperlink" href="mailto:support@assessments.ws">support@assessments.ws</a>
+                        <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a>
                     </p>
                 </div>
             </div>
