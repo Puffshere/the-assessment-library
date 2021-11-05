@@ -60,8 +60,6 @@
                     <div class="col-6">
                         <ul>
                             <li>Access Certified Trainer Material to use in your coaching/training business, including a Debrief Guide, PowerPoint presentations, and marketing materials</li>
-                            <li>SILVER level pricing on assessment purchases</li>
-                            <li>Receive 10 Core Assessment credits upon completion of your certification</li>
                             <li>Get listed on our International Directory of Certified Practitioners linked to your website</li> 
                             <li>Debrief clients with confidence</li>
                             <li>Maximize the effectiveness of your assessment debriefs</li>
