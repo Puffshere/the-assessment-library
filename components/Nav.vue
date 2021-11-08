@@ -4,7 +4,7 @@
 
         <div class="info-bar">
             <p>
-                <strong>Available Now:</strong> Kids DISC! Each child's bird style is their superpower. <nuxt-link class="hyperlink light" to="/assessments/kids-disc">Discover Kids DISC &rarr;</nuxt-link>
+                <strong>Available Now:</strong> Kids DISC! Each child's bird style is their superpower. <nuxt-link tabindex="-1" class="hyperlink light" to="/assessments/kids-disc">Discover Kids DISC &rarr;</nuxt-link>
             </p>
         </div>
 
@@ -12,13 +12,14 @@
             <div class="row">
                 <div class="col-3">
                     <logo></logo>
+                    <a tabindex="2" href="#skip" @click="focusMainContent" class="tab-skip hyperlink light">Skip to main content</a>
                 </div>
 
                 <div class="col-9 nav-collapse-container">
                     <div class="nav-collapse">
                         <ul class="nav-bar">
                             <li class="nav-item" @mouseover="hover.assessments = true" @mouseleave="hover.assessments = false">
-                                <a href="/assessments" :class="{ active: active == 'assessments' }">Assessments</a>
+                                <a tabindex="3" href="/assessments" :class="{ active: active == 'assessments' }">Assessments</a>
 
                                 <ul :class="{ active: hover.assessments, 'sub-nav-category': true }">
                                     <span class="title">Core Assessments</span>
@@ -70,11 +71,11 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="https://www.hiresense.com" target="_blank" rel="noopener">Hiring &amp; Selection</a>
+                                <a tabindex="4" href="https://www.hiresense.com" target="_blank" rel="noopener">Hiring &amp; Selection</a>
                             </li>
                             
                             <li class="nav-item" @mouseover="hover.training = true" @mouseleave="hover.training = false">
-                                <a href="/certifications" :class="{ active: active == 'training' }">Certifications</a>
+                                <a tabindex="5" href="/certifications" :class="{ active: active == 'training' }">Certifications</a>
 
                                 <ul :class="{ active: hover.training, 'sub-nav-category': true }">
                                     <span class="title">Training Topics</span>
@@ -102,7 +103,7 @@
                             </li>
 
                             <li class="nav-item" @mouseover="hover.about = true" @mouseleave="hover.about = false">
-                                <a href="/about" :class="{ active: active == 'about' }">About</a>
+                                <a tabindex="6" href="/about" :class="{ active: active == 'about' }">About</a>
 
                                 <ul :class="{ active: hover.about, 'sub-nav-category': true }">
                                     <span class="title">About Us</span>
@@ -126,7 +127,7 @@
                             </li>
 
                             <li class="nav-item" @mouseover="hover.resources = true" @mouseleave="hover.resources = false">
-                                <a href="javascript:void(0)" :class="{ active: active == 'resources' }">Resources</a>
+                                <a tabindex="7" href="javascript:void(0)" :class="{ active: active == 'resources' }">Resources</a>
 
                                 <ul :class="{ active: hover.resources, 'sub-nav-category': true }">
                                     <span class="title">Resources</span>
@@ -162,7 +163,7 @@
                             </li>
                             
                             <li class="nav-item">
-                                <a href="/contact" :class="{ active: active == 'contact' }">Contact</a>
+                                <a tabindex="8" href="/contact" :class="{ active: active == 'contact' }">Contact</a>
                             </li>
 
                             <li class="nav-item shopping-cart desktop" @click="openCart" v-show="cartTotalProducts">
@@ -324,6 +325,8 @@
                 </li>
             </ul>
         </div>
+
+        <div id="skip" tabindex="9"></div>
     </header>
 </template>
 
@@ -349,7 +352,8 @@
                     about: false,
                     resources: false
                 },
-                hidden: false
+                hidden: false,
+                tabindex: 1
             }
         },
         created() {
@@ -373,6 +377,9 @@
             },
             openCart() {
                 $nuxt.$emit('openCartModal');
+            },
+            focusMainContent() {
+                document.getElementById('skip').focus();
             }
         },
         computed: mapGetters({
@@ -405,6 +412,20 @@
             
             p {
                 margin: 0;
+            }
+        }
+
+        .tab-skip {
+            position: absolute;
+            z-index: -999;
+            background: #1e222d;
+            padding: 6px 12px;
+            border-radius: 5px;
+            margin-top: 16px;
+            font-size: 11pt;
+
+            &:focus, &:active {
+                z-index: 999;
             }
         }
 

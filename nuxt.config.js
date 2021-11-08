@@ -68,8 +68,13 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/gtm',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
+  robots: {
+    UserAgent: '*',
+    Sitemap: 'https://assessments24x7.com/sitemap.xml'
+  },
   sitemap: {
     hostname: 'https://assessments24x7.com',
     gzip: true,

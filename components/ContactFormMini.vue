@@ -7,14 +7,14 @@
                 <div class="col-6">
                     <div class="form-group" style="margin-top: 16px">
                         <ValidationProvider v-slot="v" rules="required">
-                            <input id="firstName" name="firstName" type="text" v-model="form.firstName" tabindex="1" placeholder="First Name *" />
+                            <input id="firstName" name="firstName" type="text" v-model="form.firstName" placeholder="First Name *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required|email">
-                            <input id="email" name="email" type="email" tabindex="3" v-model="form.email" placeholder="Email Address *" />
+                            <input id="email" name="email" type="email" v-model="form.email" placeholder="Email Address *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
@@ -23,14 +23,14 @@
                 <div class="col-6">
                     <div class="form-group" style="margin-top: 16px">
                         <ValidationProvider v-slot="v" rules="required">
-                            <input id="lastName" name="lastName" type="text" v-model="form.lastName" tabindex="2" placeholder="Last Name *" />
+                            <input id="lastName" name="lastName" type="text" v-model="form.lastName" placeholder="Last Name *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required|numeric">
-                            <input id="phone" name="phone" type="tel" tabindex="4" v-model="form.phone" placeholder="Phone Number *" />
+                            <input id="phone" name="phone" type="tel" v-model="form.phone" placeholder="Phone Number *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
@@ -39,7 +39,7 @@
                 <div class="col-12">
                     <div class="form-group" style="margin-top: -16px">
                         <ValidationProvider v-slot="v" rules="required">
-                            <input id="company" name="company" type="text" tabindex="5" v-model="form.company" placeholder="Company/Organization *"/>
+                            <input id="company" name="company" type="text" v-model="form.company" placeholder="Company/Organization *"/>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
@@ -47,12 +47,12 @@
                     <div class="form-group" style="margin-top: -0px">
                         <ValidationProvider v-slot="v" rules="required">
                             <div class="form-check pill">
-                                <input class="form-check-input" id="reseller" name="clientType" type="radio" value="Reseller" v-model="form.clientType" tabindex="9" />
+                                <input class="form-check-input" id="reseller" name="clientType" type="radio" value="Reseller" v-model="form.clientType" />
                                 <label class="form-check-label" for="reseller">I am a coach or trainer looking to use assessments with clients</label>
                             </div>
 
                             <div class="form-check pill">
-                                <input class="form-check-input" id="corporate" name="clientType" type="radio" value="Corporate" v-model="form.clientType" tabindex="10" />
+                                <input class="form-check-input" id="corporate" name="clientType" type="radio" value="Corporate" v-model="form.clientType" />
                                 <label class="form-check-label" for="corporate">I am part of a company looking to use assessments internally</label>
                             </div>
 
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 
-                <button class="button secondary" type="button" @click="process" tabindex="15" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{ buttonText || 'Submit' }}</button>
+                <button class="button secondary" type="button" @click="process" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{ buttonText || 'Submit' }}</button>
             </ValidationObserver>
         </form>
     </section>
