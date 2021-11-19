@@ -35,6 +35,12 @@
                     <h3>Previously Recorded Webinars</h3>
 
                     <ul class="resources">
+                        <nuxt-link to="/resources/disc-surprising-facts">
+                            <li class="resource a24x7">
+                                DISC: Unraveling the BIG Misconceptions
+                            </li>
+                        </nuxt-link>
+
                         <nuxt-link to="/resources/disc-use-cases">
                             <li class="resource a24x7">
                                 Solution-Driven Applications with DISC
