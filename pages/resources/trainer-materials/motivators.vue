@@ -77,8 +77,6 @@
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Ranges_Standard Deviations Scores - HireSenseMot.pptx" target="_blank" rel="noopener">Standard Deviations</a>
                             <small>Shares the median and standard deviations for each dimension.</small></td></tr>
 
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Risk Measurements 6.20.pdf" target="_blank" rel="noopener">Risk Measurements</a>
-                            <small>Shows all risk scales for motivators in one document</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MOT Alternative Words_Matrix descriptors 6.20.docx" target="_blank" rel="noopener">Matrix Alternative Words</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Extensions.pdf" target="_blank" rel="noopener">Extensions</a>
                             <small>Short guide to understanding scoring extensions.</small></td></tr>
