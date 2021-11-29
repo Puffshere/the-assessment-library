@@ -33,7 +33,7 @@
 
                     <p style="text-align:center">
                         We’d like the opportunity to discuss your assessment and certification needs in detail. Please use the calendar below to schedule a 
-                        quick call. You can also email us at <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> 
+                        quick call. You can also email us at <a class="hyperlink" href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a> 
                         or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
                     </p><br/>
 
@@ -56,8 +56,7 @@
             return {
                 script: [
                     {
-                        src: 'https://assets.calendly.com/assets/external/widget.js',
-                        async: true
+                        src: 'https://assets.calendly.com/assets/external/widget.js'
                     }
                 ]
             }
@@ -83,10 +82,14 @@
                 this.$gtm.push({ event: 'Thank You' });
             }
 
-            const { data } = await axios.get(`/api/contact/${this.$route.query.contactId}`);
-            const salesPersonInt = data.fieldValues.find(obj => {
-                return obj.field === '79'; // 79 is the field id for Sales Person Assignment in AC
-            });
+            let salesPersonInt = '1';
+
+            if (this.$route.query.contactId) {
+                const { data } = await axios.get(`/api/contact/${this.$route.query.contactId}`);
+                salesPersonInt = data.fieldValues.find(obj => {
+                    return obj.field === '79'; // 79 is the field id for Sales Person Assignment in AC
+                });
+            }
 
             const suzette = 'suzette-247/30min';
             const angie = 'angiew-1/30min';
@@ -113,7 +116,7 @@
                 }
             },
             showCalendlyPopup() {
-                Calendly.showPopupWidget(`https://calendly.com/${this.agent}?text_color=000000&primary_color=0033c5`);
+                Calendly.initPopupWidget({ url: `https://calendly.com/${this.agent}?text_color=000000&primary_color=0033c5` });
             }
         }
     }
