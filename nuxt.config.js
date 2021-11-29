@@ -58,6 +58,10 @@ module.exports = {
     {
       src: '~/plugins/aos',
       ssr: false
+    },
+    {
+      src: '~/plugins/calendly.js',
+      mode: 'client'
     }
   ],
 

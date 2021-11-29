@@ -46,6 +46,7 @@
     "nuxt": "2.14.12",
     "uuid": "^8.3.2",
     "vee-validate": "^3.4.6",
+    "vue-calendly": "0.0.4",
     "vue-cool-lightbox": "^2.7.3",
     "vue-country-region-select": "^2.0.16",
     "vue-file-agent": "^1.7.3",

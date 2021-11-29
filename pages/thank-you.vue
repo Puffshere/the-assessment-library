@@ -19,18 +19,19 @@
                     
                     <h2 style="text-align:center">Your information has been submitted</h2>
 
-                    <h3 v-if="!isBooked" style="text-align:center;font-size:16pt;text-transform:uppercase;letter-spacing:1px;margin-bottom:-15px"><span style="color:#e93d2f">Don't leave yet!</span></h3>
-                    <h3 v-if="!isBooked" style="text-align:center;font-size:18pt"><span style="background:#ffbd05">&nbsp;Claim your FREE Assessment Credit!&nbsp;</span></h3>
+                    <h3 style="text-align:center;font-size:16pt;text-transform:uppercase;letter-spacing:1px;margin-bottom:-15px"><span style="color:#e93d2f">Don't leave yet!</span></h3>
+                    <h3 style="text-align:center;font-size:18pt"><span style="background:#ffbd05">&nbsp;Claim your FREE Assessment Credit!&nbsp;</span></h3>
 
-                    <p v-if="!isBooked" style="text-align:center">
-                        <strong>Book now</strong> on this page and receive a <strong>free assessment credit</strong> of your choice when you create an account.<br/>Click 
-                        the button below to book an appointment to qualify for the free credit.
-                    </p><br v-if="!isBooked"/>
+                    <p style="text-align:center">
+                        <strong>Book now</strong> on this page and receive a <strong>free assessment credit</strong> of your choice when you create an 
+                        account.<br/>Use the calendar below to book an appointment to qualify for the free credit.
+                    </p>
 
-                    <button v-if="!isBooked" @click="showCalendlyPopup" style="margin:0 auto;display:block;" class="button danger">Book an Appointment Now</button>
-                    <br v-if="!isBooked"/>
-                    <br v-if="!isBooked"/>
+                    <vue-calendly v-if="this.agent === 'suzette'" url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                    <vue-calendly v-if="this.agent === 'angie'" url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                    <vue-calendly v-if="this.agent === 'monica'" url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
 
+                    <br/>
                     <p style="text-align:center">
                         We’d like the opportunity to discuss your assessment and certification needs in detail. Please use the calendar below to schedule a 
                         quick call. You can also email us at <a class="hyperlink" href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a> 
@@ -67,8 +68,7 @@
         },
         data() {
             return {
-                agent: '',
-                isBooked: false
+                agent: ''
             }
         },
         mounted() {
@@ -89,34 +89,26 @@
                 salesPersonInt = data.fieldValues.find(obj => {
                     return obj.field === '79'; // 79 is the field id for Sales Person Assignment in AC
                 });
+            } else {
+                this.agent = 'suzette';
             }
-
-            const suzette = 'suzette-247/30min';
-            const angie = 'angiew-1/30min';
-            const monica = 'monica-saare/30min';
 
             if (salesPersonInt.value === '1') {
-                this.agent = suzette;
+                this.agent = 'suzette';
             } else if (salesPersonInt.value === '2') {
-                this.agent = angie;
+                this.agent = 'angie';
             } else if (salesPersonInt.value === '3') {
-                this.agent = monica;
+                this.agent = 'monica';
             }
-
-            this.showCalendlyPopup();
         },
         methods: {
             onCalendlyEvent(e) {
                 if (e.data.event && e.data.event.indexOf('calendly') === 0) {
                     if (e.data.event === 'calendly.event_scheduled') {
-                        this.isBooked = true;
                         axios.post(`/api/contact/${this.$route.query.contactId}/tag/7`);
                         axios.post(`/api/contact/${this.$route.query.contactId}/tag/849`);
                     }
                 }
-            },
-            showCalendlyPopup() {
-                Calendly.initPopupWidget({ url: `https://calendly.com/${this.agent}?text_color=000000&primary_color=0033c5` });
             }
         }
     }
