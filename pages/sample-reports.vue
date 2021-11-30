@@ -39,7 +39,7 @@
                             <option value="pt">Portuguese - 6</option>
                             <option value="pt-br">Portuguese (Brazil) - 3</option>
                             <option value="ru">Russian - 4</option>
-                            <option value="es">Spanish - 6</option>
+                            <option value="es">Spanish - 7</option>
                             <option value="sv">Swedish - 6</option>
                             <option value="tr">Turkish - 7</option>
                             <option value="vi">Vietnamese - 9</option>
@@ -269,8 +269,9 @@
                         <h3>Emotional Intelligence 360&deg;</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence 360&deg;</a>
                         <a v-else-if="lang === 'ru'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence 360&deg;</a>
+                        <a v-else-if="lang === 'es'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence 360&deg;</a>
                         <a v-else class="hyperlink disabled">Emotional Intelligence 360&deg;</a>
-                        <a class="language-button other" @click="eiq360ReportModal = true">2 languages</a><br/>
+                        <a class="language-button other" @click="eiq360ReportModal = true">3 languages</a><br/>
                     </div>
                 </div>
 
@@ -677,7 +678,8 @@
                                 <h1>Emotional Intelligence 360&deg; Reports</h1>
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Russian</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Russian</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Spanish</a>
                             </div>
                         </div>
                     </div>
