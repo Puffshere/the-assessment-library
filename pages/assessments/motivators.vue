@@ -9,9 +9,9 @@
                     <div class="col-10">
                         <h1><img class="ass-icon" src="~assets/motivators-icon.png"> Motivators</h1>
                         <p>
-                            Motivation influences behavior, decisions and actions. Finding ways to achieve objectives that resonate and align with core <strong>motivations</strong> 
-                            is vital for superior performance.  Those who understand their <strong>natural motivators</strong> better are far more likely to pursue the right opportunities, 
-                            for the right reasons, and get the results they desire. 
+                            Motivation influences behavior, decisions, and actions. Finding ways to achieve objectives that resonate and align with core <strong>motivations</strong> 
+                            is vital for superior performance.  Those who better understand their <strong>natural motivators</strong> better are far more likely to pursue the right opportunities 
+                            for the right reasons and get the results they desire. 
                         </p>
 
                         <nuxt-link to="/contact" class="button outline light">Contact a Specialist</nuxt-link>
@@ -134,17 +134,17 @@
                         <h4 class="title">Learn What Motivates People</h4>
                         <p>
                             The Motivators assessment offers an in-depth identification and exploration of seven dimensions and 
-                            how they uniquely combine to influence behavior, decision and actions:
+                            how they uniquely combine to influence behavior, decision, and actions:
                         </p>
 
                         <ul>
-                            <li><strong>Aesthetic</strong> is a drive for balance, harmony and form.</li>
+                            <li><strong>Aesthetic</strong> is a drive for balance, harmony, and form.</li>
                             <li><strong>Economic</strong> is a drive for return on investment (including time, money, resources).</li>
                             <li><strong>Individualistic</strong> is a drive to stand out as independent and unique.</li>
                             <li><strong>Power</strong> is a drive to be in control or have influence.</li>
                             <li><strong>Altruistic</strong> is a drive to help others at the expense of self.</li>
-                            <li><strong>Regulatory</strong> is a drive to establish order, routine and structure.</li>
-                            <li><strong>Theoretical</strong> is the drive for knowledge, learning and understanding. </li>
+                            <li><strong>Regulatory</strong> is a drive to establish order, routine, and structure.</li>
+                            <li><strong>Theoretical</strong> is the drive for knowledge, learning, and understanding. </li>
                         </ul><br/>
 
                         <nuxt-link to="/assessments" class="button">More Assessments</nuxt-link>
@@ -159,7 +159,7 @@
                                 <div :class="{'icon aes': true, 'active': active === 'aes'}" @mouseover="changeActive('aes')">AES</div>
                                 <div :class="{'content': true, 'active': active === 'aes'}">
                                     <h4>Aesthetic</h4>
-                                    <p>Strong desire and need to achieve equilibrium between the world around us and ourselves.</p>
+                                    <p>The strong desire and need to achieve equilibrium between the world around us and ourselves.</p>
                                 </div>
                             </div>
 
@@ -175,7 +175,7 @@
                                 <div :class="{'icon ind': true, 'active': active === 'ind'}" @mouseover="changeActive('ind')">IND</div>
                                 <div :class="{'content': true, 'active': active === 'ind'}">
                                     <h4>Individualistic</h4>
-                                    <p>Need to be seen as autonomous, unique, independent, and to stand apart from the crowd.</p>
+                                    <p>The need to be seen as autonomous, unique, independent, and to stand apart from the crowd.</p>
                                 </div>
                             </div>
 
@@ -183,7 +183,7 @@
                                 <div :class="{'icon pow': true, 'active': active === 'pow'}" @mouseover="changeActive('pow')">POW</div>
                                 <div :class="{'content': true, 'active': active === 'pow'}">
                                     <h4>Power</h4>
-                                    <p>Being seen as a leader, while having influence and control over one's environment and success.</p>
+                                    <p>The need to be seen as a leader, while having influence and control over one's success.</p>
                                 </div>
                             </div>
 
@@ -191,7 +191,7 @@
                                 <div :class="{'icon alt': true, 'active': active === 'alt'}" @mouseover="changeActive('alt')">ALT</div>
                                 <div :class="{'content': true, 'active': active === 'alt'}">
                                     <h4>Altruistic</h4>
-                                    <p> An expression of the need or energy to benefit others at the expense of self.</p>
+                                    <p>The expression of the need or energy to benefit others at the expense of self.</p>
                                 </div>
                             </div>
 
@@ -199,7 +199,7 @@
                                 <div :class="{'icon reg': true, 'active': active === 'reg'}" @mouseover="changeActive('reg')">REG</div>
                                 <div :class="{'content': true, 'active': active === 'reg'}">
                                     <h4>Regulatory</h4>
-                                    <p>A need to establish order, routine and structure. This motivation is to promote a black and white mindset.</p>
+                                    <p>The need to establish order, routine, and structure. This motivation is to promote a black and white mindset.</p>
                                 </div>
                             </div>
 

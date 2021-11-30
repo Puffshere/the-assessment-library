@@ -29,7 +29,7 @@
                         <strong>Zero Membership Fees. No Setup Costs. Pay as You Go Pricing.</strong>
                     </p>
                     
-                    <nuxt-link to="/certifications" class="button">Partner With Us</nuxt-link>
+                    <nuxt-link to="/contact" class="button">Partner With Us</nuxt-link>
                 </div>
             </div>
         </div>
