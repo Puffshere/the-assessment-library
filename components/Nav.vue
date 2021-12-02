@@ -17,6 +17,20 @@
 
                 <div class="col-9 nav-collapse-container">
                     <div class="nav-collapse">
+                        <div class="contact-info">
+                            <div class="phone">
+                                <div class="phone-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+
+                                <div class="phone-number">
+                                    <a class="hyperlink light" href="tel:12064006647">+1 (206) 400-6647</a>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <ul class="nav-bar">
                             <li class="nav-item" @mouseover="hover.assessments = true" @mouseleave="hover.assessments = false">
                                 <a tabindex="3" href="/assessments" :class="{ active: active == 'assessments' }">Assessments</a>
@@ -199,6 +213,17 @@
         </nav>
 
         <div :class="{ 'mobile-menu': true, 'show': showMobileMenu }">
+            <div class="mobile-contact">
+                <div class="phone-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <div class="phone-number">
+                    <a class="hyperlink light" style="text-align: center" href="tel:12064006647">+1 (206) 400-6647</a>
+                </div>
+            </div>
+
             <ul class="nav-bar">
                 <li class="nav-item">
                     <a href="/assessments">Assessments</a>
@@ -440,6 +465,34 @@
 
         nav {
             .nav-collapse {
+                .contact-info {
+                    .phone {
+                        color: #fff;
+                        position: absolute;
+                        font-size: 9pt;
+                        font-weight: 500;
+                        top: 20px;
+                        right: 22px;
+                        z-index: 9999;
+
+                        .phone-icon, .phone-number {
+                            display: inline-block;
+                        }
+
+                        .phone-icon {
+                            color: $secondary;
+                            vertical-align: sub;
+                            margin-right: 3px;
+                        }
+
+                        .phone-number {
+                            .hyperlink {
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+
                 .nav-bar {
                     float: right;
                     margin: -12px 0;
@@ -450,7 +503,8 @@
                         display: inline-block;
                         font-family: $font-family;
                         font-weight: 600;
-                        line-height: 83px;
+                        line-height: 90px;
+                        margin-top: 16px;
 
                         &:not(:first-child) {
                             margin-left: 20px;
@@ -516,7 +570,7 @@
             .hamburger {
                 display: none;
                 position: absolute;
-                top: 15px;
+                top: 16px;
                 right: 22px;
                 z-index: 1;
 
@@ -618,6 +672,31 @@
             &.show {
                 display: block;
                 opacity: 1;
+            }
+
+            .mobile-contact {
+                color: #fff;
+                width: 100%;
+                text-align: center;
+                margin-top: 16px;
+                margin-bottom: -5px;
+                font-weight: 600;
+
+                .phone-icon, .phone-number {
+                    display: inline-block;
+                }
+
+                .phone-icon {
+                    color: $secondary;
+                    vertical-align: sub;
+                    margin-right: 3px;
+                }
+
+                .phone-number {
+                    .hyperlink {
+                        box-shadow: none;
+                    }
+                }
             }
 
             .nav-bar {

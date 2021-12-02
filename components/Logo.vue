@@ -99,7 +99,7 @@
 
     .logo {
         width: 300px;
-        margin-top: 8px;
+        margin-top: 18px;
 
         .st0 {
             fill: $color-i;
@@ -133,6 +133,7 @@
     @media screen and (max-width: $breakpoint-med) {
         .logo {
             width: 200px;
+            margin-top: 9px;
         }
     }
 </style>

@@ -77,10 +77,10 @@ module.exports = {
   ],
   robots: {
     UserAgent: '*',
-    Sitemap: 'https://assessments24x7.com/sitemap.xml'
+    Sitemap: 'https://www.assessments24x7.com/sitemap.xml'
   },
   sitemap: {
-    hostname: 'https://assessments24x7.com',
+    hostname: 'https://www.assessments24x7.com',
     gzip: true,
     routes: async () => {
       const { data } = await axios.get('https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/posts/?key=1cd8f26ccc1cb09274574d0e00&limit=all&fields=slug');
