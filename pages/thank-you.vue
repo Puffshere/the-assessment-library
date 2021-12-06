@@ -105,8 +105,21 @@
             onCalendlyEvent(e) {
                 if (e.data.event && e.data.event.indexOf('calendly') === 0) {
                     if (e.data.event === 'calendly.event_scheduled') {
-                        axios.post(`/api/contact/${this.$route.query.contactId}/tag/7`);
-                        axios.post(`/api/contact/${this.$route.query.contactId}/tag/849`);
+
+                        const data = {
+                            contactId: this.$route.query.contactId
+                        }
+
+                        // Tell Zapier to apply tags:
+                        // Tag ID 7 - Call Booked
+                        // Tag ID 849 - Booked on Thank You Page Promo
+                        this.$zapier.post('/hooks/catch/2424937/bmtl8xa/', JSON.stringify(data), {
+                            withCredentials: false,
+                            transformRequest: [(data, headers) => {
+                                delete headers.post['Content-Type'];
+                                return data;
+                            }]
+                        });
                     }
                 }
             }

@@ -62,7 +62,8 @@ module.exports = {
     {
       src: '~/plugins/calendly.js',
       mode: 'client'
-    }
+    },
+    '~/plugins/zapier.js'
   ],
 
   /*
