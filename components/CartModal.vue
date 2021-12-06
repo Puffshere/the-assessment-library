@@ -69,11 +69,11 @@
                     mode: 'payment',
                     successUrl: 'https://www.assessments24x7.com/store/purchase-confirmation',
                     cancelUrl: 'https://www.assessments24x7.com/store',
-                    //billingAddressCollection: 'required',
-                    //clientReferenceId: 'physical',
-                    //shippingAddressCollection: {
-                        //allowedCountries: ['US']
-                    //}
+                    billingAddressCollection: 'required',
+                    clientReferenceId: 'physical',
+                    shippingAddressCollection: {
+                        allowedCountries: ['US']
+                    }
                 });
 
                 if (error) {
