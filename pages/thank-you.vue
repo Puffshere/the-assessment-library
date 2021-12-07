@@ -110,16 +110,18 @@
                             contactId: this.$route.query.contactId
                         }
 
-                        // Tell Zapier to apply tags:
-                        // Tag ID 7 - Call Booked
-                        // Tag ID 849 - Booked on Thank You Page Promo
-                        this.$zapier.post('/hooks/catch/2424937/bmtl8xa/', JSON.stringify(data), {
-                            withCredentials: false,
-                            transformRequest: [(data, headers) => {
-                                delete headers.post['Content-Type'];
-                                return data;
-                            }]
-                        });
+                        if (this.$route.query.contactId) {
+                            // Tell Zapier to apply tags:
+                            // Tag ID 7 - Call Booked
+                            // Tag ID 849 - Booked on Thank You Page Promo
+                            this.$zapier.post('/hooks/catch/2424937/bmtl8xa/', JSON.stringify(data), {
+                                withCredentials: false,
+                                transformRequest: [(data, headers) => {
+                                    delete headers.post['Content-Type'];
+                                    return data;
+                                }]
+                            });   
+                        }
                     }
                 }
             }
