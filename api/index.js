@@ -7,6 +7,7 @@ import directoryController from './controllers/directoryController';
 import communicationCoachController from './controllers/communicationCoachController';
 import contactController from './controllers/contactController';
 import uploadController from './controllers/uploadController';
+import leadController from './controllers/leadController';
 import GhostSearch from './ghost-search';
 import multer from 'multer';
 import cors from 'cors';
@@ -104,6 +105,18 @@ app.post('/tracking-event', (req, res) => {
 
 app.post('/upload', upload.single('file'), (req, res) => {
     uploadController.upload(req, res);
+});
+
+app.post('/lead', (req, res) => {
+    leadController.createLead(req, res);
+});
+
+app.get('/lead/next-assignment', (req, res) => {
+    leadController.getNextLeadAssignment(req, res);
+});
+
+app.put('/lead/:leadId/:contactId', (req, res) => {
+    leadController.updateContactId(req, res);
 });
 
 app.use((req, res, next) => {

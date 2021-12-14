@@ -222,6 +222,16 @@
                     this.loading = true;
 
                     try {
+                        const salesPerson = await axios.get('/api/lead/next-assignment');
+
+                        const lead = await axios.post('/api/lead', {
+                            salesPerson: salesPerson.data,
+                            firstName: this.form.firstName,
+                            lastName: this.form.lastName,
+                            phone: this.form.phone,
+                            email: this.form.email
+                        });
+
                         const { data } = await axios.post('/api/contact', {
                             contact: {
                                 email: this.form.email,
@@ -255,7 +265,7 @@
                                     },
                                     {
                                         field: '79', // Sales Person Assignment,
-                                        value: Math.floor(Math.random() * 3) + 1
+                                        value: salesPerson.data
                                     },
                                     {
                                         field: '80', // Get Started Account Affiliation
@@ -264,6 +274,8 @@
                                 ]
                             }
                         });
+
+                        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
                         // Check to see if this contact wants to subscribe to our newsletter
                         if (this.form.newsletter === '45') {

@@ -82,22 +82,24 @@
                 this.$gtm.push({ event: 'Thank You' });
             }
 
-            let salesPersonInt = '1';
+            let salesPerson = {
+                value: 'Suzette Chaparro'
+            };
 
             if (this.$route.query.contactId) {
                 const { data } = await axios.get(`/api/contact/${this.$route.query.contactId}`);
-                salesPersonInt = data.fieldValues.find(obj => {
+                salesPerson = data.fieldValues.find(obj => {
                     return obj.field === '79'; // 79 is the field id for Sales Person Assignment in AC
                 });
             } else {
                 this.agent = 'suzette';
             }
 
-            if (salesPersonInt.value === '1') {
+            if (salesPerson.value === 'Suzette Chaparro') {
                 this.agent = 'suzette';
-            } else if (salesPersonInt.value === '2') {
+            } else if (salesPerson.value === 'Angie Warner') {
                 this.agent = 'angie';
-            } else if (salesPersonInt.value === '3') {
+            } else if (salesPerson.value === 'Monica Saare') {
                 this.agent = 'monica';
             }
         },
