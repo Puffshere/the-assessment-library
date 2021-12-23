@@ -179,24 +179,25 @@
                 <div class="row">
                     <div class="partner">
                         <div class="col-6">
-                            <img class="logo" src="~/assets/partner-logos/bank.png" alt="Codebreaker Technologies partners with Assessments 24x7">
+                            <img class="logo" src="~/assets/partner-logos/five-four.png" alt="FiveFour partners with Assessments 24x7">
 
                             <p class="bio">
-                                Codebreaker Technologies is the world leader in personality coding technology for sales, powered by the B.A.N.K. 
-                                methodology. B.A.N.K. is scientifically validated to predict buying behavior in nanoseconds and close more sales in less 
-                                time. Rather than using psychology, B.A.N.K. reverse-engineered personality science and built the world’s first assessment 
-                                based in buyology - the science of buying behavior.
+                                FiveFour helps companies with disengaged employees and disgruntled customers ignite a culture of customer success. Our 
+                                process is ideal for businesses that have grown to the point where the founder or leader no longer has direct contact with 
+                                front-line employees. That disconnect leads to undefined expectations for the customer experience. We help them design a 
+                                world-class customer experience and define a culture of learning and development that gets them back on the path to growth.   
                             </p>
 
                             <p class="quote">
-                                The synergy between Codebreaker Technologies and Assessments 24x7 is powerful. Our partnership allows us to serve the 
-                                business community in a greater way to help them grow revenues and maximize their results. They are a fantastic team to 
-                                work with and are committed to providing the best tools in the marketplace to their clients.
+                                The behavioral assessments from Assessments247 are an invaluable tool in our process of helping the leaders of the company 
+                                lead in a new way. The assessments provide a vital window for each person to see themselves, how they interact with others 
+                                and how they perform as a team. Every leadership group we assess gains self-awareness and sees new opportunities for better 
+                                team alignment.
                             </p>
 
-                            <div class="cite">Cheri Tree, Founder & Chairman, Codebreaker Technologies</div>
+                            <div class="cite">Nathan Schock, Co-Founder and President, FiveFour</div>
 
-                            <a class="hyperlink" target="_blank" rel="noopener" href="http://crackmycode.com/a24x7">Visit Codebreaker Technologies &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://fivefourtraining.com/">Visit FiveFour &rarr;</a>
                         </div>
                     </div>
 
@@ -218,32 +219,6 @@
                             <div class="cite">Danny Ing, Co-Founder, Hiring Steps</div>
 
                             <a class="hyperlink" target="_blank" rel="noopener" href="https://www.hiringsteps.com/">Visit Hiring Steps &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="partner">
-                        <div class="col-6">
-                            <img class="logo" src="~/assets/partner-logos/five-four.png" alt="FiveFour partners with Assessments 24x7">
-
-                            <p class="bio">
-                                FiveFour helps companies with disengaged employees and disgruntled customers ignite a culture of customer success. Our 
-                                process is ideal for businesses that have grown to the point where the founder or leader no longer has direct contact with 
-                                front-line employees. That disconnect leads to undefined expectations for the customer experience. We help them design a 
-                                world-class customer experience and define a culture of learning and development that gets them back on the path to growth.   
-                            </p>
-
-                            <p class="quote">
-                                The behavioral assessments from Assessments247 are an invaluable tool in our process of helping the leaders of the company 
-                                lead in a new way. The assessments provide a vital window for each person to see themselves, how they interact with others 
-                                and how they perform as a team. Every leadership group we assess gains self-awareness and sees new opportunities for better 
-                                team alignment.
-                            </p>
-
-                            <div class="cite">Nathan Schock, Co-Founder and President, FiveFour</div>
-
-                            <a class="hyperlink" target="_blank" rel="noopener" href="https://fivefourtraining.com/">Visit FiveFour &rarr;</a>
                         </div>
                     </div>
                 </div>

@@ -16,12 +16,12 @@
             <div class="row">
                 <div class="col-12">
                     <img class="banner-image" src="~/assets/business-resources.jpg" alt="20 Free Business Resources"><br/>
-                    <h2 class="subtitle">Is Financial Success on YOUR List of 2021 Goals?</h2>
+                    <h2 class="subtitle">Is Financial Success on YOUR List of 2022 Goals?</h2>
 
                     <p>
                         We’ve curated these resources specifically for those who want to step up their OWN financial game. With over 4 hours of video and 
                         1600+ pages of premium content, you’re sure to find resources that will put both you and your clients on the road to financial 
-                        success in 2021.
+                        success in 2022.
                     </p>
                 </div>
             </div>
