@@ -188,7 +188,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'a24x7siq2021') {
+                if (this.password === 'a24x72022siq') {
                     this.unlocked = true;
                 } else {
                     this.validationError = true;

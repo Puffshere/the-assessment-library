@@ -486,7 +486,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'a24x7disc2021') {
+                if (this.password === 'a24x72022disc') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'certified') {

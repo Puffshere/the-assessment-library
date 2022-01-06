@@ -266,7 +266,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'a24x7ls2021') {
+                if (this.password === 'a24x72022ls') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'lscertified') {
