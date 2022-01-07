@@ -36,7 +36,7 @@
                     <div class="col-4">
                         <h3><div class="step-icon small">2</div> Account Confirmation Form</h3>
                         <p>
-                            Submit your <a href="https://rz189.infusionsoft.app/app/form/practitioner-certification-verification?cookieUUID=4ba5323a-1f0d-438c-a551-dec107d69bb8" target="_blank" rel="noopener" class="hyperlink">Account Confirmation Form</a>* so that we can create your assessment dashboard account and confirm your contact 
+                            Submit your <a href="https://www.assessments24x7.com/account-setup" target="_blank" rel="noopener" class="hyperlink">Account Confirmation Form</a>* so that we can create your assessment dashboard account and confirm your contact 
                             information is accurate.
                         </p>
                     </div>
