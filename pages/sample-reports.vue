@@ -38,7 +38,7 @@
                             <option value="no">Norwegian - 1</option>
                             <option value="pt">Portuguese - 6</option>
                             <option value="pt-br">Portuguese (Brazil) - 3</option>
-                            <option value="ru">Russian - 4</option>
+                            <option value="ru">Russian - 5</option>
                             <option value="es">Spanish - 7</option>
                             <option value="sv">Swedish - 6</option>
                             <option value="tr">Turkish - 7</option>
@@ -253,11 +253,12 @@
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'ja'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'pt-br'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
+                        <a v-else-if="lang === 'ru'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportRussian.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportSpanish.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportVietnamese.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQChineseSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else class="hyperlink disabled">Emotional Intelligence Report</a>
-                        <a class="language-button other" @click="eiqReportModal = true">7 languages</a><br/>
+                        <a class="language-button other" @click="eiqReportModal = true">8 languages</a><br/>
                         
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandEIQ.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Emotional Intelligence</a>
                         <a v-else class="hyperlink disabled">DISC + Emotional Intelligence</a><br/>
@@ -659,6 +660,7 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf" target="_blank" rel="noopener">Japanese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportRussian.pdf" target="_blank" rel="noopener">Russian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportSpanish.pdf" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportVietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
                             </div>
