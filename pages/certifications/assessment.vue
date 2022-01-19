@@ -212,7 +212,7 @@
             'main-nav': () => import('@/components/Nav'),
             'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
             'footer-fold': () => import('@/components/Footer'),
-            'credits': () => import('@/components/credits')
+            'credits': () => import('@/components/Credits')
         },
         data() {
             return {
