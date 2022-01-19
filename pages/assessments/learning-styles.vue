@@ -292,45 +292,7 @@
             </div>
         </section>
 
-        <section class="credits">
-            <div class="container">
-                <div class="row">
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/shrm.png" alt="shrm">
-                        <span class="credit">10 Credits</span>
-                        <p class="institute">SHRM**</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/hrci.png" alt="hrci">
-                        <span class="credit">7 Credits</span>
-                        <p class="institute">HRCI*</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/atd.png" alt="atd">
-                        <span class="credit">7 Credits</span>
-                        <p class="institute">ATD</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/icf.png" alt="icf">
-                        <span class="credit">4/13.5</span>
-                        <p class="institute">Core/RD ICF</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * HRCertification Institute's®️ (www.HRCI.org) official seal confirms that Assessments 24x7 meets the criteria for pre-approved 
-                            recertification credit(s) for any of HRCI’s eight credentials, including SPHR®️ and PHR®️. ** Assessments 24x7 is recognized by 
-                            SHRM to offer Professional Development Credits (PDCs) for SHRM-CP®️ or SHRM-SCP®️.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <credits shrm="10" hrci="7" atd="7" icfCore="4" icfRD="13.5" hrciProgramId="582703" />
 
         <section class="faq">
             <div class="container">
@@ -461,11 +423,13 @@
 <script>
     import Nav from '../../components/Nav';
     import Footer from '../../components/Footer';
+    import Credits from '../../components/Credits.vue';
 
     export default {
         components: {
             'main-nav': Nav,
-            'footer-fold': Footer
+            'footer-fold': Footer,
+            'credits': Credits
         },
         head() {
             return {
@@ -792,33 +756,6 @@
         .subtitle {
             margin: 0;
             font-size: 16pt;
-        }
-    }
-    
-    .credits {
-        padding: 34px 0 10px;
-        background: linear-gradient(90deg, rgba(30,34,45,1) 0%, rgba(48,53,66,1) 100%);
-        margin-bottom: 80px;
-
-        .credit {
-            font-size: 23pt;
-            text-align: center;
-            color: #fff;
-            display: block;
-            font-weight: 700;
-        }
-
-        .institute {
-            text-align: center;
-            font-size: 18pt;
-            margin-top: -2px;
-            color: #fff;
-        }
-
-        .provider-image {
-            margin: 0 auto 14px;
-            display: block;
-            height: 100px;
         }
     }
 

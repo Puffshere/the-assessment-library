@@ -67,11 +67,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <br/><br/>
-        <LazyHydrate when-visible><susan-cranston></susan-cranston></LazyHydrate>
-        <br/><br/>
+        </div><br/><br/>
 
         <div class="container">
             <div class="row">
@@ -115,43 +111,7 @@
                 </div>
             </div>
 
-            <section class="credits">
-                <div class="row">
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/shrm-dark.png" alt="shrm">
-                        <span class="credit">12 Credits</span>
-                        <p class="institute">SHRM**</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/hrci.png" alt="hrci">
-                        <span class="credit">10 Credits</span>
-                        <p class="institute">HRCI*</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/atd-dark.png" alt="atd">
-                        <span class="credit">10 Credits</span>
-                        <p class="institute">ATD</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/icf-dark.png" alt="icf">
-                        <span class="credit">5.25/12.5</span>
-                        <p class="institute">Core/RD ICF</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * HRCertification Institute's®️ (www.HRCI.org) official seal confirms that Assessments 24x7 meets the criteria for pre-approved 
-                            recertification credit(s) for any of HRCI’s eight credentials, including SPHR®️ and PHR®️. ** Assessments 24x7 is recognized by 
-                            SHRM to offer Professional Development Credits (PDCs) for SHRM-CP®️ or SHRM-SCP®️.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <credits :isLight="true" shrm="12" hrci="10" atd="10" icfCore="5.25" icfRD="12.5" hrciProgramId="582706" />
 
             <div class="row">
                 <div class="col-12">
@@ -194,43 +154,7 @@
                 </div>
             </div>
 
-            <section class="credits">
-                <div class="row">
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/shrm-dark.png" alt="shrm">
-                        <span class="credit">10 Credits</span>
-                        <p class="institute">SHRM**</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/hrci.png" alt="hrci">
-                        <span class="credit">7 Credits</span>
-                        <p class="institute">HRCI*</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/atd-dark.png" alt="atd">
-                        <span class="credit">7 Credits</span>
-                        <p class="institute">ATD</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/icf-dark.png" alt="icf">
-                        <span class="credit">7.5/9.25</span>
-                        <p class="institute">Core/RD ICF</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * HRCertification Institute's®️ (www.HRCI.org) official seal confirms that Assessments 24x7 meets the criteria for pre-approved 
-                            recertification credit(s) for any of HRCI’s eight credentials, including SPHR®️ and PHR®️. ** Assessments 24x7 is recognized by 
-                            SHRM to offer Professional Development Credits (PDCs) for SHRM-CP®️ or SHRM-SCP®️.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <credits :isLight="true" shrm="10" hrci="7" atd="7" icfCore="7.5" icfRD="9.25" hrciProgramId="582705" />
 
             <div class="row">
                 <div class="col-12">
@@ -270,45 +194,11 @@
                 </div>
             </div>
 
-            <section class="credits">
-                <div class="row">
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/shrm-dark.png" alt="shrm">
-                        <span class="credit">12 Credits</span>
-                        <p class="institute">SHRM**</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/hrci.png" alt="hrci">
-                        <span class="credit">7.5 Credits</span>
-                        <p class="institute">HRCI*</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/atd-dark.png" alt="atd">
-                        <span class="credit">7.5 Credits</span>
-                        <p class="institute">ATD</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/icf-dark.png" alt="icf">
-                        <span class="credit">8.25/6.75</span>
-                        <p class="institute">Core/RD ICF</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * HRCertification Institute's®️ (www.HRCI.org) official seal confirms that Assessments 24x7 meets the criteria for pre-approved 
-                            recertification credit(s) for any of HRCI’s eight credentials, including SPHR®️ and PHR®️. ** Assessments 24x7 is recognized by 
-                            SHRM to offer Professional Development Credits (PDCs) for SHRM-CP®️ or SHRM-SCP®️.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <credits :isLight="true" shrm="12" hrci="7.5" atd="7.5" icfCore="8.25" icfRD="6.75" hrciProgramId="582701" />
         </div>
 
+        <br/>
+        <LazyHydrate when-visible><susan-cranston></susan-cranston></LazyHydrate>
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
     </section>
 </template>
@@ -321,7 +211,8 @@
             LazyHydrate,
             'main-nav': () => import('@/components/Nav'),
             'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
-            'footer-fold': () => import('@/components/Footer')
+            'footer-fold': () => import('@/components/Footer'),
+            'credits': () => import('@/components/credits')
         },
         data() {
             return {
@@ -402,30 +293,6 @@
         h2 {
             font-size: 20pt;
             line-height: 24pt;
-        }
-
-        .credits {
-            padding: 34px 0 10px;
-            margin-bottom: 80px;
-
-            .credit {
-                font-size: 23pt;
-                text-align: center;
-                display: block;
-                font-weight: 700;
-            }
-
-            .institute {
-                text-align: center;
-                font-size: 18pt;
-                margin-top: -2px;
-            }
-
-            .provider-image {
-                margin: 0 auto 14px;
-                display: block;
-                height: 100px;
-            }
         }
 
         .course-summary {

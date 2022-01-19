@@ -229,45 +229,7 @@
             </div>
         </section>
 
-        <section class="credits">
-            <div class="container">
-                <div class="row">
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/shrm.png" alt="shrm">
-                        <span class="credit">12 Credits</span>
-                        <p class="institute">SHRM**</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/hrci.png" alt="hrci">
-                        <span class="credit">10 Credits</span>
-                        <p class="institute">HRCI*</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/atd.png" alt="atd">
-                        <span class="credit">12 Credits</span>
-                        <p class="institute">ATD</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/icf.png" alt="icf">
-                        <span class="credit">5.25/12.5</span>
-                        <p class="institute">Core/RD ICF</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * HRCertification Institute's®️ (www.HRCI.org) official seal confirms that Assessments 24x7 meets the criteria for pre-approved 
-                            recertification credit(s) for any of HRCI’s eight credentials, including SPHR®️ and PHR®️. ** Assessments 24x7 is recognized by 
-                            SHRM to offer Professional Development Credits (PDCs) for SHRM-CP®️ or SHRM-SCP®️.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <credits shrm="12" hrci="10" atd="10" icfCore="5.25" icfRD="12.5" hrciProgramId="582706" />
 
         <LazyHydrate when-visible><validation-mini></validation-mini></LazyHydrate>
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
@@ -289,7 +251,8 @@
             'validation-mini': () => import('@/components/ValidationMini'),
             'contact-form': () => import('@/components/ContactForm'),
             'client-logos': () => import('@/components/ClientLogos'),
-            'footer-fold': Footer
+            'footer-fold': Footer,
+            'credits': () => import('@/components/Credits')
         },
         head() {
             return {
@@ -379,33 +342,6 @@
             font-size: 9pt;
             font-weight: 500;
             padding: 1px 8px;
-        }
-
-        .credits {
-            padding: 34px 0 10px;
-            background: linear-gradient(90deg, rgba(30,34,45,1) 0%, rgba(48,53,66,1) 100%);
-            margin-bottom: 0px;
-
-            .credit {
-                font-size: 23pt;
-                text-align: center;
-                color: #fff;
-                display: block;
-                font-weight: 700;
-            }
-
-            .institute {
-                text-align: center;
-                font-size: 18pt;
-                margin-top: -2px;
-                color: #fff;
-            }
-
-            .provider-image {
-                margin: 0 auto 14px;
-                display: block;
-                height: 100px;
-            }
         }
 
         .certification {

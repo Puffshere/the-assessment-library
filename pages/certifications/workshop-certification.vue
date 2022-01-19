@@ -164,43 +164,7 @@
                 </div>
             </div>
 
-            <section class="credits">
-                <div class="row">
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/shrm-dark.png" alt="shrm">
-                        <span class="credit">15 Credits</span>
-                        <p class="institute">SHRM**</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/hrci.png" alt="hrci">
-                        <span class="credit">11.5 Credits</span>
-                        <p class="institute">HRCI*</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/atd-dark.png" alt="atd">
-                        <span class="credit">11.5 Credits</span>
-                        <p class="institute">ATD</p>
-                    </div>
-
-                    <div class="col-3 col-6-sm">
-                        <img class="provider-image" src="~assets/icf-dark.png" alt="icf">
-                        <span class="credit">6/9</span>
-                        <p class="institute">Core/RD ICF</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * HRCertification Institute's®️ (www.HRCI.org) official seal confirms that Assessments 24x7 meets the criteria for pre-approved 
-                            recertification credit(s) for any of HRCI’s eight credentials, including SPHR®️ and PHR®️. ** Assessments 24x7 is recognized by 
-                            SHRM to offer Professional Development Credits (PDCs) for SHRM-CP®️ or SHRM-SCP®️.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <credits :isLight="true" shrm="15" hrci="11.5" atd="11.5" icfCore="6" icfRD="9" hrciProgramId="582708" />
         </div>
 
         <LazyHydrate when-visible><kevin-mccarthy></kevin-mccarthy></LazyHydrate>
@@ -216,7 +180,8 @@
             LazyHydrate,
             'main-nav': () => import('@/components/Nav'),
             'kevin-mccarthy': () => import('@/components/testimonials/KevinMcCarthy'),
-            'footer-fold': () => import('@/components/Footer')
+            'footer-fold': () => import('@/components/Footer'),
+            'credits': () => import('@/components/Credits')
         },
         data() {
             return {
@@ -301,30 +266,6 @@
         .image {
             width: 100%;
             border-radius: 20px;
-        }
-
-        .credits {
-            padding: 34px 0 10px;
-            margin-bottom: 30px;
-
-            .credit {
-                font-size: 23pt;
-                text-align: center;
-                display: block;
-                font-weight: 700;
-            }
-
-            .institute {
-                text-align: center;
-                font-size: 18pt;
-                margin-top: -2px;
-            }
-
-            .provider-image {
-                margin: 0 auto 14px;
-                display: block;
-                height: 100px;
-            }
         }
 
         .course-summary {

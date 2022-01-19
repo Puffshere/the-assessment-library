@@ -260,8 +260,10 @@
                 <div class="row">
                     <div class="col-12">
                         <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                            * HRCertification Institute's®️ (www.HRCI.org) official seal confirms that Assessments 24x7 meets the criteria for pre-approved 
-                            recertification credit(s) for any of HRCI’s eight credentials, including SPHR®️ and PHR®️. ** Assessments 24x7 is recognized by 
+                            * he use of this official seal confirms that this Activity has met HR Certification Institute’s®️ (HRCI®️)  criteria for 
+                            recertification credit pre-approval.
+                            
+                            ** Assessments 24x7 is recognized by 
                             SHRM to offer Professional Development Credits (PDCs) for SHRM-CP®️ or SHRM-SCP®️.
                         </p>
                     </div>
