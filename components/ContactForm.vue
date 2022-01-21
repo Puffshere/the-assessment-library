@@ -129,7 +129,7 @@
                         </ValidationProvider>
                     </div>
 
-                    <button class="button" type="button" @click="process">{{ buttonText || 'Submit' }}</button>
+                    <button :disabled="isDisabled" :class="{ 'button': true, 'disabled': isDisabled }" type="button" @click="process">{{ buttonText || 'Submit' }}</button>
                 </div>
             </ValidationObserver>
         </form>
@@ -171,6 +171,7 @@
                 sources: [],
                 affiliations: [],
                 getStartedAccountName: 'Assessments 24x7',
+                isDisabled: false,
                 form: {
                     firstName: '',
                     lastName: '',
@@ -216,6 +217,8 @@
         },
         methods: {
             async process() {
+                this.isDisabled = true;
+
                 const validated = await this.$refs.form.validate();
 
                 if (validated) {
@@ -309,6 +312,7 @@
                         this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
                         
                     } catch(err) {
+                        this.isDisabled = false;
                         this.loading = false;
                         this.$toast.open({
                             message: 'An unexpected error has occured. Please try again later.',
@@ -318,7 +322,7 @@
                         });
                     }
                 } else {
-                    console.log('Not validated yet...');
+                    this.isDisabled = false;
                 }
             },
             async trackConversion(contactId) {

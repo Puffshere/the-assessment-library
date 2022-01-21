@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 
-                <button class="button secondary" type="button" @click="process" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{ buttonText || 'Submit' }}</button>
+                <button :disabled="isDisabled" :class="{ 'button secondary': true, 'disabled': isDisabled }" type="button" @click="process" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{ buttonText || 'Submit' }}</button>
             </ValidationObserver>
         </form>
     </section>
@@ -98,6 +98,7 @@
                 loading: false,
                 sources: [],
                 affiliations: [],
+                isDisabled: false,
                 form: {
                     firstName: '',
                     lastName: '',
@@ -112,6 +113,8 @@
         },
         methods: {
             async process() {
+                this.isDisabled = true;
+
                 const validated = await this.$refs.form.validate();
 
                 if (validated) {
@@ -168,6 +171,7 @@
                         this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
                         
                     } catch(err) {
+                        this.isDisabled = false;
                         this.loading = false;
                         this.$toast.open({
                             message: 'An unexpected error has occured. Please try again later.',
@@ -177,7 +181,7 @@
                         });
                     }
                 } else {
-                    console.log('Not validated yet...');
+                    this.isDisabled = false;
                 }
             },
             trackConversion() {
