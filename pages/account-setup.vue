@@ -151,6 +151,7 @@
                                             v-model="logoToBeUploaded"
                                             tabindex="12">
                                         </vue-file-agent>
+                                        <small>For best results, please upload a high resolution image where the longest side is at least 800 pixels.</small>
                                     </div>
                                 </div>
                             </div>
