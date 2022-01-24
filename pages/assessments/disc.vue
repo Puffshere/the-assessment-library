@@ -73,6 +73,7 @@
                             <span><img src="~assets/flags/algeria.svg" alt="Arabic DISC Assessments"> العربية</span>
                             <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
                             <span><img src="~assets/flags/netherlands.svg" alt="Dutch DISC Assessments"> Nederlands</span>
+                            <span><img src="~assets/flags/italy.svg" alt="Italian DISC Assessments"> Italiano</span>
                             <span><img src="~assets/flags/france.svg" alt="French DISC Assessments"> Français</span>
                             <span><img src="~assets/flags/germany.svg" alt="German DISC Assessments"> Deutsch</span>
                             <span><img src="~assets/flags/indonesia.svg" alt="Indonesian DISC Assessments"> Indonesian</span>
@@ -80,8 +81,10 @@
                             <span><img src="~assets/flags/cambodia.svg" alt="Cambodian DISC Assessments"> ភាសាខ្មែរ</span>
                             <span><img src="~assets/flags/south-korea.svg" alt="Korean DISC Assessments"> 한국어</span>
                             <span><img src="~assets/flags/malaysia.svg" alt="Malaysian DISC Assessments"> മലയാളം</span>
+                            <span><img src="~assets/flags/norway.svg" alt="Norwegian DISC Assessments"> Norsk</span>
                             <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português</span>
                             <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português (Brazil)</span>
+                            <span><img src="~assets/flags/russia.svg" alt="Russian DISC Assessments"> Россия</span>
                             <span><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>
                             <span><img src="~assets/flags/turkey.svg" alt="Turkish DISC Assessments"> Türkçe</span>
                             <span><img src="~assets/flags/vietnam.svg" alt="Vietnamese DISC Assessments"> Tiếng Việt</span>
