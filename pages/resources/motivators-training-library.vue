@@ -132,7 +132,7 @@
                                             <li>Review the <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AgreementsConflictsCombinations.pdf" target="_blank" rel="noopener" class="hyperlink">Agreements, Conflicts and Interesting Combinations Document</a></li>
                                             <li>Review the <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Word%20Matrix%20Scoring%20Information_Mot.pptx" target="_blank" rel="noopener" class="hyperlink">Word Matrix Ranges PowerPoint</a></li>
                                             <li>Review the <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Ranges_Standard%20Deviations%20Scores%20-%20HireSenseMot.pptx" target="_blank" rel="noopener" class="hyperlink">Standard Deviations PowerPoint</a></li>
-                                            <li>Watch the <a href="https://vimeo.com/gebbs/review/158568674/004c333f50" target="_blank" rel="noopener" class="hyperlink">Motivators Video Lesson</a> <span class="time-badge">1 hour</span> (Optional)</li>
+                                            <li>Watch the <a href="https://www.youtube.com/watch?v=Lo8-ZcEIrZM" target="_blank" rel="noopener" class="hyperlink">Motivators Video Lesson</a> <span class="time-badge">1 hour</span> (Optional)</li>
                                         </ul>
                                     </div>
                                 </div>
