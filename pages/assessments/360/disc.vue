@@ -1,6 +1,6 @@
 <template>
     <section class="disc-360">
-        <main-nav active="assessments"></main-nav>
+        <main-nav active="assessments" />
 
         <section class="header">
             <div class="container">
@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <overview-360></overview-360>
+        <LazyHydrate when-visible><overview-360 /></LazyHydrate>
 
         <section class="faq">
             <div class="container">
@@ -142,20 +142,19 @@
             </div>
         </section>
 
-        <footer-fold></footer-fold>
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
 
 <script>
-    import Nav from '@/components/Nav';
-    import Footer from '@/components/Footer';
-    import Overview360 from '@/components/Overview360';
+    import LazyHydrate from 'vue-lazy-hydration';
 
     export default {
         components: {
-            'main-nav': Nav,
-            'overview-360': Overview360,
-            'footer-fold': Footer
+            LazyHydrate,
+            'main-nav': () => import('@/components/Nav'),
+            'overview-360': () => import('@/components/Overview360'),
+            'footer-fold': () => import('@/components/Footer')
         },
         data() {
             return {

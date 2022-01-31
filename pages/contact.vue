@@ -1,6 +1,6 @@
 <template>
     <div class="contact">
-        <LazyHydrate when-visible><main-nav active="contact"></main-nav></LazyHydrate>
+        <main-nav active="contact" />
         <LazyHydrate when-visible><contact-header></contact-header></LazyHydrate>
 
         <div class="container">

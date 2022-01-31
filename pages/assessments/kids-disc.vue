@@ -235,33 +235,33 @@
             </div>
         </section>
 
-        <validation-mini :birdVersion="true" />
+        <LazyHydrate when-visible><validation-mini :birdVersion="true" /></LazyHydrate>
 
         <section class="testimonial">
-        <div class="container">
-            <div class="row">                
-                <div class="col-8">
-                    <blockquote>
-                        <p>
-                            "Everyone working with children should incorporate the What is your Bird Style? - Kids DISC assessment from Assessments 24x7! 
-                            Understanding the basic foundation of differences in behavioral styles was an eye opener for our staff. Then applying this to 
-                            the various styles of our students has dramatically improved the overall communication, and specifically one on one 
-                            instruction. We even watch the kids talk amongst themselves regarding their Bird Styles. Exceptional, thank you!"
-                        </p>
+            <div class="container">
+                <div class="row">                
+                    <div class="col-8">
+                        <blockquote>
+                            <p>
+                                "Everyone working with children should incorporate the What is your Bird Style? - Kids DISC assessment from Assessments 24x7! 
+                                Understanding the basic foundation of differences in behavioral styles was an eye opener for our staff. Then applying this to 
+                                the various styles of our students has dramatically improved the overall communication, and specifically one on one 
+                                instruction. We even watch the kids talk amongst themselves regarding their Bird Styles. Exceptional, thank you!"
+                            </p>
 
-                        <footer>
-                            <cite>Julie Sand</cite>
-                            Pioneer Junior High School
-                        </footer>
-                    </blockquote>
-                </div>
+                            <footer>
+                                <cite>Julie Sand</cite>
+                                Pioneer Junior High School
+                            </footer>
+                        </blockquote>
+                    </div>
 
-                <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/banner/julie-sand.png" alt="Julie Sand">
+                    <div class="col-4">
+                        <img class="image" src="~/assets/testimonials/banner/julie-sand.png" alt="Julie Sand">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
         <section class="call-to-action">
             <div class="container">
@@ -285,20 +285,19 @@
             </div>
         </section>
         
-        <footer-fold />
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
 
 <script>
-    import Nav from '../../components/Nav';
-    import ValidationMini from '../../components/ValidationMini';
-    import Footer from '../../components/Footer';
+    import LazyHydrate from 'vue-lazy-hydration';
 
     export default {
         components: {
-            'main-nav': Nav,
-            'validation-mini': ValidationMini,
-            'footer-fold': Footer
+            LazyHydrate,
+            'main-nav': () => import('@/components/Nav'),
+            'validation-mini': () => import('@/components/ValidationMini'),
+            'footer-fold': () => import('@/components/Footer')
         },
         head() {
             return {

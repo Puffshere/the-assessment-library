@@ -157,14 +157,14 @@
             </div>
         </div>
 
-        <validation-mini></validation-mini>
+        <LazyHydrate when-visible><validation-mini/></LazyHydrate>
 
         <section class="contact-form">
             <div class="container">
                 <div class="row flex-center">
                     <div class="col-8">
                         <h5 class="section-title">Meet with an Expert to Learn More About our DISC Assessment</h5>
-                        <contact-form :isShort="true" buttonText="Learn More About DISC" />
+                        <LazyHydrate when-visible><contact-form :isShort="true" buttonText="Learn More About DISC" /></LazyHydrate>
                     </div>
                 </div>
             </div>
@@ -278,9 +278,8 @@
             </div>
         </section>
 
-        <credits shrm="12" hrci="10" atd="10" icfCore="5.25" icfRD="12.5" hrciProgramId="582706" />
-
-        <rebecca-maxwell style="margin-top:-80px;margin-bottom:80px;"/>
+        <LazyHydrate when-visible><credits shrm="12" hrci="10" atd="10" icfCore="5.25" icfRD="12.5" hrciProgramId="582706" /></LazyHydrate>
+        <LazyHydrate when-visible><rebecca-maxwell style="margin-top:-80px;margin-bottom:80px;"/></LazyHydrate>
 
         <section class="faq">
             <div class="container">
@@ -417,26 +416,22 @@
             </div>
         </section>
         
-        <footer-fold></footer-fold>
+        <LazyHydrate when-visible><footer-fold/></LazyHydrate>
     </section>
 </template>
 
 <script>
-    import Nav from '../../components/Nav';
-    import ValidationMini from '../../components/ValidationMini';
-    import RebeccaMaxwell from '../../components/testimonials/RebeccaMaxwell';
-    import Footer from '../../components/Footer';
-    import ContactForm from '../../components/ContactForm.vue';
-    import Credits from '../../components/Credits.vue';
+    import LazyHydrate from 'vue-lazy-hydration';
 
     export default {
         components: {
-            'main-nav': Nav,
-            'validation-mini': ValidationMini,
-            'contact-form': ContactForm,
-            'rebecca-maxwell': RebeccaMaxwell,
-            'footer-fold': Footer,
-            'credits': Credits
+            LazyHydrate,
+            'main-nav': () => import('@/components/Nav'),
+            'validation-mini': () => import('@/components/ValidationMini'),
+            'contact-form': () => import('@/components/ContactForm'),
+            'rebecca-maxwell': () => import('@/components/testimonials/RebeccaMaxwell'),
+            'footer-fold': () => import('@/components/Footer'),
+            'credits': () => import('@/components/Credits')
         },
         head() {
             return {

@@ -1,6 +1,6 @@
 <template>
     <section class="why-use-assessments">
-        <LazyHydrate when-visible><main-nav active="about"></main-nav></LazyHydrate>
+        <main-nav active="about" />
         
         <section class="header">
             <div class="container">
@@ -161,8 +161,8 @@
             </div>
         </div>
 
-        <LazyHydrate when-visible><carrie-ann-barrow></carrie-ann-barrow></LazyHydrate>
-        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
+        <LazyHydrate when-visible><carrie-ann-barrow /></LazyHydrate>
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
 

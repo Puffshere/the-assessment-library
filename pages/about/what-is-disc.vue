@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <LazyHydrate when-visible><main-nav active="about"></main-nav></LazyHydrate>
+        <main-nav active="about" />
         
         <section class="header">
             <div class="container">
@@ -481,7 +481,7 @@
             </div>
         </div>
 
-        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </div>
 </template>
 

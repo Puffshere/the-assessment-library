@@ -1,6 +1,6 @@
 <template>
     <section class="assessment-certification">
-        <LazyHydrate when-visible><main-nav active="training"></main-nav></LazyHydrate>
+        <main-nav active="training" />
 
         <section class="header">
             <div class="container">
@@ -198,8 +198,8 @@
         </div>
 
         <br/>
-        <LazyHydrate when-visible><susan-cranston></susan-cranston></LazyHydrate>
-        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
+        <LazyHydrate when-visible><susan-cranston /></LazyHydrate>
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
 

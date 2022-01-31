@@ -1,6 +1,6 @@
 <template>
     <section class="certification">
-        <LazyHydrate when-visible><main-nav active="training"></main-nav></LazyHydrate>
+        <main-nav active="training" />
 
         <section class="header">
             <div class="container">
@@ -120,8 +120,8 @@
             </div>
         </div>
 
-        <LazyHydrate when-visible><ira-tau></ira-tau></LazyHydrate>
-        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
+        <LazyHydrate when-visible><ira-tau /></LazyHydrate>
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
 

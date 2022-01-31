@@ -1,6 +1,6 @@
 <template>
     <section class="sales-iq">
-        <main-nav active="assessments"></main-nav>
+        <main-nav active="assessments" />
 
         <section class="header">
             <div class="container">
@@ -10,7 +10,7 @@
                         <p>
                             Sales IQ Plus provides feedback for your individual skills by assessing your effectiveness in eight areas. When used with an effective selling strategy, 
                             this information enables you to effectively self-manage and consistently reach your sales potential.
-                            </p>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -92,16 +92,17 @@
                     <p>
                         This assessment takes approximately 30 minutes to complete and consists of 48 questions that guide you in assessing each of the eight primary sales competencies. 
                         From this, you will be able to accurately and more easily:
-                        </p>
-                        <ul>
-                            <li>Develop a plan to overcome challenges</li>
-                            <li>Simplify sales training</li>
-                            <li>Focus on areas that produce results</li>
-                             <li>Build confidence</li>
-                             <li>Determine strategies that are needed to sell a specific product/service in a given market</li>
-                             <li>Identify every new sales applicant’s strengths and weaknesses</li>
-                             <li>Address specific training or management needs of a salesperson or sales team</li>
-                        </ul><br/>
+                    </p>
+
+                    <ul>
+                        <li>Develop a plan to overcome challenges</li>
+                        <li>Simplify sales training</li>
+                        <li>Focus on areas that produce results</li>
+                        <li>Build confidence</li>
+                        <li>Determine strategies that are needed to sell a specific product/service in a given market</li>
+                        <li>Identify every new sales applicant’s strengths and weaknesses</li>
+                        <li>Address specific training or management needs of a salesperson or sales team</li>
+                    </ul><br/>
 
                     <nuxt-link to="/assessments" class="button">More Assessments</nuxt-link>
                     <nuxt-link to="/contact" class="button outline">Contact a Specialist</nuxt-link>
@@ -294,18 +295,18 @@
             </div>
         </section>
 
-        <footer-fold></footer-fold>
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
 
 <script>
-    import Nav from '@/components/Nav';
-    import Footer from '@/components/Footer';
+    import LazyHydrate from 'vue-lazy-hydration';
 
     export default {
         components: {
-            'main-nav': Nav,
-            'footer-fold': Footer
+            LazyHydrate,
+            'main-nav': () => import('@/components/Nav'),
+            'footer-fold': () => import('@/components/Footer')
         },
         data() {
             return {

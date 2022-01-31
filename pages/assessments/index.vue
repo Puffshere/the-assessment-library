@@ -1,127 +1,129 @@
 <template>
     <div class="main">
-        <main-nav active="assessments"></main-nav>
-        <assessments-header></assessments-header>
-                <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <br/><br/>
-
-                                        <h2>DISC and Motivators – The Foundation Assessments</h2>
-                                        <p>
-                                            Whether they are used individually or in combination with each other, DISC and Motivators continue to be two of 
-                                            the most impactful assessments in the industry. They are used by coaches, managers, and leaders around the 
-                                            world to provide immediate insights and in-depth knowledge that might not be obvious from a simple conversation 
-                                            or interview.
-                                        </p>
-                                        <p>
-                                            Utilizing the DISC and Motivators assessments provides a path for people to learn more about their own 
-                                            communication styles and the underlying motivations that drive behavior and decision-making. Coaches use them 
-                                            to create powerful moments of self-awareness for clients, and managers apply them to develop more insightful, 
-                                            empathetic leaders.
-                                        </p>
-
-                                        <br/><br/>
-                                    </div>
-                                </div>    
-                </div>
-        <juxtapose-left
-            title="DISC"
-            body="Our most popular assessment and the world’s #1 behavioral tool, DISC provides a highly-detailed analysis of each individual’s Natural and 
-            Adapted behavioral styles. DISC reveals how a person will most likely behave within a given environment, situation, or relationship. It offers 
-            prescriptive lessons designed to highlight and maximize self-awareness, intentionality, and interpersonal communication, personally and 
-            professionally. "
-            image="disc"
-            alt="DISC"
-            href="/assessments/disc"
-            linkText="DISC Assessment"
-            :lang="['english', 'uk-english', 'spanish', 'arabic', 'chinese', 'dutch', 'french', 'german', 'indonesian', 'japanese', 'cambodian', 'korean', 'malaysian', 'portugese', 'swedish', 'turkish', 'vietnamese']"
-            :badges="[
-                {
-                    class: 'disc-d',
-                    label: 'DOMINANCE'
-                },
-                {
-                    class: 'disc-i',
-                    label: 'INFLUENCE'
-                },
-                {
-                    class: 'disc-s',
-                    label: 'STEADINESS'
-                },
-                {
-                    class: 'disc-c',
-                    label: 'CONSCIENTIOUS'
-                }
-            ]"/>
-        <juxtapose-right
-            title="Motivators"
-            body="The perfect companion to DISC, Motivators measures seven Dimensions of Motivation that drive our behavior and decisions: Aesthetic, Economic, Individualistic, Power, Altruistic, Regulatory, and 
-            Theoretical. Just as DISC reveals how a person will likely behave, Motivators explores why we are driven to do what we do and what we value at our core. "
-            image="motivators"
-            alt="Motivators"
-            href="/assessments/motivators"
-            linkText="Motivators Assessment"
-            :lang="['english', 'uk-english', 'spanish', 'arabic', 'dutch', 'french', 'german', 'indonesian', 'japanese', 'portugese', 'swedish', 'turkish', 'vietnamese']"
-            :badges="[
-                {
-                    class: 'mot-aes',
-                    label: 'AESTHETIC'
-                },
-                {
-                    class: 'mot-eco',
-                    label: 'ECONOMIC'
-                },
-                {
-                    class: 'mot-ind',
-                    label: 'INDIVIDUALISTIC'
-                },
-                {
-                    class: 'mot-pow',
-                    label: 'POWER'
-                },
-                {
-                    class: 'mot-alt',
-                    label: 'ALTRUISTIC'
-                },
-                {
-                    class: 'mot-reg',
-                    label: 'REGULATORY'
-                },
-                {
-                    class: 'mot-the',
-                    label: 'THEORETICAL'
-                },
-            ]"/>
+        <main-nav active="assessments" />
+        <LazyHydrate when-visible><assessments-header /></LazyHydrate>
         
-        <overview-360></overview-360>
-        <corina-lorenzi></corina-lorenzi>
-        <footer-fold></footer-fold>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <br/><br/>
+
+                    <h2>DISC and Motivators – The Foundation Assessments</h2>
+                    <p>
+                        Whether they are used individually or in combination with each other, DISC and Motivators continue to be two of 
+                        the most impactful assessments in the industry. They are used by coaches, managers, and leaders around the 
+                        world to provide immediate insights and in-depth knowledge that might not be obvious from a simple conversation 
+                        or interview.
+                    </p>
+                    <p>
+                        Utilizing the DISC and Motivators assessments provides a path for people to learn more about their own 
+                        communication styles and the underlying motivations that drive behavior and decision-making. Coaches use them 
+                        to create powerful moments of self-awareness for clients, and managers apply them to develop more insightful, 
+                        empathetic leaders.
+                    </p>
+
+                    <br/><br/>
+                </div>
+            </div>    
+        </div>
+
+        <LazyHydrate when-visible>
+            <juxtapose-left
+                title="DISC"
+                body="Our most popular assessment and the world’s #1 behavioral tool, DISC provides a highly-detailed analysis of each individual’s Natural and 
+                Adapted behavioral styles. DISC reveals how a person will most likely behave within a given environment, situation, or relationship. It offers 
+                prescriptive lessons designed to highlight and maximize self-awareness, intentionality, and interpersonal communication, personally and 
+                professionally. "
+                image="disc"
+                alt="DISC"
+                href="/assessments/disc"
+                linkText="DISC Assessment"
+                :lang="['english', 'uk-english', 'spanish', 'arabic', 'chinese', 'dutch', 'french', 'german', 'indonesian', 'japanese', 'cambodian', 'korean', 'malaysian', 'portugese', 'swedish', 'turkish', 'vietnamese']"
+                :badges="[
+                    {
+                        class: 'disc-d',
+                        label: 'DOMINANCE'
+                    },
+                    {
+                        class: 'disc-i',
+                        label: 'INFLUENCE'
+                    },
+                    {
+                        class: 'disc-s',
+                        label: 'STEADINESS'
+                    },
+                    {
+                        class: 'disc-c',
+                        label: 'CONSCIENTIOUS'
+                    }
+                ]"
+            />
+        </LazyHydrate>
+
+        <LazyHydrate when-visible>
+            <juxtapose-right
+                title="Motivators"
+                body="The perfect companion to DISC, Motivators measures seven Dimensions of Motivation that drive our behavior and decisions: Aesthetic, Economic, Individualistic, Power, Altruistic, Regulatory, and 
+                Theoretical. Just as DISC reveals how a person will likely behave, Motivators explores why we are driven to do what we do and what we value at our core. "
+                image="motivators"
+                alt="Motivators"
+                href="/assessments/motivators"
+                linkText="Motivators Assessment"
+                :lang="['english', 'uk-english', 'spanish', 'arabic', 'dutch', 'french', 'german', 'indonesian', 'japanese', 'portugese', 'swedish', 'turkish', 'vietnamese']"
+                :badges="[
+                    {
+                        class: 'mot-aes',
+                        label: 'AESTHETIC'
+                    },
+                    {
+                        class: 'mot-eco',
+                        label: 'ECONOMIC'
+                    },
+                    {
+                        class: 'mot-ind',
+                        label: 'INDIVIDUALISTIC'
+                    },
+                    {
+                        class: 'mot-pow',
+                        label: 'POWER'
+                    },
+                    {
+                        class: 'mot-alt',
+                        label: 'ALTRUISTIC'
+                    },
+                    {
+                        class: 'mot-reg',
+                        label: 'REGULATORY'
+                    },
+                    {
+                        class: 'mot-the',
+                        label: 'THEORETICAL'
+                    },
+                ]"
+            />
+        </LazyHydrate>
+        
+        <LazyHydrate when-visible><overview-360 /></LazyHydrate>
+        <LazyHydrate when-visible><corina-lorenzi /></LazyHydrate>
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </div>
 </template>
 
 <script>
-    import Nav from '../../components/Nav';
-    import SimpleHero from '../../components/SimpleHero';
-    import AssessmentsHeader from '../../components/AssessmentsHeader';
-    import JuxtaposeLeft from '../../components/JuxtaposeLeft';
-    import JuxtaposeRight from '../../components/JuxtaposeRight';
-    import KeywordFold from '../../components/KeywordFold';
-    import Overview360 from '../../components/Overview360';
-    import CorinaLorenzi from '../../components/testimonials/CorinaLorenzi';
-    import Footer from '../../components/Footer';
+    import LazyHydrate from 'vue-lazy-hydration';
 
     export default {
         components: {
-            'main-nav': Nav,
-            'simple-hero': SimpleHero,
-            'assessments-header': AssessmentsHeader,
-            'juxtapose-left': JuxtaposeLeft,
-            'juxtapose-right': JuxtaposeRight,
-            'keyword-fold': KeywordFold,
-            'overview-360': Overview360,
-            'corina-lorenzi': CorinaLorenzi,
-            'footer-fold': Footer
+            LazyHydrate,
+            'main-nav': () => import('@/components/Nav'),
+            'simple-hero': () => import('@/components/SimpleHero'),
+            'assessments-header': () => import('@/components/AssessmentsHeader'),
+            'juxtapose-left': () => import('@/components/JuxtaposeLeft'),
+            'juxtapose-right': () => import('@/components/JuxtaposeRight'),
+            'keyword-fold': () => import('@/components/KeywordFold'),
+            'overview-360': () => import('@/components/Overview360'),
+            'corina-lorenzi': () => import('@/components/testimonials/CorinaLorenzi'),
+            'footer-fold': () => import('@/components/Footer')
         },
         data() {
             return {

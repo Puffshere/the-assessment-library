@@ -1,6 +1,7 @@
 <template>
     <div class="main">
         <main-nav active="assessments"></main-nav>
+
         <div class="hero">
             <img class="globe-tex" src="~assets/globe-bg.png">
 
@@ -218,9 +219,8 @@
             </div>
         </div>
 
-        <validation-mini></validation-mini>
-
-        <mamawa-daboh />
+        <LazyHydrate when-visible><validation-mini /></LazyHydrate>
+        <LazyHydrate when-visible><mamawa-daboh /></LazyHydrate>
 
         <section class="assessment-content">
             <div class="container">
@@ -332,7 +332,7 @@
             </div>
         </section>
 
-        <credits shrm="10" hrci="7" atd="7" icfCore="7.5" icfRD="9.25" hrciProgramId="582705" />
+        <LazyHydrate when-visible><credits shrm="10" hrci="7" atd="7" icfCore="7.5" icfRD="9.25" hrciProgramId="582705" /></LazyHydrate>
 
         <section class="faq">
             <div class="container">
@@ -346,12 +346,13 @@
                     <div class="col-12">
                         <h6 class="question">Why is understanding Motivators important?</h6>
                         <p class="answer">
-                        Understanding how Motivators work and how they uniquely combine for each of us brings deeper insight into our self-awareness and also helps 
-                        us to effectively connect with others. They help us understand what is important to us and also what is important to someone else. 
+                            Understanding how Motivators work and how they uniquely combine for each of us brings deeper insight into our self-awareness and also helps 
+                            us to effectively connect with others. They help us understand what is important to us and also what is important to someone else. 
                         </p>
+
                         <p>
-                        As a self-awareness activity, examining how we are motivated helps us to make intentional choices and work to align our behaviors and actions 
-                        to get what we want. With others, an awareness of what motivates them, helps us to understand their behaviors and actions. 
+                            As a self-awareness activity, examining how we are motivated helps us to make intentional choices and work to align our behaviors and actions 
+                            to get what we want. With others, an awareness of what motivates them, helps us to understand their behaviors and actions. 
                         </p>
                     </div>
                 </div>
@@ -362,8 +363,11 @@
                         <p class="answer">
                             While Motivators as a standalone tool is beneficial and insightful, with additional information we become more empowered and informed. 
                             In combination with other assessments, we can see how our decision making, learning preferences, behaviors and emotions are influenced 
-                            by what is most important to us.</p> 
-                        <p>In combination with DISC, a practical understanding of our own motivations helps us to avoid tricking ourselves into feeling that we 
+                            by what is most important to us.
+                        </p>
+
+                        <p>
+                            In combination with DISC, a practical understanding of our own motivations helps us to avoid tricking ourselves into feeling that we 
                             lack motivation. We are all motivated, but we may lack the “energy” (seen in the DISC graph) to get what we want. With DISC and 
                             Motivators together, we discover whether or not we are behaving what we value in a way that works.
                         </p>
@@ -464,24 +468,21 @@
             </div>
         </section>
 
-        <footer-fold></footer-fold>
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </div>
 </template>
 
 <script>
-    import Nav from '../../components/Nav';
-    import ValidationMini from '../../components/ValidationMini';
-    import MamawaDaboh from '../../components/testimonials/MamawaDaboh.vue';
-    import Footer from '../../components/Footer';
-    import Credits from '../../components/Credits.vue';
+    import LazyHydrate from 'vue-lazy-hydration';
 
     export default {
         components: {
-            'main-nav': Nav,
-            'validation-mini': ValidationMini,
-            'mamawa-daboh': MamawaDaboh,
-            'footer-fold': Footer,
-            'credits': Credits
+            LazyHydrate,
+            'main-nav': () => import('@/components/Nav'),
+            'validation-mini': () => import('@/components/ValidationMini'),
+            'mamawa-daboh': () => import('@/components/testimonials/MamawaDaboh'),
+            'footer-fold': () => import('@/components/Footer'),
+            'credits': () => import('@/components/Credits')
         },
         head() {
             return {
