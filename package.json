@@ -33,7 +33,6 @@
     "elasticlunr": "0.9.4",
     "express": "^4.17.1",
     "helmet": "^3.23.3",
-    "infusionsoft-rest": "git+https://github.com/knowareco/infusionsoft-rest.git",
     "koa": "^2.13.1",
     "lazysizes": "^5.3.2",
     "lodash": "^4.17.21",

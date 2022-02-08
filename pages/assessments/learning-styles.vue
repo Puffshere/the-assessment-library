@@ -1,6 +1,7 @@
 <template>
     <div class="main">
-        <main-nav active="assessments"></main-nav>
+        <main-nav active="assessments" />
+
         <div class="hero">
             <img class="globe-tex" src="~assets/globe-bg.png">
 
@@ -292,7 +293,7 @@
             </div>
         </section>
 
-        <credits shrm="10" hrci="7" atd="7" icfCore="4" icfRD="13.5" hrciProgramId="582703" />
+        <LazyHydrate when-visible><credits shrm="10" hrci="7" atd="7" icfCore="4" icfRD="13.5" hrciProgramId="582703" /></LazyHydrate>
 
         <section class="faq">
             <div class="container">
@@ -416,20 +417,19 @@
             </div>
         </section>
 
-        <footer-fold></footer-fold>
+        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </div>
 </template>
 
 <script>
-    import Nav from '../../components/Nav';
-    import Footer from '../../components/Footer';
-    import Credits from '../../components/Credits.vue';
+    import LazyHydrate from 'vue-lazy-hydration';
 
     export default {
         components: {
-            'main-nav': Nav,
-            'footer-fold': Footer,
-            'credits': Credits
+            LazyHydrate,
+            'main-nav': () => import('@/components/Nav'),
+            'footer-fold': () => import('@/components/Footer'),
+            'credits': () => import('@/components/Credits')
         },
         head() {
             return {
