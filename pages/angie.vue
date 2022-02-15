@@ -21,8 +21,8 @@
                         I’d like the opportunity to discuss your assessment and certification needs in detail. Choose a time slot from the calendar and we’ll get the conversation started!<br/><br/>
                     </p>
 
-                    <div class="calendly-inline-widget" :data-url="`https://calendly.com/angiemfairbanks/assessment-coaching-website?text_color=000000&primary_color=0033c5`" style="min-width:320px;height:700px;margin-top:-40px"></div>
-                
+                    <vue-calendly url="https://calendly.com/angiemfairbanks/assessment-coaching-website?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+
                     <p style="text-align: center; font-size: 10pt;">
                         You can also email me at <a class="hyperlink" href="mailto:angie@assessments24x7.com">angie@assessments24x7.com</a><br/>
                         or call <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a><br/><br/>
