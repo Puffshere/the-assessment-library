@@ -18,6 +18,20 @@
         </section>
 
         <div class="container" v-if="unlocked">
+            <div v-if="!certified" class="row">
+                <div class="col-12">
+                    <div class="non-certified">
+                        <h4>Non-Certified Training Materials</h4>
+
+                        <p>
+                            This is an abridged library of some DISC resources to support our clients using DISC in an introductory capacity. A comprehensive library of DISC 
+                            training and resources is available for our certified DISC Practitioners and Account Plus clients. If you are interested in accessing our full library, 
+                            please contact us for information on certification or an Account Plus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-6">
                     <h2>
@@ -104,7 +118,7 @@
                             <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15DISCstyleBehavioralPatterns.pdf" target="_blank" rel="noopener">The 15 DISCstyle Behavioral Patterns</a>
                             <small>This is a detailed description of the 15 most common workplace patterns along with some insights into how they typically function in their day-to-day interpersonal dynamics.</small></td></tr>
 
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMapPDFVersion.pdf" target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PDF)</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMapPDFVersion.pdf" target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PDF)</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap.pptx" target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PowerPoint)</a></td></tr>
 
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ComDoandDonts.pdf" target="_blank" rel="noopener">Communication Dos and Don’ts by Classical Styles</a>
@@ -118,7 +132,7 @@
                         </tbody>
                     </table>
 
-                    <table style="width:100%">
+                    <table v-if="certified" style="width:100%">
                         <thead>
                             <tr>
                                 <th>KnowDISC Introductory Videos</th>
@@ -170,7 +184,7 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC2HourFacilitatorGuide.pdf" target="_blank" rel="noopener">DISC 2 Hour Facilitator Guide</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC2HourFacilitatorGuide.pdf" target="_blank" rel="noopener">DISC 2 Hour Facilitator Guide</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC2hourTrainingPresentation.ppt" target="_blank" rel="noopener">DISC 2 Hour Training Presentation</a>
                             <small>For general overview of DISC: 1 hour and 45-minute report debrief</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC4HourFacilitatorGuide.pdf" target="_blank" rel="noopener">DISC 4 Hour Facilitator Guide</a></td></tr>
@@ -182,16 +196,16 @@
                             <small>If the above PowerPoint does not play on your MAC computer, <a href="https://www.hightail.com/download/cUJXcmxhV3IwVWx3SGNUQw" class="hyperlink" target="_blank" rel="noopener">use these video lecturettes in MP4 format</a>.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbook.pdf" target="_blank" rel="noopener">DISC Platinum Rule 84-page Participant eWorkbook</a>
                             <small>For use with Comprehensive DISC training programs.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BasicDISCSlides.pptx" target="_blank" rel="noopener">PowerPoint - "The Comprehensive DISC Slide Presentation"</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BasicDISCSlides.pptx" target="_blank" rel="noopener">PowerPoint - "The Comprehensive DISC Slide Presentation"</a>
                             <small>For general, sales, leadership or team-building programs (can be used to customize presentations) <i>*See Audio/Video files below</i></small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Mini_DISCPresentation.pptx" target="_blank" rel="noopener">Mini - DISC Presentation</a>
                             <small>For 15 to 20 minute overview of DISC introducing the what and why behind the model and highlighting the main concepts.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/TeamDynamics.pptm" target="_blank" rel="noopener">Team Dynamics PowerPoint Presentation</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/TeamDynamicsActivities.pptm" target="_blank" rel="noopener">Riddles and Team Practice PowerPoint Presentation</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/TeamDynamics.pptm" target="_blank" rel="noopener">Team Dynamics PowerPoint Presentation</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/TeamDynamicsActivities.pptm" target="_blank" rel="noopener">Riddles and Team Practice PowerPoint Presentation</a></td></tr>
                         </tbody>
                     </table>
 
-                    <table style="width:100%">
+                    <table v-if="certified" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Video Presentation Files</th>
@@ -210,7 +224,7 @@
                         </tbody>
                     </table>
 
-                    <table style="width:100%">
+                    <table v-if="certified" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Audio Presentation Files</th>
@@ -279,7 +293,7 @@
                         </tbody>
                     </table>
 
-                    <small>
+                    <small v-if="certified">
                         All of the audio and video <b>presentation files</b> ABOVE need to be downloaded and copied into the same folder where you save the PP presentation (The Comprehensive 
                         DISC Slide Presentation). This way the files will be associated with the presentation and work on each individual slide. If you have questions, 
                         please call 1-206-400-6647 x4 (PST)
@@ -312,7 +326,7 @@
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC Style Situations.pdf" target="_blank" rel="noopener">DISC Style Situations</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/AdaptingDISCStyles.pdf" target="_blank" rel="noopener">Adapting to DISC Styles</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/CreatingBetterRelationships.pdf" target="_blank" rel="noopener">Creating Better Relationships</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/WheelGraphJPG.jpeg" target="_blank" rel="noopener">DISC Behavioral Pattern View Poster (Wheel)</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/WheelGraphJPG.jpeg" target="_blank" rel="noopener">DISC Behavioral Pattern View Poster (Wheel)</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCWordSketch.pdf" target="_blank" rel="noopener">Word Sketches</a>
                             <small>2 page blank Word Sketch for use in workshops.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ContractChange.docx" target="_blank" rel="noopener">Contract for Change Word document</a>
@@ -339,17 +353,17 @@
                         </tbody>
                     </table>
 
-                    <h2>
+                    <h2 v-if="certified">
                         <img class="icon" src="~/assets/trainer-materials-icons/background-materials.png" alt="Implementation Resources">
                         Implementation Resources
-                    </h2><br/>
+                    </h2><br v-if="certified"/>
 
-                    <p>
+                    <p v-if="certified">
                         These resources are designed to help you support continued engagement with the DISC model and assessment resources. We encourage you to 
                         share them as frequently as you can.
                     </p>
 
-                    <table style="width:100%">
+                    <table v-if="certified" style="width:100%">
                         <thead>
                             <tr>
                                 <th>52 Week Email Series</th>
@@ -385,8 +399,8 @@
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCvsMBTI.pdf" target="_blank" rel="noopener">DISC vs. MBTI</a></td></tr>
                             <tr><td><a class="hyperlink" href="/blog" target="_blank" rel="noopener">DISC & Other Assessment Articles</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/comparing.pdf" target="_blank" rel="noopener">Comparing Correlations Between Four Quadrant and Five Factor Personality Assessments</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbook.pdf" target="_blank" rel="noopener">People Smart in Business 220-Page PDF eBook</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/PlatinumRuleDISCSalesMasteryForewordDaveYoho.pdf" target="_blank" rel="noopener">The Platinum Rule for DISC Sales Mastery Foreword by Dave Yoho</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbook.pdf" target="_blank" rel="noopener">People Smart in Business 220-Page PDF eBook</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/PlatinumRuleDISCSalesMasteryForewordDaveYoho.pdf" target="_blank" rel="noopener">The Platinum Rule for DISC Sales Mastery Foreword by Dave Yoho</a></td></tr>
                             <tr><td><a class="hyperlink" href="/about/validity" target="_blank" rel="noopener">Reliability Analysis DISC Online Assessment</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HistoryChart.pdf" target="_blank" rel="noopener">History Chart</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/AreYouMadatMe.pdf" target="_blank" rel="noopener">Are You Mad at Me? Article</a></td></tr>
@@ -584,6 +598,21 @@
                     margin: 0;
                     font-size: 11pt;
                 }
+            }
+        }
+
+        .non-certified {
+            color: #fff;
+            background: linear-gradient(268deg, #0999fe, #0249ec);
+            padding: 10px;
+            border-radius: 10px;
+
+            h4 {
+                margin: 10px 0 -5px;
+            }
+
+            p {
+                font-size: 11pt;
             }
         }
 
