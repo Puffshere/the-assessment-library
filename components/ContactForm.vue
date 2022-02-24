@@ -189,10 +189,13 @@
             }
         },
         async created() {
-            let response = await axios.get(`/api/contact/custom-field/21`);
+            let foo = await axios.get('http://localhost:3000/api/contact/custom-fields');
+            console.log(foo.data);
+
+            let response = await axios.get(`http://localhost:3000/api/contact/custom-field/21`);
             this.sources = response.data.fieldOptions;
 
-            response = await axios.get(`/api/contact/custom-field/64`);
+            response = await axios.get(`http://localhost:3000/api/contact/custom-field/64`);
             this.affiliations = response.data.fieldOptions;
 
             switch (this.getStartedId) {
@@ -235,6 +238,17 @@
                             email: this.form.email
                         });
 
+                        let event = '';
+                        let adWordsValue = 'No';
+
+                        if (localStorage.getItem('ppc_event')) {
+                            event = localStorage.getItem('ppc_event');
+
+                            if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
+                                adWordsValue = 'Yes';
+                            }
+                        }
+
                         const { data } = await axios.post('/api/contact', {
                             contact: {
                                 email: this.form.email,
@@ -273,6 +287,10 @@
                                     {
                                         field: '80', // Get Started Account Affiliation
                                         value: this.isGetStarted ? this.getStartedAccountName : ''
+                                    },
+                                    {
+                                        field: '84', // Is Adwords Lead?
+                                        value: adWordsValue
                                     }
                                 ]
                             }

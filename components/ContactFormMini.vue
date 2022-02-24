@@ -120,6 +120,17 @@
                 if (validated) {
                     this.loading = true;
 
+                    let event = '';
+                    let adWordsValue = 'No';
+
+                    if (localStorage.getItem('ppc_event')) {
+                        event = localStorage.getItem('ppc_event');
+
+                        if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
+                            adWordsValue = 'Yes';
+                        }
+                    }
+
                     try {
                         const { data } = await axios.post('/api/contact', {
                             contact: {
@@ -139,6 +150,10 @@
                                     {
                                         field: '79', // Sales Person Assignment,
                                         value: Math.floor(Math.random() * 3) + 1
+                                    },
+                                    {
+                                        field: '84', // Is Adwords Lead?
+                                        value: adWordsValue
                                     }
                                 ]
                             }
