@@ -73,7 +73,7 @@
 
                     <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/UZKHHav3INY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br/><br/>
-                    <a href="https://assessments123.com/Account/adminguide.pdf" class="hyperlink" target="_blank">Download full PDF instruction guide (see pages 3-11)</a>
+                    <a href="https://assessments247.net/Account/IGhome.pdf" class="hyperlink" target="_blank">Download full PDF instruction guide (see pages 3-11)</a>
                     <br/><br/>
                 </div>
             </div>
@@ -86,7 +86,7 @@
 
                     <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/-xnQzh6gnvk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br/><br/>
-                    <a href="https://assessments123.com/Account/adminguide.pdf" class="hyperlink" target="_blank">Download full PDF instruction guide (see pages 14-18)</a>
+                    <a href="https://assessments247.net/Account/IGassessmentlinks.pdf" class="hyperlink" target="_blank">Download full PDF instruction guide (see pages 14-18)</a>
                     <br/><br/>
                 </div>
             </div>
