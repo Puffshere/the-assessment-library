@@ -71,7 +71,7 @@
                     <button class="button secodary" @click="navToStep(2)">Go Back</button>
                     <button class="button" @click="navToStep(4)">Next Step</button><br/><br/>
 
-                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/0XRVr4fc8sc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/UZKHHav3INY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br/><br/>
                     <a href="https://assessments123.com/Account/adminguide.pdf" class="hyperlink" target="_blank">Download full PDF instruction guide (see pages 3-11)</a>
                     <br/><br/>
@@ -84,7 +84,7 @@
                     <button class="button secodary" @click="navToStep(3)">Go Back</button>
                     <button class="button" @click="navToStep(5)">Next Step</button><br/><br/>
 
-                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/-wcs-p1FFps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/-xnQzh6gnvk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br/><br/>
                     <a href="https://assessments123.com/Account/adminguide.pdf" class="hyperlink" target="_blank">Download full PDF instruction guide (see pages 14-18)</a>
                     <br/><br/>
