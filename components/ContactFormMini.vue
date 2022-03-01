@@ -120,18 +120,28 @@
                 if (validated) {
                     this.loading = true;
 
-                    let event = '';
-                    let adWordsValue = 'No';
-
-                    if (localStorage.getItem('ppc_event')) {
-                        event = localStorage.getItem('ppc_event');
-
-                        if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
-                            adWordsValue = 'Yes';
-                        }
-                    }
-
                     try {
+                        const salesPerson = await axios.get('/api/lead/next-assignment');
+
+                        const lead = await axios.post('/api/lead', {
+                            salesPerson: salesPerson.data,
+                            firstName: this.form.firstName,
+                            lastName: this.form.lastName,
+                            phone: this.form.phone,
+                            email: this.form.email
+                        });
+
+                        let event = '';
+                        let adWordsValue = 'No';
+
+                        if (localStorage.getItem('ppc_event')) {
+                            event = localStorage.getItem('ppc_event');
+
+                            if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
+                                adWordsValue = 'Yes';
+                            }
+                        }
+
                         const { data } = await axios.post('/api/contact', {
                             contact: {
                                 email: this.form.email,
@@ -149,7 +159,7 @@
                                     },
                                     {
                                         field: '79', // Sales Person Assignment,
-                                        value: Math.floor(Math.random() * 3) + 1
+                                        value: salesPerson.data
                                     },
                                     {
                                         field: '84', // Is Adwords Lead?
@@ -158,6 +168,8 @@
                                 ]
                             }
                         });
+
+                        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
                         // Check to see if this contact wants to subscribe to our newsletter
                         if (this.form.newsletter === '45') {
