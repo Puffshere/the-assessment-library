@@ -222,6 +222,31 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/disc-daily.png" alt="DISC Daily partners with Assessments 24x7">
+
+                            <p class="bio">
+                                DISC Daily is a simple, daily reminder to focus on growth and development. The messages are easy to implement. They help you 
+                                think about your main goals as well as your most important relationships. If you are a coach who wants to help your clients 
+                                achieve their goals beyond the initial contract, DISC Daily is the solution for you. By engaging on the platform at any time, 
+                                reading the weekly email and daily texts, your clients can track how effective they are in each area of their lives every day. 
+                            </p>
+
+                            <p class="quote">
+                                Partnering with Assessments 24x7 is what got my business off the ground. I can still recall my first contact with the company. 
+                                Jennifer Larsen, VP of Instructional Design and Education, talked with me, heard me, and came up with just what I needed to move 
+                                my business to the next step.
+                            </p>
+
+                            <div class="cite">Emily Bass, President and CEO, Emily Bass Strategies/The DISC Daily</div>
+
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://discdailycoach.com/">Visit DISC Daily &rarr;</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
