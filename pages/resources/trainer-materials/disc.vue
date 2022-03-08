@@ -121,8 +121,6 @@
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMapPDFVersion.pdf" target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PDF)</a></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap.pptx" target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PowerPoint)</a></td></tr>
 
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ComDoandDonts.pdf" target="_blank" rel="noopener">Communication Dos and Don’ts by Classical Styles</a>
-                            <small>A quick overview of the dos and don’ts found in the DISC report for each of the 15 Classical Patterns.</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDirectandIndirect.pdf" target="_blank" rel="noopener">DISC Direct & Indirect</a>
                             <small>1 page summary of definition and behaviors</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOpenandGuarded.pdf" target="_blank" rel="noopener">DISC Open & Guarded</a>
