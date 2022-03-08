@@ -35,6 +35,13 @@ export const state = () => ({
             name: 'The Platinum Rule Reminder Card',
             price: '600',
             slug: 'platinum-rule-reminder-card'
+        },
+        {
+            id: '6',
+            stripeId: 'price_1Kb55MBPiAffrwryIaZdF4nA',
+            name: 'The Platinum Rule Workbook',
+            price: '1495',
+            slug: 'platinum-rule-workbook'
         }
     ]
 });
