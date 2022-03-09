@@ -107,7 +107,8 @@
                             <small>Short guide to understanding scoring extensions.</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BTDescriptions.pdf" target="_blank" rel="noopener">The 12 Behavioral Tendencies Definitions & Explanations</a>
                             <small>A quick explanation and example to clarify the behaviors for each behavioral tendency comparison.</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDiamond.pdf" target="_blank" rel="noopener">Design & Explanation of the DISC Behavioral Diamond</a>
+
+                            <tr><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Wheel+Debrief+Guide_4.22.pdf" target="_blank" rel="noopener">Design & Explanation of the DISC Behavioral Diamond</a>
                             <small>This powerful tool adds a visual representation allowing you to view your natural behavior style (circle) and your adapted behavioral style (star). It also shares additional insight about unusual graphs – Tight, Over Shift and Under Shift patterns.</small></td></tr>
 
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BehaviorPatternView.pdf" target="_blank" rel="noopener">Behavior Pattern View (PDF)</a></td></tr>
@@ -188,14 +189,10 @@
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC4HourFacilitatorGuide.pdf" target="_blank" rel="noopener">DISC 4 Hour Facilitator Guide</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC4hourTrainingPresentation.ppt" target="_blank" rel="noopener">DISC 4 Hour Training Presentation</a>
                             <small>for general overview of DISC: 3 hours with activities and 55 minute report debrief.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCFacilitatorGuide.pdf" target="_blank" rel="noopener">DISC Comprehensive Facilitator Guide</a>
-                            <small>50 page guide with step-by-step instructions for facilitating half and full-day DISC training programs.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCppt.pptx" target="_blank" rel="noopener">DISC with embedded video lecturettes</a>
-                            <small>If the above PowerPoint does not play on your MAC computer, <a href="https://www.hightail.com/download/cUJXcmxhV3IwVWx3SGNUQw" class="hyperlink" target="_blank" rel="noopener">use these video lecturettes in MP4 format</a>.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbook.pdf" target="_blank" rel="noopener">DISC Platinum Rule 84-page Participant eWorkbook</a>
+
+                            <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+eWorkbook+INTERACTIVE.pdf" target="_blank" rel="noopener">DISC Platinum Rule 84-page Participant eWorkbook</a>
                             <small>For use with Comprehensive DISC training programs.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BasicDISCSlides.pptx" target="_blank" rel="noopener">PowerPoint - "The Comprehensive DISC Slide Presentation"</a>
-                            <small>For general, sales, leadership or team-building programs (can be used to customize presentations) <i>*See Audio/Video files below</i></small></td></tr>
+
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Mini_DISCPresentation.pptx" target="_blank" rel="noopener">Mini - DISC Presentation</a>
                             <small>For 15 to 20 minute overview of DISC introducing the what and why behind the model and highlighting the main concepts.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/TeamDynamics.pptm" target="_blank" rel="noopener">Team Dynamics PowerPoint Presentation</a></td></tr>
