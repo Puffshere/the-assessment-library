@@ -17,15 +17,7 @@
                 <div class="col-12">
                     <img alt="Message Sent" src="https://cdn.assessments24x7.com/file/assessments24x7-media/illustrations/sent-message.png" width="200" style="margin:20px auto 0 auto;display:block">
                     
-                    <h2 style="text-align:center">Your information has been submitted</h2>
-
-                    <h3 style="text-align:center;font-size:16pt;text-transform:uppercase;letter-spacing:1px;margin-bottom:-15px"><span style="color:#e93d2f">Don't leave yet!</span></h3>
-                    <h3 style="text-align:center;font-size:18pt"><span style="background:#ffbd05">&nbsp;Claim your FREE Assessment Credit!&nbsp;</span></h3>
-
-                    <p style="text-align:center">
-                        <strong>Book now</strong> on this page and receive a <strong>free assessment credit</strong> of your choice when you create an 
-                        account.<br/>Use the calendar below to book an appointment to qualify for the free credit.
-                    </p>
+                    <h2 style="text-align:center;margin-bottom:0">Your information has been submitted</h2>
 
                     <vue-calendly v-if="this.agent === 'suzette'" url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
                     <vue-calendly v-if="this.agent === 'angie'" url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
