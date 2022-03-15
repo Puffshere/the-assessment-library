@@ -66,9 +66,12 @@
                         <input id="sourceOther" name="sourceOther" type="text" />
                     </div>
 
-                    <div class="form-group" v-if="!isShort">
-                        <label for="comments">Questions/Comments:</label>
-                        <textarea cols="24" rows="5" id="comments" name="comments" v-model="form.comments"></textarea>
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <label for="comments">Questions/Comments:</label>
+                            <textarea cols="24" rows="5" id="comments" name="comments" v-model="form.comments"></textarea>
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
                     </div>
                     
                     <div class="form-group">

@@ -44,6 +44,13 @@
                         </ValidationProvider>
                     </div>
 
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <textarea id="comments" name="comments" v-model="form.comments" placeholder="Questions/Comments *"/>
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
+
                     <div class="form-group" style="margin-top: -0px">
                         <ValidationProvider v-slot="v" rules="required">
                             <div class="form-check pill">
@@ -106,6 +113,7 @@
                     phone: '',
                     company: '',
                     clientType: '',
+                    comments: '',
                     newsletter: '45',
                     consent: ''
                 }
@@ -156,6 +164,10 @@
                                     {
                                         field: '10', // Newsletter opt-in,
                                         value: this.form.newsletter
+                                    },
+                                    {
+                                        field: '20', // Questions/Comments,
+                                        value: this.form.comments
                                     },
                                     {
                                         field: '79', // Sales Person Assignment,
