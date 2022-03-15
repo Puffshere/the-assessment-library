@@ -60,7 +60,7 @@
                                 </p><br/>
 
                                 <a class="button" href="https://tonyrobbinsassessments.com/register_acct.aspx" target="_blank" rel="noopener">Set up your account</a>
-                                <a class="button secondary" href="https://assessment.tonyrobbins.com/account" target="_blank" rel="noopener">Already have an account? Sign in</a>
+                                <a class="button secondary" href="https://tonyrobbinsassessments.com/Account" target="_blank" rel="noopener">Already have an account? Sign in</a>
                             </div>
                         </div>
                     </div>
