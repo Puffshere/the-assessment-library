@@ -128,6 +128,12 @@
                             <small>1 page summary of definition behaviors</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbookPgs3536.pdf" target="_blank" rel="noopener">Behavior and Needs Under Stress</a>
                             <small>Overview of the 4 DISC styles as others perceive them in stress and what helps them overcome tension in stressful situations.</small></td></tr>
+
+                            <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-in-conflict-typical-behaviors_vs2.pdf" target="_blank" rel="noopener">Typical DISC Behaviors In Conflict</a>
+                            <small>Each behavioral style has typical behaviors they are likely to express when experiencing conflict or tension. This document provides insight into each style’s likely behaviors in tense and trying times.</small></td></tr>
+
+                            <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Tensions-Between-Same-Styles-vs2.pdf" target="_blank" rel="noopener">Tensions Between Same DISC Styless</a>
+                            <small>When like-minded styles work together, there can be incredible benefits, but also some difficult challenges. This document outlines likely behaviors when like-minded styles work together: D and D, I and I, S and S, & C and C.</small></td></tr>
                         </tbody>
                     </table>
 
