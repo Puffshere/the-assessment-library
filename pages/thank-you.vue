@@ -19,16 +19,27 @@
                     
                     <h2 style="text-align:center;margin-bottom:0">Your information has been submitted</h2>
 
-                    <vue-calendly v-if="this.agent === 'suzette'" url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
-                    <vue-calendly v-if="this.agent === 'angie'" url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
-                    <vue-calendly v-if="this.agent === 'monica'" url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                    <div v-if="clientType !== 'Retail'">
+                        <vue-calendly v-if="this.agent === 'suzette'" url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                        <vue-calendly v-if="this.agent === 'angie'" url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                        <vue-calendly v-if="this.agent === 'monica'" url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
 
-                    <br/>
-                    <p style="text-align:center">
-                        We’d like the opportunity to discuss your assessment and certification needs in detail. Please use the calendar below to schedule a 
-                        quick call. You can also email us at <a class="hyperlink" href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a> 
-                        or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
-                    </p><br/>
+                        <br/>
+                        <p style="text-align:center">
+                            We’d like the opportunity to discuss your assessment and certification needs in detail. Please use the calendar below to schedule a 
+                            quick call. You can also email us at <a class="hyperlink" href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a> 
+                            or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                        </p><br/>
+                    </div>
+
+                    <div v-else>
+                        <br/>
+                        <p style="text-align:center">
+                            We’d like the opportunity to discuss your assessment and certification needs in detail. A representative will contact you shortly. 
+                            You can also email us at <a class="hyperlink" href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a> 
+                            or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                        </p><br/>
+                    </div>
 
                     <br/><br/><br/>
                 </div>
@@ -60,7 +71,8 @@
         },
         data() {
             return {
-                agent: ''
+                agent: '',
+                clientType: ''
             }
         },
         mounted() {
@@ -85,6 +97,10 @@
                 });
             } else {
                 this.agent = 'suzette';
+            }
+
+            if (this.$route.query.clientType) {
+                this.clientType = this.$route.query.clientType;
             }
 
             if (salesPerson.value === 'Suzette Chaparro') {

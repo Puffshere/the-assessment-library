@@ -5,7 +5,7 @@
                 <loading :active="loading" :is-full-page="false" />
 
                 <div class="col-6">
-                    <div class="form-group" style="margin-top: 16px">
+                    <div class="form-group" style="margin-top: -16px">
                         <ValidationProvider v-slot="v" rules="required">
                             <input id="firstName" name="firstName" type="text" v-model="form.firstName" placeholder="First Name *" />
                             <span class="error">{{ v.errors[0] }}</span>
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="col-6">
-                    <div class="form-group" style="margin-top: 16px">
+                    <div class="form-group" style="margin-top: -16px">
                         <ValidationProvider v-slot="v" rules="required">
                             <input id="lastName" name="lastName" type="text" v-model="form.lastName" placeholder="Last Name *" />
                             <span class="error">{{ v.errors[0] }}</span>
@@ -55,12 +55,17 @@
                         <ValidationProvider v-slot="v" rules="required">
                             <div class="form-check pill">
                                 <input class="form-check-input" id="reseller" name="clientType" type="radio" value="Reseller" v-model="form.clientType" />
-                                <label class="form-check-label" for="reseller">I am a coach or trainer looking to use assessments with clients</label>
+                                <label class="form-check-label" for="reseller">I am a <strong>coach or trainer</strong> looking to resell assessments with my clients.</label>
                             </div>
 
                             <div class="form-check pill">
                                 <input class="form-check-input" id="corporate" name="clientType" type="radio" value="Corporate" v-model="form.clientType" />
-                                <label class="form-check-label" for="corporate">I am part of a company looking to use assessments internally</label>
+                                <label class="form-check-label" for="corporate">I am part of a <strong>company</strong> looking to use assessments internally with my team.</label>
+                            </div>
+
+                            <div class="form-check pill">
+                                <input class="form-check-input" id="retail" name="clientType" type="radio" value="Retail" v-model="form.clientType" />
+                                <label class="form-check-label" for="retail">I am an <strong>individual</strong> looking to purchase a single assessment only.</label>
                             </div>
 
                             <span class="error">{{ v.errors[0] }}</span>

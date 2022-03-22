@@ -80,12 +80,17 @@
                             
                             <div class="form-check">
                                 <input class="form-check-input" id="reseller" name="clientType" type="radio" value="Reseller" v-model="form.clientType" />
-                                <label class="form-check-label" for="reseller">I am a coach or trainer looking to use assessments with clients</label>
+                                <label class="form-check-label" for="reseller">I am a <strong>coach or trainer</strong> looking to resell assessments with my clients.</label>
                             </div>
 
                             <div class="form-check">
                                 <input class="form-check-input" id="corporate" name="clientType" type="radio" value="Corporate" v-model="form.clientType" />
-                                <label class="form-check-label" for="corporate">I am part of a company looking to use assessments internally for team building, hiring, etc.</label>
+                                <label class="form-check-label" for="corporate">I am part of a <strong>company</strong> looking to use assessments internally with my team.</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" id="retail" name="clientType" type="radio" value="Retail" v-model="form.clientType" />
+                                <label class="form-check-label" for="retail">I am an <strong>individual</strong> looking to purchase a single assessment only.</label>
                             </div>
 
                             <span class="error">{{ v.errors[0] }}</span>
