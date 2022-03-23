@@ -659,7 +659,7 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQChineseSampleReport.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf" target="_blank" rel="noopener">Japanese</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Portuguese (Brazil)</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportRussian.pdf" target="_blank" rel="noopener">Russian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportSpanish.pdf" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportVietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
