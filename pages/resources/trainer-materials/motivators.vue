@@ -37,7 +37,7 @@
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Certified Debrief Guide 6.20.docx" target="_blank" rel="noopener">Motivators Debrief Guide</a>
+                            <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators-Certified-Debrief-Guide-2022.docx" target="_blank" rel="noopener">Motivators Debrief Guide</a>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
                             <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsDebriefGuide.pdf" target="_blank" rel="noopener">Motivators Debrief Guide</a>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
@@ -123,13 +123,13 @@
                         </thead>
 
                         <tbody>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotFGCertified.pdf" target="_blank" rel="noopener">2-Hour Facilitator Guide</a>
+                            <tr><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators2hourFacilitatorGuide2022.pdf" target="_blank" rel="noopener">2-Hour Facilitator Guide</a>
                             <small>Step-by-step instructions for facilitating 2-hour workshop</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT2hour.pptx" target="_blank" rel="noopener">2-Hour Presentation</a>
+                            <tr><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT2hour2022.pptx" target="_blank" rel="noopener">2-Hour Presentation</a>
                             <small>Overview of Motivators, discussion and activity and report debrief opportunity.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsFG4hour.pdf" target="_blank" rel="noopener">4-Hour Facilitator Guide</a>
+                            <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators4hourFacilitatorGuide2022.pdf" target="_blank" rel="noopener">4-Hour Facilitator Guide</a>
                             <small>Step-by-step instructions for facilitating 4-hour workshop</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT4hour.pptx" target="_blank" rel="noopener">4-Hour Presentation</a>
+                            <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT4hour2022.pptx" target="_blank" rel="noopener">4-Hour Presentation</a>
                             <small>Motivators, strengths and limitations, discussion and activities, and report debrief opportunity.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MOT Mini Presentation 2020.pptx" target="_blank" rel="noopener">Mini-Motivators Presentation</a>
                             <small>15 to 20 minute overview of Motivators introducing the what and why behind the model and highlighting the main concepts.</small></td></tr>
