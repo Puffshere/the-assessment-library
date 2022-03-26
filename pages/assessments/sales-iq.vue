@@ -63,18 +63,6 @@
                                 </svg>
                             </div>
                         </a>
-
-                        <a href="/reports/SalesIQPlus-Managers-Coaching-Guide.pdf" target="_blank">
-                            <div class="sample">
-                                <img src="~assets/pdf-icon.svg"> Sales IQ Managers Coaching Guide
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
-                                    <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
-                                        l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
-                                        c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z"
-                                    />
-                                </svg>
-                            </div>
-                        </a>
                     </div>
 
                     <nuxt-link to="/sample-reports" class="hyperlink">View All Sample Reports &rarr;</nuxt-link>
@@ -93,8 +81,12 @@
                         This assessment takes approximately 30 minutes to complete and consists of 48 questions that guide you in assessing each of the eight primary sales competencies. 
                         From this, you will be able to accurately and more easily:
                     </p>
+                </div>
+            </div>
 
-                    <ul>
+            <div class="row">
+                <div class="col-12">
+                    <ul style="margin-top: -20px;">
                         <li>Develop a plan to overcome challenges</li>
                         <li>Simplify sales training</li>
                         <li>Focus on areas that produce results</li>
