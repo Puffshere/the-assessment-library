@@ -51,18 +51,136 @@
             </div>
         </section>
 
-        <footer-fold/>
+        <section class="certification">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Become A Certified Assessment Practitioner</h2>
+                        <div class="col-6">
+                            <ul>
+                                <li>Improve relationships with colleagues and clients</li>
+                                <li>Gain deeper insights into yourself</li>
+                                <li>Enhance your critical thinking skills</li>
+                                <li>Ongoing, situational support from an Assessments 24x7 Master Certified Practitioner</li>
+                                <li>Receive an assessment & an in-depth, professional debrief by your Master Certified Trainer</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6">
+                            <ul>
+                                <li>Access Certified Trainer Material to use in your coaching/training business, including a Debrief Guide, PowerPoint presentations, and marketing materials</li>
+                                <li>Get listed on our International Directory of Certified Practitioners linked to your website</li> 
+                                <li>Debrief clients with confidence</li>
+                                <li>Maximize the effectiveness of your assessment debriefs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id="disc">DISC Assessment Certification</h2>
+
+                        <div class="col-3">
+                            <img class="image" src="~/assets/badges/new/disc-cert-badge-color.png" alt="">
+                        </div>
+
+                        <div class="col-9">
+                            <p>
+                                Do you want to significantly improve your understanding of DISC and your ability to debrief DISC reports? Have you ever 
+                                struggled to figure out how to use the assessments for different client needs? Clear up those questions and more with 
+                                Assessments 24x7's DISC Certification program. This is an exceptional investment for every coach, HR specialist, and leadership 
+                                development professional. DISC Certification will give you the knowledge to debrief reports without hesitation- which means 
+                                even more satisfied clients for you!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <h3 style="margin-bottom: -10px">Course Summary (12 hours):</h3>
+
+                        <div class="col-6">
+                            <ul class="course-summary">
+                                <li class="topic disc">Take the Online DISC Assessment</li>
+                                <li class="topic disc">Independent Review of Select Self-Study Documents</li>
+                                <li class="topic disc">Complete the 10-part DISC Virtual Training Program and all phases of the DISC Communications Coach training</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6">
+                            <ul class="course-summary">
+                                <li class="topic disc">Receive a personal DISC report debrief from one of our trainers</li>
+                                <li class="topic disc">Review the online Resources for DISC Trainers</li>
+                                <li class="topic disc">DISC Final Knowledge Check and certification call</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <credits :isLight="true" shrm="12" hrci="10" atd="10" icfCore="5.25" icfRD="12.5" hrciProgramId="582706" />
+
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id="motivators">Motivators Assessment Certification</h2>
+
+                        <div class="col-3">
+                            <img class="image" src="~/assets/badges/new/mot-cert-badge-color.png" alt="">
+                        </div>
+
+                        <div class="col-9">
+                            <p>
+                                The Motivators Assessment Certification Program provides a fresh perspective into human motivation. With this understanding, 
+                                organizations and workplaces can more effectively motivate employees to increase productivity, strengthen collaboration, and 
+                                produce exceptional results. The curriculum teaches the seven Dimensions of Motivation individually so that you learn how they 
+                                affect interactions with others. When you better understand what motivates your workforce – or yourself! – there’s no limit to 
+                                what you can achieve.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <h3 style="margin-bottom: -10px">Course Summary (10 hours):</h3>
+
+                        <div class="col-6">
+                            <ul class="course-summary">
+                                <li class="topic mot">Take the Online Motivators Assessment</li>
+                                <li class="topic mot">Independent Review of Self-Study Reading and Videos</li>
+                                <li class="topic mot">Receive a personal Motivators report debrief from a trainer</li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col-6">
+                            <ul class="course-summary">
+                                <li class="topic mot">Review the online Resources for Motivators Trainers</li>
+                                <li class="topic mot">Motivators Final Knowledge Check</li>
+                                <li class="topic mot">Final Certification Call and discuss strategy for use</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <credits :isLight="true" shrm="10" hrci="7" atd="7" icfCore="7.5" icfRD="9.25" hrciProgramId="582705" />
+            </div>
+        </section>
+
+        <LazyHydrate when-visible><stats style="margin: 80px 0;"></stats></LazyHydrate>
+        <LazyHydrate when-visible><validation style="margin: -30px 0 0;"></validation></LazyHydrate>
+        <LazyHydrate when-visible><footer-fold/></LazyHydrate>
     </section>
 </template>
 
 <script>
-    import Nav from '@/components/Nav';
-    import Footer from '@/components/Footer';
+    import LazyHydrate from 'vue-lazy-hydration';
 
     export default {
         components: {
-            'main-nav': Nav,
-            'footer-fold': Footer
+            'main-nav': () => import('@/components/Nav'),
+            'validation': () => import('@/components/ASIValidation'),
+            'stats': () => import('@/components/Stats'),
+            'credits': () => import('@/components/Credits'),
+            'footer-fold': () => import('@/components/Footer')
         },
         data() {
             return {
@@ -158,6 +276,41 @@
 
                 .button {
                     margin-right: 0;
+                }
+            }
+        }
+
+        .certification {
+            .image {
+                height: 220px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            h2 {
+                font-size: 20pt;
+                line-height: 24pt;
+                margin-bottom: 0px;
+            }
+
+            .course-summary {
+                list-style: none;
+                padding-left: 0;
+
+                .topic {
+                    padding: 10px;
+                    background: #f7f7f7;
+                    margin-bottom: 6px;
+                    border-radius: 10px;
+                    color: #fff;
+                    font-weight: 600;
+
+                    &.disc { background: linear-gradient(268deg, #0999fe, #0249ec); }
+                    &.mot { background: linear-gradient(268deg, #ffa518, #fc542a); }
+                    &.hvp { background: linear-gradient(268deg, #8ef03a, #11bd04); }
+                    &.eiq { background: linear-gradient(268deg, #fa4ca6, #ff2f4c); }
+                    &.learning { background: linear-gradient(268deg, #b82cff, #540bfb); }
+                    &.pgi { background: linear-gradient(268deg, #666, #333); }
                 }
             }
         }
