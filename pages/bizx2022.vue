@@ -48,6 +48,14 @@
                         <a href="https://buy.stripe.com/28odRq9zn7ev4Zq5kS" target="_blank" class="button secondary">Purchase Certification Bundle</a>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-12" style="text-align: center;margin-top: 30px;">
+                        <h3>Download Dr. Tony Alessandra's Presentation Slides</h3>
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/BizX+UK+-+Different+Strokes+for+Different+Folks.pdf" target="_blank" class="hyperlink">Different Strokes for Different Folks</a> &nbsp;|&nbsp;
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/BizX+UK+Coaches+-+How+Assessments+Can+Help+You+%26+Your+Clients.pdf" target="_blank"  class="hyperlink">How Assessments Can Help You & Your Clients</a>
+                    </div>
+                </div>
             </div>
         </section>
 
