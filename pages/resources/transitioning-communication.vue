@@ -36,7 +36,7 @@
                 <div class="col-8">
                     <h3>Want to learn more? Contact us using the form below: </h3>
                     
-                    <!--<contact-form redirect="/thank-you" acFormId="17" />-->
+                    <contact-form redirect="/thank-you" acFormId="17" />
                 </div>
             
                 <div class="col-4">
