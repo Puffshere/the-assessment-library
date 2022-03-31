@@ -22,7 +22,7 @@
                 <div class="col-12">
                     <h2 style="margin-bottom: 0px">Watch the Full Webinar:</h2>
                     <h4 style="float:left">DISC in a World of Transitioning Communication (43 minutes)<br/>Uploaded March 31st, 2022</h4>
-                    <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_Watson_DISC_Presentation.pdf" class="button" style="float:right">Download the Slide Deck</a>
+                    <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_Transitioning_Communication.pdf" class="button" style="float:right">Download the Slide Deck</a>
                 </div>
 
                 <div class="col-12">
