@@ -53,7 +53,8 @@
                     <div class="col-12" style="text-align: center;margin-top: 30px;">
                         <h3 style="color:#e93d2f;font-size:16pt;margin-bottom:0">Download Dr. Tony Alessandra's Presentation Slides:</h3>
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/BizX+UK+-+Different+Strokes+for+Different+Folks.pdf" target="_blank" class="hyperlink">Different Strokes for Different Folks</a> &nbsp;|&nbsp;
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/BizX+UK+Coaches+-+How+Assessments+Can+Help+You+%26+Your+Clients.pdf" target="_blank"  class="hyperlink">How Assessments Can Help You & Your Clients</a>
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/BizX+UK+Coaches+-+How+Assessments+Can+Help+You+%26+Your+Clients.pdf" target="_blank"  class="hyperlink">How Assessments Can Help You & Your Clients</a><br/>
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/BizX+Las+Vegas+-+Attracting%2C+Training+%26+Retaining+Top+Talent.pdf" target="_blank"  class="hyperlink">Attracting, Training & Retaining Top Talent</a>
                     </div>
                 </div>
             </div>

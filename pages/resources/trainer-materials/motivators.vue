@@ -39,7 +39,7 @@
                         <tbody>
                             <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators-Certified-Debrief-Guide-2022.docx" target="_blank" rel="noopener">Motivators Debrief Guide</a>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
-                            <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsDebriefGuide.pdf" target="_blank" rel="noopener">Motivators Debrief Guide</a>
+                            <tr v-else><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators+Non-Certified+Debrief+Guide+2022.docx" target="_blank" rel="noopener">Motivators Debrief Guide</a>
                             <small>Overview and Guide for what is included in the assessment report</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsCoachingandQuestions.pdf" target="_blank" rel="noopener">Motivators Coaching and Questions</a>
                             <small>Open ended and purposeful follow-up questions to uncover opportunities and reveal areas for support, including action planning and coaching suggestions.</small></td></tr>
