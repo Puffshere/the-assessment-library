@@ -63,7 +63,7 @@ export default function(context) {
         }
 
         else if (context.req.url == '/360_Instructions_2020.pdf') {
-            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2021.pdf');
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2022.pdf');
         }
 
         else if (context.req.url == '/hiring-and-selection') {

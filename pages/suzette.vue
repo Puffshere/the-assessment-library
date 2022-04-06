@@ -27,7 +27,9 @@
                         <strong>Hobbies & Fun Facts: </strong>When I am not working, you can find me hiking in the backcountry, cooking new and exciting 
                         meals for loved ones, or hanging out with my two sweet dogs.<br/><br/>
 
-                        My DISC Style is: <strong>Di</strong>
+                        My DISC Style is: <strong>Id
+                            
+                        </strong>
                     </p>
                 </div>
 
