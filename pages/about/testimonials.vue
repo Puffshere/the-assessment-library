@@ -31,7 +31,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/susan-cranston.jpg" alt="Susan Cranston">
+                            <img class="image" src="~/assets/testimonials/susan-cranston.jpg" alt="Susan Merli">
                         </div>
 
                         <div class="col-9">
@@ -42,7 +42,7 @@
                                 <span class="star">★</span>
                                 <span class="star">★</span>
                             </div>
-                            <h3 class="name">Susan Cranston</h3>
+                            <h3 class="name">Susan Merli</h3>
                             <p class="attribution">
                                 Founder & CEO<br/>
                                 <a class="hyperlink" href="https://authentikaconsulting.com/" target="_blank" rel="noopener">Authentika Consulting Inc.</a>

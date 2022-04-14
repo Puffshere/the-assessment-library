@@ -14,7 +14,7 @@
                         </p>
 
                         <footer>
-                            <cite>Susan Cranston</cite>
+                            <cite>Susan Merli</cite>
                             Founder & CEO<br/>
                             Authentika Consulting Inc.
                         </footer>
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/banner/susan-cranston.jpg" alt="Susan Cranston">
+                    <img class="image" src="~/assets/testimonials/banner/susan-cranston.jpg" alt="Susan Merli">
                 </div>
             </div>
         </div>

@@ -46,7 +46,7 @@
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
-                            <textarea id="comments" name="comments" v-model="form.comments" placeholder="Questions/Comments *"/>
+                            <textarea id="comments" name="comments" v-model="form.comments" placeholder="What would you like to discuss? *"/>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 
-                <button :disabled="isDisabled" :class="{ 'button secondary': true, 'disabled': isDisabled }" type="button" @click="process" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{ buttonText || 'Submit' }}</button>
+                <button :disabled="isDisabled" :class="{ 'button secondary': true, 'disabled': isDisabled }" type="button" @click="process" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{ buttonText || 'Get in Touch' }}</button>
             </ValidationObserver>
         </form>
     </section>

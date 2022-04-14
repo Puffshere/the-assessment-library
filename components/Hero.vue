@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="col-5 col-12-md" style="position:relative">
-                    <contact-form-mini buttonText="Schedule a Consultation" acFormId="12" />
+                    <contact-form-mini acFormId="12" />
 
                     <span class="legal-form-text">
                         By submitting this form, I agree to the <nuxt-link to="/legal/privacy" class="hyperlink light">Privacy Policy</nuxt-link> and 

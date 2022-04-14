@@ -143,7 +143,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <img style="width: 90%; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1)" src="~/assets/testimonials/susan-cranston.jpg">
+                        <img style="width: 90%; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1)" src="~/assets/testimonials/susan-cranston.jpg" alt="Susan Merli">
                     </div>
 
                     <div class="col-8">
@@ -157,7 +157,7 @@
                             stay forward-thinking."<br/>
                         </p>
                         <p>
-                            <strong>Susan Cranston</strong><br/>
+                            <strong>Susan Merli</strong><br/>
                             Founder & CEO | Authentika Consulting Inc.
                         </p>
                     </div>
