@@ -38,7 +38,7 @@
                             <option value="no">Norwegian - 1</option>
                             <option value="pt">Portuguese - 6</option>
                             <option value="pt-br">Portuguese (Brazil) - 3</option>
-                            <option value="ru">Russian - 5</option>
+                            <option value="ru">Russian - 6</option>
                             <option value="es">Spanish - 7</option>
                             <option value="sv">Swedish - 6</option>
                             <option value="tr">Turkish - 7</option>
@@ -130,10 +130,11 @@
                     <div class="samples-container">
                         <h3>DISC 360&deg;</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
+                        <a v-else-if="lang === 'ru'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
                         <a v-else-if="lang === 'sv'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
                         <a v-else-if="lang === 'vi'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
                         <a v-else class="hyperlink disabled">DISC 360&deg; Report</a>
-                        <a class="language-button disc" @click="disc360ReportModal = true">3 languages</a><br/>
+                        <a class="language-button disc" @click="disc360ReportModal = true">4 languages</a><br/>
                     </div>
                 </div>
 
@@ -482,6 +483,7 @@
                                 <h1>DISC 360&deg; Reports</h1>
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Russian</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Vietnamese</a>
                             </div>
