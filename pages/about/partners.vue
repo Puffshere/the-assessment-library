@@ -246,6 +246,22 @@
                             <a class="hyperlink" target="_blank" rel="noopener" href="https://discdailycoach.com/">Visit DISC Daily &rarr;</a>
                         </div>
                     </div>
+
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/crosscheck.png" alt="Cross Check partners with Assessments 24x7">
+
+                            <p class="bio">
+                                At Cross Check, we are transformation architects for people in business – passionate about unlocking human potential.  Providing our clients with strategies for effective talent selection, onboarding, employee development, behavioural change, conflict resolution, creating world-class leaders, career progression, and creating purposeful teams built for performance and longevity is what we do best. 
+                            </p>
+
+                            <p class="quote">
+                                Thanks to Assessments 24x7 and their great range of quality assessment tools, we can empower our clients to explore their unique human resources, conquer their challenges, achieve transformation and ultimately reach their true potential.
+                            </p>
+
+                            <div class="cite">Katrina Stephenson & Gillian Blackman, Co-Founders of Cross-Check Australasia</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
