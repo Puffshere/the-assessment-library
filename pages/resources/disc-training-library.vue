@@ -248,7 +248,7 @@
                     <div class="col-6">
                         <h3><div class="step-icon small">2</div> Final Knowledge Check - Part 2</h3>
                         <p>
-                            Part 2, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGVNQbIKm8Nwrtdk7459WfTc45Xcl9oJP9j93g1c1YxS6dQ/viewform" target="_blank" rel="noopener" class="hyperlink">DISC Knowledge Check Analysis of Graphs</a>, 
+                            Part 2, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLl_m5NAyfFEA48Yg0JOJTf8SZbjT0EZaDOzg6NPJY5fH9Mw/viewform" target="_blank" rel="noopener" class="hyperlink">DISC Knowledge Check Analysis of Graphs</a>, 
                             asks you to provide an analysis of provided graphs based on your newly acquired skills. Your coach will receive your 
                             submitted responses and will contact you with feedback within 48 business hours.
                         </p>
