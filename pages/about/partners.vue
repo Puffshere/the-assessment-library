@@ -259,7 +259,9 @@
                                 Thanks to Assessments 24x7 and their great range of quality assessment tools, we can empower our clients to explore their unique human resources, conquer their challenges, achieve transformation and ultimately reach their true potential.
                             </p>
 
-                            <div class="cite">Katrina Stephenson & Gillian Blackman, Co-Founders of Cross-Check Australasia</div>
+                            <div class="cite">Katrina Stephenson & Gillian Blackman, Co-Founders of Cross Check Australasia</div>
+
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://www.crosscheck.com.au">Visit Cross Check &rarr;</a>
                         </div>
                     </div>
                 </div>

@@ -57,6 +57,12 @@
                                 Custom Work (Client Facing)
                             </li>
                         </a>
+
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScYBPEfh3rr9kEXC5x6JaphAor2rvFwN99X7NATeVnY_Jwzrw/viewform">
+                            <li class="resource other">
+                                Employee Time-off Request Form
+                            </li>
+                        </a>
                     </ul>
                 </div>
             </div>
@@ -152,6 +158,11 @@
 
                 &.custom {
                     background: linear-gradient(268deg, #b82cff, #540bfb);
+                }
+
+                &.other {
+                    border: 1px solid #eaeaea;
+                    color: #1e222d;
                 }
             }
         }
