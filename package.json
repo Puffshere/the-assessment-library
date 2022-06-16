@@ -73,5 +73,8 @@
     "require-extension-hooks-vue": "^2.0.0",
     "sass-loader": "^7.1.0",
     "webp-loader": "^0.5.0"
+  },
+  "engines": {
+    "node": "16.14.2"
   }
 }
