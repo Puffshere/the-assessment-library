@@ -1,7 +1,7 @@
 import { json } from 'body-parser';
 import Lead from '../models/Lead';
 
-const salesPeople = ['Suzette Chaparro', 'Angie Warner', 'Monica Saare'];
+const salesPeople = ['Suzette Chaparro', 'Angie Warner'];
 
 const getNextLeadAssignment = async (req, res) => {
     try {
