@@ -21,7 +21,6 @@
                 <div class="col-12">
                     <h2 style="margin-bottom: 0px">Watch the Full Webinar:</h2>
                     <h4 style="float:left">Use Your Assessment Dashboard Like a Pro (35 minutes)<br/>Uploaded June 16th, 2022</h4>
-                    <a target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7_WEBINAR_Dashboard_Tips.pdf" class="button" style="float:right"><img class="pdf-icon" src="~/assets/pdf-icon.svg"> Download the Slide Deck</a>
                     <iframe style="width:100%" height="515" src="https://www.youtube.com/embed/NXmFEiIcrVQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
