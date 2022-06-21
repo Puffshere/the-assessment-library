@@ -311,7 +311,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'certified') {
+                if (this.password === '#disccertification') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else {

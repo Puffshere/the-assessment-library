@@ -299,7 +299,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'motcertified') {
+                if (this.password === '#motcertification') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else {
