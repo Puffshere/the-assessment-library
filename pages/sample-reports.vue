@@ -337,9 +337,9 @@
 
                 <div class="col-3">
                     <div class="samples-container">
-                        <h3>5 Disciplines</h3>
-                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/5DisciplinesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">5 Disciplines Report</a>
-                        <a v-else class="hyperlink disabled">5 Disciplines Report</a><br/>
+                        <h3>Organizational Development</h3>
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/5DisciplinesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Organizational Development Report</a>
+                        <a v-else class="hyperlink disabled">Organizational Development Report</a><br/>
                     </div>
                 </div>
             </div>
