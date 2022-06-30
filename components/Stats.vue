@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="col-4">
-                    <p class="stat-number">7,039,810</p>
+                    <p class="stat-number">15,746,580</p>
                     <p class="stat-label">Assessments completed through our technology platform</p>
                 </div>
             </div>
