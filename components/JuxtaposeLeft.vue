@@ -19,6 +19,8 @@
                         <span v-if="lang.indexOf('spanish') !== -1"><img src="~assets/flags/mexico.svg" alt="Spanish DISC Assessments"> Español</span>
                         <span v-if="lang.indexOf('arabic') !== -1"><img src="~assets/flags/algeria.svg" alt="Arabic DISC Assessments"> العربية</span>
                         <span v-if="lang.indexOf('chinese') !== -1"><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
+                        <span v-if="lang.indexOf('italian') !== -1"><img src="~assets/flags/italy.svg" alt="Italian DISC Assessments"> Italiano</span>
+                        <span v-if="lang.indexOf('polish') !== -1"><img src="~assets/flags/republic-of-poland.svg" alt="Polish DISC Assessments"> Polskie</span>
                         <span v-if="lang.indexOf('dutch') !== -1"><img src="~assets/flags/netherlands.svg" alt="Dutch DISC Assessments"> Nederlands</span>
                         <span v-if="lang.indexOf('french') !== -1"><img src="~assets/flags/france.svg" alt="French DISC Assessments"> Français</span>
                         <span v-if="lang.indexOf('german') !== -1"><img src="~assets/flags/germany.svg" alt="German DISC Assessments"> Deutsch</span>
@@ -26,8 +28,11 @@
                         <span v-if="lang.indexOf('japanese') !== -1"><img src="~assets/flags/japan.svg" alt="Japanese DISC Assessments"> 日本語</span>
                         <span v-if="lang.indexOf('cambodian') !== -1"><img src="~assets/flags/cambodia.svg" alt="Cambodian DISC Assessments"> ភាសាខ្មែរ</span>
                         <span v-if="lang.indexOf('korean') !== -1"><img src="~assets/flags/south-korea.svg" alt="Korean DISC Assessments"> 한국어</span>
+                        <span v-if="lang.indexOf('norwegian') !== -1"><img src="~assets/flags/norway.svg" alt="Norwegian DISC Assessments"> Norsk</span>
                         <span v-if="lang.indexOf('malaysian') !== -1"><img src="~assets/flags/malaysia.svg" alt="Malaysian DISC Assessments"> മലയാളം</span>
-                        <span v-if="lang.indexOf('portugese') !== -1"><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português</span>
+                        <span v-if="lang.indexOf('portugese') !== -1"><img src="~assets/flags/portugal.svg" alt="Portugese DISC Assessments"> Português</span>
+                        <span v-if="lang.indexOf('portugese-brazil') !== -1"><img src="~assets/flags/brazil.svg" alt="Brazilian Portugese DISC Assessments"> Português (Brazil)</span>
+                        <span v-if="lang.indexOf('russian') !== -1"><img src="~assets/flags/russia.svg" alt="Russian DISC Assessments"> Россия</span>
                         <span v-if="lang.indexOf('swedish') !== -1"><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>
                         <span v-if="lang.indexOf('turkish') !== -1"><img src="~assets/flags/turkey.svg" alt="Turkish DISC Assessments"> Türkçe</span>
                         <span v-if="lang.indexOf('vietnamese') !== -1"><img src="~assets/flags/vietnam.svg" alt="Vietnamese DISC Assessments"> Tiếng Việt</span>

@@ -82,7 +82,8 @@
                             <span><img src="~assets/flags/south-korea.svg" alt="Korean DISC Assessments"> 한국어</span>
                             <span><img src="~assets/flags/malaysia.svg" alt="Malaysian DISC Assessments"> മലയാളം</span>
                             <span><img src="~assets/flags/norway.svg" alt="Norwegian DISC Assessments"> Norsk</span>
-                            <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português</span>
+                            <span><img src="~assets/flags/republic-of-poland.svg" alt="Polish DISC Assessments"> Polskie</span>
+                            <span><img src="~assets/flags/portugal.svg" alt="Portugese DISC Assessments"> Português</span>
                             <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português (Brazil)</span>
                             <span><img src="~assets/flags/russia.svg" alt="Russian DISC Assessments"> Россия</span>
                             <span><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>

@@ -118,7 +118,7 @@
                             <span><img src="~assets/flags/france.svg" alt="French DISC Assessments"> Français</span>
                             <span><img src="~assets/flags/germany.svg" alt="German DISC Assessments"> Deutsch</span>
                             <span><img src="~assets/flags/japan.svg" alt="Japanese DISC Assessments"> 日本語</span>
-                            <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português</span>
+                            <span><img src="~assets/flags/portugal.svg" alt="Portugese DISC Assessments"> Português</span>
                             <span><img src="~assets/flags/russia.svg" alt="Russian DISC Assessments"> Россия</span>
                             <span><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>
                             <span><img src="~assets/flags/turkey.svg" alt="Turkish DISC Assessments"> Türkçe</span>

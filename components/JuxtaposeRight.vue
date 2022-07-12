@@ -21,7 +21,7 @@
                         <span v-if="lang.indexOf('cambodian') !== -1"><img src="~assets/flags/cambodia.svg" alt="Cambodian DISC Assessments"> ភាសាខ្មែរ</span>
                         <span v-if="lang.indexOf('korean') !== -1"><img src="~assets/flags/south-korea.svg" alt="Korean DISC Assessments"> 한국어</span>
                         <span v-if="lang.indexOf('malaysian') !== -1"><img src="~assets/flags/malaysia.svg" alt="Malaysian DISC Assessments"> മലയാളം</span>
-                        <span v-if="lang.indexOf('portugese') !== -1"><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português</span>
+                        <span v-if="lang.indexOf('portugese') !== -1"><img src="~assets/flags/portugal.svg" alt="Portugese DISC Assessments"> Português</span>
                         <span v-if="lang.indexOf('swedish') !== -1"><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>
                         <span v-if="lang.indexOf('turkish') !== -1"><img src="~assets/flags/turkey.svg" alt="Turkish DISC Assessments"> Türkçe</span>
                         <span v-if="lang.indexOf('vietnamese') !== -1"><img src="~assets/flags/vietnam.svg" alt="Vietnamese DISC Assessments"> Tiếng Việt</span>

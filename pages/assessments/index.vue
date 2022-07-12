@@ -38,7 +38,7 @@
                 alt="DISC"
                 href="/assessments/disc"
                 linkText="DISC Assessment"
-                :lang="['english', 'uk-english', 'spanish', 'arabic', 'chinese', 'dutch', 'french', 'german', 'indonesian', 'japanese', 'cambodian', 'korean', 'malaysian', 'portugese', 'swedish', 'turkish', 'vietnamese']"
+                :lang="['english', 'uk-english', 'spanish', 'arabic', 'chinese', 'dutch', 'italian', 'polish', 'french', 'german', 'indonesian', 'japanese', 'cambodian', 'korean', 'norwegian', 'malaysian', 'portugese', 'portugese-brazil', 'russian', 'swedish', 'turkish', 'vietnamese']"
                 :badges="[
                     {
                         class: 'disc-d',
