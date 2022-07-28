@@ -4,7 +4,7 @@ export const state = () => ({
         {
             id: '1',
             stripeId: 'price_1I6dd4BPiAffrwry1TMNJ3YR',
-            name: 'DISCStyles Assessment (5 Pack)',
+            name: 'DISCStyles Paper Assessment (5 Pack)',
             price: '7500',
             slug: 'hrd-press-discstyles'
         },
