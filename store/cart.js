@@ -3,41 +3,48 @@ export const state = () => ({
     all: [
         {
             id: '1',
+            stripeId: 'price_1LVEPrBPiAffrwrymaFeTdCZ',
+            name: 'Which Bird Are You?: Ten-Lesson Curriculum...',
+            price: '5000',
+            slug: 'which-bird-are-you'
+        },
+        {
+            id: '2',
             stripeId: 'price_1I6dd4BPiAffrwry1TMNJ3YR',
             name: 'DISCStyles Paper Assessment (5 Pack)',
             price: '7500',
             slug: 'hrd-press-discstyles'
         },
         {
-            id: '2',
+            id: '3',
             stripeId: 'price_1I6ddRBPiAffrwryvXYASANa',
             name: 'The DISC Laminated Summary Card',
             price: '600',
             slug: 'disc-summary-card'
         },
         {
-            id: '3',
+            id: '4',
             stripeId: 'price_1I8SHeBPiAffrwrybwJPSTrr',
             name: 'The Platinum Rule Paper Assessment',
             price: '1000',
             slug: 'platinum-rule-assessment'
         },
         {
-            id: '4',
+            id: '5',
             stripeId: 'price_1I8SIABPiAffrwryszKH9TO0',
             name: 'The Platinum Rule Scoring Booklet',
             price: '1200',
             slug: 'platinum-rule-scoring-booklet'
         },
         {
-            id: '5',
+            id: '6',
             stripeId: 'price_1I8SIVBPiAffrwryc6vmDBM7',
             name: 'The Platinum Rule Reminder Card',
             price: '600',
             slug: 'platinum-rule-reminder-card'
         },
         {
-            id: '6',
+            id: '7',
             stripeId: 'price_1Kb55MBPiAffrwryIaZdF4nA',
             name: 'The Platinum Rule Workbook',
             price: '1495',
