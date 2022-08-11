@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">Certification &amp; Training</h1>
+                        <h1 class="section-title">Virtual Certification &amp; Training</h1>
                         <p>
                             Whether independent facilitators, corporate trainers, coaches or consultants, Certified Practitioners offer 
                             unique expertise and perspective, receive higher contracts and salaries, rate stronger when interacting with 
@@ -22,6 +22,11 @@
         <div class="container">
             <div class="row" style="margin-bottom: 30px;">
                 <div class="col-12">
+                    <div class="notification">
+                        <strong>Self-paced, 100% online training</strong><br/>
+                        All certification programs are <strong>100% virtual and self-paced</strong>. No rigid class schedules. Start and finish the training on your own time.
+                    </div>
+
                     <h2>Assessment Certifications &amp; Training</h2>
 
                     <p>
@@ -211,6 +216,15 @@
         h2 {
             font-size: 20pt;
             line-height: 24pt;
+        }
+
+        .notification {
+            background: #f0f9eb;
+            border: 1px solid #c3e5d0;
+            color: #0dab49;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
     }
 </style>
