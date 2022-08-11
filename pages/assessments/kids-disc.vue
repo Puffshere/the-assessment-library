@@ -219,16 +219,19 @@
         <section class="about-the-report">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h4 class="title">At school, with friends, and around family</h4>
+                    <div class="col-4">
+                        <img class="product-image" data-aos="fade-in" data-aos-duration="1000" src="~/assets/what-bird-are-you.png" alt="Kids DISC for parenting and leading children">
+                    </div>
+                    <div class="col-8">
+                        <h4 class="title">Which Bird Are You?</h4>
                         <p>
-                            The Kids DISC report is far more than simply an examination of a single child’s behavioral style. It is packed with details 
-                            designed to teach children to adapt, interact, and better communicate with their peers, teachers, and families. In the parent 
-                            and teacher sections, you’ll discover what the child needs from you to thrive and specific suggestions to support them in ways 
-                            they will understand.
+                            The Which Bird Are You?: Ten-Lesson Curriculum for Teaching Personality in the Classroom Teacher’s Guide & Teacher’s Supplemental 
+                            Materials teaches 8 to 12-year-old children about the four styles we call Eagles, Parrots, Doves, and Owls. The birds bring 
+                            personality to life with imagery that is instantly recognizable and memorable. The Which Bird Are You? Teacher’s Guide makes it easy 
+                            for teachers to lead ten fun and interactive lessons to help children learn about the styles, themselves, and others.
                         </p><br/>
 
-                        <nuxt-link to="/contact" class="button">Questions? Bulk Order?</nuxt-link>
+                        <nuxt-link to="/store/which-bird-are-you" class="button">Buy The Curriculum Today</nuxt-link>
                         <nuxt-link to="/assessments" class="button secondary">See Our Other Assessments</nuxt-link>
                     </div>
                 </div>
@@ -503,6 +506,13 @@
         .title {
             font-size: 24pt;
             margin: 0;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            display: block;
         }
     }
 

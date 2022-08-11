@@ -34,7 +34,7 @@
                         lead ten fun and interactive lessons to help children learn about the styles, themselves, and others.
                     </p><br/>
 
-                    <button class="button success" @click="purchase">BUY NOW FOR $50.00 (FREE SHIPPING)</button>
+                    <button class="button success" @click="addToCart">BUY NOW FOR $50.00 (FREE SHIPPING)</button>
 
                     <p class="price">
                         <span class="discount">$99.00</span>
@@ -88,45 +88,31 @@
     import Nav from '@/components/Nav';
     import Footer from '@/components/Footer';
     import LazyHydrate from 'vue-lazy-hydration';
-    import { loadStripe } from '@stripe/stripe-js';
-    //import AffiliateModal from '@/components/AffiliateModal';
 
     export default {
         components: {
             'main-nav': Nav,
             'client-logos': () => import('@/components/ClientLogos'),
-            //'affiliate-modal': AffiliateModal,
             'footer-fold': Footer
         },
-        async created() {
-            this.stripe = await loadStripe('pk_live_PeTuiiqtJ2b0XODImvk8vWOK00CSpSe0tF');
-        },
         data() {
-            return {
-                stripe: null,
-                isAffiliateModalOpen: false
-            }
+            return {}
         },
         methods: {
-            async purchase() {
-                const {error} = await this.stripe.redirectToCheckout({
-                    items: [
-                        {
-                            sku: 'sku_HAuOYJV8dzrHgz',
-                            quantity: 1
-                        }
-                    ],
-                    successUrl: 'https://www.assessments24x7.com/store',
-                    cancelUrl: 'https://www.assessments24x7.com/store/which-bird-are-you',
-                    billingAddressCollection: 'required',
-                    shippingAddressCollection: {
-                        allowedCountries: ['US'],
+            addToCart() {
+                this.$toast.open({
+                    message: '"Which Bird Are You?: Ten-Lesson Curriculum" has been added to your shopping cart.',
+                    onClick: () => {
+                        $nuxt.$emit('openCartModal');
                     }
                 });
-
-                if (error) {
-                    console.log(error.message);
-                } 
+                this.$store.dispatch('cart/addToCart', {
+                    id: '1',
+                    stripeId: 'price_1LVEPrBPiAffrwrymaFeTdCZ',
+                    name: 'Which Bird Are You?: Ten-Lesson Curriculum...',
+                    price: '5000',
+                    slug: 'which-bird-are-you'
+                });
             }
         },
         head() {
