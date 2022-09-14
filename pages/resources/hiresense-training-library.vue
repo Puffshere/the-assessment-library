@@ -213,6 +213,7 @@
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking-Building+Awareness_HireSense_+PPT-pb.pptx" target="_blank" rel="noopener" class="hyperlink">Critical Thinking for HireSense™ Building Awareness PowerPoint</a></li>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking-Bridging+the+Gap_HireSense_+pb+PPT.pptx" target="_blank" rel="noopener" class="hyperlink">Critical Thinking for HireSense™ Bridging the Gap PowerPoint</a></li>
                                             <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking_HVP+Self+Side+Calculations+vs2.pdf" target="_blank" rel="noopener" class="hyperlink">Self-Side Support Information PDF</a></li>
+                                            <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/hiresense/library/critical-thinking/Critical+Thinking+HVP+Subcategories.pdf" target="_blank" rel="noopener" class="hyperlink">Critical Thinking HVP Subcategory Descriptions</a></li>
                                         </ul>
 
                                         <p class="indented-text">
