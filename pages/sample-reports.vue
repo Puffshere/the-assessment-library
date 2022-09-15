@@ -316,7 +316,7 @@
                         <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQTurkish.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQVietnamese.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else class="hyperlink disabled">Sales IQ Report</a>
-                        <a class="language-button other" @click="salesIQReportModal = true">6 languages</a><br/>
+                        <a class="language-button other" @click="salesIQReportModal = true">7 languages</a><br/>
 
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf" class="hyperlink" target="_blank" rel="noopener">Sales IQ Team Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a>
