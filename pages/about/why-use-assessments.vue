@@ -64,7 +64,7 @@
                         Using assessments, you can identify strengths and potential risks of job applicants <em>before</em> the interview and make thoughtful, 
                         scientifically-informed decisions.
                     </p>
-                    <nuxt-link to="/hiring-and-selection" class="hyperlink">Hiring & Selection &rarr;</nuxt-link>
+                    <a href="https://www.hiresense.com/" target="_blank" class="hyperlink">Hiring & Selection &rarr;</a>
                 </div>
 
                 <div class="col-4">

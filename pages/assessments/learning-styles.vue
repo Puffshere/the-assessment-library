@@ -224,7 +224,7 @@
         <section class="whitelabel">
             <div class="container">
                 <div class="row flex-center">
-                    <div c+lass="col-8">
+                    <div class="col-8">
                         <img class="logo-img" src="~assets/whitelabel-report/learning-styles-whitelabel.png" alt="">
                         <h4 class="title">White Label Our Assessments With Your Own Brand's Logo</h4>
                     </div>
