@@ -35,6 +35,12 @@
                     <h3>Previously Recorded Webinars</h3>
 
                     <ul class="resources">
+                        <nuxt-link to="/resources/disc-sales-tools">
+                            <li class="resource a24x7">
+                                DISC Insights from 48 years in the Industry
+                            </li>
+                        </nuxt-link>
+
                         <nuxt-link to="/resources/dashboard-tips">
                             <li class="resource a24x7">
                                 Use Your Assessment Dashboard Like a Pro!

@@ -7,7 +7,7 @@
             we’ve created a survey so that you can let us know what that direction should be.
         </p>
 
-        <a target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLScEA5kC97Q6HsV1LPy-XWIvuJrkCTX2xuJfS-MIls82mllb1w/viewform" class="button secondary">Take The Latest Webinar Survey</a>
+        <a target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSeG6C6breWVAkP82ylJ8JRmj59rjYQUxNLZP8DFxHxCvPYiOw/viewform" class="button secondary">Take The Latest Webinar Survey</a>
     </section>
 </template>
 
