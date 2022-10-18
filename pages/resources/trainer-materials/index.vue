@@ -48,7 +48,7 @@
                 <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/critical-thinking">
                         <img class="badge" src="~/assets/badges/new/hartman-cert-badge-color-label.png" alt="Critical Thinking Trainer Materials">
-                        <h2>Critical Thinking Trainer Materials</h2>
+                        <h2>Critical Thinking (HVP) Trainer Materials</h2>
                         <p class="description">Click here to access the Critical Thinking trainer materials login portal.</p>
                     </nuxt-link>
                 </div>
