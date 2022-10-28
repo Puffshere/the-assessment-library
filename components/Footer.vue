@@ -82,7 +82,8 @@
                     
                     <p class="contact-legal">&copy; {{new Date().getFullYear()}} Global Assessment Technologies LLC.<br/>All Rights Reserved.</p>
                     <p class="contact-privacy">
-                        <a href="/legal/privacy">Privacy Policy</a> &nbsp;|&nbsp; <a href="/legal/compliance">GDPR Compliance</a>
+                        <a href="/legal/privacy">Privacy Policy</a> &nbsp;|&nbsp; <a href="/legal/compliance">GDPR Compliance</a><br/>
+                        <a href="/legal/accessibility">Accessibility</a>
                     </p>
                 </div>
             </div>
