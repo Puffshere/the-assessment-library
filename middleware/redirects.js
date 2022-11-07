@@ -22,10 +22,6 @@ export default function(context) {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOT.pdf');
         } 
 
-        else if (context.req.url == '/reports/salesiqteamreport.pdf ') {
-            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf ');
-        } 
-        
         else if (context.req.url == '/reports/EIQSampleReport.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf');
         } 
