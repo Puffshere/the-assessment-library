@@ -52,7 +52,7 @@
                             </div>
                         </a>
 
-                        <a href="/reports/SampleDISCandMOT.pdf" target="_blank" rel="noopener">
+                        <a href="/reports/salesiqteamreport.pdf" target="_blank" rel="noopener">
                             <div class="sample">
                                 <img src="~assets/pdf-icon.svg"> Sales IQ Team Report
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf"  x="0px" y="0px" viewBox="0 0 185.343 185.343">
