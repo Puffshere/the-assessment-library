@@ -189,7 +189,7 @@
                                 </div>
                             </a>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCAdultBirds%20(1).pdf" target="_blank" rel="noopener">
+                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/AdultDISC-Birds.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Adult Birds Sample Report
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
