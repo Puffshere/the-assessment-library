@@ -116,7 +116,7 @@
 
                         <h3>Kids DISC</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report</a>
-                        <a v-else-if="lang === 'zh'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISCChinese.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report</a>
+                        <a v-else-if="lang === 'zh'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISCChinese.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report (Simplified)</a>
                         <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Full Report</a><br/>
                         <a class="language-button disc" @click="kidsDISCReportModal = true">2 languages</a><br/>
                         

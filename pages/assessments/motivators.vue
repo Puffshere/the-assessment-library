@@ -113,6 +113,7 @@
                             <span><img src="~assets/flags/united-kingdom.svg" alt="UK DISC Assessments"> UK English</span>
                             <span><img src="~assets/flags/mexico.svg" alt="Spanish DISC Assessments"> Español</span>
                             <span><img src="~assets/flags/algeria.svg" alt="Arabic DISC Assessments"> العربية</span>
+                            <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
                             <span><img src="~assets/flags/italy.svg" alt="Italian DISC Assessments"> Italiano</span>
                             <span><img src="~assets/flags/netherlands.svg" alt="Dutch DISC Assessments"> Nederlands</span>
                             <span><img src="~assets/flags/france.svg" alt="French DISC Assessments"> Français</span>
@@ -123,7 +124,6 @@
                             <span><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>
                             <span><img src="~assets/flags/turkey.svg" alt="Turkish DISC Assessments"> Türkçe</span>
                             <span><img src="~assets/flags/vietnam.svg" alt="Vietnamese DISC Assessments"> Tiếng Việt</span>
-                            <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
                         </div>
                     </div>
                 </div>
@@ -453,6 +453,7 @@
                                     <span><img src="~assets/flags/united-kingdom.svg" alt="UK DISC Assessments"> UK English</span>
                                     <span><img src="~assets/flags/mexico.svg" alt="Spanish DISC Assessments"> Español</span>
                                     <span><img src="~assets/flags/algeria.svg" alt="Arabic DISC Assessments"> العربية</span>
+                                    <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
                                     <span><img src="~assets/flags/netherlands.svg" alt="Dutch DISC Assessments"> Nederlands</span>
                                     <span><img src="~assets/flags/france.svg" alt="French DISC Assessments"> Français</span>
                                     <span><img src="~assets/flags/germany.svg" alt="German DISC Assessments"> Deutsch</span>
@@ -461,7 +462,6 @@
                                     <span><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>
                                     <span><img src="~assets/flags/turkey.svg" alt="Turkish DISC Assessments"> Türkçe</span>
                                     <span><img src="~assets/flags/vietnam.svg" alt="Vietnamese DISC Assessments"> Tiếng Việt</span>
-                                    <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
                                 </div>
                             </div>
                         </div>
