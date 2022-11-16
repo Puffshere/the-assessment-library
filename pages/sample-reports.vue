@@ -476,7 +476,7 @@
                                 <h1>Kids DISC - Full Report</h1>
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISCChinese_(Simplified).pdf" class="hyperlink" target="_blank" rel="noopener">Chinese (Simplified)</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISCChinese.pdf" class="hyperlink" target="_blank" rel="noopener">Chinese (Simplified)</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Kids_DISC_-_Chinese_(Traditional).pdf" class="hyperlink" target="_blank" rel="noopener">Chinese (Traditional)</a><br/>
                             </div>
                         </div>
