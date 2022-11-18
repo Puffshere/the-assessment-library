@@ -836,6 +836,7 @@
                                 <h1>Sales IQ Team Reports</h1>
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusGroupReport_Chinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf" target="_blank" rel="noopener">Turkish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
