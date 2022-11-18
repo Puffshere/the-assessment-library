@@ -641,6 +641,7 @@
 
                                 <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf" target="_blank" rel="noopener">Motivators Team Wheel</a>
                                 <a v-else class="hyperlink disabled">Motivators Team Wheel</a><br/>
+                                <a class="language-button mot" @click="motTeamWheelReportModal = true">2 languages</a><br/>
                             </div>
                         </div>
                     </div>
@@ -659,6 +660,24 @@
 
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReport.pdf" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportChinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
+            <!--MOT TEAM WHEEL MODAL-->
+            <transition name="fade">
+                <section v-if="motTeamWheelReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="motTeamWheelReportModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Motivators Team Wheel</h1>
+
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf" target="_blank" rel="noopener">English</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamWheel_Chinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                             </div>
                         </div>
                     </div>
@@ -875,6 +894,7 @@
                 motSelfReportModal: false,
                 motTeamReportsModal: false,
                 motTeamReportModal: false,
+                motTeamWheelReportModal: false,
                 motDISCReportModal: false,
                 eiqReportModal: false,
                 eiq360ReportModal: false,
