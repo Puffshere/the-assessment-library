@@ -190,7 +190,7 @@
                         <a v-else-if="lang === 'us-gb'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSampleUK.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Vietnamese.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else class="hyperlink disabled">Motivators Self Report</a>
-                        <a class="language-button mot" @click="motSelfReportModal = true">14 languages</a><br/>
+                        <a class="language-button mot" @click="motSelfReportModal = true">15 languages</a><br/>
 
                         <a v-if="lang === 'en-us' || lang === 'zh'" @click="motTeamReportsModal = true" class="hyperlink" target="_blank" rel="noopener">Motivators Team Reports &rsaquo;</a>
                         <a v-else class="hyperlink disabled">Motivators Team Reports</a><br/>
@@ -697,6 +697,7 @@
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/valuessamplereport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Arabic.pdf" target="_blank" rel="noopener">Arabic</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Chinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Dutch.pdf" target="_blank" rel="noopener">Dutch</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_French.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsItalian.pdf" target="_blank" rel="noopener">Italian</a><br/>
