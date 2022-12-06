@@ -176,6 +176,7 @@
                         <h3>Motivators Self</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/valuessamplereport.pdf" class="hyperlink" target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'ar'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Arabic.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Chinese.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'nl'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Dutch.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_French.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'it'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsItalian.pdf" target="_blank" rel="noopener">Motivators Self Report</a>
