@@ -187,7 +187,7 @@
                         <p>
                             When you become certified in DISC, you will receive access to a certified version of each folder, containing exclusive and 
                             upgraded materials that our Master Certified Practitioners use.
-                        <p>
+                        
 
                         </p><br/>
 
@@ -218,7 +218,7 @@
                         </svg>
 
                         <h5 class="subtitle">Tools to Power Your Business</h5>
-                           <p><p>
+                          
                             <p>Our 25-Years of R&D…Is Now Yours. Our white-labeled solution means more than just branding - it means the freedom to run your business, your way. Customize it, market it, 
                                 and sell it, however you want - for however much you want. Whether you’re a consultancy practice of one or 100, you have the freedom to leverage our industry-leading assessments, 
                                 resources, and technology to be your own. We have partnered with thousands of coaches and consultants around the globe to help grow their business and support their growth.</p>
@@ -234,7 +234,7 @@
                         </svg>
 
                         <h5 class="subtitle">The Leading Corporate Assessment Solution</h5>
-                        <p><p>
+                        
                             
 
                            <p> Are you an in-house corporate trainer or HR professional? For business, this means developing in-house employee training 

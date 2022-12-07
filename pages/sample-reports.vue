@@ -123,6 +123,10 @@
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-ChildOnly.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Child Only</a>
                         <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Child Only</a><br/>
 
+                        <a v-if="lang === 'en-us'" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Questionnaire Only</a>
+                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Questionnaire Only</a><br/>
+                        <a class="language-button disc" @click="kidsDiscQuestionaireOnlyModal = true">10 languages</a><br/>
+
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCAdultBirds.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Adult Birds</a>
                         <a v-else class="hyperlink disabled" target="_blank" rel="noopener">DISC Adult Birds</a><br/>
                     </div>
@@ -460,6 +464,32 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryUKSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English (UK)</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
+            <!-- KIDS DISC QUESTIONAIRE ONLY SUMMARY REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="kidsDiscQuestionaireOnlyModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="kidsDiscQuestionaireOnlyModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Kids DISC - Questionnaire Only</h1><br />
+
+                                <a class="hyperlink" target="_blank" rel="noopener">German</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Spanish</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">French</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Italian</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Japanese</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Portugese (Brazil)</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Portugese (Portugal)</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Swedish</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Turkish</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Vietnamese</a><br/>
                             </div>
                         </div>
                     </div>
@@ -886,6 +916,7 @@
                 discSelfModal: false,
                 discTeamReportModal: false,
                 discSummaryReportModal: false,
+                kidsDiscQuestionaireOnlyModal: false,
                 kidsDISCReportModal: false,
                 discTeamDynamicsReportModal: false,
                 discTeamSummaryReportModal: false,
