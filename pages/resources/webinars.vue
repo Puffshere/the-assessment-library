@@ -35,6 +35,12 @@
                     <h3>Previously Recorded Webinars</h3>
 
                     <ul class="resources">
+                        <nuxt-link to="/resources/looking-ahead">
+                            <li class="resource a24x7">
+                                Your Questions Answered & Looking Ahead to 2023!
+                            </li>
+                        </nuxt-link>
+
                         <nuxt-link to="/resources/disc-sales-tools">
                             <li class="resource a24x7">
                                 DISC Insights from 48 years in the Industry
