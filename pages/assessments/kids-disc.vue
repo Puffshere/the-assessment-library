@@ -251,7 +251,7 @@
                                 English</span>
                         </div>
                         <br />
-                        <nuxt-link to="" class="hyperlink">Kids DISC QUESTIONNAIRE ONLY available in &rarr;</nuxt-link>
+                        <p class="hyperlink lineLength">Kids DISC QUESTIONNAIRE ONLY available in &rarr;</p>
                         <div class="languages">
                             <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments">
                                 English</span>
@@ -471,6 +471,12 @@ export default {
             }
         }
     }
+}
+
+.lineLength {
+    box-shadow: inset 0 -3px 0 0 rgb(0 168 255 / 30%);
+    width: 59%;
+    pointer-events: none !important;
 }
 
 .about-assess {
@@ -843,4 +849,5 @@ export default {
         color: #303542;
     }
 }
+
 </style>
