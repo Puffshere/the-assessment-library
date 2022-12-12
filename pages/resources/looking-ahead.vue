@@ -23,7 +23,7 @@
                 <div class="col-12">
                     <h2 style="margin-bottom: 0px">Watch the Full Webinar:</h2>
                     <h4 style="float:left">Your Questions Answered & Looking Ahead to 2023! (55 minutes)<br/>Uploaded December 7th, 2022</h4>
-                    <iframe style="width:100%" height="515" src="https://youtu.be/EHFCDClyQWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe style="width:100%" height="515" src="https://www.youtube.com/watch?v=EHFCDClyQWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
