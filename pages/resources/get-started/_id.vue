@@ -507,6 +507,8 @@
                 this.url = 'assessments123.com';
             } else if (this.id === 'swc') {
                 this.url = 'navigate.southwesternconsulting.com';
+            } else if (this.id === 'wcg') {
+                this.url = 'wcginsights.worldwidecoachinggroup.com/';
             }
 
             if (this.$route.query.noframe) {

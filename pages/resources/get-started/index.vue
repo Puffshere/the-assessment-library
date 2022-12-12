@@ -12,6 +12,7 @@
                         <img v-else-if="id === 'tonyrobbins'" src="~/assets/get-started/tonyrobbins.png" alt="Tony Robbins" class="partner-logo">
                         <img v-else-if="id === 'engageandgrow'" src="~/assets/get-started/engage-and-grow.png" alt="Engage and Grow" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png" alt="Southwestern Consulting" class="partner-logo">
+                        <img v-else-if="id === 'wcg'" src="~/assets/get-started/wcg.png" alt="Worldwide Coaching Group" class="partner-logo">
                         <h1 class="section-title">Get Started</h1>
                         <p>
                             Welcome to your personal coaching dashboard! We invite you to view any and all materials that look interesting to you, 
@@ -370,6 +371,9 @@
             } else if (this.$route.query.id === 'swc') {
                 this.url = 'navigate.southwesternconsulting.com';
                 this.id = 'swc';
+            } else if (this.$route.query.id === 'wcg') {
+                this.url = 'wcginsights.worldwidecoachinggroup.com/';
+                this.id = 'wcg';
             }
 
             if (this.$route.query.noframe) {
