@@ -222,6 +222,9 @@
                 case 'swc':
                     this.getStartedAccountName = 'South Western Consulting';
                     break;
+                case 'wcg':
+                    this.getStartedAccountName = 'Worldwide Coaching Group';
+                    break;
             }
 
             this.loading = false;

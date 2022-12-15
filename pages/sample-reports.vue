@@ -890,6 +890,7 @@
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLE360.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Vietnamese</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360ChineseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Chinese</a>
                             </div>
                         </div>
                     </div>
