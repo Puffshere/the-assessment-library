@@ -36,17 +36,13 @@
                                     <b>
                                         {{
                                         leader.website.indexOf(",") === -1
-                                        ? leader.website
+                                        ? ""
                                         : leader.website.split(",")[1]
                                         }}
                                     </b>
                                 </a><br />
                             </span>
-                            <span v-else-if="leader.website">
-                                <a style="color: #fff" :href="leader.website" target="blank" rel="noopener">
-                                    <b>{{ leader.website.split(",") }}</b>
-                                </a><br/>
-                            </span>
+                            
 
                             <span v-if="leader.linkedin">
                                 <a style="color: #fff" :href="leader.linkedin" target="blank" rel="noopener">
