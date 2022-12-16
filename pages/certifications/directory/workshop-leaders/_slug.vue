@@ -22,7 +22,7 @@
 
                             
 
-                            <span v-if="leader.website.includes(',')">
+                            <span v-if="leader.website">
                                 <a style="color: #fff" :href="leader.website.split(',')[0]" target="blank" rel="noopener">
                                     <b>
                                         {{
