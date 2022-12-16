@@ -27,7 +27,7 @@
                             </span> -->
 
                             <span v-if="leader.website">
-                                <a style="color: #fff" :href="leader.website" target="blank" rel="noopener">
+                                <a style="color: #fff" :href="leader.website.split(',')[0]" target="blank" rel="noopener">
                                     <b>
                                         {{
                                         leader.website.indexOf(",") === -1
@@ -36,7 +36,7 @@
                                         }}
                                     </b>
                                 </a><br />
-                                <a style="color: #fff" :href="leader.website" target="blank" rel="noopener">
+                                <a style="color: #fff" :href="leader.website.split(',')[1]" target="blank" rel="noopener">
                                     <b>
                                         {{
                                         leader.website.indexOf(",") === -1
