@@ -31,8 +31,17 @@
                                     <b>
                                         {{
                                         leader.website.indexOf(",") === -1
-                                        ? leader.website
-                                        : leader.website.split(",")
+                                        ? leader.website.substring(0, leader.website.length/2)
+                                        : leader.website.split(",")[0]
+                                        }}
+                                    </b>
+                                </a><br />
+                                <a style="color: #fff" :href="leader.website" target="blank" rel="noopener">
+                                    <b>
+                                        {{
+                                        leader.website.indexOf(",") === -1
+                                        ? leader.website.substring(leader.website.length/2)
+                                        : leader.website.split(",")[1]
                                         }}
                                     </b>
                                 </a><br />
