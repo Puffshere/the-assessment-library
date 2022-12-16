@@ -31,7 +31,7 @@
                                     <b>
                                         {{
                                         leader.website.indexOf(",") === -1
-                                        ? leader.website.substring(0, leader.website.length/2)
+                                        ? leader.website
                                         : leader.website.split(",")[0]
                                         }}
                                     </b>
