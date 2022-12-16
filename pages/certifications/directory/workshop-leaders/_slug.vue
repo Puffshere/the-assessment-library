@@ -20,26 +20,28 @@
                                 v-else-if="leader.country === 'Australia' || leader.country === 'Western Australia'">🇦🇺</span>
                             <span v-else-if="leader.country === 'India'">🇮🇳</span><br />
 
-                            <span v-if="leader.website">
+                            <span v-if="leader.website.Contains(',') === -1">
+                                <a style="color: #fff" :href="leader.website" target="blank" rel="noopener">
+                                    <b>{{ leader.website }}</b>
+                                </a><br />
+                            </span>
+                            <span v-else>
                                 <a style="color: #fff" :href="leader.website.split(',')[0]" target="blank" rel="noopener">
                                     <b>
                                         {{
-                                        leader.website.indexOf(",") === -1
-                                        ? leader.website
-                                        : leader.website.split(",")[0]
+                                        leader.website.split(",")[0]
                                         }}
                                     </b>
                                 </a><br />
                                 <a style="color: #fff" :href="leader.website.split(',')[1]" target="blank" rel="noopener">
                                     <b>
                                         {{
-                                        leader.website.indexOf(",") === -1
-                                        ? null
-                                        : leader.website.split(",")[1]
+                                        leader.website.split(",")[1]
                                         }}
                                     </b>
                                 </a><br />
                             </span>
+                      
 
                             <span v-if="leader.linkedin">
                                 <a style="color: #fff" :href="leader.linkedin" target="blank" rel="noopener">
