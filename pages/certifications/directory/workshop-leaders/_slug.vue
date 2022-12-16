@@ -20,13 +20,9 @@
                                 v-else-if="leader.country === 'Australia' || leader.country === 'Western Australia'">🇦🇺</span>
                             <span v-else-if="leader.country === 'India'">🇮🇳</span><br />
 
-                            <!-- <span v-if="leader.website">
-                                <a style="color: #fff" :href="leader.website" target="blank" rel="noopener">
-                                    <b>{{ leader.website.split(",") }}</b>
-                                </a><br/>
-                            </span> -->
+                            
 
-                            <span v-if="leader.website">
+                            <span v-if="leader.website.includes(',')">
                                 <a style="color: #fff" :href="leader.website.split(',')[0]" target="blank" rel="noopener">
                                     <b>
                                         {{
@@ -45,6 +41,11 @@
                                         }}
                                     </b>
                                 </a><br />
+                            </span>
+                            <span v-else-if="leader.website">
+                                <a style="color: #fff" :href="leader.website" target="blank" rel="noopener">
+                                    <b>{{ leader.website.split(",") }}</b>
+                                </a><br/>
                             </span>
 
                             <span v-if="leader.linkedin">
