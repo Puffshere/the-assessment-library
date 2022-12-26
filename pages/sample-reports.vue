@@ -298,12 +298,13 @@
                     <div class="samples-container">
                         <h3>Learning Styles</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Learning Styles Report</a>
+                        <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Learning_Styles_-_Chinese.pdf" target="_blank" rel="noopener">Learning Styles Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesFrench.pdf" target="_blank" rel="noopener">Learning Styles Report</a>
                         <a v-else-if="lang === 'ja'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf" target="_blank" rel="noopener">Learning Styles Report</a>
                         <a v-else-if="lang === 'pt-br'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf" target="_blank" rel="noopener">Learning Styles Report</a>
                         <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLSVietnamese.pdf" target="_blank" rel="noopener">Learning Styles Report</a>
                         <a v-else class="hyperlink disabled">Learning Styles Report</a>
-                        <a class="language-button other" @click="learningStylesReportModal = true">5 languages</a><br/>
+                        <a class="language-button other" @click="learningStylesReportModal = true">6 languages</a><br/>
                         
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Learning Styles</a>
                         <a v-else class="hyperlink disabled">DISC + Learning Styles</a><br/>
@@ -826,6 +827,7 @@
                                 <h1>Learning Styles Reports</h1>
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Learning_Styles_-_Chinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesFrench.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf" target="_blank" rel="noopener">Japanese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf" target="_blank" rel="noopener">Portuguese (Brazil)</a><br/>
