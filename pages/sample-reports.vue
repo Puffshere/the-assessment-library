@@ -436,9 +436,10 @@
 
                                 <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelChinese.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
+                                <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelSpanishSample.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
                                 <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelTurkishSampleReport.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
                                 <a v-else class="hyperlink disabled">DISC Team Wheel</a>
-                                <a class="language-button disc" @click="discTeamWheelReportModal = true">3 languages</a><br/>
+                                <a class="language-button disc" @click="discTeamWheelReportModal = true">4 languages</a><br/>
                                 
                                 <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCMatching.pdf" target="_blank" rel="noopener">DISC Collaboration</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCollaborationReportChinese.pdf" target="_blank" rel="noopener">DISC Collaboration</a>
@@ -648,6 +649,7 @@
 
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelChinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelSpanishSample.pdf" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelTurkishSampleReport.pdf" target="_blank" rel="noopener">Turkish</a>
                             </div>
                         </div>
