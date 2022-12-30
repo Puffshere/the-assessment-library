@@ -71,6 +71,15 @@
                             </a>
                         </div>
 
+                        <nuxt-link to="/sample-reports" class="hyperlink">View All Sample Reports &rarr;</nuxt-link>
+
+                        <div class="languages">
+                            <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments"> English</span>
+                            <span><img src="~assets/flags/russia.svg" alt="Russian DISC Assessments"> Россия</span>
+                            <span><img src="~assets/flags/mexico.svg" alt="Spanish DISC Assessments"> Español</span>
+                        </div>
+                        <br />
+
                         <nuxt-link to="/contact" class="button outline">Contact Us</nuxt-link>
                         <nuxt-link to="/assessments/emotional-intelligence" class="button outline">Learn More About EIQ</nuxt-link>
                     </div>
@@ -205,7 +214,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .eiq-360 {
+.eiq-360 {
         .header {
             background: url('~assets/eiq-360.jpg');
             background-size: cover;
@@ -236,6 +245,24 @@
             width: 100%;
             border-radius: 20px 20px 0 0;
             margin-top: 24px;
+        }
+
+        .languages {
+            margin-top: 10px;
+
+            img {
+                width: 14px;
+            }
+
+            span {
+                font-size: 9pt;
+                margin-bottom: 5px;
+                display: inline-block;
+                background: #eaeaea;
+                padding: 0 7px 0 0;
+                border-radius: 20px;
+                font-weight: 600;
+            }
         }
 
         .cta {
