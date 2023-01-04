@@ -270,9 +270,9 @@
                         <p>
                             When you become certified in DISC, Motivators, HireSense or Emotional Intelligence, you will receive access to a certified 
                             version of each folder, containing exclusive and upgraded materials that our Master Certified Practitioners use.
-                        <p>
-
-                        </p><br/>
+                        </p>
+                        
+                        <br/>
 
                         <nuxt-link to="/contact" class="button">Book A Demo Now</nuxt-link>
                     </div>
