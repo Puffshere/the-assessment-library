@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-12">
                         <img class="take-flight-icon" src="~/assets/partner-logos/take-flight-learning-white.png" alt="Take Flight Learning Logo">
-                        <h1 class="section-title">Teachers Guide & Materials</h1>
+                        <h1 class="section-title">Teacher's Guide & Materials</h1>
                         <p>
                             In collaboration with Take Flight Learning, Assessments 24x7 is proud to offer the "Which Bird Are You?" guides. This product enables 
                             teachers to help children enhance their social and emotional skills as they discover what makes them special.
