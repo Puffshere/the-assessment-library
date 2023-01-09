@@ -132,8 +132,8 @@
                     </div>
                 </div>
 
-                <h2>Technology Partners</h2>
-                <hr />
+                <!-- <h2>Master Distributers</h2>
+                <hr /> -->
 
                 <div class="row">
                     <div class="partner">
@@ -360,6 +360,11 @@
                         </div>
                     </div>
                 </div>
+
+                <br />
+                <h2>Affiliate Partners</h2>
+                <hr />
+
             </div>
         </section>
 
