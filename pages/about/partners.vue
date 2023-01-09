@@ -132,7 +132,7 @@
                     </div>
                 </div>
 
-                <h2>Master Distributer Sites</h2>
+                <h2>Master Distributers</h2>
                 <hr />
 
                 <div class="row">
