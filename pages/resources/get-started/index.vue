@@ -13,6 +13,10 @@
                         <img v-else-if="id === 'engageandgrow'" src="~/assets/get-started/engage-and-grow.png" alt="Engage and Grow" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png" alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'wcg'" src="~/assets/get-started/wcg.png" alt="Worldwide Coaching Group" class="partner-logo">
+                        <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png" alt="Australasia" class="partner-logo affiliate">
+                        <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo affiliate">
+                        <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe" class="partner-logo affiliate">
+                        <img v-else-if="id === 'viet'" src="~/assets/partner-logos/vietnam-logo.png" alt="Vietnam" class="partner-logo affiliate">
                         <h1 class="section-title">Get Started</h1>
                         <p>
                             Welcome to your personal coaching dashboard! We invite you to view any and all materials that look interesting to you, 
@@ -374,6 +378,14 @@
             } else if (this.$route.query.id === 'wcg') {
                 this.url = 'wcginsights.worldwidecoachinggroup.com/';
                 this.id = 'wcg';
+            } else if (this.$route.query.id === 'aus') {
+                this.id = 'aus';
+            } else if (this.$route.query.id === 'can') {
+                this.id = 'can';
+            } else if (this.$route.query.id === 'eur') {
+                this.id = 'eur';
+            } else if (this.$route.query.id === 'viet') {
+                this.id = 'viet';
             }
 
             if (this.$route.query.noframe) {
@@ -430,6 +442,13 @@
             font-size: 20pt;
             line-height: 24pt;
             margin-bottom: 0;
+        }
+
+        .affiliate {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
         .step {

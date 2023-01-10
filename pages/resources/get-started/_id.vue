@@ -12,6 +12,10 @@
                         <img v-else-if="id === 'tonyrobbins'" src="~/assets/get-started/tonyrobbins.png" alt="Tony Robbins" class="partner-logo">
                         <img v-else-if="id === 'engageandgrow'" src="~/assets/get-started/engage-and-grow.png" alt="Engage and Grow" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png" alt="Southwestern Consulting" class="partner-logo">
+                        <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png" alt="Australasia" class="partner-logo">
+                        <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo">
+                        <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe" class="partner-logo">
+                        <img v-else-if="id === 'viet'" src="~/assets/partner-logos/vietnam-logo.png" alt="Vietnam" class="partner-logo">
                         <h1 class="section-title">Get Started</h1>
 
                         <p v-if="id === 'tonyrobbins'">
@@ -496,7 +500,7 @@
         },
         created() {
             this.id = this.$route.params.id;
-
+            
             if (this.id === 'ccc') {
                 this.url = 'cccassessments.com';
             } else if (this.id === 'actioncoach') {
@@ -509,6 +513,10 @@
                 this.url = 'navigate.southwesternconsulting.com';
             } else if (this.id === 'wcg') {
                 this.url = 'wcginsights.worldwidecoachinggroup.com/';
+            } else if (this.id === 'aus') {
+            } else if (this.id === 'can') {
+            } else if (this.id === 'eur') {
+            } else if (this.id === 'viet') {
             }
 
             if (this.$route.query.noframe) {

@@ -28,9 +28,138 @@
             </div>
         </div>
 
-
         <section class="partner-list">
             <div class="container">
+                <h2>Affiliate Partners</h2>
+                <hr />
+                <div class="row">
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/australasia-logo.png"
+                                alt="Australasia partners with Assessments 24x7">
+                            <div class="countries">
+                                <h4 class="countriesCovered">
+                                    Countries Covered:
+                                </h4>
+                                <div style="display: flex; flex-direction: row;">
+                                    <ul style="flex: 1;">
+                                        <li>Australia</li>
+                                        <li>New Zealand</li>
+                                        <li>Papua New Guinea</li>
+                                        <li>Solomon Islands</li>
+                                        <li>Nauru</li>
+                                        <li>Vanuatu</li>
+                                        <li>New Caledonia</li>
+                                    </ul>
+                                    <ul style="flex: 1;">
+                                        <li>Fiij</li>
+                                        <li>Tonga</li>
+                                        <li>Cook Islands</li>
+                                        <li>Samoa</li>
+                                        <li>Tuvalu</li>
+                                        <li>Tokelau</li>
+                                        <li>Tahiti</li>
+                                        <li>Easter Island</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br />
+                            <a class="hyperlink" target="_blank" rel="noopener"
+                                href="https://www.assessments24x7.com/resources/get-started?id=aus&noframe=1#">Learn more! &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/europe-logo.png"
+                                alt="Europe partners with Assessments 24x7">
+                            <div class="countries">
+                                <h4 class="countriesCovered">
+                                    Countries Covered:
+                                </h4>
+                                <div style="display: flex; flex-direction: row;">
+                                    <ul style="flex: 1;">
+                                        <li>Algeria</li>
+                                        <li>Dahomey</li>
+                                        <li>Enclaves of Forcados and Badjibo</li>
+                                        <li>France</li>
+                                        <li>French Sudan</li>
+                                        <li>French Togoland</li>
+                                        <li>Guinea</li>
+                                        <li>Italy</li>
+                                        <li>Ivory Coast/Senegal/Cameroon</li>
+                                    </ul>
+                                    <ul style="flex: 1;">
+                                        <li>Mauritania</li>
+                                        <li>Morocco</li>
+                                        <li>Niger</li>
+                                        <li>Senegal</li>
+                                        <li>Switzerland</li>
+                                        <li>Tunisia</li>
+                                        <li>Upper Volta</li>
+                                        <li>Germany</li>
+                                        <li>Poland</li>
+                                        <li>Portugal</li>
+                                        <li>Spain</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br />
+                            <a class="hyperlink" target="_blank" rel="noopener"
+                                href="https://www.assessments24x7.com/resources/get-started?id=eur&noframe=1#">Learn more! &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/vietnam-logo.png"
+                                alt="Vietnam partners with Assessments 24x7">
+                            <div class="countries">
+                                <h4 class="countriesCovered">
+                                    Countries Covered:
+                                </h4>
+                                <div style="display: flex; flex-direction: row;">
+                                    <ul style="flex: 1;">
+                                        <li>Cambodia</li>
+                                        <li>Indonesia</li>
+                                        <li>Laos</li>
+                                        <li>Malaysia</li>
+                                    </ul>
+                                    <ul style="flex: 1;">
+                                        <li>Philippines</li>
+                                        <li>Singapore</li>
+                                        <li>Taiwan</li>
+                                        <li>Thailand</li>
+                                        <li>Vietnam</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br />
+                            <a class="hyperlink" target="_blank" rel="noopener"
+                                href="https://www.assessments24x7.com/resources/get-started?id=viet&noframe=1#">Learn more! &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/canada-logo.png"
+                                alt="Canada partners with Assessments 24x7">
+                            <div class="countries">
+                                <h4 class="countriesCovered">
+                                    Countries Covered:
+                                </h4>
+                                <ul>
+                                    <li>Canada</li>
+                                </ul>
+                            </div>
+                            <br />
+                            <a class="hyperlink" target="_blank" rel="noopener"
+                                href="https://www.assessments24x7.com/resources/get-started?id=can&noframe=1#">Learn more! &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
                 <div class="row">
                     <h2>Technology Partners</h2>
                     <hr />
@@ -40,20 +169,26 @@
                                 alt="Take Flight Learning partners with Assessments 24x7">
 
                             <p class="bio">
-                                Take Flight Learning has taken the DISC model and infused some bird wisdom. By linking
+                                Take Flight Learning has taken the DISC model and infused some bird wisdom. By
+                                linking
                                 the four styles, Eagles (D), Parrots
-                                (I), Doves (S), and Owls (C), the styles are easy to remember and simple to apply. In
+                                (I), Doves (S), and Owls (C), the styles are easy to remember and simple to apply.
+                                In
                                 addition to their Taking Flight with DISC
-                                foundational session, they have four addition programs that allow people to apply the
+                                foundational session, they have four addition programs that allow people to apply
+                                the
                                 styles into a variety of aspects of their
-                                work life. These include: Chameleon Leadership, Chameleon Selling, Innovating IDEAs, and
+                                work life. These include: Chameleon Leadership, Chameleon Selling, Innovating IDEAs,
+                                and
                                 ReDISCovering Conflict.
                             </p>
 
                             <p class="quote">
-                                "Assessments 24x7 defines what it means to a partner. Their people are amazing. Their
+                                "Assessments 24x7 defines what it means to a partner. Their people are amazing.
+                                Their
                                 technology is simple to use and their
-                                profiles provide the foundation for transformation. We see them as an extension of our
+                                profiles provide the foundation for transformation. We see them as an extension of
+                                our
                                 organization.”
                             </p>
 
@@ -92,14 +227,17 @@
                                 maximizing organizational performance
                                 through better people performance. For more than 40 years, True Colors has helped
                                 millions of people find greater personal
-                                awareness and dramatically improve their inter-personal relationships. Our user-friendly
+                                awareness and dramatically improve their inter-personal relationships. Our
+                                user-friendly
                                 programs help people of all ages
-                                understand and learn to recognize the unique differences that lead to miscommunication
+                                understand and learn to recognize the unique differences that lead to
+                                miscommunication
                                 and conflict.
                             </p>
 
                             <p class="quote">
-                                True Colors has been happily partnered with Assessments 24x7 for over a decade. For us-
+                                True Colors has been happily partnered with Assessments 24x7 for over a decade. For
+                                us-
                                 its all about service. The team at
                                 A 24x7 couldn’t possibly be more responsive to our dynamic needs- whether it be new
                                 product development or standard service
@@ -132,9 +270,6 @@
                     </div>
                 </div>
 
-                <!-- <h2>Master Distributers</h2>
-                <hr /> -->
-
                 <div class="row">
                     <div class="partner">
                         <div class="col-6">
@@ -148,21 +283,25 @@
                                 behavioral style you can become the person
                                 God created you to be. Biblical DISC provides insights into learning how to love and
                                 serve one another as Jesus did. Lead
-                                like Jesus is a global, non-profit, faith-based organization that provides leadership
+                                like Jesus is a global, non-profit, faith-based organization that provides
+                                leadership
                                 training based on Biblical truths.
                             </p>
 
                             <p class="quote">
-                                "Assessments 24x7 provided the Platform we needed to introduce the online Biblical DISC®
+                                "Assessments 24x7 provided the Platform we needed to introduce the online Biblical
+                                DISC®
                                 Assessment into the ministry and
-                                faith-based marketplace. Our experience working with Assessments 24x7 has been an answer
+                                faith-based marketplace. Our experience working with Assessments 24x7 has been an
+                                answer
                                 to prayer. They provide innovative
                                 solutions to on-going product development, excellent customer service, valid and
                                 reliable assessments - always with
                                 integrity and professionalism."
                             </p>
 
-                            <div class="cite">Barbara Meiss, Director of Leadership Development, Lead Like Jesus</div>
+                            <div class="cite">Barbara Meiss, Director of Leadership Development, Lead Like Jesus
+                            </div>
 
                             <a class="sample-link" href="/partner-sample-reports/LeadLikeJesusSample.pdf"
                                 target="_blank" rel="noopener">
@@ -193,7 +332,8 @@
                                 alt="Athlete Assessments partners with Assessments 24x7">
 
                             <p class="bio">
-                                Sports are played by people, coached by people and managed by people, so it’s imperative
+                                Sports are played by people, coached by people and managed by people, so it’s
+                                imperative
                                 to get the people side of sport
                                 right. We are experts in the ‘people side’ of elite sports. We work with you,
                                 strengthening what you’ve already established
@@ -203,11 +343,14 @@
                             </p>
 
                             <p class="quote">
-                                "Our relationship with Assessments 24x7 is our most valued business partnership. With
+                                "Our relationship with Assessments 24x7 is our most valued business partnership.
+                                With
                                 over a decade of working together,
-                                they have been consistent with their high level of service and reliability. Their team
+                                they have been consistent with their high level of service and reliability. Their
+                                team
                                 all have an incredible ‘can do’
-                                approach to any opportunity or challenge, their professionalism is unmatched and their
+                                approach to any opportunity or challenge, their professionalism is unmatched and
+                                their
                                 pursuit of excellence relentless.
                                 Thank you Tony, Brandon, Steve and your phenomenal team."
                             </p>
@@ -245,22 +388,28 @@
                                 alt="FiveFour partners with Assessments 24x7">
 
                             <p class="bio">
-                                FiveFour helps companies with disengaged employees and disgruntled customers ignite a
+                                FiveFour helps companies with disengaged employees and disgruntled customers ignite
+                                a
                                 culture of customer success. Our
-                                process is ideal for businesses that have grown to the point where the founder or leader
+                                process is ideal for businesses that have grown to the point where the founder or
+                                leader
                                 no longer has direct contact with
-                                front-line employees. That disconnect leads to undefined expectations for the customer
+                                front-line employees. That disconnect leads to undefined expectations for the
+                                customer
                                 experience. We help them design a
-                                world-class customer experience and define a culture of learning and development that
+                                world-class customer experience and define a culture of learning and development
+                                that
                                 gets them back on the path to growth.
                             </p>
 
                             <p class="quote">
-                                The behavioral assessments from Assessments247 are an invaluable tool in our process of
+                                The behavioral assessments from Assessments247 are an invaluable tool in our process
+                                of
                                 helping the leaders of the company
                                 lead in a new way. The assessments provide a vital window for each person to see
                                 themselves, how they interact with others
-                                and how they perform as a team. Every leadership group we assess gains self-awareness
+                                and how they perform as a team. Every leadership group we assess gains
+                                self-awareness
                                 and sees new opportunities for better
                                 team alignment.
                             </p>
@@ -282,12 +431,14 @@
                                 consuming and often expensive fragmented
                                 system consisting of various team members screening, emailing, calling, preparing
                                 spreadsheets and printing resumes. But
-                                the hard work and money spent often does not lead to the best results. At Hiring Steps,
+                                the hard work and money spent often does not lead to the best results. At Hiring
+                                Steps,
                                 we have simplified that process.
                             </p>
 
                             <p class="quote">
-                                "Partnering with Tony and Brandon at Assessments 24x7 has brought us closer to achieving
+                                "Partnering with Tony and Brandon at Assessments 24x7 has brought us closer to
+                                achieving
                                 our vision of becoming the
                                 matchmaker of hiring.  We are truly excited about the work we are doing together to
                                 revolutionize the industry!"
@@ -308,25 +459,31 @@
                                 alt="DISC Daily partners with Assessments 24x7">
 
                             <p class="bio">
-                                DISC Daily is a simple, daily reminder to focus on growth and development. The messages
+                                DISC Daily is a simple, daily reminder to focus on growth and development. The
+                                messages
                                 are easy to implement. They help you
-                                think about your main goals as well as your most important relationships. If you are a
+                                think about your main goals as well as your most important relationships. If you are
+                                a
                                 coach who wants to help your clients
-                                achieve their goals beyond the initial contract, DISC Daily is the solution for you. By
+                                achieve their goals beyond the initial contract, DISC Daily is the solution for you.
+                                By
                                 engaging on the platform at any time,
-                                reading the weekly email and daily texts, your clients can track how effective they are
+                                reading the weekly email and daily texts, your clients can track how effective they
+                                are
                                 in each area of their lives every day.
                             </p>
 
                             <p class="quote">
                                 Partnering with Assessments 24x7 is what got my business off the ground. I can still
                                 recall my first contact with the company.
-                                Jennifer Larsen, VP of Instructional Design and Education, talked with me, heard me, and
+                                Jennifer Larsen, VP of Instructional Design and Education, talked with me, heard me,
+                                and
                                 came up with just what I needed to move
                                 my business to the next step.
                             </p>
 
-                            <div class="cite">Emily Bass, President and CEO, Emily Bass Strategies/The DISC Daily</div>
+                            <div class="cite">Emily Bass, President and CEO, Emily Bass Strategies/The DISC Daily
+                            </div>
 
                             <a class="hyperlink" target="_blank" rel="noopener" href="https://discdailycoach.com/">Visit
                                 DISC Daily &rarr;</a>
@@ -342,13 +499,15 @@
                                 At Cross Check, we are transformation architects for people in business – passionate
                                 about unlocking human potential. Providing our clients with strategies for effective
                                 talent selection, onboarding, employee development, behavioural change, conflict
-                                resolution, creating world-class leaders, career progression, and creating purposeful
+                                resolution, creating world-class leaders, career progression, and creating
+                                purposeful
                                 teams built for performance and longevity is what we do best.
                             </p>
 
                             <p class="quote">
                                 Thanks to Assessments 24x7 and their great range of quality assessment tools, we can
-                                empower our clients to explore their unique human resources, conquer their challenges,
+                                empower our clients to explore their unique human resources, conquer their
+                                challenges,
                                 achieve transformation and ultimately reach their true potential.
                             </p>
 
@@ -360,11 +519,6 @@
                         </div>
                     </div>
                 </div>
-
-                <br />
-                <h2>Affiliate Partners</h2>
-                <hr />
-
             </div>
         </section>
 
@@ -424,6 +578,17 @@ export default {
     h2 {
         font-size: 20pt;
         line-height: 24pt;
+    }
+
+    .countriesCovered {
+        margin-bottom: -10px;
+    }
+
+    .countries {
+        padding: 10px;
+        background: #f9f9f9;
+        padding-top: .5px;
+        margin-top: 20px;
     }
 
     .report-spread-image {
