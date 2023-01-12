@@ -469,6 +469,26 @@ export default {
                         // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
                         await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
+                        // Apply the "Affiliate Referral: Australasia" tag (tag id 907)
+                        if (this.getStartedId === 'aus') {
+                        await axios.post(`/api/contact/${data.contact.id}/tag/907`);
+                        };
+
+                        // Apply the "Affiliate Referral: Canada" tag (tag id 910)
+                        if (this.getStartedId === 'can') {
+                        await axios.post(`/api/contact/${data.contact.id}/tag/910`);
+                        };
+
+                        // Apply the "Affiliate Referral: Erudia" tag (tag id 908)
+                        if (this.getStartedId === 'eur') {
+                        await axios.post(`/api/contact/${data.contact.id}/tag/908`);
+                        };
+                        
+                        // Apply the "Affiliate Referral: Vietnam" tag (tag id 909)
+                        if (this.getStartedId === 'viet') {
+                        await axios.post(`/api/contact/${data.contact.id}/tag/909`);
+                        };
+
                         // Create an account and associate the contact to it
                         await axios.post(`/api/contact/${data.contact.id}/account`, {
                             company: this.form.company

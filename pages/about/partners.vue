@@ -2,6 +2,31 @@
     <section class="partners">
         <main-nav />
 
+        <transition name="fade">
+            <section v-if="isOpen" class="account-modal-window">
+                <div class="container">
+                    <a href="#" title="Close" class="modal-close" @click="close">Close</a>
+                    <span>
+                        <img v-if="id === 'aus'" class="partner-logo" src="~/assets/partner-logos/australasia-logo.png"
+                            alt="Australasia partners with Assessments 24x7">
+                        <img v-if="id === 'can'" class="partner-logo" src="~/assets/partner-logos/canada-logo.png"
+                            alt="Canada partners with Assessments 24x7">
+                        <img v-if="id === 'eur'" class="partner-logo" src="~/assets/partner-logos/europe-logo.png"
+                            alt="Europe partners with Assessments 24x7">
+                        <img v-if="id === 'viet'" class="partner-logo" src="~/assets/partner-logos/vietnam-logo.png"
+                            alt="Vietnam partners with Assessments 24x7">
+                        <h4 class="subText">For more information on this partner please fill out the form below:</h4>
+                    </span>
+                    <div class="row">
+                        <div class="col-12">
+                            <contact-form buttonText="Request an Account" redirect="/get-started-thankyou"
+                                :isShort="true" :isGetStarted="true" acFormId="2" :getStartedId="id" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </transition>
+
         <section class="header">
             <div class="container">
                 <div class="row">
@@ -33,7 +58,7 @@
                 <h2>Affiliate Partners</h2>
                 <hr />
                 <div class="row">
-                    <div class="partner">
+                    <div id="id" class="partner">
                         <div class="col-6">
                             <img class="logo" src="~/assets/partner-logos/australasia-logo.png"
                                 alt="Australasia partners with Assessments 24x7">
@@ -64,8 +89,7 @@
                                 </div>
                             </div>
                             <br />
-                            <a class="hyperlink" target="_blank" rel="noopener"
-                                href="https://www.assessments24x7.com/resources/get-started?id=aus&noframe=1#">Learn more! &rarr;</a>
+                            <a href="#" title="Open" class="modal-open hyperlink" @click="open('aus')">Learn more!</a>
                         </div>
                     </div>
                     <div class="partner">
@@ -104,8 +128,7 @@
                                 </div>
                             </div>
                             <br />
-                            <a class="hyperlink" target="_blank" rel="noopener"
-                                href="https://www.assessments24x7.com/resources/get-started?id=eur&noframe=1#">Learn more! &rarr;</a>
+                                <a href="#" title="Open" class="modal-open hyperlink" @click="open('eur')">Learn more!</a>
                         </div>
                     </div>
                 </div>
@@ -135,8 +158,7 @@
                                 </div>
                             </div>
                             <br />
-                            <a class="hyperlink" target="_blank" rel="noopener"
-                                href="https://www.assessments24x7.com/resources/get-started?id=viet&noframe=1#">Learn more! &rarr;</a>
+                                <a href="#" title="Open" class="modal-open hyperlink" @click="open('viet')">Learn more!</a>
                         </div>
                     </div>
 
@@ -153,8 +175,7 @@
                                 </ul>
                             </div>
                             <br />
-                            <a class="hyperlink" target="_blank" rel="noopener"
-                                href="https://www.assessments24x7.com/resources/get-started?id=can&noframe=1#">Learn more! &rarr;</a>
+                                <a href="#" title="Open" class="modal-open hyperlink" @click="open('can')">Learn more!</a>
                         </div>
                     </div>
                 </div>
@@ -533,9 +554,14 @@ import Stats from '@/components/Stats';
 import Footer from '@/components/Footer';
 
 export default {
+    props: [
+        'id',
+        'getStartedId'
+    ],
     components: {
         'main-nav': Nav,
         'stats': Stats,
+        'contact-form': () => import('@/components/ContactForm'),
         'footer-fold': Footer
     },
     head() {
@@ -549,11 +575,116 @@ export default {
                 }
             ]
         }
+    },
+    data() {
+        return {
+            isOpen: false
+        }
+    },
+    methods: {
+        open(id) {
+            this.id = id;
+            this.isOpen = true;
+        },
+        close() {
+            this.isOpen = false;
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.partner-logo {
+    width: 100%;
+    max-width: 450px;
+}
+
+.subText {
+    background: linear-gradient(to right, #f7f7f7, #efefef);
+    box-shadow: -1px 3px 7px -5px black;
+    letter-spacing: .25px;
+}
+
+.account-modal-window {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .6);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    transition: all 0.25s;
+
+    .container {
+        width: 100%;
+        max-width: 800px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px 20px;
+        background: #fff;
+        text-align: center;
+        height: 100%;
+        max-height: 700px;
+        overflow-y: scroll;
+        border-radius: 10px;
+
+        .modal-close {
+            color: #aaa;
+            line-height: 50px;
+            font-size: 12pt;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 0;
+            width: 70px;
+            text-decoration: none;
+
+            &:hover {
+                color: #000;
+            }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 18pt;
+        }
+
+        .contact-form {
+            text-align: left;
+            display: flex;
+        }
+    }
+
+    .validation {
+        background: #fef0f0;
+        ;
+        color: #f56c6c;
+        padding: 12px 20px;
+        border-radius: 4px;
+
+        .title,
+        .description {
+            margin: 0;
+            font-size: 10pt;
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+    {
+    opacity: 0;
+}
+
 .partners {
     .header {
         background: url('~assets/about.jpg');
