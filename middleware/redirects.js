@@ -90,7 +90,7 @@ export default function(context) {
             context.redirect('https://hiresense.com');
         }
 
-        else if (context.req.url == '/resources/Five-Sample-EIQ') {
+        else if (context.req.url == '/resources/Five-Sample-EIQ.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Five-Sample-EIQ.PDF');
         }
         
