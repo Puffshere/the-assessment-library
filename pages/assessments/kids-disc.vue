@@ -375,16 +375,6 @@
 import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
-    modules: [
-        'nuxt-redirect-module',
-    ],
-    redirect: [
-        {
-            from: '/store',
-            to: 'https://store.assessments24x7.com',
-            statusCode: 301
-        }
-    ],
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),

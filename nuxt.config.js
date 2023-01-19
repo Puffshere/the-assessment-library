@@ -74,15 +74,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/gtm',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
-    'nuxt-redirect-module'
-  ],
-  redirect: [
-    {
-      from: '/store',
-      to: 'https://store.assessments24x7.com',
-      statusCode: 301
-    }
+    '@nuxtjs/robots'
   ],
   robots: {
     UserAgent: '*',
@@ -165,7 +157,8 @@ module.exports = {
   },
 
   serverMiddleware: [
-    '~/api/index.js'
+    '~/api/index.js',
+    '~/middleware/redirects.js'
   ],
 
   router: {
