@@ -157,8 +157,7 @@ module.exports = {
   },
 
   serverMiddleware: [
-    '~/api/index.js',
-    '~/middleware/redirects.js'
+    '~/api/index.js'
   ],
 
   router: {
