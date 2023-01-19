@@ -247,9 +247,12 @@
                         <nuxt-link to="/sample-reports" class="hyperlink">View All Sample Reports &rarr;</nuxt-link>
 
                         <div class="languages">
-                            <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments"> English</span>
-                            <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文 (Simplified)</span>
-                            <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文 (Traditional)</span>
+                            <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments">
+                                English</span>
+                            <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文
+                                (Simplified)</span>
+                            <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文
+                                (Traditional)</span>
                         </div>
                         <br />
                         <p class="hyperlink lineLength">Kids DISC QUESTIONNAIRE ONLY available in &rarr;</p>
@@ -299,7 +302,8 @@
                             styles, themselves, and others.
                         </p><br />
 
-                        <a href="https://store.assessments24x7.com/products/which-bird-are-you-ten-lesson-curriculum" target="_blank" rel="noopener" class="button">Buy The Curriculum Today</a>
+                        <nuxt-link to="/store/products/which-bird-are-you-ten-lesson-curriculum" class="button">Buy The Curriculum Today</nuxt-link>
+                        <nuxt-link to="/store" class="button">Buy The Curriculum Today</nuxt-link>
                         <nuxt-link to="/assessments" class="button secondary">See Our Other Assessments</nuxt-link>
                     </div>
                 </div>
@@ -850,5 +854,4 @@ export default {
         color: #303542;
     }
 }
-
 </style>

@@ -74,7 +74,15 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/gtm',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    'nuxt-redirect-module'
+  ],
+  redirect: [
+    {
+      from: '/store',
+      to: 'https://store.assessments24x7.com',
+      statusCode: 301
+    }
   ],
   robots: {
     UserAgent: '*',
@@ -138,7 +146,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extend (config, { isDev, isClient, loaders: { vue } }) {
+    extend(config, { isDev, isClient, loaders: { vue } }) {
       if (isClient) {
         vue.transformAssetUrls.img = ['data-src', 'src']
         vue.transformAssetUrls.source = ['data-srcset', 'srcset']
@@ -149,7 +157,7 @@ module.exports = {
       }
     },
     transpile: ['vue-mapbox', '@nuxtjs/axios', 'vee-validate/dist/rules'],
-    babel:{
+    babel: {
       plugins: [
         ['@babel/plugin-proposal-private-methods', { loose: true }]
       ]
