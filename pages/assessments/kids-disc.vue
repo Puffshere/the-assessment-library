@@ -302,8 +302,8 @@
                             styles, themselves, and others.
                         </p><br />
 
-                        <nuxt-link to="/store/products/which-bird-are-you-ten-lesson-curriculum" class="button">Buy The Curriculum Today</nuxt-link>
-                        <nuxt-link to="/store" class="button">Buy The Curriculum Today</nuxt-link>
+                        <a href="https://store.assessments24x7.com/products/which-bird-are-you-ten-lesson-curriculum" target="_blank" rel="noopener"
+                            class="button">Buy The Curriculum Today</a>
                         <nuxt-link to="/assessments" class="button secondary">See Our Other Assessments</nuxt-link>
                     </div>
                 </div>
@@ -375,6 +375,16 @@
 import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
+    modules: [
+        'nuxt-redirect-module',
+    ],
+    redirect: [
+        {
+            from: '/store',
+            to: 'https://store.assessments24x7.com',
+            statusCode: 301
+        }
+    ],
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
