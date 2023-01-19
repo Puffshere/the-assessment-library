@@ -299,7 +299,7 @@
                             styles, themselves, and others.
                         </p><br />
 
-                        <nuxt-link to="https://store.assessments24x7.com/products/which-bird-are-you-ten-lesson-curriculum" class="button">Buy The Curriculum Today</nuxt-link>
+                        <nuxt-link to="/products/which-bird-are-you-ten-lesson-curriculum" class="button">Buy The Curriculum Today</nuxt-link>
                         <nuxt-link to="/assessments" class="button secondary">See Our Other Assessments</nuxt-link>
                     </div>
                 </div>
