@@ -89,6 +89,10 @@ export default function(context) {
         else if (context.req.url == '/disc-fitness-benchmarking.asp') {
             context.redirect('https://hiresense.com');
         }
+
+        else if (context.req.url == '/resources/Five-Sample-EIQ') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Five-Sample-EIQ.PDF');
+        }
         
         else if (context.req.url.match(/(\/reports\/)[\w- ]+\.pdf/gi)) {
             context.redirect('https://www.assessments24x7.com/sample-reports');
