@@ -735,13 +735,13 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Chinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Dutch.pdf" target="_blank" rel="noopener">Dutch</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_French.pdf" target="_blank" rel="noopener">French</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_German.pdf" target="_blank" rel="noopener">German</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsItalian.pdf" target="_blank" rel="noopener">Italian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Japanese.pdf" target="_blank" rel="noopener">Japanese</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_German.pdf" target="_blank" rel="noopener">German</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsPortuguese.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsRussian.pdf" target="_blank" rel="noopener">Russian</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Swedish.pdf" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Espanol.pdf" target="_blank" rel="noopener">Spanish</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Swedish.pdf" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSampleTurkish.pdf" target="_blank" rel="noopener">Turkish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSampleUK.pdf" target="_blank" rel="noopener">English (UK)</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Vietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
