@@ -187,7 +187,7 @@
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic eiq">Review the online Resources for EIQ Trainers</li>
-                            <li class="topic eiq">EIQ Final Knowledge Check<li>
+                            <li class="topic eiq">EIQ Final Knowledge Check</li>
                             <li class="topic eiq">Final Certification Call and discuss strategy for use</li>
                         </ul>
                     </div>
