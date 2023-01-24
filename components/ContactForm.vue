@@ -928,7 +928,7 @@ export default {
                     try {
                         const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {
-                            salesPerson: salesPerson.data,
+                            salesPerson: "Suzette Chaparro",
                             firstName: this.form.firstName,
                             lastName: this.form.lastName,
                             phone: this.form.phone,
