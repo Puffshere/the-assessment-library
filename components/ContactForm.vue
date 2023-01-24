@@ -32,9 +32,12 @@
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
                             <label for="country">Country *</label>
-                            <input type="text" id="country" name="country" v-model="form.country" list="countries" autocomplete="country">
+                            <input type="text" id="country" name="country" v-model="form.country" list="countries"
+                                autocomplete="country">
                             <datalist id="countries">
-                                <option v-for="country in countries" :key="country.id" :value="country.label">{{ country.label }}</option>
+                                <option v-for="country in countries" :key="country.id" :value="country.label">{{
+                                    country.label
+                                }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -433,7 +436,7 @@ export default {
                 { label: 'Yemen' },
                 { label: 'Zambia' },
                 { label: 'Zimbabwe' },
-                { label: 'Other' }, 
+                { label: 'Other' },
             ],
         }
     },
@@ -741,6 +744,20 @@ export default {
                         this.getStartedId = "can";
                         break;
                 }
+                switch (this.getStartedId) {
+                    case 'aus':
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'can':
+                        this.getStartedAccountName = 'Canada';
+                        break;
+                    case 'eur':
+                        this.getStartedAccountName = 'Europe';
+                        break;
+                    case 'viet':
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                }
                 if (this.getStartedId === "aus" || this.getStartedId === "can" || this.getStartedId === "eur" || this.getStartedId === "viet") {
                     try {
                         console.log("This is currently working");
@@ -830,22 +847,22 @@ export default {
 
                         // Apply the "Affiliate Referral: Australasia" tag (tag id 907)
                         if (this.getStartedId === 'aus') {
-                        await axios.post(`/api/contact/${data.contact.id}/tag/907`);
+                            await axios.post(`/api/contact/${data.contact.id}/tag/907`);
                         };
 
                         // Apply the "Affiliate Referral: Canada" tag (tag id 910)
                         if (this.getStartedId === 'can') {
-                        await axios.post(`/api/contact/${data.contact.id}/tag/910`);
+                            await axios.post(`/api/contact/${data.contact.id}/tag/910`);
                         };
 
                         // Apply the "Affiliate Referral: Erudia" tag (tag id 908)
                         if (this.getStartedId === 'eur') {
-                        await axios.post(`/api/contact/${data.contact.id}/tag/908`);
+                            await axios.post(`/api/contact/${data.contact.id}/tag/908`);
                         };
-                        
+
                         // Apply the "Affiliate Referral: Vietnam" tag (tag id 909)
                         if (this.getStartedId === 'viet') {
-                        await axios.post(`/api/contact/${data.contact.id}/tag/909`);
+                            await axios.post(`/api/contact/${data.contact.id}/tag/909`);
                         };
 
                         // Create an account and associate the contact to it
