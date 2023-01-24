@@ -51,8 +51,7 @@
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
-                            <label for="country">Country *</label>
-                            <input type="text" id="country" name="country" v-model="form.country" list="countries"
+                            <input type="text" id="country" name="country" v-model="form.country" placeholder="Country *" list="countries"
                                 autocomplete="country">
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
