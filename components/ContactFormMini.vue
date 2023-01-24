@@ -51,8 +51,8 @@
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
-                            <input type="text" id="country" name="country" v-model="form.country" placeholder="Country *" list="countries"
-                                autocomplete="country">
+                            <input type="text" id="country" name="country" v-model="form.country"
+                                placeholder="Country *" list="countries" autocomplete="country">
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
@@ -354,7 +354,7 @@ export default {
                 { label: 'Yemen' },
                 { label: 'Zambia' },
                 { label: 'Zimbabwe' },
-                { label: 'Other' }, 
+                { label: 'Other' },
             ],
         }
     },
@@ -367,98 +367,417 @@ export default {
             if (validated) {
                 this.loading = true;
 
-                try {
-                    const salesPerson = await axios.get('/api/lead/next-assignment');
-
-                    const lead = await axios.post('/api/lead', {
-                        salesPerson: salesPerson.data,
-                        firstName: this.form.firstName,
-                        lastName: this.form.lastName,
-                        phone: this.form.phone,
-                        email: this.form.email,
-                        country: this.form.country
-                    });
-
-                    let event = '';
-                    let adWordsValue = 'No';
-
-                    if (localStorage.getItem('ppc_event')) {
-                        event = localStorage.getItem('ppc_event');
-
-                        if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
-                            adWordsValue = 'Yes';
-                        }
-                    }
-
-                    const { data } = await axios.post('/api/contact', {
-                        contact: {
-                            email: this.form.email,
+                switch (this.form.country) {
+                    case 'Australia':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'New Zealand':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Papua New Guinea':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Solomon Islands':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Nauru':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Vanuatu':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'New Caledonia':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Fiij':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Tonga':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Cook Islands':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Samoa':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Tuvalu':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Tokelau':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Tahiti':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Easter Island':
+                        this.getStartedId = "aus";
+                        this.getStartedAccountName = 'Australasia';
+                        break;
+                    case 'Algeria':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Dahomey':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Enclaves of Forcados and Badjibo':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'France':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'French Sudan':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'French Togoland':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Guinea':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Italy':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Ivory Coast/Senegal/Cameroon':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Mauritania':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Morocco':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Niger':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Senegal':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Switzerland':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Tunisia':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Upper Volta':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Germany':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Poland':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Portugal':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Spain':
+                        this.getStartedId = "eur";
+                        this.getStartedAccountName = 'Erudia';
+                        break;
+                    case 'Cambodia':
+                        this.getStartedId = "viet";
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                    case 'Indonesia':
+                        this.getStartedId = "viet";
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                    case 'Laos':
+                        this.getStartedId = "viet";
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                    case 'Malaysia':
+                        this.getStartedId = "viet";
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                    case 'Philippines':
+                        this.getStartedId = "viet";
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                    case 'Singapore':
+                        this.getStartedId = "viet";
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                    case 'Taiwan':
+                        this.getStartedId = "viet";
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                    case 'Thailand':
+                        this.getStartedId = "viet";
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                    case 'Vietnam':
+                        this.getStartedId = "viet";
+                        this.getStartedAccountName = 'Vietnam';
+                        break;
+                    case 'Canada':
+                        this.getStartedId = "can";
+                        this.getStartedAccountName = 'Canada';
+                        break;
+                }
+                if (this.getStartedId === "aus" || this.getStartedId === "can" || this.getStartedId === "eur" || this.getStartedId === "viet") {
+                    try {
+                        const salesPerson = await axios.get('/api/lead/next-assignment');
+                        const lead = await axios.post('/api/lead', {
+                            salesPerson: "Angie Fairbanks",
                             firstName: this.form.firstName,
                             lastName: this.form.lastName,
                             phone: this.form.phone,
-                            country: this.form.country,
-                            fieldValues: [
-                                {
-                                    field: '4', // Client type (reseller vs corporate),
-                                    value: this.form.clientType
-                                },
-                                {
-                                    field: '10', // Newsletter opt-in,
-                                    value: this.form.newsletter
-                                },
-                                {
-                                    field: '20', // Questions/Comments,
-                                    value: this.form.comments
-                                },
-                                {
-                                    field: '79', // Sales Person Assignment,
-                                    value: salesPerson.data
-                                },
-                                {
-                                    field: '84', // Is Adwords Lead?
-                                    value: adWordsValue
-                                }
-                            ]
+                            email: this.form.email,
+                            country: this.form.country
+                        });
+
+                        let event = '';
+                        let adWordsValue = 'No';
+
+                        if (localStorage.getItem('ppc_event')) {
+                            event = localStorage.getItem('ppc_event');
+
+                            if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
+                                adWordsValue = 'Yes';
+                            }
                         }
-                    });
 
-                    const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+                        const { data } = await axios.post('/api/contact', {
+                            contact: {
+                                email: this.form.email,
+                                firstName: this.form.firstName,
+                                lastName: this.form.lastName,
+                                phone: this.form.phone,
+                                country: this.form.country,
+                                fieldValues: [
+                                    {
+                                        field: '21', // How did you hear about us?
+                                        value: this.form.source
+                                    },
+                                    {
+                                        field: '22', // How did you hear about us? (Other),
+                                        value: this.form.sourceOther
+                                    },
+                                    {
+                                        field: '20', // Questions/Comments,
+                                        value: this.form.comments
+                                    },
+                                    {
+                                        field: '4', // Client type (reseller vs corporate),
+                                        value: this.form.clientType
+                                    },
+                                    {
+                                        field: '64', // Affiliation,
+                                        value: this.form.affiliation
+                                    },
+                                    {
+                                        field: '10', // Newsletter opt-in,
+                                        value: this.form.newsletter
+                                    },
+                                    {
+                                        field: '79', // Sales Person Assignment,
+                                        value: "Angie Fairbanks"
+                                    },
+                                    {
+                                        field: '80', // Get Started Account Affiliation
+                                        value: this.isGetStarted ? this.getStartedAccountName : ''
+                                    },
+                                    {
+                                        field: '84', // Is Adwords Lead?
+                                        value: adWordsValue
+                                    }
+                                ]
+                            }
+                        });
 
-                    // Check to see if this contact wants to subscribe to our newsletter
-                    if (this.form.newsletter === '45') {
-                        await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+
+                        // Check to see if this contact wants to subscribe to our newsletter
+                        if (this.form.newsletter === '45') {
+                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                        }
+
+                        // If this is a the Get Started flow, we need to add a special tag to trigger email alerts
+                        if (this.isGetStarted) {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/149`);
+                        }
+
+                        // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
+                        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+                        // Apply the "Affiliate Referral: Australasia" tag (tag id 907)
+                        if (this.getStartedId === 'aus') {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/907`);
+                        };
+
+                        // Apply the "Affiliate Referral: Canada" tag (tag id 910)
+                        if (this.getStartedId === 'can') {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/910`);
+                        };
+
+                        // Apply the "Affiliate Referral: Erudia" tag (tag id 908)
+                        if (this.getStartedId === 'eur') {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/908`);
+                        };
+
+                        // Apply the "Affiliate Referral: Vietnam" tag (tag id 909)
+                        if (this.getStartedId === 'viet') {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/909`);
+                        };
+
+                        // Create an account and associate the contact to it
+                        await axios.post(`/api/contact/${data.contact.id}/account`, {
+                            company: this.form.company
+                        });
+
+                        this.trackConversion(data.contact.id);
+
+                        this.loading = false;
+
+                        this.$toast.open({
+                            message: 'Your information has been successfully submitted!',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'success'
+                        });
+
+                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+
+                    } catch (err) {
+                        this.isDisabled = false;
+                        this.loading = false;
+                        this.$toast.open({
+                            message: 'An unexpected error has occured. Please try again later.',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'error'
+                        });
                     }
+                }
+                if (this.getStartedId !== "wcg" && this.getStartedId !== "aus" && this.getStartedId !== "can" && this.getStartedId !== "eur" && this.getStartedId !== "viet") {
+                    try {
+                        const salesPerson = await axios.get('/api/lead/next-assignment');
 
-                    // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
-                    await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+                        const lead = await axios.post('/api/lead', {
+                            salesPerson: salesPerson.data,
+                            firstName: this.form.firstName,
+                            lastName: this.form.lastName,
+                            phone: this.form.phone,
+                            email: this.form.email,
+                            country: this.form.country
+                        });
 
-                    // Create an account and associate the contact to it
-                    await axios.post(`/api/contact/${data.contact.id}/account`, {
-                        company: this.form.company
-                    });
+                        let event = '';
+                        let adWordsValue = 'No';
 
-                    this.trackConversion();
+                        if (localStorage.getItem('ppc_event')) {
+                            event = localStorage.getItem('ppc_event');
 
-                    this.loading = false;
+                            if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
+                                adWordsValue = 'Yes';
+                            }
+                        }
 
-                    this.$toast.open({
-                        message: 'Your information has been successfully submitted!',
-                        position: 'top',
-                        duration: 8000,
-                        type: 'success'
-                    });
+                        const { data } = await axios.post('/api/contact', {
+                            contact: {
+                                email: this.form.email,
+                                firstName: this.form.firstName,
+                                lastName: this.form.lastName,
+                                phone: this.form.phone,
+                                country: this.form.country,
+                                fieldValues: [
+                                    {
+                                        field: '4', // Client type (reseller vs corporate),
+                                        value: this.form.clientType
+                                    },
+                                    {
+                                        field: '10', // Newsletter opt-in,
+                                        value: this.form.newsletter
+                                    },
+                                    {
+                                        field: '20', // Questions/Comments,
+                                        value: this.form.comments
+                                    },
+                                    {
+                                        field: '79', // Sales Person Assignment,
+                                        value: salesPerson.data
+                                    },
+                                    {
+                                        field: '84', // Is Adwords Lead?
+                                        value: adWordsValue
+                                    }
+                                ]
+                            }
+                        });
 
-                    this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+                        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
-                } catch (err) {
-                    this.isDisabled = false;
-                    this.loading = false;
-                    this.$toast.open({
-                        message: 'An unexpected error has occured. Please try again later.',
-                        position: 'top',
-                        duration: 8000,
-                        type: 'error'
-                    });
+                        // Check to see if this contact wants to subscribe to our newsletter
+                        if (this.form.newsletter === '45') {
+                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                        }
+
+                        // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
+                        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+                        // Create an account and associate the contact to it
+                        await axios.post(`/api/contact/${data.contact.id}/account`, {
+                            company: this.form.company
+                        });
+
+                        this.trackConversion();
+
+                        this.loading = false;
+
+                        this.$toast.open({
+                            message: 'Your information has been successfully submitted!',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'success'
+                        });
+
+                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+
+                    } catch (err) {
+                        this.isDisabled = false;
+                        this.loading = false;
+                        this.$toast.open({
+                            message: 'An unexpected error has occured. Please try again later.',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'error'
+                        });
+                    }
                 }
             } else {
                 this.isDisabled = false;
