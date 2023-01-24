@@ -53,13 +53,13 @@
                     </nuxt-link>
                 </div>
 
-                <div class="col-4">
+                <!-- <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/learning-styles">
                         <img class="badge" src="~/assets/badges/new/learning-cert-badge-color-label.png" alt="Learning Styles Trainer Materials">
                         <h2>Learning Styles Trainer Materials</h2>
                         <p class="description">Click here to access the Learning Styles trainer materials login portal.</p>
                     </nuxt-link>
-                </div>
+                </div> -->
 
                 <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/sales-iq">
