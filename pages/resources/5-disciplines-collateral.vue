@@ -1,0 +1,190 @@
+<template>
+    <section class="skeleton">
+        <LazyHydrate when-visible><main-nav></main-nav></LazyHydrate>
+
+        <section class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="section-title">5 Disciplines Information Page</h1>
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Empowering our Community</h2>
+
+                    <p>
+                        We are committed to developing content that helps our clients grow their businesses and master
+                        the products we offer. If you ever
+                        miss an Assessments 24x7 webinar, we will post the recording and slide deck here. Be sure to
+                        bookmark this page and check it
+                        periodically!
+                    </p>
+                </div>
+            </div><br />
+
+            <div class="row">
+                <div class="col-8">
+                    <h3>5 Diciplines White Papers:</h3>
+
+                    <ul class="resources">
+                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Adding-Zeros.pdf"
+                            target="_blank" rel="noopener">
+                            <li class="resource a24x7 spacing">
+                                Adding Zeros
+                            </li>
+                        </a>
+                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Business-Development.pdf"
+                            target="_blank" rel="noopener">
+                            <li class="resource a24x7 spacing">
+                                Business Development
+                            </li>
+                        </a>
+                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Execution.pdf"
+                            target="_blank" rel="noopener">
+                            <li class="resource a24x7 spacing">
+                                Execution
+                            </li>
+                        </a>
+                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Mission.pdf"
+                            target="_blank" rel="noopener">
+                            <li class="resource a24x7 spacing">
+                                Mission
+                            </li>
+                        </a>
+                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-People.pdf"
+                            target="_blank" rel="noopener">
+                            <li class="resource a24x7 spacing">
+                                People
+                            </li>
+                        </a>
+                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Strategy.pdf"
+                            target="_blank" rel="noopener">
+                            <li class="resource a24x7 spacing">
+                                Strategy
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="col-4">
+                    <!-- <LazyHydrate when-visible><survey-sidebar></survey-sidebar></LazyHydrate> -->
+                    <LazyHydrate when-visible><contact-sidebar></contact-sidebar></LazyHydrate>
+                </div>
+            </div>
+        </div>
+
+        <validation-mini />
+        <client-logos />
+
+        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
+    </section>
+</template>
+
+<script>
+import LazyHydrate from 'vue-lazy-hydration';
+
+export default {
+    components: {
+        'main-nav': () => import('@/components/Nav'),
+        'footer-fold': () => import('@/components/Footer'),
+        'contact-sidebar': () => import('@/components/ContactSidebar'),
+        'survey-sidebar': () => import('@/components/SurveySidebar'),
+        'validation-mini': () => import('@/components/ValidationMini'),
+        'client-logos': () => import('@/components/ClientLogos')
+    },
+    head() {
+        return {
+            title: 'Webinars | Assessments 24x7',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'If you ever miss an Assessments 24x7 webinar, we will post the recording and slide deck here. Be sure to bookmark this page and check it periodically!'
+                }
+            ]
+        }
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+.skeleton {
+    .header {
+        background: url('~assets/leadership-360.jpg');
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 70px 0;
+        margin-bottom: 30px;
+
+        .section-title {
+            font-size: 30pt;
+            margin-top: 0;
+        }
+    }
+
+    .hyperlink {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    h1 {
+        font-size: 30pt;
+        line-height: 34pt;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 22pt;
+        line-height: 24pt;
+    }
+
+    h3 {
+        font-size: 18pt;
+        line-height: 24pt;
+        margin-top: 0;
+    }
+
+    .resources {
+        padding-left: 0;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+        }
+
+        .resource {
+            padding: 10px;
+            background: #f7f7f7;
+            margin-bottom: 6px;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+
+            &.a24x7 {
+                background: linear-gradient(268deg, #0999fe, #0249ec);
+            }
+
+            &.business {
+                background: linear-gradient(268deg, #ffa518, #fc542a);
+            }
+
+            &.wellness {
+                background: linear-gradient(268deg, #fa4ca6, #ff2f4c);
+            }
+        }
+    }
+}
+
+.spacing {
+        letter-spacing: 1px;
+    }
+</style>

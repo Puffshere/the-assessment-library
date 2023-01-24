@@ -502,6 +502,8 @@
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'certified') {
+                //  Tophat
+                // } else if (this.password === 'certified23') {
                     this.unlocked = true;
                     this.certified = true;
                     this.validationError = false;

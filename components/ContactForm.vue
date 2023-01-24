@@ -28,6 +28,17 @@
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
+
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <label for="country">Country *</label>
+                            <input type="text" id="country" name="country" v-model="form.country" list="countries" autocomplete="country">
+                            <datalist id="countries">
+                                <option v-for="country in countries" :key="country.id" :value="country.label">{{ country.label }}</option>
+                            </datalist>
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
                 </div>
 
                 <div class="col-6">
@@ -216,8 +227,214 @@ export default {
                 clientType: '',
                 affiliation: '',
                 newsletter: '45',
-                consent: ''
-            }
+                consent: '',
+                country: ''
+            },
+            countries: [
+                { label: 'Afghanistan' },
+                { label: 'Albania' },
+                { label: 'Algeria' },
+                { label: 'Andorra' },
+                { label: 'Angola' },
+                { label: 'Antigua and Barbuda' },
+                { label: 'Argentina' },
+                { label: 'Armenia' },
+                { label: 'Australia' },
+                { label: 'Austria' },
+                { label: 'Azerbaijan' },
+                { label: 'Bahamas' },
+                { label: 'Bahrain' },
+                { label: 'Bangladesh' },
+                { label: 'Barbados' },
+                { label: 'Belarus' },
+                { label: 'Belgium' },
+                { label: 'Belize' },
+                { label: 'Benin' },
+                { label: 'Bhutan' },
+                { label: 'Bolivia' },
+                { label: 'Bosnia and Herzegovina' },
+                { label: 'Botswana' },
+                { label: 'Brazil' },
+                { label: 'Brunei' },
+                { label: 'Bulgaria' },
+                { label: 'Burkina Faso' },
+                { label: 'Burundi' },
+                { label: 'Cambodia' },
+                { label: 'Cameroon' },
+                { label: 'Canada' },
+                { label: 'Cape Verde' },
+                { label: 'Central African Republic' },
+                { label: 'Chad' },
+                { label: 'Chile' },
+                { label: 'China' },
+                { label: 'Colombia' },
+                { label: 'Comoros' },
+                { label: 'Congo' },
+                { label: 'Cook Islands' },
+                { label: 'Costa Rica' },
+                { label: 'Croatia' },
+                { label: 'Cuba' },
+                { label: 'Cyprus' },
+                { label: 'Czech Republic' },
+                { label: 'Dahomey' },
+                { label: 'Denmark' },
+                { label: 'Djibouti' },
+                { label: 'Dominica' },
+                { label: 'Dominican Republic' },
+                { label: 'Easter Island' },
+                { label: 'Ecuador' },
+                { label: 'Egypt' },
+                { label: 'El Salvador' },
+                { label: 'Enclaves of Forcados and Badjibo' },
+                { label: 'Equatorial Guinea' },
+                { label: 'Eritrea' },
+                { label: 'Estonia' },
+                { label: 'Ethiopia' },
+                { label: 'Fiji' },
+                { label: 'Finland' },
+                { label: 'France' },
+                { label: 'French Sudan' },
+                { label: 'French Togoland' },
+                { label: 'Gabon' },
+                { label: 'Gambia' },
+                { label: 'Georgia' },
+                { label: 'Germany' },
+                { label: 'Ghana' },
+                { label: 'Greece' },
+                { label: 'Grenada' },
+                { label: 'Guatemala' },
+                { label: 'Guinea' },
+                { label: 'Guinea-Bissau' },
+                { label: 'Guyana' },
+                { label: 'Haiti' },
+                { label: 'Honduras' },
+                { label: 'Hungary' },
+                { label: 'Iceland' },
+                { label: 'India' },
+                { label: 'Indonesia' },
+                { label: 'Iran' },
+                { label: 'Iraq' },
+                { label: 'Ireland' },
+                { label: 'Israel' },
+                { label: 'Italy' },
+                { label: 'Ivory Coast/Senegal/Cameroon' },
+                { label: 'Jamaica' },
+                { label: 'Japan' },
+                { label: 'Jordan' },
+                { label: 'Kazakhstan' },
+                { label: 'Kenya' },
+                { label: 'Kiribati' },
+                { label: 'Kuwait' },
+                { label: 'Kyrgyzstan' },
+                { label: 'Laos' },
+                { label: 'Latvia' },
+                { label: 'Lebanon' },
+                { label: 'Lesotho' },
+                { label: 'Liberia' },
+                { label: 'Libya' },
+                { label: 'Liechtenstein' },
+                { label: 'Lithuania' },
+                { label: 'Luxembourg' },
+                { label: 'Macedonia' },
+                { label: 'Madagascar' },
+                { label: 'Malawi' },
+                { label: 'Malaysia' },
+                { label: 'Maldives' },
+                { label: 'Mali' },
+                { label: 'Malta' },
+                { label: 'Marshall Islands' },
+                { label: 'Mauritania' },
+                { label: 'Mauritius' },
+                { label: 'Mexico' },
+                { label: 'Micronesia' },
+                { label: 'Moldova' },
+                { label: 'Monaco' },
+                { label: 'Mongolia' },
+                { label: 'Montenegro' },
+                { label: 'Morocco' },
+                { label: 'Mozambique' },
+                { label: 'Myanmar' },
+                { label: 'Namibia' },
+                { label: 'Nauru' },
+                { label: 'Nepal' },
+                { label: 'Netherlands' },
+                { label: 'New Caledonia' },
+                { label: 'New Zealand' },
+                { label: 'Nicaragua' },
+                { label: 'Niger' },
+                { label: 'Nigeria' },
+                { label: 'Norway' },
+                { label: 'Oman' },
+                { label: 'Pakistan' },
+                { label: 'Palau' },
+                { label: 'Panama' },
+                { label: 'Papua New Guinea' },
+                { label: 'Paraguay' },
+                { label: 'Peru' },
+                { label: 'Philippines' },
+                { label: 'Poland' },
+                { label: 'Portugal' },
+                { label: 'Qatar' },
+                { label: 'Romania' },
+                { label: 'Russia' },
+                { label: 'Rwanda' },
+                { label: 'Saint Kitts and Nevis' },
+                { label: 'Saint Lucia' },
+                { label: 'Saint Vincent and the Grenadines' },
+                { label: 'Samoa' },
+                { label: 'San Marino' },
+                { label: 'Sao Tome and Principe' },
+                { label: 'Saudi Arabia' },
+                { label: 'Senegal' },
+                { label: 'Serbia' },
+                { label: 'Seychelles' },
+                { label: 'Sierra Leone' },
+                { label: 'Singapore' },
+                { label: 'Slovakia' },
+                { label: 'Slovenia' },
+                { label: 'Solomon Islands' },
+                { label: 'Somalia' },
+                { label: 'South Africa' },
+                { label: 'South Korea' },
+                { label: 'South Sudan' },
+                { label: 'Spain' },
+                { label: 'Sri Lanka' },
+                { label: 'Sudan' },
+                { label: 'Suriname' },
+                { label: 'Swaziland' },
+                { label: 'Sweden' },
+                { label: 'Switzerland' },
+                { label: 'Syria' },
+                { label: 'Tahiti' },
+                { label: 'Taiwan' },
+                { label: 'Tajikistan' },
+                { label: 'Tanzania' },
+                { label: 'Thailand' },
+                { label: 'Timor-Leste' },
+                { label: 'Togo' },
+                { label: 'Tokelau' },
+                { label: 'Tonga' },
+                { label: 'Trinidad and Tobago' },
+                { label: 'Tunisia' },
+                { label: 'Turkey' },
+                { label: 'Turkmenistan' },
+                { label: 'Tuvalu' },
+                { label: 'Uganda' },
+                { label: 'Ukraine' },
+                { label: 'United Arab Emirates' },
+                { label: 'United Kingdom' },
+                { label: 'United States of America' },
+                { label: 'Upper Volta' },
+                { label: 'Uruguay' },
+                { label: 'Uzbekistan' },
+                { label: 'Vanuatu' },
+                { label: 'Venezuela' },
+                { label: 'Vietnam' },
+                { label: 'Yemen' },
+                { label: 'Zambia' },
+                { label: 'Zimbabwe' },
+                { label: 'Other' }, 
+            ],
         }
     },
     async created() {
@@ -280,7 +497,8 @@ export default {
                             firstName: this.form.firstName,
                             lastName: this.form.lastName,
                             phone: this.form.phone,
-                            email: this.form.email
+                            email: this.form.email,
+                            country: this.form.country
                         });
 
                         let event = '';
@@ -300,6 +518,7 @@ export default {
                                 firstName: this.form.firstName,
                                 lastName: this.form.lastName,
                                 phone: this.form.phone,
+                                country: this.form.country,
                                 fieldValues: [
                                     {
                                         field: '21', // How did you hear about us?
@@ -385,15 +604,154 @@ export default {
                         });
                     }
                 }
+                switch (this.form.country) {
+                    case 'Australia':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'New Zealand':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Papua New Guinea':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Solomon Islands':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Nauru':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Vanuatu':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'New Caledonia':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Fiij':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Tonga':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Cook Islands':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Samoa':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Tuvalu':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Tokelau':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Tahiti':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Easter Island':
+                        this.getStartedId = "aus";
+                        break;
+                    case 'Algeria':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Dahomey':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Enclaves of Forcados and Badjibo':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'France':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'French Sudan':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'French Togoland':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Guinea':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Italy':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Ivory Coast/Senegal/Cameroon':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Mauritania':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Morocco':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Niger':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Senegal':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Switzerland':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Tunisia':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Upper Volta':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Germany':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Poland':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Portugal':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Spain':
+                        this.getStartedId = "eur";
+                        break;
+                    case 'Cambodia':
+                        this.getStartedId = "viet";
+                        break;
+                    case 'Indonesia':
+                        this.getStartedId = "viet";
+                        break;
+                    case 'Laos':
+                        this.getStartedId = "viet";
+                        break;
+                    case 'Malaysia':
+                        this.getStartedId = "viet";
+                        break;
+                    case 'Philippines':
+                        this.getStartedId = "viet";
+                        break;
+                    case 'Singapore':
+                        this.getStartedId = "viet";
+                        break;
+                    case 'Taiwan':
+                        this.getStartedId = "viet";
+                        break;
+                    case 'Thailand':
+                        this.getStartedId = "viet";
+                        break;
+                    case 'Vietnam':
+                        this.getStartedId = "viet";
+                        break;
+                    case 'Canada':
+                        this.getStartedId = "can";
+                        break;
+                }
                 if (this.getStartedId === "aus" || this.getStartedId === "can" || this.getStartedId === "eur" || this.getStartedId === "viet") {
                     try {
+                        console.log("This is currently working");
                         const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {
                             salesPerson: salesPerson.data,
                             firstName: this.form.firstName,
                             lastName: this.form.lastName,
                             phone: this.form.phone,
-                            email: this.form.email
+                            email: this.form.email,
+                            country: this.form.country
                         });
 
                         let event = '';
@@ -413,6 +771,7 @@ export default {
                                 firstName: this.form.firstName,
                                 lastName: this.form.lastName,
                                 phone: this.form.phone,
+                                country: this.form.country,
                                 fieldValues: [
                                     {
                                         field: '21', // How did you hear about us?
@@ -526,7 +885,8 @@ export default {
                             firstName: this.form.firstName,
                             lastName: this.form.lastName,
                             phone: this.form.phone,
-                            email: this.form.email
+                            email: this.form.email,
+                            country: this.form.country
                         });
 
                         let event = '';
@@ -546,6 +906,7 @@ export default {
                                 firstName: this.form.firstName,
                                 lastName: this.form.lastName,
                                 phone: this.form.phone,
+                                country: this.form.country,
                                 fieldValues: [
                                     {
                                         field: '21', // How did you hear about us?

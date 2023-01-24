@@ -270,6 +270,8 @@
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'lscertified') {
+                //  Tophat
+                // } else if (this.password === 'lscertified23') {
                     this.unlocked = true;
                     this.certified = true;
                     this.validationError = false;

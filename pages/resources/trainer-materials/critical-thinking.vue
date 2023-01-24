@@ -273,6 +273,8 @@
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'HVPcertified' || this.password === 'hvpcertified') {
+                //  Tophat
+                // } else if (this.password === 'HVPcertified23' || this.password === 'hvpcertified23') {
                     this.unlocked = true;
                     this.certified = true;
                     this.validationError = false;
