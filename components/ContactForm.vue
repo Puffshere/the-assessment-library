@@ -35,7 +35,7 @@
                             <input type="text" id="country" name="country" v-model="form.country" list="countries"
                                 autocomplete="country">
                             <datalist id="countries">
-                                <option v-for="country in countries" :key="country.id" :value="country.label">{{
+                                <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
                                 }}</option>
                             </datalist>
@@ -164,7 +164,8 @@
                                 <label class="form-check-label" for="consent">
                                     I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy
                                         Policy</nuxt-link> and
-                                    <nuxt-link to="/legal/compliance" class="hyperlink">GDPR Policy</nuxt-link> and give
+                                    <nuxt-link to="/legal/compliance" class="hyperlink">GDPR Policy</nuxt-link> and
+                                    give
                                     my consent.*
                                 </label>
 
@@ -1061,6 +1062,11 @@ export default {
 
                 axios.post('/api/tracking-event', { event, email: this.form.email });
             }
+        }
+    },
+    computed: {
+        filteredCountries() {
+            return this.countries.filter(country => country.label.toLowerCase().startsWith(this.form.country.toLowerCase()));
         }
     }
 }

@@ -190,7 +190,6 @@
             unlock() {
                 if (this.password === 'a24x72022siq') {
                 //  Tophat
-                // if (this.password === 'a24x72022siq23') {
                     this.unlocked = true;
                 } else {
                     this.validationError = true;
