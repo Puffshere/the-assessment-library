@@ -336,11 +336,10 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'a24x72022mot') {
+                if (this.password === 'a24x7mot2023') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'motcertified') {
-                //  Tophat
                     this.unlocked = true;
                     this.certified = true;
                     this.validationError = false;

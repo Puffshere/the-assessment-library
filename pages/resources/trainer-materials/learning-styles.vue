@@ -266,11 +266,10 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'a24x72022ls') {
+                if (this.password === 'a24x7ls2023') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'lscertified') {
-                //  Tophat
                     this.unlocked = true;
                     this.certified = true;
                     this.validationError = false;

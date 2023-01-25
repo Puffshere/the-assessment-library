@@ -188,8 +188,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'a24x72022siq') {
-                //  Tophat
+                if (this.password === 'a24x7siq2023') {
                     this.unlocked = true;
                 } else {
                     this.validationError = true;

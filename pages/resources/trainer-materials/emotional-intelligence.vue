@@ -297,11 +297,10 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
         },
         methods: {
             unlock() {
-                if (this.password === 'a24x72022eiq') {
+                if (this.password === 'a24x7eiq2023') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'eiqcertified') {
-                //  Tophat    
                     this.unlocked = true;
                     this.certified = true;
                     this.validationError = false;
