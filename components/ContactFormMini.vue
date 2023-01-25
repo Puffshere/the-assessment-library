@@ -348,7 +348,6 @@ export default {
                 }
                 if (this.getStartedId === "aus" || this.getStartedId === "can" || this.getStartedId === "eur" || this.getStartedId === "viet") {
                     try {
-                        const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Angie Fairbanks",
                             firstName: this.form.firstName,

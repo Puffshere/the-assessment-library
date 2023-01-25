@@ -290,121 +290,6 @@ export default {
 
             if (validated) {
                 this.loading = true;
-                if (this.getStartedId !== "wcg" && this.getStartedId !== "aus" && this.getStartedId !== "can" && this.getStartedId !== "eur" && this.getStartedId !== "viet") {
-                    try {
-                        const salesPerson = await axios.get('/api/lead/next-assignment');
-                        const lead = await axios.post('/api/lead', {
-                            salesPerson: salesPerson.data,
-                            firstName: this.form.firstName,
-                            lastName: this.form.lastName,
-                            phone: this.form.phone,
-                            email: this.form.email,
-                            country: this.form.country
-                        });
-
-                        let event = '';
-                        let adWordsValue = 'No';
-
-                        if (localStorage.getItem('ppc_event')) {
-                            event = localStorage.getItem('ppc_event');
-
-                            if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
-                                adWordsValue = 'Yes';
-                            }
-                        }
-
-                        const { data } = await axios.post('/api/contact', {
-                            contact: {
-                                email: this.form.email,
-                                firstName: this.form.firstName,
-                                lastName: this.form.lastName,
-                                phone: this.form.phone,
-                                country: this.form.country,
-                                fieldValues: [
-                                    {
-                                        field: '21', // How did you hear about us?
-                                        value: this.form.source
-                                    },
-                                    {
-                                        field: '22', // How did you hear about us? (Other),
-                                        value: this.form.sourceOther
-                                    },
-                                    {
-                                        field: '20', // Questions/Comments,
-                                        value: this.form.comments
-                                    },
-                                    {
-                                        field: '4', // Client type (reseller vs corporate),
-                                        value: this.form.clientType
-                                    },
-                                    {
-                                        field: '64', // Affiliation,
-                                        value: this.form.affiliation
-                                    },
-                                    {
-                                        field: '10', // Newsletter opt-in,
-                                        value: this.form.newsletter
-                                    },
-                                    {
-                                        field: '79', // Sales Person Assignment,
-                                        value: salesPerson.data
-                                    },
-                                    {
-                                        field: '80', // Get Started Account Affiliation
-                                        value: this.isGetStarted ? this.getStartedAccountName : ''
-                                    },
-                                    {
-                                        field: '84', // Is Adwords Lead?
-                                        value: adWordsValue
-                                    }
-                                ]
-                            }
-                        });
-
-                        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
-
-                        // Check to see if this contact wants to subscribe to our newsletter
-                        if (this.form.newsletter === '45') {
-                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
-                        }
-
-                        // If this is a the Get Started flow, we need to add a special tag to trigger email alerts
-                        if (this.isGetStarted) {
-                            await axios.post(`/api/contact/${data.contact.id}/tag/149`);
-                        }
-
-                        // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
-                        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
-
-                        // Create an account and associate the contact to it
-                        await axios.post(`/api/contact/${data.contact.id}/account`, {
-                            company: this.form.company
-                        });
-
-                        this.trackConversion(data.contact.id);
-
-                        this.loading = false;
-
-                        this.$toast.open({
-                            message: 'Your information has been successfully submitted!',
-                            position: 'top',
-                            duration: 8000,
-                            type: 'success'
-                        });
-
-                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
-
-                    } catch (err) {
-                        this.isDisabled = false;
-                        this.loading = false;
-                        this.$toast.open({
-                            message: 'An unexpected error has occured. Please try again later.',
-                            position: 'top',
-                            duration: 8000,
-                            type: 'error'
-                        });
-                    }
-                }
                 switch (this.form.country) {
                     case 'Australia':
                         this.getStartedId = "aus";
@@ -589,7 +474,6 @@ export default {
                 }
                 if (this.getStartedId === "aus" || this.getStartedId === "can" || this.getStartedId === "eur" || this.getStartedId === "viet") {
                     try {
-                        const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Angie Fairbanks",
                             firstName: this.form.firstName,
@@ -724,7 +608,6 @@ export default {
                 }
                 if (this.getStartedId === "wcg") {
                     try {
-                        const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Suzette Chaparro",
                             firstName: this.form.firstName,
@@ -780,6 +663,121 @@ export default {
                                     {
                                         field: '79', // Sales Person Assignment,
                                         value: "Suzette Chaparro"
+                                    },
+                                    {
+                                        field: '80', // Get Started Account Affiliation
+                                        value: this.isGetStarted ? this.getStartedAccountName : ''
+                                    },
+                                    {
+                                        field: '84', // Is Adwords Lead?
+                                        value: adWordsValue
+                                    }
+                                ]
+                            }
+                        });
+
+                        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+
+                        // Check to see if this contact wants to subscribe to our newsletter
+                        if (this.form.newsletter === '45') {
+                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                        }
+
+                        // If this is a the Get Started flow, we need to add a special tag to trigger email alerts
+                        if (this.isGetStarted) {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/149`);
+                        }
+
+                        // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
+                        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+                        // Create an account and associate the contact to it
+                        await axios.post(`/api/contact/${data.contact.id}/account`, {
+                            company: this.form.company
+                        });
+
+                        this.trackConversion(data.contact.id);
+
+                        this.loading = false;
+
+                        this.$toast.open({
+                            message: 'Your information has been successfully submitted!',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'success'
+                        });
+
+                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+
+                    } catch (err) {
+                        this.isDisabled = false;
+                        this.loading = false;
+                        this.$toast.open({
+                            message: 'An unexpected error has occured. Please try again later.',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'error'
+                        });
+                    }
+                }
+                if (this.getStartedId !== "wcg" && this.getStartedId !== "aus" && this.getStartedId !== "can" && this.getStartedId !== "eur" && this.getStartedId !== "viet") {
+                    try {
+                        const salesPerson = await axios.get('/api/lead/next-assignment');
+                        const lead = await axios.post('/api/lead', {
+                            salesPerson: salesPerson.data,
+                            firstName: this.form.firstName,
+                            lastName: this.form.lastName,
+                            phone: this.form.phone,
+                            email: this.form.email,
+                            country: this.form.country
+                        });
+
+                        let event = '';
+                        let adWordsValue = 'No';
+
+                        if (localStorage.getItem('ppc_event')) {
+                            event = localStorage.getItem('ppc_event');
+
+                            if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
+                                adWordsValue = 'Yes';
+                            }
+                        }
+
+                        const { data } = await axios.post('/api/contact', {
+                            contact: {
+                                email: this.form.email,
+                                firstName: this.form.firstName,
+                                lastName: this.form.lastName,
+                                phone: this.form.phone,
+                                country: this.form.country,
+                                fieldValues: [
+                                    {
+                                        field: '21', // How did you hear about us?
+                                        value: this.form.source
+                                    },
+                                    {
+                                        field: '22', // How did you hear about us? (Other),
+                                        value: this.form.sourceOther
+                                    },
+                                    {
+                                        field: '20', // Questions/Comments,
+                                        value: this.form.comments
+                                    },
+                                    {
+                                        field: '4', // Client type (reseller vs corporate),
+                                        value: this.form.clientType
+                                    },
+                                    {
+                                        field: '64', // Affiliation,
+                                        value: this.form.affiliation
+                                    },
+                                    {
+                                        field: '10', // Newsletter opt-in,
+                                        value: this.form.newsletter
+                                    },
+                                    {
+                                        field: '79', // Sales Person Assignment,
+                                        value: salesPerson.data
                                     },
                                     {
                                         field: '80', // Get Started Account Affiliation
