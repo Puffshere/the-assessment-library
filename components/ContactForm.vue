@@ -221,6 +221,7 @@ export default {
             affiliations: [],
             getStartedAccountName: 'Assessments 24x7',
             isDisabled: false,
+            isPartnerId: '',
             form: {
                 firstName: '',
                 lastName: '',
@@ -268,16 +269,24 @@ export default {
                 this.getStartedAccountName = 'Worldwide Coaching Group';
                 break;
             case 'aus':
+                this.isPartnerId = 'aus';
                 this.getStartedAccountName = 'Australasia';
+                this.getStartedId = '';
                 break;
             case 'can':
+                this.isPartnerId = 'can';
                 this.getStartedAccountName = 'Canada';
+                this.getStartedId = '';
                 break;
             case 'eur':
-                this.getStartedAccountName = 'Europe';
+                this.isPartnerId = 'eur';
+                this.getStartedAccountName = 'Erudia';
+                this.getStartedId = '';
                 break;
             case 'viet':
+                this.isPartnerId = 'viet';
                 this.getStartedAccountName = 'Vietnam';
+                this.getStartedId = '';
                 break;
         }
         this.loading = false;
@@ -290,189 +299,191 @@ export default {
 
             if (validated) {
                 this.loading = true;
+                //  This would be used to override the partner page contact form over the country input field for the this.getStartedAccountName.
+                // if (this.isPartnerId !== 'aus' || this.isPartnerId !== 'can' || this.isParterId !== 'eur' || this.isPartnerId !== 'viet') {
                 switch (this.form.country) {
                     case 'Australia':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'New Zealand':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Papua New Guinea':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Solomon Islands':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Nauru':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Vanuatu':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'New Caledonia':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Fiij':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Tonga':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Cook Islands':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Samoa':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Tuvalu':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Tokelau':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Tahiti':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Easter Island':
-                        this.getStartedId = "aus";
+                        this.isPartnerId = "aus";
                         this.getStartedAccountName = 'Australasia';
                         break;
                     case 'Algeria':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Dahomey':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Enclaves of Forcados and Badjibo':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'France':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'French Sudan':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'French Togoland':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Guinea':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Italy':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Ivory Coast/Senegal/Cameroon':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Mauritania':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Morocco':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Niger':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Senegal':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Switzerland':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Tunisia':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Upper Volta':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Germany':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Poland':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Portugal':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Spain':
-                        this.getStartedId = "eur";
+                        this.isPartnerId = "eur";
                         this.getStartedAccountName = 'Erudia';
                         break;
                     case 'Cambodia':
-                        this.getStartedId = "viet";
+                        this.isPartnerId = "viet";
                         this.getStartedAccountName = 'Vietnam';
                         break;
                     case 'Indonesia':
-                        this.getStartedId = "viet";
+                        this.isPartnerId = "viet";
                         this.getStartedAccountName = 'Vietnam';
                         break;
                     case 'Laos':
-                        this.getStartedId = "viet";
+                        this.isPartnerId = "viet";
                         this.getStartedAccountName = 'Vietnam';
                         break;
                     case 'Malaysia':
-                        this.getStartedId = "viet";
+                        this.isPartnerId = "viet";
                         this.getStartedAccountName = 'Vietnam';
                         break;
                     case 'Philippines':
-                        this.getStartedId = "viet";
+                        this.isPartnerId = "viet";
                         this.getStartedAccountName = 'Vietnam';
                         break;
                     case 'Singapore':
-                        this.getStartedId = "viet";
+                        this.isPartnerId = "viet";
                         this.getStartedAccountName = 'Vietnam';
                         break;
                     case 'Taiwan':
-                        this.getStartedId = "viet";
+                        this.isPartnerId = "viet";
                         this.getStartedAccountName = 'Vietnam';
                         break;
                     case 'Thailand':
-                        this.getStartedId = "viet";
+                        this.isPartnerId = "viet";
                         this.getStartedAccountName = 'Vietnam';
                         break;
                     case 'Vietnam':
-                        this.getStartedId = "viet";
+                        this.isPartnerId = "viet";
                         this.getStartedAccountName = 'Vietnam';
                         break;
                     case 'Canada':
-                        this.getStartedId = "can";
+                        this.isPartnerId = "can";
                         this.getStartedAccountName = 'Canada';
                         break;
                 }
-                if (this.getStartedId === "aus" || this.getStartedId === "can" || this.getStartedId === "eur" || this.getStartedId === "viet") {
+                if (this.isPartnerId === "aus" || this.isPartnerId === "can" || this.isPartnerId === "eur" || this.isPartnerId === "viet") {
                     try {
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Angie Fairbanks",
@@ -532,7 +543,7 @@ export default {
                                     },
                                     {
                                         field: '80', // Get Started Account Affiliation
-                                        value: this.isGetStarted ? this.getStartedAccountName : ''
+                                        value: this.isPartnerId ? this.getStartedAccountName : ''
                                     },
                                     {
                                         field: '84', // Is Adwords Lead?
@@ -558,22 +569,22 @@ export default {
                         await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
                         // Apply the "Affiliate Referral: Australasia" tag (tag id 907)
-                        if (this.getStartedId === 'aus') {
+                        if (this.isPartnerId === 'aus') {
                             await axios.post(`/api/contact/${data.contact.id}/tag/907`);
                         };
 
                         // Apply the "Affiliate Referral: Canada" tag (tag id 910)
-                        if (this.getStartedId === 'can') {
+                        if (this.isPartnerId === 'can') {
                             await axios.post(`/api/contact/${data.contact.id}/tag/910`);
                         };
 
                         // Apply the "Affiliate Referral: Erudia" tag (tag id 908)
-                        if (this.getStartedId === 'eur') {
+                        if (this.isPartnerId === 'eur') {
                             await axios.post(`/api/contact/${data.contact.id}/tag/908`);
                         };
 
                         // Apply the "Affiliate Referral: Vietnam" tag (tag id 909)
-                        if (this.getStartedId === 'viet') {
+                        if (this.isPartnerId === 'viet') {
                             await axios.post(`/api/contact/${data.contact.id}/tag/909`);
                         };
 
@@ -720,7 +731,7 @@ export default {
                         });
                     }
                 }
-                if (this.getStartedId !== "wcg" && this.getStartedId !== "aus" && this.getStartedId !== "can" && this.getStartedId !== "eur" && this.getStartedId !== "viet") {
+                if (this.getStartedId !== "wcg" && this.isPartnerId !== "aus" && this.isPartnerId !== "can" && this.isPartnerId !== "eur" && this.isPartnerId !== "viet") {
                     try {
                         const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {
