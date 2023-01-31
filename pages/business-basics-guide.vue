@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <validation-mini />
+        <validation-mini class=" badge-margin"/>
         <client-logos />
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
     </section>
@@ -102,6 +102,10 @@ export default {
         font-size: 18pt;
         line-height: 24pt;
         margin-top: 0;
+    }
+
+    .badge-margin {
+        margin-top: -75px;
     }
 
     .resources {
