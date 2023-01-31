@@ -1,46 +1,20 @@
 <template>
     <section class="skeleton">
         <LazyHydrate when-visible><main-nav></main-nav></LazyHydrate>
-
         <section class="header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">5 Disciplines Information Page</h1>
-                        <p>
-
-                        </p>
+                        <h1 class="section-title">Organizational & Executive Development</h1>
                     </div>
                 </div>
             </div>
         </section>
-
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2>Empowering our Community</h2>
-
-                    <p>
-                        We are committed to developing content that helps our clients grow their businesses and master
-                        the products we offer. If you ever
-                        miss an Assessments 24x7 webinar, we will post the recording and slide deck here. Be sure to
-                        bookmark this page and check it
-                        periodically!
-                    </p>
-                </div>
-            </div><br />
-
-            <div class="row">
                 <div class="col-8">
-                    <h3>5 Diciplines White Papers:</h3>
-
+                    <h3>5 Disciplines White Papers:</h3>
                     <ul class="resources">
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Adding-Zeros.pdf"
-                            target="_blank" rel="noopener">
-                            <li class="resource a24x7 spacing">
-                                Adding Zeros
-                            </li>
-                        </a>
                         <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Business-Development.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
@@ -73,23 +47,43 @@
                         </a>
                     </ul>
                 </div>
-
                 <div class="col-4">
-                    <!-- <LazyHydrate when-visible><survey-sidebar></survey-sidebar></LazyHydrate> -->
                     <LazyHydrate when-visible><contact-sidebar></contact-sidebar></LazyHydrate>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Supplemental Resource Docs:</h3>
+                        <ul class="resources">
+                            <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/5DA+Company+Sample+MPT+December+2022.pdf"
+                                target="_blank" rel="noopener">
+                                <li class="resource a24x7 spacing">
+                                    5DA Company Sample MPT December 2022
+                                </li>
+                            </a>
+                            <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/Organizational+Development+5+Disciplines+Assessment+Instruction+Guide.pdf"
+                                target="_blank" rel="noopener">
+                                <li class="resource a24x7 spacing">
+                                    Organizational Development 5 Disciplines Assessment Instruction Guide
+                                </li>
+                            </a>
+                            <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/Why_Who_How_Benefits_OrganizationalDevelopment.pdf"
+                                target="_blank" rel="noopener">
+                                <li class="resource a24x7 spacing">
+                                    Why Who How Benefits Organizational Development
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-
         <validation-mini />
         <client-logos />
-
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
     </section>
 </template>
 
 <script>
-import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
     components: {
@@ -185,6 +179,6 @@ export default {
 }
 
 .spacing {
-        letter-spacing: 1px;
-    }
+    letter-spacing: 1px;
+}
 </style>
