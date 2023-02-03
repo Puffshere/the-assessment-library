@@ -61,6 +61,14 @@ export default function(context) {
         else if (context.req.url == '/reports/salesiqteamreport.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf');
         } 
+
+        else if (context.req.url == '/reports/motgroupgraphs.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motgroupgraphs.pdf');
+        } 
+
+        else if (context.req.url == '/reports/motteamwheel.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf');
+        } 
         
         else if (context.req.url == '/reports/tsselfsample.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/tsselfsample.pdf');
