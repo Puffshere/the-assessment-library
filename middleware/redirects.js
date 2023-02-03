@@ -69,6 +69,14 @@ export default function(context) {
         else if (context.req.url == '/reports/motteamwheel.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf');
         } 
+
+        else if (context.req.url == '/reports/DISC360SampleReport.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf');
+        }
+
+        else if (context.req.url == '/reports/SampleLE360.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLE360.pdf');
+        } 
         
         else if (context.req.url == '/reports/tsselfsample.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/tsselfsample.pdf');
