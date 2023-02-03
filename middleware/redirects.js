@@ -29,6 +29,14 @@ export default function(context) {
         else if (context.req.url == '/reports/EIQ360SampleReport.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf');
         } 
+
+        else if (context.req.url == '/reports/DISCandEIQ.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandEIQ.pdf');
+        } 
+
+        else if (context.req.url == '/reports/DISCLeadandEIQ.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCLeadandEIQ.pdf');
+        } 
         
         else if (context.req.url == '/reports/LearningStylesSampleReport.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesSampleReport.pdf');
