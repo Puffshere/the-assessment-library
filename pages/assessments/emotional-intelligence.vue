@@ -71,7 +71,7 @@
                                     </svg>
                                 </div>
                             </a>
-
+                       
                             <a href="/reports/EIQ360SampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~assets/pdf-icon.svg"> Emotional Intelligence 360
