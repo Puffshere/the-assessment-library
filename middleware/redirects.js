@@ -41,6 +41,18 @@ export default function(context) {
         else if (context.req.url == '/reports/LearningStylesSampleReport.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesSampleReport.pdf');
         } 
+
+        else if (context.req.url == '/reports/SampleDISCandLS.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf');
+        } 
+
+        else if (context.req.url == '/reports/SampleDISCSalesandLS.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCSalesandLS.pdf');
+        } 
+
+        else if (context.req.url == '/reports/SampleDISCLeadandLS.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCLeadandLS.pdf');
+        } 
         
         else if (context.req.url == '/reports/tsselfsample.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/tsselfsample.pdf');
