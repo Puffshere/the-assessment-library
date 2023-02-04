@@ -330,6 +330,9 @@
                         <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a>
                         <a v-else class="hyperlink disabled">Sales IQ Team Report</a>
                         <a class="language-button other" @click="salesIQTeamReportModal = true">4 languages</a><br/>
+
+                        <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSalesandEIQ.pdf" class="hyperlink" target="_blank" rel="noopener">Sales IQ + DISC Report</a>
+                        <a v-else class="hyperlink disabled">Sales IQ + DISC Report</a>
                     </div>
                 </div>
 
@@ -878,6 +881,23 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf" target="_blank" rel="noopener">Turkish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
+            <!-- SALES IQ + DISC REPORT MODAL -->
+            <transition name="fade">
+                <section v-if="salesIQTeamReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="salesIQTeamReportModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Sales IQ + DISC Report</h1>
+
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSalesandEIQ.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                             </div>
                         </div>
                     </div>
