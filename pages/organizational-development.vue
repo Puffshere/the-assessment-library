@@ -15,31 +15,31 @@
                 <div class="col-8">
                     <h3>5 Disciplines White Papers:</h3>
                     <ul class="resources">
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Business-Development.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/White-Paper-Business-Development.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 Business Development
                             </li>
                         </a>
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Execution.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/White-Paper-Execution.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 Execution
                             </li>
                         </a>
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Mission.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/White-Paper-Mission.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 Mission
                             </li>
                         </a>
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-People.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/White-Paper-People.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 People
                             </li>
                         </a>
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/White-Paper-Strategy.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/White-Paper-Strategy.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 Strategy
@@ -55,19 +55,19 @@
                 <div class="col-8">
                     <h3>Supplemental Resource Docs:</h3>
                     <ul class="resources">
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/5DA+Company+Sample+MPT+December+2022.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/5DA+Company+Sample+MPT+December+2022.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 5DA Company Sample MPT December 2022
                             </li>
                         </a>
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/Organizational+Development+5+Disciplines+Assessment+Instruction+Guide.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/Organizational+Development+5+Disciplines+Assessment+Instruction+Guide.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 Organizational Development 5 Disciplines Assessment Instruction Guide
                             </li>
                         </a>
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/Why_Who_How_Benefits_OrganizationalDevelopment.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/Why_Who_How_Benefits_OrganizationalDevelopment.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 Why Who How Benefits Organizational Development

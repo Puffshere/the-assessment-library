@@ -42,16 +42,20 @@
                             <small>Overview and Guide to debrief the assessment report</small></td></tr>
                             <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/19+EIQ+Debrief+Guide+_NC_vs4FINAL.pdf" target="_blank" rel="noopener">Emotional Intelligence Debrief Guide</a>
                             <small>Overview and Guide to debrief the assessment report</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/eiq/02_EIQ+Graphic+2023.pdf" target="_blank" rel="noopener">EIQ Graphic</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/02_EIQ+Graphic+2023.pdf" target="_blank" rel="noopener">EIQ Graphic</a>
                             <small>Overview of the EIQ model in a single page graphic outlining priorities and impact</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_DISCIntegration.pdf" target="_blank" rel="noopener">EI and DISC Expressions</a>
+                            <small>One-page document showing DISC styles and corresponding expression for high and low EIQ</small></td></tr>
+                            <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/20+DISC+EIQ_integrationSlide+2023+Non-Certified+PDF.pdf" target="_blank" rel="noopener">EI and DISC Expressions</a>
                             <small>One-page document showing DISC styles and corresponding expression for high and low EIQ</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_PlatRule%20Integration.pdf" target="_blank" rel="noopener">EI and Platinum Rule Expressions</a>
                             <small>One-page document showing Platinum Rule and corresponding expression for high and low EIQ</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EmotionCharts.pdf" target="_blank" rel="noopener">Emotion Charts</a>
                             <small>a single PDF document including:
-Pg 1. Feelings Word Vocabulary - A list of intensities for the 5 common emotions: Happy, Sad, Angry, Scared and Confused. These are listed by strong, mild, and weak emotions.
-Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories to help broaden our emotional understanding and language.</small></td></tr>
+                            Pg 1. Feelings Word Vocabulary - A list of intensities for the 5 common emotions: Happy, Sad, Angry, Scared and Confused. These are listed by strong, mild, and weak emotions.
+                            Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories to help broaden our emotional understanding and language.</small></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/13+EIQ_ReflectionWorksheets.docx" target="_blank" rel="noopener">EIQ Reflection Worksheets</a>
+                            <small>Worksheets for each of the quotients, taken directly from the assessment that can be used electronically.</small></td></tr>
                         </tbody>
                     </table>
 
@@ -63,7 +67,7 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/MM%20Manuscript.pdf" target="_blank" rel="noopener">Mind Matters Manuscript</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/MM%20Manuscript.pdf" target="_blank" rel="noopener">Mind Matters Manuscript</a>
                             <small>The foundational manuscript by Robert Jerus underscoring the details and supporting the uses of the EIQ-2 assessment</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20Emotional%20Intelligence.pdf" target="_blank" rel="noopener">Understanding Emotional Intelligence</a>
                             <small>A short article introduction to Emotional Intelligence</small></td></tr>
@@ -94,9 +98,9 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ2Hour.pdf" target="_blank" rel="noopener">2-Hour Facilitator Guide</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/05+EIQ+2hour+Facilitator+Guide+2023.pdf" target="_blank" rel="noopener">2-Hour Facilitator Guide</a>
                             <small>Step-by-step instructions for facilitating 2-hour workshop</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ2HourPres.pptx" target="_blank" rel="noopener">2-Hour Presentation</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/06+EIQ-2HourPres-2023.pptx" target="_blank" rel="noopener">2-Hour Presentation</a>
                             <small>Overview of Emotional Intelligence and report debrief opportunity</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ%202%20hour_%20Agenda.docx" target="_blank" rel="noopener">2-Hour Agenda for Presentation Workshop</a>
                             <small>Overview of timeline for presentation</small></td></tr>
@@ -104,9 +108,9 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                             <small>Step-by-step instructions for facilitating 4-hour workshop</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ4HourPres.pptx" target="_blank" rel="noopener">4-Hour Presentation</a>
                             <small>Overview of Emotional Intelligence and report debrief opportunity</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQSageAdviceObservations.pptx" target="_blank" rel="noopener">EIQ Sage Advice and Observations</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQSageAdviceObservations.pptx" target="_blank" rel="noopener">EIQ Sage Advice and Observations</a>
                             <small>A series of PPT memorable and meaningful quotes from well-recognized people</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/DISC%20EIQ%20slide.pptx" target="_blank" rel="noopener">EI and DISC Expressions PPT slide</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/21+DISC+EIQ_integrationSlide+2023+NCPPT.pptx" target="_blank" rel="noopener">EI and DISC Expressions PPT slide</a>
                             <small>Single PowerPoint Slide showing DISC styles and corresponding expression for high and low EIQ</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/DISC%20EIQ_integration.pptx" target="_blank" rel="noopener">Emotional Intelligence and DISC Integration PowerPoint</a>
                             <small>PowerPoint deck with integrations of EIQ and DISC</small></td></tr>
@@ -133,16 +137,20 @@ Pg 2. Six Families of Emotions - A list of 60 emotions separated into categories
                         </thead>
 
                         <tbody>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQActivities.pdf" target="_blank" rel="noopener">EIQ Workshop Activities</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/11+EIQ+Workshop+Activities+2023.pptx" target="_blank" rel="noopener">EIQ Workshop Activities</a>
                             <small>Group activities to bring engagement and movement in EIQ sessions.</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQQuotes.pdf" target="_blank" rel="noopener">EIQ Quote List</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQQuotes.pdf" target="_blank" rel="noopener">EIQ Quote List</a>
                             <small>A list of popular EIQ quotes for reflection and discussion</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQWordSearch.pdf" target="_blank" rel="noopener">EIQ Word Search</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQWordSearch.pdf" target="_blank" rel="noopener">EIQ Word Search</a>
                             <small>A simple word search for classroom activity use</small></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/Rapid%20Skill%20Builder%20EMOTIONAL%20INTELLIGENCE.pdf" target="_blank" rel="noopener">Emotional Intelligence Rapid Skill Builder</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/Rapid%20Skill%20Builder%20EMOTIONAL%20INTELLIGENCE.pdf" target="_blank" rel="noopener">Emotional Intelligence Rapid Skill Builder</a>
                             <small>Optional activity for 4-hour workshop, or individual development use</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Reflection_brain_emotions.pdf" target="_blank" rel="noopener">EIQ Reflection</a>
                             <small>A reflection worksheet corresponding to the Understand the Brain and Understanding Emotions and Feelings articles</small></td></tr>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/12+Emotional+Intelligence+Reflection.pdf" target="_blank" rel="noopener">Emotional Intelligence</a>
+                            <small>Individual/Group Activity
+                            A reflection activity to be used either with a group or individually to increase personal and group awareness.
+                            </small></td></tr>
                         </tbody>
                     </table>
 

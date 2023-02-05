@@ -15,13 +15,13 @@
                 <div class="col-8">
                     <h3>Business Basics Guide:</h3>
                     <ul class="resources">
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/Business+Basics_Business+Goals+Planning2023.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/Business+Basics_Business+Goals+Planning2023.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 Business Goals & Planning Template
                             </li>
                         </a>
-                        <a href="https://f002.backblazeb2.com/file/assessments24x7-media/pdf/Business+Basics_Using+Assessments2023.pdf"
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/Business+Basics_Using+Assessments2023.pdf"
                             target="_blank" rel="noopener">
                             <li class="resource a24x7 spacing">
                                 Using Assessments - Business Basics Guide for Coaches
