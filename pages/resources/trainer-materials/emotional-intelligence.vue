@@ -71,7 +71,7 @@
                             <small>The foundational manuscript by Robert Jerus underscoring the details and supporting the uses of the EIQ-2 assessment</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20Emotional%20Intelligence.pdf" target="_blank" rel="noopener">Understanding Emotional Intelligence</a>
                             <small>A short article introduction to Emotional Intelligence</small></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20the%20Emotions_Feelings.pdf" target="_blank" rel="noopener">Understanding Emotions and Feelings</a>
+                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20the%20Emotions_Feelings.pdf" target="_blank" rel="noopener">Understanding Emotions and Feelings</a>
                             <small>A short article discussing emotions and feelings</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20the%20Brain.pdf" target="_blank" rel="noopener">Understanding the Brain</a>
                             <small>A short article introduction to the mechanics of the brain and how it relates to EIQ</small></td></tr>
