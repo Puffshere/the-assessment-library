@@ -40,7 +40,7 @@
                         <tbody>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ%20Debrief%20Guide-certified_vs3%209.pdf" target="_blank" rel="noopener">Emotional Intelligence Debrief Guide</a>
                             <small>Overview and Guide to debrief the assessment report</small></td></tr>
-                            <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ%20Debrief%20Guide_nc-vs3%209.pdf" target="_blank" rel="noopener">Emotional Intelligence Debrief Guide</a>
+                            <tr v-else><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/19+EIQ+Debrief+Guide+_NC_vs4FINAL.pdf" target="_blank" rel="noopener">Emotional Intelligence Debrief Guide</a>
                             <small>Overview and Guide to debrief the assessment report</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/Overview%20of%20EIQ-graphic.pdf" target="_blank" rel="noopener">EIQ Graphic</a>
                             <small>Overview of the EIQ model in a single page graphic outlining priorities and impact</small></td></tr>
