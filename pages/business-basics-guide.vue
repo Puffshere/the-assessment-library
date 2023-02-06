@@ -53,7 +53,7 @@ export default {
     },
     head() {
         return {
-            title: 'Webinars | Assessments 24x7',
+            title: 'Business Basics Guide | Assessments 24x7',
             meta: [
                 {
                     hid: 'description',
