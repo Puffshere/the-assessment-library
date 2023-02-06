@@ -160,9 +160,7 @@
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Reflection_brain_emotions.pdf" target="_blank" rel="noopener">EIQ Reflection</a>
                             <small>A reflection worksheet corresponding to the Understand the Brain and Understanding Emotions and Feelings articles</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/12+Emotional+Intelligence+Reflection.pdf" target="_blank" rel="noopener">Emotional Intelligence Individual/Group Activity</a>
-                            <small>
-                            A reflection activity to be used either with a group or individually to increase personal and group awareness.
-                            </small></td></tr>
+                            <small>A reflection activity to be used either with a group or individually to increase personal and group awareness.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/15+Faces+and+Feelings_2023.pdf" target="_blank" rel="noopener">Faces and Feelings</a>
                             <small>A few pictures of different emotions to identify and strengthen understanding of the emotions of others.</small></td></tr>
                         </tbody>
