@@ -61,7 +61,7 @@
                         </ValidationProvider>
                     </div>
 
-                    <div v-if="this.getStartedId !== 'wcg'">
+                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet'">
                         <div class="form-group">
                             <ValidationProvider v-slot="v" rules="required">
                                 <label for="source">How did you hear about us? *</label>
@@ -84,7 +84,7 @@
                         <input id="sourceOther" name="sourceOther" type="text" />
                     </div>
 
-                    <div v-if="this.getStartedId !== 'wcg'">
+                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet'">
                         <div class="form-group">
                             <ValidationProvider v-slot="v" rules="required">
                                 <label for="comments">What would you like to discuss?</label>
@@ -271,22 +271,22 @@ export default {
             case 'aus':
                 this.isPartnerId = 'aus';
                 this.getStartedAccountName = 'Australasia';
-                this.getStartedId = '';
+                // this.getStartedId = '';
                 break;
             case 'can':
                 this.isPartnerId = 'can';
                 this.getStartedAccountName = 'Canada';
-                this.getStartedId = '';
+                // this.getStartedId = '';
                 break;
             case 'eur':
                 this.isPartnerId = 'eur';
                 this.getStartedAccountName = 'Erudia';
-                this.getStartedId = '';
+                // this.getStartedId = '';
                 break;
             case 'viet':
                 this.isPartnerId = 'viet';
                 this.getStartedAccountName = 'Vietnam';
-                this.getStartedId = '';
+                // this.getStartedId = '';
                 break;
         }
         this.loading = false;

@@ -517,6 +517,7 @@
             } else if (this.id === 'can') {
             } else if (this.id === 'eur') {
             } else if (this.id === 'viet') {
+                this.url = 'assessments24x7.asia';
             }
 
             if (this.$route.query.noframe) {

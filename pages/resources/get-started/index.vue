@@ -385,6 +385,7 @@
             } else if (this.$route.query.id === 'eur') {
                 this.id = 'eur';
             } else if (this.$route.query.id === 'viet') {
+                this.url = 'assessments24x7.asia';
                 this.id = 'viet';
             }
 
