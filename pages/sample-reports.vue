@@ -308,6 +308,7 @@
                         
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Learning Styles</a>
                         <a v-else class="hyperlink disabled">DISC + Learning Styles</a><br/>
+                        <a class="language-button other" @click="discPlusLearningStylesReportModal = true">2 languages</a><br/>
                     </div>
                 </div>
 
@@ -840,6 +841,24 @@
                 </section>
             </transition>
 
+            <!-- DISC + LEARNING STYLES REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="discPlusLearningStylesReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="discPlusLearningStylesReportModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>DISC + Learning Styles</h1>
+
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Learning_Styles_-_Chinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
             <!-- SALES IQ REPORTS MODAL -->
             <transition name="fade">
                 <section v-if="salesIQReportModal" class="modal-window">
@@ -940,6 +959,7 @@
                 eiqReportModal: false,
                 eiq360ReportModal: false,
                 learningStylesReportModal: false,
+                discPlusLearningStylesReportModal: false,
                 salesIQReportModal: false,
                 salesIQTeamReportModal: false,
                 le360ReportModal: false
