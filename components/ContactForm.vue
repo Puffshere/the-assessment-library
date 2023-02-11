@@ -699,9 +699,6 @@ export default {
                             await axios.post(`/api/contact/${data.contact.id}/tag/149`);
                         }
 
-                        // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
-                        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
-
                         // Create an account and associate the contact to it
                         await axios.post(`/api/contact/${data.contact.id}/account`, {
                             company: this.form.company
