@@ -561,7 +561,7 @@ export default {
                         }
 
                         // If this is a the Get Started flow, we need to add a special tag to trigger email alerts
-                        if (this.isPartnerId) {
+                        if (this.isGetStarted) {
                             await axios.post(`/api/contact/${data.contact.id}/tag/149`);
                         }
 
