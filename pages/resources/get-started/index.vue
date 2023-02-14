@@ -12,7 +12,7 @@
                         <img v-else-if="id === 'tonyrobbins'" src="~/assets/get-started/tonyrobbins.png" alt="Tony Robbins" class="partner-logo">
                         <img v-else-if="id === 'engageandgrow'" src="~/assets/get-started/engage-and-grow.png" alt="Engage and Grow" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png" alt="Southwestern Consulting" class="partner-logo">
-                        <img v-else-if="id === 'wcg'" src="~/assets/get-started/wcg.png" alt="Worldwide Coaching Group" class="partner-logo">
+                        <img v-else-if="id === 'wcg'" src="~/assets/WCG-cropped.jpg" alt="Worldwide Coaching Group" class="partner-logo-wcg">
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png" alt="Australasia" class="partner-logo affiliate">
                         <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo affiliate">
                         <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe" class="partner-logo affiliate">
@@ -214,6 +214,24 @@
                             <p class="text">
                                 Identify at least one customer who you believe can benefit from one or more of your assessments and send them a sample link to take it.
                                 Would you like a personalized dashboard tour? Contact us at <a href="mailto:support@assessments.ws" class="hyperlink">support@assessments.ws</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="step">
+                        <div class="icon">7</div>
+                        
+                        <div class="body">
+                            <h3 class="title">
+                                Schedule with your Assessment Advisor
+                            </h3>
+
+                            <p class="text">
+                                Schedule your appointment with Angie at <a href="https://www.assessments24x7.com/angie" class="hyperlink">www.assessments24x7.com/angie</a>
                             </p>
                         </div>
                     </div>
@@ -430,6 +448,13 @@
             .partner-logo {
                 width: 100%;
                 max-width: 300px;
+            }
+
+            .partner-logo-wcg {
+                width: 100%;
+                max-width: 95%;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                margin-bottom: 35px;
             }
         }
 
