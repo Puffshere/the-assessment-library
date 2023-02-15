@@ -125,7 +125,7 @@
                             <small>Step-by-step instructions for facilitating 2-hour workshop</small></td></tr>
                             <tr><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT2hour2022.pptx" target="_blank" rel="noopener">2-Hour Presentation</a>
                             <small>Overview of Motivators, discussion and activity and report debrief opportunity.</small></td></tr>
-                            <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators4hourFacilitatorGuide2022.pdf" target="_blank" rel="noopener">4-Hour Facilitator Guide</a>
+                            <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators4hourFacilitatorGuide2023.pdf" target="_blank" rel="noopener">4-Hour Facilitator Guide</a>
                             <small>Step-by-step instructions for facilitating 4-hour workshop</small></td></tr>
                             <tr v-if="certified"><td><span class="new-badge">NEW</span><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsWorkshopPPT4hour2022.pptx" target="_blank" rel="noopener">4-Hour Presentation</a>
                             <small>Motivators, strengths and limitations, discussion and activities, and report debrief opportunity.</small></td></tr>
