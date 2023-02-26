@@ -129,10 +129,9 @@
                     <div class="form-group" v-if="!isShort">
                         <label>Are you affiliated with one of the following organizations?</label>
 
-                        <select id="affiliation" name="affiliation" v-model="form.affiliation"
-                            style="max-width: 310px;">
-                            <option v-for="affiliation in affiliations" :key="affiliation.id"
-                                :value="affiliation.value">{{ affiliation.label }}</option>
+                        <select id="affiliation" name="affiliation" v-model="form.affiliation" style="max-width: 310px;">
+                            <option v-for="affiliation in affiliations" :key="affiliation.id" :value="affiliation.value">{{
+                                affiliation.label }}</option>
                         </select>
                     </div>
 
@@ -483,7 +482,7 @@ export default {
                         this.getStartedAccountName = 'Canada';
                         break;
                 }
-                if (this.isPartnerId === "aus" || this.isPartnerId === "can" || this.isPartnerId === "eur" || this.isPartnerId === "viet") {
+                if (this.isPartnerId === "aus" || this.isPartnerId === "eur" || this.isPartnerId === "viet") {
                     try {
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Angie Fairbanks",
@@ -573,11 +572,6 @@ export default {
                             await axios.post(`/api/contact/${data.contact.id}/tag/907`);
                         };
 
-                        // Apply the "Affiliate Referral: Canada" tag (tag id 910)
-                        if (this.isPartnerId === 'can') {
-                            await axios.post(`/api/contact/${data.contact.id}/tag/910`);
-                        };
-
                         // Apply the "Affiliate Referral: Erudia" tag (tag id 908)
                         if (this.isPartnerId === 'eur') {
                             await axios.post(`/api/contact/${data.contact.id}/tag/908`);
@@ -586,6 +580,126 @@ export default {
                         // Apply the "Affiliate Referral: Vietnam" tag (tag id 909)
                         if (this.isPartnerId === 'viet') {
                             await axios.post(`/api/contact/${data.contact.id}/tag/909`);
+                        };
+
+                        // Create an account and associate the contact to it
+                        await axios.post(`/api/contact/${data.contact.id}/account`, {
+                            company: this.form.company
+                        });
+
+                        this.trackConversion(data.contact.id);
+
+                        this.loading = false;
+
+                        this.$toast.open({
+                            message: 'Your information has been successfully submitted!',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'success'
+                        });
+
+                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+
+                    } catch (err) {
+                        this.isDisabled = false;
+                        this.loading = false;
+                        this.$toast.open({
+                            message: 'An unexpected error has occured. Please try again later.',
+                            position: 'top',
+                            duration: 8000,
+                            type: 'error'
+                        });
+                    }
+                }
+                if (this.isPartnerId === "can") {
+                    try {
+                        const salesPerson = await axios.get('/api/lead/next-assignment');
+                        const lead = await axios.post('/api/lead', {
+                            salesPerson: salesPerson.data,
+                            firstName: this.form.firstName,
+                            lastName: this.form.lastName,
+                            phone: this.form.phone,
+                            email: this.form.email,
+                            country: this.form.country
+                        });
+
+                        let event = '';
+                        let adWordsValue = 'No';
+
+                        if (localStorage.getItem('ppc_event')) {
+                            event = localStorage.getItem('ppc_event');
+
+                            if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
+                                adWordsValue = 'Yes';
+                            }
+                        }
+
+                        const { data } = await axios.post('/api/contact', {
+                            contact: {
+                                email: this.form.email,
+                                firstName: this.form.firstName,
+                                lastName: this.form.lastName,
+                                phone: this.form.phone,
+                                country: this.form.country,
+                                fieldValues: [
+                                    {
+                                        field: '21', // How did you hear about us?
+                                        value: this.form.source
+                                    },
+                                    {
+                                        field: '22', // How did you hear about us? (Other),
+                                        value: this.form.sourceOther
+                                    },
+                                    {
+                                        field: '20', // Questions/Comments,
+                                        value: this.form.comments
+                                    },
+                                    {
+                                        field: '4', // Client type (reseller vs corporate),
+                                        value: this.form.clientType
+                                    },
+                                    {
+                                        field: '64', // Affiliation,
+                                        value: this.form.affiliation
+                                    },
+                                    {
+                                        field: '10', // Newsletter opt-in,
+                                        value: this.form.newsletter
+                                    },
+                                    {
+                                        field: '79', // Sales Person Assignment,
+                                        value: salesPerson.data
+                                    },
+                                    {
+                                        field: '80', // Get Started Account Affiliation
+                                        value: this.isPartnerId ? this.getStartedAccountName : ''
+                                    },
+                                    {
+                                        field: '84', // Is Adwords Lead?
+                                        value: adWordsValue
+                                    }
+                                ]
+                            }
+                        });
+
+                        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+
+                        // Check to see if this contact wants to subscribe to our newsletter
+                        if (this.form.newsletter === '45') {
+                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                        }
+
+                        // If this is a the Get Started flow, we need to add a special tag to trigger email alerts
+                        if (this.isGetStarted) {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/149`);
+                        }
+
+                        // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
+                        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+                        // Apply the "Affiliate Referral: Canada" tag (tag id 910)
+                        if (this.isPartnerId === 'can') {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/910`);
                         };
 
                         // Create an account and associate the contact to it
