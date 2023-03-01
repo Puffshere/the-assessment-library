@@ -149,6 +149,10 @@ export default function(context) {
         else if (context.req.url.match(/(\/reports\/)[\w- ]+\.pdf/gi)) {
             context.redirect('https://www.assessments24x7.com/sample-reports');
         }
+
+        else if (context.req.url == '/disc-card-retail') {
+            context.redirect('https://assessments247.net/EndUserAdmin/RegisterChoice.aspx?oY%5d%5bkT');
+        }
         
         else {
             const redirect = redirects.find(r => r.from === context.req.url);
