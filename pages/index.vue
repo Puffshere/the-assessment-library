@@ -38,7 +38,7 @@
                     "@context": "http://schema.org",
                     "@type": "WebPage",
                     "name": "DISC Assessments & Tools for Behavioral Profiling | Assessments 24x7",
-                    "description": "Assessments 24x7 is a global leader in online DISC assessments and other behavioral profiling testing tools to organizations.",
+                    "description": "Assessments 24x7 is a global leader in online DISC assessments and other behavioral profiling testing tools for organizations.",
                 },
                 structuredDataService: {
                     "@context": "http://schema.org",
