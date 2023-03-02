@@ -253,6 +253,8 @@
                                 (Simplified)</span>
                             <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文
                                 (Traditional)</span>
+                            <span><img src="~assets/flags/vietnam.svg" alt="Vietnamese DISC Assessments"> Tiếng
+                                Việt</span>
                         </div>
                         <br />
                         <p class="hyperlink lineLength">Kids DISC QUESTIONNAIRE ONLY available in &rarr;</p>
