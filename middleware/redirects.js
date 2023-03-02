@@ -122,16 +122,8 @@ export default function(context) {
             context.redirect('https://hiresense.com');
         }
 
-        else if (context.req.url == '/hiring-and-selection/') {
-            context.redirect('https://www.assessments24x7.com');
-        }
-
         else if (context.req.url == '/store') {
             context.redirect('https://store.assessments24x7.com');
-        }
-
-        else if (context.req.url == '/store/group-certification') {
-            context.redirect('https://www.assessments24x7.com/certifications');
         }
 
         else if (context.req.url == '/hiring-and-selection-assessments.asp') {
@@ -160,22 +152,6 @@ export default function(context) {
 
         else if (context.req.url == '/disc-card-retail') {
             context.redirect('https://assessments247.net/EndUserAdmin/RegisterChoice.aspx?oY%5d%5bkT');
-        }
-
-        else if (context.req.url == '/rick-barrera.asp') {
-            context.redirect('https://www.assessments24x7.com');
-        }
-
-        else if (context.req.url == '/continuing-education.asp') {
-            context.redirect('https://www.assessments24x7.com/certifications');
-        }
-
-        else if (context.req.url == '/annual-users-conference-2016.asp') {
-            context.redirect('https://www.assessments24x7.com');
-        }
-
-        else if (context.req.url == '/the-platinum-rule.asp') {
-            context.redirect('https://www.assessments24x7.com/assessments');
         }
 
         else {
