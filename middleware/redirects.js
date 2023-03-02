@@ -181,7 +181,7 @@ export default function(context) {
 
         else if (context.req.url == '/the-platinum-rule.asp') {
             context.statusCode = 301;
-            context.redirect('https://www.assessments24x7.com/assessments');
+            context.res.setHeader('Location', 'https://www.assessments24x7.com/assessments');
         }
 
         else {
