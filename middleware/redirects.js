@@ -123,6 +123,7 @@ export default function(context) {
         }
 
         else if (context.req.url == '/hiring-and-selection/') {
+            context.statusCode = 301;
             context.redirect('https://www.assessments24x7.com');
         }
 
@@ -131,6 +132,7 @@ export default function(context) {
         }
 
         else if (context.req.url == '/store/group-certification') {
+            context.statusCode = 301;
             context.redirect('https://www.assessments24x7.com/certifications');
         }
 
@@ -163,18 +165,22 @@ export default function(context) {
         }
 
         else if (context.req.url == '/rick-barrera.asp') {
+            context.statusCode = 301;
             context.redirect('https://www.assessments24x7.com');
         }
 
         else if (context.req.url == '/continuing-education.asp') {
+            context.statusCode = 301;
             context.redirect('https://www.assessments24x7.com/certifications');
         }
 
         else if (context.req.url == '/annual-users-conference-2016.asp') {
+            context.statusCode = 301;
             context.redirect('https://www.assessments24x7.com');
         }
 
         else if (context.req.url == '/the-platinum-rule.asp') {
+            context.statusCode = 301;
             context.redirect('https://www.assessments24x7.com/assessments');
         }
 
