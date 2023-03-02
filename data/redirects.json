@@ -298,5 +298,29 @@
     {
         "from": "/virtualtours12.asp",
         "to": "/virtual-tour"
+    },
+    {
+        "from": "/rick-barrera.asp",
+        "to": "/"
+    },
+    {
+        "from": "/continuing-education.asp",
+        "to": "/certifications"
+    },
+    {
+        "from": "/annual-users-conference-2016.asp",
+        "to": "/"
+    },
+    {
+        "from": "/hiring-and-selection/",
+        "to": "/"
+    },
+    {
+        "from": "/store/group-certification",
+        "to": "/certifications"
+    },
+    {
+        "from": "/the-platinum-rule.asp",
+        "to": "/assessments"
     }
 ]
