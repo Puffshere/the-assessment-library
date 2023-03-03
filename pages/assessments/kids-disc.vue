@@ -272,8 +272,6 @@
                                 Português</span>
                             <span><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>
                             <span><img src="~assets/flags/turkey.svg" alt="Turkish DISC Assessments"> Türkçe</span>
-                            <span><img src="~assets/flags/vietnam.svg" alt="Vietnamese DISC Assessments"> Tiếng
-                                Việt</span>
                         </div>
                     </div>
                     <div class="col-5">
