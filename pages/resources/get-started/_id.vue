@@ -1,7 +1,7 @@
 <template>
     <section class="get-started">
         <main-nav/>
-        <account-modal v-if="id !== 'ccc' && id !== 'tonyrobbins'" :id="id"/>
+        <account-modal v-if="id !== 'ccc' && id !== 'tonyrobbins' && id !== 'ref'" :id="id"/>
 
         <section class="header">
             <div class="container">
@@ -11,12 +11,13 @@
                         <img v-else-if="id === 'actioncoach'" src="~/assets/get-started/actioncoach.png" alt="ActionCOACH" class="partner-logo">
                         <img v-else-if="id === 'tonyrobbins'" src="~/assets/get-started/tonyrobbins.png" alt="Tony Robbins" class="partner-logo">
                         <img v-else-if="id === 'engageandgrow'" src="~/assets/get-started/engage-and-grow.png" alt="Engage and Grow" class="partner-logo">
+                        <img v-else-if="id === 'ref'" id="ref" src="~/assets/get-started/reflogoinlarged.png" alt="REF" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png" alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png" alt="Australasia" class="partner-logo">
                         <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo">
                         <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe" class="partner-logo">
                         <img v-else-if="id === 'viet'" src="~/assets/partner-logos/vietnam-logo.png" alt="Vietnam" class="partner-logo">
-                        <h1 class="section-title">Get Started</h1>
+                        <h1 class="section-title" id="getStarted">Get Started</h1>
 
                         <p v-if="id === 'tonyrobbins'">
                             Welcome to your personal Tony Robbins DISC and Motivators assessment dashboard. Here are the steps for getting started. 
@@ -178,7 +179,7 @@
             </section>
 
             <section v-else class="steps">
-                <div class="row">
+                <div v-if="ref" class="row">
                     <div class="col-12">
                         <div class="step">
                             <div class="icon">1</div>
@@ -194,6 +195,26 @@
                                 </p>
 
                                 <a class="link" :href="`https://${url}`" target="_blank" rel="noopener">https://{{url}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div v-else class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">1</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Don't have an account yet?
+                                </h3>
+
+                                <p class="text">
+                                    Don't have an account yet? Set your account up and it will be available immediately. Already have an account? You can sign in using the button below.
+                                </p><br/>
+
+                                <a class="button" href="https://refassessments.com/register_acct.aspx" target="_blank" rel="noopener">Set up your account</a>
+                                <a class="button secondary" href="https://refassessments.com/Account" target="_blank" rel="noopener">Already have an account? Sign in</a>
                             </div>
                         </div>
                     </div>
@@ -454,8 +475,8 @@
                             <img class="image" src="~/assets/badges/new/disc-cert-badge-color-label.png" alt="">
                             <img class="image" src="~/assets/badges/new/mot-cert-badge-color-label.png" alt="">
                             <img class="image" src="~/assets/badges/new/eiq-cert-badge-color-label.png" alt="">
-                            <img class="image" src="~/assets/badges/new/hartman-cert-badge-color-label.png" alt="">
-                            <img class="image" src="~/assets/badges/new/learning-cert-badge-color-label.png" alt="">
+                            <img v-if="id !== 'ref'" class="image" src="~/assets/badges/new/hartman-cert-badge-color-label.png" alt="">
+                            <img v-if="id !== 'ref'" class="image" src="~/assets/badges/new/learning-cert-badge-color-label.png" alt="">
                         </div>
 
                         <h2>Assessment Certifications &amp; Training</h2>
@@ -556,6 +577,16 @@
             .section-title {
                 font-size: 30pt;
                 margin-top: 0;
+            }
+
+            #ref[id="ref"] {
+            transform: scale(1.50);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            box-sizing: border-box;
+            }
+
+            #getStarted {
+                padding-top: 50px;
             }
 
             .partner-logo {
