@@ -13,6 +13,10 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'theme-color', content: '#01A8FF' },
+      { name: 'msapplication-navbutton-color', content: '#01A8FF' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       { hid: 'description', name: 'description', content: 'Assessments 24x7 is a global leader in online DISC assessments and other behavioral profiling testing tools to organizations. Get a free quote today!' }
     ],
     link: [
