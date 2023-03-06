@@ -17,7 +17,8 @@
                         <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo">
                         <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe" class="partner-logo">
                         <img v-else-if="id === 'viet'" src="~/assets/partner-logos/vietnam-logo.png" alt="Vietnam" class="partner-logo">
-                        <h1 class="section-title" id="getStarted">Get Started</h1>
+                        <h1 v-if="id === 'ref'" class="section-title" id="reff">Get Started</h1>
+                        <h1 v-else class="section-title">Get Started</h1>
 
                         <p v-if="id === 'tonyrobbins'">
                             Welcome to your personal Tony Robbins DISC and Motivators assessment dashboard. Here are the steps for getting started. 
@@ -585,7 +586,7 @@
             box-sizing: border-box;
             }
 
-            #getStarted {
+            #reff {
                 padding-top: 50px;
             }
 
