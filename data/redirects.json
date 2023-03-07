@@ -326,5 +326,41 @@
     {
         "from": "/disc-card-retail",
         "to": "https://assessments247.net/EndUserAdmin/RegisterChoice.aspx?oY%5d%5bkT"
+    },
+    {
+        "from": "/communication-styles.asp",
+        "to": "/assessments/disc"
+    },
+    {
+        "from": "/annual-users-conference-2018.asp",
+        "to": "/"
+    },
+    {
+        "from": "/disc-retail.asp",
+        "to": "/assessments/disc"
+    },
+    {
+        "from": "/leadership-360.asp",
+        "to": "/assessments/360/leadership-effectiveness"
+    },
+    {
+        "from": "/annual-users-conference.asp",
+        "to": "/"
+    },
+    {
+        "from": "/judgment-series.asp",
+        "to": "/assessments"
+    },
+    {
+        "from": "/case-studies.asp",
+        "to": "/"
+    },
+    {
+        "from": "/become-certified.asp",
+        "to": "/certifications"
+    },
+    {
+        "from": "/disc-motivators.asp",
+        "to": "/assessments/disc"
     }
 ]
