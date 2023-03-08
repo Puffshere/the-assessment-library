@@ -379,6 +379,25 @@
                         </div>
                     </div>
                 </div>
+
+                <div v-if="id === ref" class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">7</div>
+
+                            <div class="body">
+                                <h3 class="title">
+                                    Schedule with your Assessment Advisor
+                                </h3>
+
+                                <p class="text">
+                                    Schedule your appointment with Angie at <a href="https://www.assessments24x7.com/angie"
+                                        class="hyperlink">www.assessments24x7.com/angie</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <div v-if="id !== 'tonyrobbins'" class="row">
