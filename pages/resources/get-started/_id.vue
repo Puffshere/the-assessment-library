@@ -180,27 +180,7 @@
             </section>
 
             <section v-else class="steps">
-                <div v-if="id !== 'ref'" class="row">
-                    <div class="col-12">
-                        <div class="step">
-                            <div class="icon">1</div>
-                            
-                            <div class="body">
-                                <h3 class="title">
-                                    Sign in to your account
-                                </h3>
-
-                                <p class="text">
-                                    Is this your first time logging in? You will need to update your password!
-                                    <span v-if="id !== 'ccc'">Don't have an account? <a href="#" class="hyperlink" @click="$nuxt.$emit('openAccountModal')">Click here</a></span>
-                                </p>
-
-                                <a class="link" :href="`https://${url}`" target="_blank" rel="noopener">https://{{url}}</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div v-else class="row">
+                <div v-if="id === 'ref'" class="row">
                     <div class="col-12">
                         <div class="step">
                             <div class="icon">1</div>
@@ -220,6 +200,28 @@
                         </div>
                     </div>
                 </div>
+                    
+                <div v-else class="row">
+                    <div class="col-12">
+                        <div class="step">
+                            <div class="icon">1</div>
+                            
+                            <div class="body">
+                                <h3 class="title">
+                                    Sign in to your account
+                                </h3>
+
+                                <p class="text">
+                                    Is this your first time logging in? You will need to update your password!
+                                    <span v-if="id !== 'ccc'">Don't have an account? <a href="#" class="hyperlink" @click="$nuxt.$emit('openAccountModal')">Click here</a></span>
+                                </p>
+
+                                <a class="link" :href="`https://${url}`" target="_blank" rel="noopener">https://{{url}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
 
                 <div class="row">
                     <div class="col-12">
