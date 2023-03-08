@@ -83,7 +83,11 @@
                     "review": [
                         {
                             "@type": "Review",
-                            "author": "Donna Bell",
+                            // "author": "Donna Bell",
+                            "author": {
+                                "@type": "Person", 
+                                "name": "Donna Bell",
+                            },
                             "datePublished": "2019-07-09",
                             "reviewBody": "Assessments 24x7 is the gold standard for assessment technology. Their interfaces are intuitive, their support is best in class and their staff are remarkably knowledgable.",
                             "reviewRating": {
