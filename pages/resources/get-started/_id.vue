@@ -380,7 +380,7 @@
                     </div>
                 </div>
 
-                <div v-if="id === ref" class="row">
+                <div v-if="ref" class="row">
                     <div class="col-12">
                         <div class="step">
                             <div class="icon">7</div>
