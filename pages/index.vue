@@ -177,6 +177,7 @@
                     "@context": "http://schema.org",
                     "@type": "Corporation",
                     "name": "Assessments 24x7",
+                    "image": "",
                     "url": "https://assessments24x7.com",
                     "sameAs": [
                         "https://www.facebook.com/Assessments247/",
