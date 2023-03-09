@@ -291,7 +291,7 @@
                         and communication preferences and priorities.
                     </p>    
                 </div>
-                         
+                    
                 <div class="col-12">
                     <h3 class="title">Which DISC Profile or Vendor is Best?</h3>        
                     
@@ -390,9 +390,10 @@
                         Assessments 24x7 maintains the highest standards of development and application through extensive research and we diligently work to validate and ensure our reports are accurate. Each report is designed to 
                         provide clear interpretations and feedback based on the individual’s self-perception score that is then confirmed with face validity (to ensure the assessment measures what it says it will measure).
                     </p>
-                        <p>We also practice a philosophy of transparency and openly share our rigorous reporting, research, and validation information to ensure a high degree of confidence for use in business, non-profit, 
-                            coaching, or counseling. Our research reports are publicly <a href="/about/validity" class="hyperlink" target="_blank" rel="noopener">available here.</a>
-                            </p>
+
+                    <p>
+                        We also practice a philosophy of transparency and openly share our rigorous reporting, research, and validation information to ensure a high degree of confidence for use in business, non-profit, 
+                        coaching, or counseling. Our research reports are publicly <a href="/about/validity" class="hyperlink" target="_blank" rel="noopener">available here.</a>
                     </p>
                 </div>
 
