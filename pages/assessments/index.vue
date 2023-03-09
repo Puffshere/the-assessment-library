@@ -170,7 +170,10 @@
                     "review": [
                         {
                             "@type": "Review",
-                            "author": "Donna Bell",
+                            "author": {
+                                "@type": "Person", 
+                                "name": "Donna Bell",
+                            },
                             "datePublished": "2019-07-09",
                             "reviewBody": "Assessments 24x7 is the gold standard for assessment technology. Their interfaces are intuitive, their support is best in class and their staff are remarkably knowledgable.",
                             "reviewRating": {
@@ -182,7 +185,10 @@
                         },
                         {
                             "@type": "Review",
-                            "author": "Stephen Moore",
+                            "author": {
+                                "@type": "Person", 
+                                "name": "Stephen Moore",
+                            },
                             "datePublished": "2019-07-09",
                             "reviewBody": "Looking for a one-stop-shop for all your business assessment needs? I recommend that you check out Assessments 24x7 for the tools you can use in your organization.",
                             "reviewRating": {
@@ -194,7 +200,10 @@
                         },
                         {
                             "@type": "Review",
-                            "author": "Jaymini Mistry",
+                            "author": {
+                                "@type": "Person", 
+                                "name": "Jaymini Mistry",
+                            },
                             "datePublished": "2019-07-09",
                             "reviewBody": "I applaud Assessments 24x7 for providing industry-leading tools that not only help coaches and executives, but in my case, will help me prepare the next generation of business leaders to reach their full potential!",
                             "reviewRating": {
@@ -206,7 +215,10 @@
                         },
                         {
                             "@type": "Review",
-                            "author": "Tamera Phallan",
+                            "author": {
+                                "@type": "Person", 
+                                "name": "Tamera Phallan",
+                            },
                             "datePublished": "2019-07-09",
                             "reviewBody": "The Advanced Certified Practitioner (ACP) journey was enriching, empowering and an exponential growth experience!",
                             "reviewRating": {
@@ -218,7 +230,10 @@
                         },
                         {
                             "@type": "Review",
-                            "author": "Catherine D. McAnally",
+                            "author": {
+                                "@type": "Person", 
+                                "name": "Catherine D. McAnally",
+                            },
                             "datePublished": "2019-07-09",
                             "reviewBody": "Assessments 24x7 knows assessments like no one else on Earth! They've been at it for more than a quarter century and they have it down to a science. You couldn’t ask for a better business partner!",
                             "reviewRating": {
@@ -230,7 +245,10 @@
                         },
                         {
                             "@type": "Review",
-                            "author": "Hamish Robertson",
+                            "author": {
+                                "@type": "Person", 
+                                "name": "Hamish Robertson",
+                            },
                             "datePublished": "2019-07-09",
                             "reviewBody": "Not only did I get a better understanding, I received a degree of mastery and personal transformation. You've exceeded my expectations!",
                             "reviewRating": {
