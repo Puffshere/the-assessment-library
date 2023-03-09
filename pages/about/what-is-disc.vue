@@ -518,6 +518,26 @@
                             } 
                         }
                     ]
+                },
+                structuredFAQPage: {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [{
+                        "@type": "Question",
+                        "name": "What does DISC stand for?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "DISC stands for Dominance, Influence, Steadiness, and Conscientiousness - four behavioral styles that can be used to identify an individual's patterns of observable behavior and emotions. It is a self-assessment tool used to improve productivity, teamwork, and communication by providing insight into behavioral tensions, causes of stress, problem-solving, and ways to respond more effectively to conflict."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is the DISC Assessment used for?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "DISC teaches users how to identify the predictable aspects of behavior and communication and to use that knowledge to their advantage.  The ability to create a strong and immediate connection with others is a fundamental skill in sales, management, executive-level leadership, and everyday life."
+                        }
+                    }]
                 }
             }
         },
@@ -536,7 +556,11 @@
                     {
                         innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
                         type: 'application/ld+json'
-                    }
+                    },
+                    {
+                        innerHTML: JSON.stringify(this.structuredFAQPage),
+                        type: 'application/ld+json'
+                    },
                 ]
             }
         }
