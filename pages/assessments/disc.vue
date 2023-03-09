@@ -436,7 +436,7 @@
         },
         head() {
             return {
-                title: 'DISC Assessment | Assessments 24x7',
+                title: 'DISC Assessments | Assessments 24x7',
                 meta: [
                     {
                         hid: 'description',
