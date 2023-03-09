@@ -286,6 +286,7 @@
                     "location": {
                         "@type": "Place",
                         "name": "Assessments 24x7",
+                        "image": "",
                         "hasMap": "",
                         "telephone": "1 (206) 400-6647",
                         "url": "https://assessments24x7.com",
