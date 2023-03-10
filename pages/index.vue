@@ -256,7 +256,7 @@
                     "duration": "PT1M7S",
                     "embedUrl": "https://www.youtube.com/embed/2dGXLNzWrAc"
                 },
-                structuredFAQPage: {
+                structuredDataFAQPage: {
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
                     "mainEntity": [{
@@ -303,7 +303,7 @@
                         type: 'application/ld+json'
                     },
                     {
-                        innerHTML: JSON.stringify(this.structuredFAQPage),
+                        innerHTML: JSON.stringify(this.structuredDataFAQPage),
                         type: 'application/ld+json'
                     },
                 ]

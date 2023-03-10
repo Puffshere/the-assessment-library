@@ -519,7 +519,7 @@
                         }
                     ]
                 },
-                structuredFAQPage: {
+                structuredDataFAQPage: {
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
                     "mainEntity": [{
@@ -558,7 +558,7 @@
                         type: 'application/ld+json'
                     },
                     {
-                        innerHTML: JSON.stringify(this.structuredFAQPage),
+                        innerHTML: JSON.stringify(this.structuredDataFAQPage),
                         type: 'application/ld+json'
                     },
                 ]
