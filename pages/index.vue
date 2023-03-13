@@ -199,7 +199,7 @@
                     "location": {
                         "@type": "Place",
                         "name": "Assessments 24x7",
-                        "image": "",
+                        "image": "~/assets/get-started/24x7logo.png",
                         "hasMap": "",
                         "telephone": "1 (206) 400-6647",
                         "url": "https://assessments24x7.com",
