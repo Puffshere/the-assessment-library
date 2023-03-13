@@ -45,7 +45,7 @@
                     "@type": "ProfessionalService",
                     "name": "Assessments 24x7",
                     "logo": "",
-                    "image": "assets\get-started\24x7logo.png",
+                    "image": "https://assessments24x7-media.s3.us-west-002.backblazeb2.com/brand-elements/24x7logo.png",
                     "@id": "",
                     "url": "https://assessments24x7.com",
                     "telephone": "1 (206) 400-6647",
@@ -177,7 +177,7 @@
                     "@context": "http://schema.org",
                     "@type": "Corporation",
                     "name": "Assessments 24x7",
-                    "image": "assets\get-started\24x7logo.png",
+                    "image": "https://assessments24x7-media.s3.us-west-002.backblazeb2.com/brand-elements/24x7logo.png",
                     "url": "https://assessments24x7.com",
                     "sameAs": [
                         "https://www.facebook.com/Assessments247/",
@@ -199,7 +199,7 @@
                     "location": {
                         "@type": "Place",
                         "name": "Assessments 24x7",
-                        "image": "assets\get-started\24x7logo.png",
+                        "image": "https://assessments24x7-media.s3.us-west-002.backblazeb2.com/brand-elements/24x7logo.png",
                         "hasMap": "",
                         "telephone": "1 (206) 400-6647",
                         "url": "https://assessments24x7.com",
