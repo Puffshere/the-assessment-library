@@ -45,7 +45,7 @@
                     "@type": "ProfessionalService",
                     "name": "Assessments 24x7",
                     "logo": "",
-                    "image": "",
+                    "image": "~/assets/get-started/24x7logo.png",
                     "@id": "",
                     "url": "https://assessments24x7.com",
                     "telephone": "1 (206) 400-6647",
@@ -177,7 +177,7 @@
                     "@context": "http://schema.org",
                     "@type": "Corporation",
                     "name": "Assessments 24x7",
-                    "image": "",
+                    "image": "~/assets/get-started/24x7logo.png",
                     "url": "https://assessments24x7.com",
                     "sameAs": [
                         "https://www.facebook.com/Assessments247/",
