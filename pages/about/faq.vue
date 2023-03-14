@@ -189,6 +189,26 @@
                             } 
                         }
                     ]
+                },
+                structuredDataFAQPage: {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [{
+                        "@type": "Question",
+                        "name": "If I want to buy assessments in bulk/volume, do you offer even lower prices?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, we offer our clients additional discounts at a range of volumes to fit any business size or need. Our pricing is based on the volume of your purchase. We offer 4 levels: Bronze, Silver, Gold, and Platinum. If you would like a copy of our discount pricing sheet, email us at 'support@assessments.ws' and we will be happy to email one to you. Please include in your email address, and whether you are an independent coach/trainer or an inside corporate coach/trainer."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need to be certified to use assessments?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Absolutely not; however, HIGHLY recommended. Certification is not required to administer assessments, to interpret the results or to give presentations. Many of our customers find that our certifications provide them with a deeper understanding of the assessments and the tools available for report debriefing, program facilitation and client coaching. There is no doubt that our certified practitioners have greater success using assessments with their clients and companies. It brings a greater level of confidence producing outstanding results. Please contact us if you are interested in becoming certified."
+                        }
+                    }]
                 }
             }
         },
@@ -207,7 +227,11 @@
                     {
                         innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
                         type: 'application/ld+json'
-                    }
+                    },
+                    {
+                        innerHTML: JSON.stringify(this.structuredDataFAQPage),
+                        type: 'application/ld+json'
+                    },
                 ]
             }
         }
