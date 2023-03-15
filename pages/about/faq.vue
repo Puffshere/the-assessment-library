@@ -192,6 +192,7 @@
                 },
                 structuredDataFAQPage: {
                     "@context": "https://schema.org",
+                    "image": "https://assessments24x7-media.s3.us-west-002.backblazeb2.com/brand-elements/24x7logo.png",
                     "@type": "FAQPage",
                     "mainEntity": [{
                         "@type": "Question",
