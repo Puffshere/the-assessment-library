@@ -101,7 +101,7 @@ module.exports = {
       '/resources/trainer-materials/**',
       '/badge',
       '/disc-workshop-leader-badge',
-      '/eiq-2-badge',
+      '/eiq-badge',
       '/motivators-badge',
       '/pgi-badge',
       '/platinum-rule-badge',
