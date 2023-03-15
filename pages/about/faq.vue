@@ -193,6 +193,7 @@
                 structuredDataFAQPage: {
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
+                    "url": "https://assessments24x7.com",
                     "mainEntity": [{
                         "@type": "Question",
                         "name": "If I want to buy assessments in bulk/volume, do you offer even lower prices?",
