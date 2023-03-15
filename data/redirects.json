@@ -366,5 +366,10 @@
     {
         "from": "/store",
         "to": "https://store.assessments24x7.com"
+    },
+    {
+        "from": "/eiq-2-badge",
+        "to": "/eiq-badge"
     }
+
 ]
