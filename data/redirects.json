@@ -362,5 +362,9 @@
     {
         "from": "/disc-motivators.asp",
         "to": "/assessments/disc"
+    },
+    {
+        "from": "/store",
+        "to": "https://store.assessments24x7.com"
     }
 ]
