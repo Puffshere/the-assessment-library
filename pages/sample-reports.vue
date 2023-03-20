@@ -489,13 +489,13 @@
                             <div class="col-12">
                                 <h1>Kids DISC - Questionnaire Only</h1><br />
 
-                                <a class="hyperlink" target="_blank" rel="noopener">German</a><br/>
-                                <a class="hyperlink" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a class="hyperlink" target="_blank" rel="noopener">French</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">German</a><br/>
                                 <a class="hyperlink" target="_blank" rel="noopener">Italian</a><br/>
                                 <a class="hyperlink" target="_blank" rel="noopener">Japanese</a><br/>
-                                <a class="hyperlink" target="_blank" rel="noopener">Portugese (Brazil)</a><br/>
-                                <a class="hyperlink" target="_blank" rel="noopener">Portugese (Portugal)</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Portuguese (Brazil)</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Portuguese (Portugal)</a><br/>
+                                <a class="hyperlink" target="_blank" rel="noopener">Spanish</a><br/>
                                 <a class="hyperlink" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a class="hyperlink" target="_blank" rel="noopener">Turkish</a><br/>
                             </div>
