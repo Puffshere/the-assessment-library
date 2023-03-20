@@ -321,7 +321,7 @@
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf" class="hyperlink" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusChinese.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
-                        <a v-else-if="lang === 'pt'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPortuguese.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'pt'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusPortuguese.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'sv'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQSwedish.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQTurkish.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQVietnamese.pdf" target="_blank" rel="noopener">Sales IQ Report</a>
@@ -877,7 +877,7 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusChinese.pdf" class="hyperlink" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf" target="_blank" rel="noopener">French</a><br/>
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPortuguese.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusPortuguese.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQSwedish.pdf" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQTurkish.pdf" target="_blank" rel="noopener">Turkish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQVietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
