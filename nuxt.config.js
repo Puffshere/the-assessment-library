@@ -123,6 +123,7 @@ module.exports = {
       '/monica',
       '/suzette',
       '/cathy'
+      '/cristina'
     ]
   },
   gtm: {
