@@ -122,7 +122,7 @@ module.exports = {
       '/jennifer',
       '/monica',
       '/suzette',
-      '/cathy'
+      '/cathy',
       '/cristina'
     ]
   },
