@@ -18,13 +18,12 @@
                     <h2>Schedule a Meeting with<br/>Cristina Moore</h2>
 
                     <p>
-                        <strong>About Me: </strong>Hello! I'm Cristina Moore, We are a family and friends 
-                        business and I look forward to working with you!
+                        <strong>About Me: </strong>Hi there! My name is Cristina Moore, Senior Account Manager here at Assessments 24x7. My background includes extensive Corporate Sales experience in the Clean Beauty and Wellness industries for national beauty retailers. I leverage my attention to detail and analytical skills to discover synergy between companies and establish thriving partnerships. I'm dedicated to providing outstanding customer service and developing innovative strategies to maximize your success with Assessments!
                         <br/><br/>
 
-                        <strong>Hobbies & Fun Facts: </strong>I play pickle ball, love to travel, have two adorable cats who are sisters and I love to sing.<br/><br/>
+                        <strong>Hobbies & Fun Facts: </strong>My favorite movies of all time are The Godfather trilogy. Even named my dog Sonny! Outside of movies, I love to be outdoors. I'm currently learning to golf and enjoy hiking all over San Diego with my family.<br/><br/>
 
-                        My DISC Style is: <strong>ISc</strong>
+                        My DISC Style is: <strong>ICs</strong>
                     </p><br/>
                 </div>
 
