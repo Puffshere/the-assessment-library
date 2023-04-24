@@ -272,7 +272,9 @@
                         <a class="language-button other" @click="eiqReportModal = true">8 languages</a><br/>
                         
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandEIQ.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Emotional Intelligence</a>
+                        <a v-else-if="lang === 'zh'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DiscPlusEiqChineseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Emotional Intelligence</a>
                         <a v-else class="hyperlink disabled">DISC + Emotional Intelligence</a><br/>
+                        <a class="language-button other" @click="discPluseiqReportModal = true">2 languages</a><br/>
                     </div>
                 </div>
 
@@ -807,6 +809,24 @@
                 </section>
             </transition>
 
+            <!-- DISC + EIQ REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="discPluseiqReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="discPluseiqReportModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>DISC + Emotional Intelligence</h1>
+
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandEIQ.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DiscPlusEiqChineseSampleReport.pdf" target="_blank" rel="noopener">Chinese (Simplified)</a><br/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
             <!-- EIQ 360 REPORTS MODAL -->
             <transition name="fade">
                 <section v-if="eiq360ReportModal" class="modal-window">
@@ -966,6 +986,7 @@
                 motTeamWheelReportModal: false,
                 motDISCReportModal: false,
                 eiqReportModal: false,
+                discPluseiqReportModal: false,
                 eiq360ReportModal: false,
                 learningStylesReportModal: false,
                 discPlusLearningStylesReportModal: false,
