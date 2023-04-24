@@ -330,10 +330,11 @@
 
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf" class="hyperlink" target="_blank" rel="noopener">Sales IQ Team Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a>
+                        <a v-else-if="lang === 'no'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIqPlus_NorwegianTeamReport.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a>
                         <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a>
                         <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf" target="_blank" rel="noopener">Sales IQ Team Report</a>
                         <a v-else class="hyperlink disabled">Sales IQ Team Report</a>
-                        <a class="language-button other" @click="salesIQTeamReportModal = true">4 languages</a><br/>
+                        <a class="language-button other" @click="salesIQTeamReportModal = true">5 languages</a><br/>
                     </div>
                 </div>
 
@@ -900,6 +901,7 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusGroupReport_Chinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf" target="_blank" rel="noopener">French</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIqPlus_NorwegianTeamReport.pdf" target="_blank" rel="noopener">Norwegian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf" target="_blank" rel="noopener">Turkish</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf" target="_blank" rel="noopener">Vietnamese</a>
                             </div>
