@@ -142,8 +142,9 @@
                         <a v-else-if="lang === 'ru'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
                         <a v-else-if="lang === 'sv'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
                         <a v-else-if="lang === 'vi'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
+                        <a v-else-if="lang === 'zh'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Simplified_DISC_360_-_Chinese.pdf" class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
                         <a v-else class="hyperlink disabled">DISC 360&deg; Report</a>
-                        <a class="language-button disc" @click="disc360ReportModal = true">4 languages</a><br/>
+                        <a class="language-button disc" @click="disc360ReportModal = true">5 languages</a><br/>
                     </div>
                 </div>
 
@@ -538,6 +539,7 @@
                             <div class="col-12">
                                 <h1>DISC 360&deg; Reports</h1>
 
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Simplified_DISC_360_-_Chinese.pdf" class="hyperlink" target="_blank" rel="noopener">Chinese (Simplified)</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Russian</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Swedish</a><br/>
