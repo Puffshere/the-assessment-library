@@ -61,7 +61,7 @@
                         </ValidationProvider>
                     </div>
 
-                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet'">
+                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc'">
                         <div class="form-group">
                             <ValidationProvider v-slot="v" rules="required">
                                 <label for="source">How did you hear about us? *</label>
@@ -84,7 +84,7 @@
                         <input id="sourceOther" name="sourceOther" type="text" />
                     </div>
 
-                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet'">
+                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc'">
                         <div class="form-group">
                             <ValidationProvider v-slot="v" rules="required">
                                 <label for="comments">What would you like to discuss?</label>

@@ -13,6 +13,7 @@
                         <img v-else-if="id === 'engageandgrow'" src="~/assets/get-started/engage-and-grow.png" alt="Engage and Grow" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png" alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'wcg'" src="~/assets/WCG-cropped.jpg" alt="Worldwide Coaching Group" class="partner-logo-wcg">
+                        <img v-else-if="id === 'dc'" src="~/assets/Dale-Carnegie-logo.png" alt="Dale Carnegie" class="partner-logo-dc">
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png" alt="Australasia" class="partner-logo affiliate">
                         <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo affiliate">
                         <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe" class="partner-logo affiliate">
@@ -333,8 +334,8 @@
                             <img class="image" src="~/assets/badges/new/disc-cert-badge-color-label.png" alt="">
                             <img class="image" src="~/assets/badges/new/mot-cert-badge-color-label.png" alt="">
                             <img class="image" src="~/assets/badges/new/eiq-cert-badge-color-label.png" alt="">
-                            <img v-if="id !== 'wcg'" class="image" src="~/assets/badges/new/hartman-cert-badge-color-label.png" alt="">
-                            <img v-if="id !== 'wcg'" class="image" src="~/assets/badges/new/learning-cert-badge-color-label.png" alt="">
+                            <img v-if="id !== 'wcg' || id !== 'dc'" class="image" src="~/assets/badges/new/hartman-cert-badge-color-label.png" alt="">
+                            <img v-if="id !== 'wcg' || id !== 'dc'" class="image" src="~/assets/badges/new/learning-cert-badge-color-label.png" alt="">
                         </div>
 
                         <h2>Assessment Certifications &amp; Training</h2>
@@ -405,6 +406,8 @@
             } else if (this.$route.query.id === 'viet') {
                 this.url = 'assessments24x7.asia';
                 this.id = 'viet';
+            } else if (this.$route.query.id === 'dc') {
+                this.id = 'dc';
             }
 
             if (this.$route.query.noframe) {
@@ -453,6 +456,11 @@
             .partner-logo-wcg {
                 width: 100%;
                 max-width: 95%;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                margin-bottom: 35px;
+            }
+            .partner-logo-dc {
+                max-width: 300px;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
                 margin-bottom: 35px;
             }
