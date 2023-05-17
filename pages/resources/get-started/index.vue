@@ -408,8 +408,10 @@
                 this.url = 'assessments24x7.asia';
                 this.id = 'viet';
             } else if (this.$route.query.id === 'dc') {
+                this.url = 'dalecarnegiesurveys.com';
                 this.id = 'dc';
             } else if (this.$route.query.id === 'bni') {
+                this.url = 'bniassessments.com/';
                 this.id = 'bni';
             }
 
