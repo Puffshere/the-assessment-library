@@ -61,7 +61,7 @@
                         </ValidationProvider>
                     </div>
 
-                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc'">
+                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc' && this.getStartedId !== 'bni'">
                         <div class="form-group">
                             <ValidationProvider v-slot="v" rules="required">
                                 <label for="source">How did you hear about us? *</label>
@@ -84,7 +84,7 @@
                         <input id="sourceOther" name="sourceOther" type="text" />
                     </div>
 
-                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc'">
+                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc' && this.getStartedId !== 'bni'">
                         <div class="form-group">
                             <ValidationProvider v-slot="v" rules="required">
                                 <label for="comments">What would you like to discuss?</label>
@@ -266,6 +266,12 @@ export default {
                 break;
             case 'wcg':
                 this.getStartedAccountName = 'Worldwide Coaching Group';
+                break;
+            case 'dc':
+                this.getStartedAccountName = 'Dale Carnegie';
+                break;
+            case 'bni':
+                this.getStartedAccountName = 'BNI';
                 break;
             case 'aus':
                 this.isPartnerId = 'aus';
@@ -731,7 +737,7 @@ export default {
                         });
                     }
                 }
-                if (this.getStartedId === "wcg") {
+                if (this.getStartedId === "wcg" || this.getStartedId === "dc" || this.getStartedId === "bni") {
                     try {
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Suzette Chaparro",
@@ -842,7 +848,7 @@ export default {
                         });
                     }
                 }
-                if (this.getStartedId !== "wcg" && this.isPartnerId !== "aus" && this.isPartnerId !== "can" && this.isPartnerId !== "eur" && this.isPartnerId !== "viet") {
+                if (this.getStartedId !== "wcg" && this.isPartnerId !== "aus" && this.isPartnerId !== "can" && this.isPartnerId !== "eur" && this.isPartnerId !== "viet" && this.getStartedId !== "dc" && this.getStartedId !== "bni") {
                     try {
                         const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {

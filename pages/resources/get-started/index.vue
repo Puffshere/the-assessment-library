@@ -14,6 +14,7 @@
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png" alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'wcg'" src="~/assets/WCG-cropped.jpg" alt="Worldwide Coaching Group" class="partner-logo-wcg">
                         <img v-else-if="id === 'dc'" src="~/assets/Dale-Carnegie-logo.png" alt="Dale Carnegie" class="partner-logo-dc">
+                        <img v-else-if="id === 'bni'" src="~/assets/BNI_logo.png" alt="BNI" class="partner-logo-bni">
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png" alt="Australasia" class="partner-logo affiliate">
                         <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo affiliate">
                         <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe" class="partner-logo affiliate">
@@ -408,6 +409,8 @@
                 this.id = 'viet';
             } else if (this.$route.query.id === 'dc') {
                 this.id = 'dc';
+            } else if (this.$route.query.id === 'bni') {
+                this.id = 'bni';
             }
 
             if (this.$route.query.noframe) {
@@ -462,6 +465,10 @@
             .partner-logo-dc {
                 max-width: 300px;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                margin-bottom: 35px;
+            }
+            .partner-logo-bni {
+                max-width: 300px;
                 margin-bottom: 35px;
             }
         }
