@@ -543,7 +543,7 @@ export default {
                                         value: this.form.newsletter
                                     },
                                     {
-                                        field: '79', // Sales Person Assignment,
+                                        field: '79', // Salesperson Assignment,
                                         value: "Angie Fairbanks"
                                     },
                                     {
@@ -673,7 +673,7 @@ export default {
                                         value: this.form.newsletter
                                     },
                                     {
-                                        field: '79', // Sales Person Assignment,
+                                        field: '79', // Salesperson Assignment,
                                         value: salesPerson.data
                                     },
                                     {
@@ -792,7 +792,7 @@ export default {
                                         value: this.form.newsletter
                                     },
                                     {
-                                        field: '79', // Sales Person Assignment,
+                                        field: '79', // Salesperson Assignment,
                                         value: "Suzette Chaparro"
                                     },
                                     {
@@ -904,7 +904,7 @@ export default {
                                         value: this.form.newsletter
                                     },
                                     {
-                                        field: '79', // Sales Person Assignment,
+                                        field: '79', // Salesperson Assignment,
                                         value: salesPerson.data
                                     },
                                     {

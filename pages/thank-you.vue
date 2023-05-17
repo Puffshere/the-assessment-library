@@ -93,7 +93,7 @@
             if (this.$route.query.contactId) {
                 const { data } = await axios.get(`/api/contact/${this.$route.query.contactId}`);
                 salesPerson = data.fieldValues.find(obj => {
-                    return obj.field === '79'; // 79 is the field id for Sales Person Assignment in AC
+                    return obj.field === '79'; // 79 is the field id for Salesperson Assignment in AC
                 });
             } else {
                 this.agent = 'suzette';
