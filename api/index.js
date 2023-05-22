@@ -34,7 +34,7 @@ mongoose.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: t
 app.use(express.static(path.join(__dirname, 'static')));
 
 // Serves a PDF from the static/pdf folder
-app.get('/pdfs/Disc-reminder-card-2023.pdf', (req, res) => {
+app.get('/pdfs/Disc_reminder_card_2023.pdf', (req, res) => {
     const pdfPath = path.join(__dirname, 'static', 'pdfs', req.params.pdfName);
     res.download(pdfPath);
   });
