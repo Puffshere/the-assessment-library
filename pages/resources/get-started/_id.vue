@@ -497,8 +497,6 @@
                             <img class="image" src="~/assets/badges/new/disc-cert-badge-color-label.png" alt="">
                             <img class="image" src="~/assets/badges/new/mot-cert-badge-color-label.png" alt="">
                             <img class="image" src="~/assets/badges/new/eiq-cert-badge-color-label.png" alt="">
-                            <img v-if="id !== 'ref'" class="image" src="~/assets/badges/new/hartman-cert-badge-color-label.png" alt="">
-                            <img v-if="id !== 'ref'" class="image" src="~/assets/badges/new/learning-cert-badge-color-label.png" alt="">
                         </div>
 
                         <h2>Assessment Certifications &amp; Training</h2>
