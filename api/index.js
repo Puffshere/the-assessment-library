@@ -14,6 +14,7 @@ import cors from 'cors';
 
 const upload = multer();
 const app = express();
+const path = require('path');
 
 GhostSearch.start();
 
@@ -28,6 +29,15 @@ const cosmos = {
 
 const connectionString = `mongodb://${cosmos.username}:${cosmos.password}@${cosmos.host}:${cosmos.port}/${cosmos.name}${cosmos.opts}`;
 mongoose.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true});
+
+// Serving static files 
+app.use(express.static(path.join(__dirname, 'static')));
+
+// Serves a PDF from the static/pdf folder
+app.get('/pdfs/Disc-reminder-card-2023.pdf', (req, res) => {
+    const pdfPath = path.join(__dirname, 'static', 'pdf', req.params.pdfName);
+    res.download(pdfPath);
+  });
 
 app.use(helmet());
 app.use(cors());
