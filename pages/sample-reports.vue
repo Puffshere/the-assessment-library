@@ -283,10 +283,11 @@
                     <div class="samples-container">
                         <h3>Emotional Intelligence 360&deg;</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence 360&deg;</a>
+                        <a v-else-if="lang === 'fr'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360FrenchSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence 360&deg;</a>
                         <a v-else-if="lang === 'ru'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence 360&deg;</a>
                         <a v-else-if="lang === 'es'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence 360&deg;</a>
                         <a v-else class="hyperlink disabled">Emotional Intelligence 360&deg;</a>
-                        <a class="language-button other" @click="eiq360ReportModal = true">3 languages</a><br/>
+                        <a class="language-button other" @click="eiq360ReportModal = true">4 languages</a><br/>
                     </div>
                 </div>
 
@@ -840,6 +841,7 @@
                                 <h1>Emotional Intelligence 360&deg; Reports</h1>
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360FrenchSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">French</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Russian</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Spanish</a>
                             </div>
