@@ -63,6 +63,12 @@
                                 Employee Time-off Request Form
                             </li>
                         </a>
+
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfW1lT14EV4L-XI6KSDWTef03JG62aiIzjpL3nLQueg2uFcAg/viewform?usp=sharing">
+                            <li class="resource accountPurchase">
+                                Account/Purchase Form
+                            </li>
+                        </a>
                     </ul>
                 </div>
             </div>
@@ -163,6 +169,9 @@
                 &.other {
                     border: 1px solid #eaeaea;
                     color: #1e222d;
+                }
+                &.accountPurchase {
+                    color: #25ca20;
                 }
             }
         }
