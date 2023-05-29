@@ -68,8 +68,8 @@
 
                         <div class="languages">
                             <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments"> English</span>
-                            <span><img src="~assets/flags/mexico.svg" alt="Spanish DISC Assessments"> Español</span>
                             <span><img src="~assets/flags/algeria.svg" alt="Arabic DISC Assessments"> العربية</span>
+                            <span><img src="~assets/flags/australia.svg" alt="Australian DISC Assessments"> Australian</span>
                             <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
                             <span><img src="~assets/flags/netherlands.svg" alt="Dutch DISC Assessments"> Nederlands</span>
                             <span><img src="~assets/flags/italy.svg" alt="Italian DISC Assessments"> Italiano</span>
@@ -85,6 +85,7 @@
                             <span><img src="~assets/flags/portugal.svg" alt="Portugese DISC Assessments"> Português</span>
                             <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português (Brazil)</span>
                             <span><img src="~assets/flags/russia.svg" alt="Russian DISC Assessments"> Россия</span>
+                            <span><img src="~assets/flags/mexico.svg" alt="Spanish DISC Assessments"> Español</span>
                             <span><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>
                             <span><img src="~assets/flags/turkey.svg" alt="Turkish DISC Assessments"> Türkçe</span>
                             <span><img src="~assets/flags/united-kingdom.svg" alt="UK DISC Assessments"> UK English</span>

@@ -23,10 +23,10 @@
                         <label for="lang">Filter by Language:</label>
                         <select class="input" id="lang" v-model="lang">
                             <option value="ar">Arabic - 2</option>
+                            <option value="en-au">Australian - 1</option>
                             <option value="zh">Chinese (Mandarin) - 12</option>
                             <option value="zh-t">Chinese (Traditional) - 12</option>
                             <option value="nl">Dutch - 5</option>
-                            <option value="en-gb">English (UK) - 2</option>
                             <option value="en-us" selected>English (US) - 34</option>
                             <option value="fr">French - 9</option>
                             <option value="de">German - 3</option>
@@ -44,6 +44,7 @@
                             <option value="es">Spanish - 7</option>
                             <option value="sv">Swedish - 6</option>
                             <option value="tr">Turkish - 7</option>
+                            <option value="en-gb">English (UK) - 2</option>
                             <option value="vi">Vietnamese - 9</option>
                         </select>
                     </div>
@@ -72,6 +73,7 @@
                         <h3>DISC Self</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'ar'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCArabic.pdf" target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'en-au'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfAustralian.pdf" target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf" target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'nl'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfDutch.pdf" target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfFrench.pdf" target="_blank" rel="noopener">DISC Self Report</a>
@@ -93,7 +95,7 @@
                         <a v-else-if="lang === 'en-gb'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfUK.pdf" target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCVietnamese.pdf" target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else class="hyperlink disabled">DISC Self Report</a>
-                        <a class="language-button disc" @click="discSelfModal = true">22 languages</a>
+                        <a class="language-button disc" @click="discSelfModal = true">23 languages</a>
                         <br/>
 
                         <a v-if="lang === 'en-us' || lang === 'zh' || lang === 'nl' || lang === 'fr' || lang === 'pt' || lang === 'sv' || lang === 'vi' || lang === 'tr' || lang === 'es'" @click="discTeamReportModal = true" class="hyperlink" target="_blank" rel="noopener">DISC Team Reports &rsaquo;</a>
@@ -377,6 +379,7 @@
                                 <h1>DISC Self</h1>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCArabic.pdf" target="_blank" rel="noopener">Arabic</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfAustralian.pdf" target="_blank" rel="noopener">Australian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfDutch.pdf" target="_blank" rel="noopener">Dutch</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfFrench.pdf" target="_blank" rel="noopener">French</a><br/>
