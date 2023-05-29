@@ -171,7 +171,7 @@
                     color: #1e222d;
                 }
                 &.accountPurchase {
-                    color: #25ca20;
+                    background: linear-gradient(268deg, #25ca20, #168d11);
                 }
             }
         }
