@@ -98,7 +98,11 @@
             async fetchData() {
                 const salesperson = await axios.get('/api/lead/next-assignment');
                 this.salesperson = salesperson.data;
-                console.log("this is the salesperson 1", this.salesperson);
+                const lead = await axios.post('/api/lead', {
+                            salesPerson: salesPerson.data,
+                        });
+                console.log("this is the salesperson", this.salesperson);
+                console.log("this is the salesperson", lead);
           }
         }
     }
