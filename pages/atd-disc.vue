@@ -17,7 +17,7 @@
                 <div class="col-6">
                     <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2>
 
-                    <p>
+                    <!-- <p>
                         <strong>About Me: </strong>Hi, I am Angie Warner and I am VP of Sales here at Assessments 24x7. I live with my husband and my dog, 
                         Doug! I have worked in sales since I joined the workforce 17 years ago. I started in the telecom industry and moved into 
                         Pharmaceutical Sales. I have worked with a few pharmaceutical companies including Johnson & Johnson and I've worked in many 
@@ -29,16 +29,16 @@
                         shelters. Watching any and all college football.<br/><br/>
 
                         My DISC Style is: <strong>Id</strong>
-                    </p><br/>
+                    </p><br/> -->
                 </div>
 
                 <div class="col-6">
-                    <vue-calendly url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                    <vue-calendly url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
                 
-                    <p style="text-align: center; font-size: 10pt;">
+                    <!-- <p style="text-align: center; font-size: 10pt;">
                         You can also email me at <a class="hyperlink" href="mailto:angiew@assessments24x7.com">angiew@assessments24x7.com</a><br/>
                         or call <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
-                    </p>
+                    </p> -->
                 </div>
             </div>
 
