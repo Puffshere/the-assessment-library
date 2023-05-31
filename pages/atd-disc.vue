@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="col-6">
-                    <vue-calendly url={{ calendlyAddress }} :height="650"></vue-calendly>
+                    <vue-calendly url={{ this.calendlyAddress }} :height="650"></vue-calendly>
                 </div>
             </div>
 
