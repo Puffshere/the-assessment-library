@@ -75,7 +75,7 @@
         },
         data() {
             return {
-            salesperson: '',
+            salesperson: salesperson.data,
             }
         },
         created() {
@@ -96,9 +96,9 @@
                 }
             },
             async fetchData() {
-              console.log("this is the salesperson", this.salesperson);
+              console.log("this is the salesperson 1", this.salesperson);
               this.salesperson = await axios.get('/api/lead/next-assignment');
-              console.log("this is the salesperson", this.salesperson);
+              console.log("this is the salesperson 2", this.salesperson);
           }
         }
     }
