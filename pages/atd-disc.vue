@@ -54,12 +54,6 @@
             'main-nav': Nav,
             'footer-fold': Footer
         },
-        data() {
-            return {
-                salesperson: '',
-                calendlyAddress: ''
-            }
-        },
         created() {
             this.fetchData();
         },
