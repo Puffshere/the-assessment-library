@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="col-6">
-                    <vue-calendly url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                    <vue-calendly url={{ calendlyAddress }} :height="650"></vue-calendly>
                 </div>
             </div>
 
@@ -53,6 +53,12 @@
         components: {
             'main-nav': Nav,
             'footer-fold': Footer
+        },
+        data() {
+            return {
+                salesperson: '',
+                calendlyAddress: ''
+            }
         },
         created() {
             this.fetchData();
