@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <h2>Schedule a Meeting with<br/>{{ salesperson.name }}</h2>
+                    <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2>
 
                     <p>
                         <strong>About Me: </strong>Hi, I am Angie Warner and I am VP of Sales here at Assessments 24x7. I live with my husband and my dog, 
