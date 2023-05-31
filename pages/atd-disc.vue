@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="col-6">
-                    <vue-calendly :calendlyAddress="calendlyAddress" url="https://calendly.com/{{ calendlyAddress }}/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                    <vue-calendly url={{ calendlyAddress }} :height="650"></vue-calendly>
                 </div>
             </div>
 
@@ -54,12 +54,6 @@
             'main-nav': Nav,
             'footer-fold': Footer
         },
-        data() {
-            return {
-            //salesperson: '',
-            calendlyAddress: ''
-            }
-        },
         created() {
             this.fetchData();
         },
@@ -79,16 +73,15 @@
             },
             async fetchData() {
                 const salesperson = await axios.get('/api/lead/next-assignment');
-                //const calendlyAddress = '';
                 this.salesperson = salesperson.data;
                 if (this.salesperson === 'Suzette Chaparro') {
-                    this.calendlyAddress = 'suzette-247'
+                    this.calendlyAddress = 'https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5'
                 }
                 if (this.salesperson === 'Monica Saare') {
-                    this.calendlyAddress = 'monica-saare'
+                    this.calendlyAddress = 'https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5'
                 }
                 if (this.salesperson === 'Angie Warner') {
-                    this.calendlyAddress = 'angiew-1'
+                    this.calendlyAddress = 'https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5'
                 }
                 console.log("This is the calenlyAddress", this.calendlyAddress);
           }
