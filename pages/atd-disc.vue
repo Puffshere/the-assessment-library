@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">Schedule a Meeting</h1>
+                        <h1 class="section-title">Schedule a meeting to receive your FREE full, 40-page DISC report. ($??.?? value)</h1>
                     </div>
                 </div>
             </div>
@@ -15,30 +15,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2>
-
-                    <!-- <p>
-                        <strong>About Me: </strong>Hi, I am Angie Warner and I am VP of Sales here at Assessments 24x7. I live with my husband and my dog, 
-                        Doug! I have worked in sales since I joined the workforce 17 years ago. I started in the telecom industry and moved into 
-                        Pharmaceutical Sales. I have worked with a few pharmaceutical companies including Johnson & Johnson and I've worked in many 
-                        different specialties such as Gastroenterology, Endocrinology, Cardiology, Allergy, and ENT surgeons. My role with Assessments 
-                        24x7 is to help customize assessments packages to maximize hiring and leadership potential for your organization.  
-                        <br/><br/>
-
-                        <strong>Hobbies & Fun Facts: </strong>Crafting and any creative projects. Designing and Home Decor. Volunteering with animal 
-                        shelters. Watching any and all college football.<br/><br/>
-
-                        My DISC Style is: <strong>Id</strong>
-                    </p><br/> -->
+                    <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2>            
                 </div>
 
                 <div class="col-6">
-                    <vue-calendly url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
-                
-                    <!-- <p style="text-align: center; font-size: 10pt;">
-                        You can also email me at <a class="hyperlink" href="mailto:angiew@assessments24x7.com">angiew@assessments24x7.com</a><br/>
-                        or call <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
-                    </p> -->
+                    <vue-calendly :calendlyAddress="calendlyAddress" url="https://calendly.com/{{ calendlyAddress }}/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
                 </div>
             </div>
 
@@ -76,6 +57,7 @@
         data() {
             return {
             salesperson: '',
+            calendlyAddress: ''
             }
         },
         created() {
@@ -97,7 +79,17 @@
             },
             async fetchData() {
                 const salesperson = await axios.get('/api/lead/next-assignment');
+                //const calendlyAddress = '';
                 this.salesperson = salesperson.data;
+                if (this.salesperson === 'Suzette Chaparro') {
+                    this.calendlyAddress = 'suzette-247'
+                }
+                if (this.salesperson === 'Monica Saare') {
+                    this.calendlyAddress = 'monica-saare'
+                }
+                if (this.salesperson === 'Angie Warner') {
+                    this.calendlyAddress = 'angiew-1'
+                }
           }
         }
     }
