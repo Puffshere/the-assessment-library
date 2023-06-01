@@ -87,10 +87,10 @@
             async fetchData() {
                 const salesperson = await axios.get('/api/lead/next-assignment');
                 this.salesperson = salesperson.data;
-                const lead = await axios.post('/api/lead', {
-                            salesperson: salesperson.data
-                        });
-                const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+                // const lead = await axios.post('/api/lead', {
+                //             salesperson: salesperson.data
+                //         });
+                // const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
           }
         }
     }
