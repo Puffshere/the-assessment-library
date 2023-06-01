@@ -79,20 +79,24 @@ export default {
         window.removeEventListener('message', this.onCalendlyEvent);
     },
     methods: {
-        onCalendlyEvent(e) {
+        async onCalendlyEvent(e) {
             if (e.data.event && e.data.event.indexOf('calendly') === 0) {
                 if (e.data.event === 'calendly.event_scheduled') {
                     axios.post(`/api/contact/${this.$route.query.contactId}/tag/7`);
                 }
+                const lead = await axios.post('/api/lead', {
+                            salesPerson: this.salesperson,
+                            firstName: 'ATD Lead',
+                            lastName: 2023,
+                            phone: '',
+                            email: '',
+                            country: 'San Diego, CA'
+                        });
             }
         },
         async fetchData() {
             const salesperson = await axios.get('/api/lead/next-assignment');
             this.salesperson = salesperson.data;
-            // const lead = await axios.post('/api/lead', {
-            //             salesperson: salesperson.data
-            //         });
-            // const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
         }
     }
 }
