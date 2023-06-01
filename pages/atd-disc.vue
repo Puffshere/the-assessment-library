@@ -15,9 +15,10 @@
                 <div class="col-6 textBox">
                     <h2>Schedule a Meeting with<br />{{ salesperson }}</h2>
                     <hr />
-                    <h4>Connect with Assessments 24x7 Team member. Dive into your full DISC report, explore certification
+                    <h3>AN EXCLUSIVE OFFER FOR ATD ATTENDEES</h3>
+                    <h4>Connect with an Assessments 24x7 Team member. Dive into your full DISC report, explore certification
                         options, and gain insights on opening an account.</h4>
-                    <img class="heroImage" src="~/assets/discRoundLogo.png">
+                    <img class="heroImage" src="~/assets/DISCGraphic.png">
                 </div>
                 <div class="col-6">
                     <div v-if="this.salesperson === 'Suzette Chaparro'">
@@ -145,9 +146,11 @@ export default {
     }
 
     .heroImage {
-        padding-top: 100px;
+        padding-top: 40px;
         padding-bottom: 25px;
         width: 150px;
+        margin: 0 auto;
+        display: flex;
     }
 
     .textBox {
