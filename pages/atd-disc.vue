@@ -132,7 +132,7 @@ export default {
     }
 
     .textBox {
-        background: linear-gradient(268deg, #c9c9c92e, #f5f5f52e);
+        background: linear-gradient(268deg, #c9c9c92e, #ffffff);
         border-radius: 5px;
         color: rgb(24, 24, 24);
         padding: 20px;
