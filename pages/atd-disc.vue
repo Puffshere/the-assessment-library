@@ -14,9 +14,8 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 textBox">
                     <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2> 
-                    <br />
                     <br />
                     <h3>Connect with Assessments 24x7 Team member. Dive into your full DISC report, explore certification options, and gain insights on opening an account.</h3>
                 </div>
@@ -130,6 +129,13 @@
         h2 {
             font-size: 20pt;
             line-height: 24pt;
+        }
+
+        .textBox {
+            background-color: #81c2ff2e;
+            border-radius: 5px;
+            color: rgb(24, 24, 24);
+            padding: 20px;
         }
     }
 </style>
