@@ -23,14 +23,29 @@
                     <div v-if="this.salesperson === 'Suzette Chaparro'">
                         <vue-calendly url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5"
                             :height="650"></vue-calendly>
+                        <p style="text-align: center; font-size: 10pt;">
+                            You can also email me at <a class="hyperlink"
+                                href="mailto:suzette@assessments24x7.com">suzette@assessments24x7.com</a><br />
+                            or call <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                        </p>
                     </div>
                     <div v-else-if="this.salesperson === 'Monica Saare'">
                         <vue-calendly url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5"
                             :height="650"></vue-calendly>
+                        <p style="text-align: center; font-size: 10pt;">
+                            You can also email me at <a class="hyperlink"
+                                href="mailto:monica@assessments24x7.com">monica@assessments24x7.com</a><br />
+                            or call <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                        </p>
                     </div>
                     <div v-else-if="this.salesperson === 'Angie Warner'">
                         <vue-calendly url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5"
                             :height="650"></vue-calendly>
+                        <p style="text-align: center; font-size: 10pt;">
+                            You can also email me at <a class="hyperlink"
+                                href="mailto:angiew@assessments24x7.com">angiew@assessments24x7.com</a><br />
+                            or call <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -85,17 +100,17 @@ export default {
                     axios.post(`/api/contact/${this.$route.query.contactId}/tag/7`);
                 }
                 const lead = await axios.post('/api/lead', {
-                            salesPerson: this.salesperson,
-                            firstName: 'ATD Lead',
-                            lastName: 2023,
-                            phone: '',
-                            email: '',
-                            country: 'San Diego, CA'
-                        });
+                    salesPerson: this.salesperson,
+                    firstName: 'ATD Lead',
+                    lastName: 2023,
+                    phone: '',
+                    email: '',
+                    country: 'San Diego, CA'
+                });
             }
         },
         async fetchData() {
-            const salesperson = await axios.get('/api/lead/next-assignment');
+            const salesperson = await axios.get('http://localhost:3000/api/lead/next-assignment');
             this.salesperson = salesperson.data;
         }
     }
@@ -141,5 +156,4 @@ export default {
         color: rgb(24, 24, 24);
         padding: 20px;
     }
-}
-</style>
+}</style>
