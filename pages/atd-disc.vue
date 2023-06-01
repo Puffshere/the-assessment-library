@@ -16,7 +16,6 @@
             <div class="row">
                 <div class="col-6 textBox">
                     <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2> 
-                    <br />
                     <h3>Connect with Assessments 24x7 Team member. Dive into your full DISC report, explore certification options, and gain insights on opening an account.</h3>
                 </div>
 
@@ -132,7 +131,7 @@
         }
 
         .textBox {
-            background-color: #81c2ff2e;
+            background: linear-gradient(268deg, #c9c9c92e, #f5f5f52e);
             border-radius: 5px;
             color: rgb(24, 24, 24);
             padding: 20px;
