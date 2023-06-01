@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">Schedule a meeting to receive your FREE full, 40-page DISC report. ($??.?? value)</h1>
+                        <h1 class="section-title">Free Complete DISC Report</h1>
                     </div>
                 </div>
             </div>
@@ -15,10 +15,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2>            
+                    <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2> 
+                    <br />
+                    <br />
+                    <h3>Connect with Assessments 24x7 Team member. Dive into your full DISC report, explore certification options, and gain insights on opening an account.</h3>
                 </div>
 
-                
                 <div v-if="this.salesperson === 'Suzette Chaparro'" class="col-6">
                     <vue-calendly url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
                 </div>
@@ -28,6 +30,7 @@
                 <div v-if="this.salesperson === 'Angie Warner'" class="col-6">
                     <vue-calendly url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
                 </div>
+                
             </div>
 
             <div class="row">
