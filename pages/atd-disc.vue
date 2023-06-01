@@ -65,7 +65,6 @@
         data() {
             return {
                 salesperson: ''
-                //calendlyAddress: ''
             }
         },
         created() {
@@ -88,16 +87,9 @@
             async fetchData() {
                 const salesperson = await axios.get('/api/lead/next-assignment');
                 this.salesperson = salesperson.data;
-                // if (this.salesperson === 'Suzette Chaparro') {
-                //     this.calendlyAddress = 'https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5'
-                // }
-                // if (this.salesperson === 'Monica Saare') {
-                //     this.calendlyAddress = 'https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5'
-                // }
-                // if (this.salesperson === 'Angie Warner') {
-                //     this.calendlyAddress = 'https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5'
-                // }
-                //console.log("This is the calenlyAddress", this.calendlyAddress);
+                const lead = await axios.post('/api/lead', {
+                            salesPerson: salesPerson.data
+                        });
           }
         }
     }
