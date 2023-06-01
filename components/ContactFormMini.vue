@@ -149,7 +149,7 @@ export default {
                 this.loading = true;
 
                     try {
-                        const salesPerson = await axios.get('http://localhost:3000/api/lead/next-assignment');
+                        const salesPerson = await axios.get('/api/lead/next-assignment');
 
                         const lead = await axios.post('/api/lead', {
                             salesPerson: salesPerson.data,
