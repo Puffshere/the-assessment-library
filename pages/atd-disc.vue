@@ -88,7 +88,7 @@
                 const salesperson = await axios.get('/api/lead/next-assignment');
                 this.salesperson = salesperson.data;
                 const lead = await axios.post('/api/lead', {
-                            salesPerson: salesPerson.data
+                            salesperson: salesperson.data
                         });
           }
         }
