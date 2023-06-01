@@ -16,8 +16,7 @@
                     <h2>Schedule a Meeting with<br />{{ salesperson }}</h2>
                     <hr />
                     <h3>AN EXCLUSIVE OFFER FOR ATD ATTENDEES</h3>
-                    <h4>Connect with an Assessments 24x7 Team member. Dive into your full DISC report, explore certification
-                        options, and gain insights on opening an account.</h4>
+                    <h4>Connect with an Assessments 24x7 team member. Dive into your full DISC report, explore certification options, and gain insights on opening a white-labeled account.</h4>
                     <img class="heroImage" src="~/assets/DISCGraphic.png">
                 </div>
                 <div class="col-6">
