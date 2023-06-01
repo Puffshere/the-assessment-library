@@ -1,7 +1,6 @@
 <template>
     <section class="skeleton">
         <main-nav></main-nav>
-
         <section class="header">
             <div class="container">
                 <div class="row">
@@ -11,33 +10,34 @@
                 </div>
             </div>
         </section>
-
         <div class="container">
             <div class="row">
                 <div class="col-6 textBox">
-                    <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2> 
-                    <h4>Connect with Assessments 24x7 Team member. Dive into your full DISC report, explore certification options, and gain insights on opening an account.</h4>
+                    <h2>Schedule a Meeting with<br />{{ salesperson }}</h2>
+                    <h4>Connect with Assessments 24x7 Team member. Dive into your full DISC report, explore certification
+                        options, and gain insights on opening an account.</h4>
                 </div>
-
-                <div v-if="this.salesperson === 'Suzette Chaparro'" class="col-6">
-                    <vue-calendly url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                <div class="col-6">
+                    <div v-if="this.salesperson === 'Suzette Chaparro'" >
+                        <vue-calendly url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5"
+                            :height="650"></vue-calendly>
+                    </div>
+                    <div v-else-if="this.salesperson === 'Monica Saare'" >
+                        <vue-calendly url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5"
+                        :height="650"></vue-calendly>
+                    </div>
+                    <div v-else-if="this.salesperson === 'Angie Warner'" >
+                        <vue-calendly url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5"
+                        :height="650"></vue-calendly>
+                    </div>
                 </div>
-                <div v-if="this.salesperson === 'Monica Saare'" class="col-6">
-                    <vue-calendly url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
-                </div>
-                <div v-if="this.salesperson === 'Angie Warner'" class="col-6">
-                    <vue-calendly url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
-                </div>
-                
             </div>
-
             <div class="row">
                 <div class="col-12">
-                    
+
                 </div>
             </div>
         </div>
-
         <footer-fold></footer-fold>
     </section>
 </template>
@@ -90,6 +90,7 @@
                 const lead = await axios.post('/api/lead', {
                             salesperson: salesperson.data
                         });
+                const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
           }
         }
     }
