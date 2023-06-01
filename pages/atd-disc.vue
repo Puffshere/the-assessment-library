@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-6 textBox">
                     <h2>Schedule a Meeting with<br/>{{ salesperson }}</h2> 
-                    <h3>Connect with Assessments 24x7 Team member. Dive into your full DISC report, explore certification options, and gain insights on opening an account.</h3>
+                    <h4>Connect with Assessments 24x7 Team member. Dive into your full DISC report, explore certification options, and gain insights on opening an account.</h4>
                 </div>
 
                 <div v-if="this.salesperson === 'Suzette Chaparro'" class="col-6">
