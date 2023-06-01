@@ -126,10 +126,8 @@ export default {
 
     .heroImage {
         padding-top: 100px;
+        padding-bottom: 25px;
         width: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .textBox {
