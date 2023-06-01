@@ -110,7 +110,7 @@ export default {
             }
         },
         async fetchData() {
-            const salesperson = await axios.get('http://localhost:3000/api/lead/next-assignment');
+            const salesperson = await axios.get('/api/lead/next-assignment');
             this.salesperson = salesperson.data;
         }
     }
