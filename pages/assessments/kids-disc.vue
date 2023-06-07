@@ -247,6 +247,8 @@
                         <nuxt-link to="/sample-reports" class="hyperlink">View All Sample Reports &rarr;</nuxt-link>
 
                         <div class="languages">
+                            <span><img src="~assets/flags/australia.svg" alt="DISC Assessments">
+                                Australian</span>
                             <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments">
                                 English</span>
                             <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文
