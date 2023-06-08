@@ -162,9 +162,9 @@
                         <p>
                             Use your training materials and resources to deepen your knowledge and further develop your ability to apply the tools 
                             effectively.
-                        <p>
+                        </p>
 
-                        </p><br/>
+                        <br/>
 
                         <nuxt-link v-if="isNoFrame" :to="`/resources/get-started?id=${id}&noframe=1`" class="button">Get Started</nuxt-link>
                         <nuxt-link v-else :to="`/resources/get-started?id=${id}`" class="button">Get Started</nuxt-link>
