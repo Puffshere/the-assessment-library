@@ -92,6 +92,7 @@ module.exports = {
       return data.posts.map(post => `/blog/${post.slug}`);
     },
     exclude: [
+      '/disccert-account-setup',
       '/account-setup',
       '/account-setup-thank-you',
       '/thank-you',
