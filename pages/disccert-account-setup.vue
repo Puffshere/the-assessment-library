@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">DISCCert Account Setup</h1>
+                        <h1 class="section-title">DISCcert Account Setup</h1>
                     </div>
                 </div>
             </div>
