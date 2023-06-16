@@ -255,6 +255,9 @@
                                 (Simplified)</span>
                             <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文
                                 (Traditional)</span>
+                            <span><img src="~assets/flags/united-kingdom.svg" alt="Vietnamese DISC Assessments"> 
+                                English (UK)
+                            </span>
                             <span><img src="~assets/flags/vietnam.svg" alt="Vietnamese DISC Assessments"> Tiếng
                                 Việt</span>
                         </div>

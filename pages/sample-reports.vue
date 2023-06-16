@@ -122,9 +122,10 @@
                         <a v-else-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report</a>
                         <a v-else-if="lang === 'zh'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISCChinese.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report (Simplified)</a>
                         <a v-else-if="lang === 'zh-t'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Kids_DISC_-_Chinese_(Traditional).pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report (Traditional)</a>
+                        <a v-else-if="lang === 'en-gb'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Kids_DISC_-_UK.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report</a>
                         <a v-else-if="lang === 'vi'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Kids_DISC_-_Vietnamese.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Full Report</a>
                         <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Full Report</a><br/>
-                        <a class="language-button disc" @click="kidsDISCReportModal = true">5 languages</a><br/>
+                        <a class="language-button disc" @click="kidsDISCReportModal = true">6 languages</a><br/>
                         
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-ChildOnly.pdf" class="hyperlink" target="_blank" rel="noopener">Kids DISC - Child Only</a>
                         <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Child Only</a><br/>
@@ -528,6 +529,7 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISCChinese.pdf" class="hyperlink" target="_blank" rel="noopener">Chinese (Simplified)</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Kids_DISC_-_Chinese_(Traditional).pdf" class="hyperlink" target="_blank" rel="noopener">Chinese (Traditional)</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Kids_DISC_-_UK.pdf" class="hyperlink" target="_blank" rel="noopener">English (UK)</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Kids_DISC_-_Vietnamese.pdf" class="hyperlink" target="_blank" rel="noopener">Vietnamese</a><br/>
                             </div>
                         </div>
