@@ -144,7 +144,7 @@
                                         <vue-file-agent
                                             ref="fileUploader"
                                             :multiple="false"
-                                            :accept="'image/jpg,image/png'"
+                                            :accept="'.jpg,.png'"
                                             :averageColor="false"
                                             theme="list"
                                             @select="selectLogo($event)"
