@@ -65,7 +65,7 @@
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/MotivatorsAssessmentHistory.pdf" target="_blank" rel="noopener">Values Overview & Motivators History Article</a></td></tr>
                             
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators Certification Notes 6.15.20.docx" target="_blank" rel="noopener">Certification Notes</a></td></tr>
-                            <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators - Scoring Guide_vs2_6.20.docx" target="_blank" rel="noopener">Motivators Scoring Guide</a>
+                            <!-- <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Motivators - Scoring Guide_vs2_6.20.docx" target="_blank" rel="noopener">Motivators Scoring Guide</a> -->
                             <small>Shares overview of scoring and characteristics of high and low scores in each Motivator</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AgreementsConflictsCombinations.pdf" target="_blank" rel="noopener">Agreements, Conflicts and Interesting Combinations</a>
                             <small>Describes common agreements, conflicts and interesting combinations of motivators with charts and details</small></td></tr>
