@@ -318,6 +318,7 @@
 
                         <tbody>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Vacation.pdf" target="_blank" rel="noopener">Vacation</a></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/GameShow.pdf" target="_blank" rel="noopener">GameShow</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/MakingAMovie.pdf" target="_blank" rel="noopener">Making a Movie</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/MazeLabyrinthDISCActivity.pdf" target="_blank" rel="noopener">Mazes & Labyrinths</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC Adaptability Scenario Practice.pdf" target="_blank" rel="noopener">DISC Adaptability Scenario Practice</a></td></tr>
