@@ -318,7 +318,7 @@
 
                         <tbody>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Vacation.pdf" target="_blank" rel="noopener">Vacation</a></td></tr>
-                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/GameShow.pdf" target="_blank" rel="noopener">GameShow</a>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/GameShow.pptm" target="_blank" rel="noopener">GameShow</a>
                             <small>GameShow is a Jeopardy-style PPT game to check DISC knowledge in a fun and competitive way! Play with 2-4 teams to lock in the learning.</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/MakingAMovie.pdf" target="_blank" rel="noopener">Making a Movie</a></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/MazeLabyrinthDISCActivity.pdf" target="_blank" rel="noopener">Mazes & Labyrinths</a></td></tr>
