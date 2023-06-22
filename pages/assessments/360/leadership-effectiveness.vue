@@ -86,6 +86,7 @@
                         <div class="languages">
                             <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments"> English</span>
                             <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
+                            <span><img src="~assets/flags/mexico.svg" alt="Mexico DISC Assessments"> Español</span>
                             <span><img src="~assets/flags/vietnam.svg" alt="Vietnamese DISC Assessments"> Tiếng Việt</span>
                         </div>
                         <br />

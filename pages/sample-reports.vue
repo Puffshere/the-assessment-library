@@ -351,11 +351,12 @@
                     <div class="samples-container">
                         <h3>Leadership Effectiveness 360&deg;</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLE360.pdf" class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
-                        <a v-else-if="lang === 'vi'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
                         <a v-else-if="lang === 'zh'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360ChineseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
+                        <a v-else-if="lang === 'es'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360SpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
+                        <a v-else-if="lang === 'vi'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
 
                         <a v-else class="hyperlink disabled">Leadership Effectiveness 360&deg;</a>
-                        <a class="language-button other" @click="le360ReportModal = true">3 languages</a><br/>
+                        <a class="language-button other" @click="le360ReportModal = true">4 languages</a><br/>
                     </div>
                 </div>
 
@@ -954,8 +955,9 @@
                                 <h1>Leadership Effectiveness 360&deg; Reports</h1>
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLE360.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Vietnamese</a><br/>
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360ChineseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Chinese</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360ChineseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Chinese</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360SpanishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Spanish</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Vietnamese</a>
                             </div>
                         </div>
                     </div>
