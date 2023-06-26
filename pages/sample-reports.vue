@@ -24,10 +24,10 @@
                         <select class="input" id="lang" v-model="lang">
                             <option value="ar">Arabic - 2</option>
                             <option value="en-au">Australian - 2</option>
-                            <option value="zh">Chinese (Mandarin) - 12</option>
+                            <option value="zh">Chinese (Mandarin) - 17</option>
                             <option value="zh-t">Chinese (Traditional) - 1</option>
                             <option value="nl">Dutch - 5</option>
-                            <option value="en-us" selected>English (US) - 27</option>
+                            <option value="en-us" selected>English (US) - 35</option>
                             <option value="fr">French - 10</option>
                             <option value="de">German - 3</option>
                             <option value="id">Indonesian - 1</option>
@@ -41,10 +41,10 @@
                             <option value="pt">Portuguese - 6</option>
                             <option value="pt-br">Portuguese (Brazil) - 3</option>
                             <option value="ru">Russian - 6</option>
-                            <option value="es">Spanish - 8</option>
+                            <option value="es">Spanish - 9</option>
                             <option value="sv">Swedish - 6</option>
-                            <option value="tr">Turkish - 5</option>
-                            <option value="en-gb">English (UK) - 2</option>
+                            <option value="tr">Turkish - 7</option>
+                            <option value="en-gb">English (UK) - 3</option>
                             <option value="vi">Vietnamese - 10</option>
                         </select>
                     </div>
