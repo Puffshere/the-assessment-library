@@ -321,7 +321,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div v-if="id !== 'ref'" class="row">
                     <div class="col-12">
                         <div class="step">
                             <div class="icon">4</div>
@@ -342,7 +342,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div v-if="id !== 'ref'" class="row">
                     <div class="col-12">
                         <div class="step">
                             <div class="icon">5</div>
@@ -366,7 +366,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="step">
-                            <div class="icon">6</div>
+                            <div v-if="id === 'ref'" class="icon">4</div>
+                            <div v-else class="icon">6</div>
                             
                             <div class="body">
                                 <h3 class="title">
@@ -385,7 +386,7 @@
                 <div v-if="id === 'ref'" class="row">
                     <div class="col-12">
                         <div class="step">
-                            <div class="icon">7</div>
+                            <div class="icon">5</div>
 
                             <div class="body">
                                 <h3 class="title">
