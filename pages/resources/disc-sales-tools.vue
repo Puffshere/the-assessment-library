@@ -35,7 +35,6 @@
                 </div>
             
                 <div class="col-4">
-                    <LazyHydrate when-visible><survey-sidebar></survey-sidebar></LazyHydrate>
                     <LazyHydrate when-visible><contact-sidebar></contact-sidebar></LazyHydrate>
                 </div>
             </div>
@@ -52,7 +51,6 @@
     export default {
         components: {
             'main-nav': Nav,
-            'survey-sidebar': () => import('@/components/SurveySidebar'),
             'contact-sidebar': () => import('@/components/ContactSidebar'),
             'contact-form': () => import('@/components/ContactForm'),
             'footer-fold': Footer
