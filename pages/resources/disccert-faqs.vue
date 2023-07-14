@@ -47,7 +47,6 @@
                             href="https://www.assessments24x7.com/resources/trainer-materials/disc">Non-Certified DISC
                             Materials
                         </a><br>
-                        <span class="password">- Password:&nbsp;&nbsp;a24x7disc2023</span>
                         <p><a class="hyperlink" href="https://www.assessments24x7.com/sample-reports">Sample Reports</a></p>
                         <p><a class="hyperlink" href="https://www.assessments24x7.com/certifications">Certification &
                                 Upskill Information</a></p>
@@ -167,10 +166,6 @@ export default {
 
 .links {
     margin-bottom: 25px;
-
-    .password {
-    font-size: 11pt;
-}
 
     h2 {
         border-radius: 4px;
