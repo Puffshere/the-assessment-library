@@ -145,6 +145,10 @@ export default function(context) {
         else if (context.req.url == '/resources/Five-Sample-EIQ.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Five-Sample-EIQ.PDF');
         }
+
+        else if (context.req.url == '/webinars/DISC+Debrief+Coaching+Worksheet-+Assessments+24x7+report_Final.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/DISC+Debrief+Coaching+Worksheet-+Assessments+24x7+report_Final.pdf');
+        }
         
         else if (context.req.url.match(/(\/reports\/)[\w- ]+\.pdf/gi)) {
             context.redirect('https://www.assessments24x7.com/sample-reports');

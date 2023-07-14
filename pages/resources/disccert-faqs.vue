@@ -41,6 +41,24 @@
                 </div>
 
                 <div class="col-4">
+                    <div class="links">
+                        <h2><span class="linksFirstWord">Additional</span> Webinar Materials</h2>
+                        <a class="hyperlink"
+                            href="https://www.assessments24x7.com/resources/trainer-materials/disc">Non-Certified DISC
+                            Materials
+                        </a><br>
+                        <span class="password">- Password:&nbsp;&nbsp;a24x7disc2023</span>
+                        <p><a class="hyperlink" href="https://www.assessments24x7.com/sample-reports">Sample Reports</a></p>
+                        <p><a class="hyperlink" href="https://www.assessments24x7.com/certifications">Certification &
+                                Upskill Information</a></p>
+                        <p><a class="hyperlink" href="https://www.assessments24x7.com/resources/webinars">Previous Webinars
+                            </a></p>
+                        <p><a class="hyperlink"
+                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/DISC+Debrief+Coaching+Worksheet-+Assessments+24x7+report_Final.pdf">
+                                Debrief Coaching Worksheet
+                            </a></p>
+                    </div>
+                    <br>
                     <LazyHydrate when-visible><survey-sidebar></survey-sidebar></LazyHydrate>
                     <LazyHydrate when-visible><contact-sidebar></contact-sidebar></LazyHydrate>
                 </div>
@@ -145,4 +163,25 @@ export default {
             margin-bottom: -8px;
         }
     }
-}</style>
+}
+
+.links {
+    margin-bottom: 25px;
+
+    .password {
+    font-size: 11pt;
+}
+
+    h2 {
+        border-radius: 4px;
+        border-bottom: 3px solid #eaeaea;
+        font-size: 18pt;
+        margin-top: 20;
+        margin-bottom: 18px;
+    }
+}
+
+.linksFirstWord {
+    color: #0033c5;
+}
+</style>
