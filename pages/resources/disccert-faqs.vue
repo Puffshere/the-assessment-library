@@ -45,17 +45,14 @@
                         <h2><span class="linksFirstWord">Additional</span> Webinar Materials</h2>
                         <a class="hyperlink"
                             href="https://www.assessments24x7.com/resources/trainer-materials/disc">Non-Certified DISC
-                            Materials
-                        </a><br>
+                            Materials</a>
                         <p><a class="hyperlink" href="https://www.assessments24x7.com/sample-reports">Sample Reports</a></p>
-                        <p><a class="hyperlink" href="https://www.assessments24x7.com/certifications">Certification &
-                                Upskill Information</a></p>
-                        <p><a class="hyperlink" href="https://www.assessments24x7.com/resources/webinars">Previous Webinars
-                            </a></p>
+                        <p><a class="hyperlink" href="https://www.assessments24x7.com/certifications">Certification & Upskill Information</a></p>
+                        <p><a class="hyperlink" href="https://www.assessments24x7.com/resources/webinars">Previous Webinars</a></p>
+                        <p><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7+DISCcert+Webinar+.pdf">Webinar Slides</a></p>
                         <p><a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/DISC+Debrief+Coaching+Worksheet-+Assessments+24x7+report_Final.pdf">
-                                Debrief Coaching Worksheet
-                            </a></p>
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/DISC+Debrief+Coaching+Worksheet-+Assessments+24x7+report_Final.pdf">
+                            Debrief Coaching Worksheet</a></p>
                     </div>
                     <br>
                     <LazyHydrate when-visible><survey-sidebar></survey-sidebar></LazyHydrate>
