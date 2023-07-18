@@ -51,9 +51,9 @@
                     </p>
                 </div>
 
-                <div class="col-12">
+                <LazyHydrate when-visible><div class="col-12">
                     <img style="margin:20px auto 0;display:block" src="~assets/disc-behavioral-wheel.jpg" alt="">
-                </div>
+                </div></LazyHydrate>
 
                 <div class="col-12">
                     <h3 class="title">Cornerstone Principles of a DISC Workplace</h3>
