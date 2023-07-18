@@ -486,7 +486,7 @@
     </div>
 </template>
 
-<script>
+<script defer>
    export default {
         components: {
             'main-nav': () => import('@/components/Nav'),
