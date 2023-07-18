@@ -51,9 +51,9 @@
                     </p>
                 </div>
 
-                <LazyHydrate when-visible><div class="col-12">
+                <lazy-hydrate when-visible><div class="col-12">
                     <img style="margin:20px auto 0;display:block" src="~assets/disc-behavioral-wheel.jpg" alt="">
-                </div></LazyHydrate>
+                </div></lazy-hydrate>
 
                 <div class="col-12">
                     <h3 class="title">Cornerstone Principles of a DISC Workplace</h3>
@@ -160,7 +160,7 @@
                         The DISC model uses four behavioral reference points.  A formal assessment goes much deeper, but an overview of the four styles are:
                     </p>
 
-                    <LazyHydrate when-visible><img style="margin:20px auto 0;display:block; width:100%" src="~assets/disc-focus-chart.png" alt=""></LazyHydrate>
+                    <lazy-hydrate when-visible><img style="margin:20px auto 0;display:block; width:100%" src="~assets/disc-focus-chart.png" alt=""></lazy-hydrate>
 
                     <div class="col-6">
                         <h4>Dominance (D)</h4>
@@ -482,16 +482,13 @@
             </div>
         </div>
 
-        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
+        <lazy-hydrate when-visible><footer-fold /></lazy-hydrate>
     </div>
 </template>
 
 <script>
-    import LazyHydrate from 'vue-lazy-hydration';
-
-    export default {
+   export default {
         components: {
-            LazyHydrate,
             'main-nav': () => import('@/components/Nav'),
             'footer-fold': () => import('@/components/Footer')
         },

@@ -55,6 +55,9 @@ module.exports = {
       src: '~plugins/mapbox.js',
       mode: 'client'
     },
+    { 
+      src: '~/plugins/lazy-hydration.js', ssr: false 
+    },
     {
       src: '~/plugins/vue-toast-notification.js',
       mode: 'client'
