@@ -566,7 +566,7 @@
 
 <style lang="scss" scoped>
     .header {
-        background: url('~assets/about.jpg');
+        background: url('~assets/about.webp');
         background-size: cover;
         color: #fff;
         text-align: center;
