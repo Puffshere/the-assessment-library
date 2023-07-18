@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="col-12">
-                    <img style="margin:20px auto 0;display:block" src="~assets/disc-behavioral-wheel.jpg" alt="" loading="lazy">
+                    <img style="margin:20px auto 0;display:block" src="~assets/disc-behavioral-wheel.webp" alt="" loading="lazy">
                 </div>
 
                 <div class="col-12">
@@ -160,7 +160,7 @@
                         The DISC model uses four behavioral reference points.  A formal assessment goes much deeper, but an overview of the four styles are:
                     </p>
 
-                    <img style="margin:20px auto 0;display:block; width:100%" src="~assets/disc-focus-chart.png" alt="" loading="lazy">
+                    <img style="margin:20px auto 0;display:block; width:100%" src="~assets/disc-focus-chart.webp" alt="" loading="lazy">
 
                     <div class="col-6">
                         <h4>Dominance (D)</h4>
