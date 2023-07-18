@@ -69,6 +69,12 @@
                                 Account/Purchase Form
                             </li>
                         </a>
+
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd-xMXE2-tluQ0exLK0ZOZWL9wNcWHU7aXoObTbyTXU9KsNUA/viewform">
+                            <li class="resource workshopsTraining">
+                                Workshops & Live Training Requests
+                            </li>
+                        </a>
                     </ul>
                 </div>
             </div>
@@ -167,11 +173,15 @@
                 }
 
                 &.other {
-                    border: 1px solid #eaeaea;
+                    border: 1px solid #a1a1a1;
+                    background: linear-gradient(268deg, #f7f7f7, #d2d3d3);
                     color: #1e222d;
                 }
                 &.accountPurchase {
                     background: linear-gradient(268deg, #25ca20, #168d11);
+                }
+                &.workshopsTraining {
+                    background: linear-gradient(268deg, #20a8ca, #167c96);
                 }
             }
         }
