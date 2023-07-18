@@ -91,7 +91,7 @@
     </section>
 </template>
 
-<script defer>
+<script>
     export default {
         data() {
             return {
