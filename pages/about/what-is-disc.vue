@@ -482,7 +482,7 @@
             </div>
         </div>
 
-        <lazy-hydrate when-visible><footer-fold /></lazy-hydrate>
+        <footer-fold />
     </div>
 </template>
 
