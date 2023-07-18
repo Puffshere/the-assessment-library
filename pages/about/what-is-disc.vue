@@ -608,4 +608,10 @@
         color: #4c4c4c;
         border-left: 8px solid #02bbff;
     }
+
+    @media only screen and (max-width: 600px) {
+    img {
+      width: 100%;
+    }
+  }
 </style>
