@@ -2,7 +2,7 @@
     <div class="main">
         <main-nav active="about" />
         
-        <section class="header">
+        <section class="header" format="webp">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
