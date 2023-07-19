@@ -27,7 +27,7 @@
     @import '~assets/scss/vars';
 
     .draft-kings-fold {
-        background:  url('~assets/draft-kings-bg.jpg');
+        background:  url('~assets/draft-kings-bg.webp');
         background-position: center;
         padding: 100px 0 90px;
         margin: 60px 0 -60px;
