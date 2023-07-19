@@ -4,32 +4,32 @@
             <div class="row">
                 <div class="col-2 col-4-md col-6-sm col-12-xs">
                     <div class="logo-item">
-                        <img class="lazyload" data-src="~assets/partner-logos/astra-zeneca.png" alt="Astra Zeneca uses Assessments 24x7">
+                        <img class="lazyload" data-src="~assets/partner-logos/astra-zeneca.webp" alt="Astra Zeneca uses Assessments 24x7">
                     </div>
                 </div>
                 <div class="col-2 col-4-md col-6-sm col-12-xs">
                     <div class="logo-item">
-                        <img class="lazyload" data-src="~assets/partner-logos/verizon.png" alt="Verizon uses Assessments 24x7">
+                        <img class="lazyload" data-src="~assets/partner-logos/verizon.webp" alt="Verizon uses Assessments 24x7">
                     </div>
                 </div>
                 <div class="col-2 col-4-md col-6-sm col-12-xs">
                     <div class="logo-item">
-                        <img class="lazyload" data-src="~assets/partner-logos/canon.png" alt="Canon uses Assessments 24x7">
+                        <img class="lazyload" data-src="~assets/partner-logos/canon.webp" alt="Canon uses Assessments 24x7">
                     </div>
                 </div>
                 <div class="col-2 col-4-md col-6-sm col-12-xs">
                     <div class="logo-item">
-                        <img class="lazyload" data-src="~assets/partner-logos/boston-scientific.png" alt="Boston Scientific uses Assessments 24x7">
+                        <img class="lazyload" data-src="~assets/partner-logos/boston-scientific.webp" alt="Boston Scientific uses Assessments 24x7">
                     </div>
                 </div>
                 <div class="col-2 col-4-md col-6-sm col-12-xs">
                     <div class="logo-item">
-                        <img class="lazyload" data-src="~assets/partner-logos/panasonic.png" alt="Panasonic uses Assessments 24x7">
+                        <img class="lazyload" data-src="~assets/partner-logos/panasonic.webp" alt="Panasonic uses Assessments 24x7">
                     </div>
                 </div>
                 <div class="col-2 col-4-md col-6-sm col-12-xs">
                     <div class="logo-item">
-                        <img class="lazyload" data-src="~assets/partner-logos/tony-robbins.png" alt="Tony Robbins uses Assessments 24x7">
+                        <img class="lazyload" data-src="~assets/partner-logos/tony-robbins.webp" alt="Tony Robbins uses Assessments 24x7">
                     </div>
                 </div>
             </div>
