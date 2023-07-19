@@ -1,9 +1,9 @@
 <template>
-    <section class="draft-kings-fold">
+    <section class="draft-kings-fold" loading="lazy">
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/A52Getj1sdg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/A52Getj1sdg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
 
                 <div class="col-6">
