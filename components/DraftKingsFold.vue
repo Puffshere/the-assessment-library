@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="col-6">
-                    <img class="draft-kings-logo" src="@/assets/draft-kings-logo.png" alt="DraftKings uses Assessments 24x7" quality="80" loading="lazy">
+                    <img class="draft-kings-logo" src="@/assets/draft-kings-logo.webp" alt="DraftKings uses Assessments 24x7" quality="80" loading="lazy">
 
                     <p>
                         Listen to Will Mahon, Talent Development Manager at DraftKings, explain why they have decided to use Assessments 24x7 as their
