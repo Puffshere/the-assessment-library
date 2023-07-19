@@ -53,12 +53,12 @@
     @import '~assets/scss/vars';
 
     .no-webp .hero {
-        background: url('~assets/hero.jpg') !important;
+        background: url('~assets/hero.webp') !important;
         background-size: cover !important;
     }
 
     .webp .hero {
-        background: url('~assets/hero.jpg') !important;
+        background: url('~assets/hero.webp') !important;
         background-size: cover !important;
     }
 
