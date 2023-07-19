@@ -11,7 +11,7 @@
 
             <div class="row">
                 <div class="col-3">
-                    <img class="image" src="~assets/asi-certified.png" alt="Scientifically Validated Assessments by ASI">
+                    <img class="image" src="~assets/asi-certified.png" alt="Scientifically Validated Assessments by ASI" loading="lazy">
                 </div>
 
                 <div class="col-9">

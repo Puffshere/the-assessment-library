@@ -3,8 +3,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img v-if="birdVersion" class="image" src="~assets/asi-certified-birds.png" alt="Scientifically Validated Assessments by ASI">
-                    <img v-else class="image" src="~assets/asi-certified.png" alt="Scientifically Validated Assessments by ASI">
+                    <img v-if="birdVersion" class="image" src="~assets/asi-certified-birds.png" alt="Scientifically Validated Assessments by ASI" loading="lazy">
+                    <img v-else class="image" src="~assets/asi-certified.png" alt="Scientifically Validated Assessments by ASI" loading="lazy">
                     <h3 class="section-title">Validated. Reliable. Compliant.</h3>
                     <p class="section-subtitle"><strong>A Scientific Solution for Professionals.</strong></p>
                 </div>
