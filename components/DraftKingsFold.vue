@@ -1,5 +1,5 @@
 <template>
-    <section class="draft-kings-fold" loading="lazy">
+    <section class="draft-kings-fold" loading="lazy" quality="80">
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="col-6">
-                    <img class="draft-kings-logo" src="@/assets/draft-kings-logo.png" alt="DraftKings uses Assessments 24x7" loading="lazy">
+                    <img class="draft-kings-logo" src="@/assets/draft-kings-logo.png" alt="DraftKings uses Assessments 24x7" quality="80" loading="lazy">
 
                     <p>
                         Listen to Will Mahon, Talent Development Manager at DraftKings, explain why they have decided to use Assessments 24x7 as their
