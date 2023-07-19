@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="side-img lazyload" data-src="~assets/corporate.jpg">
+                    <img class="side-img" data-src="~assets/corporate.jpg" loading="lazy" alt="corporate image">
                 </div>
             </div>
         </div>
