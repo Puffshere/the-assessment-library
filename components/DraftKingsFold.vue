@@ -3,11 +3,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/A52Getj1sdg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/A52Getj1sdg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
 
                 <div class="col-6">
-                    <img class="draft-kings-logo" src="@/assets/draft-kings-logo.png" title="YouTube video player" alt="DraftKings uses Assessments 24x7" loading="lazy">
+                    <img class="draft-kings-logo" src="@/assets/draft-kings-logo.png" alt="DraftKings uses Assessments 24x7" loading="lazy">
 
                     <p>
                         Listen to Will Mahon, Talent Development Manager at DraftKings, explain why they have decided to use Assessments 24x7 as their
