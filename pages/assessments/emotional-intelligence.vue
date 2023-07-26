@@ -439,12 +439,12 @@
         },
         head() {
             return {
-                title: 'Emotional Intelligence Assessment | Assessments 24x7',
+                title: 'Emotional Intelligence Assessment: Measure Your EQ and Improve Your Relationships',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Emotional Intelligence is all about understanding and managing yourself and also understanding and managing others. It is based on an internal loop that begins with awareness of our own emotions and temperament.'
+                        content: 'The Emotional Intelligence Assessment is a powerful tool that can help you measure your EQ and improve your relationships. Learn how to better understand your own emotions and the emotions of others, and how to use this knowledge to build stronger relationships.'
                     }
                 ],
                 __dangerouslyDisableSanitizers: ['script'],
