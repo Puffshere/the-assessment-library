@@ -487,12 +487,12 @@
         },
         head() {
             return {
-                title: 'Motivators Assessment | Assessments 24x7',
+                title: 'Personal Drivers: Exploring Motivators Assessments',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Motivation influences behavior, decisions and actions. Finding ways to achieve objectives that resonate and align with core motivations is vital for superior performance. Those who understand their natural motivators better are far more likely to pursue the right opportunities, for the right reasons.'
+                        content: 'Discover the power of motivators assessments in unraveling the intrinsic drivers that fuel individuals. Explore the profound benefits of understanding motivators for personal and professional growth.'
                     }
                 ],
                 __dangerouslyDisableSanitizers: ['script'],

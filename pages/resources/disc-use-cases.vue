@@ -64,12 +64,12 @@
         },
         head() {
             return {
-                title: 'Solution-Driven Applications with DISC Webinar | Assessments 24x7',
+                title: 'Unlocking the Versatility of DISC: Real-Life Use Cases',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'When utilized in personal relationships, professional interactions, or any situation in which greater understanding is essential for growth, DISC and its supplementary assessments offer insights that can lead to better connections, mutually beneficial results, and incredible outcomes!'
+                        content: 'Uncover the versatility of the DISC assessment through real-life use cases. Gain valuable insights into how the DISC model has positively impacted individuals and organizations across diverse contexts and industries.'
                     }
                 ]
             }

@@ -9,7 +9,7 @@ module.exports = {
     htmlAttrs: {
       lang: 'en',
     },
-    title: 'DISC Assessments & Tools for Behavioral Profiling | Assessments 24x7',
+    title: 'Unlock Your Potential with Assessments 24x7 - Personal and Professional Development',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -17,7 +17,7 @@ module.exports = {
       { name: 'msapplication-navbutton-color', content: '#01A8FF' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      { hid: 'description', name: 'description', content: 'Assessments 24x7 is a global leader in online DISC assessments and other behavioral profiling testing tools to organizations. Get a free quote today!' }
+      { hid: 'description', name: 'description', content: 'Empower yourself with Assessments 24x7\'s diverse range of online assessment tools for personal and professional development. Explore our resources designed to enhance self-awareness, growth, and success.' }
     ],
     link: [
       {

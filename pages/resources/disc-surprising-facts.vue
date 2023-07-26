@@ -64,12 +64,12 @@
         },
         head() {
             return {
-                title: 'Solution-Driven Applications with DISC Webinar | Assessments 24x7',
+                title: '10 Surprising Facts About DISC You Need to Know',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'When utilized in personal relationships, professional interactions, or any situation in which greater understanding is essential for growth, DISC and its supplementary assessments offer insights that can lead to better connections, mutually beneficial results, and incredible outcomes!'
+                        content: 'Learn 10 surprising facts about DISC that you didn\'t know. In this webinar, Dr. Russ Watson, the DISC mastermind, shares his insights on the DISC personality assessment.'
                     }
                 ]
             }
