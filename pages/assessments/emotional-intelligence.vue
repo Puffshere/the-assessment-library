@@ -127,6 +127,7 @@
                             <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments"> English</span>
                             <span><img src="~assets/flags/mexico.svg" alt="Spanish DISC Assessments"> Español</span>
                             <span><img src="~assets/flags/france.svg" alt="French DISC Assessments"> Français</span>
+                            <span><img src="~assets/flags/germany.svg" alt="German DISC Assessments"> Deutsch</span>
                             <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
                             <span><img src="~assets/flags/japan.svg" alt="Japanese DISC Assessments"> 日本語</span>
                             <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português (Brazil)</span>

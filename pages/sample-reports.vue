@@ -29,7 +29,7 @@
                             <option value="nl">Dutch - 5</option>
                             <option value="en-us" selected>English (US) - 35</option>
                             <option value="fr">French - 10</option>
-                            <option value="de">German - 3</option>
+                            <option value="de">German - 4</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 2</option>
                             <option value="ja">Japanese - 4</option>
@@ -267,6 +267,7 @@
                         <h3>Emotional Intelligence</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
+                        <a v-else-if="lang === 'de'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportGerman.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'ja'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'pt-br'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'ru'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportRussian.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
@@ -274,7 +275,7 @@
                         <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportVietnamese.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQChineseSampleReport.pdf" target="_blank" rel="noopener">Emotional Intelligence Report</a>
                         <a v-else class="hyperlink disabled">Emotional Intelligence Report</a>
-                        <a class="language-button other" @click="eiqReportModal = true">8 languages</a><br/>
+                        <a class="language-button other" @click="eiqReportModal = true">9 languages</a><br/>
                         
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandEIQ.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Emotional Intelligence</a>
                         <a v-else-if="lang === 'zh'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DiscPlusEiqChineseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Emotional Intelligence</a>
@@ -809,6 +810,7 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQChineseSampleReport.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf" target="_blank" rel="noopener">French</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportGerman.pdf" target="_blank" rel="noopener">German</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf" target="_blank" rel="noopener">Japanese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf" target="_blank" rel="noopener">Portuguese (Brazil)</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportRussian.pdf" target="_blank" rel="noopener">Russian</a><br/>
