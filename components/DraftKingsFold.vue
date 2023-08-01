@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/A52Getj1sdg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/A52Getj1sdg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen lazy></iframe>
                 </div>
 
                 <div class="col-6">
