@@ -44,7 +44,7 @@
                     "@context": "http://schema.org",
                     "@type": "ProfessionalService",
                     "name": "Assessments 24x7",
-                    "logo": "",
+                    "logo": "~/assets/disc-logo.png",
                     "image": "https://assessments24x7-media.s3.us-west-002.backblazeb2.com/brand-elements/24x7logo.png",
                     "@id": "",
                     "url": "https://assessments24x7.com",
