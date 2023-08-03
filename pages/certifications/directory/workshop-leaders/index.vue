@@ -49,7 +49,7 @@
                                 </th>
                                 <th>
                                     <button class="location-button" @click="sortByLocation('country')">Country</button>
-                                    <span class="filter-icon" :class="{
+                                    <span :class="{
                                         'arrow-up': sortBy === 'city' && sortDirection === 'asc',
                                         'arrow-down': sortBy === 'city' && sortDirection === 'desc'
                                     }">
@@ -270,7 +270,7 @@ export default {
         font-weight: bold;
         color: #ffffff;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 15px;
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     }
 
