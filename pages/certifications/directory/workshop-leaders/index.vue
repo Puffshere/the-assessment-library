@@ -277,7 +277,7 @@ export default {
         font-size: 15px;
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         position: relative;
-        padding-left: 20px;
+        padding-left: -5px;
     }
 }
 
