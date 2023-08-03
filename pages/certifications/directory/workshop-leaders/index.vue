@@ -34,26 +34,29 @@
                                 <th>Trainer</th>
                                 <th>
                                     <button class="location-button" @click="sortByLocation('city')">City</button>
-                                    <span class="filter-icon">
-                                        ►
+                                    <span class="filter-icon" :class="{
+                                        'arrow-up': sortBy === 'city' && sortDirection === 'asc',
+                                        'arrow-down': sortBy === 'city' && sortDirection === 'desc'
+                                    }">
+                                    <img src='~assets/artifacts/icons8-arrow-20.png'>
                                     </span>
                                 </th>
                                 <th>
                                     <button class="location-button" @click="sortByLocation('state')">State</button>
                                     <span class="filter-icon" :class="{
-                                        'arrow-up': sortBy === 'city' && sortDirection === 'asc',
-                                        'arrow-down': sortBy === 'city' && sortDirection === 'desc'
+                                        'arrow-up': sortBy === 'state' && sortDirection === 'asc',
+                                        'arrow-down': sortBy === 'state' && sortDirection === 'desc'
                                     }">
-                                        ►
+                                    <img src='~assets/artifacts/icons8-arrow-20.png'>
                                     </span>
                                 </th>
                                 <th>
                                     <button class="location-button" @click="sortByLocation('country')">Country</button>
-                                    <span :class="{
-                                        'arrow-up': sortBy === 'city' && sortDirection === 'asc',
-                                        'arrow-down': sortBy === 'city' && sortDirection === 'desc'
+                                    <span class="filter-icon" :class="{
+                                        'arrow-up': sortBy === 'country' && sortDirection === 'asc',
+                                        'arrow-down': sortBy === 'country' && sortDirection === 'desc'
                                     }">
-                                        ►
+                                    <img src='~assets/artifacts/icons8-arrow-20.png'>
                                     </span>
                                 </th>
                             </tr>
@@ -259,6 +262,7 @@ export default {
         td,
         th {
             padding: 8px;
+            width: 100px;
         }
     }
 
@@ -272,20 +276,27 @@ export default {
         text-decoration: none;
         font-size: 15px;
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    }
-
-
-    .arrow-up {
-        transform: rotate(180deg);
-    }
-
-    .arrow-down {
-        transform: rotate(0deg);
+        position: relative;
+        padding-left: 20px;
     }
 }
 
 .filter-icon {
-    color: white;
-    max-width: 1px;
+    color: white;    
+    position: absolute;
+}
+
+.arrow-up {
+    position: absolute;
+    margin-left: 5px;
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+}
+
+.arrow-down {
+    position: absolute;
+    margin-left: 5px;
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
 }
 </style>
