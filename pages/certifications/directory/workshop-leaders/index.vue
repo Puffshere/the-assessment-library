@@ -185,7 +185,7 @@ export default {
         }
     },
     async created() {
-        const response = await axios.get('http://localhost:3000/api/workshop-leaders');
+        const response = await axios.get('/api/workshop-leaders');
         this.leaders = response.data.leaders;
 
         this.leaders.forEach(leader => {
@@ -223,7 +223,7 @@ export default {
                     return 0;
                 });
             } else {
-                const response = await axios.get('http://localhost:3000/api/workshop-leaders');
+                const response = await axios.get('/api/workshop-leaders');
                 this.leaders = response.data.leaders;
 
                 this.leaders.forEach(leader => {
