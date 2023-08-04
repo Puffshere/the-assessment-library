@@ -361,6 +361,23 @@ export default {
 }
 
 @media (max-width: 1150px) {
+
+    .filter-icon.city {
+        right: 145px;
+    }
+
+    .filter-icon.state {
+        right: 140px;
+    }
+
+    .filter-icon.country {
+        right: 130px;
+    }
+
+    .location-button {
+        position: static !important;
+    }
+
     .table-container {
         overflow-x: scroll;
     }
@@ -381,7 +398,7 @@ export default {
 
     .responsive-table th,
     .responsive-table td {
-        text-align: left;
         padding: 4px;
     }
-}</style>
+}
+</style>
