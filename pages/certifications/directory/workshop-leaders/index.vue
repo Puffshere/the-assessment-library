@@ -28,57 +28,61 @@
 
             <div class="row">
                 <div class="col-12">
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Trainer</th>
-                                <th>
-                                    <button class="location-button" @click="sortByLocation('city')">City</button>
-                                    <span class="filter-icon" :class="{
-                                        'arrow-up': sortBy === 'city' && sortDirection === 'asc',
-                                        'arrow-down': sortBy === 'city' && sortDirection === 'desc',
-                                        'arrow-side': sortDirection === 'side'
-                                    }">
-                                        <img src='~assets/artifacts/icons8-arrow-20.png'>
-                                    </span>
-                                </th>
-                                <th>
-                                    <button class="location-button" @click="sortByLocation('state')">State</button>
-                                    <span class="filter-icon" :class="{
-                                        'arrow-up': sortBy === 'state' && sortDirection === 'asc',
-                                        'arrow-down': sortBy === 'state' && sortDirection === 'desc',
-                                        'arrow-side': sortDirection === 'side'
-                                    }">
-                                        <img src='~assets/artifacts/icons8-arrow-20.png'>
-                                    </span>
-                                </th>
-                                <th>
-                                    <button class="location-button" @click="sortByLocation('country')">Country</button>
-                                    <span class="filter-icon" :class="{
-                                        'arrow-up': sortBy === 'country' && sortDirection === 'asc',
-                                        'arrow-down': sortBy === 'country' && sortDirection === 'desc',
-                                        'arrow-side': sortDirection === 'side'
-                                    }">
-                                        <img src='~assets/artifacts/icons8-arrow-20.png'>
-                                    </span>
-                                </th>
-                            </tr>
-                        </thead>
+                    <div class="table-container">
+                        <table style="width: 100%" class="responsive-table">
+                            <thead>
+                                <tr>
+                                    <th>Trainer</th>
+                                    <th class="city">
+                                        <button class="location-button city" @click="sortByLocation('city')">City</button>
+                                        <span class="filter-icon city" :class="{
+                                            'arrow-up': sortBy === 'city' && sortDirection === 'asc',
+                                            'arrow-down': sortBy === 'city' && sortDirection === 'desc',
+                                            'arrow-side': sortDirection === 'side'
+                                        }">
+                                            <img src='~assets/artifacts/icons8-arrow-20.png'>
+                                        </span>
+                                    </th>
+                                    <th class="state">
+                                        <button class="location-button state"
+                                            @click="sortByLocation('state')">State</button>
+                                        <span class="filter-icon state" :class="{
+                                            'arrow-up': sortBy === 'state' && sortDirection === 'asc',
+                                            'arrow-down': sortBy === 'state' && sortDirection === 'desc',
+                                            'arrow-side': sortDirection === 'side'
+                                        }">
+                                            <img src='~assets/artifacts/icons8-arrow-20.png'>
+                                        </span>
+                                    </th>
+                                    <th class="country">
+                                        <button class="location-button country"
+                                            @click="sortByLocation('country')">Country</button>
+                                        <span class="filter-icon country" :class="{
+                                            'arrow-up': sortBy === 'country' && sortDirection === 'asc',
+                                            'arrow-down': sortBy === 'country' && sortDirection === 'desc',
+                                            'arrow-side': sortDirection === 'side'
+                                        }">
+                                            <img src='~assets/artifacts/icons8-arrow-20.png'>
+                                        </span>
+                                    </th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                            <tr v-for="leader in leaders" :key="leader.stub">
-                                <td>
-                                    <nuxt-link class="hyperlink"
-                                        :to="`/certifications/directory/workshop-leaders/${leader.stub}`">
-                                        {{ leader.name }}
-                                    </nuxt-link>
-                                </td>
-                                <td>{{ leader.city }}</td>
-                                <td>{{ leader.state }}</td>
-                                <td>{{ leader.country }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            <tbody>
+                                <tr v-for="leader in leaders" :key="leader.stub">
+                                    <td>
+                                        <nuxt-link class="hyperlink"
+                                            :to="`/certifications/directory/workshop-leaders/${leader.stub}`">
+                                            {{ leader.name }}
+                                        </nuxt-link>
+                                    </td>
+                                    <td>{{ leader.city }}</td>
+                                    <td>{{ leader.state }}</td>
+                                    <td>{{ leader.country }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
@@ -181,7 +185,7 @@ export default {
         }
     },
     async created() {
-        const response = await axios.get('/api/workshop-leaders');
+        const response = await axios.get('http://localhost:3000/api/workshop-leaders');
         this.leaders = response.data.leaders;
 
         this.leaders.forEach(leader => {
@@ -219,7 +223,7 @@ export default {
                     return 0;
                 });
             } else {
-                const response = await axios.get('/api/workshop-leaders');
+                const response = await axios.get('http://localhost:3000/api/workshop-leaders');
                 this.leaders = response.data.leaders;
 
                 this.leaders.forEach(leader => {
@@ -280,7 +284,7 @@ export default {
         td,
         th {
             padding: 8px;
-            width: 100px;
+            position: relative;
         }
     }
 
@@ -288,40 +292,96 @@ export default {
         background-color: transparent;
         border: none;
         cursor: pointer;
-        padding: 0;
         font-weight: bold;
         color: #ffffff;
         text-decoration: none;
         font-size: 15px;
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        position: relative;
-        padding-left: -5px;
+        position: absolute;
+        top: 8px;
+    }
+
+    .location-button.city {
+        left: 152px;
+    }
+
+    .location-button.state {
+        left: 30px;
+    }
+
+    .location-button.country {
+        left: 75px;
     }
 }
 
 .filter-icon {
     color: white;
     position: absolute;
+    top: 8px;
+}
+
+.filter-icon.city {
+    right: 140px;
+}
+
+.filter-icon.state {
+    right: 20px;
+}
+
+.filter-icon.country {
+    right: 65px;
 }
 
 .arrow-up {
     position: absolute;
-    margin-left: 5px;
+    top: 8px;
     transform: rotate(90deg);
     transition: transform 0.3s;
 }
 
 .arrow-down {
     position: absolute;
-    margin-left: 5px;
+    top: 8px;
     transform: rotate(-90deg);
     transition: transform 0.3s;
 }
 
 .arrow-side {
     position: absolute;
-    margin-left: 5px;
     transform: rotate(0deg);
     transition: transform 0.3s;
 }
-</style>
+
+.table-container {
+    overflow-x: auto;
+}
+
+.responsive-table {
+    width: 100%;
+}
+
+@media (max-width: 1150px) {
+    .table-container {
+        overflow-x: scroll;
+    }
+
+    .responsive-table {
+        display: block;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .responsive-table thead,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table th,
+    .responsive-table td {
+        display: block;
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        text-align: left;
+        padding: 4px;
+    }
+}</style>
