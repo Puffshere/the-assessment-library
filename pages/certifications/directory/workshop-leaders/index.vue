@@ -36,9 +36,10 @@
                                     <button class="location-button" @click="sortByLocation('city')">City</button>
                                     <span class="filter-icon" :class="{
                                         'arrow-up': sortBy === 'city' && sortDirection === 'asc',
-                                        'arrow-down': sortBy === 'city' && sortDirection === 'desc'
+                                        'arrow-down': sortBy === 'city' && sortDirection === 'desc',
+                                        'arrow-side': sortDirection === 'side'
                                     }">
-                                    <img src='~assets/artifacts/icons8-arrow-20.png'>
+                                        <img src='~assets/artifacts/icons8-arrow-20.png'>
                                     </span>
                                 </th>
                                 <th>
@@ -47,7 +48,7 @@
                                         'arrow-up': sortBy === 'state' && sortDirection === 'asc',
                                         'arrow-down': sortBy === 'state' && sortDirection === 'desc'
                                     }">
-                                    <img src='~assets/artifacts/icons8-arrow-20.png'>
+                                        <img src='~assets/artifacts/icons8-arrow-20.png'>
                                     </span>
                                 </th>
                                 <th>
@@ -56,7 +57,7 @@
                                         'arrow-up': sortBy === 'country' && sortDirection === 'asc',
                                         'arrow-down': sortBy === 'country' && sortDirection === 'desc'
                                     }">
-                                    <img src='~assets/artifacts/icons8-arrow-20.png'>
+                                        <img src='~assets/artifacts/icons8-arrow-20.png'>
                                     </span>
                                 </th>
                             </tr>
@@ -122,6 +123,7 @@ export default {
         return {
             sortBy: null,
             sortDirection: 'asc',
+            sideArrow: false,
             leaders: [],
             features: [],
             token: 'pk.eyJ1IjoiZHlsYW50bWFyc2giLCJhIjoiY2pndzl0N2w0MGszZjJxbDZ6aXBhYW03eCJ9.LENZtRDnKJLDeo7JqyFZWA',
@@ -187,29 +189,43 @@ export default {
         this.geoJsonSource.data.features = this.features;
     },
     methods: {
-        sortByLocation(property) {
-            if (this.sortBy !== property) {
-                // If the current sort property is not the same as the clicked property, set the sort direction to "asc" (ascending)
+        async sortByLocation(property) {
+            if (this.sortBy !== property || this.sortDirection === 'side') {
                 this.sortDirection = 'asc';
+            } else if (this.sortDirection === 'asc') {
+                this.sortDirection = 'desc';
             } else {
-                // If the current sort property is the same as the clicked property, toggle the sort direction between "asc" and "desc"
-                this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+                this.sortDirection = 'side';
+                this.sortBy = null;
             }
+
+            console.log('this is the sortDirection', this.sortDirection);
 
             this.sortBy = property;
 
-            this.leaders.sort((a, b) => {
-                const valueA = a[property].toLowerCase();
-                const valueB = b[property].toLowerCase();
+            if (this.sortDirection === 'asc' || this.sortDirection === 'desc') {
+                this.leaders.sort((a, b) => {
+                    const valueA = a[property].toLowerCase();
+                    const valueB = b[property].toLowerCase();
 
-                if (valueA < valueB) {
-                    return this.sortDirection === 'asc' ? -1 : 1;
-                }
-                if (valueA > valueB) {
-                    return this.sortDirection === 'asc' ? 1 : -1;
-                }
-                return 0;
-            });
+                    if (valueA < valueB) {
+                        return this.sortDirection === 'asc' ? -1 : 1;
+                    }
+                    if (valueA > valueB) {
+                        return this.sortDirection === 'asc' ? 1 : -1;
+                    }
+                    return 0;
+                });
+            } else {
+                const response = await axios.get('http://localhost:3000/api/workshop-leaders');
+                this.leaders = response.data.leaders;
+
+                this.leaders.forEach(leader => {
+                    this.features.push(leader.geo);
+                });
+
+                this.geoJsonSource.data.features = this.features;
+            }
         }
     }
 }
@@ -282,7 +298,7 @@ export default {
 }
 
 .filter-icon {
-    color: white;    
+    color: white;
     position: absolute;
 }
 
@@ -297,6 +313,13 @@ export default {
     position: absolute;
     margin-left: 5px;
     transform: rotate(-90deg);
+    transition: transform 0.3s;
+}
+
+.arrow-side {
+    position: absolute;
+    margin-left: 5px;
+    transform: rotate(0deg);
     transition: transform 0.3s;
 }
 </style>
