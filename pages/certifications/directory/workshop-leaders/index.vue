@@ -46,7 +46,8 @@
                                     <button class="location-button" @click="sortByLocation('state')">State</button>
                                     <span class="filter-icon" :class="{
                                         'arrow-up': sortBy === 'state' && sortDirection === 'asc',
-                                        'arrow-down': sortBy === 'state' && sortDirection === 'desc'
+                                        'arrow-down': sortBy === 'state' && sortDirection === 'desc',
+                                        'arrow-side': sortDirection === 'side'
                                     }">
                                         <img src='~assets/artifacts/icons8-arrow-20.png'>
                                     </span>
@@ -55,7 +56,8 @@
                                     <button class="location-button" @click="sortByLocation('country')">Country</button>
                                     <span class="filter-icon" :class="{
                                         'arrow-up': sortBy === 'country' && sortDirection === 'asc',
-                                        'arrow-down': sortBy === 'country' && sortDirection === 'desc'
+                                        'arrow-down': sortBy === 'country' && sortDirection === 'desc',
+                                        'arrow-side': sortDirection === 'side'
                                     }">
                                         <img src='~assets/artifacts/icons8-arrow-20.png'>
                                     </span>
@@ -217,7 +219,7 @@ export default {
                     return 0;
                 });
             } else {
-                const response = await axios.get('http://localhost:3000/api/workshop-leaders');
+                const response = await axios.get('/api/workshop-leaders');
                 this.leaders = response.data.leaders;
 
                 this.leaders.forEach(leader => {
