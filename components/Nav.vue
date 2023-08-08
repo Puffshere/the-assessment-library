@@ -89,7 +89,7 @@
                             </li>
                             
                             <li class="nav-item" @mouseover="hover.training = true" @mouseleave="hover.training = false">
-                                <a tabindex="5" href="/certifications" :class="{ active: active == 'training' }">Certifications</a>
+                                <a tabindex="5" href="/certifications" :class="{ active: active == 'training' }">Certifications & Training</a>
 
                                 <ul :class="{ active: hover.training, 'sub-nav-category': true }">
                                     <span class="title">Training Topics</span>
@@ -99,7 +99,7 @@
                                     </li>
 
                                     <li class="sub-nav-item">
-                                        <a href="/certifications/workshop-certification">Workshop Certification</a>
+                                        <a href="/certifications/workshop-certification">Workshop Essentials</a>
                                     </li>
 
                                     <li class="sub-nav-item">
