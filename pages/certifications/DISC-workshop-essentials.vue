@@ -50,7 +50,7 @@
                     <ul>
                         <li>Self-Awareness & Communication</li>
                         <li>Transitioning from Peer to Leader</li>
-                        <li>Trust Based Leadership</li>
+                        <li>Trust-based Leadership</li>
                         <li>Making Teams Work</li>
                         <li>Sales Optimization</li>
                     </ul>

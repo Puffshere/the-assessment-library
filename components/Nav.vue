@@ -4,7 +4,7 @@
 
         <div class="info-bar">
             <p>
-                <strong>Available Now:</strong> Kids DISC! Each child's bird style is their superpower. <nuxt-link tabindex="-1" class="hyperlink light" to="/assessments/kids-disc">Discover Kids DISC &rarr;</nuxt-link>
+                <strong>UPDATED DISC WORKSHOP ESSENTIALS:</strong> Lead DISC Workshops with confidence! <nuxt-link tabindex="-1" class="hyperlink light" to="/certifications/DISC-workshop-essentials">Details here &rarr;</nuxt-link>
             </p>
         </div>
 
