@@ -374,6 +374,9 @@
     {
         "from": "/DISCReminder",
         "to": "/pdfs/Disc_reminder_card_2023.pdf"
+    },
+    {
+        "from": "/certifications/workshop-certification",
+        "to": "/certifications/DISC-workshop-essentials"
     }
-
 ]
