@@ -10,11 +10,72 @@
                 </div>
             </div>
         </section>
+
+
+
+
+        <section class="slides">
+            <div class="container">
+                <div class="row slides-container">
+                    <div class="col-3 col-6-sm tprSlideSection">
+                        <img class="image" src="images/the_new_relationship_strategies_audio.png"
+                            alt="The New Relationship Strategies">
+                    </div>
+                    
+                    <div class="col-9">
+                        <ul class="slideList">
+                            <a target="_blank"
+                                href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/1+A+Proven+Way+to+Build+Rapport+%26+Understanding+the+Four+Basic+Styles.mp3">
+                                <li class="mp3Links mp3Buttons"><span class="numbers">1.</span>
+                                    A Proven Way to Build Rapport & Understanding the Four Basic Styles
+                                </li>
+                            </a>
+                            <a target="_blank"
+                                href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/2+Getting+a+Quick+Handle+on+Anyone+%26+The+Platinum+Grid.mp3">
+                                <li class="mp3Links mp3Buttons"><span class="numbers">2.</span>
+                                    Getting a Quick Handle on Anyone & The Platinum Grid
+                                </li>
+                            </a>
+                            <a target="_blank"
+                                href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/3+Pinpointing+Your+Blend+of+Personal+Styles+%26+Building+the+Bridges+of+Compatibility.mp3">
+                                <li class="mp3Links mp3Buttons"><span class="numbers">3.</span>
+                                    Pinpointing Your Blend of Personal Styles & Building the Bridges of Compatibility
+                                </li>
+                            </a>
+                            <a target="_blank"
+                                href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/4+Mastering+the+Skill+of+Adaptability+%26+Bringing+Out+the+Best+in+Groups.mp3">
+                                <li class="mp3Links mp3Buttons"><span class="numbers">4.</span>
+                                    Mastering the Skill of Adaptability & Bringing Out the Best in Groups
+                                </li>
+                            </a>
+                            <a target="_blank"
+                                href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/5+High-Performance+Leadership+%26+Five+Steps+to+Successful+Sales.mp3">
+                                <li class="mp3Links mp3Buttons"><span class="numbers">5.</span>
+                                    High-Performance Leadership & Five Steps to Successful Sales
+                                </li>
+                            </a>
+                            <a target="_blank"
+                                href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/6+Five+Steps+to+Successful+Sales+(cont%E2%80%99d)+%26+Creating+a+Web+of+Rich+Relationships.mp3">
+                                <li class="mp3Links mp3Buttons"><span class="numbers">6.</span>
+                                    Five Steps to Successful Sales (cont’d) & Creating a Web of Rich Relationships
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <br>
+        <br>
         <section class="slides">
             <div class="container">
                 <div class="row slides-container">
                     <div class="col-4 col-6-sm tprSlideSection">
-                        <img class="image" src="images/TPR_eBook.png" alt="TPR eBook">
+                        <img class="image" src="images/the_platinum_rule.png" alt="TPR eBook">
                         <ul class="slideList">
                             <a target="_blank"
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR_eBook.pdf">
@@ -25,7 +86,8 @@
                         </ul>
                     </div>
                     <div class="col-4 col-6-sm tprSlideSection">
-                        <img class="image forSalesMasteryImage" src="images/tpr_forSale_mastery_ebook.png" alt="TPR for Sales Mastery Ebook">
+                        <img class="image" src="images/the_platinum_rule_for_sales_mastery.png"
+                            alt="TPR for Sales Mastery Ebook">
                         <ul class="slideList">
                             <a target="_blank"
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR_for_sales_mastery_ebook.pdf">
@@ -36,7 +98,7 @@
                         </ul>
                     </div>
                     <div class="col-4 col-6-sm tprSlideSection">
-                        <img class="image" src="images/TPR_eWorkbook.png" alt="TPR eWorkbook">
+                        <img class="image" src="images/the_platinum_rule_workbook.png" alt="TPR eWorkbook">
                         <ul class="slideList">
                             <a target="_blank"
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR_eWorkbook.pdf">
@@ -108,25 +170,55 @@ export default {
             text-decoration: none;
         }
 
+        .numbers {
+            float: left;
+        }
+
         .slideLink {
+            margin-bottom: 4px;
             padding: 10px;
             background: #f7f7f7;
             border-radius: 10px;
             color: #fff;
             font-weight: 600;
-            transition: transform .3s ease;
             text-align: center;
 
             &:hover {
-                transform: scale(1.03);
+                transform: scale(1.01);
             }
 
             &:active {
-                transform: scale(1.225);
+                transform: scale(1.02);
             }
 
             &.slideButtons {
                 background: linear-gradient(268deg, #0999fe, #0249ec);
+            }
+        }
+
+        .mp3Links {
+            margin-bottom: 4px;
+            padding: 10px;
+            background: #f7f7f7;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+            //transition: transform .1s ease;
+            text-align: right;
+
+            &:hover {
+                transform: scale(1.01);
+            }
+
+            &:active {
+                transform: scale(1.02);
+            }
+
+            &.mp3Buttons {
+                color: rgb(24, 24, 24);
+                // background: linear-gradient(268deg, #f5f4f4, #cecece);
+                // border: 1px solid #a1a1a1;
+
             }
         }
     }
@@ -152,10 +244,6 @@ export default {
                 border-radius: 20px;
                 margin-bottom: 10px;
                 margin-top: 10px;
-            }
-
-            .forSalesMasteryImage {
-                max-height: 423px;
             }
 
             a {
