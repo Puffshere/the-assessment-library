@@ -114,15 +114,14 @@ export default {
             border-radius: 10px;
             color: #fff;
             font-weight: 600;
-            transition: transform .3s ease;
             text-align: center;
 
             &:hover {
-                transform: scale(1.03);
+                transform: scale(1.01);
             }
 
             &:active {
-                transform: scale(1.225);
+                transform: scale(1.02);
             }
 
             &.slideButtons {

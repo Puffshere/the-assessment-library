@@ -21,7 +21,7 @@
                         <img class="image" src="images/the_new_relationship_strategies_audio.png"
                             alt="The New Relationship Strategies">
                     </div>
-                    
+
                     <div class="col-9">
                         <ul class="slideList">
                             <a target="_blank"
@@ -203,7 +203,6 @@ export default {
             border-radius: 10px;
             color: #fff;
             font-weight: 600;
-            //transition: transform .1s ease;
             text-align: right;
 
             &:hover {
@@ -216,9 +215,6 @@ export default {
 
             &.mp3Buttons {
                 color: rgb(24, 24, 24);
-                // background: linear-gradient(268deg, #f5f4f4, #cecece);
-                // border: 1px solid #a1a1a1;
-
             }
         }
     }
