@@ -1,5 +1,5 @@
 <template>
-    <section class="forms">
+    <section class="tprSlides">
         <main-nav />
         <section class="header">
             <div class="container">
@@ -10,61 +10,45 @@
                 </div>
             </div>
         </section>
-        <br>
-        <div class="container">
-            <div class="col-12">
-                <div class="row background">
-                    <div class="col-3">
-                        <img class="image" src="images/Team_slide.png" alt="Self-awareness and Communication">
-                    </div>
-                    <div class="col-5">
-                        <ul class="resources">
-                            <a target="_blank"
+        <section class="slides">
+            <div class="container">
+                <div class="row slides-container">
+                    <div class="col-4 col-6-sm tprSlideSection">
+                        <img class="image" src="images/team_slide.png" alt="TPR Team Slide">
+                        <ul class="slideList">
+                            <a
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR+TEAM+Slides.pptx">
-                                <li class="resource marketing">
-                                    THE PLATINUM RULE TEAM Slides
+                                <li class="slideLink slideButtons">
+                                    TPR TEAM Slides
                                 </li>
                             </a>
                         </ul>
                     </div>
-                </div>
-                <br>
-                <br>
-                <div class="row right-align-content background">
-                    <div class="col-5">
-                        <ul class="resources">
-                            <a target="_blank"
+                    <div class="col-4 col-6-sm tprSlideSection">
+                        <img class="image" src="images/leadership_slide.png" alt="TPR Leadership Slide">
+                        <ul class="slideList">
+                            <a
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR+Leadership+Slides.pptx">
-                                <li class="resource marketing">
-                                    THE PLATINUM RULE Leadership Slides
+                                <li class="slideLink slideButtons">
+                                    TPR Leadership Slides
                                 </li>
                             </a>
                         </ul>
                     </div>
-                    <div class="col-3">
-                        <img class="image" src="images/Team_slide.png" alt="Self-awareness and Communication">
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="row background">
-                    <div class="col-3">
-                        <img class="image" src="images/Team_slide.png" alt="Self-awareness and Communication">
-                    </div>
-                    <div class="col-5">
-                        <ul class="resources">
-                            <a target="_blank"
+                    <div class="col-4 col-6-sm tprSlideSection">
+                        <img class="image" src="images/full_presentation_slide.png" alt="TPR Full Day Presentation">
+                        <ul class="slideList">
+                            <a
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR+Full-day+Presentation.pptx">
-                                <li class="resource marketing">
-                                    THE PLATINUM RULE Full-day Presentation
+                                <li class="slideLink slideButtons">
+                                    TPR Full-day Presentation
                                 </li>
                             </a>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <br>
+        </section>
         <footer-fold />
     </section>
 </template>
@@ -94,20 +78,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.image {
-    width: 100%;
-}
-
-.right-align-content {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.background {
-    background-color: rgba(175, 175, 175, 0.315);
-}
-
-.forms {
+.tprSlides {
     .header {
         background: url('~assets/about.jpg');
         background-size: cover;
@@ -128,61 +99,65 @@ export default {
         margin-bottom: 0;
     }
 
-    h2 {
-        font-size: 20pt;
-        line-height: 24pt;
-    }
-
-    .resources {
+    .slideList {
         padding-left: 0;
         list-style: none;
-        margin-bottom: 60px;
+        margin-bottom: 15px;
 
         a {
             text-decoration: none;
         }
 
-        .resource {
+        .slideLink {
             padding: 10px;
             background: #f7f7f7;
-            margin-bottom: 12px;
             border-radius: 10px;
             color: #fff;
             font-weight: 600;
+            transition: transform .3s ease;
+            text-align: center;
 
-            &.marketing {
+            &:hover {
+                transform: scale(1.03);
+            }
+
+            &:active {
+                transform: scale(1.225);
+            }
+
+            &.slideButtons {
                 background: linear-gradient(268deg, #0999fe, #0249ec);
             }
+        }
+    }
+}
 
-            &.training {
-                background: linear-gradient(268deg, #ffa518, #fc542a);
+.slides {
+    margin: -50px 0 30px;
+
+    .slides-container {
+        background: #fff;
+        border-radius: 20px;
+        padding: 14px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+        .tprSlideSection {
+            .image {
+                width: 100%;
+                height: 100%;
+                background-size: cover !important;
+                background-position: center !important;
+                object-fit: cover;
+                box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+                border-radius: 20px;
+                margin-bottom: 10px;
+                margin-top: 10px;
             }
 
-            &.support {
-                background: linear-gradient(268deg, #fa4ca6, #ff2f4c);
+            a {
+                text-decoration: none;
             }
 
-            &.development {
-                background: linear-gradient(268deg, #303542, #1e222d);
-            }
-
-            &.custom {
-                background: linear-gradient(268deg, #b82cff, #540bfb);
-            }
-
-            &.other {
-                border: 1px solid #a1a1a1;
-                background: linear-gradient(268deg, #f7f7f7, #d2d3d3);
-                color: #1e222d;
-            }
-
-            &.accountPurchase {
-                background: linear-gradient(268deg, #25ca20, #168d11);
-            }
-
-            &.workshopsTraining {
-                background: linear-gradient(268deg, #20a8ca, #167c96);
-            }
         }
     }
 }
