@@ -1,6 +1,6 @@
 <template>
     <section class="forms">
-        <main-nav/>
+        <main-nav />
 
         <section class="header">
             <div class="container">
@@ -16,10 +16,12 @@
             <div class="row">
                 <div class="col-12">
                     <h2>Official Request Forms</h2>
-                    
+
                     <p>
-                        This page is for internal use only. You can bookmark this page as a quick reference to Assessments 24x7 department request forms. 
-                        Each request form is for submitting tickets for the corresponding department. These links may change over time, so please reference 
+                        This page is for internal use only. You can bookmark this page as a quick reference to Assessments
+                        24x7 department request forms.
+                        Each request form is for submitting tickets for the corresponding department. These links may change
+                        over time, so please reference
                         this page first. When in doubt, use the form!
                     </p>
                 </div>
@@ -31,6 +33,13 @@
                         <a target="_blank" href="https://form.asana.com/?k=GaI7gFjDe0froa_H4koKNw&d=460673300006490">
                             <li class="resource marketing">
                                 Marketing Team Request Form
+                            </li>
+                        </a>
+
+                        <a target="_blank"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSd-xMXE2-tluQ0exLK0ZOZWL9wNcWHU7aXoObTbyTXU9KsNUA/viewform">
+                            <li class="resource workshopsTraining">
+                                Workshops & Live Training Requests
                             </li>
                         </a>
 
@@ -58,132 +67,140 @@
                             </li>
                         </a>
 
-                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScYBPEfh3rr9kEXC5x6JaphAor2rvFwN99X7NATeVnY_Jwzrw/viewform">
+                        <a target="_blank"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScYBPEfh3rr9kEXC5x6JaphAor2rvFwN99X7NATeVnY_Jwzrw/viewform">
                             <li class="resource other">
                                 Employee Time-off Request Form
                             </li>
                         </a>
 
-                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfW1lT14EV4L-XI6KSDWTef03JG62aiIzjpL3nLQueg2uFcAg/viewform?usp=sharing">
+                        <a target="_blank"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfW1lT14EV4L-XI6KSDWTef03JG62aiIzjpL3nLQueg2uFcAg/viewform?usp=sharing">
                             <li class="resource accountPurchase">
                                 Account/Purchase Form
                             </li>
                         </a>
 
-                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd-xMXE2-tluQ0exLK0ZOZWL9wNcWHU7aXoObTbyTXU9KsNUA/viewform">
-                            <li class="resource workshopsTraining">
-                                Workshops & Live Training Requests
+                        <a target="_blank"
+                            href="https://form.asana.com/?k=bN_EmGZKoRacgcvmUftsRQ&d=460673300006490">
+                            <li class="resource translationRequests">
+                                Translation Requests
                             </li>
                         </a>
+
                     </ul>
                 </div>
             </div>
         </div>
 
-        <footer-fold/>
+        <footer-fold />
     </section>
 </template>
 
 <script>
-    import Nav from '@/components/Nav';
-    import Footer from '@/components/Footer';
+import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 
-    export default {
-        components: {
-            'main-nav': Nav,
-            'footer-fold': Footer
-        },
-        head() {
-            return {
-                title: 'Forms | Assessments 24x7',
-                meta: [
-                    {
-                        hid: 'robots',
-                        name: 'robots',
-                        content: 'noindex'
-                    }
-                ]
-            }
-        },
-    }
+export default {
+    components: {
+        'main-nav': Nav,
+        'footer-fold': Footer
+    },
+    head() {
+        return {
+            title: 'Forms | Assessments 24x7',
+            meta: [
+                {
+                    hid: 'robots',
+                    name: 'robots',
+                    content: 'noindex'
+                }
+            ]
+        }
+    },
+}
 </script>
 
 <style lang="scss" scoped>
-    .forms {
-        .header {
-            background: url('~assets/about.jpg');
-            background-size: cover;
-            color: #fff;
-            text-align: center;
-            padding: 70px 0;
-            margin-bottom: 30px;
+.forms {
+    .header {
+        background: url('~assets/about.jpg');
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 70px 0;
+        margin-bottom: 30px;
 
-            .section-title {
-                font-size: 30pt;
-                margin-top: 0;
-            }
-        }
-
-        h1 {
+        .section-title {
             font-size: 30pt;
-            line-height: 34pt;
-            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+    h1 {
+        font-size: 30pt;
+        line-height: 34pt;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 20pt;
+        line-height: 24pt;
+    }
+
+    .resources {
+        padding-left: 0;
+        list-style: none;
+        margin-bottom: 60px;
+
+        a {
+            text-decoration: none;
         }
 
-        h2 {
-            font-size: 20pt;
-            line-height: 24pt;
-        }
+        .resource {
+            padding: 10px;
+            background: #f7f7f7;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
 
-        .resources {
-            padding-left: 0;
-            list-style: none;
-            margin-bottom: 60px;
-
-            a {
-                text-decoration: none;
+            &.marketing {
+                background: linear-gradient(268deg, #0999fe, #0249ec);
             }
 
-            .resource {
-                padding: 10px;
-                background: #f7f7f7;
-                margin-bottom: 12px;
-                border-radius: 10px;
-                color: #fff;
-                font-weight: 600;
+            &.training {
+                background: linear-gradient(268deg, #ffa518, #fc542a);
+            }
 
-                &.marketing {
-                    background: linear-gradient(268deg, #0999fe, #0249ec);
-                }
+            &.support {
+                background: linear-gradient(268deg, #fa4ca6, #ff2f4c);
+            }
 
-                &.training {
-                    background: linear-gradient(268deg, #ffa518, #fc542a);
-                }
+            &.development {
+                background: linear-gradient(268deg, #303542, #1e222d);
+            }
 
-                &.support {
-                    background: linear-gradient(268deg, #fa4ca6, #ff2f4c);
-                }
+            &.custom {
+                background: linear-gradient(268deg, #b82cff, #540bfb);
+            }
 
-                &.development {
-                    background: linear-gradient(268deg, #303542, #1e222d);
-                }
+            &.other {
+                border: 1px solid #a1a1a1;
+                background: linear-gradient(268deg, #f7f7f7, #d2d3d3);
+                color: #1e222d;
+            }
 
-                &.custom {
-                    background: linear-gradient(268deg, #b82cff, #540bfb);
-                }
+            &.accountPurchase {
+                background: linear-gradient(268deg, #25ca20, #168d11);
+            }
 
-                &.other {
-                    border: 1px solid #a1a1a1;
-                    background: linear-gradient(268deg, #f7f7f7, #d2d3d3);
-                    color: #1e222d;
-                }
-                &.accountPurchase {
-                    background: linear-gradient(268deg, #25ca20, #168d11);
-                }
-                &.workshopsTraining {
-                    background: linear-gradient(268deg, #20a8ca, #167c96);
-                }
+            &.workshopsTraining {
+                background: linear-gradient(268deg, #20a8ca, #167c96);
+            }
+            &.translationRequests {
+                background: linear-gradient(268deg, #ff293a, #961621);
             }
         }
     }
-</style>
+}</style>
