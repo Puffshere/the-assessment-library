@@ -1,5 +1,5 @@
 <template>
-    <section class="tprSlides">
+    <section class="tprmp3s">
         <main-nav />
         <section class="header">
             <div class="container">
@@ -10,19 +10,18 @@
                 </div>
             </div>
         </section>
-        <section class="slides">
+        <section class="mp3s">
             <div class="container">
-                <div class="row slides-container">
-                    <div class="col-3 col-6-sm tprSlideSection">
+                <div class="row mp3s-container">
+                    <div class="col-3 col-6-sm tprmp3section">
                         <img class="image" src="images/the_new_relationship_strategies_audio.png"
                             alt="The New Relationship Strategies">
                     </div>
-
                     <div class="col-9">
-                        <ul class="slideList">
+                        <ul class="mp3List">
                             <a target="_blank"
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/1+A+Proven+Way+to+Build+Rapport+%26+Understanding+the+Four+Basic+Styles.mp3">
-                                <li class="mp3Links mp3Buttons"><span class="numbers">1.</span>
+                                <li class="mp3Links mp3Buttons"><span class="number1">1.</span>
                                     <span>
                                         <img class="imageMp3" src="images/beeping.png">
                                     </span>
@@ -40,7 +39,7 @@
                             </a>
                             <a target="_blank"
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/3+Pinpointing+Your+Blend+of+Personal+Styles+%26+Building+the+Bridges+of+Compatibility.mp3">
-                                <li class="mp3Links mp3Buttons"><span class="numbers">3.</span>
+                                <li class="mp3Links mp3Buttons"><span class="number3">3.</span>
                                     <span>
                                         <img class="imageMp3" src="images/beeping.png">
                                     </span>
@@ -49,7 +48,7 @@
                             </a>
                             <a target="_blank"
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/4+Mastering+the+Skill+of+Adaptability+%26+Bringing+Out+the+Best+in+Groups.mp3">
-                                <li class="mp3Links mp3Buttons"><span class="numbers">4.</span>
+                                <li class="mp3Links mp3Buttons"><span class="number4">4.</span>
                                     <span>
                                         <img class="imageMp3" src="images/beeping.png">
                                     </span>
@@ -79,44 +78,40 @@
                 </div>
             </div>
         </section>
-
-
-
-
         <br>
         <br>
-        <section class="slides">
+        <section class="mp3s">
             <div class="container">
-                <div class="row slides-container">
-                    <div class="col-4 col-6-sm tprSlideSection">
+                <div class="row mp3s-container">
+                    <div class="col-4 col-6-sm tprmp3section">
                         <img class="image" src="images/the_platinum_rule.png" alt="TPR eBook">
-                        <ul class="slideList">
+                        <ul class="mp3List">
                             <a target="_blank"
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR_eBook.pdf">
-                                <li class="slideLink slideButtons">
+                                <li class="mp3Link mp3Buttons">
                                     The Platinum Rule
                                 </li>
                             </a>
                         </ul>
                     </div>
-                    <div class="col-4 col-6-sm tprSlideSection">
+                    <div class="col-4 col-6-sm tprmp3section">
                         <img class="image" src="images/the_platinum_rule_for_sales_mastery.png"
                             alt="TPR for Sales Mastery Ebook">
-                        <ul class="slideList">
+                        <ul class="mp3List">
                             <a target="_blank"
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR_for_sales_mastery_ebook.pdf">
-                                <li class="slideLink slideButtons">
+                                <li class="mp3Link mp3Buttons">
                                     TPR for Sales Mastery
                                 </li>
                             </a>
                         </ul>
                     </div>
-                    <div class="col-4 col-6-sm tprSlideSection">
+                    <div class="col-4 col-6-sm tprmp3section">
                         <img class="image" src="images/the_platinum_rule_workbook.png" alt="TPR eWorkbook">
-                        <ul class="slideList">
+                        <ul class="mp3List">
                             <a target="_blank"
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR_eWorkbook.pdf">
-                                <li class="slideLink slideButtons">
+                                <li class="mp3Link mp3Buttons">
                                     The Platinum Rule Workbook
                                 </li>
                             </a>
@@ -154,7 +149,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tprSlides {
+.tprmp3s {
     .header {
         background: url('~assets/about.jpg');
         background-size: cover;
@@ -175,7 +170,7 @@ export default {
         margin-bottom: 0;
     }
 
-    .slideList {
+    .mp3List {
         padding-left: 0;
         list-style: none;
         margin-bottom: 15px;
@@ -187,6 +182,18 @@ export default {
         .numbers {
             float: left;
         }
+        .number1 {
+            float: left;
+            padding-right: 4px;
+        }
+        .number3 {
+            float: left;
+            margin-right: -1px;
+        }
+        .number4 {
+            float: left;
+            margin-right: -2px;
+        }
 
         .imageMp3 {
             width: 3%;
@@ -194,7 +201,7 @@ export default {
             margin-left: 20px;
         }
 
-        .slideLink {
+        .mp3Link {
             margin-bottom: 4px;
             padding: 10px;
             background: #f7f7f7;
@@ -211,7 +218,7 @@ export default {
                 transform: scale(1.02);
             }
 
-            &.slideButtons {
+            &.mp3Buttons {
                 background: linear-gradient(268deg, #0999fe, #0249ec);
             }
         }
@@ -240,16 +247,16 @@ export default {
     }
 }
 
-.slides {
+.mp3s {
     margin: -50px 0 30px;
 
-    .slides-container {
+    .mp3s-container {
         background: #fff;
         border-radius: 20px;
         padding: 14px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
-        .tprSlideSection {
+        .tprmp3section {
             .image {
                 width: 100%;
                 height: 100%;
