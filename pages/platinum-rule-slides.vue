@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row slides-container">
                     <div class="col-4 col-6-sm tprSlideSection">
-                        <img class="image" src="images/team_slide.png" alt="TPR Team Slide">
+                        <img class="image" src="images/Team_slide.png" alt="TPR Team Slide">
                         <ul class="slideList">
                             <a
                                 href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR+TEAM+Slides.pptx">
