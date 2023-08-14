@@ -29,7 +29,7 @@
                         security, data integrity, access, and 
                         enforcement. To learn more about the 
                         Safe Harbor program, and to view A24X7's 
-                        certification, please visit <a class="hyperlink" href="http://www.export.gov/safeharbor/" target="_blank" rel="noopener">http://www.export.gov/safeharbor/</font></a>
+                        certification, please visit <a class="hyperlink" href="http://www.export.gov/safeharbor/" target="_blank" rel="noopener">http://www.export.gov/safeharbor/</a>
                     </p>
 
                     <h2>SAFE HARBOR</h2>
