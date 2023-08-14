@@ -35,6 +35,7 @@
                             <option value="ja">Japanese - 4</option>
                             <option value="km">Khmer (Cambodian) - 1</option>
                             <option value="ko">Korean - 1</option>
+                            <option value="li">Lithuanian - 1</option>
                             <option value="ms">Malaysian - 1</option>
                             <option value="no">Norwegian - 3</option>
                             <option value="pl">Polish - 1</option>
@@ -218,13 +219,14 @@
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOT.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTFrench.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'de'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTGerman.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else-if="lang === 'li'" class="hyperlink" href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators_Lithuanian.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'pt'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'ru'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMOTRussianSample.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMotivatorsChineseSampleReport.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'nl'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_DutchSampleReport.pdf" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else class="hyperlink disabled">DISC + Motivators Report</a>
-                        <a class="language-button mot" @click="motDISCReportModal = true">8 languages</a><br/>
+                        <a class="language-button mot" @click="motDISCReportModal = true">9 languages</a><br/>
 
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTLite.pdf" class="hyperlink" target="_blank" rel="noopener">DISC + Motivators Lite</a>
                         <a v-else class="hyperlink disabled">DISC + Motivators Lite</a><br/>
@@ -788,6 +790,7 @@
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_DutchSampleReport.pdf" target="_blank" rel="noopener">Dutch</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTFrench.pdf" target="_blank" rel="noopener">French</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTGerman.pdf" target="_blank" rel="noopener">German</a><br/>
+                                <a class="hyperlink" href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators_Lithuanian.pdf" target="_blank" rel="noopener">Lithuanian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf" target="_blank" rel="noopener">Portuguese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMOTRussianSample.pdf" target="_blank" rel="noopener">Russian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf" target="_blank" rel="noopener">Spanish</a><br/>

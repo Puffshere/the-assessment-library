@@ -1,7 +1,6 @@
 <template>
     <section class="forms">
         <main-nav />
-
         <section class="header">
             <div class="container">
                 <div class="row">
@@ -11,7 +10,6 @@
                 </div>
             </div>
         </section>
-
         <section class="tprmp3s">
             <div class="container">
                 <div class="row">
@@ -26,7 +24,6 @@
                                     class="hyperlink" href="tel:12064006647">(206) 400-6647</a></span> #4.
                         </h3>
                     </div>
-
                     <div class="col-6 mp3s">
                         <div class="row mp3s-box">
                             <div class="col-3 col-6-sm title">
@@ -34,8 +31,7 @@
                             </div>
                             <div class="col-9">
                                 <ul class="mp3List">
-                                    <a
-                                        href="http://www.assessmentdownloads.com/dashboard/backup/videos/DirDesc.wmv">
+                                    <a href="http://www.assessmentdownloads.com/dashboard/backup/videos/DirDesc.wmv">
                                         <li class="mp3Links mp3Buttons"><span class="number1">1.</span>
                                             <span>
                                                 <img class="imageMp3" src="images/video-icon.png">
@@ -76,10 +72,8 @@
                     </div>
                 </div>
             </div>
-
             <section class="container mp3s">
                 <div class="row">
-
                     <div class="col-6">
                         <div class="row mp3s-box">
                             <div class="col-3 col-6-sm title">
@@ -127,7 +121,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-6">
                         <div class="row mp3s-box">
                             <div class="col-3 col-6-sm title">
@@ -184,13 +177,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
                 <div class="row">
-
-
-
                     <div class="col-6">
                         <div class="row mp3s-box">
                             <div class="col-3 col-6-sm title">
@@ -238,8 +226,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="col-6">
                         <div class="row mp3s-box">
                             <div class="col-3 col-6-sm title">
@@ -288,18 +274,10 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </section>
         </section>
-
-
-
         <br>
         <br>
-
         <footer-fold />
     </section>
 </template>
@@ -363,8 +341,6 @@ export default {
     // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.507); 
 }
 
-
-
 .tprmp3s {
     .header {
         background: url('~assets/about.jpg');
@@ -422,7 +398,6 @@ export default {
         .mp3Links {
             margin-bottom: 4px;
             padding: 10px;
-            //background: #f7f7f7;
             border-radius: 10px;
             color: #fff;
             font-weight: 600;
@@ -439,17 +414,12 @@ export default {
             &.mp3Buttons {
                 color: rgb(24, 24, 24);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.507);
-
-                
             }
         }
     }
 }
 
 .mp3s {
-    //margin: -50px 0 30px;
-
-
     .mp3s-box {
         background: #fff;
         border-radius: 20px;
