@@ -70,23 +70,23 @@
                             <span><img src="~assets/flags/united-states-of-america.svg" alt="DISC Assessments"> English</span>
                             <span><img src="~assets/flags/algeria.svg" alt="Arabic DISC Assessments"> العربية</span>
                             <span><img src="~assets/flags/australia.svg" alt="Australian DISC Assessments"> Australian</span>
+                            <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português (Brazil)</span>
                             <span><img src="~assets/flags/cambodia.svg" alt="Cambodian DISC Assessments"> ភាសាខ្មែរ</span>
                             <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
-                            <span><img src="~assets/flags/netherlands.svg" alt="Dutch DISC Assessments"> Nederlands</span>
-                            <span><img src="~assets/flags/italy.svg" alt="Italian DISC Assessments"> Italiano</span>
                             <span><img src="~assets/flags/france.svg" alt="French DISC Assessments"> Français</span>
                             <span><img src="~assets/flags/germany.svg" alt="German DISC Assessments"> Deutsch</span>
-                            <span><img src="~assets/flags/indonesia.svg" alt="Indonesian DISC Assessments"> lietuvių</span>
+                            <span><img src="~assets/flags/indonesia.svg" alt="Indonesian DISC Assessments"> Indonesian</span>
+                            <span><img src="~assets/flags/italy.svg" alt="Italian DISC Assessments"> Italiano</span>
                             <span><img src="~assets/flags/japan.svg" alt="Japanese DISC Assessments"> 日本語</span>
                             <span><img src="~assets/flags/south-korea.svg" alt="Korean DISC Assessments"> 한국어</span>
                             <span><img src="~assets/flags/lithuania.svg" alt="Lithuanian DISC Assessments"> lietuvių</span>
-                            <span><img src="~assets/flags/malaysia.svg" alt="Malaysian DISC Assessments"> മലയാളം</span>
-                            <span><img src="~assets/flags/norway.svg" alt="Norwegian DISC Assessments"> Norsk</span>
-                            <span><img src="~assets/flags/republic-of-poland.svg" alt="Polish DISC Assessments"> Polskie</span>
-                            <span><img src="~assets/flags/portugal.svg" alt="Portugese DISC Assessments"> Português</span>
-                            <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português (Brazil)</span>
-                            <span><img src="~assets/flags/russia.svg" alt="Russian DISC Assessments"> Россия</span>
+                            <span><img src="~assets/flags/malaysia.svg" alt="Malaysian DISC Assessments"> Bahasa Melayu</span>
                             <span><img src="~assets/flags/mexico.svg" alt="Spanish DISC Assessments"> Español</span>
+                            <span><img src="~assets/flags/netherlands.svg" alt="Dutch DISC Assessments"> Nederlands</span>
+                            <span><img src="~assets/flags/norway.svg" alt="Norwegian DISC Assessments"> Norsk</span>
+                            <span><img src="~assets/flags/portugal.svg" alt="Portugese DISC Assessments"> Português</span>
+                            <span><img src="~assets/flags/republic-of-poland.svg" alt="Polish DISC Assessments"> Polskie</span>
+                            <span><img src="~assets/flags/russia.svg" alt="Russian DISC Assessments"> Россия</span>
                             <span><img src="~assets/flags/sweden.svg" alt="Swedish DISC Assessments"> Svenska</span>
                             <span><img src="~assets/flags/turkey.svg" alt="Turkish DISC Assessments"> Türkçe</span>
                             <span><img src="~assets/flags/united-kingdom.svg" alt="UK DISC Assessments"> UK English</span>
