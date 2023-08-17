@@ -7,7 +7,7 @@
                 <div class="col-6">
                     <div class="form-group" style="margin-top: -16px">
                         <ValidationProvider v-slot="v" rules="required">
-                            <input id="firstName" name="firstName" type="text" v-model="form.firstName"
+                            <input id="firstName" name="firstName" type="text" v-model="form.firstName" tabindex="1"
                                 placeholder="First Name *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -15,7 +15,7 @@
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required|email">
-                            <input id="email" name="email" type="email" v-model="form.email"
+                            <input id="email" name="email" type="email" v-model="form.email" tabindex="3"
                                 placeholder="Email Address *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -25,7 +25,7 @@
                 <div class="col-6">
                     <div class="form-group" style="margin-top: -16px">
                         <ValidationProvider v-slot="v" rules="required">
-                            <input id="lastName" name="lastName" type="text" v-model="form.lastName"
+                            <input id="lastName" name="lastName" type="text" v-model="form.lastName" tabindex="2"
                                 placeholder="Last Name *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -33,7 +33,7 @@
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required|numeric">
-                            <input id="phone" name="phone" type="tel" v-model="form.phone"
+                            <input id="phone" name="phone" type="tel" v-model="form.phone" tabindex="4"
                                 placeholder="Phone Number *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -43,7 +43,7 @@
                 <div class="col-12">
                     <div class="form-group" style="margin-top: -16px">
                         <ValidationProvider v-slot="v" rules="required">
-                            <input id="company" name="company" type="text" v-model="form.company"
+                            <input id="company" name="company" type="text" v-model="form.company" tabindex="5"
                                 placeholder="Company/Organization *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -51,7 +51,7 @@
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
-                            <textarea id="comments" name="comments" v-model="form.comments"
+                            <textarea id="comments" name="comments" v-model="form.comments" tabindex="6"
                                 placeholder="What would you like to discuss? *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
