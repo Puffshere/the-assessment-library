@@ -965,6 +965,7 @@ export default {
                     }
                 }
             } else {
+                window.scrollTo(0, 0);
                 this.isDisabled = false;
             }
         },
