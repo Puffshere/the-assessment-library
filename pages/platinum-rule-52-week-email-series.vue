@@ -270,8 +270,8 @@ export default {
     },
     computed: {
         displayedLinks() {
-            const start = this.currentPage * 10;
-            const end = start + 10;
+            const start = this.currentPage * 9;
+            const end = start + 9;
             return this.allLinks.slice(start, end);
         }
     },
