@@ -332,6 +332,14 @@ h2 {
 
         &.marketing {
             background: linear-gradient(268deg, #0999fe, #0249ec);
+            
+            &:hover {
+                background: linear-gradient(268deg, #0789e6, #0140d1);
+            }
+            
+            &:active {
+                background: linear-gradient(268deg, #067dd1, #0133a7);
+            }
         }
     }
 }
