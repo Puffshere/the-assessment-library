@@ -16,7 +16,7 @@
             <div class="row flex-center">
                 <div class="col-6">
                     <ul class="resources">
-                        <a v-for="(link, index) in displayedLinks" :key="index" :href="link.href" target="_blank">
+                        <a v-for="(link, index) in displayedLinks" :key="index" :href="link.href">
                             <li class="resource marketing">{{ link.text }}</li>
                         </a>
                         <div class="buttons">
