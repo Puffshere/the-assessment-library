@@ -20,9 +20,9 @@
                             <li class="resource marketing">{{ link.text }}</li>
                         </a>
                         <div class="buttons">
-                            <button v-if="currentPage !== 0" @click="currentPage = Math.max(currentPage - 1, 0)">Previous</button>
-                            <span class="page">Page {{ currentPage + 1 }} of 6</span>
-                            <button v-if="currentPage !== 5" @click="currentPage++">Next</button>
+                            <button @click="currentPage = Math.max(currentPage - 1, 0)">Previous</button>
+                            <span class="page">Page {{ currentPage + 1 }}</span>
+                            <button @click="currentPage++">Next</button>
                         </div>
                     </ul>
                 </div>
@@ -44,12 +44,9 @@ export default {
     data() {
         return {
             currentPage: 0,
+            linksPerPage: 9,
             allLinks: [
-                {
-                    href: "https://www.assessmentdownloads.com/dashboard/backup/PR52docs/01%20THE%20FOUR%20BEHAVIORAL%20STYLES.doc",
-                    text: "1.  THE FOUR BEHAVIORAL STYLES.doc"
-                },
-                {
+            {
                     href: "https://www.assessmentdownloads.com/dashboard/backup/PR52docs/02%20Strengths%20and%20Weaknesses%20of%20Directors.doc",
                     text: "2.  Strengths and Weaknesses of Directors.doc"
                 },
@@ -253,9 +250,14 @@ export default {
                     href: "https://www.assessmentdownloads.com/dashboard/backup/PR52docs/52%20Four%20Styles--%20just%20acting%20themselves.doc",
                     text: "52.  Four Styles-- just acting themselves.doc"
                 }
+                // ... (existing links should be here)
             ]
         }
     },
+                
+            
+        
+
     head() {
         return {
             title: 'PLATINUM RULE 52 WEEK EMAIL SERIES | Assessments 24x7',
@@ -269,11 +271,13 @@ export default {
         }
     },
     computed: {
-        displayedLinks() {
-            const start = this.currentPage * 9;
-            const end = start + 9;
-            return this.allLinks.slice(start, end);
+        totalPages() {
+            return Math.ceil(this.allLinks.length / this.linksPerPage);
+        },
+        pageNumbers() {
+            return Array.from({ length: this.totalPages }, (_, i) => i + 1);
         }
+    
     },
 }
 </script>
