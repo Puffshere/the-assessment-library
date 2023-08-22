@@ -9,7 +9,7 @@
                 <div class="col-8">
                     <blockquote>
                         <p>
-                            "Becoming certified in Emotional Intelligence (EIQ-2) was a great experience. Although I have 
+                            "Becoming certified in Emotional Intelligence (EIQ) was a great experience. Although I have 
                             a wealth of experience, I learned more than I expected through this certification."
                         </p>
 

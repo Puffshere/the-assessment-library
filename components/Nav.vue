@@ -66,7 +66,7 @@
                                     </li>
 
                                     <li class="sub-nav-item">
-                                        <a href="/assessments/360/eiq">EIQ-2 360&deg;</a>
+                                        <a href="/assessments/360/eiq">EIQ 360&deg;</a>
                                     </li>
 
                                     <li class="sub-nav-item">
@@ -276,7 +276,7 @@
                 </li>
 
                 <li class="nav-item indent">
-                    <a href="/assessments/360/eiq">EIQ-2 360</a>
+                    <a href="/assessments/360/eiq">EIQ 360</a>
                 </li>
 
                 <li class="nav-item indent">

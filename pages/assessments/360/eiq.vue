@@ -23,16 +23,16 @@
                     <nuxt-link to="/contact" class="button cta">Schedule An Appointment</nuxt-link>
                 </div>
                 <div class="col-8">
-                    <h2>Emotional Intelligence (EIQ-2) 360º Assessment</h2>
+                    <h2>Emotional Intelligence (EIQ) 360º Assessment</h2>
                     <p>
-                        The EIQ-2 assessment is a measure of your understanding of how your behavior affects those around you. However, there is often a 
+                        The EIQ assessment is a measure of your understanding of how your behavior affects those around you. However, there is often a 
                         disconnect between how we think others perceive us and the reality of how our actions are perceived. This disconnect is where the 
-                        EIQ-2 360° assessment fills in the gaps.
+                        EIQ 360° assessment fills in the gaps.
                     </p>
 
                     <p>
                         Even the best, most self-aware manager may have blind spots in emotional awareness. With the anonymous, honest, and candid feedback 
-                        from our EIQ-2 360° providing the bigger picture, behaviors can be modified to support intentions, and your actions can be 
+                        from our EIQ 360° providing the bigger picture, behaviors can be modified to support intentions, and your actions can be 
                         interpreted as they were intended.
                     </p>
                 </div>
@@ -45,12 +45,12 @@
                     <div class="col-6">
                         <h2>One Price for Unlimited Observer Responses</h2>
                         <p>
-                            Enhance the traditional EIQ-2 self-assessment with unlimited, anonymous observer data. Using the same questionnaire process, 
+                            Enhance the traditional EIQ self-assessment with unlimited, anonymous observer data. Using the same questionnaire process, 
                             observers are asked to provide their perspective of your emotional intelligence. In the report, the observer experience is 
                             compared to your intent to highlight the differences between them.
                         </p>
                         <p>
-                            As with all of our 360º assessments, the EIQ-2 360º includes an unlimited number of observer assessments. Add a minimum of 
+                            As with all of our 360º assessments, the EIQ 360º includes an unlimited number of observer assessments. Add a minimum of 
                             three observers or 300; the cost is the same.
                         </p>
                     </div>
@@ -60,7 +60,7 @@
                             <h2>Sample Report</h2>
                             <a href="/reports/EIQ360SampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> EIQ-2 360° (Sample Report)
+                                    <img src="~assets/pdf-icon.svg"> EIQ 360° (Sample Report)
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -114,9 +114,9 @@
                     <div class="col-12">
                         <h6 class="question">What is the benefit of a 360° assessment versus a self-assessment?</h6>
                         <p class="answer">
-                           A self-assessment is from a single perspective - yours. The EIQ-2 360° is designed to reveal the bigger picture of how those 
+                           A self-assessment is from a single perspective - yours. The EIQ 360° is designed to reveal the bigger picture of how those 
                            around you perceive your Emotional Intelligence. By opening yourself up to receiving feedback, you can examine the differences 
-                           between your intentions and others’ perceptions. The EIQ-2 360 improves your ability to adapt, as an understanding of both self 
+                           between your intentions and others’ perceptions. The EIQ 360 improves your ability to adapt, as an understanding of both self 
                            and others is achieved.
                         </p>
                     </div>
@@ -125,11 +125,11 @@
                 <div class="row">
                     <div class="col-12">
                         <h6 class="question">
-                            EIQ-2 360° gives general information about others’ perceptions of me, but I’d like to know specifics about why they think that. 
+                            EIQ 360° gives general information about others’ perceptions of me, but I’d like to know specifics about why they think that. 
                             How can I learn more?
                         </h6>
                         <p class="answer">
-                            Ask! The EIQ-2 360° is intended to offer you an overall view of how those around you perceive your Emotional Intelligence and 
+                            Ask! The EIQ 360° is intended to offer you an overall view of how those around you perceive your Emotional Intelligence and 
                             actions and reveal areas where they may be misunderstood. The information in the report can be used as a starting point for 
                             discussion to ask clarifying questions. The key to this conversation is that it must be safe for feedback to be shared. Come to 
                             the conversation with authentic curiosity and a desire to understand what others are experiencing.

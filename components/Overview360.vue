@@ -24,13 +24,13 @@
             
                 <div class="col-4">
                     <div class="ass-img eiq"></div>
-                    <nuxt-link to="/assessments/360/eiq" class="ass-name">EIQ-2 360&deg;</nuxt-link>
+                    <nuxt-link to="/assessments/360/eiq" class="ass-name">EIQ 360&deg;</nuxt-link>
                     <p class="ass-desc">
-                        The EIQ-2 360º reveals how one’s perceived emotional intelligence in four key areas compares to observer feedback. 
+                        The EIQ 360º reveals how one’s perceived emotional intelligence in four key areas compares to observer feedback. 
                         It highlights the ways we may think we recognize and manage emotions effectively, but fall short with others. 
                         With this insight, you will be able to examine if and how your EIQ matches what others perceive. 
                     </p>
-                    <nuxt-link to="/assessments/360/eiq" class="hyperlink ass-link">Discover EIQ-2 360&deg; &rarr;</nuxt-link>
+                    <nuxt-link to="/assessments/360/eiq" class="hyperlink ass-link">Discover EIQ 360&deg; &rarr;</nuxt-link>
                 </div>
 
                 <div class="col-4">

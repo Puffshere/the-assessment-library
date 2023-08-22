@@ -166,7 +166,7 @@
 
                     <div class="col-9">
                         <p>
-                            EIQ-2 Certification provides enhanced clarity on how people perceive and apply their Emotional Intelligence, empowering 
+                            EIQ Certification provides enhanced clarity on how people perceive and apply their Emotional Intelligence, empowering 
                             practitioners with the necessary insights to coach in a way that creates beneficial interpersonal outcomes. Boost your 
                             interpersonal conflict management skills as well, and learn to tactfully deal with difficult people during stressful situations.
                         </p>

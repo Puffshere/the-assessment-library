@@ -39,7 +39,7 @@
                                 <nuxt-link class="hyperlink" to="/assessments/motivators">Motivators</nuxt-link>, 
                                 <a class="hyperlink" href="https://hiresense.com">HireSense</a> (our hiring and selection product), and 
                                 <nuxt-link class="hyperlink" to="/assessments/emotional-intelligence">Emotional Intelligence</nuxt-link>
-                                (EIQ-2). They include Continuing Education Credits with ICF, SHRM, HRCI, and ATD. All certifications are 100% self-paced 
+                                (EIQ). They include Continuing Education Credits with ICF, SHRM, HRCI, and ATD. All certifications are 100% self-paced 
                                 and virtual.
                             </li>
                         </ul>

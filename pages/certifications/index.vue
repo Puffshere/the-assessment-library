@@ -82,8 +82,8 @@
                     <h3>Emotional Intelligence Certification</h3>
 
                     <p>
-                        The EIQ-2 Certification examines at a much more comprehensive level how people perceive and apply their Emotional Intelligence. 
-                        Developed with author Robert Jerus, the EIQ-2 Certification empowers practitioners with enhanced clarity and 
+                        The EIQ Certification examines at a much more comprehensive level how people perceive and apply their Emotional Intelligence. 
+                        Developed with author Robert Jerus, the EIQ Certification empowers practitioners with enhanced clarity and 
                         insights necessary to consistently support and share what’s needed for creating beneficial interpersonal outcomes with strong EIQ.
                     </p>
 

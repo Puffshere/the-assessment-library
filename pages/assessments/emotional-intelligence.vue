@@ -73,7 +73,7 @@
                             <h2>EIQ Sample Reports</h2>
                             <a href="/reports/EIQSampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Emotional Intelligence (EIQ-2)
+                                    <img src="~assets/pdf-icon.svg"> Emotional Intelligence (EIQ)
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -101,7 +101,7 @@
 
                             <a href="/reports/DISCandEIQ.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> DISC + EIQ-2 Combination
+                                    <img src="~assets/pdf-icon.svg"> DISC + EIQ Combination
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -115,7 +115,7 @@
 
                             <a href="/reports/DISCLeadandEIQ.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> DISC Leadership + EIQ-2 Combination
+                                    <img src="~assets/pdf-icon.svg"> DISC Leadership + EIQ Combination
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -130,7 +130,7 @@
                             <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/EIQ-2-Validity-Study.pdf"
                                 target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> EIQ-2 Validity Study
+                                    <img src="~assets/pdf-icon.svg"> EIQ Validity Study
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -213,7 +213,7 @@
 
                 <div class="col-6">
                     <div class="dimensions-aside">
-                        <span class="sup-title">EIQ-2 Assessment</span>
+                        <span class="sup-title">EIQ Assessment</span>
                         <h4 class="title">Emotional Intelligence for Professional Success</h4>
                         <p>
                             This assessment measures and provides insight into four areas of EIQ and the five sub-categories
@@ -271,7 +271,7 @@
             <div class="container">
                 <div class="row flex-center">
                     <div class="col-8">
-                        <img class="logo-img" src="~assets/whitelabel-report/eiq-whitelabel.png" alt="">
+                        <img class="logo-img" src="~assets/emotional_intelligence_report.png" alt="">
                         <h4 class="title">White Label Our Assessments With Your Own Brand's Logo</h4>
                     </div>
                 </div>
@@ -326,7 +326,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-8">
-                        <h5 class="title">Get EIQ-2 Certified</h5>
+                        <h5 class="title">Get EIQ Certified</h5>
                         <p>
                             Become an expert with our internationally accredited certification training. Designed
                             specifically to foster a deeper understanding of the mode, you’ll discover how it can
@@ -382,7 +382,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">Is EIQ-2 really effective to use in the workplace?</h6>
+                        <h6 class="question">Is EIQ really effective to use in the workplace?</h6>
                         <p class="answer">
                             Absolutely! For some it may seem “touchy-feely” or “too emotional,” but EIQ goes so far beyond
                             just the soft skill applications.
@@ -482,7 +482,7 @@
 
                             <h3>Emotional Intelligence 360°</h3>
                             <p>
-                                The EIQ-2 360º offers assessment professionals and users alike, the ability to compare the
+                                The EIQ 360º offers assessment professionals and users alike, the ability to compare the
                                 user’s perceived “self” emotional intelligence in contrast with the “observer”
                                 feedback provided anonymously by colleagues, direct reports, managers, etc. <a
                                     style="color:#fff" class="hyperlink" href="/assessments/360/eiq">Learn more about our
