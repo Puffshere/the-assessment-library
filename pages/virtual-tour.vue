@@ -24,7 +24,7 @@
                     </p>
 
                     <p>
-                        Schedule with <nuxt-link to="/suzette" class="hyperlink">Suzette Chaparro</nuxt-link>
+                        Schedule with <a href="https://calendly.com/molly-24x7/virtual-tour-of-your-account-dashboard" class="hyperlink">Molly Kirby</a>
                     </p>
 
                     <p>
