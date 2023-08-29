@@ -135,7 +135,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">Is EIQ-2 really effective to use in the workplace?</h6>
+                        <h6 class="question">Is EIQ really effective to use in the workplace?</h6>
                         <p class="answer">
                             Absolutely! For some it may seem “touchy-feely” or “too emotional,” but EIQ goes so far beyond just the soft skill applications. 
                             High EIQ benefits our communication, decision-making, leadership abilities, sales, teamwork and team performance, productivity, 

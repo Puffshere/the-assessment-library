@@ -192,7 +192,7 @@
                                 <strong>Action Steps:</strong><br/>
                                 Recommend and launch individual coaching and/or group training initiatives that address the performance 
                                 gaps identified by the PGI Diagnostic report. These initiatives enable consultants and trainers to offer 
-                                laser-targeted solutions leveraging individual assessments (DISC, Motivators, EIQ-2, etc.), team reports, 
+                                laser-targeted solutions leveraging individual assessments (DISC, Motivators, EIQ, etc.), team reports, 
                                 benchmarking and other instruments.
                             </li>
                             <li>

@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img class="image" src="/images/eiq-badge.png" alt="EIQ-2 Certification">
+                    <img class="image" src="/images/eiq-badge.png" alt="EIQ Certification">
                 </div>
             </div>
             <div class="row">

@@ -77,7 +77,7 @@
 
                             <h3>Level-up Your Knowledge - Get Certified</h3>
                             <p>
-                                We offer self-paced, virtual practitioner certification in each of the five Core Assessments. DISC, Motivators, EIQ-2, 
+                                We offer self-paced, virtual practitioner certification in each of the five Core Assessments. DISC, Motivators, EIQ, 
                                 Critical Thinking, and Learning Styles are each exceptional assessment instruments offering reports, training materials, 
                                 and coaching guidance. In becoming a certified practitioner in any one or combination of these assessments, you make 
                                 yourself an invaluable resource to your clients. In addition, each of these assessment certifications is recognized by 

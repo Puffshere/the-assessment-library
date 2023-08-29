@@ -70,7 +70,7 @@
 
                         <tbody>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/MM%20Manuscript.pdf" target="_blank" rel="noopener">Mind Matters Manuscript</a>
-                            <small>The foundational manuscript by Robert Jerus underscoring the details and supporting the uses of the EIQ-2 assessment</small></td></tr>
+                            <small>The foundational manuscript by Robert Jerus underscoring the details and supporting the uses of the EIQ assessment</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20Emotional%20Intelligence.pdf" target="_blank" rel="noopener">Understanding Emotional Intelligence</a>
                             <small>A short article introduction to Emotional Intelligence</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQ_Understanding%20the%20Emotions_Feelings.pdf" target="_blank" rel="noopener">Understanding Emotions and Feelings</a>

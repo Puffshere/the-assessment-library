@@ -37,9 +37,9 @@
 
                 <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/emotional-intelligence">
-                        <img class="badge" src="~/assets/badges/new/eiq-cert-badge-color-label.png" alt="EIQ-2 Trainer Materials">
-                        <h2>EIQ-2 Trainer Materials</h2>
-                        <p class="description">Click here to access the EIQ-2 trainer materials login portal.</p>
+                        <img class="badge" src="~/assets/badges/new/eiq-cert-badge-color-label.png" alt="EIQ Trainer Materials">
+                        <h2>EIQ Trainer Materials</h2>
+                        <p class="description">Click here to access the EIQ trainer materials login portal.</p>
                     </nuxt-link>
                 </div>
             </div><br/>

@@ -23,7 +23,7 @@
                 <div class="col-12">
                     <h2 style="margin-bottom: 0px">Program Details</h2>
                     <p>
-                        In light of this difficult time, we have decided to offer three of our top-rated certifications, DISC, Motivators, and EIQ-2, in 
+                        In light of this difficult time, we have decided to offer three of our top-rated certifications, DISC, Motivators, and EIQ, in 
                         a group setting for $795 each. These will be virtual events and they will be live with our certification team. We will cover the 
                         same material we cover in our one-on-one certifications, but rather than a self-paced, self-driven learning experience, you’ll 
                         have a live instructor to lead you through each step of the process. Keep in mind, the program does not include an individual 

@@ -14,17 +14,17 @@
                 </div>
 
                 <div class="col-3">
-                    <span class="stat">172</span>
+                    <span class="stat">1,314</span>
                     <p class="stat-label">Certified Practitioners</p>
                 </div>
 
                 <div class="col-3">
-                    <span class="stat">13</span>
+                    <span class="stat">21</span>
                     <p class="stat-label">Employees</p>
                 </div>
 
                 <div class="col-3">
-                    <span class="stat">7+ MM</span>
+                    <span class="stat">15+ MM</span>
                     <p class="stat-label">Assessments Given</p>
                 </div>
             </div>
