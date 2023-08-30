@@ -36,12 +36,12 @@
                             </li>
                         </a>
 
-                        <a target="_blank"
+                        <!-- <a target="_blank"
                             href="https://docs.google.com/forms/d/e/1FAIpQLSd-xMXE2-tluQ0exLK0ZOZWL9wNcWHU7aXoObTbyTXU9KsNUA/viewform">
                             <li class="resource workshopsTraining">
                                 Workshops & Live Training Requests
                             </li>
-                        </a>
+                        </a> -->
 
                         <a target="_blank" href="https://form.asana.com/?k=YCSB-IWeQgLnQUMNxxiEjQ&d=460673300006490">
                             <li class="resource training">
