@@ -205,8 +205,6 @@ export default {
                 this.sortBy = null;
             }
 
-            console.log('this is the sortDirection', this.sortDirection);
-
             this.sortBy = property;
 
             if (this.sortDirection === 'asc' || this.sortDirection === 'desc') {
@@ -363,15 +361,15 @@ export default {
 @media (max-width: 1150px) {
 
     .filter-icon.city {
-        right: 145px;
+        right: 30px;
     }
 
     .filter-icon.state {
-        right: 140px;
+        right: 30px;
     }
 
     .filter-icon.country {
-        right: 130px;
+        right: 30px;
     }
 
     .location-button {
