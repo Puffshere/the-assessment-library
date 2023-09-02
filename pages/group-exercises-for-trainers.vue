@@ -170,7 +170,7 @@ export default {
         background-size: cover;
         color: #fff;
         text-align: center;
-        padding: 70px 0 40px;
+        padding: 70px 0 30px;
 
         .section-title {
             font-size: 30pt;
