@@ -116,10 +116,9 @@ export default {
 
 <style lang="scss" scoped>
 .top {
-    background: url('~assets/artifacts/left-rings.png') no-repeat, linear-gradient(90deg, rgb(177, 177, 177) 0%, rgba(231, 230, 230, 0.89) 100%);
+    background: url('~assets/artifacts/left-rings-flipped.png') no-repeat, linear-gradient(90deg, rgb(241, 241, 241) 0%, rgba(231, 230, 230, 0.89) 100%);
     background-position: right;
     width: 100%;
-    margin-top: -30px;
     margin-bottom: -60px;
     color: white;
     padding-top: 60px;
@@ -136,7 +135,7 @@ export default {
     font-size: 23px;
     font-weight: 700;
     text-decoration: none;
-    color: rgb(43, 43, 43);
+    color: rgb(59, 59, 59);
     text-shadow: 1px 1px rgb(236, 235, 235);
 }
 
@@ -158,14 +157,10 @@ export default {
 }
 
 .assessment-content {
-    margin: -50px 0 30px;
 
     .section-title {
-        font-size: 20pt;
-        line-height: 34pt;
         font-weight: 600;
         margin-top: 0;
-        margin-bottom: 20px;
     }
 }
 
@@ -175,8 +170,7 @@ export default {
         background-size: cover;
         color: #fff;
         text-align: center;
-        padding: 70px 0;
-        margin-bottom: 30px;
+        padding: 70px 0 40px;
 
         .section-title {
             font-size: 30pt;
@@ -237,11 +231,12 @@ export default {
         font-size: 15px;
         font-weight: 700;
         text-decoration: none;
-        color: rgb(43, 43, 43);
+        color: rgb(59, 59, 59);
         text-shadow: 1px 1px rgb(236, 235, 235);
     }
 
     .image {
         width: 15%;
     }
-}</style>
+}
+</style>
