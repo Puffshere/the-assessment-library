@@ -152,7 +152,7 @@
                             </li>
 
                             <li class="nav-item" @mouseover="hover.resources = true" @mouseleave="hover.resources = false">
-                                <a tabindex="26" href="javascript:void(0)"
+                                <a tabindex="26"
                                     :class="{ active: active == 'resources' }">Resources</a>
 
                                 <ul :class="{ active: hover.resources, 'sub-nav-category': true }">
