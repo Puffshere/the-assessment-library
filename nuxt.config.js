@@ -12,7 +12,7 @@ module.exports = {
     title: 'Unlock Your Potential with Assessments 24x7 - Personal and Professional Development',
     meta: [
       // unused javascript
-      { charset: 'utf-8' },
+      // { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#01A8FF' },
       { name: 'msapplication-navbutton-color', content: '#01A8FF' },
