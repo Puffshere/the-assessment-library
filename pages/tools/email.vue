@@ -57,7 +57,7 @@
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import axios from 'axios';
-//import { runCompletion } from './../../api/index';
+
 
 export default {
     components: {
@@ -126,25 +126,17 @@ export default {
     methods: {
         async submitMessage() {
 
-            const endpoint = "http://localhost:3000/api/completions";
+            const endpoint = "/api/completions";
             try {
-                // const body = {
-                //     prompt: this.userInput,
-                //     max_tokens: 150
-                // };
-
                 const result = await axios.post(endpoint);
 
                 if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
                     this.response = result.data.choices[0].message.content;
                 }
 
-
-                console.log("this is the response", this.response);
             } catch (error) {
                 console.error("Error fetching data from proxy server:", error);
             }
-
         },
         head() {
             return {

@@ -17,7 +17,6 @@ const upload = multer();
 const app = express();
 const path = require('path');
 
-
 GhostSearch.start();
 
 const cosmos = {
@@ -96,38 +95,8 @@ app.post('/contact', (req, res) => {
 });
 
 app.post('/completions', async (req, res) => {
-    //const { Configuration, OpenAIApi } = require("openai");
-
-    console.log("This is a message");
-
-    console.log("This is a message");
-
-    //     const runCompletion = async (theUserInput) => {
-    //         const configuration = new Configuration({
-    //             apiKey: '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',  // Use environment variable
-    //         });
-    //         const openai = new OpenAIApi(configuration);
-
-    //         const completion = await openai.createCompletion({
-    //             model: "text-davinci-003",
-    //             prompt: theUserInput,
-    //             "max_tokens": 2048
-    //         });
-    //         return completion.data.choices[0].text;
-    //     }
-
-    //     const userInput = "what is a cat?";
-
-    //     // Ensure user input exists
-    //     if (!userInput) {
-    //         return res.status(400).json({ error: 'Input is required' });
-    //     }
-
-    //     const result = await runCompletion(userInput);
-    //     res.json({ completion: result });
-    console.log("this is the index file", req.body);
     try {
-        const openaiApiKey = process.env.OPENAI_API_KEY; // Fetching the API key from Heroku environment variable
+        const openaiApiKey = process.env.OPENAI_API_KEY; 
 
         if (!openaiApiKey) {
             throw new Error("API key not found");
@@ -154,7 +123,6 @@ app.post('/completions', async (req, res) => {
         console.error("Error:", error.message);
         res.status(500).json({ error: error.message || 'Internal Server Error' });
     }
-
 
 });
 
