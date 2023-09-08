@@ -29,14 +29,7 @@
                 <textarea class="inputStyling" type="text" v-model="userInput" @keyup.enter="submitMessage"
                     placeholder="Paste email here to be altered..." />
 
-                <div v-if="response" class="formatted-response">{{ response }}</div>
-
-                <div type="textarea" class="col-12" v-for="message in alteredEmail" :key="message.id">
-                    <div class="response">
-                        <p v-if="message.fromUser">{{ message.text }}</p>
-                        <p v-else>{{ message.text }}</p>
-                    </div>
-                </div>
+                <div type='text' v-if="response" class="formatted-response">{{ response }}</div>
 
                 <div class="button-container">
                     <button type="submit" @click="submitMessage" style="width: 100px" class="generate">Submit</button>
@@ -121,12 +114,25 @@ export default {
     },
     computed: {
         promptContext() {
-            return `Rewrite the email below to be written in the voice of a person keeping these two DISC assessment types in mind: Adapted Style as ${this.adaptedStyle} and Natural Style as ${this.naturalStyle}.`;
+            return `Rewrite the following email, emphasizing the DISC traits:
+
+                    Adapted: ${this.adaptedStyle}
+                    Natural: ${this.naturalStyle}
+
+                    Incorporate these nuances:
+                    If multiple DISC traits are provided, ensure the email is a balanced reflection of all specified traits.
+                    Vocabulary: Use words that resonate with the specific DISC trait. E.g., action-oriented for D, enthusiastic for I, harmonious for S, and analytical for C.
+                    Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. D might prefer brevity, I emotive punctuation, S connected sentences, and C precise detailing.
+                    CTA (Call to Action): Tailor the conclusion or request based on the trait. D being directive, I collaborative, S supportive, and C instructive.
+                    Structure & Flow: D should be direct and prioritize main points, I may start personally, S should maintain balance, and C needs clear, detailed flow.
+                    Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I as upbeat, S as calm, and C as methodical.
+
+                    Here's the original email:`
         }
     },
     methods: {
         async submitMessage() {
-            //const endpoint = "http://localhost:3000/api/completions";
+            // const endpoint = "http://localhost:3000/api/completions";
             const endpoint = "/api/completions";
             const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
@@ -181,38 +187,51 @@ export default {
         margin-bottom: 0;
     }
 
-    h2 {
-        font-size: 20pt;
-        line-height: 24pt;
-    }
-
     .body {
         .styles {
             margin-bottom: 20px;
         }
 
         .inputStyling {
+            cursor: pointer;
             width: 100%;
             min-height: 400px;
             border-radius: 5px;
-            font-size: 15px;
             padding-left: 20px;
             padding-top: 20px;
             margin-bottom: 30px;
+            border: 5px solid rgb(102, 146, 240);
+            box-shadow: 5px 5px 5px rgb(61, 61, 61);
+            font-size: 20px;
         }
 
         .drop {
+            cursor: pointer;
             padding: 5px;
             border-radius: 5px;
+            border: 3px solid rgb(102, 146, 240);
+            box-shadow: 3px 3px 5px rgb(61, 61, 61);
+            font-family: monospace;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 1px;
         }
 
-        .text {
-            min-height: 400px;
-            margin-bottom: 25px;
-            width: 100%;
+        .formatted-response {
+            cursor: pointer;
+            white-space: pre-line;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 30px;
+            border: 5px solid rgb(102, 178, 240);
+            box-shadow: 5px 5px 5px rgb(61, 61, 61);
+            font-size: 20px;
+            font-family: monospace;
         }
 
         .generate {
+            cursor: pointer;
             margin-bottom: 40px;
             margin-right: 25px;
             padding: 10px;
@@ -224,28 +243,22 @@ export default {
             font-weight: 600;
             background: linear-gradient(268deg, #0999fe, #0249ec);
             border: none;
+            box-shadow: 3px 3px 5px rgb(61, 61, 61);
         }
 
         .generate:hover {
             background: linear-gradient(268deg, #078ae7, #0240d1);
+            box-shadow: 2px 2px 5px rgb(61, 61, 61);
         }
 
         .generate:focus {
             background: linear-gradient(268deg, #0676c7, #0135ad);
+            box-shadow: 1px 1px 5px rgb(61, 61, 61);
         }
 
         .button-container {
             display: flex;
             justify-content: flex-end;
-        }
-
-        .formatted-response {
-            white-space: pre-line;
-            border: 1px solid #e0e0e0;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            margin-bottom: 30px;
         }
 
     }

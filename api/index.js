@@ -129,6 +129,7 @@ app.post('/completions', async (req, res) => {
             throw new Error("API key not found");
         }
         const combinedInput = req.body.input;
+        console.log("This is the prompt", combinedInput);
         if (!combinedInput) {
             throw new Error("Combined input not provided");
         }
