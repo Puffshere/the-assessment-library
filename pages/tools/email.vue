@@ -126,6 +126,7 @@ export default {
     },
     methods: {
         async submitMessage() {
+            //const endpoint = "http://localhost:3000/api/completions";
             const endpoint = "/api/completions";
             const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
@@ -196,6 +197,7 @@ export default {
             border-radius: 5px;
             font-size: 15px;
             padding-left: 20px;
+            padding-top: 20px;
             margin-bottom: 30px;
         }
 
