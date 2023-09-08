@@ -14,16 +14,23 @@
 
         <section class="body">
             <div class="container">
-                <div class="row styles">
-                    <select class="col-3 drop" v-model="adaptedStyle">
-                        <option disabled value="">Adapted Style</option>
-                        <option v-for="item in items" :key="item.id" :value="item.name">{{ item.name }}</option>
-                    </select>
+                <div class="bar col-12">
+                    <div class="row styles">
+                        <select class="col-3 drop" v-model="adaptedStyle">
+                            <option disabled value="">Adapted Style</option>
+                            <option v-for="item in items" :key="item.id" :value="item.name">{{ item.name }}</option>
+                        </select>
 
-                    <select class="col-3 drop" v-model="naturalStyle">
-                        <option disabled value="">Natural Style</option>
-                        <option v-for="item in items" :key="item.id" :value="item.name">{{ item.name }}</option>
-                    </select>
+                        <select class="col-3 drop" v-model="naturalStyle">
+                            <option disabled value="">Natural Style</option>
+                            <option v-for="item in items" :key="item.id" :value="item.name">{{ item.name }}</option>
+                        </select>
+
+                        <div class="col-3"></div>
+                        <img v-if="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning">
+                        <img v-else src="./../../assets/Power-Generator-PNG-Image.png" class="col-3 generator">
+
+                    </div>
                 </div>
 
                 <textarea class="inputStyling" type="text" v-model="userInput" @keyup.enter="submitMessage"
@@ -110,6 +117,7 @@ export default {
             userInput: '',
             response: '',
             alteredEmail: [],
+            isLoading: false
         };
     },
     computed: {
@@ -132,6 +140,7 @@ export default {
     },
     methods: {
         async submitMessage() {
+            this.isLoading = true;
             // const endpoint = "http://localhost:3000/api/completions";
             const endpoint = "/api/completions";
             const combinedInput = this.promptContext + '\n\n' + this.userInput;
@@ -143,7 +152,10 @@ export default {
                     this.response = result.data.choices[0].message.content;
                 }
 
+                this.isLoading = false;
+
             } catch (error) {
+                this.isLoading = false;
                 console.error("Error fetching data from proxy server:", error);
             }
         },
@@ -188,6 +200,37 @@ export default {
     }
 
     .body {
+        .bar {
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.301);
+            border-radius: 5px;
+            box-shadow: 2px 5px 10px rgba(61, 61, 61, 0.507);
+            border: 1px solid rgb(168, 169, 170);
+            padding-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .generator {
+            max-width: 40px;
+            margin-left: 190px;
+        }
+
+        .spinning {
+            max-width: 30px;
+            margin-left: 190px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         .styles {
             margin-bottom: 20px;
         }
@@ -200,8 +243,9 @@ export default {
             padding-left: 20px;
             padding-top: 20px;
             margin-bottom: 30px;
-            border: 5px solid rgb(102, 146, 240);
+            border: 4px solid rgb(61, 107, 204);
             box-shadow: 5px 5px 5px rgb(61, 61, 61);
+            box-shadow: 5px 5px 10px rgb(61, 61, 61);
             font-size: 20px;
         }
 
@@ -209,12 +253,13 @@ export default {
             cursor: pointer;
             padding: 5px;
             border-radius: 5px;
-            border: 3px solid rgb(102, 146, 240);
+            border: 2px solid rgb(34, 98, 238);
             box-shadow: 3px 3px 5px rgb(61, 61, 61);
             font-family: monospace;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 16px;
             letter-spacing: 1px;
+            margin-bottom: 3px;
         }
 
         .formatted-response {
@@ -224,8 +269,9 @@ export default {
             border-radius: 5px;
             overflow-x: auto;
             margin-bottom: 30px;
-            border: 5px solid rgb(102, 178, 240);
+            border: 4px solid rgb(54, 147, 223);
             box-shadow: 5px 5px 5px rgb(61, 61, 61);
+            box-shadow: 5px 5px 10px rgb(61, 61, 61);
             font-size: 20px;
             font-family: monospace;
         }
@@ -261,6 +307,16 @@ export default {
             justify-content: flex-end;
         }
 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .generator {
+        display: none;
+    }
+
+    .spinning {
+        display: none;
     }
 }
 </style>
