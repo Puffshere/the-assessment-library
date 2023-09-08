@@ -30,10 +30,10 @@
                     types in
                     mind: Adapted Style as {{ adaptedStyle }} and Natural Style as {{ naturalStyle }}.</p>
 
-                <input class="inputStyling" type="text" v-model="userInput" @keyup.enter="submitMessage"
+                <textarea class="inputStyling" type="text" v-model="userInput" @keyup.enter="submitMessage"
                     placeholder="Paste email here to be altered..." />
 
-                <div v-if="response">{{ response }}</div>
+                <div v-if="response" class="formatted-response">{{ response }}</div>
 
                 <div type="textarea" class="col-12" v-for="message in alteredEmail" :key="message.id">
                     <div class="response">
@@ -123,12 +123,18 @@ export default {
             alteredEmail: [],
         };
     },
+    computed: {
+        promptContext() {
+            return `Rewrite the email below to be written in the voice of a person keeping these two DISC assessment types in mind: Adapted Style as ${this.adaptedStyle} and Natural Style as ${this.naturalStyle}.`;
+        }
+    },
     methods: {
         async submitMessage() {
-
             const endpoint = "/api/completions";
+            const combinedInput = this.promptContext + '\n\n' + this.userInput;
+
             try {
-                const result = await axios.post(endpoint);
+                const result = await axios.post(endpoint, { input: combinedInput });
 
                 if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
                     this.response = result.data.choices[0].message.content;
@@ -192,7 +198,7 @@ export default {
             width: 100%;
             min-height: 400px;
             border-radius: 5px;
-            font-size: 20px;
+            font-size: 15px;
             padding-left: 20px;
             margin-bottom: 30px;
         }
@@ -234,6 +240,16 @@ export default {
             display: flex;
             justify-content: flex-end;
         }
+
+        .formatted-response {
+            white-space: pre-line;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+
     }
 }
 </style>

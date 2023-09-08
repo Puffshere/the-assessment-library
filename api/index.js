@@ -94,38 +94,6 @@ app.post('/contact', (req, res) => {
     contactController.createContact(req, res);
 });
 
-app.post('/completions', async (req, res) => {
-    try {
-        const openaiApiKey = process.env.OPENAI_API_KEY; 
-
-        if (!openaiApiKey) {
-            throw new Error("API key not found");
-        }
-
-        const openaiResponse = await axios.post(
-            'https://api.openai.com/v1/chat/completions', 
-            {
-                model: "gpt-3.5-turbo",
-                messages: [{ "role": "user", "content": "What is a cat?" }],
-                temperature: 0.7
-            },
-            {
-                headers: {
-                    'Authorization': `Bearer ${openaiApiKey}`
-                }
-            }
-        );
-            console.log("This is the response after the call", openaiResponse.data);
-
-        res.json(openaiResponse.data);
-
-    } catch (error) {
-        console.error("Error:", error.message);
-        res.status(500).json({ error: error.message || 'Internal Server Error' });
-    }
-
-});
-
 app.get('/contact/:contactId', (req, res) => {
     contactController.getContact(req, res);
 });
@@ -152,6 +120,36 @@ app.post('/upload', upload.single('file'), (req, res) => {
 
 app.post('/lead', (req, res) => {
     leadController.createLead(req, res);
+});
+
+app.post('/completions', async (req, res) => {
+    try {
+        const openaiApiKey = OPENAI_API_KEY;
+        if (!openaiApiKey) {
+            throw new Error("API key not found");
+        }
+        const combinedInput = req.body.input;
+        if (!combinedInput) {
+            throw new Error("Combined input not provided");
+        }
+        const openaiResponse = await axios.post(
+            'https://api.openai.com/v1/chat/completions',
+            {
+                model: "gpt-3.5-turbo",
+                messages: [{ "role": "user", "content": combinedInput }],
+                temperature: 0.7
+            },
+            {
+                headers: {
+                    'Authorization': `Bearer ${openaiApiKey}`
+                }
+            }
+        );
+        res.json(openaiResponse.data);
+    } catch (error) {
+        console.error("Error:", error.message);
+        res.status(500).json({ error: error.message || 'Internal Server Error' });
+    }
 });
 
 app.get('/lead/next-assignment', (req, res) => {
