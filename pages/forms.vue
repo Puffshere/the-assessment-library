@@ -27,8 +27,8 @@
                 </div>
             </div>
 
-            <div class="row flex-center">
-                <div class="col-6">
+            <div class="row flex body">
+                <div class="col-4 links">
                     <ul class="resources">
                         <a target="_blank" href="https://form.asana.com/?k=GaI7gFjDe0froa_H4koKNw&d=460673300006490">
                             <li class="resource marketing">
@@ -81,15 +81,19 @@
                             </li>
                         </a>
 
-                        <a target="_blank"
-                            href="https://form.asana.com/?k=bN_EmGZKoRacgcvmUftsRQ&d=460673300006490">
+                        <a target="_blank" href="https://form.asana.com/?k=bN_EmGZKoRacgcvmUftsRQ&d=460673300006490">
                             <li class="resource translationRequests">
                                 Translation Requests
                             </li>
                         </a>
 
                     </ul>
+
                 </div>
+                <iframe class="col-8 calendar"
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FLos_Angeles&showDate=1&showPrint=0&src=Y19kOWE0YWQwZGU4NjQ4ZGY4OGM2OWZlMWM0Zjc0MmE0Njg4NGM3Yjg0MWE1MjQ2NTMxNDA3NmMxMmNlZTBkYTY2QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986CB"
+                    style="border:solid 1px #777" width="800" height="600" scrolling="no">
+                </iframe>
             </div>
         </div>
 
@@ -148,6 +152,10 @@ export default {
         line-height: 24pt;
     }
 
+    .body {
+        margin-bottom: 20px;
+    }
+
     .resources {
         padding-left: 0;
         list-style: none;
@@ -198,9 +206,30 @@ export default {
             &.workshopsTraining {
                 background: linear-gradient(268deg, #20a8ca, #167c96);
             }
+
             &.translationRequests {
                 background: linear-gradient(268deg, #ff293a, #961621);
             }
         }
+
     }
-}</style>
+
+    .calendar {
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: #4285f4;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .calendar {
+        max-height: 400px;
+    }
+
+    .forms {
+        .resources {
+            margin-bottom: 40px;
+        }
+    }
+}
+</style>
