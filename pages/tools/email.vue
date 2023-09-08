@@ -57,6 +57,7 @@
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import axios from 'axios';
+//import { runCompletion } from './../../api/index';
 
 export default {
     components: {
@@ -124,37 +125,40 @@ export default {
     },
     methods: {
         async submitMessage() {
+
+            const endpoint = "http://localhost:3000/api/completions";
             try {
-                const endpoint = "http://localhost:3000/api/completions";
+                // const body = {
+                //     prompt: this.userInput,
+                //     max_tokens: 150
+                // };
 
-                const body = {
-                    prompt: this.userInput,
-                    max_tokens: 150
-                };
+                const result = await axios.post(endpoint);
 
-                // Since you're only passing the body, you don't explicitly need headers
-                const result = await axios.post(endpoint, body);
-
-                if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].text) {
-                    this.response = result.data.choices[0].text.trim();
+                if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
+                    this.response = result.data.choices[0].message.content;
                 }
+
+
+                console.log("this is the response", this.response);
             } catch (error) {
                 console.error("Error fetching data from proxy server:", error);
             }
-        }
-    },
-    head() {
-        return {
-            title: 'Emails | Assessments 24x7',
-            meta: [
-                {
-                    hid: 'robots',
-                    name: 'robots',
-                    content: 'noindex'
-                }
-            ]
-        }
-    },
+
+        },
+        head() {
+            return {
+                title: 'Emails | Assessments 24x7',
+                meta: [
+                    {
+                        hid: 'robots',
+                        name: 'robots',
+                        content: 'noindex'
+                    }
+                ]
+            }
+        },
+    }
 }
 </script>
 
