@@ -56,7 +56,6 @@
 <script>
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-//import { runCompletion } from './../../api/chat.js';
 import axios from 'axios';
 
 export default {
@@ -126,23 +125,21 @@ export default {
     methods: {
         async submitMessage() {
             try {
-                const endpoint = "https://api.openai.com/v2/completions";
-                const headers = {
-                    "Authorization": "Bearer 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",
-                    "Content-Type": "application/json"
-                };
+                const endpoint = "http://localhost:3000/api/completions";
 
                 const body = {
                     prompt: this.userInput,
                     max_tokens: 150
                 };
 
-                const result = await axios.post(endpoint, body, { headers });
+                // Since you're only passing the body, you don't explicitly need headers
+                const result = await axios.post(endpoint, body);
+
                 if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].text) {
                     this.response = result.data.choices[0].text.trim();
                 }
             } catch (error) {
-                console.error("Error fetching data from GPT-4 API:", error);
+                console.error("Error fetching data from proxy server:", error);
             }
         }
     },

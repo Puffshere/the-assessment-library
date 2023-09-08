@@ -11,6 +11,7 @@ import leadController from './controllers/leadController';
 import GhostSearch from './ghost-search';
 import multer from 'multer';
 import cors from 'cors';
+import axios from 'axios';
 
 const upload = multer();
 const app = express();
@@ -92,6 +93,20 @@ app.get('/contact/custom-field/:fieldId', (req, res) => {
 app.post('/contact', (req, res) => {
     contactController.createContact(req, res);
 });
+
+app.post('/completions', async (req, res) => {
+    
+        console.log("This is a message");
+        const openaiResponse = await axios.post('https://api.openai.com/v2/completions', req.body, {
+            headers: {
+                'Authorization': 'Bearer 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',
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        res.json(openaiResponse.data);
+    } 
+);
 
 app.get('/contact/:contactId', (req, res) => {
     contactController.getContact(req, res);
