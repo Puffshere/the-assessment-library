@@ -26,10 +26,6 @@
                     </select>
                 </div>
 
-                <p class="">Alter the email below to be written in the voice of a person keeping these two DISC assessment
-                    types in
-                    mind: Adapted Style as {{ adaptedStyle }} and Natural Style as {{ naturalStyle }}.</p>
-
                 <textarea class="inputStyling" type="text" v-model="userInput" @keyup.enter="submitMessage"
                     placeholder="Paste email here to be altered..." />
 
