@@ -215,22 +215,6 @@ export default {
             margin-left: 190px;
         }
 
-        .spinning {
-            max-width: 30px;
-            margin-left: 190px;
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
         .styles {
             margin-bottom: 20px;
         }
@@ -305,6 +289,22 @@ export default {
         .button-container {
             display: flex;
             justify-content: flex-end;
+        }
+
+        .spinning {
+            max-width: 30px;
+            margin-left: 190px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
     }
