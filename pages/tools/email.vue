@@ -28,8 +28,8 @@
 
                         <div class="col-3"></div>
 
-                        <img v-if="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning">
-                        <img v-else src="./../../assets/Power-Generator-PNG-Image.png" class="col-3 generator">
+                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning">
+                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-3 generator">
 
                     </div>
                 </div>
@@ -142,8 +142,8 @@ export default {
     methods: {
         async submitMessage() {
             this.isLoading = true;
-            // const endpoint = "http://localhost:3000/api/completions";
-            const endpoint = "/api/completions";
+            const endpoint = "http://localhost:3000/api/completions";
+            // const endpoint = "/api/completions";
             const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
             try {
