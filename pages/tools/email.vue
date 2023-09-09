@@ -142,8 +142,9 @@ export default {
     methods: {
         async submitMessage() {
             this.isLoading = true;
-            const endpoint = "http://localhost:3000/api/completions";
-            // const endpoint = "/api/completions";
+            // Code needed for development
+            // const endpoint = "http://localhost:3000/api/completions";
+            const endpoint = "/api/completions";
             const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
             try {
