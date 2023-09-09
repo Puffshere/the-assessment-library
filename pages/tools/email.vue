@@ -27,6 +27,7 @@
                         </select>
 
                         <div class="col-3"></div>
+
                         <img v-if="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning">
                         <img v-else src="./../../assets/Power-Generator-PNG-Image.png" class="col-3 generator">
 
@@ -292,9 +293,11 @@ export default {
         }
 
         .spinning {
-            max-width: 30px;
-            margin-left: 190px;
-            animation: spin 2s linear infinite;
+            &:not(.generator) {
+                max-width: 30px;
+                margin-left: 190px;
+                animation: spin 2s linear infinite;
+            }
         }
 
         @keyframes spin {
