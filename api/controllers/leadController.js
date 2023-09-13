@@ -2,7 +2,7 @@ import { json } from 'body-parser';
 import Lead from '../models/Lead';
 
 
-const salesPeople = ['Monica Saare', 'Cristina Moore', 'Angie Warner'];
+const salesPeople = ['Monica Saare', 'Suzette Chaparro', 'Angie Warner'];
 const getNextLeadAssignment = async (req, res) => {
     try {
         const leads = await Lead.find({}).sort({ createdAt: -1 });
