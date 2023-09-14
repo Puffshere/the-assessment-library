@@ -20,7 +20,7 @@
                     <h2 style="text-align:center;margin-bottom:0">Your information has been submitted</h2>
 
                     <div v-if="clientType !== 'Retail'">
-                        <!-- <vue-calendly v-if="this.agent === 'suzette'" url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly> -->
+                        <vue-calendly v-if="this.agent === 'suzette'" url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
                         <vue-calendly v-if="this.agent === 'cristina'" url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
                         <vue-calendly v-if="this.agent === 'angie'" url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
                         <vue-calendly v-if="this.agent === 'monica'" url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
