@@ -9,7 +9,7 @@ module.exports = {
     htmlAttrs: {
       lang: 'en',
     },
-    title: 'Unlock Your Potential with Assessments 24x7 - Personal and Professional Development',
+    title: 'Assessments 24x7 | A global leader in DISC assessment technology',
     meta: [
       // unused javascript
       // { charset: 'utf-8' },
@@ -19,7 +19,7 @@ module.exports = {
       // unused javascript
       // { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      { hid: 'description', name: 'description', content: 'Empower yourself with Assessments 24x7\'s diverse range of online assessment tools for personal and professional development. Explore our resources designed to enhance self-awareness, growth, and success.' }
+      { hid: 'description', name: 'description', content: 'Explore the DISC assessment at Assessments 24x7. Gain deep insights into your personality and improve relationships. Discover how DISC can transform your life.' }
     ],
     link: [
       {
