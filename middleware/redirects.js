@@ -122,9 +122,9 @@ export default function(context) {
             context.redirect('https://hiresense.com');
         }
 
-        // else if (context.req.url == '/store') {
-        //     context.redirect('https://store.assessments24x7.com');
-        // }
+        else if (context.req.url == '/store') {
+            context.redirect('https://store.assessments24x7.com');
+        }
 
         else if (context.req.url == '/hiring-and-selection-assessments.asp') {
             context.redirect('https://hiresense.com');
