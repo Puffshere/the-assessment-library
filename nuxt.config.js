@@ -130,7 +130,8 @@ module.exports = {
       '/monica',
       '/suzette',
       '/cathy',
-      '/cristina'
+      '/cristina',
+      '/tools/email'
     ]
   },
   gtm: {
