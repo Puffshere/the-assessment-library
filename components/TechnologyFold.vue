@@ -15,7 +15,7 @@
 
             <div class="row">
                 <div class="col-6">
-                    <img class="side-img lazyload" data-src="~assets/acp.jpg" alt="">
+                    <img class="side-img lazyload" data-src="~assets/acp.jpg" alt="technology-fold image">
                 </div>
 
                 <div class="col-6">
