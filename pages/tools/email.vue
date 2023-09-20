@@ -28,8 +28,8 @@
 
                         <div class="col-3"></div>
 
-                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning">
-                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-3 generator">
+                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning" alt="spinning wheel">
+                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-3 generator" alt="generator">
 
                     </div>
                 </div>
