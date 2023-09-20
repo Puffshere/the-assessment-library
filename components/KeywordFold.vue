@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="side-img" src="~assets/corporate.jpg" alt="corporate image">
+                    <img class="side-img" src="~assets/corporate.webp" alt="corporate image">
                 </div>
             </div>
         </div>
