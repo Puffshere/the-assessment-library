@@ -122,6 +122,7 @@ module.exports = {
       '/resources/lock/**',
       '/cardone-communication-coach',
       '/store/purchase-confirmation',
+      '/store/collections/products',
       '/store',
       '/resources/hiresense-training-library',
       '/angie',
