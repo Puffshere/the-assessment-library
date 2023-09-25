@@ -28,14 +28,17 @@
 
                         <div class="col-3"></div>
 
-                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning" alt="spinning wheel">
-                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-3 generator" alt="generator">
+                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning"
+                            alt="spinning wheel">
+                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-3 generator"
+                            alt="generator">
 
                     </div>
                 </div>
 
-                <textarea class="inputStyling" type="text" v-model="userInput" @keyup.enter="submitMessage"
-                    placeholder="Paste email here to be altered..." />
+                <textarea class="inputStyling" v-model="userInput" @keydown="handleKeyDown"
+                    placeholder="Paste email here to be altered...">
+                </textarea>
 
                 <div type='text' v-if="response" class="formatted-response">{{ response }}</div>
 
@@ -140,6 +143,30 @@ export default {
         }
     },
     methods: {
+
+        handleKeyDown(event) {
+            if (event.key === 'Enter') {
+                if (event.shiftKey) {
+                    // If Shift + Enter is pressed, insert a newline
+                    event.preventDefault();
+
+                    const start = event.target.selectionStart;
+                    const end = event.target.selectionEnd;
+
+                    // Update the userInput model by inserting a newline character at the cursor position
+                    this.userInput = this.userInput.substring(0, start) + '\n' + this.userInput.substring(end);
+
+                    // Update the cursor position after Vue updates the DOM
+                    this.$nextTick(() => {
+                        event.target.selectionStart = event.target.selectionEnd = start + 1;
+                    });
+                } else {
+                    // If only Enter is pressed, call the submitMessage method
+                    this.submitMessage();
+                }
+            }
+        },
+
         async submitMessage() {
             this.isLoading = true;
             // Code needed for development
