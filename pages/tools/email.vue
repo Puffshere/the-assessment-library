@@ -178,7 +178,8 @@ export default {
                     Incorporate these nuances:
                     If multiple DISC traits are provided, ensure the email is a balanced reflection of all specified traits.
                     Vocabulary: Use words that resonate with the specific DISC trait. E.g., action-oriented for D, enthusiastic for I, harmonious for S, and analytical for C.
-                    Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. D might prefer brevity, I emotive punctuation, S connected sentences, and C precise detailing.
+                    Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. 
+                    D might prefer brevity, I emotive punctuation, S connected sentences, and C precise detailing.
                     CTA (Call to Action): Tailor the conclusion or request based on the trait. D being directive, I collaborative, S supportive, and C instructive.
                     Structure & Flow: D should be direct and prioritize main points, I may start personally, S should maintain balance, and C needs clear, detailed flow.
                     Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I as upbeat, S as calm, and C as methodical.
