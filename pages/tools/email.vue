@@ -320,8 +320,8 @@ export default {
 
         .speech_to_text {
             max-width: 40px;
-            padding-top: 4px;
-            margin-bottom: -4px;
+            padding-top: 5px;
+            margin-bottom: -5px;
             cursor: pointer;
         }
 
