@@ -26,7 +26,10 @@
                             <option v-for="item in items" :key="item.id" :value="item.name">{{ item.name }}</option>
                         </select>
 
-                        <div class="col-3"></div>
+                        <select class="col-3 drop" v-model="language">
+                            <option disabled :value="null">{{ language || 'English' }}</option>
+                            <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name }}</option>
+                        </select>
 
                         <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning"
                             alt="spinning wheel">
@@ -68,6 +71,44 @@ export default {
         return {
             adaptedStyle: "",
             naturalStyle: "",
+            language: "English",
+            languages: [
+                { id: 1, name: 'English' },
+                { id: 2, name: 'Arabic' },
+                { id: 3, name: 'Chinese (Simplified)' },
+                { id: 4, name: 'Chinese (Traditional)' },
+                { id: 5, name: 'Croatian' },
+                { id: 6, name: 'Danish' },
+                { id: 7, name: 'Dutch (Standard)' },
+                { id: 8, name: 'English (Australia)' },
+                { id: 9, name: 'English (United Kingdom)' },
+                { id: 10, name: 'Finnish' },
+                { id: 11, name: 'French (Canada)' },
+                { id: 12, name: 'French (France)' },
+                { id: 13, name: 'German (Germany)' },
+                { id: 14, name: 'Hungarian' },
+                { id: 15, name: 'Indonesian' },
+                { id: 16, name: 'Italian' },
+                { id: 17, name: 'Japanese' },
+                { id: 18, name: 'Khmer (Cambodia)' },
+                { id: 19, name: 'Korean' },
+                { id: 20, name: 'Latvian' },
+                { id: 21, name: 'Lithuanian' },
+                { id: 22, name: 'Malay (Malaysia)' },
+                { id: 23, name: 'Norwegian' },
+                { id: 24, name: 'Polish' },
+                { id: 25, name: 'Portuguese (Brazil)' },
+                { id: 26, name: 'Portuguese (Portugal)' },
+                { id: 27, name: 'Romanian' },
+                { id: 28, name: 'Russian' },
+                { id: 29, name: 'Slovak' },
+                { id: 30, name: 'Spanish' },
+                { id: 31, name: 'Spanish (Latin Americana)' },
+                { id: 32, name: 'Spanish (Spain)' },
+                { id: 33, name: 'Swedish' },
+                { id: 34, name: 'Turkish' },
+                { id: 35, name: 'Vietnamese' },
+            ],
             items: [
                 { id: 1, name: 'Pure D' },
                 { id: 2, name: 'Pure I' },
@@ -126,10 +167,11 @@ export default {
     },
     computed: {
         promptContext() {
-            return `Rewrite the following email, emphasizing the DISC traits:
+            return `Rewrite the following email, emphasizing the DISC traits, if a language is provided change the output to be in that specified language:
 
                     Adapted: ${this.adaptedStyle}
                     Natural: ${this.naturalStyle}
+                    Language: ${this.language}
 
                     Incorporate these nuances:
                     If multiple DISC traits are provided, ensure the email is a balanced reflection of all specified traits.
