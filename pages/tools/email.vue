@@ -170,7 +170,7 @@ export default {
     },
     computed: {
         promptContext() {
-            return `Rewrite the following email, emphasizing the DISC traits, if a language is provided change the output to be in that specified language:
+            return `Rewrite the following email, emphasizing the DISC traits, if a language is provided change the output to be written in the specified language:
 
                     Adapted: ${this.adaptedStyle}
                     Natural: ${this.naturalStyle}
