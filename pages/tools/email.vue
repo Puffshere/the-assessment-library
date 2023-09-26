@@ -345,8 +345,8 @@ export default {
         .generator {
             max-width: 40px;
             margin-left: 110px;
-            margin-top: 13px;
-            margin-bottom: -3px;
+            margin-top: 14px;
+            margin-bottom: -4px;
         }
 
         .styles {
@@ -430,8 +430,8 @@ export default {
                 max-width: 30px;
                 margin-left: 110px;
                 animation: spin 2s linear infinite;
-                margin-top: 13px;
-                margin-bottom: -3px;
+                margin-top: 14px;
+                margin-bottom: -4px;
             }
         }
 
