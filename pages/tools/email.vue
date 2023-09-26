@@ -16,6 +16,7 @@
             <div class="container">
                 <div class="bar col-12">
                     <div class="row styles">
+
                         <select class="col-3 drop" v-model="adaptedStyle">
                             <option disabled value="">Adapted Style</option>
                             <option v-for="item in items" :key="item.id" :value="item.name">{{ item.name }}</option>
@@ -31,10 +32,10 @@
                             <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name }}</option>
                         </select>
 
-                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-3 spinning"
-                            alt="spinning wheel">
-                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-3 generator"
-                            alt="generator">
+                        <img :class="['col-2', 'speech_to_text', { 'activeSTT': recognitionActive }]" src="./../../assets/SpeechToText.png" @click="toggleRecognition"/>
+
+                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 spinning" alt="spinning wheel">
+                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-1 generator" alt="generator">
 
                     </div>
                 </div>
@@ -162,7 +163,9 @@ export default {
             userInput: '',
             response: '',
             alteredEmail: [],
-            isLoading: false
+            isLoading: false,
+            recognition: null,
+            recognitionActive: false
         };
     },
     computed: {
@@ -185,7 +188,6 @@ export default {
         }
     },
     methods: {
-
         handleKeyDown(event) {
             if (event.key === 'Enter') {
                 if (event.shiftKey) {
@@ -208,7 +210,42 @@ export default {
                 }
             }
         },
+        toggleRecognition() {
+            if (!("webkitSpeechRecognition" in window)) {
+                alert("Your browser does not support Speech Recognition.");
+                return;
+            }
 
+            if (this.recognitionActive) {
+                this.recognition.stop();
+                this.recognitionActive = false;
+                return;
+            }
+
+            this.recognition = new webkitSpeechRecognition();
+            this.recognition.continuous = true;
+            this.recognition.interimResults = true;
+
+            this.recognition.onresult = (event) => {
+                let interimTranscript = "";
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    const transcript = event.results[i][0].transcript;
+                    if (event.results[i].isFinal) {
+                        this.userInput += transcript;
+                    } else {
+                        interimTranscript += transcript;
+                    }
+                }
+            };
+
+            this.recognition.onend = () => {
+                this.recognitionActive = false;
+                console.log("Speech Recognition has stopped.");
+            };
+
+            this.recognition.start();
+            this.recognitionActive = true;
+        },
         async submitMessage() {
             this.isLoading = true;
             // Code needed for development
@@ -281,9 +318,35 @@ export default {
             margin-bottom: 20px;
         }
 
+        .speech_to_text {
+            max-width: 40px;
+            padding-top: 3px;
+            margin-bottom: -3px;
+            cursor: pointer;
+        }
+
+        .activeSTT {
+            background: linear-gradient(268deg, #9bfa9f, #90f883); 
+            box-shadow: 2px 2px 5px rgb(61, 61, 61);
+            border-radius: 5px;
+        }
+
+        .speech_to_text:hover {
+            background: linear-gradient(268deg, #d2d3d3, #b9b9b9);
+            box-shadow: 2px 2px 5px rgb(61, 61, 61);
+            border-radius: 5px;
+        }
+
+        .speech_to_text:active {
+            background: linear-gradient(268deg, #c1c2c2, #a5a5a5);
+            box-shadow: 1px 1px 5px rgb(61, 61, 61);
+        }
+
         .generator {
             max-width: 40px;
-            margin-left: 190px;
+            margin-left: 110px;
+            margin-top: 13px;
+            margin-bottom: -3px;
         }
 
         .styles {
@@ -365,8 +428,10 @@ export default {
         .spinning {
             &:not(.generator) {
                 max-width: 30px;
-                margin-left: 190px;
+                margin-left: 110px;
                 animation: spin 2s linear infinite;
+                margin-top: 13px;
+                margin-bottom: -3px;
             }
         }
 
@@ -384,12 +449,22 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
-    .generator {
-        display: none;
-    }
 
+    .speech_to_text {
+        float: left !important;
+        margin-left: 40px !important;
+    }
+    
+    .generator {
+        float: right !important;
+        margin-right: 40px !important;
+        // display: none;
+    }
+    
     .spinning {
-        display: none;
+        float: right !important;
+        margin-right: 40px !important;
+        // display: none;
     }
 }
 </style>
