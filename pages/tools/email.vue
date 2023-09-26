@@ -458,13 +458,11 @@ export default {
     .generator {
         float: right !important;
         margin-right: 40px !important;
-        // display: none;
     }
     
     .spinning {
         float: right !important;
         margin-right: 40px !important;
-        // display: none;
     }
 }
 </style>
