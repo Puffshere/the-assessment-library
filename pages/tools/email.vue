@@ -170,11 +170,10 @@ export default {
     },
     computed: {
         promptContext() {
-            return `Rewrite the original email, emphasizing the DISC traits provided, written in the specified language with correct email formatting:
+            return `Rewrite the original email, emphasizing the DISC traits provided below.  Write the new email in ${this.language} with correct email formatting.
 
                     Adapted: ${this.adaptedStyle}
                     Natural: ${this.naturalStyle}
-                    Language: ${this.language}
 
                     Incorporate these nuances:
                     If multiple DISC traits are provided, ensure the email is a balanced reflection of all specified traits.
