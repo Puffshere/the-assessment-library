@@ -49,7 +49,7 @@
                 </textarea>
 
                 <div type='text' v-if="response" class="formatted-response">{{ response }}</div>
-                <div class="container">
+                <div class="container bar">
                     <div class="row col-12 button-container">
 
                         <div class="col-6"></div>
@@ -378,7 +378,7 @@ export default {
             border-radius: 5px;
             padding-left: 20px;
             padding-top: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             border: 4px solid rgb(61, 107, 204);
             box-shadow: 5px 5px 5px rgb(61, 61, 61);
             box-shadow: 5px 5px 10px rgb(61, 61, 61);
@@ -416,7 +416,7 @@ export default {
             cursor: pointer;
             padding: 10px;
             font-family: $font-family;
-            margin-bottom: 30px;
+            margin-bottom: 12px;
             border-radius: 10px;
             color: #fff;
             letter-spacing: 2px;
