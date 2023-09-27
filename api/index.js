@@ -125,8 +125,8 @@ app.post('/lead', (req, res) => {
 app.post('/completions', async (req, res) => {
     try {
         // Code needed for development
-        const openaiApiKey = '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';
-        // const openaiApiKey = process.env.OPENAI_API_KEY;
+        // const openaiApiKey = '';
+        const openaiApiKey = process.env.OPENAI_API_KEY;
         if (!openaiApiKey) {
             throw new Error("API key not found");
         }

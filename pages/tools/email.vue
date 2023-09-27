@@ -265,8 +265,8 @@ export default {
         async translateText() {
             this.isLoading = true;
             // Code needed for development
-            const endpoint = "http://localhost:3000/api/completions";
-            // const endpoint = "/api/completions";
+            // const endpoint = "http://localhost:3000/api/completions";
+            const endpoint = "/api/completions";
             const combinedInput = this.promptTranslate + '\n\n' + this.userInput;
 
             try {
@@ -290,8 +290,8 @@ export default {
         async submitMessage() {
             this.isLoading = true;
             // Code needed for development
-            const endpoint = "http://localhost:3000/api/completions";
-            // const endpoint = "/api/completions";
+            // const endpoint = "http://localhost:3000/api/completions";
+            const endpoint = "/api/completions";
             const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
             try {
