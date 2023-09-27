@@ -29,13 +29,17 @@
 
                         <select class="col-3 drop" v-model="language">
                             <option disabled :value="null">{{ language || 'English' }}</option>
-                            <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name }}</option>
+                            <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name
+                            }}</option>
                         </select>
 
-                        <img :class="['col-2', 'speech_to_text', { 'activeSTT': recognitionActive }]" src="./../../assets/SpeechToText.png" @click="toggleRecognition"/>
+                        <img :class="['col-2', 'speech_to_text', { 'activeSTT': recognitionActive }]"
+                            src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
 
-                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 spinning" alt="spinning wheel">
-                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-1 generator" alt="generator">
+                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 spinning"
+                            alt="spinning wheel">
+                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-1 generator"
+                            alt="generator">
 
                     </div>
                 </div>
@@ -45,11 +49,21 @@
                 </textarea>
 
                 <div type='text' v-if="response" class="formatted-response">{{ response }}</div>
+                <div class="container">
+                    <div class="row col-12 button-container">
 
-                <div class="button-container">
-                    <button type="submit" @click="submitMessage" style="width: 100px" class="generate">Submit</button>
+                        <div class="col-6"></div>
+
+                        <div class="col-3">
+                            <button v-if="response" @click="swapOutput" class="swap btn">Swap</button>
+                        </div>
+
+                        <div class="col-1">
+                            <button type="submit" @click="submitMessage" class="generate btn">Submit</button>
+                        </div>
+
+                    </div>
                 </div>
-
             </div>
         </section>
 
@@ -246,6 +260,10 @@ export default {
             this.recognition.start();
             this.recognitionActive = true;
         },
+        swapOutput() {
+            this.userInput = this.response;
+            this.response = "";
+        },
         async submitMessage() {
             this.isLoading = true;
             // Code needed for development
@@ -326,7 +344,7 @@ export default {
         }
 
         .activeSTT {
-            background: linear-gradient(268deg, #9bfa9f, #90f883); 
+            background: linear-gradient(268deg, #9bfa9f, #90f883);
             box-shadow: 2px 2px 5px rgb(61, 61, 61);
             border-radius: 5px;
         }
@@ -394,10 +412,8 @@ export default {
             font-family: monospace;
         }
 
-        .generate {
+        .btn {
             cursor: pointer;
-            margin-bottom: 40px;
-            margin-right: 25px;
             padding: 10px;
             font-family: $font-family;
             margin-bottom: 30px;
@@ -408,6 +424,27 @@ export default {
             background: linear-gradient(268deg, #0999fe, #0249ec);
             border: none;
             box-shadow: 3px 3px 5px rgb(61, 61, 61);
+            float: right;
+            min-width: 100px;
+        }
+
+        .swap {
+            background: linear-gradient(268deg, #09e1fe, #02d1ec);
+            margin-right: 30px;
+        }
+
+        .swap:hover {
+            background: linear-gradient(268deg, #07d0eb, #01bad3);
+            box-shadow: 2px 2px 5px rgb(61, 61, 61);
+        }
+
+        .swap:focus {
+            background: linear-gradient(268deg, #07c1da, #01abc2);
+            box-shadow: 1px 1px 5px rgb(61, 61, 61);
+        }
+
+        .generate {
+            background: linear-gradient(268deg, #0999fe, #0249ec);
         }
 
         .generate:hover {
@@ -454,12 +491,16 @@ export default {
         float: left !important;
         margin-left: 40px !important;
     }
-    
+
     .generator {
         float: right !important;
         margin-right: 40px !important;
     }
-    
+
+    .swap {
+        margin-right: 0px !important;
+    }
+
     .spinning {
         float: right !important;
         margin-right: 40px !important;
