@@ -29,17 +29,14 @@
 
                         <select class="col-3 drop" v-model="language">
                             <option disabled :value="null">{{ language || 'English' }}</option>
-                            <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name
-                            }}</option>
+                            <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name }}</option>
                         </select>
 
                         <img :class="['col-2', 'speech_to_text', { 'activeSTT': recognitionActive }]"
                             src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
 
-                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 spinning"
-                            alt="spinning wheel">
-                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-1 generator"
-                            alt="generator">
+                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 spinning" alt="spinning wheel">
+                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-1 generator" alt="generator">
 
                     </div>
                 </div>
@@ -52,13 +49,15 @@
                 <div class="container bar bar2">
                     <div class="row col-12 button-container">
 
-                        <div class="col-6"></div>
+                        <div class="col-4">
+                            <button @click="translateText" class="btn translateBtn">Translate</button>
+                        </div>
 
-                        <div class="col-3">
+                        <div class="col-4 center-button">
                             <button v-if="response" @click="swapOutput" class="swap btn">Swap</button>
                         </div>
 
-                        <div class="col-1">
+                        <div class="col-4">
                             <button type="submit" @click="submitMessage" class="generate btn">Submit</button>
                         </div>
 
@@ -199,6 +198,9 @@ export default {
                     Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I as upbeat, S as calm, and C as methodical.
 
                     Here's the original email:`
+        },
+        promptTranslate() {
+            return `Translate the following text into ${this.language}, here is the text to be translated:`
         }
     },
     methods: {
@@ -260,6 +262,27 @@ export default {
             this.recognition.start();
             this.recognitionActive = true;
         },
+        async translateText() {
+            this.isLoading = true;
+            // Code needed for development
+            const endpoint = "http://localhost:3000/api/completions";
+            // const endpoint = "/api/completions";
+            const combinedInput = this.promptTranslate + '\n\n' + this.userInput;
+
+            try {
+                const result = await axios.post(endpoint, { input: combinedInput });
+
+                if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
+                    this.response = result.data.choices[0].message.content;
+                }
+
+                this.isLoading = false;
+
+            } catch (error) {
+                this.isLoading = false;
+                console.error("Error fetching data from proxy server:", error);
+            }
+        },
         swapOutput() {
             this.userInput = this.response;
             this.response = "";
@@ -267,8 +290,8 @@ export default {
         async submitMessage() {
             this.isLoading = true;
             // Code needed for development
-            // const endpoint = "http://localhost:3000/api/completions";
-            const endpoint = "/api/completions";
+            const endpoint = "http://localhost:3000/api/completions";
+            // const endpoint = "/api/completions";
             const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
             try {
@@ -428,13 +451,18 @@ export default {
             background: linear-gradient(268deg, #0999fe, #0249ec);
             border: none;
             box-shadow: 3px 3px 5px rgb(61, 61, 61);
-            float: right;
             min-width: 100px;
         }
 
+        .center-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .swap {
+            align-items: center;
             background: linear-gradient(268deg, #09e1fe, #02d1ec);
-            margin-right: 30px;
         }
 
         .swap:hover {
@@ -449,6 +477,7 @@ export default {
 
         .generate {
             background: linear-gradient(268deg, #0999fe, #0249ec);
+            float: right;
         }
 
         .generate:hover {
@@ -463,7 +492,7 @@ export default {
 
         .button-container {
             display: flex;
-            justify-content: flex-end;
+            margin: 0 auto;
         }
 
         .spinning {
@@ -501,13 +530,17 @@ export default {
         margin-right: 40px !important;
     }
 
-    .swap {
-        margin-right: 0px !important;
-    }
-
     .spinning {
         float: right !important;
         margin-right: 40px !important;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .btn {
+        min-width: none !important;
+        max-width: 10% !important;
     }
 }
 </style>
