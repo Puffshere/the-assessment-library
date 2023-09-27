@@ -460,6 +460,16 @@ export default {
             align-items: center;
         }
 
+        .translateBtn:hover {
+            background: linear-gradient(268deg, #078ae7, #0240d1);
+            box-shadow: 2px 2px 5px rgb(61, 61, 61);
+        }
+
+        .translateBtn:focus {
+            background: linear-gradient(268deg, #0676c7, #0135ad);
+            box-shadow: 1px 1px 5px rgb(61, 61, 61);
+        }
+
         .swap {
             align-items: center;
             background: linear-gradient(268deg, #09e1fe, #02d1ec);
