@@ -49,7 +49,7 @@
                 </textarea>
 
                 <div type='text' v-if="response" class="formatted-response">{{ response }}</div>
-                <div class="container bar">
+                <div class="container bar bar2">
                     <div class="row col-12 button-container">
 
                         <div class="col-6"></div>
@@ -334,6 +334,10 @@ export default {
             border: 1px solid rgb(168, 169, 170);
             padding-top: 10px;
             margin-bottom: 20px;
+        }
+        
+        .bar2 {
+            margin-bottom: 30px;
         }
 
         .speech_to_text {
