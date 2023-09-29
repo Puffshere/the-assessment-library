@@ -14,7 +14,8 @@
 
         <section class="body">
             <div class="container">
-                <div class="bar col-12">
+
+                <div v-if="!readyToFormatText" class="bar col-12">
                     <div class="row styles">
 
                         <select class="col-3 drop" v-model="adaptedStyle">
@@ -29,14 +30,40 @@
 
                         <select class="col-3 drop" v-model="language">
                             <option disabled :value="null">{{ language || 'English' }}</option>
-                            <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name }}</option>
+                            <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name
+                            }}</option>
                         </select>
 
                         <img :class="['col-2', 'speech_to_text', { 'activeSTT': recognitionActive }]"
                             src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
 
-                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 spinning" alt="spinning wheel">
-                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-1 generator" alt="generator">
+                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 spinning"
+                            alt="spinning wheel">
+                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-1 generator"
+                            alt="generator">
+
+                    </div>
+                </div>
+
+                <div v-else class="bar col-12">
+                    <div class="row styles">
+
+                        <div class="col-6">
+                            <h2 class="formatBar">Would you like to format this text?</h2>
+                        </div>
+
+                        <div class="col-2">
+                            <button @click="yesFormatText" class="formatBtnYes btn">YES</button>
+                        </div>
+
+                        <div class="col-2">
+                            <button @click="noFormatText" class="formatBtnNo btn">NO</button>
+                        </div>
+
+                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 formatSpinning"
+                            alt="spinning wheel">
+                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png"
+                            class="col-1 formatGenerator" alt="generator">
 
                     </div>
                 </div>
@@ -178,7 +205,8 @@ export default {
             alteredEmail: [],
             isLoading: false,
             recognition: null,
-            recognitionActive: false
+            recognitionActive: false,
+            readyToFormatText: false
         };
     },
     computed: {
@@ -201,7 +229,10 @@ export default {
         },
         promptTranslate() {
             return `Translate the following text into ${this.language}, here is the text to be translated:`
-        }
+        },
+        promptFormat() {
+            return `Reformat the following raw text into proper and grammatically correct email format:`
+        },
     },
     methods: {
         handleKeyDown(event) {
@@ -235,6 +266,7 @@ export default {
             if (this.recognitionActive) {
                 this.recognition.stop();
                 this.recognitionActive = false;
+                this.readyToFormatText = true;
                 return;
             }
 
@@ -259,8 +291,35 @@ export default {
                 console.log("Speech Recognition has stopped.");
             };
 
-            this.recognition.start();
             this.recognitionActive = true;
+            this.recognition.start();
+        },
+        noFormatText() {
+            this.readyToFormatText = false;
+            console.log("This the readyToFormatText", this.readyToFormatText);
+        },
+        async yesFormatText() {
+            this.isLoading = true;
+            // Code needed for development
+            //const endpoint = "http://localhost:3000/api/completions";
+            const endpoint = "/api/completions";
+            const combinedInput = this.promptFormat + '\n\n' + this.userInput;
+
+            try {
+                const result = await axios.post(endpoint, { input: combinedInput });
+
+                if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
+                    this.userInput = result.data.choices[0].message.content;
+                }
+
+                this.isLoading = false;
+
+            } catch (error) {
+                this.isLoading = false;
+                console.error("Error fetching data from proxy server:", error);
+            }
+
+            this.readyToFormatText = false;
         },
         async translateText() {
             this.isLoading = true;
@@ -358,7 +417,17 @@ export default {
             padding-top: 10px;
             margin-bottom: 20px;
         }
-        
+
+        .formatBar {
+            margin-top: 0px;
+            margin-bottom: -10px;
+            display: flex;
+            justify-content: center;
+            padding-top: 3px;
+            letter-spacing: 2px;
+            color: rgb(51, 51, 51);
+        }
+
         .bar2 {
             margin-bottom: 30px;
         }
@@ -387,13 +456,6 @@ export default {
             box-shadow: 1px 1px 5px rgb(61, 61, 61);
         }
 
-        .generator {
-            max-width: 40px;
-            margin-left: 110px;
-            margin-top: 14px;
-            margin-bottom: -4px;
-        }
-
         .styles {
             margin-bottom: 20px;
         }
@@ -404,6 +466,7 @@ export default {
             min-height: 400px;
             border-radius: 5px;
             padding-left: 20px;
+            padding-right: 15px;
             padding-top: 20px;
             margin-bottom: 15px;
             border: 4px solid rgb(61, 107, 204);
@@ -441,14 +504,12 @@ export default {
 
         .btn {
             cursor: pointer;
-            padding: 10px;
             font-family: $font-family;
             margin-bottom: 12px;
             border-radius: 10px;
             color: #fff;
             letter-spacing: 2px;
             font-weight: 600;
-            background: linear-gradient(268deg, #0999fe, #0249ec);
             border: none;
             box-shadow: 3px 3px 5px rgb(61, 61, 61);
             min-width: 100px;
@@ -458,6 +519,46 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .formatBtnYes {
+            padding: 9px;
+            margin-bottom: -10px;
+            float: right;
+            color: black;
+            background: linear-gradient(268deg, #9cf88a, #22ff04);
+        }
+
+        .formatBtnYes:hover {
+            background: linear-gradient(268deg, #92e981, #1eec03);
+            box-shadow: 2px 2px 5px rgb(61, 61, 61);
+        }
+
+        .formatBtnYes:focus {
+            background: linear-gradient(268deg, #9cf88a, #22ff04);
+            background: linear-gradient(268deg, #82cf73, #1bd403);
+            box-shadow: 1px 1px 5px rgb(61, 61, 61);
+        }
+
+        .formatBtnNo {
+            padding: 9px;
+            margin-bottom: -10px;
+            background: linear-gradient(268deg, #fc4c4c, #fa0808);
+        }
+
+        .formatBtnNo:hover {
+            background: linear-gradient(268deg, #e94545, #e70707);
+            box-shadow: 2px 2px 5px rgb(61, 61, 61);
+        }
+
+        .formatBtnNo:focus {
+            background: linear-gradient(268deg, #d63f3f, #d10606);
+            box-shadow: 1px 1px 5px rgb(61, 61, 61);
+        }
+
+        .translateBtn {
+            padding: 10px;
+            background: linear-gradient(268deg, #0999fe, #0249ec);
         }
 
         .translateBtn:hover {
@@ -473,6 +574,7 @@ export default {
         .swap {
             align-items: center;
             background: linear-gradient(268deg, #09e1fe, #02d1ec);
+            padding: 10px;
         }
 
         .swap:hover {
@@ -488,6 +590,7 @@ export default {
         .generate {
             background: linear-gradient(268deg, #0999fe, #0249ec);
             float: right;
+            padding: 10px;
         }
 
         .generate:hover {
@@ -505,10 +608,34 @@ export default {
             margin: 0 auto;
         }
 
+        .generator {
+            max-width: 40px;
+            margin-left: 110px;
+            margin-top: 14px;
+            margin-bottom: -4px;
+        }
+
+        .formatGenerator {
+            max-width: 40px;
+            margin-left: 100px;
+            margin-top: 14px;
+            margin-bottom: -4px;
+        }
+
         .spinning {
             &:not(.generator) {
                 max-width: 30px;
                 margin-left: 110px;
+                animation: spin 2s linear infinite;
+                margin-top: 14px;
+                margin-bottom: -4px;
+            }
+        }
+
+        .formatSpinning {
+            &:not(.formatGenerator) {
+                max-width: 30px;
+                margin-left: 100px;
                 animation: spin 2s linear infinite;
                 margin-top: 14px;
                 margin-bottom: -4px;
@@ -529,6 +656,10 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
+
+    .formatBtnYes {
+        float: left !important;
+    }
 
     .speech_to_text {
         float: left !important;
