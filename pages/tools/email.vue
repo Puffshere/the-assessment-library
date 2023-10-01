@@ -2,6 +2,24 @@
     <section class="email">
         <main-nav />
 
+        <!-- This is the template modal -->
+        <div v-if="showModal" class="modal-backdrop">
+            <div class="container col-12">
+                <div class="modal-content">
+                    <div class="row">
+                        <p class="modalTitle">Avaliable Templates</p>
+                        <hr>
+                        <p class="templates">Possible template 1</p>
+                        <p class="templates">Possible template 2</p>
+                        <p class="templates">Possible template 3</p>
+                        <div class="closeBtn">
+                            <button @click="closeModal" class="modalCloseBtn modalBtn">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="header">
             <div class="container">
                 <div class="row">
@@ -73,6 +91,7 @@
                 </textarea>
 
                 <div type='text' v-if="response" class="formatted-response">{{ response }}</div>
+
                 <div class="container bar bar2">
                     <div class="row col-12 button-container">
 
@@ -82,6 +101,7 @@
 
                         <div class="col-4 center-button">
                             <button v-if="response" @click="swapOutput" class="swap btn">Swap</button>
+                            <button v-else @click="templateOptions" class="swap btn">Templates</button>
                         </div>
 
                         <div class="col-4">
@@ -90,12 +110,17 @@
 
                     </div>
                 </div>
+
+
             </div>
         </section>
+
+
 
         <footer-fold />
     </section>
 </template>
+
 
 <script>
 import Nav from '@/components/Nav';
@@ -206,7 +231,8 @@ export default {
             isLoading: false,
             recognition: null,
             recognitionActive: false,
-            readyToFormatText: false
+            readyToFormatText: false,
+            showModal: false
         };
     },
     computed: {
@@ -301,7 +327,7 @@ export default {
         async yesFormatText() {
             this.isLoading = true;
             // Code needed for development
-            //const endpoint = "http://localhost:3000/api/completions";
+            // const endpoint = "http://localhost:3000/api/completions";
             const endpoint = "/api/completions";
             const combinedInput = this.promptFormat + '\n\n' + this.userInput;
 
@@ -341,6 +367,18 @@ export default {
                 this.isLoading = false;
                 console.error("Error fetching data from proxy server:", error);
             }
+        },
+        templateOptions() {
+            const bodySection = this.$el.querySelector('.body');
+            bodySection.classList.add('no-scroll');
+
+            this.showModal = true;
+        },
+        closeModal() {
+            const bodySection = this.$el.querySelector('.body');
+            bodySection.classList.remove('no-scroll');
+
+            this.showModal = false;
         },
         swapOutput() {
             this.userInput = this.response;
@@ -386,7 +424,12 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .email {
+
     .header {
         background: url('~assets/about.jpg');
         background-size: cover;
@@ -408,6 +451,7 @@ export default {
     }
 
     .body {
+
         .bar {
             width: 100%;
             background-color: rgba(128, 128, 128, 0.301);
@@ -651,9 +695,96 @@ export default {
                 transform: rotate(360deg);
             }
         }
-
     }
+
+    // This is the beginning of the template modal
+
+    .modalCloseBtn {
+        align-items: center;
+        background: linear-gradient(268deg, #5ac3fc, #01a8ff);
+        padding: 10px;
+    }
+
+    .modalCloseBtn:hover {
+        background: linear-gradient(268deg, #51b4e9, #0097e9);
+        box-shadow: 2px 2px 5px rgb(61, 61, 61);
+    }
+
+    .modalCloseBtn:focus {
+        background: linear-gradient(268deg, #479fce, #0088d1);
+        box-shadow: 1px 1px 5px rgb(61, 61, 61);
+    }
+
+    .modalBtn {
+        cursor: pointer;
+        font-family: $font-family;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        color: #fff;
+        letter-spacing: 2px;
+        font-weight: 600;
+        border: none;
+        box-shadow: 3px 3px 5px rgb(61, 61, 61);
+        min-width: 100px;
+    }
+
+    .modal-backdrop {
+        position: fixed;
+        z-index: 1;
+        width: 100vw;
+        height: 90%;
+        background-color: rgba(0, 0, 0, 0.733);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        padding: 10px;
+        background-color: #141414;
+        border-radius: 10px;
+    }
+
+    .modalTitle {
+        font-size: clamp(15px, 5vw, 40px);
+        color: white;
+        margin-bottom: 20px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .templates {
+        cursor: pointer;
+        font-size: clamp(12px, 4vw, 20px);
+        color: white;
+        margin-bottom: 15px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .closeBtn {
+        max-width: 100px;
+        float: right;
+        margin-right: 60px;
+    }
+
+    .centered-no-wrap {
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .no-wrap {
+        white-space: nowrap;
+    }
+
+    // This is the end of the template modal
+
 }
+
 
 @media screen and (max-width: 500px) {
 
