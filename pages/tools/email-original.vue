@@ -24,15 +24,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">DISC AI Email Generator</h1>
+                        <h1 class="section-title">Custom Email Generator</h1>
                     </div>
                 </div>
             </div>
         </section>
-
-        <div v-if="!userInput">
-            <a href="https://www.assessments24x7.com/communication-coach" class="notSure">Not sure what style to use?</a>
-        </div>
 
         <section class="body">
             <div class="container">
@@ -41,13 +37,13 @@
                     <div class="row styles">
 
                         <select class="col-3 drop" v-model="adaptedStyle">
-                            <option disabled value="">Recipient Adapted Style</option>
-                            <option v-for="item in items" :key="item.id" :value="item.value">{{ item.name }}</option>
+                            <option disabled value="">Adapted Style</option>
+                            <option v-for="item in items" :key="item.id" :value="item.name">{{ item.name }}</option>
                         </select>
 
                         <select class="col-3 drop" v-model="naturalStyle">
-                            <option disabled value="">Recipient Natural Style</option>
-                            <option v-for="item in items" :key="item.id" :value="item.value">{{ item.name }}</option>
+                            <option disabled value="">Natural Style</option>
+                            <option v-for="item in items" :key="item.id" :value="item.name">{{ item.name }}</option>
                         </select>
 
                         <select class="col-3 drop" v-model="language">
@@ -119,6 +115,8 @@
             </div>
         </section>
 
+
+
         <footer-fold />
     </section>
 </template>
@@ -178,54 +176,54 @@ export default {
                 { id: 35, name: 'Vietnamese' },
             ],
             items: [
-                { id: 1, name: 'D', value: 'Dominance' },
-                { id: 2, name: 'I', value: 'Influence' },
-                { id: 3, name: 'S', value: 'Steadiness' },
-                { id: 4, name: 'C', value: 'Conscientiousness' },
+                { id: 1, name: 'Pure D' },
+                { id: 2, name: 'Pure I' },
+                { id: 3, name: 'Pure S' },
+                { id: 4, name: 'Pure C' },
 
-                // { id: 5, name: 'DI' },
-                // { id: 6, name: 'DS' },
-                // { id: 7, name: 'DC' },
+                { id: 5, name: 'DI' },
+                { id: 6, name: 'DS' },
+                { id: 7, name: 'DC' },
 
-                // { id: 8, name: 'ID' },
-                // { id: 9, name: 'IC' },
-                // { id: 10, name: 'IS' },
+                { id: 8, name: 'ID' },
+                { id: 9, name: 'IC' },
+                { id: 10, name: 'IS' },
 
-                // { id: 11, name: 'SD' },
-                // { id: 12, name: 'SI' },
-                // { id: 13, name: 'SC' },
+                { id: 11, name: 'SD' },
+                { id: 12, name: 'SI' },
+                { id: 13, name: 'SC' },
 
-                // { id: 14, name: 'CD' },
-                // { id: 15, name: 'CI' },
-                // { id: 16, name: 'CS' },
+                { id: 14, name: 'CD' },
+                { id: 15, name: 'CI' },
+                { id: 16, name: 'CS' },
 
-                // { id: 17, name: 'DIS' },
-                // { id: 18, name: 'DSI' },
-                // { id: 19, name: 'DIC' },
-                // { id: 20, name: 'DCI' },
-                // { id: 21, name: 'DSC' },
-                // { id: 22, name: 'DCS' },
+                { id: 17, name: 'DIS' },
+                { id: 18, name: 'DSI' },
+                { id: 19, name: 'DIC' },
+                { id: 20, name: 'DCI' },
+                { id: 21, name: 'DSC' },
+                { id: 22, name: 'DCS' },
 
-                // { id: 23, name: 'ISD' },
-                // { id: 24, name: 'IDS' },
-                // { id: 25, name: 'ICS' },
-                // { id: 26, name: 'ISC' },
-                // { id: 27, name: 'ICD' },
-                // { id: 28, name: 'IDC' },
+                { id: 23, name: 'ISD' },
+                { id: 24, name: 'IDS' },
+                { id: 25, name: 'ICS' },
+                { id: 26, name: 'ISC' },
+                { id: 27, name: 'ICD' },
+                { id: 28, name: 'IDC' },
 
-                // { id: 29, name: 'SCI' },
-                // { id: 30, name: 'SIC' },
-                // { id: 31, name: 'SDC' },
-                // { id: 32, name: 'SCD' },
-                // { id: 33, name: 'SDI' },
-                // { id: 34, name: 'SID' },
+                { id: 29, name: 'SCI' },
+                { id: 30, name: 'SIC' },
+                { id: 31, name: 'SDC' },
+                { id: 32, name: 'SCD' },
+                { id: 33, name: 'SDI' },
+                { id: 34, name: 'SID' },
 
-                // { id: 35, name: 'CSD' },
-                // { id: 36, name: 'CDS' },
-                // { id: 37, name: 'CDI' },
-                // { id: 38, name: 'CID' },
-                // { id: 39, name: 'CIS' },
-                // { id: 40, name: 'CSI' }
+                { id: 35, name: 'CSD' },
+                { id: 36, name: 'CDS' },
+                { id: 37, name: 'CDI' },
+                { id: 38, name: 'CID' },
+                { id: 39, name: 'CIS' },
+                { id: 40, name: 'CSI' }
             ],
             userInput: '',
             response: '',
@@ -329,8 +327,8 @@ export default {
         async yesFormatText() {
             this.isLoading = true;
             // Code needed for development
-            // const endpoint = "http://localhost:3000/api/completions";
-            const endpoint = "/api/completions";
+            const endpoint = "http://localhost:3000/api/completions";
+            // const endpoint = "/api/completions";
             const combinedInput = this.promptFormat + '\n\n' + this.userInput;
 
             try {
@@ -352,8 +350,8 @@ export default {
         async translateText() {
             this.isLoading = true;
             // Code needed for development
-            // const endpoint = "http://localhost:3000/api/completions";
-            const endpoint = "/api/completions";
+            const endpoint = "http://localhost:3000/api/completions";
+            // const endpoint = "/api/completions";
             const combinedInput = this.promptTranslate + '\n\n' + this.userInput;
 
             try {
@@ -389,8 +387,8 @@ export default {
         async submitMessage() {
             this.isLoading = true;
             // Code needed for development
-            // const endpoint = "http://localhost:3000/api/completions";
-            const endpoint = "/api/completions";
+            const endpoint = "http://localhost:3000/api/completions";
+            // const endpoint = "/api/completions";
             const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
             try {
@@ -409,12 +407,12 @@ export default {
         },
         head() {
             return {
-                title: 'DISC AI Email Generator | Assessments 24x7',
+                title: 'Emails | Assessments 24x7',
                 meta: [
                     {
-                        hid: 'description',
-                        name: 'description',
-                        content: 'A tool to help users generate emails based on reciepients Adapted and Natural D.I.S.C. styles.'
+                        hid: 'robots',
+                        name: 'robots',
+                        content: 'noindex'
                     }
                 ]
             }
@@ -450,16 +448,6 @@ export default {
         font-size: 30pt;
         line-height: 34pt;
         margin-bottom: 0;
-    }
-
-    .notSure {
-        cursor: pointer;
-        font-size: large;
-        position: absolute;
-        left: 50%;
-        bottom: 40%;
-        transform: translateX(-50%);
-        color: rgb(34, 98, 238);
     }
 
     .body {
@@ -540,6 +528,7 @@ export default {
             font-family: monospace;
             font-weight: 500;
             font-size: 16px;
+            letter-spacing: 1px;
             margin-bottom: 3px;
         }
 
@@ -709,6 +698,7 @@ export default {
     }
 
     // This is the beginning of the template modal
+
     .modalCloseBtn {
         align-items: center;
         background: linear-gradient(268deg, #5ac3fc, #01a8ff);
@@ -792,6 +782,7 @@ export default {
     }
 
     // This is the end of the template modal
+
 }
 
 
