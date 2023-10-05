@@ -1,7 +1,5 @@
 <template>
     <section class="email">
-        <main-nav />
-
         <!-- This is the template modal -->
         <div v-if="showModal" class="modal-backdrop">
             <div class="container col-12">
@@ -9,9 +7,9 @@
                     <div class="row">
                         <p class="modalTitle">Avaliable Templates</p>
                         <hr>
-                        <p class="templates">Possible template 1</p>
-                        <p class="templates">Possible template 2</p>
-                        <p class="templates">Possible template 3</p>
+                        <p class="templates" @click="addTemplate1">Survey and Free Assessment</p>
+                        <p class="futureTemplate">Future Template</p>
+                        <p class="futureTemplate">Future Template</p>
                         <div class="closeBtn">
                             <button @click="closeModal" class="modalCloseBtn modalBtn">Close</button>
                         </div>
@@ -19,6 +17,14 @@
                 </div>
             </div>
         </div>
+        <div v-if="isLoading" class="modal-backdrop">
+            <div class="container">
+                <div class="">
+                    <img src="./../../assets/Spinning-Wheel-Image.png" class="formatSpinning" alt="spinning wheel">
+                </div>
+            </div>
+        </div>
+        <main-nav />
 
         <section class="header">
             <div class="container">
@@ -36,19 +42,56 @@
 
         <section class="body">
             <div class="container">
+                <div v-if="!readyToFormatText" class=" bar col-12">
+                    <div class="row">
+                        <div class="col-3 first">
+                            <div class="dropdown-trigger" @click="toggleDropdown1">{{ adaptedStyle || 'Recipient Adapted Style' }}
+                                <svg :class="{ 'chevron-selected': dropdownActive1 }" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                            <div class="dropdown"
+                                :class="{ 'dropdown-active': dropdownActive1, 'dropdown-nonActive': !dropdownActive1 }">
+                                <div class="dropdown__left-panel">
+                                    <div :class="{ 'circle-grow': circleGrows1[0] }" class="circle circle-1"></div>
+                                    <div :class="{ 'circle-grow': circleGrows1[1] }" class="circle circle-2"></div>
+                                    <div :class="{ 'circle-grow': circleGrows1[2] }" class="circle circle-3"></div>
+                                </div>
+                                <div class="dropdown__right-panel">
+                                    <div v-for="(item, index) in adaptedDropdownItems" :key="index"
+                                        :class="{ 'dropdown__item-active': item.active }" class="dropdown__item"
+                                        @click="selectItemAdapted(item)">
+                                        <span>{{ item.value }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
 
-                <div v-if="!readyToFormatText" class="bar col-12">
-                    <div class="row styles">
+                            <div class="dropdown-trigger" @click="toggleDropdown2">{{ naturalStyle || 'Recipient Natural Style' }}
+                                <svg :class="{ 'chevron-selected': dropdownActive2 }" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
 
-                        <select class="col-3 drop" v-model="adaptedStyle">
-                            <option disabled value="">Recipient Adapted Style</option>
-                            <option v-for="item in items" :key="item.id" :value="item.value">{{ item.name }}</option>
-                        </select>
-
-                        <select class="col-3 drop" v-model="naturalStyle">
-                            <option disabled value="">Recipient Natural Style</option>
-                            <option v-for="item in items" :key="item.id" :value="item.value">{{ item.name }}</option>
-                        </select>
+                            <div class="dropdown"
+                                :class="{ 'dropdown-active': dropdownActive2, 'dropdown-nonActive': !dropdownActive2 }">
+                                <div class="dropdown__left-panel">
+                                    <div :class="{ 'circle-grow': circleGrows2[0] }" class="circle circle-1"></div>
+                                    <div :class="{ 'circle-grow': circleGrows2[1] }" class="circle circle-2"></div>
+                                    <div :class="{ 'circle-grow': circleGrows2[2] }" class="circle circle-3"></div>
+                                </div>
+                                <div class="dropdown__right-panel">
+                                    <div v-for="(item, index) in naturalDropdownItems" :key="index"
+                                        :class="{ 'dropdown__item-active': item.active }" class="dropdown__item"
+                                        @click="selectItemNatural(item)">
+                                        <span>{{ item.value }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <select class="col-3 drop" v-model="language">
                             <option disabled :value="null">{{ language || 'English' }}</option>
@@ -58,11 +101,6 @@
 
                         <img :class="['col-2', 'speech_to_text', { 'activeSTT': recognitionActive }]"
                             src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
-
-                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 spinning"
-                            alt="spinning wheel">
-                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png" class="col-1 generator"
-                            alt="generator">
 
                     </div>
                 </div>
@@ -82,10 +120,8 @@
                             <button @click="noFormatText" class="formatBtnNo btn">NO</button>
                         </div>
 
-                        <img v-show="isLoading" src="./../../assets/Spinning-Wheel-Image.png" class="col-1 formatSpinning"
-                            alt="spinning wheel">
-                        <img v-show="!isLoading" src="./../../assets/Power-Generator-PNG-Image.png"
-                            class="col-1 formatGenerator" alt="generator">
+                        <img src="./../../assets/fullCircle.png" class="col-1 formatGenerator"
+                            alt="generator">
 
                     </div>
                 </div>
@@ -114,7 +150,6 @@
 
                     </div>
                 </div>
-
 
             </div>
         </section>
@@ -177,56 +212,6 @@ export default {
                 { id: 34, name: 'Turkish' },
                 { id: 35, name: 'Vietnamese' },
             ],
-            items: [
-                { id: 1, name: 'D', value: 'Dominance' },
-                { id: 2, name: 'I', value: 'Influence' },
-                { id: 3, name: 'S', value: 'Steadiness' },
-                { id: 4, name: 'C', value: 'Conscientiousness' },
-
-                // { id: 5, name: 'DI' },
-                // { id: 6, name: 'DS' },
-                // { id: 7, name: 'DC' },
-
-                // { id: 8, name: 'ID' },
-                // { id: 9, name: 'IC' },
-                // { id: 10, name: 'IS' },
-
-                // { id: 11, name: 'SD' },
-                // { id: 12, name: 'SI' },
-                // { id: 13, name: 'SC' },
-
-                // { id: 14, name: 'CD' },
-                // { id: 15, name: 'CI' },
-                // { id: 16, name: 'CS' },
-
-                // { id: 17, name: 'DIS' },
-                // { id: 18, name: 'DSI' },
-                // { id: 19, name: 'DIC' },
-                // { id: 20, name: 'DCI' },
-                // { id: 21, name: 'DSC' },
-                // { id: 22, name: 'DCS' },
-
-                // { id: 23, name: 'ISD' },
-                // { id: 24, name: 'IDS' },
-                // { id: 25, name: 'ICS' },
-                // { id: 26, name: 'ISC' },
-                // { id: 27, name: 'ICD' },
-                // { id: 28, name: 'IDC' },
-
-                // { id: 29, name: 'SCI' },
-                // { id: 30, name: 'SIC' },
-                // { id: 31, name: 'SDC' },
-                // { id: 32, name: 'SCD' },
-                // { id: 33, name: 'SDI' },
-                // { id: 34, name: 'SID' },
-
-                // { id: 35, name: 'CSD' },
-                // { id: 36, name: 'CDS' },
-                // { id: 37, name: 'CDI' },
-                // { id: 38, name: 'CID' },
-                // { id: 39, name: 'CIS' },
-                // { id: 40, name: 'CSI' }
-            ],
             userInput: '',
             response: '',
             alteredEmail: [],
@@ -234,7 +219,23 @@ export default {
             recognition: null,
             recognitionActive: false,
             readyToFormatText: false,
-            showModal: false
+            showModal: false,
+            dropdownActive1: false,
+            dropdownActive2: false,
+            circleGrows1: [false, false, false],
+            circleGrows2: [false, false, false],
+            adaptedDropdownItems: [
+                { id: 1, name: 'D', value: 'D - Dominance', active: false },
+                { id: 2, name: 'I', value: 'I - Influence', active: false },
+                { id: 3, name: 'S', value: 'S - Steadiness', active: false },
+                { id: 4, name: 'C', value: 'C - Conscientiousness', active: false }
+            ],
+            naturalDropdownItems: [
+                { id: 1, name: 'D', value: 'D - Dominance', active: false },
+                { id: 2, name: 'I', value: 'I - Influence', active: false },
+                { id: 3, name: 'S', value: 'S - Steadiness', active: false },
+                { id: 4, name: 'C', value: 'C - Conscientiousness', active: false }
+            ]
         };
     },
     computed: {
@@ -261,8 +262,67 @@ export default {
         promptFormat() {
             return `Reformat the following raw text into proper and grammatically correct email format:`
         },
+        template1() {
+            return `Hello, [Recipient], we hope this email finds you well.
+                    As your assessments & certifications provider, wee would greatly value your feedback. Would you have 5 minutes to spare for a quick survey? Your feedback will play a crucial role in tailoring our services to meet your evolving needs.
+                    Take the survey & receive a free DISC assessment
+                    As a thank you for your time, we will send a complimentary DISC assessment link when you have completed the survey.
+                    Experience our updated DISC Report, paired with modernized training materials and resources. Enjoy dashboard upgrades, reports, and new assessment options -- now available to all DISCcert clients with no cost to upgrade! Schedule an introduction call with your Success Team below.
+                    If you need any additional support, let's connect and see how we can best assist you.
+                    Questions? Contact us!
+                    Sincerely,
+                    [Author]`
+        }
     },
     methods: {
+        addTemplate1() {
+            this.isLoading = true;
+            this.userInput = this.template1;
+            this.yesFormatText();
+            this.showModal = false;
+        },
+        toggleDropdown1() {
+            this.dropdownActive1 = !this.dropdownActive1;
+
+            this.circleGrows1.forEach((_, index) => {
+                setTimeout(() => {
+                    this.$set(this.circleGrows1, index, !this.circleGrows1[index]);
+                }, index * 200);
+            });
+
+            this.adaptedDropdownItems.forEach((_, index) => {
+                setTimeout(() => {
+                    this.$set(this.adaptedDropdownItems, index, { ...this.adaptedDropdownItems[index], active: !this.adaptedDropdownItems[index].active });
+                }, index * 200);
+            });
+        },
+        toggleDropdown2() {
+            this.dropdownActive2 = !this.dropdownActive2;
+
+            this.circleGrows2.forEach((_, index) => {
+                setTimeout(() => {
+                    this.$set(this.circleGrows2, index, !this.circleGrows2[index]);
+                }, index * 200);
+            });
+
+            this.naturalDropdownItems.forEach((_, index) => {
+                setTimeout(() => {
+                    this.$set(this.naturalDropdownItems, index, { ...this.naturalDropdownItems[index], active: !this.naturalDropdownItems[index].active });
+                }, index * 200);
+            });
+        },
+        selectItemAdapted(item) {
+            this.adaptedStyle = item.value;
+            this.dropdownActive1 = false;
+            this.adaptedDropdownItems.forEach(i => i.active = i === item);
+            this.circleGrows1 = this.circleGrows1.map(() => false);
+        },
+        selectItemNatural(item) {
+            this.naturalStyle = item.value;
+            this.dropdownActive2 = false;
+            this.naturalDropdownItems.forEach(i => i.active = i === item);
+            this.circleGrows2 = this.circleGrows2.map(() => false);
+        },
         handleKeyDown(event) {
             if (event.key === 'Enter') {
                 if (event.shiftKey) {
@@ -426,11 +486,152 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 
+
+$primary-color: #ced5d8;
+$bg-color: #f8fafc;
+$border-radius: 0.5rem;
+
 .no-scroll {
     overflow: hidden;
 }
 
 .email {
+
+    .first {
+        margin-right: 70px;
+        margin-left: 20px;
+    }
+
+    .dropdown-trigger {
+        width: 19rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 2rem;
+        background-color: $primary-color;
+        border-radius: $border-radius;
+        cursor: pointer;
+        margin-top: -5px;
+        margin-bottom: 5px;
+        box-shadow: 3px 3px 5px rgb(61, 61, 61);
+
+        // box-shadow: 2px 5px 10px rgba(61, 61, 61, 0.507);
+        font-size: 18px;
+
+        svg {
+            width: 2rem;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .chevron-selected {
+            transform: rotate(180deg);
+        }
+    }
+
+    .dropdown {
+        width: 20rem;
+        display: flex;
+        background-color: #1e222d;
+        border-radius: $border-radius;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 10px;
+
+        .dropdown__left-panel {
+            width: 5rem;
+            position: relative;
+            background-color: #1666ff;
+            border-radius: $border-radius 0 0 $border-radius;
+            overflow: hidden;
+            z-index: 10;
+
+            @mixin circle {
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0;
+                transform: scale(0.1);
+                transition: transform 1s ease-in-out;
+            }
+
+            .circle-1 {
+                @include circle;
+                width: 1.5rem;
+                height: 1.5rem;
+                top: 0.5rem;
+                right: 0.2rem;
+                background-color: #0dab49;
+            }
+
+            .circle-2 {
+                @include circle;
+                width: 4rem;
+                height: 4rem;
+                top: 3rem;
+                left: -2rem;
+                background-color: #e93d2f;
+            }
+
+            .circle-3 {
+                @include circle;
+                width: 0.75rem;
+                height: 0.75rem;
+                bottom: 0.5rem;
+                right: 1rem;
+                background-color: #ffbd05;
+            }
+
+            .circle-grow {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .dropdown__right-panel {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+            z-index: 10px;
+
+            .dropdown__item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                padding: 1rem 0.25rem 1rem 2rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out;
+                font-weight: 400;
+                line-height: 24px;
+                opacity: 0;
+                color: white;
+                transform: translateY(0.5rem);
+                transition: opacity, transform 0.5s ease-in-out;
+
+                &:hover {
+                    background-color: rgba(193, 195, 196, 0.781);
+                }
+
+                &:focus {
+                    background-color: rgba(221, 223, 224, 0.781);
+                }
+            }
+
+            .dropdown__item-active {
+                opacity: 1;
+                transform: translatey(0);
+            }
+
+        }
+    }
+
+    .dropdown-active {
+        opacity: 1;
+        position: absolute;
+    }
+
+    .dropdown-nonActive {
+        display: none;
+    }
 
     .header {
         background: url('~assets/about.jpg');
@@ -438,7 +639,7 @@ export default {
         color: #fff;
         text-align: center;
         padding: 50px 0;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
 
         .section-title {
             font-size: 30pt;
@@ -462,7 +663,16 @@ export default {
         color: rgb(34, 98, 238);
     }
 
+    .notSure:hover {
+        font-size: 25px;
+    }
+
     .body {
+
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .bar {
             width: 100%;
@@ -489,9 +699,10 @@ export default {
         }
 
         .speech_to_text {
+            position: relative;
+            right: -8%;
+            margin-top: 11px;
             max-width: 40px;
-            padding-top: 5px;
-            margin-bottom: -5px;
             cursor: pointer;
         }
 
@@ -533,14 +744,25 @@ export default {
 
         .drop {
             cursor: pointer;
-            padding: 5px;
+            padding: 11px;
             border-radius: 5px;
-            border: 2px solid rgb(34, 98, 238);
-            box-shadow: 3px 3px 5px rgb(61, 61, 61);
             font-family: monospace;
             font-weight: 500;
-            font-size: 16px;
-            margin-bottom: 3px;
+            font-size: 20px;
+            margin-top: 3px;
+            margin-left: 70px;
+            background-color: #09e0fd;
+            color: white;
+            letter-spacing: 1px;
+            text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.404);
+            box-shadow: 3px 3px 5px rgb(61, 61, 61);
+
+            // box-shadow: 2px 5px 10px rgba(61, 61, 61, 0.507);
+            border: none;
+
+            .style {
+                min-width: 20px !important;
+            }
         }
 
         .formatted-response {
@@ -671,30 +893,10 @@ export default {
         }
 
         .formatGenerator {
-            max-width: 40px;
+            max-width: 37px;
             margin-left: 100px;
-            margin-top: 14px;
+            margin-top: 10px;
             margin-bottom: -4px;
-        }
-
-        .spinning {
-            &:not(.generator) {
-                max-width: 30px;
-                margin-left: 110px;
-                animation: spin 2s linear infinite;
-                margin-top: 14px;
-                margin-bottom: -4px;
-            }
-        }
-
-        .formatSpinning {
-            &:not(.formatGenerator) {
-                max-width: 30px;
-                margin-left: 100px;
-                animation: spin 2s linear infinite;
-                margin-top: 14px;
-                margin-bottom: -4px;
-            }
         }
 
         @keyframes spin {
@@ -742,7 +944,7 @@ export default {
         position: fixed;
         z-index: 1;
         width: 100vw;
-        height: 90%;
+        height: 100%;
         background-color: rgba(0, 0, 0, 0.733);
         display: flex;
         align-items: center;
@@ -753,6 +955,12 @@ export default {
         padding: 10px;
         background-color: #141414;
         border-radius: 10px;
+    }
+
+    .formatSpinning {
+        max-width: 100px;
+        margin: 45%;
+        animation: spin 4s linear infinite;
     }
 
     .modalTitle {
@@ -774,6 +982,25 @@ export default {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .templates:hover {
+        text-shadow: 1px 1px 1px rgb(253, 251, 251);
+    }
+
+    .templates:focus {
+        text-shadow: 1px 1px 1px rgb(182, 181, 181);
+    }
+
+    .futureTemplate {
+        font-size: clamp(12px, 4vw, 20px);
+        color: white;
+        margin-bottom: 15px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        opacity: .5;
     }
 
     .closeBtn {
@@ -804,16 +1031,6 @@ export default {
     .speech_to_text {
         float: left !important;
         margin-left: 40px !important;
-    }
-
-    .generator {
-        float: right !important;
-        margin-right: 40px !important;
-    }
-
-    .spinning {
-        float: right !important;
-        margin-right: 40px !important;
     }
 }
 
