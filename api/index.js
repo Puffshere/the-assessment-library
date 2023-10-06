@@ -138,6 +138,8 @@ app.post('/completions', async (req, res) => {
         const openaiResponse = await axios.post(
             'https://api.openai.com/v1/chat/completions',
             {
+                // This is the newest more accurate model, but it is a lot Slower.
+                // model: "gpt-4",
                 model: "gpt-3.5-turbo",
                 messages: [{ "role": "user", "content": combinedInput }],
                 temperature: 0.7

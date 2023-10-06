@@ -45,7 +45,8 @@
                 <div v-if="!readyToFormatText" class=" bar col-12">
                     <div class="row">
                         <div class="col-3 first">
-                            <div class="dropdown-trigger" @click="toggleDropdown1">{{ adaptedStyle || 'Recipient Adapted Style' }}
+                            <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle ||
+                                'Recipient Adapted Style' }}
                                 <svg :class="{ 'chevron-selected': dropdownActive1 }" xmlns="http://www.w3.org/2000/svg"
                                     fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -69,7 +70,8 @@
                         </div>
                         <div class="col-3">
 
-                            <div class="dropdown-trigger" @click="toggleDropdown2">{{ naturalStyle || 'Recipient Natural Style' }}
+                            <div class="dropdown-trigger" :class="styleColor2" @click="toggleDropdown2">{{ naturalStyle ||
+                                'Recipient Natural Style' }}
                                 <svg :class="{ 'chevron-selected': dropdownActive2 }" xmlns="http://www.w3.org/2000/svg"
                                     fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -99,7 +101,10 @@
                             }}</option>
                         </select>
 
-                        <img :class="['col-2', 'speech_to_text', { 'activeSTT': recognitionActive }]"
+                        <img class="col-1 questionmark"
+                            src="./../../assets/questionmark.png" />
+
+                        <img :class="['col-1', 'speech_to_text', { 'activeSTT': recognitionActive }]"
                             src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
 
                     </div>
@@ -120,8 +125,7 @@
                             <button @click="noFormatText" class="formatBtnNo btn">NO</button>
                         </div>
 
-                        <img src="./../../assets/fullCircle.png" class="col-1 formatGenerator"
-                            alt="generator">
+                        <img src="./../../assets/fullCircle.png" class="col-1 formatGenerator" alt="generator">
 
                     </div>
                 </div>
@@ -174,6 +178,8 @@ export default {
         return {
             adaptedStyle: "",
             naturalStyle: "",
+            selectedStyle1: '',
+            selectedStyle2: '',
             language: "English",
             languages: [
                 { id: 1, name: 'English' },
@@ -239,6 +245,22 @@ export default {
         };
     },
     computed: {
+        styleColor1() {
+            return {
+                'color-D': this.selectedStyle1 === 'D',
+                'color-I': this.selectedStyle1 === 'I',
+                'color-S': this.selectedStyle1 === 'S',
+                'color-C': this.selectedStyle1 === 'C'
+            };
+        },
+        styleColor2() {
+            return {
+                'color-D': this.selectedStyle2 === 'D',
+                'color-I': this.selectedStyle2 === 'I',
+                'color-S': this.selectedStyle2 === 'S',
+                'color-C': this.selectedStyle2 === 'C'
+            };
+        },
         promptContext() {
             return `Rewrite the original email, emphasizing the DISC traits provided below.  Write the new email in ${this.language} with correct email formatting.
 
@@ -316,12 +338,14 @@ export default {
             this.dropdownActive1 = false;
             this.adaptedDropdownItems.forEach(i => i.active = i === item);
             this.circleGrows1 = this.circleGrows1.map(() => false);
+            this.selectedStyle1 = item.name;
         },
         selectItemNatural(item) {
             this.naturalStyle = item.value;
             this.dropdownActive2 = false;
             this.naturalDropdownItems.forEach(i => i.active = i === item);
             this.circleGrows2 = this.circleGrows2.map(() => false);
+            this.selectedStyle2 = item.name;
         },
         handleKeyDown(event) {
             if (event.key === 'Enter') {
@@ -384,7 +408,6 @@ export default {
         },
         noFormatText() {
             this.readyToFormatText = false;
-            console.log("This the readyToFormatText", this.readyToFormatText);
         },
         async yesFormatText() {
             this.isLoading = true;
@@ -410,24 +433,28 @@ export default {
             this.readyToFormatText = false;
         },
         async translateText() {
-            this.isLoading = true;
-            // Code needed for development
-            // const endpoint = "http://localhost:3000/api/completions";
-            const endpoint = "/api/completions";
-            const combinedInput = this.promptTranslate + '\n\n' + this.userInput;
+            if (this.userInput && this.userInput !== "Please add text to be translated!") {
+                this.isLoading = true;
+                // Code needed for development
+                // const endpoint = "http://localhost:3000/api/completions";
+                const endpoint = "/api/completions";
+                const combinedInput = this.promptTranslate + '\n\n' + this.userInput;
 
-            try {
-                const result = await axios.post(endpoint, { input: combinedInput });
+                try {
+                    const result = await axios.post(endpoint, { input: combinedInput });
 
-                if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
-                    this.response = result.data.choices[0].message.content;
+                    if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
+                        this.response = result.data.choices[0].message.content;
+                    }
+
+                    this.isLoading = false;
+
+                } catch (error) {
+                    this.isLoading = false;
+                    console.error("Error fetching data from proxy server:", error);
                 }
-
-                this.isLoading = false;
-
-            } catch (error) {
-                this.isLoading = false;
-                console.error("Error fetching data from proxy server:", error);
+            } else {
+                this.userInput = "Please add text to be translated!"
             }
         },
         templateOptions() {
@@ -447,6 +474,7 @@ export default {
             this.response = "";
         },
         async submitMessage() {
+            if (this.userInput && this.userInput !== "Please add an email to be altered!") {
             this.isLoading = true;
             // Code needed for development
             // const endpoint = "http://localhost:3000/api/completions";
@@ -466,6 +494,9 @@ export default {
                 this.isLoading = false;
                 console.error("Error fetching data from proxy server:", error);
             }
+        } else {
+            this.userInput = "Please add an email to be altered!"
+        }
         },
         head() {
             return {
@@ -500,6 +531,25 @@ $border-radius: 0.5rem;
     .first {
         margin-right: 70px;
         margin-left: 20px;
+    }
+
+    .color-D {
+        background-color: #e93d2f !important;
+        color: white !important;
+    }
+
+    .color-I {
+        background-color: #1666ff !important;
+        color: white !important;
+    }
+
+    .color-S {
+        background-color: #0dab49 !important;
+        color: white !important;
+    }
+
+    .color-C {
+        background-color: yellow !important;
     }
 
     .dropdown-trigger {
@@ -577,7 +627,7 @@ $border-radius: 0.5rem;
                 height: 0.75rem;
                 bottom: 0.5rem;
                 right: 1rem;
-                background-color: #ffbd05;
+                background-color: yellow;
             }
 
             .circle-grow {
@@ -696,6 +746,19 @@ $border-radius: 0.5rem;
 
         .bar2 {
             margin-bottom: 30px;
+        }
+
+        .questionmark {
+            position: relative;
+            cursor: pointer;
+            width: 16px;
+            margin-top: 11px;
+            margin-left: 48px;
+            margin-right: -78px;
+        }
+
+        .questionmark:hover {
+            width: 18px;
         }
 
         .speech_to_text {
