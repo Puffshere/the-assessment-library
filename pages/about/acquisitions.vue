@@ -73,7 +73,8 @@
 
                             <p class="mainParagraph">Assessments 24x7 and DISCcert are both excited about the positive
                                 impact this acquisition will have on their valued clients, their teams, and the broader DISC
-                                community. Together, they look </p>
+                                community. Together, they look forward to advancing personal and professional development
+                                opportunities through their combined expertise and resources.</p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +114,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .acquisitions {
     .header {
         background: url('~assets/about.jpg');
