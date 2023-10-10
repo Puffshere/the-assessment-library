@@ -8,7 +8,7 @@
                     <div class="col-12">
                         <h1 class="section-title">Assessments 24x7 Acquistions</h1>
                         <p>
-                            acquisitionships are one of the cornerstones of our company and we are pleased to feature a
+                            Acquisitionships are one of the cornerstones of our company and we are pleased to feature a
                             few of them here. They've taken our
                             assessment customization to the next level in some very creative ways, and they all provide
                             the high quality assessment
