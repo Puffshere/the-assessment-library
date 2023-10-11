@@ -56,20 +56,28 @@
                             </p>
 
                             <p class="subParagraph">
-                                <span class="bold">Access to a Broader Range of Assessments and
-                                    Resources:</span>&nbsp;&nbsp;With Assessments 24x7's extensive
-                                selection of assessments, clients now have access to tools designed to enhance motivation,
-                                teamwork, leadership, emotional intelligence, and more. This expanded offering empowers
-                                individuals and organizations to achieve their goals more effectively.
+                                <span class="bold">Continued Outstanding Support:</span>&nbsp;&nbsp;Assessments 24x7 boasts
+                                a dedicated team of experienced professionals who are committed to providing exceptional
+                                support. Clients can rely on readily available assistance for utilizing assessments,
+                                navigating the platform, and addressing any questions or concerns. The support services are
+                                also available across multiple time zones, extending office hours for added convenience.
                             </p>
 
                             <p class="subParagraph">
-                                <span class="bold">Access to a Broader Range of Assessments and
-                                    Resources:</span>&nbsp;&nbsp;With Assessments 24x7's extensive
-                                selection of assessments, clients now have access to tools designed to enhance motivation,
-                                teamwork, leadership, emotional intelligence, and more. This expanded offering empowers
-                                individuals and organizations to achieve their goals more effectively.
+                                <span class="bold">Seamless Transition:
+                                </span>&nbsp;&nbsp;Clients can expect a smooth and seamless transition, as Assessments 24x7
+                                has powered DISCcert assessments for the past 15 years. This continuity ensures that clients
+                                will experience minimal disruptions to their day-to-day workflow.
                             </p>
+
+                            <p class="mainParagraph">Bonnie Burn reassured her clients that she would be exploring new
+                                endeavors related to her passion for DISC, including keynote speaking and writing a DISC
+                                book, while remaining active on her LinkedIn personal account.</p>
+
+                            <p class="mainParagraph">Clients of DISCcert are encouraged to check their inboxes for email
+                                announcements from the company, which will include updated points of contact for all DISC
+                                and DISC certification support needs. The transition is designed to be effortless, ensuring
+                                that clients can continue to rely on high-quality assessments and services.</p>
 
                             <p class="mainParagraph">Assessments 24x7 and DISCcert are both excited about the positive
                                 impact this acquisition will have on their valued clients, their teams, and the broader DISC
@@ -159,4 +167,5 @@ export default {
             }
         }
     }
-}</style>
+}
+</style>
