@@ -83,6 +83,18 @@
                                 impact this acquisition will have on their valued clients, their teams, and the broader DISC
                                 community. Together, they look forward to advancing personal and professional development
                                 opportunities through their combined expertise and resources.</p>
+
+                            <p class="mainParagraph"><span class="italic">For more information about Assessments 24x7 and
+                                    its offerings, please visit</span> <span><a class="link"
+                                        href="/">www.assessments24x7.com</a></span>.</p>
+
+                            <p class="subParagraph">
+                                <span class="bold">About Assessments 24x7:
+                                </span>&nbsp;&nbsp;For 24+ years, Assessments 24x7 has provided consultants, coaches, and
+                                corporations the tools to optimize hiring processes and maximize performance. Our validated
+                                assessments, flexible platform, and exceptional support have positioned us as a "Global
+                                Leader in Assessment Technology."
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -154,10 +166,18 @@ export default {
             .mainParagraph {
                 margin-bottom: 20px;
                 margin-top: 0;
+
+                .italic {
+                    font-style: italic;
+                }
             }
 
             .bold {
                 font-weight: bold;
+            }
+
+            .link {
+                color: blue;
             }
 
             .subParagraph {
@@ -167,5 +187,4 @@ export default {
             }
         }
     }
-}
-</style>
+}</style>
