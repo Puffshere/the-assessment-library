@@ -2,7 +2,7 @@
     <section class="acquisitions">
         <main-nav />
 
-        <section class="header">
+        <!-- <section class="header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="mainBody">
             <div class="container">
@@ -27,10 +27,11 @@
                             <h2>Assessments 24x7 Acquires DISCcert, Enhancing Assessment Offerings and Client Support</h2>
 
                             <p class="mainParagraph">
-                                Assessments 24x7, a leading provider of assessments and resources for personal and
-                                professional development, is thrilled to announce its recent acquisition of DISCcert, a
-                                prominent DISC assessment provider previously owned by Bonnie Burn. The acquisition was
-                                completed on June 1, 2023, and signifies a significant step forward for both companies.
+                                East Wenatchee, WA October 3, 2023 - Assessments 24x7, a leading provider of assessments and
+                                resources for personal and professional development, is thrilled to announce its recent
+                                acquisition of DISCcert, a prominent DISC assessment provider previously owned by Bonnie
+                                Burn. The acquisition was completed on June 1, 2023, and signifies a significant step
+                                forward for both companies.
                             </p>
 
                             <p class="mainParagraph">
@@ -38,14 +39,13 @@
                                 heartfelt letter to her clients. She emphasized her commitment to constant process
                                 improvement and highlighted the opportunities this acquisition presents for clients to
                                 access a broader range of assessments and resources while continuing to receive outstanding
-                                support. Brandon Parker, CEO of Assessments 24x7 is excited to offer DISCcert clients an
+                                support. Brandon Parker, CEO of Assessments 24x7, is excited to offer DISCcert clients an
                                 opportunity to upgrade their DISC reports and assessment dashboards to make the most of the
                                 acquisition. “We are really looking forward to showing off our updated dashboard to all the
-                                existing DISCcert clients. I truly think they will be blown away by the technology,” says
-                                Brandon.
+                                existing DISCcert clients. I truly think the technology will blow them away,” says Brandon.
                             </p>
 
-                            <h3>Key Benefits of the Acquisition for DISCCert Clients:</h3>
+                            <h3>Key Benefits of the Acquisition for Clients:</h3>
 
                             <p class="subParagraph">
                                 <span class="bold">Access to a Broader Range of Assessments and
@@ -56,18 +56,19 @@
                             </p>
 
                             <p class="subParagraph">
-                                <span class="bold">Continued Outstanding Support:</span>&nbsp;&nbsp;Assessments 24x7 boasts
-                                a dedicated team of experienced professionals who are committed to providing exceptional
-                                support. Clients can rely on readily available assistance for utilizing assessments,
-                                navigating the platform, and addressing any questions or concerns. The support services are
-                                also available across multiple time zones, extending office hours for added convenience.
+                                <span class="bold">Access to a Broader Range of Assessments and
+                                    Resources:</span>&nbsp;&nbsp;With Assessments 24x7's extensive
+                                selection of assessments, clients now have access to tools designed to enhance motivation,
+                                teamwork, leadership, emotional intelligence, and more. This expanded offering empowers
+                                individuals and organizations to achieve their goals more effectively.
                             </p>
 
                             <p class="subParagraph">
-                                <span class="bold">Seamless Transition:
-                                </span>&nbsp;&nbsp;Clients can expect a smooth and seamless transition, as Assessments 24x7
-                                has powered DISCcert assessments for the past 15 years. This continuity ensures that clients
-                                will experience minimal disruptions to their day-to-day workflow.
+                                <span class="bold">Access to a Broader Range of Assessments and
+                                    Resources:</span>&nbsp;&nbsp;With Assessments 24x7's extensive
+                                selection of assessments, clients now have access to tools designed to enhance motivation,
+                                teamwork, leadership, emotional intelligence, and more. This expanded offering empowers
+                                individuals and organizations to achieve their goals more effectively.
                             </p>
 
                             <p class="mainParagraph">Assessments 24x7 and DISCcert are both excited about the positive
@@ -80,7 +81,6 @@
             </div>
         </section>
 
-        <acquisitions-fold />
         <footer-fold />
     </section>
 </template>
@@ -88,23 +88,21 @@
 <script>
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import Acquisitions from '@/components/Acquisitions';
 
 export default {
     components: {
         'main-nav': Nav,
         'contact-form': () => import('@/components/ContactForm'),
         'footer-fold': Footer,
-        'acquisitions-fold': Acquisitions
     },
     head() {
         return {
-            title: 'Assessments 24x7 | Recent Acquisitions and Acquisition Opportunities',
+            title: 'Assessments 24x7 Acquires DISCcert',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Discover Assessments 24x7\'s recent acquisition of DISCcert, enhancing our assessment offerings and client support. Explore the benefits for clients and learn how you can discuss acquisition opportunities with us.'
+                    content: 'Assessments 24x7\'s acquisition of DISCcert enhances assessment offerings and support for DISCcert customers.'
                 }
             ]
         }
