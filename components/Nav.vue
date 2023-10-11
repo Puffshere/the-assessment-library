@@ -14,8 +14,8 @@
             <div class="row">
                 <div class="col-3">
                     <logo></logo>
-                    <a tabindex="21" href="#skip" @click="focusMainContent" class="tab-skip hyperlink light">Skip to main
-                        content</a>
+                    <!-- <a tabindex="21" href="#skip" @click="focusMainContent" class="tab-skip hyperlink light">Skip to main
+                        content</a> -->
                 </div>
 
                 <div class="col-9 nav-collapse-container">
