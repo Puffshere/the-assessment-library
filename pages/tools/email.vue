@@ -7,9 +7,9 @@
                     <div class="row">
                         <p class="modalTitle">Avaliable Templates</p>
                         <hr>
-                        <p class="templates" @click="addTemplate1">Survey and Free Assessment</p>
-                        <p class="futureTemplate">Future Template</p>
-                        <p class="futureTemplate">Future Template</p>
+                        <p class="templates" @click="helloTemplate">Hello Email</p>
+                        <p class="templates" @click="surveyTemplate">Survey and Free Assessment</p>
+                        <p class="templates" @click="followUpTemplate">Follow Up Email</p>
                         <div class="closeBtn">
                             <button @click="closeModal" class="modalCloseBtn modalBtn">Close</button>
                         </div>
@@ -95,14 +95,31 @@
                             </div>
                         </div>
 
-                        <select class="col-3 drop" v-model="language">
+                        <!-- <select class="col-3 drop" v-model="language">
                             <option disabled :value="null">{{ language || 'English' }}</option>
                             <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name
                             }}</option>
-                        </select>
+                        </select> -->
 
-                        <img class="col-1 questionmark"
-                            src="./../../assets/questionmark.png" />
+                        <div class="col-3 dropLanguage" @click="toggleDropdown3">{{ language || 'Language' }}
+                            <svg :class="{ 'chevron-selected': dropdownActive3 }" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+
+                        <div class="dropdown--language"
+                            :class="{ 'dropdown-active': dropdownActive3, 'dropdown-nonActive': !dropdownActive3 }">
+                            <div class="dropdown__language">
+                                <div v-for="(languageItem, index) in languages" :key="index"
+                                    :class="{ 'dropdown__item-activeLanguage': languageItem.active }"
+                                    class="dropdown__itemLanguage" @click="selectItemLanguage(languageItem)">
+                                    <span>{{ languageItem.value }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img class="col-1 questionmark" src="./../../assets/questionmark.png" />
 
                         <img :class="['col-1', 'speech_to_text', { 'activeSTT': recognitionActive }]"
                             src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
@@ -182,41 +199,41 @@ export default {
             selectedStyle2: '',
             language: "English",
             languages: [
-                { id: 1, name: 'English' },
-                { id: 2, name: 'Arabic' },
-                { id: 3, name: 'Chinese (Simplified)' },
-                { id: 4, name: 'Chinese (Traditional)' },
-                { id: 5, name: 'Croatian' },
-                { id: 6, name: 'Danish' },
-                { id: 7, name: 'Dutch (Standard)' },
-                { id: 8, name: 'English (Australia)' },
-                { id: 9, name: 'English (United Kingdom)' },
-                { id: 10, name: 'Finnish' },
-                { id: 11, name: 'French (Canada)' },
-                { id: 12, name: 'French (France)' },
-                { id: 13, name: 'German (Germany)' },
-                { id: 14, name: 'Hungarian' },
-                { id: 15, name: 'Indonesian' },
-                { id: 16, name: 'Italian' },
-                { id: 17, name: 'Japanese' },
-                { id: 18, name: 'Khmer (Cambodia)' },
-                { id: 19, name: 'Korean' },
-                { id: 20, name: 'Latvian' },
-                { id: 21, name: 'Lithuanian' },
-                { id: 22, name: 'Malay (Malaysia)' },
-                { id: 23, name: 'Norwegian' },
-                { id: 24, name: 'Polish' },
-                { id: 25, name: 'Portuguese (Brazil)' },
-                { id: 26, name: 'Portuguese (Portugal)' },
-                { id: 27, name: 'Romanian' },
-                { id: 28, name: 'Russian' },
-                { id: 29, name: 'Slovak' },
-                { id: 30, name: 'Spanish' },
-                { id: 31, name: 'Spanish (Latin Americana)' },
-                { id: 32, name: 'Spanish (Spain)' },
-                { id: 33, name: 'Swedish' },
-                { id: 34, name: 'Turkish' },
-                { id: 35, name: 'Vietnamese' },
+                { id: 1, name: 'English', value: 'English', active: false },
+                { id: 2, name: 'Arabic', value: 'Arabic', active: false },
+                { id: 3, name: 'Chinese (Simplified)', value: 'Chinese (Simplified)', active: false },
+                { id: 4, name: 'Chinese (Traditional)', value: 'Chinese (Traditional)', active: false },
+                { id: 5, name: 'Croatian', value: 'Croatian', active: false },
+                { id: 6, name: 'Danish', value: 'Danish', active: false },
+                { id: 7, name: 'Dutch (Standard)', value: 'Dutch (Standard)', active: false },
+                { id: 8, name: 'English (Australia)', value: 'English (Australia)', active: false },
+                { id: 9, name: 'English (United Kingdom)', value: 'English (United Kingdom)', active: false },
+                { id: 10, name: 'Finnish', value: 'Finnish', active: false },
+                { id: 11, name: 'French (Canada)', value: 'French (Canada)', active: false },
+                { id: 12, name: 'French (France)', value: 'French (France)', active: false },
+                { id: 13, name: 'German (Germany)', value: 'German (Germany)', active: false },
+                { id: 14, name: 'Hungarian', value: 'Hungarian', active: false },
+                { id: 15, name: 'Indonesian', value: 'Indonesian', active: false },
+                { id: 16, name: 'Italian', value: 'Italian', active: false },
+                { id: 17, name: 'Japanese', value: 'Japanese', active: false },
+                { id: 18, name: 'Khmer (Cambodia)', value: 'Khmer (Cambodia)', active: false },
+                { id: 19, name: 'Korean', value: 'Korean', active: false },
+                { id: 20, name: 'Latvian', value: 'Latvian', active: false },
+                { id: 21, name: 'Lithuanian', value: 'Lithuanian', active: false },
+                { id: 22, name: 'Malay (Malaysia)', value: 'Malay (Malaysia)', active: false },
+                { id: 23, name: 'Norwegian', value: 'Norwegian', active: false },
+                { id: 24, name: 'Polish', value: 'Polish', active: false },
+                { id: 25, name: 'Portuguese (Brazil)', value: 'Portuguese (Brazil)', active: false },
+                { id: 26, name: 'Portuguese (Portugal)', value: 'Portuguese (Portugal)', active: false },
+                { id: 27, name: 'Romanian', value: 'Romanian', active: false },
+                { id: 28, name: 'Russian', value: 'Russian', active: false },
+                { id: 29, name: 'Slovak', value: 'Slovak', active: false },
+                { id: 30, name: 'Spanish', value: 'Spanish', active: false },
+                { id: 31, name: 'Spanish (Latin Americana)', value: 'Spanish (Latin Americana)', active: false },
+                { id: 32, name: 'Spanish (Spain)', value: 'Spanish (Spain)', active: false },
+                { id: 33, name: 'Swedish', value: 'Swedish', active: false },
+                { id: 34, name: 'Turkish', value: 'Turkish', active: false },
+                { id: 35, name: 'Vietnamese', value: 'Vietnamese', active: false },
             ],
             userInput: '',
             response: '',
@@ -228,6 +245,7 @@ export default {
             showModal: false,
             dropdownActive1: false,
             dropdownActive2: false,
+            dropdownActive3: false,
             circleGrows1: [false, false, false],
             circleGrows2: [false, false, false],
             adaptedDropdownItems: [
@@ -264,19 +282,19 @@ export default {
         promptContext() {
             return `Rewrite the original email, emphasizing the DISC traits provided below.  Write the new email in ${this.language} with correct email formatting.
 
-                    Adapted: ${this.adaptedStyle}
-                    Natural: ${this.naturalStyle}
+Adapted: ${this.adaptedStyle}
+Natural: ${this.naturalStyle}
 
-                    Incorporate these nuances:
-                    If multiple DISC traits are provided, ensure the email is a balanced reflection of all specified traits.
-                    Vocabulary: Use words that resonate with the specific DISC trait. E.g., action-oriented for D, enthusiastic for I, harmonious for S, and analytical for C.
-                    Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. 
-                    D might prefer brevity, I emotive punctuation, S connected sentences, and C precise detailing.
-                    CTA (Call to Action): Tailor the conclusion or request based on the trait. D being directive, I collaborative, S supportive, and C instructive.
-                    Structure & Flow: D should be direct and prioritize main points, I may start personally, S should maintain balance, and C needs clear, detailed flow.
-                    Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I as upbeat, S as calm, and C as methodical.
+Incorporate these nuances:
+If multiple DISC traits are provided, ensure the email is a balanced reflection of all specified traits.
+Vocabulary: Use words that resonate with the specific DISC trait. E.g., action-oriented for D, enthusiastic for I, harmonious for S, and analytical for C.
+Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. 
+D might prefer brevity, I emotive punctuation, S connected sentences, and C precise detailing.
+CTA (Call to Action): Tailor the conclusion or request based on the trait. D being directive, I collaborative, S supportive, and C instructive.
+Structure & Flow: D should be direct and prioritize main points, I may start personally, S should maintain balance, and C needs clear, detailed flow.
+Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I as upbeat, S as calm, and C as methodical.
 
-                    Here's the original email:`
+Here's the original email:`
         },
         promptTranslate() {
             return `Translate the following text into ${this.language}, here is the text to be translated:`
@@ -284,23 +302,64 @@ export default {
         promptFormat() {
             return `Reformat the following raw text into proper and grammatically correct email format:`
         },
-        template1() {
-            return `Hello, [Recipient], we hope this email finds you well.
-                    As your assessments & certifications provider, wee would greatly value your feedback. Would you have 5 minutes to spare for a quick survey? Your feedback will play a crucial role in tailoring our services to meet your evolving needs.
-                    Take the survey & receive a free DISC assessment
-                    As a thank you for your time, we will send a complimentary DISC assessment link when you have completed the survey.
-                    Experience our updated DISC Report, paired with modernized training materials and resources. Enjoy dashboard upgrades, reports, and new assessment options -- now available to all DISCcert clients with no cost to upgrade! Schedule an introduction call with your Success Team below.
-                    If you need any additional support, let's connect and see how we can best assist you.
-                    Questions? Contact us!
-                    Sincerely,
-                    [Author]`
-        }
+        helloTemplateText() {
+            return `Dear [Recipient],
+
+We look forward to hearing from you and would just like to extend a hello!  If you have any questions feel free to reach out.
+
+Sincerely,
+[Author]`;
+        },
+        surveyTemplateText() {
+            return `Dear [Recipient],
+
+We hope this email finds you well. As your assessments and certifications provider, we would greatly value your feedback. Would you have 5 minutes to spare for a quick survey? Your feedback will play a crucial role in tailoring our services to meet your evolving needs.
+
+Take the survey & receive a free DISC assessment
+
+As a thank you for your time, we will send a complimentary DISC assessment link when you have completed the survey. Experience our updated DISC Report, paired with modernized training materials and resources. Enjoy dashboard upgrades, reports, and new assessment options -- now available to all DISCcert clients with no cost to upgrade! 
+
+Schedule an introduction call with your Success Team below.
+
+If you need any additional support, let's connect and see how we can best assist you.
+
+Questions? Contact us!
+
+Sincerely,
+[Author]`;
+        },
+        followUpTemplateText() {
+            return `Dear [Recipient],
+
+Thank you for joining us at [Event/Meeting Name]. It was a pleasure to connect with you and we trust you found the experience to be insightful and valuable. 
+
+[Optional: Insert a sentence or two about a key takeaway or highlight from the event/meeting.]
+
+In our continuous effort to enhance our collaborations and events, we’d love to hear about your experiences and any thoughts you might have on how we can improve in the future.
+
+[Optional: If applicable, insert a sentence or two about follow-up materials, such as presentation slides, documentation, or related resources. Example: "We have attached the presentation slides and additional resources for your reference and further exploration."]
+
+If you have any questions or would like to discuss any specific aspects in more detail, please do not hesitate to reach out to us directly. Your insights and feedback are immensely valuable as we strive to continuously improve and better serve you.
+
+Looking forward to our future interactions and once again, thank you for being a vital part of [Event/Meeting Name].
+
+Warm regards,
+[Author]
+[Your Position]
+[Your Contact Information]`;
+}
     },
     methods: {
-        addTemplate1() {
-            this.isLoading = true;
-            this.userInput = this.template1;
-            this.yesFormatText();
+        helloTemplate() {
+            this.userInput = this.helloTemplateText;
+            this.showModal = false;
+        },
+        surveyTemplate() {
+            this.userInput = this.surveyTemplateText;
+            this.showModal = false;
+        },
+        followUpTemplate() {
+            this.userInput = this.followUpTemplateText;
             this.showModal = false;
         },
         toggleDropdown1() {
@@ -333,6 +392,15 @@ export default {
                 }, index * 200);
             });
         },
+        toggleDropdown3() {
+            this.dropdownActive3 = !this.dropdownActive3;
+
+            this.languages.forEach((_, index) => {
+                setTimeout(() => {
+                    this.$set(this.languages, index, { ...this.languages[index], active: !this.languages[index].active });
+                }, index * 0);
+            });
+        },
         selectItemAdapted(item) {
             this.adaptedStyle = item.value;
             this.dropdownActive1 = false;
@@ -346,6 +414,11 @@ export default {
             this.naturalDropdownItems.forEach(i => i.active = i === item);
             this.circleGrows2 = this.circleGrows2.map(() => false);
             this.selectedStyle2 = item.name;
+        },
+        selectItemLanguage(languageItem) {
+            this.language = languageItem.value;
+            this.dropdownActive3 = false;
+            this.languages.forEach(i => i.active = i === languageItem);
         },
         handleKeyDown(event) {
             if (event.key === 'Enter') {
@@ -475,28 +548,28 @@ export default {
         },
         async submitMessage() {
             if (this.userInput && this.userInput !== "Please add an email to be altered!") {
-            this.isLoading = true;
-            // Code needed for development
-            // const endpoint = "http://localhost:3000/api/completions";
-            const endpoint = "/api/completions";
-            const combinedInput = this.promptContext + '\n\n' + this.userInput;
+                this.isLoading = true;
+                // Code needed for development
+                // const endpoint = "http://localhost:3000/api/completions";
+                const endpoint = "/api/completions";
+                const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
-            try {
-                const result = await axios.post(endpoint, { input: combinedInput });
+                try {
+                    const result = await axios.post(endpoint, { input: combinedInput });
 
-                if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
-                    this.response = result.data.choices[0].message.content;
+                    if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
+                        this.response = result.data.choices[0].message.content;
+                    }
+
+                    this.isLoading = false;
+
+                } catch (error) {
+                    this.isLoading = false;
+                    console.error("Error fetching data from proxy server:", error);
                 }
-
-                this.isLoading = false;
-
-            } catch (error) {
-                this.isLoading = false;
-                console.error("Error fetching data from proxy server:", error);
+            } else {
+                this.userInput = "Please add an email to be altered!"
             }
-        } else {
-            this.userInput = "Please add an email to be altered!"
-        }
         },
         head() {
             return {
@@ -552,6 +625,54 @@ $border-radius: 0.5rem;
         background-color: yellow !important;
     }
 
+    .dropdown--language {
+        position: right;
+        width: 17rem;
+        background-color: #1e222d;
+        border-radius: $border-radius;
+        opacity: 0;
+        margin-top: 10px;
+        z-index: 1;
+        margin-left: 60%;
+        margin-top: 65px;
+
+        .dropdown__right-panelLanguage {
+            z-index: 1;
+
+            .dropdown__item-activeLanguage {
+                opacity: 1;
+            }
+        }
+
+        .dropdown__language {
+            overflow-y: auto;
+            max-height: 500px;
+
+            .dropdown__itemLanguage {
+                gap: 1rem;
+                padding: 1rem 0.25rem 1rem 2rem;
+                cursor: pointer;
+                font-weight: 400;
+                line-height: 24px;
+                opacity: 0;
+                color: white;
+
+                &:hover {
+                    background-color: rgba(193, 195, 196, 0.781);
+                }
+
+                &:focus {
+                    background-color: rgba(221, 223, 224, 0.781);
+                }
+            }
+
+            .dropdown__item-activeLanguage {
+                opacity: 1;
+            }
+
+        }
+    }
+
     .dropdown-trigger {
         width: 19rem;
         display: flex;
@@ -564,8 +685,6 @@ $border-radius: 0.5rem;
         margin-top: -5px;
         margin-bottom: 5px;
         box-shadow: 3px 3px 5px rgb(61, 61, 61);
-
-        // box-shadow: 2px 5px 10px rgba(61, 61, 61, 0.507);
         font-size: 18px;
 
         svg {
@@ -753,7 +872,7 @@ $border-radius: 0.5rem;
             cursor: pointer;
             width: 16px;
             margin-top: 11px;
-            margin-left: 48px;
+            margin-left: 47px;
             margin-right: -78px;
         }
 
@@ -810,6 +929,7 @@ $border-radius: 0.5rem;
             padding: 11px;
             border-radius: 5px;
             font-family: monospace;
+            justify-content: space-between;
             font-weight: 500;
             font-size: 20px;
             margin-top: 3px;
@@ -819,12 +939,49 @@ $border-radius: 0.5rem;
             letter-spacing: 1px;
             text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.404);
             box-shadow: 3px 3px 5px rgb(61, 61, 61);
-
-            // box-shadow: 2px 5px 10px rgba(61, 61, 61, 0.507);
             border: none;
+
+            svg {
+                width: 2rem;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .chevron-selected {
+                transform: rotate(180deg);
+            }
 
             .style {
                 min-width: 20px !important;
+            }
+        }
+
+        .dropLanguage {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 11px;
+            border-radius: 5px;
+            font-family: monospace;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 20px;
+            margin-top: 3px;
+            margin-left: 70px;
+            max-height: 48px;
+            background-color: #09e0fd;
+            color: white;
+            letter-spacing: 1px;
+            text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.404);
+            box-shadow: 3px 3px 5px rgb(61, 61, 61);
+            border: none;
+
+            svg {
+                width: 2rem;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .chevron-selected {
+                transform: rotate(180deg);
             }
         }
 
