@@ -1,5 +1,6 @@
 <template>
     <section class="email">
+        <tool-tips v-if="toolTips" @close="toolTips = false" />
         <!-- This is the template modal -->
         <div v-if="showModal" class="modal-backdrop">
             <div class="container col-12">
@@ -119,7 +120,7 @@
                             </div>
                         </div>
 
-                        <img class="col-1 questionmark" src="./../../assets/questionmark.png" />
+                        <img class="col-1 questionmark" @click="showTips" src="./../../assets/questionmark.png" />
 
                         <img :class="['col-1', 'speech_to_text', { 'activeSTT': recognitionActive }]"
                             src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
@@ -183,13 +184,15 @@
 <script>
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import Questionmark from '@/components/Questionmark';
 import axios from 'axios';
 
 
 export default {
     components: {
         'main-nav': Nav,
-        'footer-fold': Footer
+        'footer-fold': Footer,
+        'tool-tips': Questionmark
     },
     data() {
         return {
@@ -243,6 +246,7 @@ export default {
             recognitionActive: false,
             readyToFormatText: false,
             showModal: false,
+            toolTips: false,
             dropdownActive1: false,
             dropdownActive2: false,
             dropdownActive3: false,
@@ -347,7 +351,7 @@ Warm regards,
 [Author]
 [Your Position]
 [Your Contact Information]`;
-}
+        }
     },
     methods: {
         helloTemplate() {
@@ -361,6 +365,10 @@ Warm regards,
         followUpTemplate() {
             this.userInput = this.followUpTemplateText;
             this.showModal = false;
+        },
+        showTips() {
+            this.toolTips = true;
+            console.log("This is the questionmark button", this.toolTips);
         },
         toggleDropdown1() {
             this.dropdownActive1 = !this.dropdownActive1;
