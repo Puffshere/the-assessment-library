@@ -1059,6 +1059,17 @@ $border-radius: 0.5rem;
         }
     }
 
+    .modal-backdrop {
+        position: fixed;
+        z-index: 1;
+        width: 100vw;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.733);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .formatSpinning {
         max-width: 100px;
         margin: 45%;
