@@ -49,7 +49,7 @@
                         <div class="row toolRow">
                             <div class="col-3">
                                 <div class="toolImages">
-                                    <img class="microphoneImage" src="../assets/microphone.png">
+                                    <img class="microphoneImage" src="../../assets/microphone.png">
                                 </div>
                             </div>
                             <div class="col-9">
@@ -76,22 +76,9 @@
 <script>
 export default {
     methods: {
-        openModal() {
-            document.body.classList.add('body-no-scroll');
-            // Additional code to open the modal
-        },
-        closeModal() {
-            document.body.classList.remove('body-no-scroll');
-            // Additional code to close the modal
-        },
         closeToolTips() {
             this.$emit('close');
-            console.log("This is the close button");
         }
-    },
-    beforeDestroy() {
-        // Ensure that the class is removed from body when this component is destroyed
-        this.closeModal();
     }
 }
 </script>
@@ -112,15 +99,15 @@ export default {
     }
 
     .modal-content {
-        display: flex; // Utilizing Flexbox
-        flex-direction: column; // Arranging children (modal-body and closeBtn) vertically
+        display: flex;
+        flex-direction: column;
         padding: 10px;
         background-color: #141414;
         border-radius: 10px;
     }
 
     .modal-body {
-        flex-grow: 1; 
+        flex-grow: 1;
     }
 
     .modalTitle {
@@ -159,7 +146,7 @@ export default {
     }
 
     .lightBlueButton {
-        @extend .btnBase; // Use shared button styles
+        @extend .btnBase;
         background: linear-gradient(268deg, #5ac3fc, #01a8ff);
         padding: 10px;
 
@@ -175,13 +162,13 @@ export default {
     }
 
     .swap {
-        @extend .btnBase; // Use shared button styles
+        @extend .btnBase;
         background: linear-gradient(268deg, #09e1fe, #02d1ec);
         padding: 10px;
     }
 
     .translateBtn {
-        @extend .btnBase; // Use shared button styles
+        @extend .btnBase;
         background: linear-gradient(268deg, #0999fe, #0249ec);
         padding: 10px;
     }
@@ -222,6 +209,6 @@ export default {
         max-height: 80vh;
         overflow-y: auto;
     }
-    
+
 }
 </style>

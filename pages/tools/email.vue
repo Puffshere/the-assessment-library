@@ -1,23 +1,13 @@
 <template>
     <section class="email">
+
+        <!-- This is the Tips Modal -->
         <tool-tips v-if="toolTips" @close="toolTips = false" />
-        <!-- This is the template modal -->
-        <div v-if="showModal" class="modal-backdrop">
-            <div class="container col-12">
-                <div class="modal-content">
-                    <div class="row">
-                        <p class="modalTitle">Avaliable Templates</p>
-                        <hr>
-                        <p class="templates" @click="helloTemplate">Hello Email</p>
-                        <p class="templates" @click="surveyTemplate">Survey and Free Assessment</p>
-                        <p class="templates" @click="followUpTemplate">Follow Up Email</p>
-                        <div class="closeBtn">
-                            <button @click="closeModal" class="modalCloseBtn modalBtn">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <!-- This is the Templates Modal -->
+        <templates v-if="emailTemplates" @update-user-input="updateUserInput" @close="emailTemplates = false" />
+
+        <!-- This is the loading Spinner -->
         <div v-if="isLoading" class="modal-backdrop">
             <div class="container">
                 <div class="">
@@ -25,8 +15,16 @@
                 </div>
             </div>
         </div>
+
+        <!-- This is the Link in the userInput -->
+        <div v-if="!userInput">
+            <a href="https://www.assessments24x7.com/communication-coach" class="notSure">Not sure what style to use?</a>
+        </div>
+
+        <!-- This is the Main Nav Bar -->
         <main-nav />
 
+        <!-- This is the Header Section -->
         <section class="header">
             <div class="container">
                 <div class="row">
@@ -37,14 +35,12 @@
             </div>
         </section>
 
-        <div v-if="!userInput">
-            <a href="https://www.assessments24x7.com/communication-coach" class="notSure">Not sure what style to use?</a>
-        </div>
-
+        <!-- This is the Main Body of the page -->
         <section class="body">
             <div class="container">
                 <div v-if="!readyToFormatText" class=" bar col-12">
                     <div class="row">
+
                         <div class="col-3 first">
                             <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle ||
                                 'Recipient Adapted Style' }}
@@ -69,8 +65,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
 
+                        <div class="col-3">
                             <div class="dropdown-trigger" :class="styleColor2" @click="toggleDropdown2">{{ naturalStyle ||
                                 'Recipient Natural Style' }}
                                 <svg :class="{ 'chevron-selected': dropdownActive2 }" xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +74,6 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </div>
-
                             <div class="dropdown"
                                 :class="{ 'dropdown-active': dropdownActive2, 'dropdown-nonActive': !dropdownActive2 }">
                                 <div class="dropdown__left-panel">
@@ -96,19 +91,12 @@
                             </div>
                         </div>
 
-                        <!-- <select class="col-3 drop" v-model="language">
-                            <option disabled :value="null">{{ language || 'English' }}</option>
-                            <option v-for="language in languages" :key="language.id" :value="language.name">{{ language.name
-                            }}</option>
-                        </select> -->
-
                         <div class="col-3 dropLanguage" @click="toggleDropdown3">{{ language || 'Language' }}
                             <svg :class="{ 'chevron-selected': dropdownActive3 }" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                             </svg>
                         </div>
-
                         <div class="dropdown--language"
                             :class="{ 'dropdown-active': dropdownActive3, 'dropdown-nonActive': !dropdownActive3 }">
                             <div class="dropdown__language">
@@ -176,7 +164,9 @@
             </div>
         </section>
 
+        <!-- This is the Footer -->
         <footer-fold />
+
     </section>
 </template>
 
@@ -184,7 +174,8 @@
 <script>
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import Questionmark from '@/components/Questionmark';
+import Questionmark from '@/components/emailGenerator/Questionmark';
+import Templates from '@/components/emailGenerator/Templates';
 import axios from 'axios';
 
 
@@ -192,7 +183,8 @@ export default {
     components: {
         'main-nav': Nav,
         'footer-fold': Footer,
-        'tool-tips': Questionmark
+        'tool-tips': Questionmark,
+        'templates': Templates
     },
     data() {
         return {
@@ -245,8 +237,8 @@ export default {
             recognition: null,
             recognitionActive: false,
             readyToFormatText: false,
-            showModal: false,
             toolTips: false,
+            emailTemplates: false,
             dropdownActive1: false,
             dropdownActive2: false,
             dropdownActive3: false,
@@ -305,70 +297,11 @@ Here's the original email:`
         },
         promptFormat() {
             return `Reformat the following raw text into proper and grammatically correct email format:`
-        },
-        helloTemplateText() {
-            return `Dear [Recipient],
-
-We look forward to hearing from you and would just like to extend a hello!  If you have any questions feel free to reach out.
-
-Sincerely,
-[Author]`;
-        },
-        surveyTemplateText() {
-            return `Dear [Recipient],
-
-We hope this email finds you well. As your assessments and certifications provider, we would greatly value your feedback. Would you have 5 minutes to spare for a quick survey? Your feedback will play a crucial role in tailoring our services to meet your evolving needs.
-
-Take the survey & receive a free DISC assessment
-
-As a thank you for your time, we will send a complimentary DISC assessment link when you have completed the survey. Experience our updated DISC Report, paired with modernized training materials and resources. Enjoy dashboard upgrades, reports, and new assessment options -- now available to all DISCcert clients with no cost to upgrade! 
-
-Schedule an introduction call with your Success Team below.
-
-If you need any additional support, let's connect and see how we can best assist you.
-
-Questions? Contact us!
-
-Sincerely,
-[Author]`;
-        },
-        followUpTemplateText() {
-            return `Dear [Recipient],
-
-Thank you for joining us at [Event/Meeting Name]. It was a pleasure to connect with you and we trust you found the experience to be insightful and valuable. 
-
-[Optional: Insert a sentence or two about a key takeaway or highlight from the event/meeting.]
-
-In our continuous effort to enhance our collaborations and events, we’d love to hear about your experiences and any thoughts you might have on how we can improve in the future.
-
-[Optional: If applicable, insert a sentence or two about follow-up materials, such as presentation slides, documentation, or related resources. Example: "We have attached the presentation slides and additional resources for your reference and further exploration."]
-
-If you have any questions or would like to discuss any specific aspects in more detail, please do not hesitate to reach out to us directly. Your insights and feedback are immensely valuable as we strive to continuously improve and better serve you.
-
-Looking forward to our future interactions and once again, thank you for being a vital part of [Event/Meeting Name].
-
-Warm regards,
-[Author]
-[Your Position]
-[Your Contact Information]`;
         }
     },
     methods: {
-        helloTemplate() {
-            this.userInput = this.helloTemplateText;
-            this.showModal = false;
-        },
-        surveyTemplate() {
-            this.userInput = this.surveyTemplateText;
-            this.showModal = false;
-        },
-        followUpTemplate() {
-            this.userInput = this.followUpTemplateText;
-            this.showModal = false;
-        },
         showTips() {
             this.toolTips = true;
-            console.log("This is the questionmark button", this.toolTips);
         },
         toggleDropdown1() {
             this.dropdownActive1 = !this.dropdownActive1;
@@ -539,16 +472,10 @@ Warm regards,
             }
         },
         templateOptions() {
-            const bodySection = this.$el.querySelector('.body');
-            bodySection.classList.add('no-scroll');
-
-            this.showModal = true;
+            this.emailTemplates = true;
         },
-        closeModal() {
-            const bodySection = this.$el.querySelector('.body');
-            bodySection.classList.remove('no-scroll');
-
-            this.showModal = false;
+        updateUserInput(newUserData) {
+            this.userInput = newUserData;
         },
         swapOutput() {
             this.userInput = this.response;
@@ -603,9 +530,6 @@ $primary-color: #ced5d8;
 $bg-color: #f8fafc;
 $border-radius: 0.5rem;
 
-.no-scroll {
-    overflow: hidden;
-}
 
 .email {
 
@@ -677,7 +601,6 @@ $border-radius: 0.5rem;
             .dropdown__item-activeLanguage {
                 opacity: 1;
             }
-
         }
     }
 
@@ -797,7 +720,6 @@ $border-radius: 0.5rem;
                 opacity: 1;
                 transform: translatey(0);
             }
-
         }
     }
 
@@ -845,7 +767,6 @@ $border-radius: 0.5rem;
     }
 
     .body {
-
         font-family: "Roboto", sans-serif;
         display: flex;
         justify-content: center;
@@ -1138,115 +1059,12 @@ $border-radius: 0.5rem;
         }
     }
 
-    // This is the beginning of the template modal
-    .modalCloseBtn {
-        align-items: center;
-        background: linear-gradient(268deg, #5ac3fc, #01a8ff);
-        padding: 10px;
-    }
-
-    .modalCloseBtn:hover {
-        background: linear-gradient(268deg, #51b4e9, #0097e9);
-        box-shadow: 2px 2px 5px rgb(61, 61, 61);
-    }
-
-    .modalCloseBtn:focus {
-        background: linear-gradient(268deg, #479fce, #0088d1);
-        box-shadow: 1px 1px 5px rgb(61, 61, 61);
-    }
-
-    .modalBtn {
-        cursor: pointer;
-        font-family: $font-family;
-        margin-bottom: 12px;
-        border-radius: 10px;
-        color: #fff;
-        letter-spacing: 2px;
-        font-weight: 600;
-        border: none;
-        box-shadow: 3px 3px 5px rgb(61, 61, 61);
-        min-width: 100px;
-    }
-
-    .modal-backdrop {
-        position: fixed;
-        z-index: 1;
-        width: 100vw;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.733);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .modal-content {
-        padding: 10px;
-        background-color: #141414;
-        border-radius: 10px;
-    }
-
     .formatSpinning {
         max-width: 100px;
         margin: 45%;
         animation: spin 4s linear infinite;
     }
 
-    .modalTitle {
-        font-size: clamp(15px, 5vw, 40px);
-        color: white;
-        margin-bottom: 20px;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .templates {
-        cursor: pointer;
-        font-size: clamp(12px, 4vw, 20px);
-        color: white;
-        margin-bottom: 15px;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .templates:hover {
-        text-shadow: 1px 1px 1px rgb(253, 251, 251);
-    }
-
-    .templates:focus {
-        text-shadow: 1px 1px 1px rgb(182, 181, 181);
-    }
-
-    .futureTemplate {
-        font-size: clamp(12px, 4vw, 20px);
-        color: white;
-        margin-bottom: 15px;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        opacity: .5;
-    }
-
-    .closeBtn {
-        max-width: 100px;
-        float: right;
-        margin-right: 60px;
-    }
-
-    .centered-no-wrap {
-        white-space: nowrap;
-        text-align: center;
-    }
-
-    .no-wrap {
-        white-space: nowrap;
-    }
-
-    // This is the end of the template modal
 }
 
 
