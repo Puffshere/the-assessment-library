@@ -18,7 +18,8 @@
 
         <!-- This is the Link in the userInput -->
         <div v-if="!userInput">
-            <a href="https://www.assessments24x7.com/communication-coach" class="notSure">Not sure what style to use?</a>
+            <a href="https://www.assessments24x7.com/communication-coach" class="notSureLinkStyling">Not sure what style to
+                use?</a>
         </div>
 
         <!-- This is the Main Nav Bar -->
@@ -38,10 +39,10 @@
         <!-- This is the Main Body of the page -->
         <section class="body">
             <div class="container">
-                <div v-if="!readyToFormatText" class=" bar col-12">
+                <div v-if="!readyToFormatText" class="bar1 col-12">
                     <div class="row">
 
-                        <div class="col-3 first">
+                        <div class="col-3">
                             <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle ||
                                 'Recipient Adapted Style' }}
                                 <svg :class="{ 'chevron-selected': dropdownActive1 }" xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +50,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </div>
-                            <div class="dropdown"
+                            <div class="dropdown dropPlacement1"
                                 :class="{ 'dropdown-active': dropdownActive1, 'dropdown-nonActive': !dropdownActive1 }">
                                 <div class="dropdown__left-panel">
                                     <div :class="{ 'circle-grow': circleGrows1[0] }" class="circle circle-1"></div>
@@ -74,7 +75,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </div>
-                            <div class="dropdown"
+                            <div class="dropdown dropPlacement2"
                                 :class="{ 'dropdown-active': dropdownActive2, 'dropdown-nonActive': !dropdownActive2 }">
                                 <div class="dropdown__left-panel">
                                     <div :class="{ 'circle-grow': circleGrows2[0] }" class="circle circle-1"></div>
@@ -91,32 +92,38 @@
                             </div>
                         </div>
 
-                        <div class="col-3 dropLanguage" @click="toggleDropdown3">{{ language || 'Language' }}
-                            <svg :class="{ 'chevron-selected': dropdownActive3 }" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                            </svg>
-                        </div>
-                        <div class="dropdown--language"
-                            :class="{ 'dropdown-active': dropdownActive3, 'dropdown-nonActive': !dropdownActive3 }">
-                            <div class="dropdown__language">
-                                <div v-for="(languageItem, index) in languages" :key="index"
-                                    :class="{ 'dropdown__item-activeLanguage': languageItem.active }"
-                                    class="dropdown__itemLanguage" @click="selectItemLanguage(languageItem)">
-                                    <span>{{ languageItem.value }}</span>
+                        <div class="col-3">
+                            <div class="dropdown-trigger dropLanguage" @click="toggleDropdown3">{{ language || 'Language' }}
+                                <svg :class="{ 'chevron-selected': dropdownActive3 }" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                            <div class="dropdown dropdown--language"
+                                :class="{ 'dropdown-active': dropdownActive3, 'dropdown-nonActive': !dropdownActive3 }">
+                                <div class="dropdown__language">
+                                    <div v-for="(languageItem, index) in languages" :key="index"
+                                        :class="{ 'dropdown__item-activeLanguage': languageItem.active }"
+                                        class="dropdown__itemLanguage" @click="selectItemLanguage(languageItem)">
+                                        <span>{{ languageItem.value }}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <img class="col-1 questionmark" @click="showTips" src="./../../assets/questionmark.png" />
+                        <div class="col-1">
+                            <img class="questionmark" @click="showTips" src="./../../assets/questionmark.png" />
+                        </div>
 
-                        <img :class="['col-1', 'speech_to_text', { 'activeSTT': recognitionActive }]"
-                            src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
+                        <div class="col-1">
+                            <img :class="['speech_to_text', { 'activeSTT': recognitionActive }]"
+                                src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
+                        </div>
 
                     </div>
                 </div>
 
-                <div v-else class="bar col-12">
+                <div v-else class="bar1 col-12">
                     <div class="row styles">
 
                         <div class="col-6">
@@ -131,7 +138,9 @@
                             <button @click="noFormatText" class="formatBtnNo btn">NO</button>
                         </div>
 
-                        <img src="./../../assets/fullCircle.png" class="col-1 formatGenerator" alt="generator">
+                        <div class="col-2">
+                            <img src="./../../assets/fullCircle.png" class="fullCircle" alt="Full Circle">
+                        </div>
 
                     </div>
                 </div>
@@ -142,7 +151,7 @@
 
                 <div type='text' v-if="response" class="formatted-response">{{ response }}</div>
 
-                <div class="container bar bar2">
+                <div class="container bar2">
                     <div class="row col-12 button-container">
 
                         <div class="col-4">
@@ -155,7 +164,7 @@
                         </div>
 
                         <div class="col-4">
-                            <button type="submit" @click="submitMessage" class="generate btn">Submit</button>
+                            <button type="submit" @click="submitMessage" class="submit btn">Submit</button>
                         </div>
 
                     </div>
@@ -304,6 +313,12 @@ Here's the original email:`
             this.toolTips = true;
         },
         toggleDropdown1() {
+            if (this.dropdownActive2) {
+                this.toggleDropdown2();
+            }
+            if (this.dropdownActive3) {
+                this.toggleDropdown3();
+            }
             this.dropdownActive1 = !this.dropdownActive1;
 
             this.circleGrows1.forEach((_, index) => {
@@ -319,6 +334,12 @@ Here's the original email:`
             });
         },
         toggleDropdown2() {
+            if (this.dropdownActive1) {
+                this.toggleDropdown1();
+            }
+            if (this.dropdownActive3) {
+                this.toggleDropdown3();
+            }
             this.dropdownActive2 = !this.dropdownActive2;
 
             this.circleGrows2.forEach((_, index) => {
@@ -334,6 +355,12 @@ Here's the original email:`
             });
         },
         toggleDropdown3() {
+            if (this.dropdownActive1) {
+                this.toggleDropdown1();
+            }
+            if (this.dropdownActive2) {
+                this.toggleDropdown2();
+            }
             this.dropdownActive3 = !this.dropdownActive3;
 
             this.languages.forEach((_, index) => {
@@ -533,212 +560,20 @@ $border-radius: 0.5rem;
 
 .email {
 
-    .first {
-        margin-right: 70px;
-        margin-left: 20px;
-    }
-
-    .color-D {
-        background-color: #e93d2f !important;
-        color: white !important;
-    }
-
-    .color-I {
-        background-color: #1666ff !important;
-        color: white !important;
-    }
-
-    .color-S {
-        background-color: #0dab49 !important;
-        color: white !important;
-    }
-
-    .color-C {
-        background-color: yellow !important;
-    }
-
-    .dropdown--language {
-        position: right;
-        width: 17rem;
-        background-color: #1e222d;
-        border-radius: $border-radius;
-        opacity: 0;
-        margin-top: 10px;
-        z-index: 1;
-        margin-left: 60%;
-        margin-top: 65px;
-
-        .dropdown__right-panelLanguage {
-            z-index: 1;
-
-            .dropdown__item-activeLanguage {
-                opacity: 1;
-            }
-        }
-
-        .dropdown__language {
-            overflow-y: auto;
-            max-height: 500px;
-
-            .dropdown__itemLanguage {
-                gap: 1rem;
-                padding: 1rem 0.25rem 1rem 2rem;
-                cursor: pointer;
-                font-weight: 400;
-                line-height: 24px;
-                opacity: 0;
-                color: white;
-
-                &:hover {
-                    background-color: rgba(193, 195, 196, 0.781);
-                }
-
-                &:focus {
-                    background-color: rgba(221, 223, 224, 0.781);
-                }
-            }
-
-            .dropdown__item-activeLanguage {
-                opacity: 1;
-            }
-        }
-    }
-
-    .dropdown-trigger {
-        width: 19rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 8px 2rem;
-        background-color: $primary-color;
-        border-radius: $border-radius;
-        cursor: pointer;
-        margin-top: -5px;
-        margin-bottom: 5px;
-        box-shadow: 3px 3px 5px rgb(61, 61, 61);
-        font-size: 18px;
-
-        svg {
-            width: 2rem;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .chevron-selected {
-            transform: rotate(180deg);
-        }
-    }
-
-    .dropdown {
-        width: 20rem;
-        display: flex;
-        background-color: #1e222d;
-        border-radius: $border-radius;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        margin-top: 10px;
-
-        .dropdown__left-panel {
-            width: 5rem;
-            position: relative;
-            background-color: #1666ff;
-            border-radius: $border-radius 0 0 $border-radius;
-            overflow: hidden;
-            z-index: 10;
-
-            @mixin circle {
-                position: absolute;
-                border-radius: 50%;
-                opacity: 0;
-                transform: scale(0.1);
-                transition: transform 1s ease-in-out;
-            }
-
-            .circle-1 {
-                @include circle;
-                width: 1.5rem;
-                height: 1.5rem;
-                top: 0.5rem;
-                right: 0.2rem;
-                background-color: #0dab49;
-            }
-
-            .circle-2 {
-                @include circle;
-                width: 4rem;
-                height: 4rem;
-                top: 3rem;
-                left: -2rem;
-                background-color: #e93d2f;
-            }
-
-            .circle-3 {
-                @include circle;
-                width: 0.75rem;
-                height: 0.75rem;
-                bottom: 0.5rem;
-                right: 1rem;
-                background-color: yellow;
-            }
-
-            .circle-grow {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .dropdown__right-panel {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 2;
-            z-index: 10px;
-
-            .dropdown__item {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 1rem;
-                padding: 1rem 0.25rem 1rem 2rem;
-                cursor: pointer;
-                transition: background-color 0.3s ease-in-out;
-                font-weight: 400;
-                line-height: 24px;
-                opacity: 0;
-                color: white;
-                transform: translateY(0.5rem);
-                transition: opacity, transform 0.5s ease-in-out;
-
-                &:hover {
-                    background-color: rgba(193, 195, 196, 0.781);
-                }
-
-                &:focus {
-                    background-color: rgba(221, 223, 224, 0.781);
-                }
-            }
-
-            .dropdown__item-active {
-                opacity: 1;
-                transform: translatey(0);
-            }
-        }
-    }
-
-    .dropdown-active {
-        opacity: 1;
-        position: absolute;
-    }
-
-    .dropdown-nonActive {
-        display: none;
-    }
-
     .header {
         background: url('~assets/about.jpg');
         background-size: cover;
         color: #fff;
         text-align: center;
-        padding: 50px 0;
-        margin-bottom: 15px;
+        padding: 50px 10px;
+        box-shadow: 5px 5px 5px rgb(61, 61, 61);
+        box-shadow: 5px 5px 10px rgb(61, 61, 61);
+
+        h1 {
+            font-size: 30pt;
+            line-height: 34pt;
+            margin-bottom: 0;
+        }
 
         .section-title {
             font-size: 30pt;
@@ -746,13 +581,7 @@ $border-radius: 0.5rem;
         }
     }
 
-    h1 {
-        font-size: 30pt;
-        line-height: 34pt;
-        margin-bottom: 0;
-    }
-
-    .notSure {
+    .notSureLinkStyling {
         cursor: pointer;
         font-size: large;
         position: absolute;
@@ -762,24 +591,226 @@ $border-radius: 0.5rem;
         color: rgb(34, 98, 238);
     }
 
-    .notSure:hover {
+    .notSureLinkStyling:hover {
         font-size: 25px;
     }
 
     .body {
-        font-family: "Roboto", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: 0 5px;
 
-        .bar {
+        .row>.col-3,
+        .col-1 {
+            display: flex;
+            justify-content: right;
+        }
+
+        .color-D {
+            background-color: #e93d2f !important;
+            color: white !important;
+        }
+
+        .color-I {
+            background-color: #1666ff !important;
+            color: white !important;
+        }
+
+        .color-S {
+            background-color: #0dab49 !important;
+            color: white !important;
+        }
+
+        .color-C {
+            background-color: yellow !important;
+        }
+
+        .dropdown-trigger {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4.5px 10px;
+            background-color: $primary-color;
+            border-radius: $border-radius;
+            cursor: pointer;
+            box-shadow: 3px 3px 5px rgb(61, 61, 61);
+            font-size: 15px;
+
+            svg {
+                width: 2rem;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .chevron-selected {
+                transform: rotate(180deg);
+            }
+        }
+
+
+        .dropdown--language {
+            background-color: #1e222d;
+            border-radius: $border-radius;
+            opacity: 0;
+            color: white;
+            z-index: 1;
+
+            .dropdown__language {
+                overflow-y: auto;
+                max-height: 500px;
+
+                .dropdown__itemLanguage {
+                    padding: 1rem 0.25rem 1rem 2rem;
+                    cursor: pointer;
+                    font-weight: 400;
+                    line-height: 24px;
+                    opacity: 0;
+                    color: white;
+
+                    &:hover {
+                        background-color: rgba(193, 195, 196, 0.781);
+                    }
+
+                    &:focus {
+                        background-color: rgba(221, 223, 224, 0.781);
+                    }
+                }
+
+                .dropdown__item-activeLanguage {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .dropPlacement1 {
+            position: absolute;
+            width: 20rem;
+        }
+
+        .dropPlacement2 {
+            width: 20rem;
+            position: absolute;
+        }
+
+        .dropdown {
+            display: flex;
+            background-color: #1e222d;
+            border-radius: $border-radius;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            margin-top: 50px;
+
+            .dropdown__left-panel {
+                width: 5rem;
+                position: relative;
+                background-color: #1666ff;
+                border-radius: $border-radius 0 0 $border-radius;
+                overflow: hidden;
+                z-index: 10;
+
+                @mixin circle {
+                    position: absolute;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transform: scale(0.1);
+                    transition: transform 1s ease-in-out;
+                }
+
+                .circle-1 {
+                    @include circle;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    top: 0.5rem;
+                    right: 0.2rem;
+                    background-color: #0dab49;
+                }
+
+                .circle-2 {
+                    @include circle;
+                    width: 4rem;
+                    height: 4rem;
+                    top: 3rem;
+                    left: -2rem;
+                    background-color: #e93d2f;
+                }
+
+                .circle-3 {
+                    @include circle;
+                    width: 0.75rem;
+                    height: 0.75rem;
+                    bottom: 0.5rem;
+                    right: 1rem;
+                    background-color: yellow;
+                }
+
+                .circle-grow {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            .dropdown__right-panel {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 2;
+                z-index: 10px;
+
+                .dropdown__item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    padding: 1rem 0.25rem 1rem 2rem;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease-in-out;
+                    font-weight: 400;
+                    line-height: 24px;
+                    opacity: 0;
+                    color: white;
+                    transform: translateY(0.5rem);
+                    transition: opacity, transform 0.5s ease-in-out;
+
+                    &:hover {
+                        background-color: rgba(193, 195, 196, 0.781);
+                    }
+
+                    &:focus {
+                        background-color: rgba(221, 223, 224, 0.781);
+                    }
+                }
+
+                .dropdown__item-active {
+                    opacity: 1;
+                    transform: translatey(0);
+                }
+            }
+        }
+
+        .dropdown-active {
+            opacity: 1;
+            position: absolute;
+        }
+
+        .dropdown-nonActive {
+            display: none;
+        }
+
+        .bar1 {
             width: 100%;
             background-color: rgba(128, 128, 128, 0.301);
             border-radius: 5px;
-            box-shadow: 2px 5px 10px rgba(61, 61, 61, 0.507);
             border: 1px solid rgb(168, 169, 170);
-            padding-top: 10px;
+            padding: 5px 0;
+            padding-left: 10px;
+            margin-top: 30px;
             margin-bottom: 20px;
+            box-shadow: 5px 5px 5px rgb(61, 61, 61);
+            box-shadow: 5px 5px 10px rgb(61, 61, 61);
+
+            .fullCircle {
+                display: block;
+                margin: auto;
+                position: relative;
+                left: -5px;
+            }
         }
 
         .formatBar {
@@ -793,16 +824,21 @@ $border-radius: 0.5rem;
         }
 
         .bar2 {
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.301);
+            border-radius: 5px;
+            border: 1px solid rgb(168, 169, 170);
+            padding: 5px 0;
+            margin-top: 20px;
             margin-bottom: 30px;
+            box-shadow: 5px 5px 5px rgb(61, 61, 61);
+            box-shadow: 5px 5px 10px rgb(61, 61, 61);
         }
 
         .questionmark {
-            position: relative;
+            padding-top: 4.5px;
             cursor: pointer;
             width: 16px;
-            margin-top: 11px;
-            margin-left: 47px;
-            margin-right: -78px;
         }
 
         .questionmark:hover {
@@ -810,9 +846,7 @@ $border-radius: 0.5rem;
         }
 
         .speech_to_text {
-            position: relative;
-            right: -8%;
-            margin-top: 11px;
+            padding-top: 4.5px;
             max-width: 40px;
             cursor: pointer;
         }
@@ -834,10 +868,6 @@ $border-radius: 0.5rem;
             box-shadow: 1px 1px 5px rgb(61, 61, 61);
         }
 
-        .styles {
-            margin-bottom: 20px;
-        }
-
         .inputStyling {
             cursor: pointer;
             width: 100%;
@@ -846,72 +876,23 @@ $border-radius: 0.5rem;
             padding-left: 20px;
             padding-right: 15px;
             padding-top: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 0px;
             border: 4px solid rgb(61, 107, 204);
             box-shadow: 5px 5px 5px rgb(61, 61, 61);
             box-shadow: 5px 5px 10px rgb(61, 61, 61);
             font-size: 20px;
         }
 
-        .drop {
-            cursor: pointer;
-            padding: 11px;
-            border-radius: 5px;
-            font-family: monospace;
-            justify-content: space-between;
-            font-weight: 500;
-            font-size: 20px;
-            margin-top: 3px;
-            margin-left: 70px;
-            background-color: #09e0fd;
-            color: white;
-            letter-spacing: 1px;
-            text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.404);
-            box-shadow: 3px 3px 5px rgb(61, 61, 61);
-            border: none;
-
-            svg {
-                width: 2rem;
-                transition: transform 0.5s ease-in-out;
-            }
-
-            .chevron-selected {
-                transform: rotate(180deg);
-            }
-
-            .style {
-                min-width: 20px !important;
-            }
-        }
-
         .dropLanguage {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            padding: 11px;
-            border-radius: 5px;
-            font-family: monospace;
             justify-content: space-between;
             font-weight: 500;
-            font-size: 20px;
-            margin-top: 3px;
-            margin-left: 70px;
-            max-height: 48px;
+            font-size: 17px;
             background-color: #09e0fd;
             color: white;
             letter-spacing: 1px;
             text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.404);
             box-shadow: 3px 3px 5px rgb(61, 61, 61);
             border: none;
-
-            svg {
-                width: 2rem;
-                transition: transform 0.5s ease-in-out;
-            }
-
-            .chevron-selected {
-                transform: rotate(180deg);
-            }
         }
 
         .formatted-response {
@@ -920,7 +901,7 @@ $border-radius: 0.5rem;
             padding: 20px;
             border-radius: 5px;
             overflow-x: auto;
-            margin-bottom: 30px;
+            margin-top: 15px;
             border: 4px solid rgb(54, 147, 223);
             box-shadow: 5px 5px 5px rgb(61, 61, 61);
             box-shadow: 5px 5px 10px rgb(61, 61, 61);
@@ -931,7 +912,6 @@ $border-radius: 0.5rem;
         .btn {
             cursor: pointer;
             font-family: $font-family;
-            margin-bottom: 12px;
             border-radius: 10px;
             color: #fff;
             letter-spacing: 2px;
@@ -998,7 +978,6 @@ $border-radius: 0.5rem;
         }
 
         .swap {
-            align-items: center;
             background: linear-gradient(268deg, #09e1fe, #02d1ec);
             padding: 10px;
         }
@@ -1013,18 +992,18 @@ $border-radius: 0.5rem;
             box-shadow: 1px 1px 5px rgb(61, 61, 61);
         }
 
-        .generate {
+        .submit {
             background: linear-gradient(268deg, #0999fe, #0249ec);
             float: right;
             padding: 10px;
         }
 
-        .generate:hover {
+        .submit:hover {
             background: linear-gradient(268deg, #078ae7, #0240d1);
             box-shadow: 2px 2px 5px rgb(61, 61, 61);
         }
 
-        .generate:focus {
+        .submit:focus {
             background: linear-gradient(268deg, #0676c7, #0135ad);
             box-shadow: 1px 1px 5px rgb(61, 61, 61);
         }
@@ -1034,18 +1013,8 @@ $border-radius: 0.5rem;
             margin: 0 auto;
         }
 
-        .generator {
+        .fullCircle {
             max-width: 40px;
-            margin-left: 110px;
-            margin-top: 14px;
-            margin-bottom: -4px;
-        }
-
-        .formatGenerator {
-            max-width: 37px;
-            margin-left: 100px;
-            margin-top: 10px;
-            margin-bottom: -4px;
         }
 
         @keyframes spin {
@@ -1061,7 +1030,7 @@ $border-radius: 0.5rem;
 
     .modal-backdrop {
         position: fixed;
-        z-index: 1;
+        z-index: 20;
         width: 100vw;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.733);
@@ -1072,30 +1041,62 @@ $border-radius: 0.5rem;
 
     .formatSpinning {
         max-width: 100px;
-        margin: 45%;
+        display: block;
+        margin: auto;
         animation: spin 4s linear infinite;
     }
 
 }
 
+@media only screen and (max-width: 1122px) {
 
-@media screen and (max-width: 500px) {
-
-    .formatBtnYes {
-        float: left !important;
+    .notSureLinkStyling {
+        bottom: 55% !important;
+        font-size: 10px !important;
     }
 
-    .speech_to_text {
-        float: left !important;
-        margin-left: 40px !important;
+    /* Override styles for the button's container */
+    div[class*="col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        flex-direction: column !important;
     }
-}
 
-@media screen and (max-width: 300px) {
+    /* Override styles for the buttons */
+    button.btn {
+        width: calc(100% - 15px) !important;
+        max-width: 100% !important;
+        margin-bottom: 10px !important;
+        display: block !important;
+        float: none !important;
+        align-content: center !important;
+    }
 
-    .btn {
-        min-width: none !important;
-        max-width: 10% !important;
+    .col-1 {
+        text-align: center;
+    }
+
+    .bar1 {
+        padding-left: 0px !important;
+        overflow: hidden;
+    }
+
+    .dropdown-trigger {
+        margin-left: 0px !important;
+        margin-right: 80px !important;
+    }
+
+    .dropdown {
+        margin-top: 10px !important;
+    }
+
+    .fullCircle {
+        display: block;
+        margin: auto;
+        position: relative;
+        left: -5px;
+        margin-bottom: 10px;
     }
 }
 </style>
