@@ -1,42 +1,56 @@
 <template>
-    <section class="acquisitions lazyload">
-        <div class="container">
-            <div class="row">
-                <div class="col-10">
+    <section>
+        <div class="acquisitions lazyload"></div>
+        <div class="background">
+            <h1 class="text">Assessments 24x7 Acquires DISCcert, Enhancing</h1>
+            <h1 class="text">Assessment Offerings and Client Support</h1>
+        </div>
+        <div class="container col-12">
+            <h2 class="offerings spacingTop">
+                Assessments 24x7, a leading provider of assessments and resources for
+                personal and professional development, is thrilled to announce its recent
+                acquisition of DISCcert, a prominent DISC assessment provider previously
+                owned by Bonnie Burn. The acquisition was completed on June 1, 2023, and
+                signifies a significant step forward for both companies.
+                Discover Assessments 24x7's recent acquisition of
+                DISCcert, enhancing our
+                assessment offerings and client support. Explore the benefits for clients and
+                learn how you can discuss acquisition opportunities with us.
 
-                    <p class="acquisition-title">Interested in Being Acquired?</p>
-                    <p class="acquisition-description">
-                        If you are an organization or individual interested in discussing the possibility of being acquired
-                        by Assessments 24x7, we invite you to reach out to us. We are always open to exploring opportunities
-                        for growth and partnership. Our dedicated team is committed to assessing the potential for
-                        collaboration and acquisition, and we look forward to hearing from you.
-                    </p>
+            </h2>
+            <div class="row">
+                <div class="col-9">
+                    <h2 class="offeringsMiddle">
+                        Assessment Offerings and Client Support
+                        Assessments 24x7 Acquires DISCcert, Enhancing
+                        Access to a Broader Range of Assessments and Resources:
+                        With Assessments 24x7's extensive selection of assessments, clients now
+                        have access to tools designed to enhance motivation, teamwork,
+                        leadership, emotional intelligence, and more. This expanded offering empowers
+                        individuals and organizations to achieve their goals more effectively.
+                        Bonnie Burn, the former owner
+                    </h2>
+                </div>
+                <div class="col-3">
+                    <img class="icons" src="../assets/gold-logo.png" />
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-8">
-                    <ul class="contactSection">
-                        <li class="contactItem bold">
-                            Contact Us
-                        </li>
-                        <li class="contactItem">
-                            Please contact our Acquisitions Team for inquiries or to initiate a conversation about the
-                            acquisition process:
-                        </li>
-                        <li class="contactItem links">
-                            Email: <span><a href="mailto:hello@assessments24x7.com">hello@assessments24x7.com</a></span>
-                        </li>
-                        <li class="contactItem links">
-                            Phone: <span><a href="tel:12064006647">+1 (206) 400-6647</a></span>
-                        </li>
-                        <li class="contactItem">
-                            We value innovation, talent, and the potential for mutual success. Let's explore the
-                            possibilities together.
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <h2 class="offerings spacingBottom">
+                of DISCcert,
+                expressed her enthusiasm for the acquisition in a
+                heartfelt letter to her clients. She emphasized her
+                commitment to constant process improvement
+                and highlighted the opportunities this acquisition
+                presents for clients to access a broader range of
+                assessments and resources while continuing to
+                receive outstanding support.
+                Brandon Parker, CEO of Assessments 24x7 is excited to offer DISCcert clients
+                an opportunity to upgrade their DISC reports and assessment dashboards to
+                make the most of the acquisition. “We are really looking forward to showing off
+                our updated dashboard to all the existing DISCcert clients. I truly think they will
+                be blown away by the technology,
+                ” says Brandon.
+            </h2>
         </div>
     </section>
 </template>
@@ -45,45 +59,76 @@
 @import '~assets/scss/vars';
 
 
-.contactSection {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-
-    .contactItem {
-        margin-bottom: 8px;
-        font-family: $font-alt;
-    }
-
-    .bold {
-        font-weight: bold;
-    }
-
-    .links {
-        cursor: pointer;
-    }
-}
-
 .acquisitions {
     background-size: cover !important;
     background-position: bottom !important;
     width: 100%;
-    padding: 25px 0 40px;
-    color: black;
+    min-height: 65vh;
 
     &.lazyloaded {
-        background: url('~assets/acquisitionsImage.jpg');
+        background: url('~assets/acquisitions-top.png');
     }
+}
 
-    .acquisition-title {
-        font-size: 30pt;
-        line-height: 34pt;
-        font-weight: 600;
-        margin-bottom: 0;
-    }
+h2 {
+    font-size: 20pt;
+    line-height: 24pt;
+}
 
-    .acquisition-description {
-        margin-bottom: 20px;
-    }
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1666ff;
+    margin-top: -20px;
+    min-height: 170pt;
+    color: white;
+}
+
+.text {
+    margin: 0px;
+    font-size: 30pt;
+}
+
+.offerings {
+    font-weight: 500;
+    padding: 0px 8px;
+    line-height: 45px;
+}
+
+.spacingTop {
+margin-top: 40px;
+}
+
+.offeringsMiddle {
+    font-weight: 500;
+    line-height: 45px;
+    margin-left: -15px;
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+
+.spacingBottom {
+margin-bottom: 40px;
+}
+
+.icons {
+    width: 350px;
+    margin-left: -20px;
+}
+
+@media only screen and (max-width: 1122px) {
+
+.offeringsMiddle {
+    margin-left: 0px !important;
+}
+
+.icons {
+    margin-top: 35px;
+    margin-left: 0px;
+}
+
 }
 </style>

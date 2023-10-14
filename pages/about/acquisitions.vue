@@ -1,101 +1,62 @@
 <template>
     <section class="acquisitions">
         <main-nav />
-
         <section class="header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="section-title">Assessments 24x7 Acquistions</h1>
-                        <p>
-                            Acquisitionships are one of the cornerstones of our company and we are pleased to feature a
-                            few of them here. They've taken our
-                            assessment customization to the next level in some very creative ways, and they all provide
-                            the high quality assessment
-                            products that you would expect from an Assessments 24x7 partner.
-                        </p>
+                        <h1 class="section-title">Assessments 24x7</h1>
+                        <h1 class="section-subtitle">Recent Acquisitions and </h1>
+                        <h1 class="section-subtitle">Acquistion Opportunities</h1>
+                        <h2 class="section-subtitle-description">Discover Assessments 24x7's recent acquisition of DISCcert,
+                            enhancing our</h2>
+                        <h2 class="section-subtitle-description"> offerings and client support. Explore the benefits for
+                            clients and</h2>
+                        <h2 class="section-subtitle-description"> how you can discuss acquisition opportunities with us.
+                        </h2>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="mainBody">
+        <acquisitions-fold />
+        <key-benefits-fold />
+        <section>
             <div class="container">
                 <div class="row">
-                    <div class="body">
-                        <div class="col-12">
-                            <h2>Assessments 24x7 Acquires DISCcert, Enhancing Assessment Offerings and Client Support</h2>
-
-                            <p class="mainParagraph">
-                                Assessments 24x7, a leading provider of assessments and resources for personal and
-                                professional development, is thrilled to announce its recent acquisition of DISCcert, a
-                                prominent DISC assessment provider previously owned by Bonnie Burn. The acquisition was
-                                completed on June 1, 2023, and signifies a significant step forward for both companies.
-                            </p>
-
-                            <p class="mainParagraph">
-                                Bonnie Burn, the former owner of DISCcert, expressed her enthusiasm for the acquisition in a
-                                heartfelt letter to her clients. She emphasized her commitment to constant process
-                                improvement and highlighted the opportunities this acquisition presents for clients to
-                                access a broader range of assessments and resources while continuing to receive outstanding
-                                support. Brandon Parker, CEO of Assessments 24x7 is excited to offer DISCcert clients an
-                                opportunity to upgrade their DISC reports and assessment dashboards to make the most of the
-                                acquisition. “We are really looking forward to showing off our updated dashboard to all the
-                                existing DISCcert clients. I truly think they will be blown away by the technology,” says
-                                Brandon.
-                            </p>
-
-                            <h3>Key Benefits of the Acquisition for DISCCert Clients:</h3>
-
-                            <p class="subParagraph">
-                                <span class="bold">Access to a Broader Range of Assessments and
-                                    Resources:</span>&nbsp;&nbsp;With Assessments 24x7's extensive
-                                selection of assessments, clients now have access to tools designed to enhance motivation,
-                                teamwork, leadership, emotional intelligence, and more. This expanded offering empowers
-                                individuals and organizations to achieve their goals more effectively.
-                            </p>
-
-                            <p class="subParagraph">
-                                <span class="bold">Continued Outstanding Support:</span>&nbsp;&nbsp;Assessments 24x7 boasts
-                                a dedicated team of experienced professionals who are committed to providing exceptional
-                                support. Clients can rely on readily available assistance for utilizing assessments,
-                                navigating the platform, and addressing any questions or concerns. The support services are
-                                also available across multiple time zones, extending office hours for added convenience.
-                            </p>
-
-                            <p class="subParagraph">
-                                <span class="bold">Seamless Transition:
-                                </span>&nbsp;&nbsp;Clients can expect a smooth and seamless transition, as Assessments 24x7
-                                has powered DISCcert assessments for the past 15 years. This continuity ensures that clients
-                                will experience minimal disruptions to their day-to-day workflow.
-                            </p>
-
-                            <p class="mainParagraph">Assessments 24x7 and DISCcert are both excited about the positive
-                                impact this acquisition will have on their valued clients, their teams, and the broader DISC
-                                community. Together, they look forward to advancing personal and professional development
-                                opportunities through their combined expertise and resources.</p>
-                        </div>
+                    <div class="col-12">
+                        <h2 class="ceoStatement">Brandon Parker, CEO of Assessments 24x7 is excited to
+                            offer DISCcert clients an opportunity to upgrade their DISC reports and assessment
+                            dashboards to make
+                            the most of the acquisition. “We are really looking forward to showing off our
+                            updated dashboard to all the existing DISCcert clients. I truly think they will be
+                            blown away by the technology,” says Brandon.
+                        </h2>
                     </div>
                 </div>
             </div>
         </section>
-
-        <acquisitions-fold />
+        <acquisitions-interest-fold />
         <footer-fold />
     </section>
 </template>
+
 
 <script>
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Acquisitions from '@/components/Acquisitions';
+import KeyBenefitsFold from '../../components/KeyBenefitsFold.vue';
+import AcquisitionsInterestFold from '../../components/AcquisitionsInterestFold.vue'
+
 
 export default {
     components: {
         'main-nav': Nav,
         'contact-form': () => import('@/components/ContactForm'),
         'footer-fold': Footer,
-        'acquisitions-fold': Acquisitions
+        'acquisitions-fold': Acquisitions,
+        'key-benefits-fold': KeyBenefitsFold,
+        'acquisitions-interest-fold': AcquisitionsInterestFold
     },
     head() {
         return {
@@ -115,16 +76,28 @@ export default {
 <style lang="scss" scoped>
 .acquisitions {
     .header {
-        background: url('~assets/about.jpg');
         background-size: cover;
-        color: #fff;
+        color: #161616;
         text-align: center;
-        padding: 70px 0;
-        margin-bottom: 30px;
+        padding-top: 60px;
+        padding-bottom: 30px;
 
         .section-title {
-            font-size: 30pt;
+            font-size: 42pt;
             margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 42pt;
+            font-weight: 400;
+            margin-top: 0;
+            line-height: 65px;
+        }
+
+        .section-subtitle-description {
+            font-weight: 500;
+            line-height: 20pt;
         }
     }
 
@@ -161,4 +134,19 @@ export default {
             }
         }
     }
-}</style>
+
+    .ceoStatement {
+        font-weight: 500;
+        padding: 8px;
+        line-height: 45px;
+    }
+}
+
+@media only screen and (max-width: 1122px) {
+
+.section-title {
+    font-size: 40pt !important;
+}
+
+}
+</style>
