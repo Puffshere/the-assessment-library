@@ -11,7 +11,7 @@
             </div>
             <div class="row">
                 <div class="col-1">
-                    <img class="icons" src="../assets/mail-icon.png" />
+                    <img class="icons" src="../assets/Icon1.png" />
                 </div>
                 <div class="col-11">
                     <p class="subParagraph">
@@ -25,7 +25,7 @@
             </div>
             <div class="row">
                 <div class="col-1">
-                    <img class="icons" src="../assets/mail-icon.png" />
+                    <img class="icons" src="../assets/Icon2.png" />
                 </div>
                 <div class="col-11">
                     <p class="subParagraph">
@@ -39,7 +39,7 @@
             </div>
             <div class="row">
                 <div class="col-1">
-                    <img class="icons" src="../assets/mail-icon.png" />
+                    <img class="icons" src="../assets/Icon3.png" />
                 </div>
                 <div class="col-11">
                     <p class="subParagraph">
@@ -92,8 +92,9 @@
     }
 
     .icons {
-        width: 100px;
+        width: 90px;
         margin-left: -20px;
+        margin-top: 20px;
     }
 
     .bold {

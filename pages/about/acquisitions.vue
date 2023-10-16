@@ -31,6 +31,9 @@
                             updated dashboard to all the existing DISCcert clients. I truly think they will be
                             blown away by the technology,” says Brandon.
                         </h2>
+
+                        <h2 class="ceoStatement"><a href="/DISCcert-press-release">Read the full DISCcert press release
+                                here.</a></h2>
                     </div>
                 </div>
             </div>
@@ -144,9 +147,13 @@ export default {
 
 @media only screen and (max-width: 1122px) {
 
-.section-title {
-    font-size: 40pt !important;
-}
+    .section-title {
+        font-size: 38pt !important;
+    }
+
+    .section-subtitle {
+        font-size: 38pt !important;
+    }
 
 }
 </style>
