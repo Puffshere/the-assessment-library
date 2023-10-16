@@ -114,6 +114,8 @@
                             <small>Step-by-step instructions for facilitating 4-hour workshop</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/08+EIQ-4HourPres-2023.pptx" target="_blank" rel="noopener">4-Hour Presentation</a>
                             <small>Overview of Emotional Intelligence and report debrief opportunity</small></td></tr>
+                            <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/Mini_EIQ_Presentation_2021.pptx" target="_blank" rel="noopener">Mini-EIQ Presentation</a>
+                            <small>15 to 20-minute overview of Emotional Intelligence introducing the model and highlighting the main concepts and areas measured.</small></td></tr>
                             <tr><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/EIQSageAdviceObservations.pptx" target="_blank" rel="noopener">EIQ Sage Advice and Observations</a>
                             <small>A series of PPT memorable and meaningful quotes from well-recognized people</small></td></tr>
                             <tr v-if="certified"><td><a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/eiq/09+DISC+EIQ_integration+2023_Certified.pptx" target="_blank" rel="noopener">EI and DISC Expressions PPT slide</a>
