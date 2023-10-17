@@ -100,7 +100,7 @@ export default {
 .toolTips {
     .modal-backdrop {
         position: fixed;
-        z-index: 10;
+        z-index: 10000;
         width: 100vw;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.733);
