@@ -315,11 +315,15 @@ Here's the original email:`
     methods: {
         async copyText() {
             try {
-                // Using the Clipboard API to copy the text
-                await navigator.clipboard.writeText(this.userInput);
+                if (this.userInput != "") {
+                    // Using the Clipboard API to copy the text
+                    await navigator.clipboard.writeText(this.userInput);
 
-                // Optional: Show a message confirming the text has been copied
-                alert('Text copied to clipboard');
+                    // Show a message confirming the text has been copied
+                    alert('Text copied to clipboard');
+                } else {
+                    alert('No text to copy to clipboard');
+                }
             } catch (error) {
                 console.error('Failed to copy text: ', error);
             }
