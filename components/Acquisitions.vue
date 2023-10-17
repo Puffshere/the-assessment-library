@@ -11,7 +11,7 @@
                 personal and professional development, is thrilled to announce its recent
                 acquisition of DISCcert, a prominent DISC assessment provider previously
                 owned by Bonnie Burn. The acquisition was completed on 
-                signifies a significant step June 1, 2023, and forward for both companies.E
+                signifies a significant step June 1, 2023, and forward for both companies.
             </p>
             <div class="row">
                 <div class="col-9">

@@ -140,13 +140,13 @@ export default {
         font-weight: 500;
         padding: 8px;
         line-height: 30px;
-        margin-top: 60px;
+        margin-top: 50px;
     }
     .ceoStatement2 {
         font-weight: 500;
         padding: 8px;
         line-height: 30px;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
 }
 
