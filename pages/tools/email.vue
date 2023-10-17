@@ -120,6 +120,10 @@
                                 src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
                         </div>
 
+                        <div class="col-1">
+                            <img class="clipboard" @click="copyText" src="./../../assets/clipboard.png" />
+                        </div>
+
                     </div>
                 </div>
 
@@ -309,6 +313,17 @@ Here's the original email:`
         }
     },
     methods: {
+        async copyText() {
+            try {
+                // Using the Clipboard API to copy the text
+                await navigator.clipboard.writeText(this.userInput);
+
+                // Optional: Show a message confirming the text has been copied
+                alert('Text copied to clipboard');
+            } catch (error) {
+                console.error('Failed to copy text: ', error);
+            }
+        },
         showTips() {
             this.toolTips = true;
         },
@@ -842,12 +857,26 @@ $border-radius: 0.5rem;
         }
 
         .questionmark:hover {
-            width: 18px;
+            background: linear-gradient(268deg, #d2d3d3, #b9b9b9);
+            box-shadow: 2px 2px 5px rgb(61, 61, 61);
+            border-radius: 5px;
+        }
+
+        .clipboard {
+            cursor: pointer;
+            width: 40px;
+            margin-right: 12px;
+        }
+
+        .clipboard:hover {
+            background: linear-gradient(268deg, #d2d3d3, #b9b9b9);
+            box-shadow: 2px 2px 5px rgb(61, 61, 61);
+            border-radius: 5px;
         }
 
         .speech_to_text {
             padding-top: 4.5px;
-            max-width: 40px;
+            max-width: 41px;
             cursor: pointer;
         }
 
@@ -1051,7 +1080,7 @@ $border-radius: 0.5rem;
 @media only screen and (max-width: 1122px) {
 
     .notSureLinkStyling {
-        bottom: 55% !important;
+        bottom: 54% !important;
         font-size: 10px !important;
     }
 
@@ -1082,9 +1111,14 @@ $border-radius: 0.5rem;
         overflow: hidden;
     }
 
+    .clipboard {
+        margin-right: 8px !important;
+    }
+
     .dropdown-trigger {
         margin-left: 0px !important;
         margin-right: 80px !important;
+        width: 95% !important;
     }
 
     .dropdown {

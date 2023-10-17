@@ -63,6 +63,17 @@
                                     so or No to leave recorded text in raw format. </p>
                             </div>
                         </div>
+                        <div class="row toolRow">
+                            <div class="col-3">
+                                <div class="toolImages">
+                                    <img class="clipboardImage" src="../../assets/clipboard.png">
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <p class="tips">
+                                    Use this button to copy the email from the top input box to your clipboard. </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="closeBtn">
                         <button @click="closeToolTips" class="lightBlueButton">Close</button>
@@ -180,6 +191,12 @@ export default {
 
     .microphoneImage {
         border-radius: 10px;
+    }
+
+    .clipboardImage {
+        width: 75px;
+        border-radius: 10px;
+        background-color: white;
     }
 
     .bold {
