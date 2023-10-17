@@ -43,7 +43,7 @@
                             <img class="icons" src="../assets/phone-icon.png" />
                         </div>
                         <h2 class="col-11 contactInfo">
-                            +1-206-400-6647
+                            1-(206)-400-6647
                         </h2>
                     </div>
                 </div>
