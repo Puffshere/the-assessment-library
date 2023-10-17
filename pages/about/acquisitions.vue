@@ -8,12 +8,10 @@
                         <h1 class="section-title">Assessments 24x7</h1>
                         <h1 class="section-subtitle">Recent Acquisitions and </h1>
                         <h1 class="section-subtitle">Acquistion Opportunities</h1>
-                        <h2 class="section-subtitle-description">Discover Assessments 24x7's recent acquisition of DISCcert,
-                            enhancing our</h2>
-                        <h2 class="section-subtitle-description"> offerings and client support. Explore the benefits for
-                            clients and</h2>
-                        <h2 class="section-subtitle-description"> how you can discuss acquisition opportunities with us.
-                        </h2>
+                        <p class="section-subtitle-description">Discover Assessments 24x7's recent acquisition of DISCcert,
+                            enhancing our offerings and client support. Explore the benefits for
+                            clients and how you can discuss acquisition opportunities with us.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -24,16 +22,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="ceoStatement">Brandon Parker, CEO of Assessments 24x7 is excited to
+                        <p class="ceoStatement">Brandon Parker, CEO of Assessments 24x7 is excited to
                             offer DISCcert clients an opportunity to upgrade their DISC reports and assessment
                             dashboards to make
                             the most of the acquisition. “We are really looking forward to showing off our
                             updated dashboard to all the existing DISCcert clients. I truly think they will be
                             blown away by the technology,” says Brandon.
-                        </h2>
+                        </p>
 
-                        <h2 class="ceoStatement"><a href="/DISCcert-press-release">Read the full DISCcert press release
-                                here.</a></h2>
+                        <p class="ceoStatement2"><a href="/DISCcert-press-release">Read the full DISCcert press release
+                                here.</a></p>
                     </div>
                 </div>
             </div>
@@ -100,7 +98,7 @@ export default {
 
         .section-subtitle-description {
             font-weight: 500;
-            line-height: 20pt;
+            //line-height: 20pt;
         }
     }
 
@@ -141,7 +139,14 @@ export default {
     .ceoStatement {
         font-weight: 500;
         padding: 8px;
-        line-height: 45px;
+        line-height: 30px;
+        margin-top: 60px;
+    }
+    .ceoStatement2 {
+        font-weight: 500;
+        padding: 8px;
+        line-height: 30px;
+        margin-bottom: 60px;
     }
 }
 

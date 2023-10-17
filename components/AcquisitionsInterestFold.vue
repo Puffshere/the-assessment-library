@@ -8,12 +8,12 @@
         <section>
             <div class="container">
                 <div class="">
-                    <h2 class="interestStatement">If you are an organization or individual interested in discussing
+                    <p class="interestStatement">If you are an organization or individual interested in discussing
                         the possibility of being acquired by Assessments 24x7, we invite you to reach out to us. We are
                         always open to exploring opportunities for growth and partnership. Our
                         dedicated team is committed to assessing the potential for collaboration and
                         acquisition, and we look forward to hearing from you.
-                    </h2>
+                    </p>
                 </div>
                 <div class="contact col-12">
                     <div class="row">
@@ -108,7 +108,8 @@
     .interestStatement {
         font-weight: 500;
         padding: 8px;
-        line-height: 45px;
+        line-height: 30px;
+        margin-top: 60px;
     }
 
     .contact {

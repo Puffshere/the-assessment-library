@@ -65,7 +65,7 @@
     background-size: cover !important;
     background-position: bottom !important;
     width: 100%;
-    min-height: 75vh;
+    min-height: 70vh;
 
     &.lazyloaded {
         background-color: #1666ff;
@@ -104,7 +104,7 @@
     .subParagraph {
         padding: 0px;
         text-align: left;
-        font-size: 16pt;
+        //font-size: 16pt;
     }
 }
 
