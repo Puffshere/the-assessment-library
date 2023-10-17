@@ -142,6 +142,7 @@ export default {
         line-height: 30px;
         margin-top: 50px;
     }
+
     .ceoStatement2 {
         font-weight: 500;
         padding: 8px;
@@ -152,12 +153,19 @@ export default {
 
 @media only screen and (max-width: 1122px) {
 
-    .section-title {
-        font-size: 38pt !important;
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
+    .section-title,
     .section-subtitle {
-        font-size: 38pt !important;
+        font-size: 24pt !important;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        word-wrap: break-word;
+        line-height: 30px !important;
     }
 
 }
