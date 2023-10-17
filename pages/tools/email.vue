@@ -289,7 +289,7 @@ export default {
             };
         },
         promptContext() {
-            return `Rewrite the original email, emphasizing the DISC traits provided below.  Write the new email in ${this.language} with correct email formatting.
+            return `Perfect Rewrite the original email, emphasizing the DISC traits provided below.  Write the new email in ${this.language} with correct email formatting.
 
 Adapted: ${this.adaptedStyle}
 Natural: ${this.naturalStyle}
@@ -306,10 +306,10 @@ Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I 
 Here's the original email:`
         },
         promptTranslate() {
-            return `Translate the following text into ${this.language}, here is the text to be translated:`
+            return `Perfect Translate the following text into ${this.language}, here is the text to be translated:`
         },
         promptFormat() {
-            return `Reformat the following raw text into proper and grammatically correct email format:`
+            return `Perfect Reformat the following raw text into proper and grammatically correct email format:`
         }
     },
     methods: {
