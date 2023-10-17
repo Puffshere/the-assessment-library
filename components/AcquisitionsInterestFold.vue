@@ -40,7 +40,7 @@
                     </div>
                     <div class="row">
                         <div class="col-1">
-                            <img class="icons" src="../assets/mail-icon.png" />
+                            <img class="icons" src="../assets/phone-icon.png" />
                         </div>
                         <h2 class="col-11 contactInfo">
                             +1-206-400-6647
