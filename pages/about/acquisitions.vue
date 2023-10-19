@@ -105,29 +105,6 @@ export default {
         line-height: 24pt;
     }
 
-    .mainBody {
-        margin: 30px 0 80px;
-
-        .body {
-            margin-bottom: 40px;
-
-            .mainParagraph {
-                margin-bottom: 20px;
-                margin-top: 0;
-            }
-
-            .bold {
-                font-weight: bold;
-            }
-
-            .subParagraph {
-                border-left: 4px solid #0033c5;
-                padding: 10px;
-                background: #f0eeee;
-            }
-        }
-    }
-
     .pressReleaseLink {
         margin-bottom: 50px;
     }
