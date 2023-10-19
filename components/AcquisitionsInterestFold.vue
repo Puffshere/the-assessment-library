@@ -7,51 +7,47 @@
 
         <section>
             <div class="container">
-                <div class="">
-                    <p class="interestStatement">If you are an organization or individual interested in discussing
-                        the possibility of being acquired by Assessments 24x7, we invite you to reach out to us. We are
-                        always open to exploring opportunities for growth and partnership. Our
-                        dedicated team is committed to assessing the potential for collaboration and
-                        acquisition, and we look forward to hearing from you.
-                    </p>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="interestStatement">If you are an organization or individual interested in discussing
+                            the possibility of being acquired by Assessments 24x7, we invite you to reach out to us. We are
+                            always open to exploring opportunities for growth and partnership. Our
+                            dedicated team is committed to assessing the potential for collaboration and
+                            acquisition, and we look forward to hearing from you.
+                        </p>
+                    </div>
                 </div>
-                <div class="contact col-12">
+                <div class="contact">
                     <div class="row">
-                        <h1>
+                        <p class="contactUs">
                             Contact Us
-                        </h1>
+                        </p>
                     </div>
                     <div class="row">
-                        <h2 class="contactStatement">
-                            Please contact our Acquisitions Team for inquiries or to
-                            initiate a conversation about the acquisition process.
-                        </h2>
+                        <div class="col-12">
+                            <p>
+                                Please contact our Acquisitions Team for inquiries or to
+                                initiate a conversation about the acquisition process.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <br>
                 <div class="contactItems">
-                    <div class="row">
-                        <div class="col-1">
-                            <img class="icons" src="../assets/mail-icon.png" />
-                        </div>
-                        <h2 class="col-11 contactInfo">
-                            hello@assessments24x7.com
-                        </h2>
+                    <div class="row same">
+                        <img class="icons" src="../assets/mail-icon.png" />
+                        <p>hello@assessments24x7.com</p>
                     </div>
-                    <div class="row">
-                        <div class="col-1">
-                            <img class="icons" src="../assets/phone-icon.png" />
-                        </div>
-                        <h2 class="col-11 contactInfo">
-                            1-(206)-400-6647
-                        </h2>
+                    <div class="row same">
+                        <img class="icons" src="../assets/phone-icon.png" />
+                        <p>1-(206)-400-6647</p>
                     </div>
                 </div>
                 <div class="contactFinalStatement">
-                    <h1 class="finalText">
+                    <p class="finalText">
                         We value innovation, talent, and the potential for mutual<br>
                         success. Let's explore the possibilities together.
-                    </h1>
+                    </p>
                 </div>
             </div>
         </section>
@@ -62,18 +58,8 @@
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 
+
 .acquisitionsInterestSection {
-
-    h1 {
-        font-size: 30pt;
-        line-height: 34pt;
-        margin-bottom: 0;
-    }
-
-    h2 {
-        font-size: 20pt;
-        line-height: 24pt;
-    }
 
     .acquisitionsInterest {
         background-size: cover !important;
@@ -99,15 +85,11 @@
     }
 
     .text {
-        margin: 0px;
         font-size: 40pt;
         letter-spacing: 2px;
-        line-height: 50pt;
     }
 
     .interestStatement {
-        font-weight: 500;
-        padding: 8px;
         line-height: 30px;
         margin-top: 60px;
     }
@@ -115,36 +97,31 @@
     .contact {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: center;
-        margin-top: -40px;
     }
-
-    .contactStatement {
-        font-size: 25pt;
-        font-weight: 500;
-        padding: 8px;
-        line-height: 45px;
+    
+    .contactUs {
+        font-size: 30pt;
+        font-weight: 600;
+        margin: 20px 0;
     }
 
     .contactItems {
-        margin-top: -30px;
-        margin-left: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .same {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
     }
 
     .icons {
-        width: 100px;
-        margin-left: -20px;
-    }
-
-    .contactInfo {
-        margin-top: 25px;
-        font-size: 25pt;
-        font-weight: 500;
-        padding: 8px;
-        line-height: 45px;
-        align-items: left !important;
+        width: 50px;
     }
 
     .contactFinalStatement {
@@ -158,30 +135,9 @@
 
     .finalText {
         font-size: 25pt;
+        margin-top: 50px;
         margin-bottom: 50px;
+        font-weight: 600;
     }
-}
-
-@media only screen and (max-width: 1122px) {
-
-    .contactItems {
-        margin-left: 0px !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .icons {
-        width: 100px;
-        margin-left: 0px !important;
-    }
-
-    .contactInfo {
-        font-size: 15pt !important;
-        margin-top: 0px !important;
-    }
-
 }
 </style>

@@ -17,25 +17,18 @@
             </div>
         </section>
         <acquisitions-fold />
-        <key-benefits-fold />
         <section>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <p class="ceoStatement">Brandon Parker, CEO of Assessments 24x7 is excited to
-                            offer DISCcert clients an opportunity to upgrade their DISC reports and assessment
-                            dashboards to make
-                            the most of the acquisition. “We are really looking forward to showing off our
-                            updated dashboard to all the existing DISCcert clients. I truly think they will be
-                            blown away by the technology,” says Brandon.
+                        <p class="pressReleaseLink"><a href="/DISCcert-press-release">Read the full DISCcert press release
+                                here.</a>
                         </p>
-
-                        <p class="ceoStatement2"><a href="/DISCcert-press-release">Read the full DISCcert press release
-                                here.</a></p>
                     </div>
                 </div>
             </div>
         </section>
+        <key-benefits-fold />
         <acquisitions-interest-fold />
         <footer-fold />
     </section>
@@ -98,7 +91,6 @@ export default {
 
         .section-subtitle-description {
             font-weight: 500;
-            //line-height: 20pt;
         }
     }
 
@@ -136,18 +128,9 @@ export default {
         }
     }
 
-    .ceoStatement {
-        font-weight: 500;
-        padding: 8px;
-        line-height: 30px;
-        margin-top: 50px;
-    }
-
-    .ceoStatement2 {
-        font-weight: 500;
-        padding: 8px;
-        line-height: 30px;
+    .pressReleaseLink {
         margin-bottom: 50px;
+        //margin-left: -15px;
     }
 }
 
@@ -166,6 +149,10 @@ export default {
         margin-right: auto;
         word-wrap: break-word;
         line-height: 30px !important;
+    }
+
+    .pressReleaseLink {
+        margin-left: 0px !important;
     }
 
 }

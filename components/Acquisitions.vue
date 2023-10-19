@@ -5,14 +5,19 @@
             <h1 class="text">Assessments 24x7 Acquires DISCcert, Enhancing</h1>
             <h1 class="text">Assessment Offerings and Client Support</h1>
         </div>
-        <div class="container col-12">
-            <p class="offerings spacingTop">
-                Assessments 24x7, a leading provider of assessments and resources for
-                personal and professional development, is thrilled to announce its recent
-                acquisition of DISCcert, a prominent DISC assessment provider previously
-                owned by Bonnie Burn. The acquisition was completed on
-                signifies a significant step June 1, 2023, and forward for both companies.
-            </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="offerings spacingTop">
+                        Assessments 24x7, a leading provider of assessments and resources for
+                        personal and professional development, is thrilled to announce its recent
+                        acquisition of DISCcert, a prominent DISC assessment provider previously
+                        owned by Bonnie Burn. The acquisition was completed on
+                        signifies a significant step June 1, 2023, and forward for both companies.
+                    </p>
+                </div>
+            </div>
+            <br>
             <div class="row">
                 <div class="col-9">
                     <p class="offeringsMiddle">
@@ -31,14 +36,19 @@
                     <img class="icons" src="../assets/gold-logo.png" />
                 </div>
             </div>
-            <p class="offerings spacingBottom">
-                Brandon Parker, CEO of Assessments 24x7 is excited to offer DISCcert clients
-                an opportunity to upgrade their DISC reports and assessment dashboards to
-                make the most of the acquisition. “We are really looking forward to showing off
-                our updated dashboard to all the existing DISCcert clients. I truly think they will
-                be blown away by the technology,
-                ” says Brandon.
-            </p>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                    <p class="offerings spacingBottom">
+                        Brandon Parker, CEO of Assessments 24x7 is excited to offer DISCcert clients
+                        an opportunity to upgrade their DISC reports and assessment dashboards to
+                        make the most of the acquisition. “We are really looking forward to showing off
+                        our updated dashboard to all the existing DISCcert clients. I truly think they will
+                        be blown away by the technology,
+                        ” says Brandon.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -81,8 +91,6 @@ h2 {
 }
 
 .offerings {
-    font-weight: 500;
-    padding: 0px 8px;
     line-height: 30px;
 }
 
@@ -91,15 +99,13 @@ h2 {
 }
 
 .offeringsMiddle {
-    font-weight: 500;
     line-height: 30px;
-    margin-left: -15px;
     margin-top: -25px;
     margin-bottom: -190px;
 }
 
 .spacingBottom {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .icons {
@@ -118,12 +124,10 @@ h2 {
 
     .icons {
         margin-top: 5px;
-        margin-bottom: 5px;
         margin-left: auto;
         margin-right: auto;
         display: block;
     }
 
 }
-
 </style>
