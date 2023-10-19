@@ -99,7 +99,7 @@
         flex-direction: column;
         text-align: center;
     }
-    
+
     .contactUs {
         font-size: 30pt;
         font-weight: 600;

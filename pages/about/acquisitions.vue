@@ -130,7 +130,6 @@ export default {
 
     .pressReleaseLink {
         margin-bottom: 50px;
-        //margin-left: -15px;
     }
 }
 

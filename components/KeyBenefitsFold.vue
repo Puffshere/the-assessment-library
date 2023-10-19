@@ -104,7 +104,6 @@
     .subParagraph {
         padding: 0px;
         text-align: left;
-        //font-size: 16pt;
     }
 }
 
