@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row icons-row">
+                        <div :class="{ 'row': isMobileView, 'icons-row': true }">
                             <div class="col-1 mobile-icon">
                                 <img class="questionmark" @click="showTips" src="./../../assets/questionmark.png" />
                             </div>
@@ -277,6 +277,13 @@ export default {
         };
     },
     computed: {
+        isMobileView() {
+            // Check if window is defined
+            if (typeof window !== 'undefined') {
+                return window.innerWidth <= 1220;
+            }
+            return false;
+        },
         styleColor1() {
             return {
                 'color-D': this.selectedStyle1 === 'D',
@@ -317,7 +324,22 @@ Here's the original email:`
             return `Perfect Reformat the following raw text into proper and grammatically correct email format:`
         }
     },
+    mounted() {
+        // Check if window is defined
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', this.handleResize);
+        }
+    },
+    destroyed() {
+        // Check if window is defined
+        if (typeof window !== 'undefined') {
+            window.removeEventListener('resize', this.handleResize);
+        }
+    },
     methods: {
+        handleResize() {
+            this.$forceUpdate();
+        },
         async copyText() {
             try {
                 if (this.userInput != "") {
