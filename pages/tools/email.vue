@@ -41,6 +41,7 @@
             <div class="container">
                 <div v-if="!readyToFormatText" class="bar1 col-12">
                     <div class="row">
+                        <!-- If statement for type of Styles dropdown -->
                         <div>
                             <div class="col-3">
                                 <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle
@@ -114,20 +115,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row icons-row">
+                            <div class="col-1 mobile-icon">
+                                <img class="questionmark" @click="showTips" src="./../../assets/questionmark.png" />
+                            </div>
 
-                        <div class="col-1">
-                            <img class="questionmark" @click="showTips" src="./../../assets/questionmark.png" />
+                            <div class="col-1 mobile-icon">
+                                <img :class="['speech_to_text', { 'activeSTT': recognitionActive }]"
+                                    src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
+                            </div>
+
+                            <div class="col-1 mobile-icon">
+                                <img class="clipboard" @click="copyText" src="./../../assets/clipboard.png" />
+                            </div>
                         </div>
-
-                        <div class="col-1">
-                            <img :class="['speech_to_text', { 'activeSTT': recognitionActive }]"
-                                src="./../../assets/SpeechToText.png" @click="toggleRecognition" />
-                        </div>
-
-                        <div class="col-1">
-                            <img class="clipboard" @click="copyText" src="./../../assets/clipboard.png" />
-                        </div>
-
                     </div>
                 </div>
 
@@ -722,6 +723,7 @@ $border-radius: 0.5rem;
             transition: opacity 0.5s ease-in-out;
             margin-top: 17px;
             margin-left: -45px;
+            z-index: 10;
 
             .dropdown__left-panel {
                 width: 5rem;
@@ -1090,8 +1092,8 @@ $border-radius: 0.5rem;
 @media only screen and (max-width: 1220px) {
 
     .notSureLinkStyling {
-        bottom: 54% !important;
-        font-size: 10px !important;
+        bottom: 57% !important;
+        font-size: 14px !important;
     }
 
     /* Override styles for the button's container */
@@ -1118,11 +1120,22 @@ $border-radius: 0.5rem;
 
     .bar1 {
         padding-left: 0px !important;
-        overflow: hidden;
+        //overflow: hidden;
     }
 
     .clipboard {
         margin-right: 8px !important;
+    }
+
+    .icons-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .icons-row .mobile-icon {
+        flex-basis: 30%;
+        max-width: 30%;
     }
 
     .dropdown-trigger {
