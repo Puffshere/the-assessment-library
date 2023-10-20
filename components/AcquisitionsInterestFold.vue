@@ -39,7 +39,7 @@
                     </div>
                     <div class="row same">
                         <img class="icons" src="../assets/phone-icon.png" />
-                        <p>1-(206)-400-6647</p>
+                        <a href="tel:12064006647">+1 (206) 400-6647</a>
                     </div>
                 </div>
                 <div class="contactFinalStatement">
