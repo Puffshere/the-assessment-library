@@ -1093,7 +1093,7 @@ $border-radius: 0.5rem;
 
     .notSureLinkStyling {
         bottom: 57% !important;
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
 
     /* Override styles for the button's container */
