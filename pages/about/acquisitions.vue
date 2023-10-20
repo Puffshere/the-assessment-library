@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <p class="pressReleaseLink"><a href="/DISCcert-press-release">Read the full DISCcert press release
+                        <p class="pressReleaseLink"><a class="hyperlink" href="/DISCcert-press-release">Read the full DISCcert press release
                                 here.</a>
                         </p>
                     </div>
