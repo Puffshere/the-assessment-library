@@ -6,9 +6,8 @@
                 <div class="row">
                     <div class="col-12">
                         <h1 class="section-title">Assessments 24x7</h1>
-                        <h1 class="section-subtitle">Recent Acquisitions and </h1>
-                        <h1 class="section-subtitle">Acquistion Opportunities</h1>
-                        <p class="section-subtitle-description">Discover Assessments 24x7's recent acquisition of DISCcert,
+                        <h2>Recent Acquisitions and Acquistion Opportunities</h2>
+                        <p>Discover Assessments 24x7's recent acquisition of DISCcert,
                             enhancing our offerings and client support. Explore the benefits for
                             clients and how you can discuss acquisition opportunities with us.
                         </p>
@@ -81,17 +80,6 @@ export default {
             margin-top: 0;
             margin-bottom: 10px;
         }
-
-        .section-subtitle {
-            font-size: 42pt;
-            font-weight: 400;
-            margin-top: 0;
-            line-height: 65px;
-        }
-
-        .section-subtitle-description {
-            font-weight: 500;
-        }
     }
 
     h1 {
@@ -100,10 +88,10 @@ export default {
         margin-bottom: 0;
     }
 
-    h2 {
-        font-size: 20pt;
-        line-height: 24pt;
-    }
+    // h2 {
+    //     font-size: 20pt;
+    //     line-height: 24pt;
+    // }
 
     .pressReleaseLink {
         margin-bottom: 50px;

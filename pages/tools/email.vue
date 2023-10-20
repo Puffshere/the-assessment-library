@@ -41,8 +41,10 @@
             <div class="container">
                 <div v-if="!readyToFormatText" class="bar1 col-12">
                     <div class="row">
+
                         <!-- If statement for type of Styles dropdown -->
-                        <div>
+                        <!-- This is the code if user checks box for multiple styles -->
+                        <div v-if="isChecked">
                             <div class="col-3">
                                 <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle
                                     ||
@@ -69,7 +71,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-3">
                                 <div class="dropdown-trigger" :class="styleColor2" @click="toggleDropdown2">{{ naturalStyle
                                     ||
@@ -97,6 +98,40 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- This is the code if the user has not checked box for multiple styles -->
+                        <div v-else>
+                            <div class="col-3">
+                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle
+                                    ||
+                                    'DISC Style' }}
+                                    <svg :class="{ 'chevron-selected': dropdownActive1 }" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>
+                                <div class="dropdown dropPlacement1"
+                                    :class="{ 'dropdown-active': dropdownActive1, 'dropdown-nonActive': !dropdownActive1 }">
+                                    <div class="dropdown__left-panel">
+                                        <div :class="{ 'circle-grow': circleGrows1[0] }" class="circle circle-1"></div>
+                                        <div :class="{ 'circle-grow': circleGrows1[1] }" class="circle circle-2"></div>
+                                        <div :class="{ 'circle-grow': circleGrows1[2] }" class="circle circle-3"></div>
+                                    </div>
+                                    <div class="dropdown__right-panel">
+                                        <div v-for="(item, index) in adaptedDropdownItems" :key="index"
+                                            :class="{ 'dropdown__item-active': item.active }" class="dropdown__item"
+                                            @click="selectItemAdapted(item)">
+                                            <span>{{ item.value }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="additionalStyles" @click="toggleStyles">Additional Style Options</div>
+                            </div>
+                        </div>
+
                         <div class="col-3">
                             <div class="dropdown-trigger dropLanguage" @click="toggleDropdown3">{{ language || 'Language' }}
                                 <svg :class="{ 'chevron-selected': dropdownActive3 }" xmlns="http://www.w3.org/2000/svg"
@@ -208,6 +243,7 @@ export default {
         return {
             adaptedStyle: "",
             naturalStyle: "",
+            isChecked: false,
             selectedStyle1: '',
             selectedStyle2: '',
             language: "English",
@@ -339,6 +375,9 @@ Here's the original email:`
     methods: {
         handleResize() {
             this.$forceUpdate();
+        },
+        toggleStyles() {
+            this.isChecked = true;
         },
         async copyText() {
             try {
@@ -842,6 +881,21 @@ $border-radius: 0.5rem;
             display: none;
         }
 
+        .additionalStyles {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            cursor: pointer;
+            min-height: 41px;
+            width: 100%;
+            //padding: 4.5px 10px;
+            background-color: $primary-color;
+            border-radius: $border-radius;
+            box-shadow: 3px 3px 5px rgb(61, 61, 61);
+            font-size: 15px;
+        }
+
         .bar1 {
             width: 100%;
             background-color: rgba(128, 128, 128, 0.301);
@@ -1145,6 +1199,10 @@ $border-radius: 0.5rem;
         //overflow: hidden;
     }
 
+    .additionalStyles {
+        width: 95% !important;
+    }
+
     .clipboard {
         margin-right: 8px !important;
     }
@@ -1184,5 +1242,4 @@ $border-radius: 0.5rem;
         left: -5px;
         margin-bottom: 10px;
     }
-}
-</style>
+}</style>

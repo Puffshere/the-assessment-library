@@ -32,7 +32,6 @@
                         </div>
                     </div>
                 </div>
-                <br>
                 <div class="contactItems">
                     <div class="row same">
                         <img class="icons" src="../assets/mail-icon.png" />
@@ -91,7 +90,7 @@
 
     .interestStatement {
         line-height: 30px;
-        margin-top: 60px;
+        margin-top: 50px;
     }
 
     .contact {
@@ -103,7 +102,7 @@
     .contactUs {
         font-size: 30pt;
         font-weight: 600;
-        margin: 20px 0;
+        margin: 5px 0;
     }
 
     .contactItems {
@@ -112,8 +111,9 @@
         align-items: center;
         justify-content: center;
     }
-
+    
     .same {
+        max-height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -130,12 +130,12 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
 
     .finalText {
         font-size: 25pt;
-        margin-top: 50px;
+        margin-top: 40px;
         margin-bottom: 50px;
         font-weight: 600;
     }
