@@ -41,57 +41,61 @@
             <div class="container">
                 <div v-if="!readyToFormatText" class="bar1 col-12">
                     <div class="row">
-
-                        <div class="col-3">
-                            <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle ||
-                                'Recipient Adapted Style' }}
-                                <svg :class="{ 'chevron-selected': dropdownActive1 }" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div class="dropdown dropPlacement1"
-                                :class="{ 'dropdown-active': dropdownActive1, 'dropdown-nonActive': !dropdownActive1 }">
-                                <div class="dropdown__left-panel">
-                                    <div :class="{ 'circle-grow': circleGrows1[0] }" class="circle circle-1"></div>
-                                    <div :class="{ 'circle-grow': circleGrows1[1] }" class="circle circle-2"></div>
-                                    <div :class="{ 'circle-grow': circleGrows1[2] }" class="circle circle-3"></div>
+                        <div>
+                            <div class="col-3">
+                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle
+                                    ||
+                                    'Recipient Adapted Style' }}
+                                    <svg :class="{ 'chevron-selected': dropdownActive1 }" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
                                 </div>
-                                <div class="dropdown__right-panel">
-                                    <div v-for="(item, index) in adaptedDropdownItems" :key="index"
-                                        :class="{ 'dropdown__item-active': item.active }" class="dropdown__item"
-                                        @click="selectItemAdapted(item)">
-                                        <span>{{ item.value }}</span>
+                                <div class="dropdown dropPlacement1"
+                                    :class="{ 'dropdown-active': dropdownActive1, 'dropdown-nonActive': !dropdownActive1 }">
+                                    <div class="dropdown__left-panel">
+                                        <div :class="{ 'circle-grow': circleGrows1[0] }" class="circle circle-1"></div>
+                                        <div :class="{ 'circle-grow': circleGrows1[1] }" class="circle circle-2"></div>
+                                        <div :class="{ 'circle-grow': circleGrows1[2] }" class="circle circle-3"></div>
+                                    </div>
+                                    <div class="dropdown__right-panel">
+                                        <div v-for="(item, index) in adaptedDropdownItems" :key="index"
+                                            :class="{ 'dropdown__item-active': item.active }" class="dropdown__item"
+                                            @click="selectItemAdapted(item)">
+                                            <span>{{ item.value }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="dropdown-trigger" :class="styleColor2" @click="toggleDropdown2">{{ naturalStyle
+                                    ||
+                                    'Recipient Natural Style' }}
+                                    <svg :class="{ 'chevron-selected': dropdownActive2 }" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>
+                                <div class="dropdown dropPlacement2"
+                                    :class="{ 'dropdown-active': dropdownActive2, 'dropdown-nonActive': !dropdownActive2 }">
+                                    <div class="dropdown__left-panel">
+                                        <div :class="{ 'circle-grow': circleGrows2[0] }" class="circle circle-1"></div>
+                                        <div :class="{ 'circle-grow': circleGrows2[1] }" class="circle circle-2"></div>
+                                        <div :class="{ 'circle-grow': circleGrows2[2] }" class="circle circle-3"></div>
+                                    </div>
+                                    <div class="dropdown__right-panel">
+                                        <div v-for="(item, index) in naturalDropdownItems" :key="index"
+                                            :class="{ 'dropdown__item-active': item.active }" class="dropdown__item"
+                                            @click="selectItemNatural(item)">
+                                            <span>{{ item.value }}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-3">
-                            <div class="dropdown-trigger" :class="styleColor2" @click="toggleDropdown2">{{ naturalStyle ||
-                                'Recipient Natural Style' }}
-                                <svg :class="{ 'chevron-selected': dropdownActive2 }" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                            <div class="dropdown dropPlacement2"
-                                :class="{ 'dropdown-active': dropdownActive2, 'dropdown-nonActive': !dropdownActive2 }">
-                                <div class="dropdown__left-panel">
-                                    <div :class="{ 'circle-grow': circleGrows2[0] }" class="circle circle-1"></div>
-                                    <div :class="{ 'circle-grow': circleGrows2[1] }" class="circle circle-2"></div>
-                                    <div :class="{ 'circle-grow': circleGrows2[2] }" class="circle circle-3"></div>
-                                </div>
-                                <div class="dropdown__right-panel">
-                                    <div v-for="(item, index) in naturalDropdownItems" :key="index"
-                                        :class="{ 'dropdown__item-active': item.active }" class="dropdown__item"
-                                        @click="selectItemNatural(item)">
-                                        <span>{{ item.value }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="col-3">
                             <div class="dropdown-trigger dropLanguage" @click="toggleDropdown3">{{ language || 'Language' }}
                                 <svg :class="{ 'chevron-selected': dropdownActive3 }" xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +103,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </div>
-                            <div class="dropdown dropdown--language"
+                            <div class="dropdown--language"
                                 :class="{ 'dropdown-active': dropdownActive3, 'dropdown-nonActive': !dropdownActive3 }">
                                 <div class="dropdown__language">
                                     <div v-for="(languageItem, index) in languages" :key="index"
@@ -671,6 +675,9 @@ $border-radius: 0.5rem;
             opacity: 0;
             color: white;
             z-index: 1;
+            min-width: 280px;
+            margin-top: 58px;
+            margin-right: -25px;
 
             .dropdown__language {
                 overflow-y: auto;
@@ -700,13 +707,11 @@ $border-radius: 0.5rem;
         }
 
         .dropPlacement1 {
-            position: absolute;
             width: 20rem;
         }
 
         .dropPlacement2 {
             width: 20rem;
-            position: absolute;
         }
 
         .dropdown {
@@ -715,7 +720,8 @@ $border-radius: 0.5rem;
             border-radius: $border-radius;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
-            margin-top: 50px;
+            margin-top: 17px;
+            margin-left: -45px;
 
             .dropdown__left-panel {
                 width: 5rem;
@@ -1081,7 +1087,7 @@ $border-radius: 0.5rem;
 
 }
 
-@media only screen and (max-width: 1122px) {
+@media only screen and (max-width: 1220px) {
 
     .notSureLinkStyling {
         bottom: 54% !important;
@@ -1126,6 +1132,13 @@ $border-radius: 0.5rem;
     }
 
     .dropdown {
+        min-width: 95%;
+        margin-top: 10px !important;
+        margin-left: 0px !important;
+    }
+
+    .dropdown--language {
+        min-width: 95% !important;
         margin-top: 10px !important;
     }
 
