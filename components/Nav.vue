@@ -148,6 +148,10 @@
                                     <li class="sub-nav-item">
                                         <a href="/about/partners">Partners</a>
                                     </li>
+
+                                    <li class="sub-nav-item">
+                                        <a href="/about/acquisitions">Acquisitions</a>
+                                    </li>
                                 </ul>
                             </li>
 
