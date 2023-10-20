@@ -35,11 +35,11 @@
                 <div class="contactItems">
                     <div class="row same">
                         <img class="icons" src="../assets/mail-icon.png" />
-                        <p>hello@assessments24x7.com</p>
+                        <a href="mailto:hello@assessments24x7.com" class="hyperlink">hello@assessments24x7.com</a>
                     </div>
                     <div class="row same">
                         <img class="icons" src="../assets/phone-icon.png" />
-                        <a href="tel:12064006647">+1 (206) 400-6647</a>
+                        <a href="tel:12064006647" class="hyperlink">+1 (206) 400-6647</a>
                     </div>
                 </div>
                 <div class="contactFinalStatement">
