@@ -33,7 +33,7 @@
                                 </div>
 
                                 <div class="phone-number">
-                                    <a class="hyperlink light" href="tel:12064006647"><span>+</span>1 (206) 400-6647</a>
+                                    <a class="hyperlink light" href="tel:12064006647">+1 (206) 400-6647</a>
                                 </div>
                             </div>
                         </div>
