@@ -102,26 +102,26 @@
                         <!-- This is the code if the user has not checked box for multiple styles -->
                         <div v-else>
                             <div class="col-3">
-                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ discStyle
+                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdownDisc">{{ discStyle
                                     ||
                                     'DISC Style' }}
-                                    <svg :class="{ 'chevron-selected': dropdownActive1 }" xmlns="http://www.w3.org/2000/svg"
+                                    <svg :class="{ 'chevron-selected': dropdownActive4 }" xmlns="http://www.w3.org/2000/svg"
                                         fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                     </svg>
                                 </div>
                                 <div class="dropdown dropPlacement1"
-                                    :class="{ 'dropdown-active': dropdownActive1, 'dropdown-nonActive': !dropdownActive1 }">
+                                    :class="{ 'dropdown-active': dropdownActive4, 'dropdown-nonActive': !dropdownActive4 }">
                                     <div class="dropdown__left-panel">
                                         <div :class="{ 'circle-grow': circleGrows1[0] }" class="circle circle-1"></div>
                                         <div :class="{ 'circle-grow': circleGrows1[1] }" class="circle circle-2"></div>
                                         <div :class="{ 'circle-grow': circleGrows1[2] }" class="circle circle-3"></div>
                                     </div>
                                     <div class="dropdown__right-panel">
-                                        <div v-for="(item, index) in adaptedDropdownItems" :key="index"
+                                        <div v-for="(item, index) in discDropdownItems" :key="index"
                                             :class="{ 'dropdown__item-active': item.active }" class="dropdown__item"
-                                            @click="selectItemAdapted(item)">
+                                            @click="selectItemDisc(item)">
                                             <span>{{ item.value }}</span>
                                         </div>
                                     </div>
@@ -297,8 +297,15 @@ export default {
             dropdownActive1: false,
             dropdownActive2: false,
             dropdownActive3: false,
+            dropdownActive4: false,
             circleGrows1: [false, false, false],
             circleGrows2: [false, false, false],
+            discDropdownItems: [
+                { id: 1, name: 'D', value: 'D - Dominance', active: false },
+                { id: 2, name: 'I', value: 'I - Influence', active: false },
+                { id: 3, name: 'S', value: 'S - Steadiness', active: false },
+                { id: 4, name: 'C', value: 'C - Conscientiousness', active: false }
+            ],
             adaptedDropdownItems: [
                 { id: 1, name: 'D', value: 'D - Dominance', active: false },
                 { id: 2, name: 'I', value: 'I - Influence', active: false },
@@ -394,6 +401,10 @@ Here's the original email:`
         },
         toggleStyles() {
             this.isChecked = true;
+            this.selectedStyle1 = "";
+            this.selectedStyle2 = "";
+            this.adaptedStyle = "";
+            this.naturalStyle = "";
         },
         async copyText() {
             try {
@@ -412,6 +423,27 @@ Here's the original email:`
         },
         showTips() {
             this.toolTips = true;
+        },
+        toggleDropdownDisc() {
+            if (this.dropdownActive2) {
+                this.toggleDropdown2();
+            }
+            if (this.dropdownActive3) {
+                this.toggleDropdown3();
+            }
+            this.dropdownActive4 = !this.dropdownActive4;
+
+            this.circleGrows1.forEach((_, index) => {
+                setTimeout(() => {
+                    this.$set(this.circleGrows1, index, !this.circleGrows1[index]);
+                }, index * 200);
+            });
+
+            this.discDropdownItems.forEach((_, index) => {
+                setTimeout(() => {
+                    this.$set(this.discDropdownItems, index, { ...this.discDropdownItems[index], active: !this.discDropdownItems[index].active });
+                }, index * 200);
+            });
         },
         toggleDropdown1() {
             if (this.dropdownActive2) {
@@ -472,8 +504,8 @@ Here's the original email:`
         },
         selectItemDisc(item) {
             this.discStyle = item.value;
-            this.dropdownActive1 = false;
-            this.adaptedDropdownItems.forEach(i => i.active = i === item);
+            this.dropdownActive4 = false;
+            this.discDropdownItems.forEach(i => i.active = i === item);
             this.circleGrows1 = this.circleGrows1.map(() => false);
             this.selectedStyle1 = item.name;
         },
@@ -635,7 +667,10 @@ Here's the original email:`
                         }
 
                         this.isLoading = false;
-
+                        this.isChecked = false;
+                        this.selectedStyle1 = "";
+                        this.discStyle = "";
+                        this.dropdownActive4 = false;
                     } catch (error) {
                         this.isLoading = false;
                         console.error("Error fetching data from proxy server:", error);
@@ -661,7 +696,7 @@ Here's the original email:`
                         }
 
                         this.isLoading = false;
-
+                        this.isChecked = false;
                     } catch (error) {
                         this.isLoading = false;
                         console.error("Error fetching data from proxy server:", error);
