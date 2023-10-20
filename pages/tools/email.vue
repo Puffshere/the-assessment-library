@@ -102,7 +102,7 @@
                         <!-- This is the code if the user has not checked box for multiple styles -->
                         <div v-else>
                             <div class="col-3">
-                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle
+                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ discStyle
                                     ||
                                     'DISC Style' }}
                                     <svg :class="{ 'chevron-selected': dropdownActive1 }" xmlns="http://www.w3.org/2000/svg"
@@ -241,6 +241,7 @@ export default {
     },
     data() {
         return {
+            discStyle: "",
             adaptedStyle: "",
             naturalStyle: "",
             isChecked: false,
@@ -335,6 +336,21 @@ export default {
                 'color-S': this.selectedStyle2 === 'S',
                 'color-C': this.selectedStyle2 === 'C'
             };
+        },
+        singleStylePromptContext() {
+            return `Perfect Rewrite the original email, emphasizing the DISC trait provided below.  Write the new email in ${this.language} with correct email formatting.
+
+DISC trait: ${this.discStyle}
+
+Incorporate these nuances:
+Vocabulary: Use words that resonate with the specific DISC trait. E.g., action-oriented for D, enthusiastic for I, harmonious for S, and analytical for C.
+Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. 
+D might prefer brevity, I emotive punctuation, S connected sentences, and C precise detailing.
+CTA (Call to Action): Tailor the conclusion or request based on the trait. D being directive, I collaborative, S supportive, and C instructive.
+Structure & Flow: D should be direct and prioritize main points, I may start personally, S should maintain balance, and C needs clear, detailed flow.
+Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I as upbeat, S as calm, and C as methodical.
+
+Here's the original email:`
         },
         promptContext() {
             return `Perfect Rewrite the original email, emphasizing the DISC traits provided below.  Write the new email in ${this.language} with correct email formatting.
@@ -453,6 +469,13 @@ Here's the original email:`
                     this.$set(this.languages, index, { ...this.languages[index], active: !this.languages[index].active });
                 }, index * 0);
             });
+        },
+        selectItemDisc(item) {
+            this.discStyle = item.value;
+            this.dropdownActive1 = false;
+            this.adaptedDropdownItems.forEach(i => i.active = i === item);
+            this.circleGrows1 = this.circleGrows1.map(() => false);
+            this.selectedStyle1 = item.name;
         },
         selectItemAdapted(item) {
             this.adaptedStyle = item.value;
@@ -594,28 +617,58 @@ Here's the original email:`
             this.response = "";
         },
         async submitMessage() {
-            if (this.userInput && this.userInput !== "Please add an email to be altered!") {
-                this.isLoading = true;
-                // Code needed for development
-                // const endpoint = "http://localhost:3000/api/completions";
-                const endpoint = "/api/completions";
-                const combinedInput = this.promptContext + '\n\n' + this.userInput;
+            if (this.isChecked) {
+                if (this.userInput && this.userInput !== "Please add an email to be altered!") {
+                    this.isLoading = true;
+                    // Code needed for development
+                    // const endpoint = "http://localhost:3000/api/completions";
+                    const endpoint = "/api/completions";
 
-                try {
-                    const result = await axios.post(endpoint, { input: combinedInput });
+                    const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
-                    if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
-                        this.response = result.data.choices[0].message.content;
+
+                    try {
+                        const result = await axios.post(endpoint, { input: combinedInput });
+
+                        if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
+                            this.response = result.data.choices[0].message.content;
+                        }
+
+                        this.isLoading = false;
+
+                    } catch (error) {
+                        this.isLoading = false;
+                        console.error("Error fetching data from proxy server:", error);
                     }
-
-                    this.isLoading = false;
-
-                } catch (error) {
-                    this.isLoading = false;
-                    console.error("Error fetching data from proxy server:", error);
+                } else {
+                    this.userInput = "Please add an email to be altered!"
                 }
             } else {
-                this.userInput = "Please add an email to be altered!"
+                if (this.userInput && this.userInput !== "Please add an email to be altered!") {
+                    this.isLoading = true;
+                    // Code needed for development
+                    // const endpoint = "http://localhost:3000/api/completions";
+                    const endpoint = "/api/completions";
+
+                    const combinedInput = this.singleStylePromptContext + '\n\n' + this.userInput;
+
+
+                    try {
+                        const result = await axios.post(endpoint, { input: combinedInput });
+
+                        if (result.data && result.data.choices && result.data.choices[0] && result.data.choices[0].message) {
+                            this.response = result.data.choices[0].message.content;
+                        }
+
+                        this.isLoading = false;
+
+                    } catch (error) {
+                        this.isLoading = false;
+                        console.error("Error fetching data from proxy server:", error);
+                    }
+                } else {
+                    this.userInput = "Please add an email to be altered!"
+                }
             }
         },
         head() {
@@ -1242,4 +1295,5 @@ $border-radius: 0.5rem;
         left: -5px;
         margin-bottom: 10px;
     }
-}</style>
+}
+</style>

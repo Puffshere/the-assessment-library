@@ -71,7 +71,9 @@
                             </div>
                             <div class="col-9">
                                 <p class="tips">
-                                    Use this button to copy the email from the top input box to your clipboard. </p>
+                                    Use this button to copy the email from the top input box to your clipboard. <span class="bold">Text will be
+                                    copied from the top Input box only so be sure to swap the response up to the top box
+                                    before hitting the copy text button.</span></p>
                             </div>
                         </div>
                     </div>
