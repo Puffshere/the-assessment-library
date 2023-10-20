@@ -399,6 +399,19 @@ Here's the original email:`
         handleResize() {
             this.$forceUpdate();
         },
+        resetActiveStatus() {
+            // Function to set active to false for each item in an array
+            const deactivateItems = (items) => {
+                items.forEach(item => {
+                    item.active = false;
+                });
+            };
+
+            // Applying the function to each of your arrays
+            deactivateItems(this.discDropdownItems);
+            deactivateItems(this.adaptedDropdownItems);
+            deactivateItems(this.naturalDropdownItems);
+        },
         toggleStyles() {
             this.isChecked = true;
             this.selectedStyle1 = "";
@@ -671,6 +684,7 @@ Here's the original email:`
                         this.selectedStyle1 = "";
                         this.discStyle = "";
                         this.dropdownActive4 = false;
+                        this.resetActiveStatus()
                     } catch (error) {
                         this.isLoading = false;
                         console.error("Error fetching data from proxy server:", error);
@@ -697,6 +711,7 @@ Here's the original email:`
 
                         this.isLoading = false;
                         this.isChecked = false;
+                        this.resetActiveStatus()
                     } catch (error) {
                         this.isLoading = false;
                         console.error("Error fetching data from proxy server:", error);
