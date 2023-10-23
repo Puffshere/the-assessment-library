@@ -12,8 +12,8 @@
                         Assessments 24x7, a leading provider of assessments and resources for
                         personal and professional development, is thrilled to announce its recent
                         acquisition of DISCcert, a prominent DISC assessment provider previously
-                        owned by Bonnie Burn. The acquisition was completed on
-                        signifies a significant step June 1, 2023, and forward for both companies.
+                        owned by Bonnie Burn. The acquisition was completed on June 1, 2023, and signifies a significant
+                        step forward for both companies.
                     </p>
                 </div>
             </div>
