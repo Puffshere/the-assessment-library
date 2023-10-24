@@ -357,7 +357,7 @@ export default {
 
 DISC trait: ${this.discStyle}
 
-Incorporate these nuances:
+Write the new email in the voice of someone emphasising these nuances:
 Vocabulary: Use words that resonate with the specific DISC trait. E.g., action-oriented for D, enthusiastic for I, harmonious for S, and analytical for C.
 Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. 
 D might prefer brevity, I emotive punctuation, S connected sentences, and C precise detailing.
