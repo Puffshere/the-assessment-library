@@ -189,11 +189,14 @@
                     </div>
                 </div>
 
-                <textarea class="inputStyling" v-model="userInput" @keydown="handleKeyDown"
-                    placeholder="Paste email here to be altered...">
-                </textarea>
+                <div :class="styleBackgroundColorInput">
+                    <textarea class="inputStyling" v-model="userInput" @keydown="handleKeyDown"
+                        placeholder="Paste email here to be altered...">
+                    </textarea>
+                </div>
 
-                <div type='text' v-if="response" class="formatted-response">{{ response }}</div>
+                <div type='text' v-if="response" class="formatted-response" :class="styleBackgroundColorResponse">{{
+                    response }}</div>
 
                 <div class="container bar2">
                     <div class="row col-12 button-container">
@@ -244,6 +247,8 @@ export default {
             discStyle: "",
             adaptedStyle: "",
             naturalStyle: "",
+            currentEmailBackgroundColor: "",
+            styleBackgroundColor: "",
             isChecked: false,
             selectedStyle1: '',
             selectedStyle2: '',
@@ -344,6 +349,22 @@ export default {
                 'color-C': this.selectedStyle2 === 'C'
             };
         },
+        styleBackgroundColorInput() {
+            return {
+                'box-shadow-D1': this.currentEmailBackgroundColor === 'D - Dominance',
+                'box-shadow-I1': this.currentEmailBackgroundColor === 'I - Influence',
+                'box-shadow-S1': this.currentEmailBackgroundColor === 'S - Steadiness',
+                'box-shadow-C1': this.currentEmailBackgroundColor === 'C - Conscientiousness'
+            };
+        },
+        styleBackgroundColorResponse() {
+            return {
+                'box-shadow-D': this.styleBackgroundColor === 'D - Dominance',
+                'box-shadow-I': this.styleBackgroundColor === 'I - Influence',
+                'box-shadow-S': this.styleBackgroundColor === 'S - Steadiness',
+                'box-shadow-C': this.styleBackgroundColor === 'C - Conscientiousness'
+            };
+        },
         singleStylePromptContext() {
             return `Perfect Rewrite the original email, emphasizing the DISC trait provided below.  Write the new email in ${this.language} with correct email formatting.  Do not include a subject line.
 
@@ -360,12 +381,12 @@ Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I 
 Here's the original email:`
         },
         promptContext() {
-            return `Perfect Rewrite the original email, emphasizing the DISC traits provided below.  Write the new email in ${this.language} with correct email formatting.
+            return `Perfect Rewrite the original email, emphasizing the DISC traits provided below.  Write the new email in ${this.language} with correct email formatting.  Do not include a subject line.
 
 Adapted: ${this.adaptedStyle}
 Natural: ${this.naturalStyle}
 
-Incorporate these nuances:
+Write the new email in the voice of someone emphasising these nuances:
 If multiple DISC traits are provided, ensure the email is a balanced reflection of all specified traits.
 Vocabulary: Use words that resonate with the specific DISC trait. E.g., action-oriented for D, enthusiastic for I, harmonious for S, and analytical for C.
 Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. 
@@ -660,6 +681,7 @@ Here's the original email:`
         swapOutput() {
             this.userInput = this.response;
             this.response = "";
+            this.currentEmailBackgroundColor = this.styleBackgroundColor;
         },
         async submitMessage() {
             if (this.isChecked) {
@@ -711,6 +733,7 @@ Here's the original email:`
 
                         this.isLoading = false;
                         this.isChecked = false;
+                        this.styleBackgroundColor = this.discStyle;
                         this.resetActiveStatus()
                     } catch (error) {
                         this.isLoading = false;
@@ -809,6 +832,118 @@ $border-radius: 0.5rem;
 
         .color-C {
             background-color: yellow !important;
+        }
+
+        .box-shadow-D1 {
+            position: relative;
+        }
+
+        .box-shadow-D1::before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            height: 96.25%;
+            width: 5px;
+            background-color: #e93d2f !important;
+        }
+
+        .box-shadow-I1 {
+            position: relative;
+        }
+
+        .box-shadow-I1::before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            height: 96.25%;
+            width: 5px;
+            background-color: #1666ff;
+        }
+
+        .box-shadow-S1 {
+            position: relative;
+        }
+
+        .box-shadow-S1::before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            height: 96.25%;
+            width: 5px;
+            background-color: #0dab49;
+        }
+
+        .box-shadow-C1 {
+            position: relative;
+        }
+
+        .box-shadow-C1::before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            height: 96.25%;
+            width: 5px;
+            background-color: yellow;
+        }
+
+        .box-shadow-D {
+            position: relative;
+        }
+
+        .box-shadow-D::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #e93d2f !important;
+        }
+
+        .box-shadow-I {
+            position: relative;
+        }
+
+        .box-shadow-I::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #1666ff;
+        }
+
+        .box-shadow-S {
+            position: relative;
+        }
+
+        .box-shadow-S::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #0dab49;
+        }
+
+        .box-shadow-C {
+            position: relative;
+        }
+
+        .box-shadow-C::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background-color: yellow;
         }
 
         .dropdown-trigger {
@@ -992,7 +1127,6 @@ $border-radius: 0.5rem;
             cursor: pointer;
             min-height: 41px;
             width: 100%;
-            //padding: 4.5px 10px;
             background-color: $primary-color;
             border-radius: $border-radius;
             box-shadow: 3px 3px 5px rgb(61, 61, 61);
@@ -1123,10 +1257,10 @@ $border-radius: 0.5rem;
             overflow-x: auto;
             margin-top: 15px;
             border: 4px solid rgb(54, 147, 223);
-            box-shadow: 5px 5px 5px rgb(61, 61, 61);
-            box-shadow: 5px 5px 10px rgb(61, 61, 61);
             font-size: 20px;
             font-family: monospace;
+            box-shadow: 5px 5px 5px rgb(61, 61, 61);
+            box-shadow: 5px 5px 10px rgb(61, 61, 61);
         }
 
         .btn {
@@ -1299,7 +1433,6 @@ $border-radius: 0.5rem;
 
     .bar1 {
         padding-left: 0px !important;
-        //overflow: hidden;
     }
 
     .additionalStyles {
