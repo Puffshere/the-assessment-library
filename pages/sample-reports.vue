@@ -23,7 +23,7 @@
                         <label for="lang">Filter by Language:</label>
                         <select class="input" id="lang" v-model="lang">
                             <option value="ar">Arabic - 2</option>
-                            <option value="en-au">Australian - 2</option>
+                            <option value="en-au">Australian - 4</option>
                             <option value="zh">Chinese (Mandarin) - 17</option>
                             <option value="zh-t">Chinese (Traditional) - 1</option>
                             <option value="nl">Dutch - 5</option>
@@ -157,10 +157,14 @@
                     <div class="samples-container">
                         <h3>DISC Relationships</h3>
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationships.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Relationship Self</a>
+                        <a v-else-if="lang === 'en-au'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipsAustralian.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Relationship Self</a>
                         <a v-else class="hyperlink disabled">DISC Relationship Self</a><br/>
+                        <a class="language-button disc" @click="discRelationshipsModal = true">2 languages</a><br/>
 
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipCouplesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Relationship Couples</a>
+                        <a v-else-if="lang === 'en-au'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipAustralianCouplesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Relationship Couples</a>
                         <a v-else class="hyperlink disabled">DISC Relationship Couples</a><br/>
+                        <a class="language-button disc" @click="discRelationshipsCouplesModal = true">2 languages</a><br/>
                     </div>
                 </div>
             </div>
@@ -557,6 +561,42 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360RussianSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Russian</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SwedishSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Swedish</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360VietnameseSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Vietnamese</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
+            <!-- DISC RELATIONSHIPS MODAL -->
+            <transition name="fade">
+                <section v-if="discRelationshipsModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="discRelationshipsModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>DISC Relationships Reports</h1>
+
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationships.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipsAustralian.pdf" class="hyperlink" target="_blank" rel="noopener">Australian</a><br/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
+            <!-- DISC RELATIONSHIPS COUPLES MODAL -->
+            <transition name="fade">
+                <section v-if="discRelationshipsCouplesModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="discRelationshipsCouplesModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>DISC Relationships Couples Reports</h1>
+
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipCouplesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipAustralianCouplesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Australian</a><br/>
                             </div>
                         </div>
                     </div>
@@ -1000,6 +1040,8 @@
                 discGroupGraphsModal: false,
                 discCollaborationModal: false,
                 disc360ReportModal: false,
+                discRelationshipsModal: false,
+                discRelationshipsCouplesModal: false,
                 motSelfReportModal: false,
                 motTeamReportsModal: false,
                 motTeamReportModal: false,
