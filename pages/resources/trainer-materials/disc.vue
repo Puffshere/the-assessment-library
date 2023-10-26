@@ -238,7 +238,7 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylePatternsComplete.pptx"
-                                        target="_blank" rel="noopener">15 Classical DISCstyle Behavioral Patterns</a>
+                                        target="_blank" rel="noopener">15 Classical DISCstyle Behavioral Patterns (PowerPoint)</a>
                                     <small>This is a detailed description of the 15 most common workplace patterns along
                                         with some insights into how they typically function in their day-to-day
                                         interpersonal dynamics.</small>
@@ -251,6 +251,18 @@
                                     <small>This is a detailed description of the 15 most common workplace patterns along
                                         with some insights into how they typically function in their day-to-day
                                         interpersonal dynamics.</small>
+                                </td>
+                            </tr>
+
+                            <tr v-if="certified">
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicalStylesSummaryReportFinal_10.25.23.pdf"
+                                        target="_blank" rel="noopener">15 Classic DISC Styles Summary Overview (PDF)</a>
+                                    <small>This document provides an introductory overview and highlights from the DISCself
+                                        Report for each of the 15 Classic DISC Patterns, including strengths, work style
+                                        tendencies, effective environments, motivations and needs, typical behaviors in
+                                        conflict, perceptions and needs when stressed, and the dos/don’ts of
+                                        communication.</small>
                                 </td>
                             </tr>
 
