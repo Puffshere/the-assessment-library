@@ -577,8 +577,8 @@
                             <div class="col-12">
                                 <h1>DISC Relationships Reports</h1>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationships.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipsAustralian.pdf" class="hyperlink" target="_blank" rel="noopener">Australian</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationships.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                             </div>
                         </div>
                     </div>
@@ -595,8 +595,8 @@
                             <div class="col-12">
                                 <h1>DISC Relationships Couples Reports</h1>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipCouplesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipAustralianCouplesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">Australian</a><br/>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipCouplesSampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">English</a><br/>
                             </div>
                         </div>
                     </div>
