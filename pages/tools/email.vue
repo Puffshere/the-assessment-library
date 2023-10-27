@@ -211,7 +211,7 @@
                         </div>
 
                         <div class="col-4">
-                            <button type="submit" @click="submitMessage" class="submit btn">Submit</button>
+                            <button type="submit" @click="submitMessage" class="submit btn">Generate</button>
                         </div>
 
                     </div>
@@ -431,14 +431,12 @@ Here's the original email:`
             this.$forceUpdate();
         },
         resetActiveStatus() {
-            // Function to set active to false for each item in an array
             const deactivateItems = (items) => {
                 items.forEach(item => {
                     item.active = false;
                 });
             };
 
-            // Applying the function to each of your arrays
             deactivateItems(this.discDropdownItems);
             deactivateItems(this.adaptedDropdownItems);
             deactivateItems(this.naturalDropdownItems);
@@ -453,11 +451,13 @@ Here's the original email:`
         async copyText() {
             try {
                 if (this.userInput != "") {
-                    // Using the Clipboard API to copy the text
+
                     await navigator.clipboard.writeText(this.userInput);
 
-                    // Show a message confirming the text has been copied
-                    alert('Text copied to clipboard');
+                    if (confirm('Text copied to clipboard. Would you like to send the text via email?')) {
+                        let mailtoLink = `mailto:?subject=&body=${encodeURIComponent(this.userInput)}`;
+                        window.open(mailtoLink, '_blank');
+                    }
                 } else {
                     alert('No text to copy to clipboard');
                 }
@@ -732,7 +732,6 @@ Here's the original email:`
                     const endpoint = "/api/completions";
 
                     const combinedInput = this.singleStylePromptContext + '\n\n' + this.userInput;
-
 
                     try {
                         const result = await axios.post(endpoint, { input: combinedInput });

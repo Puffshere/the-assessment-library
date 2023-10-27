@@ -10,6 +10,16 @@
                         <br>
                         <div class="row toolRow">
                             <div class="col-3">
+                                <div class="text">Helpful Tip</div>
+                            </div>
+                            <div class="col-9">
+                                <p class="tips">
+                                    If you don't like the generated email keep hitting the Generate button until you find one you do!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row toolRow">
+                            <div class="col-3">
                                 <div class="toolImages">
                                     <button class="translateBtn btn">Translate</button>
                                 </div>
@@ -71,9 +81,11 @@
                             </div>
                             <div class="col-9">
                                 <p class="tips">
-                                    Use this button to copy the email from the top input box to your clipboard. <span class="bold">Text will be
-                                    copied from the top Input box only so be sure to swap the response up to the top box
-                                    before hitting the copy text button.</span></p>
+                                    Use this button to copy the email from the top input box to your clipboard and if you
+                                    choose send the copied text via email. <span class="bold">Text will be copied from the
+                                        top Input box only so be sure
+                                        to swap the response up to the top box before hitting the copy text button.</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -133,6 +145,10 @@ export default {
         text-overflow: ellipsis;
         padding: 20px;
         letter-spacing: 2px;
+    }
+
+    .text {
+        color: white;
     }
 
     .tips {
