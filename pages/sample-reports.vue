@@ -23,7 +23,7 @@
                         <label for="lang">Filter by Language:</label>
                         <select class="input" id="lang" v-model="lang">
                             <option value="ar">Arabic - 2</option>
-                            <option value="en-au">Australian - 4</option>
+                            <option value="en-au">Australian - 9</option>
                             <option value="zh">Chinese (Mandarin) - 17</option>
                             <option value="zh-t">Chinese (Traditional) - 1</option>
                             <option value="nl">Dutch - 5</option>
@@ -99,7 +99,7 @@
                         <a class="language-button disc" @click="discSelfModal = true">23 languages</a>
                         <br/>
 
-                        <a v-if="lang === 'en-us' || lang === 'zh' || lang === 'nl' || lang === 'fr' || lang === 'pt' || lang === 'sv' || lang === 'vi' || lang === 'tr' || lang === 'es'" @click="discTeamReportModal = true" class="hyperlink" target="_blank" rel="noopener">DISC Team Reports &rsaquo;</a>
+                        <a v-if="lang === 'en-us' || lang === 'en-au' || lang === 'zh' || lang === 'nl' || lang === 'fr' || lang === 'pt' || lang === 'sv' || lang === 'vi' || lang === 'tr' || lang === 'es'" @click="discTeamReportModal = true" class="hyperlink" target="_blank" rel="noopener">DISC Team Reports &rsaquo;</a>
                         <a v-else class="hyperlink disabled">DISC Team Reports</a><br/>
 
                         <a v-if="lang === 'en-us'" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySampleReport.pdf" class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
@@ -427,7 +427,8 @@
                             <div class="col-12">
                                 <h1>DISC Team Reports</h1>
 
-                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
+                                <a v-if="lang === 'en-au'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupAustralianSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
+                                <a v-else-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamDynamicsReportChinese.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
                                 <a v-else-if="lang === 'nl'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportDutch.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
                                 <a v-else-if="lang === 'fr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupFrenchSampleReport.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
@@ -436,40 +437,44 @@
                                 <a v-else-if="lang === 'sv'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportSwedish.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
                                 <a v-else-if="lang === 'vi'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportVietnamese.pdf" target="_blank" rel="noopener">DISC Team Dynamics Report</a>
                                 <a v-else class="hyperlink disabled"></a>
-                                <a class="language-button disc" @click="discTeamDynamicsReportModal = true">8 languages</a><br/>
+                                <a class="language-button disc" @click="discTeamDynamicsReportModal = true">9 languages</a><br/>
 
-                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a>
+                                <a v-if="lang === 'en-au'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummaryAustralianSampleReport.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a>
+                                <a v-else-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummaryReportChinese.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a>
                                 <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySpanishSampleReport.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a>
                                 <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummaryTurkishSampleReport.pdf" target="_blank" rel="noopener">DISC Team Summary Report</a>
                                 <a v-else class="hyperlink disabled">DISC Team Summary Report</a>
-                                <a class="language-button disc" @click="discTeamSummaryReportModal = true">4 languages</a><br/>
+                                <a class="language-button disc" @click="discTeamSummaryReportModal = true">5 languages</a><br/>
 
                                 <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportGraphs.pdf" target="_blank" rel="noopener">DISC Group Graphs</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCGroupGraphsChinese.pdf" target="_blank" rel="noopener">DISC Group Graphs</a>
                                 <a v-else class="hyperlink disabled">DISC Group Graphs</a><br/>
                                 <a class="language-button disc" @click="discGroupGraphsModal = true">2 languages</a><br/>
 
-                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportBT.pdf" target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
+                                <a v-if="lang === 'en-au'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamBehavioralTendenciesAustralianSampleReport.pdf" target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
+                                <a v-else-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportBT.pdf" target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCBehavioralTendenciesChinese.pdf" target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
                                 <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCBehTendenciesTeamTurkishSampleReport.pdf" target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
                                 <a v-else class="hyperlink disabled">DISC Behavioral Tendencies</a>
-                                <a class="language-button disc" @click="discBehavioralTendenciesReportModal = true">3 languages</a><br/>
+                                <a class="language-button disc" @click="discBehavioralTendenciesReportModal = true">4 languages</a><br/>
 
                                 <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportIntegratedBehaviors.pdf" target="_blank" rel="noopener">DISC Integrated Behaviors</a>
                                 <a v-else class="hyperlink disabled">DISC Integrated Behaviors</a><br/>
 
-                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
+                                <a v-if="lang === 'en-au'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelAustralianSampleReport.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
+                                <a v-else-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelChinese.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
                                 <a v-else-if="lang === 'es'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelSpanishSample.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
                                 <a v-else-if="lang === 'tr'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelTurkishSampleReport.pdf" target="_blank" rel="noopener">DISC Team Wheel</a>
                                 <a v-else class="hyperlink disabled">DISC Team Wheel</a>
-                                <a class="language-button disc" @click="discTeamWheelReportModal = true">4 languages</a><br/>
+                                <a class="language-button disc" @click="discTeamWheelReportModal = true">5 languages</a><br/>
                                 
-                                <a v-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCMatching.pdf" target="_blank" rel="noopener">DISC Collaboration</a>
+                                <a v-if="lang === 'en-au'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCollaborationAustralianSampleReport.pdf" target="_blank" rel="noopener">DISC Collaboration</a>
+                                <a v-else-if="lang === 'en-us'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCMatching.pdf" target="_blank" rel="noopener">DISC Collaboration</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCollaborationReportChinese.pdf" target="_blank" rel="noopener">DISC Collaboration</a>
                                 <a v-else class="hyperlink disabled">DISC Collaboration</a><br/>
-                                <a class="language-button disc" @click="discCollaborationModal = true">2 languages</a><br/>
+                                <a class="language-button disc" @click="discCollaborationModal = true">3 languages</a><br/>
                             </div>
                         </div>
                     </div>
