@@ -618,6 +618,7 @@
                             <div class="col-12">
                                 <h1>DISC Team Dynamics Reports</h1>
                                 
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupAustralianSampleReport.pdf" target="_blank" rel="noopener">Australian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamDynamicsReportChinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportDutch.pdf" target="_blank" rel="noopener">Dutch</a><br/>
@@ -642,6 +643,7 @@
                             <div class="col-12">
                                 <h1>DISC Team Summary Reports</h1>
 
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummaryAustralianSampleReport.pdf" target="_blank" rel="noopener">Australian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummaryReportChinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySpanishSampleReport.pdf" target="_blank" rel="noopener">Spanish</a><br/>
@@ -680,6 +682,7 @@
                             <div class="col-12">
                                 <h1>DISC Collaboration</h1>
 
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCollaborationAustralianSampleReport.pdf" target="_blank" rel="noopener">Australian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCMatching.pdf" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCollaborationReportChinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                             </div>
@@ -698,6 +701,7 @@
                             <div class="col-12">
                                 <h1>DISC Behavioral Tendencies Reports</h1>
 
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamBehavioralTendenciesAustralianSampleReport.pdf" target="_blank" rel="noopener">Australian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportBT.pdf" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCBehavioralTendenciesChinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCBehTendenciesTeamTurkishSampleReport.pdf" target="_blank" rel="noopener">Turkish</a>
@@ -717,6 +721,7 @@
                             <div class="col-12">
                                 <h1>DISC Team Wheel Reports</h1>
 
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">DISCTeamWheelAustralianSampleReport</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelChinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelSpanishSample.pdf" target="_blank" rel="noopener">Spanish</a><br/>
