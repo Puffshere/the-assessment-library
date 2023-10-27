@@ -637,8 +637,8 @@ Here's the original email:`
         async yesFormatText() {
             this.isLoading = true;
             // Code needed for development
-            const endpoint = "http://localhost:3000/api/completions";
-            // const endpoint = "/api/completions";
+            // const endpoint = "http://localhost:3000/api/completions";
+            const endpoint = "/api/completions";
             const combinedInput = this.promptFormat + '\n\n' + this.userInput;
 
             try {
@@ -661,8 +661,8 @@ Here's the original email:`
             if (this.userInput && this.userInput !== "Please add text to be translated!") {
                 this.isLoading = true;
                 // Code needed for development
-                const endpoint = "http://localhost:3000/api/completions";
-                // const endpoint = "/api/completions";
+                // const endpoint = "http://localhost:3000/api/completions";
+                const endpoint = "/api/completions";
                 const combinedInput = this.promptTranslate + '\n\n' + this.userInput;
 
                 try {
@@ -698,8 +698,8 @@ Here's the original email:`
                 if (this.userInput && this.userInput !== "Please add an email to be altered!") {
                     this.isLoading = true;
                     // Code needed for development
-                    const endpoint = "http://localhost:3000/api/completions";
-                    // const endpoint = "/api/completions";
+                    // const endpoint = "http://localhost:3000/api/completions";
+                    const endpoint = "/api/completions";
 
                     const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
@@ -728,8 +728,8 @@ Here's the original email:`
                 if (this.userInput && this.userInput !== "Please add an email to be altered!") {
                     this.isLoading = true;
                     // Code needed for development
-                    const endpoint = "http://localhost:3000/api/completions";
-                    // const endpoint = "/api/completions";
+                    // const endpoint = "http://localhost:3000/api/completions";
+                    const endpoint = "/api/completions";
 
                     const combinedInput = this.singleStylePromptContext + '\n\n' + this.userInput;
 
