@@ -721,7 +721,7 @@
                             <div class="col-12">
                                 <h1>DISC Team Wheel Reports</h1>
 
-                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">DISCTeamWheelAustralianSampleReport</a><br/>
+                                <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelAustralianSampleReport.pdf" target="_blank" rel="noopener">Australian</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportWheel.pdf" target="_blank" rel="noopener">English</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelChinese.pdf" target="_blank" rel="noopener">Chinese</a><br/>
                                 <a class="hyperlink" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelSpanishSample.pdf" target="_blank" rel="noopener">Spanish</a><br/>
