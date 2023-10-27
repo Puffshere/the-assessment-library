@@ -366,34 +366,44 @@ export default {
             };
         },
         singleStylePromptContext() {
-            return `Perfect Rewrite the original email, emphasizing the DISC trait provided below.  Write the new email in ${this.language} with correct email formatting.  Do not include a subject line.
+            return `
+Perfect Rewrite the original email, emphasizing the DISC trait provided below. Write the new email in ${this.language} with correct email formatting. Do not include a subject line or directly use the trait's name in the content. Instead, incorporate the essence of the trait.
 
 DISC trait: ${this.discStyle}
 
-Write the new email in the voice of someone emphasising these nuances:
-Vocabulary: Use words that resonate with the specific DISC trait. E.g., action-oriented for D, enthusiastic for I, harmonious for S, and analytical for C.
-Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. 
-D might prefer brevity, I emotive punctuation, S connected sentences, and C precise detailing.
-CTA (Call to Action): Tailor the conclusion or request based on the trait. D being directive, I collaborative, S supportive, and C instructive.
-Structure & Flow: D should be direct and prioritize main points, I may start personally, S should maintain balance, and C needs clear, detailed flow.
-Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I as upbeat, S as calm, and C as methodical.
+For example:
+- D: "We need to act now to get results." (Action-oriented, direct)
+- I: "Let's get together and brainstorm!" (Enthusiastic, collaborative)
+- S: "I believe we can find a middle ground that works for everyone." (Harmonious, supportive)
+- C: "Based on the data, here are the next steps." (Analytical, precise)
+
+Vocabulary: Use words that resonate with the specific DISC trait.
+Punctuation & Formatting: Adjust to reflect the trait's characteristics.
+CTA (Call to Action): Tailor based on the trait.
+Structure & Flow: Adjust for each trait.
+Tone Modifiers: Reflect the tone associated with each trait.
 
 Here's the original email:`
         },
         promptContext() {
-            return `Perfect Rewrite the original email, emphasizing the DISC traits provided below.  Write the new email in ${this.language} with correct email formatting.  Do not include a subject line.
+            return `
+Perfect Rewrite the original email, emphasizing the DISC trait provided below. Write the new email in ${this.language} with correct email formatting. Do not include a subject line or directly use the trait's name in the content. Instead, incorporate the essence of the trait.
 
 Adapted: ${this.adaptedStyle}
 Natural: ${this.naturalStyle}
 
-Write the new email in the voice of someone emphasising these nuances:
 If multiple DISC traits are provided, ensure the email is a balanced reflection of all specified traits.
-Vocabulary: Use words that resonate with the specific DISC trait. E.g., action-oriented for D, enthusiastic for I, harmonious for S, and analytical for C.
-Punctuation & Formatting: Adjust sentence lengths and punctuation to reflect the trait's characteristics. 
-D might prefer brevity, I emotive punctuation, S connected sentences, and C precise detailing.
-CTA (Call to Action): Tailor the conclusion or request based on the trait. D being directive, I collaborative, S supportive, and C instructive.
-Structure & Flow: D should be direct and prioritize main points, I may start personally, S should maintain balance, and C needs clear, detailed flow.
-Tone Modifiers: Reflect the tone associated with each trait—D as assertive, I as upbeat, S as calm, and C as methodical.
+For example:
+- D: "We need to act now to get results." (Action-oriented, direct)
+- I: "Let's get together and brainstorm!" (Enthusiastic, collaborative)
+- S: "I believe we can find a middle ground that works for everyone." (Harmonious, supportive)
+- C: "Based on the data, here are the next steps." (Analytical, precise)
+
+Vocabulary: Use words that resonate with the specific DISC trait.
+Punctuation & Formatting: Adjust to reflect the trait's characteristics.
+CTA (Call to Action): Tailor based on the trait.
+Structure & Flow: Adjust for each trait.
+Tone Modifiers: Reflect the tone associated with each trait.
 
 Here's the original email:`
         },
@@ -627,8 +637,8 @@ Here's the original email:`
         async yesFormatText() {
             this.isLoading = true;
             // Code needed for development
-            // const endpoint = "http://localhost:3000/api/completions";
-            const endpoint = "/api/completions";
+            const endpoint = "http://localhost:3000/api/completions";
+            // const endpoint = "/api/completions";
             const combinedInput = this.promptFormat + '\n\n' + this.userInput;
 
             try {
@@ -651,8 +661,8 @@ Here's the original email:`
             if (this.userInput && this.userInput !== "Please add text to be translated!") {
                 this.isLoading = true;
                 // Code needed for development
-                // const endpoint = "http://localhost:3000/api/completions";
-                const endpoint = "/api/completions";
+                const endpoint = "http://localhost:3000/api/completions";
+                // const endpoint = "/api/completions";
                 const combinedInput = this.promptTranslate + '\n\n' + this.userInput;
 
                 try {
@@ -688,8 +698,8 @@ Here's the original email:`
                 if (this.userInput && this.userInput !== "Please add an email to be altered!") {
                     this.isLoading = true;
                     // Code needed for development
-                    // const endpoint = "http://localhost:3000/api/completions";
-                    const endpoint = "/api/completions";
+                    const endpoint = "http://localhost:3000/api/completions";
+                    // const endpoint = "/api/completions";
 
                     const combinedInput = this.promptContext + '\n\n' + this.userInput;
 
@@ -718,8 +728,8 @@ Here's the original email:`
                 if (this.userInput && this.userInput !== "Please add an email to be altered!") {
                     this.isLoading = true;
                     // Code needed for development
-                    // const endpoint = "http://localhost:3000/api/completions";
-                    const endpoint = "/api/completions";
+                    const endpoint = "http://localhost:3000/api/completions";
+                    // const endpoint = "/api/completions";
 
                     const combinedInput = this.singleStylePromptContext + '\n\n' + this.userInput;
 
