@@ -367,7 +367,7 @@ export default {
         },
         singleStylePromptContext() {
             return `
-Perfect Rewrite the original email, emphasizing the DISC trait provided below. Write the new email in ${this.language} with correct email formatting. Do not include a subject line or directly use the trait's name in the content. Instead, incorporate the essence of the trait.
+Perfect Rewrite the original email, emphasizing the DISC trait provided below. Write the new email in ${this.language} with correct email formatting. Do not include a subject line or directly use the DISC trait, no where in the email should the DISC trait provided appear in the content. Instead, incorporate the essence of the trait.
 
 DISC trait: ${this.discStyle}
 
@@ -387,7 +387,7 @@ Here's the original email:`
         },
         promptContext() {
             return `
-Perfect Rewrite the original email, emphasizing the DISC trait provided below. Write the new email in ${this.language} with correct email formatting. Do not include a subject line or directly use the trait's name in the content. Instead, incorporate the essence of the trait.
+Perfect Rewrite the original email, emphasizing the DISC trait provided below. Write the new email in ${this.language} with correct email formatting. Do not include a subject line or directly use the DISC trait, no where in the email should the DISC trait provided appear in the content. Instead, incorporate the essence of the trait.
 
 Adapted: ${this.adaptedStyle}
 Natural: ${this.naturalStyle}
