@@ -381,6 +381,7 @@ Vocabulary: Use words that resonate with the specific DISC trait.
 Punctuation & Formatting: Adjust to reflect the trait's characteristics.
 CTA (Call to Action): Tailor based on the trait.
 Structure & Flow: Adjust for each trait.
+Never use this word, conscientiousness, in the rewritten email.
 Tone Modifiers: Reflect the tone associated with each trait.
 
 Here's the original email:`
@@ -403,6 +404,7 @@ Vocabulary: Use words that resonate with the specific DISC trait.
 Punctuation & Formatting: Adjust to reflect the trait's characteristics.
 CTA (Call to Action): Tailor based on the trait.
 Structure & Flow: Adjust for each trait.
+Never use this word, conscientiousness, in the rewritten email.
 Tone Modifiers: Reflect the tone associated with each trait.
 
 Here's the original email:`
