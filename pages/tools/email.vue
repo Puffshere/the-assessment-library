@@ -381,7 +381,7 @@ Vocabulary: Use words that resonate with the specific DISC trait.
 Punctuation & Formatting: Adjust to reflect the trait's characteristics.
 CTA (Call to Action): Tailor based on the trait.
 Structure & Flow: Adjust for each trait.
-Never use this word, conscientiousness, in the rewritten email.
+Ensure that the word 'conscientiousness' is not used anywhere in the rewritten email.
 Tone Modifiers: Reflect the tone associated with each trait.
 
 Here's the original email:`
@@ -404,7 +404,7 @@ Vocabulary: Use words that resonate with the specific DISC trait.
 Punctuation & Formatting: Adjust to reflect the trait's characteristics.
 CTA (Call to Action): Tailor based on the trait.
 Structure & Flow: Adjust for each trait.
-Never use this word, conscientiousness, in the rewritten email.
+Ensure that the word 'conscientiousness' is not used anywhere in the rewritten email.
 Tone Modifiers: Reflect the tone associated with each trait.
 
 Here's the original email:`
@@ -663,7 +663,7 @@ Here's the original email:`
             if (this.userInput && this.userInput !== "Please add text to be translated!") {
                 this.isLoading = true;
                 // Code needed for development
-                // const endpoint = "http://localhost:3000/api/completions";
+                //const endpoint = "http://localhost:3000/api/completions";
                 const endpoint = "/api/completions";
                 const combinedInput = this.promptTranslate + '\n\n' + this.userInput;
 
