@@ -202,7 +202,7 @@
                     <div class="row col-12 button-container">
 
                         <div class="col-4">
-                            <button @click="translateText" class="btn translateBtn">translate</button>
+                            <button @click="translateText" class="btn translateBtn">Translate</button>
                         </div>
 
                         <div class="col-4 center-button">
