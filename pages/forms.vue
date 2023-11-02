@@ -51,7 +51,7 @@
 
                         <a target="_blank" href="https://form.asana.com/?k=imQ5iceoN9QkK7VkpLiYQQ&d=460673300006490">
                             <li class="resource support">
-                                Support Team Request Form
+                                Brinna Tasks Request Form
                             </li>
                         </a>
 
