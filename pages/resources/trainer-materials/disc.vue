@@ -833,7 +833,7 @@
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/GameShow.pptm"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/GameShow.pptx"
                                         target="_blank" rel="noopener">GameShow</a>
                                     <small>GameShow is a Jeopardy-style PPT game to check DISC knowledge in a fun and
                                         competitive way! Play with 2-4 teams to lock in the learning.</small>
