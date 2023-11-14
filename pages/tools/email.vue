@@ -372,10 +372,10 @@ Perfect Rewrite the original email, emphasizing the DISC trait provided below. W
 DISC trait: ${this.discStyle}
 
 For example:
-- D: "We need to act now to get results." (Action-oriented, direct)
-- I: "Let's get together and brainstorm!" (Enthusiastic, collaborative)
-- S: "I believe we can find a middle ground that works for everyone." (Harmonious, supportive)
-- C: "Based on the data, here are the next steps." (Analytical, precise)
+- D: "We need to act now to get results." (Action-oriented, direct). Length: Keep it short and to the point.
+- I: "Let's get together and brainstorm!" (Enthusiastic, collaborative). Length: Moderate length, allowing for some personal touch.
+- S: "I believe we can find a middle ground that works for everyone." (Harmonious, supportive). Length: Slightly longer, providing reassurance and clarity.
+- C: "Based on the data, here are the next steps." (Analytical, precise). Length: Longer, with detailed information and analysis.
 
 Vocabulary: Use words that resonate with the specific DISC trait.
 Punctuation & Formatting: Adjust to reflect the trait's characteristics.
@@ -395,10 +395,10 @@ Natural: ${this.naturalStyle}
 
 If multiple DISC traits are provided, ensure the email is a balanced reflection of all specified traits.
 For example:
-- D: "We need to act now to get results." (Action-oriented, direct)
-- I: "Let's get together and brainstorm!" (Enthusiastic, collaborative)
-- S: "I believe we can find a middle ground that works for everyone." (Harmonious, supportive)
-- C: "Based on the data, here are the next steps." (Analytical, precise)
+- D: "We need to act now to get results." (Action-oriented, direct). Length: Keep it short and to the point.
+- I: "Let's get together and brainstorm!" (Enthusiastic, collaborative). Length: Moderate length, allowing for some personal touch.
+- S: "I believe we can find a middle ground that works for everyone." (Harmonious, supportive). Length: Slightly longer, providing reassurance and clarity.
+- C: "Based on the data, here are the next steps." (Analytical, precise). Length: Longer, with detailed information and analysis.
 
 Vocabulary: Use words that resonate with the specific DISC trait.
 Punctuation & Formatting: Adjust to reflect the trait's characteristics.
