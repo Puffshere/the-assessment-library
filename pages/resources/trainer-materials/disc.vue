@@ -238,7 +238,8 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylePatternsComplete.pptx"
-                                        target="_blank" rel="noopener">15 Classical DISCstyle Behavioral Patterns (PowerPoint)</a>
+                                        target="_blank" rel="noopener">15 Classical DISCstyle Behavioral Patterns
+                                        (PowerPoint)</a>
                                     <small>This is a detailed description of the 15 most common workplace patterns along
                                         with some insights into how they typically function in their day-to-day
                                         interpersonal dynamics.</small>
@@ -829,7 +830,8 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Vacation.pdf"
-                                        target="_blank" rel="noopener">Vacation</a></td>
+                                        target="_blank" rel="noopener">Planning a Vacation</a>
+                                        <small>Teams work together to create a vacation opportunity for another DISC style and present it to practice what they have learned about the styles and adaptability.</small></td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
@@ -848,6 +850,13 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/MazeLabyrinthDISCActivity.pdf"
                                         target="_blank" rel="noopener">Mazes & Labyrinths</a></td>
+                            </tr>
+                            <tr v-if="certified">
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Jigsaw.pdf"
+                                        target="_blank" rel="noopener">Jigsaw Puzzles</a>
+                                    <small>2 puzzle-based activities to practice communication and teamwork</small>
+                                </td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
@@ -1341,4 +1350,5 @@ export default {
             padding: 8px;
         }
     }
-}</style>
+}
+</style>
