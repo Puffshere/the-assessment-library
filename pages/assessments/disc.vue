@@ -3,12 +3,12 @@
         <main-nav active="assessments"></main-nav>
  
         <div class="hero">
-            <img class="globe-tex" src="~assets/globe-bg.png">
+            <img class="globe-tex" src="~assets/globe-bg.png" alt="globe-bg">
 
             <div class="container">
                 <div class="row">
                     <div class="col-10">
-                        <h1><img class="ass-icon" src="~assets/disc-icon.png"> DISC Assessment</h1>
+                        <h1><img class="ass-icon" src="~assets/disc-icon.png" alt="disc-icon"> DISC Assessment</h1>
                         <p>
                             As the world’s most popular behavioral assessment, DISC offers a simple solution with profound results. 
                             Learn how to identify the behavioral styles of others and adapt your communication to increase sales, assemble teams, 
@@ -26,7 +26,7 @@
                     <p class="posts-title">Recent Posts with the Tag <span class="tag">DISC</span></p>
                     <div class="col-3 col-6-sm post" v-for="post in posts" :key="post.id">
                         <nuxt-link :to="`/blog/${post.slug}`">
-                            <img class="image" :src="post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'">
+                            <img class="image" :src="post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'" alt="post feature image">
 
                             <h3 class="title" v-html="post.title"></h3>
                         </nuxt-link>
@@ -53,7 +53,7 @@
                             <h2>DISC Sample Reports</h2>
                             <a href="/reports/DISCselfSampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> DISC Sample Report
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC Sample Report
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -207,7 +207,7 @@
             <div class="container">
                 <div class="row flex-center">
                     <div class="col-8">
-                        <img class="logo-img" src="~assets/whitelabel-report/disc-whitelabel.png" alt="">
+                        <img class="logo-img" src="~assets/whitelabel-report/disc-whitelabel.png" alt="logo-image">
                         <h4 class="title">White Label Our DISC Assessments With Your Brand's Logo- Not ours!</h4>
                     </div>
                 </div>

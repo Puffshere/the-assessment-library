@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="col-12">
-                    <img style="margin:20px auto 0;display:block" src="~assets/disc-behavioral-wheel.webp" alt=""
+                    <img style="margin:20px auto 0;display:block" src="~assets/disc-behavioral-wheel.webp" alt="disc-behavioral-wheel"
                         loading="lazy">
                 </div>
 
@@ -206,7 +206,7 @@
                         overview of the four styles are:
                     </p>
 
-                    <img style="margin:20px auto 0;display:block; width:100%" src="~assets/disc-focus-chart.webp" alt=""
+                    <img style="margin:20px auto 0;display:block; width:100%" src="~assets/disc-focus-chart.webp" alt="disc-focus-chart"
                         loading="lazy">
 
                     <div class="col-6">
