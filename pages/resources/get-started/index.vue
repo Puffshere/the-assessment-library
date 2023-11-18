@@ -197,7 +197,7 @@
                                 resource center on the home page of your account.
                             </p>
 
-                            <img style="width:100%;max-width:700px;margin:20px auto 0;display:block" src="~/assets/demo-assessments-ss.jpg">
+                            <img style="width:100%;max-width:700px;margin:20px auto 0;display:block" src="~/assets/demo-assessments-ss.jpg" alt="demo-assessments">
                         </div>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                         <h2>Additional Resources</h2>
                         <a href="https://www.assessments24x7.com/pdfs/DISC-eWorkbook-INTERACTIVE.pdf" target="_blank" rel="noopener">
                             <div class="sample">
-                                <img src="~assets/pdf-icon.svg"> DISC eWorkbook
+                                <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC eWorkbook
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -268,7 +268,7 @@
 
                         <a href="https://www.assessments24x7.com/PSEBook.pdf" target="_blank" rel="noopener">
                             <div class="sample">
-                                <img src="~assets/pdf-icon.svg"> People Smart in Business eBook
+                                <img src="~assets/pdf-icon.svg" alt="pdf-icon"> People Smart in Business eBook
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -280,7 +280,7 @@
 
                         <a href="https://www.assessments123.com/EndUserAdmin/RegisterMobile.aspx?mU%40e" target="_blank" rel="noopener">
                             <div class="sample">
-                                <img src="~assets/internet-icon.svg"> DISC Virtual Training
+                                <img src="~assets/internet-icon.svg" alt="internet-icon"> DISC Virtual Training
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -292,7 +292,7 @@
 
                         <a href="https://youtu.be/wqXCukZr9LI" target="_blank" rel="noopener">
                             <div class="sample">
-                                <img src="~assets/youtube-icon.svg"> Dr. Tony Alessandra's DISC Speech
+                                <img src="~assets/youtube-icon.svg" alt="youtube-icon"> Dr. Tony Alessandra's DISC Speech
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -304,7 +304,7 @@
 
                         <a v-if="noframe" href="/resources/relationship-strategies-audio-program?noframe=1" target="_blank" rel="noopener">
                             <div class="sample">
-                                <img src="~assets/internet-icon.svg"> DISC Relationship Strategies Audio Program
+                                <img src="~assets/internet-icon.svg" alt="internet-icon"> DISC Relationship Strategies Audio Program
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -315,7 +315,7 @@
                         </a>
                         <a v-else href="/resources/relationship-strategies-audio-program" target="_blank" rel="noopener">
                             <div class="sample">
-                                <img src="~assets/internet-icon.svg"> DISC Relationship Strategies Audio Program
+                                <img src="~assets/internet-icon.svg" alt="internet-icon"> DISC Relationship Strategies Audio Program
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -332,9 +332,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="images">
-                            <img class="image" src="~/assets/badges/new/disc-cert-badge-color-label.png" alt="">
-                            <img class="image" src="~/assets/badges/new/mot-cert-badge-color-label.png" alt="">
-                            <img class="image" src="~/assets/badges/new/eiq-cert-badge-color-label.png" alt="">
+                            <img class="image" src="~/assets/badges/new/disc-cert-badge-color-label.png" alt="disc-cert-badge">
+                            <img class="image" src="~/assets/badges/new/mot-cert-badge-color-label.png" alt="mot-cert-badge">
+                            <img class="image" src="~/assets/badges/new/eiq-cert-badge-color-label.png" alt="eiq-cert-badge">
                         </div>
 
                         <h2>Assessment Certifications &amp; Training</h2>

@@ -2,12 +2,12 @@
     <div class="main">
         <main-nav active="assessments"></main-nav>
         <div class="hero">
-            <img class="globe-tex" src="~assets/globe-bg.png">
+            <img class="globe-tex" src="~assets/globe-bg.png" alt="globe">
 
             <div class="container">
                 <div class="row">
                     <div class="col-10">
-                        <h1><img class="ass-icon" src="~assets/hartman-icon.png">Critical Thinking (HVP)</h1>
+                        <h1><img class="ass-icon" src="~assets/hartman-icon.png" alt="hartman-icon">Critical Thinking (HVP)</h1>
                         <p>
                             Ultimately, better judgment means better decisions.Critical Thinking is the key to making good decisions, solving problems, 
                             risk management and effective planning. Our results will depend on the critical thinking and decision making skills we apply 
@@ -59,7 +59,7 @@
                             <h2>HVP Sample Reports</h2>
                             <a href="/reports/tsselfsample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Hartman Value Profile - Self
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Hartman Value Profile - Self
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -71,7 +71,7 @@
 
                             <a href="/reports/tssalessample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Hartman Value Profile - Sales
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Hartman Value Profile - Sales
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -83,7 +83,7 @@
 
                             <a href="/reports/tsmanagesample.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Hartman Value Profile - Leadership
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Hartman Value Profile - Leadership
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -107,8 +107,8 @@
                         <h4 class="title">Measure Critical Thinking</h4>
                         <p>
                             This assessment measures and provides insight into our Thinking Style, made up of 2 key areas - Critical Processing Patterns and Thinking Strengths & Abilities:<br/>
-                            <h3><strong>Critical Processing Patterns</strong> are evaluated in: </h3>
                         </p>
+                            <h3><strong>Critical Processing Patterns</strong> are evaluated in: </h3>
 
                         <ul>
                             <li><strong>Intuitive Thinking:</strong> The ability to see, understand and appreciate the uniqueness in others and in situations; having a gut instinct.</li>
@@ -231,7 +231,7 @@
             <div class="container">
                 <div class="row flex-center">
                     <div class="col-8">
-                        <img class="logo-img" src="~assets/whitelabel-report/hvp-whitelabel.png" alt="">
+                        <img class="logo-img" src="~assets/whitelabel-report/hvp-whitelabel.png" alt="hvp-whitelabel">
                         <h4 class="title">White Label Our Assessments With Your Own Brand's Logo</h4>
                     </div>
                 </div>

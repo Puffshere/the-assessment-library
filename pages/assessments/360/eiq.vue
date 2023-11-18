@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <img class="image" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80">
+                    <img class="image" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80" alt="photo">
                     <nuxt-link to="/contact" class="button cta">Schedule An Appointment</nuxt-link>
                 </div>
                 <div class="col-8">
@@ -60,7 +60,7 @@
                             <h2>Sample Report</h2>
                             <a href="/reports/EIQ360SampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> EIQ 360° (Sample Report)
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> EIQ 360° (Sample Report)
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#05bbff;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934

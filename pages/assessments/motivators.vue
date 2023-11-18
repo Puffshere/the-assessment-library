@@ -3,12 +3,12 @@
         <main-nav active="assessments"></main-nav>
 
         <div class="hero">
-            <img class="globe-tex" src="~assets/globe-bg.png">
+            <img class="globe-tex" src="~assets/globe-bg.png" alt="globe">
 
             <div class="container">
                 <div class="row">
                     <div class="col-10">
-                        <h1><img class="ass-icon" src="~assets/motivators-icon.png"> Motivators</h1>
+                        <h1><img class="ass-icon" src="~assets/motivators-icon.png" alt="motivators-icon"> Motivators</h1>
                         <p>
                             Motivation influences behavior, decisions, and actions. Finding ways to achieve objectives that resonate and align with core <strong>motivations</strong> 
                             is vital for superior performance.  Those who better understand their <strong>natural motivators</strong> better are far more likely to pursue the right opportunities 
@@ -27,7 +27,7 @@
                     <p class="posts-title">Recent Posts with the Tag <span class="tag">Motivators</span></p>
                     <div class="col-3 col-6-sm post" v-for="post in posts" :key="post.id">
                         <nuxt-link :to="`/blog/${post.slug}`">
-                            <img class="image" :src="post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'">
+                            <img class="image" :src="post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'" alt="photo">
 
                             <h3 class="title" v-html="post.title"></h3>
                         </nuxt-link>
@@ -59,7 +59,7 @@
                             <h2>Motivators Sample Reports</h2>
                             <a href="/reports/valuessamplereport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Motivators
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Motivators
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -71,7 +71,7 @@
 
                             <a href="/reports/SampleDISCandMOT.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> DISC + Motivators Combination
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC + Motivators Combination
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -83,7 +83,7 @@
 
                             <a href="/reports/motgroupgraphs.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Motivators Group Graphs
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Motivators Group Graphs
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -95,7 +95,7 @@
 
                             <a href="/reports/motteamwheel.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Motivators Team Wheel
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Motivators Team Wheel
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                         <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                             l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -259,7 +259,7 @@
             <div class="container">
                 <div class="row flex-center">
                     <div class="col-8">
-                        <img class="logo-img" src="~assets/whitelabel-report/motivators-whitelabel.png" alt="">
+                        <img class="logo-img" src="~assets/whitelabel-report/motivators-whitelabel.png" alt="motivators-whitelabel">
                         <h4 class="title">White Label Our Assessments With Your Own Brand's Logo</h4>
                     </div>
                 </div>

@@ -3,12 +3,12 @@
         <main-nav active="assessments" />
 
         <div class="hero">
-            <img class="globe-tex" src="~assets/globe-bg.png">
+            <img class="globe-tex" src="~assets/globe-bg.png" alt="globe">
 
             <div class="container">
                 <div class="row">
                     <div class="col-10">
-                        <h1><img class="ass-icon" src="~assets/learning-styles-icon.png"> Learning Styles</h1>
+                        <h1><img class="ass-icon" src="~assets/learning-styles-icon.png" alt="learning-styles-icon"> Learning Styles</h1>
                         <p>
                             All learners are not equal. They come from a wide variety of cultural backgrounds, have many
                             different
@@ -33,7 +33,7 @@
                     <div class="col-3 col-6-sm post" v-for="post in posts" :key="post.id">
                         <nuxt-link :to="`/blog/${post.slug}`">
                             <img class="image"
-                                :src="post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'">
+                                :src="post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'" alt="photo">
 
                             <h3 class="title" v-html="post.title"></h3>
                         </nuxt-link>
@@ -74,7 +74,7 @@
                             <h2>Learning Styles Sample Reports</h2>
                             <a href="/reports/LearningStylesSampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Learning Styles
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Learning Styles
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -88,7 +88,7 @@
 
                             <a href="/reports/SampleDISCandLS.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> DISC + Learning Styles
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC + Learning Styles
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -102,7 +102,7 @@
 
                             <a href="/reports/SampleDISCSalesandLS.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> DISC Sales + Learning Styles
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC Sales + Learning Styles
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -116,7 +116,7 @@
 
                             <a href="/reports/SampleDISCLeadandLS.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> DISC Leadership + Learning Styles
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC Leadership + Learning Styles
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -263,7 +263,7 @@
             <div class="container">
                 <div class="row flex-center">
                     <div class="col-8">
-                        <img class="logo-img" src="~assets/whitelabel-report/learning-styles-whitelabel.png" alt="">
+                        <img class="logo-img" src="~assets/whitelabel-report/learning-styles-whitelabel.png" alt="learning-styles-whitelabel">
                         <h4 class="title">White Label Our Assessments With Your Own Brand's Logo</h4>
                     </div>
                 </div>

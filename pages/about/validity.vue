@@ -21,7 +21,7 @@
                 <div class="col-12">
                     <h2>Testing for APA Standards & EEOC Compliance</h2>
 
-                    <img class="image" src="~assets/asi-certified.png" alt="" loading="lazy">
+                    <img class="image" src="~assets/asi-certified.png" alt="asi-certified" loading="lazy">
 
                     <p>
                        A recent review revealed <strong>a significant majority of assessments available today lacked
@@ -68,7 +68,7 @@
                         <h2>ASI Validation Reports</h2>
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/validitydisc.pdf">
                             <div class="sample">
-                                <img src="~assets/pdf-icon.svg"> DISC Reliability & Construct Validity
+                                <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC Reliability & Construct Validity
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -80,7 +80,7 @@
 
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/A24x7-DISC-Disparate-Impact191009.pdf">
                             <div class="sample">
-                                <img src="~assets/pdf-icon.svg"> DISC Disparate Impact
+                                <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC Disparate Impact
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -92,7 +92,7 @@
 
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/motivators-construct-validity.pdf">
                             <div class="sample">
-                                <img src="~assets/pdf-icon.svg"> Motivators Construct Validity
+                                <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Motivators Construct Validity
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -104,7 +104,7 @@
 
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/motivators-reliability.pdf">
                             <div class="sample">
-                                <img src="~assets/pdf-icon.svg"> Motivators Reliability
+                                <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Motivators Reliability
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -116,7 +116,7 @@
 
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/Motivators-Disparate-Impact.pdf">
                             <div class="sample">
-                                <img src="~assets/pdf-icon.svg"> Motivators Disparate Impact
+                                <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Motivators Disparate Impact
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
@@ -128,7 +128,7 @@
 
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/EIQ-2-Validity-Study.pdf">
                             <div class="sample">
-                                <img src="~assets/pdf-icon.svg"> EIQ-2 Validity Study
+                                <img src="~assets/pdf-icon.svg" alt="pdf-icon"> EIQ-2 Validity Study
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.343 185.343">
                                     <path style="fill:#dadada;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
                                         l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934

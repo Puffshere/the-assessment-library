@@ -2,12 +2,12 @@
     <div class="main">
         <main-nav active="assessments"></main-nav>
         <div class="hero">
-            <img class="globe-tex" src="~assets/globe-bg.png">
+            <img class="globe-tex" src="~assets/globe-bg.png" alt="globe">
 
             <div class="container">
                 <div class="row">
                     <div class="col-10">
-                        <h1><img class="ass-icon" src="~assets/eiq-icon.png"> Emotional Intelligence</h1>
+                        <h1><img class="ass-icon" src="~assets/eiq-icon.png" alt="eiq-icon"> Emotional Intelligence</h1>
                         <p>
                             Research indicates that Emotional Intelligence (EIQ) can be learned and can be seen as
                             measurable differences directly associated with professional
@@ -31,7 +31,7 @@
                     <div class="col-3 col-6-sm post" v-for="post in posts" :key="post.id">
                         <nuxt-link :to="`/blog/${post.slug}`">
                             <img class="image"
-                                :src="post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'">
+                                :src="post.feature_image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'" alt="post.feature_image">
 
                             <h3 class="title" v-html="post.title"></h3>
                         </nuxt-link>
@@ -73,7 +73,7 @@
                             <h2>EIQ Sample Reports</h2>
                             <a href="/reports/EIQSampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Emotional Intelligence (EIQ)
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Emotional Intelligence (EIQ)
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -87,7 +87,7 @@
 
                             <a href="/reports/EIQ360SampleReport.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Emotional Intelligence 360
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Emotional Intelligence 360
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -101,7 +101,7 @@
 
                             <a href="/reports/DISCandEIQ.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> DISC + EIQ Combination
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC + EIQ Combination
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -115,7 +115,7 @@
 
                             <a href="/reports/DISCLeadandEIQ.pdf" target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> DISC Leadership + EIQ Combination
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> DISC Leadership + EIQ Combination
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -130,7 +130,7 @@
                             <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/validity/EIQ-2-Validity-Study.pdf"
                                 target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> EIQ Validity Study
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> EIQ Validity Study
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -271,7 +271,7 @@
             <div class="container">
                 <div class="row flex-center">
                     <div class="col-8">
-                        <img class="logo-img" src="~assets/emotional_intelligence_report.png" alt="">
+                        <img class="logo-img" src="~assets/emotional_intelligence_report.png" alt="emotional_intelligence_report">
                         <h4 class="title">White Label Our Assessments With Your Own Brand's Logo</h4>
                     </div>
                 </div>
