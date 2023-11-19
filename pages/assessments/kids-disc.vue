@@ -24,7 +24,7 @@
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf"
                             target="_blank" rel="noopener" class="button pdf"
                             style="display:inline-block; width:424px;">
-                            <img src="~assets/pdf-icon.svg" style="width:30px; width: 25px; margin-right: 2px;">
+                            <img src="~assets/pdf-icon.svg" alt="pdf-icon" style="width:30px; width: 25px; margin-right: 2px;">
                             Download Sample Report
                         </a><br /><br />
 
@@ -201,7 +201,7 @@
                             <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-Birds.pdf"
                                 target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Kids DISC - Full Report
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Kids DISC - Full Report
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -216,7 +216,7 @@
                             <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-ChildOnly.pdf"
                                 target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Kids DISC - Child Only
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Kids DISC - Child Only
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">
@@ -231,7 +231,7 @@
                             <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/AdultDISC-Birds.pdf"
                                 target="_blank" rel="noopener">
                                 <div class="sample">
-                                    <img src="~assets/pdf-icon.svg"> Adult Birds Sample Report
+                                    <img src="~assets/pdf-icon.svg" alt="pdf-icon"> Adult Birds Sample Report
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 185.343 185.343">

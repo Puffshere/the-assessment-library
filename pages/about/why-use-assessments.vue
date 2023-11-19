@@ -56,7 +56,7 @@
 
             <div class="row">
                 <div class="col-4">
-                    <img class="image" src="https://v.fastcdn.co/u/d7e0ba7f/47424610-0-job-people.jpg" alt="">
+                    <img class="image" src="https://v.fastcdn.co/u/d7e0ba7f/47424610-0-job-people.jpg" alt="people on the job">
                     
                     <h3>Improve Hiring and Selection</h3>
                     <p>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    <img class="image" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo">
 
                     <h3>Increase Sales</h3>
                     <p>
@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="https://images.unsplash.com/photo-1560250056-07ba64664864?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80" alt="">
+                    <img class="image" src="https://images.unsplash.com/photo-1560250056-07ba64664864?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80" alt="photo">
 
                     <h3>Create World-class Leaders</h3>
                     <p>
@@ -92,7 +92,7 @@
 
             <div class="row">
                 <div class="col-4">
-                    <img class="image" src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    <img class="image" src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo">
 
                     <h3>Increase Productivity</h3>
                     <p>
@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1384&q=80" alt="">
+                    <img class="image" src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1384&q=80" alt="photo">
 
                     <h3>Reduce Employee Turnover</h3>
                     <p>
@@ -114,7 +114,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80" alt="">
+                    <img class="image" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80" alt="photo">
 
                     <h3>Create Connected Teams</h3>
                     <p>
@@ -127,7 +127,7 @@
 
             <div class="row">
                 <div class="col-4">
-                    <img class="image" src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    <img class="image" src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo">
 
                     <h3>Model Team Building</h3>
                     <p>
@@ -138,7 +138,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    <img class="image" src="https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo">
                     
                     <h3>Make the right, bright decisions</h3>
                     <p>
@@ -149,7 +149,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+                    <img class="image" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="photo">
                     
                     <h3>Customize Employee Training</h3>
                     <p>

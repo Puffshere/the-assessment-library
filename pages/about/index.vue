@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img class="image" src="~assets/our-journey.jpg" alt="">
+                    <img class="image" src="~assets/our-journey.jpg" alt="our-journey">
 
                     <p>
                         Assessments 24x7 was founded by Dr. Tony Alessandra and Brandon Parker. Separated by 30 years of life experience, 
@@ -28,7 +28,7 @@
                         racial diversity, etc.  
                     </p>
 
-                    <img class="image-wrap" src="~assets/tony-brandon.jpg" alt="">
+                    <img class="image-wrap" src="~assets/tony-brandon.jpg" alt="tony-brandon">
 
                     <p>
                         The Platinum Rule, "Do unto others as they want done unto them," helps us avoid the possible conflicts the Golden 
@@ -66,7 +66,7 @@
                         gained so much traction, there was no looking back. 
                     </p>
 
-                    <img class="image-wrap right" src="~assets/about-us.jpg" alt="">
+                    <img class="image-wrap right" src="~assets/about-us.jpg" alt="about-us">
 
                     <p>
                         Over the years, the system has undergone countless improvements. Hundreds of assessments have been programmed with thousands of 
