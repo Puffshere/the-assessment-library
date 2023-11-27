@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img class="image" :src="`/workshop-leaders/${leader.stub}.jpg`" :alt="leader.name">
+                        <img v-if="!leader.name === 'jean-noel-puissant'"  class="image" :src="`/workshop-leaders/${leader.stub}.jpg`" :alt="leader.name">
                         <h1 class="section-title">{{ leader.name }}</h1>
                         <p>
                             {{ leader.city }}<span v-if="leader.state"> {{ leader.state }}</span>, {{ leader.country }}
@@ -117,7 +117,7 @@ export default {
         }
     },
     async created() {
-        const response = await axios.get(`/api/workshop-leaders/${this.$route.params.slug}`);
+        const response = await axios.get(`http://localhost:3000/api/workshop-leaders/${this.$route.params.slug}`);
         this.leader = response.data.leader;
     }
 }
