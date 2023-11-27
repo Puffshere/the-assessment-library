@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img v-if="!leader.name === 'jean-noel-puissant'"  class="image" :src="`/workshop-leaders/${leader.stub}.jpg`" :alt="leader.name">
+                        <img class="image" :src="`/workshop-leaders/${leader.stub}.jpg`" :alt="leader.name">
                         <h1 class="section-title">{{ leader.name }}</h1>
                         <p>
                             {{ leader.city }}<span v-if="leader.state"> {{ leader.state }}</span>, {{ leader.country }}
