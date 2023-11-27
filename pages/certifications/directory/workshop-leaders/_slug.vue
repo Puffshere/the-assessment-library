@@ -117,7 +117,7 @@ export default {
         }
     },
     async created() {
-        const response = await axios.get(`http://localhost:3000/api/workshop-leaders/${this.$route.params.slug}`);
+        const response = await axios.get(`/api/workshop-leaders/${this.$route.params.slug}`);
         this.leader = response.data.leader;
     }
 }
