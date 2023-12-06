@@ -183,6 +183,11 @@ export default {
 }
 
 @media (max-width: 1000px) {
+
+    .templateBanner {
+        font-size: medium;
+    }
+    
     .template-library-row {
         flex-direction: column;
         align-items: center;
