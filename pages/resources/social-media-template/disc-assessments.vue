@@ -38,7 +38,7 @@
                             </div>
                             <div class="text-column">
                                 <div class="header">
-                                    <h4 class="templateTitle">{{ post.title }}</h4>
+                                    <a :href="post.canvaLink" class="templateTitle"> {{ post.title }} </a>
                                 </div>
                                 <div>
                                     <span class="templateSize">Template size:</span> {{ post.templateSize }}
@@ -76,6 +76,7 @@
             <img class="backIcon" src="~assets/backIcon.png" alt="template icons">
         </nuxt-link>
         <br>
+        <br>
         <footer-fold />
     </section>
 </template>
@@ -108,7 +109,8 @@ export default {
                 {
                     id: 1,
                     title: 'DISC Assessments: 4 Reasons to choose DISC over other available Assessments - LI-IG',
-                    imageUrl: '/templateImage.png',
+                    canvaLink: 'https://www.canva.com/design/DAFzoZu0gJ8/4CS_DcLTSn6N8USWoxvOmg/view?utm_content=DAFzoZu0gJ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/1aTemplateImage.png',
                     templateSize: '1200 x 1200',
                     linkedPostAs: 'Document',
                     instaPostAs: 'Multiple Images',
@@ -119,7 +121,8 @@ export default {
                 {
                     id: 2,
                     title: 'DISC Assessments: 4 Reasons to choose DISC over other available Assessments - IG',
-                    imageUrl: '/templateImage2.png',
+                    canvaLink: 'https://www.canva.com/design/DAFs8e5O3ow/xrHJMh1V2e1PZRcVZnTX6Q/view?utm_content=DAFs8e5O3ow&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/1bTemplateImage.png',
                     templateSize: '1080 x 1920',
                     linkedPostAs: '',
                     instaPostAs: 'Reel',
@@ -130,7 +133,8 @@ export default {
                 {
                     id: 3,
                     title: 'Can you Adapt? - LI-IG',
-                    imageUrl: '/templateImage.png',
+                    canvaLink: 'https://www.canva.com/design/DAF1c0IX6-I/yEIKlkGveNRIr8032lka_w/view?utm_content=DAF1c0IX6-I&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/8TemplateImage.png',
                     templateSize: '1200 x 1200',
                     linkedPostAs: 'Image',
                     instaPostAs: 'Image',
@@ -154,7 +158,8 @@ Give some thought to a meeting, phone call, or email coming up in your to-do lis
                 {
                     id: 4,
                     title: 'Leveraging the Power of DISC for Coaching Success - LI or IG',
-                    imageUrl: '/templateImage.png',
+                    canvaLink: 'https://www.canva.com/design/DAF0JOaVsao/Mpu8aJmLAwII4N524qWlug/view?utm_content=DAF0JOaVsao&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/9aTemplateImage.png',
                     templateSize: '1200 x 1200',
                     linkedPostAs: 'Video',
                     instaPostAs: 'Video',
@@ -183,7 +188,8 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
                 {
                     id: 5,
                     title: 'Leveraging the Power of DISC for Coaching Success - IG',
-                    imageUrl: '/templateImage2.png',
+                    canvaLink: 'https://www.canva.com/design/DAFtyhMIM0o/84h-AOb63nf2F_ulWjXgOg/view?utm_content=DAFtyhMIM0o&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/9bTemplateImage.png',
                     templateSize: '1080 x 1920',
                     linkedPostAs: '',
                     instaPostAs: 'Reel',
@@ -262,15 +268,18 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
 }
 
 .post-inner {
+    max-height: 260px;
     display: flex;
     flex-direction: row;
+    padding: 10px 0;
 }
 
 .image-column {
     flex-basis: 20%;
     padding: 10px;
-    height: 100%;
     text-align: center;
+    max-width: 80%;
+    max-height: 100%;
 }
 
 .image-column img {
@@ -386,5 +395,37 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
     cursor: pointer;
 }
 
-@media (max-width: 1155px) {}
+@media (max-width: 1200px) {
+    .post-inner {
+        max-height: none;
+    }
+
+    .backIcon {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .templateBanner {
+        font-size: medium;
+    }
+
+    .post-inner {
+        flex-direction: column;
+    }
+
+    .image-column,
+    .text-column {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .image-column img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
 </style>
