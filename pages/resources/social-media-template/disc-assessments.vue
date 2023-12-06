@@ -105,7 +105,7 @@ export default {
                     instaPostAs: 'Multiple Images',
                     ctaLink: 'http://www.assessments24x7.com/',
                     caption: 'There are lots of factors to consider when selecting an assessment for your organization. Here are four great ones for considering the DISC assessment! #disc #discassessment #coaching #hiring #humanresources',
-                    postCategory: 'disc assessments'
+                    postCategory: 'DISC: Assessments'
                 },
                 {
                     id: 2,
@@ -117,7 +117,7 @@ export default {
                     instaPostAs: 'Reel',
                     ctaLink: 'http://www.assessments24x7.com/',
                     caption: 'There are lots of factors to consider when selecting an assessment for your organization. Here are four great ones for considering the DISC assessment! #disc #discassessment #coaching #hiring #humanresources',
-                    postCategory: 'disc assessments'
+                    postCategory: 'DISC: Assessments'
                 },
                 {
                     id: 3,
@@ -142,7 +142,7 @@ Did it feel a bit unusual, but you still managed? The initial discomfort is natu
 Give some thought to a meeting, phone call, or email coming up in your to-do list ... How can you adapt your communication style to make it easier for the recipient to understand you? Give an example in the comment for extra points! 😉
 
 #CommunicationFlexibility #disc #DISCstyles`,
-                    postCategory: 'disc assessments'
+                    postCategory: 'DISC: Assessments'
                 },
                 {
                     id: 4,
@@ -172,7 +172,7 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
 🚀Foster Personal Growth: Beyond business, DISC facilitates personal growth by helping clients understand strengths and areas for improvement, promoting self-awareness and self-improvement.
 
 #businesssuccess #coachingexcellence #discstyles #growthmindset #Coaching #professionaldevelopment`,
-                    postCategory: 'disc assessments'
+                    postCategory: 'DISC: Assessments'
                 },
                 {
                     id: 5,
@@ -202,7 +202,7 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
 🚀Foster Personal Growth: Beyond business, DISC facilitates personal growth by helping clients understand strengths and areas for improvement, promoting self-awareness and self-improvement.
 
 #businesssuccess #coachingexcellence #discstyles #growthmindset #Coaching #professionaldevelopment`,
-                    postCategory: 'disc assessments'
+                    postCategory: 'DISC: Assessments'
                 }
             ]
         };
@@ -224,10 +224,10 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
     },
     methods: {
         truncatedCaption(caption) {
-            return caption.length > 205 ? caption.substring(0, 205) + '...' : caption;
+            return caption.length > 180 ? caption.substring(0, 180) + '...' : caption;
         },
         isCaptionTruncated(caption) {
-            const maxLength = 205;
+            const maxLength = 180;
             return caption.length > maxLength;
         },
     },

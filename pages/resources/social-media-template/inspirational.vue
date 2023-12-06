@@ -105,7 +105,7 @@ export default {
                     instaPostAs: '',
                     ctaLink: 'http://www.assessments24x7.com/',
                     caption: ``,
-                    postCategory: ''
+                    postCategory: 'Inspirational Quotes'
                 },
                 {
                     id: 2,
@@ -117,7 +117,7 @@ export default {
                     instaPostAs: '',
                     ctaLink: 'http://www.assessments24x7.com/',
                     caption: ``,
-                    postCategory: ''
+                    postCategory: 'Inspirational Quotes'
                 },
                 {
                     id: 3,
@@ -129,7 +129,7 @@ export default {
                     instaPostAs: '',
                     ctaLink: 'http://www.assessments24x7.com/',
                     caption: ``,
-                    postCategory: ''
+                    postCategory: 'Inspirational Quotes'
                 },
                 {
                     id: 3,
@@ -141,7 +141,7 @@ export default {
                     instaPostAs: '',
                     ctaLink: 'http://www.assessments24x7.com/',
                     caption: ``,
-                    postCategory: ''
+                    postCategory: 'Inspirational Quotes'
                 }
             ]
         };
@@ -163,10 +163,10 @@ export default {
     },
     methods: {
         truncatedCaption(caption) {
-            return caption.length > 210 ? caption.substring(0, 210) + '...' : caption;
+            return caption.length > 180 ? caption.substring(0, 180) + '...' : caption;
         },
         isCaptionTruncated(caption) {
-            const maxLength = 210;
+            const maxLength = 180;
             return caption.length > maxLength;
         },
     },

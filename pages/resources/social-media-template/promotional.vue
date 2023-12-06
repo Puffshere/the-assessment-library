@@ -217,10 +217,10 @@ Share in the comments how DISC, Motivators, or EIQ Certification has made a diff
     },
     methods: {
         truncatedCaption(caption) {
-            return caption.length > 205 ? caption.substring(0, 205) + '...' : caption;
+            return caption.length > 180 ? caption.substring(0, 180) + '...' : caption;
         },
         isCaptionTruncated(caption) {
-            const maxLength = 205;
+            const maxLength = 180;
             return caption.length > maxLength;
         },
     },

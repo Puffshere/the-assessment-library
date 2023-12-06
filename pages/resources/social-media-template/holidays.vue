@@ -97,75 +97,111 @@ export default {
             posts: [
                 {
                     id: 1,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Holiday: Description of dogs and their DISC Styles - LI or IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0WjgEmgU/rkcbcUTp0ljQAEJdpUgdJw/view?utm_content=DAF0WjgEmgU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/4aTemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `We missed #nationaldogday by a few days, but still wanted to pay tribute to our 4 legged friends and their DISC styles! What do you think of our picks for representatives of each style?
+
+Post a pic in the comments of your furry friend and what style you think they would be!`,
+                    postCategory: 'Holidays'
                 },
                 {
                     id: 2,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
-                    templateSize: '1200 x 1200',
+                    title: 'Holiday: Description of dogs and their DISC Styes - IG',
+                    canvaLink: 'https://www.canva.com/design/DAFtNtBCAgQ/33r1mMEr_FYZG3UCO64lyw/view?utm_content=DAFtNtBCAgQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/4bTemplateImage.png',
+                    templateSize: '1080 x 1920',
                     linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    instaPostAs: 'Reel',
+                    ctaLink: '',
+                    caption: `We missed #nationaldogday by a few days, but still wanted to pay tribute to our 4 legged friends and their DISC styles! What do you think of our picks for representatives of each style?
+
+Post a pic in the comments of your furry friend and what style you think they would be!`,
+                    postCategory: 'Holidays'
                 },
                 {
                     id: 3,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Holiday: Labor Day Post (1st Monday of September) - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0WrSo50c/tGxvzBgAoyi60dfuevx_SQ/view?utm_content=DAF0WrSo50c&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/5TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Happy Labor Day, everyone!`,
+                    postCategory: 'Holidays'
                 },
                 {
                     id: 4,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'World Tourism Day: DISC Foreign Country Analogy - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0JDckPrQ/gRxIcIDi1q3FyJoJX__KrA/view?utm_content=DAF0JDckPrQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/11TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Happy World Tourism Day! Let’s Think about DISC in the context of traveling internationally. ✈
+
+We don't always have time to study a new language before a trip, but communication is much more than the spoken word. Think about how expressive I-styles are with body language or how a C-style might need a little more personal space. Pay attention to those nonverbal cues and adapt to mirror them. Even if you don't know the language, people will notice & appreciate the effort!
+
+#ThePlatinumRule #DISCstyles
+ #ThePlatinumRule  #DISCstyles"`,
+                    postCategory: 'Holidays'
                 },
                 {
                     id: 5,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'DISC Fears - Halloween post - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAFywgFxKZI/A7t4Yj39LtzUZVHH7QaieQ/view?utm_content=DAFywgFxKZI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/23TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `Discover the Fears of each DISC Behavioral Style! 👻🔮🕷️
+Which one gives YOU the spooks? 🎃 #HappyHalloween!
+
+#DISC #DISCBehaviors #Communication #Teams #LeadershipDevelopment #Businessdevelopment #HR`,
+                    postCategory: 'Holidays'
                 },
                 {
                     id: 6,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Team Update - Halloween Costumes and DISC - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0PQA4GJY/TxB0biZioDFa6UbEW19nTA/view?utm_content=DAF0PQA4GJY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/24TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `🌟 Discover Your True Self with DISC! 🌟
+(And meet some of our AWESOME Team!)
+Are you a Taco, Squints, Moana, Clown, Skeleton, or a Disco Cowgirl?
+
+We believe that understanding your unique Behavioral Style is the 🗝key to unlocking your full potential!
+
+🌮 Do you exude confidence and love being the center of attention like our Taco friend?
+🧢 Or are you the lovable, quirky character who adds charm to every situation like Squints from The Sandlot?
+🌺 Does your adventurous spirit lead you on exciting journeys just like Moana?
+🤡 Or are you the life of the party and always ready to make people smile like our Clown buddy?
+💀Need to add a touch of spooky flair as a Skeleton?
+🤠Or are you ready to line dance and bring some groovy charm as a Disco Cowgirl?
+
+No matter which costume you relate to, DISC can help you:
+✨Boost self-awareness
+✨Enhance communication skills
+✨Strengthen relationships
+✨Excel in your personal and professional life
+
+Ready to embrace your unique behavior style and take the first step towards personal growth and success? Tag a colleague who needs to DISCover their inner Taco, Clown, Moana, Disco Cowgirl, Skeleton, or Squints!
+Or better yet... Take a DISC Assessment! 🔗https://discstyles.com/
+
+Angie Warner, Jared Moore, Cristina Moore, Amy Lewis, Suzette Chaparro, Monica Saare
+
+#DISCAssessments #DISCStyle #BehavioralStyle #SelfDiscovery #UnlockYourPotential #Happyhalloween`,
+                    postCategory: 'Holidays'
                 }
             ]
         };
@@ -187,10 +223,10 @@ export default {
     },
     methods: {
         truncatedCaption(caption) {
-            return caption.length > 210 ? caption.substring(0, 210) + '...' : caption;
+            return caption.length > 180 ? caption.substring(0, 180) + '...' : caption;
         },
         isCaptionTruncated(caption) {
-            const maxLength = 210;
+            const maxLength = 180;
             return caption.length > maxLength;
         },
     },
