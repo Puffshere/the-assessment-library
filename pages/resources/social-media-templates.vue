@@ -29,13 +29,17 @@
             <br>
             <br>
             <div class="row template-library-row">
-                <div v-for="template in topRowTemplates" :key="template.name" class="btn template-button">
-                    <nuxt-link :to="template.url" class="hyperlink">{{ template.name }}</nuxt-link>
+                <div v-for="template in topRowTemplates" :key="template.name">
+                    <nuxt-link :to="template.url" class="hyperlink">
+                        <div class="btn template-button">{{ template.name }}</div>
+                    </nuxt-link>
                 </div>
             </div>
             <div class="row template-library-row">
-                <div v-for="template in bottomRowTemplates" :key="template.name" class="btn template-button">
-                    <nuxt-link :to="template.url" class="hyperlink">{{ template.name }}</nuxt-link>
+                <div v-for="template in bottomRowTemplates" :key="template.name">
+                    <nuxt-link :to="template.url" class="hyperlink">
+                        <div class="btn template-button">{{ template.name }}</div>
+                    </nuxt-link>
                 </div>
             </div>
             <br>
@@ -79,7 +83,7 @@ export default {
                 { name: 'Holidays', url: '/resources/social-media-template/holidays' },
                 { name: 'Educational', url: '/resources/social-media-template/educational' },
                 { name: 'Humor', url: '/resources/social-media-template/humor' },
-                { name: 'Inspirational', url: '/resources/social-media-template/inspirational' },
+                { name: 'Inspirational Quotes', url: '/resources/social-media-template/inspirational-quotes' },
             ],
         };
     },
@@ -185,8 +189,9 @@ export default {
     }
 
     .template-button {
-        width: 80%;
+        width: 100%;
         margin: 10px 0;
+        min-width: 250px;
     }
 }
 </style>

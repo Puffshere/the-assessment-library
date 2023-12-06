@@ -233,12 +233,12 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
     },
     head() {
         return {
-            title: 'Social Media Templates | Assessments 24x7',
+            title: 'Social Media Templates - DISC Assessments | Assessments 24x7',
             meta: [
                 {
-                    hid: 'robots',
-                    name: 'robots',
-                    content: 'noindex'
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Enhance your social media presence using our branded templates on Canva. Customize these professionally crafted designs to incorporate your preferred language, logos, and more within your Canva Pro Account. Leverage the provided information exclusively for branding guidance, maintaining authenticity by avoiding verbatim copying. Establish credibility and captivate your audience with visually stunning content that resonates. Elevate your brand effortlessly!'
                 }
             ]
         }

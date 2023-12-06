@@ -22,7 +22,7 @@
         </div>
         <div class="template-library">
             <div class="templateBanner">
-                <h1>Inspirational</h1>
+                <h1>Inspirational Quotes</h1>
             </div>
         </div>
         <br>
@@ -97,50 +97,61 @@ export default {
             posts: [
                 {
                     id: 1,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Quote: Ernest Hemingway - Listening - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF1c3guqws/fSos6hgatebax-vIvamtEg/view?utm_content=DAF1c3guqws&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/7TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Do you listen to respond or to UNDERSTAND? They are very different ways of listening!
+
+#theplatinumrule #DISC #listentounderstand`,
                     postCategory: 'Inspirational Quotes'
                 },
                 {
                     id: 2,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Quote: Dr. Tony Adapting Quote - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0JQhCwp8/owpMXAuPApBtR9_ReCJJLw/view?utm_content=DAF0JQhCwp8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/14TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Embrace a new week with the right mindset! 💪✨
+
+By shifting our attitudes, we unlock the power to thrive in any situation. 🚀
+
+
+
+#MotivationMonday #Adaptability #PositiveAttitude #PersonalGrowth`,
                     postCategory: 'Inspirational Quotes'
                 },
                 {
                     id: 3,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Quote: Dr. Tony on Sales - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0KtiaA5U/Ms_m9fWY215EqDPWbJkatQ/view?utm_content=DAF0KtiaA5U&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/18TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Empathy is gold.  
+ Understanding your customers isn't just about facts and figures; it's about connecting on an emotional level. When your customers feel truly understood, that's when the magic happens. 🛍️✨ #EmpathyInSales #CustomerConnection #DISCinSales #DISC #Communication`,
                     postCategory: 'Inspirational Quotes'
                 },
                 {
-                    id: 3,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    id: 4,
+                    title: 'Quote: Teams - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0K6pIl-Q/SQHY1VAwUQb292ZqznLDZA/view?utm_content=DAF0K6pIl-Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/22TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `Diversity of Styles on a Team = Enhanced Team Dynamics, Creativity, and Resilience!
+
+#MondayMotivation #TeamDiversity #NewWeekMindset #DISC`,
                     postCategory: 'Inspirational Quotes'
                 }
             ]
@@ -172,12 +183,12 @@ export default {
     },
     head() {
         return {
-            title: 'Social Media Templates | Assessments 24x7',
+            title: 'Social Media Templates - Inspirational Quotes | Assessments 24x7',
             meta: [
                 {
-                    hid: 'robots',
-                    name: 'robots',
-                    content: 'noindex'
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Enhance your social media presence using our branded templates on Canva. Customize these professionally crafted designs to incorporate your preferred language, logos, and more within your Canva Pro Account. Leverage the provided information exclusively for branding guidance, maintaining authenticity by avoiding verbatim copying. Establish credibility and captivate your audience with visually stunning content that resonates. Elevate your brand effortlessly!'
                 }
             ]
         }
