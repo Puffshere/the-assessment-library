@@ -97,50 +97,71 @@ export default {
             posts: [
                 {
                     id: 1,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'The Platinum Rule vs The Golden Rule - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0JPVVLkw/t4uqSYJhz_3BJ9L0xG6DGg/view?utm_content=DAF0JPVVLkw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/10TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `We've decided to implement "Casual Friday" on LinkedIn by lightening the mood a bit with some meme therapy! Have a great weekend!
+
+#theplatinumrule #funnyfriday #CasualFridays"`,
                     postCategory: 'Humor'
                 },
                 {
                     id: 2,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: `S's at sporting events - Li-IG`,
+                    canvaLink: 'https://www.canva.com/design/DAF0JKbBegI/uiT53NmmCC2qrYTvz2xPKQ/view?utm_content=DAF0JKbBegI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/13TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `It's time for #casualfriday on LinkedIn! 😊 If you know someone who's an S Style, this should sound familiar. Tag your S Style friends and colleagues in the comments!`,
                     postCategory: 'Humor'
                 },
                 {
                     id: 3,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Best Boss - The Office - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0KkgmF4o/oze3l8REgdxPAaAaSRvuCQ/view?utm_content=DAF0KkgmF4o&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/17TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `The Power of Frequent One-on-Ones in Leadership.
+
+These one-on-ones are more than just a calendar appointment; they are an invaluable 
+investment in your team's growth and success. Here's why:
+Get Personal: Your team isn't just a bunch of worker bees; they're unique individuals. One-on-ones build personal connections, and that's your golden ticket to trust and camaraderie.
+Development Central: One-on-ones give you the chance to chat about goals, performance, and growth. You're not just managing; you're guiding your team to be rock stars.
+Chat It Out: These meetings create a safe space for your team to share thoughts and concerns. Listen up, offer support, and tackle challenges head-on.
+Goals Aligned: You're not just managing people; you're leading a mission. Use one-on-ones to align personal objectives with your team and company goals.
+High-Five Time: Recognize and appreciate your team's hard work. Regular high-fives create a positive and motivated workspace.
+Problem-Solving Hub: Got issues? Use one-on-ones to collaborate and solve problems as a team.
+Stay Agile: The world changes fast, and you need to keep up. One-on-ones help you stay adaptable and switch strategies as the game evolves.
+In a nutshell, these meetings aren't just management; they're a commitment to your team's growth, happiness, and success. Be the leader who rocks the one-on-ones, and watch your team thrive.
+#Leadership #OneonOnes #TeamSuccess`,
                     postCategory: 'Humor'
                 },
                 {
                     id: 4,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'DISC and Sales Training - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0K4bHvA8/AYWa6Ph_ItppH0dvyjrmgw/view?utm_content=DAF0K4bHvA8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/21TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `DISC plays a crucial role in some of the most successful Sales.
+A sales team that isn't well-versed in their own DISC Behavioral style OR proficient in recognizing their prospect's style could be missing valuable opportunities. 
+
+✅ Enhance Self-Awareness: Gain insight into your strengths and areas for improvement.
+✅ Sharpen Prospect Profiling: Identify their distinct style. 
+✅ Elevate Adaptive Selling: Foster trust through personalized communication. (High Trust Selling 😉)
+
+And in the competitive world of sales, relying on chance isn't the wisest strategy. `,
                     postCategory: 'Humor'
                 }
             ]
