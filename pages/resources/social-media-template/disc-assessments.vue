@@ -94,17 +94,6 @@ export default {
     data() {
         return {
             hover: false,
-            topRowTemplates: [
-                { name: 'DISC Assessments', url: '/resources/disc-assessments' },
-                { name: 'DISC General Knowledge', url: '/resources/disc-general' },
-                { name: 'Promotional', url: '/resources/promotional' },
-            ],
-            bottomRowTemplates: [
-                { name: 'Holidays', url: '/resources/holidays' },
-                { name: 'Educational', url: '/resources/educational' },
-                { name: 'Humor', url: '/resources/humor' },
-                { name: 'Inspirational', url: '/resources/inspirational' },
-            ],
             posts: [
                 {
                     id: 1,
@@ -214,7 +203,7 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
 
 #businesssuccess #coachingexcellence #discstyles #growthmindset #Coaching #professionaldevelopment`,
                     postCategory: 'disc assessments'
-                },
+                }
             ]
         };
     },
