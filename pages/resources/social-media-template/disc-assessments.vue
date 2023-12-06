@@ -224,10 +224,10 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
     },
     methods: {
         truncatedCaption(caption) {
-            return caption.length > 210 ? caption.substring(0, 210) + '...' : caption;
+            return caption.length > 205 ? caption.substring(0, 205) + '...' : caption;
         },
         isCaptionTruncated(caption) {
-            const maxLength = 210;
+            const maxLength = 205;
             return caption.length > maxLength;
         },
     },

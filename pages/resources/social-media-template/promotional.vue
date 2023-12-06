@@ -97,75 +97,105 @@ export default {
             posts: [
                 {
                     id: 1,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Assessments Certification: Learn From The Top Assessment Experts In The Industry - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0WmnZxW0/DnP1y9rvNe30ZSekmQ3fQQ/view?utm_content=DAF0WmnZxW0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/6TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: 'https://www.assessments24x7.com/certifications/assessment',
+                    caption: `There are sooo many great reasons to get certified! Here are just a few.`,
+                    postCategory: 'Promotional'
                 },
                 {
                     id: 2,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Bet on Yourself with DISC Certification - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0JBRApr8/TXhkJ9yXnNz8iL5AKj9yjQ/view?utm_content=DAF0JBRApr8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/12aTemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: 'https://www.assessments24x7.com/contact',
+                    caption: `Ready to Take Your Shot? Bet on yourself with DISC Certification.
+Don't miss out on this opportunity to supercharge your career and relationships. Get in touch with a Senior Account Executive today to get started.
+
+➡️ https://lnkd.in/g2CAaRtc
+
+#DISC #DISCprofile #DISCcertification #coaching #communication`,
+                    postCategory: 'Promotional'
                 },
                 {
                     id: 3,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
-                    templateSize: '1200 x 1200',
+                    title: 'Bet on Yourself with DISC Certification - IG',
+                    canvaLink: 'https://www.canva.com/design/DAFvw0acs84/D-lMmjcYzrqgTjZQEj4pmQ/view?utm_content=DAFvw0acs84&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/12bTemplateImage.png',
+                    templateSize: '1080 x 1920',
                     linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    instaPostAs: 'Reel',
+                    ctaLink: 'https://www.assessments24x7.com/contact',
+                    caption: `Ready to Take Your Shot? Bet on yourself with DISC Certification.
+Don't miss out on this opportunity to supercharge your career and relationships. Get in touch with a Senior Account Executive today to get started.
+
+➡️ https://lnkd.in/g2CAaRtc
+
+#DISC #DISCprofile #DISCcertification #coaching #communication`,
+                    postCategory: 'Promotional'
                 },
                 {
                     id: 4,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'DISC Blocks - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0Kz-4Mkw/i9Hxb5d9Ne5v3TEMTcv8BQ/view?utm_content=DAF0Kz-4Mkw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/20aTemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: 'https://store.assessments24x7.com/products/disc-blocks',
+                    caption: `No Caption - Have only posted the Christmas Version`,
+                    postCategory: 'Promotional'
                 },
                 {
                     id: 5,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'DISC Blocks - Christmas Version - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0K0gtAT8/x00SwJY4MQXsDC2I4moEsw/view?utm_content=DAF0K0gtAT8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/20bTemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: 'https://store.assessments24x7.com/products/disc-blocks',
+                    caption: `🎁 Introducing our DISC Blocks - the perfect stocking stuffers that will help
+your team connect, communicate, and collaborate more effectively.
+
+🚀 Enhance Communication: Stack your DISC Blocks to display your style and supercharge interactions.
+
+🤝 Boost Team Dynamics: Understanding DISC styles minimizes conflicts and fuels teamwork.
+
+🧠 Personalized Learning: Visual aids for meetings and training, fostering better results.
+
+🌈 Stress Relief: Squishy and calming - a must-have for busy workdays.
+
+This holiday, go the extra mile and give the gift of improved communication and collaboration. Order now at the link below or in our story before the season rushes in! 🎄🎉
+
+🔗 Order Now: https://store.assessments24x7.com/products/disc-blocks
+
+#TeamDevelopment #DISCBlocks #EffectiveCommunication #DISC #DISCStyle #traininganddevelopment #leadershipdevelopment #coaching #hr #businessdevelopment`,
+                    postCategory: 'Promotional'
                 },
                 {
                     id: 6,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'Reach Limitless Opportunities - DISC Certification - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0EwjBAfk/p_N428Nea71gF63_Yffjpg/view?utm_content=DAF0EwjBAfk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/26TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
-                    postCategory: ''
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `Elevate your career with a distinct advantage by earning a professional Certification in the assessment industry. 🚀 Our flexible Certification program fits seamlessly into your schedule, allowing you to learn at your own pace, day or night. Whether you're considering a career change, aiming for a promotion, or venturing into a new industry, our core assessments - DISC, Motivators, and Emotional Intelligence - are versatile and applicable across diverse roles. #SHRM #HRCI #ATD #ICF approved, our Certifications empower you to stand out. 
+
+Certified already? 
+Share in the comments how DISC, Motivators, or EIQ Certification has made a difference in your professional journey and personal growth. 👩‍🎓👨‍🎓 
+
+#CareerAdvancement #ProfessionalDevelopment #CertificationSuccess #Continuingeducation #DISC #Motivators #EIQ #EmotionalIntelligence #Assessments24x7`,
+                    postCategory: 'Promotional'
                 }
             ]
         };
@@ -187,10 +217,10 @@ export default {
     },
     methods: {
         truncatedCaption(caption) {
-            return caption.length > 210 ? caption.substring(0, 210) + '...' : caption;
+            return caption.length > 205 ? caption.substring(0, 205) + '...' : caption;
         },
         isCaptionTruncated(caption) {
-            const maxLength = 210;
+            const maxLength = 205;
             return caption.length > maxLength;
         },
     },

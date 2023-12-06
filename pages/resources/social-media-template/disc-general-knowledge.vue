@@ -303,10 +303,10 @@ Missed the D - Dominance Style? Hit rewind to last week's post and catch up! ðŸ”
     },
     methods: {
         truncatedCaption(caption) {
-            return caption.length > 210 ? caption.substring(0, 210) + '...' : caption;
+            return caption.length > 205 ? caption.substring(0, 205) + '...' : caption;
         },
         isCaptionTruncated(caption) {
-            const maxLength = 210;
+            const maxLength = 205;
             return caption.length > maxLength;
         },
     },
