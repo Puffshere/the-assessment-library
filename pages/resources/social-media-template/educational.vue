@@ -97,38 +97,69 @@ export default {
             posts: [
                 {
                     id: 1,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: `Tony's Podcast: First 50 Seconds of Tony's Podcast - LI-IG`,
+                    canvaLink: 'https://www.canva.com/design/DAFzrtc_3Uo/OWXX_S0COus4y62U5vCcHw/view?utm_content=DAFzrtc_3Uo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/3TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: 'https://www.youtube.com/watch?v=zpXJ4d6r34g',
+                    caption: `Tony Alessandra PhD recently sat down for a conversation with Michael Maximoff for his podcast. Catch the whole convo at the link below!`,
                     postCategory: 'Educational'
                 },
                 {
                     id: 2,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: '10 Tips for Effective listening',
+                    canvaLink: 'https://www.canva.com/design/DAF0Krif9zo/yjTO2BC06_hGo6w1ruxX-A/view?utm_content=DAF0Krif9zo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/16TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `👂 Listen actively. 🗣️ Speak wisely!
+🤝 Improve your communication skills with these ten tips from Tony Alessandra PhD.
+
+You'll listen better and be listened to if you practice these TIPS:
+
+1. Let others tell their own stories first. By letting them speak first, you save time. When their interests are revealed, you can tailor your discussion to their needs, goals, and objectives and stop wasting time volleying sentences that take much longer to hear. You'll get your turn.
+
+2. It is impossible to listen and talk at the same time. Not interrupting allows the other person to keep their train of thought. Why not wait until the speaker's point is made? Then you will have your chance.
+
+3. Listen for the main ideas. Specific facts are only important as they pertain to the main theme. Relate stated facts to the speaker.
+Ask yourself: "What is the speaker getting at?" Or "What is his point?" Then get feedback. If you guess correctly, your understanding is enhanced, and your attention is increased. If you are incorrect, you learn from your mistake.
+
+4. Fight off distractions. Train yourself to listen carefully to your customer's words despite external distractions (ringing telephone, passersby, or other office noise). Focus your attention on the words, ideas, feelings, and underlying intent. Improve your power of concentration to block out external and internal distractions and attend totally to the speaker.
+
+5. React to the message, not the person. Don't allow your mental impression of the speaker to influence your interpretation of the message. Good thoughts, concepts, and arguments can come from some of your least favorite people.
+
+6. Use feedback. Constantly try to check your understanding of what you hear. Do not only hear what you want to hear.
+
+7. Try not to be critical, either mentally or verbally, of the other person's point of view. Allow the speaker plenty of time to fully finish their train of thought. You might find that what you were initially going to disagree with wasn't a bad idea after all. Keep an open mind.
+
+8. Listen attentively. Face the speaker with uncrossed arms and legs; lean slightly forward. Establish eye contact. Use affirmative head nods and appropriate facial expressions when called for, but don't overdo it.
+
+9. Create a positive listening environment. Shoot for a private atmosphere away from sources of distraction.
+
+10. Ask questions. Ask open-ended questions to allow the speaker to express his feelings and thoughts. More than a simple yes or no is required. "How can I help you?" "Where do we go from here?" Clarifying questions seek information by restating the speaker's remarks. The effective use of questions also allows you to contribute to the conversation.
+
+#EffectiveListening #Communication #RespectfulCommunications`,
                     postCategory: 'Educational'
                 },
                 {
                     id: 3,
-                    title: '',
-                    canvaLink: '',
-                    imageUrl: '/2aTemplateImage.png',
+                    title: 'High Trust Selling Blog - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0KryDvk0/HHQm265OUsGOptw1LLcNqA/view?utm_content=DAF0KryDvk0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/19TemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: '',
-                    instaPostAs: '',
-                    ctaLink: 'http://www.assessments24x7.com/',
-                    caption: ``,
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: 'https://www.assessments24x7.com/blog/high-trust-selling/',
+                    caption: `Uncover the Evolution of Sales: From Low Trust to High Trust 🤝
+
+Did you know there's a world of difference between low trust and high trust selling? The sales landscape has seen a remarkable transformation over the years. While low trust selling once had its place, its outdated and manipulative techniques are making way for the non-manipulative and thoughtful approach of high trust selling.
+Check out our blog on Platinum Rules for Success, as Dr. Tony Alessandra dives into the intriguing history of these two competing sales methods.  http://assessments24x7.com/blog/high-trust-selling/
+
+🚀 #SalesEvolution #HighTrustSelling #SalesStrategies #Communication`,
                     postCategory: 'Educational'
                 }
             ]
