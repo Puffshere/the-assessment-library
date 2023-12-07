@@ -137,8 +137,7 @@ export default {
             localStorage.removeItem('storedPassword');
             this.unlocked = false;
             this.password = '';
-        }, 60000); // 60,000 milliseconds = 1 minute
-
+        }, 20 * 60 * 1000); // 20 minutes
     },
     methods: {
         async attemptLogin() {

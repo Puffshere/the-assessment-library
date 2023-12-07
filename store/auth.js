@@ -10,7 +10,7 @@ export const mutations = {
 
 export const actions = {
     login({ commit }, password) {
-        if (password === '1234') {
+        if (password === 'a24x7partnersocial1207') {
             commit('SET_AUTH', true);
             return true;
         } else {
