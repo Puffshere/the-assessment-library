@@ -101,8 +101,8 @@ export default {
                     canvaLink: 'https://www.canva.com/design/DAFzoZu0gJ8/4CS_DcLTSn6N8USWoxvOmg/view?utm_content=DAFzoZu0gJ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
                     imageUrl: '/1aTemplateImage.png',
                     templateSize: '1200 x 1200',
-                    linkedPostAs: 'Document',
-                    instaPostAs: 'Multiple Images',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
                     ctaLink: 'http://www.assessments24x7.com/',
                     caption: 'There are lots of factors to consider when selecting an assessment for your organization. Here are four great ones for considering the DISC assessment! #disc #discassessment #coaching #hiring #humanresources',
                     postCategory: 'DISC: Assessments'

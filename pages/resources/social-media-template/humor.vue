@@ -144,25 +144,6 @@ Stay Agile: The world changes fast, and you need to keep up. One-on-ones help yo
 In a nutshell, these meetings aren't just management; they're a commitment to your team's growth, happiness, and success. Be the leader who rocks the one-on-ones, and watch your team thrive.
 #Leadership #OneonOnes #TeamSuccess`,
                     postCategory: 'Humor'
-                },
-                {
-                    id: 4,
-                    title: 'DISC and Sales Training - LI-IG',
-                    canvaLink: 'https://www.canva.com/design/DAF0K4bHvA8/AYWa6Ph_ItppH0dvyjrmgw/view?utm_content=DAF0K4bHvA8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
-                    imageUrl: '/21TemplateImage.png',
-                    templateSize: '1200 x 1200',
-                    linkedPostAs: 'Image',
-                    instaPostAs: 'Image',
-                    ctaLink: '',
-                    caption: `DISC plays a crucial role in some of the most successful Sales.
-A sales team that isn't well-versed in their own DISC Behavioral style OR proficient in recognizing their prospect's style could be missing valuable opportunities. 
-
-✅ Enhance Self-Awareness: Gain insight into your strengths and areas for improvement.
-✅ Sharpen Prospect Profiling: Identify their distinct style. 
-✅ Elevate Adaptive Selling: Foster trust through personalized communication. (High Trust Selling 😉)
-
-And in the competitive world of sales, relying on chance isn't the wisest strategy. `,
-                    postCategory: 'Humor'
                 }
             ]
         };

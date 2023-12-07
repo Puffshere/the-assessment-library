@@ -130,7 +130,7 @@ To learn more, visit: https://lnkd.in/gS5YPtqq
                 {
                     id: 3,
                     title: 'DISC Styles: Overview of each DISC Style - S - LI-IG',
-                    canvaLink: 'https://www.canva.com/design/DAF1c0IX6-I/yEIKlkGveNRIr8032lka_w/view?utm_content=DAF1c0IX6-I&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    canvaLink: 'https://www.canva.com/design/DAFzr01RPlM/ctgNgCGsXCc1Onq51dZVGw/view?utm_content=DAFzr01RPlM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
                     imageUrl: '/2cTemplateImage.png',
                     templateSize: '1200 x 1200',
                     linkedPostAs: 'Document',
@@ -143,7 +143,7 @@ They're the harmonizers, patient listeners, and the glue that holds teams togeth
                 {
                     id: 4,
                     title: 'DISC Styles: Overview of each DISC Style - C - LI-IG',
-                    canvaLink: 'https://www.canva.com/design/DAF0JOaVsao/Mpu8aJmLAwII4N524qWlug/view?utm_content=DAF0JOaVsao&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    canvaLink: 'https://www.canva.com/design/DAFzrxDBVQo/RuBA5OV8yJakImGX-TMqPA/view?utm_content=DAFzrxDBVQo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
                     imageUrl: '/2dTemplateImage.png',
                     templateSize: '1200 x 1200',
                     linkedPostAs: 'Document',
