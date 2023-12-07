@@ -1,4 +1,3 @@
-// store/auth.js
 export const state = () => ({
     isAuthenticated: false,
 });

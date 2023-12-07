@@ -134,11 +134,11 @@ export default {
     mounted() {
         this.checkStoredPassword();
         setTimeout(() => {
-                    localStorage.removeItem('storedPassword');
-                    this.unlocked = false;
-                    this.password = '';
-                }, 60000); // 60,000 milliseconds = 1 minute
-                
+            localStorage.removeItem('storedPassword');
+            this.unlocked = false;
+            this.password = '';
+        }, 60000); // 60,000 milliseconds = 1 minute
+
     },
     methods: {
         async attemptLogin() {
@@ -147,13 +147,7 @@ export default {
             if (success) {
                 this.unlocked = true;
                 this.validationError = false;
-                localStorage.setItem('storedPassword', this.password); // Store the password
-
-                // Set a timeout to clear the stored password after 1 minute
-                // setTimeout(() => {
-                //     localStorage.removeItem('storedPassword');
-                //     this.unlocked = false;
-                // }, 60000); // 60,000 milliseconds = 1 minute
+                localStorage.setItem('storedPassword', this.password);
             } else {
                 this.validationError = true;
                 this.password = '';
@@ -163,8 +157,6 @@ export default {
             const storedPassword = localStorage.getItem('storedPassword');
             console.log("this is the password", storedPassword);
             if (storedPassword === '1234') {
-                // You would need a method to validate the stored password. 
-                // This might involve an API call or a local check, depending on your setup.
                 this.unlocked = true;
             }
             else {
@@ -174,7 +166,7 @@ export default {
     },
     computed: {
         isAuthenticated() {
-            return this.$store.state.auth.isAuthenticated1;
+            return this.$store.state.auth.isAuthenticated;
         }
     },
     head() {
