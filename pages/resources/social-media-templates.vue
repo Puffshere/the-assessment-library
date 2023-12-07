@@ -137,7 +137,7 @@ export default {
             localStorage.removeItem('storedPassword');
             this.unlocked = false;
             this.password = '';
-        }, 60000); // 60,000 milliseconds = 1 minute
+        }, 20 * 60 * 1000); // 20 minutes
     },
     methods: {
         async attemptLogin() {
@@ -155,7 +155,7 @@ export default {
         checkStoredPassword() {
             const storedPassword = localStorage.getItem('storedPassword');
             console.log("this is the password", storedPassword);
-            if (storedPassword === '1234') {
+            if (storedPassword === 'a24x7partnersocial1207') {
                 this.unlocked = true;
             }
             else {
