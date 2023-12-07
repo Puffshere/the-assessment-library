@@ -142,7 +142,6 @@ export default {
     methods: {
         async attemptLogin() {
             const success = await this.$store.dispatch('auth/login', this.password);
-            console.log("this is the success", success);
             if (success) {
                 this.unlocked = true;
                 this.validationError = false;
@@ -154,7 +153,6 @@ export default {
         },
         checkStoredPassword() {
             const storedPassword = localStorage.getItem('storedPassword');
-            console.log("this is the password", storedPassword);
             if (storedPassword === 'a24x7partnersocial1207') {
                 this.unlocked = true;
             }
