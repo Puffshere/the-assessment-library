@@ -131,22 +131,50 @@ export default {
             ],
         };
     },
-    // In a Vue component
+    mounted() {
+        this.checkStoredPassword();
+        setTimeout(() => {
+                    localStorage.removeItem('storedPassword');
+                    this.unlocked = false;
+                    this.password = '';
+                }, 60000); // 60,000 milliseconds = 1 minute
+                
+    },
     methods: {
         async attemptLogin() {
             const success = await this.$store.dispatch('auth/login', this.password);
+            console.log("this is the success", success);
             if (success) {
                 this.unlocked = true;
                 this.validationError = false;
+                localStorage.setItem('storedPassword', this.password); // Store the password
+
+                // Set a timeout to clear the stored password after 1 minute
+                // setTimeout(() => {
+                //     localStorage.removeItem('storedPassword');
+                //     this.unlocked = false;
+                // }, 60000); // 60,000 milliseconds = 1 minute
             } else {
                 this.validationError = true;
                 this.password = '';
+            }
+        },
+        checkStoredPassword() {
+            const storedPassword = localStorage.getItem('storedPassword');
+            console.log("this is the password", storedPassword);
+            if (storedPassword === '1234') {
+                // You would need a method to validate the stored password. 
+                // This might involve an API call or a local check, depending on your setup.
+                this.unlocked = true;
+            }
+            else {
+                this.unlocked = false;
             }
         }
     },
     computed: {
         isAuthenticated() {
-            return this.$store.state.auth.isAuthenticated;
+            return this.$store.state.auth.isAuthenticated1;
         }
     },
     head() {
