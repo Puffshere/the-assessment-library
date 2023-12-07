@@ -50,7 +50,8 @@ export const state = () => ({
             price: '1495',
             slug: 'platinum-rule-workbook'
         }
-    ]
+    ],
+    isAuthenticated: false,
 });
 
 export const getters = {
@@ -99,6 +100,9 @@ export const mutations = {
     },
     CHANGE_QUANTITY(state, { id, quantity }) {
         state.added = state.added.map(p => (p.id === id ? { ...p, quantity } : p));
+    },
+    SET_AUTH(state, status) {
+        state.isAuthenticated = status;
     }
 };
 
@@ -121,5 +125,17 @@ export const actions = {
                 quantity: product.quantity
             });
         }
+    },
+    // new actions for social media template authentication
+    login({ commit }, password) {
+        if (password === '1234') { 
+            commit('SET_AUTH', true);
+            return true;
+        } else {
+            return false;
+        }
+    },
+    logout({ commit }) {
+        commit('SET_AUTH', false);
     }
 };

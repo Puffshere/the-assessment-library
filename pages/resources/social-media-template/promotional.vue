@@ -86,6 +86,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
 export default {
+    middleware: 'auth',
     components: {
         'main-nav': Nav,
         'footer-fold': Footer

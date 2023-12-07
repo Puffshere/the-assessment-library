@@ -175,7 +175,7 @@ module.exports = {
   ],
 
   router: {
-    middleware: 'redirects'
+    middleware: ['redirects', 'auth']
   },
   telemetry: false
 }
