@@ -47,7 +47,7 @@
                             <option value="sv">Swedish - 6</option>
                             <option value="tr">Turkish - 7</option>
                             <option value="en-gb">English (UK) - 3</option>
-                            <option value="vi">Vietnamese - 10</option>
+                            <option value="vi">Vietnamese - 11</option>
                         </select>
                     </div>
                 </div>
@@ -385,8 +385,11 @@
                         <a v-else-if="lang === 'nl'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_DutchSampleReport.pdf"
                             target="_blank" rel="noopener">DISC + Motivators Report</a>
+                        <a v-else-if="lang === 'vi'" class="hyperlink"
+                            href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_VietnameseSampleReport.pdf"
+                            target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else class="hyperlink disabled">DISC + Motivators Report</a>
-                        <a class="language-button mot" @click="motDISCReportModal = true">9 languages</a><br />
+                        <a class="language-button mot" @click="motDISCReportModal = true">10 languages</a><br />
 
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTLite.pdf"
@@ -1350,6 +1353,9 @@
                             <a class="hyperlink"
                                 href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf"
                                 target="_blank" rel="noopener">Spanish</a><br />
+                            <a class="hyperlink"
+                                href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_VietnameseSampleReport.pdf"
+                                target="_blank" rel="noopener">Vietnamese</a><br />
                         </div>
                     </div>
                 </div>
