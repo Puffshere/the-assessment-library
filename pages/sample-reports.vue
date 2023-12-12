@@ -32,7 +32,7 @@
                             <option value="fr">French - 12</option>
                             <option value="de">German - 4</option>
                             <option value="id">Indonesian - 1</option>
-                            <option value="it">Italian - 2</option>
+                            <option value="it">Italian - 3</option>
                             <option value="ja">Japanese - 4</option>
                             <option value="km">Khmer (Cambodian) - 1</option>
                             <option value="ko">Korean - 1</option>
@@ -163,6 +163,9 @@
                         <a v-else-if="lang === 'fr'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryFrenchSampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
+                        <a v-else-if="lang === 'it'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryItalianSampleReport.pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
                         <a v-else-if="lang === 'pt'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryPortuguesePortugalSampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
@@ -176,7 +179,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryUKSampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
                         <a v-else class="hyperlink disabled">DISC Summary</a>
-                        <a class="language-button disc" @click="discSummaryReportModal = true">7 languages</a><br />
+                        <a class="language-button disc" @click="discSummaryReportModal = true">8 languages</a><br />
                     </div>
                 </div>
 
@@ -386,7 +389,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_DutchSampleReport.pdf"
                             target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'vi'" class="hyperlink"
-                            href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_VietnameseSampleReport.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_VietnameseSampleReport.pdf"
                             target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else class="hyperlink disabled">DISC + Motivators Report</a>
                         <a class="language-button mot" @click="motDISCReportModal = true">10 languages</a><br />
@@ -428,7 +431,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf"
                             class="hyperlink" target="_blank" rel="noopener">HireSense Summary</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink"
-                            href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/HireSense-summary-French.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-summary-French.pdf"
                             target="_blank" rel="noopener">HireSense Summary</a>
                         <a v-else class="hyperlink disabled">HireSense Summary</a><br />
                         <a class="language-button other" @click="hireSenseSummaryReportModal = true">2 languages</a><br />
@@ -437,7 +440,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSample.pdf"
                             class="hyperlink" target="_blank" rel="noopener">HireSense Full Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink"
-                            href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/HireSense-fullReport-French.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-fullReport-French.pdf"
                             target="_blank" rel="noopener">HireSense Full Report</a>
                         <a v-else class="hyperlink disabled">HireSense Full Report</a><br />
                         <a class="language-button other" @click="hireSenseFullReportModal = true">2 languages</a><br />
@@ -865,6 +868,8 @@
                                     class="hyperlink" target="_blank" rel="noopener">Dutch</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryFrenchSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">French</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryItalianSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Italian</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryPortuguesePortugalSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Portuguese</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySpanishSampleReport.pdf"
@@ -1342,7 +1347,7 @@
                                 href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTGerman.pdf"
                                 target="_blank" rel="noopener">German</a><br />
                             <a class="hyperlink"
-                                href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators_Lithuanian.pdf"
+                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators_Lithuanian.pdf"
                                 target="_blank" rel="noopener">Lithuanian</a><br />
                             <a class="hyperlink"
                                 href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf"
@@ -1354,7 +1359,7 @@
                                 href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf"
                                 target="_blank" rel="noopener">Spanish</a><br />
                             <a class="hyperlink"
-                                href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_VietnameseSampleReport.pdf"
+                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_VietnameseSampleReport.pdf"
                                 target="_blank" rel="noopener">Vietnamese</a><br />
                         </div>
                     </div>
@@ -1375,7 +1380,7 @@
                             <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf"
                                 class="hyperlink" target="_blank" rel="noopener">English</a><br />
                             <a class="hyperlink"
-                                href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/HireSense-summary-French.pdf"
+                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-summary-French.pdf"
                                 target="_blank" rel="noopener">French</a><br />
                         </div>
                     </div>
@@ -1396,7 +1401,7 @@
                             <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSample.pdf"
                                 class="hyperlink" target="_blank" rel="noopener">English</a><br />
                             <a class="hyperlink"
-                                href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/HireSense-fullReport-French.pdf"
+                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-fullReport-French.pdf"
                                 target="_blank" rel="noopener">French</a><br />
                         </div>
                     </div>
