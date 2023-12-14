@@ -283,6 +283,33 @@ Missed the D - Dominance Style? Hit rewind to last week's post and catch up! �
                     ctaLink: 'http://www.assessments24x7.com/',
                     caption: `No caption`,
                     postCategory: 'DISC: General Knowledge'
+                },
+                {
+                    id: 12,
+                    title: 'Listen up - C - Conscientiousness - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF2GtNmlKg/EzmcDFPWwGaelaJ2XDK-Zg/view?utm_content=DAF2GtNmlKg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: '/26dTemplateImage.png',
+                    templateSize: '1080 x 1350',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: 'http://www.assessments24x7.com/',
+                    caption: `Larry King famously said “I remind myself every morning: Nothing I say this day will teach me anything. So if I'm going to learn, I must do it by listening.”
+
+Start each day with a commitment to gain knowledge through attentive listening. Master these tips for listening to the C - Conscientiousness DISC Style 🚀
+
+1. Acknowledge and commend their thoroughness and correctness when appropriate.
+2. Pay attention to their concerns, reasoning, and suggestions.
+3. Tune in for specific facts, data, and specifications that are important to them.
+4. Listen for opportunities to
+tell them “why” and “how”.
+5. Allow time for them to process and share; don't expect quick responses or outward displays of emotion.
+
+Let's create a world of respectful communication.
+Not sure of your DISC Style? Take a free DISC Assessment here:
+🔗 https://discstyles.com/
+
+#DISCStyles #CommunicationTips #ActiveListening #Softskills #Assessments24x7 #DISC`,
+                    postCategory: 'DISC: General Knowledge'
                 }
             ]
         };
