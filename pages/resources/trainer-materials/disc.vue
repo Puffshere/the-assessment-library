@@ -979,7 +979,7 @@
                     <table v-if="certified" style="width:100%">
                         <thead>
                             <tr>
-                                <th>"DISC in Action Series</th>
+                                <th>DISC in Action Series</th>
                             </tr>
                         </thead>
 
