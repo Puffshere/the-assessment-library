@@ -976,6 +976,22 @@
                         </tbody>
                     </table>
 
+                    <table v-if="certified" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>"DISC in Action Series</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+During+Change.pdf"
+                                        target="_blank" rel="noopener">DISC in Action - During Change</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <h2>
                         <img class="icon" src="~/assets/trainer-materials-icons/debrief-guide.png"
                             alt="DISC Debrief Resources">
