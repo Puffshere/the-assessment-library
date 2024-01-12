@@ -1210,7 +1210,7 @@ export default {
     },
     methods: {
         unlock() {
-            if (this.password === 'a24x7disc2023') {
+            if (this.password === 'disc2024a24x7') {
                 this.unlocked = true;
                 this.validationError = false;
             } else if (this.password === 'certified') {

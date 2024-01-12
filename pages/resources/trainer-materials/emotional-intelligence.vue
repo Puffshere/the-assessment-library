@@ -319,7 +319,7 @@
         },
         methods: {
             unlock() {
-                if (this.password === 'a24x7eiq2023') {
+                if (this.password === 'eiq2024a24x7') {
                     this.unlocked = true;
                     this.validationError = false;
                 } else if (this.password === 'eiqcertified') {
