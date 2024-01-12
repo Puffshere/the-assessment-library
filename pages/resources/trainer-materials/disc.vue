@@ -359,7 +359,7 @@
                     <table style="width:100%">
                         <thead>
                             <tr>
-                                <th>DISC Target Applications</th>
+                                <th>DISC Target Applications Tips</th>
                             </tr>
                         </thead>
 
@@ -367,7 +367,7 @@
                             <tr>
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCCoachingTargetApplication.pdf"
-                                        target="_blank" rel="noopener">DISC Coaching</a>
+                                        target="_blank" rel="noopener">DISC Coaching Tips</a>
                                     <small>This document covers DISC as a coach - Ask, Listen, Coach, Praise and
                                         Challenge.</small>
                                 </td>
@@ -375,7 +375,7 @@
                             <tr>
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSalesTargetApplication.pdf"
-                                        target="_blank" rel="noopener">DISC Sales</a>
+                                        target="_blank" rel="noopener">DISC Sales Tips</a>
                                     <small>This document covers the five stages to the selling cycle – Connecting,
                                         Assessing, Solving, Confirming and Assuring</small>
                                 </td>
@@ -383,7 +383,7 @@
                             <tr>
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCLeadershipTargetApplication.pdf"
-                                        target="_blank" rel="noopener">DISC Leadership</a>
+                                        target="_blank" rel="noopener">DISC Leadership Tips</a>
                                     <small>This document covers DISC as a leader - Developing, Adapting, Helping,
                                         Motivating, Complimenting, Counseling, Correcting, Delegating, &
                                         Acknowledging.</small>
@@ -392,7 +392,7 @@
                             <tr>
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCServiceTargetApplication.pdf"
-                                        target="_blank" rel="noopener">DISC Service</a>
+                                        target="_blank" rel="noopener">DISC Service Tips</a>
                                     <small>This document covers communicating effectively in the service process – Greet,
                                         Value, Ask, Listen, Help, Invite.</small>
                                 </td>
