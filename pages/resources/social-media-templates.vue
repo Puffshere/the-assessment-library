@@ -1,7 +1,6 @@
 <template>
     <section class="social-media-templates">
         <main-nav />
-
         <div class="wrapper">
             <div class="container hero">
                 <div class="row rowItems">
@@ -21,7 +20,6 @@
                 </div>
             </div>
         </div>
-
         <div class="template-library">
             <div class="templateBanner">
                 <h1>TEMPLATE LIBRARY</h1>
@@ -45,9 +43,6 @@
                 </div>
             </div>
             <br>
-            <nuxt-link to="/resources/affiliate-partner-materials">
-                <img class="backIcon" src="~assets/back_to_affiliate.webp" alt="back to affiliate image">
-            </nuxt-link>
             <h2>
                 Important:
             </h2>
@@ -59,7 +54,9 @@
             </p>
             <br>
             <br>
-            <br>
+            <nuxt-link to="/resources/affiliate-partner-materials">
+                <img class="backIcon" src="~assets/back_to_affiliate.webp" alt="back to affiliate image">
+            </nuxt-link>
             <br>
         </div>
         <footer-fold />
@@ -184,7 +181,7 @@ export default {
 .backIcon {
     display: flex;
     margin: 0 auto 40px;
-    margin-top: 20px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
