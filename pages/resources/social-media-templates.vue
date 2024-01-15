@@ -45,6 +45,9 @@
                 </div>
             </div>
             <br>
+            <nuxt-link to="/resources/affiliate-partner-materials">
+                <img class="backIcon" src="~assets/back_to_affiliate.webp" alt="back to affiliate image">
+            </nuxt-link>
             <h2>
                 Important:
             </h2>
@@ -178,10 +181,24 @@ export default {
     background-color: #e0e0e0;
 }
 
+.backIcon {
+    display: flex;
+    margin: 0 auto 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
 .important-note {
     color: rgb(27, 27, 27);
     max-width: 90%;
     margin: -15px auto;
+}
+
+@media (max-width: 1200px) {
+
+    .backIcon {
+        max-width: 90%;
+    }
 }
 
 @media (max-width: 1000px) {
