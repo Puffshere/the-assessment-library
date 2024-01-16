@@ -352,6 +352,15 @@ export default {
 
 @media (max-width: 300px) {
 
+    .titleImage {
+        width: 125%;
+    }
+
+    .titleText {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
     .image {
         width: 50%;
     }

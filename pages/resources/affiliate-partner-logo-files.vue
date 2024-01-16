@@ -194,11 +194,30 @@ export default {
 
 @media (max-width: 480px) {
 
+    .titleImage {
+        width: 115%;
+    }
+
     .template-box {
         width: calc(100% - 20px);
         margin: 10px;
         padding: 10px;
         box-sizing: border-box;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 300px) {
+
+    .titleImage {
+        width: 125%;
+        margin-top: -10px;
+        margin-bottom: -15px;
+    }
+
+    .backIcon {
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 }
 </style>
