@@ -134,7 +134,7 @@ export default {
                 },
                 {
                     name: 'Rate Sheets',
-                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/pdf/5DA+Company+Sample+MPT+December+2022.pdf', text: 'Corp Rate Sheet (PDF Download)' },
+                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Pricing+%26+Instruction+Sheets/A24x7+Pricing+Guide+CP+Q223.pdf', text: 'Corp Rate Sheet (PDF Download)' },
                     link2: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Pricing+%26+Instruction+Sheets/A24x7+Pricing+Guide+RS+Q223.pdf', text: 'RS Rate Sheet (PDF Download)' },
                 },
                 {
