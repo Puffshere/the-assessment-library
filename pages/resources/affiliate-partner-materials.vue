@@ -30,7 +30,7 @@
                 <div v-for="template in topRowTemplates" :key="template.name">
                     <div class="template-box">{{ template.name }}
                         <br>
-                        <br>
+                        <div class="titlePadding"></div>
                         <div v-if="template.name === 'Affiliate Partner Logos' || template.name === 'Social Media'">
                             <nuxt-link v-if="template.link1" :to="template.link1.url" class="link hyperlink">
                                 {{ template.link1.mainText }}
@@ -69,7 +69,7 @@
                     <div class="template-box">{{ template.name }}
                         <img v-if="template.image" :src="template.image" alt="coming soon image" class="comingSoon">
                         <br>
-                        <br>
+                        <div class="titlePadding"></div>
                         <a v-if="template.link1" :href="template.link1.url" class="link hyperlink" target="_blank"
                             rel="noopener">
                             {{ template.link1.mainText }}
@@ -304,6 +304,10 @@ export default {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+}
+
+.titlePadding {
+    min-height: 20px;
 }
 
 .template-box {
