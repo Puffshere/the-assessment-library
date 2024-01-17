@@ -173,7 +173,8 @@ export default {
                     name: 'Social Media',
                     link1: {
                         url: '/resources/social-media-templates',
-                        mainText: 'Social Media Templates'
+                        mainText: 'Social Media',
+                        subText: 'Templates'
                     },
                 }
             ],
@@ -308,7 +309,7 @@ export default {
 .template-box {
     border: 2px solid #5a5959;
     border-radius: 7px;
-    padding: 10px 50px;
+    padding: 10px 20px;
     margin: 30px 25px;
     font-style: italic;
     font-size: 21px;
@@ -333,11 +334,6 @@ export default {
     width: auto;
     height: auto;
 
-}
-
-.link {
-    padding: 0px 2px;
-    margin: 0px auto;
 }
 
 .password-prompt {
