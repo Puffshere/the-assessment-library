@@ -129,9 +129,9 @@ export default {
 }
 
 .titleImage {
-    width: 100%;
-    margin-left: -30px;
-    margin-top: 10px;
+    width: 87%;
+    margin-left: -28px;
+    margin-top: 6px;
 }
 
 .partner-logo {
@@ -166,6 +166,7 @@ export default {
 }
 
 .link {
+    font-size: 18px;
     padding: 0px 2px;
     margin: 0px auto;
 }

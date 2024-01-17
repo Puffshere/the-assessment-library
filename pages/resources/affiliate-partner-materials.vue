@@ -32,21 +32,34 @@
                         <br>
                         <br>
                         <div v-if="template.name === 'Affiliate Partner Logos' || template.name === 'Social Media'">
-                            <nuxt-link v-if="template.link1" :to="template.link1.url" class="link hyperlink">{{
-                                template.link1.text }}</nuxt-link>
+                            <nuxt-link v-if="template.link1" :to="template.link1.url" class="link hyperlink">
+                                {{ template.link1.mainText }}
+                                <br>
+                                {{ template.link1.subText }}
+                            </nuxt-link>
                             <span style="display: block; margin-bottom: -20px;"></span>
                             <br>
-                            <nuxt-link v-if="template.link2" :to="template.link2.url" class="link hyperlink">{{
-                                template.link2.text }}</nuxt-link>
+                            <nuxt-link v-if="template.link2" :to="template.link2.url" class="link hyperlink">
+                                {{ template.link2.mainText }}
+                                <br>
+                                {{ template.link2.subText }}
+                            </nuxt-link>
                         </div>
                         <div v-else>
                             <a v-if="template.link1" :href="template.link1.url" class="link hyperlink" target="_blank"
-                                rel="noopener">{{ template.link1.text }}</a>
+                                rel="noopener">
+                                {{ template.link1.mainText }}
+                                <br>
+                                {{ template.link1.subText }}
+                            </a>
                             <span style="display: block; margin-bottom: -20px;"></span>
                             <br>
                             <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
-                                rel="noopener">{{
-                                    template.link2.text }}</a>
+                                rel="noopener">
+                                {{ template.link2.mainText }}
+                                <br>
+                                {{ template.link2.subText }}
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -58,12 +71,19 @@
                         <br>
                         <br>
                         <a v-if="template.link1" :href="template.link1.url" class="link hyperlink" target="_blank"
-                            rel="noopener">{{ template.link1.text }}</a>
+                            rel="noopener">
+                            {{ template.link1.mainText }}
+                            <br>
+                            {{ template.link1.subText }}
+                        </a>
                         <span style="display: block; margin-bottom: -20px;"></span>
                         <br>
                         <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
-                            rel="noopener">{{
-                                template.link2.text }}</a>
+                            rel="noopener">
+                            {{ template.link2.mainText }}
+                            <br>
+                            {{ template.link2.subText }}
+                        </a>
                     </div>
                 </div>
             </div>
@@ -130,16 +150,31 @@ export default {
             topRowTemplates: [
                 {
                     name: 'Affiliate Partner Logos',
-                    link1: { url: '/resources/affiliate-partner-logo-files', text: 'Affiliate Partner Logo Files' },
+                    link1: {
+                        url: '/resources/affiliate-partner-logo-files',
+                        mainText: 'Affiliate Partner',
+                        subText: 'Logo Files'
+                    },
                 },
                 {
                     name: 'Rate Sheets',
-                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Pricing+%26+Instruction+Sheets/A24x7+Pricing+Guide+CP+Q223.pdf', text: 'Corp Rate Sheet (PDF Download)' },
-                    link2: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Pricing+%26+Instruction+Sheets/A24x7+Pricing+Guide+RS+Q223.pdf', text: 'RS Rate Sheet (PDF Download)' },
+                    link1: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Pricing+%26+Instruction+Sheets/A24x7+Pricing+Guide+CP+Q223.pdf',
+                        mainText: 'Corp Rate Sheet',
+                        subText: '(PDF Download)'
+                    },
+                    link2: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Pricing+%26+Instruction+Sheets/A24x7+Pricing+Guide+RS+Q223.pdf',
+                        mainText: 'RS Rate Sheet',
+                        subText: '(PDF Download)'
+                    },
                 },
                 {
                     name: 'Social Media',
-                    link1: { url: '/resources/social-media-templates', text: 'Social Media Templates' },
+                    link1: {
+                        url: '/resources/social-media-templates',
+                        mainText: 'Social Media Templates'
+                    },
                 }
             ],
             bottomRowTemplates: [
@@ -149,13 +184,29 @@ export default {
                 },
                 {
                     name: 'Email Templates',
-                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Support+email+-+affiliate+partners.pdf', text: 'Support Template (PDF Download)' },
-                    link2: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Sales+email+series.pdf', text: 'Sales Template (PDF Download)' },
+                    link1: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Support+email+-+affiliate+partners.pdf',
+                        mainText: 'Support Template',
+                        subText: '(PDF Download)'
+                    },
+                    link2: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Sales+email+series.pdf',
+                        mainText: 'Sales Template',
+                        subText: '(PDF Download)'
+                    },
                 },
                 {
                     name: 'Email Series',
-                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Email+retention+series+-+for+all+customers.pdf', text: 'Customer Retention (PDF Download)' },
-                    link2: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Retention+emails+for+DISC+Certification+customers.pdf', text: 'DISC Certification (PDF Download)' },
+                    link1: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Email+retention+series+-+for+all+customers.pdf',
+                        mainText: 'Customer Retention',
+                        subText: '(PDF Download)'
+                    },
+                    link2: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Retention+emails+for+DISC+Certification+customers.pdf',
+                        mainText: 'DISC Certification',
+                        subText: '(PDF Download)'
+                    },
                 }
             ],
         };
