@@ -180,8 +180,11 @@ export default {
             ],
             bottomRowTemplates: [
                 {
-                    name: 'Website Banners',
-                    image: '/images/comingSoonYellow.webp'
+                    name: 'Graphics Files',
+                    link1: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/mini-brand-guide-v2.png',
+                        mainText: 'Mini Brand Guide'
+                    }
                 },
                 {
                     name: 'Email Templates',
