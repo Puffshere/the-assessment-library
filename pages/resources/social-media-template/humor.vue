@@ -145,6 +145,61 @@ Stay Agile: The world changes fast, and you need to keep up. One-on-ones help yo
 In a nutshell, these meetings aren't just management; they're a commitment to your team's growth, happiness, and success. Be the leader who rocks the one-on-ones, and watch your team thrive.
 #Leadership #OneonOnes #TeamSuccess`,
                     postCategory: 'Humor'
+                },
+                {
+                    id: 4,
+                    title: 'Funny Friday - Adaptability - LI/IG',
+                    canvaLink: 'https://www.canva.com/design/DAF2Zy8Cd64/IBir0F4MKDkPM519gT1jwQ/view?utm_content=DAF2Zy8Cd64&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/31TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Happy Friday! 🎉 Let's dive into some DISC Adaptability with a touch of humor. (Did you know humor boosts brain function and productivity? It's true! 😊)
+
+Discover the key to impactful communication by understanding your team's DISC styles. Adapting your DISC Style to match theirs will be the key to success. Here's a brief guide on how to adapt your communications with each DISC Style:
+
+D - Dominant Style:
+- Prioritize clarity and conciseness.
+- Highlight task benefits and challenges.
+I - Influence Style:
+- Infuse friendliness and enthusiasm.
+- Sprinkle in stories and humor to show personal interest.
+S - Steadiness Style:
+- Utilize a calm and gentle tone.
+- Shower them with appreciation and empathy.
+C - Conscientiousness Style:
+- Emphasize accuracy and logic.
+- Set clear expectations and guidelines.
+
+Interested in seamlessly integrating DISC into your Organization or Client services? Assessments 24x7 has the knowledge and experience a business needs for integrating assessments into their organization. While DISC and Motivators are our recommended foundational assessments, we also have an extensive library of specialized assessments available via our industry-leading online platform to meet your needs from sales to coaching to leadership and much more. Contact us today to get started.`,
+                    postCategory: 'Humor'
+                },
+                {
+                    id: 5,
+                    title: 'Funny Friday - D Adaptability and Mr. Rodgers - LI/IG',
+                    canvaLink: 'https://www.canva.com/design/DAF3EOd2_Lw/K1YD0N51PWtHOLSRW0WXiQ/view?utm_content=DAF3EOd2_Lw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/35TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `Happy (Funny) Friday, folks! 🎉
+
+Question......
+What are you actively doing to make your emails STICK with the recipient? Whether you're emailing clients, prospects, colleagues, or friends, increase your messages' chances of standing out and making an impact by adjusting your DISC Style to align with theirs.
+
+For S-style personalities, think inclusive, dependable, and sincere when emailing them:
+- Start with a polite greeting and end warmly.
+- Keep it friendly and personable.
+- Show interest in their opinion.
+- Be crystal clear about details and expectations.
+- Don't push; invite questions and offer follow-up info.
+
+Level up your professional relationships with DISC! Explore becoming a Certified Practitioner to seamlessly integrate DISC into your organization's communication model. Let's chat about it - reach out to our specialists today: https://www.assessments24x7.com/contact 👥
+
+🚀 #DISCModel #TeamCommunication #Adaptability #FridayFun #DISC #Motivators #Communications #Assessments24x7 #ContinuedEducation #SHRM #ATD #HRCI #CCE Approved #DataDrivenDecisions #meme #Funny #businesscoaching`,
+                    postCategory: 'Humor'
                 }
             ]
         };

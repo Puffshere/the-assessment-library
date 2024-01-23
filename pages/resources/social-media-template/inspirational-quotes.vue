@@ -154,6 +154,71 @@ By shifting our attitudes, we unlock the power to thrive in any situation. 🚀
 
 #MondayMotivation #TeamDiversity #NewWeekMindset #DISC`,
                     postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 5,
+                    title: 'Years of Struggle quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0s4ox7WI/9VKnFvPXH-DOp9yPgykCgw/view?utm_content=DAF0s4ox7WI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/28TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Thanksgiving week sparks reflection. In the midst of challenges, there's a unique beauty. Gratitude transforms struggle into strength. What's a pivotal challenge you've conquered that shaped your path? Share your reflections below.
+
+#Thanksgiving #ProfessionalGrowth #Growthminset #MotivationMonday #Assessments24x7`,
+                    postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 6,
+                    title: 'Stephen Covey Quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF1X9_2EOU/XhgNpMj2W7nBKoE0NI-Zag/view?utm_content=DAF1X9_2EOU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/30TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `As we reflect on the past and plan for the future, remember it's never too late to make empowering choices. Here's to a year of growth, resilience, and continuous improvement! 🚀 What decisions will shape your path in 2023?
+
+#YearEndReflections #EmpowerYourJourney #Continuingeducation #Assessments24x7 #Growthmindset #MotivationMonday`,
+                    postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 7,
+                    title: 'Quote on Authenticity - LI/IG',
+                    canvaLink: 'https://www.canva.com/design/DAF2rkr3Bik/pSfkyKEHDdMXKmINZ5kMDg/view?utm_content=DAF2rkr3Bik&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/32TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Ever feel drowned in the business mainstream? It's like wading through a crowded marketplace where everything tends to blend...
+But let's talk real strategy: You're NOT in the game to blend in; you're here to STAND OUT. Take a cue from the greats—successful brands aren't trying to mimic others. They're embracing their uniqueness, and that's the secret sauce. 🎇
+
+Your authentic self is not just a differentiator; it's your path to unparalleled success. What will you be doing to differentiate yourself in #2024?
+
+#DISCCertification #EIQCertification #MotivatorsCertification #ContinuingEducation #Businessdevelopment #Leadershipdevelopment
+#Entreprenship #Authenticity #StandOut #ContinuingEducation #DISC #Assessments #Assessments24x7 #Coaching`,
+                    postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 8,
+                    title: 'Kindness Quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF3VVs9JKQ/cm9dIrXVcLsF3FU-FXhLyg/view?utm_content=DAF3VVs9JKQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/32TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Kindness -
+It’s the simplest yet most impactful thing you can do and it costs nothing.
+- A smile
+- A kind word
+- A helping hand
+All can make someone’s day.
+
+#kindness #Selfgrowth #MotivationMonday #DISC #Respectfulcommunications #Leadership #Assessments24x7`,
+                    postCategory: 'Inspirational Quotes'
                 }
             ]
         };

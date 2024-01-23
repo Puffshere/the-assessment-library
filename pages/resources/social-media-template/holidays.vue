@@ -203,6 +203,43 @@ Angie Warner, Jared Moore, Cristina Moore, Amy Lewis, Suzette Chaparro, Monica S
 
 #DISCAssessments #DISCStyle #BehavioralStyle #SelfDiscovery #UnlockYourPotential #Happyhalloween`,
                     postCategory: 'Holidays'
+                },
+                {
+                    id: 7,
+                    title: 'Thanksgiving Motivators Post 2023 - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF0bON0SNo/xOITH7B-SMSm11v3wPkUzQ/view?utm_content=DAF0bON0SNo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/29TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: 'https://www.assessments24x7.com/contact',
+                    caption: `What motivates you?
+
+Unlock the 'why' behind actions this Thanksgiving with the Motivators Assessment! Just as DISC reveals 'how' we behave, Motivators dives into the 'why'. 🚀✨
+
+Share and comment below which Motivator(s) resonate with you, and let's explore the unique drivers shaping our decisions and priorities.
+
+Curious about exploring Assessments such as Motivators, DISC, EIQ, and beyond? Discover the possibilities of accessing, customizing, and white-labeling your assessments by reaching out to our sales team now for more information and opportunities
+
+https://www.assessments24x7.com/contact
+
+#Motivators #SelfAwareness #Assessments #DISC #EIQ #Assessments24x7`,
+                    postCategory: 'Holidays'
+                },
+                {
+                    id: 8,
+                    title: 'Holidays: Gift Shopping WITH the Four DISC Styles - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF2rZlTJMI/KTYoQojqkoCXQDdJJ_yi-A/view?utm_content=DAF2rZlTJMI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/33TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `How does your DISC Style affect your holiday shopping?
+Are you an online shopping aficionado, or do you relish the in-store experience? Let us know in the comments below!
+
+#DISC #DISCStyles #DISCAssessments #LeadershipDevelopment #Businessdevelopment #Coaching #DISCCertification #ContinuingEducation #Assessments24x7 #Selfawareness #emotionalintelligence #Communicationtips #Assessments`,
+                    postCategory: 'Holidays'
                 }
             ]
         };

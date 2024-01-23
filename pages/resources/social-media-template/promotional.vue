@@ -197,6 +197,50 @@ Share in the comments how DISC, Motivators, or EIQ Certification has made a diff
 
 #CareerAdvancement #ProfessionalDevelopment #CertificationSuccess #Continuingeducation #DISC #Motivators #EIQ #EmotionalIntelligence #Assessments24x7`,
                     postCategory: 'Promotional'
+                },
+                {
+                    id: 7,
+                    title: 'Christmas Version DISC Blocks - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF28p35FK4/cCRE2c3EP72UYNo56QUI6w/view?utm_content=DAF28p35FK4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/34aTemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: 'https://store.assessments24x7.com/products/disc-blocks',
+                    caption: `The Holidays are HERE, and there’s no better time to enhance your Team’s communication and collaboration skills than now. Our DISC Blocks are the perfect stocking stuffers that will help your team connect, communicate, and collaborate more effectively.
+
+🚀 Enhance Communication: Stack your DISC Blocks to display your style and supercharge interactions.
+🤝 Boost Team Dynamics: Understanding DISC styles minimizes conflicts and fuels teamwork.
+🧠 Personalized Learning: Visual aids for meetings and training, fostering better results.
+🌈 Stress Relief: Squishy and calming - a must-have for busy workdays.
+
+This holiday, go the extra mile and give the gift of improved communication and collaboration. Check our story or see below for a direct link to order before it’s too late.
+🎄🎉 🔗 https://store.assessments24x7.com/products/disc-blocks
+
+#TeamDevelopment #DISCBlocks #EffectiveCommunication #DISC #DISCStyle #traininganddevelopment #leadershipdevelopment #coaching #hr #businessdevelopment`,
+                    postCategory: 'Promotional'
+                },
+                {
+                    id: 8,
+                    title: 'Christmas Version DISC Blocks - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF288Ame5g/TEjRNidoH3U0k7C0s5Ddug/view?utm_content=DAF288Ame5g&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/34aTemplateImage.png',
+                    templateSize: '1080 x 1920',
+                    linkedPostAs: '',
+                    instaPostAs: 'Reel',
+                    ctaLink: 'https://store.assessments24x7.com/products/disc-blocks',
+                    caption: `The Holidays are HERE, and there’s no better time to enhance your Team’s communication and collaboration skills than now. Our DISC Blocks are the perfect stocking stuffers that will help your team connect, communicate, and collaborate more effectively.
+
+🚀 Enhance Communication: Stack your DISC Blocks to display your style and supercharge interactions.
+🤝 Boost Team Dynamics: Understanding DISC styles minimizes conflicts and fuels teamwork.
+🧠 Personalized Learning: Visual aids for meetings and training, fostering better results.
+🌈 Stress Relief: Squishy and calming - a must-have for busy workdays.
+
+This holiday, go the extra mile and give the gift of improved communication and collaboration. Check our story or see below for a direct link to order before it’s too late.
+🎄🎉 🔗 https://store.assessments24x7.com/products/disc-blocks
+
+#TeamDevelopment #DISCBlocks #EffectiveCommunication #DISC #DISCStyle #traininganddevelopment #leadershipdevelopment #coaching #hr #businessdevelopment`,
+                    postCategory: 'Promotional'
                 }
             ]
         };
