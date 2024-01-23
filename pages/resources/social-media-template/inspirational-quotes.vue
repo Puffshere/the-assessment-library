@@ -205,7 +205,7 @@ Your authentic self is not just a differentiator; it's your path to unparalleled
                     id: 8,
                     title: 'Kindness Quote - LI - IG',
                     canvaLink: 'https://www.canva.com/design/DAF3VVs9JKQ/cm9dIrXVcLsF3FU-FXhLyg/view?utm_content=DAF3VVs9JKQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
-                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/32TemplateImage.png',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/36TemplateImage.png',
                     templateSize: '1200 x 1200',
                     linkedPostAs: 'Image',
                     instaPostAs: 'Image',
