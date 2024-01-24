@@ -428,10 +428,10 @@
                     <div class="samples-container">
                         <h3>Selection</h3>
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/disc_workplace_insights.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Workplace insights</a>
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSample.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/disc_executive_insights.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Executive insights</a>
                     </div>
                 </div>
