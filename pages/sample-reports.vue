@@ -430,20 +430,20 @@
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Workplace insights</a>
-                        <a v-else-if="lang === 'fr'" class="hyperlink"
+                        <!-- <a v-else-if="lang === 'fr'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-summary-French.pdf"
                             target="_blank" rel="noopener">HireSense Summary</a>
                         <a v-else class="hyperlink disabled">HireSense Summary</a><br />
-                        <a class="language-button other" @click="hireSenseSummaryReportModal = true">2 languages</a><br />
+                        <a class="language-button other" @click="hireSenseSummaryReportModal = true">2 languages</a><br /> -->
 
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSample.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Executive insights</a>
-                        <a v-else-if="lang === 'fr'" class="hyperlink"
+                        <!-- <a v-else-if="lang === 'fr'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-fullReport-French.pdf"
                             target="_blank" rel="noopener">HireSense Full Report</a>
                         <a v-else class="hyperlink disabled">HireSense Full Report</a><br />
-                        <a class="language-button other" @click="hireSenseFullReportModal = true">2 languages</a><br />
+                        <a class="language-button other" @click="hireSenseFullReportModal = true">2 languages</a><br /> -->
                     </div>
                 </div>
 
