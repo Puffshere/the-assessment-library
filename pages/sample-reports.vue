@@ -426,7 +426,7 @@
             <div class="row">
                 <div class="col-3">
                     <div class="samples-container">
-                        <h3>HireSense</h3>
+                        <h3>Selection</h3>
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf"
                             class="hyperlink" target="_blank" rel="noopener">HireSense Summary</a>
