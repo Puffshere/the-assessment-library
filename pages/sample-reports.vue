@@ -430,20 +430,9 @@
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Workplace insights</a>
-                        <!-- <a v-else-if="lang === 'fr'" class="hyperlink"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-summary-French.pdf"
-                            target="_blank" rel="noopener">HireSense Summary</a>
-                        <a v-else class="hyperlink disabled">HireSense Summary</a><br />
-                        <a class="language-button other" @click="hireSenseSummaryReportModal = true">2 languages</a><br /> -->
-
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSample.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Executive insights</a>
-                        <!-- <a v-else-if="lang === 'fr'" class="hyperlink"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-fullReport-French.pdf"
-                            target="_blank" rel="noopener">HireSense Full Report</a>
-                        <a v-else class="hyperlink disabled">HireSense Full Report</a><br />
-                        <a class="language-button other" @click="hireSenseFullReportModal = true">2 languages</a><br /> -->
                     </div>
                 </div>
 
@@ -1328,329 +1317,330 @@
                     <div class="container">
                         <a title="Close" class="modal-close" @click="motDISCReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>DISC + Motivators Reports</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>DISC + Motivators Reports</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOT.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMotivatorsChineseSampleReport.pdf"
-                                target="_blank" rel="noopener">Chinese</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_DutchSampleReport.pdf"
-                                target="_blank" rel="noopener">Dutch</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTFrench.pdf"
-                                target="_blank" rel="noopener">French</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTGerman.pdf"
-                                target="_blank" rel="noopener">German</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators_Lithuanian.pdf"
-                                target="_blank" rel="noopener">Lithuanian</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf"
-                                target="_blank" rel="noopener">Portuguese</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMOTRussianSample.pdf"
-                                target="_blank" rel="noopener">Russian</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf"
-                                target="_blank" rel="noopener">Spanish</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_VietnameseSampleReport.pdf"
-                                target="_blank" rel="noopener">Vietnamese</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOT.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMotivatorsChineseSampleReport.pdf"
+                                    target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_DutchSampleReport.pdf"
+                                    target="_blank" rel="noopener">Dutch</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTFrench.pdf"
+                                    target="_blank" rel="noopener">French</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTGerman.pdf"
+                                    target="_blank" rel="noopener">German</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators_Lithuanian.pdf"
+                                    target="_blank" rel="noopener">Lithuanian</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf"
+                                    target="_blank" rel="noopener">Portuguese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMOTRussianSample.pdf"
+                                    target="_blank" rel="noopener">Russian</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTSP.pdf"
+                                    target="_blank" rel="noopener">Spanish</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC_and_Motivators_-_VietnameseSampleReport.pdf"
+                                    target="_blank" rel="noopener">Vietnamese</a><br />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- HIRESENSE SUMMARY REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="hireSenseSummaryReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="hireSenseSummaryReportModal = false">Close</a>
+            <!-- HIRESENSE SUMMARY REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="hireSenseSummaryReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="hireSenseSummaryReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>HireSense Summary Reports</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>HireSense Summary Reports</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-summary-French.pdf"
-                                target="_blank" rel="noopener">French</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSummarySample.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-summary-French.pdf"
+                                    target="_blank" rel="noopener">French</a><br />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- HIRESENSE FULL REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="hireSenseFullReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="hireSenseFullReportModal = false">Close</a>
+            <!-- HIRESENSE FULL REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="hireSenseFullReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="hireSenseFullReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>HireSense Full Reports</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>HireSense Full Reports</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSample.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-fullReport-French.pdf"
-                                target="_blank" rel="noopener">French</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSenseSample.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/HireSense-fullReport-French.pdf"
+                                    target="_blank" rel="noopener">French</a><br />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- EIQ REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="eiqReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="eiqReportModal = false">Close</a>
+            <!-- EIQ REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="eiqReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="eiqReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Emotional Intelligence Reports</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Emotional Intelligence Reports</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQChineseSampleReport.pdf"
-                                target="_blank" rel="noopener">Chinese</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf"
-                                target="_blank" rel="noopener">French</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportGerman.pdf"
-                                target="_blank" rel="noopener">German</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf"
-                                target="_blank" rel="noopener">Japanese</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf"
-                                target="_blank" rel="noopener">Portuguese (Brazil)</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportRussian.pdf"
-                                target="_blank" rel="noopener">Russian</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportSpanish.pdf"
-                                target="_blank" rel="noopener">Spanish</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportVietnamese.pdf"
-                                target="_blank" rel="noopener">Vietnamese</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQChineseSampleReport.pdf"
+                                    target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQFrenchSampleReport.pdf"
+                                    target="_blank" rel="noopener">French</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportGerman.pdf"
+                                    target="_blank" rel="noopener">German</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQJapeneseSampleReport.pdf"
+                                    target="_blank" rel="noopener">Japanese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQPortSampleReport.pdf"
+                                    target="_blank" rel="noopener">Portuguese (Brazil)</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportRussian.pdf"
+                                    target="_blank" rel="noopener">Russian</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportSpanish.pdf"
+                                    target="_blank" rel="noopener">Spanish</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReportVietnamese.pdf"
+                                    target="_blank" rel="noopener">Vietnamese</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- DISC + EIQ REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="discPluseiqReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="discPluseiqReportModal = false">Close</a>
+            <!-- DISC + EIQ REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="discPluseiqReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="discPluseiqReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>DISC + Emotional Intelligence</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>DISC + Emotional Intelligence</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandEIQ.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DiscPlusEiqChineseSampleReport.pdf"
-                                target="_blank" rel="noopener">Chinese (Simplified)</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandEIQ.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DiscPlusEiqChineseSampleReport.pdf"
+                                    target="_blank" rel="noopener">Chinese (Simplified)</a><br />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- EIQ 360 REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="eiq360ReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="eiq360ReportModal = false">Close</a>
+            <!-- EIQ 360 REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="eiq360ReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="eiq360ReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Emotional Intelligence 360&deg; Reports</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Emotional Intelligence 360&deg; Reports</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360FrenchSampleReport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">French</a><br />
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360RussianSampleReport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">Russian</a><br />
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SpanishSampleReport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">Spanish</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360FrenchSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">French</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360RussianSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Russian</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQ360SpanishSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Spanish</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- LEARNING STYLES REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="learningStylesReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="learningStylesReportModal = false">Close</a>
+            <!-- LEARNING STYLES REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="learningStylesReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="learningStylesReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Learning Styles Reports</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Learning Styles Reports</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesSampleReport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Learning_Styles_-_Chinese.pdf"
-                                target="_blank" rel="noopener">Chinese</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesFrench.pdf"
-                                target="_blank" rel="noopener">French</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf"
-                                target="_blank" rel="noopener">Japanese</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf"
-                                target="_blank" rel="noopener">Portuguese (Brazil)</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLSVietnamese.pdf"
-                                target="_blank" rel="noopener">Vietnamese</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Learning_Styles_-_Chinese.pdf"
+                                    target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesFrench.pdf"
+                                    target="_blank" rel="noopener">French</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf"
+                                    target="_blank" rel="noopener">Japanese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf"
+                                    target="_blank" rel="noopener">Portuguese (Brazil)</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLSVietnamese.pdf"
+                                    target="_blank" rel="noopener">Vietnamese</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- DISC + LEARNING STYLES REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="discPlusLearningStylesReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="discPlusLearningStylesReportModal = false">Close</a>
+            <!-- DISC + LEARNING STYLES REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="discPlusLearningStylesReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="discPlusLearningStylesReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>DISC + Learning Styles</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>DISC + Learning Styles</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Learning_Styles_-_Chinese.pdf"
-                                target="_blank" rel="noopener">Chinese</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Learning_Styles_-_Chinese.pdf"
+                                    target="_blank" rel="noopener">Chinese</a><br />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- SALES IQ REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="salesIQReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="salesIQReportModal = false">Close</a>
+            <!-- SALES IQ REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="salesIQReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="salesIQReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Sales IQ Reports</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Sales IQ Reports</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusChinese.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">Chinese</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf"
-                                target="_blank" rel="noopener">French</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIqPlus_NorwegianSampleReport.pdf"
-                                target="_blank" rel="noopener">Norwegian</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusPortuguese.pdf"
-                                target="_blank" rel="noopener">Portuguese</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusSpanish.pdf"
-                                target="_blank" rel="noopener">Spanish</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQSwedish.pdf"
-                                target="_blank" rel="noopener">Swedish</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQTurkish.pdf"
-                                target="_blank" rel="noopener">Turkish</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusVietnamese.pdf"
-                                target="_blank" rel="noopener">Vietnamese</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusChinese.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf"
+                                    target="_blank" rel="noopener">French</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIqPlus_NorwegianSampleReport.pdf"
+                                    target="_blank" rel="noopener">Norwegian</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusPortuguese.pdf"
+                                    target="_blank" rel="noopener">Portuguese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusSpanish.pdf"
+                                    target="_blank" rel="noopener">Spanish</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQSwedish.pdf"
+                                    target="_blank" rel="noopener">Swedish</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQTurkish.pdf"
+                                    target="_blank" rel="noopener">Turkish</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusVietnamese.pdf"
+                                    target="_blank" rel="noopener">Vietnamese</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- SALES IQ TEAM REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="salesIQTeamReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="salesIQTeamReportModal = false">Close</a>
+            <!-- SALES IQ TEAM REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="salesIQTeamReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="salesIQTeamReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Sales IQ Team Reports</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Sales IQ Team Reports</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusGroupReport_Chinese.pdf"
-                                target="_blank" rel="noopener">Chinese</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf"
-                                target="_blank" rel="noopener">French</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIqPlus_NorwegianTeamReport.pdf"
-                                target="_blank" rel="noopener">Norwegian</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf"
-                                target="_blank" rel="noopener">Turkish</a><br />
-                            <a class="hyperlink"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf"
-                                target="_blank" rel="noopener">Vietnamese</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusGroupReport_Chinese.pdf"
+                                    target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf"
+                                    target="_blank" rel="noopener">French</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIqPlus_NorwegianTeamReport.pdf"
+                                    target="_blank" rel="noopener">Norwegian</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportturkish.pdf"
+                                    target="_blank" rel="noopener">Turkish</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf"
+                                    target="_blank" rel="noopener">Vietnamese</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
+                </section>
+            </transition>
 
-        <!-- LE 360 TEAM REPORTS MODAL -->
-        <transition name="fade">
-            <section v-if="le360ReportModal" class="modal-window">
-                <div class="container">
-                    <a title="Close" class="modal-close" @click="le360ReportModal = false">Close</a>
+            <!-- LE 360 TEAM REPORTS MODAL -->
+            <transition name="fade">
+                <section v-if="le360ReportModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="le360ReportModal = false">Close</a>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Leadership Effectiveness 360&deg; Reports</h1>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Leadership Effectiveness 360&deg; Reports</h1>
 
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLE360.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360ChineseSampleReport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">Chinese</a><br />
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360SpanishSampleReport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">Spanish</a><br />
-                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360VietnameseSampleReport.pdf"
-                                class="hyperlink" target="_blank" rel="noopener">Vietnamese</a>
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleLE360.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360ChineseSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Chinese</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360SpanishSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Spanish</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360VietnameseSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Vietnamese</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </transition>
-    </div>
+                </section>
+            </transition>
+        </div>
 
-    <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
-</section></template>
+        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
+    </section>
+</template>
 
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
@@ -1710,7 +1700,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>@import '~assets/scss/vars';
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
 
 .sample-reports {
     .header {
