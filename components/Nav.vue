@@ -94,7 +94,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a tabindex="23" href="https://www.hiresense.com" target="_blank" rel="noopener">Hiring &amp;
+                                <a tabindex="23" href="/sample-reports#hiring-selection">Hiring &amp;
                                     Selection</a>
                             </li>
 

@@ -406,7 +406,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div class="section-hero other">
+                    <div id="hiring-selection" class="section-hero other">
                         <img class="globe-tex" src="~assets/globe-bg.png">
 
                         <h2>Specialty Assessments</h2>
