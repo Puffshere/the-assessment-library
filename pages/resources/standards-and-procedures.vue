@@ -332,7 +332,6 @@ export default {
 
 .titleText {
     margin-left: 20px;
-    // background-color: lightgray;
     background: linear-gradient(to top, lightgray, rgb(233, 232, 232));
     padding: 20px;
     border-radius: 20px;
