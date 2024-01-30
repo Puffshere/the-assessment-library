@@ -332,10 +332,11 @@ export default {
 
 .titleText {
     margin-left: 20px;
-    background-color: lightgray;
+    // background-color: lightgray;
+    background: linear-gradient(to top, lightgray, rgb(233, 232, 232));
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px rgb(83, 83, 83);
 }
 
 .pageTitle {
