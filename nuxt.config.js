@@ -132,7 +132,8 @@ module.exports = {
       '/suzette',
       '/cathy',
       '/cristina',
-      '/tools/email'
+      '/tools/email',
+      '/resources/standards-and-procedures'
     ]
   },
   gtm: {

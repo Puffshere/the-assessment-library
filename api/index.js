@@ -8,6 +8,7 @@ import communicationCoachController from './controllers/communicationCoachContro
 import contactController from './controllers/contactController';
 import uploadController from './controllers/uploadController';
 import leadController from './controllers/leadController';
+import settings from './controllers/settings';
 import GhostSearch from './ghost-search';
 import multer from 'multer';
 import cors from 'cors';
@@ -106,6 +107,10 @@ app.post('/contact/:contactId/tag/:tagId', (req, res) => {
     contactController.applyTag(req, res);
 });
 
+app.post('/settings', (req, res) => {
+    settings.getAllSettings(req, res);
+});
+
 app.post('/contact/:contactId/account', (req, res) => {
     contactController.createAccountAndAssociateContact(req, res);
 });
@@ -157,6 +162,26 @@ app.post('/completions', async (req, res) => {
     }
 });
 
+app.post('/api/verify-password', async (req, res) => {
+    try {
+        const { password } = req.body;
+        const db = client.db("website");
+        const collection = db.collection('settings');
+
+        const setting = await collection.findOne({ key: "employeeAccessPassword" });
+        const match = await bcrypt.compare(password, setting.hashedPassword);
+
+        if (match) {
+            res.json({ success: true });
+        } else {
+            res.json({ success: false });
+        }
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
+
 app.get('/lead/next-assignment', (req, res) => {
     leadController.getNextLeadAssignment(req, res);
 });
@@ -176,3 +201,5 @@ export default {
     path: '/api',
     handler: app
 };
+
+module.exports = { connectionString };

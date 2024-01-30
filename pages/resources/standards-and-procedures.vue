@@ -1,5 +1,5 @@
 <template>
-    <section class="affiliate-partner-materials">
+    <section class="standards-and-procedures">
         <main-nav />
 
         <div class="wrapper">
@@ -7,31 +7,27 @@
                 <div class="row rowItems">
                     <div class="col-8">
                         <div>
-                            <img class="titleImage" src="~assets/affiliate_partner_materials.png"
-                                alt="affiliate partner materials title image">
+                            <img class="titleImageLogo" src="~assets/logo.png">
+                            <h1 class="pageTitle">Intranet</h1>
                             <p class="titleText">
-                                Welcome to our Affiliate Partner Materials hub – your go-to resource for standardized and
-                                impactful brand representation. Utilize these tools, including email templates, social media
-                                posts, and logos, to ensure a cohesive global presence and maximize the effectiveness of our
-                                partnership. Please feel free to leverage these resources as needed to amplify our brand
-                                consistently across all channels.
+                                A company page for SOPs and other employee only links.
                             </p>
                         </div>
                     </div>
                     <div class="col-4">
-                        <img class="image" src="~assets/affiliate_partner_materials_logo.png"
-                            alt="affiliate partner materials logo">
+                        <img class="image" src="~assets/employee_med.png" alt="affiliate partner materials logo">
                     </div>
                 </div>
             </div>
         </div>
         <div class="template-library" v-if="unlocked">
             <div class="row template-library-row">
-                <div v-for="template in topRowTemplates" :key="template.name">
+                <div v-for="template in firstRowLinks" :key="template.name">
                     <div class="template-box">{{ template.name }}
                         <br>
                         <div class="titlePadding"></div>
-                        <div v-if="template.name === 'Affiliate Partner Logos' || template.name === 'Social Media'">
+                        <img :src="template.image" v-if="template.image" class="comingSoon">
+                        <div v-if="template.name === '' || template.name === ''">
                             <nuxt-link v-if="template.link1" :to="template.link1.url" class="link hyperlink">
                                 {{ template.link1.mainText }}
                                 <br>
@@ -65,25 +61,79 @@
                 </div>
             </div>
             <div class="row template-library-row">
-                <div v-for="template in bottomRowTemplates" :key="template.name">
+                <div v-for="template in secondRowLinks" :key="template.name">
                     <div class="template-box">{{ template.name }}
-                        <img v-if="template.image" :src="template.image" alt="coming soon image" class="comingSoon">
                         <br>
                         <div class="titlePadding"></div>
-                        <a v-if="template.link1" :href="template.link1.url" class="link hyperlink" target="_blank"
-                            rel="noopener">
-                            {{ template.link1.mainText }}
+                        <img :src="template.image" v-if="template.image" class="comingSoon">
+                        <div v-if="template.name === '' || template.name === ''">
+                            <nuxt-link v-if="template.link1" :to="template.link1.url" class="link hyperlink">
+                                {{ template.link1.mainText }}
+                                <br>
+                                {{ template.link1.subText }}
+                            </nuxt-link>
+                            <span style="display: block; margin-bottom: -20px;"></span>
                             <br>
-                            {{ template.link1.subText }}
-                        </a>
-                        <span style="display: block; margin-bottom: -20px;"></span>
+                            <nuxt-link v-if="template.link2" :to="template.link2.url" class="link hyperlink">
+                                {{ template.link2.mainText }}
+                                <br>
+                                {{ template.link2.subText }}
+                            </nuxt-link>
+                        </div>
+                        <div v-else>
+                            <a v-if="template.link1" :href="template.link1.url" class="link hyperlink" target="_blank"
+                                rel="noopener">
+                                {{ template.link1.mainText }}
+                                <br>
+                                {{ template.link1.subText }}
+                            </a>
+                            <span style="display: block; margin-bottom: -20px;"></span>
+                            <br>
+                            <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
+                                rel="noopener">
+                                {{ template.link2.mainText }}
+                                <br>
+                                {{ template.link2.subText }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row template-library-row">
+                <div v-for="template in thirdRowLinks" :key="template.name">
+                    <div class="template-box">{{ template.name }}
                         <br>
-                        <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
-                            rel="noopener">
-                            {{ template.link2.mainText }}
+                        <div class="titlePadding"></div>
+                        <img :src="template.image" v-if="template.image" class="comingSoon">
+                        <div v-if="template.name === '' || template.name === ''">
+                            <nuxt-link v-if="template.link1" :to="template.link1.url" class="link hyperlink">
+                                {{ template.link1.mainText }}
+                                <br>
+                                {{ template.link1.subText }}
+                            </nuxt-link>
+                            <span style="display: block; margin-bottom: -20px;"></span>
                             <br>
-                            {{ template.link2.subText }}
-                        </a>
+                            <nuxt-link v-if="template.link2" :to="template.link2.url" class="link hyperlink">
+                                {{ template.link2.mainText }}
+                                <br>
+                                {{ template.link2.subText }}
+                            </nuxt-link>
+                        </div>
+                        <div v-else>
+                            <a v-if="template.link1" :href="template.link1.url" class="link hyperlink">
+                                {{ template.link1.mainText }}
+                                <br>
+                                {{ template.link1.subText }}
+                            </a>
+                            <span style="display: block; margin-bottom: -20px;"></span>
+                            <br>
+                            <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
+                                rel="noopener">
+                                {{ template.link2.mainText }}
+                                <br>
+                                {{ template.link2.subText }}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,10 +145,10 @@
                     <div class="password-prompt">
                         <form @submit.prevent="attemptLogin">
                             <div class="info">
-                                <h3>This resource is password protected</h3>
+                                <h3>These resources are password protected</h3>
                                 <p>
-                                    These resources are only available for Assessments 24x7 account holders.
-                                    Please use the password provided to you in your Resource Center.
+                                    These resources are only available for Assessments 24x7 Employees.
+                                    Please use the password provided by your team leader.
                                 </p>
                             </div>
 
@@ -118,8 +168,7 @@
                                     support team &rarr;</a>
                             </p>
 
-                            <button type="submit" class="button" style="width:100%">Access the Affiliate Partner
-                                Materials</button>
+                            <button type="submit" class="button" style="width:100%">Access the Employee Materials</button>
                         </form>
                     </div>
                 </div>
@@ -135,129 +184,124 @@
 <script>
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import axios from 'axios';
+
 
 export default {
     components: {
         'main-nav': Nav,
         'footer-fold': Footer
     },
-    name: 'AffiliatePartnerMaterials',
+    name: 'StandardsAndProcedures',
     data() {
         return {
             unlocked: false,
             password: '',
             validationError: false,
-            topRowTemplates: [
+            firstRowLinks: [
                 {
-                    name: 'Affiliate Partner Logos',
+                    name: 'Certification',
                     link1: {
-                        url: '/resources/affiliate-partner-logo-files',
-                        mainText: 'Affiliate Partner',
-                        subText: 'Logo Files'
-                    },
-                },
-                {
-                    name: 'Rate Sheets',
-                    link1: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Pricing+%26+Instruction+Sheets/A24x7+Pricing+Guide+CP+Q223.pdf',
-                        mainText: 'Corp Rate Sheet',
-                        subText: '(PDF Download)'
-                    },
-                    link2: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Pricing+%26+Instruction+Sheets/A24x7+Pricing+Guide+RS+Q223.pdf',
-                        mainText: 'RS Rate Sheet',
-                        subText: '(PDF Download)'
-                    },
-                },
-                {
-                    name: 'Social Media',
-                    link1: {
-                        url: '/resources/social-media-templates',
-                        mainText: 'Social Media',
-                        subText: 'Templates'
-                    },
-                }
-            ],
-            bottomRowTemplates: [
-                {
-                    name: 'Graphics Files',
-                    link1: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/mini-brand-guide-v2.png',
-                        mainText: 'Mini Brand Guide'
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Upskill_Certification_Sales_Instructions.pdf',
+                        mainText: 'Upskill Certification',
+                        subText: 'Sales Instructions'
                     }
                 },
                 {
-                    name: 'Email Templates',
+                    name: 'Sales & Retention',
                     link1: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Support+email+-+affiliate+partners.pdf',
-                        mainText: 'Support Template',
-                        subText: '(PDF Download)'
-                    },
-                    link2: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Sales+email+series.pdf',
-                        mainText: 'Sales Template',
-                        subText: '(PDF Download)'
-                    },
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Report_Pricing_Full_list-editable.docx',
+                        mainText: 'Report Pricing Full List',
+                        subText: '*NOTE Save as a pdf before sending to clients'
+                    }
                 },
                 {
-                    name: 'Email Series',
+                    name: 'Support',
+                    image: '/images/comingSoonYellow.webp',
+                }
+            ],
+            secondRowLinks: [
+                {
+                    name: 'Translations/Custom Work',
+                    image: '/images/comingSoonYellow.webp',
+                },
+                {
+                    name: 'Training',
+                    image: '/images/comingSoonYellow.webp',
+                },
+                {
+                    name: 'Development',
+                    image: '/images/comingSoonYellow.webp',
+                }
+            ],
+            thirdRowLinks: [
+                {
+                    name: 'Marketing',
+                    image: '/images/comingSoonYellow.webp',
+                },
+                {
+                    name: 'Coaching',
+                    image: '/images/comingSoonYellow.webp',
+                },
+                {
+                    name: 'Misc',
                     link1: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Email+retention+series+-+for+all+customers.pdf',
-                        mainText: 'Customer Retention',
-                        subText: '(PDF Download)'
-                    },
-                    link2: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Retention+emails+for+DISC+Certification+customers.pdf',
-                        mainText: 'DISC Certification',
-                        subText: '(PDF Download)'
-                    },
+                        url: 'https://www.assessments24x7.com/forms',
+                        mainText: 'Company',
+                        subText: 'Forms & Calendar'
+                    }
                 }
             ],
         };
     },
     mounted() {
-        this.checkStoredPassword();
+        this.checkEmployeePassword();
         setTimeout(() => {
-            localStorage.removeItem('storedPassword');
+            localStorage.removeItem('employeePassword');
             this.unlocked = false;
             this.password = '';
         }, 20 * 60 * 1000); // 20 minutes
     },
     methods: {
         async attemptLogin() {
-            const success = await this.$store.dispatch('auth/login', this.password);
+            const success = await this.$store.dispatch('employeeAuth/login', this.password);
             if (success) {
                 this.unlocked = true;
                 this.validationError = false;
-                localStorage.setItem('storedPassword', this.password);
+                localStorage.setItem('employeePassword', this.password);
             } else {
                 this.validationError = true;
                 this.password = '';
             }
         },
-        checkStoredPassword() {
-            const storedPassword = localStorage.getItem('storedPassword');
-            if (storedPassword === 'a24x7partnersocial1207') {
-                this.unlocked = true;
-            }
-            else {
+        async checkEmployeePassword() {
+            try {
+                const response = await axios.post('/api/settings');
+                const currentPassword = localStorage.getItem('employeePassword');
+                const databasePassword = response.data.settings[0].hashedPassword;
+                if (databasePassword === currentPassword) {
+                    this.unlocked = true;
+                }
+            } catch (error) {
+                console.error("Error verifying password", error);
                 this.unlocked = false;
             }
         }
+
     },
     computed: {
         isAuthenticated() {
-            return this.$store.state.auth.isAuthenticated;
+            return this.$store.state.employeeAuth.isAuthenticated;
         }
     },
     head() {
         return {
-            title: 'Affiliate Partner Materials | Assessments 24x7',
+            title: 'Assessments 24x7 Intranet | Assessments 24x7',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Enhance your social media presence using our branded templates on Canva. Customize these professionally crafted designs to incorporate your preferred language, logos, and more within your Canva Pro Account. Leverage the provided information exclusively for branding guidance, maintaining authenticity by avoiding verbatim copying. Establish credibility and captivate your audience with visually stunning content that resonates. Elevate your brand effortlessly!'
+                    content: ''
                 }
             ]
         }
@@ -288,11 +332,24 @@ export default {
 
 .titleText {
     margin-left: 20px;
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
 }
 
-.titleImage {
+.pageTitle {
+    letter-spacing: 1px;
+    font-size: xxx-large;
+    margin-left: 90px;
+    color: #191919;
+}
+
+.titleImageLogo {
     width: 100%;
+    margin-top: 20px;
     margin-left: -30px;
+    margin-bottom: -58px;
 }
 
 .image {
@@ -340,6 +397,7 @@ export default {
     right: -30px;
     width: auto;
     height: auto;
+
 }
 
 .password-prompt {
