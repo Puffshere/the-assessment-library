@@ -15,7 +15,8 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <img class="image" src="~assets/employee_med.png" alt="affiliate partner materials logo">
+                        <img src="~assets/employee_procedures_med.png" alt="affiliate partner materials logo">
+                        <div class="shadow"></div>
                     </div>
                 </div>
             </div>
@@ -23,7 +24,8 @@
         <div class="template-library" v-if="unlocked">
             <div class="row template-library-row">
                 <div v-for="template in firstRowLinks" :key="template.name">
-                    <div class="template-box">{{ template.name }}
+                    <div class="template-box centering">
+                        {{ template.name }}
                         <br>
                         <div class="titlePadding"></div>
                         <img :src="template.image" v-if="template.image" class="comingSoon">
@@ -42,12 +44,19 @@
                             </nuxt-link>
                         </div>
                         <div v-else>
-                            <a v-if="template.link1" :href="template.link1.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link1.mainText }}
+                            <div v-if="template.link1 && template.name === 'Sales & Retention'">
+                                <a :href="template.link1.url" class="link hyperlink placement" target="_blank"
+                                    rel="noopener">
+                                    {{ template.link1.mainText }}
+                                </a>
                                 <br>
-                                {{ template.link1.subText }}
-                            </a>
+                                <span class="footNote">*NOTE Save as a pdf before sending to clients</span>
+                            </div>
+                            <div v-else-if="template.link1 && template.name !== 'Sales & Retention'">
+                                <a :href="template.link1.url" class="link hyperlink" target="_blank" rel="noopener">
+                                    <div class="">{{ template.link1.mainText }}</div>
+                                </a>
+                            </div>
                             <span style="display: block; margin-bottom: -20px;"></span>
                             <br>
                             <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
@@ -203,16 +212,17 @@ export default {
                     name: 'Certification',
                     link1: {
                         url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Upskill_Certification_Sales_Instructions.pdf',
-                        mainText: 'Upskill Certification',
-                        subText: 'Sales Instructions'
+                        mainText: 'Upskill Certification Sales Instructions',
+                        subText: ''
                     }
                 },
                 {
                     name: 'Sales & Retention',
                     link1: {
                         url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Report_Pricing_Full_list-editable.docx',
-                        mainText: 'Report Pricing Full List',
-                        subText: '*NOTE Save as a pdf before sending to clients'
+                        mainText: 'Full Report List (Editable)',
+                        subText: '',
+                        footNote: '*NOTE Save as a pdf before sending to clients'
                     }
                 },
                 {
@@ -247,8 +257,8 @@ export default {
                     name: 'Misc',
                     link1: {
                         url: 'https://www.assessments24x7.com/forms',
-                        mainText: 'Company',
-                        subText: 'Forms & Calendar'
+                        mainText: 'Forms & Calendar',
+                        subText: ''
                     }
                 }
             ],
@@ -332,10 +342,11 @@ export default {
 
 .titleText {
     margin-left: 20px;
-    background: linear-gradient(to top, lightgray, rgb(233, 232, 232));
+    background: linear-gradient(to top, lightgray, rgb(238, 238, 238));
     padding: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgb(83, 83, 83);
+    color: rgb(41, 41, 41);
 }
 
 .pageTitle {
@@ -352,12 +363,19 @@ export default {
     margin-bottom: -58px;
 }
 
-.image {
-    padding: 20px 0;
+$pixel: 15px;
+
+.shadow {
+    background-image: radial-gradient(#aaa, transparent 60%);
+    position: absolute;
+    right: -$pixel * 1;
+    bottom: -$pixel * -1;
+    width: $pixel * 23;
+    height: $pixel * 4;
 }
 
-.template-library {
-    text-align: center;
+.centering {
+    text-align: center !important;
 }
 
 .template-library-row {
@@ -384,11 +402,28 @@ export default {
     color: #0749c4;
     position: relative;
 
+    .placement {
+        margin-top: 0px !important;
+    }
+
     .link {
         font-style: normal !important;
-        font-size: 18px !important;
-        color: black !important;
+        font-size: 14px !important;
+        position: absolute;
+        left: 15px;
+        margin-top: 20px;
     }
+}
+
+.footNote {
+    position: relative;
+    font-size: 12px !important;
+    top: 55px;
+    margin-top: -60px !important;
+    left: -26px;
+    display: block;
+    width: 305px;
+    color: rgb(56, 56, 56);
 }
 
 .comingSoon {
@@ -397,7 +432,6 @@ export default {
     right: -30px;
     width: auto;
     height: auto;
-
 }
 
 .password-prompt {
@@ -439,11 +473,33 @@ export default {
     }
 }
 
+@media (max-width: 1100px) {
+
+    .template-library-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shadow {
+        background-image: radial-gradient(#aaa, transparent 60%);
+        position: absolute;
+        right: -$pixel * -15;
+        bottom: -$pixel * 3;
+        width: $pixel * 23;
+        height: $pixel * 4;
+    }
+}
+
 @media (max-width: 1000px) {
 
     .template-library-row {
         flex-direction: column;
         align-items: center;
+    }
+
+    .shadow {
+        right: -$pixel * -9;
+        bottom: -$pixel * 3;
     }
 }
 
@@ -458,6 +514,11 @@ export default {
         margin: 10px;
         padding: 10px;
         box-sizing: border-box;
+    }
+
+    .shadow {
+        right: -$pixel * 1;
+        bottom: -$pixel * 3;
     }
 }
 
@@ -481,6 +542,11 @@ export default {
         margin: 10px;
         padding: 10px;
         box-sizing: border-box;
+    }
+
+    .shadow {
+        right: -$pixel * 1;
+        bottom: -$pixel * -1;
     }
 }
 </style>
