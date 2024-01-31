@@ -71,7 +71,7 @@
             </div>
             <div class="row template-library-row">
                 <div v-for="template in secondRowLinks" :key="template.name">
-                    <div class="template-box">{{ template.name }}
+                    <div class="template-box centering">{{ template.name }}
                         <br>
                         <div class="titlePadding"></div>
                         <img :src="template.image" v-if="template.image" class="comingSoon">
@@ -110,7 +110,7 @@
             </div>
             <div class="row template-library-row">
                 <div v-for="template in thirdRowLinks" :key="template.name">
-                    <div class="template-box">{{ template.name }}
+                    <div class="template-box centering">{{ template.name }}
                         <br>
                         <div class="titlePadding"></div>
                         <img :src="template.image" v-if="template.image" class="comingSoon">
