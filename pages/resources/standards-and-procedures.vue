@@ -369,7 +369,7 @@ $pixel: 15px;
     padding-top: 6px;
     max-height: 5px;
     border-radius: 10px;
-    box-shadow: 1px 2px 1px rgba(136, 136, 136, 0.61);
+    box-shadow: -1px 2px 1px rgba(136, 136, 136, 0.61);
 }
 
 .fineLines {
@@ -396,21 +396,24 @@ $pixel: 15px;
 .diagonal-line {
     position: absolute;
     z-index: 5;
-    min-height: 120px;
-    border-radius: 4px;
-    padding: 6px;
-    background-image: linear-gradient(45deg, #a4bcce, #8eb0ce);
-    box-shadow: 0px 5px 6px rgb(158, 157, 157);
-    margin-top: -40px;
+    border-radius: 10px;
+    padding: 4px;
+    background-image: linear-gradient(to left, #deeaf3, #acc1d4);
+    box-shadow: -1px 2px 2px rgb(146, 145, 145);
+    box-shadow: 1px 1px 1px rgb(146, 145, 145);
     transform: rotate(20deg);
 }
 
 .diagonal-line1 {
+    margin-top: -40px;
     left: 110px;
+    min-height: 120px;
 }
 
 .diagonal-line2 {
+    margin-top: -20px;
     left: 135px;
+    min-height: 100px;
 }
 
 .titleText {
