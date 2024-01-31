@@ -396,12 +396,12 @@ $pixel: 15px;
 .diagonal-line {
     position: absolute;
     z-index: 5;
-    min-height: 80px;
+    min-height: 120px;
     border-radius: 4px;
     padding: 6px;
-    background-image: linear-gradient(120deg, #6d8497, #85c1f1);
-    box-shadow: 0px 5px 8px rgb(70, 70, 70);
-    margin-top: -7px;
+    background-image: linear-gradient(45deg, #a4bcce, #8eb0ce);
+    box-shadow: 0px 5px 8px rgb(158, 157, 157);
+    margin-top: -40px;
     transform: rotate(20deg);
 }
 
