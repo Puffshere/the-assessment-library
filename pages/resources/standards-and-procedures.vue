@@ -346,7 +346,7 @@ export default {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgb(83, 83, 83);
-    color: rgb(41, 41, 41);
+    color: rgb(43, 43, 43);
 }
 
 .pageTitle {
