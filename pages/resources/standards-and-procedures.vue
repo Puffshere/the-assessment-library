@@ -18,6 +18,9 @@
                         <img src="~assets/employee_procedures_med.png" alt="affiliate partner materials logo">
                         <div class="shadow"></div>
                     </div>
+                    <div class="fineLine fineLines"></div>
+                    <div class="fineLine fineLine1"></div>
+                    <div class="fineLine fineLine2"></div>
                 </div>
             </div>
         </div>
@@ -320,6 +323,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$pixel: 15px;
+
 .col-4 {
     display: flex;
     justify-content: center;
@@ -356,14 +361,42 @@ export default {
     color: #191919;
 }
 
+.fineLine {
+    position: absolute;
+    z-index: -1;
+    padding-top: 6px;
+    max-height: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px rgba(136, 136, 136, 0.61);
+}
+
+.fineLines {
+    background-color: #3a78ab13;
+    top: 100px;
+    right: 60px;
+    min-width: 270px;
+}
+
+.fineLine1 {
+    background-color: #3a78ab1e;
+    top: 130px;
+    right: 50px;
+    min-width: 360px;
+}
+
+.fineLine2 {
+    background-color: #3a78ab31;
+    top: 160px;
+    right: 40px;
+    min-width: 670px;
+}
+
 .titleImageLogo {
     width: 100%;
     margin-top: 20px;
     margin-left: -30px;
     margin-bottom: -58px;
 }
-
-$pixel: 15px;
 
 .shadow {
     background-image: radial-gradient(#aaa, transparent 60%);
