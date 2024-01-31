@@ -607,5 +607,4 @@ $pixel: 15px;
         right: -$pixel * 1;
         bottom: -$pixel * -1;
     }
-}
-</style>
+}</style>
