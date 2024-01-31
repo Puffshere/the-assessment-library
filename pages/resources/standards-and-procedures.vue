@@ -400,7 +400,7 @@ $pixel: 15px;
     border-radius: 4px;
     padding: 6px;
     background-image: linear-gradient(45deg, #a4bcce, #8eb0ce);
-    box-shadow: 0px 5px 8px rgb(158, 157, 157);
+    box-shadow: 0px 5px 6px rgb(158, 157, 157);
     margin-top: -40px;
     transform: rotate(20deg);
 }
