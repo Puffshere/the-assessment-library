@@ -397,10 +397,10 @@ $pixel: 15px;
     position: absolute;
     z-index: 5;
     border-radius: 10px;
-    padding: 4px;
-    background-image: linear-gradient(to left, #deeaf3, #acc1d4);
-    box-shadow: -1px 2px 2px rgb(146, 145, 145);
-    box-shadow: 1px 1px 1px rgb(146, 145, 145);
+    padding: 3.5px;
+    background-image: linear-gradient(to left, #e0e8ee, #b7c8d8);
+    box-shadow: -1px 2px 2px rgb(184, 183, 183);
+    box-shadow: 2px 2px 2px rgb(182, 181, 181);
     transform: rotate(20deg);
 }
 
@@ -411,7 +411,7 @@ $pixel: 15px;
 }
 
 .diagonal-line2 {
-    margin-top: -20px;
+    margin-top: -24px;
     left: 135px;
     min-height: 100px;
 }
