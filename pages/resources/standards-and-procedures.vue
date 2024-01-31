@@ -9,6 +9,8 @@
                         <div>
                             <img class="titleImageLogo" src="~assets/logo.png">
                             <h1 class="pageTitle">Intranet</h1>
+                            <div class="diagonal-line diagonal-line1"></div>
+                            <div class="diagonal-line diagonal-line2"></div>
                             <p class="titleText">
                                 A company page for SOPs and other employee only links.
                             </p>
@@ -389,6 +391,30 @@ $pixel: 15px;
     top: 160px;
     right: 40px;
     min-width: 670px;
+}
+
+.diagonal-line {
+    position: absolute;
+    z-index: 5;
+    min-height: 80px;
+    border-radius: 4px;
+    padding: 6px;
+    background-image: linear-gradient(120deg, #6d8497, #85c1f1);
+    box-shadow: 0px 5px 8px rgb(70, 70, 70);
+    margin-top: -7px;
+    transform: rotate(20deg);
+}
+
+.diagonal-line1 {
+    left: 110px;
+}
+
+.diagonal-line2 {
+    left: 135px;
+}
+
+.titleText {
+    padding-left: 120px;
 }
 
 .titleImageLogo {
