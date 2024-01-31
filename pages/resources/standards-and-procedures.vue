@@ -398,20 +398,22 @@ $pixel: 15px;
     z-index: 5;
     border-radius: 10px;
     padding: 3.5px;
-    background-image: linear-gradient(to left, #e0e8ee, #b7c8d8);
-    box-shadow: -1px 2px 2px rgb(184, 183, 183);
-    box-shadow: 2px 2px 2px rgb(182, 181, 181);
+    background-image: linear-gradient(270deg,#deeaf3,#b3c4d4);
+    box-shadow: -1px 2px 2px #707070;
+    box-shadow: 1px 1px 1px #929191;
     transform: rotate(20deg);
 }
 
 .diagonal-line1 {
+    background-image: linear-gradient(to left, #e0e8ee, #aac3dd);
     margin-top: -40px;
     left: 110px;
     min-height: 120px;
 }
 
 .diagonal-line2 {
-    margin-top: -24px;
+    background-image: linear-gradient(to left, #e0e8ee, #adc4dd);
+    margin-top: -21px;
     left: 135px;
     min-height: 100px;
 }
