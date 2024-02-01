@@ -831,7 +831,10 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Vacation.pdf"
                                         target="_blank" rel="noopener">Planning a Vacation</a>
-                                        <small>Teams work together to create a vacation opportunity for another DISC style and present it to practice what they have learned about the styles and adaptability.</small></td>
+                                    <small>Teams work together to create a vacation opportunity for another DISC style and
+                                        present it to practice what they have learned about the styles and
+                                        adaptability.</small>
+                                </td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
