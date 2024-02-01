@@ -281,10 +281,6 @@ export default {
     margin-left: -100px;
 }
 
-.titleText {
-    letter-spacing: .5px;
-}
-
 .cardTitle {
     font-size: 28px;
     font-weight: 700;
