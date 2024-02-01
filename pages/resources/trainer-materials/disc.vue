@@ -487,12 +487,12 @@
                         <tbody>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DirDesc.mp4"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighD.mp4"
                                         target="_blank" rel="noopener">Description for High D Styles</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/SocDesc.mp4"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighI.mp4"
                                         target="_blank" rel="noopener">Description for High I Styles</a></td>
                             </tr>
                             <tr>
