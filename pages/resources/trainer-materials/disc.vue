@@ -497,12 +497,12 @@
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/RelDesc.mp4"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighS.mp4"
                                         target="_blank" rel="noopener">Description for High S Styles</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ThinkDesc.mp4"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighC.mp4"
                                         target="_blank" rel="noopener">Description for High C Styles</a></td>
                             </tr>
                             <tr>
