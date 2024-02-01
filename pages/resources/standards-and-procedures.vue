@@ -9,27 +9,22 @@
                         <div>
                             <img class="titleImageLogo" src="~assets/logo.png">
                             <h1 class="pageTitle">Intranet</h1>
-                            <!-- <div class="diagonal-line diagonal-line1"></div>
-                            <div class="diagonal-line diagonal-line2"></div> -->
                             <p class="titleText">
                                 A company page for SOPs and other employee only links.
                             </p>
                         </div>
                     </div>
                     <div class="col-4">
-                        <img class="mainRoundImage" src="~assets/employee_procedures_med.png" alt="affiliate partner materials logo">
-                        <!-- <div class="shadow"></div> -->
+                        <img class="mainRoundImage" src="~assets/employee_procedures_med.png"
+                            alt="affiliate partner materials logo">
                     </div>
-                    <!-- <div class="fineLine fineLines"></div>
-                    <div class="fineLine fineLine1"></div>
-                    <div class="fineLine fineLine2"></div> -->
                 </div>
             </div>
         </div>
         <div class="template-library" v-if="unlocked">
             <div class="row template-library-row">
                 <div v-for="template in firstRowLinks" :key="template.name">
-                    <div class="template-box centering">
+                    <div class="template-box centering" :class="{ 'scrollable-vertical': isScrollable(template) }">
                         {{ template.name }}
                         <br>
                         <div class="titlePadding"></div>
@@ -56,6 +51,7 @@
                                 </a>
                                 <br>
                                 <span class="footNote">*NOTE Save as a pdf before sending to clients</span>
+                                <br>
                             </div>
                             <div v-else-if="template.link1 && template.name !== 'Sales & Retention'">
                                 <a :href="template.link1.url" class="link hyperlink" target="_blank" rel="noopener">
@@ -67,8 +63,31 @@
                             <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
                                 rel="noopener">
                                 {{ template.link2.mainText }}
-                                <br>
-                                {{ template.link2.subText }}
+                            </a>
+                            <br>
+                            <a v-if="template.link3" :href="template.link3.url" class="link hyperlink" target="_blank"
+                                rel="noopener">
+                                {{ template.link3.mainText }}
+                            </a>
+                            <br>
+                            <a v-if="template.link4" :href="template.link4.url" class="link hyperlink" target="_blank"
+                                rel="noopener">
+                                {{ template.link4.mainText }}
+                            </a>
+                            <br>
+                            <a v-if="template.link5" :href="template.link5.url" class="link hyperlink" target="_blank"
+                                rel="noopener">
+                                {{ template.link5.mainText }}
+                            </a>
+                            <br>
+                            <a v-if="template.link6" :href="template.link6.url" class="link hyperlink" target="_blank"
+                                rel="noopener">
+                                {{ template.link6.mainText }}
+                            </a>
+                            <br>
+                            <a v-if="template.link7" :href="template.link7.url" class="link hyperlink" target="_blank"
+                                rel="noopener">
+                                {{ template.link7.mainText }}
                             </a>
                         </div>
                     </div>
@@ -228,6 +247,30 @@ export default {
                         mainText: 'Full Report List (Editable)',
                         subText: '',
                         footNote: '*NOTE Save as a pdf before sending to clients'
+                    },
+                    link2: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+Q1-2024.pdf',
+                        mainText: 'CP Pricing Q1-2024',
+                    },
+                    link3: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+Q1-2024%2BDWL.pdf',
+                        mainText: 'CP Pricing Q1-2024+DWL',
+                    },
+                    link4: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Additional+Reports+Sheet_CP.pdf',
+                        mainText: 'CP Additional Reports page',
+                    },
+                    link5: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+Q1-2024.pdf',
+                        mainText: 'RS Pricing Q1-2024',
+                    },
+                    link6: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+Q1-2024%2BDWL.pdf',
+                        mainText: 'RS Pricing Q1-2024+DWL',
+                    },
+                    link7: {
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Additional+Reports+Sheet_RS.pdf',
+                        mainText: 'RS Additional Reports page',
                     }
                 },
                 {
@@ -301,8 +344,11 @@ export default {
                 console.error("Error verifying password", error);
                 this.unlocked = false;
             }
+        },
+        isScrollable(template) {
+            const linkCount = [template.link1, template.link2, template.link3, template.link4, template.link5, template.link6, template.link7].filter(Boolean).length;
+            return linkCount > 4; // For example, if more than 4 links, it's scrollable
         }
-
     },
     computed: {
         isAuthenticated() {
@@ -358,7 +404,6 @@ $pixel: 15px;
 
 .mainRoundImage {
     margin-top: 30px;
-    margin-right: 60px;
 }
 
 .pageTitle {
@@ -366,61 +411,6 @@ $pixel: 15px;
     font-size: xxx-large;
     margin-left: 90px;
     color: #191919;
-}
-
-.fineLine {
-    position: absolute;
-    z-index: -1;
-    padding-top: 6px;
-    max-height: 5px;
-    border-radius: 10px;
-    box-shadow: -1px 2px 1px rgba(136, 136, 136, 0.61);
-}
-
-.fineLines {
-    background-color: #3a78ab13;
-    top: 100px;
-    right: 60px;
-    min-width: 270px;
-}
-
-.fineLine1 {
-    background-color: #3a78ab1e;
-    top: 130px;
-    right: 50px;
-    min-width: 360px;
-}
-
-.fineLine2 {
-    background-color: #3a78ab31;
-    top: 160px;
-    right: 40px;
-    min-width: 670px;
-}
-
-.diagonal-line {
-    position: absolute;
-    z-index: 5;
-    border-radius: 10px;
-    padding: 3.5px;
-    background-image: linear-gradient(270deg,#deeaf3,#b3c4d4);
-    box-shadow: -1px 2px 2px #707070;
-    box-shadow: 1px 1px 1px #929191;
-    transform: rotate(20deg);
-}
-
-.diagonal-line1 {
-    background-image: linear-gradient(to left, #e0e8ee, #aac3dd);
-    margin-top: -40px;
-    left: 110px;
-    min-height: 120px;
-}
-
-.diagonal-line2 {
-    background-image: linear-gradient(to left, #e0e8ee, #adc4dd);
-    margin-top: -21px;
-    left: 135px;
-    min-height: 100px;
 }
 
 .titleText {
@@ -434,17 +424,41 @@ $pixel: 15px;
     margin-bottom: -58px;
 }
 
-.shadow {
-    background-image: radial-gradient(#aaa, transparent 60%);
-    position: absolute;
-    right: -$pixel * 1;
-    bottom: -$pixel * -1;
-    width: $pixel * 23;
-    height: $pixel * 4;
-}
-
 .centering {
     text-align: center !important;
+}
+
+.scrollable-vertical {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Style the scrollbar itself (background) */
+.scrollable-vertical::-webkit-scrollbar {
+    width: 10px;
+    /* width of the entire scrollbar */
+}
+
+/* Style the scrollbar handle */
+.scrollable-vertical::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    /* color of the scroll thumb */
+    border-radius: 10px;
+    /* roundness of the scroll thumb */
+    border: 2px solid white;
+    /* creates padding around scroll thumb */
+}
+
+/* Style the scrollbar track */
+.scrollable-vertical::-webkit-scrollbar-track {
+    background: white;
+    /* color of the track */
+}
+
+/* Optional: style the scrollbar button (up and down arrows) */
+.scrollable-vertical::-webkit-scrollbar-button {
+    background-color: #666;
 }
 
 .template-library-row {
@@ -548,15 +562,6 @@ $pixel: 15px;
         flex-direction: column;
         align-items: center;
     }
-
-    .shadow {
-        background-image: radial-gradient(#aaa, transparent 60%);
-        position: absolute;
-        right: -$pixel * -15;
-        bottom: -$pixel * 3;
-        width: $pixel * 23;
-        height: $pixel * 4;
-    }
 }
 
 @media (max-width: 1000px) {
@@ -565,18 +570,9 @@ $pixel: 15px;
         flex-direction: column;
         align-items: center;
     }
-
-    .shadow {
-        right: -$pixel * -9;
-        bottom: -$pixel * 3;
-    }
 }
 
 @media (max-width: 480px) {
-
-    .image {
-        width: 50%;
-    }
 
     .template-box {
         min-width: calc(100% - 20px);
@@ -584,26 +580,13 @@ $pixel: 15px;
         padding: 10px;
         box-sizing: border-box;
     }
-
-    .shadow {
-        right: -$pixel * 1;
-        bottom: -$pixel * 3;
-    }
 }
 
 @media (max-width: 300px) {
 
-    .titleImage {
-        width: 125%;
-    }
-
     .titleText {
         font-size: 14px;
         margin-left: 5px;
-    }
-
-    .image {
-        width: 50%;
     }
 
     .template-box {
@@ -611,10 +594,5 @@ $pixel: 15px;
         margin: 10px;
         padding: 10px;
         box-sizing: border-box;
-    }
-
-    .shadow {
-        right: -$pixel * 1;
-        bottom: -$pixel * -1;
     }
 }</style>
