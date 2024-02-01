@@ -43,16 +43,10 @@
                                     <div class="row">
                                         <div class="cardBody">
                                             <div class="post" v-for="post in analysisPosts" :key="post.id">
-                                                <a :href="post.url" class="hyperlink" target="_blank" rel="noopener"> {{
-                                                    post.title }} </a>
+                                                <a :href="post.url" class="link hyperlink" target="_blank" rel="noopener">
+                                                    {{ post.title }} </a>
                                                 <br>
-                                                <span @mouseover="showTooltip(post.id)" @mouseleave="hideTooltip">
-                                                    {{ truncatedCaption(post.caption) }}
-                                                    <span v-if="activeTooltipId === post.id" class="custom-tooltip">{{
-                                                        post.caption }}</span>
-                                                </span>
-                                                <button v-if="isCaptionTruncated(post.caption)"
-                                                    @click="copyText(post.caption)" class="link">Copy</button>
+                                                    {{ post.caption }}
                                                 <hr>
                                             </div>
                                         </div>
@@ -89,13 +83,7 @@
                                                 <a :href="post.url" class="link hyperlink" target="_blank" rel="noopener">
                                                     {{ post.title }} </a>
                                                 <br>
-                                                <span @mouseover="showTooltip2(post.id)" @mouseleave="hideTooltip2">
-                                                    {{ truncatedCaption(post.caption) }}
-                                                    <span v-if="activeTooltipId2 === post.id" class="custom-tooltip">{{
-                                                        post.caption }}</span>
-                                                </span>
-                                                <button v-if="isCaptionTruncated(post.caption)"
-                                                    @click="copyText(post.caption)" class="link">Copy</button>
+                                                    {{ post.caption }}
                                                 <hr>
                                             </div>
                                         </div>
@@ -326,8 +314,8 @@ export default {
     color: rgb(17, 17, 17);
     padding: 10px 20px;
     border-radius: 5px;
-    left: 20%;
-    transform: translateX(-50%);
+    left: 40%;
+    transform: translateX(50%);
     z-index: 10;
     display: inline-block;
     border: 1px solid black;
