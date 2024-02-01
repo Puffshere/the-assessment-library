@@ -22,7 +22,6 @@
             </div>
         </div>
         <br>
-        <br>
         <div class="container">
             <div class="row">
                 <div class="content-box">
@@ -46,7 +45,8 @@
                                                 <a :href="post.url" class="link hyperlink" target="_blank" rel="noopener">
                                                     {{ post.title }} </a>
                                                 <br>
-                                                    {{ post.caption }}
+                                                    <div class="gap">{{ post.caption }}</div>
+                                                <br>
                                                 <hr>
                                             </div>
                                         </div>
@@ -83,7 +83,8 @@
                                                 <a :href="post.url" class="link hyperlink" target="_blank" rel="noopener">
                                                     {{ post.title }} </a>
                                                 <br>
-                                                    {{ post.caption }}
+                                                    <div class="gap">{{ post.caption }}</div>
+                                                <br>
                                                 <hr>
                                             </div>
                                         </div>
@@ -306,6 +307,10 @@ export default {
 .cardBody {
     margin-left: -20px;
     padding-right: 60px;
+}
+
+.gap {
+    margin-bottom: -18px;
 }
 
 .custom-tooltip {
