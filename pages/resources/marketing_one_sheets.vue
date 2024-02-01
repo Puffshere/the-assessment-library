@@ -7,7 +7,7 @@
                     <div class="col-8">
                         <div>
                             <h1 class="pageTitle">MARKETING ONE-SHEETS</h1>
-                            <p class="titleText">
+                            <p class="">
                                 Distribute marketing one-sheets through email attachments, print collateral, or website
                                 content. These serve as effective primers when introducing assessments and related concepts
                                 to employees or trainees. Customize each one-sheet with your business name and contact
