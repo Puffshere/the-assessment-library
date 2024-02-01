@@ -989,6 +989,16 @@
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+During+Change.pdf"
                                         target="_blank" rel="noopener">DISC in Action - During Change</a></td>
                             </tr>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+On+the+Phone.pdf"
+                                        target="_blank" rel="noopener">DISC in Action - On the Phone</a></td>
+                            </tr>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Leading+a+Meeting.pdf"
+                                        target="_blank" rel="noopener">DISC in Action - Leading a Meeting</a></td>
+                            </tr>
                         </tbody>
                     </table>
 
