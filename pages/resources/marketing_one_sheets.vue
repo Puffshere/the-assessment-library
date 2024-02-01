@@ -46,9 +46,10 @@
                                                 <a :href="post.url" class="hyperlink" target="_blank" rel="noopener"> {{
                                                     post.title }} </a>
                                                 <br>
-                                                <span @mouseover="hover = true" @mouseleave="hover = false"
-                                                    :title="hover ? post.caption : ''">
+                                                <span @mouseover="showTooltip(post.id)" @mouseleave="hideTooltip">
                                                     {{ truncatedCaption(post.caption) }}
+                                                    <span v-if="activeTooltipId === post.id" class="custom-tooltip">{{
+                                                        post.caption }}</span>
                                                 </span>
                                                 <button v-if="isCaptionTruncated(post.caption)"
                                                     @click="copyText(post.caption)" class="link">Copy</button>
@@ -88,9 +89,10 @@
                                                 <a :href="post.url" class="link hyperlink" target="_blank" rel="noopener">
                                                     {{ post.title }} </a>
                                                 <br>
-                                                <span @mouseover="hover = true" @mouseleave="hover = false"
-                                                    :title="hover ? post.caption : ''">
+                                                <span @mouseover="showTooltip2(post.id)" @mouseleave="hideTooltip2">
                                                     {{ truncatedCaption(post.caption) }}
+                                                    <span v-if="activeTooltipId2 === post.id" class="custom-tooltip">{{
+                                                        post.caption }}</span>
                                                 </span>
                                                 <button v-if="isCaptionTruncated(post.caption)"
                                                     @click="copyText(post.caption)" class="link">Copy</button>
@@ -127,6 +129,8 @@ export default {
     data() {
         return {
             hover: false,
+            activeTooltipId: null,
+            activeTooltipId2: null,
             analysisPosts: [
                 {
                     id: 1,
@@ -216,6 +220,18 @@ export default {
             const maxLength = 180;
             return caption.length > maxLength;
         },
+        showTooltip(postId) {
+            this.activeTooltipId = postId;
+        },
+        showTooltip2(postId) {
+            this.activeTooltipId2 = postId;
+        },
+        hideTooltip() {
+            this.activeTooltipId = null;
+        },
+        hideTooltip2() {
+            this.activeTooltipId2 = null;
+        }
     },
     head() {
         return {
@@ -283,6 +299,18 @@ export default {
     padding-bottom: -10px;
 }
 
+.cardImage {
+    position: relative;
+    top: 20px;
+    right: -10px;
+    width: 110px;
+}
+
+.cardDescription {
+    font-weight: 400;
+    font-size: 18px;
+}
+
 .link {
     cursor: pointer;
 }
@@ -290,6 +318,19 @@ export default {
 .cardBody {
     margin-left: -20px;
     padding-right: 60px;
+}
+
+.custom-tooltip {
+    position: absolute;
+    background-color: rgb(223, 222, 222);
+    color: rgb(17, 17, 17);
+    padding: 10px 20px;
+    border-radius: 5px;
+    left: 20%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: inline-block;
+    border: 1px solid black;
 }
 
 .header h4 {
@@ -331,18 +372,6 @@ export default {
     top: 50px;
     right: -50px;
     width: 150px;
-}
-
-.cardImage {
-    position: relative;
-    top: 20px;
-    right: -10px;
-    width: 110px;
-}
-
-.cardDescription {
-    font-weight: 400;
-    font-size: 18px;
 }
 
 @media (max-width: 745px) {
