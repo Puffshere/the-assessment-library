@@ -281,6 +281,10 @@ export default {
     margin-left: -100px;
 }
 
+.titleText {
+    letter-spacing: .5px;
+}
+
 .cardTitle {
     font-size: 28px;
     font-weight: 700;
@@ -297,7 +301,7 @@ export default {
 
 .cardDescription {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .link {
