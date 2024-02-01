@@ -9,20 +9,20 @@
                         <div>
                             <img class="titleImageLogo" src="~assets/logo.png">
                             <h1 class="pageTitle">Intranet</h1>
-                            <!-- <div class="diagonal-line diagonal-line1"></div>
-                            <div class="diagonal-line diagonal-line2"></div> -->
+                            <div class="diagonal-line diagonal-line1"></div>
+                            <div class="diagonal-line diagonal-line2"></div>
                             <p class="titleText">
                                 A company page for SOPs and other employee only links.
                             </p>
                         </div>
                     </div>
                     <div class="col-4">
-                        <img class="mainRoundImage" src="~assets/employee_procedures_med.png" alt="affiliate partner materials logo">
-                        <!-- <div class="shadow"></div> -->
+                        <img src="~assets/employee_procedures_med.png" alt="affiliate partner materials logo">
+                        <div class="shadow"></div>
                     </div>
-                    <!-- <div class="fineLine fineLines"></div>
+                    <div class="fineLine fineLines"></div>
                     <div class="fineLine fineLine1"></div>
-                    <div class="fineLine fineLine2"></div> -->
+                    <div class="fineLine fineLine2"></div>
                 </div>
             </div>
         </div>
@@ -356,11 +356,6 @@ $pixel: 15px;
     color: rgb(43, 43, 43);
 }
 
-.mainRoundImage {
-    margin-top: 30px;
-    margin-right: 60px;
-}
-
 .pageTitle {
     letter-spacing: 1px;
     font-size: xxx-large;
@@ -424,7 +419,7 @@ $pixel: 15px;
 }
 
 .titleText {
-    padding-left: 60px;
+    padding-left: 120px;
 }
 
 .titleImageLogo {
