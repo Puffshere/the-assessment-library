@@ -21,151 +21,73 @@
                 </div>
             </div>
         </div>
-        <div class="template-library" v-if="unlocked">
-            <div class="row template-library-row">
-                <div v-for="template in firstRowLinks" :key="template.name">
-                    <div class="template-box centering" :class="{ 'scrollable-vertical': isScrollable(template) }">
-                        {{ template.name }}
+        <div class="document-library" v-if="unlocked">
+            <div class="row document-library-row">
+                <div v-for="document in firstRowLinks" :key="document.id">
+                    <div class="document-box centering" :class="{ 'scrollable-vertical': isScrollable(document) }">
+                        {{ document.name }}
                         <br>
                         <div class="titlePadding"></div>
-                        <img :src="template.image" v-if="template.image" class="comingSoon">
-                        <div v-if="template.name === '' || template.name === ''">
-                            <nuxt-link v-if="template.link1" :to="template.link1.url" class="link hyperlink">
-                                {{ template.link1.mainText }}
-                                <br>
-                                {{ template.link1.subText }}
-                            </nuxt-link>
-                            <span style="display: block; margin-bottom: -20px;"></span>
+                        <img :src="document.image" v-if="document.image" class="comingSoon">
+                        <div v-for="link in document.links" :key="link.url">
+                            <a :href="link.url" class="link hyperlink placement" target="_blank" rel="noopener">
+                                {{ link.mainText }}
+                            </a>
                             <br>
-                            <nuxt-link v-if="template.link2" :to="template.link2.url" class="link hyperlink">
-                                {{ template.link2.mainText }}
+                            <div v-if="link.footNote">
+                                <span class="footNote">{{ link.footNote }}</span>
                                 <br>
-                                {{ template.link2.subText }}
-                            </nuxt-link>
-                        </div>
-                        <div v-else>
-                            <div v-if="template.link1 && template.name === 'Sales & Retention'">
-                                <a :href="template.link1.url" class="link hyperlink placement" target="_blank"
-                                    rel="noopener">
-                                    {{ template.link1.mainText }}
-                                </a>
-                                <br>
-                                <span class="footNote">*NOTE Save as a pdf before sending to clients</span>
                                 <br>
                             </div>
-                            <div v-else-if="template.link1 && template.name !== 'Sales & Retention'">
-                                <a :href="template.link1.url" class="link hyperlink" target="_blank" rel="noopener">
-                                    <div class="">{{ template.link1.mainText }}</div>
-                                </a>
-                            </div>
-                            <span style="display: block; margin-bottom: -20px;"></span>
-                            <br>
-                            <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link2.mainText }}
-                            </a>
-                            <br>
-                            <a v-if="template.link3" :href="template.link3.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link3.mainText }}
-                            </a>
-                            <br>
-                            <a v-if="template.link4" :href="template.link4.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link4.mainText }}
-                            </a>
-                            <br>
-                            <a v-if="template.link5" :href="template.link5.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link5.mainText }}
-                            </a>
-                            <br>
-                            <a v-if="template.link6" :href="template.link6.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link6.mainText }}
-                            </a>
-                            <br>
-                            <a v-if="template.link7" :href="template.link7.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link7.mainText }}
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row template-library-row">
-                <div v-for="template in secondRowLinks" :key="template.name">
-                    <div class="template-box centering">{{ template.name }}
+            <div class="row document-library-row">
+                <div v-for="document in secondRowLinks" :key="document.id">
+                    <div class="document-box centering" :class="{ 'scrollable-vertical': isScrollable(document) }">
+                        {{ document.name }}
                         <br>
                         <div class="titlePadding"></div>
-                        <img :src="template.image" v-if="template.image" class="comingSoon">
-                        <div v-if="template.name === '' || template.name === ''">
-                            <nuxt-link v-if="template.link1" :to="template.link1.url" class="link hyperlink">
-                                {{ template.link1.mainText }}
-                                <br>
-                                {{ template.link1.subText }}
-                            </nuxt-link>
-                            <span style="display: block; margin-bottom: -20px;"></span>
-                            <br>
-                            <nuxt-link v-if="template.link2" :to="template.link2.url" class="link hyperlink">
-                                {{ template.link2.mainText }}
-                                <br>
-                                {{ template.link2.subText }}
-                            </nuxt-link>
-                        </div>
-                        <div v-else>
-                            <a v-if="template.link1" :href="template.link1.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link1.mainText }}
-                                <br>
-                                {{ template.link1.subText }}
+                        <img :src="document.image" v-if="document.image" class="comingSoon">
+                        <div v-for="link in document.links" :key="link.url">
+                            <a :href="link.url" class="link hyperlink placement" target="_blank" rel="noopener">
+                                {{ link.mainText }}
                             </a>
-                            <span style="display: block; margin-bottom: -20px;"></span>
                             <br>
-                            <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link2.mainText }}
+                            <div v-if="link.footNote">
+                                <span class="footNote">{{ link.footNote }}</span>
                                 <br>
-                                {{ template.link2.subText }}
-                            </a>
+                                <br>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row template-library-row">
-                <div v-for="template in thirdRowLinks" :key="template.name">
-                    <div class="template-box centering">{{ template.name }}
+            <div class="row document-library-row">
+                <div v-for="document in thirdRowLinks" :key="document.id">
+                    <div class="document-box centering" :class="{ 'scrollable-vertical': isScrollable(document) }">
+                        {{ document.name }}
                         <br>
                         <div class="titlePadding"></div>
-                        <img :src="template.image" v-if="template.image" class="comingSoon">
-                        <div v-if="template.name === '' || template.name === ''">
-                            <nuxt-link v-if="template.link1" :to="template.link1.url" class="link hyperlink">
-                                {{ template.link1.mainText }}
-                                <br>
-                                {{ template.link1.subText }}
-                            </nuxt-link>
-                            <span style="display: block; margin-bottom: -20px;"></span>
+                        <img :src="document.image" v-if="document.image" class="comingSoon">
+                        <div v-for="link in document.links" :key="link.url">
+                            <div v-if="link.mainText === 'Forms & Calendar'">
+                                <a :href="link.url" class="link hyperlink placement">
+                                    {{ link.mainText }}
+                                </a>
+                            </div>
+                            <div v-else>
+                                <a :href="link.url" class="link hyperlink placement" target="_blank" rel="noopener">
+                                    {{ link.mainText }}
+                                </a>
+                            </div>
                             <br>
-                            <nuxt-link v-if="template.link2" :to="template.link2.url" class="link hyperlink">
-                                {{ template.link2.mainText }}
+                            <div v-if="link.footNote">
+                                <span class="footNote">{{ link.footNote }}</span>
                                 <br>
-                                {{ template.link2.subText }}
-                            </nuxt-link>
-                        </div>
-                        <div v-else>
-                            <a v-if="template.link1" :href="template.link1.url" class="link hyperlink">
-                                {{ template.link1.mainText }}
                                 <br>
-                                {{ template.link1.subText }}
-                            </a>
-                            <span style="display: block; margin-bottom: -20px;"></span>
-                            <br>
-                            <a v-if="template.link2" :href="template.link2.url" class="link hyperlink" target="_blank"
-                                rel="noopener">
-                                {{ template.link2.mainText }}
-                                <br>
-                                {{ template.link2.subText }}
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -233,81 +155,111 @@ export default {
             validationError: false,
             firstRowLinks: [
                 {
+                    id: 1,
                     name: 'Certification',
-                    link1: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Upskill_Certification_Sales_Instructions.pdf',
-                        mainText: 'Upskill Certification Sales Instructions',
-                        subText: ''
-                    }
+                    links: [
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Upskill_Certification_Sales_Instructions.pdf',
+                            mainText: 'Upskill Certification Sales Instructions',
+                        }
+                    ]
                 },
                 {
-                    name: 'Sales & Retention',
-                    link1: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Report_Pricing_Full_list-editable.docx',
-                        mainText: 'Full Report List (Editable)',
-                        subText: '',
-                        footNote: '*NOTE Save as a pdf before sending to clients'
-                    },
-                    link2: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+Q1-2024.pdf',
-                        mainText: 'CP Pricing Q1-2024',
-                    },
-                    link3: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+Q1-2024%2BDWL.pdf',
-                        mainText: 'CP Pricing Q1-2024+DWL',
-                    },
-                    link4: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Additional+Reports+Sheet_CP.pdf',
-                        mainText: 'CP Additional Reports page',
-                    },
-                    link5: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+Q1-2024.pdf',
-                        mainText: 'RS Pricing Q1-2024',
-                    },
-                    link6: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+Q1-2024%2BDWL.pdf',
-                        mainText: 'RS Pricing Q1-2024+DWL',
-                    },
-                    link7: {
-                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Additional+Reports+Sheet_RS.pdf',
-                        mainText: 'RS Additional Reports page',
-                    }
+                    id: 2,
+                    name: "Sales & Retention",
+                    links: [
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Report_Pricing_Full_list-editable.docx",
+                            mainText: "Full Report List (Editable)",
+                            footNote: "*NOTE Save as a pdf before sending to clients"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+Q1-2024.pdf",
+                            mainText: "CP Pricing Q1-2024"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+Q1-2024%2BDWL.pdf",
+                            mainText: "CP Pricing Q1-2024+DWL"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Additional+Reports+Sheet_CP.pdf",
+                            mainText: "CP Additional Reports page"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+Q1-2024.pdf",
+                            mainText: "RS Pricing Q1-2024"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+Q1-2024%2BDWL.pdf",
+                            mainText: "RS Pricing Q1-2024+DWL"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Additional+Reports+Sheet_RS.pdf",
+                            mainText: "RS Additional Reports page"
+                        }
+                    ]
                 },
                 {
+                    id: 3,
                     name: 'Support',
                     image: '/images/comingSoonYellow.webp',
+                    links: [
+                        {
+                            url: "",
+                            main: ""
+                        }
+                    ]
                 }
             ],
             secondRowLinks: [
                 {
+                    id: 4,
                     name: 'Translations/Custom Work',
                     image: '/images/comingSoonYellow.webp',
                 },
                 {
+                    id: 5,
                     name: 'Training',
                     image: '/images/comingSoonYellow.webp',
                 },
                 {
+                    id: 6,
                     name: 'Development',
                     image: '/images/comingSoonYellow.webp',
                 }
             ],
             thirdRowLinks: [
                 {
+                    id: 7,
                     name: 'Marketing',
                     image: '/images/comingSoonYellow.webp',
                 },
                 {
+                    id: 8,
                     name: 'Coaching',
                     image: '/images/comingSoonYellow.webp',
                 },
                 {
+                    id: 9,
                     name: 'Misc',
-                    link1: {
-                        url: 'https://www.assessments24x7.com/forms',
-                        mainText: 'Forms & Calendar',
-                        subText: ''
-                    }
+                    links: [
+                        {
+                            url: 'https://www.assessments24x7.com/forms',
+                            mainText: 'Forms & Calendar',
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/IRSform.pdf',
+                            mainText: 'IRS W9 Form',
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/liablility-insurance.pdf',
+                            mainText: 'A24x7 Liability Insurance',
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/cyber-liability-insurance.pdf',
+                            mainText: 'A24x7 Cyber Liability Insurance',
+                        }
+                    ]
                 }
             ],
         };
@@ -335,8 +287,8 @@ export default {
         async checkEmployeePassword() {
             try {
                 const response = await axios.post('/api/settings');
-                const currentPassword = localStorage.getItem('employeePassword');
                 const databasePassword = response.data.settings[0].hashedPassword;
+                const currentPassword = localStorage.getItem('employeePassword');
                 if (databasePassword === currentPassword) {
                     this.unlocked = true;
                 }
@@ -345,9 +297,10 @@ export default {
                 this.unlocked = false;
             }
         },
-        isScrollable(template) {
-            const linkCount = [template.link1, template.link2, template.link3, template.link4, template.link5, template.link6, template.link7].filter(Boolean).length;
-            return linkCount > 4; // For example, if more than 4 links, it's scrollable
+        isScrollable(document) {
+            const isLinksArray = Array.isArray(document.links);
+            const linkCount = isLinksArray ? document.links.length : 0;
+            return linkCount > 4;
         }
     },
     computed: {
@@ -362,7 +315,7 @@ export default {
                 {
                     hid: 'description',
                     name: 'description',
-                    content: ''
+                    content: 'A company page for SOPs and other employee only links.'
                 }
             ]
         }
@@ -461,7 +414,7 @@ $pixel: 15px;
     background-color: #666;
 }
 
-.template-library-row {
+.document-library-row {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
@@ -471,7 +424,7 @@ $pixel: 15px;
     min-height: 20px;
 }
 
-.template-box {
+.document-box {
     border: 2px solid #5a5959;
     border-radius: 7px;
     padding: 10px 20px;
@@ -503,7 +456,7 @@ $pixel: 15px;
     font-size: 12px !important;
     top: 55px;
     margin-top: -60px !important;
-    left: -26px;
+    left: -30px;
     display: block;
     width: 305px;
     color: rgb(56, 56, 56);
@@ -558,7 +511,7 @@ $pixel: 15px;
 
 @media (max-width: 1100px) {
 
-    .template-library-row {
+    .document-library-row {
         flex-direction: column;
         align-items: center;
     }
@@ -566,7 +519,7 @@ $pixel: 15px;
 
 @media (max-width: 1000px) {
 
-    .template-library-row {
+    .document-library-row {
         flex-direction: column;
         align-items: center;
     }
@@ -574,7 +527,7 @@ $pixel: 15px;
 
 @media (max-width: 480px) {
 
-    .template-box {
+    .document-box {
         min-width: calc(100% - 20px);
         margin: 10px;
         padding: 10px;
@@ -589,10 +542,11 @@ $pixel: 15px;
         margin-left: 5px;
     }
 
-    .template-box {
+    .document-box {
         width: calc(100% - 20px);
         margin: 10px;
         padding: 10px;
         box-sizing: border-box;
     }
-}</style>
+}
+</style>
