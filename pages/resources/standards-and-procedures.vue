@@ -478,6 +478,7 @@ $pixel: 15px;
     padding: 20px;
     margin: -40px auto;
     display: block;
+    margin-top: -10px;
     margin-bottom: -30px;
 
     .info {
@@ -537,7 +538,7 @@ $pixel: 15px;
 
     .titleImageLogo {
         width: 120%;
-        margin-top: 15px;
+        margin-top: 0px;
         margin-left: -30px;
         margin-bottom: 0px;
     }
@@ -554,6 +555,33 @@ $pixel: 15px;
         margin-top: 0px;
         width: 70%;
         margin-bottom: -30px;
+    }
+
+    .password-prompt {
+        width: 100%;
+        max-width: 700px;
+        padding: 20px;
+        margin: -40px auto;
+        display: block;
+        margin-top: -10px;
+        margin-bottom: -30px;
+
+        .info {
+            background: rgba(255, 189, 7, .2);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 189, 7, .3);
+            margin-bottom: 18px;
+
+            h3 {
+                margin: 0 0 5px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 11pt;
+            }
+        }
     }
 }
 </style>
