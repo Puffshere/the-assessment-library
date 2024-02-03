@@ -559,8 +559,8 @@ $pixel: 15px;
 
     .pageTitle {
     letter-spacing: 1px;
-    font-size: xx-large;
-    margin-top: -10px;
+    font-size: x-large;
+    margin-top: -6px;
     margin-left: 30px;
     color: #191919;
 }
