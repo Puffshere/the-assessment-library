@@ -418,6 +418,8 @@ $pixel: 15px;
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    // flex-wrap: wrap;
+    // justify-content: space-around; 
 }
 
 .titlePadding {
@@ -437,6 +439,8 @@ $pixel: 15px;
     box-shadow: 4px 6px 0px rgb(36, 35, 35);
     color: #0749c4;
     position: relative;
+    max-width: 100%;
+    box-sizing: border-box;
 
     .placement {
         margin-top: 0px !important;
@@ -515,38 +519,55 @@ $pixel: 15px;
         flex-direction: column;
         align-items: center;
     }
+
+    .titleText {
+    padding-left: 30px;
+    margin-left: -20px;
+}
 }
 
-@media (max-width: 1000px) {
+// @media (max-width: 480px) {
 
-    .document-library-row {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+//     .document-box {
+//         min-width: calc(100% - 20px);
+//         margin: 10px;
+//         padding: 10px;
+//         box-sizing: border-box;
+//     }
+// }
 
-@media (max-width: 480px) {
-
-    .document-box {
-        min-width: calc(100% - 20px);
-        margin: 10px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
+@media (max-width: 768px) {
+   
 }
 
 @media (max-width: 300px) {
 
-    .titleText {
-        font-size: 14px;
-        margin-left: 5px;
+    .document-library-row {
+        flex-direction: column;
     }
 
     .document-box {
-        width: calc(100% - 20px);
-        margin: 10px;
-        padding: 10px;
-        box-sizing: border-box;
+        margin: 10px auto; /* centers the box */
     }
+
+    .titleImageLogo {
+    width: 130%;
+    margin-top: 0px;
+    margin-left: -30px;
+    margin-bottom: 0px;
+}
+
+    .pageTitle {
+    letter-spacing: 1px;
+    font-size: xx-large;
+    margin-top: -10px;
+    margin-left: 30px;
+    color: #191919;
+}
+
+.mainRoundImage {
+    margin-top: 0px;
+    width: 70%;
+}
 }
 </style>
