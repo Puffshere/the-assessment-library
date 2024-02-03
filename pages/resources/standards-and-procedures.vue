@@ -537,15 +537,15 @@ $pixel: 15px;
 
     .titleImageLogo {
         width: 120%;
-        margin-top: 0px;
+        margin-top: 15px;
         margin-left: -30px;
-        margin-bottom: -15px;
+        margin-bottom: 0px;
     }
 
     .pageTitle {
         letter-spacing: 1px;
         font-size: x-large;
-        margin-top: -6px;
+        margin-top: 6px;
         margin-left: 30px;
         color: #191919;
     }
