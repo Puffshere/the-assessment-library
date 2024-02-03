@@ -545,7 +545,7 @@ $pixel: 15px;
     .pageTitle {
         letter-spacing: 1px;
         font-size: x-large;
-        margin-top: 0px;
+        margin-top: -6px;
         margin-left: 30px;
         color: #191919;
     }
@@ -553,7 +553,7 @@ $pixel: 15px;
     .mainRoundImage {
         margin-top: 0px;
         width: 70%;
-        margin-bottom: -20px;
+        margin-bottom: -30px;
     }
 }
 </style>
