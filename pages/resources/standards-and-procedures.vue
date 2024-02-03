@@ -159,7 +159,7 @@ export default {
                     name: 'Certification',
                     links: [
                         {
-                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Upskill_Certification_Sales_Instructions.pdf',
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Upskill_Training_Sales_Instructions.pdf',
                             mainText: 'Upskill Certification Sales Instructions',
                         }
                     ]
