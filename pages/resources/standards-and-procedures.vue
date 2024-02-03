@@ -540,7 +540,7 @@ $pixel: 15px;
    
 }
 
-@media (max-width: 300px) {
+@media (max-width: 350px) {
 
     .document-library-row {
         flex-direction: column;
