@@ -45,7 +45,7 @@
                                                 <a :href="post.url" class="link hyperlink" target="_blank" rel="noopener">
                                                     {{ post.title }} </a>
                                                 <br>
-                                                    <div class="gap">{{ post.caption }}</div>
+                                                <div class="gap">{{ post.caption }}</div>
                                                 <br>
                                                 <hr>
                                             </div>
@@ -83,7 +83,7 @@
                                                 <a :href="post.url" class="link hyperlink" target="_blank" rel="noopener">
                                                     {{ post.title }} </a>
                                                 <br>
-                                                    <div class="gap">{{ post.caption }}</div>
+                                                <div class="gap">{{ post.caption }}</div>
                                                 <br>
                                                 <hr>
                                             </div>
@@ -313,19 +313,6 @@ export default {
     margin-bottom: -18px;
 }
 
-.custom-tooltip {
-    position: absolute;
-    background-color: rgb(223, 222, 222);
-    color: rgb(17, 17, 17);
-    padding: 10px 20px;
-    border-radius: 5px;
-    left: 40%;
-    transform: translateX(50%);
-    z-index: 10;
-    display: inline-block;
-    border: 1px solid black;
-}
-
 .header h4 {
     margin: 0;
     padding: 0;
@@ -368,37 +355,76 @@ export default {
 }
 
 @media (max-width: 745px) {
-    .post-inner {
-        max-height: none;
+
+    .pageTitle {
+        margin-top: -10px;
+        font-size: 30px;
     }
 
-    .text-column {
-        margin-left: 10px;
+    .image {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        width: 120px;
     }
 
-    .cardBody {
-        margin-left: 10px;
-        padding-right: 60px;
-    }
-}
-
-@media (max-width: 750px) {
-
+    
     .post-inner {
         flex-direction: column;
     }
-
+    
+    .image-column img {
+        margin-top: -60px;
+    }
+    
     .image-column,
     .text-column {
+        padding: 0px;
+        margin-left: 0px;
         flex-basis: 100%;
         max-width: 100%;
+
+        .cardTitle {
+            margin-top: 30px;
+            padding-left: 10px;
+        }
+
+        .cardDescription {
+            padding-left: 10px;
+            margin-left: 0px;
+        }
+
+        .cardBody {
+            padding-left: 40px;
+        }
     }
 
     .image-column img {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+        margin-left: -30px;
+        width: 30%;
+    }
+}
+
+@media (max-width: 350px) {
+    
+    .image-column,
+    .text-column {
+
+        .cardTitle {
+            margin-top: 30px;
+            padding-left: 10px;
+            font-size: 24px;
+        }
+
+        .cardDescription {
+            padding-left: 10px;
+            font-size: 16px;
+        }
+
+        .cardBody {
+            padding-left: 40px;
+        }
     }
 }
 </style>
