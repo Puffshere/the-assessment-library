@@ -128,17 +128,22 @@ app.post('/lead', (req, res) => {
 });
 
 app.post('/slack/events', (req, res) => {
-    // When you add the URL to your Slack event subscriptions,
-    // Slack will send a challenge parameter that you need to respond with.
+    console.log('Received a request from Slack: ', req.body);
+    
+    // Respond to Slack challenge
     if (req.body.challenge) {
-      return res.status(200).send(req.body.challenge);
+        console.log('Challenge received, responding to Slack...');
+        return res.status(200).send(req.body.challenge);
     }
   
-    // Your code here to handle the Slack events,
-    // such as messages posted in the announcements channel
-  
+    // Handle other Slack events here
+    // ...
+
+    // If there's no challenge, it's an actual event
+    console.log('Handling Slack event...');
     res.status(200).send('Event received');
-  });
+});
+
   
 
 app.post('/completions', async (req, res) => {
