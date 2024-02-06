@@ -127,7 +127,7 @@ app.post('/lead', (req, res) => {
     leadController.createLead(req, res);
 });
 
-app.post('api/slack/events', (req, res) => {
+app.post('/slack/events', (req, res) => {
     console.log('Received a request from Slack: ', req.body);
     
     // Respond to Slack challenge
