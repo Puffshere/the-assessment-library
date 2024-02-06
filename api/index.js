@@ -141,7 +141,7 @@ app.post('/slack/events', (req, res) => {
 
     // If there's no challenge, it's an actual event
     console.log('Handling Slack event...');
-    res.status(200).send('Event received',req.body);
+    res.status(200).send('Event received');
 });
 
   
