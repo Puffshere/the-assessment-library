@@ -127,6 +127,20 @@ app.post('/lead', (req, res) => {
     leadController.createLead(req, res);
 });
 
+app.post('/slack/events', (req, res) => {
+    // When you add the URL to your Slack event subscriptions,
+    // Slack will send a challenge parameter that you need to respond with.
+    if (req.body.challenge) {
+      return res.status(200).send(req.body.challenge);
+    }
+  
+    // Your code here to handle the Slack events,
+    // such as messages posted in the announcements channel
+  
+    res.status(200).send('Event received');
+  });
+  
+
 app.post('/completions', async (req, res) => {
     try {
         // Code needed for development
