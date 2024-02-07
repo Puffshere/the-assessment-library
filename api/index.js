@@ -9,6 +9,7 @@ import contactController from './controllers/contactController';
 import uploadController from './controllers/uploadController';
 import leadController from './controllers/leadController';
 import settings from './controllers/settings';
+import announcements from './controllers/announcements';
 import GhostSearch from './ghost-search';
 import multer from 'multer';
 import cors from 'cors';
@@ -91,12 +92,16 @@ app.get('/contact/custom-field/:fieldId', (req, res) => {
     contactController.getCustomField(req, res);
 });
 
-app.post('/contact', (req, res) => {
-    contactController.createContact(req, res);
-});
-
 app.get('/contact/:contactId', (req, res) => {
     contactController.getContact(req, res);
+});
+
+app.get('/announcements', (req, res) => {
+    announcements.getMostRecentAnnouncement(req, res);
+});
+
+app.post('/contact', (req, res) => {
+    contactController.createContact(req, res);
 });
 
 app.post('/contact/:contactId/subscribe', (req, res) => {
@@ -127,21 +132,22 @@ app.post('/lead', (req, res) => {
     leadController.createLead(req, res);
 });
 
-app.post('/slack/events', (req, res) => {
-    console.log('Received a request from Slack: ', req.body);
-    
-    // Respond to Slack challenge
+app.post('/slack/events', async (req, res) => {
     if (req.body.challenge) {
-        console.log('Challenge received, responding to Slack...');
         return res.status(200).send(req.body.challenge);
     }
-  
-    // Handle other Slack events here
-    // ...
-
-    // If there's no challenge, it's an actual event
-    console.log('Handling Slack event...');
-    res.status(200).send('Event received', req);
+    if (req.body.event && req.body.event.text) {
+        const announcement = req.body.event.text;
+        const saveResult = await announcements.addAnnouncement(announcement);
+        if (saveResult.success) {
+            console.log(saveResult.message); // Announcement saved successfully
+        } else {
+            console.error(saveResult.message); // Error occurred
+        }
+        res.status(200).send({ message: 'Event received and processed.' });
+    } else {
+        res.status(200).send('Event received');
+    }
 });
 
 app.post('/completions', async (req, res) => {

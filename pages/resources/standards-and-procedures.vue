@@ -9,9 +9,14 @@
                         <div>
                             <img class="titleImageLogo" src="~assets/logo.png">
                             <h1 class="pageTitle">Intranet</h1>
-                            <p class="titleText">
-                                A company page for SOPs and other employee only links.
-                            </p>
+                            <div class="announce" v-if="unlocked && announcements.length !== 0">
+                                <p class="announcementText"> {{ announcements }}</p>
+                            </div>
+                            <div v-else>
+                                <p class="titleText">
+                                    A company page for SOPs and other employee only links.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-4">
@@ -153,6 +158,7 @@ export default {
             unlocked: false,
             password: '',
             validationError: false,
+            announcements: [],
             firstRowLinks: [
                 {
                     id: 1,
@@ -266,6 +272,7 @@ export default {
     },
     mounted() {
         this.checkEmployeePassword();
+        this.fetchAnnouncements();
         setTimeout(() => {
             localStorage.removeItem('employeePassword');
             this.unlocked = false;
@@ -295,6 +302,14 @@ export default {
             } catch (error) {
                 console.error("Error verifying password", error);
                 this.unlocked = false;
+            }
+        },
+        async fetchAnnouncements() {
+            try {
+                const response = await axios.get('/api/announcements');
+                this.announcements = response.data.announcement.announcement_text;
+            } catch (error) {
+                console.error('There was an error fetching the announcements:', error);
             }
         },
         isScrollable(document) {
@@ -344,6 +359,19 @@ $pixel: 15px;
 .hero {
     padding: 30px 20px;
     min-height: 300px;
+}
+
+.announce {
+    position: relative;
+
+    .announcementText {
+        margin-left: 20px;
+        background: linear-gradient(to top, lightgray, rgb(238, 238, 238));
+        padding: 20px 30px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px rgb(83, 83, 83);
+        color: rgb(43, 43, 43);
+    }
 }
 
 .titleText {
