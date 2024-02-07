@@ -150,57 +150,65 @@ app.post('/lead', (req, res) => {
 //     }
 // });
 
-app.post('/slack/events', async (req, res) => {
-    // Verify URL for Slack event subscriptions
+// Unified function to handle adding announcements
+async function handleAddAnnouncement(text, responseUrl = null) {
+    try {
+        const saveResult = await announcements.addAnnouncement(text);
+        if (saveResult.success) {
+            console.log(saveResult.message); // Announcement saved successfully
+            if (responseUrl) {
+                // Send a confirmation message to the response_url if it was a slash command
+                await axios.post(responseUrl, {
+                    response_type: 'in_channel',
+                    text: "Announcement added successfully."
+                });
+            }
+        } else {
+            console.error(saveResult.message); // Error occurred
+            if (responseUrl) {
+                // Send an error message to the response_url if it was a slash command
+                await axios.post(responseUrl, {
+                    response_type: 'ephemeral',
+                    text: "Failed to add announcement."
+                });
+            }
+        }
+    } catch (error) {
+        console.error("Error adding announcement:", error);
+        if (responseUrl) {
+            // Send an error message to the response_url if it was a slash command
+            await axios.post(responseUrl, {
+                response_type: 'ephemeral',
+                text: `Error processing your command: ${error.message}`
+            });
+        }
+    }
+}
+
+// Endpoint to handle both Slack event notifications and slash commands
+app.post('/api/slack/events', async (req, res) => {
     if (req.body.challenge) {
         return res.status(200).send(req.body.challenge);
     }
 
-    // Handle Event API
     if (req.body.event) {
+        // Handle Event API logic
         if (req.body.event.type === 'message' && req.body.event.text) {
-            const announcement = req.body.event.text;
-            const saveResult = await announcements.addAnnouncement(announcement);
-            if (saveResult.success) {
-                console.log(saveResult.message); // Announcement saved successfully
-            } else {
-                console.error(saveResult.message); // Error occurred
-            }
+            // Process the message event and add an announcement
+            await handleAddAnnouncement(req.body.event.text);
             res.status(200).send({ message: 'Event received and processed.' });
         }
-    }
-    // Handle Slash Command
-    else if (req.body.command) {
-        // You can perform actions based on the 'text' received with the slash command
-        // You may want to process the command asynchronously and respond later
-        const commandText = req.body.text;
+    } else if (req.body.command) {
+        // Acknowledge the slash command immediately
+        res.status(200).send({ response_type: 'in_channel', text: 'Adding your announcement...' });
 
-        // Respond to the slash command with an acknowledgement message
-        // You will likely need to send the actual response asynchronously if it requires processing time
-        res.status(200).send({ response_type: 'in_channel', text: 'Processing your command...' });
-
-        // Perform the necessary actions based on the commandText
-        // For example, fetch and return the most recent announcement
-        // Use the response_url from the request body to send the delayed response back to Slack
-        // You'll need to implement the logic for getMostRecentAnnouncement accordingly
-        const mostRecentAnnouncement = await announcements.getMostRecentAnnouncement();
-        if (mostRecentAnnouncement) {
-            // Send the announcement message to Slack using the response_url
-            // This is a simplified example; you'll need to include error handling
-            axios.post(req.body.response_url, {
-                response_type: 'in_channel',
-                text: mostRecentAnnouncement.announcement_text,
-            });
-        } else {
-            // Handle the case where no announcement was found
-        }
-    }
-    else {
-        // If the request is neither an event nor a slash command
+        // Perform the necessary actions asynchronously and respond using the response_url
+        await handleAddAnnouncement(req.body.text, req.body.response_url);
+    } else {
+        // Respond to unknown requests
         res.status(400).send('Invalid request');
     }
 });
-
 
 app.post('/completions', async (req, res) => {
     try {
