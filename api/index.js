@@ -150,60 +150,60 @@ app.post('/lead', (req, res) => {
 //     }
 // });
 
-// Unified function to handle adding announcements
-async function handleAddAnnouncement(text, responseUrl = null) {
-    try {
-        const saveResult = await announcements.addAnnouncement(text);
-        if (saveResult.success) {
-            console.log(saveResult.message); // Announcement saved successfully
-            if (responseUrl) {
-                // Send a confirmation message to the response_url if it was a slash command
-                await axios.post(responseUrl, {
-                    response_type: 'in_channel',
-                    text: "Announcement added successfully."
-                });
-            }
-        } else {
-            console.error(saveResult.message); // Error occurred
-            if (responseUrl) {
-                // Send an error message to the response_url if it was a slash command
-                await axios.post(responseUrl, {
-                    response_type: 'ephemeral',
-                    text: "Failed to add announcement."
-                });
-            }
-        }
-    } catch (error) {
-        console.error("Error adding announcement:", error);
-        if (responseUrl) {
-            // Send an error message to the response_url if it was a slash command
-            await axios.post(responseUrl, {
-                response_type: 'ephemeral',
-                text: `Error processing your command: ${error.message}`
-            });
-        }
-    }
-}
-
 // Endpoint to handle both Slack event notifications and slash commands
 app.post('/api/slack/events', async (req, res) => {
+    // Verify the request from Slack with the challenge token
     if (req.body.challenge) {
         return res.status(200).send(req.body.challenge);
     }
 
+    // Handle Event API logic
     if (req.body.event) {
-        // Handle Event API logic
         if (req.body.event.type === 'message' && req.body.event.text) {
             // Process the message event and add an announcement
-            await handleAddAnnouncement(req.body.event.text);
-            res.status(200).send({ message: 'Event received and processed.' });
+            try {
+                const announcement = req.body.event.text;
+                const saveResult = await announcements.addAnnouncement(announcement);
+                if (saveResult.success) {
+                    console.log(saveResult.message); // Announcement saved successfully
+                } else {
+                    console.error(saveResult.message); // Error occurred
+                }
+                res.status(200).send({ message: 'Event received and processed.' });
+            } catch (error) {
+                console.error("Error handling event message:", error);
+                res.status(500).send('Internal Server Error');
+            }
         }
-    } else if (req.body.command) {
+    }
+    // Handle Slash Command logic
+    else if (req.body.command) {
         // Acknowledge the slash command immediately
-        res.status(200).send({ response_type: 'in_channel', text: 'Adding your announcement...' });
+        res.status(200).send({ response_type: 'in_channel', text: 'Processing your command...' });
 
-        // Perform the necessary actions asynchronously and respond using the response_url
-        await handleAddAnnouncement(req.body.text, req.body.response_url);
+        try {
+            // Perform the necessary actions asynchronously
+            const mostRecentAnnouncement = await announcements.getMostRecentAnnouncement();
+            if (mostRecentAnnouncement) {
+                // Send the announcement message to Slack using the response_url
+                await axios.post(req.body.response_url, {
+                    response_type: 'in_channel',
+                    text: mostRecentAnnouncement.announcement_text,
+                });
+            } else {
+                // Handle the case where no announcement was found
+                await axios.post(req.body.response_url, {
+                    response_type: 'ephemeral',
+                    text: 'No announcements found.',
+                });
+            }
+        } catch (error) {
+            // Handle any errors that occur during processing
+            await axios.post(req.body.response_url, {
+                response_type: 'ephemeral',
+                text: `Error processing your command: ${error.message}`,
+            });
+        }
     } else {
         // Respond to unknown requests
         res.status(400).send('Invalid request');
