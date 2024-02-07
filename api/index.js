@@ -154,7 +154,7 @@ app.post('/slack/events', async (req, res) => {
         const saveResult = await announcements.addAnnouncement(announcement);
         if (saveResult.success) {
             console.log(saveResult.message); // Announcement saved successfully
-            res.status(200).send({ response_type: 'in_channel', text: 'Command processed...' });
+            res.status(200).send({ response_type: 'in_channel', text: 'Annoucements updated...' });
         } else {
             console.error(saveResult.message); // Error occurred
             res.status(500).send({ response_type: 'in_channel', text: 'Command failed...' });
