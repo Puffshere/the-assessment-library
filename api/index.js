@@ -132,23 +132,75 @@ app.post('/lead', (req, res) => {
     leadController.createLead(req, res);
 });
 
+// app.post('/slack/events', async (req, res) => {
+//     if (req.body.challenge) {
+//         return res.status(200).send(req.body.challenge);
+//     }
+//     if (req.body.event && req.body.event.text) {
+//         const announcement = req.body.event.text;
+//         const saveResult = await announcements.addAnnouncement(announcement);
+//         if (saveResult.success) {
+//             console.log(saveResult.message); // Announcement saved successfully
+//         } else {
+//             console.error(saveResult.message); // Error occurred
+//         }
+//         res.status(200).send({ message: 'Event received and processed.' });
+//     } else {
+//         res.status(200).send('Event received');
+//     }
+// });
+
 app.post('/slack/events', async (req, res) => {
+    // Verify URL for Slack event subscriptions
     if (req.body.challenge) {
         return res.status(200).send(req.body.challenge);
     }
-    if (req.body.event && req.body.event.text) {
-        const announcement = req.body.event.text;
-        const saveResult = await announcements.addAnnouncement(announcement);
-        if (saveResult.success) {
-            console.log(saveResult.message); // Announcement saved successfully
-        } else {
-            console.error(saveResult.message); // Error occurred
+
+    // Handle Event API
+    if (req.body.event) {
+        if (req.body.event.type === 'message' && req.body.event.text) {
+            const announcement = req.body.event.text;
+            const saveResult = await announcements.addAnnouncement(announcement);
+            if (saveResult.success) {
+                console.log(saveResult.message); // Announcement saved successfully
+            } else {
+                console.error(saveResult.message); // Error occurred
+            }
+            res.status(200).send({ message: 'Event received and processed.' });
         }
-        res.status(200).send({ message: 'Event received and processed.' });
-    } else {
-        res.status(200).send('Event received');
+    }
+    // Handle Slash Command
+    else if (req.body.command) {
+        // You can perform actions based on the 'text' received with the slash command
+        // You may want to process the command asynchronously and respond later
+        const commandText = req.body.text;
+
+        // Respond to the slash command with an acknowledgement message
+        // You will likely need to send the actual response asynchronously if it requires processing time
+        res.status(200).send({ response_type: 'in_channel', text: 'Processing your command...' });
+
+        // Perform the necessary actions based on the commandText
+        // For example, fetch and return the most recent announcement
+        // Use the response_url from the request body to send the delayed response back to Slack
+        // You'll need to implement the logic for getMostRecentAnnouncement accordingly
+        const mostRecentAnnouncement = await announcements.getMostRecentAnnouncement();
+        if (mostRecentAnnouncement) {
+            // Send the announcement message to Slack using the response_url
+            // This is a simplified example; you'll need to include error handling
+            axios.post(req.body.response_url, {
+                response_type: 'in_channel',
+                text: mostRecentAnnouncement.announcement_text,
+            });
+        } else {
+            // Handle the case where no announcement was found
+        }
+    }
+    else {
+        // If the request is neither an event nor a slash command
+        res.status(400).send('Invalid request');
     }
 });
+
 
 app.post('/completions', async (req, res) => {
     try {
