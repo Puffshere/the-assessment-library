@@ -269,13 +269,13 @@
 
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMapPDFVersion.pdf"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap1.24.pdf"
                                         target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PDF)</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap.pptx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap1.24.pptx"
                                         target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting
                                         (PowerPoint)</a></td>
                             </tr>

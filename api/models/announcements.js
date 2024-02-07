@@ -5,7 +5,7 @@ const announcementSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now,
-        index: true, // This adds an index on the createdAt field
+        index: true,
     }
 });
 

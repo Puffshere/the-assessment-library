@@ -140,37 +140,24 @@ app.post('/slack/events', async (req, res) => {
         const announcement = req.body.event.text;
         const saveResult = await announcements.addAnnouncement(announcement);
         if (saveResult.success) {
-            console.log(saveResult.message); // Announcement saved successfully
+            console.log(saveResult.message);
         } else {
-            console.error(saveResult.message); // Error occurred
+            console.error(saveResult.message);
         }
         res.status(200).send({ message: 'Event received and processed.' });
     }
-        else if (req.body.command) {
-            // You can perform actions based on the 'text' received with the slash command
-            // You may want to process the command asynchronously and respond later
-            const announcement = req.body.text;
-            console.log("these are the announcements", announcements);
+    else if (req.body.command) {
+        const announcement = req.body.text;
         const saveResult = await announcements.addAnnouncement(announcement);
         if (saveResult.success) {
-            console.log(saveResult.message); // Announcement saved successfully
+            console.log(saveResult.message);
             res.status(200).send({ response_type: 'in_channel', text: 'Annoucements updated...' });
         } else {
-            console.error(saveResult.message); // Error occurred
+            console.error(saveResult.message);
             res.status(500).send({ response_type: 'in_channel', text: 'Command failed...' });
         }
-            // Respond to the slash command with an acknowledgement message
-            // You will likely need to send the actual response asynchronously if it requires processing time
-    
-            // Perform the necessary actions based on the commandText
-            // For example, fetch and return the most recent announcement
-            // Use the response_url from the request body to send the delayed response back to Slack
-            // You'll need to implement the logic for getMostRecentAnnouncement accordingly
-          
-        }
-
-
-     else {
+    }
+    else {
         res.status(200).send('Event received');
     }
 });

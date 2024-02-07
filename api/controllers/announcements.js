@@ -13,8 +13,6 @@ const getMostRecentAnnouncement = async (req, res) => {
     }
 };
 
-
-// Add a new function to create an announcement
 const addAnnouncement = async (announcementText) => {
     try {
         const newAnnouncement = new Announcements({
