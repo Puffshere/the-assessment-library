@@ -5,7 +5,7 @@
                 <loading :active="loading" :is-full-page="false" />
 
                 <div class="col-6">
-                    
+
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
                             <label for="firstName">First Name *</label>
@@ -25,7 +25,7 @@
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
                             <label for="company">Company/Organization *</label>
-                            <input id="company" name="company" type="text" v-model="form.company" tabindex="5"/>
+                            <input id="company" name="company" type="text" v-model="form.company" tabindex="5" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
@@ -57,12 +57,13 @@
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required|numeric">
                             <label for="phone">Phone Number *</label>
-                            <input id="phone" name="phone" type="tel" v-model="form.phone" tabindex="4"/>
+                            <input id="phone" name="phone" type="tel" v-model="form.phone" tabindex="4" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
 
-                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc' && this.getStartedId !== 'bni'">
+                    <div
+                        v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc' && this.getStartedId !== 'bni'">
                         <div class="form-group">
                             <ValidationProvider v-slot="v" rules="required">
                                 <label for="source">How did you hear about us? *</label>
@@ -85,12 +86,13 @@
                         <input id="sourceOther" name="sourceOther" type="text" />
                     </div>
 
-                    <div v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc' && this.getStartedId !== 'bni'">
+                    <div
+                        v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc' && this.getStartedId !== 'bni'">
                         <div class="form-group">
                             <ValidationProvider v-slot="v" rules="required">
                                 <label for="comments">What would you like to discuss?</label>
-                                <textarea cols="24" rows="5" id="comments" name="comments"
-                                    v-model="form.comments" tabindex="8"></textarea>
+                                <textarea cols="24" rows="5" id="comments" name="comments" v-model="form.comments"
+                                    tabindex="8"></textarea>
                                 <span class="error">{{ v.errors[0] }}</span>
                             </ValidationProvider>
                         </div>
@@ -101,7 +103,7 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" id="reseller" name="clientType" type="radio"
-                                        value="Reseller" v-model="form.clientType" tabindex="9"/>
+                                        value="Reseller" v-model="form.clientType" tabindex="9" />
                                     <label class="form-check-label" for="reseller">I am a <strong>coach or
                                             trainer</strong>
                                         looking to resell assessments with my clients.</label>
@@ -109,7 +111,7 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" id="corporate" name="clientType" type="radio"
-                                        value="Corporate" v-model="form.clientType" tabindex="10"/>
+                                        value="Corporate" v-model="form.clientType" tabindex="10" />
                                     <label class="form-check-label" for="corporate">I am part of a
                                         <strong>company</strong>
                                         looking to use assessments internally with my team.</label>
@@ -117,7 +119,7 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" id="retail" name="clientType" type="radio"
-                                        value="Retail" v-model="form.clientType" tabindex="11"/>
+                                        value="Retail" v-model="form.clientType" tabindex="11" />
                                     <label class="form-check-label" for="retail">I am an <strong>individual</strong>
                                         looking
                                         to purchase a single assessment only.</label>
@@ -130,7 +132,8 @@
                     <div class="form-group" v-if="!isShort">
                         <label>Are you affiliated with one of the following organizations?</label>
 
-                        <select id="affiliation" name="affiliation" v-model="form.affiliation" style="max-width: 310px;" tabindex="12">
+                        <select id="affiliation" name="affiliation" v-model="form.affiliation" style="max-width: 310px;"
+                            tabindex="12">
                             <option v-for="affiliation in affiliations" :key="affiliation.id" :value="affiliation.value">{{
                                 affiliation.label }}</option>
                         </select>
@@ -142,13 +145,13 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" id="optinYes" name="newsletter" type="radio" value="45"
-                                    v-model="form.newsletter" tabindex="13"/>
+                                    v-model="form.newsletter" tabindex="13" />
                                 <label class="form-check-label" for="optinYes">Yes, please!</label>
                             </div>
 
                             <div class="form-check">
                                 <input class="form-check-input" id="optinNo" name="newsletter" type="radio" value="46"
-                                    v-model="form.newsletter" tabindex="14"/>
+                                    v-model="form.newsletter" tabindex="14" />
                                 <label class="form-check-label" for="optinNo">No, thank you</label>
                             </div>
 
@@ -160,7 +163,7 @@
                         <ValidationProvider v-slot="v" rules="required">
                             <span class="form-check">
                                 <input class="form-check-input" id="consent" name="consent" type="checkbox"
-                                    v-model="form.consent" tabindex="15"/>
+                                    v-model="form.consent" tabindex="15" />
                                 <label class="form-check-label" for="consent">
                                     I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy
                                         Policy</nuxt-link> and
@@ -494,39 +497,39 @@ export default {
                         this.getStartedAccountName = 'Canada';
                         break;
                     case 'Netherlands':
-                        this.isPartnerId = "neth_bet";
+                        this.isPartnerId = "neth_bel";
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                     case 'Dutch-speaking Aruba':
-                        this.isPartnerId = "neth_bet";
+                        this.isPartnerId = "neth_bel";
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                     case 'Suriname':
-                        this.isPartnerId = "neth_bet";
+                        this.isPartnerId = "neth_bel";
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                     case 'Sint-Maarten':
-                        this.isPartnerId = "neth_bet";
+                        this.isPartnerId = "neth_bel";
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                     case 'Curaçao':
-                        this.isPartnerId = "neth_bet";
+                        this.isPartnerId = "neth_bel";
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                     case 'Bonaire':
-                        this.isPartnerId = "neth_bet";
+                        this.isPartnerId = "neth_bel";
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                     case 'Sint-Eustatius':
-                        this.isPartnerId = "neth_bet";
+                        this.isPartnerId = "neth_bel";
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                     case 'Saba':
-                        this.isPartnerId = "neth_bet";
+                        this.isPartnerId = "neth_bel";
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                     case 'Dutch-speaking Belgium including Brussels':
-                        this.isPartnerId = "neth_bet";
+                        this.isPartnerId = "neth_bel";
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                 }
@@ -1055,5 +1058,4 @@ export default {
         font-weight: 600;
         font-size: 11pt;
     }
-}
-</style>
+}</style>
