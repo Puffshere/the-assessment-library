@@ -289,6 +289,11 @@ export default {
                 this.getStartedAccountName = 'Erudia';
                 // this.getStartedId = '';
                 break;
+            case 'neth_bel':
+                this.isPartnerId = 'neth_bel';
+                this.getStartedAccountName = 'Netherlands/Belgium';
+                // this.getStartedId = '';
+                break;
             case 'viet':
                 this.isPartnerId = 'viet';
                 this.getStartedAccountName = 'Vietnam';
@@ -306,7 +311,7 @@ export default {
             if (validated) {
                 this.loading = true;
                 //  This would be used to override the partner page contact form over the country input field for the this.getStartedAccountName.
-                // if (this.isPartnerId !== 'aus' || this.isPartnerId !== 'can' || this.isParterId !== 'eur' || this.isPartnerId !== 'viet') {
+                // if (this.isPartnerId !== 'aus' || this.isPartnerId !== 'can' || this.isParterId !== 'eur' || this.isPartnerId !== 'neth_bel' || this.isPartnerId !== 'viet') {
                 switch (this.form.country) {
                     case 'Australia':
                         this.isPartnerId = "aus";
@@ -488,8 +493,44 @@ export default {
                         this.isPartnerId = "can";
                         this.getStartedAccountName = 'Canada';
                         break;
+                    case 'Netherlands':
+                        this.isPartnerId = "neth_bet";
+                        this.getStartedAccountName = 'Netherlands/Belgium';
+                        break;
+                    case 'Dutch-speaking Aruba':
+                        this.isPartnerId = "neth_bet";
+                        this.getStartedAccountName = 'Netherlands/Belgium';
+                        break;
+                    case 'Suriname':
+                        this.isPartnerId = "neth_bet";
+                        this.getStartedAccountName = 'Netherlands/Belgium';
+                        break;
+                    case 'Sint-Maarten':
+                        this.isPartnerId = "neth_bet";
+                        this.getStartedAccountName = 'Netherlands/Belgium';
+                        break;
+                    case 'Curaçao':
+                        this.isPartnerId = "neth_bet";
+                        this.getStartedAccountName = 'Netherlands/Belgium';
+                        break;
+                    case 'Bonaire':
+                        this.isPartnerId = "neth_bet";
+                        this.getStartedAccountName = 'Netherlands/Belgium';
+                        break;
+                    case 'Sint-Eustatius':
+                        this.isPartnerId = "neth_bet";
+                        this.getStartedAccountName = 'Netherlands/Belgium';
+                        break;
+                    case 'Saba':
+                        this.isPartnerId = "neth_bet";
+                        this.getStartedAccountName = 'Netherlands/Belgium';
+                        break;
+                    case 'Dutch-speaking Belgium including Brussels':
+                        this.isPartnerId = "neth_bet";
+                        this.getStartedAccountName = 'Netherlands/Belgium';
+                        break;
                 }
-                if (this.isPartnerId === "aus" || this.isPartnerId === "eur" || this.isPartnerId === "viet") {
+                if (this.isPartnerId === "aus" || this.isPartnerId === "eur" || this.isPartnerId === "neth_bel" || this.isPartnerId === "viet") {
                     try {
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Angie Fairbanks",
@@ -582,6 +623,11 @@ export default {
                         // Apply the "Affiliate Referral: Erudia" tag (tag id 908)
                         if (this.isPartnerId === 'eur') {
                             await axios.post(`/api/contact/${data.contact.id}/tag/908`);
+                        };
+
+                        // Apply the "Affiliate Referral: Netherlands/Belgium" tag (tag id ?)
+                        if (this.isPartnerId === 'neth_bel') {
+                            await axios.post(`/api/contact/${data.contact.id}/tag/?`);
                         };
 
                         // Apply the "Affiliate Referral: Vietnam" tag (tag id 909)
@@ -849,7 +895,7 @@ export default {
                         });
                     }
                 }
-                if (this.getStartedId !== "wcg" && this.isPartnerId !== "aus" && this.isPartnerId !== "can" && this.isPartnerId !== "eur" && this.isPartnerId !== "viet" && this.getStartedId !== "dc" && this.getStartedId !== "bni") {
+                if (this.getStartedId !== "wcg" && this.isPartnerId !== "aus" && this.isPartnerId !== "can" && this.isPartnerId !== "eur" && this.isPartnerId !== "neth_bel" && this.isPartnerId !== "viet" && this.getStartedId !== "dc" && this.getStartedId !== "bni") {
                     try {
                         const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {

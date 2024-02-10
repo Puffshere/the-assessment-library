@@ -18,6 +18,7 @@
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png" alt="Australasia" class="partner-logo affiliate">
                         <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo affiliate">
                         <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe" class="partner-logo affiliate">
+                        <img v-else-if="id === 'neth_bel'" src="~/assets/partner-logos/netherlands-belgium-logo.png" alt="Netherlands/Belgium" class="partner-logo affiliate">
                         <img v-else-if="id === 'viet'" src="~/assets/partner-logos/vietnam-logo.png" alt="Vietnam" class="partner-logo affiliate">
                         <h1 class="section-title">Get Started</h1>
                         <p>
@@ -402,6 +403,8 @@
                 this.id = 'can';
             } else if (this.$route.query.id === 'eur') {
                 this.id = 'eur';
+            } else if (this.$route.query.id === 'neth_bel') {
+                this.id = 'neth_bel';
             } else if (this.$route.query.id === 'viet') {
                 this.url = 'assessments24x7.asia';
                 this.id = 'viet';

@@ -9,8 +9,8 @@
                     <span>
                         <img v-if="id === 'aus'" class="partner-logo" src="~/assets/partner-logos/australasia-logo.png"
                             alt="Australasia partners with Assessments 24x7">
-                        <img v-if="id === 'can'" class="partner-logo" src="~/assets/partner-logos/canada-logo.png"
-                            alt="Canada partners with Assessments 24x7">
+                        <img v-if="id === 'neth_bel'" class="partner-logo" src="~/assets/partner-logos/netherlands-belgium-logo.png"
+                            alt="Netherlands Belgium partners with Assessments 24x7">
                         <img v-if="id === 'eur'" class="partner-logo" src="~/assets/partner-logos/europe-logo.png"
                             alt="Europe partners with Assessments 24x7">
                         <img v-if="id === 'viet'" class="partner-logo" src="~/assets/partner-logos/vietnam-logo.png"
@@ -164,18 +164,26 @@
 
                     <div class="partner">
                         <div class="col-6">
-                            <img class="logo" src="~/assets/partner-logos/canada-logo.png"
-                                alt="Canada partners with Assessments 24x7">
+                            <img class="logo" src="~/assets/partner-logos/netherlands-belgium-logo.png"
+                                alt="Netherlands Belgium partners with Assessments 24x7">
                             <div class="countries">
                                 <h4 class="countriesCovered">
                                     Countries Covered:
                                 </h4>
                                 <ul>
-                                    <li>Canada</li>
+                                    <li>Netherlands</li>
+                                    <li>Dutch-speaking Aruba</li>
+                                    <li>Suriname</li>
+                                    <li>Sint-Maarten</li>
+                                    <li>Curaçao</li>
+                                    <li>Bonaire</li>
+                                    <li>Sint-Eustatius</li>
+                                    <li>Saba</li>
+                                    <li>Dutch-speaking Belgium including Brussels</li>
                                 </ul>
                             </div>
                             <br />
-                                <a href="#" title="Open" class="modal-open hyperlink" @click="open('can')">Learn more!</a>
+                                <a href="#" title="Open" class="modal-open hyperlink" @click="open('neth_bel')">Learn more!</a>
                         </div>
                     </div>
                 </div>

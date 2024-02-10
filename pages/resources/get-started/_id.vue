@@ -16,6 +16,7 @@
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png" alt="Australasia" class="partner-logo">
                         <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo">
                         <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe" class="partner-logo">
+                        <img v-else-if="id === 'neth_bel'" src="~/assets/partner-logos/netherlands-belgium-logo.png" alt="Netherlands/Belgium" class="partner-logo">
                         <img v-else-if="id === 'viet'" src="~/assets/partner-logos/vietnam-logo.png" alt="Vietnam" class="partner-logo">
                         <h1 v-if="id === 'ref'" class="section-title" id="reff">Get Started</h1>
                         <h1 v-else class="section-title">Get Started</h1>
@@ -558,6 +559,7 @@
             } else if (this.id === 'aus') {
             } else if (this.id === 'can') {
             } else if (this.id === 'eur') {
+            } else if (this.id === 'neth_bel') {
             } else if (this.id === 'viet') {
                 this.url = 'assessments24x7.asia';
             }

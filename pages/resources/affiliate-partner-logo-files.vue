@@ -76,10 +76,15 @@ export default {
                     link1: { url: 'https://f002.backblazeb2.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-australasia-logo..png', text: 'A24x7 – Australasia Logo (.png version)' },
                     link2: { url: 'https://f002.backblazeb2.com/file/assessments24x7-media/Partners+%26+Affiliates/Assessments+24x7+Australasia+Logo+Vector.ai', text: 'A24x7 – Australasia logo (.ai version)' },
                 },
+                // {
+                //     image: '/images/canada-logo.png',
+                //     link1: { url: 'https://f002.backblazeb2.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-canada-logo.png', text: 'A24x7 – Canada Logo (.png version)' },
+                //     link2: { url: 'https://f002.backblazeb2.com/file/assessments24x7-media/Partners+%26+Affiliates/Assessments+24x7+Canada+Logo+Vector.ai', text: 'A24x7 – Canada logo (.ai version)' },
+                // }
                 {
-                    image: '/images/canada-logo.png',
-                    link1: { url: 'https://f002.backblazeb2.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-canada-logo.png', text: 'A24x7 – Canada Logo (.png version)' },
-                    link2: { url: 'https://f002.backblazeb2.com/file/assessments24x7-media/Partners+%26+Affiliates/Assessments+24x7+Canada+Logo+Vector.ai', text: 'A24x7 – Canada logo (.ai version)' },
+                    image: '/images/netherlands-belgium-logo.png',
+                    link1: { url: 'https://f002.backblazeb2.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-netherlands-belgium-logo.png', text: 'A24x7 – Netherlands/Belgium Logo (.png version)' },
+                    // link2: { url: 'https://f002.backblazeb2.com/file/assessments24x7-media/Partners+%26+Affiliates/Assessments+24x7+Canada+Logo+Vector.ai', text: 'A24x7 – Canada logo (.ai version)' },
                 }
             ],
             bottomRowTemplates: [
