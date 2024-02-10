@@ -625,9 +625,9 @@ export default {
                             await axios.post(`/api/contact/${data.contact.id}/tag/908`);
                         };
 
-                        // Apply the "Affiliate Referral: Netherlands/Belgium" tag (tag id ?)
+                        // Apply the "Affiliate Referral: Netherlands/Belgium" tag (tag id 983)
                         if (this.isPartnerId === 'neth_bel') {
-                            await axios.post(`/api/contact/${data.contact.id}/tag/?`);
+                            await axios.post(`/api/contact/${data.contact.id}/tag/983`);
                         };
 
                         // Apply the "Affiliate Referral: Vietnam" tag (tag id 909)
