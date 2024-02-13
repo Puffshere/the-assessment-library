@@ -238,7 +238,12 @@ export default {
                 {
                     id: 7,
                     name: 'Marketing',
-                    image: '/images/comingSoonYellow.webp',
+                    links: [
+                        {
+                            url: 'https://docs.google.com/spreadsheets/d/1fqxFWCx70mT4cPVZTfEfwibgwJPsj9-qXGY_cEEi15g/edit#gid=17462517',
+                            mainText: 'Social Media Calendar',
+                        },
+                    ]
                 },
                 {
                     id: 8,
