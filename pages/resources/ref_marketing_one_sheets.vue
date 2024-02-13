@@ -1,12 +1,12 @@
 <template>
-    <section class="marketing-one-sheets">
+    <section class="ref-marketing-one-sheets">
         <main-nav />
         <div class="wrapper">
             <div class="container hero">
                 <div class="row rowItems">
                     <div class="col-8">
                         <div>
-                            <h1 class="pageTitle">MARKETING ONE-SHEETS</h1>
+                            <h1 class="pageTitle">REF MARKETING ONE-SHEETS</h1>
                             <p class="">
                                 Distribute marketing one-sheets through email attachments, print collateral, or website
                                 content. These serve as effective primers when introducing assessments and related concepts
@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <img class="image" src="~assets/marketing_one_sheets_logo.png" alt="template icons">
+                        <img class="image" src="~assets/REF-logo-black-2000px.png" alt="template icons">
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@ export default {
         'main-nav': Nav,
         'footer-fold': Footer
     },
-    name: 'Marketing-One-Sheets',
+    name: 'REF-Marketing-One-Sheets',
     data() {
         return {
             hover: false,
@@ -124,13 +124,13 @@ export default {
                 {
                     id: 1,
                     title: 'Hiring & Selection Data (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/hiringselection.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+hiringselection.pdf',
                     caption: `This one-sheet highlights new data illustrating the growth and importance of this fast-growing segment to business consulting. For the first time, modern online assessments are making hiring & selection analytics both practical and affordable for businesses of all sizes.`,
                 },
                 {
                     id: 2,
                     title: 'Why Assessments? (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/WhyAssessments.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+WhyAssessments.pdf',
                     caption: `This one-sheet easily introduces the reader to several of the most effective business applications and advantages that assessments provide 21st century organizations.`,
                 }
             ],
@@ -138,49 +138,49 @@ export default {
                 {
                     id: 1,
                     title: 'Core Assessments (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/CoreAssessments.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+CoreAssessments.pdf',
                     caption: `This one-sheet provides a simple overview of our catalog's "foundational" assessments: DISC, Motivators and Emotional Intelligence. Each of these distinctly different assessments measure an important and unique aspect of human behavior and/or cognition.`,
                 },
                 {
                     id: 2,
                     title: 'DISC (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/DISC.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+DISC.pdf',
                     caption: `This one-sheet offers a concise explanation of DISC and seven of its most popular business applications.`,
                 },
                 {
                     id: 3,
                     title: 'Motivators (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Motivators.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+Motivators.pdf',
                     caption: `This one-sheet provides users an insightful introduction to the popular Motivators assessment. This one-sheet identifies Motivators excellent pairing with DISC, popular workplace applications and key report features. If you love DISC, then Motivators is a must!`,
                 },
                 {
                     id: 4,
                     title: 'Emotional Intelligence (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/EIQ2.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+EIQ2.pdf',
                     caption: `This one-sheet equips coaches with a compelling visual primer for the Emotional Intelligence concept and our trending EIQ-2 report.`,
                 },
                 {
                     id: 5,
                     title: 'Sales IQ Plus (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/SalesIQPlus.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+SalesIQPlus.pdf',
                     caption: `This one-sheet details each of the 8 Primary Sales Competencies measured by this award-winning sales skills test (via Top Sales World magazine). The one-sheet also highlights several of the assessment's most notable features, like it's sales celebrity developers (Jeffrey Gitomer, etc) and rotating pool of questions -- allowing coaches to continually re-administer this instrument, while never giving the same test twice. This instrument's reputation is so strong, you could say it sells itself!`,
                 },
                 {
                     id: 6,
                     title: '360 Assessments (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/360.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+360.pdf',
                     caption: `This one-sheet details our popular 360 assessments. Each 360 Assessment cracks the code of behavioral style misunderstandings in the workplace, offering business leaders and managers (even fellow colleagues) the ability to effectively process the collective perceptions of how others see them.`,
                 },
                 {
                     id: 7,
                     title: 'Kids DISC (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/kidsDISC.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+KidsDISC.pdf',
                     caption: `The Kids DISC assessment is an opportunity for children to learn more about themselves! Inside the report, kids, and the adults around them, will discover how special and unique they are. Each child s bird style is their superpower, and the Kids DISC assessment by Assessments 24x7 helps them be the best that they can be.`,
                 },
                 {
                     id: 8,
                     title: 'Organizational Development Assessment (download PDF)',
-                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/5DA-MM.pdf',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/ref-documents/REF+-+5DA-MM.pdf',
                     caption: `There are 5 Disciplines for Exponential Growth that every business must get correct. Learn how your executive team, your departments and your organization sees performance in each of the 5 Disciplines.`,
                 }
             ]
@@ -224,12 +224,12 @@ export default {
     },
     head() {
         return {
-            title: 'Marketing One-Sheets | Assessments 24x7',
+            title: 'REF Marketing One-Sheets | Assessments 24x7',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'These are the Marketing One-Sheets!'
+                    content: 'These are the REF Marketing One-Sheets!'
                 }
             ]
         }
@@ -349,9 +349,9 @@ export default {
 
 .image {
     position: relative;
-    top: 50px;
-    right: -50px;
-    width: 150px;
+    top: 60px;
+    right: 20px;
+    width: 300px;
 }
 
 @media (max-width: 745px) {
