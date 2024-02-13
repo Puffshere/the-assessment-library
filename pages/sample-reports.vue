@@ -29,7 +29,7 @@
                             <option value="zh-t">Chinese (Traditional) - 1</option>
                             <option value="nl">Dutch - 5</option>
                             <option value="en-us" selected>English (US) - 35</option>
-                            <option value="fr">French - 12</option>
+                            <option value="fr">French - 13</option>
                             <option value="de">German - 5</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 3</option>
@@ -610,6 +610,9 @@
                         <a v-else-if="lang === 'zh'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360ChineseSampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
+                        <a v-else-if="lang === 'fr'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360FrenchSampleReport.pdf"
+                            class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
                         <a v-else-if="lang === 'es'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360SpanishSampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
@@ -618,7 +621,7 @@
                             class="hyperlink" target="_blank" rel="noopener">Leadership Effectiveness 360&deg;</a>
 
                         <a v-else class="hyperlink disabled">Leadership Effectiveness 360&deg;</a>
-                        <a class="language-button other" @click="le360ReportModal = true">4 languages</a><br />
+                        <a class="language-button other" @click="le360ReportModal = true">5 languages</a><br />
                     </div>
                 </div>
 
@@ -1632,6 +1635,8 @@
                                     class="hyperlink" target="_blank" rel="noopener">English</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360ChineseSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Chinese</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360FrenchSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">French</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360SpanishSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Spanish</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LeadershipEffectiveness360VietnameseSampleReport.pdf"
