@@ -9,7 +9,8 @@
                     <span>
                         <img v-if="id === 'aus'" class="partner-logo" src="~/assets/partner-logos/australasia-logo.png"
                             alt="Australasia partners with Assessments 24x7">
-                        <img v-if="id === 'neth_bel'" class="partner-logo" src="~/assets/partner-logos/netherlands-belgium-logo.png"
+                        <img v-if="id === 'neth_bel'" class="partner-logo"
+                            src="~/assets/partner-logos/netherlands-belgium-logo.png"
                             alt="Netherlands Belgium partners with Assessments 24x7">
                         <img v-if="id === 'eur'" class="partner-logo" src="~/assets/partner-logos/europe-logo.png"
                             alt="Europe partners with Assessments 24x7">
@@ -19,8 +20,8 @@
                     </span>
                     <div class="row">
                         <div class="col-12">
-                            <contact-form buttonText="Request an Account" redirect="/get-started-thankyou"
-                                :isShort="true" :isGetStarted="true" acFormId="2" :getStartedId="id" />
+                            <contact-form buttonText="Request an Account" redirect="/get-started-thankyou" :isShort="true"
+                                :isGetStarted="true" acFormId="2" :getStartedId="id" />
                         </div>
                     </div>
                 </div>
@@ -128,7 +129,7 @@
                                 </div>
                             </div>
                             <br />
-                                <a href="#" title="Open" class="modal-open hyperlink" @click="open('eur')">Learn more!</a>
+                            <a href="#" title="Open" class="modal-open hyperlink" @click="open('eur')">Learn more!</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +159,7 @@
                                 </div>
                             </div>
                             <br />
-                                <a href="#" title="Open" class="modal-open hyperlink" @click="open('viet')">Learn more!</a>
+                            <a href="#" title="Open" class="modal-open hyperlink" @click="open('viet')">Learn more!</a>
                         </div>
                     </div>
 
@@ -183,7 +184,7 @@
                                 </ul>
                             </div>
                             <br />
-                                <a href="#" title="Open" class="modal-open hyperlink" @click="open('neth_bel')">Learn more!</a>
+                            <a href="#" title="Open" class="modal-open hyperlink" @click="open('neth_bel')">Learn more!</a>
                         </div>
                     </div>
                 </div>
@@ -332,8 +333,8 @@
                             <div class="cite">Barbara Meiss, Director of Leadership Development, Lead Like Jesus
                             </div>
 
-                            <a class="sample-link" href="/partner-sample-reports/LeadLikeJesusSample.pdf"
-                                target="_blank" rel="noopener">
+                            <a class="sample-link" href="/partner-sample-reports/LeadLikeJesusSample.pdf" target="_blank"
+                                rel="noopener">
                                 <div class="sample">
                                     <img src="~/assets/pdf-icon-light.svg"> Biblical DISC Assessment Sample Report
 
@@ -404,8 +405,8 @@
                                 </div>
                             </a>
 
-                            <a class="hyperlink" target="_blank" rel="noopener"
-                                href="https://athleteassessments.com/">Visit Athlete Assessments &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://athleteassessments.com/">Visit
+                                Athlete Assessments &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -445,8 +446,8 @@
 
                             <div class="cite">Nathan Schock, Co-Founder and President, FiveFour</div>
 
-                            <a class="hyperlink" target="_blank" rel="noopener"
-                                href="https://fivefourtraining.com/">Visit FiveFour &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://fivefourtraining.com/">Visit
+                                FiveFour &rarr;</a>
                         </div>
                     </div>
 
@@ -475,8 +476,8 @@
 
                             <div class="cite">Danny Ing, Co-Founder, Hiring Steps</div>
 
-                            <a class="hyperlink" target="_blank" rel="noopener"
-                                href="https://www.hiringsteps.com/">Visit Hiring Steps &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://www.hiringsteps.com/">Visit
+                                Hiring Steps &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -488,18 +489,15 @@
                                 alt="DISC Daily partners with Assessments 24x7">
 
                             <p class="bio">
-                                DISC Daily is a simple, daily reminder to focus on growth and development. The
-                                messages
-                                are easy to implement. They help you
-                                think about your main goals as well as your most important relationships. If you are
-                                a
-                                coach who wants to help your clients
-                                achieve their goals beyond the initial contract, DISC Daily is the solution for you.
-                                By
-                                engaging on the platform at any time,
-                                reading the weekly email and daily texts, your clients can track how effective they
-                                are
-                                in each area of their lives every day.
+                                DISC Daily emerged as a vital link between the DISC assessment and its application in
+                                everyday life. Acknowledging it requires practice to master any new skill, DISC Daily keeps
+                                the practice front-of-mind! The comprehensive 38-page DISC report, while informative,
+                                necessitates more than mere perusal for comprehension. So, a tool was created to anchor
+                                learning in a clients’ routine. This automated, client-centric approach also empowers
+                                coaches to gain and impart deeper understanding to their clients, resulting in tangible
+                                progress in client's lives. With affordability as its hallmark, DISC Daily ensures
+                                accessibility for all, fostering continuous growth and development. <span class="hyperlink"><a class="none" href="https://discdailycoach.com/">Visit the
+                                site</a></span> or <span class="hyperlink"><a class="none" href="https://calendly.com/emilybass/30min?month=2024-02">schedule a firsthand tour</a></span> of the platform to explore its transformative potential.
                             </p>
 
                             <p class="quote">
@@ -543,8 +541,8 @@
                             <div class="cite">Katrina Stephenson & Gillian Blackman, Co-Founders of Cross Check
                                 Australasia</div>
 
-                            <a class="hyperlink" target="_blank" rel="noopener"
-                                href="https://www.crosscheck.com.au">Visit Cross Check &rarr;</a>
+                            <a class="hyperlink" target="_blank" rel="noopener" href="https://www.crosscheck.com.au">Visit
+                                Cross Check &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -602,6 +600,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.none {
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+}
+
 .partner-logo {
     width: 100%;
     max-width: 450px;
@@ -799,5 +803,4 @@ export default {
             }
         }
     }
-}
-</style>
+}</style>
