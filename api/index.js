@@ -132,13 +132,49 @@ app.post('/lead', (req, res) => {
     leadController.createLead(req, res);
 });
 
+// app.post('/slack/events', async (req, res) => {
+//     if (req.body.challenge) {
+//         return res.status(200).send(req.body.challenge);
+//     }
+//     if (req.body.event && req.body.event.text) {
+//         const announcement = req.body.event.text;
+//         const saveResult = await announcements.addAnnouncement(announcement);
+//         if (saveResult.success) {
+//             console.log(saveResult.message);
+//         } else {
+//             console.error(saveResult.message);
+//         }
+//         res.status(200).send({ message: 'Event received and processed.' });
+//     }
+//     else if (req.body.command) {
+//         const announcement = req.body.text;
+//         const saveResult = await announcements.addAnnouncement(announcement);
+//         if (saveResult.success) {
+//             console.log(saveResult.message);
+//             res.status(200).send({ response_type: 'in_channel', text: 'Annoucements updated...' });
+//         } else {
+//             console.error(saveResult.message);
+//             res.status(500).send({ response_type: 'in_channel', text: 'Command failed...' });
+//         }
+//     }
+//     else {
+//         res.status(200).send('Event received');
+//     }
+// });
+
 app.post('/slack/events', async (req, res) => {
     if (req.body.challenge) {
         return res.status(200).send(req.body.challenge);
     }
     if (req.body.event && req.body.event.text) {
         const announcement = req.body.event.text;
-        const saveResult = await announcements.addAnnouncement(announcement);
+        // Extract user ID from the event
+        const user_name = req.body.event.user_name;
+
+        // Optionally, you can fetch more details about the user here using Slack's API
+
+        // Pass both announcement and user_name to addAnnouncement
+        const saveResult = await announcements.addAnnouncement(announcement, user_name);
         if (saveResult.success) {
             console.log(saveResult.message);
         } else {
@@ -148,10 +184,14 @@ app.post('/slack/events', async (req, res) => {
     }
     else if (req.body.command) {
         const announcement = req.body.text;
-        const saveResult = await announcements.addAnnouncement(announcement);
+        // Assuming commands also include a user ID, extract it similarly
+        const user_name = req.body.user_name; // Make sure to use the correct field name for command payloads
+
+        // Pass both announcement and user_name to addAnnouncement
+        const saveResult = await announcements.addAnnouncement(announcement, user_name);
         if (saveResult.success) {
             console.log(saveResult.message);
-            res.status(200).send({ response_type: 'in_channel', text: 'Annoucements updated...' });
+            res.status(200).send({ response_type: 'in_channel', text: 'Announcements updated...' });
         } else {
             console.error(saveResult.message);
             res.status(500).send({ response_type: 'in_channel', text: 'Command failed...' });
@@ -161,6 +201,7 @@ app.post('/slack/events', async (req, res) => {
         res.status(200).send('Event received');
     }
 });
+
 
 app.post('/completions', async (req, res) => {
     try {

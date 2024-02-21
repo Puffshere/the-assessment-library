@@ -10,7 +10,7 @@
                             <img class="titleImageLogo" src="~assets/logo.png">
                             <h1 class="pageTitle">Intranet</h1>
                             <div class="announce" v-if="unlocked && announcements.length !== 0">
-                                <p class="announcementText"> {{ announcements }}</p>
+                                <p class="announcementText"> {{ announcements_name }}:  {{ announcements }}</p>
                             </div>
                             <div v-else>
                                 <p class="titleText">
@@ -159,6 +159,7 @@ export default {
             password: '',
             validationError: false,
             announcements: [],
+            announcements_name: [],
             firstRowLinks: [
                 {
                     id: 1,
@@ -312,7 +313,8 @@ export default {
         async fetchAnnouncements() {
             try {
                 const response = await axios.get('/api/announcements');
-                this.announcements = response.data.announcement.announcement_text;
+                this.announcements = response.data.announcement;
+                this.announcements_name = response.data.user_name;
             } catch (error) {
                 console.error('There was an error fetching the announcements:', error);
             }

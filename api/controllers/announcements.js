@@ -4,7 +4,12 @@ const getMostRecentAnnouncement = async (req, res) => {
     try {
         const mostRecentAnnouncement = await Announcements.findOne().sort({ createdAt: -1 }).exec();
         if (mostRecentAnnouncement) {
-            res.json({ announcement: mostRecentAnnouncement });
+            res.json({ 
+                announcement: mostRecentAnnouncement.announcement_text,
+                user_name: mostRecentAnnouncement.user_name,
+                createdAt: mostRecentAnnouncement.createdAt
+
+             });
         } else {
             res.status(404).send({ message: 'No announcements found' });
         }
@@ -13,10 +18,11 @@ const getMostRecentAnnouncement = async (req, res) => {
     }
 };
 
-const addAnnouncement = async (announcementText) => {
+const addAnnouncement = async (announcementText, userName) => {
     try {
         const newAnnouncement = new Announcements({
-            announcement_text: announcementText
+            announcement_text: announcementText,
+            user_name: userName
         });
         await newAnnouncement.save();
         return { success: true, message: "Announcement saved successfully", announcement: newAnnouncement };
