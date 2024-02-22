@@ -11,12 +11,14 @@
                             <h1 class="pageTitle">Intranet</h1>
                             <div class="announce" v-if="unlocked && announcements.length !== 0">
                                 <div class="announcementText">
-                                    Announcements
-                                    <hr>
                                     <template v-if="announcements_name">
-                                        From {{ announcements_name }}: {{ announcements }}
+                                        Announcement From {{ announcements_name }}
+                                        <hr>
+                                        {{ announcements }}
                                     </template>
                                     <template v-else>
+                                        Announcements
+                                        <hr>
                                         {{ announcements }}
                                     </template>
                                 </div>
