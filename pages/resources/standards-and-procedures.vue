@@ -10,7 +10,16 @@
                             <img class="titleImageLogo" src="~assets/logo.png">
                             <h1 class="pageTitle">Intranet</h1>
                             <div class="announce" v-if="unlocked && announcements.length !== 0">
-                                <p class="announcementText"> {{ announcements_name }}:  {{ announcements }}</p>
+                                <div class="announcementText">
+                                    Announcements
+                                    <hr>
+                                    <template v-if="announcements_name">
+                                        From {{ announcements_name }}: {{ announcements }}
+                                    </template>
+                                    <template v-else>
+                                        {{ announcements }}
+                                    </template>
+                                </div>
                             </div>
                             <div v-else>
                                 <p class="titleText">
@@ -26,6 +35,24 @@
                 </div>
             </div>
         </div>
+        <div class="wrapper" v-if="unlocked && tonysNotes.length !== 0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-11">
+                        <div class="tonyNotes">
+                            Notes From Tony
+                            <hr>
+                            <ul>
+                                <li v-for="(note, index) in tonysNotes" :key="index">
+                                    {{ note.announcement_text }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
         <div class="document-library" v-if="unlocked">
             <div class="row document-library-row">
                 <div v-for="document in firstRowLinks" :key="document.id">
@@ -160,6 +187,7 @@ export default {
             validationError: false,
             announcements: [],
             announcements_name: [],
+            tonysNotes: [],
             firstRowLinks: [
                 {
                     id: 1,
@@ -279,6 +307,7 @@ export default {
     mounted() {
         this.checkEmployeePassword();
         this.fetchAnnouncements();
+        this.fetchTonyAnnouncements();
         setTimeout(() => {
             localStorage.removeItem('employeePassword');
             this.unlocked = false;
@@ -315,6 +344,16 @@ export default {
                 const response = await axios.get('/api/announcements');
                 this.announcements = response.data.announcement;
                 this.announcements_name = response.data.user_name;
+            } catch (error) {
+                console.error('There was an error fetching the announcements:', error);
+            }
+        },
+        async fetchTonyAnnouncements() {
+            try {
+                const response = await axios.get('/api/announcementsTony');
+                console.log("This is Tony's response", response);
+                this.tonysNotes = response.data.announcements;
+                console.log("This is the notes from Tony", this.tonysNotes);
             } catch (error) {
                 console.error('There was an error fetching the announcements:', error);
             }
@@ -375,10 +414,22 @@ $pixel: 15px;
         margin-left: 20px;
         background: linear-gradient(to top, lightgray, rgb(238, 238, 238));
         padding: 20px 30px;
-        border-radius: 20px;
+        border-radius: 10px;
         box-shadow: 5px 5px 5px rgb(83, 83, 83);
         color: rgb(43, 43, 43);
+        margin-top: -30px;
     }
+
+}
+
+.tonyNotes {
+    margin-left: 60px;
+    background: linear-gradient(to top, lightgray, rgb(238, 238, 238));
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(83, 83, 83);
+    color: rgb(43, 43, 43);
+    margin-top: -20px;
 }
 
 .titleText {
