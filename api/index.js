@@ -142,9 +142,8 @@ app.post('/slack/events', async (req, res) => {
     }
     if (req.body.event && req.body.event.text) {
         const announcement = req.body.event.text;
-        const user_name = req.body.event.user_name;
 
-        const saveResult = await announcements.addAnnouncement(announcement, user_name);
+        const saveResult = await announcements.addAnnouncement(announcement);
         if (saveResult.success) {
             console.log(saveResult.message);
         } else {
