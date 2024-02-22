@@ -49,7 +49,19 @@ function capitalizeUserName(userName) {
     return userName.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
-const addAnnouncement = async (announcementText, userName) => {
+const addAnnouncement = async (announcementText) => {
+    try {
+        const newAnnouncement = new Announcements({
+            announcement_text: announcementText,
+        });
+        await newAnnouncement.save();
+        return { success: true, message: "Announcement saved successfully", announcement: newAnnouncement };
+    } catch (error) {
+        return { success: false, message: error.message };
+    }
+};
+
+const addCommandAnnouncement = async (announcementText, userName) => {
     try {
         const capitalizedUserName = capitalizeUserName(userName);
 
@@ -67,5 +79,6 @@ const addAnnouncement = async (announcementText, userName) => {
 export default {
     getMostRecentAnnouncement,
     getThreeMostRecentAnnouncementsByTony,
-    addAnnouncement
+    addAnnouncement,
+    addCommandAnnouncement
 };
