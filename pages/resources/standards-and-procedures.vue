@@ -90,7 +90,7 @@
                             </a>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNote">{{ link.footNote }}</span>
+                                <span class="footNote2">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
@@ -238,51 +238,6 @@ export default {
                 },
                 {
                     id: 3,
-                    name: 'Support',
-                    image: '/images/comingSoonYellow.webp',
-                    links: [
-                        {
-                            url: "",
-                            main: ""
-                        }
-                    ]
-                }
-            ],
-            secondRowLinks: [
-                {
-                    id: 4,
-                    name: 'Translations/Custom Work',
-                    image: '/images/comingSoonYellow.webp',
-                },
-                {
-                    id: 5,
-                    name: 'Training',
-                    image: '/images/comingSoonYellow.webp',
-                },
-                {
-                    id: 6,
-                    name: 'Development',
-                    image: '/images/comingSoonYellow.webp',
-                }
-            ],
-            thirdRowLinks: [
-                {
-                    id: 7,
-                    name: 'Marketing',
-                    links: [
-                        {
-                            url: 'https://docs.google.com/spreadsheets/d/1fqxFWCx70mT4cPVZTfEfwibgwJPsj9-qXGY_cEEi15g/edit#gid=17462517',
-                            mainText: 'Social Media Calendar',
-                        },
-                    ]
-                },
-                {
-                    id: 8,
-                    name: 'Coaching',
-                    image: '/images/comingSoonYellow.webp',
-                },
-                {
-                    id: 9,
                     name: 'Misc',
                     links: [
                         {
@@ -300,6 +255,57 @@ export default {
                         {
                             url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/cyber-liability-insurance.pdf',
                             mainText: 'A24x7 Cyber Liability Insurance',
+                        }
+                    ]
+                }
+            ],
+            secondRowLinks: [
+                {
+                    id: 4,
+                    name: 'Marketing',
+                    links: [
+                        {
+                            url: 'https://docs.google.com/spreadsheets/d/1fqxFWCx70mT4cPVZTfEfwibgwJPsj9-qXGY_cEEi15g/edit#gid=17462517',
+                            mainText: 'Social Media Calendar'
+                        },
+                    ]
+                },
+                {
+                    id: 5,
+                    name: 'Affiliate Info',
+                    links: [
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Global+Affiliate+Lead+Distribution_Contact+Sheet.pdf',
+                            mainText: 'Global Affiliate Lead Distribution',
+                            footNote: "*Contact Sheet"
+                        }
+                    ]
+                },
+                {
+                    id: 6,
+                    name: 'Development',
+                    image: '/images/comingSoonYellow.webp',
+                }
+            ],
+            thirdRowLinks: [
+                {
+                    id: 7,
+                    name: 'Translations/Custom Work',
+                    image: '/images/comingSoonYellow.webp',
+                },
+                {
+                    id: 8,
+                    name: 'Training',
+                    image: '/images/comingSoonYellow.webp',
+                },
+                {
+                    id: 9,
+                    name: 'Support',
+                    image: '/images/comingSoonYellow.webp',
+                    links: [
+                        {
+                            url: "",
+                            main: ""
                         }
                     ]
                 }
@@ -547,6 +553,17 @@ $pixel: 15px;
     top: 55px;
     margin-top: -60px !important;
     left: -30px;
+    display: block;
+    width: 305px;
+    color: rgb(56, 56, 56);
+}
+
+.footNote2 {
+    position: relative;
+    font-size: 12px !important;
+    top: 55px;
+    margin-top: -60px !important;
+    left: -110px;
     display: block;
     width: 305px;
     color: rgb(56, 56, 56);
