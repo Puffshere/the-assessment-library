@@ -51,8 +51,8 @@
                     </div>
                 </div>
             </div>
+            <br>
         </div>
-        <br>
         <div class="document-library" v-if="unlocked">
             <div class="row document-library-row">
                 <div v-for="document in firstRowLinks" :key="document.id">
