@@ -9,8 +9,8 @@
                         <div>
                             <img class="titleImageLogo" src="~assets/logo.png">
                             <h1 class="pageTitle">Intranet</h1>
-                            <div class="announce" v-if="unlocked && announcements.length !== 0">
-                                <div class="announcementText">
+                            <div v-if="unlocked && announcements.length !== 0">
+                                <div class="announcementText announcementBody">
                                     <template v-if="announcements_name">
                                         Announcement From {{ announcements_name }}
                                         <hr>
@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-11">
-                        <div class="tonyNotes">
+                        <div class="tonyNotes announcementBody">
                             Notes From Tony
                             <hr>
                             <ul>
@@ -69,7 +69,7 @@
                             </a>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNote">{{ link.footNote }}</span>
+                                <span class="footNote1 footNotes">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
@@ -90,7 +90,7 @@
                             </a>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNote2">{{ link.footNote }}</span>
+                                <span class="footNote2 footNotes">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
@@ -118,7 +118,7 @@
                             </div>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNote">{{ link.footNote }}</span>
+                                <span class="footNotes">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
@@ -415,28 +415,21 @@ $pixel: 15px;
     min-height: 300px;
 }
 
-.announce {
-    position: relative;
-
-    .announcementText {
-        margin-left: 20px;
-        background: linear-gradient(to top, lightgray, rgb(238, 238, 238));
-        padding: 20px 30px;
-        border-radius: 10px;
-        box-shadow: 5px 5px 5px rgb(83, 83, 83);
-        color: rgb(43, 43, 43);
-        margin-top: -30px;
-    }
-
-}
-
-.tonyNotes {
-    margin-left: 60px;
+.announcementBody {
     background: linear-gradient(to top, lightgray, rgb(238, 238, 238));
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(83, 83, 83);
     color: rgb(43, 43, 43);
+}
+
+.announcementText {
+    margin-left: 20px;
+    margin-top: -30px;
+}
+
+.tonyNotes {
+    margin-left: 60px;
     margin-top: -20px;
 }
 
@@ -547,26 +540,23 @@ $pixel: 15px;
     }
 }
 
-.footNote {
+.footNotes {
     position: relative;
     font-size: 12px !important;
     top: 55px;
     margin-top: -60px !important;
-    left: -30px;
     display: block;
     width: 305px;
     color: rgb(56, 56, 56);
 }
 
+.footNote1 {
+    left: -30px;
+}
+
 .footNote2 {
-    position: relative;
-    font-size: 12px !important;
-    top: 55px;
-    margin-top: -60px !important;
     left: -110px;
-    display: block;
-    width: 305px;
-    color: rgb(56, 56, 56);
+    
 }
 
 .comingSoon {
