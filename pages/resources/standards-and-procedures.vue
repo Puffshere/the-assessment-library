@@ -556,7 +556,6 @@ $pixel: 15px;
 
 .footNote2 {
     left: -110px;
-    
 }
 
 .comingSoon {
