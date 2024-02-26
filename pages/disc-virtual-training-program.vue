@@ -13,8 +13,19 @@
         </section>
 
         <div class="container">
-            <div class="col-12">
-                <img class="titleImage" src="./../assets/freeEbookImage.png" alt="template icons">
+            <div class="row flex-center">
+                <div class="col-12">
+                    <a class="col-6"
+                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum+Rule+for+DISC+Sales+Mastery+eBook.pdf"
+                        target="_blank" rel="noopener"><img class="banner-image" src="~/assets/free_book_banner.png"></a>
+                    <a class="col-6 banner-text"
+                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum+Rule+for+DISC+Sales+Mastery+eBook.pdf"
+                        target="_blank" rel="noopener">I'm offering this book for free as an SMEI bonus</a>
+                    <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/ebooks/Platinum+Rule+for+DISC+Sales+Mastery+eBook.pdf"
+                        target="_blank" rel="noopener">
+                        <img src="~/assets/arrow.png" class="arrow">
+                    </a>
+                </div>
             </div>
             <div class="row flex-center">
                 <div class="col-12">
@@ -37,74 +48,74 @@
                 <div class="row flex-center">
                     <div class="col-12">
                         <div class="col-6">
-                        <h3 class="youtubeTitle">The Different DISC Styles</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/u6H6NBPU1LA"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">The Different DISC Styles</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/u6H6NBPU1LA"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="col-6">
-                        <h3 class="youtubeTitle">How to Identify Each DISC Style</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/r2TKr9yThAo"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">How to Identify Each DISC Style</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/r2TKr9yThAo"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="col-6">
-                        <h3 class="youtubeTitle">Describing the Four DISC Styles</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/FDUvX-0FZMY"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">Describing the Four DISC Styles</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/FDUvX-0FZMY"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="col-6">
-                        <h3 class="youtubeTitle">Adaptability with all Four DISC Styles</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/-xN3-4scIps"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">Adaptability with all Four DISC Styles</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/-xN3-4scIps"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="col-6">
-                        <h3 class="youtubeTitle">Building Effective Teams</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/-7vNaF_We5I"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">Building Effective Teams</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/-7vNaF_We5I"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="col-6">
-                        <h3 class="youtubeTitle">Leadership and the Four DISC Styles</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/HbnD_9mDmGc"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">Leadership and the Four DISC Styles</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/HbnD_9mDmGc"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="col-6">
-                        <h3 class="youtubeTitle">The Sales and Services Process</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/aV_bi0hfkII"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">The Sales and Services Process</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/aV_bi0hfkII"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="col-6">
-                        <h3 class="youtubeTitle">Adaptability - the Key to the Platinum Rule</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/ZW2sImmQ7P8"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">Adaptability - the Key to the Platinum Rule</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/ZW2sImmQ7P8"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="col-6">
-                        <h3 class="youtubeTitle">We are all a BLEND of Styles</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/aCgMx-Cb7S8"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">We are all a BLEND of Styles</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/aCgMx-Cb7S8"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="col-6">
-                        <h3 class="youtubeTitle">Frequently Asked Questions (Optional)</h3>
-                        <iframe class="col-12" height="315" src="https://www.youtube.com/embed/lFdrPWpTDhI"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            <h3 class="youtubeTitle">Frequently Asked Questions (Optional)</h3>
+                            <iframe class="col-12" height="315" src="https://www.youtube.com/embed/lFdrPWpTDhI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -140,6 +151,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.banner-image {
+    width: 500px;
+}
+
+.banner-text {
+    font-size: 24px;
+    color: rgb(31, 30, 30);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.arrow {
+    width: 40px;
+    margin-left: 20px;
+}
+
 .forms {
     .header {
         background: url('~assets/about.jpg');
@@ -193,7 +220,6 @@ export default {
 }
 
 .youtubeTitle {
-margin-left: 20px;
+    margin-left: 20px;
 }
-
 </style>
