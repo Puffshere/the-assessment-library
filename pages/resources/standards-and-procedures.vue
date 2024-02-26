@@ -9,6 +9,9 @@
                         <div>
                             <img class="titleImageLogo" src="~assets/logo.png">
                             <h1 class="pageTitle">Intranet</h1>
+                            <div class="wrapper" v-if="unlocked && tonysNotes.length === 0">
+                                <br>
+                            </div>
                             <div v-if="unlocked && announcements.length !== 0">
                                 <div class="announcementText announcementBody">
                                     <template v-if="announcements_name">
