@@ -5,7 +5,7 @@ const getMostRecentAnnouncement = async (req, res) => {
     try {
         // Find the most recent announcement where user_name is not "Tony"
         const mostRecentAnnouncement = await Announcements.findOne({
-            user_name: { $ne: "Tony" }
+            user_name: { $ne: "Aja" }
         }).sort({ createdAt: -1 }).exec();
 
         if (mostRecentAnnouncement) {
@@ -26,7 +26,7 @@ const getThreeMostRecentAnnouncementsByTony = async (req, res) => {
     try {
         // Find the three most recent announcements where user_name is "Tony"
         const recentAnnouncementsByTony = await Announcements.find({
-            user_name: "Tony"
+            user_name: "Aja"
         }).sort({ createdAt: -1 }).limit(3).exec();
 
         if (recentAnnouncementsByTony && recentAnnouncementsByTony.length > 0) {

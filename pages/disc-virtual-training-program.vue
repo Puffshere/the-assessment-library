@@ -13,6 +13,9 @@
         </section>
 
         <div class="container">
+            <div class="col-12">
+                <img class="titleImage" src="./../assets/freeEbookImage.png" alt="template icons">
+            </div>
             <div class="row flex-center">
                 <div class="col-12">
                     <ul class="resources">
