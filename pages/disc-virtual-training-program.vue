@@ -225,6 +225,10 @@ export default {
 
 @media (max-width: 1036px) {
 
+    .banner-image {
+    width: 100%;
+}
+
    .arrow {
     display: none;
    }
