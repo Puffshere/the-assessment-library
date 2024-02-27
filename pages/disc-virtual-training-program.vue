@@ -222,4 +222,11 @@ export default {
 .youtubeTitle {
     margin-left: 20px;
 }
+
+@media (max-width: 1036px) {
+
+   .arrow {
+    display: none;
+   }
+}
 </style>
