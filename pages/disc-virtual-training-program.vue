@@ -153,6 +153,7 @@ export default {
 <style lang="scss" scoped>
 .banner-image {
     width: 100%;
+    border-radius: 5px;
 }
 
 .banner-text {
@@ -164,7 +165,8 @@ export default {
 
 .arrow {
     width: 40px;
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-top: 5px;
 }
 
 .forms {
