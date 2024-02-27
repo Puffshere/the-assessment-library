@@ -152,7 +152,7 @@ export default {
 
 <style lang="scss" scoped>
 .banner-image {
-    width: 500px;
+    width: 100%;
 }
 
 .banner-text {
@@ -224,10 +224,6 @@ export default {
 }
 
 @media (max-width: 1036px) {
-
-    .banner-image {
-    width: 100%;
-}
 
    .arrow {
     display: none;
