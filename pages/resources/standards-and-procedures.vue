@@ -48,8 +48,7 @@
                             Notes From Tony
                             <hr>
                             <ul>
-                                <li v-for="(note, index) in tonysNotes" :key="index">
-                                    {{ note.announcement_text }}
+                                <li v-for="(note, index) in tonysNotes" :key="index" v-html="note.announcement_text">
                                 </li>
                             </ul>
                         </div>

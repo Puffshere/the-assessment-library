@@ -1,4 +1,5 @@
 import Announcements from "../models/announcements";
+const { sanitizeAndLinkifyText } = require('../utils/textProcessing');
 
 
 const getMostRecentAnnouncement = async (req, res) => {
@@ -25,17 +26,19 @@ const getMostRecentAnnouncement = async (req, res) => {
 const getThreeMostRecentAnnouncementsByTony = async (req, res) => {
     try {
         // Find the three most recent announcements where user_name is "Tony"
-        const recentAnnouncementsByTony = await Announcements.find({
-            user_name: "Aja"
+        let recentAnnouncementsByTony = await Announcements.find({
+            user_name: "Aja" // Make sure to query the correct user_name
         }).sort({ createdAt: -1 }).limit(3).exec();
 
         if (recentAnnouncementsByTony && recentAnnouncementsByTony.length > 0) {
+            // Use the utility function to sanitize and linkify each announcement text
+            recentAnnouncementsByTony = recentAnnouncementsByTony.map(announcement => ({
+                ...announcement._doc, // Use _doc to access the raw document, assuming Mongoose documents are returned
+                announcement_text: sanitizeAndLinkifyText(announcement.announcement_text),
+            }));
+
             res.json({
-                announcements: recentAnnouncementsByTony.map(announcement => ({
-                    announcement_text: announcement.announcement_text,
-                    user_name: announcement.user_name,
-                    createdAt: announcement.createdAt
-                }))
+                announcements: recentAnnouncementsByTony
             });
         } else {
             res.status(404).send({ message: 'No announcements by Tony found' });
