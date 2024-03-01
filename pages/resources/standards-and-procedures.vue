@@ -258,6 +258,10 @@ export default {
                         {
                             url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/cyber-liability-insurance.pdf',
                             mainText: 'A24x7 Cyber Liability Insurance',
+                        },
+                        {
+                            url: 'https://docs.google.com/spreadsheets/d/1Vhgz4OqXdN3KIKMsWKp5z4Md0_Da2uzos1O6WUXYGSY/edit#gid=713753388',
+                            mainText: 'Employee Roster',
                         }
                     ]
                 }
