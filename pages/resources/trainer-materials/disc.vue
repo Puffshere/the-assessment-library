@@ -507,7 +507,7 @@
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DirAdapt.mp4"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/How to Adapt_Dominance_1.25.24.mp4"
                                         target="_blank" rel="noopener">Adaptability for High D Styles</a></td>
                             </tr>
                             <tr>
