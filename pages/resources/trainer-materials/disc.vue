@@ -512,12 +512,12 @@
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/SocAdapt.mp4"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/I_Influence_Adaptive_2.29.24.mp4"
                                         target="_blank" rel="noopener">Adaptability for High I Styles</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/RelAdapt.mp4"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/S_Steadiness_Adaptive_2.29.24.mp4"
                                         target="_blank" rel="noopener">Adaptability for High S Styles</a></td>
                             </tr>
                             <tr>
