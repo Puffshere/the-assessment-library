@@ -289,8 +289,14 @@ export default {
                 },
                 {
                     id: 6,
-                    name: 'Development',
+                    name: 'Support',
                     image: '/images/comingSoonYellow.webp',
+                    links: [
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/SOP+-+Support+Department+-+_Do+Not+Contact_.docx",
+                            mainText: "Do Not Contact"
+                        }
+                    ]
                 }
             ],
             thirdRowLinks: [
@@ -306,15 +312,10 @@ export default {
                 },
                 {
                     id: 9,
-                    name: 'Support',
+                    name: 'Development',
                     image: '/images/comingSoonYellow.webp',
-                    links: [
-                        {
-                            url: "",
-                            main: ""
-                        }
-                    ]
                 }
+                
             ],
         };
     },
