@@ -437,6 +437,15 @@ $pixel: 15px;
 .tonyNotes {
     margin-left: 60px;
     margin-top: -20px;
+    overflow: hidden; 
+}
+
+.tonyNotes li {
+  word-wrap: break-word;
+}
+
+.tonyNotes a {
+  word-wrap: break-word;
 }
 
 .titleText {
