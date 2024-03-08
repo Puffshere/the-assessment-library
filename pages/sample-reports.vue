@@ -529,7 +529,7 @@
                             target="_blank" rel="noopener">Learning Styles Report</a>
                         <a v-else-if="lang === 'ja'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf"
-                            target="_blank" rel="noopener">Learning Styles Report</a>
+                            target="_blank" rel="noopener">Learning Styles Report  <span class="reportOnly">(Report Only, not Questionnaire)</span></a>
                         <a v-else-if="lang === 'pt-br'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf"
                             target="_blank" rel="noopener">Learning Styles Report</a>
@@ -1513,7 +1513,7 @@
                                     target="_blank" rel="noopener">French</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf"
-                                    target="_blank" rel="noopener">Japanese</a><br />
+                                    target="_blank" rel="noopener">Japanese (Report Only, not Questionnaire)</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf"
                                     target="_blank" rel="noopener">Portuguese (Brazil)</a><br />
@@ -1915,5 +1915,9 @@ export default {
     /* .fade-leave-active below version 2.1.8 */
         {
         opacity: 0;
+    }
+
+    .reportOnly {
+        font-size: 12px;
     }
 }</style>
