@@ -680,4 +680,96 @@ export default {
     }
   }
 }
+
+@media (max-width: 550px) {
+
+  .bizx {
+    .banner1 {
+      .container {
+        margin-top: -5px;
+      }
+    }
+
+    .banner1,
+    .banner2,
+    .banner3 {
+      .bannerTopWave {
+        top: -80px;
+      }
+
+      .bannerBottomWave {
+        bottom: -80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+
+  .bizx {
+    .banner1 {
+      .container {
+        margin-top: -5px;
+      }
+    }
+
+    .banner1,
+    .banner2,
+    .banner3 {
+      .bannerTopWave {
+        top: -60px;
+      }
+
+      .bannerBottomWave {
+        bottom: -60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+
+  .bizx {
+    .banner1 {
+      .container {
+        margin-top: -5px;
+      }
+    }
+
+    .banner1,
+    .banner2,
+    .banner3 {
+      .bannerTopWave {
+        top: -50px;
+      }
+
+      .bannerBottomWave {
+        bottom: -50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+
+  .bizx {
+    .banner1 {
+      .container {
+        margin-top: -5px;
+      }
+    }
+
+    .banner1,
+    .banner2,
+    .banner3 {
+      .bannerTopWave {
+        top: -40px;
+      }
+
+      .bannerBottomWave {
+        bottom: -40px;
+      }
+    }
+  }
+}
 </style>
