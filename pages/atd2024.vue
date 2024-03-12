@@ -431,14 +431,6 @@ export default {
       bottom: -170px;
       z-index: -10;
     }
-
-    .bannerTopWave {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: -180px;
-      z-index: -10;
-    }
   }
 
   .whiteSection1 {
@@ -662,6 +654,29 @@ export default {
 
     img {
       max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .bizx {
+    .banner1 {
+      .container {
+        margin-top: -5px;
+      }
+    }
+
+    .banner1,
+    .banner2,
+    .banner3 {
+      .bannerTopWave {
+        top: -115px;
+      }
+
+      .bannerBottomWave {
+        bottom: -110px;
+      }
     }
   }
 }
