@@ -522,7 +522,7 @@
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ThinkAdapt.mp4"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/High_C_Adaptive.mp4"
                                         target="_blank" rel="noopener">Adaptability for High C Styles</a></td>
                             </tr>
                         </tbody>
