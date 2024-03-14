@@ -49,11 +49,11 @@
                             </li>
                         </a>
 
-                        <a target="_blank" href="https://form.asana.com/?k=imQ5iceoN9QkK7VkpLiYQQ&d=460673300006490">
+                        <!-- <a target="_blank" href="https://form.asana.com/?k=imQ5iceoN9QkK7VkpLiYQQ&d=460673300006490">
                             <li class="resource support">
                                 Brinna Tasks Request Form
                             </li>
-                        </a>
+                        </a> -->
 
                         <a target="_blank" href="https://form.asana.com/?k=-yxazr6big4-S5muOfIHXw&d=460673300006490">
                             <li class="resource development">
@@ -81,11 +81,11 @@
                             </li>
                         </a>
 
-                        <a target="_blank" href="https://form.asana.com/?k=bN_EmGZKoRacgcvmUftsRQ&d=460673300006490">
+                        <!-- <a target="_blank" href="https://form.asana.com/?k=bN_EmGZKoRacgcvmUftsRQ&d=460673300006490">
                             <li class="resource translationRequests">
                                 Translation Requests
                             </li>
-                        </a>
+                        </a> -->
 
                     </ul>
 
