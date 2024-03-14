@@ -58,16 +58,16 @@
             <br />
             <div class="row">
               <div class="col-3">
-                <img src="~/assets/Red_D_Dominance.png" alt="red block" class="block" />
+                <img src="~/assets/dominance.png" alt="red block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/Yellow_I_Influence.png" alt="yellow block" class="block" />
+                <img src="~/assets/influence.png" alt="yellow block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/Green_S_Steadiness.png" alt="green block" class="block" />
+                <img src="~/assets/steadiness.png" alt="green block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/Blue_C_Conscientiousness.png" alt="blue block" class="block" />
+                <img src="~/assets/conscientiousness.png" alt="blue block" class="block" />
               </div>
             </div>
           </div>
@@ -438,6 +438,16 @@ export default {
       font-size: 34pt;
       line-height: 34pt;
       margin-bottom: 0;
+      margin-left: 20px;
+    }
+
+    p {
+      margin-left: 20px;
+    }
+
+    .block {
+      width: 100%;
+      min-height: 55px;
     }
   }
 
@@ -627,11 +637,6 @@ export default {
         max-width: 100%;
       }
     }
-  }
-
-  .block {
-    width: 200px;
-    border-radius: 20px;
   }
 
   .orderBtn {
