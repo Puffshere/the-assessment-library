@@ -133,23 +133,23 @@
               </div>
               <div class="col-7">
                 <h2>
-                  <span class="benefitsPlus">+</span> IMPROVED TEAM DYNAMICS
+                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> IMPROVED TEAM DYNAMICS
                 </h2>
                 <hr>
                 <h2>
-                  <span class="benefitsPlus">+</span> CONFLICT REDUCTION
+                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> CONFLICT REDUCTION
                 </h2>
                 <hr>
                 <h2>
-                  <span class="benefitsPlus">+</span> CONTINUOUS LEARING
+                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> CONTINUOUS LEARING
                 </h2>
                 <hr>
                 <h2>
-                  <span class="benefitsPlus">+</span> ENHANCED SELF-AWARENESS
+                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> ENHANCED SELF-AWARENESS
                 </h2>
                 <hr>
                 <h2>
-                  <span class="benefitsPlus">+</span> TAILORED APPROACH
+                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> TAILORED APPROACH
                 </h2>
               </div>
             </div>
@@ -181,22 +181,22 @@
               </div>
               <div class="col-12">
                 <h2>
-                  <span class="appPlus">+</span> <span class="appText">Small Group Practice |</span> DISC Block
+                  <span class="appPlus"><img src="~/assets/whitePlus.png"></span> <span class="appText">Small Group Practice |</span> DISC Block
                   Challenge: Effective Communication
                 </h2>
                 <hr>
                 <h2>
-                  <span class="appPlus">+</span> <span class="appText">Small Group Practice |</span> DISC Block
+                  <span class="appPlus"><img src="~/assets/whitePlus.png"></span> <span class="appText">Small Group Practice |</span> DISC Block
                   Challenge: Scenarios
                 </h2>
                 <hr>
                 <h2>
-                  <span class="appPlus">+</span> <span class="appText">Workshop/Large group Practice |</span> Fostering
+                  <span class="appPlus"><img src="~/assets/whitePlus.png"></span> <span class="appText">Workshop/Large group Practice |</span> Fostering
                   Participation & Understanding
                 </h2>
                 <hr>
                 <h2>
-                  <span class="appPlus">+</span> <span class="appText">Zoom Meetings |</span> Application in Virtual
+                  <span class="appPlus"><img src="~/assets/whitePlus.png"></span> <span class="appText">Zoom Meetings |</span> Application in Virtual
                   settings
                 </h2>
               </div>
@@ -425,7 +425,7 @@ export default {
     }
 
     .benefitsPlus {
-      margin-left: -20px;
+      margin-left: -40px;
       margin-right: 20px;
     }
 
@@ -476,7 +476,7 @@ export default {
 
     .appPlus {
       margin-left: -20px;
-      margin-right: 20px;
+      margin-right: 10px;
     }
 
     .appText {
