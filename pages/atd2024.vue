@@ -181,19 +181,23 @@
               </div>
               <div class="col-12">
                 <h2>
-                  <span class="appPlus">+</span> <span class="appText">Small Group Practice |</span> DISC Block Challenge: Effective Communication
+                  <span class="appPlus">+</span> <span class="appText">Small Group Practice |</span> DISC Block
+                  Challenge: Effective Communication
                 </h2>
                 <hr>
                 <h2>
-                  <span class="appPlus">+</span> <span class="appText">Small Group Practice |</span> DISC Block Challenge: Scenarios
+                  <span class="appPlus">+</span> <span class="appText">Small Group Practice |</span> DISC Block
+                  Challenge: Scenarios
                 </h2>
                 <hr>
                 <h2>
-                  <span class="appPlus">+</span> <span class="appText">Workshop/Large group Practice |</span> Fostering Participation & Understanding
+                  <span class="appPlus">+</span> <span class="appText">Workshop/Large group Practice |</span> Fostering
+                  Participation & Understanding
                 </h2>
                 <hr>
                 <h2>
-                  <span class="appPlus">+</span> <span class="appText">Zoom Meetings |</span> Application in Virtual settings
+                  <span class="appPlus">+</span> <span class="appText">Zoom Meetings |</span> Application in Virtual
+                  settings
                 </h2>
               </div>
             </div>
@@ -221,7 +225,7 @@
     <br />
     <br />
     <br />
-    <section class="banner3">
+    <section class="banner4">
       <img src="~/assets/Wave_2.png" alt="top wave" class="bannerTopWave" />
     </section>
     <LazyHydrate when-visible><footer-fold /></LazyHydrate>
@@ -457,7 +461,7 @@ export default {
     .peopleSmiling {
       display: flex;
       justify-content: center;
-      align-items: center; 
+      align-items: center;
 
       img {
         max-width: 100%;
@@ -481,6 +485,18 @@ export default {
       bottom: -170px;
       z-index: -10;
     }
+
+    .bannerTopWave {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: -180px;
+      z-index: -10;
+    }
+  }
+
+  .banner4 {
+    position: relative;
 
     .bannerTopWave {
       position: absolute;
@@ -535,6 +551,12 @@ export default {
         bottom: -110px;
       }
     }
+
+    .banner4 {
+      .bannerTopWave {
+        top: -115px;
+      }
+    }
   }
 }
 
@@ -556,6 +578,12 @@ export default {
 
       .bannerBottomWave {
         bottom: -80px;
+      }
+    }
+
+    .banner4 {
+      .bannerTopWave {
+        top: -80px;
       }
     }
   }
@@ -581,6 +609,12 @@ export default {
         bottom: -60px;
       }
     }
+
+    .banner4 {
+      .bannerTopWave {
+        top: -60px;
+      }
+    }
   }
 }
 
@@ -604,6 +638,12 @@ export default {
         bottom: -50px;
       }
     }
+
+    .banner4 {
+      .bannerTopWave {
+        top: -55px;
+      }
+    }
   }
 }
 
@@ -625,6 +665,12 @@ export default {
 
       .bannerBottomWave {
         bottom: -40px;
+      }
+    }
+
+    .banner4 {
+      .bannerTopWave {
+        top: -40px;
       }
     }
   }
