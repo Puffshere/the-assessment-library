@@ -137,7 +137,7 @@ module.exports = {
     ]
   },
   gtm: {
-    id: 'GTM-WP6WZ2ZF',
+    id: 'G-CK6V4QCYE2',
     autoInit: true,
     pageTracking: true,
     scriptDefer: true

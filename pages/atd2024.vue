@@ -11,11 +11,10 @@
               <br />
               <img class="blocks" src="~/assets/DISC_Blocks_top_image.png" alt="blocks" />
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
             <div class="col-6">
+              <img src="~/assets/logo-footer.png" alt="assessments24x7 logo" class="logo">
+              <br />
+              <br />
               <h3>DISC</h3>
               <h3>BLOCKS</h3>
               <h4>A Practical Tool for Enhanced</h4>
@@ -129,27 +128,34 @@
             <h1>BENEFITS</h1>
             <br />
             <div class="row">
-              <div class="col-9">
-                <img src="~/assets/people_raising_hands.png" alt="people raising hands" class="peopleRaisingHands" />
+              <div class="col-5">
+                <img src="~/assets/male_business_man.png" alt="male business man" class="manSmiling" />
               </div>
-              <div class="col-3">
+              <div class="col-7">
                 <h2>
-                  Improved
-                  <br>
-                  Team Dynamics
-                  <br>
-                  <hr>
+                  + IMPROVED TEAM DYNAMICS
                 </h2>
-                <p>
-                  By visualizing and acknowledging distinct communication
-                  styles, teams can better understand and leverage the diversity
-                  of perspectives, leading to improved collaboration and
-                  productivity.
-                </p>
+                <hr>
+                <h2>
+                  + CONFLICT REDUCTION
+                </h2>
+                <hr>
+                <h2>
+                  + CONTINUOUS LEARING
+                </h2>
+                <hr>
+                <h2>
+                  + ENHANCED SELF-AWARENESS
+                </h2>
+                <hr>
+                <h2>
+                  + TAILORED APPROACH
+                </h2>
+                <hr>
               </div>
             </div>
             <br />
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-3">
                 <h2>
                   Tailored
@@ -209,7 +215,7 @@
                   members' behaviors and responses.
                 </p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -222,105 +228,11 @@
     <section class="banner3">
       <img src="~/assets/Wave_2.png" alt="top wave" class="bannerTopWave" />
       <div class="container">
-        <br />
         <div class="row">
           <div class="col-12">
             <br />
-            <br />
-            <div class="col-5">
-              <br />
-              <div class="blocks">
-                <img src="~/assets/DISC_Blocks_Single_Stack_Image.png" alt="disc blocks single stack" />
-              </div>
-            </div>
-            <div class="col-7">
-              <h3>INTRODUCING THE</h3>
-              <h3>DISC BLOCKS</h3>
-              <br />
-              <p>
-                Give each member a complete set of DISC Blocks during or after review of the DISC assessment. Show them
-                how each block represents a primary style and can be used either individually to showcase one style in
-                action or as a group to reveal a blend of styles present at one time. Introduce the adaptability phrase
-                on each block as a quick way to connect with the needs of that style.
-                Then, consider initiating a 'Block of the Week' activity or communication - each week a different DISC
-                Block is highlighted to help educate the team about that style’s traits and encourage team members to
-                explore and appreciate diverse working and communication styles.
-              </p>
-              <br />
-              <br />
-              <br />
-              <button class="orderBtn">ORDER NOW</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="title">
-              <h3>
-                VISUALLY COMMUNICATING YOUR
-              </h3>
-              <h3>
-                STYLE TO OTHERS
-              </h3>
-            </div>
-            <br />
-            <div class="row">
-              <div class="col-12">
-                <div class="col-5">
-                  <p>
-                    One way to utilize these blocks is by using them as a means of communicating your current style to
-                    team members. For instance, if you are in a direct and task-oriented mode, you can place the Red
-                    Block on top to indicate this style. This way, team members will understand the need for brevity,
-                    directness, and getting straight to the point, or simply exchanging greetings.
-                  </p>
-                  <br />
-                  <br />
-                  <p>
-                    In addition to indicating current communication preferences, DISC Blocks can be used in a variety of
-                    ways to keep the principles of DISC prevalent in the daily workflow. For instance, during team
-                    meetings, individuals might place their block of choice in front of them, acting as a non-verbal cue
-                    to others on how they are approaching the meeting. Another option could be to incorporate the blocks
-                    into desk organization; employees could have a small pedestal where they display the block
-                    representing their dominant style for the day or project. This method helps foster an environment
-                    where team members can adjust their interactions based on visible cues.
-                  </p>
-                  <br />
-                  <br />
-                  <br />
-                  <button class="orderBtn">ORDER NOW</button>
-                </div>
-                <div class="col-7">
-                  <br />
-                  <div class="blocks">
-                    <img src="~/assets/male_business_man.png" alt="male business man" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-          </div>
-        </div>
-      </div>
-      <img class="bannerBottomWave" src="~/assets/Wave_1.png" alt="bottom wave" />
-    </section>
-    <br />
-    <br />
-    <br />
-    <br />
-    <section class="whiteSection3">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
             <h1>APPLICATION</h1>
+            <br />
             <h2>
               Building Communication & Understanding as a Team/Group
             </h2>
@@ -331,11 +243,15 @@
               </div>
             </div>
             <br />
+            <br />
+            <br />
+            <br />
             <div class="row">
             </div>
           </div>
         </div>
       </div>
+      <img class="bannerBottomWave" src="~/assets/Wave_1.png" alt="bottom wave" />
     </section>
     <br />
     <br />
@@ -371,6 +287,11 @@ export default {
     text-align: center;
     margin-bottom: 60px;
     position: relative;
+
+    .logo {
+      width: 65%;
+      margin-left: 60px;
+    }
 
     h1 {
       font-size: 34pt;
@@ -524,17 +445,23 @@ export default {
       margin-left: 20px;
     }
 
-    .peopleRaisingHands {
-      width: 100%;
-      margin-left: 0px;
+    h2 {
+      font-size: 24pt;
+      margin-left: 60px;
     }
 
     hr {
-      height: 6px;
+      height: 4px;
       background-color: #1e222d;
-      width: 67px;
+      width: 95%;
       float: left;
-      margin-top: -5px;
+      margin-top: -20px;
+      margin-left: 20px;
+
+    }
+
+    .manSmiling {
+      width: 100%;
     }
   }
 
@@ -545,34 +472,24 @@ export default {
     margin-bottom: 60px;
     position: relative;
 
-    h3 {
-      font-size: 40pt;
-      margin-bottom: -35px;
-      margin-top: 0;
-      margin-left: 0px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    h1 {
+      font-size: 36pt;
+      line-height: 34pt;
+      margin-bottom: -20px;
       text-align: left;
+      margin-left: 20px;
     }
 
-    h4 {
-      font-size: 15pt;
-      font-weight: 300;
-      margin-bottom: -30px;
+    h2 {
+      font-size: 18pt;
+      line-height: 0px;
       text-align: left;
+      margin-left: 20px;
+      margin-bottom: 0px;
+      font-weight: 400;
     }
 
-    P {
-      font-weight: 300;
-      margin-bottom: -30px;
-      text-align: left;
-    }
-
-    .title {
-      margin-left: 40px;
-    }
-
-    .blocks {
+    .peopleSmiling {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -580,16 +497,6 @@ export default {
       img {
         max-width: 100%;
       }
-    }
-
-    .orderBtn {
-      float: left;
-    }
-
-    .findUs {
-      max-width: 320px;
-      margin-left: 190px;
-      margin-top: -80px;
     }
 
     .bannerBottomWave {
@@ -606,36 +513,6 @@ export default {
       left: 0;
       top: -180px;
       z-index: -10;
-    }
-  }
-
-  .whiteSection3 {
-    h1 {
-      font-size: 36pt;
-      line-height: 34pt;
-      margin-bottom: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    h2 {
-      font-size: 20pt;
-      font-weight: 400;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .peopleSmiling {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        max-width: 100%;
-      }
     }
   }
 
