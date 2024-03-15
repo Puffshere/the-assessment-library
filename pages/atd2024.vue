@@ -274,9 +274,10 @@
                 </div>
                 <hr>
                 <h2>
+                  <div v-if="SGP_S_Modal === true" class="expanseMargins"></div>
                   <span class="appPlus">
                     <img v-if="SGP_S_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
-                      @click="SGP_S_Modal = true">
+                    @click="SGP_S_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="SGP_S_Modal = false">
                   </span> <span class="appText">
                     Small Group Practice |</span> DISC Block Challenge: Scenarios
@@ -296,6 +297,7 @@
                 </div>
                 <hr>
                 <h2>
+                  <div v-if="WGP_Modal === true" class="expanseMargins"></div>
                   <span class="appPlus">
                     <img v-if="WGP_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
                       @click="WGP_Modal = true">
@@ -318,7 +320,7 @@
                         <span class="appModalTextTitle">Ice Breaker Option 1: Observations:</span> Start the workshop by
                         having each participant introduce
                         themselves and share their name, role, something they love about their work, and something they
-                        hope to learn about in the session. Ask each participant to choose the block that they think
+                        expanseMargins to learn about in the session. Ask each participant to choose the block that they think
                         represents that person’s style, based on their observations of the short introduction.
                       </li>
                       <br />
@@ -359,6 +361,7 @@
                 </div>
                 <hr>
                 <h2>
+                  <div v-if="ZM_Modal === true" class="expanseMargins"></div>
                   <span class="appPlus">
                     <img v-if="ZM_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
                       @click="ZM_Modal = true">
@@ -726,6 +729,10 @@ export default {
         max-width: 100%;
         margin-bottom: 20px;
       }
+    }
+
+    .expanseMargins {
+      min-height: 7px;
     }
 
     .appPlus {
