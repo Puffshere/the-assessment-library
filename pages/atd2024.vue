@@ -141,6 +141,13 @@
                   </span>
                   IMPROVED TEAM DYNAMICS
                 </h2>
+                <div v-if="ITD_Modal === true">
+                  <p class="benefitsModalText">
+                    By visualizing and acknowledging distinct communication styles, teams can better understand and
+                    leverage the diversity of perspectives, leading to improved collaboration and productivity.
+                  </p>
+                  <br />
+                </div>
                 <hr>
                 <h2>
                   <span class="benefitsPlus">
@@ -151,6 +158,13 @@
                   </span>
                   CONFLICT REDUCTION
                 </h2>
+                <div v-if="CR_Modal === true">
+                  <p class="benefitsModalText">
+                    The use of DISC Blocks can help preempt misunderstandings and conflicts by providing a clear
+                    framework for interpreting team members' behaviors and responses.
+                  </p>
+                  <br />
+                </div>
                 <hr>
                 <h2>
                   <span class="benefitsPlus">
@@ -161,6 +175,14 @@
                   </span>
                   CONTINUOUS LEARING
                 </h2>
+                <div v-if="CL_Modal === true">
+                  <p class="benefitsModalText">
+                    Implementing DISC Blocks promotes an environment of continuous learning and development, as team
+                    members regularly assess and discuss communication styles, leading to ongoing improvements in team
+                    efficacy.
+                  </p>
+                  <br />
+                </div>
                 <hr>
                 <h2>
                   <span class="benefitsPlus">
@@ -171,6 +193,15 @@
                   </span>
                   ENHANCED SELF-AWARENESS
                 </h2>
+                <div v-if="ESA_Modal === true">
+                  <p class="benefitsModalText">
+                    DISC Blocks encourage individuals to reflect on their communication styles, fostering
+                    self-awareness
+                    and personal growth, which can lead to more effective interactions and leadership within the
+                    organization.
+                  </p>
+                  <br />
+                </div>
                 <hr>
                 <h2>
                   <span class="benefitsPlus">
@@ -181,6 +212,14 @@
                   </span>
                   TAILORED APPROACH
                 </h2>
+                <div v-if="TA_Modal === true">
+                  <p class="benefitsModalText">
+                    DISC Blocks enable team members to adapt their communication strategies to suit different
+                    situations
+                    and audiences within the organization, allowing for more tailored and successful interactions.
+                  </p>
+                  <br />
+                </div>
               </div>
             </div>
             <br />
@@ -219,6 +258,20 @@
                   <span class="appText">
                     Small Group Practice |</span> DISC Block Challenge: Effective Communication
                 </h2>
+                <div v-if="SGP_EC_Modal === true">
+                  <p class="appModalText">
+                    In this activity, the team is divided into 4 small groups, with each given one DISC Block. Each
+                    group is presented with a message, and they must craft an effective way to communicate the message
+                    to their assigned DISC Block style. Each message is then shared with the group at large to gather
+                    feedback on if that message has been communicated appropriately, or if there should be something
+                    different in the communication. Discuss the implications of differing audiences, mindsets, the kind
+                    of message (modality), context and timing of the message, and what the intention is of the message
+                    compared to the perception of what may be received to ensure the message is effective. Then, switch
+                    style blocks, and repeat with a new message to practice adaptability and incorporate feedback from
+                    the first time through.
+                  </p>
+                  <br />
+                </div>
                 <hr>
                 <h2>
                   <span class="appPlus">
@@ -228,6 +281,19 @@
                   </span> <span class="appText">
                     Small Group Practice |</span> DISC Block Challenge: Scenarios
                 </h2>
+                <div v-if="SGP_S_Modal === true">
+                  <p class="appModalText">
+                    In this activity, the team is divided into small groups, with each member given a full set of DISC
+                    Blocks. Each group is presented with a series of hypothetical workplace scenarios requiring
+                    cooperation, leadership, negotiation, and adaptability. Members silently choose the DISC Block that
+                    they feel represents the best communication style to handle the situation. After revealing their
+                    choices, each group discusses the benefits and potential drawbacks of the collective styles
+                    represented. Through this engaging exercise, team members can gain a deeper understanding of how
+                    different communication styles can be effective in a variety of contexts, fostering a sense of
+                    empathy and strategic thinking within the team.
+                  </p>
+                  <br />
+                </div>
                 <hr>
                 <h2>
                   <span class="appPlus">
@@ -237,6 +303,60 @@
                   </span> <span class="appText">
                     Workshop/Large group Practice |</span> Fostering Participation & Understanding
                 </h2>
+                <div v-if="WGP_Modal === true">
+                  <div class="appModalText">
+                    <ol>
+                      <li>
+                        <span class="appModalTextTitle">Ice Breaker Option 1: Introductions:</span> Start the workshop
+                        by having each participant select a DISC
+                        Block that they feel currently represents their communication style. Ask them to share why they
+                        chose that block, encouraging a discussion about how different styles can positively impact a
+                        workshop setting.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Ice Breaker Option 1: Observations:</span> Start the workshop by
+                        having each participant introduce
+                        themselves and share their name, role, something they love about their work, and something they
+                        hope to learn about in the session. Ask each participant to choose the block that they think
+                        represents that person’s style, based on their observations of the short introduction.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Group Activities:</span> Divide participants into groups and
+                        give each group a scenario to work through
+                        using their complete set of DISC Blocks. Instruct them to clearly note which styles are being
+                        used for which part of the solution. For example, tackling a problem that requires a balance of
+                        assertiveness and careful planning might see both Red and Blue Blocks being used prominently.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Role Swap:</span> Challenge participants to swap blocks with
+                        someone demonstrating a different style
+                        and take on that style for an assigned time. This will encourage them to consider alternative
+                        perspectives and approaches, emphasizing adaptability and empathy in communication.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Active Reflection:</span> Throughout the workshop, integrate
+                        moments where participants reflect on the
+                        activities in the session or their use of the DISC Blocks and what insights they've gained. They
+                        can reflect in their own style, and then consider how another style would likely reflect on the
+                        same activity. They could share how using a different style affected their interaction in the
+                        group activity or their problem-solving approach.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Debrief Session:</span> Conclude the workshop with a debrief,
+                        encouraging participants to discuss how
+                        the use of DISC Blocks influenced the workshop dynamics and what they learned about other
+                        communication styles. Gather ideas of how they may plan to use the DISC Blocks and encourage
+                        them to teach someone else they know about the DISC styles using the blocks.
+                      </li>
+                    </ol>
+                  </div>
+                  <br />
+                </div>
                 <hr>
                 <h2>
                   <span class="appPlus">
@@ -246,6 +366,66 @@
                   </span> <span class="appText">
                     Zoom Meetings |</span> Application in Virtual settings
                 </h2>
+                <div v-if="ZM_Modal === true">
+                  <div class="appModalText">
+                    <p>
+                      To effectively use DISC Blocks in a <span class="appModalTextTitle1">virtual setting</span> like a
+                      Zoom meeting, teams can follow these
+                      steps:
+                    </p>
+
+                    <ol>
+                      <li>
+                        <span class="appModalTextTitle">Preparation:</span> Prior to the meeting, ensure each team
+                        member has a set of DISC Blocks. In a
+                        remote
+                        work environment, this might mean mailing a set to each participant or using a digital
+                        representation if physical blocks are not an option.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Introductions:</span> At the start of the Zoom call, have each
+                        participant introduce themselves along
+                        with
+                        their chosen DISC Block for the meeting. Encourage team members to place their physical block or
+                        digital representation in view of the camera.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Meeting Guidelines:</span> Establish guidelines for using DISC
+                        Blocks during the meeting. For
+                        instance,
+                        if
+                        a team member wishes to display a change in their communication style, they would hold up a
+                        different color block to the camera.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Active Use:</span> Incorporate active block usage during
+                        discussions. For example, when brainstorming,
+                        a
+                        team member could hold up their 'I' (Yellow) Block to indicate a preference for open, creative
+                        dialogue, or display the 'D' (Red) Block when the conversation needs a more decisive turn.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Reflection:</span> At the end of the meeting, allow time for
+                        participants to reflect on the
+                        effectiveness
+                        of the DISC Blocks. Ask for feedback on whether the visual cues helped facilitate better
+                        communication and understanding.
+                      </li>
+                      <br />
+                      <li>
+                        <span class="appModalTextTitle">Follow-Up:</span> After the meeting, send out a quick survey or
+                        have an asynchronous discussion in
+                        your
+                        team’s chat platform about the use of DISC Blocks and any insights gained from the exercise.
+                      </li>
+                    </ol>
+                  </div>
+                  <br />
+                </div>
               </div>
             </div>
             <br />
@@ -498,6 +678,11 @@ export default {
       }
     }
 
+    .benefitsModalText {
+      margin-left: 90px;
+      margin-top: -20px;
+    }
+
     .manSmiling {
       width: 100%;
     }
@@ -555,6 +740,25 @@ export default {
 
     .appText {
       font-weight: 700;
+    }
+
+    ol li {
+      padding-left: 20px;
+    }
+
+    .appModalText {
+      text-align: left;
+      margin-top: 25px;
+      margin-bottom: -5px;
+
+      .appModalTextTitle1 {
+        font-weight: 700;
+      }
+
+      .appModalTextTitle {
+        font-weight: 700;
+        padding-right: 10px;
+      }
     }
 
     .bannerBottomWave {
