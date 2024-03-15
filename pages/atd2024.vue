@@ -427,6 +427,10 @@ export default {
     .benefitsPlus {
       margin-left: -40px;
       margin-right: 20px;
+
+      img {
+        margin-bottom: 5px;
+      }
     }
 
     .manSmiling {
@@ -459,8 +463,8 @@ export default {
     }
 
     hr {
-      margin-bottom: 25px;
-      margin-top: 25px;
+      margin-bottom: -5px;
+      margin-top: 10px;
     }
 
     .peopleSmiling {
@@ -477,6 +481,10 @@ export default {
     .appPlus {
       margin-left: -20px;
       margin-right: 10px;
+
+      img {
+        margin-bottom: 5px;
+      }
     }
 
     .appText {
