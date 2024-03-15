@@ -21,7 +21,7 @@
               <h4>Collaboration and Understanding</h4>
               <br />
               <br />
-              <button class="orderBtn">ORDER NOW</button>
+              <button class="orderBtn" @click="orderButton">ORDER NOW</button>
               <br />
               <br />
               <img class="whiteArrow" src="~/assets/White_Arrow_Pointing.png" alt="white arrow" />
@@ -103,7 +103,7 @@
               <br />
               <br />
               <br />
-              <button class="orderBtn">ORDER NOW</button>
+              <button class="orderBtn" @click="orderButton">ORDER NOW</button>
             </div>
             <div class="col-7">
               <br />
@@ -239,6 +239,11 @@ export default {
     "main-nav": () => import("@/components/Nav"),
     "footer-fold": () => import("@/components/Footer"),
   },
+  methods: {
+    orderButton() {
+      window.open('https://store.assessments24x7.com/products/disc-blocks', '_blank');
+    }
+  }
 };
 </script>
 
@@ -513,6 +518,7 @@ export default {
     border-radius: 10px;
     height: 50px;
     width: 140px;
+    cursor: pointer;
   }
 
   .whiteArrow {
