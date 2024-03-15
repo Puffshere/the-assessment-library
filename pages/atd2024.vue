@@ -133,89 +133,27 @@
               </div>
               <div class="col-7">
                 <h2>
-                  + IMPROVED TEAM DYNAMICS
+                  <span class="benefitsPlus">+</span> IMPROVED TEAM DYNAMICS
                 </h2>
                 <hr>
                 <h2>
-                  + CONFLICT REDUCTION
+                  <span class="benefitsPlus">+</span> CONFLICT REDUCTION
                 </h2>
                 <hr>
                 <h2>
-                  + CONTINUOUS LEARING
+                  <span class="benefitsPlus">+</span> CONTINUOUS LEARING
                 </h2>
                 <hr>
                 <h2>
-                  + ENHANCED SELF-AWARENESS
+                  <span class="benefitsPlus">+</span> ENHANCED SELF-AWARENESS
                 </h2>
                 <hr>
                 <h2>
-                  + TAILORED APPROACH
+                  <span class="benefitsPlus">+</span> TAILORED APPROACH
                 </h2>
-                <hr>
               </div>
             </div>
             <br />
-            <!-- <div class="row">
-              <div class="col-3">
-                <h2>
-                  Tailored
-                  <br>
-                  Approach
-                  <br>
-                  <hr>
-                </h2>
-                <p>
-                  DISC Blocks enable team members to adapt their communication
-                  strategies to suit different situations and audiences within
-                  the organization, allowing for more tailored and successful
-                  interactions.
-                </p>
-              </div>
-              <div class="col-3">
-                <h2>
-                  Enhanced
-                  <br>
-                  Self-Awareness
-                  <br>
-                  <hr>
-                </h2>
-                <p>
-                  DISC Blocks encourage individuals to reflect on their
-                  communication styles, fostering self-awareness and personal
-                  growth, which can lead to more effective interactions and
-                  leadership within the organization.
-                </p>
-              </div>
-              <div class="col-3">
-                <h2>
-                  Continuous
-                  <br>
-                  Learning
-                  <br>
-                  <hr>
-                </h2>
-                <p>
-                  Implementing DISC Blocks promotes an environment of continuous
-                  learning and development, as team members regularly assess and
-                  discuss communication styles, leading to ongoing improvements
-                  in team efficacy.
-                </p>
-              </div>
-              <div class="col-3">
-                <h2>
-                  Conflict
-                  <br>
-                  Reduction
-                  <br>
-                  <hr>
-                </h2>
-                <p>
-                  The use of DISC Blocks can help preempt misunderstandings and
-                  conflicts by providing a clear framework for interpreting team
-                  members' behaviors and responses.
-                </p>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -241,6 +179,23 @@
               <div class="col-12 peopleSmiling">
                 <img src="~/assets/team_smiling.png" alt="team smiling" />
               </div>
+              <div class="col-12">
+                <h2>
+                  <span class="appPlus">+</span> <span class="appText">Small Group Practice |</span> DISC Block Challenge: Effective Communication
+                </h2>
+                <hr>
+                <h2>
+                  <span class="appPlus">+</span> <span class="appText">Small Group Practice |</span> DISC Block Challenge: Scenarios
+                </h2>
+                <hr>
+                <h2>
+                  <span class="appPlus">+</span> <span class="appText">Workshop/Large group Practice |</span> Fostering Participation & Understanding
+                </h2>
+                <hr>
+                <h2>
+                  <span class="appPlus">+</span> <span class="appText">Zoom Meetings |</span> Application in Virtual settings
+                </h2>
+              </div>
             </div>
             <br />
             <br />
@@ -256,7 +211,6 @@
     <br />
     <br />
     <br />
-    <br />
     <div class="findUsFooter">
       <img src="~/assets/ATD_Find_us_at.png" alt="find us at white background" />
     </div>
@@ -264,6 +218,12 @@
     <br />
     <br />
     <br />
+    <br />
+    <br />
+    <br />
+    <section class="banner3">
+      <img src="~/assets/Wave_2.png" alt="top wave" class="bannerTopWave" />
+    </section>
     <LazyHydrate when-visible><footer-fold /></LazyHydrate>
   </section>
 </template>
@@ -379,10 +339,6 @@ export default {
     margin-bottom: 60px;
     position: relative;
 
-    h1 {}
-
-    h2 {}
-
     h3 {
       font-size: 40pt;
       margin-bottom: -35px;
@@ -455,9 +411,13 @@ export default {
       background-color: #1e222d;
       width: 95%;
       float: left;
-      margin-top: -20px;
+      margin-top: -15px;
       margin-left: 20px;
+    }
 
+    .benefitsPlus {
+      margin-left: -20px;
+      margin-right: 20px;
     }
 
     .manSmiling {
@@ -489,14 +449,29 @@ export default {
       font-weight: 400;
     }
 
+    hr {
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+
     .peopleSmiling {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center; 
 
       img {
         max-width: 100%;
+        margin-bottom: 20px;
       }
+    }
+
+    .appPlus {
+      margin-left: -20px;
+      margin-right: 20px;
+    }
+
+    .appText {
+      font-weight: 700;
     }
 
     .bannerBottomWave {
