@@ -133,23 +133,53 @@
               </div>
               <div class="col-7">
                 <h2>
-                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> IMPROVED TEAM DYNAMICS
+                  <span class="benefitsPlus">
+                    <img v-if="ITD_Modal === false" src="~/assets/bluePlus.png" alt="blue plus symbol"
+                      @click="ITD_Modal = true">
+                    <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="ITD_Modal = false"
+                      class="blueMinus">
+                  </span>
+                  IMPROVED TEAM DYNAMICS
                 </h2>
                 <hr>
                 <h2>
-                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> CONFLICT REDUCTION
+                  <span class="benefitsPlus">
+                    <img v-if="CR_Modal === false" src="~/assets/bluePlus.png" alt="blue plus symbol"
+                      @click="CR_Modal = true">
+                    <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="CR_Modal = false"
+                      class="blueMinus">
+                  </span>
+                  CONFLICT REDUCTION
                 </h2>
                 <hr>
                 <h2>
-                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> CONTINUOUS LEARING
+                  <span class="benefitsPlus">
+                    <img v-if="CL_Modal === false" src="~/assets/bluePlus.png" alt="blue plus symbol"
+                      @click="CL_Modal = true">
+                    <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="CL_Modal = false"
+                      class="blueMinus">
+                  </span>
+                  CONTINUOUS LEARING
                 </h2>
                 <hr>
                 <h2>
-                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> ENHANCED SELF-AWARENESS
+                  <span class="benefitsPlus">
+                    <img v-if="ESA_Modal === false" src="~/assets/bluePlus.png" alt="blue plus symbol"
+                      @click="ESA_Modal = true">
+                    <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="ESA_Modal = false"
+                      class="blueMinus">
+                  </span>
+                  ENHANCED SELF-AWARENESS
                 </h2>
                 <hr>
                 <h2>
-                  <span class="benefitsPlus"><img src="~/assets/bluePlus.png"></span> TAILORED APPROACH
+                  <span class="benefitsPlus">
+                    <img v-if="TA_Modal === false" src="~/assets/bluePlus.png" alt="blue plus symbol"
+                      @click="TA_Modal = true">
+                    <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="TA_Modal = false"
+                      class="blueMinus">
+                  </span>
+                  TAILORED APPROACH
                 </h2>
               </div>
             </div>
@@ -181,23 +211,40 @@
               </div>
               <div class="col-12">
                 <h2>
-                  <span class="appPlus"><img src="~/assets/whitePlus.png"></span> <span class="appText">Small Group Practice |</span> DISC Block
-                  Challenge: Effective Communication
+                  <span class="appPlus">
+                    <img v-if="SGP_EC_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
+                      @click="SGP_EC_Modal = true">
+                    <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="SGP_EC_Modal = false">
+                  </span>
+                  <span class="appText">
+                    Small Group Practice |</span> DISC Block Challenge: Effective Communication
                 </h2>
                 <hr>
                 <h2>
-                  <span class="appPlus"><img src="~/assets/whitePlus.png"></span> <span class="appText">Small Group Practice |</span> DISC Block
-                  Challenge: Scenarios
+                  <span class="appPlus">
+                    <img v-if="SGP_S_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
+                      @click="SGP_S_Modal = true">
+                    <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="SGP_S_Modal = false">
+                  </span> <span class="appText">
+                    Small Group Practice |</span> DISC Block Challenge: Scenarios
                 </h2>
                 <hr>
                 <h2>
-                  <span class="appPlus"><img src="~/assets/whitePlus.png"></span> <span class="appText">Workshop/Large group Practice |</span> Fostering
-                  Participation & Understanding
+                  <span class="appPlus">
+                    <img v-if="WGP_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
+                      @click="WGP_Modal = true">
+                    <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="WGP_Modal = false">
+                  </span> <span class="appText">
+                    Workshop/Large group Practice |</span> Fostering Participation & Understanding
                 </h2>
                 <hr>
                 <h2>
-                  <span class="appPlus"><img src="~/assets/whitePlus.png"></span> <span class="appText">Zoom Meetings |</span> Application in Virtual
-                  settings
+                  <span class="appPlus">
+                    <img v-if="ZM_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
+                      @click="ZM_Modal = true">
+                    <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="ZM_Modal = false">
+                  </span> <span class="appText">
+                    Zoom Meetings |</span> Application in Virtual settings
                 </h2>
               </div>
             </div>
@@ -235,6 +282,19 @@
 
 <script>
 export default {
+  data() {
+    return {
+      ITD_Modal: false,
+      CR_Modal: false,
+      CL_Modal: false,
+      ESA_Modal: false,
+      TA_Modal: false,
+      SGP_EC_Modal: false,
+      SGP_S_Modal: false,
+      WGP_Modal: false,
+      ZM_Modal: false
+    }
+  },
   components: {
     "main-nav": () => import("@/components/Nav"),
     "footer-fold": () => import("@/components/Footer"),
@@ -427,9 +487,14 @@ export default {
     .benefitsPlus {
       margin-left: -40px;
       margin-right: 20px;
+      cursor: pointer;
 
       img {
         margin-bottom: 5px;
+      }
+
+      .blueMinus {
+        cursor: pointer;
       }
     }
 
@@ -481,6 +546,7 @@ export default {
     .appPlus {
       margin-left: -20px;
       margin-right: 10px;
+      cursor: pointer;
 
       img {
         margin-bottom: 5px;
