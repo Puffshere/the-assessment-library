@@ -19,7 +19,7 @@ export default function(context) {
         } 
         
         else if (context.req.url == '/reports/SampleDISCandMOT.pdf') {
-            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOT.pdf');
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators.pdf');
         } 
 
         else if (context.req.url == '/reports/EIQSampleReport.pdf') {
@@ -87,7 +87,7 @@ export default function(context) {
         } 
         
         else if (context.req.url == '/reports/valuessamplereport.pdf') {
-            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/valuessamplereport.pdf');
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf');
         } 
         
         else if (context.req.url == '/reports/DISCselfSampleReport.pdf') {

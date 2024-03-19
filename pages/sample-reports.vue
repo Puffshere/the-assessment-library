@@ -303,7 +303,7 @@
                     <div class="samples-container">
                         <h3>Motivators Self</h3>
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/valuessamplereport.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf"
                             class="hyperlink" target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'ar'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Arabic.pdf"
@@ -355,7 +355,7 @@
                         <a v-else class="hyperlink disabled">Motivators Team Reports</a><br />
 
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSummarySampleReport.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators_Summary.pdf"
                             class="hyperlink" target="_blank" rel="noopener">Motivators Summary</a>
                         <a v-else class="hyperlink disabled">Motivators Summary</a><br />
                     </div>
@@ -365,7 +365,7 @@
                     <div class="samples-container">
                         <h3>DISC + Motivators</h3>
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOT.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTFrench.pdf"
@@ -398,7 +398,7 @@
                         <a class="language-button mot" @click="motDISCReportModal = true">10 languages</a><br />
 
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTLite.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators_-_Lite.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC + Motivators Lite</a>
                         <a v-else class="hyperlink disabled">DISC + Motivators Lite</a><br />
                     </div>
@@ -434,7 +434,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCworkplace.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Workplace insights</a>
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCexecutive.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Executive insights</a>
                     </div>
                 </div>
@@ -1191,7 +1191,7 @@
                                 <h1>Motivators Team Reports</h1>
 
                                 <a v-if="lang === 'en-us'" class="hyperlink"
-                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReport.pdf"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators+Team+Report+Sample.pdf"
                                     target="_blank" rel="noopener">Motivators Team Report</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportChinese.pdf"
@@ -1226,7 +1226,7 @@
                                 <h1>Motivators Team Report</h1>
 
                                 <a class="hyperlink"
-                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReport.pdf"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators+Team+Report+Sample.pdf"
                                     target="_blank" rel="noopener">English</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportChinese.pdf"
@@ -1269,7 +1269,7 @@
                             <div class="col-12">
                                 <h1>Motivators Self Reports</h1>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/valuessamplereport.pdf"
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">English</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Arabic.pdf"
@@ -1329,7 +1329,7 @@
                             <div class="col-12">
                                 <h1>DISC + Motivators Reports</h1>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOT.pdf"
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">English</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCandMotivatorsChineseSampleReport.pdf"
