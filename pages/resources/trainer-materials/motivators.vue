@@ -45,12 +45,12 @@
                             <tr>
                                 <td><a class="hyperlink"
                                         href="https://assessmentdownloads.com/Motivators%20Update%20Mar%202024%20Details.pdf"
-                                        target="_blank" rel="noopener">Motivators Update March 2024</a></td>
+                                        target="_blank" rel="noopener">Motivators Update March 2024 PDF</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
                                         href="https://www.youtube.com/watch?v=SUjIQZ5cKOs"
-                                        target="_blank" rel="noopener">Click here for a detailed video explanation of the changes</a></td>
+                                        target="_blank" rel="noopener">Motivators Update March 2024 VIDEO</a></td>
                             </tr>
                             <tr v-if="certified">
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
