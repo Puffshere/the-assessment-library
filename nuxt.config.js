@@ -132,7 +132,8 @@ module.exports = {
       '/suzette',
       '/cathy',
       '/cristina',
-      '/tools/email',
+      '/tools/email-dev',
+      '/tools/email-original',
       '/resources/standards-and-procedures'
     ]
   },
