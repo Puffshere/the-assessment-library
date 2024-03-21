@@ -139,7 +139,7 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="ITD_Modal = false"
                       class="blueMinus">
                   </span>
-                  IMPROVED TEAM DYNAMICS
+                  <span @click="ITD_Modal = !ITD_Modal" style="cursor: pointer;">IMPROVED TEAM DYNAMICS</span>
                 </h2>
                 <div v-if="ITD_Modal === true">
                   <p class="benefitsModalText">
@@ -156,7 +156,7 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="CR_Modal = false"
                       class="blueMinus">
                   </span>
-                  CONFLICT REDUCTION
+                  <span @click="CR_Modal = !CR_Modal" style="cursor: pointer;">CONFLICT REDUCTION</span>
                 </h2>
                 <div v-if="CR_Modal === true">
                   <p class="benefitsModalText">
@@ -173,7 +173,7 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="CL_Modal = false"
                       class="blueMinus">
                   </span>
-                  CONTINUOUS LEARING
+                  <span @click="CL_Modal = !CL_Modal" style="cursor: pointer;">CONTINUOUS LEARING</span>
                 </h2>
                 <div v-if="CL_Modal === true">
                   <p class="benefitsModalText">
@@ -191,7 +191,7 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="ESA_Modal = false"
                       class="blueMinus">
                   </span>
-                  ENHANCED SELF-AWARENESS
+                  <span @click="ESA_Modal = !ESA_Modal" style="cursor: pointer;">ENHANCED SELF-AWARENESS</span>
                 </h2>
                 <div v-if="ESA_Modal === true">
                   <p class="benefitsModalText">
@@ -210,7 +210,7 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="TA_Modal = false"
                       class="blueMinus">
                   </span>
-                  TAILORED APPROACH
+                  <span @click="TA_Modal = !TA_Modal" style="cursor: pointer;">TAILORED APPROACH</span>
                 </h2>
                 <div v-if="TA_Modal === true">
                   <p class="benefitsModalText">
@@ -255,8 +255,9 @@
                       @click="SGP_EC_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="SGP_EC_Modal = false">
                   </span>
+                  <span @click="SGP_EC_Modal = !SGP_EC_Modal" style="cursor: pointer;">
                   <span class="appText">
-                    Small Group Practice |</span> DISC Block Challenge: Effective Communication
+                    Small Group Practice |</span> DISC Block Challenge: Effective Communication</span>
                 </h2>
                 <div v-if="SGP_EC_Modal === true">
                   <p class="appModalText">
@@ -279,8 +280,10 @@
                     <img v-if="SGP_S_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
                     @click="SGP_S_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="SGP_S_Modal = false">
-                  </span> <span class="appText">
-                    Small Group Practice |</span> DISC Block Challenge: Scenarios
+                  </span> 
+                  <span @click="SGP_S_Modal = !SGP_S_Modal" style="cursor: pointer;">
+                  <span class="appText">
+                    Small Group Practice |</span> DISC Block Challenge: Scenarios</span>
                 </h2>
                 <div v-if="SGP_S_Modal === true">
                   <p class="appModalText">
@@ -302,8 +305,10 @@
                     <img v-if="WGP_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
                       @click="WGP_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="WGP_Modal = false">
-                  </span> <span class="appText">
-                    Workshop/Large group Practice |</span> Fostering Participation & Understanding
+                  </span> 
+                  <span @click="WGP_Modal = !WGP_Modal" style="cursor: pointer;">
+                  <span class="appText">
+                    Workshop/Large group Practice |</span> Fostering Participation & Understanding</span>
                 </h2>
                 <div v-if="WGP_Modal === true">
                   <div class="appModalText">
@@ -366,8 +371,10 @@
                     <img v-if="ZM_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
                       @click="ZM_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="ZM_Modal = false">
-                  </span> <span class="appText">
-                    Zoom Meetings |</span> Application in Virtual settings
+                  </span> 
+                  <span @click="ZM_Modal = !ZM_Modal" style="cursor: pointer;">
+                  <span class="appText">
+                    Zoom Meetings |</span> Application in Virtual settings</span>
                 </h2>
                 <div v-if="ZM_Modal === true">
                   <div class="appModalText">
