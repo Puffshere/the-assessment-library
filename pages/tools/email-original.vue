@@ -407,12 +407,12 @@ export default {
         },
         head() {
             return {
-                title: 'Emails | Assessments 24x7',
+                title: 'Assessments 24x7 | A global leader in DISC assessment technology',
                 meta: [
                     {
                         hid: 'robots',
                         name: 'robots',
-                        content: 'noindex'
+                        content: 'Explore the DISC assessment at Assessments 24x7. Gain deep insights into your personality and improve relationships. Discover how DISC can transform your life.'
                     }
                 ]
             }

@@ -770,12 +770,12 @@ Which DISC style does the email align with, and why?
         },
         head() {
             return {
-                title: 'DISC AI Email Generator | Assessments 24x7',
+                title: 'Assessments 24x7 | A global leader in DISC assessment technology',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'A tool to help users generate emails based on reciepients Adapted and Natural D.I.S.C. styles.'
+                        content: 'Explore the DISC assessment at Assessments 24x7. Gain deep insights into your personality and improve relationships. Discover how DISC can transform your life.'
                     }
                 ]
             }
