@@ -18,7 +18,8 @@
 
         <!-- This is the Link in the userInput -->
         <div v-if="!userInput">
-            <a href="https://www.assessments24x7.com/communication-coach" class="notSureLinkStyling">Not sure what style to
+            <a href="https://www.assessments24x7.com/communication-coach" class="notSureLinkStyling">Not sure what style
+                to
                 use?</a>
         </div>
 
@@ -46,11 +47,13 @@
                         <!-- This is the code if user checks box for multiple styles -->
                         <div v-if="isChecked">
                             <div class="col-3">
-                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{ adaptedStyle
-                                    ||
-                                    'Recipient Adapted Style' }}
-                                    <svg :class="{ 'chevron-selected': dropdownActive1 }" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdown1">{{
+            adaptedStyle
+            ||
+            'Recipient Adapted Style' }}
+                                    <svg :class="{ 'chevron-selected': dropdownActive1 }"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -72,11 +75,13 @@
                                 </div>
                             </div>
                             <div class="col-3">
-                                <div class="dropdown-trigger" :class="styleColor2" @click="toggleDropdown2">{{ naturalStyle
-                                    ||
-                                    'Recipient Natural Style' }}
-                                    <svg :class="{ 'chevron-selected': dropdownActive2 }" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <div class="dropdown-trigger" :class="styleColor2" @click="toggleDropdown2">{{
+            naturalStyle
+            ||
+            'Recipient Natural Style' }}
+                                    <svg :class="{ 'chevron-selected': dropdownActive2 }"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -102,11 +107,13 @@
                         <!-- This is the code if the user has not checked box for multiple styles -->
                         <div v-else>
                             <div class="col-3">
-                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdownDisc">{{ discStyle
-                                    ||
-                                    'DISC Style' }}
-                                    <svg :class="{ 'chevron-selected': dropdownActive4 }" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <div class="dropdown-trigger" :class="styleColor1" @click="toggleDropdownDisc">{{
+            discStyle
+            ||
+            'DISC Style' }}
+                                    <svg :class="{ 'chevron-selected': dropdownActive4 }"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -133,10 +140,12 @@
                         </div>
 
                         <div class="col-3">
-                            <div class="dropdown-trigger dropLanguage" @click="toggleDropdown3">{{ language || 'Language' }}
+                            <div class="dropdown-trigger dropLanguage" @click="toggleDropdown3">{{ language ||
+            'Language' }}
                                 <svg :class="{ 'chevron-selected': dropdownActive3 }" xmlns="http://www.w3.org/2000/svg"
                                     fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </div>
                             <div class="dropdown--language"
@@ -757,12 +766,12 @@ Here's the original email:`
         },
         head() {
             return {
-                title: 'DISC AI Email Generator | Assessments 24x7',
+                title: 'Assessments 24x7 | A global leader in DISC assessment technology',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'A tool to help users generate emails based on reciepients Adapted and Natural D.I.S.C. styles.'
+                        content: 'Explore the DISC assessment at Assessments 24x7. Gain deep insights into your personality and improve relationships. Discover how DISC can transform your life.'
                     }
                 ]
             }
