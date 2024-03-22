@@ -235,6 +235,10 @@ export default {
                         {
                             url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Additional+Reports+Sheet_RS.pdf",
                             mainText: "RS Additional Reports page"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Account+Plans+2024.pdf",
+                            mainText: "Account Plans 2024"
                         }
                     ]
                 },
@@ -290,7 +294,6 @@ export default {
                 {
                     id: 6,
                     name: 'Support',
-                    image: '/images/comingSoonYellow.webp',
                     links: [
                         {
                             url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/SOP+-+Support+Department+-+_Do+Not+Contact_.docx",
