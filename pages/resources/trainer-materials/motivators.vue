@@ -380,62 +380,62 @@
                         <tbody>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/What are Motivators_EM1_6.20.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/What+are+Motivators_EM+Final.docx"
                                         target="_blank" rel="noopener">What are Motivators?</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Aesthetic Motivator.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Aesthetic+Motivator-EM+Final.docx"
                                         target="_blank" rel="noopener">The Aesthetic Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Economic Motivator.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Economic+Motivator+-+EM+Final.docx"
                                         target="_blank" rel="noopener">The Economic Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Individualistic Motivator.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Individualistic+Motivator+EM+Final.docx"
                                         target="_blank" rel="noopener">The Individualistic Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Power Motivator.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Power+Motivator+EM+Final.docx"
                                         target="_blank" rel="noopener">The Power Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Altruistic Motivator.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Altruistic+Motivator+EM+Final.docx"
                                         target="_blank" rel="noopener">The Altruistic Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Regulatory Motivator.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Regulatory+Motivator+EM+Final.docx"
                                         target="_blank" rel="noopener">The Regulatory Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/The Theoretical Motivator.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Theoretical+Motivator+-+EM+Final.docx"
                                         target="_blank" rel="noopener">The Theoretical Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Agreements_Conflicts EM.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/Agreements_Conflicts+EM+Final.docx"
                                         target="_blank" rel="noopener">Agreements and Conflicts</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Norms%2CIntensities%2CRisks+EM.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/PopulationIntensityRisk+EM+Final.docx"
                                         target="_blank" rel="noopener">Norms, Intensities, & Risks</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/Coaching for Motivators EM.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/Coaching+for+Motivators+EM+Final.docx"
                                         target="_blank" rel="noopener">Coaching for Motivators</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/DISCandMotivators EM.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/DISCandMotivators+EM+Final.docx"
                                         target="_blank" rel="noopener">DISC & Motivators</a></td>
                             </tr>
                         </tbody>
