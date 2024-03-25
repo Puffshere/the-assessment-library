@@ -350,7 +350,7 @@
                         <a v-else class="hyperlink disabled">Motivators Self Report</a>
                         <a class="language-button mot" @click="motSelfReportModal = true">15 languages</a><br />
 
-                        <a v-if="lang === 'en-us' || lang === 'zh' || lang === 'sv'" @click="motTeamReportsModal = true" class="hyperlink"
+                        <a v-if="lang === 'en-us' || lang === 'zh' || lang === 'sv' || lang === 'nl' || lang === 'fr' || lang === 'pt-br'" @click="motTeamReportsModal = true" class="hyperlink"
                             target="_blank" rel="noopener">Motivators Team Reports &rsaquo;</a>
                         <a v-else class="hyperlink disabled">Motivators Team Reports</a><br />
 
