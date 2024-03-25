@@ -27,9 +27,9 @@
                             <option value="en-au">Australian - 9</option>
                             <option value="zh">Chinese (Mandarin) - 17</option>
                             <option value="zh-t">Chinese (Traditional) - 1</option>
-                            <option value="nl">Dutch - 5</option>
+                            <option value="nl">Dutch - 6</option>
                             <option value="en-us" selected>English (US) - 35</option>
-                            <option value="fr">French - 13</option>
+                            <option value="fr">French - 14</option>
                             <option value="de">German - 5</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 3</option>
@@ -41,10 +41,10 @@
                             <option value="no">Norwegian - 3</option>
                             <option value="pl">Polish - 1</option>
                             <option value="pt">Portuguese - 6</option>
-                            <option value="pt-br">Portuguese (Brazil) - 3</option>
+                            <option value="pt-br">Portuguese (Brazil) - 4</option>
                             <option value="ru">Russian - 6</option>
                             <option value="es">Spanish - 10</option>
-                            <option value="sv">Swedish - 6</option>
+                            <option value="sv">Swedish - 7</option>
                             <option value="tr">Turkish - 7</option>
                             <option value="en-gb">English (UK) - 3</option>
                             <option value="vi">Vietnamese - 11</option>
@@ -350,7 +350,7 @@
                         <a v-else class="hyperlink disabled">Motivators Self Report</a>
                         <a class="language-button mot" @click="motSelfReportModal = true">15 languages</a><br />
 
-                        <a v-if="lang === 'en-us' || lang === 'zh'" @click="motTeamReportsModal = true" class="hyperlink"
+                        <a v-if="lang === 'en-us' || lang === 'zh' || lang === 'sv'" @click="motTeamReportsModal = true" class="hyperlink"
                             target="_blank" rel="noopener">Motivators Team Reports &rsaquo;</a>
                         <a v-else class="hyperlink disabled">Motivators Team Reports</a><br />
 
@@ -1196,8 +1196,17 @@
                                 <a v-else-if="lang === 'zh'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportChinese.pdf"
                                     target="_blank" rel="noopener">Motivators Team Report</a>
+                                <a v-else-if="lang === 'nl'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportDutch.pdf"
+                                    target="_blank" rel="noopener">Motivators Team Report</a>
+                                <a v-else-if="lang === 'fr'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportFrench.pdf"
+                                    target="_blank" rel="noopener">Motivators Team Report</a>
+                                <a v-else-if="lang === 'pt-br'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportPortuguese(Brazil).pdf"
+                                    target="_blank" rel="noopener">Motivators Team Report</a>
                                 <a v-else class="hyperlink disabled">Motivators Team Report</a><br />
-                                <a class="language-button mot" @click="motTeamReportModal = true">2 languages</a><br />
+                                <a class="language-button mot" @click="motTeamReportModal = true">5 languages</a><br />
 
                                 <a v-if="lang === 'en-us'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motgroupgraphs.pdf"
@@ -1207,8 +1216,14 @@
                                 <a v-if="lang === 'en-us'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/motteamwheel.pdf"
                                     target="_blank" rel="noopener">Motivators Team Wheel</a>
+                                <a v-if="lang === 'zh'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamWheel_Chinese.pdf"
+                                    target="_blank" rel="noopener">Motivators Team Wheel</a>
+                                <a v-if="lang === 'sv'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamWheel_Swedish.pdf"
+                                    target="_blank" rel="noopener">Motivators Team Wheel</a>
                                 <a v-else class="hyperlink disabled">Motivators Team Wheel</a><br />
-                                <a class="language-button mot" @click="motTeamWheelReportModal = true">2 languages</a><br />
+                                <a class="language-button mot" @click="motTeamWheelReportModal = true">3 languages</a><br />
                             </div>
                         </div>
                     </div>
@@ -1231,6 +1246,15 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportChinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportDutch.pdf"
+                                    target="_blank" rel="noopener">Dutch</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportFrench.pdf"
+                                    target="_blank" rel="noopener">French</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamReportPortuguese(Brazil).pdf"
+                                    target="_blank" rel="noopener">Portuguese (Brazil)</a><br />
                             </div>
                         </div>
                     </div>
@@ -1253,6 +1277,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamWheel_Chinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamWheel_Swedish.pdf"
+                                    target="_blank" rel="noopener">Swedish</a><br />
                             </div>
                         </div>
                     </div>
