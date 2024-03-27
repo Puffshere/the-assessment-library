@@ -155,11 +155,13 @@
                             </div>
 
                             <p style="margin-top:-10px;font-size:10pt;margin-bottom:30px">
-                                Having trouble? <a class="hyperlink" href="mailto:support@assessments24x7.com">Contact our
+                                Having trouble? <a class="hyperlink" href="mailto:support@assessments24x7.com">Contact
+                                    our
                                     support team &rarr;</a>
                             </p>
 
-                            <button type="submit" class="button" style="width:100%">Access the Employee Materials</button>
+                            <button type="submit" class="button" style="width:100%">Access the Employee
+                                Materials</button>
                         </form>
                     </div>
                 </div>
@@ -306,7 +308,12 @@ export default {
                 {
                     id: 7,
                     name: 'Translations/Custom Work',
-                    image: '/images/comingSoonYellow.webp',
+                    links: [
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Activating+a+Custom+Domain.pdf",
+                            mainText: "New Custom Domain SOP"
+                        },
+                    ]
                 },
                 {
                     id: 8,
@@ -318,7 +325,7 @@ export default {
                     name: 'Development',
                     image: '/images/comingSoonYellow.webp',
                 }
-                
+
             ],
         };
     },
@@ -441,15 +448,15 @@ $pixel: 15px;
 .tonyNotes {
     margin-left: 60px;
     margin-top: -20px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .tonyNotes li {
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .tonyNotes a {
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .titleText {
