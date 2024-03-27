@@ -24,7 +24,7 @@
                         <label for="lang">Filter by Language:</label>
                         <select class="input" id="lang" v-model="lang">
                             <option value="ar">Arabic - 2</option>
-                            <option value="en-au">Australian - 9</option>
+                            <option value="en-au">Australian - 10</option>
                             <option value="zh">Chinese (Mandarin) - 17</option>
                             <option value="zh-t">Chinese (Traditional) - 1</option>
                             <option value="nl">Dutch - 6</option>
@@ -157,6 +157,9 @@
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
+                        <a v-else-if="lang === 'en-au'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryAustralianSampleReport.pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
                         <a v-else-if="lang === 'nl'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryDutchSampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
@@ -182,7 +185,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryUKSampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
                         <a v-else class="hyperlink disabled">DISC Summary</a>
-                        <a class="language-button disc" @click="discSummaryReportModal = true">9 languages</a><br />
+                        <a class="language-button disc" @click="discSummaryReportModal = true">10 languages</a><br />
                     </div>
                 </div>
 
@@ -859,6 +862,8 @@
 
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummarySampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryAustralianSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Australian</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryDutchSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Dutch</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSummaryFrenchSampleReport.pdf"
