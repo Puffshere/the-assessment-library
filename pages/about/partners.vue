@@ -20,8 +20,8 @@
                     </span>
                     <div class="row">
                         <div class="col-12">
-                            <contact-form buttonText="Request an Account" redirect="/get-started-thankyou" :isShort="true"
-                                :isGetStarted="true" acFormId="2" :getStartedId="id" />
+                            <contact-form buttonText="Request an Account" redirect="/get-started-thankyou"
+                                :isShort="true" :isGetStarted="true" acFormId="2" :getStartedId="id" />
                         </div>
                     </div>
                 </div>
@@ -184,7 +184,8 @@
                                 </ul>
                             </div>
                             <br />
-                            <a href="#" title="Open" class="modal-open hyperlink" @click="open('neth_bel')">Learn more!</a>
+                            <a href="#" title="Open" class="modal-open hyperlink" @click="open('neth_bel')">Learn
+                                more!</a>
                         </div>
                     </div>
                 </div>
@@ -333,8 +334,8 @@
                             <div class="cite">Barbara Meiss, Director of Leadership Development, Lead Like Jesus
                             </div>
 
-                            <a class="sample-link" href="/partner-sample-reports/LeadLikeJesusSample.pdf" target="_blank"
-                                rel="noopener">
+                            <a class="sample-link" href="/partner-sample-reports/LeadLikeJesusSample.pdf"
+                                target="_blank" rel="noopener">
                                 <div class="sample">
                                     <img src="~/assets/pdf-icon-light.svg"> Biblical DISC Assessment Sample Report
 
@@ -405,7 +406,8 @@
                                 </div>
                             </a>
 
-                            <a class="hyperlink" target="_blank" rel="noopener" href="https://athleteassessments.com/">Visit
+                            <a class="hyperlink" target="_blank" rel="noopener"
+                                href="https://athleteassessments.com/">Visit
                                 Athlete Assessments &rarr;</a>
                         </div>
                     </div>
@@ -446,7 +448,8 @@
 
                             <div class="cite">Nathan Schock, Co-Founder and President, FiveFour</div>
 
-                            <a class="hyperlink" target="_blank" rel="noopener" href="https://fivefourtraining.com/">Visit
+                            <a class="hyperlink" target="_blank" rel="noopener"
+                                href="https://fivefourtraining.com/">Visit
                                 FiveFour &rarr;</a>
                         </div>
                     </div>
@@ -476,7 +479,8 @@
 
                             <div class="cite">Danny Ing, Co-Founder, Hiring Steps</div>
 
-                            <a class="hyperlink" target="_blank" rel="noopener" href="https://www.hiringsteps.com/">Visit
+                            <a class="hyperlink" target="_blank" rel="noopener"
+                                href="https://www.hiringsteps.com/">Visit
                                 Hiring Steps &rarr;</a>
                         </div>
                     </div>
@@ -490,14 +494,18 @@
 
                             <p class="bio">
                                 DISC Daily emerged as a vital link between the DISC assessment and its application in
-                                everyday life. Acknowledging it requires practice to master any new skill, DISC Daily keeps
+                                everyday life. Acknowledging it requires practice to master any new skill, DISC Daily
+                                keeps
                                 the practice front-of-mind! The comprehensive 38-page DISC report, while informative,
                                 necessitates more than mere perusal for comprehension. So, a tool was created to anchor
                                 learning in a clients’ routine. This automated, client-centric approach also empowers
                                 coaches to gain and impart deeper understanding to their clients, resulting in tangible
                                 progress in client's lives. With affordability as its hallmark, DISC Daily ensures
-                                accessibility for all, fostering continuous growth and development. <span class="hyperlink"><a class="none" href="https://discdailycoach.com/">Visit the
-                                site</a></span> or <span class="hyperlink"><a class="none" href="https://calendly.com/emilybass/30min?month=2024-02">schedule a firsthand tour</a></span> of the platform to explore its transformative potential.
+                                accessibility for all, fostering continuous growth and development. <span
+                                    class="hyperlink"><a class="none" href="https://discdailycoach.com/">Visit the
+                                        site</a></span> or <span class="hyperlink"><a class="none"
+                                        href="https://calendly.com/emilybass/30min?month=2024-02">schedule a firsthand
+                                        tour</a></span> of the platform to explore its transformative potential.
                             </p>
 
                             <p class="quote">
@@ -541,11 +549,63 @@
                             <div class="cite">Katrina Stephenson & Gillian Blackman, Co-Founders of Cross Check
                                 Australasia</div>
 
-                            <a class="hyperlink" target="_blank" rel="noopener" href="https://www.crosscheck.com.au">Visit
+                            <a class="hyperlink" target="_blank" rel="noopener"
+                                href="https://www.crosscheck.com.au">Visit
                                 Cross Check &rarr;</a>
                         </div>
                     </div>
                 </div>
+                <br />
+                <br />
+                <div class="row aqSection">
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo" src="~/assets/partner-logos/AQ - main website logo.png"
+                                alt="DISC Daily partners with Assessments 24x7">
+
+                            <p class="bio">
+                                Answer Intelligence (AQ)
+                                <br />
+                                Sales, customer service, leadership, and every
+                                business challenge is a mountain to be climbed.
+                                Reach new heights of success with AQ. AQ is the
+                                ability to provide elevated answers to important
+                                questions for your business challenges. 
+                            </p>
+
+                            <a class="sample-link"
+                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/AQ+1+pager.FINAL.pdf"
+                                target="_blank" rel="noopener">
+                                <div class="sampleAQ">
+                                    <img src="~/assets/pdf-icon-light.svg"> AQ 1 pager FINAL
+
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 185.343 185.343">
+                                        <path
+                                            d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
+                                            l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
+                                            c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z"
+                                            style="fill:#05bbff;">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </a>
+
+                            <a class="hyperlink" target="_blank" rel="noopener"
+                                href="https://www.raiseyouraq.com/">Visit
+                                Answer Intelligence (AQ) &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="partner">
+                        <div class="col-6">
+                            <img class="logo aqImage" src="~/assets/partner-logos/AQ_additional_image.png"
+                                alt="AQ Diagram">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -600,7 +660,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .none {
     text-decoration: none;
     color: rgb(36, 36, 36);
@@ -744,6 +803,14 @@ export default {
     .partner-list {
         margin: 30px 0 80px;
 
+        .aqSection {
+            background-color: #f7f5f5;
+            border-left: 4px solid #e9e8e8;
+            border-right: 4px solid #e9e8e8;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
         .partner {
             margin-bottom: 40px;
 
@@ -752,6 +819,11 @@ export default {
                 display: block;
                 margin: 0 auto 10px;
                 max-width: 400px;
+            }
+
+            .aqImage {
+                border-radius: 20px;
+                margin-bottom: 20px;
             }
 
             .bio {
@@ -801,6 +873,28 @@ export default {
                     margin-top: 7px;
                 }
             }
+
+            .sampleAQ {
+                border: 2px solid #c5c4c4;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                font-weight: 500;
+                transition: background .3s ease;
+                cursor: pointer;
+
+                img {
+                    width: 24px;
+                    margin-right: 5px;
+                }
+
+                svg {
+                    width: 17px;
+                    float: right;
+                    margin-top: 7px;
+                }
+            }
         }
     }
-}</style>
+}
+</style>
