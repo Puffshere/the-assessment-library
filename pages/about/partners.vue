@@ -804,7 +804,7 @@ export default {
         margin: 30px 0 80px;
 
         .aqSection {
-            background-color: #f7f5f5;
+            background-color: #f9f9f9;
             border-left: 4px solid #e9e8e8;
             border-right: 4px solid #e9e8e8;
             padding: 20px;
