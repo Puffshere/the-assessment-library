@@ -577,7 +577,7 @@
                                 href="https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/AQ+1+pager.FINAL.pdf"
                                 target="_blank" rel="noopener">
                                 <div class="sampleAQ">
-                                    <img src="~/assets/pdf-icon-light.svg"> AQ 1 pager FINAL
+                                    <img src="~/assets/pdf-icon-light.svg"> DOWNLOAD PDF 
 
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
