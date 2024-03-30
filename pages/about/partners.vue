@@ -201,37 +201,30 @@
                                 <img class="logo" src="~/assets/partner-logos/AQ - main website logo.png"
                                     alt="DISC Daily partners with Assessments 24x7">
                                 <p class="bio">
-                                    Answer Intelligence (AQ)
-                                    <br />
-                                    Sales, customer service, leadership, and every
-                                    business challenge is a mountain to be climbed.
-                                    Reach new heights of success with AQ. AQ is the
-                                    ability to provide elevated answers to important
-                                    questions for your business challenges.
+                                    Answer Intelligence (AQ) presents a strategic framework for elevating business
+                                    communication by addressing key challenges faced by organizations, including
+                                    talent
+                                    management, digital transformation, sustainability, economic uncertainty,
+                                    cybersecurity, and supply chain resilience.
                                     <br />
                                     <span v-if="aqReadMoreModal === false" class="hyperlink" style="cursor: pointer"
                                         @click="aqReadMoreModal = !aqReadMoreModal">Read More!</span> 
                                     <span v-else class="hyperlink" style="cursor: pointer"
-                                        @click="aqReadMoreModal = !aqReadMoreModal">Read Less!</span> 
+                                        @click="aqCloseReadMoreModal">Read Less!</span> 
+                                </p>
+                                <p v-if="aqReadMoreModal">
+                                    It leverages a combination of six
+                                    answer
+                                    types—concept, theory, metaphor, story, procedure, action—mapped to important
+                                    questions (why, what, how, when, where, who) to provide comprehensive and
+                                    effective
+                                    communication strategies. This innovative approach enhances problem-solving,
+                                    boosts
+                                    confidence, saves time and resources, and is versatile across various
+                                    professional
+                                    and personal settings.
                                 </p>
                                 <div v-if="aqReadMoreModal === true">
-                                    <p>
-                                        Answer Intelligence (AQ) presents a strategic framework for elevating business
-                                        communication by addressing key challenges faced by organizations, including
-                                        talent
-                                        management, digital transformation, sustainability, economic uncertainty,
-                                        cybersecurity, and supply chain resilience. It leverages a combination of six
-                                        answer
-                                        types—concept, theory, metaphor, story, procedure, action—mapped to important
-                                        questions (why, what, how, when, where, who) to provide comprehensive and
-                                        effective
-                                        communication strategies. This innovative approach enhances problem-solving,
-                                        boosts
-                                        confidence, saves time and resources, and is versatile across various
-                                        professional
-                                        and personal settings.
-                                    </p>
-
                                     <div class="row">
                                         <div class="col-12">
                                             <p>
@@ -246,7 +239,7 @@
                                                 and
                                                 interact. In partnership, AQ and DISC can:
                                             </p>
-                                            
+
                                             <ol>
                                                 <li>
                                                     Enhance Communication Effectiveness: DISC provides insights into
@@ -293,9 +286,11 @@
                                                     teams.
                                                 </li>
                                             </ol>
+
                                             <p>
                                                 Ways AQ Can Complement the DISC Customer Proposition
                                             </p>
+
                                             <ol>
                                                 <li>
                                                     Personalized Communication Strategies: AQ can be used to develop
@@ -341,6 +336,7 @@
                                                     to handle conflicts more constructively and collaboratively.
                                                 </li>
                                             </ol>
+
                                             <p>
                                                 By leveraging the strengths of both AQ and DISC, organizations can
                                                 unlock new levels
@@ -352,13 +348,13 @@
                                             </p>
                                         </div>
                                     </div>
+                                    <br />
                                 </div>
                                 <a class="sample-link"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/AQ+1+pager.FINAL.pdf"
                                     target="_blank" rel="noopener">
                                     <div class="sampleAQ">
                                         <img src="~/assets/pdf-icon-light.svg"> DOWNLOAD PDF
-
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                             viewBox="0 0 185.343 185.343">
