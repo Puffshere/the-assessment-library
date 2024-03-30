@@ -228,8 +228,10 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <p>
-                                                <span style="font-weight: bold;">Advantages of Integrating AQ with DISC Assessment</span>
-                                                <br />
+                                                <span style="font-weight: bold;">Advantages of Integrating AQ with DISC
+                                                    Assessment</span>
+                                            </p>
+                                            <p>
                                                 Pairing AQ with the DISC assessment offers a holistic approach to
                                                 understanding and
                                                 improving interpersonal and organizational communication. DISC focuses
@@ -243,7 +245,8 @@
 
                                             <ol>
                                                 <li>
-                                                    <span style="font-weight: bold;">Enhance Communication Effectiveness:</span> DISC provides insights into
+                                                    <span style="font-weight: bold;">Enhance Communication
+                                                        Effectiveness:</span> DISC provides insights into
                                                     the
                                                     behavioral
                                                     styles of individuals, while AQ offers strategies to tailor
@@ -251,7 +254,8 @@
                                                     styles, leading to more effective and impactful interactions.
                                                 </li>
                                                 <li>
-                                                    <span style="font-weight: bold;">Improve Team Collaboration:</span> Understanding the diverse
+                                                    <span style="font-weight: bold;">Improve Team Collaboration:</span>
+                                                    Understanding the diverse
                                                     communication
                                                     needs and
                                                     preferences through DISC, combined with AQ's framework for answering
@@ -259,7 +263,8 @@
                                                     questions, can foster better teamwork and collaboration.
                                                 </li>
                                                 <li>
-                                                    <span style="font-weight: bold;">Facilitate Leadership and Management:</span> Leaders can leverage DISC
+                                                    <span style="font-weight: bold;">Facilitate Leadership and
+                                                        Management:</span> Leaders can leverage DISC
                                                     to
                                                     understand
                                                     their own leadership style and their team's behavioral tendencies,
@@ -268,7 +273,8 @@
                                                     communicate vision, expectations, and feedback more effectively.
                                                 </li>
                                                 <li>
-                                                    <span style="font-weight: bold;">Boost Conflict Resolution:</span> DISC helps identify potential sources
+                                                    <span style="font-weight: bold;">Boost Conflict Resolution:</span>
+                                                    DISC helps identify potential sources
                                                     of
                                                     conflict
                                                     based on behavioral styles, and AQ offers the tools to navigate
@@ -277,7 +283,8 @@
                                                     through tailored communication and problem-solving approaches.
                                                 </li>
                                                 <li>
-                                                    <span style="font-weight: bold;">Enhance Training and Development:</span> Integrating DISC insights into
+                                                    <span style="font-weight: bold;">Enhance Training and
+                                                        Development:</span> Integrating DISC insights into
                                                     AQ
                                                     training can
                                                     create more personalized and effective development programs,
@@ -289,19 +296,22 @@
                                             </ol>
 
                                             <p>
-                                                <span style="font-weight: bold;">Ways AQ Can Complement the DISC Customer Proposition</span>
+                                                <span style="font-weight: bold;">Ways AQ Can Complement the DISC
+                                                    Customer Proposition</span>
                                             </p>
 
                                             <ol>
                                                 <li>
-                                                    <span style="font-weight: bold;">Personalized Communication Strategies:</span> AQ can be used to develop
+                                                    <span style="font-weight: bold;">Personalized Communication
+                                                        Strategies:</span> AQ can be used to develop
                                                     tailored
                                                     communication strategies that align with the behavioral styles
                                                     identified by DISC,
                                                     enhancing the clarity and impact of messages.
                                                 </li>
                                                 <li>
-                                                    <span style="font-weight: bold;">Enhanced Sales and Negotiation Techniques:</span> By understanding the
+                                                    <span style="font-weight: bold;">Enhanced Sales and Negotiation
+                                                        Techniques:</span> By understanding the
                                                     DISC
                                                     profiles of
                                                     clients or negotiation partners, AQ can guide sales professionals
@@ -313,7 +323,8 @@
                                                     and influence.
                                                 </li>
                                                 <li>
-                                                    <span style="font-weight: bold;">Improved Customer Service:</span> Customer service teams can apply DISC
+                                                    <span style="font-weight: bold;">Improved Customer Service:</span>
+                                                    Customer service teams can apply DISC
                                                     to
                                                     understand
                                                     customer behavior patterns and AQ to adapt their communication
@@ -322,7 +333,8 @@
                                                     increased customer satisfaction and loyalty.
                                                 </li>
                                                 <li>
-                                                    <span style="font-weight: bold;">Leadership Development:</span> Integrating AQ principles into leadership
+                                                    <span style="font-weight: bold;">Leadership Development:</span>
+                                                    Integrating AQ principles into leadership
                                                     programs based
                                                     on DISC assessments can equip leaders with advanced skills in
                                                     communicating
@@ -330,7 +342,8 @@
                                                     performance.
                                                 </li>
                                                 <li>
-                                                    <span style="font-weight: bold;">Conflict Management Workshops:</span> Workshops that combine DISC for
+                                                    <span style="font-weight: bold;">Conflict Management
+                                                        Workshops:</span> Workshops that combine DISC for
                                                     behavioral
                                                     understanding with AQ for communication strategies can empower
                                                     individuals and teams
