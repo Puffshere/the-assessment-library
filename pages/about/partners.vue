@@ -190,10 +190,200 @@
                     </div>
                 </div>
                 <br />
-
-                <div class="row">
+                <div class="row" id="technologyPartnersSection">
                     <h2>Technology Partners</h2>
                     <hr />
+                    <br />
+                    <br />
+                    <div class="row aqSection">
+                        <div class="partner">
+                            <div :class="aqReadMoreModal ? 'col-12' : 'col-6'">
+                                <img class="logo" src="~/assets/partner-logos/AQ - main website logo.png"
+                                    alt="DISC Daily partners with Assessments 24x7">
+                                <p class="bio">
+                                    Answer Intelligence (AQ)
+                                    <br />
+                                    Sales, customer service, leadership, and every
+                                    business challenge is a mountain to be climbed.
+                                    Reach new heights of success with AQ. AQ is the
+                                    ability to provide elevated answers to important
+                                    questions for your business challenges.
+                                    <br />
+                                    <span v-if="aqReadMoreModal === false" class="hyperlink" style="cursor: pointer"
+                                        @click="aqReadMoreModal = !aqReadMoreModal">Read More!</span> 
+                                    <span v-else class="hyperlink" style="cursor: pointer"
+                                        @click="aqReadMoreModal = !aqReadMoreModal">Read Less!</span> 
+                                </p>
+                                <div v-if="aqReadMoreModal === true">
+                                    <p>
+                                        Answer Intelligence (AQ) presents a strategic framework for elevating business
+                                        communication by addressing key challenges faced by organizations, including
+                                        talent
+                                        management, digital transformation, sustainability, economic uncertainty,
+                                        cybersecurity, and supply chain resilience. It leverages a combination of six
+                                        answer
+                                        types—concept, theory, metaphor, story, procedure, action—mapped to important
+                                        questions (why, what, how, when, where, who) to provide comprehensive and
+                                        effective
+                                        communication strategies. This innovative approach enhances problem-solving,
+                                        boosts
+                                        confidence, saves time and resources, and is versatile across various
+                                        professional
+                                        and personal settings.
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>
+                                                Advantages of Integrating AQ with DISC Assessment
+                                                Pairing AQ with the DISC assessment offers a holistic approach to
+                                                understanding and
+                                                improving interpersonal and organizational communication. DISC focuses
+                                                on
+                                                understanding personality behavior styles—Dominance, Influence,
+                                                Steadiness,
+                                                Compliance—providing insights into how individuals prefer to communicate
+                                                and
+                                                interact. In partnership, AQ and DISC can:
+                                            </p>
+                                            
+                                            <ol>
+                                                <li>
+                                                    Enhance Communication Effectiveness: DISC provides insights into
+                                                    the
+                                                    behavioral
+                                                    styles of individuals, while AQ offers strategies to tailor
+                                                    communication to these
+                                                    styles, leading to more effective and impactful interactions.
+                                                </li>
+                                                <li>
+                                                    Improve Team Collaboration: Understanding the diverse
+                                                    communication
+                                                    needs and
+                                                    preferences through DISC, combined with AQ's framework for answering
+                                                    important
+                                                    questions, can foster better teamwork and collaboration.
+                                                </li>
+                                                <li>
+                                                    Facilitate Leadership and Management: Leaders can leverage DISC
+                                                    to
+                                                    understand
+                                                    their own leadership style and their team's behavioral tendencies,
+                                                    and
+                                                    use AQ to
+                                                    communicate vision, expectations, and feedback more effectively.
+                                                </li>
+                                                <li>
+                                                    Boost Conflict Resolution: DISC helps identify potential sources
+                                                    of
+                                                    conflict
+                                                    based on behavioral styles, and AQ offers the tools to navigate
+                                                    these
+                                                    conflicts
+                                                    through tailored communication and problem-solving approaches.
+                                                </li>
+                                                <li>
+                                                    Enhance Training and Development: Integrating DISC insights into
+                                                    AQ
+                                                    training can
+                                                    create more personalized and effective development programs,
+                                                    catering to
+                                                    the
+                                                    specific communication and behavioral needs of individuals and
+                                                    teams.
+                                                </li>
+                                            </ol>
+                                            <p>
+                                                Ways AQ Can Complement the DISC Customer Proposition
+                                            </p>
+                                            <ol>
+                                                <li>
+                                                    Personalized Communication Strategies: AQ can be used to develop
+                                                    tailored
+                                                    communication strategies that align with the behavioral styles
+                                                    identified by DISC,
+                                                    enhancing the clarity and impact of messages.
+                                                </li>
+                                                <li>
+                                                    Enhanced Sales and Negotiation Techniques: By understanding the
+                                                    DISC
+                                                    profiles of
+                                                    clients or negotiation partners, AQ can guide sales professionals
+                                                    and
+                                                    negotiators in
+                                                    choosing the most effective types of answers and communication
+                                                    styles to
+                                                    persuade
+                                                    and influence.
+                                                </li>
+                                                <li>
+                                                    Improved Customer Service: Customer service teams can apply DISC
+                                                    to
+                                                    understand
+                                                    customer behavior patterns and AQ to adapt their communication
+                                                    approach,
+                                                    leading to
+                                                    increased customer satisfaction and loyalty.
+                                                </li>
+                                                <li>
+                                                    Leadership Development: Integrating AQ principles into leadership
+                                                    programs based
+                                                    on DISC assessments can equip leaders with advanced skills in
+                                                    communicating
+                                                    effectively with diverse teams, driving organizational alignment and
+                                                    performance.
+                                                </li>
+                                                <li>
+                                                    Conflict Management Workshops: Workshops that combine DISC for
+                                                    behavioral
+                                                    understanding with AQ for communication strategies can empower
+                                                    individuals and teams
+                                                    to handle conflicts more constructively and collaboratively.
+                                                </li>
+                                            </ol>
+                                            <p>
+                                                By leveraging the strengths of both AQ and DISC, organizations can
+                                                unlock new levels
+                                                of communication excellence, enhancing interpersonal interactions,
+                                                teamwork,
+                                                leadership, and overall organizational effectiveness.
+                                                <span class="hyperlink" style="cursor: pointer; margin-left: 5px;"
+                                                    @click="aqCloseReadMoreModal">Read Less!</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="sample-link"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/AQ+1+pager.FINAL.pdf"
+                                    target="_blank" rel="noopener">
+                                    <div class="sampleAQ">
+                                        <img src="~/assets/pdf-icon-light.svg"> DOWNLOAD PDF
+
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 185.343 185.343">
+                                            <path
+                                                d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
+                                            l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
+                                            c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z"
+                                                style="fill:#05bbff;">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a class="hyperlink" target="_blank" rel="noopener"
+                                    href="https://www.raiseyouraq.com/">Visit
+                                    Answer Intelligence (AQ) &rarr;</a>
+                            </div>
+                        </div>
+                        <div v-if="aqReadMoreModal === false" class="partner">
+                            <div class="col-6">
+                                <img class="logo aqImage" src="~/assets/partner-logos/AQ_additional_image.png"
+                                    alt="AQ Diagram">
+                            </div>
+                        </div>
+                    </div>
+                    <br />
                     <div class="partner">
                         <div class="col-6">
                             <img class="logo" src="~/assets/partner-logos/take-flight-learning.png"
@@ -555,57 +745,6 @@
                         </div>
                     </div>
                 </div>
-                <br />
-                <br />
-                <div class="row aqSection">
-                    <div class="partner">
-                        <div class="col-6">
-                            <img class="logo" src="~/assets/partner-logos/AQ - main website logo.png"
-                                alt="DISC Daily partners with Assessments 24x7">
-
-                            <p class="bio">
-                                Answer Intelligence (AQ)
-                                <br />
-                                Sales, customer service, leadership, and every
-                                business challenge is a mountain to be climbed.
-                                Reach new heights of success with AQ. AQ is the
-                                ability to provide elevated answers to important
-                                questions for your business challenges. 
-                            </p>
-
-                            <a class="sample-link"
-                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/AQ+1+pager.FINAL.pdf"
-                                target="_blank" rel="noopener">
-                                <div class="sampleAQ">
-                                    <img src="~/assets/pdf-icon-light.svg"> DOWNLOAD PDF 
-
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        viewBox="0 0 185.343 185.343">
-                                        <path
-                                            d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175
-                                            l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934
-                                            c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z"
-                                            style="fill:#05bbff;">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </a>
-
-                            <a class="hyperlink" target="_blank" rel="noopener"
-                                href="https://www.raiseyouraq.com/">Visit
-                                Answer Intelligence (AQ) &rarr;</a>
-                        </div>
-                    </div>
-
-                    <div class="partner">
-                        <div class="col-6">
-                            <img class="logo aqImage" src="~/assets/partner-logos/AQ_additional_image.png"
-                                alt="AQ Diagram">
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
@@ -644,7 +783,8 @@ export default {
     },
     data() {
         return {
-            isOpen: false
+            isOpen: false,
+            aqReadMoreModal: false
         }
     },
     methods: {
@@ -654,6 +794,15 @@ export default {
         },
         close() {
             this.isOpen = false;
+        },
+        aqCloseReadMoreModal() {
+            this.$nextTick(() => {
+                const section = document.getElementById('technologyPartnersSection');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            this.aqReadMoreModal = false;
         }
     }
 }
