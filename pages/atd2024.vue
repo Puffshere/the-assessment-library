@@ -918,7 +918,7 @@ export default {
 
       .whiteArrow {
         max-width: 20%;
-        margin-left: -280px;
+        margin-left: -260px;
       }
 
       .findUs {
