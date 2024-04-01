@@ -139,7 +139,8 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="ITD_Modal = false"
                       class="blueMinus">
                   </span>
-                  <span @click="ITD_Modal = !ITD_Modal" style="cursor: pointer;" class="benefitsTitle">IMPROVED TEAM DYNAMICS</span>
+                  <span @click="ITD_Modal = !ITD_Modal" style="cursor: pointer;" class="benefitsTitle">IMPROVED TEAM
+                    DYNAMICS</span>
                 </h2>
                 <div v-if="ITD_Modal === true">
                   <p class="benefitsModalText">
@@ -156,7 +157,8 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="CR_Modal = false"
                       class="blueMinus">
                   </span>
-                  <span @click="CR_Modal = !CR_Modal" style="cursor: pointer;" class="benefitsTitle">CONFLICT REDUCTION</span>
+                  <span @click="CR_Modal = !CR_Modal" style="cursor: pointer;" class="benefitsTitle">CONFLICT
+                    REDUCTION</span>
                 </h2>
                 <div v-if="CR_Modal === true">
                   <p class="benefitsModalText">
@@ -173,7 +175,8 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="CL_Modal = false"
                       class="blueMinus">
                   </span>
-                  <span @click="CL_Modal = !CL_Modal" style="cursor: pointer;" class="benefitsTitle">CONTINUOUS LEARING</span>
+                  <span @click="CL_Modal = !CL_Modal" style="cursor: pointer;" class="benefitsTitle">CONTINUOUS
+                    LEARING</span>
                 </h2>
                 <div v-if="CL_Modal === true">
                   <p class="benefitsModalText">
@@ -191,7 +194,8 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="ESA_Modal = false"
                       class="blueMinus">
                   </span>
-                  <span @click="ESA_Modal = !ESA_Modal" style="cursor: pointer;" class="benefitsTitle">ENHANCED SELF-AWARENESS</span>
+                  <span @click="ESA_Modal = !ESA_Modal" style="cursor: pointer;" class="benefitsTitle">ENHANCED
+                    SELF-AWARENESS</span>
                 </h2>
                 <div v-if="ESA_Modal === true">
                   <p class="benefitsModalText">
@@ -210,7 +214,8 @@
                     <img v-else src="~/assets/blueMinus.png" alt="open modal" @click="TA_Modal = false"
                       class="blueMinus">
                   </span>
-                  <span @click="TA_Modal = !TA_Modal" style="cursor: pointer;" class="benefitsTitle">TAILORED APPROACH</span>
+                  <span @click="TA_Modal = !TA_Modal" style="cursor: pointer;" class="benefitsTitle">TAILORED
+                    APPROACH</span>
                 </h2>
                 <div v-if="TA_Modal === true">
                   <p class="benefitsModalText">
@@ -1013,6 +1018,12 @@ export default {
 
       .bannerBottomWave {
         bottom: -40px;
+      }
+    }
+
+    .whiteSection2 {
+      .benefitsTitle {
+        font-size: 18px;
       }
     }
 
