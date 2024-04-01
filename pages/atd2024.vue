@@ -1025,14 +1025,14 @@ export default {
 
       .benefitsPlus {
         img {
-          max-width: 20px;
+          max-width: 15px;
           margin-left: 0px;
           margin-right: 0px;
         }
       }
 
       .benefitsTitle {
-        font-size: 14px;
+        font-size: 12px;
         margin-left: -10px;
         margin-top: -20px;
       }
