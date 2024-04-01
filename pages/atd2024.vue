@@ -994,21 +994,21 @@ export default {
 
     .banner3 {
       h1 {
-        font-size: 24px;
+        font-size: 40px;
       }
     }
 
     .whiteSection2 {
       .benefitsPlus {
         img {
-          max-width: 15px;
+          max-width: 20px;
           margin-left: 0px;
           margin-right: 0px;
         }
       }
 
       .benefitsTitle {
-        font-size: 12px;
+        font-size: 16px;
         margin-left: -10px;
         margin-top: -20px;
       }
