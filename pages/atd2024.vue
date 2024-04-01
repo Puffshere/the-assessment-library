@@ -1022,8 +1022,19 @@ export default {
     }
 
     .whiteSection2 {
+
+      .benefitsPlus {
+        img {
+          max-width: 20px;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+
       .benefitsTitle {
-        font-size: 18px;
+        font-size: 14px;
+        margin-left: -10px;
+        margin-top: -20px;
       }
     }
 
