@@ -992,6 +992,28 @@ export default {
       }
     }
 
+    .banner3 {
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    .whiteSection2 {
+      .benefitsPlus {
+        img {
+          max-width: 15px;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+
+      .benefitsTitle {
+        font-size: 12px;
+        margin-left: -10px;
+        margin-top: -20px;
+      }
+    }
+
     .banner4 {
       .bannerTopWave {
         top: -55px;
@@ -1018,23 +1040,6 @@ export default {
 
       .bannerBottomWave {
         bottom: -40px;
-      }
-    }
-
-    .whiteSection2 {
-
-      .benefitsPlus {
-        img {
-          max-width: 15px;
-          margin-left: 0px;
-          margin-right: 0px;
-        }
-      }
-
-      .benefitsTitle {
-        font-size: 12px;
-        margin-left: -10px;
-        margin-top: -20px;
       }
     }
 
