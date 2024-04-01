@@ -241,7 +241,7 @@
             <h1>APPLICATION</h1>
             <br />
             <h2>
-              Building Communication & Understanding as a Team/Group
+              <span class="applicationTitle">Building Communication & Understanding as a Team/Group</span>
             </h2>
             <br />
             <div class="row">
@@ -256,8 +256,9 @@
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="SGP_EC_Modal = false">
                   </span>
                   <span @click="SGP_EC_Modal = !SGP_EC_Modal" style="cursor: pointer;">
-                  <span class="appText">
-                    Small Group Practice |</span> DISC Block Challenge: Effective Communication</span>
+                    <span class="appText">
+                      Small Group Practice |</span><span class="applicationTitle"> DISC Block Challenge: Effective
+                      Communication</span></span>
                 </h2>
                 <div v-if="SGP_EC_Modal === true">
                   <p class="appModalText">
@@ -278,12 +279,13 @@
                   <div v-if="SGP_S_Modal === true" class="expanseMargins"></div>
                   <span class="appPlus">
                     <img v-if="SGP_S_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
-                    @click="SGP_S_Modal = true">
+                      @click="SGP_S_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="SGP_S_Modal = false">
-                  </span> 
+                  </span>
                   <span @click="SGP_S_Modal = !SGP_S_Modal" style="cursor: pointer;">
-                  <span class="appText">
-                    Small Group Practice |</span> DISC Block Challenge: Scenarios</span>
+                    <span class="appText">
+                      Small Group Practice |</span><span class="applicationTitle"> DISC Block Challenge:
+                      Scenarios</span></span>
                 </h2>
                 <div v-if="SGP_S_Modal === true">
                   <p class="appModalText">
@@ -305,10 +307,11 @@
                     <img v-if="WGP_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
                       @click="WGP_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="WGP_Modal = false">
-                  </span> 
+                  </span>
                   <span @click="WGP_Modal = !WGP_Modal" style="cursor: pointer;">
-                  <span class="appText">
-                    Workshop/Large group Practice |</span> Fostering Participation & Understanding</span>
+                    <span class="appText">
+                      Workshop/Large group Practice |</span><span class="applicationTitle"> Fostering Participation &
+                      Understanding</span></span>
                 </h2>
                 <div v-if="WGP_Modal === true">
                   <div class="appModalText">
@@ -325,7 +328,8 @@
                         <span class="appModalTextTitle">Ice Breaker Option 1: Observations:</span> Start the workshop by
                         having each participant introduce
                         themselves and share their name, role, something they love about their work, and something they
-                        expanseMargins to learn about in the session. Ask each participant to choose the block that they think
+                        expanseMargins to learn about in the session. Ask each participant to choose the block that they
+                        think
                         represents that person’s style, based on their observations of the short introduction.
                       </li>
                       <br />
@@ -371,10 +375,11 @@
                     <img v-if="ZM_Modal === false" src="~/assets/whitePlus.png" alt="white plus symbol"
                       @click="ZM_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="ZM_Modal = false">
-                  </span> 
+                  </span>
                   <span @click="ZM_Modal = !ZM_Modal" style="cursor: pointer;">
-                  <span class="appText">
-                    Zoom Meetings |</span> Application in Virtual settings</span>
+                    <span class="appText">
+                      Zoom Meetings |</span><span class="applicationTitle"> Application in Virtual
+                      settings</span></span>
                 </h2>
                 <div v-if="ZM_Modal === true">
                   <div class="appModalText">
@@ -835,6 +840,25 @@ export default {
     .banner1 {
       .container {
         margin-top: -5px;
+
+        h3,
+        h4 {
+          margin-left: 0px;
+        }
+
+        .orderBtn {
+          display: block;
+          margin-left: 0;
+        }
+      }
+
+      .logo {
+        margin: 0px 0px;
+      }
+
+      .blocks {
+        width: 100%;
+        margin-left: 0px;
       }
     }
 
@@ -848,6 +872,15 @@ export default {
       .bannerBottomWave {
         bottom: -110px;
       }
+
+      .applicationTitle {
+        line-height: 1.5;
+      }
+    }
+
+    .col-5 h3 {
+      margin: 0;
+      line-height: 1;
     }
 
     .banner4 {
@@ -876,6 +909,17 @@ export default {
 
       .bannerBottomWave {
         bottom: -80px;
+      }
+
+      .whiteArrow {
+        max-width: 20%;
+      }
+
+      .findUs {
+        display: block;
+        max-width: 60%;
+        margin-top: -20px;
+        margin-left: 30%;
       }
     }
 
