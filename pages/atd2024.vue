@@ -954,12 +954,17 @@ export default {
         }
       }
 
+      
       .benefitsTitle {
         font-size: 20px;
       }
     }
-
+    
     .banner3 {
+      .fontControl {
+        font-size: large;
+      }
+
       .appPlus {
         img {
           max-width: 25px;
@@ -984,11 +989,7 @@ export default {
       }
     }
 
-    .banner3 {
-      .fontControl {
-        font-size: 20px;
-      }
-    }
+    
 
     .banner1,
     .banner2,
@@ -1041,7 +1042,6 @@ export default {
       .benefitsTitle {
         font-size: 16px;
         margin-left: -10px;
-        margin-top: -20px;
       }
     }
 
