@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
 
-const Settings = new mongoose.Schema({
+const settingsSchema = new mongoose.Schema({
     key: String,
     hashedPassword: String
 });
 
-export default mongoose.model('Settings', Settings);
+export default mongoose.model('Settings', settingsSchema);
+

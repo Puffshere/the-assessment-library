@@ -348,15 +348,34 @@ export default {
         }, 20 * 60 * 1000); // 20 minutes
     },
     methods: {
+        // This is the old method that stored the password in the store, going to come up with a token system instead of using local storage
+
+        // async attemptLogin() {
+        //     const success = await this.$store.dispatch('employeeAuth/login', this.password);
+        //     if (success) {
+        //         this.unlocked = true;
+        //         this.validationError = false;
+        //         localStorage.setItem('employeePassword', this.password);
+        //     } else {
+        //         this.validationError = true;
+        //         this.password = '';
+        //     }
+        // },
         async attemptLogin() {
-            const success = await this.$store.dispatch('employeeAuth/login', this.password);
-            if (success) {
-                this.unlocked = true;
-                this.validationError = false;
-                localStorage.setItem('employeePassword', this.password);
-            } else {
+            try {
+                const response = await axios.post('/api/verify-password', { password: this.password });
+
+                if (response.data.success) {
+                    this.unlocked = true;
+                    this.validationError = false;
+                    // Handle successful authentication, e.g., redirecting the user or storing the session token (if provided by the server)
+                } else {
+                    this.validationError = true;
+                    this.password = '';
+                }
+            } catch (error) {
+                console.error("Login error:", error);
                 this.validationError = true;
-                this.password = '';
             }
         },
         async checkEmployeePassword() {

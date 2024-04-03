@@ -14,10 +14,13 @@ import GhostSearch from './ghost-search';
 import multer from 'multer';
 import cors from 'cors';
 import axios from 'axios';
+import Settings from './models/settings.js'; 
+
 
 const upload = multer();
 const app = express();
 const path = require('path');
+const bcrypt = require('bcrypt');
 
 GhostSearch.start();
 
@@ -205,25 +208,46 @@ app.post('/completions', async (req, res) => {
     }
 });
 
-app.post('/api/verify-password', async (req, res) => {
+// Don't believe this was ever being used, will delete it after some time to verify
+
+// app.post('/verify-password', async (req, res) => {
+//     try {
+//         const { password } = req.body;
+//         const db = client.db("website");
+//         const collection = db.collection('settings');
+
+//         const setting = await collection.findOne({ key: "employeeAccessPassword" });
+//         const match = await bcrypt.compare(password, setting.hashedPassword);
+
+//         if (match) {
+//             res.json({ success: true });
+//         } else {
+//             res.json({ success: false });
+//         }
+//     } catch (error) {
+//         res.status(500).send(error);
+//     }
+// });
+
+app.post('/verify-password', async (req, res) => {
     try {
-        const { password } = req.body;
-        const db = client.db("website");
-        const collection = db.collection('settings');
+        const { password } = req.body; 
+        const setting = await Settings.findOne({ key: "employeeAccessPassword" });
 
-        const setting = await collection.findOne({ key: "employeeAccessPassword" });
+        if (!setting) {
+            return res.status(404).json({ success: false, message: "Settings not found" });
+        }
+
         const match = await bcrypt.compare(password, setting.hashedPassword);
-
         if (match) {
             res.json({ success: true });
         } else {
-            res.json({ success: false });
+            res.status(401).json({ success: false, message: "Incorrect password" });
         }
     } catch (error) {
-        res.status(500).send(error);
+        res.status(500).send(error.message);
     }
 });
-
 
 app.get('/lead/next-assignment', (req, res) => {
     leadController.getNextLeadAssignment(req, res);
