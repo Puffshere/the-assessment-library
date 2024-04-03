@@ -1,10 +1,10 @@
 const bcrypt = require('bcrypt');
 
 // The plaintext password you want to verify
-const plaintextPassword = 'procedures2024';
+const plaintextPassword = '';
 
 // The hashed password retrieved from your database
-const hashedPasswordFromDb = '$2b$10$QTU/wqI3SQq2gusDzCVex.g0beTHtCG96kTy3LatuvqcsTe3cKBV2';
+const hashedPasswordFromDb = '';
 
 bcrypt.compare(plaintextPassword, hashedPasswordFromDb, function(err, isMatch) {
     if (err) {
