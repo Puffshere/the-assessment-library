@@ -921,10 +921,9 @@ export default {
       }
 
       .bizx-logo {
-        width: 100%;
         max-width: 200px;
-        left: 40px;
-        position: absolute;
+        left: 25px;
+        margin-top: -15px;
       }
 
       .whiteArrow {
