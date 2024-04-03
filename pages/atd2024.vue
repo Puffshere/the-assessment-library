@@ -1048,6 +1048,12 @@ export default {
       }
     }
 
+    .whiteSection2 {
+      .manSmilingTextMargins {
+        margin-left: -10px;
+      }
+    }
+
     .banner4 {
       .bannerTopWave {
         top: -55px;
@@ -1074,12 +1080,6 @@ export default {
 
       .bannerBottomWave {
         bottom: -40px;
-      }
-    }
-
-    .whiteSection2 {
-      .manSmilingTextMargins {
-        margin-left: -10px;
       }
     }
 
