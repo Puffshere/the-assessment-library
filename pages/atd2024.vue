@@ -957,12 +957,12 @@ export default {
           margin-right: 0px;
         }
       }
-      
+
       .benefitsTitle {
         font-size: 20px;
       }
     }
-    
+
     .banner3 {
       .fontControl {
         font-size: large;
@@ -992,7 +992,7 @@ export default {
       }
     }
 
-    
+
 
     .banner1,
     .banner2,
@@ -1074,6 +1074,12 @@ export default {
 
       .bannerBottomWave {
         bottom: -40px;
+      }
+    }
+
+    .whiteSection2 {
+      .manSmilingTextMargins {
+        margin-left: -10px;
       }
     }
 
