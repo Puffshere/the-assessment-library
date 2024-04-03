@@ -903,6 +903,10 @@ export default {
       .container {
         margin-top: -5px;
       }
+
+      h3 {
+        font-size: 70px;
+      }
     }
 
     .banner1,
@@ -914,6 +918,13 @@ export default {
 
       .bannerBottomWave {
         bottom: -80px;
+      }
+
+      .bizx-logo {
+        width: 100%;
+        max-width: 200px;
+        left: 40px;
+        position: absolute;
       }
 
       .whiteArrow {
