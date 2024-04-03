@@ -313,6 +313,14 @@ export default {
                             url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Activating+a+Custom+Domain.pdf",
                             mainText: "New Custom Domain SOP"
                         },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Translation+Project+SOP.docx",
+                            mainText: "Translation Project SOP"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Deactivating+a+Custom+Domain+SOP.pdf",
+                            mainText: "Deactivating a Custom Domain SOP"
+                        },
                     ]
                 },
                 {
