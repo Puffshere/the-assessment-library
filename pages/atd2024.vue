@@ -131,7 +131,7 @@
               <div class="col-5">
                 <img src="~/assets/male_business_man.png" alt="male business man" class="manSmiling" />
               </div>
-              <div class="col-7">
+              <div class="col-7 manSmilingTextMargins">
                 <h2>
                   <span class="benefitsPlus">
                     <img v-if="ITD_Modal === false" src="~/assets/bluePlus.png" alt="blue plus symbol"
@@ -260,7 +260,7 @@
                       @click="SGP_EC_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="SGP_EC_Modal = false">
                   </span>
-                  <span @click="SGP_EC_Modal = !SGP_EC_Modal" style="cursor: pointer;">
+                  <span @click="SGP_EC_Modal = !SGP_EC_Modal" style="cursor: pointer;" class="fontControl">
                     <span class="appText">
                       Small Group Practice |</span><span class="applicationTitle"> DISC Block Challenge: Effective
                       Communication</span></span>
@@ -287,7 +287,7 @@
                       @click="SGP_S_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="SGP_S_Modal = false">
                   </span>
-                  <span @click="SGP_S_Modal = !SGP_S_Modal" style="cursor: pointer;">
+                  <span @click="SGP_S_Modal = !SGP_S_Modal" style="cursor: pointer;" class="fontControl">
                     <span class="appText">
                       Small Group Practice |</span><span class="applicationTitle"> DISC Block Challenge:
                       Scenarios</span></span>
@@ -313,7 +313,7 @@
                       @click="WGP_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="WGP_Modal = false">
                   </span>
-                  <span @click="WGP_Modal = !WGP_Modal" style="cursor: pointer;">
+                  <span @click="WGP_Modal = !WGP_Modal" style="cursor: pointer;" class="fontControl">
                     <span class="appText">
                       Workshop/Large group Practice |</span><span class="applicationTitle"> Fostering Participation &
                       Understanding</span></span>
@@ -381,7 +381,7 @@
                       @click="ZM_Modal = true">
                     <img v-else src="~/assets/whiteMinus.png" alt="white minus symbol" @click="ZM_Modal = false">
                   </span>
-                  <span @click="ZM_Modal = !ZM_Modal" style="cursor: pointer;">
+                  <span @click="ZM_Modal = !ZM_Modal" style="cursor: pointer;" class="fontControl">
                     <span class="appText">
                       Zoom Meetings |</span><span class="applicationTitle"> Application in Virtual
                       settings</span></span>
@@ -593,6 +593,7 @@ export default {
 
     p {
       margin-left: 20px;
+      margin-right: 20px;
     }
 
     .block {
@@ -940,8 +941,29 @@ export default {
     }
 
     .whiteSection2 {
+      h2 {
+        display: flex;
+        align-items: center;
+      }
+
+      .benefitsPlus {
+        img {
+          max-width: 25px;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+
       .benefitsTitle {
         font-size: 20px;
+      }
+    }
+
+    .banner3 {
+      .appPlus {
+        img {
+          max-width: 25px;
+        }
       }
     }
 
@@ -959,6 +981,12 @@ export default {
     .banner1 {
       .container {
         margin-top: -5px;
+      }
+    }
+
+    .banner3 {
+      .fontControl {
+        font-size: 20px;
       }
     }
 
@@ -1010,14 +1038,6 @@ export default {
     }
 
     .whiteSection2 {
-      .benefitsPlus {
-        img {
-          max-width: 20px;
-          margin-left: 0px;
-          margin-right: 0px;
-        }
-      }
-
       .benefitsTitle {
         font-size: 16px;
         margin-left: -10px;
