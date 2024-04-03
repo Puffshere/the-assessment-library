@@ -946,6 +946,10 @@ export default {
         align-items: center;
       }
 
+      .manSmilingTextMargins {
+        margin: 0 auto;
+      }
+
       .benefitsPlus {
         img {
           max-width: 25px;
@@ -953,7 +957,6 @@ export default {
           margin-right: 0px;
         }
       }
-
       
       .benefitsTitle {
         font-size: 20px;
