@@ -790,7 +790,7 @@ export default {
                 if (this.getStartedId === "wcg" || this.getStartedId === "dc" || this.getStartedId === "bni") {
                     try {
                         const lead = await axios.post('/api/lead', {
-                            salesPerson: "Suzette Chaparro",
+                            salesPerson: "Cristina Moore",
                             firstName: this.form.firstName,
                             lastName: this.form.lastName,
                             phone: this.form.phone,
@@ -843,7 +843,7 @@ export default {
                                     },
                                     {
                                         field: '79', // Salesperson Assignment,
-                                        value: "Suzette Chaparro"
+                                        value: "Cristina Moore"
                                     },
                                     {
                                         field: '80', // Get Started Account Affiliation
