@@ -536,7 +536,7 @@ export default {
                 if (this.isPartnerId === "aus" || this.isPartnerId === "eur" || this.isPartnerId === "neth_bel" || this.isPartnerId === "viet") {
                     try {
                         const lead = await axios.post('/api/lead', {
-                            salesPerson: "Angie Fairbanks",
+                            salesPerson: "Cristina Moore",
                             firstName: this.form.firstName,
                             lastName: this.form.lastName,
                             phone: this.form.phone,
@@ -589,7 +589,7 @@ export default {
                                     },
                                     {
                                         field: '79', // Salesperson Assignment,
-                                        value: "Angie Fairbanks"
+                                        value: "Cristina Moore"
                                     },
                                     {
                                         field: '80', // Get Started Account Affiliation
