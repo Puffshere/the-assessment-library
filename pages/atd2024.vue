@@ -66,7 +66,7 @@
                 <img src="~/assets/Steadiness.png" alt="green block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/Conscientiousness.png" alt="blue block" class="block" />
+                <!-- <img src="~/assets/Conscientiousness.png" alt="blue block" class="block" /> -->
               </div>
             </div>
           </div>
