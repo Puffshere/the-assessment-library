@@ -57,16 +57,16 @@
             <br />
             <div class="row">
               <div class="col-3">
-                <img src="~/assets/Dominance.png" alt="red block" class="block" />
+                <img src="~/assets/new_dominance.png" alt="red block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/Influence.png" alt="yellow block" class="block" />
+                <img src="~/assets/new_influence.png" alt="yellow block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/Steadiness.png" alt="green block" class="block" />
+                <img src="~/assets/new_steadiness.png" alt="green block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/Conscientiousness.png" alt="blue block" class="block" />
+                <img src="~/assets/new_conscientiousness.png" alt="blue block" class="block" />
               </div>
             </div>
           </div>
