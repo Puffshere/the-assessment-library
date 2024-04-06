@@ -57,16 +57,16 @@
             <br />
             <div class="row">
               <div class="col-3">
-                <img src="~/assets/dominance.png" alt="red block" class="block" />
+                <img src="~/assets/Dominance.png" alt="red block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/influence.png" alt="yellow block" class="block" />
+                <img src="~/assets/Influence.png" alt="yellow block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/steadiness.png" alt="green block" class="block" />
+                <img src="~/assets/Steadiness.png" alt="green block" class="block" />
               </div>
               <div class="col-3">
-                <img src="~/assets/conscientiousness.png" alt="blue block" class="block" />
+                <img src="~/assets/Conscientiousness.png" alt="blue block" class="block" />
               </div>
             </div>
           </div>
@@ -176,7 +176,7 @@
                       class="blueMinus">
                   </span>
                   <span @click="CL_Modal = !CL_Modal" style="cursor: pointer;" class="benefitsTitle">CONTINUOUS
-                    LEARING</span>
+                    LEARNING</span>
                 </h2>
                 <div v-if="CL_Modal === true">
                   <p class="benefitsModalText">
@@ -333,7 +333,7 @@
                         <span class="appModalTextTitle">Ice Breaker Option 1: Observations:</span> Start the workshop by
                         having each participant introduce
                         themselves and share their name, role, something they love about their work, and something they
-                        expanseMargins to learn about in the session. Ask each participant to choose the block that they
+                        expect to learn about in the session. Ask each participant to choose the block that they
                         think
                         represents that person’s style, based on their observations of the short introduction.
                       </li>
