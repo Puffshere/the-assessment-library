@@ -98,7 +98,8 @@
                                     Selection</a>
                             </li>
 
-                            <li class="nav-item" @mouseover="hover.training = true" @mouseleave="hover.training = false">
+                            <li class="nav-item" @mouseover="hover.training = true"
+                                @mouseleave="hover.training = false">
                                 <a tabindex="24" href="/certifications"
                                     :class="{ active: active == 'training' }">Certifications & Training</a>
 
@@ -155,9 +156,9 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item" @mouseover="hover.resources = true" @mouseleave="hover.resources = false">
-                                <a tabindex="26"
-                                    :class="{ active: active == 'resources' }">Resources</a>
+                            <li class="nav-item" @mouseover="hover.resources = true"
+                                @mouseleave="hover.resources = false">
+                                <a tabindex="26" :class="{ active: active == 'resources' }">Resources</a>
 
                                 <ul :class="{ active: hover.resources, 'sub-nav-category': true }">
                                     <span class="title">Resources</span>
@@ -391,7 +392,7 @@ export default {
     },
     data() {
         return {
-            phoneNumber: '+1 (206) 400-6647',
+            phoneNumber: '1 (206) 400-6647',
             showMobileMenu: false,
             hover: {
                 assessments: false,
@@ -498,6 +499,10 @@ header {
                     top: 20px;
                     right: 22px;
                     z-index: 9999;
+
+                    .phone::before {
+                        content: "+";
+                    }
 
                     .phone-icon,
                     .phone-number {
@@ -707,6 +712,10 @@ header {
             margin-bottom: -5px;
             font-weight: 600;
 
+            .mobile-contact::before {
+                content: "+";
+            }
+
             .phone-icon,
             .phone-number {
                 display: inline-block;
@@ -780,4 +789,5 @@ header {
             }
         }
     }
-}</style>
+}
+</style>
