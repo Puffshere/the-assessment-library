@@ -33,7 +33,7 @@
                                 </div>
 
                                 <div class="phone-number">
-                                    <a class="hyperlink light">{{ phoneNumber }}</a>
+                                    <a class="hyperlink light" href="tel:12064006647">{{ phoneNumber }}</a>
                                 </div>
                             </div>
                         </div>
