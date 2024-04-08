@@ -1,7 +1,7 @@
-// plugins/aos.js
-import AOS from "aos";
-import "aos/dist/aos.css";
+// // plugins/aos.js
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
-export default ({ app }) => {
-    app.AOS = new AOS.init({ disable: "phone" });
-};
+// export default ({ app }) => {
+//     app.AOS = new AOS.init({ disable: "phone" });
+// };
