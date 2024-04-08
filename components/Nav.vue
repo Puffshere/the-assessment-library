@@ -33,7 +33,7 @@
                                 </div>
 
                                 <div class="phone-number">
-                                    <a class="hyperlink light" href="tel:12064006647">{{ phoneNumber }}</a>
+                                    <a class="hyperlink light" href="`tel:${formattedPhoneNumber}`">{{ formattedPhoneNumber }}</a>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,8 @@
                                     Selection</a>
                             </li>
 
-                            <li class="nav-item" @mouseover="hover.training = true" @mouseleave="hover.training = false">
+                            <li class="nav-item" @mouseover="hover.training = true"
+                                @mouseleave="hover.training = false">
                                 <a tabindex="24" href="/certifications"
                                     :class="{ active: active == 'training' }">Certifications & Training</a>
 
@@ -155,9 +156,9 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item" @mouseover="hover.resources = true" @mouseleave="hover.resources = false">
-                                <a tabindex="26"
-                                    :class="{ active: active == 'resources' }">Resources</a>
+                            <li class="nav-item" @mouseover="hover.resources = true"
+                                @mouseleave="hover.resources = false">
+                                <a tabindex="26" :class="{ active: active == 'resources' }">Resources</a>
 
                                 <ul :class="{ active: hover.resources, 'sub-nav-category': true }">
                                     <span class="title">Resources</span>
@@ -242,7 +243,7 @@
                     </svg>
                 </div>
                 <div class="phone-number">
-                    <a class="hyperlink light" style="text-align: center" href="tel:12064006647">{{ phoneNumber }}</a>
+                    <a class="hyperlink light" style="text-align: center" href="`tel:${formattedPhoneNumber}`">{{ formattedPhoneNumber }}</a>
                 </div>
             </div>
 
@@ -391,7 +392,7 @@ export default {
     },
     data() {
         return {
-            phoneNumber: '+1 (206) 400-6647',
+            formattedPhoneNumber,
             showMobileMenu: false,
             hover: {
                 assessments: false,
@@ -432,7 +433,11 @@ export default {
     },
     computed: mapGetters({
         cartTotalProducts: 'cart/getNumberOfCartItems'
-    })
+
+    }),
+    formattedPhoneNumber() {
+        return `+${this.rawPhoneNumber}`;
+    }
 }
 </script>
 
@@ -780,4 +785,5 @@ header {
             }
         }
     }
-}</style>
+}
+</style>
