@@ -391,6 +391,7 @@ export default {
     },
     data() {
         return {
+            phoneNumber: '+1 (206) 400-6647',
             showMobileMenu: false,
             hover: {
                 assessments: false,
