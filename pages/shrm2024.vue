@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-12">
             <div class="col-6">
-              <!-- <img class="bizx-logo" src="~/assets/shrm_Logo.png" alt="SHRM" /> -->
+              <img class="bizx-logo" src="~/assets/shrm_Logo.png" alt="SHRM" />
               <br />
               <img class="blocks" src="~/assets/DISC_Blocks_top_image.png" alt="blocks" />
             </div>
