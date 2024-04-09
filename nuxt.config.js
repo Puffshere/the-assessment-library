@@ -164,7 +164,7 @@ module.exports = {
         fs: 'empty'
       }
     },
-    transpile: ['vue-mapbox', '@nuxtjs/axios'],
+    transpile: ['vue-mapbox', '@nuxtjs/axios', 'vee-validate/dist/rules'],
     babel: {
       plugins: [
         ['@babel/plugin-proposal-private-methods', { loose: true }]
