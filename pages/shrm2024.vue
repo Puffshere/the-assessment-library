@@ -26,7 +26,7 @@
               <br />
               <img class="whiteArrow" src="~/assets/White_Arrow_Pointing.png" alt="white arrow" />
               <br />
-              <!-- <img class="findUs" src="~/assets/Find_us_at_shrm_logo_white.png" alt="find us logo" /> -->
+              <img class="findUs" src="~/assets/Find_us_at_shrm_logo_white.png" alt="find us logo" />
             </div>
           </div>
         </div>
