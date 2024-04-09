@@ -120,7 +120,7 @@
 export default {
     data() {
         return {
-            rawPhoneNumber: '1 (206) 400-6647',
+            rawPhoneNumber: '+ 1 (206) 400-6647',
             hidden: false
         }
     },
