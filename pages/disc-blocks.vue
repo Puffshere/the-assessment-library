@@ -7,8 +7,6 @@
         <div class="row">
           <div class="col-12">
             <div class="col-6">
-              <img class="bizx-logo" src="~/assets/shrm_logo.png" alt="SHRM" />
-              <br />
               <img class="blocks" src="~/assets/DISC_Blocks_top_image.png" alt="blocks" />
             </div>
             <div class="col-6">
@@ -24,9 +22,6 @@
               <button class="orderBtn" @click="orderButton">ORDER NOW</button>
               <br />
               <br />
-              <img class="whiteArrow" src="~/assets/White_Arrow_Pointing.png" alt="white arrow" />
-              <br />
-              <img class="findUs" src="~/assets/Find_us_at_shrm_logo_white.png" alt="find us logo" />
             </div>
           </div>
         </div>
@@ -110,9 +105,8 @@
               <img class="a-f-l-m" src="~/assets/asian_female_leading_meeting.png" alt="female leading meeting" />
               <br />
               <br />
-              <img class="whiteArrow" src="~/assets/White_Arrow_Pointing.png" alt="white arrow" />
               <br />
-              <img class="findUs" src="~/assets/Find_us_at_shrm_logo_white.png" alt="find us logo" />
+              <br />
             </div>
           </div>
         </div>
@@ -393,7 +387,6 @@
                       Zoom meeting, teams can follow these
                       steps:
                     </p>
-
                     <ol>
                       <li>
                         <span class="appModalTextTitle">Preparation:</span> Prior to the meeting, ensure each team
@@ -451,32 +444,11 @@
             <br />
             <br />
             <br />
-            <br />
-            <div class="row">
-            </div>
           </div>
         </div>
       </div>
-      <img class="bannerBottomWave" src="~/assets/Wave_1.png" alt="bottom wave" />
-    </section>
-    <br />
-    <br />
-    <br />
-    <div class="findUsFooter">
-      <img src="~/assets/Find_us_at_shrm_logo_navy_blue.png" alt="find us at white background" />
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <section class="banner4">
-      <img src="~/assets/Wave_2.png" alt="top wave" class="bannerTopWave" />
-      <br />
-      <br />
       <img src="~/assets/logo-footer.png" alt="assessments24x7 logo" class="bottomAssessmentLogo">
+      <br />
       <br />
       <br />
       <br />
@@ -567,7 +539,6 @@ export default {
     }
 
     .blocks {
-      margin-top: 110px;
       margin-left: 80px;
     }
 
@@ -808,19 +779,9 @@ export default {
       top: -180px;
       z-index: -10;
     }
-  }
 
-  .banner4 {
-    position: relative;
-    background-color: #1e222d;
-    text-align: center;
-
-    .bannerTopWave {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: -180px;
-      z-index: -10;
+    .bottomAssessmentLogo {
+      max-width: 700px;
     }
   }
 
@@ -838,14 +799,8 @@ export default {
     margin-left: -300px;
   }
 
-  .findUsFooter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      max-width: 100%;
-    }
+  .footer {
+    margin-top: -70px;
   }
 }
 
@@ -890,6 +845,10 @@ export default {
       .applicationTitle {
         line-height: 1.5;
       }
+
+      .bottomAssessmentLogo {
+        max-width: 70%;
+      }
     }
 
     .col-5 h3 {
@@ -901,14 +860,6 @@ export default {
       .bannerTopWave {
         top: -110px;
       }
-
-      .bottomAssessmentLogo {
-        max-width: 90%;
-      }
-    }
-
-    .footer {
-      margin-top: -20px;
     }
 
     .findUsFooter {
