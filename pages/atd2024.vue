@@ -894,6 +894,13 @@ export default {
         top: -115px;
       }
     }
+
+    .findUsFooter {
+      img {
+        max-width: 60%;
+        margin-bottom: -40px;
+      }
+    }
   }
 }
 
