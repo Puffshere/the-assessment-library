@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-12">
             <div class="col-6">
-              <img class="bizx-logo" src="~/assets/shrm_Logo.png" alt="SHRM" />
+              <!-- <img class="bizx-logo" src="~/assets/shrm_Logo.png" alt="SHRM" /> -->
               <br />
               <img class="blocks" src="~/assets/DISC_Blocks_top_image.png" alt="blocks" />
             </div>
@@ -26,7 +26,7 @@
               <br />
               <img class="whiteArrow" src="~/assets/White_Arrow_Pointing.png" alt="white arrow" />
               <br />
-              <img class="findUs" src="~/assets/Find_us_at_shrm_logo_white.png" alt="find us logo" />
+              <!-- <img class="findUs" src="~/assets/Find_us_at_shrm_logo_white.png" alt="find us logo" /> -->
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@
               <br />
               <img class="whiteArrow" src="~/assets/White_Arrow_Pointing.png" alt="white arrow" />
               <br />
-              <img class="findUs" src="~/assets/Find_us_at_shrm_logo_white.png" alt="find us logo" />
+              <!-- <img class="findUs" src="~/assets/Find_us_at_shrm_logo_white.png" alt="find us logo" /> -->
             </div>
           </div>
         </div>
@@ -463,7 +463,7 @@
     <br />
     <br />
     <div class="findUsFooter">
-      <img src="~/assets/Find_us_at_shrm_logo_navy_blue.png" alt="find us at white background" />
+      <!-- <img src="~/assets/Find_us_at_shrm_logo_navy_blue.png" alt="find us at white background" /> -->
     </div>
     <br />
     <br />
