@@ -476,13 +476,13 @@
       <img src="~/assets/Wave_2.png" alt="top wave" class="bannerTopWave" />
       <br />
       <br />
-      <img src="~/assets/logo-footer.png" alt="assessments24x7 logo" class="logo">
+      <img src="~/assets/logo-footer.png" alt="assessments24x7 logo" class="bottomAssessmentLogo">
       <br />
       <br />
       <br />
       <br />
     </section>
-    <LazyHydrate when-visible><footer-fold /></LazyHydrate>
+    <LazyHydrate when-visible><footer-fold class="footer" /></LazyHydrate>
   </section>
 </template>
 
@@ -814,7 +814,6 @@ export default {
     position: relative;
     background-color: #1e222d;
     text-align: center;
-    position: relative;
 
     .bannerTopWave {
       position: absolute;
@@ -901,7 +900,38 @@ export default {
 
     .banner4 {
       .bannerTopWave {
-        top: -115px;
+        top: -110px;
+      }
+
+      .bottomAssessmentLogo {
+        max-width: 90%;
+      }
+    }
+
+    .footer {
+      margin-top: -20px;
+    }
+
+    .findUsFooter {
+      img {
+        max-width: 60%;
+        margin-bottom: -40px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 820px) {
+
+  .bizx {
+    .banner4 {
+      .bannerTopWave {
+        top: -90px;
+      }
+
+      .bottomAssessmentLogo {
+        max-width: 70%;
       }
     }
   }
@@ -993,6 +1023,7 @@ export default {
   }
 }
 
+
 @media (max-width: 430px) {
 
   .bizx {
@@ -1021,6 +1052,18 @@ export default {
     }
   }
 }
+
+@media (max-width: 415px) {
+  .bizx {
+
+    .banner4 {
+      .bannerTopWave {
+        top: -60px;
+      }
+    }
+  }
+}
+
 
 @media (max-width: 390px) {
 
