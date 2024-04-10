@@ -392,7 +392,6 @@ export default {
     },
     data() {
         return {
-            phoneNumber: '+1 (206) 400-6647',
             showMobileMenu: false,
             hover: {
                 assessments: false,
@@ -436,7 +435,6 @@ export default {
             cartTotalProducts: 'cart/getNumberOfCartItems'
         }),
         formattedPhoneNumber() {
-            // Assuming you have a getter named 'formattedPhoneNumber' in your Vuex store
             return this.$store.getters.formattedPhoneNumber;
         }
     }
