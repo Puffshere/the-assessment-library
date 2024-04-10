@@ -1,7 +1,5 @@
-// store/index.js
-
 export const state = () => ({
-    phoneNumber: '1 (206) 400-6647'
+    phoneNumber: '+1 (206) 400-6647'
   });
   
   export const getters = {
