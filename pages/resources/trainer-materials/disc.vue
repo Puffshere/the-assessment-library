@@ -8,7 +8,8 @@
                     <div class="col-12">
                         <h1 class="section-title">DISC Trainer Materials</h1>
                         <p>
-                            The Training Materials library is your comprehensive resource for coaching and debriefing tools,
+                            The Training Materials library is your comprehensive resource for coaching and debriefing
+                            tools,
                             additional insight & information on the assessment,
                             reports and models, and gives quick access to class/workshop materials you may need. Explore
                             these at your leisure - you will find there are many
@@ -46,9 +47,11 @@
                     </h2><br />
 
                     <p>
-                        These resources are designed to help you with debrief, coaching and your own continued development
+                        These resources are designed to help you with debrief, coaching and your own continued
+                        development
                         of your DISC knowledge. We
-                        encourage you to share the KnowDISC videos and DISC Specific Appendices as desired to help others
+                        encourage you to share the KnowDISC videos and DISC Specific Appendices as desired to help
+                        others
                         understand DISC and its
                         application.
                     </p>
@@ -66,7 +69,8 @@
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDebriefingGuideCert.pdf"
                                         target="_blank" rel="noopener">DISC Debrief Guide</a>
                                     <small>Overview and Guide for what is included on each page of our 3 Part DISC
-                                        assessment report. You can confirm your version of the report by checking the table
+                                        assessment report. You can confirm your version of the report by checking the
+                                        table
                                         of contents.</small>
                                 </td>
                             </tr>
@@ -83,9 +87,12 @@
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCReportHighlights3.pdf"
                                         target="_blank" rel="noopener">DISC Report Highlights</a>
                                     <small>When there is not the opportunity to debrief the entire report page by page,
-                                        which pages should be focused on? This outlines the most significant pages needing
-                                        debrief support. This is designed to be used with the DISC Debrief Guide for the 3
-                                        Part report which can be confirmed by checking the report table of contents.</small>
+                                        which pages should be focused on? This outlines the most significant pages
+                                        needing
+                                        debrief support. This is designed to be used with the DISC Debrief Guide for the
+                                        3
+                                        Part report which can be confirmed by checking the report table of
+                                        contents.</small>
                                 </td>
                             </tr>
 
@@ -93,8 +100,10 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCfaq.pdf"
                                         target="_blank" rel="noopener">DISC FAQs</a>
-                                    <small>Provide answers to Frequently Asked Questions regarding the DISC model, the DISC
-                                        Assessment and Report, Reading DISC Graphs, DISC History, Hiring and Selection, and
+                                    <small>Provide answers to Frequently Asked Questions regarding the DISC model, the
+                                        DISC
+                                        Assessment and Report, Reading DISC Graphs, DISC History, Hiring and Selection,
+                                        and
                                         other assessments.</small>
                                 </td>
                             </tr>
@@ -103,7 +112,8 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/NaturalandAdaptedGraphs.pptx"
                                         target="_blank" rel="noopener">Natural and Adapted DISC Graphs</a>
-                                    <small>A short PowerPoint presentation describing the various elements of the Natural
+                                    <small>A short PowerPoint presentation describing the various elements of the
+                                        Natural
                                         and Adapted DISC graphs</small>
                                 </td>
                             </tr>
@@ -112,8 +122,10 @@
                                 <td><a class="hyperlink"
                                         href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaNM956tOMqirauvqe885Qc"
                                         target="_blank" rel="noopener">Practice Videos for Debriefing Graphs</a>
-                                    <small>A series of short DISC graph debrief videos to help you practice the flow of the
-                                        conversation, understand what to focus on in the debrief, and how to discuss it in a
+                                    <small>A series of short DISC graph debrief videos to help you practice the flow of
+                                        the
+                                        conversation, understand what to focus on in the debrief, and how to discuss it
+                                        in a
                                         way that your client can understand. </small>
                                 </td>
                             </tr>
@@ -121,18 +133,21 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLbO8-2-hhuZ4-XZJJJME0sp"
-                                        target="_blank" rel="noopener">Understanding Your DISC Report (for your clients)</a>
-                                    <small>A series of four videos to walk your clients through the report in preparation
+                                        target="_blank" rel="noopener">Understanding Your DISC Report (for your
+                                        clients)</a>
+                                    <small>A series of four videos to walk your clients through the report in
+                                        preparation
                                         for a one-on-one or group conversation. Your client will gain a foundational
                                         understanding of the report and should be able to generate questions for the
-                                        coaching conversation. In total, the series is less than 50 minutes long.</small>
+                                        coaching conversation. In total, the series is less than 50 minutes
+                                        long.</small>
                                 </td>
                             </tr>
 
                             <tr v-if="certified">
                                 <td>
-                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=j0KbAvu4uq0" target="_blank"
-                                        rel="noopener">Communicating with all 4 styles</a>
+                                    <a class="hyperlink" href="https://www.youtube.com/watch?v=j0KbAvu4uq0"
+                                        target="_blank" rel="noopener">Communicating with all 4 styles</a>
                                     <small>Merrick Rosenberg demonstrates a quick, thorough, and effective way to share
                                         information for all 4 DISC styles</small>
                                     <!-- <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/j0KbAvu4uq0"
@@ -156,13 +171,15 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC360 Debrief Guide.pdf"
                                         target="_blank" rel="noopener">DISC 360 Debrief Guide</a>
-                                    <small>A synopsis of how to use the DISC 360 report to be used in conjunction with the
+                                    <small>A synopsis of how to use the DISC 360 report to be used in conjunction with
+                                        the
                                         DISC Debrief Guide. </small>
                                 </td>
                             </tr>
                             <tr>
-                                <td><a class="hyperlink" href="https://www.youtube.com/watch?v=IFEiJmud3WI" target="_blank"
-                                        rel="noopener">Setting up a 360 Assessment Link in the Dashboard (Video)</a></td>
+                                <td><a class="hyperlink" href="https://www.youtube.com/watch?v=IFEiJmud3WI"
+                                        target="_blank" rel="noopener">Setting up a 360 Assessment Link in the Dashboard
+                                        (Video)</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
@@ -190,7 +207,8 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOverUnderExtensions_Emotions.pdf"
                                         target="_blank" rel="noopener">Over-Under Extensions and DISC Emotions </a>
-                                    <small>Additional insight into the over (scores above 90) and under (scores below 10)
+                                    <small>Additional insight into the over (scores above 90) and under (scores below
+                                        10)
                                         extensions of DISC Scores, and additional insight into the high and low DISC
                                         emotions.</small>
                                 </td>
@@ -217,7 +235,8 @@
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Wheel+Debrief+Guide_4.22.pdf"
                                         target="_blank" rel="noopener">Design & Explanation of the DISC Behavioral
                                         Diamond</a>
-                                    <small>This powerful tool adds a visual representation allowing you to view your natural
+                                    <small>This powerful tool adds a visual representation allowing you to view your
+                                        natural
                                         behavior style (circle) and your adapted behavioral style (star). It also shares
                                         additional insight about unusual graphs – Tight, Over Shift and Under Shift
                                         patterns.</small>
@@ -259,7 +278,8 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicalStylesSummaryReportFinal_10.25.23.pdf"
                                         target="_blank" rel="noopener">15 Classic DISC Styles Summary Overview (PDF)</a>
-                                    <small>This document provides an introductory overview and highlights from the DISCself
+                                    <small>This document provides an introductory overview and highlights from the
+                                        DISCself
                                         Report for each of the 15 Classic DISC Patterns, including strengths, work style
                                         tendencies, effective environments, motivations and needs, typical behaviors in
                                         conflict, perceptions and needs when stressed, and the dos/don’ts of
@@ -270,7 +290,8 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap1.24.pdf"
-                                        target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting (PDF)</a>
+                                        target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting
+                                        (PDF)</a>
                                 </td>
                             </tr>
                             <tr>
@@ -298,7 +319,8 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbookPgs3536.pdf"
                                         target="_blank" rel="noopener">Behavior and Needs Under Stress</a>
-                                    <small>Overview of the 4 DISC styles as others perceive them in stress and what helps
+                                    <small>Overview of the 4 DISC styles as others perceive them in stress and what
+                                        helps
                                         them overcome tension in stressful situations.</small>
                                 </td>
                             </tr>
@@ -308,7 +330,8 @@
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-in-conflict-typical-behaviors_vs2.pdf"
                                         target="_blank" rel="noopener">Typical DISC Behaviors In Conflict</a>
                                     <small>Each behavioral style has typical behaviors they are likely to express when
-                                        experiencing conflict or tension. This document provides insight into each style’s
+                                        experiencing conflict or tension. This document provides insight into each
+                                        style’s
                                         likely behaviors in tense and trying times.</small>
                                 </td>
                             </tr>
@@ -317,8 +340,10 @@
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Tensions-Between-Same-Styles-vs2.pdf"
                                         target="_blank" rel="noopener">Tensions Between Same DISC Styles</a>
-                                    <small>When like-minded styles work together, there can be incredible benefits, but also
-                                        some difficult challenges. This document outlines likely behaviors when like-minded
+                                    <small>When like-minded styles work together, there can be incredible benefits, but
+                                        also
+                                        some difficult challenges. This document outlines likely behaviors when
+                                        like-minded
                                         styles work together: D and D, I and I, S and S, & C and C.</small>
                                 </td>
                             </tr>
@@ -393,7 +418,8 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCServiceTargetApplication.pdf"
                                         target="_blank" rel="noopener">DISC Service Tips</a>
-                                    <small>This document covers communicating effectively in the service process – Greet,
+                                    <small>This document covers communicating effectively in the service process –
+                                        Greet,
                                         Value, Ask, Listen, Help, Invite.</small>
                                 </td>
                             </tr>
@@ -407,7 +433,8 @@
                     </h2><br />
 
                     <p>
-                        These resources are designed to help you provide training sessions and workshops of varying lengths
+                        These resources are designed to help you provide training sessions and workshops of varying
+                        lengths
                         to different audiences with a
                         variety of needs. We encourage you to customize and tailor these resources to fit your training
                         needs.
@@ -450,7 +477,8 @@
                             <tr v-if="certified">
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+eWorkbook+INTERACTIVE.pdf"
-                                        target="_blank" rel="noopener">DISC Platinum Rule 84-page Participant eWorkbook</a>
+                                        target="_blank" rel="noopener">DISC Platinum Rule 84-page Participant
+                                        eWorkbook</a>
                                     <small>For use with Comprehensive DISC training programs.</small>
                                 </td>
                             </tr>
@@ -471,7 +499,8 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/TeamDynamicsActivities.pptm"
-                                        target="_blank" rel="noopener">Riddles and Team Practice PowerPoint Presentation</a>
+                                        target="_blank" rel="noopener">Riddles and Team Practice PowerPoint
+                                        Presentation</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -773,34 +802,40 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/assuring%20director.wav"
-                                        target="_blank" rel="noopener">Assuring Customer Satisfaction With High D Styles</a>
+                                        target="_blank" rel="noopener">Assuring Customer Satisfaction With High D
+                                        Styles</a>
                                 </td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/assuring%20socializer.wav"
-                                        target="_blank" rel="noopener">Assuring Customer Satisfaction With High I Styles</a>
+                                        target="_blank" rel="noopener">Assuring Customer Satisfaction With High I
+                                        Styles</a>
                                 </td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/assuring%20relater.wav"
-                                        target="_blank" rel="noopener">Assuring Customer Satisfaction With High S Styles</a>
+                                        target="_blank" rel="noopener">Assuring Customer Satisfaction With High S
+                                        Styles</a>
                                 </td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/assuring%20thinker.wav"
-                                        target="_blank" rel="noopener">Assuring Customer Satisfaction With High C Styles</a>
+                                        target="_blank" rel="noopener">Assuring Customer Satisfaction With High C
+                                        Styles</a>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
 
                     <small v-if="certified">
-                        All of the audio and video <b>presentation files</b> ABOVE need to be downloaded and copied into the
+                        All of the audio and video <b>presentation files</b> ABOVE need to be downloaded and copied into
+                        the
                         same folder where you save the PP presentation (The Comprehensive
-                        DISC Slide Presentation). This way the files will be associated with the presentation and work on
+                        DISC Slide Presentation). This way the files will be associated with the presentation and work
+                        on
                         each individual slide. If you have questions,
                         please call 1-206-400-6647 x4 (PST)
                     </small>
@@ -814,7 +849,8 @@
                     </h2><br />
 
                     <p>
-                        These resources are designed to help foster application and interaction with groups. There are some
+                        These resources are designed to help foster application and interaction with groups. There are
+                        some
                         DISC specific activities and
                         tools and general team building and group engagement resources.
                     </p>
@@ -831,7 +867,8 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Vacation.pdf"
                                         target="_blank" rel="noopener">Planning a Vacation</a>
-                                    <small>Teams work together to create a vacation opportunity for another DISC style and
+                                    <small>Teams work together to create a vacation opportunity for another DISC style
+                                        and
                                         present it to practice what they have learned about the styles and
                                         adaptability.</small>
                                 </td>
@@ -884,7 +921,8 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/WheelGraphJPG.jpeg"
-                                        target="_blank" rel="noopener">DISC Behavioral Pattern View Poster (Wheel)</a></td>
+                                        target="_blank" rel="noopener">DISC Behavioral Pattern View Poster (Wheel)</a>
+                                </td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
@@ -904,7 +942,8 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSummaryPage.pdf"
                                         target="_blank" rel="noopener">DISC Summary Editable PDF page</a>
-                                    <small>This summary page, pulled from the DISC report, provides editable fields to be
+                                    <small>This summary page, pulled from the DISC report, provides editable fields to
+                                        be
                                         used electronically by the end user.</small>
                                 </td>
                             </tr>
@@ -912,9 +951,20 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Tensions.doc"
                                         target="_blank" rel="noopener">Tensions Worksheet</a>
-                                    <small>From the Applicability Activities at the end of the DISC Report, this editable
-                                        worksheet allows you to identify tensions of pace and priority in relationships and
+                                    <small>From the Applicability Activities at the end of the DISC Report, this
+                                        editable
+                                        worksheet allows you to identify tensions of pace and priority in relationships
+                                        and
                                         strategically plan for more effective communication.</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a class="hyperlink" href="https://www.assessments24x7.com/disc-blocks">DISC Blocks
+                                        Benefits & Applications</a>
+                                    <small>By integrating DISC Blocks into the workplace, you can create a dynamic,
+                                        engaging environment that not only highlights individual communication
+                                        preferences but also promotes a deeper understanding of how these styles
+                                        contribute to the collective success of the team's efforts.</small>
                                 </td>
                             </tr>
                         </tbody>
@@ -1012,7 +1062,8 @@
                     </h2><br />
 
                     <p>
-                        These resources are designed to further enhance your learning journey. Some of them are historical
+                        These resources are designed to further enhance your learning journey. Some of them are
+                        historical
                         versions of resources previously
                         used and others are from other sources that we found helpful or interesting.
                     </p>
@@ -1047,28 +1098,33 @@
                                         target="_blank" rel="noopener">DISC vs. MBTI</a></td>
                             </tr>
                             <tr>
-                                <td><a class="hyperlink" href="/blog" target="_blank" rel="noopener">DISC & Other Assessment
+                                <td><a class="hyperlink" href="/blog" target="_blank" rel="noopener">DISC & Other
+                                        Assessment
                                         Articles</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/comparing.pdf"
-                                        target="_blank" rel="noopener">Comparing Correlations Between Four Quadrant and Five
+                                        target="_blank" rel="noopener">Comparing Correlations Between Four Quadrant and
+                                        Five
                                         Factor Personality Assessments</a></td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbook.pdf"
-                                        target="_blank" rel="noopener">People Smart in Business 220-Page PDF eBook</a></td>
+                                        target="_blank" rel="noopener">People Smart in Business 220-Page PDF eBook</a>
+                                </td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/PlatinumRuleDISCSalesMasteryForewordDaveYoho.pdf"
-                                        target="_blank" rel="noopener">The Platinum Rule for DISC Sales Mastery Foreword by
+                                        target="_blank" rel="noopener">The Platinum Rule for DISC Sales Mastery Foreword
+                                        by
                                         Dave Yoho</a></td>
                             </tr>
                             <tr>
-                                <td><a class="hyperlink" href="/about/validity" target="_blank" rel="noopener">Reliability
+                                <td><a class="hyperlink" href="/about/validity" target="_blank"
+                                        rel="noopener">Reliability
                                         Analysis DISC Online Assessment</a></td>
                             </tr>
                             <tr v-if="certified">
@@ -1090,7 +1146,8 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+CAREERS.pdf"
                                         target="_blank" rel="noopener">DISC Careers</a>
-                                    <small>A one-page list of some of the most common job roles behaviorally-aligned with
+                                    <small>A one-page list of some of the most common job roles behaviorally-aligned
+                                        with
                                         each primary DISC style.</small>
                                 </td>
                             </tr>
@@ -1104,9 +1161,11 @@
                     </h2><br />
 
                     <p>
-                        These resources are designed for trainers, facilitators, and presenters to help grow facilitation
+                        These resources are designed for trainers, facilitators, and presenters to help grow
+                        facilitation
                         and presentation skills. They are
-                        useful for both new and experienced individuals who wish to continue to develop their skills in this
+                        useful for both new and experienced individuals who wish to continue to develop their skills in
+                        this
                         area.
                     </p>
 
@@ -1146,7 +1205,8 @@
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/SelfFeedbackForm.pdf"
                                         target="_blank" rel="noopener">Self-Feedback Form</a>
                                     <small>To be used to create self-awareness and growth by review of logistics and
-                                        self-evaluation of training after live session or while observing recordings (video
+                                        self-evaluation of training after live session or while observing recordings
+                                        (video
                                         or live session)</small>
                                 </td>
                             </tr>
@@ -1154,7 +1214,8 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DevelopmentPlan.docx"
                                         target="_blank" rel="noopener">Development Plan Sample</a>
-                                    <small>General development form to explore strengths and challenges and create action
+                                    <small>General development form to explore strengths and challenges and create
+                                        action
                                         plans for growth.</small>
                                 </td>
                             </tr>
@@ -1171,7 +1232,8 @@
                         <div class="info">
                             <h3>This resource is password protected</h3>
                             <p>
-                                These trainer material resources are only available for Assessments 24x7 account holders.
+                                These trainer material resources are only available for Assessments 24x7 account
+                                holders.
                                 Please use the password provided to you in your Resource Center.
                             </p>
                         </div>
