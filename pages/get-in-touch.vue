@@ -38,7 +38,10 @@
                                 <h2>
                                     Experience
                                 </h2>
-                                <img src="~/assets/learn-more-icon.png" alt="learn more icon" class="learnMoreIcon" />
+                                <a href="#form">
+                                    <img src="~/assets/learn-more-icon.png" alt="learn more icon"
+                                        class="learnMoreIcon" />
+                                </a>
                             </div>
                             <div class="col-8">
                                 <img src="~/assets/api.png" alt="thumbnail" class="thumbnail" />
@@ -75,7 +78,7 @@
                 <div class="container">
                     <div class="row flex-container">
                         <div class="col-12">
-                            <div class="col-6">
+                            <div class="col-6 boxes">
                                 <img src="~/assets/api.png" alt="api photo" class="" />
                                 <img src="~/assets/api-icon.png" alt="api icon" class="icon" />
                                 <h3>API Intergration</h3>
@@ -91,7 +94,7 @@
                                     API integration solutions.
                                 </p>
                             </div>
-                            <div class="col-6">
+                            <div class="col-6 boxes">
                                 <img src="~/assets/custom-reports.png" alt="custom reports photo" class="" />
                                 <img src="~/assets/custom-reports-icon.png" alt="custom reports icon" class="icon" />
                                 <h3>Custom Reports</h3>
@@ -111,7 +114,7 @@
                         </div>
                         <div class="row flex-container">
                             <div class="col-12">
-                                <div class="col-6">
+                                <div class="col-6 boxes">
                                     <img src="~/assets/branding-and-user-experience.png"
                                         alt="branding and user experience photo" class="" />
                                     <img src="~/assets/branding-and-user-experience-icon.png"
@@ -129,7 +132,7 @@
                                         your brand's values and fosters meaningful engagement with your audience.
                                     </p>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-6 boxes">
                                     <img src="~/assets/domain-customization.png" alt="domain customization photo"
                                         class="" />
                                     <img src="~/assets/domain-customization-icon.png" alt="domain customization icon"
@@ -155,7 +158,7 @@
                     <br />
                     <br />
                 </div>
-                <div class="container">
+                <div class="container flex-container" id="form">
                     <div class="row flex-container">
                         <div class="col-12">
                             <h1>
@@ -163,6 +166,57 @@
                             </h1>
                         </div>
                     </div>
+                    <br />
+                    <br />
+                    <form @submit.prevent="submitForm">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="col-6">
+                                    <div>
+                                        <label for="name">Name</label>
+                                        <input v-model="form.name" type="text" id="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <label for="email">Email</label>
+                                        <input v-model="form.email" type="email" id="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="col-6">
+                                    <div>
+                                        <label for="phoneNumber">Phone Number</label>
+                                        <input v-model="form.phoneNumber" type="text" id="phoneNumber" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <label for="company">Company</label>
+                                        <input v-model="form.company" type="text" id="company" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="col-12">
+                                    <div>
+                                        <label for="message">Message</label>
+                                        <input v-model="form.message" type="text" id="message" class="messageBox"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <button type="submit" class="submitBtn"><img src="~/assets/submit-icon.png" alt="submit icon"
+                                class="submitIcon" /></button>
+                    </form>
                     <br />
                     <br />
                     <br />
@@ -186,6 +240,22 @@ export default {
     components: {
         'main-nav': Nav,
         'footer-fold': Footer
+    },
+    data() {
+        return {
+            form: {
+                name: '',
+                email: '',
+                phoneNumber: '',
+                company: '',
+                message: ''
+            }
+        };
+    },
+    methods: {
+        submitForm() {
+            console.log('Form submitted:', this.form);
+        }
     }
 }
 </script>
@@ -245,6 +315,13 @@ export default {
     }
 
     .mid {
+        .row {
+            label {
+                text-align: left;
+                display: block; 
+            }
+        }
+
         .flex-container {
             display: flex;
             flex-direction: column;
@@ -284,7 +361,7 @@ export default {
             padding: 0 22px;
         }
 
-        .col-6 {
+        .boxes {
             background-color: white;
             min-height: 720px;
             border-radius: 10px;
@@ -300,6 +377,36 @@ export default {
         .icon {
             width: 22%;
             margin-top: -70px;
+        }
+
+        label {
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        input {
+            width: 100%;
+            min-height: 70px;
+            border-radius: 8px;
+            padding: 0 20px;
+            font-size: 24px;
+        }
+
+        .messageBox {
+            min-height: 110px;
+        }
+
+        .submitBtn {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            width: 24%;
+        }
+
+        .submitIcon {
+            width: 100%;
         }
     }
 }
