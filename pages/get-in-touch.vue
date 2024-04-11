@@ -3,8 +3,9 @@
         <main-nav></main-nav>
         <section class="body">
             <br />
+            <br />
             <section class="title">
-                <div class="container col-12">
+                <div class="container">
                     <div class="row flex-container">
                         <div class="col-5">
                             <img src="~/assets/logo-footer.png" alt="assessments24x7 logo" class="logo" />
@@ -20,7 +21,8 @@
                 <br />
                 <br />
                 <br />
-                <div class="container col-12">
+                <br />
+                <div class="container">
                     <div class="row flex-container">
                         <div class="col-12">
                             <div class="col-4">
@@ -43,6 +45,57 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+            </section>
+            <section class="mid">
+                <div class="container">
+                    <div class="row flex-container">
+                        <div class="col-12">
+                            <h1>
+                                Tailored Assessment Solutions
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row flex-container">
+                        <div class="col-12">
+                            <h2>
+                                for Your Unique Needs
+                            </h2>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+                <div class="container">
+                    <div class="row flex-container">
+                        <div class="col-12">
+                            <div class="col-6">
+                                <img src="~/assets/api.png" alt="api photo" class="thumbnail" />
+                            </div>
+                            <div class="col-6">
+                                <img src="~/assets/custom-reports.png" alt="custom reports photo" class="thumbnail" />
+                            </div>
+                        </div>
+                        <div class="row flex-container">
+                            <div class="col-12">
+                                <div class="col-6">
+                                    <img src="~/assets/branding-and-user-experience.png"
+                                        alt="branding and user experience photo" class="thumbnail" />
+                                </div>
+                                <div class="col-6">
+                                    <img src="~/assets/domain-customization.png" alt="domain customization photo"
+                                        class="thumbnail" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -70,8 +123,6 @@ export default {
 
 <style lang="scss" scoped>
 .body {
-    margin: 0px;
-    padding: 0px;
     background-color: #133c84;
 
     .title {
@@ -108,6 +159,11 @@ export default {
             font-weight: 400;
         }
 
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
         .learnMoreIcon {
             margin-top: 30px;
             max-width: 70%;
@@ -116,6 +172,43 @@ export default {
 
         .thumbnail {
             max-width: 100%;
+        }
+    }
+
+    .mid {
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            font-weight: bold;
+            font-size: 55px;
+            margin-top: -10px;
+            margin-bottom: -15px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 45px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+            font-weight: 400;
+        }
+
+        .col-6 {
+            background-color: white;
+            min-height: 640px;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 20px;
+            padding: 5px;
         }
     }
 }
