@@ -98,6 +98,19 @@
                     <br />
                     <br />
                     <br />
+                </div>
+                <div class="container">
+                    <div class="row flex-container">
+                        <div class="col-12">
+                            <h1>
+                                Get in Touch
+                            </h1>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <br />
                 </div>
             </section>
