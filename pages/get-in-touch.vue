@@ -1,7 +1,11 @@
 <template>
     <section>
-        <main-nav></main-nav>
+        <main-nav class="nav"></main-nav>
         <section class="body">
+            <img src="~/assets/blue-glow.png" alt="assessments24x7 logo" class="blue1" />
+            <img src="~/assets/blue-glow.png" alt="assessments24x7 logo" class="blue2" />
+            <img src="~/assets/blue-glow.png" alt="assessments24x7 logo" class="blue3" />
+            <img src="~/assets/blue-glow.png" alt="assessments24x7 logo" class="blue4" />
             <br />
             <br />
             <section class="title">
@@ -224,11 +228,11 @@
                     <br />
                 </div>
             </section>
+            <section class="underBody">
+                <img src="~/assets/logo.png" alt="assessments24x7 underbody logo" />
+            </section>
         </section>
-        <section class="underBody">
-            <img src="~/assets/logo.png" alt="assessments24x7 underbody logo" />
-        </section>
-        <footer-fold></footer-fold>
+        <footer-fold class="foot"></footer-fold>
     </section>
 </template>
 
@@ -261,10 +265,47 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.nav {
+    position: relative;
+}
+
 .body {
     background-color: #133c84;
 
+    .blue1 {
+        position: fixed;
+        z-index: 0;
+        display: block;
+        top: -400px;
+        left: -400px;
+    }
+
+    .blue2 {
+        position: fixed;
+        z-index: 0;
+        display: block;
+        top: -200px;
+        left: -700px;
+    }
+
+    .blue3 {
+        position: fixed;
+        z-index: 0;
+        display: block;
+        top: 500px;
+        right: -500px;
+    }
+
+    .blue4 {
+        position: fixed;
+        z-index: 0;
+        display: block;
+        top: 400px;
+        right: -800px;
+    }
+
     .title {
+
         .logo {
             max-width: 100%;
         }
@@ -318,7 +359,7 @@ export default {
         .row {
             label {
                 text-align: left;
-                display: block; 
+                display: block;
             }
         }
 
@@ -412,13 +453,20 @@ export default {
 }
 
 .underBody {
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
 
     img {
         max-width: 35%;
         margin: 30px 0;
     }
+}
+
+.foot {
+    position: relative;
 }
 </style>
