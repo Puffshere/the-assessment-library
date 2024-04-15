@@ -519,7 +519,7 @@ export default {
     }
 }
 
-@media (max-width: 299px) {
+@media (max-width: 390px) {
 
     .body {
         .mid {
