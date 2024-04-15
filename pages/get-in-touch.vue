@@ -518,4 +518,21 @@ export default {
         }
     }
 }
+
+@media (max-width: 299px) {
+
+    .body {
+        .title {
+            .container {
+                h1 {
+                    font-size: 45px;
+                }
+
+                h2 {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
 </style>
