@@ -523,7 +523,6 @@ export default {
 
     .body {
         .mid {
-            .container {
                 h1 {
                     font-size: 45px;
                 }
@@ -534,5 +533,4 @@ export default {
             }
         }
     }
-}
 </style>
