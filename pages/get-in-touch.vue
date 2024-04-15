@@ -15,6 +15,7 @@
                             <img src="~/assets/logo-footer.png" alt="assessments24x7 logo" class="logo" />
                         </div>
                         <div class="col-5">
+
                             <hr class="titleHr">
                         </div>
                         <div class="col-2">
@@ -23,9 +24,11 @@
                     </div>
                 </div>
                 <br />
-                <br />
-                <br />
-                <br />
+                <div class="brTitleSpacing">
+                    <br />
+                    <br />
+                    <br />
+                </div>
                 <div class="container">
                     <div class="row flex-container">
                         <div class="col-12">
@@ -160,7 +163,9 @@
                         </div>
                     </div>
                     <br />
-                    <br />
+                    <div class="brTitleSpacing">
+                        <br />
+                    </div>
                 </div>
                 <div class="container flex-container" id="form">
                     <div class="row flex-container">
@@ -218,14 +223,21 @@
                         </div>
                         <br />
                         <br />
-                        <button type="submit" class="submitBtn"><img src="~/assets/submit-icon.png" alt="submit icon"
-                                class="submitIcon" /></button>
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="submitBtn">
+                                    <img src="~/assets/submit-icon.png" alt="submit icon" class="submitIcon" />
+                                </button>
+                            </div>
+                        </div>
                     </form>
                     <br />
                     <br />
                     <br />
                     <br />
-                    <br />
+                    <div class="brTitleSpacing">
+                        <br />
+                    </div>
                 </div>
             </section>
             <section class="underBody">
@@ -468,5 +480,42 @@ export default {
 
 .foot {
     position: relative;
+}
+
+@media (max-width: 1025px) {
+
+    .body {
+        .title {
+            .logo {
+                min-width: 200%;
+            }
+
+            .titleHr {
+                display: none;
+            }
+
+            .brTitleSpacing {
+                display: none;
+            }
+        }
+
+        .mid {
+            .submitBtn {
+                width: 50%;
+            }
+
+            .container {
+                .brTitleSpacing {
+                    display: none;
+                }
+            }
+        }
+
+        .underBody {
+            img {
+                max-width: 60%;
+            }
+        }
+    }
 }
 </style>
