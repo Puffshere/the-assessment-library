@@ -522,7 +522,7 @@ export default {
 @media (max-width: 299px) {
 
     .body {
-        .title {
+        .mid {
             .container {
                 h1 {
                     font-size: 45px;
