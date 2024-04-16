@@ -15,7 +15,6 @@
                             <img src="~/assets/logo-footer.png" alt="assessments24x7 logo" class="logo" />
                         </div>
                         <div class="col-5">
-
                             <hr class="titleHr">
                         </div>
                         <div class="col-2">
@@ -51,7 +50,16 @@
                                 </a>
                             </div>
                             <div class="col-8">
-                                <img src="~/assets/api.png" alt="thumbnail" class="thumbnail" />
+                                <div class="video-container">
+                                    <video ref="videoElement" class="video-player" controls>
+                                        <source
+                                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/get-in-touch-video.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <img v-if="showThumbnail" src="~/assets/get-in-touch-video-image.png"
+                                        @click="playVideo" class="video-thumbnail" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -259,6 +267,7 @@ export default {
     },
     data() {
         return {
+            showThumbnail: true, // Control visibility of the thumbnail
             form: {
                 name: '',
                 email: '',
@@ -271,7 +280,11 @@ export default {
     methods: {
         submitForm() {
             console.log('Form submitted:', this.form);
-        }
+        },
+        playVideo() {
+            this.$refs.videoElement.play();
+            this.showThumbnail = false; // Hide the thumbnail
+        },
     }
 }
 </script>
@@ -282,6 +295,7 @@ export default {
 }
 
 .body {
+    //background-color: #133c84;
     background-color: #282980;
 
     .blue1 {
@@ -317,6 +331,26 @@ export default {
     }
 
     .title {
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            //height: 315px;
+        }
+
+        .video-player {
+            width: 100%;
+            //height: 100%;
+        }
+
+        .video-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            //height: 100%;
+            cursor: pointer;
+        }
 
         .logo {
             max-width: 100%;
@@ -523,14 +557,14 @@ export default {
 
     .body {
         .mid {
-                h1 {
-                    font-size: 45px;
-                }
+            h1 {
+                font-size: 45px;
+            }
 
-                h2 {
-                    font-size: 35px;
-                }
+            h2 {
+                font-size: 35px;
             }
         }
     }
+}
 </style>
