@@ -122,7 +122,7 @@ export default {
     data() {
         return {
             hidden: false,
-            rawPhoneNumber: '++1234567890', // Example initial value
+            rawPhoneNumber: '++1 (206) 400-6647', // Example initial value
         }
     },
     created() {
