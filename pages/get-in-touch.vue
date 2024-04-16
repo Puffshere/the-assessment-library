@@ -282,7 +282,7 @@ export default {
 }
 
 .body {
-    background-color: #133c84;
+    background-color: #282980;
 
     .blue1 {
         position: fixed;
