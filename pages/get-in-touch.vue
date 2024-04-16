@@ -373,7 +373,7 @@ export default {
             color: white;
             font-weight: bold;
             font-size: 55px;
-            margin-top: -10px;
+            margin-top: 0px;
             margin-bottom: -15px;
         }
 
