@@ -42,7 +42,8 @@
 
                 <div class="col-4">
                     <p class="contact-title">Contact Assessments 24x7</p>
-                    <p class="contact-info"><a class="contact-touch-point" href="`tel:${formattedPhoneNumber}`">{{ formattedPhoneNumber }}</a>
+                    <p class="contact-info"><a class="contact-touch-point" href="`tel:${formattedPhoneNumber}`">{{
+                            formattedPhoneNumber }}</a>
                     </p>
                     <p class="contact-info"><a class="contact-touch-point"
                             href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a></p>
@@ -120,7 +121,8 @@
 export default {
     data() {
         return {
-            hidden: false
+            hidden: false,
+            rawPhoneNumber: '++1234567890', // Example initial value
         }
     },
     created() {
@@ -130,7 +132,7 @@ export default {
     },
     computed: {
         formattedPhoneNumber() {
-            return this.$store.getters.formattedPhoneNumber;
+            return this.rawPhoneNumber.replace(/^(\+*)/, '+');
         }
     }
 }
