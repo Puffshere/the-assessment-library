@@ -274,12 +274,25 @@ export default {
             secondRowLinks: [
                 {
                     id: 4,
-                    name: 'Marketing',
+                    name: 'Conference & Travel Info',
                     links: [
                         {
-                            url: 'https://docs.google.com/spreadsheets/d/1fqxFWCx70mT4cPVZTfEfwibgwJPsj9-qXGY_cEEi15g/edit#gid=17462517',
-                            mainText: 'Social Media Calendar'
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Travel+and+Expense+Reimbursements+SOP.pdf',
+                            mainText: 'Travel & Expense Reimbursement ',
+                            footNote: "*Instructions"
                         },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/SOP_TRAVEL+ADVANCE+REQUEST.docx',
+                            mainText: 'Travel Advance Request',
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Dress+Code+for+Events_SOP.pdf',
+                            mainText: 'Dress Code for Events',
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Expense+Reimbursement+Form.xlsx',
+                            mainText: 'Expense Reimbursement Form',
+                        }
                     ]
                 },
                 {
@@ -298,8 +311,16 @@ export default {
                     name: 'Support',
                     links: [
                         {
-                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/SOP+-+Support+Department+-+_Do+Not+Contact_.docx",
-                            mainText: "Do Not Contact"
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Do+Not+Contact+-+SOP+Support+Department.pdf",
+                            mainText: "Do Not Contact (SOP)"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Locating+an+Account+Sales+Rep+-+SOP+-+Support.pdf",
+                            mainText: "Locating an Account Sales Rep"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Credit+Transfers+of+Unequal+Value+SOP+-+Support.pdf",
+                            mainText: "Credit Transfers of Unequal Value"
                         }
                     ]
                 }
@@ -325,12 +346,17 @@ export default {
                 },
                 {
                     id: 8,
-                    name: 'Training',
-                    image: '/images/comingSoonYellow.webp',
+                    name: 'Marketing',
+                    links: [
+                        {
+                            url: 'https://docs.google.com/spreadsheets/d/1fqxFWCx70mT4cPVZTfEfwibgwJPsj9-qXGY_cEEi15g/edit#gid=17462517',
+                            mainText: 'Social Media Calendar'
+                        },
+                    ]
                 },
                 {
                     id: 9,
-                    name: 'Development',
+                    name: 'Development/Training',
                     image: '/images/comingSoonYellow.webp',
                 }
 
@@ -582,6 +608,10 @@ $pixel: 15px;
 
     .placement {
         margin-top: 0px !important;
+    }
+
+    .placement2 {
+        margin-top: 25px !important;
     }
 
     .link {
