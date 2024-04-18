@@ -259,6 +259,7 @@
 <script>
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import axios from 'axios';
 
 export default {
     components: {
@@ -270,6 +271,8 @@ export default {
             showThumbnail: true, // Control visibility of the thumbnail
             form: {
                 name: '',
+                firstName: '',
+                lastName: '',
                 email: '',
                 phoneNumber: '',
                 company: '',
@@ -278,13 +281,79 @@ export default {
         };
     },
     methods: {
-        submitForm() {
-            console.log('Form submitted:', this.form);
-        },
         playVideo() {
             this.$refs.videoElement.play();
-            this.showThumbnail = false; // Hide the thumbnail
+            this.showThumbnail = false;
         },
+        async submitForm() {
+            console.log('Form submitted:', this.form);
+
+            // Split the name input into firstName and lastName
+            const names = this.form.name.split(' ');
+            this.firstName = names[0];
+            this.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+
+            try {
+                const salesPerson = await axios.get('/api/lead/next-assignment');
+
+                const lead = await axios.post('/api/lead', {
+                    salesPerson: salesPerson.data,
+                    firstName: this.firstName,
+                    lastName: this.lastName,
+                    phone: this.form.phoneNumber,
+                    email: this.form.email,
+                    company: this.form.company,
+                    message: this.form.message
+                });
+
+                const { data } = await axios.post('/api/contact', {
+                    contact: {
+                        email: this.form.email,
+                        firstName: this.firstName,
+                        lastName: this.lastName,
+                        phone: this.form.phoneNumber,
+                        company: this.form.company,
+                        message: this.form.message,
+                        fieldValues: [
+                            {
+                                field: '79', // Sales Person Assignment
+                                value: salesPerson.data
+                            }
+                        ]
+                    }
+                });
+
+                const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+
+                // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
+                await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+                // Create an account and associate the contact to it
+                await axios.post(`/api/contact/${data.contact.id}/account`, {
+                    company: this.form.company
+                });
+
+                this.$toast.open({
+                    message: 'Your information has been successfully submitted!',
+                    position: 'top',
+                    duration: 8000,
+                    type: 'success'
+                });
+
+                this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+
+            } catch (err) {
+                this.isDisabled = false;
+                this.loading = false;
+                this.$toast.open({
+                    message: 'An unexpected error has occurred. Please try again later.',
+                    position: 'top',
+                    duration: 8000,
+                    type: 'error'
+                });
+            }
+        }
+
     }
 }
 </script>
