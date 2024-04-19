@@ -28,7 +28,7 @@
                             <option value="zh">Chinese (Mandarin) - 17</option>
                             <option value="zh-t">Chinese (Traditional) - 1</option>
                             <option value="nl">Dutch - 6</option>
-                            <option value="en-us" selected>English (US) - 35</option>
+                            <option value="en-us" selected>English (US) - 38</option>
                             <option value="fr">French - 14</option>
                             <option value="de">German - 5</option>
                             <option value="id">Indonesian - 1</option>
@@ -60,11 +60,14 @@
                         <h2>DISC Sample Reports</h2>
 
                         <p>
-                            Our most popular assessment and the world’s #1 behavioral tool, DISC provides a highly-detailed
+                            Our most popular assessment and the world’s #1 behavioral tool, DISC provides a
+                            highly-detailed
                             analysis of each individual’s
-                            Natural and Adapted behavioral styles. DISC reveals how a person will most likely behave within
+                            Natural and Adapted behavioral styles. DISC reveals how a person will most likely behave
+                            within
                             a given environment, situation, or
-                            relationship. It offers prescriptive lessons designed to highlight and maximize self-awareness,
+                            relationship. It offers prescriptive lessons designed to highlight and maximize
+                            self-awareness,
                             intentionality, and interpersonal
                             communication, personally and professionally.
                         </p>
@@ -150,7 +153,8 @@
                         <br />
 
                         <a v-if="lang === 'en-us' || lang === 'en-au' || lang === 'zh' || lang === 'nl' || lang === 'fr' || lang === 'pt' || lang === 'sv' || lang === 'vi' || lang === 'tr' || lang === 'es'"
-                            @click="discTeamReportModal = true" class="hyperlink" target="_blank" rel="noopener">DISC Team
+                            @click="discTeamReportModal = true" class="hyperlink" target="_blank" rel="noopener">DISC
+                            Team
                             Reports &rsaquo;</a>
                         <a v-else class="hyperlink disabled">DISC Team Reports</a><br />
 
@@ -186,6 +190,12 @@
                             class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
                         <a v-else class="hyperlink disabled">DISC Summary</a>
                         <a class="language-button disc" @click="discSummaryReportModal = true">10 languages</a><br />
+                        <a v-if="lang === 'en-us'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Sales.pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC Sales</a><br />
+                        <a v-if="lang === 'en-us'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC Leadership</a>
                     </div>
                 </div>
 
@@ -219,13 +229,15 @@
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/KidsDISC-ChildOnly.pdf"
                             class="hyperlink" target="_blank" rel="noopener">Kids DISC - Child Only</a>
-                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Child Only</a><br />
+                        <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Child
+                            Only</a><br />
 
                         <a v-if="lang === 'en-us'" class="hyperlink" target="_blank" rel="noopener">Kids DISC -
                             Questionnaire Only</a>
                         <a v-else class="hyperlink disabled" target="_blank" rel="noopener">Kids DISC - Questionnaire
                             Only</a><br />
-                        <a class="language-button disc" @click="kidsDiscQuestionaireOnlyModal = true">9 languages</a><br />
+                        <a class="language-button disc" @click="kidsDiscQuestionaireOnlyModal = true">9
+                            languages</a><br />
 
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCAdultBirds.pdf"
@@ -276,7 +288,8 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCRelationshipAustralianCouplesSampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Relationship Couples</a>
                         <a v-else class="hyperlink disabled">DISC Relationship Couples</a><br />
-                        <a class="language-button disc" @click="discRelationshipsCouplesModal = true">2 languages</a><br />
+                        <a class="language-button disc" @click="discRelationshipsCouplesModal = true">2
+                            languages</a><br />
                     </div>
                 </div>
             </div>
@@ -291,9 +304,11 @@
                         <h2>Motivators Sample Reports</h2>
 
                         <p>
-                            The perfect companion to DISC, Motivators measures seven Dimensions of Motivation that drive our
+                            The perfect companion to DISC, Motivators measures seven Dimensions of Motivation that drive
+                            our
                             behavior and decisions: Aesthetic,
-                            Economic, Individualistic, Power, Altruistic, Regulatory, and Theoretical. Just as DISC reveals
+                            Economic, Individualistic, Power, Altruistic, Regulatory, and Theoretical. Just as DISC
+                            reveals
                             how a person will likely behave,
                             Motivators explores why we are driven to do what we do and what we value at our core.
                         </p>
@@ -353,8 +368,9 @@
                         <a v-else class="hyperlink disabled">Motivators Self Report</a>
                         <a class="language-button mot" @click="motSelfReportModal = true">15 languages</a><br />
 
-                        <a v-if="lang === 'en-us' || lang === 'zh' || lang === 'sv' || lang === 'nl' || lang === 'fr' || lang === 'pt-br'" @click="motTeamReportsModal = true" class="hyperlink"
-                            target="_blank" rel="noopener">Motivators Team Reports &rsaquo;</a>
+                        <a v-if="lang === 'en-us' || lang === 'zh' || lang === 'sv' || lang === 'nl' || lang === 'fr' || lang === 'pt-br'"
+                            @click="motTeamReportsModal = true" class="hyperlink" target="_blank"
+                            rel="noopener">Motivators Team Reports &rsaquo;</a>
                         <a v-else class="hyperlink disabled">Motivators Team Reports</a><br />
 
                         <a v-if="lang === 'en-us'"
@@ -422,7 +438,8 @@
                             experienced by both coaches and
                             corporate trainers. We offer assessments to encourage positive outcomes in personal and
                             professional life, including employee
-                            selection, leadership development, team-building, conflict resolution, succession planning, and
+                            selection, leadership development, team-building, conflict resolution, succession planning,
+                            and
                             more.
                         </p>
                     </div>
@@ -535,7 +552,8 @@
                             target="_blank" rel="noopener">Learning Styles Report</a>
                         <a v-else-if="lang === 'ja'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesJapanese.pdf"
-                            target="_blank" rel="noopener">Learning Styles Report  <span class="reportOnly">(Report Only, not Questionnaire)</span></a>
+                            target="_blank" rel="noopener">Learning Styles Report <span class="reportOnly">(Report Only,
+                                not Questionnaire)</span></a>
                         <a v-else-if="lang === 'pt-br'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/LearningStylesPortBrazil.pdf"
                             target="_blank" rel="noopener">Learning Styles Report</a>
@@ -794,7 +812,8 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCGroupGraphsChinese.pdf"
                                     target="_blank" rel="noopener">DISC Group Graphs</a>
                                 <a v-else class="hyperlink disabled">DISC Group Graphs</a><br />
-                                <a class="language-button disc" @click="discGroupGraphsModal = true">2 languages</a><br />
+                                <a class="language-button disc" @click="discGroupGraphsModal = true">2
+                                    languages</a><br />
 
                                 <a v-if="lang === 'en-au'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamBehavioralTendenciesAustralianSampleReport.pdf"
@@ -846,7 +865,8 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCCollaborationReportChinese.pdf"
                                     target="_blank" rel="noopener">DISC Collaboration</a>
                                 <a v-else class="hyperlink disabled">DISC Collaboration</a><br />
-                                <a class="language-button disc" @click="discCollaborationModal = true">3 languages</a><br />
+                                <a class="language-button disc" @click="discCollaborationModal = true">3
+                                    languages</a><br />
                             </div>
                         </div>
                     </div>
@@ -1133,7 +1153,8 @@
             <transition name="fade">
                 <section v-if="discBehavioralTendenciesReportModal" class="modal-window">
                     <div class="container">
-                        <a title="Close" class="modal-close" @click="discBehavioralTendenciesReportModal = false">Close</a>
+                        <a title="Close" class="modal-close"
+                            @click="discBehavioralTendenciesReportModal = false">Close</a>
 
                         <div class="row">
                             <div class="col-12">
@@ -1231,7 +1252,8 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsTeamWheel_Swedish.pdf"
                                     target="_blank" rel="noopener">Motivators Team Wheel</a>
                                 <a v-else class="hyperlink disabled">Motivators Team Wheel</a><br />
-                                <a class="language-button mot" @click="motTeamWheelReportModal = true">3 languages</a><br />
+                                <a class="language-button mot" @click="motTeamWheelReportModal = true">3
+                                    languages</a><br />
                             </div>
                         </div>
                     </div>
@@ -1565,7 +1587,8 @@
             <transition name="fade">
                 <section v-if="discPlusLearningStylesReportModal" class="modal-window">
                     <div class="container">
-                        <a title="Close" class="modal-close" @click="discPlusLearningStylesReportModal = false">Close</a>
+                        <a title="Close" class="modal-close"
+                            @click="discPlusLearningStylesReportModal = false">Close</a>
 
                         <div class="row">
                             <div class="col-12">
@@ -1955,4 +1978,5 @@ export default {
     .reportOnly {
         font-size: 12px;
     }
-}</style>
+}
+</style>
