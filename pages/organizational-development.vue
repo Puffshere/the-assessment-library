@@ -73,6 +73,12 @@
                                 Why Who How Benefits Organizational Development
                             </li>
                         </a>
+                        <a href="https://youtu.be/Qt_4n12xEio"
+                            target="_blank" rel="noopener">
+                            <li class="resource a24x7 spacing">
+                                Debriefing the 5 Disciplines Assessment
+                            </li>
+                        </a>
                     </ul>
                 </div>
             </div>
