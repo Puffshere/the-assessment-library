@@ -483,6 +483,9 @@
                             class="hyperlink" target="_blank" rel="noopener">DISC + Emotional Intelligence</a>
                         <a v-else class="hyperlink disabled">DISC + Emotional Intelligence</a><br />
                         <a class="language-button other" @click="discPluseiqReportModal = true">2 languages</a><br />
+                        <a v-if="lang === 'en-us'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EQ).pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC Awareness (EQ) Report</a>
                     </div>
                 </div>
 
