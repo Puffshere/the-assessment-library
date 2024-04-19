@@ -267,6 +267,10 @@ export default {
                         {
                             url: 'https://docs.google.com/spreadsheets/d/1Vhgz4OqXdN3KIKMsWKp5z4Md0_Da2uzos1O6WUXYGSY/edit#gid=713753388',
                             mainText: 'Employee Roster',
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/PTO++Holiday+Policy_Final.pdf',
+                            mainText: 'PTO Holiday Policy',
                         }
                     ]
                 }

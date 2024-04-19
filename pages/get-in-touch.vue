@@ -407,12 +407,10 @@ export default {
         .video-container {
             position: relative;
             width: 100%;
-            //height: 315px;
         }
 
         .video-player {
             width: 100%;
-            //height: 100%;
         }
 
         .video-thumbnail {
@@ -420,7 +418,6 @@ export default {
             top: 0;
             left: 0;
             width: 100%;
-            //height: 100%;
             cursor: pointer;
         }
 
