@@ -120,7 +120,7 @@
                             </div>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNotes">{{ link.footNote }}</span>
+                                <span class="footNote3 footNotes">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
@@ -692,6 +692,10 @@ $pixel: 15px;
 
 .footNote2 {
     left: -110px;
+}
+
+.footNote3 {
+    left: -105px;
 }
 
 .comingSoon {
