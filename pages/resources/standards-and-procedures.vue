@@ -128,6 +128,34 @@
                     </div>
                 </div>
             </div>
+            <div class="row document-library-row">
+                <div v-for="document in fourthRowLinks" :key="document.id">
+                    <div class="document-box centering" :class="{ 'scrollable-vertical': isScrollable(document) }">
+                        {{ document.name }}
+                        <br>
+                        <div class="titlePadding"></div>
+                        <img :src="document.image" v-if="document.image" class="comingSoon">
+                        <div v-for="link in document.links" :key="link.url">
+                            <div v-if="link.mainText === 'Forms & Calendar'">
+                                <a :href="link.url" class="link hyperlink placement">
+                                    {{ link.mainText }}
+                                </a>
+                            </div>
+                            <div v-else>
+                                <a :href="link.url" class="link hyperlink placement" target="_blank" rel="noopener">
+                                    {{ link.mainText }}
+                                </a>
+                            </div>
+                            <br>
+                            <div v-if="link.footNote">
+                                <span class="footNotes">{{ link.footNote }}</span>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <br>
         </div>
         <div class="container" v-else>
@@ -197,11 +225,11 @@ export default {
             firstRowLinks: [
                 {
                     id: 1,
-                    name: 'Certification',
+                    name: 'Mission, Vision, Core Values',
                     links: [
                         {
-                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Upskill_Training_Sales_Instructions.pdf',
-                            mainText: 'Upskill Certification Sales Instructions',
+                            url: 'https://youtu.be/n-XvxjzRMSc',
+                            mainText: 'Mission, Vision, & Core Values video',
                         }
                     ]
                 },
@@ -301,12 +329,11 @@ export default {
                 },
                 {
                     id: 5,
-                    name: 'Affiliate Info',
+                    name: 'Certification',
                     links: [
                         {
-                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Global+Affiliate+Lead+Distribution_Contact+Sheet.pdf',
-                            mainText: 'Global Affiliate Lead Distribution',
-                            footNote: "*Contact Sheet"
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Upskill_Training_Sales_Instructions.pdf',
+                            mainText: 'Upskill Certification Sales Instructions',
                         }
                     ]
                 },
@@ -360,8 +387,30 @@ export default {
                 },
                 {
                     id: 9,
+                    name: 'Affiliate Info',
+                    links: [
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Global+Affiliate+Lead+Distribution_Contact+Sheet.pdf',
+                            mainText: 'Global Affiliate Lead Distribution',
+                            footNote: "*Contact Sheet"
+                        }
+                    ]
+                }
+
+            ],
+            fourthRowLinks: [
+                {
+                    id: 10,
                     name: 'Development/Training',
                     image: '/images/comingSoonYellow.webp',
+                },
+                {
+                    id: 11,
+                    name: '',
+                },
+                {
+                    id: 12,
+                    name: '',
                 }
 
             ],
