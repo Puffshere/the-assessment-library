@@ -38,7 +38,7 @@
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                }}</option>
+                                    }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -71,7 +71,7 @@
                                 <select id="source" name="source" v-model="form.source" tabindex="6">
                                     <option v-for="source in sources" :key="source.id" :value="source.value">{{
                                         source.label
-                                    }}</option>
+                                        }}</option>
                                 </select>
 
                                 <span class="error">{{ v.errors[0] }}</span>
@@ -134,8 +134,9 @@
 
                         <select id="affiliation" name="affiliation" v-model="form.affiliation" style="max-width: 310px;"
                             tabindex="12">
-                            <option v-for="affiliation in affiliations" :key="affiliation.id" :value="affiliation.value">{{
-                                affiliation.label }}</option>
+                            <option v-for="affiliation in affiliations" :key="affiliation.id"
+                                :value="affiliation.value">{{
+                                    affiliation.label }}</option>
                         </select>
                     </div>
 
@@ -1172,4 +1173,5 @@ export default {
         font-weight: 600;
         font-size: 11pt;
     }
-}</style>
+}
+</style>
