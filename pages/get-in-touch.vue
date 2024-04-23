@@ -6,10 +6,8 @@
             <img src="~/assets/blue-glow.png" alt="assessments24x7 logo" class="blue2" />
             <img src="~/assets/blue-glow.png" alt="assessments24x7 logo" class="blue3" />
             <img src="~/assets/blue-glow.png" alt="assessments24x7 logo" class="blue4" />
-            <br />
-            <br />
             <section class="title">
-                <div class="container">
+                <!-- <div class="container">
                     <div class="row flex-container">
                         <div class="col-5">
                             <img src="~/assets/logo-footer.png" alt="assessments24x7 logo" class="logo" />
@@ -21,8 +19,7 @@
                             <img src="~/assets/ATD_New_Orleans_Logo.png" alt="ATD" class="atdLogo" />
                         </div>
                     </div>
-                </div>
-                <br />
+                </div> -->
                 <div class="brTitleSpacing">
                     <br />
                     <br />
