@@ -230,6 +230,10 @@ export default {
                         {
                             url: 'https://youtu.be/n-XvxjzRMSc',
                             mainText: 'Mission, Vision, & Core Values video',
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/A247-VMCV.pptx',
+                            mainText: 'Mission, Vision, Core Values PowerPoint',
                         }
                     ]
                 },
