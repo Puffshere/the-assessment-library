@@ -606,7 +606,7 @@ h1 {
 .ourDifference .submitIcon {
   position: absolute;
   right: 20px;
-  bottom: 75px;
+  bottom: 65px;
   width: 22%;
   height: auto;
 }
@@ -619,9 +619,10 @@ h1 {
 
 .ourDifference .container h3 {
   color: black;
-  font-size: 26px;
+  font-size: 23px;
   text-align: left;
   font-weight: 400;
+  padding: 0 46px;
 }
 
 //  Quick Links Section
