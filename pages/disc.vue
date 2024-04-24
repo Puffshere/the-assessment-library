@@ -4,65 +4,139 @@
     <section class="body">
       <section class="hero">
         <div class="container">
-          <div class="col-12">
-            <div class="row">
-              <div class="col-5">
-                <h1>
-                  Drive
-                </h1>
-                <br />
-                <h1>
-                  Organizational
-                </h1>
-                <br />
-                <h1>
-                  Success
-                </h1>
-                <h2 class="heroSubtext">
-                  Let DISC Lead the way.
-                </h2>
-              </div>
-              <div class="col-7">
-                <div class="video-container">
-                  <video ref="videoElement" class="video-player" controls>
-                    <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/get-in-touch-video.mp4"
-                      type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                  <img v-if="showThumbnail" src="~/assets/get-in-touch-video-image.png" @click="playVideo"
-                    class="video-thumbnail" />
-                </div>
+          <div class="row">
+            <div class="col-5">
+              <h1>
+                Drive
+              </h1>
+              <br />
+              <h1>
+                Organizational
+              </h1>
+              <br />
+              <h1>
+                Success
+              </h1>
+              <h2 class="heroSubtext">
+                Let DISC Lead the way.
+              </h2>
+            </div>
+            <div class="col-7">
+              <div class="video-container">
+                <video ref="videoElement" class="video-player" controls>
+                  <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/get-in-touch-video.mp4"
+                    type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img v-if="showThumbnail" src="~/assets/get-in-touch-video-image.png" @click="playVideo"
+                  class="video-thumbnail" />
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="ourDifference">
-
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>
+                Our Difference
+              </h1>
+            </div>"
+          </div>
+        </div>
       </section>
       <section class="quickLinks">
-
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>
+                Quick Links
+              </h1>
+            </div>"
+          </div>
+        </div>
       </section>
       <section class="application">
-
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>
+                Application
+              </h1>
+            </div>"
+          </div>
+        </div>
       </section>
       <section class="implementation">
-
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-5">
+              </div>
+              <div class="col-7">
+                <h1>
+                  Implementation
+                </h1>
+              </div>
+            </div>"
+          </div>
+        </div>
       </section>
       <section class="whyCertification">
-
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>
+                Why Certification
+              </h1>
+            </div>"
+          </div>
+        </div>
       </section>
       <section class="results">
-
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>
+                Results
+              </h1>
+            </div>"
+          </div>
+        </div>
       </section>
-      <section class="draftKings">
-
+      <section class="quote">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>
+                Quote
+              </h1>
+            </div>"
+          </div>
+        </div>
       </section>
       <section class="sampleReports">
-
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>
+                Sample Reports
+              </h1>
+            </div>"
+          </div>
+        </div>
       </section>
-      <section class="sectionAboveForm">
-
+      <section class="empowers">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>
+                Empowers
+              </h1>
+            </div>"
+          </div>
+        </div>
       </section>
       <br />
       <section class="form">
@@ -140,9 +214,20 @@
           <br />
         </div>
       </section>
-    </section>
-    <section class="underBody">
-
+      <section class="interest">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 style="color: white;">
+                Interested in learning more abour our
+              </h1>
+              <h1 style="color: black;">
+                Customizations & API Intergration?
+              </h1>
+            </div>"
+          </div>
+        </div>
+      </section>
     </section>
     <footer-fold class="foot"></footer-fold>
   </section>
@@ -260,7 +345,6 @@ export default {
         });
       }
     }
-
   }
 }
 </script>
@@ -300,6 +384,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to right, #1e222d 40%, #00a8ff 40%);
 
 
   .video-container {
@@ -315,7 +400,6 @@ export default {
 
   .video-thumbnail {
     position: absolute;
-    //top: 0;
     left: 0;
     width: 100%;
     cursor: pointer;
@@ -368,90 +452,100 @@ h1 {
   margin-left: 10px;
 }
 
-
-
-
-
-
 .ourDifference {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
   min-height: 700px;
+
+  h1 {
+    color: #1e222d;
+    margin: 0px;
+    font-size: 65px;
+  }
 }
 
 .quickLinks {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
   min-height: 700px;
+
+  h1 {
+    color: #1e222d;
+    margin: 0px;
+    font-size: 65px;
+  }
 }
 
 .application {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #00a8ff;
   min-height: 700px;
+  background-color: #00a8ff;
+
+  h1 {
+    margin: 0px;
+    font-size: 65px;
+    position: absolute;
+    left: 60px;
+    top: 60px;
+  }
 }
 
 .implementation {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #1e222d;
   min-height: 700px;
+
+  h1 {
+    font-size: 65px;
+    float: right;
+  }
 }
 
 .whyCertification {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
   min-height: 700px;
+
+  h1 {
+    color: #1e222d;
+    margin: 0px;
+    font-size: 65px;
+  }
 }
 
 .results {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #1e222d;
   min-height: 700px;
+
+  h1 {
+    font-size: 65px;
+    float: right;
+  }
 }
 
-.draftKings {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #00a8ff;
+.quote {
   min-height: 700px;
+  background-color: #00a8ff;
+
+  h1 {
+    margin: 0px;
+    font-size: 65px;
+    position: absolute;
+    left: 60px;
+    top: 60px;
+  }
 }
 
 .sampleReports {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
   min-height: 700px;
+
+  h1 {
+    color: #1e222d;
+    margin: 0px;
+    font-size: 65px;
+  }
 }
 
-.sectionAboveForm {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.empowers {
   background-color: #1e222d;
   min-height: 700px;
+
+  h1 {
+    font-size: 65px;
+    float: right;
+  }
 }
 
 .form {
@@ -501,13 +595,15 @@ h1 {
   }
 }
 
-.underBody {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.interest {
   background-color: #00a8ff;
   min-height: 400px;
+
+  h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 47px;
+  }
 }
 
 .foot {
