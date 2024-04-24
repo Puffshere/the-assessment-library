@@ -3,7 +3,39 @@
     <main-nav class="nav"></main-nav>
     <section class="body">
       <section class="hero">
-
+        <div class="container">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-5">
+                <h1>
+                  Drive
+                </h1>
+                <br />
+                <h1>
+                  Organizational
+                </h1>
+                <br />
+                <h1>
+                  Success
+                </h1>
+                <h2 class="heroSubtext">
+                  Let DISC Lead the way.
+                </h2>
+              </div>
+              <div class="col-7">
+                <div class="video-container">
+                  <video ref="videoElement" class="video-player" controls>
+                    <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/get-in-touch-video.mp4"
+                      type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <img v-if="showThumbnail" src="~/assets/get-in-touch-video-image.png" @click="playVideo"
+                    class="video-thumbnail" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="ourDifference">
 
@@ -241,14 +273,13 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
   }
 
   h1 {
     color: white;
     font-weight: bold;
-    font-size: 55px;
-    margin-top: -10px;
-    margin-bottom: -15px;
   }
 
   h2 {
@@ -266,13 +297,81 @@ export default {
 }
 
 .hero {
-  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #00a8ff;
-  min-height: 700px;
+  align-items: center;
+
+
+  .video-container {
+    position: relative;
+    width: 90%;
+    padding: 40px;
+    margin: 0 auto;
+  }
+
+  .video-player {
+    width: 100%;
+  }
+
+  .video-thumbnail {
+    position: absolute;
+    //top: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .logo {
+    max-width: 100%;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+
+    .titleHr {
+      width: 100%;
+    }
+  }
 }
+
+h1 {
+  font-size: 48px;
+  padding: 20px;
+  margin-bottom: -150px;
+  margin-left: 10px;
+}
+
+.hero .col-12 {
+  width: 100%;
+}
+
+.hero .col-7 {
+  background-color: #00a8ff;
+  min-height: 440px;
+  margin: 0px;
+  width: 60%;
+}
+
+.hero .col-5 {
+  background-color: #1e222d;
+  width: 40%;
+  margin: 0px;
+  min-height: 440px;
+}
+
+.hero .col-5 .heroSubtext {
+  color: #00a8ff;
+  font-size: xx-large;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 10px;
+}
+
+
+
+
+
 
 .ourDifference {
   position: relative;
