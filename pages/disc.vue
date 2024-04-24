@@ -621,7 +621,7 @@ h1 {
   color: #1e222d;
   font-size: 26px;
   text-align: left;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 //  Quick Links Section
