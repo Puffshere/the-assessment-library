@@ -1,229 +1,116 @@
 <template>
   <section>
-      <main-nav class="nav"></main-nav>
-      <section class="body">
-          <section class="title">
-              <div class="brTitleSpacing">
-                  <br />
-                  <br />
-                  <br />
-              </div>
-              <div class="container">
-                  <div class="row flex-container">
-                      <div class="col-12">
-                          <div class="col-4">
-                              <h1>
-                                  DISC
-                              </h1>
-                              <a href="#form">
-                                  <img src="~/assets/learn-more-icon.png" alt="learn more icon"
-                                      class="learnMoreIcon" />
-                              </a>
-                          </div>
-                          <div class="col-8">
-                              <div class="video-container">
-                                  <video ref="videoElement" class="video-player" controls>
-                                      <source
-                                          src="https://cdn.assessments24x7.com/file/assessments24x7-media/get-in-touch-video.mp4"
-                                          type="video/mp4">
-                                      Your browser does not support the video tag.
-                                  </video>
-                                  <img v-if="showThumbnail" src="~/assets/get-in-touch-video-image.png"
-                                      @click="playVideo" class="video-thumbnail" />
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <br />
-              <br />
-              <br />
-              <br />
-          </section>
-          <section class="mid">
-              <div class="container">
-                  <div class="row flex-container">
-                      <div class="col-12">
-                          <h1>
-                              Tailored Assessment Solutions
-                          </h1>
-                      </div>
-                  </div>
-                  <div class="row flex-container">
-                      <div class="col-12">
-                          <h2>
-                              for Your Unique Needs
-                          </h2>
-                      </div>
-                  </div>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-              </div>
-              <div class="container">
-                  <div class="row flex-container">
-                      <div class="col-12">
-                          <div class="col-6 boxes">
-                              <img src="~/assets/api.png" alt="api photo" class="" />
-                              <img src="~/assets/api-icon.png" alt="api icon" class="icon" />
-                              <h3>API Intergration</h3>
-                              <hr />
-                              <p>
-                                  <span class="paragraph">Unlock the full potential of your existing systems</span>
-                                  with seamless API integration.
-                                  Our technical customization perspective enables us to integrate our assessments into
-                                  your company's processes, whether it's a learning management system, intranet,
-                                  employee tracking system, or internal HR systems. Utilize our assessment data and
-                                  reports effortlessly by tapping into our API, a level of customization that many of
-                                  our competitors overlook. Streamline your workflows and enhance efficiency with our
-                                  API integration solutions.
-                              </p>
-                          </div>
-                          <div class="col-6 boxes">
-                              <img src="~/assets/custom-reports.png" alt="custom reports photo" class="" />
-                              <img src="~/assets/custom-reports-icon.png" alt="custom reports icon" class="icon" />
-                              <h3>Custom Reports</h3>
-                              <hr />
-                              <p>
-                                  <span class="paragraph">Stand out from the crowd with our customizable</span>
-                                  reports that
-                                  cater to your specific requirements. Whether you need to tailor text,
-                                  incorporate static content, adjust colors, or include graphics, we've got you
-                                  covered. Our reports offer a variety of angles, providing insights that are
-                                  relevant and actionable. With our easy-to-use customization tools, creating
-                                  personalized reports that resonate with your audience has never been easier.
-                                  Elevate your reporting capabilities and make informed decisions with our
-                                  comprehensive customization options.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="row flex-container">
-                          <div class="col-12">
-                              <div class="col-6 boxes">
-                                  <img src="~/assets/branding-and-user-experience.png"
-                                      alt="branding and user experience photo" class="" />
-                                  <img src="~/assets/branding-and-user-experience-icon.png"
-                                      alt="branding and user experience icon" class="icon" />
-                                  <h3>Branding and User Experience</h3>
-                                  <hr />
-                                  <p>
-                                      <span class="paragraph">Make a lasting impression with branded dashboards</span>
-                                      and personalized user
-                                      experiences. Enhance the look and feel of your platform by incorporating your
-                                      company's colors and logos. Customize the user interface to match your brand
-                                      identity and create a cohesive experience. Whether it's modifying text or
-                                      adjusting the overall appearance, we empower you to make it exactly what you
-                                      want. By focusing on customization, we ensure that every interaction reflects
-                                      your brand's values and fosters meaningful engagement with your audience.
-                                  </p>
-                              </div>
-                              <div class="col-6 boxes">
-                                  <img src="~/assets/domain-customization.png" alt="domain customization photo"
-                                      class="" />
-                                  <img src="~/assets/domain-customization-icon.png" alt="domain customization icon"
-                                      class="icon" />
-                                  <h3>Domain Specific Customization</h3>
-                                  <hr />
-                                  <p>
-                                      <span class="paragraph">Elevate your brand presence and create a seamless</span>
-                                      experience for your employees
-                                      and clients with domain-specific customization. Our technology allows you to
-                                      private label assessments, reports, and dashboards, ensuring that they reflect
-                                      your business identity, including using your own domain name. From custom
-                                      branding to personalized interfaces, we empower you to appear as the direct
-                                      provider of these assessments, strengthening your brand recognition and
-                                      enhancing trust among your audience. Unlock the power of domain-specific
-                                      customization to elevate your organization to new heights of professionalism and
-                                      authenticity.
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <br />
-                  <div class="brTitleSpacing">
-                      <br />
-                  </div>
-              </div>
-              <div class="container flex-container" id="form">
-                  <div class="row flex-container">
-                      <div class="col-12">
-                          <h1>
-                              Get in Touch
-                          </h1>
-                      </div>
-                  </div>
-                  <br />
-                  <br />
-                  <form @submit.prevent="submitForm">
-                      <div class="row">
-                          <div class="col-12">
-                              <div class="col-6">
-                                  <div>
-                                      <label for="name">Name</label>
-                                      <input v-model="form.name" type="text" id="name" required>
-                                  </div>
-                              </div>
-                              <div class="col-6">
-                                  <div>
-                                      <label for="email">Email</label>
-                                      <input v-model="form.email" type="email" id="email" required>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-12">
-                              <div class="col-6">
-                                  <div>
-                                      <label for="phoneNumber">Phone Number</label>
-                                      <input v-model="form.phoneNumber" type="text" id="phoneNumber" required>
-                                  </div>
-                              </div>
-                              <div class="col-6">
-                                  <div>
-                                      <label for="company">Company</label>
-                                      <input v-model="form.company" type="text" id="company" required>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-12">
-                              <div class="col-12">
-                                  <div>
-                                      <label for="message">Message</label>
-                                      <input v-model="form.message" type="text" id="message" class="messageBox"
-                                          required>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <br />
-                      <br />
-                      <div class="row">
-                          <div class="col-12">
-                              <button type="submit" class="submitBtn">
-                                  <img src="~/assets/submit-icon.png" alt="submit icon" class="submitIcon" />
-                              </button>
-                          </div>
-                      </div>
-                  </form>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <div class="brTitleSpacing">
-                      <br />
-                  </div>
-              </div>
-          </section>
-          <section class="underBody">
-              <img src="~/assets/logo.png" alt="assessments24x7 underbody logo" />
-          </section>
+    <main-nav class="nav"></main-nav>
+    <section class="body">
+      <section class="hero">
+
       </section>
-      <footer-fold class="foot"></footer-fold>
+      <section class="ourDifference">
+
+      </section>
+      <section class="quickLinks">
+
+      </section>
+      <section class="application">
+
+      </section>
+      <section class="implementation">
+
+      </section>
+      <section class="whyCertification">
+
+      </section>
+      <section class="results">
+
+      </section>
+      <section class="draftKings">
+
+      </section>
+      <section class="sampleReports">
+
+      </section>
+      <section class="sectionAboveForm">
+
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <section class="form">
+        <div class="container flex-container" id="form">
+          <div class="row flex-container">
+            <div class="col-12">
+              <h1 class="formTitle">
+                Get Started
+              </h1>
+            </div>
+          </div>
+          <br />
+          <form @submit.prevent="submitForm">
+            <div class="row">
+              <div class="col-12">
+                <div class="col-6">
+                  <div>
+                    <label for="name">Name</label>
+                    <input v-model="form.name" type="text" id="name" required>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div>
+                    <label for="email">Email</label>
+                    <input v-model="form.email" type="email" id="email" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="col-6">
+                  <div>
+                    <label for="phoneNumber">Phone Number</label>
+                    <input v-model="form.phoneNumber" type="text" id="phoneNumber" required>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div>
+                    <label for="company">Company</label>
+                    <input v-model="form.company" type="text" id="company" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="col-12">
+                  <div>
+                    <label for="message">Message</label>
+                    <input v-model="form.message" type="text" id="message" class="messageBox" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+              <div class="col-12">
+                <button type="submit" class="submitBtn">
+                  <img src="~/assets/submit-icon.png" alt="submit icon" class="submitIcon" />
+                </button>
+              </div>
+            </div>
+          </form>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+      </section>
+    </section>
+    <section class="underBody">
+
+    </section>
+    <footer-fold class="foot"></footer-fold>
   </section>
 </template>
 
@@ -234,111 +121,111 @@ import axios from 'axios';
 
 export default {
   components: {
-      'main-nav': Nav,
-      'footer-fold': Footer
+    'main-nav': Nav,
+    'footer-fold': Footer
   },
   data() {
-      return {
-          showThumbnail: true, 
-          form: {
-              name: '',
-              firstName: '',
-              lastName: '',
-              email: '',
-              phoneNumber: '',
-              company: '',
-              message: ''
-          }
-      };
+    return {
+      showThumbnail: true,
+      form: {
+        name: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+        company: '',
+        message: ''
+      }
+    };
   },
   head() {
-      return {
-          title: 'DISC | Assessments 24x7',
-          meta: [
-              {
-                  hid: 'description',
-                  name: 'description',
-                  content: ''
-              }
-          ]
-      }
+    return {
+      title: 'DISC | Assessments 24x7',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: ''
+        }
+      ]
+    }
   },
   methods: {
-      playVideo() {
-          this.$refs.videoElement.play();
-          this.showThumbnail = false;
-      },
-      async submitForm() {
-          console.log('Form submitted:', this.form);
+    playVideo() {
+      this.$refs.videoElement.play();
+      this.showThumbnail = false;
+    },
+    async submitForm() {
+      console.log('Form submitted:', this.form);
 
-          // Split the name input into firstName and lastName
-          const names = this.form.name.split(' ');
-          this.firstName = names[0];
-          this.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+      // Split the name input into firstName and lastName
+      const names = this.form.name.split(' ');
+      this.firstName = names[0];
+      this.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
 
-          try {
-              const salesPerson = await axios.get('/api/lead/next-assignment');
+      try {
+        const salesPerson = await axios.get('/api/lead/next-assignment');
 
-              const lead = await axios.post('/api/lead', {
-                  salesPerson: salesPerson.data,
-                  firstName: this.firstName,
-                  lastName: this.lastName,
-                  phone: this.form.phoneNumber,
-                  email: this.form.email,
-                  company: this.form.company,
-                  message: this.form.message
-              });
+        const lead = await axios.post('/api/lead', {
+          salesPerson: salesPerson.data,
+          firstName: this.firstName,
+          lastName: this.lastName,
+          phone: this.form.phoneNumber,
+          email: this.form.email,
+          company: this.form.company,
+          message: this.form.message
+        });
 
-              const { data } = await axios.post('/api/contact', {
-                  contact: {
-                      email: this.form.email,
-                      firstName: this.firstName,
-                      lastName: this.lastName,
-                      phone: this.form.phoneNumber,
-                      company: this.form.company,
-                      message: this.form.message,
-                      fieldValues: [
-                          {
-                              field: '79', // Sales Person Assignment
-                              value: salesPerson.data
-                          }
-                      ]
-                  }
-              });
-
-              const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
-
-              // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
-              await axios.post(`/api/contact/${data.contact.id}/tag/43`);
-
-              // Apply the "ATD 2024 Get in Touch Form" tag (tag id 998)
-              await axios.post(`/api/contact/${data.contact.id}/tag/998`);
-
-              // Create an account and associate the contact to it
-              await axios.post(`/api/contact/${data.contact.id}/account`, {
-                  company: this.form.company
-              });
-
-              this.$toast.open({
-                  message: 'Your information has been successfully submitted!',
-                  position: 'top',
-                  duration: 8000,
-                  type: 'success'
-              });
-
-              this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
-
-          } catch (err) {
-              this.isDisabled = false;
-              this.loading = false;
-              this.$toast.open({
-                  message: 'An unexpected error has occurred. Please try again later.',
-                  position: 'top',
-                  duration: 8000,
-                  type: 'error'
-              });
+        const { data } = await axios.post('/api/contact', {
+          contact: {
+            email: this.form.email,
+            firstName: this.firstName,
+            lastName: this.lastName,
+            phone: this.form.phoneNumber,
+            company: this.form.company,
+            message: this.form.message,
+            fieldValues: [
+              {
+                field: '79', // Sales Person Assignment
+                value: salesPerson.data
+              }
+            ]
           }
+        });
+
+        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+
+        // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
+        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+        // Apply the "ATD 2024 Get in Touch Form" tag (tag id 998)
+        await axios.post(`/api/contact/${data.contact.id}/tag/998`);
+
+        // Create an account and associate the contact to it
+        await axios.post(`/api/contact/${data.contact.id}/account`, {
+          company: this.form.company
+        });
+
+        this.$toast.open({
+          message: 'Your information has been successfully submitted!',
+          position: 'top',
+          duration: 8000,
+          type: 'success'
+        });
+
+        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+
+      } catch (err) {
+        this.isDisabled = false;
+        this.loading = false;
+        this.$toast.open({
+          message: 'An unexpected error has occurred. Please try again later.',
+          position: 'top',
+          duration: 8000,
+          type: 'error'
+        });
       }
+    }
 
   }
 }
@@ -350,184 +237,178 @@ export default {
 }
 
 .body {
-  background-color: #282980;
-
-  .title {
-      .video-container {
-          position: relative;
-          width: 100%;
-      }
-
-      .video-player {
-          width: 100%;
-      }
-
-      .video-thumbnail {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          cursor: pointer;
-      }
-
-      .logo {
-          max-width: 100%;
-      }
-
-      .flex-container {
-          display: flex;
-          align-items: center;
-
-          .titleHr {
-              width: 100%;
-          }
-      }
-
-      .atdLogo {
-          max-width: 100%;
-      }
-
-      h1 {
-          color: white;
-          font-weight: bold;
-          font-size: 55px;
-          margin-top: 0px;
-          margin-bottom: -15px;
-      }
-
-      h2 {
-          color: white;
-          font-size: 45px;
-          margin-top: -10px;
-          margin-bottom: -10px;
-          font-weight: 400;
-      }
-
-      .flex {
-          display: flex;
-          align-items: center;
-      }
-
-      .learnMoreIcon {
-          margin-top: 30px;
-          max-width: 70%;
-          cursor: pointer;
-      }
-
-      .thumbnail {
-          max-width: 100%;
-      }
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
-  .mid {
-      .row {
-          label {
-              text-align: left;
-              display: block;
-          }
-      }
+  h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 55px;
+    margin-top: -10px;
+    margin-bottom: -15px;
+  }
 
-      .flex-container {
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-      }
+  h2 {
+    color: white;
+    font-size: 45px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    font-weight: 400;
+  }
 
-      h1 {
-          color: white;
-          font-weight: bold;
-          font-size: 55px;
-          margin-top: -10px;
-          margin-bottom: -15px;
-      }
+  h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+}
 
-      h2 {
-          color: white;
-          font-size: 45px;
-          margin-top: -10px;
-          margin-bottom: -10px;
-          font-weight: 400;
-      }
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00a8ff;
+  min-height: 700px;
+}
 
-      h3 {
-          font-size: 28px;
-          margin-bottom: 10px;
-      }
+.ourDifference {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  min-height: 700px;
+}
 
-      hr {
-          margin: 0px 50px;
-      }
+.quickLinks {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  min-height: 700px;
+}
 
-      .paragraph {
-          font-weight: 700;
-      }
+.application {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00a8ff;
+  min-height: 700px;
+}
 
-      p {
-          padding: 0 22px;
-      }
+.implementation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e222d;
+  min-height: 700px;
+}
 
-      .boxes {
-          background-color: white;
-          min-height: 720px;
-          border-radius: 10px;
-          margin-bottom: 60px;
-      }
+.whyCertification {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  min-height: 700px;
+}
 
-      img {
-          max-width: 100%;
-          border-radius: 20px;
-          padding: 5px;
-      }
+.results {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e222d;
+  min-height: 700px;
+}
 
-      .icon {
-          width: 22%;
-          margin-top: -70px;
-      }
+.draftKings {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00a8ff;
+  min-height: 700px;
+}
 
-      label {
-          color: white;
-          font-weight: bold;
-          font-size: 22px;
-      }
+.sampleReports {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  min-height: 700px;
+}
 
-      input {
-          width: 100%;
-          min-height: 70px;
-          border-radius: 8px;
-          padding: 0 20px;
-          font-size: 24px;
-      }
+.sectionAboveForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e222d;
+  min-height: 700px;
+}
 
-      .messageBox {
-          min-height: 110px;
-      }
+.form {
+  .row {
+    label {
+      text-align: left;
+      display: block;
+    }
+  }
 
-      .submitBtn {
-          background: none;
-          border: none;
-          padding: 0;
-          cursor: pointer;
-          width: 24%;
-      }
+  .container {
+    .formTitle {
+      color: #0033c5;
+    }
 
-      .submitIcon {
-          width: 100%;
-      }
+    label {
+      color: #0033c5;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    input {
+      background-color: #abd7ff;
+      border: none;
+      width: 100%;
+      min-height: 70px;
+      border-radius: 8px;
+      padding: 0 20px;
+      font-size: 24px;
+    }
+
+    .messageBox {
+      min-height: 110px;
+    }
+
+    .submitBtn {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      width: 24%;
+    }
+
+    .submitIcon {
+      width: 100%;
+    }
   }
 }
 
 .underBody {
   position: relative;
-  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-
-  img {
-      max-width: 35%;
-      margin: 30px 0;
-  }
+  background-color: #00a8ff;
+  min-height: 400px;
 }
 
 .foot {
@@ -537,52 +418,22 @@ export default {
 @media (max-width: 1025px) {
 
   .body {
-      .title {
-          .logo {
-              min-width: 200%;
-          }
-
-          .titleHr {
-              display: none;
-          }
-
-          .brTitleSpacing {
-              display: none;
-          }
-      }
-
-      .mid {
-          .submitBtn {
-              width: 50%;
-          }
-
-          .container {
-              .brTitleSpacing {
-                  display: none;
-              }
-          }
-      }
-
-      .underBody {
-          img {
-              max-width: 60%;
-          }
-      }
+    .submitBtn {
+      width: 50%;
+    }
   }
 }
 
 @media (max-width: 390px) {
 
   .body {
-      .mid {
-          h1 {
-              font-size: 45px;
-          }
+    h1 {
+      font-size: 45px;
+    }
 
-          h2 {
-              font-size: 35px;
-          }
-      }
+    h2 {
+      font-size: 35px;
+    }
   }
 }
 </style>
