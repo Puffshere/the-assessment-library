@@ -65,9 +65,6 @@
 
       </section>
       <br />
-      <br />
-      <br />
-      <br />
       <section class="form">
         <div class="container flex-container" id="form">
           <div class="row flex-container">
@@ -77,6 +74,11 @@
               </h1>
             </div>
           </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <form @submit.prevent="submitForm">
             <div class="row">
@@ -273,8 +275,6 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
   }
 
   h1 {
