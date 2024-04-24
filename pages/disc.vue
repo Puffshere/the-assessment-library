@@ -618,10 +618,10 @@ h1 {
 }
 
 .ourDifference .container h3 {
-  color: #1e222d;
+  color: black;
   font-size: 26px;
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 //  Quick Links Section
