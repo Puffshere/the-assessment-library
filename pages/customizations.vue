@@ -277,6 +277,18 @@ export default {
             }
         };
     },
+    head() {
+        return {
+            title: 'Customizations | Assessments 24x7',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: ''
+                }
+            ]
+        }
+    },
     methods: {
         playVideo() {
             this.$refs.videoElement.play();
