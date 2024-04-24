@@ -16,9 +16,6 @@
               <br />
               <br />
               <h3>DISC</h3>
-              <h3>BLOCKS</h3>
-              <h4>A Practical Tool for Enhanced</h4>
-              <h4>Collaboration and Understanding</h4>
               <br />
               <br />
               <button class="orderBtn" @click="orderButton">ORDER NOW</button>
@@ -497,7 +494,7 @@ export default {
   },
   head() {
         return {
-            title: 'ATD 2024 | Assessments 24x7',
+            title: 'DISC | Assessments 24x7',
             meta: [
                 {
                     hid: 'description',
