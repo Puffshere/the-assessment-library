@@ -51,7 +51,20 @@
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
-                            <textarea id="comments" name="comments" v-model="form.comments" tabindex="6"
+                            <input type="text" id="country" name="country" v-model="form.country" list="countries"
+                                autocomplete="country" tabindex="6" placeholder="Country *">
+                            <datalist id="countries">
+                                <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
+                                    country.label
+                                }}</option>
+                            </datalist>
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
+
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <textarea id="comments" name="comments" v-model="form.comments" tabindex="7"
                                 placeholder="What would you like to discuss? *" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -87,7 +100,7 @@
 
                 <button :disabled="isDisabled" :class="{ 'button secondary': true, 'disabled': isDisabled }"
                     type="button" @click="process" style="width: 100%; margin-top: -10px; margin-bottom: 10px">{{
-                    buttonText || 'Get in Touch' }}</button>
+                        buttonText || 'Get in Touch' }}</button>
             </ValidationObserver>
         </form>
     </section>
@@ -100,6 +113,7 @@ import 'vue-loading-overlay/dist/vue-loading.css';
 import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
 import { messages } from 'vee-validate/dist/locale/en.json';
+import { dropdownCountries } from './dropdownCountryList';
 
 Object.keys(rules).forEach(rule => {
     extend(rule, {
@@ -122,6 +136,7 @@ export default {
     data() {
         return {
             loading: false,
+            importCountry: dropdownCountries,
             sources: [],
             affiliations: [],
             isDisabled: false,
@@ -148,99 +163,101 @@ export default {
             if (validated) {
                 this.loading = true;
 
-                    try {
-                        const salesPerson = await axios.get('/api/lead/next-assignment');
+                try {
+                    const salesPerson = await axios.get('/api/lead/next-assignment');
 
-                        const lead = await axios.post('/api/lead', {
-                            salesPerson: salesPerson.data,
+                    const lead = await axios.post('/api/lead', {
+                        salesPerson: salesPerson.data,
+                        firstName: this.form.firstName,
+                        lastName: this.form.lastName,
+                        phone: this.form.phone,
+                        email: this.form.email,
+                        country: this.form.country
+                    });
+
+                    let event = '';
+                    let adWordsValue = 'No';
+
+                    if (localStorage.getItem('ppc_event')) {
+                        event = localStorage.getItem('ppc_event');
+
+                        if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
+                            adWordsValue = 'Yes';
+                        }
+                    }
+
+                    console.log("This is the package", this.form.country);
+
+                    const { data } = await axios.post('/api/contact', {
+                        contact: {
+                            email: this.form.email,
                             firstName: this.form.firstName,
                             lastName: this.form.lastName,
                             phone: this.form.phone,
-                            email: this.form.email,
-                            country: this.form.country
-                        });
-
-                        let event = '';
-                        let adWordsValue = 'No';
-
-                        if (localStorage.getItem('ppc_event')) {
-                            event = localStorage.getItem('ppc_event');
-
-                            if (event === 'ppc_disc_assessment' || event === 'ppc_disc_certification' || event === 'ppc_disc_certification_alt') {
-                                adWordsValue = 'Yes';
-                            }
+                            country: this.form.country,
+                            fieldValues: [
+                                {
+                                    field: '4', // Client type (reseller vs corporate),
+                                    value: this.form.clientType
+                                },
+                                {
+                                    field: '10', // Newsletter opt-in,
+                                    value: this.form.newsletter
+                                },
+                                {
+                                    field: '20', // Questions/Comments,
+                                    value: this.form.comments
+                                },
+                                {
+                                    field: '79', // Sales Person Assignment,
+                                    value: salesPerson.data
+                                },
+                                {
+                                    field: '84', // Is Adwords Lead?
+                                    value: adWordsValue
+                                }
+                            ]
                         }
+                    });
 
-                        const { data } = await axios.post('/api/contact', {
-                            contact: {
-                                email: this.form.email,
-                                firstName: this.form.firstName,
-                                lastName: this.form.lastName,
-                                phone: this.form.phone,
-                                country: this.form.country,
-                                fieldValues: [
-                                    {
-                                        field: '4', // Client type (reseller vs corporate),
-                                        value: this.form.clientType
-                                    },
-                                    {
-                                        field: '10', // Newsletter opt-in,
-                                        value: this.form.newsletter
-                                    },
-                                    {
-                                        field: '20', // Questions/Comments,
-                                        value: this.form.comments
-                                    },
-                                    {
-                                        field: '79', // Sales Person Assignment,
-                                        value: salesPerson.data
-                                    },
-                                    {
-                                        field: '84', // Is Adwords Lead?
-                                        value: adWordsValue
-                                    }
-                                ]
-                            }
-                        });
+                    const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
-                        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
-
-                        // Check to see if this contact wants to subscribe to our newsletter
-                        if (this.form.newsletter === '45') {
-                            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
-                        }
-
-                        // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
-                        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
-
-                        // Create an account and associate the contact to it
-                        await axios.post(`/api/contact/${data.contact.id}/account`, {
-                            company: this.form.company
-                        });
-
-                        this.trackConversion();
-
-                        this.loading = false;
-
-                        this.$toast.open({
-                            message: 'Your information has been successfully submitted!',
-                            position: 'top',
-                            duration: 8000,
-                            type: 'success'
-                        });
-
-                        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
-
-                    } catch (err) {
-                        this.isDisabled = false;
-                        this.loading = false;
-                        this.$toast.open({
-                            message: 'An unexpected error has occured. Please try again later.',
-                            position: 'top',
-                            duration: 8000,
-                            type: 'error'
-                        });
+                    // Check to see if this contact wants to subscribe to our newsletter
+                    if (this.form.newsletter === '45') {
+                        await axios.post(`/api/contact/${data.contact.id}/subscribe`);
                     }
+
+                    // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
+                    await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+                    // Create an account and associate the contact to it
+                    await axios.post(`/api/contact/${data.contact.id}/account`, {
+                        company: this.form.company
+                    });
+
+                    this.trackConversion();
+
+                    this.loading = false;
+
+                    this.$toast.open({
+                        message: 'Your information has been successfully submitted!',
+                        position: 'top',
+                        duration: 8000,
+                        type: 'success'
+                    });
+
+                    this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+
+                } catch (err) {
+                    this.isDisabled = false;
+                    this.loading = false;
+                    this.$toast.open({
+                        message: 'An unexpected error has occured. Please try again later.',
+                        position: 'top',
+                        duration: 8000,
+                        type: 'error'
+                    });
+                }
             } else {
                 this.isDisabled = false;
             }
@@ -259,6 +276,11 @@ export default {
             }
         }
     },
+    computed: {
+        filteredCountries() {
+            return this.importCountry.filter(country => country.label.toLowerCase().startsWith(this.form.country.toLowerCase()));
+        }
+    }
 }
 </script>
 
