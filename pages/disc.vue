@@ -21,7 +21,7 @@
               <h2 class="heroSubtext">
                 Let DISC Lead the way.
               </h2>
-              <img src="~/assets/disc/learn-button.png" alt="learn button" class="learnButton" />
+              <a href="#form"><img src="~/assets/disc/learn-button.png" alt="learn button" class="learnButton" /></a>
             </div>
             <div class="col-7">
               <div class="video-container">
@@ -57,6 +57,7 @@
               <br />
               <br />
               <br />
+              <br />
               <h3>
                 Discover our comprehensive suite of DISC assessments, offering the flexibility to align with YOUR
                 organization's mission, vision, and core values. Seamlessly integrate our technology Into your current
@@ -72,7 +73,7 @@
                 Enjoy exceptional customer service supported by decades of expertise in customer satisfaction, ensuring
                 prompt and thorough answers to your questions.
               </h3>
-              <img src="~/assets/disc/get-started-button.png" alt="submit icon" class="submitIcon" />
+              <a href="#form"><img src="~/assets/disc/get-started-button.png" alt="submit icon" class="submitIcon" /></a>
             </div>
           </div>
         </div>
@@ -254,7 +255,7 @@
       </section>
       <br />
 
-      <section class="form">
+      <section class="form" id="form">
         <div class="container flex-container" id="form">
           <div class="row flex-container">
             <div class="col-12">
@@ -317,7 +318,7 @@
             <div class="row">
               <div class="col-12">
                 <button type="submit" class="submitBtn">
-                  <img src="~/assets/disc/get-started-button.png" alt="submit icon" class="submitIcon" />
+                  <img src="~/assets/disc/blue-submit-button.png" alt="submit icon" class="submitIcon" />
                 </button>
               </div>
             </div>
@@ -331,6 +332,9 @@
       </section>
 
       <section class="interest">
+        <br />
+        <br />
+        <br />
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -340,7 +344,10 @@
               <h1 style="color: black;">
                 Customizations & API Intergration?
               </h1>
-            </div>"
+              <br />
+              <a href="https://www.assessments24x7.com/customizations"><img src="~/assets/disc/black-learn-more-button.png" alt="black learn more button" class="learnButton" /></a>
+              <img src="~/assets/disc/curvy-white-arrow.png" alt="curvy white arrow" class="whiteArrow" />
+            </div>
           </div>
         </div>
       </section>
@@ -539,7 +546,8 @@ export default {
   .learnButton {
     margin-left: 30px;
     margin-top: 35px;
-    width: 50%;
+    width: 210px;
+    cursor: pointer;
   }
 }
 
@@ -606,8 +614,8 @@ h1 {
 .ourDifference .submitIcon {
   position: absolute;
   right: 20px;
-  bottom: 65px;
-  width: 22%;
+  bottom: 95px;
+  width: 220px;
   height: auto;
 }
 
@@ -713,7 +721,7 @@ h1 {
     border: none;
     padding: 0;
     cursor: pointer;
-    width: 24%;
+    width: 230px;
   }
 
   .submitIcon {
@@ -857,7 +865,7 @@ h1 {
       border: none;
       padding: 0;
       cursor: pointer;
-      width: 24%;
+      width: 230px;
     }
 
     .submitIcon {
@@ -876,6 +884,18 @@ h1 {
     margin: 0px;
     padding: 0px;
     font-size: 47px;
+    letter-spacing: 3px;
+    margin-bottom: -15px;
+    font-weight: 600;
+  }
+
+  .learnButton {
+    width: 240px;
+  }
+
+  .whiteArrow {
+    width: 140px;
+    padding-left: 30px;
   }
 }
 
