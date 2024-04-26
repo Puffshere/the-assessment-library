@@ -40,7 +40,8 @@
 
       <section class="ourDifference">
         <video autoplay muted loop id="myVideo">
-          <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/our-difference-video.mp4" type="video/mp4">
+          <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/our-difference-video.mp4"
+            type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
         <div class="container">
@@ -73,12 +74,13 @@
                 Enjoy exceptional customer service supported by decades of expertise in customer satisfaction, ensuring
                 prompt and thorough answers to your questions.
               </h3>
-              <a href="#form"><img src="~/assets/disc/get-started-button.png" alt="submit icon" class="submitIcon" /></a>
+              <a href="#form"><img src="~/assets/disc/get-started-button.png" alt="submit icon"
+                  class="submitIcon" /></a>
             </div>
           </div>
         </div>
       </section>
-
+      <br />
       <section class="quickLinks">
         <div class="container">
           <div class="row">
@@ -86,6 +88,37 @@
               <h1>
                 Quick Links
               </h1>
+              <br />
+              <div class="row">
+                <div class="col-12">
+                  <div class="col-6">
+                    <h2>Application</h2>
+                  </div>
+                  <div class="col-6">
+                    <h2>Results</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="col-6">
+                    <h2>Implementation</h2>
+                  </div>
+                  <div class="col-6">
+                    <h2>What our Clients say</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="col-6">
+                    <h2>Certification</h2>
+                  </div>
+                  <div class="col-6">
+                    <h2>Sample Reports</h2>
+                  </div>
+                </div>
+              </div>
             </div>"
           </div>
         </div>
@@ -345,7 +378,9 @@
                 Customizations & API Intergration?
               </h1>
               <br />
-              <a href="https://www.assessments24x7.com/customizations"><img src="~/assets/disc/black-learn-more-button.png" alt="black learn more button" class="learnButton" /></a>
+              <a href="https://www.assessments24x7.com/customizations"><img
+                  src="~/assets/disc/black-learn-more-button.png" alt="black learn more button"
+                  class="learnButton" /></a>
               <img src="~/assets/disc/curvy-white-arrow.png" alt="curvy white arrow" class="whiteArrow" />
             </div>
           </div>
@@ -638,11 +673,29 @@ h1 {
 
 .quickLinks {
   min-height: 700px;
+  display: flex;
+  text-align: center;
+
+
+  .col-6 {
+    background-color: #00a8ff;
+    padding: 20px;
+    border-radius: 20px;
+    min-height: 110px;
+    align-content: center;
+    text-align: left;
+    max-width: 450px;
+  }
 
   h1 {
     color: #1e222d;
     margin: 0px;
-    font-size: 65px;
+    font-size: 53px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 26px;
   }
 }
 

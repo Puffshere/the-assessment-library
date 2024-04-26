@@ -209,6 +209,10 @@ export default {
                                     value: this.form.comments
                                 },
                                 {
+                                    field: '118', // Country,
+                                    value: this.form.country
+                                },
+                                {
                                     field: '79', // Sales Person Assignment,
                                     value: salesPerson.data
                                 },
