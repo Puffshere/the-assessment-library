@@ -91,32 +91,50 @@
               <br />
               <div class="row">
                 <div class="col-12">
-                  <div class="col-6">
-                    <h2>Application</h2>
-                  </div>
-                  <div class="col-6">
-                    <h2>Results</h2>
-                  </div>
+                  <a href="#application" style="cursor: pointer;">
+                    <div class="col-6">
+                      <h2>Application</h2>
+                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                    </div>
+                  </a>
+                  <a href="#results" style="cursor: pointer;">
+                    <div class="col-6">
+                      <h2>Results</h2>
+                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="row">
                 <div class="col-12">
-                  <div class="col-6">
-                    <h2>Implementation</h2>
-                  </div>
-                  <div class="col-6">
-                    <h2>What our Clients say</h2>
-                  </div>
+                  <a href="#implementation" style="cursor: pointer;">
+                    <div class="col-6">
+                      <h2>Implementation</h2>
+                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                    </div>
+                  </a>
+                  <a href="#quote" style="cursor: pointer;">
+                    <div class="col-6">
+                      <h2>What our Clients say</h2>
+                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="row">
                 <div class="col-12">
-                  <div class="col-6">
-                    <h2>Certification</h2>
-                  </div>
-                  <div class="col-6">
-                    <h2>Sample Reports</h2>
-                  </div>
+                  <a href="#certification" style="cursor: pointer;">
+                    <div class="col-6">
+                      <h2>Certification</h2>
+                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                    </div>
+                  </a>
+                  <a href="https://www.assessments24x7.com/sample-reports" style="cursor: pointer;">
+                    <div class="col-6">
+                      <h2>Sample Reports</h2>
+                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>"
@@ -124,7 +142,7 @@
         </div>
       </section>
 
-      <section class="application">
+      <section class="application" id="application">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -211,7 +229,7 @@
         </div>
       </section>
 
-      <section class="implementation">
+      <section class="implementation" id="implementation">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -227,7 +245,7 @@
         </div>
       </section>
 
-      <section class="whyCertification">
+      <section class="whyCertification" id="certification">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -239,7 +257,7 @@
         </div>
       </section>
 
-      <section class="results">
+      <section class="results" id="results">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -251,7 +269,7 @@
         </div>
       </section>
 
-      <section class="quote">
+      <section class="quote" id="quote">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -275,7 +293,7 @@
         </div>
       </section>
 
-      <section class="empowers">
+      <section class="empowers" id="empowers">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -675,6 +693,15 @@ h1 {
   min-height: 700px;
   display: flex;
   text-align: center;
+
+  .whiteArrow {
+    max-width: 24px;
+  }
+
+  img {
+    float: right;
+    margin-top: -22px;
+  }
 
 
   .col-6 {

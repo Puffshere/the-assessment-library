@@ -56,7 +56,7 @@
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                }}</option>
+                                    }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
