@@ -38,190 +38,10 @@
         </div>
       </section>
 
-      <section class="ourDifference">
-        <video autoplay muted loop id="myVideo">
-          <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/our-difference-video.mp4"
-            type="video/mp4">
-          Your browser does not support HTML5 video.
-        </video>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>
-                Our
-              </h1>
-              <h1>
-                Difference
-              </h1>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <h3>
-                Discover our comprehensive suite of DISC assessments, offering the flexibility to align with YOUR
-                organization's mission, vision, and core values. Seamlessly integrate our technology Into your current
-                system via our robust API service, empowering you to infuse your organization's culture into customized
-                reports.
-              </h3>
-              <h3>
-                Manage assessments through your personalized dashboard and utilize our extensive training materials
-                library, which includes coaching resources, workshop facilitator materials, and a 52-week email series.
-              </h3>
-              <h3>
-                Take your knowledge to the next level with DISC certification to maximize the benefits of our platform.
-                Enjoy exceptional customer service supported by decades of expertise in customer satisfaction, ensuring
-                prompt and thorough answers to your questions.
-              </h3>
-              <a href="#form"><img src="~/assets/disc/get-started-button.png" alt="submit icon"
-                  class="submitIcon" /></a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <br />
-      <section class="quickLinks">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>
-                Quick Links
-              </h1>
-              <br />
-              <div class="row">
-                <a href="#application" style="cursor: pointer;">
-                  <div class="col-6">
-                    <h2>Application</h2>
-                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                  </div>
-                </a>
-                <a href="#results" style="cursor: pointer;">
-                  <div class="col-6">
-                    <h2>Results</h2>
-                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                  </div>
-                </a>
-              </div>
-              <div class="row">
-                <a href="#implementation" style="cursor: pointer;">
-                  <div class="col-6">
-                    <h2>Implementation</h2>
-                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                  </div>
-                </a>
-                <a href="#quote" style="cursor: pointer;">
-                  <div class="col-6">
-                    <h2>What our Clients say</h2>
-                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                  </div>
-                </a>
-              </div>
-              <div class="row">
-                <a href="#certification" style="cursor: pointer;">
-                  <div class="col-6">
-                    <h2>Certification</h2>
-                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                  </div>
-                </a>
-                <a href="https://www.assessments24x7.com/sample-reports" style="cursor: pointer;">
-                  <div class="col-6">
-                    <h2>Sample Reports</h2>
-                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="application" id="application">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>
-                Application
-              </h1>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <h2>
-                DISC offers versatile applications that can revolutionize various aspects of your organization.
-              </h2>
-            </div>
-          </div>
-          <br />
-          <br />
-          <br />
-          <div class="row">
-            <div class="col-12">
-              <div class="col-4 boxes">
-                <img src="~/assets/disc/applicationIcon1.png" alt="api icon" class="icon" />
-                <h3>
-                  Team
-                </h3>
-                <h3>
-                  Training
-                </h3>
-                <br />
-                <br />
-                <hr />
-                <p>
-                  Enhance team dynamics and collaboration by leveraging DISC insights to
-                  understand each team member's communication style, strengths, and areas for development.
-                  Tailor training sessions to foster effective communication, conflict resolution, and synergy
-                  among team members, ultimately boosting productivity and morale.
-                </p>
-              </div>
-              <div class="col-4 boxes">
-                <img src="~/assets/disc/applicationIcon2.png" alt="custom reports icon" class="icon" />
-                <h3>
-                  Leadership
-                </h3>
-                <h3>
-                  Development
-                </h3>
-                <br />
-                <br />
-                <hr />
-                <p>
-                  Empower leaders to understand their own leadership style and adapt their approach to effectively
-                  lead diverse teams. DISC assessments provide valuable insights into leadership behaviors,
-                  decision-making preferences, and motivational drivers, enabling leaders to inspire, motivate,
-                  and mentor their team members more effectively.
-                </p>
-              </div>
-              <div class="col-4 boxes">
-                <img src="~/assets/disc/applicationIcon3.png" alt="branding and user experience icon" class="icon" />
-                <h3>
-                  Hiring &
-                </h3>
-                <h3>
-                  Selection
-                </h3>
-                <br />
-                <br />
-                <hr />
-                <p>
-                  Streamline your recruitment process by incorporating DISC assessments to identify candidates who
-                  not only possess the necessary skills and qualifications but also align with your organization's
-                  culture and values. Use DISC insights to assess candidates' communication styles, work
-                  preferences, and potential fit within specific roles, ensuring better hiring decisions and
-                  long-term employee success.
-                </p>
-              </div>
-            </div>
-          </div>
-          <br />
-          <br />
-          <br />
-        </div>
-      </section>
+      <our-difference></our-difference>
+      
+      <quick-links></quick-links>
+      <application></application>
 
       <section class="implementation" id="implementation">
         <div class="container">
@@ -376,28 +196,7 @@
         </div>
       </section>
 
-      <section class="interest">
-        <br />
-        <br />
-        <br />
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1 style="color: white;">
-                Interested in learning more abour our
-              </h1>
-              <h1 style="color: black;">
-                Customizations & API Intergration?
-              </h1>
-              <br />
-              <a href="https://www.assessments24x7.com/customizations"><img
-                  src="~/assets/disc/black-learn-more-button.png" alt="black learn more button"
-                  class="learnButton" /></a>
-              <img src="~/assets/disc/curvy-white-arrow.png" alt="curvy white arrow" class="whiteArrow" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <interest></interest>
 
     </section>
     <footer-fold class="foot"></footer-fold>
@@ -408,11 +207,19 @@
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import axios from 'axios';
+import Application from '@/components/ApplicationFold';
+import OurDifference from '@/components/OurDifferenceFold';
+import QuickLinks from '@/components/QuickLinksFold';
+import Interest from '@/components/InterestFold';
 
 export default {
   components: {
     'main-nav': Nav,
-    'footer-fold': Footer
+    'footer-fold': Footer,
+    'application': Application,
+    'our-difference': OurDifference,
+    'quick-links': QuickLinks,
+    'interest': Interest
   },
   data() {
     return {
@@ -631,202 +438,6 @@ h1 {
   margin-left: 10px;
 }
 
-//  Our Difference Section
-
-.ourDifference {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.ourDifference video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.ourDifference .container {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  margin-top: -20px;
-}
-
-.ourDifference .submitIcon {
-  position: absolute;
-  right: 20px;
-  bottom: 95px;
-  width: 220px;
-  height: auto;
-}
-
-.ourDifference .container h1 {
-  color: #00a8ff;
-  font-size: 65px;
-  text-align: right;
-}
-
-.ourDifference .container h3 {
-  color: black;
-  font-size: 23px;
-  text-align: left;
-  font-weight: 400;
-  padding: 0 46px;
-}
-
-//  Quick Links Section
-
-.quickLinks {
-  min-height: 590px;
-  display: flex;
-  text-align: center;
-
-  .whiteArrow {
-    max-width: 24px;
-  }
-
-  img {
-    float: right;
-    margin-top: -22px;
-  }
-
-
-  .col-6 {
-    background-color: #00a8ff;
-    padding: 20px;
-    border-radius: 20px;
-    min-height: 90px;
-    align-content: center;
-    text-align: left;
-    max-width: 450px;
-    margin-left: 60px;
-  }
-
-  h1 {
-    color: #1e222d;
-    margin: 0px;
-    font-size: 53px;
-    font-weight: 700;
-    margin-top: 14px;
-  }
-
-  h2 {
-    font-size: 26px;
-  }
-}
-
-//  Application Section
-
-.application {
-  min-height: 700px;
-  background-color: #00a8ff;
-
-  .row {
-    label {
-      text-align: left;
-      display: block;
-    }
-  }
-
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  hr {
-    margin: 0px 20px;
-    margin-top: -6px;
-  }
-
-  .paragraph {
-    font-weight: 700;
-  }
-
-  p {
-    padding: 0 22px;
-  }
-
-  .boxes {
-    background-color: white;
-    min-height: 485px;
-    border-radius: 10px;
-    margin-bottom: 60px;
-    text-align: left;
-  }
-
-  img {
-    max-width: 100%;
-    border-radius: 20px;
-    padding: 5px;
-  }
-
-  .icon {
-    width: 22%;
-    margin-top: -35px;
-    margin-right: 10px;
-    float: right;
-  }
-
-  label {
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-  }
-
-  input {
-    width: 100%;
-    min-height: 70px;
-    border-radius: 8px;
-    padding: 0 20px;
-    font-size: 24px;
-  }
-
-  .messageBox {
-    min-height: 110px;
-  }
-
-  .submitBtn {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    width: 230px;
-  }
-
-  .submitIcon {
-    width: 100%;
-  }
-
-  h1 {
-    margin: 0px;
-    font-size: 65px;
-    position: absolute;
-    top: 60px;
-    color: white;
-  }
-
-  h2 {
-    margin-left: 20px;
-    font-size: 23px;
-    position: absolute;
-    color: white;
-  }
-
-  h3 {
-    margin-left: 20px;
-    margin-bottom: -30px;
-    font-size: 24px;
-  }
-}
-
 //  Implementiation Section
 
 .implementation {
@@ -948,31 +559,6 @@ h1 {
     .submitIcon {
       width: 100%;
     }
-  }
-}
-
-//  Interest Section
-
-.interest {
-  background-color: #00a8ff;
-  min-height: 400px;
-
-  h1 {
-    margin: 0px;
-    padding: 0px;
-    font-size: 47px;
-    letter-spacing: 3px;
-    margin-bottom: -15px;
-    font-weight: 600;
-  }
-
-  .learnButton {
-    width: 240px;
-  }
-
-  .whiteArrow {
-    width: 140px;
-    padding-left: 30px;
   }
 }
 
