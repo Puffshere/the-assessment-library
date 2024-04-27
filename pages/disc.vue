@@ -90,54 +90,48 @@
               </h1>
               <br />
               <div class="row">
-                <div class="col-12">
-                  <a href="#application" style="cursor: pointer;">
-                    <div class="col-6">
-                      <h2>Application</h2>
-                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                    </div>
-                  </a>
-                  <a href="#results" style="cursor: pointer;">
-                    <div class="col-6">
-                      <h2>Results</h2>
-                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                    </div>
-                  </a>
-                </div>
+                <a href="#application" style="cursor: pointer;">
+                  <div class="col-6">
+                    <h2>Application</h2>
+                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                  </div>
+                </a>
+                <a href="#results" style="cursor: pointer;">
+                  <div class="col-6">
+                    <h2>Results</h2>
+                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                  </div>
+                </a>
               </div>
               <div class="row">
-                <div class="col-12">
-                  <a href="#implementation" style="cursor: pointer;">
-                    <div class="col-6">
-                      <h2>Implementation</h2>
-                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                    </div>
-                  </a>
-                  <a href="#quote" style="cursor: pointer;">
-                    <div class="col-6">
-                      <h2>What our Clients say</h2>
-                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                    </div>
-                  </a>
-                </div>
+                <a href="#implementation" style="cursor: pointer;">
+                  <div class="col-6">
+                    <h2>Implementation</h2>
+                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                  </div>
+                </a>
+                <a href="#quote" style="cursor: pointer;">
+                  <div class="col-6">
+                    <h2>What our Clients say</h2>
+                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                  </div>
+                </a>
               </div>
               <div class="row">
-                <div class="col-12">
-                  <a href="#certification" style="cursor: pointer;">
-                    <div class="col-6">
-                      <h2>Certification</h2>
-                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                    </div>
-                  </a>
-                  <a href="https://www.assessments24x7.com/sample-reports" style="cursor: pointer;">
-                    <div class="col-6">
-                      <h2>Sample Reports</h2>
-                      <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
-                    </div>
-                  </a>
-                </div>
+                <a href="#certification" style="cursor: pointer;">
+                  <div class="col-6">
+                    <h2>Certification</h2>
+                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                  </div>
+                </a>
+                <a href="https://www.assessments24x7.com/sample-reports" style="cursor: pointer;">
+                  <div class="col-6">
+                    <h2>Sample Reports</h2>
+                    <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                  </div>
+                </a>
               </div>
-            </div>"
+            </div>
           </div>
         </div>
       </section>
@@ -690,7 +684,7 @@ h1 {
 //  Quick Links Section
 
 .quickLinks {
-  min-height: 700px;
+  min-height: 590px;
   display: flex;
   text-align: center;
 
@@ -708,10 +702,11 @@ h1 {
     background-color: #00a8ff;
     padding: 20px;
     border-radius: 20px;
-    min-height: 110px;
+    min-height: 90px;
     align-content: center;
     text-align: left;
     max-width: 450px;
+    margin-left: 60px;
   }
 
   h1 {
@@ -719,6 +714,7 @@ h1 {
     margin: 0px;
     font-size: 53px;
     font-weight: 700;
+    margin-top: 14px;
   }
 
   h2 {
@@ -991,6 +987,22 @@ h1 {
   .body {
     .submitBtn {
       width: 50%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+
+  .body {
+
+    .quickLinks,
+    .col-6 {
+      margin-left: 5px;
+    }
+
+    .quickLinks,
+    .row {
+      padding: 0px;
     }
   }
 }
