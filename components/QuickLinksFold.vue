@@ -42,7 +42,7 @@
                                 <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
                             </div>
                         </a>
-                        <a href="https://www.assessments24x7.com/sample-reports" style="cursor: pointer;">
+                        <a href="#sampleReports" style="cursor: pointer;">
                             <div class="col-6">
                                 <h2>Sample Reports</h2>
                                 <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">

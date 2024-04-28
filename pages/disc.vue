@@ -39,49 +39,23 @@
       </section>
 
       <our-difference></our-difference>
-      
       <quick-links></quick-links>
       <application></application>
-
-      <section class="implementation" id="implementation">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="col-5">
-              </div>
-              <div class="col-7">
-                <h1>
-                  Implementation
-                </h1>
-              </div>
-            </div>"
-          </div>
-        </div>
-      </section>
+      <implementation></implementation>
 
       <section class="whyCertification" id="certification">
         <div class="container">
           <div class="row">
             <div class="col-12">
               <h1>
-                Why Certification
+                Why DISC Certification?
               </h1>
-            </div>"
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="results" id="results">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>
-                Results
-              </h1>
-            </div>"
-          </div>
-        </div>
-      </section>
+      <results></results>
 
       <section class="quote" id="quote">
         <div class="container">
@@ -90,31 +64,32 @@
               <h1>
                 Quote
               </h1>
-            </div>"
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="sampleReports">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>
-                Sample Reports
-              </h1>
-            </div>"
-          </div>
-        </div>
-      </section>
+      <sample-reports></sample-reports>
 
       <section class="empowers" id="empowers">
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h1>
-                Empowers
-              </h1>
-            </div>"
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <h2>
+                See how DISC empowers you to unlock top talent, drive positive change, and achieve remarkable results.
+              </h2>
+            </div>
           </div>
         </div>
       </section>
@@ -204,22 +179,28 @@
 </template>
 
 <script>
-import Nav from '@/components/Nav';
-import Footer from '@/components/Footer';
 import axios from 'axios';
-import Application from '@/components/ApplicationFold';
+import Nav from '@/components/Nav';
 import OurDifference from '@/components/OurDifferenceFold';
 import QuickLinks from '@/components/QuickLinksFold';
+import Application from '@/components/ApplicationFold';
+import Implementation from '@/components/ImplementationFold';
+import Results from '@/components/ResultsFold';
+import SampleReports from '@/components/SampleReportsFold';
 import Interest from '@/components/InterestFold';
+import Footer from '@/components/Footer';
 
 export default {
   components: {
     'main-nav': Nav,
-    'footer-fold': Footer,
-    'application': Application,
     'our-difference': OurDifference,
     'quick-links': QuickLinks,
-    'interest': Interest
+    'application': Application,
+    'implementation': Implementation,
+    'results': Results,
+    'sample-reports': SampleReports,
+    'interest': Interest,
+    'footer-fold': Footer
   },
   data() {
     return {
@@ -326,6 +307,7 @@ export default {
   }
 }
 </script>
+
 
 <style lang="scss" scoped>
 .nav {
@@ -438,18 +420,6 @@ h1 {
   margin-left: 10px;
 }
 
-//  Implementiation Section
-
-.implementation {
-  background-color: #1e222d;
-  min-height: 700px;
-
-  h1 {
-    font-size: 65px;
-    float: right;
-  }
-}
-
 //  Why Certification Section
 
 .whyCertification {
@@ -462,22 +432,10 @@ h1 {
   }
 }
 
-//  Results Section
-
-.results {
-  background-color: #1e222d;
-  min-height: 700px;
-
-  h1 {
-    font-size: 65px;
-    float: right;
-  }
-}
-
 //  Quote Section
 
 .quote {
-  min-height: 700px;
+  min-height: 600px;
   background-color: #00a8ff;
 
   h1 {
@@ -577,21 +535,7 @@ h1 {
   }
 }
 
-@media (max-width: 600px) {
-
-  .body {
-
-    .quickLinks,
-    .col-6 {
-      margin-left: 5px;
-    }
-
-    .quickLinks,
-    .row {
-      padding: 0px;
-    }
-  }
-}
+@media (max-width: 600px) {}
 
 @media (max-width: 390px) {
 
