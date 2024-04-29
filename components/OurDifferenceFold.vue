@@ -21,11 +21,14 @@
                     <br />
                     <br />
                     <h3>
-                        Discover our comprehensive suite of DISC assessments, offering the flexibility to align with
+                        Discover our comprehensive suite of <span style="color: #00a8ff; font-weight: 600">DISC
+                            assessments</span>, offering the flexibility to align with
                         YOUR
-                        organization's mission, vision, and core values. Seamlessly integrate our technology Into your
-                        current
-                        system via our robust API service, empowering you to infuse your organization's culture into
+                        organization's mission, vision, and core values. Seamlessly integrate our technology <span
+                            style="color: #00a8ff; font-weight: 600">Into your
+                            current
+                            system via our robust API service</span>, empowering you to infuse your organization's
+                        culture into
                         customized
                         reports.
                     </h3>
