@@ -15,7 +15,7 @@
                         <br />
                         <hr />
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf"
-                            class="hyperlink" target="_blank" rel="noopener">
+                            class="hyperlink words" target="_blank" rel="noopener">
                             DISC SELF
                             <br />
                             REPORT
@@ -29,7 +29,7 @@
                         <br />
                         <hr />
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf"
-                            class="hyperlink" target="_blank" rel="noopener">
+                            class="hyperlink words" target="_blank" rel="noopener">
                             DISC LEADERSHIP
                             <br />
                             REPORT
@@ -44,7 +44,7 @@
                         <br />
                         <hr />
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf"
-                            class="hyperlink" target="_blank" rel="noopener">
+                            class="hyperlink words" target="_blank" rel="noopener">
                             DISC TEAM DYNAMICS
                             <br />
                             REPORT
@@ -72,7 +72,6 @@
 
 .sampleReports {
     min-height: 700px;
-    position: relative;
 
     .flex-container {
         display: flex;
@@ -86,46 +85,26 @@
 
     .boxes {
         background-color: white;
-        min-height: 540px;
+        min-height: 520px;
         border-radius: 15px;
         margin-bottom: 60px;
         text-align: left;
+        padding: 0px 40px;
+        padding-top: 20px;
 
-        .hyperlink {
-            font-size: 23px;
-            color: #000;
-            font-weight: 600;
-            position: relative;
-            text-decoration: none;
-            z-index: 0;
-            transition: background .2s linear;
-            box-shadow: inset 0 -3px 0 0 rgba(0, 168, 255, .3);
-
-            &:hover {
-                background: #ffc73e;
-            }
-
-            &.light {
-                color: #fff;
-            }
+        .icon {
+            width: 22%;
+            margin-top: -48px;
+            display: block;
+            float: right;
         }
-    }
 
-    img {
-        width: 100%;
-        border-radius: 20px;
-        padding: 10px;
-    }
-
-    .icon {
-        width: 24%;
-        margin-top: -35px;
-        margin-right: 20px;
-        float: right;
-    }
-
-    .reports {
-        width: 80%;
+        .reports {
+            width: 100%;
+            display: block;
+            margin: 10px auto;
+            margin-bottom: -20px;
+        }
     }
 
     .getStartedBtn {
@@ -150,12 +129,14 @@
     }
 
     hr {
-        margin: 0px 40px;
-        margin-top: 16px;
-        color: #00a8ff;
-
+        border: none;
+        height: 1px;
+        background-color: #00a8ff;
+        margin-bottom: 20px;
     }
 
-
+    .words {
+        font-size: 22px;
+    }
 }
 </style>
