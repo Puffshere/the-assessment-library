@@ -42,24 +42,11 @@
       <quick-links></quick-links>
       <application></application>
       <implementation></implementation>
-
-      <section class="whyCertification" id="certification">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>
-                Why DISC Certification?
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <certification></certification>
       <results></results>
       <quote></quote>
       <sample-reports></sample-reports>
       <empowers></empowers>
-      <br />
 
       <section class="form" id="form">
         <div class="container flex-container" id="form">
@@ -151,6 +138,7 @@ import OurDifference from '@/components/OurDifferenceFold';
 import QuickLinks from '@/components/QuickLinksFold';
 import Application from '@/components/ApplicationFold';
 import Implementation from '@/components/ImplementationFold';
+import Certification from '../components/CertificationFold.vue';
 import Results from '@/components/ResultsFold';
 import Quote from '@/components/QuoteFold';
 import SampleReports from '@/components/SampleReportsFold';
@@ -165,6 +153,7 @@ export default {
     'quick-links': QuickLinks,
     'application': Application,
     'implementation': Implementation,
+    'certification': Certification,
     'results': Results,
     'quote': Quote,
     'sample-reports': SampleReports,
@@ -390,18 +379,6 @@ h1 {
   margin-left: 10px;
 }
 
-//  Why Certification Section
-
-.whyCertification {
-  min-height: 700px;
-
-  h1 {
-    color: #1e222d;
-    margin: 0px;
-    font-size: 65px;
-  }
-}
-
 //  Form Section
 
 .form {
@@ -415,6 +392,7 @@ h1 {
   .container {
     .formTitle {
       color: #0033c5;
+      padding-top: 40px;
     }
 
     label {
