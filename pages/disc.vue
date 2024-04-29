@@ -70,29 +70,7 @@
       </section>
 
       <sample-reports></sample-reports>
-
-      <section class="empowers" id="empowers">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <h2>
-                See how DISC empowers you to unlock top talent, drive positive change, and achieve remarkable results.
-              </h2>
-            </div>
-          </div>
-        </div>
-      </section>
+      <empowers></empowers>
       <br />
 
       <section class="form" id="form">
@@ -187,6 +165,7 @@ import Application from '@/components/ApplicationFold';
 import Implementation from '@/components/ImplementationFold';
 import Results from '@/components/ResultsFold';
 import SampleReports from '@/components/SampleReportsFold';
+import Empowers from '@/components/EmpowersFold';
 import Interest from '@/components/InterestFold';
 import Footer from '@/components/Footer';
 
@@ -199,6 +178,7 @@ export default {
     'implementation': Implementation,
     'results': Results,
     'sample-reports': SampleReports,
+    'empowers': Empowers,
     'interest': Interest,
     'footer-fold': Footer
   },
@@ -444,30 +424,6 @@ h1 {
     position: absolute;
     left: 60px;
     top: 60px;
-  }
-}
-
-//  Sample Reports Section
-
-.sampleReports {
-  min-height: 700px;
-
-  h1 {
-    color: #1e222d;
-    margin: 0px;
-    font-size: 65px;
-  }
-}
-
-//  Empowers Section
-
-.empowers {
-  background-color: #1e222d;
-  min-height: 700px;
-
-  h1 {
-    font-size: 65px;
-    float: right;
   }
 }
 
