@@ -28,7 +28,7 @@
                                 <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">
                             </div>
                         </a>
-                        <a href="#quote" style="cursor: pointer;">
+                        <a href="#testimonial" style="cursor: pointer;">
                             <div class="col-6">
                                 <h2>What our Clients say</h2>
                                 <img src="~/assets/disc/white-arrow.png" alt="white arrow icon" class="whiteArrow">

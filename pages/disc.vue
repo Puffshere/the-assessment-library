@@ -56,19 +56,7 @@
       </section>
 
       <results></results>
-
-      <section class="quote" id="quote">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>
-                Quote
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <quote></quote>
       <sample-reports></sample-reports>
       <empowers></empowers>
       <br />
@@ -164,6 +152,7 @@ import QuickLinks from '@/components/QuickLinksFold';
 import Application from '@/components/ApplicationFold';
 import Implementation from '@/components/ImplementationFold';
 import Results from '@/components/ResultsFold';
+import Quote from '@/components/QuoteFold';
 import SampleReports from '@/components/SampleReportsFold';
 import Empowers from '@/components/EmpowersFold';
 import Interest from '@/components/InterestFold';
@@ -177,6 +166,7 @@ export default {
     'application': Application,
     'implementation': Implementation,
     'results': Results,
+    'quote': Quote,
     'sample-reports': SampleReports,
     'empowers': Empowers,
     'interest': Interest,
@@ -409,21 +399,6 @@ h1 {
     color: #1e222d;
     margin: 0px;
     font-size: 65px;
-  }
-}
-
-//  Quote Section
-
-.quote {
-  min-height: 600px;
-  background-color: #00a8ff;
-
-  h1 {
-    margin: 0px;
-    font-size: 65px;
-    position: absolute;
-    left: 60px;
-    top: 60px;
   }
 }
 
