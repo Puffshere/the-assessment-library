@@ -38,7 +38,7 @@
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                    }}</option>
+                                }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -71,7 +71,7 @@
                                 <select id="source" name="source" v-model="form.source" tabindex="6">
                                     <option v-for="source in sources" :key="source.id" :value="source.value">{{
                                         source.label
-                                        }}</option>
+                                    }}</option>
                                 </select>
 
                                 <span class="error">{{ v.errors[0] }}</span>
@@ -577,6 +577,10 @@ export default {
                                         value: this.form.comments
                                     },
                                     {
+                                        field: '118', // Country,
+                                        value: this.form.country
+                                    },
+                                    {
                                         field: '4', // Client type (reseller vs corporate),
                                         value: this.form.clientType
                                     },
@@ -706,6 +710,10 @@ export default {
                                         value: this.form.comments
                                     },
                                     {
+                                        field: '118', // Country,
+                                        value: this.form.country
+                                    },
+                                    {
                                         field: '4', // Client type (reseller vs corporate),
                                         value: this.form.clientType
                                     },
@@ -824,6 +832,10 @@ export default {
                                     {
                                         field: '20', // Questions/Comments,
                                         value: this.form.comments
+                                    },
+                                    {
+                                        field: '118', // Country,
+                                        value: this.form.country
                                     },
                                     {
                                         field: '4', // Client type (reseller vs corporate),
@@ -945,6 +957,10 @@ export default {
                                         value: this.form.comments
                                     },
                                     {
+                                        field: '118', // Country,
+                                        value: this.form.country
+                                    },
+                                    {
                                         field: '4', // Client type (reseller vs corporate),
                                         value: this.form.clientType
                                     },
@@ -1055,6 +1071,10 @@ export default {
                                     {
                                         field: '20', // Questions/Comments,
                                         value: this.form.comments
+                                    },
+                                    {
+                                        field: '118', // Country,
+                                        value: this.form.country
                                     },
                                     {
                                         field: '4', // Client type (reseller vs corporate),

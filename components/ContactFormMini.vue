@@ -186,8 +186,6 @@ export default {
                         }
                     }
 
-                    console.log("This is the package", this.form.country);
-
                     const { data } = await axios.post('/api/contact', {
                         contact: {
                             email: this.form.email,
