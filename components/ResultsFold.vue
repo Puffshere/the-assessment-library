@@ -3,31 +3,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="col-5">
+                    <div class="col-6">
                         <img src="~/assets/disc/results-background-graphic.png" alt="results background graphic"
                             class="graphic">
                     </div>
-                    <div class="col-7">
+                    <div class="col-6">
                         <img src="~/assets/disc/results-icon.png" alt="results icon" class="resultsIcon">
                         <h1>
                             Results
                         </h1>
-                        <p>Enhanced Communication
+                        <p><span style="color: #abd7ff; font-weight: bold;">Enhanced Communication</span><br />
                             Provides a common language for teams, leading to better understanding and collaboration.
-                        </p><br />
-                        <p>Improved Customer Interactions
+                        <br />
+                        <br />
+                        <span style="color: #abd7ff; font-weight: bold;">Improved Customer Interactions</span><br />
                             Customer communication becomes more individualized and empathetic, resulting in greater
                             success and loyalty.
-                        </p><br />
-                        <p>Strengthened Leadership
+                        <br />
+                        <br />
+                        <span style="color: #abd7ff; font-weight: bold;">Strengthened Leadership</span><br />
                             Empowers leaders to understand and adapt to their team's behaviors, enhancing productivity
                             and morale.
-                        </p><br />
-                        <p>Conflict Resolution
+                        <br />
+                        <br />
+                        <span style="color: #abd7ff; font-weight: bold;">Conflict Resolution</span><br />
                             Help teams navigate conflicts by recognizing and accommodating differences in Behavioral and
                             working styles.
-                        </p><br />
-                        <p>Enhanced Teamwork
+                        <br />
+                        <br />
+                        <span style="color: #abd7ff; font-weight: bold;">Enhanced Teamwork</span><br />
                             Improve understanding and communication among team members to drive projects to successful
                             completion.
                         </p><br />
@@ -47,30 +51,35 @@ h1 {
     margin: 0px;
 }
 
-h3 {
-    font-size: 28px;
-    color: #00a8ff;
-}
-
 p {
     color: white;
 
 }
 
-
 .results {
     background-color: #1e222d;
+    min-height: 860px;
+
+    .col-12 {
+        margin-top: -8px;
+        margin-bottom: -34px;
+    }
+
+    .graphic {
+        max-height: 860px;
+    }
 
     img {
         width: 100%;
     }
 
-    .col-7 {
+    .col-6 {
         text-align: right;
     }
 
     .resultsIcon {
-        width: 20%;
+        margin-top: 70px;
+        width: 28%;
     }
 }
 </style>
