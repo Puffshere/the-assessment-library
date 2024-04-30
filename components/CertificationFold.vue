@@ -9,7 +9,7 @@
                         <h1>
                             Why DISC Certification?
                         </h1>
-                        <p style="color: #0033c5; font-weight: bold;">
+                        <p style="color: #0033c5; font-weight: bold; font-size: 18px;">
                             You do not need to become DISC Certified to open an account with us, but here are a few
                             reasons
                             to consider Certification:
@@ -21,7 +21,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="col-6">
+                        <div class="col-6 text">
                             <p>
                                 <span style="color: #0033c5; font-weight: bold;">Expertise:</span><br />
                                 Becoming DISC certified equips you with in-depth knowledge and understanding of the DISC
@@ -60,16 +60,28 @@
 .whyCertification {
     min-height: 700px;
 
+    .col-12 {
+        margin-bottom: -8px;
+    }
+
+    .text {
+        margin-top: -10px;
+    }
+
     .blueDiscLogo {
-        width: 100%;
+        width: 150%;
+        margin-left: -60px;
+        margin-top: -20px;
     }
 
     .credits {
         width: 100%;
+        margin-top: 50px;
     }
 
     .womanSmiling {
         width: 100%;
+        margin-top: 0px;
     }
 
     h1 {
