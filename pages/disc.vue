@@ -66,14 +66,3 @@ export default {
   }
 }
 </script>
-
-
-<style lang="scss" scoped>
-.nav {
-  position: relative;
-}
-
-.foot {
-  position: relative;
-}
-</style>
