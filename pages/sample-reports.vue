@@ -270,6 +270,7 @@
                     <br />
 
                     <div class="samples-container-special">
+                        <div class="coming-soon">New!</div>
                         <h3>DISC Awareness (EQ) Report</h3>
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EQ).pdf"
@@ -1875,6 +1876,22 @@ export default {
         padding: 24px 16px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
         min-height: 100px;
+
+        .coming-soon {
+            background: #e93d2f;
+            border-radius: 50%;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            font-size: 9pt;
+            font-weight: 700;
+            line-height: 18px;
+            text-align: center;
+            padding-top: 16px;
+            position: absolute;
+            top: -22px;
+            right: -10px;
+        }
     }
 
     .language-button {
