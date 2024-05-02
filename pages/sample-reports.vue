@@ -247,7 +247,7 @@
                 </div>
 
                 <div class="col-3">
-                    <div class="samples-container">
+                    <div class="samples-container-special">
                         <h3>DISC 360&deg;</h3>
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf"
@@ -266,6 +266,14 @@
                             class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
                         <a v-else class="hyperlink disabled">DISC 360&deg; Report</a>
                         <a class="language-button disc" @click="disc360ReportModal = true">5 languages</a><br />
+                    </div>
+                    <br />
+
+                    <div class="samples-container-special">
+                        <h3>DISC Awareness (EQ) Report</h3>
+                        <a v-if="lang === 'en-us'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EQ).pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC Awareness (EQ) Report</a>
                     </div>
                 </div>
 
@@ -1858,6 +1866,15 @@ export default {
             top: -10px;
             right: -10px;
         }
+    }
+
+    .samples-container-special {
+        position: relative;
+        background: #fff;
+        border-radius: 20px;
+        padding: 24px 16px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+        min-height: 100px;
     }
 
     .language-button {
