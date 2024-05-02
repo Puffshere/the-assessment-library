@@ -271,7 +271,7 @@
 
                     <div class="samples-container-special">
                         <div class="coming-soon">New!</div>
-                        <h3>DISC Awareness (EQ) Report</h3>
+                        <h3>DISC Awareness</h3>
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EQ).pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Awareness (EQ) Report</a>
