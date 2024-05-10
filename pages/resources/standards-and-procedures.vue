@@ -422,6 +422,16 @@ export default {
                         {
                             url: 'https://www.assessments24x7.com/resources/affiliate-partner-materials',
                             mainText: 'Partners and Affiliates',
+                        },
+                        {
+                            url: '',
+                            mainText: 'DISC Awareness Assessment',
+                            footNote: "*Coming Soon"
+                        },
+                        {
+                            url: '',
+                            mainText: 'DISC Leadership Assessment',
+                            footNote: "*Coming Soon"
                         }
                     ]
                 },
