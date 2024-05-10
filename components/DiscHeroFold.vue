@@ -24,11 +24,11 @@
                     <div class="video-container">
                         <video ref="videoElement" class="video-player" controls>
                             <source
-                                src="https://cdn.assessments24x7.com/file/assessments24x7-media/get-in-touch-video.mp4"
+                                src="https://f002.backblazeb2.com/file/assessments24x7-media/ATD+DISC+Video+-+05.09.2024+_____.mp4"
                                 type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <img v-if="showThumbnail" src="~/assets/get-in-touch-video-image.png" @click="playVideo"
+                        <img v-if="showThumbnail" src="~/assets/disc/disc-video-thumbnail.png" @click="playVideo"
                             class="video-thumbnail" />
                     </div>
                 </div>
@@ -95,19 +95,26 @@ export default {
 
     .video-container {
         position: relative;
-        width: 90%;
-        padding: 40px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
         margin: 0 auto;
     }
 
     .video-player {
+        position: absolute;
+        top: 27px;
+        left: 28px;
         width: 100%;
+        height: 100%;
     }
 
     .video-thumbnail {
         position: absolute;
-        left: 0;
+        top: 25px;
+        left: 25px;
         width: 100%;
+        height: 100%;
         cursor: pointer;
     }
 
