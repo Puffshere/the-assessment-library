@@ -23,7 +23,7 @@
             <br />
             <div class="row">
                 <div class="col-12">
-                    <div class="col-4 boxes">
+                    <div class="col-4 boxes topBox">
                         <img src="~/assets/disc/applicationIcon1.png" alt="api icon" class="icon" />
                         <h3>
                             Team
@@ -227,6 +227,18 @@ h1 {
         margin-left: 20px;
         margin-bottom: -30px;
         font-size: 24px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .application {
+        h1 {
+            font-size: 50px;
+        }
+
+        .topBox {
+            margin-top: 80px;
+        }
     }
 }
 </style>
