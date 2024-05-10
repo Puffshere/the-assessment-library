@@ -90,4 +90,18 @@
         font-size: 65px;
     }
 }
+
+@media (max-width: 1100px) {
+
+    .whyCertification {
+        h1 {
+            font-size: 40px;
+        }
+
+        .blueDiscLogo {
+            width: 50%;
+            margin-left: 25%;
+        }
+    }
+}
 </style>
