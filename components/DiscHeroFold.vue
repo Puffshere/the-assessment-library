@@ -24,7 +24,7 @@
                     <div class="video-container">
                         <video ref="videoElement" class="video-player" controls>
                             <source
-                                src="https://f002.backblazeb2.com/file/assessments24x7-media/ATD+DISC+Video+-+05.09.2024+_____.mp4"
+                                src="https://cdn.assessments24x7.com/file/assessments24x7-media/ATD+DISC+Video+-+05.09.2024+_____.mp4"
                                 type="video/mp4">
                             Your browser does not support the video tag.
                         </video>

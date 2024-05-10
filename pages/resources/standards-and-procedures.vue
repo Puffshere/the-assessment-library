@@ -405,18 +405,31 @@ export default {
             fourthRowLinks: [
                 {
                     id: 10,
-                    name: 'Development/Training',
-                    image: '/images/comingSoonYellow.webp',
+                    name: 'Landing Page Links',
+                    links: [
+                        {
+                            url: 'https://www.assessments24x7.com/customizations',
+                            mainText: 'Customizations',
+                        },
+                        {
+                            url: 'https://www.assessments24x7.com/disc',
+                            mainText: 'DISC',
+                        },
+                        {
+                            url: 'https://www.assessments24x7.com/disc-blocks',
+                            mainText: 'DISC Blocks',
+                        }
+                    ]
                 },
                 {
                     id: 11,
-                    name: '',
+                    name: 'Development/Training',
+                    image: '/images/comingSoonYellow.webp',
                 },
                 {
                     id: 12,
                     name: '',
                 }
-
             ],
         };
     },
