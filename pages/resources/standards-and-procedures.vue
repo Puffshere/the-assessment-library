@@ -148,7 +148,7 @@
                             </div>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNotes">{{ link.footNote }}</span>
+                                <span class="footNote2 footNotes">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
