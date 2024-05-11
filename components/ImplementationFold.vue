@@ -34,7 +34,6 @@
     </section>
 </template>
 
-
 <style lang="scss" scoped>
 h1 {
     font-size: 63px;
@@ -82,6 +81,26 @@ p {
 
     .col-6 {
         text-align: right;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .implementation {
+        .getStartedButton {
+            bottom: -60px;
+            width: 180px;
+            right: 40px;
+        }
+        padding-bottom: 100px; /* Expand the black container to fit the button */
+    }
+
+    .col-6 {
+        text-align: center;
     }
 }
 </style>
