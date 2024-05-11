@@ -139,4 +139,18 @@
         font-size: 22px;
     }
 }
+
+@media (max-width: 1100px) {
+    .sampleReports {
+        h1 {
+            margin: 60px;
+
+        font-size: 55px;
+        line-height: 60px;
+    }
+        .boxes {
+            padding-bottom: 30px;
+        }
+    }
+}
 </style>

@@ -136,4 +136,10 @@ h1 {
     font-weight: 400;
     padding: 0 46px;
 }
+
+@media (max-width: 1100px) {
+
+    .ourDifference {
+    }
+}
 </style>

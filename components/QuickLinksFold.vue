@@ -131,6 +131,9 @@ h1 {
 @media (max-width: 600px) {
 
     .body {
+        .quickLinks {
+            margin-bottom: 80px;
+        }
 
         .quickLinks,
         .col-6 {
