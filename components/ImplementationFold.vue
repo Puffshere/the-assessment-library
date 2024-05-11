@@ -92,11 +92,11 @@ p {
 
     .implementation {
         .getStartedButton {
-            bottom: -60px;
+            bottom: -80px;
             width: 180px;
-            right: 40px;
+            right: 20px;
         }
-        padding-bottom: 100px; /* Expand the black container to fit the button */
+        padding-bottom: 160px; /* Expand the black container to fit the button */
     }
 
     .col-6 {
