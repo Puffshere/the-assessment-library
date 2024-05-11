@@ -97,7 +97,8 @@ export default {
         position: relative;
         width: 100%;
         height: 0;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        padding-bottom: 56.25%;
+        /* 16:9 aspect ratio */
         margin: 0 auto;
     }
 
@@ -162,6 +163,7 @@ h1 {
     width: 40%;
     margin: 0px;
     min-height: 440px;
+    margin-top: -1px;
 }
 
 .hero .col-5 .heroSubtext {
@@ -170,5 +172,29 @@ h1 {
     padding: 20px;
     margin-top: 100px;
     margin-left: 10px;
+}
+
+@media (max-width: 1100px) {
+    .hero .row {
+        flex-direction: column;
+    }
+
+    .hero .col-5,
+    .hero .col-7 {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .hero {
+        .col-5 {
+            padding-bottom: 60px;
+        }
+
+        .learnButton {
+            margin-top: 20px;
+            width: 160px;
+            padding-bottom: 60px;
+        }
+    }
 }
 </style>
