@@ -57,22 +57,18 @@
 .quotation-marks-container {
     position: absolute;
     top: -80px;
-    /* Adjust as needed */
     left: 6%;
     transform: translateX(-50%);
 }
 
 .quotation-marks {
     width: 200px;
-    /* Adjust size as needed */
 }
 
 .testimonial-text {
     font-size: 18px;
-    /* Adjust as needed */
     line-height: 1.5;
     margin-top: 1em;
-    /* Provide space under the quotation marks */
     margin-bottom: 40px;
 }
 
@@ -97,13 +93,11 @@
 .author-and-role {
     flex: 1;
     margin-right: 10em;
-    /* Spacing between logo and text */
     text-align: right;
 }
 
 .author-name {
     font-size: 36px;
-    /* Adjust as needed */
     font-weight: 700;
     margin-top: -10px;
     margin-bottom: -8px;
@@ -111,9 +105,7 @@
 
 .author-role {
     font-size: 18px;
-    /* Adjust as needed */
     margin-bottom: 0.5em;
-    /* Spacing between name and role */
 }
 
 .video-testimonial-link {
@@ -124,16 +116,19 @@
 
 .author-headshot {
     width: 240px;
-    /* Adjust size as needed */
     position: absolute;
     right: -60px;
     bottom: -60px;
 }
 
 @media (max-width: 768px) {
+    .testimonial-section {
+        padding: 0 4em;
+        padding-bottom: 180px;
+    }
+
     .quotation-marks-container {
         top: -20px;
-        /* Adjust as needed */
     }
 
     .testimonial-footer {
@@ -148,6 +143,19 @@
 
     .author-headshot {
         margin-top: 1em;
+        width: 130px;
+        right: -40px;
+        bottom: -100px;
+    }
+
+    .quotation-marks {
+        width: 130px;
+    }
+
+    .draft-kings-logo {
+        left: 80px;
+        bottom: -80px;
+        width: 120px;
     }
 }
 </style>
