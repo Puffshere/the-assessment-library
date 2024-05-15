@@ -193,6 +193,25 @@
                     <table style="width:100%">
                         <thead>
                             <tr>
+                                <th>DISC Awareness (EQ) Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+Debrief+Guide_vs3_5.24_Final.pdf"
+                                        target="_blank" rel="noopener">DISC Awareness Debrief Guide</a>
+                                    <small>An overview guide for coaching, debriefing, and applying the DISC Awareness
+                                        (EQ) report with page-by-page details and suggestions for use. </small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
                                 <th>DISC Development Resources</th>
                             </tr>
                         </thead>
