@@ -174,7 +174,7 @@ h1 {
     margin-left: 10px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     .hero .row {
         flex-direction: column;
     }

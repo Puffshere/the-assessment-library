@@ -231,6 +231,7 @@ h1 {
 }
 
 @media (max-width: 1100px) {
+
     .application {
         h1 {
             font-size: 50px;

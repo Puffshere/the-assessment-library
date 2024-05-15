@@ -276,8 +276,8 @@
                         <div class="coming-soon">New!</div>
                         <h3>DISC Awareness</h3>
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EQ).pdf"
-                            class="hyperlink" target="_blank" rel="noopener">DISC Awareness (EQ) Report</a>
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC Awareness (EI) Report</a>
                     </div>
                 </div>
 
@@ -513,8 +513,8 @@
                         <a v-else class="hyperlink disabled">DISC + Emotional Intelligence</a><br />
                         <a class="language-button other" @click="discPluseiqReportModal = true">2 languages</a><br />
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EQ).pdf"
-                            class="hyperlink" target="_blank" rel="noopener">DISC Awareness (EQ) Report</a>
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf.pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC Awareness (EI) Report</a>
                     </div>
                 </div>
 
