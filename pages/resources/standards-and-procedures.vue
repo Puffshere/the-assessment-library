@@ -273,6 +273,10 @@ export default {
                         {
                             url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Account+Plans+2024.pdf",
                             mainText: "Account Plans 2024"
+                        },
+                        {
+                            url: "https://www.youtube.com/watch?v=DYHhhMePdRw",
+                            mainText: "DISC Awareness Sales - Merrick"
                         }
                     ]
                 },
