@@ -1,5 +1,5 @@
 <template>
-    <section class="form" id="form">
+    <section class="form" id="discAwarenessContactForm">
         <div class="container flex-container" id="form">
             <div class="row flex-container">
                 <div class="col-12">

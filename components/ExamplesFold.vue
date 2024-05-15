@@ -100,8 +100,10 @@
 @media (max-width: 1100px) {
     .examples {
         h1 {
-            margin: 60px;
-            font-size: 55px;
+            margin: 0px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            font-size: 38px;
             line-height: 60px;
         }
 
@@ -112,7 +114,6 @@
 }
 
 @media (max-width: 768px) {
-
     .examples {
         .flex-container {
             flex-direction: column;

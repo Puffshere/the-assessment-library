@@ -2,6 +2,7 @@
     <section>
       <main-nav class="nav"></main-nav>
       <section class="body">
+        <enhancing></enhancing>
         <examples></examples>
         <contact-form></contact-form>
       </section>
@@ -11,6 +12,7 @@
   
   <script>
   import Nav from '@/components/Nav';
+  import Enhancing from '@/components/EnhancingFold';
   import Examples from '@/components/ExamplesFold';
   import ContactForm from '@/components/DiscAwarenessContactFormFold';
   import Footer from '@/components/Footer';
@@ -18,6 +20,7 @@
   export default {
     components: {
       'main-nav': Nav,
+      'enhancing': Enhancing,
       'examples': Examples,
       'contact-form': ContactForm,
       'footer-fold': Footer
