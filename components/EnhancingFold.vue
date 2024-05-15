@@ -9,7 +9,7 @@
                     </h1>
                 </div>
                 <div class="col-12 image-container">
-                    <img src="@/assets/disc-awareness/disc-and-eq-graphic.png" alt="disc and eq graphic"
+                    <img src="@/assets/disc-awareness/disc-and-ei-graphic.png" alt="disc and ei graphic"
                         class="discEqGraphic">
                 </div>
                 <div class="col-12 flex-container">
@@ -80,8 +80,9 @@
             display: inline-block;
             width: 220px;
             height: 60px;
-
+            
             img {
+                border-radius: 5px;
                 display: block;
                 width: 100%;
                 height: 100%;
