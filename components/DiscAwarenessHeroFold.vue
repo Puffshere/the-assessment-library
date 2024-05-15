@@ -10,8 +10,8 @@
                             <span style="color: #000000">Report</span>
                         </h1>
                         <h3>
-                            Experience a seamless integration of DISC and Emotional Intelligence (EQ), offering a
-                            comprehensive understanding of communication styles, observable behavior, and EQ insights,
+                            Experience a seamless integration of DISC and Emotional Intelligence (EI), offering a
+                            comprehensive understanding of communication styles, observable behavior, and EI insights,
                             shaping powerful interpersonal dynamics.
                         </h3>
                         <div class="button-container">
