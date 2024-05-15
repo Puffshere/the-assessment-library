@@ -2,6 +2,7 @@
     <section>
       <main-nav class="nav"></main-nav>
       <section class="body">
+        <disc-awareness-hero></disc-awareness-hero>
         <enhancing></enhancing>
         <examples></examples>
         <contact-form></contact-form>
@@ -12,6 +13,7 @@
   
   <script>
   import Nav from '@/components/Nav';
+  import DiscAwarenessHero from '@/components/DiscAwarenessHeroFold';
   import Enhancing from '@/components/EnhancingFold';
   import Examples from '@/components/ExamplesFold';
   import ContactForm from '@/components/DiscAwarenessContactFormFold';
@@ -20,6 +22,7 @@
   export default {
     components: {
       'main-nav': Nav,
+      'disc-awareness-hero': DiscAwarenessHero,
       'enhancing': Enhancing,
       'examples': Examples,
       'contact-form': ContactForm,
