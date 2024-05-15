@@ -25,8 +25,7 @@
                         class="btn btn-download" target="_blank" rel="noopener" style="cursor: pointer;">
                         <img src="@/assets/disc-awareness/download-samples-button.png" alt="Download Sample">
                     </a>
-                    <a href="#discAwarenessContactForm"
-                        class="btn btn-learn" style="cursor: pointer;">
+                    <a href="#discAwarenessContactForm" class="btn btn-learn" style="cursor: pointer;">
                         <img src="@/assets/disc-awareness/learn-more-button.png" alt="Learn More">
                     </a>
                 </div>
@@ -36,6 +35,7 @@
     </section>
 </template>
 
+
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 
@@ -43,12 +43,17 @@
     min-height: 600px;
     background-color: #1e222d;
 
+    .row {
+        padding-top: 36px;
+    }
+
     .image-container {
         display: flex;
         justify-content: center;
 
         .discEqGraphic {
             width: 50%;
+            margin-top: -10px;
             margin-bottom: -70px;
         }
     }
@@ -74,16 +79,13 @@
         .btn {
             display: inline-block;
             width: 220px;
-            /* Set a fixed width for buttons */
             height: 60px;
-            /* Set a fixed height for buttons */
 
             img {
                 display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                /* Ensure image covers the button */
             }
         }
     }
@@ -120,6 +122,10 @@
 
 @media (max-width: 768px) {
     .enhancing {
+        .row {
+            padding-top: 0px;
+        }
+
         .flex-container {
             flex-direction: column;
             align-items: center;
@@ -132,9 +138,7 @@
 
             .btn {
                 width: 80%;
-                /* Set a percentage width for smaller screens */
                 max-width: 220px;
-                /* Ensure it doesn't exceed the original size */
                 margin-bottom: 10px;
             }
         }
