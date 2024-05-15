@@ -123,7 +123,7 @@
                     <table style="width:100%">
                         <thead>
                             <tr>
-                                <th>DISC Awareness (EQ) Resources</th>
+                                <th>DISC Awareness (EI) Resources</th>
                             </tr>
                         </thead>
 
@@ -133,7 +133,7 @@
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+Debrief+Guide_vs3_5.24_Final.pdf"
                                         target="_blank" rel="noopener">Emotional Intelligence Debrief Guide</a>
                                     <small>An overview guide for coaching, debriefing, and applying the DISC Awareness
-                                        (EQ) report with page-by-page details and suggestions for use.</small>
+                                        (EI) report with page-by-page details and suggestions for use.</small>
                                 </td>
                             </tr>
                         </tbody>
