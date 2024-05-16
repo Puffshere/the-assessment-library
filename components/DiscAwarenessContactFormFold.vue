@@ -254,7 +254,7 @@ h2 {
 
     h1 {
         font-size: 48px;
-        margin-top: 20px;
+        margin-top: 60px;
     }
 
     h2 {

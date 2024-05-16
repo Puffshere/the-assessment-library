@@ -5,6 +5,7 @@
         <disc-awareness-hero></disc-awareness-hero>
         <enhancing></enhancing>
         <examples></examples>
+        <awareness-concepts></awareness-concepts>
         <contact-form></contact-form>
         <asi></asi>
       </section>
@@ -17,6 +18,7 @@
   import DiscAwarenessHero from '@/components/DiscAwarenessHeroFold';
   import Enhancing from '@/components/EnhancingFold';
   import Examples from '@/components/ExamplesFold';
+  import AwarenessConcepts from '@/components/AwarenessConceptsFold';
   import ContactForm from '@/components/DiscAwarenessContactFormFold';
   import Asi from '@/components/ASIFold';
   import Footer from '@/components/Footer';
@@ -27,6 +29,7 @@
       'disc-awareness-hero': DiscAwarenessHero,
       'enhancing': Enhancing,
       'examples': Examples,
+      'awareness-concepts': AwarenessConcepts,
       'contact-form': ContactForm,
       'asi': Asi,
       'footer-fold': Footer
