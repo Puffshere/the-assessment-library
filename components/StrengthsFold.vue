@@ -142,8 +142,8 @@
         width: 80%;
     }
     .line2 {
-        margin-left: -140px;
-        width: 90%;
+        margin-left: -180px;
+        width: 100%;
         margin-bottom: -90px;
         margin-top: 42px;
     }
