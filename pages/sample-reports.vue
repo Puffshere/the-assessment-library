@@ -843,11 +843,6 @@
                                 <a class="language-button disc" @click="discBehavioralTendenciesReportModal = true">4
                                     languages</a><br />
 
-                                <a v-if="lang === 'en-us'" class="hyperlink"
-                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamReportIntegratedBehaviors.pdf"
-                                    target="_blank" rel="noopener">DISC Integrated Behaviors</a>
-                                <a v-else class="hyperlink disabled">DISC Integrated Behaviors</a><br />
-
                                 <a v-if="lang === 'en-au'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelAustralianSampleReport.pdf"
                                     target="_blank" rel="noopener">DISC Team Wheel</a>

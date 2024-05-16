@@ -4,6 +4,7 @@
       <section class="body">
         <disc-awareness-hero></disc-awareness-hero>
         <enhancing></enhancing>
+        <strengths></strengths>
         <examples></examples>
         <awareness-concepts></awareness-concepts>
         <contact-form></contact-form>
@@ -17,6 +18,7 @@
   import Nav from '@/components/Nav';
   import DiscAwarenessHero from '@/components/DiscAwarenessHeroFold';
   import Enhancing from '@/components/EnhancingFold';
+  import Strengths from '@/components/StrengthsFold';
   import Examples from '@/components/ExamplesFold';
   import AwarenessConcepts from '@/components/AwarenessConceptsFold';
   import ContactForm from '@/components/DiscAwarenessContactFormFold';
@@ -28,6 +30,7 @@
       'main-nav': Nav,
       'disc-awareness-hero': DiscAwarenessHero,
       'enhancing': Enhancing,
+      'strengths': Strengths,
       'examples': Examples,
       'awareness-concepts': AwarenessConcepts,
       'contact-form': ContactForm,
