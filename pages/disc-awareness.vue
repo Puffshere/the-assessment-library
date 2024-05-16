@@ -6,6 +6,7 @@
         <enhancing></enhancing>
         <examples></examples>
         <contact-form></contact-form>
+        <asi></asi>
       </section>
       <footer-fold class="foot"></footer-fold>
     </section>
@@ -17,6 +18,7 @@
   import Enhancing from '@/components/EnhancingFold';
   import Examples from '@/components/ExamplesFold';
   import ContactForm from '@/components/DiscAwarenessContactFormFold';
+  import Asi from '@/components/ASIFold';
   import Footer from '@/components/Footer';
   
   export default {
@@ -26,6 +28,7 @@
       'enhancing': Enhancing,
       'examples': Examples,
       'contact-form': ContactForm,
+      'asi': Asi,
       'footer-fold': Footer
     },
     head() {
