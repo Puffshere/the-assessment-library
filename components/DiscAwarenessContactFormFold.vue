@@ -179,7 +179,9 @@ export default {
 
 h1 {
     font-size: 48px;
-    margin-top: 10px;
+    //margin-top: 10px;
+    margin-top: 60px;
+
 }
 
 h2 {
@@ -254,7 +256,6 @@ h2 {
 
     h1 {
         font-size: 48px;
-        margin-top: 60px;
     }
 
     h2 {
