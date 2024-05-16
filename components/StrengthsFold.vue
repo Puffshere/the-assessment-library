@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <video muted loop id="myVideo">
+                        <video autoplay muted loop id="myVideo">
                             <source
                                 src="https://cdn.assessments24x7.com/file/assessments24x7-media/African+American+Female+Video.mp4"
                                 type="video/mp4">
@@ -143,18 +143,21 @@
         width: 40%;
         margin-top: -8px;
     }
+
     .line2 {
         margin-left: -180px;
         width: 100%;
         margin-bottom: -88px;
         margin-top: 42px;
     }
+
     .line3 {
         margin-left: -180px;
         width: 75%;
         margin-bottom: -68px;
         margin-top: 24px;
     }
+
     .line4 {
         margin-left: -180px;
         width: 100%;
