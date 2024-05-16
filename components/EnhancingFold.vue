@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-12 image-container">
                     <img src="@/assets/disc-awareness/disc-and-ei-graphic.png" alt="disc and ei graphic"
-                        class="discEqGraphic">
+                        class="discEiGraphic">
                 </div>
                 <div class="col-12 flex-container">
                     <h3 class="text">The DISC Awareness tool <span style="color: #00a8ff">synergizes DISC assessment
@@ -51,10 +51,10 @@
         display: flex;
         justify-content: center;
 
-        .discEqGraphic {
-            width: 50%;
-            margin-top: -10px;
-            margin-bottom: -70px;
+        .discEiGraphic {
+            width: 51%;
+            margin-top: -54px;
+            margin-bottom: -35px;
         }
     }
 

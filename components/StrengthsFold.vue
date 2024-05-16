@@ -22,42 +22,25 @@
                                 Strengths
                             </h1>
                             <img src="~/assets/disc-awareness/underline.png" alt="underline" class="underline" />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <div class="blackBoxes left">
-                                <span><img src="@/assets/disc-awareness/increase-commitment-cooperation.png"
-                                        alt="rapport disc">
-                                    Increase commitment & cooperation
+                            <div class="blueBoxes position1">
+                                <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
+                                    Gain insights with Emotional Intelligence (EI) by exploring the relationship with
+                                    your DISC styles.
                                 </span>
                             </div>
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <div class="blackBoxes right">
-                                <span><img src="@/assets/disc-awareness/increase-commitment-cooperation.png"
-                                        alt="rapport disc">
-                                    Increase commitment & cooperation
+                            <div class="blueBoxes position2">
+                                <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
+                                    Deepen your awareness of key Emotional Intelligence components & talents.
                                 </span>
                             </div>
-                            <br />
-                            <br />
-                            <br />
-                            <div class="blackBoxes left">
-                                <span><img src="@/assets/disc-awareness/increase-commitment-cooperation.png"
-                                        alt="rapport disc">
-                                    Increase commitment & cooperation
+                            <div class="blueBoxes position3">
+                                <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
+                                    Identify strengths and areas for development based on your EI and style.
                                 </span>
                             </div>
-                            <br />
-                            <br />
-                            <br />
-                            <div class="blackBoxes right">
-                                <span><img src="@/assets/disc-awareness/increase-commitment-cooperation.png"
-                                        alt="rapport disc">
-                                    Increase commitment & cooperation
+                            <div class="blueBoxes position4">
+                                <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
+                                    Utilize a structured framework to foster personal and professional growth.
                                 </span>
                             </div>
                         </div>
@@ -108,18 +91,6 @@
         flex-direction: column;
     }
 
-    .blackBoxes .left {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-    }
-
-    .blackBoxes .right {
-        display: flex;
-        flex-direction: column;
-        align-items: right;
-    }
-
     .womanSmilingContainer {
         position: relative;
         z-index: 2;
@@ -138,35 +109,47 @@
         align-content: center;
     }
 
-    .blackBoxes {
+    .blueBoxes {
+        display: flex;
+        align-items: center;
         color: white;
         background-color: #0033c5;
         margin-bottom: 10px;
         border-radius: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 0px;
-        font-size: 16px;
+        padding: 20px 30px;
+        font-size: 14px;
         line-height: 22px;
         font-weight: 300;
         max-height: 60px;
+        max-width: 400px;
         position: relative;
         width: 85%;
 
-        .left {
-align-content: left;
-        }
-
-        .right {
-
-        }
-
         img {
             position: absolute;
-            width: 45px;
+            width: 42px;
             left: -20px;
             top: -20px;
         }
+    }
+
+    .position1 {
+        margin-top: 100px;
+    }
+
+    .position2 {
+        margin-top: 90px;
+        margin-left: 120px;
+    }
+
+    .position3 {
+        margin-top: 70px;
+        margin-left: 40px;
+    }
+
+    .position4 {
+        margin-top: 70px;
+        margin-left: 100px;
     }
 
     h1 {
@@ -181,7 +164,6 @@ align-content: left;
     .underline {
         width: 80%;
         margin-top: -50px;
-        /* Add some margin to create space between the h1 and the underline */
     }
 }
 
@@ -202,6 +184,10 @@ align-content: left;
             margin-top: 40px;
             margin-bottom: 100px;
             z-index: 5;
+        }
+
+        .blueBoxes {
+            margin-left: 0 !important;
         }
     }
 }
