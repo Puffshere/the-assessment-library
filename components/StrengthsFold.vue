@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <video autoplay muted loop id="myVideo">
+                        <video muted loop id="myVideo">
                             <source
                                 src="https://cdn.assessments24x7.com/file/assessments24x7-media/African+American+Female+Video.mp4"
                                 type="video/mp4">
@@ -28,20 +28,20 @@
                                     your DISC styles.
                                 </span>
                             </div>
-                            <!-- <img src="@/assets/disc-awareness/line-2.png" alt="line 2" class="line1"> -->
-                            <img src="@/assets/disc-awareness/line-1.png" alt="line 1" class="line2">
+                            <img src="@/assets/disc-awareness/line-1.png" alt="line 1" class="line1">
+                            <img src="@/assets/disc-awareness/line-4.png" alt="line 2" class="line2">
                             <div class="blueBoxes position2">
                                 <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
                                     Deepen your awareness of key Emotional Intelligence components & talents.
                                 </span>
                             </div>
-                            <!-- <img src="@/assets/disc-awareness/line-2.png" alt="line 3" class="line3"> -->
+                            <img src="@/assets/disc-awareness/line-3.png" alt="line 3" class="line3">
                             <div class="blueBoxes position3">
                                 <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
                                     Identify strengths and areas for development based on your EI and style.
                                 </span>
                             </div>
-                            <!-- <img src="@/assets/disc-awareness/line-2.png" alt="line 4" class="line4"> -->
+                            <img src="@/assets/disc-awareness/line-4.png" alt="line 4" class="line4">
                             <div class="blueBoxes position4">
                                 <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
                                     Utilize a structured framework to foster personal and professional growth.
@@ -138,22 +138,28 @@
     }
 
     .line1 {
-        margin-left: -80px;
-        width: 80%;
+        margin-left: -180px;
+        margin-bottom: -32px;
+        width: 40%;
+        margin-top: -8px;
     }
     .line2 {
         margin-left: -180px;
         width: 100%;
-        margin-bottom: -90px;
+        margin-bottom: -88px;
         margin-top: 42px;
     }
     .line3 {
-        margin-left: -80px;
-        width: 100%;
+        margin-left: -180px;
+        width: 75%;
+        margin-bottom: -68px;
+        margin-top: 24px;
     }
     .line4 {
-        margin-left: -80px;
-        width: 80%;
+        margin-left: -180px;
+        width: 100%;
+        margin-top: 22px;
+        margin-bottom: -68px;
     }
 
     .position1 {
