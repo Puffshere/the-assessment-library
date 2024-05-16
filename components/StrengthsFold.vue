@@ -28,16 +28,20 @@
                                     your DISC styles.
                                 </span>
                             </div>
+                            <!-- <img src="@/assets/disc-awareness/line-2.png" alt="line 2" class="line1"> -->
+                            <img src="@/assets/disc-awareness/line-1.png" alt="line 1" class="line2">
                             <div class="blueBoxes position2">
                                 <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
                                     Deepen your awareness of key Emotional Intelligence components & talents.
                                 </span>
                             </div>
+                            <!-- <img src="@/assets/disc-awareness/line-2.png" alt="line 3" class="line3"> -->
                             <div class="blueBoxes position3">
                                 <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
                                     Identify strengths and areas for development based on your EI and style.
                                 </span>
                             </div>
+                            <!-- <img src="@/assets/disc-awareness/line-2.png" alt="line 4" class="line4"> -->
                             <div class="blueBoxes position4">
                                 <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
                                     Utilize a structured framework to foster personal and professional growth.
@@ -131,6 +135,25 @@
             left: -20px;
             top: -20px;
         }
+    }
+
+    .line1 {
+        margin-left: -80px;
+        width: 80%;
+    }
+    .line2 {
+        margin-left: -140px;
+        width: 90%;
+        margin-bottom: -90px;
+        margin-top: 42px;
+    }
+    .line3 {
+        margin-left: -80px;
+        width: 100%;
+    }
+    .line4 {
+        margin-left: -80px;
+        width: 80%;
     }
 
     .position1 {
