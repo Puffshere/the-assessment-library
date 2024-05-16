@@ -155,7 +155,7 @@
         margin-left: -180px;
         width: 75%;
         margin-bottom: -68px;
-        margin-top: 24px;
+        margin-top: 22px;
     }
 
     .line4 {
@@ -166,7 +166,7 @@
     }
 
     .position1 {
-        margin-top: 100px;
+        margin-top: 84px;
     }
 
     .position2 {
