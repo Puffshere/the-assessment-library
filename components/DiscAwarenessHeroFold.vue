@@ -57,7 +57,7 @@ h1 {
 .hero {
     position: relative;
     width: 100%;
-    min-height: 78vh;
+    min-height: 76vh;
     overflow: hidden;
 }
 
@@ -90,8 +90,8 @@ h1 {
 }
 
 .hero .sampleReportImage {
-    width: 100%;
-    margin-top: 50px;
+    width: 85%;
+    margin-top: 80px;
     margin-left: 50px;
 }
 
