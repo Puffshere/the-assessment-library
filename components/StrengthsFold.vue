@@ -145,7 +145,7 @@
     }
 
     .line2 {
-        margin-left: -180px;
+        margin-left: -177px;
         width: 100%;
         margin-bottom: -88px;
         margin-top: 42px;
@@ -154,12 +154,12 @@
     .line3 {
         margin-left: -175px;
         width: 75%;
-        margin-bottom: -68px;
-        margin-top: 22px;
+        margin-bottom: -82px;
+        margin-top: 20px;
     }
 
     .line4 {
-        margin-left: -180px;
+        margin-left: -177px;
         width: 100%;
         margin-top: 22px;
         margin-bottom: -68px;
