@@ -152,7 +152,7 @@
     }
 
     .line3 {
-        margin-left: -180px;
+        margin-left: -175px;
         width: 75%;
         margin-bottom: -68px;
         margin-top: 22px;
