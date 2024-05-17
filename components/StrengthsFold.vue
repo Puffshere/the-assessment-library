@@ -202,26 +202,61 @@
 
 @media (max-width: 1100px) {
     .strengths {
-        min-height: 1000px;
+        min-height: 1525px;
+        padding-top: 30px;
+
+        .position1,
+        .position3 {
+            margin-left: 10px;
+            padding: 40px 20px;
+        }
+
+        .position2,
+        .position4 {
+            padding: 40px 20px;
+            margin-left: 60px;
+        }
+
+        .line1 {
+            margin-left: -100px;
+            margin-bottom: -32px;
+            width: 40%;
+            margin-top: -10px;
+        }
+
+        .line3 {
+            margin-left: -175px;
+            width: 75%;
+            margin-bottom: -78px;
+            margin-top: 20px;
+        }
 
         h1 {
-            margin-top: -40px;
+            margin-top: 0px;
             font-size: 40px;
         }
 
-        .womanSmiling {
-            position: static;
-            top: 60px;
-            right: 10px;
-            width: 100%;
-            margin-top: 40px;
-            margin-bottom: 100px;
-            z-index: 5;
+        .underline {
+            margin-bottom: -40px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .strengths {
+        min-height: 1350px;
+        padding-top: 30px;
+
+        .position2,
+        .position4 {
+            margin-left: 50px;
         }
 
-        .blueBoxes {
-            margin-left: 0 !important;
+        h1 {
+            margin-top: 0px;
+            font-size: 40px;
         }
+
     }
 }
 </style>
