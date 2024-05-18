@@ -18,7 +18,7 @@
                     <div class="col-12">
                         <div class="col-7 conceptsList">
                             <div class="whiteBoxes">
-                                <!-- <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc"> -->
+                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Enhance
                                         Self-Awareness</span>
@@ -28,7 +28,7 @@
                                 </span>
                             </div>
                             <div class="whiteBoxes">
-                                <!-- <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc"> -->
+                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Improve Team
                                         Dynamics</span>
@@ -38,7 +38,7 @@
                                 </span>
                             </div>
                             <div class="whiteBoxes">
-                                <!-- <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc"> -->
+                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Target
                                         Development</span>
@@ -48,7 +48,7 @@
                                 </span>
                             </div>
                             <div class="whiteBoxes">
-                                <!-- <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc"> -->
+                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Effective
                                         Communication</span>
@@ -58,7 +58,7 @@
                                 </span>
                             </div>
                             <div class="whiteBoxes">
-                                <!-- <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc"> -->
+                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Optimize Leadership
                                         Impact</span>
