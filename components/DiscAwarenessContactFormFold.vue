@@ -7,7 +7,7 @@
                         Let data drive your decisions.
                     </h1>
                     <h2 class="formTitle">
-                        Connect with us to learn more.
+                        Connect with us to learn more
                         <img src="~/assets/disc-awareness/arrow.png" alt="white arrow" class="whiteArrow">
                     </h2>
                 </div>

@@ -8,7 +8,6 @@
                     </h1>
                     <h2 class="formTitle">
                         Connect with us today to learn more.
-                        <img src="~/assets/disc-awareness/arrow.png" alt="white arrow" class="whiteArrow">
                     </h2>
                 </div>
             </div>
@@ -59,7 +58,7 @@
                 <div class="row">
                     <div class="col-12">
                         <button type="submit" class="submitBtn">
-                            <img src="~/assets/disc-awareness/submit.png" alt="submit icon" class="submitIcon" />
+                            <img src="~/assets/disc-leadership/submit-button-blue.png" alt="submit icon" class="submitIcon" />
                         </button>
                     </div>
                 </div>
