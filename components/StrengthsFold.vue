@@ -21,7 +21,7 @@
                                 <br />
                                 Strengths
                             </h1>
-                            <img src="~/assets/disc-awareness/underline.png" alt="underline" class="underline" />
+                            <img src="@/assets/disc-awareness/underline.png" alt="underline" class="underline" />
                             <div class="blueBoxes position1">
                                 <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
                                     Gain insights with Emotional Intelligence (EI) by exploring the relationship with
