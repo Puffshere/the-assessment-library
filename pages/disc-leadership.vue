@@ -7,6 +7,7 @@
       <strengths></strengths>
       <examples></examples>
       <intergrating></intergrating>
+      <adapt></adapt>
       <contact-form></contact-form>
       <asi></asi>
     </section>
@@ -21,7 +22,9 @@ import Enhancing from '@/components/EnhancingFold';
 import Strengths from '@/components/StrengthsFold';
 import Examples from '@/components/ExamplesFold';
 import Intergrating from '@/components/IntergratingFold';
+import Adapt from '@/components/AdaptFold';
 import ContactForm from '@/components/DiscLeadershipContactFormFold';
+
 import Asi from '@/components/ASIFold';
 import Footer from '@/components/Footer';
 
@@ -33,6 +36,7 @@ export default {
     'strengths': Strengths,
     'examples': Examples,
     'intergrating': Intergrating,
+    'adapt': Adapt,
     'contact-form': ContactForm,
     'asi': Asi,
     'footer-fold': Footer
