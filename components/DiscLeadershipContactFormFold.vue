@@ -1,13 +1,13 @@
 <template>
-    <section class="form" id="discAwarenessContactForm">
+    <section class="form" id="discLeadershipContactForm">
         <div class="container flex-container" id="form">
             <div class="row flex-container">
                 <div class="col-12">
                     <h1 class="formTitle">
-                        Let data drive your decisions.
+                        Empower Your Leaders
                     </h1>
                     <h2 class="formTitle">
-                        Connect with us to learn more.
+                        Connect with us today to learn more.
                         <img src="~/assets/disc-awareness/arrow.png" alt="white arrow" class="whiteArrow">
                     </h2>
                 </div>
@@ -191,7 +191,7 @@ h2 {
 }
 
 .form {
-    background-color: #1e222d;
+    background-color: #00a8ff;
 
     .row {
         label {

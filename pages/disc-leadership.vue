@@ -21,7 +21,7 @@ import Enhancing from '@/components/EnhancingFold';
 import Strengths from '@/components/StrengthsFold';
 import Examples from '@/components/ExamplesFold';
 import Intergrating from '@/components/IntergratingFold';
-import ContactForm from '@/components/DiscAwarenessContactFormFold';
+import ContactForm from '@/components/DiscLeadershipContactFormFold';
 import Asi from '@/components/ASIFold';
 import Footer from '@/components/Footer';
 
