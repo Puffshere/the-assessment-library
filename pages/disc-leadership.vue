@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <section>
     <main-nav class="nav"></main-nav>
     <section class="body">
@@ -50,4 +50,4 @@ export default {
     }
   }
 }
-</script> -->
+</script>
