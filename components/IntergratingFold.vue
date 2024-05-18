@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <section class="intergrating">
         <br />
         <br />
@@ -211,4 +211,4 @@
         }
     }
 }
-</style>
+</style> -->
