@@ -39,7 +39,7 @@ export default {
   },
   head() {
     return {
-      title: 'DISC Awareness | Assessments 24x7',
+      title: 'DISC Leadership | Assessments 24x7',
       meta: [
         {
           hid: 'description',
