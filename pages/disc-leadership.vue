@@ -6,7 +6,7 @@
         <enhancing></enhancing>
         <strengths></strengths>
         <examples></examples>
-        <awareness-concepts></awareness-concepts>
+        <intergrating></intergrating>
         <contact-form></contact-form>
         <asi></asi>
       </section>
@@ -20,7 +20,7 @@
   import Enhancing from '@/components/EnhancingFold';
   import Strengths from '@/components/StrengthsFold';
   import Examples from '@/components/ExamplesFold';
-  import AwarenessConcepts from '@/components/AwarenessConceptsFold';
+  import Intergrating from '@/components/IntergratingFold';
   import ContactForm from '@/components/DiscAwarenessContactFormFold';
   import Asi from '@/components/ASIFold';
   import Footer from '@/components/Footer';
@@ -32,7 +32,7 @@
       'enhancing': Enhancing,
       'strengths': Strengths,
       'examples': Examples,
-      'awareness-concepts': AwarenessConcepts,
+      'intergrating': Intergrating,
       'contact-form': ContactForm,
       'asi': Asi,
       'footer-fold': Footer
