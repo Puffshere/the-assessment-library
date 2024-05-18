@@ -66,8 +66,6 @@
             <br />
             <br />
             <br />
-            <br />
-            <br />
         </div>
     </section>
 </template>
@@ -185,8 +183,8 @@ h1 {
 h2 {
     font-size: 38px;
     font-weight: 400;
-    margin-top: -100px;
-    margin-bottom: 0px;
+    margin-top: -70px;
+    margin-bottom: 40px;
 }
 
 .form {
@@ -236,7 +234,7 @@ h2 {
             border: none;
             padding: 0;
             cursor: pointer;
-            width: 230px;
+            width: 200px;
         }
 
         .submitIcon {
