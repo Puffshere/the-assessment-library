@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <section class="intergrating">
         <br />
         <br />
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <img src="~/assets/disc-leadership/black-male.png" alt="black male" class="blackMale">
+                            <img src="@/assets/disc-leadership/black-male.png" alt="black male" class="blackMale">
                         </div>
                     </div>
                 </div>
@@ -211,4 +211,4 @@
         }
     }
 }
-</style> -->
+</style>
