@@ -307,6 +307,10 @@ export default {
                         {
                             url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/PTO++Holiday+Policy_Final.pdf',
                             mainText: 'PTO Holiday Policy',
+                        },
+                        {
+                            url: 'https://youtu.be/jRbJySDg5g0',
+                            mainText: '401k Information Video',
                         }
                     ]
                 }

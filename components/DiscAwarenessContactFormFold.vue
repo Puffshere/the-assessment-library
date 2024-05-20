@@ -64,11 +64,6 @@
                     </div>
                 </div>
             </form>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
         </div>
     </section>
 </template>
@@ -242,6 +237,7 @@ h2 {
 
         .submitIcon {
             width: 100%;
+            margin-bottom: 125px;
         }
     }
 }
