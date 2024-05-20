@@ -45,6 +45,7 @@
 @import '~assets/scss/vars';
 
 .insights {
+    background-color: #1e222d;
 
     .flex-container {
         display: flex;
@@ -67,7 +68,6 @@
             margin: 0 auto;
             margin-top: 10px;
             margin-bottom: -10px;
-            /* Center the icon horizontally */
         }
 
         h3 {
@@ -84,16 +84,17 @@
 
 @media (max-width: 1100px) {
     .insights {
+        background-color: white;
+        
         .flex-container {
-            flex-direction: column; /* Stack the boxes vertically */
-            align-items: center; /* Center the boxes horizontally */
+            flex-direction: column;
+            align-items: center;
         }
 
         .boxes {
-            flex: 1 1 100%; /* Make the boxes take full width */
-            margin-bottom: 20px; /* Add some space between the boxes */
+            flex: 1 1 100%;
+            margin-bottom: 20px;
         }
     }
 }
 </style>
-

@@ -4,7 +4,7 @@
     <section class="body">
       <disc-leadership-hero></disc-leadership-hero>
       <insights></insights>
-      <enhancing></enhancing>
+      <targeted-strategies></targeted-strategies>
       <intergrating></intergrating>
       <adapt></adapt>
       <contact-form></contact-form>
@@ -18,7 +18,7 @@
 import Nav from '@/components/Nav';
 import DiscLeadershipHero from '@/components/DiscLeadershipHeroFold';
 import Insights from '@/components/InsightsFold';
-import Enhancing from '@/components/EnhancingFold';
+import TargetedStrategies from '@/components/TargetedStrategiesFold';
 import Intergrating from '@/components/IntergratingFold';
 import Adapt from '@/components/AdaptFold';
 import ContactForm from '@/components/DiscLeadershipContactFormFold';
@@ -30,7 +30,7 @@ export default {
     'main-nav': Nav,
     'disc-leadership-hero': DiscLeadershipHero,
     'insights': Insights,
-    'enhancing': Enhancing,
+    'targeted-strategies': TargetedStrategies,
     'intergrating': Intergrating,
     'adapt': Adapt,
     'contact-form': ContactForm,
