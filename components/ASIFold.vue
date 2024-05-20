@@ -32,12 +32,11 @@
 .asi {
     position: relative;
     width: 100%;
-    min-height: 71vh;
+    min-height: 700px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    //padding: 20px;
     box-sizing: border-box;
 }
 
@@ -58,6 +57,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .asi .box {
@@ -81,6 +81,12 @@
 .asi .certified {
     width: 14%;
     margin-top: -100px;
+    position: absolute;
+    padding-bottom: 20px;
+}
+
+.asi .content {
+    padding-top: 22px;
 }
 
 .asi .content h1 {
@@ -91,7 +97,6 @@
 
 .asi .content .check img {
     color: #ffcc00;
-    /* Adjust the color as needed */
     width: 48px;
     margin-top: -15px;
 }
@@ -110,12 +115,12 @@
 
 @media (max-width: 768px) {
     .asi {
-        min-height: 90vh;
+        min-height: 900px;
     }
 
     .asi .certified {
-        width: 20%;
-        margin-top: -50px;
+        width: 30%;
+        margin-top: -70px; 
     }
 
     .asi .box {
@@ -131,25 +136,56 @@
 
     .asi .content .check img {
         width: 36px;
-        /* Reduce size for mobile */
         margin: 0;
-        /* Remove margin */
     }
 
     .asi .content .words {
         font-size: 24px;
-        /* Reduce font size for mobile */
         line-height: 1.2;
-        /* Adjust line height */
         padding: 0;
-        /* Remove padding */
     }
 
     .asi .content p {
         font-size: 16px;
-        /* Adjust font size for mobile */
         line-height: 1.4;
-        /* Adjust line height */
+    }
+}
+
+@media (max-width: 350px) {
+    .asi {
+        min-height: 900px;
+    }
+
+    .asi .certified {
+        width: 40%;
+        margin-top: -75px; 
+    }
+
+    .asi .box {
+        padding: 20px;
+    }
+
+    .asi .content h1 {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .asi .content .check img {
+        width: 36px;
+        margin: 0;
+    }
+
+    .asi .content .words {
+        font-size: 24px;
+        line-height: 1.2;
+        padding: 0;
+    }
+
+    .asi .content p {
+        font-size: 16px;
+        line-height: 1.4;
     }
 }
 </style>

@@ -107,13 +107,13 @@
     }
 
     .whiteBoxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         color: rgb(19, 19, 19);
         background-color: white;
         border-radius: 10px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 20px;
-        padding-right: 10px;
+        padding: 30px 20px;
         margin: 50px 0px;
         margin-left: 50px;
         font-size: 16px;

@@ -58,7 +58,7 @@ h1 {
 .hero {
     position: relative;
     width: 100%;
-    min-height: 81vh;
+    min-height: 767px;
     overflow: hidden;
 }
 
