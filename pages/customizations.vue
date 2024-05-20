@@ -178,10 +178,10 @@
                             <h1>
                                 Get in Touch
                             </h1>
+                            <br />
+                            <br />
                         </div>
                     </div>
-                    <br />
-                    <br />
                     <form @submit.prevent="submitForm">
                         <div class="row">
                             <div class="col-12">
@@ -235,11 +235,11 @@
                                 </button>
                             </div>
                         </div>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                     </form>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                     <div class="brTitleSpacing">
                         <br />
                     </div>
