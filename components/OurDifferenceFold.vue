@@ -75,7 +75,7 @@ h1 {
 .ourDifference {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 960px;
     overflow: hidden;
 }
 
@@ -93,7 +93,7 @@ h1 {
     position: relative;
     z-index: 1;
     width: 100%;
-    min-height: 100vh;
+    min-height: 960px;
     display: flex;
     flex-direction: column;
     justify-content: center;
