@@ -20,36 +20,36 @@
                             <div class="blackBoxes">
                                 <span><img src="@/assets/disc-awareness/increase-commitment-cooperation.png"
                                         alt="rapport disc">
-                                    Increase commitment & cooperation
+                                    <span style="padding-left: 15px;">Increase commitment & cooperation</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
                                 <span><img src="@/assets/disc-awareness/build-effective-teams.png" alt="rapport disc">
-                                    Build effective teams
+                                    <span style="padding-left: 15px;">Build effective teams</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
                                 <span><img src="@/assets/disc-awareness/resolve-prevent-conflict.png"
                                         alt="rapport disc">
-                                    Resolve & prevent conflict
+                                        <span style="padding-left: 15px;">Resolve & prevent conflict</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
                                 <span><img src="@/assets/disc-awareness/gain-endorsement-credibility-rapport.png"
                                         alt="rapport disc">
-                                    Gain endorsement, credibility, & rapport
+                                        <span style="padding-left: 15px;">Gain endorsement, credibility, & rapport</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
                                 <span><img src="@/assets/disc-awareness/increase-sales.png" alt="rapport disc">
-                                    Increase sales
+                                    <span style="padding-left: 15px;">Increase sales</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
                                 <span><img
                                         src="@/assets/disc-awareness/understand-interpersonal-communication-behavior.png"
                                         alt="rapport disc">
-                                    Understand interpersonal communication & behavior
+                                        <span style="padding-left: 15px;">Understand interpersonal communication & behavior</span>
                                 </span>
                             </div>
                         </div>
@@ -92,38 +92,37 @@
     }
 
     .blackBoxes {
+        display: flex; /* Use flexbox */
+        align-items: center; /* Center items vertically */
         color: white;
         background-color: #1e222d;
         margin-bottom: 10px;
         border-radius: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 60px;
+        padding: 20px; /* Uniform padding */
         margin: 20px 50px;
         font-size: 21px;
         line-height: 22px;
         font-weight: 300;
         max-height: 64px;
         position: relative;
-        align-content: center;
 
         img {
-            position: absolute;
-            width: 75px;
-            left: -30px;
-            top: -8px;
+            margin-left: -50px; /* Space between icon and text */
+            width: 75px; /* Adjust size as needed */
+        }
+
+        span {
+            display: flex;
+            align-items: center; /* Ensure text and icon are aligned */
         }
     }
 
     .womanSmilingContainer {
         position: absolute;
         top: 50%;
-        /* Adjust as needed */
         transform: translateY(-50%);
-        /* Adjust as needed */
         z-index: 2;
         width: 60%;
-        /* Adjust as needed */
     }
 
     .womanSmiling {
@@ -156,9 +155,7 @@
 
         .blackBoxes {
             margin-bottom: 10px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 60px;
+            padding: 20px;
             margin: 20px 5px;
             margin-left: 30px;
             font-size: 14px;
@@ -166,14 +163,14 @@
         }
 
         .womanSmiling {
-        position: static;
-        top: 60px;
-        right: 10px;
-        width: 100%;
-        margin-top: 40px;
-        margin-bottom: 100px;
-        z-index: 5;
-    }
+            position: static;
+            top: 60px;
+            right: 10px;
+            width: 100%;
+            margin-top: 40px;
+            margin-bottom: 100px;
+            z-index: 5;
+        }
     }
 }
 </style>

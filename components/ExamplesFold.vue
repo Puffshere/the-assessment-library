@@ -63,7 +63,6 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 20px;
-        /* Set space between boxes */
     }
 
     .boxes {
@@ -71,7 +70,6 @@
         min-height: 460px;
         border-radius: 15px;
         flex: 1 1 calc(25% - 20px);
-        /* Adjust width of boxes with spacing */
         margin-top: 30px;
         margin-bottom: 50px;
         text-align: left;
@@ -92,6 +90,7 @@
     h1 {
         text-align: center;
         margin: 40px;
+        padding-top: 40px;
         font-size: 48px;
         color: #ffffff;
     }
