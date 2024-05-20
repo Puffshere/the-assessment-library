@@ -3,7 +3,7 @@
     <main-nav class="nav"></main-nav>
     <section class="body">
       <disc-leadership-hero></disc-leadership-hero>
-      <examples></examples>
+      <insights></insights>
       <enhancing></enhancing>
       <intergrating></intergrating>
       <adapt></adapt>
@@ -17,7 +17,7 @@
 <script>
 import Nav from '@/components/Nav';
 import DiscLeadershipHero from '@/components/DiscLeadershipHeroFold';
-import Examples from '@/components/ExamplesFold';
+import Insights from '@/components/InsightsFold';
 import Enhancing from '@/components/EnhancingFold';
 import Intergrating from '@/components/IntergratingFold';
 import Adapt from '@/components/AdaptFold';
@@ -29,7 +29,7 @@ export default {
   components: {
     'main-nav': Nav,
     'disc-leadership-hero': DiscLeadershipHero,
-    'examples': Examples,
+    'insights': Insights,
     'enhancing': Enhancing,
     'intergrating': Intergrating,
     'adapt': Adapt,

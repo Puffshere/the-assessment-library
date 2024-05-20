@@ -1,0 +1,99 @@
+<template>
+    <section class="insights" id="insights">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 flex-container">
+                    <div class="boxes" style="background-color: #0453f1">
+                        <h3>Leadership Insights
+                            <br />
+                            Tailored to You
+                        </h3>
+                        <img src="~/assets/disc-leadership/left-icon.png" alt="d circle" class="icon" />
+                        <br />
+                        <p>Unlock personalized leadership strategies based on the unique DISC style to maximize impact
+                            and effectiveness in leading teams.</p>
+                    </div>
+                    <div class="boxes" style="background-color: #1e222d;">
+                        <h3>Enhance Team
+                            <br />
+                            Collaboration
+                        </h3>
+                        <img src="~/assets/disc-leadership/middle-icon.png" alt="i circle" class="icon" />
+                        <br />
+                        <p>Learn customized communication techniques to connect authentically with diverse styles,
+                            fostering a more harmonious and productive team environment.</p>
+                    </div>
+                    <div class="boxes" style="background-color: #00a8ff;">
+                        <h3>Drive Organizational
+                            <br />
+                            Success
+                        </h3>
+                        <img src="~/assets/disc-leadership/right-icon.png" alt="s circle" class="icon" />
+                        <br />
+                        <p>Elevate performance & organizational success by leveraging tailored leadership strategies to
+                            enhance communication, motivation, & collaboration based on individual DISC styles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br /><br /><br />
+        </div>
+    </section>
+</template>
+
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
+.insights {
+
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 0px;
+        margin-bottom: -75px;
+    }
+
+    .boxes {
+        flex: 1 1 calc(33%);
+        text-align: center;
+        padding: 20px 15px;
+        color: white;
+        align-items: center;
+
+        .icon {
+            width: 26%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: -10px;
+            /* Center the icon horizontally */
+        }
+
+        h3 {
+            font-size: 21px;
+            line-height: 28px;
+        }
+
+        p {
+            margin-top: 0px;
+            line-height: 22px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .insights {
+        .flex-container {
+            flex-direction: column; /* Stack the boxes vertically */
+            align-items: center; /* Center the boxes horizontally */
+        }
+
+        .boxes {
+            flex: 1 1 100%; /* Make the boxes take full width */
+            margin-bottom: 20px; /* Add some space between the boxes */
+        }
+    }
+}
+</style>
+
