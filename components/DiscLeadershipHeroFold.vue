@@ -58,7 +58,7 @@ h1 {
 .hero {
     position: relative;
     width: 100%;
-    min-height: 767px;
+    min-height: 725px;
     overflow: hidden;
 }
 
@@ -76,7 +76,6 @@ h1 {
     position: relative;
     z-index: 1;
     width: 100%;
-    min-height: 0vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,8 +90,8 @@ h1 {
 }
 
 .hero .sampleReportImage {
-    width: 100%;
-    margin-top: 95px;
+    width: 90%;
+    margin-top: 85px;
     margin-left: 0px;
 }
 
