@@ -1,4 +1,5 @@
-<template><section class="form" id="form">
+<template>
+  <section class="form" id="form">
     <div class="container flex-container" id="form">
       <div class="row flex-container">
         <div class="col-12">
@@ -7,12 +8,6 @@
           </h1>
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <form @submit.prevent="submitForm">
         <div class="row">
           <div class="col-12">
@@ -66,11 +61,6 @@
           </div>
         </div>
       </form>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   </section>
 </template>
@@ -171,6 +161,10 @@ export default {
 
 
 <style lang="scss" scoped>
+.form {
+  margin-bottom: 125px;
+}
+
 .body {
   .flex-container {
     display: flex;
@@ -180,10 +174,10 @@ export default {
 }
 
 h1 {
-    font-size: 48px;
-    padding: 20px;
-    margin-bottom: -150px;
-    margin-left: 10px;
+  font-size: 48px;
+  padding: 20px;
+  margin-bottom: 0px;
+  margin-left: 10px;
 }
 
 .form {

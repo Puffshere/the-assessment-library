@@ -58,9 +58,6 @@
                             class="getStartedBtn" /></a>
                 </div>
             </div>
-            <br />
-            <br />
-            <br />
         </div>
     </section>
 </template>
@@ -72,15 +69,16 @@
 
 .sampleReports {
     min-height: 700px;
-
+    
     .flex-container {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
-
+    
     .container {
         background-image: url("~assets/disc/sample-reports-background-graphic.png");
+        padding-bottom: 75px;
     }
 
     .boxes {
