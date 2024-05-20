@@ -45,7 +45,7 @@
 @import '~assets/scss/vars';
 
 .insights {
-    background-color: #1e222d;
+    background-color: #1e222d27;
 
     .flex-container {
         display: flex;
