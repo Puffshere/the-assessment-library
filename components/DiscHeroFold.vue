@@ -98,24 +98,25 @@ export default {
         width: 100%;
         height: 0;
         padding-bottom: 56.25%;
-        /* 16:9 aspect ratio */
         margin: 0 auto;
     }
 
     .video-player {
         position: absolute;
-        top: 27px;
-        left: 28px;
-        width: 100%;
+        top: 15px;
+        left: 50%;
+        width: 88%;
         height: 100%;
+        transform: translateX(-50%);
     }
 
     .video-thumbnail {
         position: absolute;
-        top: 25px;
-        left: 25px;
-        width: 100%;
-        height: 100%;
+        top: 30px;
+        left: 50%;
+        width: 90%;
+        height: 98%;
+        transform: translateX(-50%);
         cursor: pointer;
     }
 
@@ -194,6 +195,38 @@ h1 {
             margin-top: 20px;
             width: 160px;
             padding-bottom: 60px;
+        }
+    }
+
+    .video-container {
+        padding-bottom: 56.25%;
+        margin: 0 auto;
+    }
+
+    .video-player {
+        margin-top: 5px;
+        left: 50%;
+        width: 90%;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+
+    .video-thumbnail {
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        width: 90%;
+        height: 100%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 350px) {
+    .hero {
+        h1 {
+            font-size: 38px;
+            line-height: 80px;
         }
     }
 }
