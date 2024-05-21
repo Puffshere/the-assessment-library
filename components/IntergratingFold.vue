@@ -11,7 +11,8 @@
                             <br />
                             DISC Leadership
                         </h1>
-                        <img src="@/assets/disc-leadership/underline-white.png" alt="underline white" class="underline" />
+                        <img src="@/assets/disc-leadership/underline-white.png" alt="underline white"
+                            class="underline" />
                     </div>
                 </div>
                 <div class="row">
