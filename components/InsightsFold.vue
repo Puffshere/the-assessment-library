@@ -11,7 +11,8 @@
                             </h3>
                             <img src="~/assets/disc-leadership/left-icon.png" alt="d circle" class="icon" />
                             <br />
-                            <p>Unlock personalized leadership strategies based on the unique DISC style to maximize impact
+                            <p>Unlock personalized leadership strategies based on the unique DISC style to maximize
+                                impact
                                 and effectiveness in leading teams.</p>
                         </div>
                         <div class="boxes" style="background-color: #1e222d;">
@@ -31,7 +32,8 @@
                             </h3>
                             <img src="~/assets/disc-leadership/right-icon.png" alt="s circle" class="icon" />
                             <br />
-                            <p>Elevate performance & organizational success by leveraging tailored leadership strategies to
+                            <p>Elevate performance & organizational success by leveraging tailored leadership strategies
+                                to
                                 enhance communication, motivation, & collaboration based on individual DISC styles.
                             </p>
                         </div>
@@ -66,7 +68,7 @@
             width: 100%;
         }
     }
-    
+
     .boxes {
         flex: 1 1 calc(33.3333%);
         text-align: center;
@@ -96,8 +98,6 @@
 
 @media (max-width: 1100px) {
     .insights {
-        background-color: white;
-        
         .flex-container {
             flex-direction: column;
             align-items: center;
@@ -109,6 +109,28 @@
 
             .icons {
                 width: 28%;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .insights {
+        .flex-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .boxes {
+            flex: 1 1 100%;
+            margin-bottom: 20px;
+
+            .icons {
+                width: 28%;
+            }
+
+            p {
+                padding: 0px 20px;
             }
         }
     }
