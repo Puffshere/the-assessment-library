@@ -308,6 +308,48 @@ Drop a 🌟 in the comments if you'll be saying "Yes" to yourself a little more 
 
 #Motivationmonday #Adaptability #Growthmindset #Continuedlearning #SuccessTips #Assessments24x7`,
                     postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 15,
+                    title: 'Start where you are quote - IG-LI',
+                    canvaLink: 'https://www.canva.com/design/DAF77E-6SAw/NiaG4Ki-2mjoOY71cOyfBQ/view?utm_content=DAF77E-6SAw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/49TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `And just KEEP GOING 🚀
+
+.
+
+.
+
+.
+
+.
+
+#BusinessDevelopment
+
+#BusinessGrowth
+
+#CareerDevelopment
+
+#Continuedlearning`,
+                    postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 16,
+                    title: 'Dr. Tony - Adaptability Quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF9a2-SxW8/xjHb4DK93rRcYSewAq3diQ/view?utm_content=DAF9a2-SxW8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/54TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `The bottom line.
+
+#Communication #Management #Humanresources #deeplearning #minfdullness`,
+                    postCategory: 'Inspirational Quotes'
                 }
             ]
         };

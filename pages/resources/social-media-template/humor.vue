@@ -218,6 +218,31 @@ If this resonates with your experiences, give it a thumbs up and share with a co
 
 #DISC #DISCAssessment #Teamdynamics #Effectivecommunication #Adaptability #Assessments24x7 #DISCCertification #Datadrivendecisions`,
                     postCategory: 'Humor'
+                },
+                {
+                    id: 7,
+                    title: 'The Emotional Journey - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF7d8fQ4WA/c_xTGMn4GR1rHzaVQu5IFA/view?utm_content=DAF7d8fQ4WA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/53TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `Introducing DISC in the corporate world can trigger skepticism among some individuals, but we’re here to change that narrative. Our state-of-the-art Assessment Technology transcends the limitations of traditional personality tests. It’s not about labeling; it’s about understanding and growth.
+
+🔑 Strategies for Navigating Pushback:
+
+1) Empathy: Understand resistance and address concerns with empathy.
+2) Storytelling: Share success stories—how DISC transformed teams and leaders.
+3) Champion Champions: Identify early adopters who can champion DISC within your organization.
+
+Trust the process, and let’s unlock potential together. 🚀
+
+👍 Like this post if you’re ready to embrace behavioral diversity and empower your team! 🌈
+
+#DISCReport #DISCTraining #CommunicationStyles #DISCInsights #HRMeme #Meme #HR #LeadershipTraining #TeamTraining #Hiring #DISCTips #DISCCertification #Assessments24x7
+#BehavioralDiversity`,
+                    postCategory: 'Humor'
                 }
             ]
         };

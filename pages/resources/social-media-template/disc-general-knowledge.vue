@@ -380,6 +380,24 @@ Apply the key indicators we've shared in previous weeks to tailor your written c
 
 If you find these posts helpful, give that like button a tap, Share this post, and stay tuned for a DISC-filled month of Romance! (and a little football) 😉 #CommunicationStyles #DISCInsights #DISCAssessment #DISCStyle #DISCTips #Assessments24x7`,
                     postCategory: 'DISC: General Knowledge'
+                },
+                {
+                    id: 17,
+                    title: 'Romance Blog Preview - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF9Vw4Hyz4/joSUIqkkYCFcMUScpBtBPQ/view?utm_content=DAF9Vw4Hyz4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/52TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Relationships can be like a rollercoaster, especially post-Valentine's Day. Whether you're a fan or glad it's over, one thing's for sure – relationships can get complicated. But in reality, they don't need to be...
+
+🗝️Unlock the secrets to successful connections through the power of DISC. Dr Tony Alessandra PhD breaks down the four distinct styles, offering practical tips tailored to each. Wave goodbye to complications and dive into our latest blog for real-world advice:
+
+🔗 https://www.assessments24x7.com/blog/romance-and-the-four-disc-styles
+
+#LoveAndLearn #DISC #DISCAssessment #DISCReport #DISCTraining #Companyculture #PersonalRelationship #Professionalrelationship #DISCandromance #DISCCommunicstions #CommunicationStyles #DISCInsights #Wisdom #growth #Assessments24x7`,
+                    postCategory: 'DISC: General Knowledge'
                 }
             ]
         };

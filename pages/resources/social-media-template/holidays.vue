@@ -240,6 +240,52 @@ Are you an online shopping aficionado, or do you relish the in-store experience?
 
 #DISC #DISCStyles #DISCAssessments #LeadershipDevelopment #Businessdevelopment #Coaching #DISCCertification #ContinuingEducation #Assessments24x7 #Selfawareness #emotionalintelligence #Communicationtips #Assessments`,
                     postCategory: 'Holidays'
+                },
+                {
+                    id: 9,
+                    title: 'SuperBowl Teaser Post - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF8M6wJlE0/zxYM45bDJ7Z6NcFCu-NkEg/view?utm_content=DAF8M6wJlE0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/50TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Curious about how each DISC Style could shine during your Super Bowl watch party? From the strategic ‘D’ to the social ‘I’ – we’ve got it all covered tomorrow! So STAY TUNED… Now, are you team Chiefs or 49ers? 🎉🔥
+
+#DISCStyles #Superbowl #executivecoaching #DISCTraining #GameDayInsights #StayTuned #CommunicationStyles #DISCInsights #DISCAssessment #DISCStyle #DISCTips #Assessments24x7📣🏆`,
+                    postCategory: 'Holidays'
+                },
+                {
+                    id: 10,
+                    title: 'Super Bowl Post - 2',
+                    canvaLink: 'https://www.canva.com/design/DAF8QYqrnkg/7lTeTGxMxjAPZYvVuFZnYw/view?utm_content=DAF8QYqrnkg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/51TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `Joining a Superbowl watch party this weekend?! With over 100 million people planning to watch the big game, we're curious about how each DISC Style might steal the show. Ever noticed those few who'd jump into the TV if they could? Check out the video as we decode the behavioral playbook and consider how these styles might even show up on the field in different positions. Comment your DISC Style below! 🏈🎉 #SuperBowlStyle #DISCdecoded #PartyPlaybook #DISCStyles #Superbowl #executivecoaching #DISCTraining #GameDayInsights #CommunicationStyles #DISCInsights #DISCAssessment #DISCStyle #DISCTips #Assessments24x7`,
+                    postCategory: 'Holidays'
+                },
+                {
+                    id: 11,
+                    title: 'Women\'s Day Post - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF_KF8VsPg/y1Yfdfv4JFJEk20ARPQR_w/view?utm_content=DAF_KF8VsPg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/56TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `💫 Belated International Women’s Day Celebration!
+At Assessments 24x7, we celebrate women every day, and we’re proud that 70% of our team consists of amazing women—12 inspiring females and 5 equally amazing males. If you’re part of our Assessments 24x7 family, you’ve likely had the privilege of working with some of them.
+
+And the celebration doesn’t stop here! 🎉Over the next 2 months, join us as we dive deep into 9 proven reasons why DISC Assessments are game-changers, providing valuable insights and practical tips! 💡
+
+Excited to learn more about DISC Assessments? Like this post! 👍
+
+#WomenInBusiness #WomenLeaders #DiversityandInclusion
+#Leadership #WorkplaceDiversity #DISCAssessments #Assessments #DISCCertifiction #Assessments24x7`,
+                    postCategory: 'Holidays'
                 }
             ]
         };
