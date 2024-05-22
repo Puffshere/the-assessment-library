@@ -200,6 +200,24 @@ Level up your professional relationships with DISC! Explore becoming a Certified
 
 🚀 #DISCModel #TeamCommunication #Adaptability #FridayFun #DISC #Motivators #Communications #Assessments24x7 #ContinuedEducation #SHRM #ATD #HRCI #CCE Approved #DataDrivenDecisions #meme #Funny #businesscoaching`,
                     postCategory: 'Humor'
+                },
+                {
+                    id: 6,
+                    title: 'Team Dynamics and Problem Solving - Funny Friday - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF5r9JBZiM/aQCm995H6BjfYcQqNy48XQ/view?utm_content=DAF5r9JBZiM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/43TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Differences in DISC Style can bring a ZEST to problem-solving. The whole can be more than the sum of the parts. Bridging the gaps between style differences not only enhances collaboration but also injects a dynamic energy into team efforts that similar styles absolutely would not.
+
+We have all collaborated with individuals with a contrasting Style to our own. While the initial adjustment period may be required to establish a cohesive working relationship, once the synergy is found, it opens the door to elevated levels of productivity and success.
+
+If this resonates with your experiences, give it a thumbs up and share with a colleague!
+
+#DISC #DISCAssessment #Teamdynamics #Effectivecommunication #Adaptability #Assessments24x7 #DISCCertification #Datadrivendecisions`,
+                    postCategory: 'Humor'
                 }
             ]
         };

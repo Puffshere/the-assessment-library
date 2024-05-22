@@ -10,7 +10,8 @@
                             <p class="titleText">
                                 Utilize these branded Social Media templates in Canva to customize within your Canva Pro
                                 Accounts for sharing on social media. Please be aware that the additional information is
-                                provided exclusively for branding and language guidance; refrain from copying it verbatim.
+                                provided exclusively for branding and language guidance; refrain from copying it
+                                verbatim.
                             </p>
                         </div>
                     </div>
@@ -218,6 +219,66 @@ It’s the simplest yet most impactful thing you can do and it costs nothing.
 All can make someone’s day.
 
 #kindness #Selfgrowth #MotivationMonday #DISC #Respectfulcommunications #Leadership #Assessments24x7`,
+                    postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 9,
+                    title: 'Small Steps Quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF4GsYcTJk/uJlDPiDfHgqENfahmEvS4Q/view?utm_content=DAF4GsYcTJk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/38TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Monumental actions, while impressive, often lack sustainability. Embracing the power of small, consistent steps not only builds momentum and resilience but also allows for adaptability, ensuring lasting and meaningful change on the journey toward our goals. #SmallStepsBigImpact #SustainableSuccess #Assessments24x7 #Growthmindset #2024 #Moveforward
+19w`,
+                    postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 10,
+                    title: 'Saying No to Others and Yes to Yourself - LI/IG',
+                    canvaLink: 'https://www.canva.com/design/DAF41PDcrh4/CjCMhzBM8-B95sUYOIYnew/view?utm_content=DAF41PDcrh4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/40TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Mastering the art of saying no can be a strategic act of self-care. Tune in to each request, discern your core values, and be ready for the potential discomfort that comes with staying true to yourself. Moving through these moments of disappointment requires resilience, but it's in these instances that your authenticity truly shines.
+
+Propose alternatives with boldness, crafting offers that seamlessly align with your true self. Maintain an open line of communication, fostering understanding and collaboration. The journey of learning to prioritize your affirmations, even if it means declining requests from others, is a process that solidifies your individuality.
+
+Embrace the concept of the positive no—an affirmation that not only strengthens your sense of self-worth but also cultivates authenticity within your professional and personal relationships.
+
+Drop a 🌟 in the comments if you'll be saying "Yes" to yourself a little more often in 2024.
+
+#Positivecommunications #DISC #Relationships #authenticity #Effectivecommunication #Assessments24x7`,
+                    postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 11,
+                    title: 'Quote: Dr. Tony on Communication - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF5Sgxss_Y/77tCKEnWjR2DxRcbI2-OOg/view?utm_content=DAF5Sgxss_Y&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/41TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Elevating your skills = elevating your success.
+💬🚀 #EffectiveCommunication #ProfessionalGrowth #Personalgrowth #ContinuedEducation #DISCCertifiation #DISCAssessment #Behavioralstyle #Assessments24x7`,
+                    postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 12,
+                    title: 'Collective Learning Quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF6DDIV0Z8/aGjlVNSeMfjNQO61XdxVQQ/view?utm_content=DAF6DDIV0Z8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/44TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Actively engage with individuals whose intelligence surpasses yours.
+
+#DISC #Communications #CollectiveLearnning #ContinuedEducation #Assessments24x7`,
                     postCategory: 'Inspirational Quotes'
                 }
             ]

@@ -241,6 +241,47 @@ This holiday, go the extra mile and give the gift of improved communication and 
 
 #TeamDevelopment #DISCBlocks #EffectiveCommunication #DISC #DISCStyle #traininganddevelopment #leadershipdevelopment #coaching #hr #businessdevelopment`,
                     postCategory: 'Promotional'
+                },
+                {
+                    id: 9,
+                    title: 'Yearly reflections Post - 25 Million Assessments - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF4MZNNAqs/unO3ejgm6qCfn_Veb3H8xg/view?utm_content=DAF4MZNNAqs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/39TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `💭 Did you know that Assessments 24x7 powers millions of assessments globally?
+
+🚀 Our assessment technology is trusted by leading organizations and coaches to shape their strategies for hiring & selection, performance evaluations, skills training, team-building, conflict management, promotion & succession planning, organizational restructuring, employee retention, and leadership development.
+
+💼 With over 20 years in business, a team of 21 dedicated employees, and 1,300+ Certified Practitioners, we've been a reliable partner for companies both big and small.
+
+Message us today to explore how can we help position you for maximum success in 2024.
+
+🚀 #Assessments24x7 #Reflections #ContinuingEducation #DISCCertification #EIQCertification #MotivatorsCertification #DISC #EIQ #Motivators #CommunicationSuccess #Businessdevelopment #HR #TrainingDevelopment`,
+                    postCategory: 'Promotional'
+                },
+                {
+                    id: 10,
+                    title: 'Testimonial - Doug Bowersock - Part 1  - IG-LI',
+                    canvaLink: 'https://www.canva.com/design/DAGFxBskPW4/UvxdgChoIk69oau9LFk6lg/view?utm_content=DAGFxBskPW4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/42TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Client success stories like this are the heartbeat of our unwavering commitment. Take charge of your success in 2024 with the
+Assessments 24x7 difference -
+✨ White-Labeled Assessments: Tailored to your brand
+🖥️ Effortless Dashboard Management
+📚 Complimentary Access to Versatile Training Materials
+Plus, elevate your expertise with our self-paced virtual certifications offering Continuing Education Credits with ICF, SHRM, HRCI, and ATD.
+
+Let's explore how you can transform your impact with Assessments in 2024 and beyond. https://www.assessments24x7.com/contact
+
+#HR #TrainingandDevelopment #LeadershipDevelopment #TeamTraining #Consulting #CertifiedExcellence #2024Goals #GrowthMindset #Assessments #Datadriven #DISCCommunication #DISCAssessment #Assessments24x7 #SHRM #ICF #HRCI #ATD Certified #DISCCertification`,
+                    postCategory: 'Promotional'
                 }
             ]
         };
