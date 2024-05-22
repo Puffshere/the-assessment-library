@@ -350,6 +350,26 @@ Drop a 🌟 in the comments if you'll be saying "Yes" to yourself a little more 
 
 #Communication #Management #Humanresources #deeplearning #minfdullness`,
                     postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 17,
+                    title: 'Sales Quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAGB1dyLRzQ/LpCW5lQe3nnJhIy2kkRaAw/view?utm_content=DAGB1dyLRzQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/63TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Are you prioritizing your customer’s needs to stay ahead of the competition?
+💭
+
+#Mindsetgrowth
+#MindsetMonday
+#Businesssuccess
+#Sales
+#Successtips
+#Assessments24x7`,
+                    postCategory: 'Inspirational Quotes'
                 }
             ]
         };

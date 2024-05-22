@@ -312,6 +312,32 @@ Get in touch with a dedicated specialist today to discuss how we can support you
 
 #executivecoaching #salestraining #Assessments #Customization #Branding #UnlockPotential #DISCCertification #AssessmentExpert #CareerDevelopment #ProfessionalGrowth #InvestInYourself #ContinuedEducation #Assessments24x7`,
                     postCategory: 'Promotional'
+                },
+                {
+                    id: 13,
+                    title: 'Did you know - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF_5MQz660/9GrlVoYtluU98hE1k2l6Ew/view?utm_content=DAF_5MQz660&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/62TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `This just scratches the surface of our customization capability. Including your branding and mission statement on the cover not only enhances your professional image but also reinforces your identity and ownership over the assessments. This level of customization is invaluable for large corporations looking to maintain consistency across their branding and messaging, as well as for independent coaches who want to establish themselves as authoritative figures in their field by private labeling the assessments. How does this sound to you?
+
+#Customization #Branding #UnlockPotential #DISCCertification #AssessmentExpert #CareerDevelopment #ProfessionalGrowth #InvestInYourself #ContinuedEducation #Assessments24x7`,
+                    postCategory: 'Promotional'
+                },
+                {
+                    id: 14,
+                    title: 'Customizations - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAGEp1QKxnY/cQQJ-qs0i5HNBPQ2Jne0Hg/view?utm_content=DAGEp1QKxnY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/68TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Did you know? At Assessments 24x7, we’re more than just Assessments and Certification; we’re your ultimate Assessment Technology customization partner. From API integration to personalized reports, user experience, and domain-specific customization, we empower you to tailor assessments to your exact needs. Let’s explore how we can elevate your business together! #UnlockPotential #Assessments #Assessemnttechnology #Customizations #AssessmentExpert #CareerDevelopment #ProfessionalGrowth #InvestInYourself #Businessdevelopment #Assessments24x7`,
+                    postCategory: 'Promotional'
                 }
             ]
         };

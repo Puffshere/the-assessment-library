@@ -286,6 +286,20 @@ Excited to learn more about DISC Assessments? Like this post! 👍
 #WomenInBusiness #WomenLeaders #DiversityandInclusion
 #Leadership #WorkplaceDiversity #DISCAssessments #Assessments #DISCCertifiction #Assessments24x7`,
                     postCategory: 'Holidays'
+                },
+                {
+                    id: 12,
+                    title: 'World Book Day - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAGDPBPJu0I/VHUndxe6d25cDR1MEZIovw/view?utm_content=DAGDPBPJu0I&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/64TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `World Book Day? We can’t miss an opportunity to talk about “What Makes Humans Tick?”. Understanding, nurturing, and developing people are essential in every relationship. But how do you grasp a clear picture of someone’s needs, strengths, and challenges? Dive into the definitive guide on DISC and Motivators today to unlock the keys to understanding human behavior. Buy now on Amazon. Paperback or Kindle!: https://www.amazon.com/dp/B09DRSGKF4/ref=cm_sw_em_r_mt_dp_Z9QWYZDYXYV1RBD172WN
+
+#WorldBookDay #DISC #Motivators #disc #discprofile #motivators #book #communication`,
+                    postCategory: 'Holidays'
                 }
             ]
         };

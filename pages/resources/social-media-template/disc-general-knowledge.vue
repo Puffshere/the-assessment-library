@@ -398,6 +398,30 @@ If you find these posts helpful, give that like button a tap, Share this post, a
 
 #LoveAndLearn #DISC #DISCAssessment #DISCReport #DISCTraining #Companyculture #PersonalRelationship #Professionalrelationship #DISCandromance #DISCCommunicstions #CommunicationStyles #DISCInsights #Wisdom #growth #Assessments24x7`,
                     postCategory: 'DISC: General Knowledge'
+                },
+                {
+                    id: 18,
+                    title: 'Cornerstone Principles of DISC - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAGCuSpIHg4/-HKDcatLtzHcvmMOG-ofFg/view?utm_content=DAGCuSpIHg4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/65TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `If you’re a DISC enthusiast, these principles are essential reminders. 🌟 Bookmark for later and share to spread the knowledge! #DISC #WorkplaceDynamics #Relationships #Communication #DISCProfile #Selfawareness #Growth #Assessments24x7`,
+                    postCategory: 'DISC: General Knowledge'
+                },
+                {
+                    id: 19,
+                    title: 'What DISC Measures - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAGE1EO67Xw/9OTPSaV7P7-2R_HR8mLj-w/view?utm_content=DAGE1EO67Xw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/66TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Facts👆Did you know this? Let us know in the poll. #DISC #BehavioralAssessment #ProfessionalDevelopment #ContinuedEdcuation #OngoingLearning #DISCProfile #Assessments24x7`,
+                    postCategory: 'DISC: General Knowledge'
                 }
             ]
         };

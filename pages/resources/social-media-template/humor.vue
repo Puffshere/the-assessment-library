@@ -243,6 +243,20 @@ Trust the process, and let’s unlock potential together. 🚀
 #DISCReport #DISCTraining #CommunicationStyles #DISCInsights #HRMeme #Meme #HR #LeadershipTraining #TeamTraining #Hiring #DISCTips #DISCCertification #Assessments24x7
 #BehavioralDiversity`,
                     postCategory: 'Humor'
+                },
+                {
+                    id: 8,
+                    title: 'More Certifications Meme - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF_-MRWCFw/LiPTQJcb5qopUmIRrhm-UA/view?utm_content=DAF_-MRWCFw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/67TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Hit the like button if you’ve been personally victimized by this tweet.
+
+#Certifications #Meme #Assessments24x7`,
+                    postCategory: 'Humor'
                 }
             ]
         };
