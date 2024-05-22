@@ -162,6 +162,20 @@ Check out our blog on Platinum Rules for Success, as Dr. Tony Alessandra dives i
 
 🚀 #SalesEvolution #HighTrustSelling #SalesStrategies #Communication`,
                     postCategory: 'Educational'
+                },
+                {
+                    id: 4,
+                    title: 'TOP PERFORMING LEADERS - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAF_gOTTdpc/clonsOSSpKI-R0PMqtwc3g/view?utm_content=DAF_gOTTdpc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/61TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `Exceptional leadership means constantly honing one’s skills and investing in self-development through personal and professional growth. Elevate your leadership game with these 8 essential skills from Dr. Tony Alessandra. Drop a comment below with one skill you’re committed to applying this Month! Let’s fuel our growth and drive toward excellence...
+
+#LeadershipSkills #ProfessionalDevelopment #SelfImprovement #GrowthMindset #Assessments24x7`,
+                    postCategory: 'Educational'
                 }
             ]
         };

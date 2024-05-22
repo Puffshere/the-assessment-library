@@ -298,6 +298,20 @@ Get in touch with a dedicated specialist today to discuss how we can support you
 
 #BusinessEmpowerment #AssessmentTechnology #StrategicPartnership #BusinessGrowth #CoachingCommunity #LeadershipDevelopment #DISCAssessment #ClientSuccess #StrategicConsulting #ProfessionalDevelopment #Behavioralassessments #ContinuedEducation #DISCCertification #Assessments24x7`,
                     postCategory: 'Promotional'
+                },
+                {
+                    id: 12,
+                    title: 'How to Start a private Labeled Assessment Company',
+                    canvaLink: 'https://www.canva.com/design/DAF_36KTstg/cYKoonzTk2xtOd19XfCejQ/view?utm_content=DAF_36KTstg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/60TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Starting a Private Labeled Assessment Business is this easy. ✨ Gain immediate access to our suite of assessments via a tailored online dashboard. Customize reports to stand out in your industry and infuse them with your unique content. With full control over design elements, including headers and footers, you’ll seamlessly integrate your branding. Experience unparalleled customization – it’s time to make your mark with Assessments 24x7. Send us a dm to take that next step. 💼🌟
+
+#executivecoaching #salestraining #Assessments #Customization #Branding #UnlockPotential #DISCCertification #AssessmentExpert #CareerDevelopment #ProfessionalGrowth #InvestInYourself #ContinuedEducation #Assessments24x7`,
+                    postCategory: 'Promotional'
                 }
             ]
         };

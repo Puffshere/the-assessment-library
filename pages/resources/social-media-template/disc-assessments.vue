@@ -204,6 +204,120 @@ For 20+ years, we have provided Coaches with the tools to optimize their hiring 
 
 #businesssuccess #coachingexcellence #discstyles #growthmindset #Coaching #professionaldevelopment`,
                     postCategory: 'DISC: Assessments'
+                },
+                {
+                    id: 6,
+                    title: 'Kids DISC Post - 1',
+                    canvaLink: 'https://www.canva.com/design/DAF77qlAMnw/lFDlIlcaP4wXBRA3N1bckw/view?utm_content=DAF77qlAMnw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/57TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Unleash children’s potential with our Kids DISC! 🚀
+Explore their unique bird styles:
+🦅 Eagle: Confident, decisive, and competitive.
+🦜 Parrot: Energetic, sociable, and adventurous.
+🕊️ Dove: Compassionate, nurturing, and empathetic.
+🦉 Owl: Analytical, organized, and curious.
+
+Empower your child’s growth with personalized insights!
+
+Contact us now to discover how Kids DISC can ignite excellence amongst children today: https://www.assessments24x7.com/contact
+
+#KidsDISC #UnlockPotential #ParentingTips #Teachers #Assessments #Assessmentsforkids #Assessments24x7`,
+                    postCategory: 'DISC: Assessments'
+                },
+                {
+                    id: 7,
+                    title: '9 Proven Reason - 1. Hiring and Selection - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF_Tv1JAI4/yrmTLGisVnj9tbp1FkyD6g/view?utm_content=DAF_Tv1JAI4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/59aTemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `🚀 Ready to revolutionize your hiring process?
+
+DISC assessments offer powerful insights into behavioral styles, guiding individuals towards roles that match their traits for success.
+
+🔴 Dominance (D)
+🟡 Influence (I)
+🟢 Steadiness (S)
+🔵 Conscientiousness (C)
+
+Employers use DISC to evaluate team dynamics and candidate suitability, fostering growth and talent development. But before you go all in, it’s important to remember these key considerations:
+
+🔍 Transparency: Inform candidates about the assessment's role and secure their consent.
+
+🤝 Fair Hiring: Use DISC as one aspect of your evaluation process to avoid bias and decision-making solely based on it.
+
+🌐 Accessibility: Ensure that both the assessment and hiring processes are inclusive and accessible to everyone.
+
+🎓 Certified Expertise: Collaborate with certified professionals for accurate DISC interpretation.
+
+🚀Reach out and learn more about how our Assessments can elevate your hiring game. https://www.assessments24x7.com/contact
+
+#Hiring #Recruitment #Hiringprocess #recruiting #DISC #DISCAssessment #DISCCertification #ContinuedEducation #DataDrivenDecisions #Assessments24x7`,
+                    postCategory: 'DISC: Assessments'
+                },
+                {
+                    id: 8,
+                    title: '9 Proven Reason - 2. Increase Sales - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF_-GaS_wM/D42GmM1WldsqlPQt1peMSQ/view?utm_content=DAF_-GaS_wM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/59bTemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `In Sales, self-awareness is without a doubt the first step in mastering effective communication, especially when navigating the diverse landscape of your prospect’s behavioral style. Here are 4 steps to use DISC to increase your sales:
+🔍 Discover your own DISC behavioral style: Begin by understanding your own strengths, weaknesses, and communication preferences using the DISC assessment tool.
+🎯 Identify the behavioral styles of your prospects: Develop a keen sense of observation to recognize subtle cues in written and body language that indicate your client’s DISC behavioral style. (Did you know... you often can tell a lot about one’s DISC style by their written LinkedIn Bio?)
+✂️ Tailor your approach: Armed with self-awareness and an understanding of your client’s behavioral style, adapt your communication style to resonate with their preferences.
+🌟 Incorporate Dr. Tony Alessandra PhD’s golden rule: “Treat people how THEY want to be treated.” Use your newfound understanding to communicate in a manner that speaks directly to your client’s preferred language, fostering trust and deepening connections.
+
+Ready to take your sales game to the next level? Talk to a dedicated DISC expert today to learn how Assessments can skyrocket your sales success! https://www.assessments24x7.com/contact
+
+& continue to follow along as we continue to share the 9 proven reasons to use Assessments!
+
+#SalesSuccess #SelfAwareness #DISCProfile #EffectiveCommunication #SalesTraining #Selling #Assessments #Assessments24x7`,
+                    postCategory: 'DISC: Assessments'
+                },
+                {
+                    id: 9,
+                    title: '9 Proven Reason - 3. Create World Class Leaders - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAGCHOaokXc/IKSBAJd_AXwZbcgCJw9T8w/view?utm_content=DAGCHOaokXc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/59cTemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `9 Proven Reasons to Use Assessments - #3: Elevate Your Leadership Game 🚀
+
+If you’re already leveraging DISC, consider amplifying your insights with our Leadership Effectiveness 360° Assessment. Gain invaluable perspective into how OTHERS perceive your leadership. Enhance performance across all levels by identifying strengths, areas for improvement, and crafting personalized development plans. Empower your leaders to maximize their potential and propel your organization toward success. Check the comments below to see a sample report and contact us today for more information.
+
+#LeadershipDevelopment #SelfImprovement #UnlockYourPotential #Datadrivendecisions #HR #Traininganddevelopment #Assessments #DISC #Leadership #360 #Assessments24x7`,
+                    postCategory: 'DISC: Assessments'
+                },
+                {
+                    id: 10,
+                    title: '9 Proven Reason - 4. Increase Productivity - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAGD4nJo8gs/t2uvr21zcn5e3nTIqth8yA/view?utm_content=DAGD4nJo8gs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/59dTemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `The key to high productivity? Motivation 🗝️
+
+Just as DISC reveals behavior, Motivators uncover the why behind actions, reflecting our values and shaping decisions. A motivated workforce is key to success.
+
+Our DISC & Motivators Assessment empowers businesses to understand and optimize motivation. Prioritizing employee motivation boosts bottom lines.
+
+Ready to harness this power? DM us to connect with a dedicated specialist today to learn more and see a sample report for yourself (available in 10 languages). Link in comments below!
+
+#DISC #Motivators #Assessment #Certification#WorkforceOptimization #MotivatorsAssessment #Certification #DISCProfile #Productivity #Motivation #Assessments24x7`,
+                    postCategory: 'DISC: Assessments'
                 }
             ]
         };
