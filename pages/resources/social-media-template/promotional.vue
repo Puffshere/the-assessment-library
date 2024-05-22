@@ -282,6 +282,22 @@ Let's explore how you can transform your impact with Assessments in 2024 and bey
 
 #HR #TrainingandDevelopment #LeadershipDevelopment #TeamTraining #Consulting #CertifiedExcellence #2024Goals #GrowthMindset #Assessments #Datadriven #DISCCommunication #DISCAssessment #Assessments24x7 #SHRM #ICF #HRCI #ATD Certified #DISCCertification`,
                     postCategory: 'Promotional'
+                },
+                {
+                    id: 11,
+                    title: 'Testimonial - Doug Bowersock - Part 2- IG-LI',
+                    canvaLink: 'https://www.canva.com/design/DAF41gBN8FI/IninhDjoe10ZsbdAQJKJLQ/view?utm_content=DAF41gBN8FI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/48TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `We have partnered with thousands of coaches and consultants to power their businesses. Our white-labeled dashboard comes fully equipped to deliver 50+ assessments and reports, while also providing the tools to take a business to the next level. Members receive access to our entire suite of validated products and reports, including our most productive and foundational DISC Assessment.
+
+Get in touch with a dedicated specialist today to discuss how we can support your 2024 objectives with our Assessment Technology today. https://www.assessments24x7.com/contact
+
+#BusinessEmpowerment #AssessmentTechnology #StrategicPartnership #BusinessGrowth #CoachingCommunity #LeadershipDevelopment #DISCAssessment #ClientSuccess #StrategicConsulting #ProfessionalDevelopment #Behavioralassessments #ContinuedEducation #DISCCertification #Assessments24x7`,
+                    postCategory: 'Promotional'
                 }
             ]
         };

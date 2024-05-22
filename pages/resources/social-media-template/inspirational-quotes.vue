@@ -280,6 +280,34 @@ Drop a 🌟 in the comments if you'll be saying "Yes" to yourself a little more 
 
 #DISC #Communications #CollectiveLearnning #ContinuedEducation #Assessments24x7`,
                     postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 13,
+                    title: 'Talent Quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF6m9qDlaY/REhRvzuzXxHnOXc9MZRErQ/view?utm_content=DAF6m9qDlaY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/46TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `Talent = Your multiplier 📈
+
+#OrganizationalCulture #TeamSatisfaction #TalentAttraction #CorporateTraining #HRStrategies #EmployeeEngagement #LeadershipDevelopment #DISCModel #BusinessCulture #WorkplaceSuccess #TeamBuilding #CareerDevelopment s #Assessments24x7`,
+                    postCategory: 'Inspirational Quotes'
+                },
+                {
+                    id: 14,
+                    title: 'Affirmation about adaptability and growth Quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAF7Rg7eDDk/oWBU-oESmrnzEprTDDIzOA/view?utm_content=DAF7Rg7eDDk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/47TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `New week, fresh mindset. 🚀 Happy Monday
+
+#Motivationmonday #Adaptability #Growthmindset #Continuedlearning #SuccessTips #Assessments24x7`,
+                    postCategory: 'Inspirational Quotes'
                 }
             ]
         };

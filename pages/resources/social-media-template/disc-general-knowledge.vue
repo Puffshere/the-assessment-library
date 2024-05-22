@@ -310,6 +310,76 @@ Not sure of your DISC Style? Take a free DISC Assessment here:
 
 #DISCStyles #CommunicationTips #ActiveListening #Softskills #Assessments24x7 #DISC`,
                     postCategory: 'DISC: General Knowledge'
+                },
+                {
+                    id: 13,
+                    title: 'Identify the DISC Styles in Writing - D  - LI/IG',
+                    canvaLink: 'https://www.canva.com/design/DAF6Kh-4UKQ/LjmYcOZ5GzU6f0yd4Sk5xg/view?utm_content=DAF6Kh-4UKQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/45aTemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `Emails, text messages, greeting cards.... Can you Identify each of the DISC Styles in writing? (Chances are YES if you're Certified. 😉)
+Here are some tips on identifying the D - #Dominance Style in writing. 📝✨
+
+Share this post with your Colleagues, Employees, and Clients, and keep these tips on hand for later!
+(Also be sure to keep an eye out for the I - #Influence Style next week🚀)
+
+#CommunicationStyles #DISCInsights #DISCAssessment #DISCStyle #DISCTips #Assessments24x7`,
+                    postCategory: 'DISC: General Knowledge'
+                },
+                {
+                    id: 14,
+                    title: 'Identify the DISC Styles in Writing - I  - LI/IG',
+                    canvaLink: 'https://www.canva.com/design/DAF6nq-CgAg/LiPX2L3bY82fczhRCcJ9Fw/view?utm_content=DAF6nq-CgAg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/45bTemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `I - Influence Style in Writing. 📝✨
+Much like body language, writing is a key avenue for expressing one's DISC Style, offering numerous indicators.
+
+Share this post with your Team, Peers, and Clients, and stay tuned for more insights!
+
+#CommunicationStyles #DISCInsights #DISCAssessment #DISCStyle #DISCTips #Assessments24x7 #Communicationtips #DISC #HR #Learninganddevelopment #CorporateTraining`,
+                    postCategory: 'DISC: General Knowledge'
+                },
+                {
+                    id: 15,
+                    title: 'Identify the DISC Styles in Writing - S  - LI/IG',
+                    canvaLink: 'https://www.canva.com/design/DAF7XIC-kIE/Z5KI9hKXVNc9TaCt5dSmcw/view?utm_content=DAF7XIC-kIE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/45cTemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `S - Steadiness Styles in Writing. 📝✨
+While all DISC Styles are of EQUAL importance, we think everyone could use an S in their life.
+Hit that like button and stick around for more 😉
+
+#CommunicationStyles #DISCInsights #DISCAssessment #DISCStyle #DISCTips #Assessments24x7`,
+                    postCategory: 'DISC: General Knowledge'
+                },
+                {
+                    id: 16,
+                    title: 'Identify the DISC Styles in Writing - C  - LI/IG',
+                    canvaLink: 'https://www.canva.com/design/DAF8BPw5koU/iKoz8IY_FjGf7Zo1X4YK7w/view?utm_content=DAF8BPw5koU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/45dTemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `Let's explore the C - Conscientiousness DISC Styles in Writing. 📝✨ Now, think about the recent email or text from a colleague or friend. Was it:
+Short and to the point? D-Style
+Warm and elaborate, maybe a bit meandering? I-Style
+Consistently optimistic and personalized? S-Style
+Detailed with questions, remarks, and extras? C-Style
+Apply the key indicators we've shared in previous weeks to tailor your written communications to their specific DISC Style. (This makes your message more relatable and likely to connect.)
+
+If you find these posts helpful, give that like button a tap, Share this post, and stay tuned for a DISC-filled month of Romance! (and a little football) 😉 #CommunicationStyles #DISCInsights #DISCAssessment #DISCStyle #DISCTips #Assessments24x7`,
+                    postCategory: 'DISC: General Knowledge'
                 }
             ]
         };
