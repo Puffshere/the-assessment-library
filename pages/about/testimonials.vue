@@ -198,7 +198,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/rebecca-maxwell.jpg" alt="Rebecca Maxwell">
+                            <img class="image" src="~/assets/testimonials/rebecca-gibbons.jpg" alt="Rebecca Maxwell">
                         </div>
 
                         <div class="col-9">
@@ -211,7 +211,7 @@
                             </div>
                             <h3 class="name">Rebecca Maxwell</h3>
                             <p class="attribution">
-                                Asentiv New York
+                                <a class="hyperlink" href="http://www.perception-insights.com/" target="_blank" rel="noopener">Perception Insights</a>
                             </p>
                             <p class="quote">
                                 Having online assessments available at the touch of a button has added even greater depth to our coaching & consulting work 
