@@ -16,13 +16,13 @@
 
                         <footer>
                             <cite>Rebecca Maxwell</cite>
-                            Asentiv New York
+                            <a class="hyperlink" href="http://www.perception-insights.com/" target="_blank" rel="noopener">Perception Insights</a>
                         </footer>
                     </blockquote>
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/banner/rebecca-maxwell.jpg" alt="Rebecca Maxwell">
+                    <img class="image" src="~/assets/testimonials/rebecca-gibbons.jpg" alt="Rebecca Maxwell">
                 </div>
             </div>
         </div>
