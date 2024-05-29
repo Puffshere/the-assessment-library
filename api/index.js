@@ -44,7 +44,17 @@ app.get('/pdfs/Disc_reminder_card_2023.pdf', (req, res) => {
     res.download(pdfPath);
 });
 
-app.use(helmet());
+app.use(helmet({
+    permissionsPolicy: {
+        features: {
+            geolocation: ["self"],
+            microphone: [],
+            camera: [],
+            // Add other valid features here if needed
+        }
+    }
+}));
+
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
