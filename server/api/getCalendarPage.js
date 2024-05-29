@@ -1,6 +1,5 @@
-// server/api/getCalendarPage.js
 const { incrementAndGetPage } = require('./../db');
-//import Settings from './../db' 
+
 
 module.exports = async (req, res) => {
   try {
