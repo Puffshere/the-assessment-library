@@ -173,7 +173,8 @@ module.exports = {
   },
 
   serverMiddleware: [
-    '~/api/index.js'
+    '~/api/index.js',
+    { path: '/api/getCalendarPage', handler: '~/server/api/getCalendarPage.js' }
   ],
 
   router: {

@@ -21,6 +21,7 @@ const upload = multer();
 const app = express();
 const path = require('path');
 const bcrypt = require('bcrypt');
+const { incrementAndGetPage } = require('../server/db');
 
 GhostSearch.start();
 
@@ -106,6 +107,16 @@ app.get('/announcements', (req, res) => {
 app.get('/announcementsTony', (req, res) => {
     announcements.getThreeMostRecentAnnouncementsByTony(req, res);
 });
+
+app.get('/getCalendarPage', async (req, res) => {
+    try {
+      const page = await incrementAndGetPage();
+      res.json({ page });
+    } catch (error) {
+      console.error('Error handling request:', error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
 
 app.post('/contact', (req, res) => {
     contactController.createContact(req, res);
