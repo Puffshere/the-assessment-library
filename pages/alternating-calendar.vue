@@ -7,7 +7,7 @@
 export default {
   async asyncData({ $axios, redirect }) {
     try {
-      const response = await $axios.get('http://localhost:3000/api/getCalendarPage');
+      const response = await $axios.get('/api/getCalendarPage');
       const page = response.data.page;
       redirect(`/${page}`);
     } catch (error) {

@@ -14,12 +14,12 @@ import GhostSearch from './ghost-search';
 import multer from 'multer';
 import cors from 'cors';
 import axios from 'axios';
-import Settings from './models/settings.js'; 
+import Settings from './models/settings.js';
+import path from 'path';
+import bcrypt from 'bcrypt';
+
 const upload = multer();
 const app = express();
-const path = require('path');
-const bcrypt = require('bcrypt');
-const { incrementAndGetPage } = require('../server/db');
 
 GhostSearch.start();
 
@@ -106,24 +106,9 @@ app.get('/announcementsTony', (req, res) => {
     announcements.getThreeMostRecentAnnouncementsByTony(req, res);
 });
 
-app.get('/getCalendarPage', async (req, res) => {
-    const { MongoClient } = require('mongodb');
-const uri = "mongodb://website:3pUpfMCc0E28ghdRLYOLFkbm7oCocvGg2zbSR6FegubepttZar5nfsx6WCvOx4SMkAeQ1DVwp7lfH8onG6diVQ==@assessments24x7.mongo.cosmos.azure.com:10255/website?ssl=true&sslverifycertificate=false";
-const dbName = 'website';
-let client;
-
-async function connectToDatabase() {
-  if (!client) {
-    client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    await client.connect();
-  }
-  return client.db(dbName);
-}
-
+// Use existing connection for this route
 async function incrementAndGetPage() {
-  const db = await connectToDatabase();
-  const collection = db.collection('visitCounter');
-
+  const collection = mongoose.connection.db.collection('visitCounter');
   const result = await collection.findOneAndUpdate(
     { _id: 'counter' },
     { $inc: { count: 1 } },
@@ -133,13 +118,15 @@ async function incrementAndGetPage() {
   const count = result.value.count;
   return count % 2 === 0 ? 'monica' : 'angie-w';
 }
-    try {
-      const page = await incrementAndGetPage();
-      res.json({ page });
-    } catch (error) {
-      console.error('Error handling request:', error);
-      res.status(500).send('Internal Server Error');
-    }
+
+app.get('/getCalendarPage', async (req, res) => {
+  try {
+    const page = await incrementAndGetPage();
+    res.json({ page });
+  } catch (error) {
+    console.error('Error handling request:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.post('/contact', (req, res) => {
