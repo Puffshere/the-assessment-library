@@ -4,15 +4,14 @@
 
 <script>
 export default {
-  async asyncData({ $axios, redirect }) {
+  async mounted() {
     try {
-      const response = await $axios.get('/api/getCalendarPage');
+      const response = await this.$axios.get('/api/getCalendarPage');
       const page = response.data.page;
-      redirect(`/${page}`);
+      this.$router.push(`/${page}`);
     } catch (error) {
       console.error('Error fetching calendar page:', error);
-      // Optional: redirect to an error page or a fallback page
-      redirect('/error');
+      this.$router.push('/error');
     }
   }
 };
