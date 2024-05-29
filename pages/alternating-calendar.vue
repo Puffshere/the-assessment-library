@@ -1,7 +1,6 @@
-<!-- <template>
+<template>
   <div></div>
 </template>
-
 
 <script>
 export default {
@@ -12,7 +11,9 @@ export default {
       redirect(`/${page}`);
     } catch (error) {
       console.error('Error fetching calendar page:', error);
+      // Optional: redirect to an error page or a fallback page
+      redirect('/error');
     }
   }
 };
-</script> -->
+</script>
