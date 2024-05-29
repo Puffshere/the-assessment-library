@@ -213,7 +213,7 @@ app.post('/completions', async (req, res) => {
 
 app.post('/verify-password', async (req, res) => {
     try {
-        const { password } = req.body; 
+        const { password } = req.body;
         const setting = await Settings.findOne({ key: "employeeAccessPassword" });
 
         if (!setting) {
