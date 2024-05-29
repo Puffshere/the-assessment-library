@@ -6,6 +6,7 @@ import workshopLeaderController from './controllers/workshopLeaderController';
 import directoryController from './controllers/directoryController';
 import communicationCoachController from './controllers/communicationCoachController';
 import contactController from './controllers/contactController';
+import calendarController from './controllers/calendarController';
 import uploadController from './controllers/uploadController';
 import leadController from './controllers/leadController';
 import settings from './controllers/settings';
@@ -106,27 +107,8 @@ app.get('/announcementsTony', (req, res) => {
     announcements.getThreeMostRecentAnnouncementsByTony(req, res);
 });
 
-// Use existing connection for this route
-async function incrementAndGetPage() {
-  const collection = mongoose.connection.db.collection('visitCounter');
-  const result = await collection.findOneAndUpdate(
-    { _id: 'counter' },
-    { $inc: { count: 1 } },
-    { returnOriginal: false, upsert: true }
-  );
-
-  const count = result.value.count;
-  return count % 2 === 0 ? 'monica' : 'angie-w';
-}
-
-app.get('/getCalendarPage', async (req, res) => {
-  try {
-    const page = await incrementAndGetPage();
-    res.json({ page });
-  } catch (error) {
-    console.error('Error handling request:', error);
-    res.status(500).send('Internal Server Error');
-  }
+app.get('/getCalendarPage', (req, res) => {
+    calendarController.incrementAndGetPage(req, res)
 });
 
 app.post('/contact', (req, res) => {
