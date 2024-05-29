@@ -2,6 +2,7 @@
     <div></div>
   </template>
   
+  
   <script>
   export default {
     async asyncData({ $axios, redirect }) {
