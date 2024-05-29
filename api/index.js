@@ -10,7 +10,7 @@ import uploadController from './controllers/uploadController';
 import leadController from './controllers/leadController';
 import settings from './controllers/settings';
 import announcements from './controllers/announcements';
-import GhostSearch from 'ghost-search';
+import GhostSearch from './ghost-search';
 import multer from 'multer';
 import cors from 'cors';
 import axios from 'axios';
@@ -44,19 +44,7 @@ app.get('/pdfs/Disc_reminder_card_2023.pdf', (req, res) => {
     res.download(pdfPath);
 });
 
-app.use(helmet({
-    contentSecurityPolicy: false, // disable if you don't have a CSP
-    crossOriginEmbedderPolicy: false, // disable if you don't use COEP
-    permissionsPolicy: {
-        features: {
-            geolocation: ['self'],
-            microphone: [],
-            camera: [],
-            // Add other valid features here
-        }
-    }
-}));
-
+app.use(helmet());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -118,6 +106,7 @@ app.get('/announcementsTony', (req, res) => {
     announcements.getThreeMostRecentAnnouncementsByTony(req, res);
 });
 
+// Use existing connection for this route
 async function incrementAndGetPage() {
   const collection = mongoose.connection.db.collection('visitCounter');
   const result = await collection.findOneAndUpdate(
