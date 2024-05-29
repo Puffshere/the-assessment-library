@@ -15,8 +15,6 @@ import multer from 'multer';
 import cors from 'cors';
 import axios from 'axios';
 import Settings from './models/settings.js'; 
-
-
 const upload = multer();
 const app = express();
 const path = require('path');
@@ -32,7 +30,7 @@ const cosmos = {
     host: 'assessments24x7.mongo.cosmos.azure.com',
     port: '10255',
     opts: '?ssl=true&sslverifycertificate=false'
-}
+};
 
 const connectionString = `mongodb://${cosmos.username}:${cosmos.password}@${cosmos.host}:${cosmos.port}/${cosmos.name}${cosmos.opts}`;
 mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -116,7 +114,7 @@ app.get('/getCalendarPage', async (req, res) => {
       console.error('Error handling request:', error);
       res.status(500).send('Internal Server Error');
     }
-  });
+});
 
 app.post('/contact', (req, res) => {
     contactController.createContact(req, res);
@@ -183,7 +181,6 @@ app.post('/slack/events', async (req, res) => {
     }
 });
 
-
 app.post('/completions', async (req, res) => {
     try {
         // Code needed for development
@@ -218,27 +215,6 @@ app.post('/completions', async (req, res) => {
         res.status(500).json({ error: error.message || 'Internal Server Error' });
     }
 });
-
-// Don't believe this was ever being used, will delete it after some time to verify
-
-// app.post('/verify-password', async (req, res) => {
-//     try {
-//         const { password } = req.body;
-//         const db = client.db("website");
-//         const collection = db.collection('settings');
-
-//         const setting = await collection.findOne({ key: "employeeAccessPassword" });
-//         const match = await bcrypt.compare(password, setting.hashedPassword);
-
-//         if (match) {
-//             res.json({ success: true });
-//         } else {
-//             res.json({ success: false });
-//         }
-//     } catch (error) {
-//         res.status(500).send(error);
-//     }
-// });
 
 app.post('/verify-password', async (req, res) => {
     try {
