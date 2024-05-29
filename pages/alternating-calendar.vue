@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div></div>
 </template>
 
@@ -15,4 +15,4 @@ export default {
     }
   }
 };
-</script> -->
+</script>
