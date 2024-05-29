@@ -1,4 +1,4 @@
-const { incrementAndGetPage } = require('./../db');
+const { incrementAndGetPage } = require('../server/db');
 
 
 module.exports = async (req, res) => {
