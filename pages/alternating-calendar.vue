@@ -6,8 +6,8 @@
 <script>
 export default {
   async asyncData({ $axios, redirect }) {
+    console.log("this is the first console log");
     try {
-      console.log("this is the first console log");
       const response = await $axios.get('/api/getCalendarPage');
       console.log("this is the response", response);
       const page = response.data.page;
