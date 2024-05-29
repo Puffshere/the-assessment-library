@@ -6,7 +6,7 @@
 export default {
   async mounted() {
     try {
-      const response = await this.$axios.get('/api/getCalendarPage');
+      const response = await this.$axios.get(`/api/getCalendarPage`);
       const page = response.data.page;
       this.$router.push(`/${page}`);
     } catch (error) {
