@@ -33,7 +33,7 @@
                                     Customize
                                 </h1>
                                 <h2>
-                                    your
+                                    Your
                                 </h2>
                                 <h2>
                                     Assessment
@@ -112,8 +112,7 @@
                                 <h3>Custom Reports</h3>
                                 <hr />
                                 <p>
-                                    <span class="paragraph">Stand out from the crowd with our customizable</span>
-                                    reports that
+                                    <span class="paragraph">Stand out from the crowd with our customizable reports</span> that
                                     cater to your specific requirements. Whether you need to tailor text,
                                     incorporate static content, adjust colors, or include graphics, we've got you
                                     covered. Our reports offer a variety of angles, providing insights that are
