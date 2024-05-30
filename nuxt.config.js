@@ -134,7 +134,8 @@ module.exports = {
       '/cristina',
       '/tools/email-dev',
       '/tools/email-original',
-      '/resources/standards-and-procedures'
+      '/resources/standards-and-procedures',
+      '/hiresense-calc'
     ]
   },
   gtm: {
