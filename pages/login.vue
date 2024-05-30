@@ -38,7 +38,7 @@
                     <div class="help">
                         <p>
                             <strong>Still having trouble?</strong> If you are unable to locate your login domain, please contact us at 
-                            <a class="hyperlink" target="_blank" href="mailto:support@assessents24x7.com">support@assessents24x7.com</a> for assistance.
+                            <a class="hyperlink" target="_blank" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a> for assistance.
                         </p>
                     </div>
                 </div>
