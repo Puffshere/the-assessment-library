@@ -193,6 +193,25 @@
                     <table style="width:100%">
                         <thead>
                             <tr>
+                                <th>DISC Leadership Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Leadership+-+Marketing+One-Sheet.pdf"
+                                        target="_blank" rel="noopener">DISC Leadership Introduction</a>
+                                    <small>A single-page descriptive document to introduce and promote DISC Leadership.
+                                    </small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
                                 <th>DISC Awareness (EI) Resources</th>
                             </tr>
                         </thead>
@@ -204,6 +223,14 @@
                                         target="_blank" rel="noopener">DISC Awareness Debrief Guide</a>
                                     <small>An overview guide for coaching, debriefing, and applying the DISC Awareness
                                         (EI) report with page-by-page details and suggestions for use. </small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+-+Marketing+One-Sheet.pdf"
+                                        target="_blank" rel="noopener">DISC Awareness Introduction</a>
+                                    <small>A single-page descriptive document to introduce and promote DISC Awareness in
+                                        simple and practical overview </small>
                                 </td>
                             </tr>
                         </tbody>

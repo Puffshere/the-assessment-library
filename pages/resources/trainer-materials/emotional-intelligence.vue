@@ -136,6 +136,14 @@
                                         (EI) report with page-by-page details and suggestions for use.</small>
                                 </td>
                             </tr>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+-+Marketing+One-Sheet.pdf"
+                                        target="_blank" rel="noopener">DISC Awareness Introduction</a>
+                                    <small>A single-page descriptive document to introduce and promote DISC Awareness in
+                                        simple and practical overview </small>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
 
