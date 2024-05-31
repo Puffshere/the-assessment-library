@@ -1190,7 +1190,7 @@
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+CAREERS.pdf"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Careers.pdf"
                                         target="_blank" rel="noopener">DISC Careers</a>
                                     <small>A one-page list of some of the most common job roles behaviorally-aligned
                                         with
