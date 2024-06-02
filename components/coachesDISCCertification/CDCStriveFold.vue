@@ -25,7 +25,6 @@
 
 <script>
 export default {
-    name: 'CDC Strive Fold',
     methods: {
         scrollToSection(event) {
             const element = document.getElementById('cdcContactForm');

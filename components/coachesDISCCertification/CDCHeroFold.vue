@@ -31,7 +31,6 @@
 
 <script>
 export default {
-    name: 'CDC Hero Fold',
     methods: {
         scrollToSection(event) {
             const element = document.getElementById('cdcContactForm');
