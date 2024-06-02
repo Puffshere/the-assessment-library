@@ -14,7 +14,7 @@
                         <br />
                         differentiate your services in a competitive market and attract high-profile executives.
                     </h5>
-                    <button class="light-blue">
+                    <button class="light-blue" @click="scrollToSection">
                         Get Started Today
                     </button>
                 </div>
@@ -24,7 +24,18 @@
 </template>
 
 <script>
-
+export default {
+    name: 'CDC Strive Fold',
+    methods: {
+        scrollToSection(event) {
+            const element = document.getElementById('cdcContactForm');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>

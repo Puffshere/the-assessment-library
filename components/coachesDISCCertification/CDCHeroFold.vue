@@ -16,7 +16,7 @@
                             <br />
                             Enhancing Your Coaching Efficacy
                         </h4>
-                        <button class="light-blue">
+                        <button class="light-blue" @click="scrollToSection">
                             Get Started Today
                         </button>
                     </div>
@@ -30,7 +30,18 @@
 </template>
 
 <script>
-
+export default {
+    name: 'CDC Hero Fold',
+    methods: {
+        scrollToSection(event) {
+            const element = document.getElementById('cdcContactForm');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -47,5 +58,4 @@
 .col-5 img {
     width: 100%;
 }
-
 </style>

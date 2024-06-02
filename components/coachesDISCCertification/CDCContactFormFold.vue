@@ -1,5 +1,5 @@
 <template>
-    <section class="form" id="discAwarenessContactForm">
+    <section class="form" id="cdcContactForm">
         <div class="container flex-container" id="form">
             <div class="row flex-container">
                 <div class="col-12">
@@ -60,7 +60,7 @@
                 <br />
                 <div class="row">
                     <div class="col-12">
-                        <button type="submit" class="">
+                        <button type="submit" class="white">
                             Submit
                         </button>
                     </div>

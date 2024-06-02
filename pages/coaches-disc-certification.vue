@@ -14,9 +14,9 @@
   <script>
   import Nav from '@/components/Nav';
   import Hero from '@/components/coachesDISCCertification/CDCHeroFold';
-  import ICFCredits from '@/components/coachesDISCCertification/ICFCreditsFold';
-  import Strive from '@/components/coachesDISCCertification/StriveFold';
-  import ContactForm from '@/components/coachesDISCCertification/ContactFormFold';
+  import ICFCredits from '@/components/coachesDISCCertification/CDCICFCreditsFold';
+  import Strive from '@/components/coachesDISCCertification/CDCStriveFold';
+  import ContactForm from '@/components/coachesDISCCertification/CDCContactFormFold';
   import Footer from '@/components/Footer';
   
   export default {

@@ -31,9 +31,34 @@ button {
     border: none;
     font-size: 15px;
     font-weight: 600;
+    cursor: pointer;
 
     &.light-blue {
         color: white;
         background-color: #00a8ff;
+
+        &:hover {
+            color: #00a8ff;
+            background-color: white;
+            border: 1px solid #00a8ff; // adding a border for better visibility on white background
+        }
+
+        &:focus {
+            color: #00a8ff;
+            background-color: rgb(187, 187, 187);
+            border: 1px solid #00a8ff; // adding a border for better visibility on white background
+        }
+    }
+
+    &.white {
+        &:hover {
+            color: white;
+            background-color: rgb(56, 56, 56);
+        }
+
+        &:focus {
+            color: white;
+            background-color: rgb(29, 29, 29);
+        }
     }
 }
