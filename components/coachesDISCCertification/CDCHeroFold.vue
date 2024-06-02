@@ -38,7 +38,22 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.$el.classList.add('animate-rise');
+                } else {
+                    this.$el.classList.remove('animate-rise');
+                }
+            });
         }
+    },
+    mounted() {
+        const observer = new IntersectionObserver(this.handleIntersection, {
+            threshold: 0.1 // Adjust this as needed
+        });
+        observer.observe(this.$el);
     }
 }
 </script>
@@ -56,5 +71,20 @@ export default {
 
 .col-5 img {
     width: 100%;
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(1in);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-rise {
+    animation: rise 1s ease-out;
 }
 </style>
