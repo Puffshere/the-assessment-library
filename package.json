@@ -55,7 +55,6 @@
     "nuxt": "2.14.12",
     "openai": "^4.5.0",
     "sanitize-html": "^2.12.1",
-    "sass": "^1.49.7",
     "tls": "^0.0.1",
     "uuid": "^8.3.2",
     "vee-validate": "^3.4.6",
@@ -84,7 +83,8 @@
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^2.0.0",
-    "sass-loader": "^7.1.0",
+    "sass": "^1.77.4",
+    "sass-loader": "^7.3.1",
     "webp-loader": "^0.5.0"
   },
   "engines": {
