@@ -21,7 +21,7 @@
                         </button>
                     </div>
                     <div class="col-5">
-                        <img src="~/assets/male_business_man.png" alt="male business man" class="manSmiling" />
+                        <img src="~/assets/coaches-disc-certification/man.png" alt="male business man" class="manSmiling" />
                     </div>
                 </div>
             </div>
