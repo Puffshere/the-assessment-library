@@ -57,7 +57,7 @@ export default {
 
 .container {
     padding-top: 10px;
-    padding-bottom: 120px;
+    padding-bottom: 110px;
 }
 
 h1 {
@@ -82,6 +82,7 @@ section {
 .col-12.button-container {
     display: flex;
     justify-content: center;
+    margin-top: 80px;
 }
 
 .timeline-container {

@@ -12,11 +12,11 @@
                         </h2>
                         <h4>
                             Earn <span class="hyperlink">ICF Credits</span> While
-                            <img src="~/assets/coaches-disc-certification/blue-arrow.png" alt="hero image">
+                            <img src="~/assets/coaches-disc-certification/blue-arrow.png" alt="hero image" class="arrow">
                             <br />
                             Enhancing Your Coaching Efficacy
                         </h4>
-                        <button class="light-blue" @click="scrollToSection">
+                        <button class="light-blue" style="margin-top: 20px;" @click="scrollToSection">
                             Get Started Today
                         </button>
                     </div>
@@ -63,6 +63,12 @@ export default {
 
 .container {
     padding: 50px 0;
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+h4 {
+    line-height: 38px;
 }
 
 .col-7 img {
@@ -71,6 +77,11 @@ export default {
 
 .col-5 img {
     width: 100%;
+    margin-top: 15px;
+}
+
+.arrow {
+    margin-top: -40px;
 }
 
 @keyframes rise {

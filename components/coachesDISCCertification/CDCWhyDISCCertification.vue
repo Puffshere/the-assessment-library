@@ -81,10 +81,15 @@ export default {
 
 .container {
     padding: 50px 0;
+
+    img {
+        width: 115%;
+    }
 }
 
 .title {
-    margin: 70px 0;
+    margin-top: 0px;
+    margin-bottom: 80px;
     line-height: 60px;
 }
 
@@ -104,12 +109,15 @@ export default {
 
         h4 {
             margin: 0;
+            font-weight: 600;
         }
     }
 
-    .blackWoman {
-        width: 100%;
+    p {
+        margin-top: -5px;
+        margin-bottom: 25px;
     }
+
 }
 
 section {
