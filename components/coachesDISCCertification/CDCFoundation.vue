@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <h1>Let DISC be your foundation <br />
-                        But don't stop there...
+                        <span style="font-weight: 400">But don't stop there...</span>
                     </h1>
                 </div>
                 <div class="col-12 button-container">
@@ -35,7 +35,8 @@ export default {
 @import './CDC.scss';
 
 .container {
-    padding: 50px 0;
+    padding-top: 10px;
+    padding-bottom: 120px;
 }
 
 h1 {

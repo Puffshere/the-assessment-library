@@ -3,11 +3,11 @@
         <div class="container flex-container" id="form">
             <div class="row flex-container">
                 <div class="col-12">
-                    <h2 class="formTitle">
+                    <h3 class="formTitle">
                         Ready to Elevate <br />
                         Your Coaching Practive?
-                    </h2>
-                    <h4 class="formTitle">
+                    </h3>
+                    <h4 class="formSubText">
                         Don't miss out on the opportunity to enhance your coaching <br />
                         effectiveness, earn ICF credits, and differentiate your services <br />
                         through DISC Certification.
@@ -170,7 +170,8 @@ export default {
 
 .body {
     .container {
-        padding: 50px 0;
+        padding-top: 25px;
+        padding-bottom: 145px;
     }
 
     .flex-container {
@@ -194,6 +195,13 @@ export default {
     .container {
         .formTitle {
             color: #ffffff;
+            line-height: 58px;
+            margin-bottom: -5px;
+        }
+
+        .formSubText {
+            color: #ffffff;
+            margin-bottom: 20px;
         }
 
         .whiteArrow {
