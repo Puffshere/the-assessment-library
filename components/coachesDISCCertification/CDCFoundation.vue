@@ -21,9 +21,13 @@
                     </div>
                     <div class="timeline-content">
                         <div class="item">DISC Self</div>
-                        <div class="item">DISC Leadership</div>
-                        <div class="item">DISC Awareness</div>
-                        <div class="item">DISC Executive Insights</div>
+                        <div class="item">DISC <br />
+                            Leadership</div>
+                        <div class="item">DISC <br />
+                            Awareness</div>
+                        <div class="item">DISC <br />
+                            Executive <br />
+                            Insights</div>
                         <div class="item"> & Beyond <br> 30+ Assessments <br> 20+ Languages </div>
                     </div>
                 </div>
@@ -82,7 +86,7 @@ section {
 .col-12.button-container {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 120px;
 }
 
 .timeline-container {
@@ -120,12 +124,14 @@ section {
     justify-content: space-around;
     width: 100%;
     margin-top: 20px;
+    font-size: 28px;
+    line-height: 34px;
 }
 
 .item {
-    text-align: center;
+    text-align: left;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
     text-decoration: underline;
 }
 
