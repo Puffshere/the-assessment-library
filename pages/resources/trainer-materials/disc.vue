@@ -66,7 +66,7 @@
                         <tbody>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDebriefingGuideCert.pdf"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Report+Certified+Debrief+Guide_vs7_06.2024.pdf"
                                         target="_blank" rel="noopener">DISC Debrief Guide</a>
                                     <small>Overview and Guide for what is included on each page of our 3 Part DISC
                                         assessment report. You can confirm your version of the report by checking the
@@ -76,7 +76,7 @@
                             </tr>
                             <tr v-else>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDebriefingGuide3.pdf"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Report+Debrief+Guide_nc_vs7_6.2024.pdf"
                                         target="_blank" rel="noopener">DISC Debrief Guide</a>
                                     <small>Overview and Guide for what is included on each page of our DISC assessment
                                         report. </small>
