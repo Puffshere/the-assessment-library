@@ -30,7 +30,7 @@ module.exports = {
       {
         rel: 'manifest',
         type: 'image/x-icon',
-        href: '/manifest.json'
+        href: '/static/manifest.json'
       },
     ]
   },
