@@ -26,7 +26,12 @@ module.exports = {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
-      }
+      },
+      {
+        rel: 'manifest',
+        type: 'image/x-icon',
+        href: '/manifest.json'
+      },
     ]
   },
 

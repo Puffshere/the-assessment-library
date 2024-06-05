@@ -1,0 +1,22 @@
+{
+    "name": "Assessments 24x7",
+    "short_name": "Assessments",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "description": "Assessments 24x7 - Your trusted source for professional assessments.",
+    "icons": [
+      {
+        "src": "/assets/discRoundLogo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/discRoundLogo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
