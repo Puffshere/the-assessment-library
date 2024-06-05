@@ -13,6 +13,7 @@ module.exports = {
     meta: [
       // unused javascript
       // { charset: 'utf-8' },
+      { name: 'google-site-verification', content: 'v4C06rU0Io2gGicg0vVafnrpu4kcC98GFIalGto2Cwc' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#01A8FF' },
       { name: 'msapplication-navbutton-color', content: '#01A8FF' },
