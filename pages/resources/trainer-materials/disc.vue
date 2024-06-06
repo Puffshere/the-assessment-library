@@ -911,6 +911,14 @@
                         <tbody>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Coffee+Break+Activity.pptx"
+                                        target="_blank" rel="noopener">Coffee Break</a>
+                                    <small>A quick activity that can be customized, if desired, to help with DISC style
+                                        identification practice.</small>
+                                </td>
+                            </tr>
+                            <tr v-if="certified">
+                                <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Vacation.pdf"
                                         target="_blank" rel="noopener">Planning a Vacation</a>
                                     <small>Teams work together to create a vacation opportunity for another DISC style
