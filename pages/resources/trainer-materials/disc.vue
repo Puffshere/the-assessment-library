@@ -146,8 +146,17 @@
 
                             <tr v-if="certified">
                                 <td>
+                                    <a class="hyperlink" href="https://youtu.be/Y65akO9eoMo"
+                                        target="_blank" rel="noopener">Communicating with the 4 Styles (DISC)</a>
+                                    <small>A demonstration showing a quick, comprehensive, and effective way to share
+                                        information for all 4 DISC styles in one conversation.</small>
+                                </td>
+                            </tr>
+
+                            <tr v-if="certified">
+                                <td>
                                     <a class="hyperlink" href="https://www.youtube.com/watch?v=j0KbAvu4uq0"
-                                        target="_blank" rel="noopener">Communicating with all 4 styles</a>
+                                        target="_blank" rel="noopener">Communicating with all 4 styles (with Birds)</a>
                                     <small>Merrick Rosenberg demonstrates a quick, thorough, and effective way to share
                                         information for all 4 DISC styles</small>
                                     <!-- <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/j0KbAvu4uq0"
