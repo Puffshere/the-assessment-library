@@ -105,29 +105,10 @@
                         Self-Paced
                     </button>
                 </div>
-
+                
                 <div v-if="selfPaced === false" class="col-12">
                     <h2 style="margin-bottom: 20px">2-Day Group Course Summary:</h2>
-
-                    <div class="col-6">
-                        <ul class="course-summary">
-                            <li class="topic disc">Take the Online DISC Assessment</li>
-                            <li class="topic disc">Complete online Virtual Training in short video segments</li>
-                            <li class="topic disc">Review your DISC assessment as you learn</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6">
-                        <ul class="course-summary">
-                            <li class="topic disc">Complete a live debrief session with an A24x7 trainer (options provided)</li>
-                            <li class="topic disc">Receive access to Library of DISC Trainer Materials</li>
-                            <li class="topic disc">Final Knowledge Check(s); receive feedback from trainer until you pass</li>
-                        </ul>
-                    </div>
-                </div>
-                <div v-else class="col-12">
-                    <h2 style="margin-bottom: 20px">Self-Paced Course Summary:</h2>
-
+                    
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic disc">Choose a 2-Day session that works for you</li>
@@ -135,7 +116,7 @@
                             <li class="topic disc">Attend the 2-Day session (4 hours per day)</li>
                         </ul>
                     </div>
-
+    
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic disc">Practice with fellow learners in small groups during the session w/guidance from trainer</li>
@@ -144,10 +125,29 @@
                         </ul>
                     </div>
                 </div>
+                <div v-else class="col-12">
+                    <h2 style="margin-bottom: 20px">Self-Paced Course Summary:</h2>
+
+                    <div class="col-6">
+                        <ul class="course-summary">
+                            <li class="topic disc">Take the Online DISC Assessment</li>
+                            <li class="topic disc">Complete online Virtual Training in short video segments</li>
+                            <li class="topic disc">Review your DISC assessment as you learn</li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-6">
+                        <ul class="course-summary">
+                            <li class="topic disc">Complete a live debrief session with an A24x7 trainer (options provided)</li>
+                            <li class="topic disc">Receive access to Library of DISC Trainer Materials</li>
+                            <li class="topic disc">Final Knowledge Check(s); receive feedback from trainer until you pass</li>
+                        </ul>
+                    </div> 
+                </div>
             </div>
-
+            
             <credits :isLight="true" shrm="12" hrci="10" atd="10" icfCore="5.25" icfRD="12.5" hrciProgramId="582706" />
-
+            
             <div class="row">
                 <div class="col-12">
                     <h2 id="motivators">Motivators Assessment Certification</h2>
