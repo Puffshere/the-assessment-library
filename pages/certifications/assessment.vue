@@ -402,10 +402,9 @@ export default {
         cursor: pointer;
 
         &:hover {
-            color: white;
             background-color: #272bff;
         }
-
+        
         &:focus {
             background-color: #2729ff;
         }
