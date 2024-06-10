@@ -104,12 +104,12 @@
                 </div>
 
                 <div class="col-12">
-                    <button ref="groupButton" @click="group" @focus="setFocus('groupButton')" class="discBtn">
+                    <button ref="groupButton" @click="group" @focus="setFocus('groupButton')" class="discBtn focus-btn">
                         <img src="~/assets/people-group.png" style="width: 12%;" alt="people icon">
                         Group
                     </button>
                     <button ref="selfPacedButton" @click="toggleSelfPaced" @focus="setFocus('selfPacedButton')"
-                        class="discBtn">
+                        class="discBtn focus-btn">
                         <img src="~/assets/head-self-paced.png" style="width: 12%;" alt="head icon">
                         Self-Paced
                     </button>
@@ -403,11 +403,21 @@ export default {
 
         &:hover {
             background-color: #272bff;
+            border: none;
         }
-        
+
         &:focus {
             background-color: #2729ff;
+            border: none;
         }
+    }
+
+    .focus-btn {
+        outline: none;
+    }
+
+    .focus-btn:focus {
+        outline: none;
     }
 
     .course-summary {
