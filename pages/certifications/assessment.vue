@@ -8,7 +8,8 @@
                     <div class="col-12">
                         <h1 class="section-title">Assessment Certification</h1>
                         <p>
-                            Gain a competitive edge while you build your resume and portfolio with a professional certification that sets you apart from 
+                            Gain a competitive edge while you build your resume and portfolio with a professional
+                            certification that sets you apart from
                             others in the assessment industry.
                         </p>
                     </div>
@@ -26,25 +27,30 @@
                     </p>
 
                     <p>
-                        Our assessment certification programs help people become experts at understanding and using assessments. Our training is designed 
-                        to foster a deeper understanding of the core assessments so that you can discover how each assessment can be used to be more 
+                        Our assessment certification programs help people become experts at understanding and using
+                        assessments. Our training is designed
+                        to foster a deeper understanding of the core assessments so that you can discover how each
+                        assessment can be used to be more
                         effective in your communication, leadership, and decision-making.
                     </p>
 
                     <h4>100% Virtual Training. On Your Schedule.</h4>
 
                     <p>
-                        Our assessment certification works with your schedule. Work through the courses online at any time of day or night. Work at your 
-                        own pace with no time constraints or schedules to worry about. Thinking about a change? Our core assessments can be used in any 
-                        industry or role, so your certification will benefit you as you move up the ladder, change companies, or even change industries. 
+                        Our assessment certification works with your schedule. Work through the courses online at any
+                        time of day or night. Work at your
+                        own pace with no time constraints or schedules to worry about. Thinking about a change? Our core
+                        assessments can be used in any
+                        industry or role, so your certification will benefit you as you move up the ladder, change
+                        companies, or even change industries.
                     </p>
 
                     <p>
                         Click below now to get started on your assessment certification!
-                    </p><br/>
+                    </p><br />
 
                     <nuxt-link to="/contact" class="button">Talk to a Specialist</nuxt-link>
-                    <nuxt-link to="/assessments" class="button outline">Learn More About Assessments</nuxt-link><br/><br/>
+                    <nuxt-link to="/assessments" class="button outline">Learn More About Assessments</nuxt-link><br /><br />
 
                     <h3 style="margin-bottom: -10px; margin-top: 50px;">Become A Certified Assessment Practitioner</h3>
                     <div class="col-6">
@@ -60,14 +66,14 @@
                     <div class="col-6">
                         <ul>
                             <li>Access Certified Trainer Material to use in your coaching/training business, including a Debrief Guide, PowerPoint presentations, and marketing materials</li>
-                            <li>Get listed on our International Directory of Certified Practitioners linked to your website</li> 
+                            <li>Get listed on our International Directory of Certified Practitioners linked to your website</li>
                             <li>Debrief clients with confidence</li>
                             <li>Maximize the effectiveness of your assessment debriefs</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div><br/><br/>
+        </div><br /><br />
 
         <div class="container">
             <div class="row">
@@ -80,32 +86,61 @@
 
                     <div class="col-9">
                         <p>
-                            Do you want to significantly improve your understanding of DISC and your ability to debrief DISC reports? Have you ever 
-                            struggled to figure out how to use the assessments for different client needs? Clear up those questions and more with 
-                            Assessments 24x7's DISC Certification program. This is an exceptional investment for every coach, HR specialist, and leadership 
-                            development professional. DISC Certification will give you the knowledge to debrief reports without hesitation- which means 
+                            Do you want to significantly improve your understanding of DISC and your ability to debrief DISC reports? Have you ever
+                            struggled to figure out how to use the assessments for different client needs? Clear up those questions and more with
+                            Assessments 24x7's DISC Certification program. This is an exceptional investment for every coach, HR specialist, and leadership
+                            development professional. DISC Certification will give you the knowledge to debrief reports without hesitation- which means
                             even more satisfied clients for you!
                         </p>
                     </div>
                 </div>
 
                 <div class="col-12">
-                    <h3 style="margin-bottom: -10px">Course Summary (12 hours):</h3>
+                    <button ref="groupButton" @click="group" @focus="setFocus('groupButton')" class="discBtn">
+                        <img src="~/assets/people-group.png" style="width: 12%;" alt="people icon">
+                        Group
+                    </button>
+                    <button ref="selfPacedButton" @click="toggleSelfPaced" @focus="setFocus('selfPacedButton')" class="discBtn">
+                        <img src="~/assets/head-self-paced.png" style="width: 12%;" alt="head icon">
+                        Self-Paced
+                    </button>
+                </div>
+
+                <div v-if="selfPaced === false" class="col-12">
+                    <h2 style="margin-bottom: 20px">2-Day Group Course Summary:</h2>
 
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic disc">Take the Online DISC Assessment</li>
-                            <li class="topic disc">Independent Review of Select Self-Study Documents</li>
-                            <li class="topic disc">Complete the 10-part DISC Virtual Training Program and all phases of the DISC Communications Coach training</li>
+                            <li class="topic disc">Complete online Virtual Training in short video segments</li>
+                            <li class="topic disc">Review your DISC assessment as you learn</li>
                         </ul>
                     </div>
 
                     <div class="col-6">
                         <ul class="course-summary">
-                            <li class="topic disc">Receive a personal DISC report debrief from one of our trainers</li>
-                            <li class="topic disc">Review the online Resources for DISC Trainers</li>
-                            <li class="topic disc">DISC Final Knowledge Check and certification call</li>
-                            
+                            <li class="topic disc">Complete a live debrief session with an A24x7 trainer (options provided)</li>
+                            <li class="topic disc">Receive access to Library of DISC Trainer Materials</li>
+                            <li class="topic disc">Final Knowledge Check(s); receive feedback from trainer until you pass</li>
+                        </ul>
+                    </div>
+                </div>
+                <div v-else class="col-12">
+                    <h2 style="margin-bottom: 20px">Self-Paced Course Summary:</h2>
+
+                    <div class="col-6">
+                        <ul class="course-summary">
+                            <li class="topic disc">Choose a 2-Day session that works for you</li>
+                            <li class="topic disc">Take the online DISC Assessment</li>
+                            <li class="topic disc">Attend the 2-Day session (4 hours per day)</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6">
+                        <ul class="course-summary">
+                            <li class="topic disc">Practice with fellow learners in small groups during the session w/guidance from trainer</li>
+                            <li class="topic disc">Receive access to Library of DISC Trainer Materials</li>
+                            <li class="topic disc">Complete certification at the of the workshop</li>
                         </ul>
                     </div>
                 </div>
@@ -123,10 +158,10 @@
 
                     <div class="col-9">
                         <p>
-                            The Motivators Assessment Certification Program provides a fresh perspective into human motivation. With this understanding, 
-                            organizations and workplaces can more effectively motivate employees to increase productivity, strengthen collaboration, and 
-                            produce exceptional results. The curriculum teaches the seven Dimensions of Motivation individually so that you learn how they 
-                            affect interactions with others. When you better understand what motivates your workforce – or yourself! – there’s no limit to 
+                            The Motivators Assessment Certification Program provides a fresh perspective into human motivation. With this understanding,
+                            organizations and workplaces can more effectively motivate employees to increase productivity, strengthen collaboration, and
+                            produce exceptional results. The curriculum teaches the seven Dimensions of Motivation individually so that you learn how they
+                            affect interactions with others. When you better understand what motivates your workforce – or yourself! – there’s no limit to
                             what you can achieve.
                         </p>
                     </div>
@@ -140,7 +175,6 @@
                             <li class="topic mot">Take the Online Motivators Assessment</li>
                             <li class="topic mot">Independent Review of Self-Study Reading and Videos</li>
                             <li class="topic mot">Receive a personal Motivators report debrief from a trainer</li>
-
                         </ul>
                     </div>
 
@@ -166,8 +200,8 @@
 
                     <div class="col-9">
                         <p>
-                            EIQ Certification provides enhanced clarity on how people perceive and apply their Emotional Intelligence, empowering 
-                            practitioners with the necessary insights to coach in a way that creates beneficial interpersonal outcomes. Boost your 
+                            EIQ Certification provides enhanced clarity on how people perceive and apply their Emotional Intelligence, empowering
+                            practitioners with the necessary insights to coach in a way that creates beneficial interpersonal outcomes. Boost your
                             interpersonal conflict management skills as well, and learn to tactfully deal with difficult people during stressful situations.
                         </p>
                     </div>
@@ -197,123 +231,203 @@
             <credits :isLight="true" shrm="12" hrci="7.5" atd="7.5" icfCore="8.25" icfRD="6.75" hrciProgramId="582701" />
         </div>
 
-        <br/>
+        <br />
         <LazyHydrate when-visible><susan-cranston /></LazyHydrate>
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
 
 <script>
-    import LazyHydrate from 'vue-lazy-hydration';
+import LazyHydrate from 'vue-lazy-hydration';
 
-    export default {
-        components: {
-            LazyHydrate,
-            'main-nav': () => import('@/components/Nav'),
-            'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
-            'footer-fold': () => import('@/components/Footer'),
-            'credits': () => import('@/components/Credits')
-        },
-        data() {
-            return {
-                structuredDataBreadcrumbs: {
-                    "@context": "http://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": "1",
-                            "item": {
-                                "@id": "https://assessments24x7.com/certifications",
-                                "name": "Certifications" 
-                            } 
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": "2",
-                            "item": {
-                                "@id": "https://assessments24x7.com/certifications/assessment",
-                                "name": "Assessment Certification" 
-                            } 
+export default {
+    components: {
+        LazyHydrate,
+        'main-nav': () => import('@/components/Nav'),
+        'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
+        'footer-fold': () => import('@/components/Footer'),
+        'credits': () => import('@/components/Credits')
+    },
+    data() {
+        return {
+            selfPaced: false,
+            lastFocusedButton: null,
+            structuredDataBreadcrumbs: {
+                "@context": "http://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": "1",
+                        "item": {
+                            "@id": "https://assessments24x7.com/certifications",
+                            "name": "Certifications"
                         }
-                    ]
-                }
-            }
-        },
-        head() {
-            return {
-                title: 'Assessment Certification | Assessments 24x7',
-                meta: [
+                    },
                     {
-                        hid: 'description',
-                        name: 'description',
-                        content: 'Gain a competitive edge while you build your resume and portfolio with a professional certification that sets you apart from others in the assessment industry.'
-                    }
-                ],
-                __dangerouslyDisableSanitizers: ['script'],
-                script: [
-                    {
-                        innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
-                        type: 'application/ld+json'
+                        "@type": "ListItem",
+                        "position": "2",
+                        "item": {
+                            "@id": "https://assessments24x7.com/certifications/assessment",
+                            "name": "Assessment Certification"
+                        }
                     }
                 ]
             }
         }
+    },
+    watch: {
+        selfPaced(newValue) {
+            if (newValue) {
+                this.$refs.selfPacedButton.focus();
+            } else {
+                this.$refs.groupButton.focus();
+            }
+        }
+    },
+    methods: {
+        group() {
+            this.selfPaced = false;
+        },
+        toggleSelfPaced() {
+            this.selfPaced = true;
+        },
+        setFocus(button) {
+            this.lastFocusedButton = button;
+        },
+        handleClickOutside(event) {
+            if (
+                this.$refs.groupButton &&
+                !this.$refs.groupButton.contains(event.target) &&
+                this.$refs.selfPacedButton &&
+                !this.$refs.selfPacedButton.contains(event.target)
+            ) {
+                if (this.lastFocusedButton) {
+                    this.$refs[this.lastFocusedButton].focus();
+                }
+            }
+        }
+    },
+    mounted() {
+        this.$refs.groupButton.focus();
+        this.lastFocusedButton = 'groupButton';
+        document.addEventListener('click', this.handleClickOutside);
+    },
+    beforeDestroy() {
+        document.removeEventListener('click', this.handleClickOutside);
+    },
+    head() {
+        return {
+            title: 'Assessment Certification | Assessments 24x7',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Gain a competitive edge while you build your resume and portfolio with a professional certification that sets you apart from others in the assessment industry.'
+                }
+            ],
+            __dangerouslyDisableSanitizers: ['script'],
+            script: [
+                {
+                    innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
+                    type: 'application/ld+json'
+                }
+            ]
+        }
     }
+}
 </script>
 
 <style lang="scss" scoped>
-    .assessment-certification {
-        .header {
-            background: url('~assets/about.jpg');
-            background-size: cover;
-            color: #fff;
-            text-align: center;
-            padding: 70px 0;
-            margin-bottom: 30px;
+.assessment-certification {
+    .header {
+        background: url('~assets/about.jpg');
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 70px 0;
+        margin-bottom: 30px;
 
-            .section-title {
-                font-size: 30pt;
-                margin-top: 0;
-            }
-        }
-
-        .image {
-            height: 220px;
-            margin: 0 auto;
-            display: block;
-        }
-
-        h1 {
+        .section-title {
             font-size: 30pt;
-            line-height: 34pt;
-            margin-bottom: 0;
+            margin-top: 0;
         }
+    }
 
-        h2 {
-            font-size: 20pt;
-            line-height: 24pt;
+    .image {
+        height: 220px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    h1 {
+        font-size: 30pt;
+        line-height: 34pt;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 20pt;
+        line-height: 24pt;
+    }
+
+    .discBtn {
+        color: white;
+        background-color: #0786f97d;
+        padding: 8px;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        max-width: 200px;
+        margin-top: 30px;
+        margin-right: 20px;
+        cursor: pointer;
+        
+        &:hover {
         }
+        
+        &:focus {
+            background-color: #2729ff;
+        }
+    }
 
-        .course-summary {
-            list-style: none;
-            padding-left: 0;
+    .course-summary {
+        list-style: none;
+        padding-left: 0;
 
-            .topic {
-                padding: 10px;
-                background: #f7f7f7;
-                margin-bottom: 6px;
-                border-radius: 10px;
-                color: #fff;
-                font-weight: 600;
+        .topic {
+            padding: 10px;
+            background: #f7f7f7;
+            margin-bottom: 6px;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
 
-                &.disc { background: linear-gradient(268deg, #0999fe, #0249ec); }
-                &.mot { background: linear-gradient(268deg, #ffa518, #fc542a); }
-                &.hvp { background: linear-gradient(268deg, #8ef03a, #11bd04); }
-                &.eiq { background: linear-gradient(268deg, #fa4ca6, #ff2f4c); }
-                &.learning { background: linear-gradient(268deg, #b82cff, #540bfb); }
-                &.pgi { background: linear-gradient(268deg, #666, #333); }
+            &.disc {
+                background: linear-gradient(268deg, #0999fe, #0249ec);
+            }
+
+            &.mot {
+                background: linear-gradient(268deg, #ffa518, #fc542a);
+            }
+
+            &.hvp {
+                background: linear-gradient(268deg, #8ef03a, #11bd04);
+            }
+
+            &.eiq {
+                background: linear-gradient(268deg, #fa4ca6, #ff2f4c);
+            }
+
+            &.learning {
+                background: linear-gradient(268deg, #b82cff, #540bfb);
+            }
+
+            &.pgi {
+                background: linear-gradient(268deg, #666, #333);
             }
         }
     }
+}
 </style>
