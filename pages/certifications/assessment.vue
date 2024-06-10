@@ -50,7 +50,8 @@
                     </p><br />
 
                     <nuxt-link to="/contact" class="button">Talk to a Specialist</nuxt-link>
-                    <nuxt-link to="/assessments" class="button outline">Learn More About Assessments</nuxt-link><br /><br />
+                    <nuxt-link to="/assessments" class="button outline">Learn More About
+                        Assessments</nuxt-link><br /><br />
 
                     <h3 style="margin-bottom: -10px; margin-top: 50px;">Become A Certified Assessment Practitioner</h3>
                     <div class="col-6">
@@ -59,14 +60,17 @@
                             <li>Gain deeper insights into yourself</li>
                             <li>Enhance your critical thinking skills</li>
                             <li>Ongoing, situational support from an Assessments 24x7 Master Certified Practitioner</li>
-                            <li>Receive an assessment & an in-depth, professional debrief by your Master Certified Trainer</li>
+                            <li>Receive an assessment & an in-depth, professional debrief by your Master Certified
+                                Trainer</li>
                         </ul>
                     </div>
 
                     <div class="col-6">
                         <ul>
-                            <li>Access Certified Trainer Material to use in your coaching/training business, including a Debrief Guide, PowerPoint presentations, and marketing materials</li>
-                            <li>Get listed on our International Directory of Certified Practitioners linked to your website</li>
+                            <li>Access Certified Trainer Material to use in your coaching/training business, including a
+                                Debrief Guide, PowerPoint presentations, and marketing materials</li>
+                            <li>Get listed on our International Directory of Certified Practitioners linked to your
+                                website</li>
                             <li>Debrief clients with confidence</li>
                             <li>Maximize the effectiveness of your assessment debriefs</li>
                         </ul>
@@ -86,10 +90,14 @@
 
                     <div class="col-9">
                         <p>
-                            Do you want to significantly improve your understanding of DISC and your ability to debrief DISC reports? Have you ever
-                            struggled to figure out how to use the assessments for different client needs? Clear up those questions and more with
-                            Assessments 24x7's DISC Certification program. This is an exceptional investment for every coach, HR specialist, and leadership
-                            development professional. DISC Certification will give you the knowledge to debrief reports without hesitation- which means
+                            Do you want to significantly improve your understanding of DISC and your ability to debrief
+                            DISC reports? Have you ever
+                            struggled to figure out how to use the assessments for different client needs? Clear up
+                            those questions and more with
+                            Assessments 24x7's DISC Certification program. This is an exceptional investment for every
+                            coach, HR specialist, and leadership
+                            development professional. DISC Certification will give you the knowledge to debrief reports
+                            without hesitation- which means
                             even more satisfied clients for you!
                         </p>
                     </div>
@@ -100,15 +108,16 @@
                         <img src="~/assets/people-group.png" style="width: 12%;" alt="people icon">
                         Group
                     </button>
-                    <button ref="selfPacedButton" @click="toggleSelfPaced" @focus="setFocus('selfPacedButton')" class="discBtn">
+                    <button ref="selfPacedButton" @click="toggleSelfPaced" @focus="setFocus('selfPacedButton')"
+                        class="discBtn">
                         <img src="~/assets/head-self-paced.png" style="width: 12%;" alt="head icon">
                         Self-Paced
                     </button>
                 </div>
-                
+
                 <div v-if="selfPaced === false" class="col-12">
                     <h2 style="margin-bottom: 20px">2-Day Group Course Summary:</h2>
-                    
+
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic disc">Choose a 2-Day session that works for you</li>
@@ -116,10 +125,10 @@
                             <li class="topic disc">Attend the 2-Day session (4 hours per day)</li>
                         </ul>
                     </div>
-    
+
                     <div class="col-6">
                         <ul class="course-summary">
-                            <li class="topic disc">Practice with fellow learners in small groups during the session w/guidance from trainer</li>
+                            <li class="topic disc">Small group practice w/ trainer guidance</li>
                             <li class="topic disc">Receive access to Library of DISC Trainer Materials</li>
                             <li class="topic disc">Complete certification at the of the workshop</li>
                         </ul>
@@ -135,19 +144,19 @@
                             <li class="topic disc">Review your DISC assessment as you learn</li>
                         </ul>
                     </div>
-        
+
                     <div class="col-6">
                         <ul class="course-summary">
-                            <li class="topic disc">Complete a live debrief session with an A24x7 trainer (options provided)</li>
+                            <li class="topic disc">Attend a live debrief w/ an A24x7 Trainer (options provided)</li>
                             <li class="topic disc">Receive access to Library of DISC Trainer Materials</li>
-                            <li class="topic disc">Final Knowledge Check(s); receive feedback from trainer until you pass</li>
+                            <li class="topic disc">Knowledge Checks; get Trainer feedback until you pass</li>
                         </ul>
-                    </div> 
+                    </div>
                 </div>
             </div>
-            
+
             <credits :isLight="true" shrm="12" hrci="10" atd="10" icfCore="5.25" icfRD="12.5" hrciProgramId="582706" />
-            
+
             <div class="row">
                 <div class="col-12">
                     <h2 id="motivators">Motivators Assessment Certification</h2>
@@ -158,10 +167,14 @@
 
                     <div class="col-9">
                         <p>
-                            The Motivators Assessment Certification Program provides a fresh perspective into human motivation. With this understanding,
-                            organizations and workplaces can more effectively motivate employees to increase productivity, strengthen collaboration, and
-                            produce exceptional results. The curriculum teaches the seven Dimensions of Motivation individually so that you learn how they
-                            affect interactions with others. When you better understand what motivates your workforce – or yourself! – there’s no limit to
+                            The Motivators Assessment Certification Program provides a fresh perspective into human
+                            motivation. With this understanding,
+                            organizations and workplaces can more effectively motivate employees to increase
+                            productivity, strengthen collaboration, and
+                            produce exceptional results. The curriculum teaches the seven Dimensions of Motivation
+                            individually so that you learn how they
+                            affect interactions with others. When you better understand what motivates your workforce –
+                            or yourself! – there’s no limit to
                             what you can achieve.
                         </p>
                     </div>
@@ -200,9 +213,12 @@
 
                     <div class="col-9">
                         <p>
-                            EIQ Certification provides enhanced clarity on how people perceive and apply their Emotional Intelligence, empowering
-                            practitioners with the necessary insights to coach in a way that creates beneficial interpersonal outcomes. Boost your
-                            interpersonal conflict management skills as well, and learn to tactfully deal with difficult people during stressful situations.
+                            EIQ Certification provides enhanced clarity on how people perceive and apply their Emotional
+                            Intelligence, empowering
+                            practitioners with the necessary insights to coach in a way that creates beneficial
+                            interpersonal outcomes. Boost your
+                            interpersonal conflict management skills as well, and learn to tactfully deal with difficult
+                            people during stressful situations.
                         </p>
                     </div>
                 </div>
@@ -228,7 +244,8 @@
                 </div>
             </div>
 
-            <credits :isLight="true" shrm="12" hrci="7.5" atd="7.5" icfCore="8.25" icfRD="6.75" hrciProgramId="582701" />
+            <credits :isLight="true" shrm="12" hrci="7.5" atd="7.5" icfCore="8.25" icfRD="6.75"
+                hrciProgramId="582701" />
         </div>
 
         <br />
@@ -383,10 +400,12 @@ export default {
         margin-top: 30px;
         margin-right: 20px;
         cursor: pointer;
-        
+
         &:hover {
+            color: white;
+            background-color: #272bff;
         }
-        
+
         &:focus {
             background-color: #2729ff;
         }
