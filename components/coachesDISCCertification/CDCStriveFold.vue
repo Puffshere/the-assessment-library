@@ -7,14 +7,14 @@
                         As a Coach, you strive to provide the <br />
                         best for your clients.
                     </h2>
-                    <h5>
+                    <h5 style="margin-top: 50px;">
                         Our DISC Certification equips you with scientifically validated tools to offer deeper insights
                         into <br />
                         your clients’ strengths, weaknesses, and areas for development. This certification will help you
                         <br />
                         differentiate your services in a competitive market and attract high-profile executives.
                     </h5>
-                    <button class="light-blue" @click="scrollToSection">
+                    <button class="light-blue" @click="scrollToSection" style="margin-bottom: 50px;">
                         Get Started Today
                     </button>
                 </div>
@@ -41,7 +41,7 @@ export default {
 @import './CDC.scss';
 
 .container {
-    padding: 50px 0;
+    padding: 80px 0;
 }
 
 h2,
