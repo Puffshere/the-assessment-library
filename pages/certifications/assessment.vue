@@ -120,17 +120,17 @@
 
                     <div class="col-6">
                         <ul class="course-summary">
-                            <li class="topic disc">Choose a 2-Day session that works for you</li>
-                            <li class="topic disc">Take the online DISC Assessment</li>
-                            <li class="topic disc">Attend the 2-Day session (4 hours per day)</li>
+                            <li class="topic disc">Choose a two-day session that works for you</li>
+                            <li class="topic disc">Take the online DISC assessment</li>
+                            <li class="topic disc">Attend the two-day session (4 hours per day)</li>
                         </ul>
                     </div>
 
                     <div class="col-6">
                         <ul class="course-summary">
-                            <li class="topic disc">Small group practice w/ trainer guidance</li>
-                            <li class="topic disc">Receive access to Library of DISC Trainer Materials</li>
-                            <li class="topic disc">Complete certification at the of the workshop</li>
+                            <li class="topic disc">Small group practice with trainer guidance</li>
+                            <li class="topic disc">Receive access to the DISC Trainer Materials library</li>
+                            <li class="topic disc">Fully certified after workshop completion</li>
                         </ul>
                     </div>
                 </div>
@@ -139,17 +139,17 @@
 
                     <div class="col-6">
                         <ul class="course-summary">
-                            <li class="topic disc">Take the Online DISC Assessment</li>
-                            <li class="topic disc">Complete online Virtual Training in short video segments</li>
+                            <li class="topic disc">Take the online DISC assessment</li>
+                            <li class="topic disc">Complete online virtual training in short video segments</li>
                             <li class="topic disc">Review your DISC assessment as you learn</li>
                         </ul>
                     </div>
 
                     <div class="col-6">
                         <ul class="course-summary">
-                            <li class="topic disc">Attend a live debrief w/ an A24x7 Trainer (options provided)</li>
-                            <li class="topic disc">Receive access to Library of DISC Trainer Materials</li>
-                            <li class="topic disc">Knowledge Checks; get Trainer feedback until you pass</li>
+                            <li class="topic disc">Attend a live debrief with an A24x7 trainer</li>
+                            <li class="topic disc">Receive access to the DISC Trainer Materials library</li>
+                            <li class="topic disc">Fully certified after passing Knowledge Checks</li>
                         </ul>
                     </div>
                 </div>
