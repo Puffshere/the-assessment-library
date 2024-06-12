@@ -12,7 +12,8 @@
                         </h2>
                         <h4>
                             Earn <span class="hyperlink">ICF Credits</span> While
-                            <img src="~/assets/coaches-disc-certification/blue-arrow.png" alt="hero image" class="arrow">
+                            <img src="~/assets/coaches-disc-certification/blue-arrow.png" alt="hero image"
+                                class="arrow">
                             <br />
                             Enhancing Your Coaching Efficacy
                         </h4>
@@ -21,7 +22,8 @@
                         </button>
                     </div>
                     <div class="col-5">
-                        <img src="~/assets/coaches-disc-certification/man.png" alt="male business man" class="manSmiling" />
+                        <img src="~/assets/coaches-disc-certification/man.png" alt="male business man"
+                            class="manSmiling" />
                     </div>
                 </div>
             </div>
@@ -42,9 +44,9 @@ export default {
         handleIntersection(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    this.$el.classList.add('animate-rise');
+                    entry.target.classList.add('animate-rise');
                 } else {
-                    this.$el.classList.remove('animate-rise');
+                    entry.target.classList.remove('animate-rise');
                 }
             });
         }
@@ -53,7 +55,12 @@ export default {
         const observer = new IntersectionObserver(this.handleIntersection, {
             threshold: 0.1 // Adjust this as needed
         });
-        observer.observe(this.$el);
+
+        // Select each child element to be observed except the image on the right
+        const elements = document.querySelectorAll('.col-7 > h2, .col-7 > h4, .col-7 > button');
+        elements.forEach(element => {
+            observer.observe(element);
+        });
     }
 }
 </script>
@@ -89,13 +96,22 @@ h4 {
         transform: translateY(1in);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
+h2,
+h4,
+button {
+    opacity: 0;
+    transform: translateY(1in);
+    transition: all 0.5s ease-out;
+}
+
 .animate-rise {
-    animation: rise 1s ease-out;
+    animation: rise 1s ease-out forwards;
 }
 </style>
