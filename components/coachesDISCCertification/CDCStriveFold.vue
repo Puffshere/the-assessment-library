@@ -71,7 +71,7 @@ export default {
 @keyframes rise {
     from {
         opacity: 0;
-        transform: translateY(1in);
+        transform: translateY(.5in);
     }
 
     to {

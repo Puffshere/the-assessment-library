@@ -8,7 +8,7 @@
                     </h1>
                     <div style="position: relative;">
                         <img src="~/assets/coaches-disc-certification/black-woman.gif" alt="black woman"
-                            style="width: 59%; position: absolute; top: -200px; right: -70px;" class="blackWoman">
+                            class="blackWoman">
                     </div>
                     <div class="icon-text" style="display: flex;">
                         <img src="~/assets/coaches-disc-certification/quantifiable-impact.png" alt="Quantifiable Impact"
@@ -43,8 +43,6 @@
                         challenges & goals of each executive client, fostering a more personalized coaching
                         experience.
                     </p>
-
-
                     <div class="icon-text" style="display: flex; margin-top: 40px;">
                         <img src="~/assets/coaches-disc-certification/user-friendly.png" alt="User-Friendly"
                             style="width: 5%;" class="icons">
@@ -55,7 +53,6 @@
                         Our platform is designed with ease of use in mind, ensuring you can seamlessly integrate
                         these assessments into your existing coaching practices without a steep learning curve.
                     </p>
-
                 </div>
                 <div class="col-12 button-container" style="margin-top: 120px;">
                     <button class="white btn" @click="scrollToSection">
@@ -76,7 +73,29 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-rise');
+                } else {
+                    entry.target.classList.remove('animate-rise');
+                }
+            });
         }
+    },
+    mounted() {
+        const observer = new IntersectionObserver(this.handleIntersection, {
+            threshold: 0.1 // Adjust this as needed
+        });
+
+        // Select each child element to be observed
+        const elements = document.querySelectorAll(
+            '.col-12 > h1, .col-12 > .icon-text, .col-12 > p, .col-12 > button'
+        );
+        elements.forEach(element => {
+            observer.observe(element);
+        });
     }
 }
 </script>
@@ -102,6 +121,18 @@ export default {
 .col-12 {
     text-align: left;
     color: white;
+
+    .blackWoman {
+        width: 59%;
+        position: absolute;
+        top: -200px;
+        right: -70px;
+    }
+}
+
+
+.icons {
+    width: 5%;
 }
 
 section {
@@ -112,6 +143,18 @@ section {
 .col-12.button-container {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 1130px) {
+    .col-12 {
+        .blackWoman {
+            width: 100%;
+            position: static;
+            top: 0px;
+            right: 0px;
+            margin-bottom: 50px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -127,5 +170,31 @@ section {
             }
         }
     }
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(.25in);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.title,
+.icon-text,
+p,
+button {
+    opacity: 0;
+    transform: translateY(1in);
+    transition: all 0.5s ease-out;
+}
+
+
+.animate-rise {
+    animation: rise 1s ease-out forwards;
 }
 </style>

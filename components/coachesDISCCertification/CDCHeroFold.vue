@@ -93,7 +93,7 @@ h4 {
 
 @keyframes rise {
     from {
-        transform: translateY(1in);
+        transform: translateY(.5in);
         opacity: 0;
     }
 
