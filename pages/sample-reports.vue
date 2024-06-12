@@ -464,10 +464,10 @@
                         <h3>Selection</h3>
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCworkplace.pdf"
-                            class="hyperlink" target="_blank" rel="noopener">DISC Workplace insights</a>
+                            class="hyperlink" target="_blank" rel="noopener">DISC Workplace Insights</a>
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf"
-                            class="hyperlink" target="_blank" rel="noopener">DISC Executive insights</a>
+                            class="hyperlink" target="_blank" rel="noopener">DISC Executive Insights</a>
                     </div>
                 </div>
 
