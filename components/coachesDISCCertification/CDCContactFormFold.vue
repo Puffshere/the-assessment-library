@@ -18,13 +18,13 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-6">
-                            <div>
+                            <div class="line">
                                 <label for="name">Name</label>
                                 <input v-model="form.name" type="text" id="name" required>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div>
+                            <div class="line">
                                 <label for="email">Email</label>
                                 <input v-model="form.email" type="email" id="email" required>
                             </div>
@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-6">
-                            <div>
+                            <div class="line">
                                 <label for="phoneNumber">Phone Number</label>
                                 <input v-model="form.phoneNumber" type="text" id="phoneNumber" required>
                             </div>
@@ -89,6 +89,15 @@ export default {
         };
     },
     methods: {
+        handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-rise');
+                } else {
+                    entry.target.classList.remove('animate-rise');
+                }
+            });
+        },
         async submitForm() {
             console.log('Form submitted:', this.form);
 
@@ -160,6 +169,17 @@ export default {
                 });
             }
         }
+    },
+    mounted() {
+        const observer = new IntersectionObserver(this.handleIntersection, {
+            threshold: 0.1 // Adjust this as needed
+        });
+
+        // Select each child element to be observed except the image on the right
+        const elements = document.querySelectorAll('.col-12 > h3, .col-12 > h4, .row > .col-12, .col-12 > button, .col-12 > .col-12');
+        elements.forEach(element => {
+            observer.observe(element);
+        });
     }
 }
 </script>
@@ -231,6 +251,31 @@ export default {
             min-height: 90px;
         }
     }
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(.5in);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h3,
+h4,
+.col-12,
+button {
+    opacity: 0;
+    transform: translateY(1in);
+    transition: all 0.5s ease-out;
+}
+
+.animate-rise {
+    animation: rise 1s ease-out forwards;
 }
 
 @media (max-width: 1000px) {
