@@ -67,16 +67,18 @@
 
     .icon2 {
         width: 60%;
-        margin-bottom: -20px;
+        margin-bottom: -17px;
         margin-top: -15px;
     }
 
     .icon3 {
         width: 45%;
+        margin-bottom: 2px;
     }
 
     .icon4 {
         width: 45%;
+        margin-bottom: 2px;
     }
 }
 
