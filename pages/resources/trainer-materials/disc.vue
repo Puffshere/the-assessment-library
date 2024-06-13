@@ -146,8 +146,8 @@
 
                             <tr v-if="certified">
                                 <td>
-                                    <a class="hyperlink" href="https://youtu.be/Y65akO9eoMo"
-                                        target="_blank" rel="noopener">Communicating with the 4 Styles (DISC)</a>
+                                    <a class="hyperlink" href="https://youtu.be/Y65akO9eoMo" target="_blank"
+                                        rel="noopener">Communicating with the 4 Styles (DISC)</a>
                                     <small>A demonstration showing a quick, comprehensive, and effective way to share
                                         information for all 4 DISC styles in one conversation.</small>
                                 </td>
@@ -1114,6 +1114,11 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Leading+a+Meeting.pdf"
                                         target="_blank" rel="noopener">DISC in Action - Leading a Meeting</a></td>
+                            </tr>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Workspaces.pdf"
+                                        target="_blank" rel="noopener">DISC in Action - Workspaces</a></td>
                             </tr>
                         </tbody>
                     </table>
