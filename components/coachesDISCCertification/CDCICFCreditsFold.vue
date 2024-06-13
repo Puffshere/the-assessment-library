@@ -4,25 +4,25 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-3">
-                        <img class="icon1" src="~/assets/coaches-disc-certification/icf-logo.png" alt="image">
+                        <img class="icon1" src="~/assets/coaches-disc-certification/icf-logo.png" alt="icf image">
                         <p><span class="topLine">8.25/6.75</span> <br />
                             <span class="bottomLine">Core/RD ICF</span>
                         </p>
                     </div>
                     <div class="col-3">
-                        <img class="icon2" src="~/assets/coaches-disc-certification/icf-logo.png" alt="image">
+                        <img class="icon2" src="~/assets/coaches-disc-certification/shrm-logo.png" alt="shrm image">
                         <p><span class="topLine">12 Credits</span> <br />
                             <span class="bottomLine">SHRM**</span>
                         </p>
                     </div>
                     <div class="col-3">
-                        <img class="icon3" src="~/assets/coaches-disc-certification/hrci-logo.png" alt="image">
+                        <img class="icon3" src="~/assets/coaches-disc-certification/hrci-logo.png" alt="hrci image">
                         <p><span class="topLine">7.5 Credits</span> <br />
                             <span class="bottomLine">HRCI*</span>
                         </p>
                     </div>
                     <div class="col-3">
-                        <img class="icon4" src="~/assets/coaches-disc-certification/atd-logo.png" alt="image">
+                        <img class="icon4" src="~/assets/coaches-disc-certification/atd-logo.png" alt="atd image">
                         <p><span class="topLine">7.5 Credits</span> <br />
                             <span class="bottomLine">ATD</span>
                         </p>
@@ -62,11 +62,13 @@
     .icon1 {
         width: 85%;
         padding-bottom: 20px;
+        margin-top: 5px;
     }
 
     .icon2 {
-        width: 85%;
-        padding-bottom: 20px;
+        width: 60%;
+        margin-bottom: -20px;
+        margin-top: -15px;
     }
 
     .icon3 {
