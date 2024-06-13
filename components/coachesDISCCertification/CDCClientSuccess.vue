@@ -15,7 +15,7 @@
                         “Partnering with Assessments 24x7 is ​what got my business off the ground. I ​credit Assessments
                         24x7 staff, products, ​and customer service, with my ​success.”
                     </p>
-                    <button class="blue" @click="scrollToSection">
+                    <button class="blue" @click="testimonialLink">
                         Read More
                     </button>
                 </div>
@@ -29,7 +29,7 @@
                         “From a coaching point of view this ​was a major breakthrough in his self-​awareness. It's given
                         me added ​credibility.”
                     </p>
-                    <button class="blue" @click="scrollToSection">
+                    <button class="blue" @click="testimonialLink">
                         Read More
                     </button>
                 </div>
@@ -43,7 +43,7 @@
                         “The "icing on the cake" is that I can ​fully personalize the reports with my ​business name and
                         logo. Thank you ​Assessments 24x7 for a great tool!”
                     </p>
-                    <button class="blue" @click="scrollToSection">
+                    <button class="blue" @click="testimonialLink">
                         Read More
                     </button>
                 </div>
@@ -55,11 +55,8 @@
 <script>
 export default {
     methods: {
-        scrollToSection(event) {
-            const element = document.getElementById('');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+        testimonialLink(event) {
+            window.location.href = 'https://www.assessments24x7.com/about/testimonials';
             event.target.blur();
         }
     }
