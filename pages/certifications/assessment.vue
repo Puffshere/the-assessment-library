@@ -71,7 +71,7 @@
                                 Debrief Guide, PowerPoint presentations, and marketing materials</li>
                             <li>Get listed on our International Directory of Certified Practitioners linked to your
                                 website</li>
-                            <li>Debrief clients with confidence</li>
+                            <li>Become the in-house expert for your company to offer effective trainings and individual or group debriefs</li>
                             <li>Maximize the effectiveness of your assessment debriefs</li>
                         </ul>
                     </div>
@@ -91,14 +91,11 @@
                     <div class="col-9">
                         <p>
                             Do you want to significantly improve your understanding of DISC and your ability to debrief
-                            DISC reports? Have you ever
-                            struggled to figure out how to use the assessments for different client needs? Clear up
-                            those questions and more with
-                            Assessments 24x7's DISC Certification program. This is an exceptional investment for every
-                            coach, HR specialist, and leadership
+                            DISC reports? Have you ever struggled to figure out how to use the assessments for different
+                            client needs? Answer those questions and more with Assessments 24x7's DISC Certification
+                            program. This is an exceptional investment for every coach, HR specialist, and leadership
                             development professional. DISC Certification will give you the knowledge to debrief reports
-                            without hesitation- which means
-                            even more satisfied clients for you!
+                            without hesitation - which means even more satisfied clients for you!
                         </p>
                     </div>
                 </div>

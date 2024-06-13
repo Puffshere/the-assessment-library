@@ -3,14 +3,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-3 col-6-sm">
-                    <img v-if="isLight" class="provider-image" src="~assets/shrm-dark.png" alt="shrm">
+                    <img v-if="isLight" class="provider-image" src="~assets/shrm-credits-logo.png" alt="shrm">
                     <img v-else class="provider-image" src="~assets/shrm.png" alt="shrm">
                     <span class="credit">{{ shrm }} Credits</span>
                     <p class="institute">SHRM**</p>
                 </div>
 
                 <div class="col-3 col-6-sm">
-                    <img class="provider-image" src="~assets/hrci.png" alt="hrci">
+                    <img class="provider-image" src="~assets/hrci-logo.png" alt="hrci">
                     <span class="credit">{{ hrci }} Credits</span>
                     <p class="institute">HRCI*</p>
                 </div>
