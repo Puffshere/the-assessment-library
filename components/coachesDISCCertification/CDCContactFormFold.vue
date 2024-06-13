@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <h3 class="formTitle">
                         Ready to Elevate <br />
-                        Your Coaching Practive?
+                        Your Coaching Practice?
                     </h3>
                     <h4 class="formSubText">
                         Don't miss out on the opportunity to enhance your coaching <br />
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div>
+                            <div class="line">
                                 <label for="company">Company</label>
                                 <input v-model="form.company" type="text" id="company" required>
                             </div>
@@ -73,7 +73,6 @@
 <script>
 import axios from 'axios';
 
-
 export default {
     data() {
         return {
@@ -92,9 +91,9 @@ export default {
         handleIntersection(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-rise');
+                    entry.target.classList.add('animate-rise-contact');
                 } else {
-                    entry.target.classList.remove('animate-rise');
+                    entry.target.classList.remove('animate-rise-contact');
                 }
             });
         },
@@ -103,16 +102,16 @@ export default {
 
             // Split the name input into firstName and lastName
             const names = this.form.name.split(' ');
-            this.firstName = names[0];
-            this.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+            this.form.firstName = names[0];
+            this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
 
             try {
                 const salesPerson = await axios.get('/api/lead/next-assignment');
 
                 const lead = await axios.post('/api/lead', {
                     salesPerson: salesPerson.data,
-                    firstName: this.firstName,
-                    lastName: this.lastName,
+                    firstName: this.form.firstName,
+                    lastName: this.form.lastName,
                     phone: this.form.phoneNumber,
                     email: this.form.email,
                     company: this.form.company,
@@ -122,8 +121,8 @@ export default {
                 const { data } = await axios.post('/api/contact', {
                     contact: {
                         email: this.form.email,
-                        firstName: this.firstName,
-                        lastName: this.lastName,
+                        firstName: this.form.firstName,
+                        lastName: this.form.lastName,
                         phone: this.form.phoneNumber,
                         company: this.form.company,
                         message: this.form.message,
@@ -159,8 +158,6 @@ export default {
                 this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
 
             } catch (err) {
-                this.isDisabled = false;
-                this.loading = false;
                 this.$toast.open({
                     message: 'An unexpected error has occurred. Please try again later.',
                     position: 'top',
@@ -176,14 +173,13 @@ export default {
         });
 
         // Select each child element to be observed except the image on the right
-        const elements = document.querySelectorAll('.col-12 > h3, .col-12 > h4, .row > .col-12, .col-12 > button, .col-12 > .col-12');
+        const elements = document.querySelectorAll('.form .col-12 > h3, .form .col-12 > h4, .form .col-6 .line, .form .col-12 > button, .form .col-12 > .col-12');
         elements.forEach(element => {
             observer.observe(element);
         });
     }
 }
 </script>
-
 
 <style lang="scss" scoped>
 @import './CDC.scss';
@@ -253,7 +249,7 @@ export default {
     }
 }
 
-@keyframes rise {
+@keyframes rise-contact {
     from {
         transform: translateY(.5in);
         opacity: 0;
@@ -265,17 +261,17 @@ export default {
     }
 }
 
-h3,
-h4,
-.col-12,
-button {
+.form h3,
+.form h4,
+.form .col-6 .line,
+.form button {
     opacity: 0;
     transform: translateY(1in);
     transition: all 0.5s ease-out;
 }
 
-.animate-rise {
-    animation: rise 1s ease-out forwards;
+.animate-rise-contact {
+    animation: rise-contact 1s ease-out forwards;
 }
 
 @media (max-width: 1000px) {

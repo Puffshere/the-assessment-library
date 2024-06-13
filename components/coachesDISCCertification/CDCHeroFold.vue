@@ -56,8 +56,8 @@ export default {
             threshold: 0.1 // Adjust this as needed
         });
 
-        // Select each child element to be observed except the image on the right
-        const elements = document.querySelectorAll('.col-7 > h2, .col-7 > h4, .col-7 > button');
+        // Select each child element to be observed
+        const elements = document.querySelectorAll('.col-7 h2, .col-7 h4, .col-7 button');
         elements.forEach(element => {
             observer.observe(element);
         });
@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 @import './CDC.scss';
 
 .container {
@@ -78,40 +78,38 @@ h4 {
     line-height: 38px;
 }
 
-.col-7 img {
+.col-7 .arrow {
     width: 5%;
+    margin-top: -40px;
 }
 
 .col-5 img {
     width: 100%;
     margin-top: 15px;
-}
-
-.arrow {
-    margin-top: -40px;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 @keyframes rise {
     from {
-        transform: translateY(.5in);
+        transform: translateY(1in);
         opacity: 0;
     }
-
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-h2,
-h4,
-button {
+.col-7 h2,
+.col-7 h4,
+.col-7 button {
     opacity: 0;
     transform: translateY(1in);
     transition: all 0.5s ease-out;
 }
 
 .animate-rise {
-    animation: rise 1s ease-out forwards;
+    animation: rise 1.25s ease-out forwards;
 }
 </style>

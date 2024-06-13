@@ -3,7 +3,7 @@
     <main-nav class="nav"></main-nav>
     <section class="body">
       <hero></hero>
-      <icf-credits></icf-credits>
+       <icf-credits></icf-credits>
       <strive></strive>
       <why-disc></why-disc>
       <client-success></client-success>
