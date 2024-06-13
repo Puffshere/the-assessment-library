@@ -203,5 +203,34 @@ section {
     .item {
         margin-top: 10px;
     }
+
+    @keyframes rise {
+    from {
+        transform: translateX(-1in);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.row .words,
+.row .timeline-container,
+.row .button-container {
+    opacity: 0;
+    transform: translateY(1in);
+    transition: all 0.5s ease-out;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateX(2in);
+    transition: all 0.5s ease-out;
+}
+
+.animate-rise {
+    animation: rise 2s ease-out forwards;
+}
 }
 </style>
