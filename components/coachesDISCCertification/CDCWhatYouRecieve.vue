@@ -94,8 +94,28 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-rise');
+                } else {
+                    entry.target.classList.remove('animate-rise');
+                }
+            });
         }
-    }
+    },
+    mounted() {
+        const observer = new IntersectionObserver(this.handleIntersection, {
+            threshold: 0.1 // Adjust this as needed
+        });
+
+        // Select each child element to be observed except the image on the right
+        const elements = document.querySelectorAll('.col-12 > h1, .col-8 > h4, .col-8 > p, .col-4 > video, .col-12 > button');
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    },
 }
 </script>
 
@@ -132,5 +152,31 @@ video {
     display: flex;
     justify-content: center;
     padding-top: 80px;
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(.5in);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1,
+h4,
+p,
+video,
+button {
+    opacity: 0;
+    transform: translateY(1in);
+    transition: all 0.5s ease-out;
+}
+
+.animate-rise {
+    animation: rise 1s ease-out forwards;
 }
 </style>
