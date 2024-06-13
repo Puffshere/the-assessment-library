@@ -2,7 +2,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 words">
                     <h1>Let DISC be your foundation <br />
                         <span style="font-weight: 400">But don't stop there...</span>
                     </h1>
@@ -50,7 +50,27 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-rise');
+                } else {
+                    entry.target.classList.remove('animate-rise');
+                }
+            });
         }
+    },
+    mounted() {
+        const observer = new IntersectionObserver(this.handleIntersection, {
+            threshold: 0.1 // Adjust this as needed
+        });
+
+        // Select each child element to be observed
+        const elements = document.querySelectorAll('.row > .words, .row > .timeline-container, .row > .button-container');
+        elements.forEach(element => {
+            observer.observe(element);
+        });
     }
 }
 </script>
@@ -133,6 +153,35 @@ section {
     color: white;
     font-weight: 400;
     text-decoration: underline;
+}
+
+@keyframes rise {
+    from {
+        transform: translateX(-4in);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.row .words,
+.row .timeline-container,
+.row .button-container {
+    opacity: 0;
+    transform: translateY(1in);
+    transition: all 0.5s ease-out;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateX(2in);
+    transition: all 0.5s ease-out;
+}
+
+.animate-rise {
+    animation: rise 2s ease-out forwards;
 }
 
 @media (max-width: 768px) {

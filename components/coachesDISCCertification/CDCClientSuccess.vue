@@ -97,25 +97,27 @@ img {
 }
 
 @keyframes rise {
-        from {
-            transform: translateX(1in);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
+    0% {
+        transform: translateX(2in);
+        opacity: 0;
     }
+    50% {
+        transform: translateX(-1in);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
-//     .col-7 h2,
-//     .col-7 h4,
-//     .col-7 button {
-//         opacity: 0;
-//         transform: translateY(1in);
-//         transition: all 0.5s ease-out;
-//     }
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateX(2in);
+    transition: all 0.5s ease-out;
+}
 
 .animate-rise {
-    animation: rise 1.25s ease-out forwards;
+    animation: rise 3s ease-out forwards;
 }
 </style>
