@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-12">
-                            <div>
+                            <div class="message">
                                 <label for="message">Message</label>
                                 <input v-model="form.message" type="text" id="message" class="messageBox" required>
                             </div>
@@ -173,7 +173,7 @@ export default {
         });
 
         // Select each child element to be observed except the image on the right
-        const elements = document.querySelectorAll('.form .col-12 > h3, .form .col-12 > h4, .form .col-6 .line, .form .col-12 > button, .form .col-12 > .col-12');
+        const elements = document.querySelectorAll('.form .col-12 > h3, .form .col-12 > h4, .form .col-6 .line, .form .col-12 > button, .form .col-12 > .col-12, .form .col-12 .message');
         elements.forEach(element => {
             observer.observe(element);
         });
@@ -264,7 +264,8 @@ export default {
 .form h3,
 .form h4,
 .form .col-6 .line,
-.form button {
+.form button,
+.form .message {
     opacity: 0;
     transform: translateY(1in);
     transition: all 0.5s ease-out;

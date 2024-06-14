@@ -58,7 +58,27 @@ export default {
         testimonialLink(event) {
             window.location.href = 'https://www.assessments24x7.com/about/testimonials';
             event.target.blur();
+        },
+        handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-sideways');
+                } else {
+                    entry.target.classList.remove('animate-sideways');
+                }
+            });
         }
+    },
+    mounted() {
+        const observer = new IntersectionObserver(this.handleIntersection, {
+            threshold: 0.1 // Adjust this as needed
+        });
+
+        // Select each child element to be observed
+        const elements = document.querySelectorAll('.col-4 button, .col-4 p, .col-4 img');
+        elements.forEach(element => {
+            observer.observe(element);
+        });
     }
 }
 </script>
@@ -101,15 +121,38 @@ img {
         transform: translateX(2in);
         opacity: 0;
     }
+
     50% {
         transform: translateX(-1in);
         opacity: 1;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
+
+@keyframes sideways {
+    from {
+        transform: translateY(.5in);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.col-4 p,
+.col-4 img,
+.col-4 button {
+    opacity: 0;
+    transform: translateY(1in);
+    transition: all 0.5s ease-out;
+}
+
 
 .animate-on-scroll {
     opacity: 0;
@@ -119,5 +162,9 @@ img {
 
 .animate-rise {
     animation: rise 3s ease-out forwards;
+}
+
+.animate-sideways {
+    animation: sideways 3s ease-out forwards;
 }
 </style>
