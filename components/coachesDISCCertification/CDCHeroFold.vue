@@ -11,7 +11,7 @@
                             with DISC Certification
                         </h2>
                         <h4>
-                            Earn <span class="hyperlink">ICF Credits</span> While
+                            Earn <span class="hyperlink" @click="scrollToSection" style="cursor: pointer;">ICF Credits</span> While
                             <img src="~/assets/coaches-disc-certification/blue-arrow.png" alt="hero image"
                                 class="arrow">
                             <br />
@@ -35,7 +35,7 @@
 export default {
     methods: {
         scrollToSection(event) {
-            const element = document.getElementById('cdcContactForm');
+            const element = document.getElementById('icfSection');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
@@ -53,7 +53,7 @@ export default {
     },
     mounted() {
         const observer = new IntersectionObserver(this.handleIntersection, {
-            threshold: 0.1 // Adjust this as needed
+            threshold: 0 // Adjust this as needed
         });
 
         // Select each child element to be observed

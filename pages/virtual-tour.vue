@@ -13,7 +13,7 @@
         </section>
 
         <div class="container">
-            <div class="row" v-show="step === 1">
+            <div class="row" v-show="step === 0">
                 <div class="col-12">
                     <h2>Introduction To Your Online Assessment Account</h2>
 
@@ -52,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="row" v-show="step === 2">
+            <div class="row" v-show="step === 1">
                 <div class="col-12">
                     <h2>General Account Settings/Upload Your Logo/Modify Your Site Design</h2>
                     <button class="button secodary" @click="navToStep(1)">Go Back</button>
@@ -193,6 +193,10 @@
                 font-size: 30pt;
                 margin-top: 0;
             }
+        }
+
+        iframe {
+            border-radius: 30px;
         }
 
         h1 {

@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="icfSection">
         <div class="container">
             <div class="row">
                 <div class="col-12">
