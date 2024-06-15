@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="">
+                    <h1 class="title observe-title">
                         What You Receive <br />
                         with DISC Certification
                     </h1>
@@ -84,25 +84,29 @@ export default {
         },
         handleIntersection(entries) {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        if (entry.intersectionRatio > 0.75) { // Ensure the element is stable
-                            entry.target.classList.add('animate-rise');
-                        }
-                    }, 100); // Adjust the delay as needed
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    if (entry.target.classList.contains('observe-title')) {
+                        entry.target.classList.add('animate-rise');
+                        entry.target.classList.add('animated'); // Mark the title as animated
+                    }
                 } else {
-                    entry.target.classList.remove('animate-rise');
+                    // For other elements, apply animation as usual
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-rise');
+                    } else {
+                        entry.target.classList.remove('animate-rise');
+                    }
                 }
             });
         }
     },
     mounted() {
         const observer = new IntersectionObserver(this.handleIntersection, {
-            threshold: Array.from({length: 101}, (v, i) => i / 100) // Creating smooth transition thresholds from 0 to 1
+            threshold: Array.from({ length: 101 }, (v, i) => i / 100) // Creating smooth transition thresholds from 0 to 1
         });
 
         // Select each child element to be observed
-        const elements = document.querySelectorAll('.observe');
+        const elements = document.querySelectorAll('.observe, .observe-title');
         elements.forEach(element => {
             observer.observe(element);
         });
@@ -162,12 +166,17 @@ video {
     transition: all 0.5s ease-out;
 }
 
+.observe-title {
+    opacity: 0;
+    transform: translateY(1in);
+    transition: all 0.5s ease-out;
+}
+
 .animate-rise {
     animation: rise 1.25s ease-out forwards;
 }
 
-.col-4 video {
-    opacity: 1 !important;
-    transform: none !important;
+.animated {
+    /* This class ensures that the element won't animate again */
 }
 </style>
