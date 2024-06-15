@@ -19,7 +19,7 @@
                         <div class="line"></div>
                         <div class="circle"></div>
                     </div>
-                    <div class="timeline-content">
+                    <div class="timeline-content" style="cursor: pointer;">
                         <div class="item">DISC Self</div>
                         <div class="item">DISC <br />
                             Leadership</div>
@@ -153,13 +153,21 @@ section {
     color: white;
     font-weight: 400;
     text-decoration: underline;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.item:hover {
+    transform: scale(1.1);
+    color: #f0f0f0; /* Optional: change color slightly to enhance the effect */
+}
+
 
 @keyframes rise {
     from {
         transform: translateX(-4in);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -205,32 +213,33 @@ section {
     }
 
     @keyframes rise {
-    from {
-        transform: translateX(-1in);
+        from {
+            transform: translateX(-1in);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .row .words,
+    .row .timeline-container,
+    .row .button-container {
         opacity: 0;
+        transform: translateY(1in);
+        transition: all 0.5s ease-out;
     }
-    to {
-        transform: translateX(0);
-        opacity: 1;
+
+    .animate-on-scroll {
+        opacity: 0;
+        transform: translateX(2in);
+        transition: all 0.5s ease-out;
     }
-}
 
-.row .words,
-.row .timeline-container,
-.row .button-container {
-    opacity: 0;
-    transform: translateY(1in);
-    transition: all 0.5s ease-out;
-}
-
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateX(2in);
-    transition: all 0.5s ease-out;
-}
-
-.animate-rise {
-    animation: rise .5s ease-out forwards;
-}
+    .animate-rise {
+        animation: rise .5s ease-out forwards;
+    }
 }
 </style>

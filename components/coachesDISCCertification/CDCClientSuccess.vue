@@ -6,44 +6,44 @@
                     <h1 class="title">Real Clients. Real Success.</h1>
                 </div>
                 <div class="col-4">
-                    <img src="~/assets/coaches-disc-certification/emily-bass.png" alt="emily bass picture" class="">
-                    <p style="padding-bottom: 5px">
+                    <img src="~/assets/coaches-disc-certification/emily-bass.png" alt="emily bass picture">
+                    <p class="observe" style="padding-bottom: 5px">
                         Emily Bass <br />
                         Emily Bass Strategies, LLC
                     </p>
-                    <p style="color: #0033c5; font-weight: 800;">
+                    <p class="observe" style="color: #0033c5; font-weight: 800;">
                         “Partnering with Assessments 24x7 is ​what got my business off the ground. I ​credit Assessments
                         24x7 staff, products, ​and customer service, with my ​success.”
                     </p>
-                    <button class="blue" @click="testimonialLink">
+                    <button class="blue observe" @click="testimonialLink">
                         Read More
                     </button>
                 </div>
                 <div class="col-4">
-                    <img src="~/assets/coaches-disc-certification/jaymini-mistry.png" alt="emily bass picture" class="">
-                    <p style="padding-bottom: 5px">
+                    <img src="~/assets/coaches-disc-certification/jaymini-mistry.png" alt="jaymini mistry picture">
+                    <p class="observe" style="padding-bottom: 5px">
                         Jaymini Mistry <br />
                         Business Coaching Melbourne
                     </p>
-                    <p style="color: #0033c5; font-weight: 800;">
+                    <p class="observe" style="color: #0033c5; font-weight: 800;">
                         “From a coaching point of view this ​was a major breakthrough in his self-​awareness. It's given
                         me added ​credibility.”
                     </p>
-                    <button class="blue" @click="testimonialLink">
+                    <button class="blue observe" @click="testimonialLink">
                         Read More
                     </button>
                 </div>
                 <div class="col-4">
-                    <img src="~/assets/coaches-disc-certification/donna-bell.png" alt="emily bass picture" class="">
-                    <p style="padding-bottom: 5px">
+                    <img src="~/assets/coaches-disc-certification/donna-bell.png" alt="donna bell picture">
+                    <p class="observe" style="padding-bottom: 5px">
                         Donna Bell <br />
                         Vitality Leadership
                     </p>
-                    <p style="color: #0033c5; font-weight: 800;">
+                    <p class="observe" style="color: #0033c5; font-weight: 800;">
                         “The "icing on the cake" is that I can ​fully personalize the reports with my ​business name and
                         logo. Thank you ​Assessments 24x7 for a great tool!”
                     </p>
-                    <button class="blue" @click="testimonialLink">
+                    <button class="blue observe" @click="testimonialLink">
                         Read More
                     </button>
                 </div>
@@ -61,10 +61,9 @@ export default {
         },
         handleIntersection(entries) {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
                     entry.target.classList.add('animate-sideways');
-                } else {
-                    entry.target.classList.remove('animate-sideways');
+                    entry.target.classList.add('animated'); // Mark the element as animated
                 }
             });
         }
@@ -75,7 +74,7 @@ export default {
         });
 
         // Select each child element to be observed
-        const elements = document.querySelectorAll('.col-4 button, .col-4 p, .col-4 img');
+        const elements = document.querySelectorAll('.observe');
         elements.forEach(element => {
             observer.observe(element);
         });
@@ -145,14 +144,11 @@ img {
     }
 }
 
-.col-4 p,
-.col-4 img,
-.col-4 button {
+.observe {
     opacity: 0;
     transform: translateY(1in);
     transition: all 0.5s ease-out;
 }
-
 
 .animate-on-scroll {
     opacity: 0;

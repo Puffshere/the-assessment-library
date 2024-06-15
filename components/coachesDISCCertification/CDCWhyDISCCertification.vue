@@ -86,7 +86,7 @@ export default {
     },
     mounted() {
         const observer = new IntersectionObserver(this.handleIntersection, {
-            threshold: 0.1 // Adjust this as needed
+            threshold: 0 // Adjust this as needed
         });
 
         // Select each child element to be observed
