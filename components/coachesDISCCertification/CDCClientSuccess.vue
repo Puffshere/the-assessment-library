@@ -161,10 +161,10 @@ img {
 }
 
 .animate-rise {
-    animation: rise 3s ease-out forwards;
+    animation: rise 2s ease-out forwards;
 }
 
 .animate-sideways {
-    animation: sideways 3s ease-out forwards;
+    animation: sideways 1s ease-out forwards;
 }
 </style>

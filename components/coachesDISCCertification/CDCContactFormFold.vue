@@ -272,7 +272,7 @@ export default {
 }
 
 .animate-rise-contact {
-    animation: rise-contact 1s ease-out forwards;
+    animation: rise-contact .5s ease-out forwards;
 }
 
 @media (max-width: 1000px) {

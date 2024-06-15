@@ -177,6 +177,6 @@ button {
 }
 
 .animate-rise {
-    animation: rise 1s ease-out forwards;
+    animation: rise .5s ease-out forwards;
 }
 </style>

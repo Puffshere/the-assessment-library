@@ -181,7 +181,7 @@ section {
 }
 
 .animate-rise {
-    animation: rise 2s ease-out forwards;
+    animation: rise 1s ease-out forwards;
 }
 
 @media (max-width: 768px) {
@@ -230,7 +230,7 @@ section {
 }
 
 .animate-rise {
-    animation: rise 2s ease-out forwards;
+    animation: rise .5s ease-out forwards;
 }
 }
 </style>
