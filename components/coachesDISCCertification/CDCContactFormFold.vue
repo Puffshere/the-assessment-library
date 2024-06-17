@@ -130,7 +130,16 @@ export default {
                             {
                                 field: '79', // Sales Person Assignment
                                 value: salesPerson.data
-                            }
+                            },
+                            {
+                                field: '21', // How did you hear about us?
+                                value: 'ICF'
+                            },
+                            {
+                                field: '4', // Client type (reseller vs corporate),
+                                value: 'Reseller'
+                            },
+
                         ]
                     }
                 });
