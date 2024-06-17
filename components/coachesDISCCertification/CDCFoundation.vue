@@ -20,15 +20,11 @@
                         <div class="circle"></div>
                     </div>
                     <div class="timeline-content" style="cursor: pointer;">
-                        <div class="item">DISC Self</div>
-                        <div class="item">DISC <br />
-                            Leadership</div>
-                        <div class="item">DISC <br />
-                            Awareness</div>
-                        <div class="item">DISC <br />
-                            Executive <br />
-                            Insights</div>
-                        <div class="item"> & Beyond <br> 30+ Assessments <br> 20+ Languages </div>
+                        <a class="item" target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf">DISC Self</a>
+                        <a class="item" target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf">DISC <br /> Leadership</a>
+                        <a class="item" target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf">DISC <br /> Awareness</a>
+                        <a class="item" target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf">DISC <br /> Executive <br /> Insights</a>
+                        <a class="item" href="https://www.assessments24x7.com/sample-reports"> & Beyond <br /> 30+ Assessments <br /> 20+ Languages </a>
                     </div>
                 </div>
                 <div class="col-12 button-container">
@@ -150,7 +146,7 @@ section {
 
 .item {
     text-align: left;
-    color: white;
+    color: rgb(209, 209, 209);
     font-weight: 400;
     text-decoration: underline;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -158,7 +154,8 @@ section {
 
 .item:hover {
     transform: scale(1.1);
-    color: #f0f0f0; /* Optional: change color slightly to enhance the effect */
+    color: #ffffff;
+    /* Optional: change color slightly to enhance the effect */
 }
 
 
