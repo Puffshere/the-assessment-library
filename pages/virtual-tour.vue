@@ -156,7 +156,7 @@
         },
         data() {
             return {
-                step: 1
+                step: 0
             }
         },
         methods: {
