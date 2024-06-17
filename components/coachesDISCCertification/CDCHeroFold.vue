@@ -17,7 +17,7 @@
                             <br />
                             Enhancing Your Coaching Efficacy
                         </h4>
-                        <button class="light-blue" style="margin-top: 20px;" @click="scrollToSection">
+                        <button class="light-blue" style="margin-top: 20px;" @click="scrollToSectionButton">
                             Get Started Today
                         </button>
                     </div>
@@ -36,6 +36,13 @@ export default {
     methods: {
         scrollToSection(event) {
             const element = document.getElementById('icfSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        scrollToSectionButton(event) {
+            const element = document.getElementById('cdcContactForm');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
