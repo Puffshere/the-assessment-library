@@ -248,6 +248,25 @@
                     <table style="width:100%">
                         <thead>
                             <tr>
+                                <th>DISC Workplace Insights Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Workplace+Insights_Vs1_6.18.2024.pdf"
+                                        target="_blank" rel="noopener">DISC Workplace Insights Report Guide</a>
+                                    <small>An overview guide for reviewing, interpreting and applying the DISC Workplace
+                                        Insights Report with page-by-page details and suggestions for use.</small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
                                 <th>DISC Development Resources</th>
                             </tr>
                         </thead>
