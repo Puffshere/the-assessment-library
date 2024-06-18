@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-7">
-                        <h2>
+                        <h2 style="line-height: 54px;">
                             Unlock the Full Potential <br />
                             of your <br />
                             Executive Coaching <br />

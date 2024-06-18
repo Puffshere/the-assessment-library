@@ -17,9 +17,9 @@
                             Quantifiable Impact</h4>
                     </div>
                     <p style="max-width: 500px; font-size: 18px; margin-top: 10px;">
-                        Leverage DISC assessments to provide tangible results, demonstrating the impact of your
-                        coaching on client performance & leadership growth. Show your clients the clear benefits of
-                        their development journey.
+                        Leverage DISC assessments to provide tangible results: demonstrating the impact of your coaching
+                        on client performance and leadership growth. Show your clients the clear benefits of their
+                        development journey.
                     </p>
                     <div class="icon-text" style="display: flex; margin-top: 40px;">
                         <img src="~/assets/coaches-disc-certification/high-roi-solution.png" alt="High ROI Solution"
@@ -28,30 +28,29 @@
                             Solution</h4>
                     </div>
                     <p style="max-width: 650px; font-size: 18px; margin-top: 10px;">
-                        We understand the importance of cost-effectiveness. Our DISC Certification & Assessment
-                        tools offer a high return on investment, providing robust support & resources to enhance
-                        your coaching practice without breaking the bank.
+                        We understand the importance of cost-effectiveness. Our DISC Certification & Assessment tools
+                        ensure a high return on investment, providing robust support and resources to enhance your
+                        coaching practice without breaking the bank.
                     </p>
                     <div class="icon-text" style="display: flex; margin-top: 20px;">
                         <img src="~/assets/coaches-disc-certification/tailored-insights.png" alt="Tailored Insights"
                             style="width: 4.5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">Tailored
-                            Insights for Diverse Needs</h4>
+                            Insights</h4>
                     </div>
                     <p style="max-width: 875px; font-size: 18px; margin-top: 10px;">
                         The versatility of DISC assessments allows you to customize your approach to meet the unique
-                        challenges & goals of each executive client, fostering a more personalized coaching
-                        experience.
+                        challenges and goals of each client, fostering a more personalized coaching experience.
                     </p>
                     <div class="icon-text" style="display: flex; margin-top: 40px;">
                         <img src="~/assets/coaches-disc-certification/user-friendly.png" alt="User-Friendly"
                             style="width: 5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">
-                            User-Friendly and Integrative</h4>
+                            Integrative and User-Friendly</h4>
                     </div>
                     <p style="font-size: 18px; margin-top: 10px;">
-                        Our platform is designed with ease of use in mind, ensuring you can seamlessly integrate
-                        these assessments into your existing coaching practices without a steep learning curve.
+                        Our platform is designed for ease of use, ensuring you can seamlessly integrate these
+                        assessments into your existing coaching practices with a simple learning curve.
                     </p>
                 </div>
                 <div class="col-12 button-container" style="margin-top: 120px;">

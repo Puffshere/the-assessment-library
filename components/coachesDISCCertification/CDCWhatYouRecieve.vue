@@ -9,26 +9,33 @@
                     </h1>
                     <div class="col-4 observe">
                         <video autoplay muted loop id="myVideo">
-                            <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/comprehensive-training.mp4" type="video/mp4">
+                            <source
+                                src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/comprehensive-training.mp4"
+                                type="video/mp4">
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
                     <div class="col-8 observe">
                         <h4>Comprehensive Training</h4>
                         <p>
-                            Gain access to in-depth training from World Class Industry Experts that covers the fundamentals of DISC theory, application of assessments, and strategies for integrating these tools into your coaching sessions.
+                            Gain access to in-depth training from world-class industry experts, covering the
+                            fundamentals of DISC theory, application of assessments, and strategies for integrating
+                            these tools into your coaching sessions.
                         </p>
                     </div>
                     <div class="col-12">
                         <div class="col-8 observe" style="text-align: right;">
                             <h4>Ongoing Support</h4>
                             <p>
-                                Benefit from our dedicated support team ready to assist you with any questions or challenges, ensuring you make the most of your DISC Certification.
+                                Receive ongoing support from our dedicated team, ready to assist you with any questions
+                                or challenges, ensuring you make the most of your DISC Certification.
                             </p>
                         </div>
                         <div class="col-4 observe">
                             <video autoplay muted loop id="myVideo">
-                                <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/ongoing-support.mp4" type="video/mp4">
+                                <source
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/ongoing-support.mp4"
+                                    type="video/mp4">
                                 Your browser does not support HTML5 video.
                             </video>
                         </div>
@@ -36,7 +43,9 @@
                 </div>
                 <div class="col-4 observe">
                     <video autoplay muted loop id="myVideo">
-                        <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/online-dashboard-video.mp4" type="video/mp4">
+                        <source
+                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/online-dashboard-video.mp4"
+                            type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
                 </div>
@@ -44,7 +53,9 @@
                     <h4>Online Dashboard (+10 Free DISC Assessments!)
                     </h4>
                     <p>
-                        Gain access to in-depth training that covers the fundamentals of DISC theory, application of assessments, and strategies for integrating these tools into your coaching sessions.
+                        Access our online dashboard and benefit from ten free DISC assessments. This tool is designed to
+                        enhance your training experience, providing essential insights into DISC theory and practical
+                        applications.
                     </p>
                 </div>
                 <div class="col-12" style="text-align: right;">
@@ -52,12 +63,15 @@
                         <h4>Exclusive Resources
                         </h4>
                         <p>
-                            Access a wealth of resources, including Coaching guides, Turnkey PPTs, Learning Activities, and more, to help you maximize the value of DISC assessments for your clients.
+                            Access a wealth of resources, including coaching guides, turnkey PPTs, learning activities,
+                            and more, to help you maximize the value of DISC assessments for your clients.
                         </p>
                     </div>
                     <div class="col-4 observe">
                         <video autoplay muted loop id="myVideo">
-                            <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/untitled-design.mp4" type="video/mp4">
+                            <source
+                                src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/untitled-design.mp4"
+                                type="video/mp4">
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
@@ -154,6 +168,7 @@ video {
         transform: translateY(1in);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
