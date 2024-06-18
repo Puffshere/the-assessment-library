@@ -148,7 +148,7 @@
                             </div>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNote2 footNotes">{{ link.footNote }}</span>
+                                <span class="footNotes" style="text-align: left;">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
@@ -449,12 +449,19 @@ export default {
                 },
                 {
                     id: 11,
-                    name: 'Development/Training',
-                    image: '/images/comingSoonYellow.webp',
+                    name: 'Meeting Recordings',
+                    links: [
+                        {
+                            url: 'https://www.youtube.com/watch?v=lfKgsDDW_Ng',
+                            mainText: 'A24x7 Team Meeting - 6/6/24 ',
+                            footNote: "*New Meeting Structure"
+                        }
+                    ]
                 },
                 {
                     id: 12,
-                    name: '',
+                    name: 'Development/Training',
+                    image: '/images/comingSoonYellow.webp',
                 }
             ],
         };
