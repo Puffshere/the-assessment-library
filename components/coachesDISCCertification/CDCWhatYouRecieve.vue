@@ -77,8 +77,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 button-container observe">
-                <button class="blue" @click="scrollToSection">
+            <div class="col-12 button-container">
+                <button class="blue observe" @click="scrollToSection">
                     Get Started Today
                 </button>
             </div>
