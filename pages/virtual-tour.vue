@@ -21,10 +21,13 @@
                     <p style="line-height: 20px; margin-top: -10px; margin-bottom: 50px;">Based on thousands of account
                         setups, here are our recommended steps. <br />
                         Feel free to skip sections and proceed at your own pace. For personalized <br />
-                        training, schedule a <span><a class="hyperlink" href="https://calendly.com/molly-24x7/virtual-tour-of-your-account-dashboard?month=2024-06">one-on-one session with
-                            Molly Kirby</a></span>. For
+                        training, schedule a <span><a class="hyperlink"
+                                href="https://calendly.com/molly-24x7/virtual-tour-of-your-account-dashboard?month=2024-06">one-on-one
+                                session with
+                                Molly Kirby</a></span>. For
                         more information on <br />
-                        our assessments, pricing, and resources, contact <span><a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments.ws</a></span>.</p>
+                        our assessments, pricing, and resources, contact <span><a class="hyperlink"
+                                href="mailto:support@assessments24x7.com">support@assessments.ws</a></span>.</p>
                     <button class="button" :disabled="step === 0"
                         :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '60px', width: '170px', opacity: step === 0 ? 0.5 : 1 }"
                         @click="prevStep()"><span>
@@ -177,9 +180,6 @@ export default {
         }
     },
     methods: {
-        navToStep(step) {
-            this.step = step;
-        },
         nextStep() {
             if (this.step < this.totalSteps - 1) {
                 this.step++;
