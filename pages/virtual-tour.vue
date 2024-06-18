@@ -12,166 +12,148 @@
             </div>
         </section>
 
-        <div class="container">
-            <div class="row" v-show="step === 1">
+        <div class="container firstFold" style="text-align: center;">
+
+
+            <div class="row" id="heroFold">
                 <div class="col-12">
                     <h2>Introduction To Your Online Assessment Account</h2>
+                    <p style="line-height: 20px; margin-top: -10px; margin-bottom: 50px;">Based on thousands of account
+                        setups, here are our recommended steps. <br />
+                        Feel free to skip sections and proceed at your own pace. For personalized <br />
+                        training, schedule a <span class="hyperlink" style="cursor: pointer;">one-on-one session with
+                            Molly Kirby</span>. For
+                        more information on <br />
+                        our assessments, pricing, and resources, contact <span class="hyperlink"
+                            style="cursor: pointer;">support@assessmentsws</span>.</p>
+                    <button class="button" :disabled="step === 0"
+                        :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '60px', width: '170px', opacity: step === 0 ? 0.5 : 1 }"
+                        @click="prevStep()"><span>
+                            <img src="~/assets/previous-video-icon.png"
+                                style="width: 20px; padding-right: 5px; margin-bottom: -4px;" alt="previous video icon">
+                        </span>Go Back
+                    </button>
+                    <button class="button" :disabled="step === 3"
+                        :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '60px', width: '170px', opacity: step === 3 ? 0.5 : 1 }"
+                        @click="nextStep()">Next Video<span>
+                            <img src="~/assets/next-video-icon.png"
+                                style="width: 20px; padding-left: 5px; margin-bottom: -4px;" alt="next video icon">
+                        </span>
+                    </button><br /><br />
 
-                    <p>
-                        The steps provided are our recommendations based off thousands of account set ups. Feel free to
-                        skip sections and move at your own
-                        pace. We also offer one-on-one training via the phone/web. If you feel this will assist, we
-                        encourage you to contact us and set up
-                        a meeting.
-                    </p>
 
-                    <p>
-                        Schedule with <a href="https://calendly.com/molly-24x7/virtual-tour-of-your-account-dashboard"
-                            class="hyperlink">Molly Kirby</a>
-                    </p>
 
-                    <p>
-                        If we can make any modifications to our software to better meet your needs, please don't
-                        hesitate to ask. For additional resources
-                        on our entire assessment catalog, pricing and additional resources feel free to contact us at
-                        <a class="hyperlink" href="mailto:support@assessments24x7.com">support@assessments24x7.com</a>.
-                    </p>
-
-                    <button class="button" @click="navToStep(2)">Start Full Tour</button><br /><br />
-
-                    <h3>Jump to an individual section:</h3>
-                    <ul>
-                        <li><a href="#" @click="navToStep(2)" class="hyperlink">General Account Settings/Upload Your
-                                Logo/Modify Your Site Design</a></li>
-                        <li><a href="#" @click="navToStep(3)" class="hyperlink">Features on Your Home Page</a></li>
-                        <li><a href="#" @click="navToStep(4)" class="hyperlink">Setting Up Assessment Access Links</a>
-                        </li>
-                        <li><a href="#" @click="navToStep(5)" class="hyperlink">Managing Assessment Users and Accessing
-                                Reports</a></li>
-                    </ul><br />
-
-                    <h3>Additional Videos:</h3>
-                    <ul>
-                        <li><a href="#" @click="navToStep(6)" class="hyperlink">Group Reporting</a></li>
-                        <li><a href="#" @click="navToStep(7)" class="hyperlink">DISC Collaboration Reporting</a></li>
-                        <li><a href="#" @click="navToStep(8)" class="hyperlink">360 Instruction Video</a></li>
-                    </ul><br /><br />
-                </div>
-            </div>
-
-            <div class="row" v-show="step === 2">
-                <div class="col-12">
-                    <h2>General Account Settings/Upload Your Logo/Modify Your Site Design</h2>
-                    <button class="button secodary" @click="navToStep(1)">Go Back</button>
-                    <button class="button" @click="navToStep(3)">Next Step</button><br /><br />
-
-                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/b0ee18iEhkU"
-                        frameborder="0"
+                    <iframe v-show="step === 0" style="width:80%; margin-bottom: 50px;" height="540"
+                        src="https://www.youtube.com/embed/mxXrKA5629M" frameborder="1"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                    <br /><br />
-                    <a href="https://assessments123.com/Account/adminguide.pdf" class="hyperlink"
-                        target="_blank">Download full PDF instruction guide (see pages 30-34)</a>
-                    <br /><br />
-                </div>
-            </div>
-
-            <div class="row" v-show="step === 3">
-                <div class="col-12">
-                    <h2>Features on Your Home Page</h2>
-                    <button class="button secodary" @click="navToStep(2)">Go Back</button>
-                    <button class="button" @click="navToStep(4)">Next Step</button><br /><br />
-
-                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/UZKHHav3INY"
-                        frameborder="0"
+                    <iframe v-show="step === 1" style="width:80%; margin-bottom: 50px;" height="540"
+                        src="https://www.youtube.com/embed/Vt_8AM_-2jM" frameborder="1"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                    <br /><br />
-                    <a href="https://assessments247.net/Account/IGhome.pdf" class="hyperlink" target="_blank">Download
-                        full PDF instruction guide (see pages 3-11)</a>
-                    <br /><br />
-                </div>
-            </div>
-
-            <div class="row" v-show="step === 4">
-                <div class="col-12">
-                    <h2>Setting up Assessment Access Links</h2>
-                    <button class="button secodary" @click="navToStep(3)">Go Back</button>
-                    <button class="button" @click="navToStep(5)">Next Step</button><br /><br />
-
-                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/-xnQzh6gnvk"
-                        frameborder="0"
+                    <iframe v-show="step === 2" style="width:80%; margin-bottom: 50px;" height="540"
+                        src="https://www.youtube.com/embed/-xnQzh6gnvk" frameborder="1"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                    <br /><br />
-                    <a href="https://assessments247.net/Account/IGassessmentlinks.pdf" class="hyperlink"
-                        target="_blank">Download full PDF instruction guide (see pages 14-18)</a>
-                    <br /><br />
-                </div>
-            </div>
-
-            <div class="row" v-show="step === 5">
-                <div class="col-12">
-                    <h2>Managing Assessment Users and Accessing Reports</h2>
-                    <button class="button secodary" @click="navToStep(4)">Go Back</button>
-                    <button class="button" @click="navToStep(1)">Next Step</button><br /><br />
-
-                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/outCzOuSXXg"
-                        frameborder="0"
+                    <iframe v-show="step === 3" style="width:80%; margin-bottom: 50px;" height="540"
+                        src="https://www.youtube.com/embed/GG9dzjEk2j0" frameborder="1"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                    <br /><br />
-                    <a href="https://assessments123.com/Account/adminguide.pdf" class="hyperlink"
-                        target="_blank">Download full PDF instruction guide (see pages 19-24)</a>
-                    <br /><br />
+
+                    <button class="button mainButton" @click="jumpToIndividualSection" style="font-size: 16px;"><span>
+                            <img src="~/assets/cert-page-buttons.png"
+                                style="width: 20px; padding-right: 5px; margin-bottom: -3px;" alt="cert page buttons">
+                        </span>Jump to individual section</button>
+                    <button class="button mainButton" @click="supplementalVideos" style="font-size: 16px;"><span>
+                            <img src="~/assets/supplemental-icon.png" style="width:20px; padding-right: 5px;"
+                                alt="supplemental icon image">
+                        </span>Supplemental videos</button>
                 </div>
             </div>
-
-            <div class="row" v-show="step === 6">
-                <div class="col-12">
-                    <h2>Group Reporting</h2>
-                    <button class="button secodary" @click="navToStep(1)">Go Back</button><br /><br />
-
-                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/7ZOuCBoXIhQ"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <br /><br />
-                    <a href="/pdfs/IGgroupreporting.pdf" class="hyperlink" target="_blank">Download group reporting full
-                        instruction PDF</a>
-                    <br /><br />
+        </div>
+        <div class="secondFold" id="jumpSection">
+            <div class="container">
+                <div class="col-12" style="color: white; text-align: center">
+                    <div class="row">
+                        <h2 style="margin-bottom: 85px;">Jump to Individual Section</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/mxXrKA5629M"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <h4>
+                                General Account Settings
+                            </h4>
+                        </div>
+                        <div class="col-6">
+                            <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/Vt_8AM_-2jM"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <h4>
+                                Features on Your Home Page
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-6">
+                            <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/-xnQzh6gnvk"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <h4>
+                                Setting Up Assessment Access Links
+                            </h4>
+                        </div>
+                        <div class="col-6">
+                            <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/GG9dzjEk2j0"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <h4>
+                                Managing Assessment Users
+                            </h4>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="row" v-show="step === 7">
-                <div class="col-12">
-                    <h2>DISC Collaboration Reporting</h2>
-                    <button class="button secodary" @click="navToStep(1)">Go Back</button><br /><br />
-
-                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/nyeaI6Qba2c"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <br /><br />
-                    <a href="/pdfs/IGcollaboration.pdf" class="hyperlink" target="_blank">Download DISC collaboration
-                        full instruction PDF</a>
-                    <br /><br />
-                </div>
-            </div>
-
-            <div class="row" v-show="step === 8">
-                <div class="col-12">
-                    <h2>360 Assessment Instructions</h2>
-                    <button class="button secodary" @click="navToStep(1)">Go Back</button><br /><br />
-
-                    <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/IFEiJmud3WI"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <br /><br />
-                    <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2022.pdf"
-                        class="hyperlink" target="_blank">Download 360 assessment full instruction PDF</a>
-                    <br /><br />
+        </div>
+        <div class="thirdFold" id="supplementalSection">
+            <div class="container">
+                <div class="col-12" style="text-align: center">
+                    <div class="row">
+                        <h2 style="color: black; margin-bottom: 60px;">Supplemental Videos</h2>
+                    </div>
+                    <div class="row" style="padding-bottom: 80px;">
+                        <div class="col-6">
+                            <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/mg5g0FXhonk"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <h4>
+                                Group Reporting/DISC Collaboration
+                            </h4>
+                        </div>
+                        <div class="col-6">
+                            <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/mPdDie91CkI"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <h4>
+                                360 Instruction Video
+                            </h4>
+                        </div>
+                    </div>
+                    <button class="button mainButton" @click="backToVirtualTour" style="font-size: 16px;"><span>
+                            <img src="~/assets/back-to-full-tour-icon.png" style="width: 25px; padding-right: 5px;"
+                                alt="back arrow image">
+                        </span>Bact to full Virtual Tour</button>
+                    <button class="button mainButton" @click="contactSupport" style="font-size: 16px;"><span>
+                            <img src="~/assets/virtual-tour-mail-icon.png" style="width:25px; padding-right: 5px;"
+                                alt="image of an envelope">
+                        </span>Contact Support</button>
                 </div>
             </div>
         </div>
@@ -191,13 +173,49 @@ export default {
     },
     data() {
         return {
-            step: 1
+            step: 0,
+            totalSteps: 4
         }
     },
     methods: {
         navToStep(step) {
             this.step = step;
-        }
+        },
+        nextStep() {
+            if (this.step < this.totalSteps - 1) {
+                this.step++;
+            }
+        },
+        prevStep() {
+            if (this.step > 0) {
+                this.step--;
+            }
+        },
+        jumpToIndividualSection(event) {
+            const element = document.getElementById('jumpSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        supplementalVideos(event) {
+            const element = document.getElementById('supplementalSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        backToVirtualTour(event) {
+            const element = document.getElementById('heroFold');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        contactSupport(event) {
+            window.location.href = 'https://www.assessments24x7.com/contact';
+            event.target.blur();
+        },
     },
     head() {
         return {
@@ -230,6 +248,32 @@ export default {
         }
     }
 
+    iframe {
+        border-radius: 30px;
+    }
+
+    button {
+        border-radius: 10px;
+    }
+
+    .mainButton {
+        min-width: 290px;
+    }
+
+    .secondFold {
+        iframe {
+            max-width: 90%;
+            max-height: 250px;
+        }
+    }
+
+    .thirdFold {
+        iframe {
+            max-width: 90%;
+            max-height: 250px;
+        }
+    }
+
     h1 {
         font-size: 30pt;
         line-height: 34pt;
@@ -237,8 +281,41 @@ export default {
     }
 
     h2 {
-        font-size: 20pt;
+        font-size: 26pt;
         line-height: 24pt;
+        font-weight: 500;
+
+    }
+
+    h4 {
+        font-size: 14pt;
+        line-height: 14pt;
+        font-weight: 400;
+    }
+
+    .firstFold {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0px;
+        padding-bottom: 70px;
+    }
+
+    .secondFold {
+        background-image: url("~assets/blue-textured-background.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .thirdFold {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 75px;
+        padding-bottom: 100px;
     }
 }
 </style>
