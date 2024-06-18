@@ -1,7 +1,6 @@
 <template>
     <section class="virtual-tour">
         <main-nav></main-nav>
-
         <section class="header">
             <div class="container">
                 <div class="row">
@@ -11,10 +10,7 @@
                 </div>
             </div>
         </section>
-
         <div class="container firstFold" style="text-align: center;">
-
-
             <div class="row" id="heroFold">
                 <div class="col-12">
                     <h2>Introduction To Your Online Assessment Account</h2>
@@ -42,9 +38,6 @@
                                 style="width: 20px; padding-left: 5px; margin-bottom: -4px;" alt="next video icon">
                         </span>
                     </button><br /><br />
-
-
-
                     <iframe v-show="step === 0" style="width:80%; margin-bottom: 50px;" height="540"
                         src="https://www.youtube.com/embed/mxXrKA5629M" frameborder="1"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -61,7 +54,6 @@
                         src="https://www.youtube.com/embed/GG9dzjEk2j0" frameborder="1"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-
                     <button class="button mainButton" @click="jumpToIndividualSection" style="font-size: 16px;"><span>
                             <img src="~/assets/cert-page-buttons.png"
                                 style="width: 20px; padding-right: 5px; margin-bottom: -3px;" alt="cert page buttons">
@@ -159,17 +151,11 @@
                 </div>
             </div>
         </div>
-
         <footer-fold></footer-fold>
     </section>
 </template>
 
 <script>
-import Vue from 'vue';
-import VueLazyload from 'vue-lazyload';
-
-Vue.use(VueLazyload);
-
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
