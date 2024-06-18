@@ -63,6 +63,7 @@
     "vue-country-region-select": "^2.0.16",
     "vue-file-agent": "^1.7.3",
     "vue-lazy-hydration": "^1.0.0-beta.14",
+    "vue-lazyload": "^3.0.0",
     "vue-loading-overlay": "^3.4.2",
     "vue-mapbox": "^0.4.1",
     "vue-moment": "^4.0.0",

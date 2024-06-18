@@ -165,6 +165,11 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import VueLazyload from 'vue-lazyload';
+
+Vue.use(VueLazyload);
+
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
