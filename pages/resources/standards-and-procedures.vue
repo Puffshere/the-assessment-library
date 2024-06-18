@@ -71,7 +71,7 @@
                             </a>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNote1 footNotes">{{ link.footNote }}</span>
+                                <span class="footNotes" style="text-align: left;">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
@@ -293,14 +293,6 @@ export default {
                             mainText: 'IRS W9 Form',
                         },
                         {
-                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/liablility-insurance.pdf',
-                            mainText: 'A24x7 Liability Insurance',
-                        },
-                        {
-                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/cyber-liability-insurance.pdf',
-                            mainText: 'A24x7 Cyber Liability Insurance',
-                        },
-                        {
                             url: 'https://docs.google.com/spreadsheets/d/1Vhgz4OqXdN3KIKMsWKp5z4Md0_Da2uzos1O6WUXYGSY/edit#gid=713753388',
                             mainText: 'Employee Roster',
                         },
@@ -311,6 +303,11 @@ export default {
                         {
                             url: 'https://youtu.be/jRbJySDg5g0',
                             mainText: '401k Information Video',
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/A24x7CyberandLiabilityInsCertificate+1-24+to+1-25.pdf',
+                            mainText: 'A24x7 Liability & Cyber Insurance',
+                            footNote: '*exp. 01/05/25'
                         }
                     ]
                 }
@@ -734,10 +731,6 @@ $pixel: 15px;
     display: block;
     width: 305px;
     color: rgb(56, 56, 56);
-}
-
-.footNote1 {
-    left: -30px;
 }
 
 .footNote2 {
