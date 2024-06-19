@@ -2,7 +2,7 @@
     <section>
       <main-nav class="nav"></main-nav>
       <section class="body">
-       <contact-form></contact-form>
+       <!-- <contact-form></contact-form> -->
       </section>
       <footer-fold class="foot"></footer-fold>
     </section>

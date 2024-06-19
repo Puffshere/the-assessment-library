@@ -58,7 +58,6 @@
                         <div class="row" style="padding-bottom: 20px;">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <!-- <ValidationProvider v-slot="v" rules="required"> -->
                                     <label><strong>Which best describes your need for assessments? *</strong></label>
 
                                     <div class="form-check">
@@ -83,8 +82,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <span class="error">{{ v.errors[0] }}</span> -->
-                            <!-- </ValidationProvider> -->
                         </div>
                         <button type="submit" class="white">
                             Submit
