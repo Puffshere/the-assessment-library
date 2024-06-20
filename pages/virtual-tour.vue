@@ -287,9 +287,9 @@ export default {
     }
 
     h2 {
-        font-size: 32px;
-        line-height: 32px;
-        font-weight: 600;
+        font-size: 24pt;
+        line-height: 28pt;
+        font-weight: bold;
 
     }
 
