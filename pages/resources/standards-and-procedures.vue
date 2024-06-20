@@ -308,6 +308,10 @@ export default {
                             url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/A24x7CyberandLiabilityInsCertificate+1-24+to+1-25.pdf',
                             mainText: 'A24x7 Liability & Cyber Insurance',
                             footNote: '*exp. 01/05/25'
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Slack+Guidelines_Final.pdf',
+                            mainText: 'Slack guidelines'
                         }
                     ]
                 }
