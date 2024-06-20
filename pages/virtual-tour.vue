@@ -10,75 +10,68 @@
                 </div>
             </div>
         </section>
-        <keep-alive>
-            <div class="container firstFold" style="text-align: center;">
-                <div class="row" id="heroFold">
-                    <div class="col-12">
-                        <h2>Introduction To Your Online Assessment Account</h2>
-                        <p style="line-height: 20px; margin-top: -10px; margin-bottom: 50px;">Here are our recommended
-                            steps
-                            based on thousands of account setups. <br />
-                            Skip sections as needed and proceed at your own pace. For
-                            personalized <br />
-                            training, <span><a class="hyperlink"
-                                    href="https://calendly.com/molly-24x7/virtual-tour-of-your-account-dashboard?month=2024-06">book
-                                    a session with Molly Kirby</a></span>. For information on <br />
-                            assessments, pricing, and resources, contact
-                            <span><a class="hyperlink"
-                                    href="mailto:support@assessments24x7.com">support@assessments.ws</a></span>.
-                        </p>
-                        <div class="buttonGroup"
-                            style="margin-bottom: 25px; display: flex; justify-content: center; margin-left: 18px;">
-                            <button class="button" :disabled="step === 0"
-                                :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '60px', width: '170px', opacity: step === 0 ? 0.5 : 1 }"
-                                @click="prevStep()"><span>
-                                    <img src="~/assets/previous-video-icon.png"
-                                        style="width: 20px; padding-right: 5px; margin-bottom: -4px;"
-                                        alt="previous video icon">
-                                </span>Go Back
-                            </button>
-                            <button class="button" :disabled="step === 3"
-                                :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '60px', width: '170px', opacity: step === 3 ? 0.5 : 1 }"
-                                @click="nextStep()">Next Video<span>
-                                    <img src="~/assets/next-video-icon.png"
-                                        style="width: 20px; padding-left: 5px; margin-bottom: -4px;"
-                                        alt="next video icon">
-                                </span>
-                            </button>
-                        </div>
-                        <iframe v-show="step === 0" style="width:80%; margin-bottom: 50px;" height="540"
-                            src="https://www.youtube.com/embed/mxXrKA5629M" frameborder="1"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <iframe v-show="step === 1" style="width:80%; margin-bottom: 50px;" height="540"
-                            src="https://www.youtube.com/embed/Vt_8AM_-2jM" frameborder="1"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <iframe v-show="step === 2" style="width:80%; margin-bottom: 50px;" height="540"
-                            src="https://www.youtube.com/embed/-xnQzh6gnvk" frameborder="1"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <iframe v-show="step === 3" style="width:80%; margin-bottom: 50px;" height="540"
-                            src="https://www.youtube.com/embed/GG9dzjEk2j0" frameborder="1"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <div class="buttonGroup" style="display: flex; justify-content: center; margin-left: 18px;">
-                            <button class="button mainButton" @click="jumpToIndividualSection"
-                                style="font-size: 16px;"><span>
-                                    <img src="~/assets/cert-page-buttons.png"
-                                        style="width: 18px; padding-right: 5px; margin-bottom: -3px;"
-                                        alt="cert page buttons">
-                                </span>Jump to individual section</button>
-                            <button class="button mainButton" @click="supplementalVideos"
-                                style="font-size: 16px;"><span>
-                                    <img src="~/assets/supplemental-icon.png" style="width:20px; padding-right: 5px;"
-                                        alt="supplemental icon image">
-                                </span>Supplemental videos</button>
-                        </div>
+        <div class="container firstFold" style="text-align: center;">
+            <div class="row" id="heroFold">
+                <div class="col-12">
+                    <h2>Introduction To Your Online Assessment Account</h2>
+                    <p style="line-height: 20px; margin-top: -10px; margin-bottom: 50px;">Here are our recommended steps
+                        based on thousands of account setups. <br />
+                        Skip sections as needed and proceed at your own pace. For
+                        personalized <br />
+                        training, <span><a class="hyperlink"
+                                href="https://calendly.com/molly-24x7/virtual-tour-of-your-account-dashboard?month=2024-06">book
+                                a session with Molly Kirby</a></span>. For information on <br />
+                        assessments, pricing, and resources, contact
+                        <span><a class="hyperlink"
+                                href="mailto:support@assessments24x7.com">support@assessments.ws</a></span>.
+                    </p>
+                    <div class="buttonGroup"
+                        style="margin-bottom: 25px; display: flex; justify-content: center; margin-left: 18px;">
+                        <button class="button" :disabled="step === 0"
+                            :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '60px', width: '170px', opacity: step === 0 ? 0.5 : 1 }"
+                            @click="prevStep()"><span>
+                                <img src="~/assets/previous-video-icon.png"
+                                    style="width: 20px; padding-right: 5px; margin-bottom: -4px;"
+                                    alt="previous video icon">
+                            </span>Go Back
+                        </button>
+                        <button class="button" :disabled="step === 3"
+                            :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '60px', width: '170px', opacity: step === 3 ? 0.5 : 1 }"
+                            @click="nextStep()">Next Video<span>
+                                <img src="~/assets/next-video-icon.png"
+                                    style="width: 20px; padding-left: 5px; margin-bottom: -4px;" alt="next video icon">
+                            </span>
+                        </button>
+                    </div>
+                    <div v-show="step === 0" id="iframe-container" style="margin-bottom: 50px;"></div>
+                    <iframe v-show="step === 1" style="width:80%; margin-bottom: 50px;" height="540"
+                        src="https://www.youtube.com/embed/Vt_8AM_-2jM" frameborder="1"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe v-show="step === 2" style="width:80%; margin-bottom: 50px;" height="540"
+                        src="https://www.youtube.com/embed/-xnQzh6gnvk" frameborder="1"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe v-show="step === 3" style="width:80%; margin-bottom: 50px;" height="540"
+                        src="https://www.youtube.com/embed/GG9dzjEk2j0" frameborder="1"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="buttonGroup" style="display: flex; justify-content: center; margin-left: 18px;">
+                        <button class="button mainButton" @click="jumpToIndividualSection"
+                            style="font-size: 16px;"><span>
+                                <img src="~/assets/cert-page-buttons.png"
+                                    style="width: 18px; padding-right: 5px; margin-bottom: -3px;"
+                                    alt="cert page buttons">
+                            </span>Jump to individual section</button>
+                        <button class="button mainButton" @click="supplementalVideos"
+                            style="font-size: 16px;"><span>
+                                <img src="~/assets/supplemental-icon.png" style="width:20px; padding-right: 5px;"
+                                    alt="supplemental icon image">
+                            </span>Supplemental videos</button>
                     </div>
                 </div>
             </div>
-        </keep-alive>
+        </div>
         <div class="secondFold" id="jumpSection">
             <div class="container" style=" display: flex; justify-content: center;">
                 <div class="col-12" style="color: white; text-align: center;">
@@ -158,7 +151,7 @@
                         <button class="button mainButton" @click="backToVirtualTour" style="font-size: 16px;"><span>
                                 <img src="~/assets/back-to-full-tour-icon.png" style="width: 25px; padding-right: 5px;"
                                     alt="back arrow image">
-                            </span>Bact to full Virtual Tour</button>
+                            </span>Back to full Virtual Tour</button>
                         <button class="button mainButton" @click="contactSupport" style="font-size: 16px;"><span>
                                 <img src="~/assets/virtual-tour-mail-icon.png" style="width:25px; padding-right: 5px;"
                                     alt="image of an envelope">
@@ -183,10 +176,28 @@ export default {
     data() {
         return {
             step: 0,
-            totalSteps: 4
+            totalSteps: 4,
+            iframeLoaded: false
+        }
+    },
+    mounted() {
+        if (!this.iframeLoaded) {
+            this.iframeLoaded = true;
+            this.loadIframe();
         }
     },
     methods: {
+        loadIframe() {
+            const iframe = document.createElement('iframe');
+            iframe.src = "https://www.youtube.com/embed/mxXrKA5629M";
+            iframe.style.width = '80%';
+            iframe.style.borderRadius = '30px';
+            iframe.height = '540';
+            iframe.frameBorder = '1';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            document.getElementById('iframe-container').appendChild(iframe);
+        },
         nextStep() {
             if (this.step < this.totalSteps - 1) {
                 this.step++;
@@ -221,18 +232,6 @@ export default {
         contactSupport(event) {
             window.location.href = 'https://www.assessments24x7.com/contact';
             event.target.blur();
-        },
-    },
-    head() {
-        return {
-            title: 'Virtual Tour | Assessments 24x7',
-            meta: [
-                {
-                    hid: 'description',
-                    name: 'description',
-                    content: 'The steps provided are our recommendations based off thousands of account set ups. Feel free to skip sections and move at your own pace.'
-                }
-            ]
         }
     }
 }
