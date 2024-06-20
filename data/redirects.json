@@ -378,5 +378,9 @@
     {
         "from": "/certifications/workshop-certification",
         "to": "/certifications/DISC-workshop-essentials"
+    },
+    {
+        "from": "/store/disc-profiler-deck",
+        "to": "/"
     }
 ]
