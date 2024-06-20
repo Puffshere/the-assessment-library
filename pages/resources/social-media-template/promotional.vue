@@ -10,7 +10,8 @@
                             <p class="titleText">
                                 Utilize these branded Social Media templates in Canva to customize within your Canva Pro
                                 Accounts for sharing on social media. Please be aware that the additional information is
-                                provided exclusively for branding and language guidance; refrain from copying it verbatim.
+                                provided exclusively for branding and language guidance; refrain from copying it
+                                verbatim.
                             </p>
                         </div>
                     </div>
@@ -337,6 +338,28 @@ Get in touch with a dedicated specialist today to discuss how we can support you
                     instaPostAs: 'Image',
                     ctaLink: '',
                     caption: `Did you know? At Assessments 24x7, we’re more than just Assessments and Certification; we’re your ultimate Assessment Technology customization partner. From API integration to personalized reports, user experience, and domain-specific customization, we empower you to tailor assessments to your exact needs. Let’s explore how we can elevate your business together! #UnlockPotential #Assessments #Assessemnttechnology #Customizations #AssessmentExpert #CareerDevelopment #ProfessionalGrowth #InvestInYourself #Businessdevelopment #Assessments24x7`,
+                    postCategory: 'Promotional'
+                },
+                {
+                    id: 15,
+                    title: 'Meet DISC Awareness Post - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAGHwHrun74/TBVds6PruZDZVvH4Rn8jiA/view?utm_content=DAGHwHrun74&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/71TemplateImage.jpg',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `Have you heard about our newest assessment? 🌟 Meet DISC Awareness!
+
+This groundbreaking tool seamlessly combines the DISC assessment you know and love with modified Emotional Intelligence (EI) insights to give you a deeper, more holistic understanding of communication styles, observable behavior, and emotions! While DISC and Emotional Intelligence are powerful assessments on their own, together, they offer a deeper exploration of parts of your personality, as well as useful self-awareness resources and suggestions for building stronger interpersonal relationships and interactions.
+
+Discover personalized insights to enhance self-recognition, self-management, social recognition, and social management based on your DISC style blend. Elevate your communication effectiveness with tailored, actionable strategies and tips for personal and professional growth and development!
+
+Ready to experience the power of DISC and Emotional Intelligence (EI) in one integrated report? Download a Sample Report 🔗 https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf.
+
+Contact us today to open an account and tap into the power of assessment technology. https://www.assessments24x7.com/contact
+
+#DISCAwareness #EmotionalIntelligence #IntegratedAssessment #CommunicationSkills #SelfAwareness #HolisticPersonality #DISC #DISCProfile #Assessment24x7`,
                     postCategory: 'Promotional'
                 }
             ]

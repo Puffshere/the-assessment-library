@@ -176,6 +176,37 @@ Check out our blog on Platinum Rules for Success, as Dr. Tony Alessandra dives i
 
 #LeadershipSkills #ProfessionalDevelopment #SelfImprovement #GrowthMindset #Assessments24x7`,
                     postCategory: 'Educational'
+                },
+                {
+                    id: 5,
+                    title: 'Life and Negotiations Quote - LI - IG',
+                    canvaLink: 'https://www.canva.com/design/DAGGd4b5878/u0XO3AXY1yocO-Q73x6uqw/view?utm_content=DAGGd4b5878&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/69TemplateImage.jpg',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: 'https://www.assessments24x7.com/blog/win-win-negotiating/',
+                    caption: `Everybody should have a solid negotiating strategy. Go check out Dr. Tony Alessandra’s 13 steps you should be taking in order to nail a win-win negotiating approach: 🔗https://www.assessments24x7.com/blog/win-win-negotiating/
+
+#BusinessStrategy #LeadershipDevelopment #PersonalGrowth
+#WinWinNegotiation #Salesskills #Essentialskills #Businessdevelopment #Assessments24x7`,
+                    postCategory: 'Educational'
+                },
+                {
+                    id: 6,
+                    title: '5 C\'s of Effective Execution_Final - LI-IG',
+                    canvaLink: 'https://www.canva.com/design/DAGHFFGIGJk/aqS-bF7wch41n1iD0_BbNQ/view?utm_content=DAGHFFGIGJk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/70TemplateImage.jpg',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `🚀 Your SMART goals are in hand, and now it’s time to execute the plan. Stay on the path to success with Dr. Tony Alessandra’s 5 C’s of Execution.
+
+Like and share this post to inspire others to achieve success with the Five C’s!
+
+#MondayMotivation #ExecuteYourPlan #StayFocused #Share #Smartgoals #Excellence #Commitment #Growthmindset #Assessments24x7`,
+                    postCategory: 'Educational'
                 }
             ]
         };
