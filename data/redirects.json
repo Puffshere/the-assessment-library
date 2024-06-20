@@ -380,7 +380,7 @@
         "to": "/certifications/DISC-workshop-essentials"
     },
     {
-        "from": "/store/disc-profiler-deck",
+        "from": "/store/disc-profiler-deck/",
         "to": "/"
     }
 ]
