@@ -28,6 +28,15 @@
                         </p>
                     </div>
                 </div>
+                <div class="col-12">
+                    <p style="color: white; font-size: 9pt; text-align: center; margin-top: 0px;">* The use of this
+                        official seal confirms that this Activity has met HR Certification
+                        Institute's®️ (HRCI®️) criteria for recertification credit pre-approval. This Program, ID No.
+                        582706, has been approved for 10 HR (General) recertification credit hours toward aPHR™️,
+                        aPHRi™️, PHR®️, PHRca®️, SPHR®️, GPHR®️, PHRi™️ and SPHRi™️ recertification through HR
+                        Certification Institute®️ (HRCI®️). ** Assessments 24x7 is recognized by SHRM to offer
+                        Professional Development Credits (PDCs) for SHRM-CP®️ or SHRM-SCP®️.</p>
+                </div>
             </div>
         </div>
     </section>

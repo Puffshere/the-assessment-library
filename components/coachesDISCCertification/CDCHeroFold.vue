@@ -7,7 +7,7 @@
                         <h2 style="line-height: 54px;">
                             Unlock the Full Potential <br />
                             of your <br />
-                            Executive Coaching <br />
+                            Coaching <br />
                             with DISC Certification
                         </h2>
                         <h4>
