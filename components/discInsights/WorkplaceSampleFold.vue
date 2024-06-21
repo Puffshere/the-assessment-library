@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <div style="display: flex; justify-content: center; margin-bottom: -40px; gap: 40px; margin-top: 60px;">
+                <div style="display: flex; justify-content: center; margin-bottom: -40px; gap: 20px; margin-top: 60px;">
                     <button style="text-align: center;" class="button">
                         <span>
                             <img src="~/assets/disc-insights/download.png"
