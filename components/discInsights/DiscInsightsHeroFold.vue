@@ -24,7 +24,7 @@
                             style="width: 100%; z-index: 1; max-height: 205px;" />
                         <div style="margin-top: -125px;">
                             <button class="button" :disabled="step === 3"
-                                :style="{ backgroundColor: '#00a8ff', marginLeft: '50px', border: 'none', fontSize: '16px', minHeight: '40px', width: '170px', opacity: step === 3 ? 0.5 : 1 }">
+                                :style="{ backgroundColor: '#00a8ff', marginLeft: '50px', minHeight: '40px', opacity: step === 3 ? 0.5 : 1 }">
                                 DISC <span style="text-decoration: underline;">Workplace</span> Insights
                                 <span>
                                     <img src="~/assets/disc-insights/right-arrow.png"
@@ -33,7 +33,7 @@
                                 </span>
                             </button>
                             <button class="button" :disabled="step === 3"
-                                :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '40px', width: '170px', opacity: step === 3 ? 0.5 : 1 }">
+                                :style="{ backgroundColor: '#00a8ff', minHeight: '40px', opacity: step === 3 ? 0.5 : 1 }">
                                 DISC <span style="text-decoration: underline;">Executive</span> Insights
                                 <span>
                                     <img src="~/assets/disc-insights/right-arrow.png"
@@ -124,7 +124,6 @@ h4 {
     background-color: #00a8ff;
     min-width: 300px;
     border-radius: 40px;
-
 }
 
 /* @keyframes rise {

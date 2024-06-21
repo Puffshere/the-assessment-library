@@ -16,39 +16,106 @@
                     optimize team performance, and develop employees effectively.
                 </p>
             </div>
-            <div class="col-5">
-
+            <div class="col-5" style="position: relative;">
+                <img :src="currentImage" alt="sample report image"
+                    style="border-radius: 10px; width: 90%; margin-top: 10px; z-index: 2; max-height: 490px;"
+                    class="report">
+                <!-- <img src="~/assets/disc-insights/black-bar-under-report.png" alt="black bar under report image" 
+                    style="border-radius: 10px; width: 100%; margin-top: 10px; z-index: 1; position: absolute; left: 0; bottom: 0; height: 100%; max-height: 200px; display: block;"> -->
+                <div style="display: flex; justify-content: center; margin-top: 40px;">
+                    <button v-for="(image, index) in images" :key="index" @click="currentImage = image"
+                        :class="['radial-button', { 'active': currentImage === image }]">
+                    </button>
+                </div>
             </div>
             <div class="col-7">
-                <p style="margin-bottom: -15px;">
-                    <strong>Targeted Evaluation</strong><br />
-                    Assesses four action factors: collaboration effectiveness, stress capability,
-                    prioritization skills, and accountability, offering a nuanced view of workplace capabilities.
-                </p>
-                <p style="margin-bottom: -15px;">
-                    <strong>Behavioral and Communication Analysis</strong><br />
-                    Provides detailed analysis of how an individual's DISC profile affects interactions and
-                    communication, crucial for team dynamics and leadership roles.
-                </p>
-                <p style="margin-bottom: -15px;">
-                    <strong>Interview and Development Tools</strong><br />
-                    Includes sample interview questions and development suggestions, aiding in recruitment and employee
-                    growth.
-                </p>
-                <p style="margin-bottom: -15px;">
-                    <strong>Risk Assessment</strong><br />
-                    Categorizes performance indicators into 'Satisfactory' or 'Cautionary' to guide hiring and
-                    development decisions, adding precaution and insight into potential challenges.
-                </p>
-                <p style="margin-bottom: -15px;">
-                    <strong>Adaptability Insights</strong><br />
-                    Distinguishes between natural and adapted behavioral styles, providing insights into reactions under
-                    different circumstances or roles.
-                </p>
+                <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
+                    <img src="~/assets/disc-insights/targeted-evaluation.png" alt="target icon"
+                        style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                    <p>
+                        <strong>Targeted Evaluation</strong><br />
+                        Assesses four action factors: collaboration effectiveness, stress capability,
+                        prioritization skills, and accountability, offering a nuanced view of workplace capabilities.
+                    </p>
+                </div>
+                <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
+                    <img src="~/assets/disc-insights/behavioral-and-communication-analysis.png"
+                        alt="behavioral analysis icon" style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                    <p>
+                        <strong>Behavioral and Communication Analysis</strong><br />
+                        Provides detailed analysis of how an individual's DISC profile affects interactions and
+                        communication, crucial for team dynamics and leadership roles.
+                    </p>
+                </div>
+                <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
+                    <img src="~/assets/disc-insights/interview-and-development-tools.png" alt="interview tools icon"
+                        style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                    <p>
+                        <strong>Interview and Development Tools</strong><br />
+                        Includes sample interview questions and development suggestions, aiding in recruitment and
+                        employee
+                        growth.
+                    </p>
+                </div>
+                <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
+                    <img src="~/assets/disc-insights/risk-assessment.png" alt="risk assessment icon"
+                        style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                    <p>
+                        <strong>Risk Assessment</strong><br />
+                        Categorizes performance indicators into 'Satisfactory' or 'Cautionary' to guide hiring and
+                        development decisions, adding precaution and insight into potential challenges.
+                    </p>
+                </div>
+                <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
+                    <img src="~/assets/disc-insights/adaptability-insights.png" alt="adaptability insights icon"
+                        style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                    <p>
+                        <strong>Adaptability Insights</strong><br />
+                        Distinguishes between natural and adapted behavioral styles, providing insights into reactions
+                        under
+                        different circumstances or roles.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div style="display: flex; justify-content: center; margin-bottom: -40px; gap: 40px; margin-top: 60px;">
+                    <button style="text-align: center;" class="button">
+                        <span>
+                            <img src="~/assets/disc-insights/download.png"
+                                style="width: 35px; float: left; margin-top: -3px; margin-left: 3px; margin-right: -6px; margin-bottom: -2px;"
+                                alt="download icon">
+                        </span>
+                        Download Sample
+                    </button>
+                    <button style="text-align: center;" class="button">
+                        <span>
+                            <img src="~/assets/disc-insights/info.png"
+                                style="width: 35px; float: left; margin-top: -3px; margin-left: 3px; margin-right: -16px; margin-bottom: -2px;"
+                                alt="info icon">
+                        </span>
+                        Learn More
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            images: [
+                require('~/assets/disc-insights/page1.png'),
+                require('~/assets/disc-insights/page2.png'),
+                require('~/assets/disc-insights/page3.png'),
+                require('~/assets/disc-insights/page4.png'),
+            ],
+            currentImage: require('~/assets/disc-insights/page1.png')
+        };
+    }
+};
+</script>
 
 <style scoped>
 @import './DiscInsights.scss';
@@ -57,9 +124,39 @@
     padding-top: 60px;
 }
 
+button.radial-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #d3d3d3;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+button.radial-button.active {
+    background-color: #00a8ff;
+}
+
+.button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+    cursor: pointer;
+    background-color: #00a8ff;
+    min-width: 220px;
+    border-radius: 40px;
+    color: white;
+}
+
 @media (max-width: 1000px) {
     .subtextPadding {
         padding: 0px 0px !important;
+    }
+
+    .report {
+        width: 100% !important;
     }
 }
 </style>
