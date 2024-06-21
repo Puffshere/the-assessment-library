@@ -82,7 +82,7 @@
                     <button style="text-align: center;" class="button">
                         <span>
                             <img src="~/assets/disc-insights/download.png"
-                                style="width: 35px; float: left; margin-top: -3px; margin-left: 3px; margin-right: -6px; margin-bottom: -2px;"
+                                style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -6px;"
                                 alt="download icon">
                         </span>
                         Download Sample
@@ -90,7 +90,7 @@
                     <button style="text-align: center;" class="button">
                         <span>
                             <img src="~/assets/disc-insights/info.png"
-                                style="width: 35px; float: left; margin-top: -3px; margin-left: 3px; margin-right: -16px; margin-bottom: -2px;"
+                                style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -16px;"
                                 alt="info icon">
                         </span>
                         Learn More
@@ -145,7 +145,7 @@ button.radial-button.active {
     text-align: left;
     cursor: pointer;
     background-color: #00a8ff;
-    min-width: 220px;
+    min-width: 240px;
     border-radius: 40px;
     color: white;
 }
