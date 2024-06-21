@@ -34,7 +34,7 @@
                 <div class="col-7">
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/targeted-evaluation.png" alt="target icon"
-                            style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                            style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Targeted Evaluation</strong><br />
                             Assesses four action factors: collaboration effectiveness, stress capability,
@@ -44,7 +44,7 @@
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/behavioral-and-communication-analysis.png"
-                            alt="behavioral analysis icon" style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                            alt="behavioral analysis icon" style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Behavioral and Communication Analysis</strong><br />
                             Provides detailed analysis of how an individual's DISC profile affects interactions and
@@ -53,7 +53,7 @@
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/interview-and-development-tools.png" alt="interview tools icon"
-                            style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                            style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Interview and Development Tools</strong><br />
                             Includes sample interview questions and development suggestions, aiding in recruitment and
@@ -63,7 +63,7 @@
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/risk-assessment.png" alt="risk assessment icon"
-                            style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                            style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Risk Assessment</strong><br />
                             Categorizes performance indicators into 'Satisfactory' or 'Cautionary' to guide hiring and
@@ -72,7 +72,7 @@
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/adaptability-insights.png" alt="adaptability insights icon"
-                            style="width: 8%; margin-right: 15px; margin-top: -40px;">
+                            style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Adaptability Insights</strong><br />
                             Distinguishes between natural and adapted behavioral styles, providing insights into
@@ -141,7 +141,8 @@ export default {
 @import './DiscInsights.scss';
 
 .container {
-    padding-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 200px;
 }
 
 button.radial-button {

@@ -23,7 +23,7 @@
                         <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
                             style="width: 100%; z-index: 1; max-height: 205px;" />
                         <div style="margin-top: -125px;">
-                            <button  @click="scrollToWorkplaceInsights" class="button" :disabled="step === 3"
+                            <button @click="scrollToWorkplaceInsights" class="button" :disabled="step === 3"
                                 :style="{ backgroundColor: '#00a8ff', marginLeft: '50px', minHeight: '40px', opacity: step === 3 ? 0.5 : 1 }">
                                 DISC <span style="text-decoration: underline;">Workplace</span> Insights
                                 <span>
@@ -110,7 +110,7 @@ export default {
 .body {
     padding: 50px 0;
     margin-top: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
 }
 
 h4 {
