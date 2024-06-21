@@ -456,6 +456,11 @@ export default {
                             url: 'https://www.youtube.com/watch?v=lfKgsDDW_Ng',
                             mainText: 'A24x7 Team Meeting - 6/6/24 ',
                             footNote: "*New Meeting Structure"
+                        },
+                        {
+                            url: 'https://drive.google.com/file/d/1FGz4m7avuF5wlF2osRQ5CYCVi7BVyLH6/view',
+                            mainText: 'A24x7 Team Meeting 6/20/2024',
+                            footNote: "*New organization chart"
                         }
                     ]
                 },
