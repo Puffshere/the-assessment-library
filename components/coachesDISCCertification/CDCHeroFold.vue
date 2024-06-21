@@ -6,7 +6,7 @@
                     <div class="col-7">
                         <h2 style="line-height: 54px;">
                             Unlock the Full Potential <br />
-                            of your <br />
+                            of Your <br />
                             Coaching <br />
                             with DISC Certification
                         </h2>
