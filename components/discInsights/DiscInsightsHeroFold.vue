@@ -23,7 +23,7 @@
                         <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
                             style="width: 100%; z-index: 1; max-height: 205px;" />
                         <div style="margin-top: -125px;">
-                            <button class="button" :disabled="step === 3"
+                            <button  @click="scrollToWorkplaceInsights" class="button" :disabled="step === 3"
                                 :style="{ backgroundColor: '#00a8ff', marginLeft: '50px', minHeight: '40px', opacity: step === 3 ? 0.5 : 1 }">
                                 DISC <span style="text-decoration: underline;">Workplace</span> Insights
                                 <span>
@@ -32,7 +32,7 @@
                                         alt="right arrow icon">
                                 </span>
                             </button>
-                            <button class="button" :disabled="step === 3"
+                            <button @click="scrollToExecutiveInsights" class="button" :disabled="step === 3"
                                 :style="{ backgroundColor: '#00a8ff', minHeight: '40px', opacity: step === 3 ? 0.5 : 1 }">
                                 DISC <span style="text-decoration: underline;">Executive</span> Insights
                                 <span>
@@ -54,6 +54,20 @@ export default {
     methods: {
         scrollToSection(event) {
             const element = document.getElementById('icfSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        scrollToWorkplaceInsights(event) {
+            const element = document.getElementById('workplaceInsights');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        scrollToExecutiveInsights(event) {
+            const element = document.getElementById('executiveInsights');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
