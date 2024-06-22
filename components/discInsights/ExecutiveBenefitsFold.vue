@@ -51,7 +51,7 @@
                         <span>Learn More</span>
                     </button>
                     <button style="display: flex; align-items: center; justify-content: center; gap: 10px;"
-                        class="button active light-blue" @click="scrollToContactForm">
+                        class="button active light-blue" @click="scrollToCompareFold">
                         <img src="~/assets/disc-insights/compare.png"
                             style="width: 35px; margin-left: -40px; margin-right: 0px;" alt="compare icon">
                         <span>Compare to <br /> Executive Insights</span>
@@ -91,6 +91,13 @@ export default {
         },
         scrollToContactForm(event) {
             const element = document.getElementById('discInsightsContactForm');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        scrollToCompareFold(event) {
+            const element = document.getElementById('discInsightsCompareFold');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
