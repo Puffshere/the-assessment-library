@@ -5,17 +5,20 @@
                 <img src="~/assets/disc-insights/balls.png" alt="balls image"
                     style="width: 100px; margin-bottom: -20px;">
                 <h2 style="line-height: 59px; font-size: 48px; font-weight: 700; color: white; text-align: center;">
-                    DISC Executive Insights <br />
+                    DISC Workplace Insights <br />
                     <span style="color: #00a8ff;">Benefits</span>
                 </h2>
                 <div class="b" style="display: flex; justify-content: center; gap: 0px;">
-                    <button class="button">
+                    <button :class="{ 'active': activeImageIndex === 0 }" @click="showImage(0)"
+                        class="button light-blue">
                         Enhanced Self-Awareness
                     </button>
-                    <button class="button">
+                    <button :class="{ 'active': activeImageIndex === 1 }" @click="showImage(1)"
+                        class="button light-blue">
                         Improved Communication
                     </button>
-                    <button class="button">
+                    <button :class="{ 'active': activeImageIndex === 2 }" @click="showImage(2)"
+                        class="button light-blue">
                         Strategic Planning
                     </button>
                 </div>
@@ -27,24 +30,31 @@
                         and role-specific expectations.
                     </h5>
                 </div>
-                <div style="display: flex; align-items: center; width: 75%; justify-content: space-between; margin-top: 15px; margin-bottom: 80px;">
-                    <div class="arrow-container" style="display: flex; justify-content: center; cursor: pointer;">
+                <div
+                    style="display: flex; align-items: center; width: 75%; justify-content: space-between; margin-top: 15px; margin-bottom: 80px;">
+                    <div class="arrow-container" style="display: flex; justify-content: center; cursor: pointer;"
+                        @click="prevImage" :class="{ 'disabled': activeImageIndex === 0 }">
                         <div class="arrow" style="transform: rotate(-45deg);"></div>
                     </div>
-                    <img src="~/assets/disc-insights/5th-fold-enhanced-self-awareness.png" alt="group of people laughing"
+                    <img :src="images[activeImageIndex]" alt="dynamic image"
                         style="width: 82%; margin-left: -80px; margin-right: -80px; border: solid 5px white; border-radius: 10px;">
-                    <div class="arrow-container" style="display: flex; justify-content: center; cursor: pointer;">
+                    <div class="arrow-container" style="display: flex; justify-content: center; cursor: pointer;"
+                        @click="nextImage" :class="{ 'disabled': activeImageIndex === images.length - 1 }">
                         <div class="arrow" style="transform: rotate(135deg);"></div>
                     </div>
                 </div>
                 <div class="b" style="display: flex; justify-content: center; gap: 0px;">
-                    <button class="button" style="display: flex; align-items: center; justify-content: center; gap: 10px;" @click="scrollToContactForm">
-                        <img src="~/assets/disc-insights/info.png" style="width: 35px; margin-left: -66px; margin-right: 20px;" alt="info icon">
+                    <button style="display: flex; align-items: center; justify-content: center; gap: 10px;"
+                        class="button active light-blue" @click="scrollToContactForm">
+                        <img src="~/assets/disc-insights/info.png"
+                            style="width: 35px; margin-left: -74px; margin-right: 25px;" alt="info icon">
                         <span>Learn More</span>
                     </button>
-                    <button class="button" style="display: flex; align-items: center; justify-content: center; gap: 10px;" @click="scrollToCompareFold">
-                        <img src="~/assets/disc-insights/compare.png" style="width: 35px; margin-left: -30px;" alt="compare icon">
-                        <span>Compare to <br /> Workplace Insights</span>
+                    <button style="display: flex; align-items: center; justify-content: center; gap: 10px;"
+                        class="button active light-blue" @click="scrollToContactForm">
+                        <img src="~/assets/disc-insights/compare.png"
+                            style="width: 35px; margin-left: -40px; margin-right: 0px;" alt="compare icon">
+                        <span>Compare to <br /> Executive Insights</span>
                     </button>
                 </div>
             </div>
@@ -52,18 +62,35 @@
     </section>
 </template>
 
+
 <script>
 export default {
+    data() {
+        return {
+            activeImageIndex: 0,
+            images: [
+                require('@/assets/disc-insights/5th-fold-enhanced-self-awareness.png'),
+                require('@/assets/disc-insights/5th-fold-improved-communication.png'),
+                require('@/assets/disc-insights/5th-fold-strategic-planning.png')
+            ]
+        };
+    },
     methods: {
+        showImage(index) {
+            this.activeImageIndex = index;
+        },
+        prevImage() {
+            if (this.activeImageIndex > 0) {
+                this.activeImageIndex--;
+            }
+        },
+        nextImage() {
+            if (this.activeImageIndex < this.images.length - 1) {
+                this.activeImageIndex++;
+            }
+        },
         scrollToContactForm(event) {
             const element = document.getElementById('discInsightsContactForm');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-            event.target.blur();
-        },
-        scrollToCompareFold(event) {
-            const element = document.getElementById('discInsightsCompareFold');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
@@ -72,6 +99,7 @@ export default {
     }
 };
 </script>
+
 
 <style scoped>
 @import './DiscInsights.scss';
@@ -91,8 +119,14 @@ export default {
     color: white;
     min-width: 250px;
     margin-left: 17px;
-    padding-right: 0px; 
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    padding-right: 0px;
     padding-left: 0px;
+}
+
+.button.active {
+    opacity: 1;
 }
 
 .arrow-container {
@@ -102,6 +136,12 @@ export default {
     width: 50px;
     height: 50px;
     background-color: #1f232e;
+    cursor: pointer;
+}
+
+.arrow-container.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 .arrow {

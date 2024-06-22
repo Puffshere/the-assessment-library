@@ -7,7 +7,8 @@
                         <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon" style="width: 110px;">
                         <img src="~/assets/disc-insights/critical-thinking-icon.png" alt="critical thinking icon"
                             style="width: 110px;">
-                        <img src="~/assets/disc-insights/motivators-icon.png" alt="motivators icon" style="width: 110px;">
+                        <img src="~/assets/disc-insights/motivators-icon.png" alt="motivators icon"
+                            style="width: 110px;">
                     </div>
                     <h2
                         style="line-height: 59px; font-size: 48px; font-weight: 700; color: #1e222d; text-align: center;">
@@ -82,7 +83,7 @@
                 <div class="col-12">
                     <div class="b"
                         style="display: flex; justify-content: center; margin-bottom: -40px; gap: 20px; margin-top: 60px;">
-                        <button style="text-align: center;" class="button" @click="scrollToContactForm">
+                        <button style="text-align: center;" class="button light-blue" @click="scrollToContactForm">
                             <span>
                                 <img src="~/assets/disc-insights/info.png"
                                     style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -16px;"
@@ -90,7 +91,8 @@
                             </span>
                             Learn More
                         </button>
-                        <button style="text-align: center;" class="button" @click="downloadExecutiveSampleReport">
+                        <button style="text-align: center;" class="button light-blue"
+                            @click="downloadExecutiveSampleReport">
                             <span>
                                 <img src="~/assets/disc-insights/download.png"
                                     style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -6px;"
@@ -178,10 +180,9 @@ button.radial-button.active {
     }
 
     .b {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 }
-
 </style>

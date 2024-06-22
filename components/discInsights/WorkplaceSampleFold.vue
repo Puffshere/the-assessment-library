@@ -85,7 +85,8 @@
                 <div class="col-12">
                     <div class="b"
                         style="display: flex; justify-content: center; margin-bottom: -40px; gap: 0px; margin-top: 60px;">
-                        <button style="text-align: center;" class="button" @click="downloadWorkplaceSampleReport">
+                        <button style="text-align: center;" class="button light-blue"
+                            @click="downloadWorkplaceSampleReport">
                             <span>
                                 <img src="~/assets/disc-insights/download.png"
                                     style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -6px;"
@@ -93,7 +94,7 @@
                             </span>
                             Download Sample
                         </button>
-                        <button style="text-align: center;" class="button" @click="scrollToContactForm">
+                        <button style="text-align: center;" class="button light-blue" @click="scrollToContactForm">
                             <span>
                                 <img src="~/assets/disc-insights/info.png"
                                     style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -16px;"
