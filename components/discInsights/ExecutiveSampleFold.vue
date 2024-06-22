@@ -4,10 +4,10 @@
             <div class="row">
                 <div class="col-12">
                     <div style="display: flex; justify-content: center; margin-bottom: -20px;">
-                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon" style="width: 10%;">
+                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon" style="width: 110px;">
                         <img src="~/assets/disc-insights/critical-thinking-icon.png" alt="critical thinking icon"
-                            style="width: 10%;">
-                        <img src="~/assets/disc-insights/motivators-icon.png" alt="motivators icon" style="width: 10%;">
+                            style="width: 110px;">
+                        <img src="~/assets/disc-insights/motivators-icon.png" alt="motivators icon" style="width: 110px;">
                     </div>
                     <h2
                         style="line-height: 59px; font-size: 48px; font-weight: 700; color: #1e222d; text-align: center;">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div
+                    <div class="b"
                         style="display: flex; justify-content: center; margin-bottom: -40px; gap: 20px; margin-top: 60px;">
                         <button style="text-align: center;" class="button" @click="scrollToContactForm">
                             <span>
@@ -176,5 +176,12 @@ button.radial-button.active {
     .report {
         width: 100% !important;
     }
+
+    .b {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+    }
 }
+
 </style>
