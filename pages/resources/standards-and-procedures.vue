@@ -437,6 +437,10 @@ export default {
                             mainText: 'Partners and Affiliates',
                         },
                         {
+                            url: 'https://www.assessments24x7.com/coaches-disc-certification',
+                            mainText: 'ICF landing page',
+                        },
+                        {
                             url: '',
                             mainText: 'DISC Awareness Assessment',
                             footNote: "*Coming Soon"
