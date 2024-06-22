@@ -142,7 +142,7 @@ export default {
 @import './DiscInsights.scss';
 
 .container {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 200px;
 }
 

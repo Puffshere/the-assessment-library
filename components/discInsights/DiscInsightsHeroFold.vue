@@ -109,7 +109,7 @@ export default {
 .body {
     padding: 50px 0;
     margin-top: 40px;
-    margin-bottom: 130px;
+    margin-bottom: 120px;
 }
 
 h4 {
