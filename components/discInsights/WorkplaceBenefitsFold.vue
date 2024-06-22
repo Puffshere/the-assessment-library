@@ -25,8 +25,7 @@
                 <div style="display: flex; justify-content: center;">
                     <h5 style="color: white; text-align: left;">
                         Enhances the hiring process by ensuring that candidates are <br />
-                        not only qualified but also align with
-                        the company’s cultural <br />
+                        not only qualified but also align with the company’s cultural <br />
                         and role-specific expectations.
                     </h5>
                 </div>

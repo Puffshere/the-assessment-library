@@ -5,7 +5,7 @@
                 <img src="~/assets/disc-insights/balls.png" alt="balls image"
                     style="width: 100px; margin-bottom: -20px;">
                 <h2 style="line-height: 59px; font-size: 48px; font-weight: 700; color: white; text-align: center;">
-                    DISC Workplace Insights <br />
+                    DISC Executive Insights <br />
                     <span style="color: #00a8ff;">Benefits</span>
                 </h2>
                 <div class="b" style="display: flex; justify-content: center; gap: 0px;">
@@ -22,13 +22,28 @@
                         Strategic Planning
                     </button>
                 </div>
-                <div style="display: flex; justify-content: center;">
-                    <h5 style="color: white; text-align: left;">
-                        Enhances the hiring process by ensuring that candidates are <br />
-                        not only qualified but also align with
-                        the company’s cultural <br />
-                        and role-specific expectations.
-                    </h5>
+                <div style="display: flex; justify-content: center; min-height: 180px;">
+                    <div v-if="activeImageIndex === 0">
+                        <h5 style="color: white; text-align: left;">
+                            Enhances the hiring process by ensuring that candidates are <br />
+                            not only qualified but also align with
+                            the company’s cultural <br />
+                            and role-specific expectations.
+                        </h5>
+                    </div>
+                    <div v-if="activeImageIndex === 1">
+                        <h5 style="color: white; text-align: left;">
+                            Provides detailed tips and strategies for more effective <br />
+                            engagement, crucial for all employee or leader roles.
+                        </h5>
+                    </div>
+                    <div v-if="activeImageIndex === 2">
+                        <h5 style="color: white; text-align: left;">
+                            Useful for personal and professional strategic development, <br />
+                            aligning leadership and management styles <br />
+                            with organizational goals.
+                        </h5>
+                    </div>
                 </div>
                 <div
                     style="display: flex; align-items: center; width: 75%; justify-content: space-between; margin-top: 15px; margin-bottom: 80px;">
