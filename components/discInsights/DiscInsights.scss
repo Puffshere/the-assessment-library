@@ -72,4 +72,12 @@ button {
             background-color: rgb(29, 29, 29);
         }
     }
+
+    &.black {
+        &:hover {
+            color: #383838;
+            background-color: white;
+            border: 1px solid #383838;
+        }
+    }
 }
