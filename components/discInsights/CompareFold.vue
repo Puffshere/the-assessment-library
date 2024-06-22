@@ -1,18 +1,43 @@
 <template>
     <section id="discInsightsCompareFold">
-        <div class="container" style="width: 100%;">
-            <div class="col-12">
+        <div class="container" style="width: 100%; position: relative;">
+            <div class="col-12" style="position: relative; z-index: 10;">
                 <h2 style="line-height: 59px; font-size: 48px; font-weight: 700; color: #1e222d; text-align: center;">
                     Let's <span style="color: #00a8ff">Compare.</span>
                 </h2>
                 <div class="comparison-table-container"
-                    style="margin-top: 30px; display: flex; justify-content: center;">
+                    style="margin-top: 30px; margin-bottom: 40px; display: flex; justify-content: center; background-color: white;">
                     <table class="comparison-table">
                         <thead>
                             <tr>
-                                <th>Compare</th>
-                                <th>DISC Workplace Insights</th>
-                                <th>DISC Executive Insights</th>
+                                <th>
+                                    <div style="min-height: 45px;"></div>
+                                    <div style="font-size: 24px; font-weight: 700;">Compare</div>
+                                </th>
+                                <th>
+                                    <div style="display: flex; justify-content: center; margin-bottom: 0px;">
+                                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon"
+                                            style="width: 45px;">
+                                        <img src="~/assets/disc-insights/critical-thinking-icon.png"
+                                            alt="critical thinking icon" style="width: 45px;">
+                                    </div>
+                                    <div @click="scrollToWorkplaceInsights"
+                                        style="text-decoration: underline; font-weight: 700; font-size: 24px; cursor: pointer">
+                                        DISC Workplace Insights</div>
+                                </th>
+                                <th>
+                                    <div style="display: flex; justify-content: center; margin-bottom: 0px;">
+                                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon"
+                                            style="width: 45px;">
+                                        <img src="~/assets/disc-insights/critical-thinking-icon.png"
+                                            alt="critical thinking icon" style="width: 45px;">
+                                        <img src="~/assets/disc-insights/motivators-icon.png" alt="motivators icon"
+                                            style="width: 45px;">
+                                    </div>
+                                    <div @click="scrollToExecutiveInsights"
+                                        style="text-decoration: underline; font-weight: 700; font-size: 24px; cursor: pointer">
+                                        DISC Executive Insights</div>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,7 +74,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div style="display: flex; justify-content: center; align-items: center; margin-top: 50px;">
+                <div style="display: flex; justify-content: center; align-items: center; margin-top: 105px;">
                     <button style="display: flex; align-items: center; justify-content: center; gap: 10px;"
                         class="button active black" @click="scrollToContactForm">
                         <img src="~/assets/disc-insights/info.png"
@@ -57,6 +82,13 @@
                         <span>Learn More</span>
                     </button>
                 </div>
+            </div>
+            <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
+                style="width: 1180px; z-index: 1; max-height: 205px; margin-left: -45px; position: absolute; bottom: 235px;" />
+            <div class="blue-balls">
+                <div class="blue-ball"></div>
+                <div class="blue-ball"></div>
+                <div class="blue-ball"></div>
             </div>
         </div>
     </section>
@@ -83,6 +115,20 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        scrollToWorkplaceInsights(event) {
+            const element = document.getElementById('workplaceInsights');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        scrollToExecutiveInsights(event) {
+            const element = document.getElementById('executiveInsights');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
         }
     }
 }
@@ -93,7 +139,7 @@ export default {
 @import './DiscInsights.scss';
 
 .container {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 130px;
 }
 
@@ -126,7 +172,7 @@ export default {
 }
 
 .comparison-table td:first-child {
-    text-align: left;
+    text-align: center;
 }
 
 .button {
@@ -139,5 +185,22 @@ export default {
     color: white;
     min-width: 240px;
     margin-left: 17px;
+}
+
+.blue-balls {
+    position: absolute;
+    bottom: 270px;
+    left: -16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    z-index: 11;
+}
+
+.blue-ball {
+    width: 30px;
+    height: 30px;
+    background-color: #00a8ff;
+    border-radius: 50%;
 }
 </style>

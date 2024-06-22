@@ -69,11 +69,11 @@
                     </div>
                 </div>
                 <div class="col-5" style="position: relative;">
+                    <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
+                        style="z-index: 1 !important; width: 420px; max-height: 205px; margin-left: -15px; position: absolute; bottom: 50px; border-radius: 10px;" />
                     <img :src="currentImage" alt="sample report image"
-                        style="border-radius: 10px; width: 90%; margin-top: 10px; z-index: 2; max-height: 490px;"
+                        style="position: relative; z-index: 5; border-radius: 10px; width: 90%; margin-top: 10px; z-index: 2; max-height: 490px;"
                         class="report">
-                    <!-- <img src="~/assets/disc-insights/black-bar-under-report.png" alt="black bar under report image" 
-                    style="border-radius: 10px; width: 100%; margin-top: 10px; z-index: 1; position: absolute; left: 0; bottom: 0; height: 100%; max-height: 200px; display: block;"> -->
                     <div style="display: flex; justify-content: center; margin-top: 40px;">
                         <button v-for="(image, index) in images" :key="index" @click="currentImage = image"
                             :class="['radial-button', { 'active': currentImage === image }]">
