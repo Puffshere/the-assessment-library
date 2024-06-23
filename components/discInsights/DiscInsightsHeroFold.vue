@@ -3,14 +3,14 @@
         <div class="container">
             <div class="row" style="display: flex; justify-content: center;">
                 <div class="col-12">
-                    <div class="col-6" style="padding-left: 50px;">
+                    <div class="col-6" style="padding-left: 0px;">
                         <h2 class="rise-on-scroll"
                             style="line-height: 59px; font-size: 48px; font-weight: 700; color: #1e222d; text-align: center; text-shadow: #00000053 0px 1.8px 7.64998px;">
                             Hire Smart <br />
                             with <span style="color: #00a8ff;">DISC Insights</span>
                         </h2>
                         <p class="rise-on-scroll"
-                            style="font-weight: 400; color: #1e222d; font-size: 21px; line-height: 29px; text-align: justify; padding: 0 -20px; padding-bottom: 60px;">
+                            style="font-weight: 400; color: #1e222d; font-size: 21px; line-height: 29px; text-align: left; padding-bottom: 60px;">
                             Empower your team with actionable insights from our DISC Workplace Insights and DISC
                             Executive Insights Reports.
                         </p>
