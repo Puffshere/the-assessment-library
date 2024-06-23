@@ -42,34 +42,39 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Target Audience</strong></td>
-                                <td>HR professionals, mid-level managers</td>
-                                <td>Executives, high-level managers</td>
+                                <td data-label="Compare"><strong>Target Audience</strong></td>
+                                <td data-label="DISC Workplace Insights">HR professionals, mid-level managers</td>
+                                <td data-label="DISC Executive Insights">Executives, high-level managers</td>
                             </tr>
                             <tr>
-                                <td><strong>Report Pages</strong></td>
-                                <td>7 pages</td>
-                                <td>41 Pages</td>
+                                <td data-label="Compare"><strong>Report Pages</strong></td>
+                                <td data-label="DISC Workplace Insights">7 pages</td>
+                                <td data-label="DISC Executive Insights">41 Pages</td>
                             </tr>
                             <tr>
-                                <td><strong>Focus</strong></td>
-                                <td>Recruitment, team dynamics, employee development</td>
-                                <td>Leadership styles, strategic development</td>
+                                <td data-label="Compare"><strong>Focus</strong></td>
+                                <td data-label="DISC Workplace Insights">Recruitment, team dynamics, employee
+                                    development</td>
+                                <td data-label="DISC Executive Insights">Leadership styles, strategic development</td>
                             </tr>
                             <tr>
-                                <td><strong>Key Components</strong></td>
-                                <td>Behavioral analysis, risk assessment, developmental tools</td>
-                                <td>Behavioral, motivational, and critical thinking assessments</td>
+                                <td data-label="Compare"><strong>Key Components</strong></td>
+                                <td data-label="DISC Workplace Insights">Behavioral analysis, risk assessment,
+                                    developmental tools</td>
+                                <td data-label="DISC Executive Insights">Behavioral, motivational, and critical thinking
+                                    assessments</td>
                             </tr>
                             <tr>
-                                <td><strong>Benefits</strong></td>
-                                <td>Recruitment precision, team optimization, risk mitigation</td>
-                                <td>Enhanced self-awareness, strategic planning, leadership development</td>
+                                <td data-label="Compare"><strong>Benefits</strong></td>
+                                <td data-label="DISC Workplace Insights">Recruitment precision, team optimization, risk
+                                    mitigation</td>
+                                <td data-label="DISC Executive Insights">Enhanced self-awareness, strategic planning,
+                                    leadership development</td>
                             </tr>
                             <tr>
-                                <td><strong>Performance Indicators</strong></td>
-                                <td>Satisfactory/Cautionary ratings</td>
-                                <td>Comprehensive, tailored insights</td>
+                                <td data-label="Compare"><strong>Performance Indicators</strong></td>
+                                <td data-label="DISC Workplace Insights">Satisfactory/ <br />Cautionary ratings</td>
+                                <td data-label="DISC Executive Insights">Comprehensive, tailored insights</td>
                             </tr>
                         </tbody>
                     </table>
@@ -202,5 +207,54 @@ export default {
     height: 30px;
     background-color: #00a8ff;
     border-radius: 50%;
+}
+
+@media (max-width: 1000px) {
+    .comparison-table {
+        display: block;
+        width: 100%;
+        border: none;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table tbody,
+    .comparison-table tr,
+    .comparison-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .comparison-table tr {
+        margin-bottom: 15px;
+    }
+
+    .comparison-table td {
+        position: relative;
+        padding-left: 60%;
+        padding-right: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .comparison-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        white-space: nowrap;
+        text-align: left;
+    }
+
+    .comparison-table td:last-child {
+        border-bottom: 2px solid #dddddd;
+    }
 }
 </style>
