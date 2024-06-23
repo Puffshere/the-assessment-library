@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-12">
                     <div style="display: flex; justify-content: center; margin-bottom: -40px;">
-                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon" style="width: 110px;">
+                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon" style="width: 110px;"
+                            id="heroImage">
                         <img src="~/assets/disc-insights/critical-thinking-icon.png" alt="critical thinking icon"
                             style="width: 110px;">
                     </div>
@@ -22,15 +23,14 @@
                 <div class="col-5" style="position: relative;">
                     <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
                         style="z-index: 1 !important; width: 420px; max-height: 205px; margin-left: -15px; position: absolute; bottom: 50px; border-radius: 10px;" />
-                    <img :src="currentImage" alt="sample report image"
-                        style="position: relative; border-radius: 10px; width: 90%; margin-top: 10px; max-height: 490px; z-index: 5 !important;"
-                        class="report">
+                    <img id="heroImageOnWorkplace" :src="currentImage" alt="sample report image"
+                        style="position: relative; border-radius: 10px; width: 90%; margin-top: 10px; max-height: 490px; z-index: 5 !important; cursor: pointer;"
+                        class="report interactive-image transition">
                     <div style="display: flex; justify-content: center; margin-top: 40px;">
                         <button v-for="(image, index) in images" :key="index" @click="currentImage = image"
                             :class="['radial-button', { 'active': currentImage === image }]">
                         </button>
                     </div>
-
                 </div>
                 <div class="col-7">
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
@@ -135,6 +135,34 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        handleMouseMove(event) {
+            const image = document.getElementById('heroImageOnWorkplace');
+            image.classList.remove('transition');
+            image.classList.add('hover');
+            const rect = image.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const moveX = (x - centerX) / 10;
+            const moveY = (y - centerY) / 10;
+            image.style.setProperty('--rotateX', `${moveY}deg`);
+            image.style.setProperty('--rotateY', `${moveX}deg`);
+        },
+        resetImageTransform() {
+            const image = document.getElementById('heroImageOnWorkplace');
+            image.classList.add('transition');
+            image.classList.remove('hover');
+            image.style.setProperty('--rotateX', '0deg');
+            image.style.setProperty('--rotateY', '0deg');
+        }
+    },
+    mounted() {
+        const image = document.getElementById('heroImageOnWorkplace');
+        if (image) {
+            image.addEventListener('mousemove', this.handleMouseMove);
+            image.addEventListener('mouseleave', this.resetImageTransform);
         }
     }
 };
@@ -161,6 +189,27 @@ button.radial-button {
 
 button.radial-button.active {
     background-color: #00a8ff;
+}
+
+.interactive-image {
+    width: 85%;
+    margin-top: 10px;
+    opacity: 1 !important;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+}
+
+.interactive-image.transition {
+    transition: transform 1s ease-out, box-shadow 1s ease-out;
+}
+
+.interactive-image.hover {
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .button {

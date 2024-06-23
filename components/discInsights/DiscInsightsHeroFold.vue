@@ -12,16 +12,18 @@
                         <p
                             style="font-weight: 400; color: #1e222d; font-size: 21px; line-height: 29px; text-align: justify; padding: 0 40px; padding-bottom: 60px;">
                             Empower your team with actionable insights from our DISC Workplace Insights and Executive
-                            Insights Reports.
+                            Insights
+                            Reports.
                         </p>
                     </div>
-                    <div class="col-6" style="position: relative;">
-                        <img src="~/assets/disc-insights/hero-main-graphic.png" alt="hero main graphic image"
-                            style="position: absolute; z-index: 5; right: 20px;" />
+                    <div class="col-6">
+                        <img id="heroImage" src="~/assets/disc-insights/hero-main-graphic.png"
+                            alt="hero main graphic image" class="interactive-image transition"
+                            style="position: relative; right: -70px; z-index: 10; cursor: pointer" />
                     </div>
                     <div class="col-12" style="position: relative;">
                         <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
-                            style="width: 100%; z-index: 1; max-height: 205px;" />
+                            style="width: 100%; z-index: 1; max-height: 205px; margin-top: -180px;" />
                         <div style="margin-top: -125px;">
                             <button @click="scrollToWorkplaceInsights" class="button light-blue"
                                 style="margin-left: 50px;">
@@ -79,28 +81,37 @@ export default {
             }
             event.target.blur();
         },
-        // handleIntersection(entries) {
-        //     entries.forEach(entry => {
-        //         if (entry.isIntersecting) {
-        //             entry.target.classList.add('animate-rise');
-        //         } else {
-        //             entry.target.classList.remove('animate-rise');
-        //         }
-        //     });
-        // }
+        handleMouseMove(event) {
+            const image = document.getElementById('heroImage');
+            image.classList.remove('transition');
+            image.classList.add('hover');
+            const rect = image.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const moveX = (x - centerX) / 10;
+            const moveY = (y - centerY) / 10;
+            image.style.setProperty('--rotateX', `${moveY}deg`);
+            image.style.setProperty('--rotateY', `${moveX}deg`);
+        },
+        resetImageTransform() {
+            const image = document.getElementById('heroImage');
+            image.classList.add('transition');
+            image.classList.remove('hover');
+            image.style.setProperty('--rotateX', '0deg');
+            image.style.setProperty('--rotateY', '0deg');
+        }
     },
-    // mounted() {
-    //     const observer = new IntersectionObserver(this.handleIntersection, {
-    //         threshold: 0 // Adjust this as needed
-    //     });
-
-    //     // Select each child element to be observed
-    //     const elements = document.querySelectorAll('.col-7 h2, .col-7 h4, .col-7 button');
-    //     elements.forEach(element => {
-    //         observer.observe(element);
-    //     });
-    // }
+    mounted() {
+        const image = document.getElementById('heroImage');
+        if (image) {
+            image.addEventListener('mousemove', this.handleMouseMove);
+            image.addEventListener('mouseleave', this.resetImageTransform);
+        }
+    }
 }
+
 </script>
 
 <style scoped>
@@ -121,11 +132,25 @@ h4 {
     margin-top: -40px;
 }
 
-.col-6 img {
+.interactive-image {
     width: 85%;
     margin-top: 10px;
     opacity: 1 !important;
-    transform: none !important;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+}
+
+.interactive-image.transition {
+    transition: transform 1s ease-out, box-shadow 1s ease-out;
+}
+
+.interactive-image.hover {
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .button {
@@ -133,31 +158,7 @@ h4 {
     line-height: 30px;
     text-align: left;
     cursor: pointer;
-    /* background-color: #00a8ff; */
     min-width: 300px;
     border-radius: 40px;
 }
-
-/* @keyframes rise {
-    from {
-        transform: translateY(1in);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.col-7 h2,
-.col-7 h4,
-.col-7 button {
-    opacity: 0;
-    transform: translateY(1in);
-    transition: all 0.5s ease-out;
-}
-
-.animate-rise {
-    animation: rise 1.25s ease-out forwards;
-} */
 </style>
