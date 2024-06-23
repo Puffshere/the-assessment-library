@@ -230,6 +230,10 @@ export default {
 }
 
 @media (max-width: 1000px) {
+    .container {
+        padding-bottom: 110px;
+    }
+
     .comparison-table {
         display: block;
         width: 100%;

@@ -236,6 +236,10 @@ button.radial-button.active {
 }
 
 @media (max-width: 1000px) {
+    .container {
+        padding-bottom: 160px;
+    }
+
     .subtextPadding {
         padding: 0px 0px !important;
     }

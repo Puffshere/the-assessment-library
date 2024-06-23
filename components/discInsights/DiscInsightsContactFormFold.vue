@@ -297,6 +297,10 @@ export default {
         .flex-container {
             margin-bottom: -5px;
         }
+
+        .container {
+            padding-top: 80px !important;
+        }
     }
 
     h1 {
