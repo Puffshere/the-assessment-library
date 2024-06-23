@@ -4,12 +4,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6" style="padding-left: 50px;">
-                        <h2
+                        <h2 class="rise-on-scroll"
                             style="line-height: 59px; font-size: 48px; font-weight: 700; color: #1e222d; text-align: center; text-shadow: #00000053 0px 1.8px 7.64998px;">
                             Hire Smart <br />
                             with <span style="color: #00a8ff;">DISC Insights</span>
                         </h2>
-                        <p
+                        <p class="rise-on-scroll"
                             style="font-weight: 400; color: #1e222d; font-size: 21px; line-height: 29px; text-align: justify; padding: 0 40px; padding-bottom: 60px;">
                             Empower your team with actionable insights from our DISC Workplace Insights and Executive
                             Insights
@@ -18,14 +18,14 @@
                     </div>
                     <div class="col-6">
                         <img id="heroImage" src="~/assets/disc-insights/hero-main-graphic.png"
-                            alt="hero main graphic image" class="interactive-image transition media"
+                            alt="hero main graphic image" class="interactive-image transition media rise-on-scroll"
                             style="position: relative; right: -70px; z-index: 10; cursor: pointer" />
                     </div>
                     <div class="col-12" style="position: relative;">
                         <img class="blackGraphic" src="~/assets/disc-insights/hero-black-graphic.png"
                             alt="hero black graphic image"
                             style="width: 100%; z-index: 1; max-height: 205px; margin-top: -180px;" />
-                        <div class="mediaButtons" style="margin-top: -125px;">
+                        <div class="mediaButtons rise-on-scroll" style="margin-top: -125px;">
                             <button @click="scrollToWorkplaceInsights" class="button light-blue-hero topButton"
                                 style="margin-left: 50px;">
                                 DISC <span style="text-decoration: underline;">Workplace</span> Insights
@@ -102,6 +102,23 @@ export default {
             image.classList.remove('hover');
             image.style.setProperty('--rotateX', '0deg');
             image.style.setProperty('--rotateY', '0deg');
+        },
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
         }
     },
     mounted() {
@@ -225,5 +242,16 @@ h4 {
         transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) scale(1.02);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     }
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>

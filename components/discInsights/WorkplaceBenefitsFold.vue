@@ -2,13 +2,14 @@
     <section style="background-color: #1f232e;">
         <div class="container" style="display: flex; justify-content: center;">
             <div class="col-12" style="display: flex; flex-direction: column; align-items: center;">
-                <img src="~/assets/disc-insights/balls.png" alt="balls image"
+                <img class="rise-on-scroll" src="~/assets/disc-insights/balls.png" alt="balls image"
                     style="width: 100px; margin-bottom: -20px;">
-                <h2 style="line-height: 59px; font-size: 48px; font-weight: 700; color: white; text-align: center;">
+                <h2 class="rise-on-scroll"
+                    style="line-height: 59px; font-size: 48px; font-weight: 700; color: white; text-align: center;">
                     DISC Workplace Insights <br />
                     <span style="color: #00a8ff;">Benefits</span>
                 </h2>
-                <div class="b" style="display: flex; justify-content: center; gap: 0px;">
+                <div class="b rise-on-scroll" style="display: flex; justify-content: center; gap: 0px;">
                     <button :class="{ 'active': activeImageIndex === 0 }" @click="showImage(0)"
                         class="button light-blue">
                         Recruitment Precision
@@ -22,7 +23,7 @@
                         Adaptability Insights
                     </button>
                 </div>
-                <div style="display: flex; justify-content: center; min-height: 180px;">
+                <div class="rise-on-scroll" style="display: flex; justify-content: center; min-height: 180px;">
                     <div v-if="activeImageIndex === 0">
                         <h5 style="color: white; text-align: left;">
                             Enhances the hiring process by ensuring that candidates are <br />
@@ -59,7 +60,7 @@
                         <div class="arrow" style="transform: rotate(135deg);"></div>
                     </div>
                 </div>
-                <div class="b" style="display: flex; justify-content: center; gap: 0px;">
+                <div class="b rise-on-scroll" style="display: flex; justify-content: center; gap: 0px;">
                     <button style="display: flex; align-items: center; justify-content: center; gap: 10px;"
                         class="button active light-blue" @click="scrollToContactForm">
                         <img src="~/assets/disc-insights/info.png"
@@ -118,6 +119,23 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
         }
     }
 };
@@ -186,20 +204,31 @@ export default {
     }
 
     .arrow-container {
-        width: 20px; 
-        height: 20px; 
+        width: 20px;
+        height: 20px;
     }
 
     .arrow {
-        width: 17.5px; 
-        height: 17.5px; 
-        border-top: 3.5px solid white; 
-        border-left: 3.5px solid white; 
+        width: 17.5px;
+        height: 17.5px;
+        border-top: 3.5px solid white;
+        border-left: 3.5px solid white;
     }
 
     .arrow:hover {
-        border-top: 3.5px solid #00a8ff; 
-        border-left: 3.5px solid #00a8ff; 
+        border-top: 3.5px solid #00a8ff;
+        border-left: 3.5px solid #00a8ff;
     }
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>

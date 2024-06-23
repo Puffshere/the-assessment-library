@@ -3,24 +3,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div style="display: flex; justify-content: center; margin-bottom: -40px;">
+                    <div class="rise-on-scroll" style="display: flex; justify-content: center; margin-bottom: -40px;">
                         <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon" style="width: 110px;"
                             id="heroImage">
                         <img src="~/assets/disc-insights/critical-thinking-icon.png" alt="critical thinking icon"
                             style="width: 110px;">
                     </div>
-                    <h2
+                    <h2 class="rise-on-scroll"
                         style="line-height: 59px; font-size: 48px; font-weight: 700; color: #1e222d; text-align: center;">
                         DISC <span style="color: #00a8ff">Workplace</span> Insights
                     </h2>
-                    <p class="subtextPadding"
+                    <p class="rise-on-scroll subtextPadding"
                         style="font-weight: 400; color: #1e222d; font-size: 21px; line-height: 29px; text-align: center; padding: 0 170px; margin-top: -20px">
                         A comprehensive tool for HR professionals and mid-level managers to refine recruitment
-                        processes,
-                        optimize team performance, and develop employees effectively.
+                        processes, optimize team performance, and develop employees effectively.
                     </p>
                 </div>
-                <div class="col-5" style="position: relative;">
+                <div class="col-5 rise-on-scroll" style="position: relative;">
                     <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
                         style="z-index: 1 !important; width: 420px; max-height: 205px; margin-left: -15px; position: absolute; bottom: 50px; border-radius: 10px;" />
                     <img id="heroImageOnWorkplace" :src="currentImage" alt="sample report image"
@@ -28,19 +27,17 @@
                         class="report interactive-image transition">
                     <div style="display: flex; justify-content: center; margin-top: 40px;">
                         <button v-for="(image, index) in images" :key="index" @click="currentImage = image"
-                            :class="['radial-button', { 'active': currentImage === image }]">
-                        </button>
+                            :class="['radial-button', { 'active': currentImage === image }]"></button>
                     </div>
                 </div>
-                <div class="col-7">
+                <div class="col-7 rise-on-scroll">
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/targeted-evaluation.png" alt="target icon"
                             style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Targeted Evaluation</strong><br />
-                            Assesses four action factors: collaboration effectiveness, stress capability,
-                            prioritization skills, and accountability, offering a nuanced view of workplace
-                            capabilities.
+                            Assesses four action factors: collaboration effectiveness, stress capability, prioritization
+                            skills, and accountability, offering a nuanced view of workplace capabilities.
                         </p>
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
@@ -58,8 +55,7 @@
                         <p>
                             <strong>Interview and Development Tools</strong><br />
                             Includes sample interview questions and development suggestions, aiding in recruitment and
-                            employee
-                            growth.
+                            employee growth.
                         </p>
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
@@ -77,13 +73,11 @@
                         <p>
                             <strong>Adaptability Insights</strong><br />
                             Distinguishes between natural and adapted behavioral styles, providing insights into
-                            reactions
-                            under
-                            different circumstances or roles.
+                            reactions under different circumstances or roles.
                         </p>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 rise-on-scroll">
                     <div class="b"
                         style="display: flex; justify-content: center; margin-bottom: -40px; gap: 0px; margin-top: 60px;">
                         <button style="text-align: center;" class="button light-blue"
@@ -109,7 +103,6 @@
         </div>
     </section>
 </template>
-
 
 <script>
 export default {
@@ -156,9 +149,27 @@ export default {
             image.classList.remove('hover');
             image.style.setProperty('--rotateX', '0deg');
             image.style.setProperty('--rotateY', '0deg');
+        },
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
         }
     },
     mounted() {
+        this.observeElements();
         const image = document.getElementById('heroImageOnWorkplace');
         if (image) {
             image.addEventListener('mousemove', this.handleMouseMove);
@@ -167,7 +178,6 @@ export default {
     }
 };
 </script>
-
 
 <style scoped>
 @import './DiscInsights.scss';
@@ -189,12 +199,6 @@ button.radial-button {
 
 button.radial-button.active {
     background-color: #00a8ff;
-    border-radius: 50%;
-}
-
-button.radial-button.focus {
-    background-color: #00a8ff;
-    border-radius: 50%;
 }
 
 .interactive-image {
@@ -245,5 +249,17 @@ button.radial-button.focus {
         align-items: center;
         gap: 20px;
     }
+}
+
+/* Add styles for rise animation */
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>

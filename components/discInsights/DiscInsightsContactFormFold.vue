@@ -3,7 +3,7 @@
         <div class="container flex-container" id="form">
             <div class="row flex-container">
                 <div class="col-12">
-                    <h2 class="formTitle" style="padding-bottom: 40px;">
+                    <h2 class="formTitle rise-on-scroll" style="padding-bottom: 40px;">
                         Take the First Step <br />
                         Toward <span style="color: #00a8ff;">Smarter Hiring</span>
                     </h2>
@@ -13,13 +13,13 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-6">
-                            <div class="line">
+                            <div class="line rise-on-scroll">
                                 <label for="name">Name</label>
                                 <input v-model="form.name" type="text" id="name" required>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="line">
+                            <div class="line rise-on-scroll">
                                 <label for="email">Email</label>
                                 <input v-model="form.email" type="email" id="email" required>
                             </div>
@@ -29,13 +29,13 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-6">
-                            <div class="line">
+                            <div class="line rise-on-scroll">
                                 <label for="phoneNumber">Phone Number</label>
                                 <input v-model="form.phoneNumber" type="text" id="phoneNumber" required>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="line">
+                            <div class="line rise-on-scroll">
                                 <label for="company">Company</label>
                                 <input v-model="form.company" type="text" id="company" required>
                             </div>
@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-12">
-                            <div class="message">
+                            <div class="message rise-on-scroll">
                                 <label for="message">Message</label>
                                 <input v-model="form.message" type="text" id="message" class="messageBox" required>
                             </div>
@@ -54,7 +54,7 @@
                 </div>
                 <br />
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 rise-on-scroll">
                         <div class="row" style="padding-bottom: 20px;">
                             <div class="col-12">
                                 <div class="form-group">
@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="white">
+                        <button type="submit" class="white rise-on-scroll">
                             Submit
                         </button>
                     </div>
@@ -111,6 +111,23 @@ export default {
         };
     },
     methods: {
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        },
         async submitForm() {
             console.log('Form submitted:', this.form);
 
@@ -306,5 +323,16 @@ export default {
             }
         }
     }
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>
