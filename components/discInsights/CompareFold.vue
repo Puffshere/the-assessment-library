@@ -234,7 +234,7 @@ export default {
 
     .comparison-table td {
         position: relative;
-        padding-left: 60%;
+        padding-left: 70%;
         padding-right: 10px;
         text-align: left;
         border: none;
