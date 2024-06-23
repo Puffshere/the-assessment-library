@@ -20,11 +20,20 @@
                         <div class="circle"></div>
                     </div>
                     <div class="timeline-content" style="cursor: pointer;">
-                        <a class="item" target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf">DISC Self</a>
-                        <a class="item" target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf">DISC <br /> Leadership</a>
-                        <a class="item" target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf">DISC <br /> Awareness</a>
-                        <a class="item" target="_blank" rel="noopener" href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf">DISC <br /> Executive <br /> Insights</a>
-                        <a class="item" href="https://www.assessments24x7.com/sample-reports"> & Beyond <br /> 30+ Assessments <br /> 20+ Languages </a>
+                        <a class="item" target="_blank" rel="noopener"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf">DISC
+                            Self</a>
+                        <a class="item" target="_blank" rel="noopener"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf">DISC
+                            <br /> Leadership</a>
+                        <a class="item" target="_blank" rel="noopener"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf">DISC
+                            <br /> Awareness</a>
+                        <a class="item" target="_blank" rel="noopener"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf">DISC
+                            <br /> Executive <br /> Insights</a>
+                        <a class="item" href="https://www.assessments24x7.com/sample-reports"> & Beyond <br /> 30+
+                            Assessments <br /> 20+ Languages </a>
                     </div>
                 </div>
                 <div class="col-12 button-container">
@@ -59,10 +68,9 @@ export default {
     },
     mounted() {
         const observer = new IntersectionObserver(this.handleIntersection, {
-            threshold: 0.1 // Adjust this as needed
+            threshold: 0.1
         });
 
-        // Select each child element to be observed
         const elements = document.querySelectorAll('.row > .words, .row > .timeline-container, .row > .button-container');
         elements.forEach(element => {
             observer.observe(element);
@@ -73,7 +81,6 @@ export default {
 
 <style lang="scss" scoped>
 @import './CDC.scss';
-
 
 .container {
     padding-top: 10px;
@@ -155,9 +162,7 @@ section {
 .item:hover {
     transform: scale(1.1);
     color: #ffffff;
-    /* Optional: change color slightly to enhance the effect */
 }
-
 
 @keyframes rise {
     from {
@@ -192,6 +197,8 @@ section {
 @media (max-width: 768px) {
     .timeline {
         flex-direction: column;
+        align-items: flex-start;
+        display: none;
     }
 
     .line {
@@ -202,11 +209,28 @@ section {
 
     .timeline-content {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        width: 100%;
+        margin-left: 10px;
+        margin-top: -10px;
     }
 
     .item {
-        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .item::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 10px;
     }
 
     @keyframes rise {
@@ -236,7 +260,7 @@ section {
     }
 
     .animate-rise {
-        animation: rise .5s ease-out forwards;
+        animation: rise 0.5s ease-out forwards;
     }
 }
 </style>
