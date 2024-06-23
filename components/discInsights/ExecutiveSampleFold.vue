@@ -184,6 +184,12 @@ button.radial-button {
 
 button.radial-button.active {
     background-color: #00a8ff;
+    border-radius: 50%;
+}
+
+button.radial-button.focus {
+    background-color: #00a8ff;
+    border-radius: 50%;
 }
 
 .interactive-image {
