@@ -18,14 +18,15 @@
                     </div>
                     <div class="col-6">
                         <img id="heroImage" src="~/assets/disc-insights/hero-main-graphic.png"
-                            alt="hero main graphic image" class="interactive-image transition"
+                            alt="hero main graphic image" class="interactive-image transition media"
                             style="position: relative; right: -70px; z-index: 10; cursor: pointer" />
                     </div>
                     <div class="col-12" style="position: relative;">
-                        <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
+                        <img class="blackGraphic" src="~/assets/disc-insights/hero-black-graphic.png"
+                            alt="hero black graphic image"
                             style="width: 100%; z-index: 1; max-height: 205px; margin-top: -180px;" />
-                        <div style="margin-top: -125px;">
-                            <button @click="scrollToWorkplaceInsights" class="button light-blue"
+                        <div class="mediaButtons" style="margin-top: -125px;">
+                            <button @click="scrollToWorkplaceInsights" class="button light-blue topButton"
                                 style="margin-left: 50px;">
                                 DISC <span style="text-decoration: underline;">Workplace</span> Insights
                                 <span>
@@ -153,6 +154,11 @@ h4 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.interactive-image:active {
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .button {
     font-size: 16px;
     line-height: 30px;
@@ -160,5 +166,53 @@ h4 {
     cursor: pointer;
     min-width: 300px;
     border-radius: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .body {
+        margin-top: 0px !important;
+        padding: 0px 0px !important;
+    }
+
+    .col-6 {
+        padding-left: 0px !important;
+    }
+
+    .media {
+        right: 0px !important;
+        margin-top: -50px !important;
+    }
+
+    .blackGraphic {
+        margin-top: -100px !important;
+        border-radius: 10px;
+    }
+
+    .mediaButtons {
+        margin-top: 40px !important;
+        margin-bottom: -100px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0px !important;
+        justify-content: center;
+
+    }
+
+    .topButton {
+        margin-left: 0px !important;
+    }
+
+    .interactive-image {
+        width: 100%;
+        margin-top: 5px;
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    }
+
+    .interactive-image.hover {
+        transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) scale(1.02);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
 }
 </style>
