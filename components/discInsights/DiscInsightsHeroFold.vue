@@ -1,54 +1,52 @@
 <template>
     <section>
-            <div class="container">
-                <div class="row" style="display: flex; justify-content: center;">
-                    <div class="col-12">
-                        <div class="col-6" style="padding-left: 50px;">
-                            <h2 class="rise-on-scroll"
-                                style="line-height: 59px; font-size: 48px; font-weight: 700; color: #1e222d; text-align: center; text-shadow: #00000053 0px 1.8px 7.64998px;">
-                                Hire Smart <br />
-                                with <span style="color: #00a8ff;">DISC Insights</span>
-                            </h2>
-                            <p class="rise-on-scroll"
-                                style="font-weight: 400; color: #1e222d; font-size: 21px; line-height: 29px; text-align: justify; padding: 0 -20px; padding-bottom: 60px;">
-                                Empower your team with actionable insights from our DISC Workplace Insights and
-                                Executive
-                                Insights
-                                Reports.
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <img id="heroImage" src="~/assets/disc-insights/hero-main-graphic.png"
-                                alt="hero main graphic image" class="interactive-image transition media"
-                                style="position: relative; right: -70px; z-index: 10; cursor: pointer" />
-                        </div>
-                        <div class="col-12" style="position: relative;">
-                            <img class="blackGraphic" src="~/assets/disc-insights/hero-black-graphic.png"
-                                alt="hero black graphic image"
-                                style="width: 116%; z-index: 1; max-height: 200px; margin-top: -180px; margin-left: -80px;" />
-                            <div class="mediaButtons rise-on-scroll" style="margin-top: -125px; margin-left: -90px;">
-                                <button @click="scrollToWorkplaceInsights" class="button light-blue-hero topButton"
-                                    style="margin-left: 50px;">
-                                    DISC <span style="text-decoration: underline;">Workplace</span> Insights
-                                    <span>
-                                        <img src="~/assets/disc-insights/right-arrow.png"
-                                            style="width: 35px; float: right; margin-top: -3px; margin-right: -16px;"
-                                            alt="right arrow icon">
-                                    </span>
-                                </button>
-                                <button @click="scrollToExecutiveInsights" class="button light-blue-hero">
-                                    DISC <span style="text-decoration: underline;">Executive</span> Insights
-                                    <span>
-                                        <img src="~/assets/disc-insights/right-arrow.png"
-                                            style="width: 35px; float: right; margin-top: -3px; margin-right: -16px;"
-                                            alt="right arrow icon">
-                                    </span>
-                                </button>
-                            </div>
+        <div class="container">
+            <div class="row" style="display: flex; justify-content: center;">
+                <div class="col-12">
+                    <div class="col-6" style="padding-left: 50px;">
+                        <h2 class="rise-on-scroll"
+                            style="line-height: 59px; font-size: 48px; font-weight: 700; color: #1e222d; text-align: center; text-shadow: #00000053 0px 1.8px 7.64998px;">
+                            Hire Smart <br />
+                            with <span style="color: #00a8ff;">DISC Insights</span>
+                        </h2>
+                        <p class="rise-on-scroll"
+                            style="font-weight: 400; color: #1e222d; font-size: 21px; line-height: 29px; text-align: justify; padding: 0 -20px; padding-bottom: 60px;">
+                            Empower your team with actionable insights from our DISC Workplace Insights and DISC
+                            Executive Insights Reports.
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <img id="heroImage" src="~/assets/disc-insights/hero-main-graphic.png"
+                            alt="hero main graphic image" class="interactive-image transition media"
+                            style="position: relative; right: -70px; z-index: 10; cursor: pointer" />
+                    </div>
+                    <div class="col-12" style="position: relative;">
+                        <img class="blackGraphic" src="~/assets/disc-insights/hero-black-graphic.png"
+                            alt="hero black graphic image"
+                            style="width: 116%; z-index: 1; max-height: 200px; margin-top: -180px; margin-left: -80px;" />
+                        <div class="mediaButtons rise-on-scroll" style="margin-top: -125px; margin-left: -90px;">
+                            <button @click="scrollToWorkplaceInsights" class="button light-blue-hero topButton"
+                                style="margin-left: 50px;">
+                                DISC <span style="text-decoration: underline;">Workplace</span> Insights
+                                <span>
+                                    <img src="~/assets/disc-insights/right-arrow.png"
+                                        style="width: 35px; float: right; margin-top: -3px; margin-right: -16px;"
+                                        alt="right arrow icon">
+                                </span>
+                            </button>
+                            <button @click="scrollToExecutiveInsights" class="button light-blue-hero">
+                                DISC <span style="text-decoration: underline;">Executive</span> Insights
+                                <span>
+                                    <img src="~/assets/disc-insights/right-arrow.png"
+                                        style="width: 35px; float: right; margin-top: -3px; margin-right: -16px;"
+                                        alt="right arrow icon">
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 </template>
 
@@ -135,6 +133,7 @@ export default {
 
 <style scoped>
 @import './DiscInsights.scss';
+
 .container {
     padding-top: 40px;
     padding-bottom: 35px;

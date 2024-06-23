@@ -41,8 +41,8 @@
                     <div v-if="activeImageIndex === 2">
                         <h5 style="color: white; text-align: left;">
                             Useful for personal and professional strategic development, <br />
-                            aligning leadership and management styles <br />
-                            with organizational goals.
+                            aligning leadership and management styles with <br />
+                            organizational goals.
                         </h5>
                     </div>
                 </div>
