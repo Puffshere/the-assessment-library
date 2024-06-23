@@ -22,12 +22,29 @@
                         Adaptability Insights
                     </button>
                 </div>
-                <div style="display: flex; justify-content: center;">
-                    <h5 style="color: white; text-align: left;">
-                        Enhances the hiring process by ensuring that candidates are <br />
-                        not only qualified but also align with the company’s cultural <br />
-                        and role-specific expectations.
-                    </h5>
+                <div style="display: flex; justify-content: center; min-height: 180px;">
+                    <div v-if="activeImageIndex === 0">
+                        <h5 style="color: white; text-align: left;">
+                            Enhances the hiring process by ensuring that candidates are <br />
+                            not only qualified but also align with
+                            the company’s cultural <br />
+                            and role-specific expectations.
+                        </h5>
+                    </div>
+                    <div v-if="activeImageIndex === 1">
+                        <h5 style="color: white; text-align: left;">
+                            Categorizes performance indicators into 'Satisfactory' or 'Cautionary <br />
+                            to guide decision-making in hiring or development processes <br />
+                            adding a layer of precaution and insight into potential challenges.
+                        </h5>
+                    </div>
+                    <div v-if="activeImageIndex === 2">
+                        <h5 style="color: white; text-align: left;">
+                            Distinguishes between an individual's natural and adapted <br />
+                            behavioral styles, providing insights into how they might react <br />
+                            under different circumstances or in different roles.
+                        </h5>
+                    </div>
                 </div>
                 <div
                     style="display: flex; align-items: center; width: 75%; justify-content: space-between; margin-top: 15px; margin-bottom: 80px;">
