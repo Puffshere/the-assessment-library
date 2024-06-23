@@ -26,7 +26,7 @@
                             alt="hero black graphic image"
                             style="width: 100%; z-index: 1; max-height: 205px; margin-top: -180px;" />
                         <div class="mediaButtons" style="margin-top: -125px;">
-                            <button @click="scrollToWorkplaceInsights" class="button light-blue topButton"
+                            <button @click="scrollToWorkplaceInsights" class="button light-blue-hero topButton"
                                 style="margin-left: 50px;">
                                 DISC <span style="text-decoration: underline;">Workplace</span> Insights
                                 <span>
@@ -35,7 +35,7 @@
                                         alt="right arrow icon">
                                 </span>
                             </button>
-                            <button @click="scrollToExecutiveInsights" class="button light-blue">
+                            <button @click="scrollToExecutiveInsights" class="button light-blue-hero">
                                 DISC <span style="text-decoration: underline;">Executive</span> Insights
                                 <span>
                                     <img src="~/assets/disc-insights/right-arrow.png"
@@ -121,7 +121,7 @@ export default {
 .body {
     padding: 50px 0;
     margin-top: 40px;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
 }
 
 h4 {
@@ -166,6 +166,17 @@ h4 {
     cursor: pointer;
     min-width: 300px;
     border-radius: 40px;
+}
+
+.light-blue-hero {
+    color: white;
+    background-color: #00a8ff;
+
+}
+
+.light-blue-hero:hover {
+    color: #00a8ff;
+    background-color: white;
 }
 
 
