@@ -184,5 +184,22 @@ export default {
         align-items: center;
         gap: 20px;
     }
+
+    .arrow-container {
+        width: 20px; 
+        height: 20px; 
+    }
+
+    .arrow {
+        width: 17.5px; 
+        height: 17.5px; 
+        border-top: 3.5px solid white; 
+        border-left: 3.5px solid white; 
+    }
+
+    .arrow:hover {
+        border-top: 3.5px solid #00a8ff; 
+        border-left: 3.5px solid #00a8ff; 
+    }
 }
 </style>
