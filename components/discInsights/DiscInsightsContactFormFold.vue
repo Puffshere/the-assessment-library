@@ -182,8 +182,8 @@ export default {
                 // Apply the "ATD 2024 Get in Touch Form" tag (tag id 998)
                 await axios.post(`/api/contact/${data.contact.id}/tag/998`);
 
-                // Apply the "ICF Landing Page" tag (tag id 1016)
-                // await axios.post(`/api/contact/${data.contact.id}/tag/1016`);
+                // Apply the "DISC Insights Landing Page" tag (tag id 1021)
+                await axios.post(`/api/contact/${data.contact.id}/tag/1021`);
 
                 // Create an account and associate the contact to it
                 await axios.post(`/api/contact/${data.contact.id}/account`, {
