@@ -33,8 +33,9 @@
                                 </div>
 
                                 <div class="phone-number">
-                                    <a class="hyperlink light" href="`tel:${formattedPhoneNumber}`">{{
-                                        formattedPhoneNumber }}</a>
+                                    <a class="hyperlink light" style="text-align: center" href="tel:12064006647">+1 (206) 400-6647</a>
+                                    <!-- <a class="hyperlink light" href="`tel:${formattedPhoneNumber}`">{{
+                                        formattedPhoneNumber }}</a> -->
                                 </div>
                             </div>
                         </div>
