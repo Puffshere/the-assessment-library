@@ -33,7 +33,7 @@
                 <div class="col-7 rise-on-scroll">
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/targeted-evaluation.png" alt="target icon"
-                            style="width: 7%; margin-right: 15px; margin-top: -60px;">
+                            style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Targeted Evaluation</strong><br />
                             Assesses four action factors: collaboration effectiveness, stress capability, prioritization
@@ -42,7 +42,7 @@
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/behavioral-and-communication-analysis.png"
-                            alt="behavioral analysis icon" style="width: 7%; margin-right: 15px; margin-top: -60px;">
+                            alt="behavioral analysis icon" style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Behavioral and Communication Analysis</strong><br />
                             Provides detailed analysis of how an individual's DISC profile affects interactions and
@@ -60,7 +60,7 @@
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/risk-assessment.png" alt="risk assessment icon"
-                            style="width: 7%; margin-right: 15px; margin-top: -60px;">
+                            style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Risk Assessment</strong><br />
                             Categorizes performance indicators into 'Satisfactory' or 'Cautionary' to guide hiring and
@@ -69,7 +69,7 @@
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <img src="~/assets/disc-insights/adaptability-insights.png" alt="adaptability insights icon"
-                            style="width: 7%; margin-right: 15px; margin-top: -60px;">
+                            style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Adaptability Insights</strong><br />
                             Distinguishes between natural and adapted behavioral styles, providing insights into

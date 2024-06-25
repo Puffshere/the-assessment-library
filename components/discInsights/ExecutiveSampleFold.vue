@@ -29,7 +29,7 @@
                         </p>
                         <img src="~/assets/disc-insights/comprehensive-3-model-analysis.png"
                             alt="comprehensive 3 model analysis icon"
-                            style="width: 7%; margin-left: 20px; margin-right: 30px; margin-top: -60px;">
+                            style="width: 7%; margin-left: 20px; margin-right: 30px; margin-top: -40px;">
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <p style="text-align: right;">
@@ -38,7 +38,7 @@
                             values and approaches to work, interactions, and decisions.
                         </p>
                         <img src="~/assets/disc-insights/customized-insights.png" alt="customized insights icon"
-                            style="width: 7%; margin-left: 20px; margin-right: 30px; margin-top: -60px;">
+                            style="width: 7%; margin-left: 20px; margin-right: 30px; margin-top: -40px;">
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
                         <p style="text-align: right;">
