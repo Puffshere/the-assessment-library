@@ -441,6 +441,10 @@ export default {
                             mainText: 'ICF landing page',
                         },
                         {
+                            url: 'https://www.assessments24x7.com/discinsights',
+                            mainText: 'DISC Insights',
+                        },
+                        {
                             url: '',
                             mainText: 'DISC Awareness Assessment',
                             footNote: "*Coming Soon"
