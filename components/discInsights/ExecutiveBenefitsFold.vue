@@ -70,7 +70,7 @@
                         class="button active light-blue" @click="scrollToCompareFold">
                         <img src="~/assets/disc-insights/compare.png"
                             style="width: 35px; margin-left: -40px; margin-right: 0px;" alt="compare icon">
-                        <span>Compare to <br /> Executive Insights</span>
+                        <span>Compare to <br /> Workplace Insights</span>
                     </button>
                 </div>
             </div>

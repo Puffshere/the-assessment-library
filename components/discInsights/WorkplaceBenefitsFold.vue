@@ -34,8 +34,8 @@
                     </div>
                     <div v-if="activeImageIndex === 1">
                         <h5 style="color: white; text-align: left;">
-                            Categorizes performance indicators into 'Satisfactory' or 'Cautionary <br />
-                            to guide decision-making in hiring or development processes <br />
+                            Categorizes performance indicators into 'Satisfactory' or 'Cautionary' <br />
+                            to guide decision-making in hiring or development processes, <br />
                             adding a layer of precaution and insight into potential challenges.
                         </h5>
                     </div>
