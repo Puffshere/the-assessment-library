@@ -101,8 +101,7 @@
                         <button style="" class="learn-more-button light-blue" @click="scrollToContactForm">
                             <span>
                                 <img src="~/assets/disc-insights/info.png"
-                                    style="width: 30px; float: left; margin-right: -16px;"
-                                    alt="info icon">
+                                    style="width: 30px; float: left; margin-right: -16px;" alt="info icon">
                             </span>
                             <span style="margin-left: 10px; margin-bottom: 40px;">Learn More</span>
                         </button>
@@ -159,7 +158,13 @@
                     </div>
                 </div>
             </div>
-
+            <div style="display: flex; justify-content: center;" class="unlockClass">
+                <a style="cursor: pointer; margin-bottom: 60px;" @click="scrollToContactForm">
+                    <h2><span style="text-decoration: underline">Unlock Your Potential: </span><span
+                            style="color: #00a8ff; text-decoration: underline;">Enroll in DISC Certification
+                            Today!</span></h2>
+                </a>
+            </div>
             <credits :isLight="true" shrm="12" hrci="10" atd="10" icfCore="5.25" icfRD="12.5" hrciProgramId="582706" />
 
             <div class="row">
@@ -405,6 +410,13 @@ export default {
                 background-color: white;
                 border: 1px solid #2729ff;
             }
+        }
+    }
+
+    .unlockClass {
+        a:hover h2 {
+            text-shadow: 2px 10px 10px rgba(97, 97, 97, 0.349);
+            border-radius: 5px;
         }
     }
 
