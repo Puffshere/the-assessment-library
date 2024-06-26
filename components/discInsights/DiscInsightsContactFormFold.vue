@@ -266,7 +266,7 @@ export default {
 
         input {
             background-color: #ffffff;
-            border: none;
+            border: 1px 1px rgb(71, 71, 71);
             width: 100%;
             min-height: 50px;
             border-radius: 2px;
@@ -275,7 +275,6 @@ export default {
         }
 
         .form-check-input {
-            border: none;
             width: 24px;
             margin-left: 0px;
             display: flex;
