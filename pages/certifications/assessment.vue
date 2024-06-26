@@ -226,14 +226,13 @@
 
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
-import ContactForm from '@/components/certifications/AssessmentContactFormFold';
 
 export default {
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
-        'contact-form': ContactForm,
+        'contact-form':  () => import('@/components/certifications/AssessmentContactFormFold'),
         'footer-fold': () => import('@/components/Footer'),
         'credits': () => import('@/components/Credits')
     },

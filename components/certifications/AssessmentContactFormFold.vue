@@ -234,7 +234,6 @@ export default {
             border-radius: 4px;
             padding: 0 20px;
             font-size: 24px;
-            border: 1px 1px black;
         }
 
         .form-check-input {
