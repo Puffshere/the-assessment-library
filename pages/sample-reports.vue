@@ -366,7 +366,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Swedish.pdf"
                             target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'es'" class="hyperlink"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Espanol.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators_-_Spanish.pdf"
                             target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'tr'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsSampleTurkish.pdf"
@@ -1365,7 +1365,7 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleMotivatorsRussian.pdf"
                                     target="_blank" rel="noopener">Russian</a><br />
                                 <a class="hyperlink"
-                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Espanol.pdf"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators_-_Spanish.pdf"
                                     target="_blank" rel="noopener">Spanish</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Swedish.pdf"
