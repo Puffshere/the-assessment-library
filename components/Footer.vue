@@ -42,7 +42,7 @@
 
                 <div class="col-4">
                     <p class="contact-title">Contact Assessments 24x7</p>
-                    <p class="contact-info"><a class="contact-touch-point" href="tel:12064006647">+1 (206) 400-6647</a>
+                    <p class="contact-info"><a class="contact-touch-point" href="tel:+12064006647">+1 (206) 400-6647</a>
                     </p>
                     <p class="contact-info"><a class="contact-touch-point"
                             href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a></p>
