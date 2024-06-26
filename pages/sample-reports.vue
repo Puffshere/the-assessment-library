@@ -27,6 +27,7 @@
                             <option value="en-au">Australian - 10</option>
                             <option value="zh">Chinese (Mandarin) - 17</option>
                             <option value="zh-t">Chinese (Traditional) - 1</option>
+                            <option value="bg">Bulgarian - 1</option>
                             <option value="nl">Dutch - 6</option>
                             <option value="en-us" selected>English (US) - 38</option>
                             <option value="fr">French - 14</option>
@@ -91,6 +92,9 @@
                         <a v-else-if="lang === 'zh'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'bg'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Self_-_Bulgarian.pdf"
+                            target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'nl'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfDutch.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
@@ -149,7 +153,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCVietnamese.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else class="hyperlink disabled">DISC Self Report</a>
-                        <a class="language-button disc" @click="discSelfModal = true">23 languages</a>
+                        <a class="language-button disc" @click="discSelfModal = true">24 languages</a>
                         <br />
 
                         <a v-if="lang === 'en-us' || lang === 'en-au' || lang === 'zh' || lang === 'nl' || lang === 'fr' || lang === 'pt' || lang === 'sv' || lang === 'vi' || lang === 'tr' || lang === 'es'"
@@ -694,6 +698,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Self_-_Bulgarian.pdf"
+                                    target="_blank" rel="noopener">Bulgarian</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfDutch.pdf"
                                     target="_blank" rel="noopener">Dutch</a><br />

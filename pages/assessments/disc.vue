@@ -71,6 +71,7 @@
                             <span><img src="~assets/flags/algeria.svg" alt="Arabic DISC Assessments"> العربية</span>
                             <span><img src="~assets/flags/australia.svg" alt="Australian DISC Assessments"> Australian</span>
                             <span><img src="~assets/flags/brazil.svg" alt="Portugese DISC Assessments"> Português (Brazil)</span>
+                            <span><img src="~assets/flags/bulgaria.svg" alt="Bulgarian DISC Assessments"> Bulgarian</span>
                             <span><img src="~assets/flags/cambodia.svg" alt="Cambodian DISC Assessments"> ភាសាខ្មែរ</span>
                             <span><img src="~assets/flags/china.svg" alt="Chinese DISC Assessments"> 中文</span>
                             <span><img src="~assets/flags/france.svg" alt="French DISC Assessments"> Français</span>
