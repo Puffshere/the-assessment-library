@@ -25,9 +25,9 @@
                         <select class="input" id="lang" v-model="lang">
                             <option value="ar">Arabic - 2</option>
                             <option value="en-au">Australian - 10</option>
+                            <option value="bg">Bulgarian - 1</option>
                             <option value="zh">Chinese (Mandarin) - 17</option>
                             <option value="zh-t">Chinese (Traditional) - 1</option>
-                            <option value="bg">Bulgarian - 1</option>
                             <option value="nl">Dutch - 6</option>
                             <option value="en-us" selected>English (US) - 38</option>
                             <option value="fr">French - 14</option>
