@@ -382,5 +382,21 @@
     {
         "from": "/store/disc-profiler-deck/",
         "to": "/"
+    },
+    {
+        "from": "/tony-alessandra.asp",
+        "to": "/"
+    },
+    {
+        "from": "https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/07_Flexibility%20&%20Versatility.mp3",
+        "to": "/resources/relationship-strategies-audio-program"
+    },
+    {
+        "from": "/pete-johnson.asp",
+        "to": "/certifications/directory/coaches"
+    },
+    {
+        "from": "/doug-devitre.asp",
+        "to": "/"
     }
 ]
