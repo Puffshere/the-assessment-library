@@ -86,7 +86,7 @@
 
                 <div class="col-6">
                     <ul class="resources">
-                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/07_Flexibility & Versatility.mp3" target="_blank" rel="noopener">
+                        <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/audio-program/07_Flexibility+%26+Versatility.mp3" target="_blank" rel="noopener">
                             <li class="resource a24x7">
                                 07 - Flexibility & Versatility
                             </li>
