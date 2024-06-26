@@ -89,11 +89,11 @@
                         <a v-else-if="lang === 'en-au'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfAustralian.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
-                        <a v-else-if="lang === 'zh'" class="hyperlink"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf"
-                            target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'bg'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Self_-_Bulgarian.pdf"
+                            target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'zh'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'nl'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfDutch.pdf"
@@ -696,11 +696,11 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfAustralian.pdf"
                                     target="_blank" rel="noopener">Australian</a><br />
                                 <a class="hyperlink"
-                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf"
-                                    target="_blank" rel="noopener">Chinese</a><br />
-                                <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Self_-_Bulgarian.pdf"
                                     target="_blank" rel="noopener">Bulgarian</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfChinese.pdf"
+                                    target="_blank" rel="noopener">Chinese</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfDutch.pdf"
                                     target="_blank" rel="noopener">Dutch</a><br />

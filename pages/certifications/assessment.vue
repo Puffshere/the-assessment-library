@@ -71,7 +71,8 @@
                                 Debrief Guide, PowerPoint presentations, and marketing materials</li>
                             <li>Get listed on our International Directory of Certified Practitioners linked to your
                                 website</li>
-                            <li>Become the in-house expert for your company to offer effective trainings and individual or group debriefs</li>
+                            <li>Become the in-house expert for your company to offer effective trainings and individual
+                                or group debriefs</li>
                             <li>Maximize the effectiveness of your assessment debriefs</li>
                         </ul>
                     </div>
@@ -97,10 +98,21 @@
                             development professional. DISC Certification will give you the knowledge to debrief reports
                             without hesitation - which means even more satisfied clients for you!
                         </p>
+                        <button style="" class="learn-more-button light-blue" @click="scrollToContactForm">
+                            <span>
+                                <img src="~/assets/disc-insights/info.png"
+                                    style="width: 30px; float: left; margin-right: -16px;"
+                                    alt="info icon">
+                            </span>
+                            <span style="margin-left: 10px; margin-bottom: 40px;">Learn More</span>
+                        </button>
                     </div>
                 </div>
 
+
                 <div class="col-12">
+                    <h2 v-if="selfPaced === false" style="padding-top: 40px">2-Day Group Course Summary:</h2>
+                    <h2 v-if="selfPaced === true" style="padding-top: 40px">Self-Paced Course Summary:</h2>
                     <button ref="groupButton" @click="group" @focus="setFocus('groupButton')" class="discBtn focus-btn">
                         <img src="~/assets/people-group.png" style="width: 12%;" alt="people icon">
                         Group
@@ -113,8 +125,6 @@
                 </div>
 
                 <div v-if="selfPaced === false" class="col-12">
-                    <h2 style="margin-bottom: 20px">2-Day Group Course Summary:</h2>
-
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic disc">Choose a two-day session that works for you</li>
@@ -132,8 +142,6 @@
                     </div>
                 </div>
                 <div v-else class="col-12">
-                    <h2 style="margin-bottom: 20px">Self-Paced Course Summary:</h2>
-
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic disc">Take the online DISC assessment</li>
@@ -244,8 +252,8 @@
             <credits :isLight="true" shrm="12" hrci="7.5" atd="7.5" icfCore="8.25" icfRD="6.75"
                 hrciProgramId="582701" />
         </div>
+        <contact-form></contact-form>
 
-        <br />
         <LazyHydrate when-visible><susan-cranston /></LazyHydrate>
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
@@ -253,12 +261,15 @@
 
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
+import ContactForm from '@/components/certifications/AssessmentContactFormFold';
+
 
 export default {
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
+        'contact-form': ContactForm,
         'footer-fold': () => import('@/components/Footer'),
         'credits': () => import('@/components/Credits')
     },
@@ -308,6 +319,13 @@ export default {
         },
         setFocus(button) {
             this.lastFocusedButton = button;
+        },
+        scrollToContactForm(event) {
+            const element = document.getElementById('certificationsAssessmentContactForm');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
         },
         handleClickOutside(event) {
             if (
@@ -368,6 +386,28 @@ export default {
         }
     }
 
+    .learn-more-button {
+        width: 210px;
+        height: 40px;
+        border-radius: 40px;
+        border: none;
+        font-size: 18.6px;
+        line-height: 30px;
+        font-weight: 600;
+        cursor: pointer;
+
+        &.light-blue {
+            color: white;
+            background-color: #2729ff;
+
+            &:hover {
+                color: #2729ff;
+                background-color: white;
+                border: 1px solid #2729ff;
+            }
+        }
+    }
+
     .image {
         height: 220px;
         margin: 0 auto;
@@ -394,7 +434,6 @@ export default {
         font-size: 18px;
         font-weight: 700;
         max-width: 200px;
-        margin-top: 30px;
         margin-right: 20px;
         cursor: pointer;
 
