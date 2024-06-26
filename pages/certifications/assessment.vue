@@ -1,7 +1,6 @@
 <template>
     <section class="assessment-certification">
         <main-nav active="training" />
-
         <section class="header">
             <div class="container">
                 <div class="row">
@@ -16,16 +15,11 @@
                 </div>
             </div>
         </section>
-
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h2 style="margin-top: 50px">Learn From The Top Assessment Experts In The Industry</h2>
-
-                    <p>
-                        Do you want to use assessments to build better personal and professional relationships?
-                    </p>
-
+                    <p>Do you want to use assessments to build better personal and professional relationships?</p>
                     <p>
                         Our assessment certification programs help people become experts at understanding and using
                         assessments. Our training is designed
@@ -33,9 +27,7 @@
                         assessment can be used to be more
                         effective in your communication, leadership, and decision-making.
                     </p>
-
                     <h4>100% Virtual Training. On Your Schedule.</h4>
-
                     <p>
                         Our assessment certification works with your schedule. Work through the courses online at any
                         time of day or night. Work at your
@@ -44,15 +36,10 @@
                         industry or role, so your certification will benefit you as you move up the ladder, change
                         companies, or even change industries.
                     </p>
-
-                    <p>
-                        Click below now to get started on your assessment certification!
-                    </p><br />
-
+                    <p>Click below now to get started on your assessment certification!</p><br />
                     <nuxt-link to="/contact" class="button">Talk to a Specialist</nuxt-link>
                     <nuxt-link to="/assessments" class="button outline">Learn More About
                         Assessments</nuxt-link><br /><br />
-
                     <h3 style="margin-bottom: -10px; margin-top: 50px;">Become A Certified Assessment Practitioner</h3>
                     <div class="col-6">
                         <ul>
@@ -64,7 +51,6 @@
                                 Trainer</li>
                         </ul>
                     </div>
-
                     <div class="col-6">
                         <ul>
                             <li>Access Certified Trainer Material to use in your coaching/training business, including a
@@ -79,16 +65,13 @@
                 </div>
             </div>
         </div><br /><br />
-
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 id="disc">DISC Assessment Certification</h2>
-
+                    <h2>DISC Assessment Certification</h2>
                     <div class="col-3">
                         <img class="image" src="~/assets/badges/new/disc-cert-badge-color.png" alt="disc-cert-badge">
                     </div>
-
                     <div class="col-9">
                         <p>
                             Do you want to significantly improve your understanding of DISC and your ability to debrief
@@ -107,22 +90,20 @@
                         </button>
                     </div>
                 </div>
-
-
                 <div class="col-12">
                     <h2 v-if="selfPaced === false" style="padding-top: 40px">2-Day Group Course Summary:</h2>
                     <h2 v-if="selfPaced === true" style="padding-top: 40px">Self-Paced Course Summary:</h2>
-                    <button ref="groupButton" @click="group" @focus="setFocus('groupButton')" class="discBtn focus-btn">
-                        <img src="~/assets/people-group.png" style="width: 12%;" alt="people icon">
-                        Group
+                    <button v-if="selfPaced === false" ref="groupButton" @click="group" class="discBtn"
+                        style="background-color: #272bff;">
+                        <img src="~/assets/people-group.png" style="width: 12%;" alt="people icon"> Group
                     </button>
-                    <button ref="selfPacedButton" @click="toggleSelfPaced" @focus="setFocus('selfPacedButton')"
-                        class="discBtn focus-btn">
-                        <img src="~/assets/head-self-paced.png" style="width: 12%;" alt="head icon">
-                        Self-Paced
+                    <button v-else ref="groupButton" @click="group" class="discBtn">
+                        <img src="~/assets/people-group.png" style="width: 12%;" alt="people icon"> Group
+                    </button>
+                    <button ref="selfPacedButton" @click="toggleSelfPaced" class="discBtn">
+                        <img src="~/assets/head-self-paced.png" style="width: 12%;" alt="head icon"> Self-Paced
                     </button>
                 </div>
-
                 <div v-if="selfPaced === false" class="col-12">
                     <div class="col-6">
                         <ul class="course-summary">
@@ -131,7 +112,6 @@
                             <li class="topic disc">Attend the two-day session (4 hours per day)</li>
                         </ul>
                     </div>
-
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic disc">Small group practice with trainer guidance</li>
@@ -148,7 +128,6 @@
                             <li class="topic disc">Review your DISC assessment as you learn</li>
                         </ul>
                     </div>
-
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic disc">Attend a live debrief with an A24x7 trainer</li>
@@ -166,33 +145,25 @@
                 </a>
             </div>
             <credits :isLight="true" shrm="12" hrci="10" atd="10" icfCore="5.25" icfRD="12.5" hrciProgramId="582706" />
-
             <div class="row">
                 <div class="col-12">
                     <h2 id="motivators">Motivators Assessment Certification</h2>
-
                     <div class="col-3">
                         <img class="image" src="~/assets/badges/new/mot-cert-badge-color.png" alt="mot-cert-badge">
                     </div>
-
                     <div class="col-9">
                         <p>
                             The Motivators Assessment Certification Program provides a fresh perspective into human
-                            motivation. With this understanding,
-                            organizations and workplaces can more effectively motivate employees to increase
-                            productivity, strengthen collaboration, and
-                            produce exceptional results. The curriculum teaches the seven Dimensions of Motivation
-                            individually so that you learn how they
-                            affect interactions with others. When you better understand what motivates your workforce –
-                            or yourself! – there’s no limit to
-                            what you can achieve.
+                            motivation. With this understanding, organizations and workplaces can more effectively
+                            motivate employees to increase productivity, strengthen collaboration, and produce
+                            exceptional results. The curriculum teaches the seven Dimensions of Motivation individually
+                            so that you learn how they affect interactions with others. When you better understand what
+                            motivates your workforce – or yourself! – there’s no limit to what you can achieve.
                         </p>
                     </div>
                 </div>
-
                 <div class="col-12">
                     <h3 style="margin-bottom: -10px">Course Summary (10 hours):</h3>
-
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic mot">Take the Online Motivators Assessment</li>
@@ -200,7 +171,6 @@
                             <li class="topic mot">Receive a personal Motivators report debrief from a trainer</li>
                         </ul>
                     </div>
-
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic mot">Review the online Resources for Motivators Trainers</li>
@@ -210,32 +180,25 @@
                     </div>
                 </div>
             </div>
-
             <credits :isLight="true" shrm="10" hrci="7" atd="7" icfCore="7.5" icfRD="9.25" hrciProgramId="582705" />
-
             <div class="row">
                 <div class="col-12">
                     <h2 id="eiq">Emotional Intelligence Certification</h2>
-
                     <div class="col-3">
                         <img class="image" src="~/assets/badges/new/eiq-cert-badge-color.png" alt="eiq-cert-badge">
                     </div>
-
                     <div class="col-9">
                         <p>
                             EIQ Certification provides enhanced clarity on how people perceive and apply their Emotional
-                            Intelligence, empowering
-                            practitioners with the necessary insights to coach in a way that creates beneficial
-                            interpersonal outcomes. Boost your
-                            interpersonal conflict management skills as well, and learn to tactfully deal with difficult
-                            people during stressful situations.
+                            Intelligence, empowering practitioners with the necessary insights to coach in a way that
+                            creates beneficial interpersonal outcomes. Boost your interpersonal conflict management
+                            skills as well, and learn to tactfully deal with difficult people during stressful
+                            situations.
                         </p>
                     </div>
                 </div>
-
                 <div class="col-12">
                     <h3 style="margin-bottom: -10px">Course Summary (10 hours):</h3>
-
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic eiq">Take the Online EIQ Assessment</li>
@@ -243,7 +206,6 @@
                             <li class="topic eiq">Receive a personal report debrief from one of our trainers</li>
                         </ul>
                     </div>
-
                     <div class="col-6">
                         <ul class="course-summary">
                             <li class="topic eiq">Review the online Resources for EIQ Trainers</li>
@@ -253,12 +215,10 @@
                     </div>
                 </div>
             </div>
-
             <credits :isLight="true" shrm="12" hrci="7.5" atd="7.5" icfCore="8.25" icfRD="6.75"
                 hrciProgramId="582701" />
         </div>
         <contact-form></contact-form>
-
         <LazyHydrate when-visible><susan-cranston /></LazyHydrate>
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
@@ -267,7 +227,6 @@
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
 import ContactForm from '@/components/certifications/AssessmentContactFormFold';
-
 
 export default {
     components: {
@@ -346,8 +305,6 @@ export default {
         }
     },
     mounted() {
-        this.$refs.groupButton.focus();
-        this.lastFocusedButton = 'groupButton';
         document.addEventListener('click', this.handleClickOutside);
     },
     beforeDestroy() {
@@ -400,10 +357,11 @@ export default {
         line-height: 30px;
         font-weight: 600;
         cursor: pointer;
+        background-color: #2729ff;
 
         &.light-blue {
             color: white;
-            background-color: #2729ff;
+            //background-color: #2729ff;
 
             &:hover {
                 color: #2729ff;
@@ -457,6 +415,11 @@ export default {
         &:focus {
             background-color: #2729ff;
             border: none;
+        }
+
+        &.disabled {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
         }
     }
 
