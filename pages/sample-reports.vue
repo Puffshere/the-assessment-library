@@ -37,7 +37,7 @@
                             <option value="ja">Japanese - 4</option>
                             <option value="km">Khmer (Cambodian) - 1</option>
                             <option value="ko">Korean - 1</option>
-                            <option value="li">Lithuanian - 1</option>
+                            <option value="li">Lithuanian - 3</option>
                             <option value="ms">Malaysian - 1</option>
                             <option value="no">Norwegian - 3</option>
                             <option value="pl">Polish - 1</option>
@@ -119,6 +119,9 @@
                         <a v-else-if="lang === 'ko'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfKorean.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'li'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Self_-_Lithuanian.pdf"
+                            target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'ms'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfMalaysian.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
@@ -153,7 +156,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCVietnamese.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else class="hyperlink disabled">DISC Self Report</a>
-                        <a class="language-button disc" @click="discSelfModal = true">24 languages</a>
+                        <a class="language-button disc" @click="discSelfModal = true">25 languages</a>
                         <br />
 
                         <a v-if="lang === 'en-us' || lang === 'en-au' || lang === 'zh' || lang === 'nl' || lang === 'fr' || lang === 'pt' || lang === 'sv' || lang === 'vi' || lang === 'tr' || lang === 'es'"
@@ -205,7 +208,6 @@
 
                 <div class="col-3">
                     <div class="samples-container">
-                        <div class="coming-soon">New!</div>
 
                         <h3>Kids DISC</h3>
                         <a v-if="lang === 'en-au'"
@@ -360,6 +362,9 @@
                         <a v-else-if="lang === 'de'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_German.pdf"
                             target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'li'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators_-_Lithuanian.pdf"
+                            target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'pt'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsPortuguese.pdf"
                             target="_blank" rel="noopener">Motivators Self Report</a>
@@ -382,7 +387,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Vietnamese.pdf"
                             target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else class="hyperlink disabled">Motivators Self Report</a>
-                        <a class="language-button mot" @click="motSelfReportModal = true">15 languages</a><br />
+                        <a class="language-button mot" @click="motSelfReportModal = true">16 languages</a><br />
 
                         <a v-if="lang === 'en-us' || lang === 'zh' || lang === 'sv' || lang === 'nl' || lang === 'fr' || lang === 'pt-br'"
                             @click="motTeamReportsModal = true" class="hyperlink" target="_blank"
@@ -465,6 +470,7 @@
             <div class="row">
                 <div class="col-3">
                     <div class="samples-container">
+                        <div class="coming-soon">New!</div>
                         <h3>Selection</h3>
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCworkplace.pdf"
@@ -725,6 +731,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfKorean.pdf"
                                     target="_blank" rel="noopener">Korean</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Self_-_Lithuanian.pdf"
+                                    target="_blank" rel="noopener">Lithuanian</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfMalaysian.pdf"
                                     target="_blank" rel="noopener">Malaysian</a><br />
@@ -1365,6 +1374,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Japanese.pdf"
                                     target="_blank" rel="noopener">Japanese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators_-_Lithuanian.pdf"
+                                    target="_blank" rel="noopener">Lithuanian</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/MotivatorsPortuguese.pdf"
                                     target="_blank" rel="noopener">Portuguese</a><br />
