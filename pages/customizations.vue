@@ -339,6 +339,9 @@ export default {
                 // Apply the "ATD 2024 Get in Touch Form" tag (tag id 998)
                 await axios.post(`/api/contact/${data.contact.id}/tag/998`);
 
+                // Apply the "Customizations Landing Page" tag (tag id 1025)
+                await axios.post(`/api/contact/${data.contact.id}/tag/1025`);
+
                 // Create an account and associate the contact to it
                 await axios.post(`/api/contact/${data.contact.id}/account`, {
                     company: this.form.company
@@ -375,7 +378,6 @@ export default {
 }
 
 .body {
-    //background-color: #133c84;
     background-color: #282980;
 
     .blue1 {
