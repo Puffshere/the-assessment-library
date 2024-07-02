@@ -131,13 +131,13 @@
                 <h2>{{ formatCurrency(annualAttritionCalculator) }}</h2>
               </div>
             </div>
-            <div class="row" style="text-align: center;">
+            <div class="row monthly" style="text-align: center; margin-top: 40px; margin-left: -20px;">
               <div class="col-8">
-                <h3>Monthly management</h3>
+                <h3 class="monthlyLabel" style="margin-left: -40px;">Monthly management</h3>
               </div>
               <div class="col-4">
                 <input type="text" :value="formattedDollarsMonthlyFee" @input="updateMonthlyFee($event.target.value)"
-                  style="background-color: #d9eafd; max-width: 130px; min-height: 50px; text-align: center; border-radius: 5px;" />
+                  class="monthlyInput" style="background-color: #d9eafd; max-width: 130px; min-height: 50px; text-align: center; border-radius: 5px; margin-top: 6px; margin-left: -50px;" />
               </div>
             </div>
           </div>
@@ -172,11 +172,11 @@
                 <h3>Expected annual cost to replace</h3>
               </div>
               <div class="col-4">
-                <h2>{{ formatCurrency(expectedAnnualCostToReplace) }}</h2>
+                <h2 style="margin-top: 15px;">{{ formatCurrency(expectedAnnualCostToReplace) }}</h2>
               </div>
             </div>
             <div class="row rowMedia"
-              style="box-shadow: 3px 3px 10px black; background-color: #027bfe; color: white; border-radius: 10px; width: 85%; padding-right: 35px; float: right; margin: 20px 0;">
+              style="box-shadow: 3px 3px 10px black; background-color: #027bfe; color: white; border-radius: 10px; width: 85%; padding-right: 35px; float: right; margin: 20px 0; margin-right: 20px;">
               <div class="col-7" style="text-align: right; margin-bottom: -20px;">
                 <h3>Annual Savings - <br />
                   Attrition Calculator
@@ -197,7 +197,7 @@
           </div>
         </div>
         <hr
-          style="height: 5px; border: none; background-color: #1d1d1d; box-shadow: 2px 2px 8px darkgray; margin-top: 33px; margin-bottom: -20px; border-radius: 10px;">
+          style="height: 5px; border: none; background-color: #1d1d1d; box-shadow: 2px 2px 8px darkgray; margin-top: 30px; margin-bottom: -20px; border-radius: 10px;">
         <div class="row">
           <h2
             style="text-align: center; padding: 10px 0px; background-color: #fe6702; box-shadow: 0px 2px 5px #232323; border-radius: 0px 0px 0px 0px;">
@@ -224,7 +224,7 @@
           </div>
         </div>
         <hr
-          style="height: 5px; border: none; background-color: #1d1d1d; box-shadow: 2px 2px 8px darkgray; margin-top: 20px; margin-bottom: 0px; border-radius: 20px;">
+          style="height: 5px; border: none; background-color: #1d1d1d; box-shadow: 2px 2px 8px darkgray; margin-top: 20px; margin-bottom: -5px; border-radius: 20px;">
       </div>
     </div>
     <div style="width: 100%; height: 100px; background-color: #027bfe; margin-top: 70px;">
@@ -527,6 +527,20 @@ input {
 
   .topResults {
     margin-top: 0px !important;
+  }
+
+  .monthly {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+  }
+
+  .monthlyLabel {
+    margin-left: 0px !important;
+  }
+
+  .monthlyInput {
+    margin-left: 0px !important;
+    margin-bottom: 40px !important;
   }
 }
 
