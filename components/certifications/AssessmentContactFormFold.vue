@@ -159,11 +159,11 @@ export default {
                 // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
                 await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
-                // Apply the "ATD 2024 Get in Touch Form" tag (tag id 998)
-                await axios.post(`/api/contact/${data.contact.id}/tag/998`);
+                // // Apply the "ATD 2024 Get in Touch Form" tag (tag id 998)
+                // await axios.post(`/api/contact/${data.contact.id}/tag/998`);
 
-                // Apply the "LS: Assess-Cert Page" tag (tag id 1024)
-                await axios.post(`/api/contact/${data.contact.id}/tag/1024`);
+                // // Apply the "LS: Assess-Cert Page" tag (tag id 1024)
+                // await axios.post(`/api/contact/${data.contact.id}/tag/1024`);
 
                 // Create an account and associate the contact to it
                 await axios.post(`/api/contact/${data.contact.id}/account`, {
