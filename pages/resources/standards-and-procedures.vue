@@ -369,6 +369,14 @@ export default {
                         {
                             url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Credit+Transfers+of+Unequal+Value+SOP+-+Support.pdf",
                             mainText: "Credit Transfers of Unequal Value"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/A24x7AdminQuickSteps.pdf",
+                            mainText: "360 Admin Setup Steps"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/A24x7+360+Instructions.pdf",
+                            mainText: "360 Assessment Instructions"
                         }
                     ]
                 }
