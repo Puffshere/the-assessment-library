@@ -30,7 +30,7 @@
                             <option value="zh-t">Chinese (Traditional) - 1</option>
                             <option value="nl">Dutch - 6</option>
                             <option value="en-us" selected>English (US) - 38</option>
-                            <option value="fr">French - 14</option>
+                            <option value="fr">French - 15</option>
                             <option value="de">German - 5</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 3</option>
@@ -258,6 +258,9 @@
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
+                        <a v-else-if="lang === 'fr'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_360_-_French.pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
                         <a v-else-if="lang === 'ru'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360RussianSampleReport.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
@@ -274,7 +277,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Simplified_DISC_360_-_Chinese.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC 360&deg; Report</a>
                         <a v-else class="hyperlink disabled">DISC 360&deg; Report</a>
-                        <a class="language-button disc" @click="disc360ReportModal = true">6 languages</a><br />
+                        <a class="language-button disc" @click="disc360ReportModal = true">7 languages</a><br />
                     </div>
                     <br />
 
@@ -999,6 +1002,8 @@
                                     class="hyperlink" target="_blank" rel="noopener">Chinese (Simplified)</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360SampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_360_-_French.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">French</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360RussianSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Russian</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_360_-_Spanish.pdf"
