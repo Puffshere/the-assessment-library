@@ -92,7 +92,7 @@
                             </a>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNote2 footNotes">{{ link.footNote }}</span>
+                                <span class="footNotes" style="text-align: left;">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
@@ -120,7 +120,7 @@
                             </div>
                             <br>
                             <div v-if="link.footNote">
-                                <span class="footNote3 footNotes">{{ link.footNote }}</span>
+                                <span class="footNotes" style="text-align: left;">{{ link.footNote }}</span>
                                 <br>
                                 <br>
                             </div>
@@ -399,6 +399,11 @@ export default {
                         {
                             url: 'https://docs.google.com/spreadsheets/d/1fqxFWCx70mT4cPVZTfEfwibgwJPsj9-qXGY_cEEi15g/edit#gid=17462517',
                             mainText: 'Social Media Calendar'
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Marketing+Review+Process+-+Emails%2C+Marketing+Sheets%2C+Landing+Pages%2C++Social+Posts.pdf',
+                            mainText: 'Marketing Review Process',
+                            footNote: "*Emails, Flyers, Landing pages"
                         },
                     ]
                 },
@@ -748,14 +753,6 @@ $pixel: 15px;
     display: block;
     width: 305px;
     color: rgb(56, 56, 56);
-}
-
-.footNote2 {
-    left: -110px;
-}
-
-.footNote3 {
-    left: -105px;
 }
 
 .comingSoon {
