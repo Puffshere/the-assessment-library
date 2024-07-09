@@ -271,7 +271,7 @@
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href=""
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Workplace+Insights+-+Marketing+One-Sheet.pdf"
                                         target="_blank" rel="noopener">DISC Workplace Insights Introduction</a>
                                     <small>A single-page descriptive document to introduce and promote DISC Workplace
                                         Insights in simple and practical overview.</small>
