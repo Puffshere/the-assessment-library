@@ -52,6 +52,11 @@
                         </div>
                     </div>
                 </div>
+                <!-- Honeypot field -->
+                <div style="display: none;">
+                    <label for="honeypot">Leave this field empty</label>
+                    <input v-model="form.honeypot" type="text" id="honeypot">
+                </div>
                 <br />
                 <div class="row">
                     <div class="col-12">
@@ -103,12 +108,26 @@ export default {
                 email: '',
                 phoneNumber: '',
                 company: '',
-                message: ''
+                message: '',
+                clientType: '',
+                honeypot: '' // Add honeypot field
             }
         };
     },
     methods: {
         async submitForm() {
+            if (this.form.honeypot) {
+                // If honeypot field is filled, it's a bot
+                console.log('Bot detected');
+                this.$toast.open({
+                    message: 'Bot detected. Form submission blocked.',
+                    position: 'top',
+                    duration: 8000,
+                    type: 'error'
+                });
+                return;
+            }
+
             console.log('Form submitted:', this.form);
 
             // Split the name input into firstName and lastName
@@ -142,10 +161,6 @@ export default {
                                 field: '79', // Sales Person Assignment
                                 value: salesPerson.data
                             },
-                            // {
-                            //     field: '21', // How did you hear about us?
-                            //     value: 'ICF'
-                            // },
                             {
                                 field: '4', // Client type (reseller vs corporate),
                                 value: this.form.clientType
@@ -156,16 +171,8 @@ export default {
 
                 const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
-                // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
                 await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
-                // // Apply the "ATD 2024 Get in Touch Form" tag (tag id 998)
-                // await axios.post(`/api/contact/${data.contact.id}/tag/998`);
-
-                // // Apply the "LS: Assess-Cert Page" tag (tag id 1024)
-                // await axios.post(`/api/contact/${data.contact.id}/tag/1024`);
-
-                // Create an account and associate the contact to it
                 await axios.post(`/api/contact/${data.contact.id}/account`, {
                     company: this.form.company
                 });
