@@ -204,12 +204,12 @@
         },
         head() {
             return {
-                title: 'Why Should You Use Assessments? | Assessments 24x7',
+                title: 'Why Are Assessments Important | Why Use Assessments Today',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Assessments work by measuring a variety of criteria: intellectual ability, achievement motivation, skill proficiency, work styles, personality characteristics, and personal values.'
+                        content: 'Why use assessments to improve your personality and career? Discover how they aid decision-making and understand why assessments are important.'
                     }
                 ],
                 __dangerouslyDisableSanitizers: ['script'],

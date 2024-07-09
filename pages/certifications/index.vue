@@ -8,11 +8,15 @@
                     <div class="col-12">
                         <h1 class="section-title">Virtual Certification &amp; Training</h1>
                         <p>
-                            Whether independent facilitators, corporate trainers, coaches or consultants, Certified Practitioners offer 
-                            unique expertise and perspective, receive higher contracts and salaries, rate stronger when interacting with 
-                            others, and succeed in attracting more clients and referrals. Not only does certification training 
-                            differentiate our clients, each of our assessment certifications are recognized for continuing education 
-                            (CE) credits with  <strong>SHRM, HRCI, ATD and ICF.</strong>
+                            Whether independent facilitators, corporate trainers, coaches or consultants, Certified
+                            Practitioners offer
+                            unique expertise and perspective, receive higher contracts and salaries, rate stronger when
+                            interacting with
+                            others, and succeed in attracting more clients and referrals. Not only does certification
+                            training
+                            differentiate our clients, each of our assessment certifications are recognized for
+                            continuing education
+                            (CE) credits with <strong>SHRM, HRCI, ATD and ICF.</strong>
                         </p>
                     </div>
                 </div>
@@ -23,24 +27,28 @@
             <div class="row" style="margin-bottom: 30px;">
                 <div class="col-12">
                     <div class="notification">
-                        <strong>Self-paced, 100% online training</strong><br/>
-                        All certification programs are <strong>100% virtual and self-paced</strong>. No rigid class schedules. Start and finish the training on your own time.
+                        <strong>Self-paced, 100% online training</strong><br />
+                        All certification programs are <strong>100% virtual and self-paced</strong>. No rigid class
+                        schedules. Start and finish the training on your own time.
                     </div>
 
                     <h2>Assessment Certifications &amp; Training</h2>
 
                     <p>
-                        Assessments 24x7 offers robust assessment certification programs designed specifically for coaches, consultants, and trainers to 
-                        take their businesses to the next level. 
+                        Assessments 24x7 offers robust assessment certification programs designed specifically for
+                        coaches, consultants, and trainers to
+                        take their businesses to the next level.
                     </p>
 
                     <h4>Self-paced, 100% Online Training</h4>
-                    
+
                     <p>
-                        Our certification programs are one-on-one, instructor-led sessions. They are fully online and self-paced. These are not 
-                        cookie-cutter online classes. They are flexible training curriculums tailored to your specific needs and goals.
+                        Our certification programs are one-on-one, instructor-led sessions. They are fully online and
+                        self-paced. These are not
+                        cookie-cutter online classes. They are flexible training curriculums tailored to your specific
+                        needs and goals.
                     </p>
-                        <br/>
+                    <br />
 
                     <nuxt-link to="/certifications/assessment" class="button">Assessment Certification</nuxt-link>
                     <nuxt-link to="/contact" class="button outline">Get Assessment Certified</nuxt-link>
@@ -54,12 +62,16 @@
                     <h3>DISC Assessment Certification</h3>
 
                     <p>
-                        Are you looking for mastery level understanding of DISC with the expertise and training to differentiate you from other 
-                        coaches, consultants and trainers? Our DISC Assessment Certification is designed to provide you with the ability 
-                        to debrief a client’s DISC report with confidence and accuracy and use the assessments for a variety of client needs. 
+                        Are you looking for mastery level understanding of DISC with the expertise and training to
+                        differentiate you from other
+                        coaches, consultants and trainers? Our DISC Assessment Certification is designed to provide you
+                        with the ability
+                        to debrief a client’s DISC report with confidence and accuracy and use the assessments for a
+                        variety of client needs.
                     </p>
 
-                    <nuxt-link class="hyperlink" to="/certifications/assessment#disc">DISC Assessment Certification &rarr;</nuxt-link>
+                    <nuxt-link class="hyperlink" to="/certifications/assessment#disc">DISC Assessment Certification
+                        &rarr;</nuxt-link>
                 </div>
 
                 <div class="col-4">
@@ -68,12 +80,16 @@
                     <h3>Motivators Assessment Certification</h3>
 
                     <p>
-                        The Motivators Assessment Certification program will substantially enhance your knowledge of the seven Dimensions of Motivation, 
-                        showing core values individually and how they interact together to drive our satisfaction. Through a curriculum designed to help 
-                        guide implementation of this remarkable tool, you can take a deeper dive into the “why” behind behavior and emotions. 
+                        The Motivators Assessment Certification program will substantially enhance your knowledge of the
+                        seven Dimensions of Motivation,
+                        showing core values individually and how they interact together to drive our satisfaction.
+                        Through a curriculum designed to help
+                        guide implementation of this remarkable tool, you can take a deeper dive into the “why” behind
+                        behavior and emotions.
                     </p>
 
-                    <nuxt-link class="hyperlink" to="/certifications/assessment#motivators">Motivators Assessment Certification &rarr;</nuxt-link>
+                    <nuxt-link class="hyperlink" to="/certifications/assessment#motivators">Motivators Assessment
+                        Certification &rarr;</nuxt-link>
                 </div>
 
                 <div class="col-4">
@@ -82,12 +98,16 @@
                     <h3>Emotional Intelligence Certification</h3>
 
                     <p>
-                        The EIQ Certification examines at a much more comprehensive level how people perceive and apply their Emotional Intelligence. 
-                        Developed with author Robert Jerus, the EIQ Certification empowers practitioners with enhanced clarity and 
-                        insights necessary to consistently support and share what’s needed for creating beneficial interpersonal outcomes with strong EIQ.
+                        The EIQ Certification examines at a much more comprehensive level how people perceive and apply
+                        their Emotional Intelligence.
+                        Developed with author Robert Jerus, the EIQ Certification empowers practitioners with enhanced
+                        clarity and
+                        insights necessary to consistently support and share what’s needed for creating beneficial
+                        interpersonal outcomes with strong EIQ.
                     </p>
 
-                    <nuxt-link class="hyperlink" to="/certifications/assessment#eiq">EIQ Assessment Certification &rarr;</nuxt-link>
+                    <nuxt-link class="hyperlink" to="/certifications/assessment#eiq">EIQ Assessment Certification
+                        &rarr;</nuxt-link>
                 </div>
             </div>
 
@@ -98,28 +118,28 @@
                     <p>
                         The quest to ensure our members are the most knowledgeable and best-equipped in their business continues with our innovative Workshop Leader 
                         Certification program!  -->
-                        <!--Developed by a combination of assessment industry professionals with over 80 collective years of experience in public 
+            <!--Developed by a combination of assessment industry professionals with over 80 collective years of experience in public 
                         speaking, training, and curriculum development, our Workshop Leader Certification programs equip you with the know-how and tools to confidently 
                         lead live, immersive workshops. Whether your next workshop is for a group of 5 or 500, get the confidence and content quickly that normally only 
-                        comes after months or years of research and development.--> 
-                        <!-- </p> -->
-                    <!-- <p>The goal of these training-in-a-box certifications is to bridge the gap further between assessment content and interactive application through 
+                        comes after months or years of research and development.-->
+            <!-- </p> -->
+            <!-- <p>The goal of these training-in-a-box certifications is to bridge the gap further between assessment content and interactive application through 
                         workshops and facilitation. Our Certified Workshop Leaders engage, teach, and wow learners by challenging 
                         participants to think differently, focus new ideas in ways that really work, and leave training sessions eager to apply their new skills.
                         
                         Currently, the Workshop Leader program specializes in the DISC model.  -->
-                        <!--Our DISC Workshop Leaders are assessment certified practitioners, qualified 
+            <!--Our DISC Workshop Leaders are assessment certified practitioners, qualified 
                         to deliver a variety of full or half-day, training workshops including:-->
-                    <!-- </p> -->
-                    
-                            <!--<ul>
+            <!-- </p> -->
+
+            <!--<ul>
                                 <li>Self-Awareness & Communication</li>
                                 <li>Transitioning from Peer to Leader</li>
                                 <li>Trust Based Leadership</li>
                                 <li>Making Teams Work</li>
                                 <li>Sales Optimization</li>
                             </ul>-->
-                 <!-- <br/>
+            <!-- <br/>
 
                     <nuxt-link to="/certifications/workshop-certification" class="button">Workshop Leader Certification</nuxt-link>
                     <nuxt-link to="/contact" class="button outline">Get Workshop Certified</nuxt-link>
@@ -133,100 +153,100 @@
 </template>
 
 <script>
-    import LazyHydrate from 'vue-lazy-hydration';
+import LazyHydrate from 'vue-lazy-hydration';
 
-    export default {
-        components: {
-            LazyHydrate,
-            'main-nav': () => import('@/components/Nav'),
-            'ira-tau': () => import('@/components/testimonials/IraTau'),
-            'footer-fold': () => import('@/components/Footer')
-        },
-        data() {
-            return {
-                structuredDataBreadcrumbs: {
-                    "@context": "http://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": "1",
-                            "item": {
-                                "@id": "https://assessments24x7.com/certifications",
-                                "name": "Certifications" 
-                            } 
+export default {
+    components: {
+        LazyHydrate,
+        'main-nav': () => import('@/components/Nav'),
+        'ira-tau': () => import('@/components/testimonials/IraTau'),
+        'footer-fold': () => import('@/components/Footer')
+    },
+    data() {
+        return {
+            structuredDataBreadcrumbs: {
+                "@context": "http://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": "1",
+                        "item": {
+                            "@id": "https://assessments24x7.com/certifications",
+                            "name": "Certifications"
                         }
-                    ]
-                }
-            }
-        },
-        head() {
-            return {
-                title: 'Certification & Training | Assessments 24x7',
-                meta: [
-                    {
-                        hid: 'description',
-                        name: 'description',
-                        content: 'Each of our assessment certifications have been recognized for continuing education (CE) credits with SHRM, HRCI, ATD and ICF.'
-                    }
-                ],
-                __dangerouslyDisableSanitizers: ['script'],
-                script: [
-                    {
-                        innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
-                        type: 'application/ld+json'
                     }
                 ]
             }
         }
+    },
+    head() {
+        return {
+            title: 'Assessment Certification Programs | Accredited Expertise',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Try our assessment certification programs recognized for CE credits by SHRM, HRCI, ATD, and ICF. Join us and advance your expertise in assessment methodologies.'
+                }
+            ],
+            __dangerouslyDisableSanitizers: ['script'],
+            script: [
+                {
+                    innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
+                    type: 'application/ld+json'
+                }
+            ]
+        }
     }
+}
 </script>
 
 <style lang="scss" scoped>
-    .certification {
-        .header {
-            background: url('~assets/about.jpg');
-            background-size: cover;
-            color: #fff;
-            text-align: center;
-            padding: 70px 0;
-            margin-bottom: 30px;
+.certification {
+    .header {
+        background: url('~assets/about.jpg');
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 70px 0;
+        margin-bottom: 30px;
 
-            .section-title {
-                font-size: 30pt;
-                margin-top: 0;
-            }
-        }
-
-        .image {
-            height: 220px;
-            margin: 0 auto;
-            display: block;
-        }
-
-        h3 {
-            text-align: center;
-            font-size: 18pt;
-        }
-
-        h1 {
+        .section-title {
             font-size: 30pt;
-            line-height: 34pt;
-            margin-bottom: 0;
-        }
-
-        h2 {
-            font-size: 20pt;
-            line-height: 24pt;
-        }
-
-        .notification {
-            background: #f0f9eb;
-            border: 1px solid #c3e5d0;
-            color: #0dab49;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
+            margin-top: 0;
         }
     }
+
+    .image {
+        height: 220px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 18pt;
+    }
+
+    h1 {
+        font-size: 30pt;
+        line-height: 34pt;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 20pt;
+        line-height: 24pt;
+    }
+
+    .notification {
+        background: #f0f9eb;
+        border: 1px solid #c3e5d0;
+        color: #0dab49;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
 </style>

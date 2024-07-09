@@ -387,12 +387,12 @@ export default {
     },
     head() {
         return {
-            title: 'The Assessments 24x7 Difference | Assessments 24x7',
+            title: 'The Assessments 24x7 Difference',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'The Assessments 24x7 team is a close-knit group of professionals with experience at the highest levels of business. Assessments 24x7 has a proven track record and 25+ years of experience in the industry.'
+                    content: 'Rely on branded assessment provided by our group of professionals. Gain training with branded assessments from industry experts with over 25 years of experience.'
                 }
             ]
         }

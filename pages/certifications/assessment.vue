@@ -232,7 +232,7 @@ export default {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
-        'contact-form':  () => import('@/components/certifications/AssessmentContactFormFold'),
+        'contact-form': () => import('@/components/certifications/AssessmentContactFormFold'),
         'footer-fold': () => import('@/components/Footer'),
         'credits': () => import('@/components/Credits')
     },
@@ -311,12 +311,12 @@ export default {
     },
     head() {
         return {
-            title: 'Assessment Certification | Assessments 24x7',
+            title: 'Assessment Certification | Assessment Training Certification',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Gain a competitive edge while you build your resume and portfolio with a professional certification that sets you apart from others in the assessment industry.'
+                    content: 'Earn your assessment certification online! Enrich your resume with our online assessment certification and gain a competitive edge in the assessment industry.'
                 }
             ],
             __dangerouslyDisableSanitizers: ['script'],

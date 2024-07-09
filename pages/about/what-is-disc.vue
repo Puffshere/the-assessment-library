@@ -689,12 +689,12 @@ export default {
     },
     head() {
         return {
-            title: 'What is DISC? | Assessments 24x7',
+            title: 'What is DiSC | What is the DiSC Model',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'DISC has been one of the most widely-used performance enhancement tools for many decades, by companies large and small, to achieve their goals. It’s the leading self-assessment tool used by millions of people annually to improve productivity, teamwork, and communication.'
+                    content: 'Get a better understanding of what is DiSC used for and how it helps understand the behavioral styles and foster effective collaboration and personal growth.'
                 }
             ],
             __dangerouslyDisableSanitizers: ['script'],

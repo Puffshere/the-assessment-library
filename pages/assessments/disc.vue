@@ -439,12 +439,12 @@
         },
         head() {
             return {
-                title: 'DISC Assessments | Assessments 24x7',
+                title: 'DiSC Assessment | DISC Personality Test',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'As the world’s most popular behavioral assessment, DISC offers a simple solution with profound results. Learn how to identify the behavioral styles of others and adapt your communication.'
+                        content: 'Take the DiSC personality assessment online to uncover your DISC profile. Identify your communication style with our easy DiSC assessment chart and guide.'
                     }
                 ],
                 __dangerouslyDisableSanitizers: ['script'],

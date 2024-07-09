@@ -244,12 +244,12 @@ export default {
     },
     head() {
         return {
-            title: 'Frequently Asked Questions (FAQ) - Assessments 24x7',
+            title: 'Assessment FAQs | Frequently Asked Questions About Our Assessments',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Discover answers to commonly asked questions about Assessments 24x7. Gain valuable insights into our services, assessments, and policies through our comprehensive FAQ section.'
+                    content: 'Explore our FAQ section for valuable answers on our assessments, services, and policies. Get answers to the most frequently asked questions now!'
                 }
             ],
             __dangerouslyDisableSanitizers: ['script'],
