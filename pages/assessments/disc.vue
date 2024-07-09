@@ -178,7 +178,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h5 class="section-title">Trainer & Facilitator Materials at No Extra Cost</h5>
+                        <h5 class="section-title">Trainer & Facilitator Materials</h5>
 
                         <p>
                             The world’s most comprehensive, one-stop assessment solution wouldn’t be complete without providing you customizable coaching 

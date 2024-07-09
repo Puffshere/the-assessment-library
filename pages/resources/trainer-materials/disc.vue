@@ -271,7 +271,7 @@
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://www.canva.com/design/DAGKWiJZ_h0/_82-G_mn-HAptNFYTAqY1Q/edit?utm_content=DAGKWiJZ_h0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                        href=""
                                         target="_blank" rel="noopener">DISC Workplace Insights Introduction</a>
                                     <small>A single-page descriptive document to introduce and promote DISC Workplace
                                         Insights in simple and practical overview.</small>
