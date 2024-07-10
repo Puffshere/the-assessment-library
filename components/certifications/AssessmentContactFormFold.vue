@@ -63,25 +63,44 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label><strong>Which best describes your need for assessments? *</strong></label>
+                                    <label><strong>Which best describes your need for certification? *</strong></label>
                                     <div class="form-check" style="margin-top: -10px;">
                                         <input class="form-check-input" id="reseller" name="clientType" type="radio"
-                                            value="Reseller" v-model="form.clientType" />
-                                        <label class="form-check-label" for="reseller">I am a coach or trainer
-                                            looking to resell assessments with my clients.</label>
+                                            required value="Reseller" v-model="form.clientType" />
+                                        <label class="form-check-label" for="reseller">I am a coach or trainer looking
+                                            to get certified.</label>
                                     </div>
                                     <div class="form-check" style="margin-top: -10px;">
                                         <input class="form-check-input" id="corporate" name="clientType" type="radio"
-                                            value="Corporate" v-model="form.clientType" />
-                                        <label class="form-check-label" for="corporate">I am part of a company
-                                            looking to use assessments internally with my team.</label>
+                                            required value="Corporate" v-model="form.clientType" />
+                                        <label class="form-check-label" for="corporate">I work for company and would
+                                            like to get certified.</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label><strong>Join our exclusive mailing list? *</strong></label>
+                                    <div class="form-check" style="margin-top: -10px;">
+                                        <input class="form-check-input" id="optinYes" name="newsletter" type="radio"
+                                            required value="45" v-model="form.newsletter" tabindex="13" />
+                                        <label class="form-check-label" for="optinYes">Yes, please!</label>
                                     </div>
                                     <div class="form-check" style="margin-top: -10px;">
-                                        <input class="form-check-input" id="retail" name="clientType" type="radio"
-                                            value="Retail" v-model="form.clientType" />
-                                        <label class="form-check-label" for="retail">I am an individual looking
-                                            to purchase a single assessment only.</label>
+                                        <input class="form-check-input" id="optinNo" name="newsletter" type="radio"
+                                            required value="46" v-model="form.newsletter" tabindex="14" />
+                                        <label class="form-check-label" for="optinNo">No, thank you</label>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input" id="consent" name="consent" type="checkbox" required
+                                        v-model="form.consent" tabindex="15" />
+                                    <label class="form-check-label" for="consent">
+                                        I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy
+                                            Policy</nuxt-link> and
+                                        <nuxt-link to="/legal/compliance" class="hyperlink">GDPR
+                                            Policy</nuxt-link> and
+                                        give
+                                        my consent.*
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -98,9 +117,11 @@
 <script>
 import axios from 'axios';
 
+
 export default {
     data() {
         return {
+            isDisabled: false,
             form: {
                 name: '',
                 firstName: '',
@@ -110,6 +131,8 @@ export default {
                 company: '',
                 message: '',
                 clientType: '',
+                newsletter: '',
+                consent: '',
                 honeypot: '' // Add honeypot field
             }
         };
@@ -164,12 +187,21 @@ export default {
                             {
                                 field: '4', // Client type (reseller vs corporate),
                                 value: this.form.clientType
+                            },
+                            {
+                                field: '10', // Newsletter opt-in,
+                                value: this.form.newsletter
                             }
                         ]
                     }
                 });
 
                 const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+
+                // Check to see if this contact wants to subscribe to our newsletter
+                if (this.form.newsletter === '45') {
+                    await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                }
 
                 await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
