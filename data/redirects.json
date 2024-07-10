@@ -117,15 +117,15 @@
     },
     {
         "from": "/get-started.asp",
-        "to": "/certifications/workshop-certification"
+        "to": "/certifications/DISC-workshop-essentials"
     },
     {
         "from": "/workshop-leader-training.asp",
-        "to": "/certifications/workshop-certification"
+        "to": "/certifications/DISC-workshop-essentials"
     },
     {
         "from": "/disc-workshop-leader.asp",
-        "to": "/certifications/workshop-certification"
+        "to": "/certifications/DISC-workshop-essentials"
     },
     {
         "from": "/about.asp",
@@ -374,10 +374,6 @@
     {
         "from": "/DISCReminder",
         "to": "/pdfs/Disc_reminder_card_2023.pdf"
-    },
-    {
-        "from": "/certifications/workshop-certification",
-        "to": "/certifications/DISC-workshop-essentials"
     },
     {
         "from": "/store/disc-profiler-deck/",

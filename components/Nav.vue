@@ -113,7 +113,7 @@
                                     </li>
 
                                     <li class="sub-nav-item">
-                                        <a href="/certifications/workshop-certification">Workshop Essentials</a>
+                                        <a href="/certifications/DISC-workshop-essentials">Workshop Essentials</a>
                                     </li>
 
                                     <li class="sub-nav-item">
