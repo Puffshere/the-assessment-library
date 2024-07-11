@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-3">
-                        <img class="icon1" src="~/assets/coaches-disc-certification/icf-logo.png" alt="icf image">
+                        <img class="icon1" src="~/assets/coaches-disc-certification/icf-logo.png" alt="icf image" style="width: 100%; margin-bottom: -12px;">
                         <p><span class="topLine">8.25/6.75</span> <br />
                             <span class="bottomLine">Core/RD ICF</span>
                         </p>

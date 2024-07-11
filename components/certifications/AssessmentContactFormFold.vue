@@ -77,7 +77,7 @@
                                             like to get certified.</label>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label><strong>Join our exclusive mailing list? *</strong></label>
                                     <div class="form-check" style="margin-top: -10px;">
                                         <input class="form-check-input" id="optinYes" name="newsletter" type="radio"
@@ -101,7 +101,7 @@
                                         give
                                         my consent.*
                                     </label>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;">
@@ -131,8 +131,8 @@ export default {
                 company: '',
                 message: '',
                 clientType: '',
-                newsletter: '',
-                consent: '',
+                // newsletter: '',
+                // consent: '',
                 honeypot: '' // Add honeypot field
             }
         };
@@ -187,21 +187,21 @@ export default {
                             {
                                 field: '4', // Client type (reseller vs corporate),
                                 value: this.form.clientType
-                            },
-                            {
-                                field: '10', // Newsletter opt-in,
-                                value: this.form.newsletter
                             }
+                            // {
+                            //     field: '10', // Newsletter opt-in,
+                            //     value: this.form.newsletter
+                            // }
                         ]
                     }
                 });
 
                 const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
-                // Check to see if this contact wants to subscribe to our newsletter
-                if (this.form.newsletter === '45') {
-                    await axios.post(`/api/contact/${data.contact.id}/subscribe`);
-                }
+                // // Check to see if this contact wants to subscribe to our newsletter
+                // if (this.form.newsletter === '45') {
+                //     await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                // }
 
                 await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
