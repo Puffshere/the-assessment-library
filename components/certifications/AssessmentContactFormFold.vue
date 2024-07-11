@@ -14,13 +14,13 @@
                     <div class="col-12">
                         <div class="col-6">
                             <div class="line">
-                                <label for="name"><strong>Name</strong></label>
+                                <label for="name"><strong>Name *</strong></label>
                                 <input v-model="form.name" type="text" id="name" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="line">
-                                <label for="email"><strong>Email</strong></label>
+                                <label for="email"><strong>Email *</strong></label>
                                 <input v-model="form.email" type="email" id="email" required>
                             </div>
                         </div>
@@ -30,13 +30,13 @@
                     <div class="col-12">
                         <div class="col-6">
                             <div class="line">
-                                <label for="phoneNumber"><strong>Phone Number</strong></label>
+                                <label for="phoneNumber"><strong>Phone Number *</strong></label>
                                 <input v-model="form.phoneNumber" type="text" id="phoneNumber" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="line">
-                                <label for="company"><strong>Company</strong></label>
+                                <label for="company"><strong>Company *</strong></label>
                                 <input v-model="form.company" type="text" id="company" required>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                         <div class="col-12">
                             <div style="margin-bottom: -40px;">
                                 <label for="message"><strong>Message</strong></label>
-                                <input v-model="form.message" type="text" id="message" class="messageBox" required>
+                                <input v-model="form.message" type="text" id="message" class="messageBox">
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                                             like to get certified.</label>
                                     </div>
                                 </div>
-                                <!-- <div class="form-group">
+                                <div class="form-group">
                                     <label><strong>Join our exclusive mailing list? *</strong></label>
                                     <div class="form-check" style="margin-top: -10px;">
                                         <input class="form-check-input" id="optinYes" name="newsletter" type="radio"
@@ -94,14 +94,14 @@
                                     <input class="form-check-input" id="consent" name="consent" type="checkbox" required
                                         v-model="form.consent" tabindex="15" />
                                     <label class="form-check-label" for="consent">
-                                        I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy
+                                        I agree to the <nuxt-link to="/legal/privacy" target="_blank" rel="noopener" class="hyperlink">Privacy
                                             Policy</nuxt-link> and
-                                        <nuxt-link to="/legal/compliance" class="hyperlink">GDPR
+                                        <nuxt-link to="/legal/compliance" target="_blank" rel="noopener" class="hyperlink">GDPR
                                             Policy</nuxt-link> and
                                         give
-                                        my consent.*
+                                        my consent. *
                                     </label>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                         <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;">
@@ -131,8 +131,8 @@ export default {
                 company: '',
                 message: '',
                 clientType: '',
-                // newsletter: '',
-                // consent: '',
+                newsletter: '',
+                consent: '',
                 honeypot: '' // Add honeypot field
             }
         };
@@ -187,21 +187,21 @@ export default {
                             {
                                 field: '4', // Client type (reseller vs corporate),
                                 value: this.form.clientType
+                            },
+                            {
+                                field: '10', // Newsletter opt-in,
+                                value: this.form.newsletter
                             }
-                            // {
-                            //     field: '10', // Newsletter opt-in,
-                            //     value: this.form.newsletter
-                            // }
                         ]
                     }
                 });
 
                 const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
-                // // Check to see if this contact wants to subscribe to our newsletter
-                // if (this.form.newsletter === '45') {
-                //     await axios.post(`/api/contact/${data.contact.id}/subscribe`);
-                // }
+                // Check to see if this contact wants to subscribe to our newsletter
+                if (this.form.newsletter === '45') {
+                    await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                }
 
                 await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
