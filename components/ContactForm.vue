@@ -170,7 +170,7 @@
                                         Policy</nuxt-link> and
                                     <nuxt-link to="/legal/compliance" target="_blank" rel="noopener" class="hyperlink">GDPR Policy</nuxt-link> and
                                     give
-                                    my consent.*
+                                    my consent. *
                                 </label>
 
                                 <span class="error">{{ v.errors[0] }}</span>
