@@ -689,12 +689,12 @@ export default {
     },
     head() {
         return {
-            title: 'What is DiSC | What is the DiSC Model',
+            title: 'What is DISC | What is the DISC Model',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Get a better understanding of what is DiSC used for and how it helps understand the behavioral styles and foster effective collaboration and personal growth.'
+                    content: 'Get a better understanding of what is DISC used for and how it helps understand the behavioral styles and foster effective collaboration and personal growth.'
                 }
             ],
             __dangerouslyDisableSanitizers: ['script'],

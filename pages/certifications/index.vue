@@ -187,7 +187,7 @@ export default {
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Try our assessment certification programs recognized for CE credits by SHRM, HRCI, ATD, and ICF. Join us and advance your expertise in assessment methodologies.'
+                    content: 'Our assessment certification programs are recognized for CE credits by SHRM, HRCI, ATD, and ICF. Join us and advance your expertise in assessment methodologies.'
                 }
             ],
             __dangerouslyDisableSanitizers: ['script'],

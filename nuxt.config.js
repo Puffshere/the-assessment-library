@@ -20,7 +20,7 @@ module.exports = {
       // unused javascript
       // { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      { hid: 'description', name: 'description', content: 'Let our assessment technology change your life. Revolutionize your experience with expertise from the industry\'s Top assessment service provider.' }
+      { hid: 'description', name: 'description', content: 'Let our assessment technology change your life. Revolutionize your experience with expertise from the industry\'s top assessment service provider.' }
     ],
     link: [
       {

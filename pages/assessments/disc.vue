@@ -439,12 +439,12 @@
         },
         head() {
             return {
-                title: 'DiSC Assessment | DISC Personality Test',
+                title: 'DISC Assessment | DISC Personality Test',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Take the DiSC personality assessment online to uncover your DISC profile. Identify your communication style with our easy DiSC assessment chart and guide.'
+                        content: 'Take the DISC assessment online to uncover your DISC profile. Identify your communication style with our easy DISC assessment chart and guide.'
                     }
                 ],
                 __dangerouslyDisableSanitizers: ['script'],

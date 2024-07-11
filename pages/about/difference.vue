@@ -392,7 +392,7 @@ export default {
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Rely on branded assessment provided by our group of professionals. Gain training with branded assessments from industry experts with over 25 years of experience.'
+                    content: 'Rely on branded assessments provided by our group of professionals. Train with branded assessments from industry experts with over 25 years of experience.'
                 }
             ]
         }
