@@ -166,9 +166,9 @@
                                 <input class="form-check-input" id="consent" name="consent" type="checkbox" required
                                     v-model="form.consent" tabindex="15" />
                                 <label class="form-check-label" for="consent">
-                                    I agree to the <nuxt-link to="/legal/privacy" class="hyperlink">Privacy
+                                    I agree to the <nuxt-link to="/legal/privacy" target="_blank" rel="noopener" class="hyperlink">Privacy
                                         Policy</nuxt-link> and
-                                    <nuxt-link to="/legal/compliance" class="hyperlink">GDPR Policy</nuxt-link> and
+                                    <nuxt-link to="/legal/compliance" target="_blank" rel="noopener" class="hyperlink">GDPR Policy</nuxt-link> and
                                     give
                                     my consent.*
                                 </label>
