@@ -283,6 +283,24 @@
                     <table style="width:100%">
                         <thead>
                             <tr>
+                                <th>DISC Executive Insights Resources</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Executive+Insights+-+Marketing+One-Sheet_v2.pdf"
+                                        target="_blank" rel="noopener">DISC Executive Insights Introduction</a>
+                                    <small>A single-page descriptive document to introduce and promote DISC Executive Insights in simple and practical overview.</small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
                                 <th>DISC Development Resources</th>
                             </tr>
                         </thead>
