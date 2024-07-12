@@ -115,8 +115,8 @@ app.post('/contact', async (req, res) => {
     console.log('Received form data:', req.body); // Log the received form data
 
     const recaptchaResponse = req.body.contact.recaptchaResponse;
-    const contactData = { ...req.body };
-    delete contactData.contact.recaptchaResponse;
+    const data = { ...req.body };
+    delete data.contact.recaptchaResponse;
     console.log('this is the req.body', req.body);
     console.log('this is the recaptcha response', recaptchaResponse);
     console.log('this is the contactData', contactData);
@@ -138,7 +138,7 @@ app.post('/contact', async (req, res) => {
 
         console.log('Contact data:', contactData);
         // Proceed with contact creation
-        contactController.createContact(req, res);
+        contactController.createContact(data);
         res.json({ success: true, message: 'Form submission successful' });
     } catch (error) {
         console.error('reCAPTCHA verification error:', error.message);
