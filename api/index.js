@@ -118,7 +118,6 @@ app.post('/contact', async (req, res) => {
     delete req.body.contact.recaptchaResponse;
     console.log('this is the req.body', req.body);
     console.log('this is the recaptcha response', recaptchaResponse);
-    console.log('this is the contactData', contactData);
 
     if (!recaptchaResponse) {
         return res.status(400).json({ message: 'reCAPTCHA token is missing' });
