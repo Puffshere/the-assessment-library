@@ -114,9 +114,9 @@ app.get('/getCalendarPage', (req, res) => {
 app.post('/contact', async (req, res) => {
     console.log('Received form data:', req.body); // Log the received form data
 
-    const recaptchaResponse = req.body.recaptchaResponse;
+    const recaptchaResponse = req.body.contact.recaptchaResponse;
     const contactData = { ...req.body };
-    delete contactData.recaptchaResponse;
+    delete contactData.contact.recaptchaResponse;
     console.log('this is the req.body', req.body);
     console.log('this is the recaptcha response', recaptchaResponse);
     console.log('this is the contactData', contactData);
