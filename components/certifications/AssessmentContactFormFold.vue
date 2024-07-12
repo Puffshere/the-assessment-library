@@ -99,7 +99,7 @@
                 </div>
               </div>
               <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;">Submit</button>
-              <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1" data-size="invisible" data-callback="onReCaptchaSuccess"></div>
+              <div ref="recaptcha" class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY" data-size="invisible" data-callback="onReCaptchaSuccess"></div>
             </div>
           </div>
         </form>
@@ -131,7 +131,17 @@
     },
     methods: {
       onSubmit() {
-        grecaptcha.execute();
+        if (typeof grecaptcha !== 'undefined') {
+          grecaptcha.execute();
+        } else {
+          console.error('reCAPTCHA client not available');
+          this.$toast.open({
+            message: 'reCAPTCHA client not available. Please try again later.',
+            position: 'top',
+            duration: 8000,
+            type: 'error'
+          });
+        }
       },
       async onReCaptchaSuccess(token) {
         console.log('reCAPTCHA token:', token); // Log the token
