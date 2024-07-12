@@ -115,6 +115,7 @@ app.post('/contact', async (req, res) => {
     console.log('Received form data:', req.body); // Log the received form data
   
     const { recaptchaResponse, ...contactData } = req.body;
+    console.log('this is the req.body', req.body);
     console.log('this is the recaptcha response', recaptchaResponse);
     console.log('this is the contactData', contactData);
   
