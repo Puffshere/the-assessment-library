@@ -9,7 +9,7 @@
             </h2>
           </div>
         </div>
-        <form @submit.prevent="submitForm">
+        <form @submit.prevent="onSubmit">
           <div class="row">
             <div class="col-12">
               <div class="col-6">
@@ -98,8 +98,8 @@
                   </div>
                 </div>
               </div>
-              <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;" @click="onSubmit">Submit</button>
-              <div ref="recaptcha" class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY" data-size="invisible" data-callback="onReCaptchaSuccess"></div>
+              <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;">Submit</button>
+              <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1" data-size="invisible" data-callback="onReCaptchaSuccess"></div>
             </div>
           </div>
         </form>
