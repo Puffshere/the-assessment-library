@@ -115,6 +115,7 @@ app.post('/contact', async (req, res) => {
     console.log('Received form data:', req.body); // Log the received form data
   
     const { recaptchaResponse, ...contactData } = req.body;
+    console.log('this is the recaptcha response', recaptchaResponse);
   
     if (!recaptchaResponse) {
       return res.status(400).json({ message: 'reCAPTCHA token is missing' });
