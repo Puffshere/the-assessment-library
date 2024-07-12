@@ -243,6 +243,9 @@ export default {
         });
       }
     }
+  },
+  mounted() {
+    window.onReCaptchaSuccess = this.onReCaptchaSuccess;
   }
 };
 </script>
