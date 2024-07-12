@@ -99,7 +99,7 @@
                 </div>
               </div>
               <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;">Submit</button>
-              <div ref="recaptcha" class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY" data-size="invisible" data-callback="onReCaptchaSuccess"></div>
+              <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1" data-size="invisible" data-callback="onReCaptchaSuccess"></div>
             </div>
           </div>
         </form>
