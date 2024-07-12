@@ -104,11 +104,12 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;">
+                        <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;" @click="onSubmit">
                             Submit
                         </button>
                     </div>
                 </div>
+                <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1" data-size="invisible" data-callback="onReCaptchaSuccess"></div>
             </form>
         </div>
     </section>
@@ -117,118 +118,133 @@
 <script>
 import axios from 'axios';
 
-
 export default {
-    data() {
-        return {
-            isDisabled: false,
-            form: {
-                name: '',
-                firstName: '',
-                lastName: '',
-                email: '',
-                phoneNumber: '',
-                company: '',
-                message: '',
-                clientType: '',
-                newsletter: '',
-                consent: '',
-                honeypot: '' // Add honeypot field
-            }
-        };
+  data() {
+    return {
+      form: {
+        name: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+        company: '',
+        message: '',
+        clientType: '',
+        newsletter: '',
+        consent: '',
+        honeypot: '' // Add honeypot field
+      },
+      recaptchaResponse: ''
+    };
+  },
+  methods: {
+    onSubmit() {
+      grecaptcha.execute();
     },
-    methods: {
-        async submitForm() {
-            if (this.form.honeypot) {
-                // If honeypot field is filled, it's a bot
-                console.log('Bot detected');
-                this.$toast.open({
-                    message: 'Bot detected. Form submission blocked.',
-                    position: 'top',
-                    duration: 8000,
-                    type: 'error'
-                });
-                return;
-            }
+    onReCaptchaSuccess(token) {
+      this.recaptchaResponse = token;
+      this.submitForm();
+    },
+    async submitForm() {
+      if (!this.recaptchaResponse) {
+        this.$toast.open({
+          message: 'Please complete the reCAPTCHA verification.',
+          position: 'top',
+          duration: 8000,
+          type: 'error'
+        });
+        return;
+      }
 
-            console.log('Form submitted:', this.form);
+      if (this.form.honeypot) {
+        console.log('Bot detected');
+        this.$toast.open({
+          message: 'Bot detected. Form submission blocked.',
+          position: 'top',
+          duration: 8000,
+          type: 'error'
+        });
+        return;
+      }
 
-            // Split the name input into firstName and lastName
-            const names = this.form.name.split(' ');
-            this.form.firstName = names[0];
-            this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+      console.log('Form submitted:', this.form);
 
-            try {
-                const salesPerson = await axios.get('/api/lead/next-assignment');
+      // Split the name input into firstName and lastName
+      const names = this.form.name.split(' ');
+      this.form.firstName = names[0];
+      this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : '';
 
-                const lead = await axios.post('/api/lead', {
-                    salesPerson: salesPerson.data,
-                    firstName: this.form.firstName,
-                    lastName: this.form.lastName,
-                    phone: this.form.phoneNumber,
-                    email: this.form.email,
-                    company: this.form.company,
-                    message: this.form.message
-                });
+      try {
+        const salesPerson = await axios.get('/api/lead/next-assignment');
 
-                const { data } = await axios.post('/api/contact', {
-                    contact: {
-                        email: this.form.email,
-                        firstName: this.form.firstName,
-                        lastName: this.form.lastName,
-                        phone: this.form.phoneNumber,
-                        company: this.form.company,
-                        message: this.form.message,
-                        fieldValues: [
-                            {
-                                field: '79', // Sales Person Assignment
-                                value: salesPerson.data
-                            },
-                            {
-                                field: '4', // Client type (reseller vs corporate),
-                                value: this.form.clientType
-                            },
-                            {
-                                field: '10', // Newsletter opt-in,
-                                value: this.form.newsletter
-                            }
-                        ]
-                    }
-                });
+        const lead = await axios.post('/api/lead', {
+          salesPerson: salesPerson.data,
+          firstName: this.form.firstName,
+          lastName: this.form.lastName,
+          phone: this.form.phoneNumber,
+          email: this.form.email,
+          company: this.form.company,
+          message: this.form.message,
+          recaptchaResponse: this.recaptchaResponse // Include reCAPTCHA response
+        });
 
-                const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+        const { data } = await axios.post('/api/contact', {
+          contact: {
+            email: this.form.email,
+            firstName: this.form.firstName,
+            lastName: this.form.lastName,
+            phone: this.form.phoneNumber,
+            company: this.form.company,
+            message: this.form.message,
+            fieldValues: [
+              {
+                field: '79', // Sales Person Assignment
+                value: salesPerson.data
+              },
+              {
+                field: '4', // Client type (reseller vs corporate),
+                value: this.form.clientType
+              },
+              {
+                field: '10', // Newsletter opt-in,
+                value: this.form.newsletter
+              }
+            ]
+          }
+        });
 
-                // Check to see if this contact wants to subscribe to our newsletter
-                if (this.form.newsletter === '45') {
-                    await axios.post(`/api/contact/${data.contact.id}/subscribe`);
-                }
+        const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
-                await axios.post(`/api/contact/${data.contact.id}/tag/43`);
-
-                await axios.post(`/api/contact/${data.contact.id}/account`, {
-                    company: this.form.company
-                });
-
-                this.$toast.open({
-                    message: 'Your information has been successfully submitted!',
-                    position: 'top',
-                    duration: 8000,
-                    type: 'success'
-                });
-
-                this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
-
-            } catch (err) {
-                this.$toast.open({
-                    message: 'An unexpected error has occurred. Please try again later.',
-                    position: 'top',
-                    duration: 8000,
-                    type: 'error'
-                });
-            }
+        if (this.form.newsletter === '45') {
+          await axios.post(`/api/contact/${data.contact.id}/subscribe`);
         }
-    },
-}
+
+        await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+        await axios.post(`/api/contact/${data.contact.id}/account`, {
+          company: this.form.company
+        });
+
+        this.$toast.open({
+          message: 'Your information has been successfully submitted!',
+          position: 'top',
+          duration: 8000,
+          type: 'success'
+        });
+
+        this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+
+      } catch (err) {
+        this.$toast.open({
+          message: 'An unexpected error has occurred. Please try again later.',
+          position: 'top',
+          duration: 8000,
+          type: 'error'
+        });
+      }
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

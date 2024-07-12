@@ -111,8 +111,24 @@ app.get('/getCalendarPage', (req, res) => {
     calendarController.incrementAndGetPage(req, res)
 });
 
-app.post('/contact', (req, res) => {
-    contactController.createContact(req, res);
+app.post('/contact', async (req, res) => {
+    const { recaptchaResponse, ...contactData } = req.body;
+
+    try {
+        // Verify reCAPTCHA response
+        const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}`;
+        const verificationResponse = await axios.post(verificationUrl);
+        
+        if (!verificationResponse.data.success) {
+            return res.status(400).json({ message: 'reCAPTCHA verification failed' });
+        }
+
+        // Proceed with contact creation
+        contactController.createContact(req, res);
+    } catch (error) {
+        console.error('reCAPTCHA verification error:', error.message);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
 });
 
 app.post('/contact/:contactId/subscribe', (req, res) => {

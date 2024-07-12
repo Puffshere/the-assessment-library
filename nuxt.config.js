@@ -11,28 +11,19 @@ module.exports = {
     },
     title: 'Assessments 24x7 | Global Leaders in Assessment Technology',
     meta: [
-      // unused javascript
-      // { charset: 'utf-8' },
       { name: 'google-site-verification', content: 'v4C06rU0Io2gGicg0vVafnrpu4kcC98GFIalGto2Cwc' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#01A8FF' },
       { name: 'msapplication-navbutton-color', content: '#01A8FF' },
-      // unused javascript
-      // { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       { hid: 'description', name: 'description', content: 'Let our assessment technology change your life. Revolutionize your experience with expertise from the industry\'s top assessment service provider.' }
     ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      },
-      {
-        rel: 'manifest',
-        type: 'image/x-icon',
-        href: '/static/manifest.json'
-      },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'manifest', type: 'image/x-icon', href: '/static/manifest.json' }
+    ],
+    script: [
+      { src: 'https://www.google.com/recaptcha/api.js', async: true, defer: true }
     ]
   },
 
@@ -45,39 +36,19 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {
-      src: '~plugins/tag-manager.js',
-      ssr: false
-    },
+    { src: '~plugins/tag-manager.js', ssr: false },
     '~plugins/lazysizes.client.js',
     '~plugins/persisted-state.client.js',
     '~plugins/filters.js',
     '~plugins/region-select.js',
     '~plugins/file-agent.js',
-    {
-      src: '~plugins/webp-modernizr.js',
-      ssr: false
-    },
+    { src: '~plugins/webp-modernizr.js', ssr: false },
     '~/plugins/vue-moment.js',
-    {
-      src: '~plugins/mapbox.js',
-      mode: 'client'
-    },
-    { 
-      src: '~/plugins/lazy-hydration.js', ssr: false 
-    },
-    {
-      src: '~/plugins/vue-toast-notification.js',
-      mode: 'client'
-    },
-    {
-      src: '~/plugins/aos',
-      ssr: false
-    },
-    {
-      src: '~/plugins/calendly.js',
-      mode: 'client'
-    },
+    { src: '~plugins/mapbox.js', mode: 'client' },
+    { src: '~/plugins/lazy-hydration.js', ssr: false },
+    { src: '~/plugins/vue-toast-notification.js', mode: 'client' },
+    { src: '~/plugins/aos', ssr: false },
+    { src: '~/plugins/calendly.js', mode: 'client' },
     '~/plugins/zapier.js'
   ],
 
@@ -85,7 +56,6 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/gtm',
     '@nuxtjs/sitemap',
@@ -103,45 +73,7 @@ module.exports = {
       return data.posts.map(post => `/blog/${post.slug}`);
     },
     exclude: [
-      '/disccert-account-setup',
-      '/account-setup',
-      '/account-setup-thank-you',
-      '/thank-you',
-      '/get-started',
-      '/get-started-thankyou',
-      '/resources/trainer-materials',
-      '/resources/trainer-materials/**',
-      '/badge',
-      '/disc-workshop-leader-badge',
-      '/eiq-badge',
-      '/motivators-badge',
-      '/pgi-badge',
-      '/platinum-rule-badge',
-      '/platinum-rule-eworkbook-thankyou',
-      '/trends-thankyou',
-      '/forms',
-      '/hs-badge',
-      '/hvp-badge',
-      '/learning-styles-badge',
-      '/logos',
-      '/login',
-      '/resources/lock/**',
-      '/cardone-communication-coach',
-      '/store/purchase-confirmation',
-      '/store/collections/products',
-      '/store',
-      '/resources/hiresense-training-library',
-      '/angie',
-      '/angie-w',
-      '/jennifer',
-      '/monica',
-      '/suzette',
-      '/cathy',
-      '/cristina',
-      '/tools/email-dev',
-      '/tools/email-original',
-      '/resources/standards-and-procedures',
-      '/hiresense-calc'
+      // Your routes to exclude
     ]
   },
   gtm: {
