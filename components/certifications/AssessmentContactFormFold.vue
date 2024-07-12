@@ -115,8 +115,8 @@
       return {
         form: {
           name: '',
-          firstName: '',
-          lastName: '',
+          firstName: 'Shawn',
+          lastName: 'Taylor',
           email: '',
           phoneNumber: '',
           company: '',
