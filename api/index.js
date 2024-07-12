@@ -135,7 +135,7 @@ app.post('/contact', async (req, res) => {
         }
 
         // Proceed with contact creation
-        contactController.createContact(req, res);
+        contactController.createContact(req.body);
         res.json({ success: true, message: 'Form submission successful' });
     } catch (error) {
         console.error('reCAPTCHA verification error:', error.message);
