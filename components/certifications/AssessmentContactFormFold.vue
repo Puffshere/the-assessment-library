@@ -65,22 +65,26 @@
                   <div class="form-group">
                     <label><strong>Which best describes your need for certification? *</strong></label>
                     <div class="form-check" style="margin-top: -10px;">
-                      <input class="form-check-input" id="reseller" name="clientType" type="radio" required value="Reseller" v-model="form.clientType" />
+                      <input class="form-check-input" id="reseller" name="clientType" type="radio"
+                        required value="Reseller" v-model="form.clientType" />
                       <label class="form-check-label" for="reseller">I am a coach or trainer looking to get certified.</label>
                     </div>
                     <div class="form-check" style="margin-top: -10px;">
-                      <input class="form-check-input" id="corporate" name="clientType" type="radio" required value="Corporate" v-model="form.clientType" />
+                      <input class="form-check-input" id="corporate" name="clientType" type="radio"
+                        required value="Corporate" v-model="form.clientType" />
                       <label class="form-check-label" for="corporate">I work for company and would like to get certified.</label>
                     </div>
                   </div>
                   <div class="form-group">
                     <label><strong>Join our exclusive mailing list? *</strong></label>
                     <div class="form-check" style="margin-top: -10px;">
-                      <input class="form-check-input" id="optinYes" name="newsletter" type="radio" required value="45" v-model="form.newsletter" tabindex="13" />
+                      <input class="form-check-input" id="optinYes" name="newsletter" type="radio"
+                        required value="45" v-model="form.newsletter" tabindex="13" />
                       <label class="form-check-label" for="optinYes">Yes, please!</label>
                     </div>
                     <div class="form-check" style="margin-top: -10px;">
-                      <input class="form-check-input" id="optinNo" name="newsletter" type="radio" required value="46" v-model="form.newsletter" tabindex="14" />
+                      <input class="form-check-input" id="optinNo" name="newsletter" type="radio"
+                        required value="46" v-model="form.newsletter" tabindex="14" />
                       <label class="form-check-label" for="optinNo">No, thank you</label>
                     </div>
                   </div>
@@ -110,6 +114,8 @@
       return {
         form: {
           name: '',
+          firstName: '',
+          lastName: '',
           email: '',
           phoneNumber: '',
           company: '',
@@ -155,27 +161,71 @@
   
         console.log('Form submitted:', { ...this.form, recaptchaResponse: this.recaptchaResponse });
   
+        // Split the name input into firstName and lastName
+        const names = this.form.name.split(' ');
+        this.form.firstName = names[0];
+        this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+  
         try {
-          const response = await axios.post('/api/contact', {
-            ...this.form,
-            recaptchaResponse: this.recaptchaResponse
+          const salesPerson = await axios.get('/api/lead/next-assignment');
+  
+          const lead = await axios.post('/api/lead', {
+            salesPerson: salesPerson.data,
+            firstName: this.form.firstName,
+            lastName: this.form.lastName,
+            phone: this.form.phoneNumber,
+            email: this.form.email,
+            company: this.form.company,
+            message: this.form.message
           });
   
-          if (response.data.success) {
-            this.$toast.open({
-              message: 'Your information has been successfully submitted!',
-              position: 'top',
-              duration: 8000,
-              type: 'success'
-            });
-          } else {
-            this.$toast.open({
-              message: 'Form submission failed. Please try again.',
-              position: 'top',
-              duration: 8000,
-              type: 'error'
-            });
+          const { data } = await axios.post('/api/contact', {
+            contact: {
+              email: this.form.email,
+              firstName: this.form.firstName,
+              lastName: this.form.lastName,
+              phone: this.form.phoneNumber,
+              company: this.form.company,
+              message: this.form.message,
+              fieldValues: [
+                {
+                  field: '79', // Sales Person Assignment
+                  value: salesPerson.data
+                },
+                {
+                  field: '4', // Client type (reseller vs corporate),
+                  value: this.form.clientType
+                },
+                {
+                  field: '10', // Newsletter opt-in,
+                  value: this.form.newsletter
+                }
+              ]
+            }
+          });
+  
+          const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+  
+          // Check to see if this contact wants to subscribe to our newsletter
+          if (this.form.newsletter === '45') {
+            await axios.post(`/api/contact/${data.contact.id}/subscribe`);
           }
+  
+          await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+  
+          await axios.post(`/api/contact/${data.contact.id}/account`, {
+            company: this.form.company
+          });
+  
+          this.$toast.open({
+            message: 'Your information has been successfully submitted!',
+            position: 'top',
+            duration: 8000,
+            type: 'success'
+          });
+  
+          this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+  
         } catch (err) {
           this.$toast.open({
             message: 'An unexpected error has occurred. Please try again later.',
