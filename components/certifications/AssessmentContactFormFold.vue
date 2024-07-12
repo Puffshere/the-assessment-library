@@ -199,6 +199,7 @@
               phone: this.form.phoneNumber,
               company: this.form.company,
               message: this.form.message,
+              recaptchaResponse: this.recaptchaResponse,
               fieldValues: [
                 {
                   field: '79', // Sales Person Assignment
