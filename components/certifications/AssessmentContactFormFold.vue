@@ -115,8 +115,8 @@
       return {
         form: {
           name: '',
-          firstName: 'Shawn',
-          lastName: 'Taylor',
+          firstName: '',
+          lastName: '',
           email: '',
           phoneNumber: '',
           company: '',
@@ -171,12 +171,14 @@
           return;
         }
   
-        console.log('Form submitted:', { ...this.form, recaptchaResponse: this.recaptchaResponse });
-  
         // Split the name input into firstName and lastName
         const names = this.form.name.split(' ');
         this.form.firstName = names[0];
         this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+  
+        const formData = { ...this.form, recaptchaResponse: this.recaptchaResponse };
+  
+        console.log('Form submitted:', formData);
   
         try {
           const salesPerson = await axios.get('/api/lead/next-assignment');
@@ -213,7 +215,8 @@
                   value: this.form.newsletter
                 }
               ]
-            }
+            },
+            recaptchaResponse: this.recaptchaResponse
           });
   
           const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
@@ -250,15 +253,7 @@
       }
     },
     mounted() {
-      console.log('mounted grecaptcha:', typeof grecaptcha !== 'undefined' ? 'exists' : 'not available');
-      if (typeof grecaptcha !== 'undefined') {
-        window.onReCaptchaSuccess = this.onReCaptchaSuccess;
-        grecaptcha.ready(() => {
-          grecaptcha.render(this.$refs.recaptcha);
-        });
-      } else {
-        console.error('reCAPTCHA client not available on mount');
-      }
+      window.onReCaptchaSuccess = this.onReCaptchaSuccess;
     }
   };
   </script>

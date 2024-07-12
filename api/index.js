@@ -140,6 +140,7 @@ app.post('/contact', async (req, res) => {
       res.status(500).json({ message: 'Internal Server Error' });
     }
   });
+  
 
 app.post('/contact/:contactId/subscribe', (req, res) => {
     contactController.subscribeContact(req, res);
