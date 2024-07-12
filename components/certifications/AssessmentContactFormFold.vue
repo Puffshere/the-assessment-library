@@ -131,6 +131,7 @@
     },
     methods: {
       onSubmit() {
+        console.log('grecaptcha:', typeof grecaptcha !== 'undefined' ? 'exists' : 'not available');
         if (typeof grecaptcha !== 'undefined') {
           grecaptcha.execute();
         } else {
@@ -249,7 +250,15 @@
       }
     },
     mounted() {
-      window.onReCaptchaSuccess = this.onReCaptchaSuccess;
+      console.log('mounted grecaptcha:', typeof grecaptcha !== 'undefined' ? 'exists' : 'not available');
+      if (typeof grecaptcha !== 'undefined') {
+        window.onReCaptchaSuccess = this.onReCaptchaSuccess;
+        grecaptcha.ready(() => {
+          grecaptcha.render(this.$refs.recaptcha);
+        });
+      } else {
+        console.error('reCAPTCHA client not available on mount');
+      }
     }
   };
   </script>
