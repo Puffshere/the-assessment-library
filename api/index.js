@@ -116,6 +116,7 @@ app.post('/contact', async (req, res) => {
   
     const { recaptchaResponse, ...contactData } = req.body;
     console.log('this is the recaptcha response', recaptchaResponse);
+    console.log('this is the contactData', contactData);
   
     if (!recaptchaResponse) {
       return res.status(400).json({ message: 'reCAPTCHA token is missing' });
@@ -132,9 +133,9 @@ app.post('/contact', async (req, res) => {
         return res.status(400).json({ message: 'reCAPTCHA verification failed' });
       }
   
-      // Proceed with contact creation
-      // Replace with your actual contact creation logic
       console.log('Contact data:', contactData);
+      // Proceed with contact creation
+      contactController.createContact(req, res);
       res.json({ success: true, message: 'Form submission successful' });
     } catch (error) {
       console.error('reCAPTCHA verification error:', error.message);
