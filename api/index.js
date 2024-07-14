@@ -119,7 +119,7 @@ app.get('/getCalendarPage', (req, res) => {
 
 app.post('/contact', (req, res) => {
 
-    console.log('This the req and the res'), req, res;
+    console.log('This the req and the res'), req;
     contactController.createContact(req, res);
 });
 
