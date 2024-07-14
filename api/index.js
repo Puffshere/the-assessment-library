@@ -111,37 +111,56 @@ app.get('/getCalendarPage', (req, res) => {
     calendarController.incrementAndGetPage(req, res)
 });
 
-app.post('/contact', async (req, res) => {
-    console.log('Received form data:', req.body); // Log the received form data
 
-    const recaptchaResponse = req.body.contact.recaptchaResponse;
-    delete req.body.contact.recaptchaResponse;
-    console.log('this is the req.body', req.body);
-    console.log('this is the recaptcha response', recaptchaResponse);
 
-    if (!recaptchaResponse) {
-        return res.status(400).json({ message: 'reCAPTCHA token is missing' });
-    }
 
-    try {
-        // Verify reCAPTCHA response
-        const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}`;
-        const verificationResponse = await axios.post(verificationUrl);
 
-        console.log('reCAPTCHA verification response:', verificationResponse.data); // Log the verification response
 
-        if (!verificationResponse.data.success) {
-            return res.status(400).json({ message: 'reCAPTCHA verification failed' });
-        }
 
-        // Proceed with contact creation
-        contactController.createContact(req, res);
-        res.json({ success: true, message: 'Form submission successful' });
-    } catch (error) {
-        console.error('reCAPTCHA verification error:', error.message);
-        res.status(500).json({ message: 'Internal Server Error' });
-    }
+app.post('/contact', (req, res) => {
+
+    console.log('This the req and the res'), req, res;
+    contactController.createContact(req, res);
 });
+
+
+
+
+
+
+
+
+// app.post('/contact', async (req, res) => {
+//     console.log('Received form data:', req.body); // Log the received form data
+
+//     const recaptchaResponse = req.body.contact.recaptchaResponse;
+//     delete req.body.contact.recaptchaResponse;
+//     console.log('this is the req.body', req.body);
+//     console.log('this is the recaptcha response', recaptchaResponse);
+
+//     if (!recaptchaResponse) {
+//         return res.status(400).json({ message: 'reCAPTCHA token is missing' });
+//     }
+
+//     try {
+//         // Verify reCAPTCHA response
+//         const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}`;
+//         const verificationResponse = await axios.post(verificationUrl);
+
+//         console.log('reCAPTCHA verification response:', verificationResponse.data); // Log the verification response
+
+//         if (!verificationResponse.data.success) {
+//             return res.status(400).json({ message: 'reCAPTCHA verification failed' });
+//         }
+
+//         // Proceed with contact creation
+//         contactController.createContact(req, res);
+//         res.json({ success: true, message: 'Form submission successful' });
+//     } catch (error) {
+//         console.error('reCAPTCHA verification error:', error.message);
+//         res.status(500).json({ message: 'Internal Server Error' });
+//     }
+// });
 
 
 app.post('/contact/:contactId/subscribe', (req, res) => {
