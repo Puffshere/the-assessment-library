@@ -52,11 +52,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Honeypot field -->
-                <div style="display: none;">
-                    <label for="honeypot">Leave this field empty</label>
-                    <input v-model="form.honeypot" type="text" id="honeypot">
-                </div>
                 <br />
                 <div class="row">
                     <div class="col-12">
@@ -94,9 +89,11 @@
                                     <input class="form-check-input" id="consent" name="consent" type="checkbox" required
                                         v-model="form.consent" tabindex="15" />
                                     <label class="form-check-label" for="consent">
-                                        I agree to the <nuxt-link to="/legal/privacy" target="_blank" rel="noopener" class="hyperlink">Privacy
+                                        I agree to the <nuxt-link to="/legal/privacy" target="_blank" rel="noopener"
+                                            class="hyperlink">Privacy
                                             Policy</nuxt-link> and
-                                        <nuxt-link to="/legal/compliance" target="_blank" rel="noopener" class="hyperlink">GDPR
+                                        <nuxt-link to="/legal/compliance" target="_blank" rel="noopener"
+                                            class="hyperlink">GDPR
                                             Policy</nuxt-link> and
                                         give
                                         my consent. *
@@ -107,6 +104,8 @@
                         <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;">
                             Submit
                         </button>
+                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1"
+                            data-size="invisible" data-callback="onReCaptchaSuccess"></div>
                     </div>
                 </div>
             </form>
@@ -132,25 +131,20 @@ export default {
                 message: '',
                 clientType: '',
                 newsletter: '',
-                consent: '',
-                honeypot: '' // Add honeypot field
+                consent: ''
             }
         };
     },
     methods: {
+        onSubmit() {
+            grecaptcha.execute();
+        },
+        async onReCaptchaSuccess(token) {
+            console.log('reCAPTCHA token:', token); // Log the token
+            this.recaptchaResponse = token;
+            await this.submitForm();
+        },
         async submitForm() {
-            if (this.form.honeypot) {
-                // If honeypot field is filled, it's a bot
-                console.log('Bot detected');
-                this.$toast.open({
-                    message: 'Bot detected. Form submission blocked.',
-                    position: 'top',
-                    duration: 8000,
-                    type: 'error'
-                });
-                return;
-            }
-
             console.log('Form submitted:', this.form);
 
             // Split the name input into firstName and lastName
@@ -179,6 +173,7 @@ export default {
                         phone: this.form.phoneNumber,
                         company: this.form.company,
                         message: this.form.message,
+                        recaptchaResponse: this.recaptchaResponse,
                         fieldValues: [
                             {
                                 field: '79', // Sales Person Assignment
@@ -443,8 +438,7 @@ export default {
                 message: '',
                 clientType: '',
                 newsletter: '',
-                consent: '',
-                honeypot: '' // Add honeypot field
+                consent: ''
             },
             recaptchaResponse: ''
         };
