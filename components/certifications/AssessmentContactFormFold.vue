@@ -104,8 +104,8 @@
                         <button type="submit" class="learn-more-button light-blue" style="margin-top: 20px;">
                             Submit
                         </button>
-                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1"
-                            data-size="invisible" data-callback="onReCaptchaSuccess"></div>
+                        <!-- <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1"
+                            data-size="invisible" data-callback="onReCaptchaSuccess"></div> -->
                     </div>
                 </div>
             </form>
@@ -136,14 +136,14 @@ export default {
         };
     },
     methods: {
-        onSubmit() {
-            grecaptcha.execute();
-        },
-        async onReCaptchaSuccess(token) {
-            console.log('reCAPTCHA token:', token); // Log the token
-            this.recaptchaResponse = token;
-            await this.submitForm();
-        },
+        // onSubmit() {
+        //     grecaptcha.execute();
+        // },
+        // async onReCaptchaSuccess(token) {
+        //     console.log('reCAPTCHA token:', token); // Log the token
+        //     this.recaptchaResponse = token;
+        //     await this.submitForm();
+        // },
         async submitForm() {
             console.log('Form submitted:', this.form);
 
@@ -173,7 +173,7 @@ export default {
                         phone: this.form.phoneNumber,
                         company: this.form.company,
                         message: this.form.message,
-                        recaptchaResponse: this.recaptchaResponse,
+                       // recaptchaResponse: this.recaptchaResponse,
                         fieldValues: [
                             {
                                 field: '79', // Sales Person Assignment
@@ -192,6 +192,7 @@ export default {
                 });
 
                 const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+                console.log("this is the updatedLead", updatedLead);
 
                 // Check to see if this contact wants to subscribe to our newsletter
                 if (this.form.newsletter === '45') {
