@@ -128,13 +128,13 @@ app.post('/contact', async (req, res) => {
 
         console.log('reCAPTCHA verification response:', verificationResponse.data); // Log the verification response
 
+        contactController.createContact(req, res);
 
     } catch (error) {
         console.error('reCAPTCHA verification error:', error.message);
         res.status(500).json({ message: 'Internal Server Error' });
     }
 
-    contactController.createContact(req, res);
 });
 
 
