@@ -27,7 +27,7 @@
 
                         <br/>
                         <p style="text-align:center">
-                            We’d like the opportunity to discuss your assessment and certification needs in detail. Please use the calendar below to schedule a 
+                            We’d like the opportunity to discuss your assessment and certification needs in detail. Please use the calendar to schedule a 
                             quick call. You can also email us at <a class="hyperlink" href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a> 
                             or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
                         </p><br/>
