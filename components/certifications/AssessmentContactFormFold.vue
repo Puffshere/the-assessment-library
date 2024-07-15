@@ -136,15 +136,14 @@ export default {
         };
     },
     methods: {
+        onSubmit() {
+            grecaptcha.execute();
+        },
         async onReCaptchaSuccess(token) {
             this.recaptchaResponse = token;
-            console.log('this is the recaptcha', this.recaptchaResponse);
             await this.submitForm();
         },
         async submitForm() {
-            console.log("hello");
-            grecaptcha.execute();
-    
             // Split the name input into firstName and lastName
             const names = this.form.name.split(' ');
             this.form.firstName = names[0];
@@ -185,12 +184,7 @@ export default {
                                 field: '10', // Newsletter opt-in,
                                 value: this.form.newsletter
                             }
-                        ],
-                        note: {
-                            note: "This is the text of the note",
-                            relid: 2,
-                            reltype: "Subscriber"
-                        }
+                        ]
                     }
                 });
 
@@ -218,7 +212,6 @@ export default {
                 this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
 
             } catch (err) {
-                console.error('Error during form submission:', err);
                 this.$toast.open({
                     message: 'An unexpected error has occurred. Please try again later.',
                     position: 'top',
@@ -228,9 +221,6 @@ export default {
             }
         }
     },
-    mounted() {
-    window.onReCaptchaSuccess = this.onReCaptchaSuccess;
-}
 }
 </script>
 
