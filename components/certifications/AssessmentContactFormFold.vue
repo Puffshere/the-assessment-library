@@ -136,91 +136,96 @@ export default {
         };
     },
     methods: {
-        onSubmit() {
-            grecaptcha.execute();
-        },
-        async onReCaptchaSuccess(token) {
-            this.recaptchaResponse = token;
-            await this.submitForm();
-        },
-        async submitForm() {
-            // Split the name input into firstName and lastName
-            const names = this.form.name.split(' ');
-            this.form.firstName = names[0];
-            this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+    onSubmit() {
+        grecaptcha.execute();
+    },
+    async onReCaptchaSuccess(token) {
+        this.recaptchaResponse = token;
+        await this.submitForm();
+    },
+    async submitForm() {
+        // Split the name input into firstName and lastName
+        const names = this.form.name.split(' ');
+        this.form.firstName = names[0];
+        this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
 
-            try {
-                const salesPerson = await axios.get('/api/lead/next-assignment');
+        try {
+            const salesPerson = await axios.get('/api/lead/next-assignment');
 
-                const lead = await axios.post('/api/lead', {
-                    salesPerson: salesPerson.data,
+            const lead = await axios.post('/api/lead', {
+                salesPerson: salesPerson.data,
+                firstName: this.form.firstName,
+                lastName: this.form.lastName,
+                phone: this.form.phoneNumber,
+                email: this.form.email,
+                company: this.form.company,
+                message: this.form.message
+            });
+
+            const { data } = await axios.post('/api/contact', {
+                contact: {
+                    email: this.form.email,
                     firstName: this.form.firstName,
                     lastName: this.form.lastName,
                     phone: this.form.phoneNumber,
-                    email: this.form.email,
                     company: this.form.company,
-                    message: this.form.message
-                });
-
-                const { data } = await axios.post('/api/contact', {
-                    contact: {
-                        email: this.form.email,
-                        firstName: this.form.firstName,
-                        lastName: this.form.lastName,
-                        phone: this.form.phoneNumber,
-                        company: this.form.company,
-                        message: this.form.message,
-                        recaptchaResponse: this.recaptchaResponse,
-                        fieldValues: [
-                            {
-                                field: '79', // Sales Person Assignment
-                                value: salesPerson.data
-                            },
-                            {
-                                field: '4', // Client type (reseller vs corporate),
-                                value: this.form.clientType
-                            },
-                            {
-                                field: '10', // Newsletter opt-in,
-                                value: this.form.newsletter
-                            }
-                        ]
+                    message: this.form.message,
+                    recaptchaResponse: this.recaptchaResponse,
+                    fieldValues: [
+                        {
+                            field: '79', // Sales Person Assignment
+                            value: salesPerson.data
+                        },
+                        {
+                            field: '4', // Client type (reseller vs corporate),
+                            value: this.form.clientType
+                        },
+                        {
+                            field: '10', // Newsletter opt-in,
+                            value: this.form.newsletter
+                        }
+                    ],
+                    note: {
+                        note: `Form data: ${JSON.stringify(this.form)}`,
                     }
-                });
-
-                const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
-                console.log("this is the updatedLead", updatedLead);
-
-                // Check to see if this contact wants to subscribe to our newsletter
-                if (this.form.newsletter === '45') {
-                    await axios.post(`/api/contact/${data.contact.id}/subscribe`);
                 }
+            });
 
-                await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+            const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
+            console.log("this is the updatedLead", updatedLead);
 
-                await axios.post(`/api/contact/${data.contact.id}/account`, {
-                    company: this.form.company
-                });
-
-                this.$toast.open({
-                    message: 'Your information has been successfully submitted!',
-                    position: 'top',
-                    duration: 8000,
-                    type: 'success'
-                });
-
-                this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
-
-            } catch (err) {
-                this.$toast.open({
-                    message: 'An unexpected error has occurred. Please try again later.',
-                    position: 'top',
-                    duration: 8000,
-                    type: 'error'
-                });
+            // Check to see if this contact wants to subscribe to our newsletter
+            if (this.form.newsletter === '45') {
+                await axios.post(`/api/contact/${data.contact.id}/subscribe`);
             }
+
+            await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+            await axios.post(`/api/contact/${data.contact.id}/account`, {
+                company: this.form.company
+            });
+
+            this.$toast.open({
+                message: 'Your information has been successfully submitted!',
+                position: 'top',
+                duration: 8000,
+                type: 'success'
+            });
+
+            this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
+
+        } catch (err) {
+            console.error('Error during form submission:', err);
+            this.$toast.open({
+                message: 'An unexpected error has occurred. Please try again later.',
+                position: 'top',
+                duration: 8000,
+                type: 'error'
+            });
         }
-    },
+    }
+}
+
 }
 </script>
 
