@@ -135,9 +135,6 @@ export default {
             }
         };
     },
-    created() {
-            grecaptcha.execute();    
-    },
     methods: {
         onSubmit() {
             grecaptcha.execute();
