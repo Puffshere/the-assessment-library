@@ -191,14 +191,16 @@ export default {
                                 field: '84', // Is Adwords Lead?
                                 value: 'yes'
                             }
-                        ],
-                        note: {
-                            note: "This is the text of the note",
-                            relid: 2,
-                            reltype: "Subscriber"
-                        }
+                        ]
                     }
                 });
+
+                const noteData = {
+                    note: `Form data: ${JSON.stringify(this.form)}, SalesPerson: ${JSON.stringify(salesPerson.data)}`,
+                    relid: data.contact.id,
+                    reltype: 'Subscriber'
+                };
+                const response = await axios.post('/api/contact/notes', { note: noteData });
 
                 const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
                 console.log("this is the updatedLead", updatedLead);

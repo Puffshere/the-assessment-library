@@ -111,19 +111,6 @@ app.get('/getCalendarPage', (req, res) => {
     calendarController.incrementAndGetPage(req, res)
 });
 
-
-// app.post('/contact', async (req, res) => {
-//     const recaptchaResponse = req.body.contact.recaptchaResponse;
-//     delete req.body.contact.recaptchaResponse;
-//     try {
-//         const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}`;
-//         const verificationResponse = await axios.post(verificationUrl);
-//         contactController.createContact(req, res);
-//     } catch (error) {
-//         console.error('reCAPTCHA verification error:', error.message);
-//         res.status(500).json({ message: 'Internal Server Error' });
-//     }
-// });
 app.post('/contact', async (req, res) => {
     const recaptchaResponse = req.body.contact.recaptchaResponse;
     delete req.body.contact.recaptchaResponse;
@@ -137,33 +124,9 @@ app.post('/contact', async (req, res) => {
     }
 });
 
-
-
-// app.post('/contact', async (req, res) => {
-//     const recaptchaResponse = req.body.contact.recaptchaResponse;
-//     delete req.body.contact.recaptchaResponse;
-
-//     try {
-//         const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}`;
-//         console.log(`Verification URL: ${verificationUrl}`);
-        
-//         // Log the secret key for debugging
-//         console.log(`reCAPTCHA Secret Key: ${process.env.RECAPTCHA_SECRET_KEY}`);
-
-//         const verificationResponse = await axios.post(verificationUrl);
-//         console.log('reCAPTCHA verification response:', verificationResponse.data);
-        
-//         if (verificationResponse.data.success) {
-//             await contactController.createContact(req, res);
-//         } else {
-//             res.status(400).json({ message: 'reCAPTCHA verification failed' });
-//         }
-//     } catch (error) {
-//         console.error('reCAPTCHA verification error:', error.response ? error.response.data : error.message);
-//         res.status(500).json({ message: 'Internal Server Error' });
-//     }
-// });
-
+app.post('/contact/notes', (req, res) => {
+    contactController.contactNotes(req, res);
+});
 
 app.post('/contact/:contactId/subscribe', (req, res) => {
     contactController.subscribeContact(req, res);

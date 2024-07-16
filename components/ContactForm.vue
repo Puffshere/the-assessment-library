@@ -38,7 +38,7 @@
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                    }}</option>
+                                }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -71,7 +71,7 @@
                                 <select id="source" name="source" v-model="form.source" tabindex="6">
                                     <option v-for="source in sources" :key="source.id" :value="source.value">{{
                                         source.label
-                                        }}</option>
+                                    }}</option>
                                 </select>
 
                                 <span class="error">{{ v.errors[0] }}</span>
@@ -166,9 +166,11 @@
                                 <input class="form-check-input" id="consent" name="consent" type="checkbox" required
                                     v-model="form.consent" tabindex="15" />
                                 <label class="form-check-label" for="consent">
-                                    I agree to the <nuxt-link to="/legal/privacy" target="_blank" rel="noopener" class="hyperlink">Privacy
+                                    I agree to the <nuxt-link to="/legal/privacy" target="_blank" rel="noopener"
+                                        class="hyperlink">Privacy
                                         Policy</nuxt-link> and
-                                    <nuxt-link to="/legal/compliance" target="_blank" rel="noopener" class="hyperlink">GDPR Policy</nuxt-link> and
+                                    <nuxt-link to="/legal/compliance" target="_blank" rel="noopener"
+                                        class="hyperlink">GDPR Policy</nuxt-link> and
                                     give
                                     my consent. *
                                 </label>
@@ -608,6 +610,13 @@ export default {
                             }
                         });
 
+                        const noteData = {
+                            note: `Form data: ${JSON.stringify(this.form)}, SalesPerson: ${JSON.stringify(salesPerson.data)}`,
+                            relid: data.contact.id,
+                            reltype: 'Subscriber'
+                        };
+                        const response = await axios.post('/api/contact/notes', { note: noteData });
+
                         const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
                         // Check to see if this contact wants to subscribe to our newsletter
@@ -741,6 +750,13 @@ export default {
                             }
                         });
 
+                        const noteData = {
+                            note: `Form data: ${JSON.stringify(this.form)}, SalesPerson: ${JSON.stringify(salesPerson.data)}`,
+                            relid: data.contact.id,
+                            reltype: 'Subscriber'
+                        };
+                        const response = await axios.post('/api/contact/notes', { note: noteData });
+
                         const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
                         // Check to see if this contact wants to subscribe to our newsletter
@@ -865,6 +881,13 @@ export default {
                             }
                         });
 
+                        const noteData = {
+                            note: `Form data: ${JSON.stringify(this.form)}, SalesPerson: ${JSON.stringify(salesPerson.data)}`,
+                            relid: data.contact.id,
+                            reltype: 'Subscriber'
+                        };
+                        const response = await axios.post('/api/contact/notes', { note: noteData });
+
                         const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
                         // Check to see if this contact wants to subscribe to our newsletter
@@ -988,6 +1011,13 @@ export default {
                             }
                         });
 
+                        const noteData = {
+                            note: `Form data: ${JSON.stringify(this.form)}, SalesPerson: ${JSON.stringify(salesPerson.data)}`,
+                            relid: data.contact.id,
+                            reltype: 'Subscriber'
+                        };
+                        const response = await axios.post('/api/contact/notes', { note: noteData });
+
                         const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
                         // Check to see if this contact wants to subscribe to our newsletter
@@ -1103,6 +1133,13 @@ export default {
                                 ]
                             }
                         });
+
+                        const noteData = {
+                            note: `Form data: ${JSON.stringify(this.form)}, SalesPerson: ${JSON.stringify(salesPerson.data)}`,
+                            relid: data.contact.id,
+                            reltype: 'Subscriber'
+                        };
+                        const response = await axios.post('/api/contact/notes', { note: noteData });
 
                         const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 

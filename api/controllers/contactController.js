@@ -50,11 +50,29 @@ const getCustomField = async (req, res) => {
 const createContact = async (req, res) => {
     try {
         const { data } = await axios.post(`${api}/contact/sync`, req.body, { headers });
-
         res.json(data);
     } catch(err) {
         console.log(err.response.data);
         res.sendStatus(500);
+    }
+};
+
+const contactNotes = async (req, res) => {
+    try {
+        const noteData = {
+            note: {
+                note: req.body.note.note,
+                relid: req.body.note.relid,
+                reltype: req.body.note.reltype
+            }
+        };
+
+        const { data } = await axios.post(`${api}/notes`, noteData, { headers });
+        res.json(data);
+    } catch (err) {
+        console.error('Error creating note:', err.response ? err.response.data : err.message);
+        console.error('Request data:', req.body); // Log request data
+        res.status(500).json({ error: err.message, details: err.response ? err.response.data : null });
     }
 };
 
@@ -154,6 +172,7 @@ export default {
     getCustomFields,
     getCustomField,
     createContact,
+    contactNotes,
     getContact,
     subscribeContact,
     applyTag,

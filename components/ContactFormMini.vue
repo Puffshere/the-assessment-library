@@ -56,7 +56,7 @@
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                    }}</option>
+                                }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -221,6 +221,13 @@ export default {
                             ]
                         }
                     });
+
+                    const noteData = {
+                        note: `Form data: ${JSON.stringify(this.form)}, SalesPerson: ${JSON.stringify(salesPerson.data)}`,
+                        relid: data.contact.id,
+                        reltype: 'Subscriber'
+                    };
+                    const response = await axios.post('/api/contact/notes', { note: noteData });
 
                     const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
