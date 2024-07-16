@@ -212,6 +212,9 @@ export default {
 
                 await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
+                // Apply the "Certifications/Assessment page contact form" tag (tag id 1028)
+                await axios.post(`/api/contact/${data.contact.id}/tag/1028`);
+
                 await axios.post(`/api/contact/${data.contact.id}/account`, {
                     company: this.form.company
                 });
