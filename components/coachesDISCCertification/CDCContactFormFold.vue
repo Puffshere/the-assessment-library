@@ -15,6 +15,7 @@
                 </div>
             </div>
             <form @submit.prevent="submitForm">
+                <loading :active="loading" :is-full-page="true" />
                 <div class="row">
                     <div class="col-12">
                         <div class="col-6">
@@ -60,7 +61,8 @@
                 <br />
                 <div class="row">
                     <div class="col-12">
-                        <button type="submit" class="white">
+                        <button type="submit" class="white" :disabled="isDisabled"
+                        :class="{ 'disabled': isDisabled }">
                             Submit
                         </button>
                     </div>
@@ -72,10 +74,18 @@
 
 <script>
 import axios from 'axios';
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
+
 
 export default {
+    components: {
+        Loading
+    },
     data() {
         return {
+            isDisabled: false,
+            loading: false,
             form: {
                 name: '',
                 firstName: '',
@@ -98,6 +108,8 @@ export default {
             });
         },
         async submitForm() {
+            this.isDisabled = true;
+            this.loading = true;
             console.log('Form submitted:', this.form);
 
             // Split the name input into firstName and lastName
@@ -167,6 +179,9 @@ export default {
                     company: this.form.company
                 });
 
+                this.loading = false;
+                this.isDisabled = false;
+
                 this.$toast.open({
                     message: 'Your information has been successfully submitted!',
                     position: 'top',
@@ -214,6 +229,11 @@ export default {
         flex-direction: column;
         text-align: center;
     }
+}
+
+.button.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
 .form {
