@@ -390,5 +390,77 @@
     {
         "from": "/doug-devitre.asp",
         "to": "/"
+    },
+    {
+        "from": "/blog/feed/",
+        "to": "/blog"
+    },
+    {
+        "from": "/bulkpurchase.htm",
+        "to": "/collections/products"
+    },
+    {
+        "from": "/certifications/workshop-certification",
+        "to": "/certifications/DISC-workshop-essentials"
+    },
+    {
+        "from": "/blog/subscribe/",
+        "to": "/blog"
+    },
+    {
+        "from": "/Privacy",
+        "to": "/legal/privacy"
+    },
+    {
+        "from": "/catalog.htm",
+        "to": "/collections/products"
+    },
+    {
+        "from": "/eula",
+        "to": "/legal/eula"
+    },
+    {
+        "from": "/assessments/sales-iq/1000",
+        "to": "/assessments/sales-iq"
+    },
+    {
+        "from": "/login/1000",
+        "to": "/login"
+    },
+    {
+        "from": "/assessments/kids-disc/1000",
+        "to": "/assessments/kids-disc"
+    },
+    {
+        "from": "/article-pages/ThePeoplePuzzle.html/1000",
+        "to": "/article-pages/ThePeoplePuzzle.html"
+    },
+    {
+        "from": "/assessments/disc/1000",
+        "to": "/partner-sample-reports/TrueColorsSample.pdf"
+    },
+    {
+        "from": "/assessments/disc/1000",
+        "to": "/assessments/disc"
+    },
+    {
+        "from": "/login.",
+        "to": "/login"
+    },
+    {
+        "from": "/about/what-is-disc/1000",
+        "to": "/about/what-is-disc"
+    },
+    {
+        "from": "/article-pages/ThePlatinumRule.html/1000",
+        "to": "/article-pages/ThePlatinumRule.html"
+    },
+    {
+        "from": "/resources/group-certification",
+        "to": "/certifications/assessment"
+    },
+    {
+        "from": "/get-in-touch",
+        "to": "/contact"
     }
 ]
