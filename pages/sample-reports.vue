@@ -31,7 +31,7 @@
                             <option value="nl">Dutch - 6</option>
                             <option value="en-us" selected>English (US) - 38</option>
                             <option value="fr">French - 15</option>
-                            <option value="de">German - 5</option>
+                            <option value="de">German - 6</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 3</option>
                             <option value="ja">Japanese - 4</option>
@@ -287,6 +287,11 @@
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Awareness (EI) Report</a>
+                        <a v-else-if="lang === 'de'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI)_-_German.pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC Awareness (EI) Report</a>
+                        <a v-else class="hyperlink disabled">DISC Awareness (EI) Report</a><br />
+                        <a class="language-button disc" @click="discAwarenessModal = true">2 languages</a><br />
                     </div>
                 </div>
 
@@ -1012,6 +1017,26 @@
                                     class="hyperlink" target="_blank" rel="noopener">Swedish</a><br />
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC360VietnameseSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Vietnamese</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+
+            <!-- DISC AWARENESS MODAL -->
+            <transition name="fade">
+                <section v-if="discAwarenessModal" class="modal-window">
+                    <div class="container">
+                        <a title="Close" class="modal-close" @click="discAwarenessModal = false">Close</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>DISC Awareness (EI) Report</h1>
+
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI)_-_German.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">German</a><br />
                             </div>
                         </div>
                     </div>
@@ -1756,6 +1781,7 @@ export default {
         return {
             lang: 'en-us',
             discSelfModal: false,
+            discAwarenessModal: false,
             discTeamReportModal: false,
             discSummaryReportModal: false,
             kidsDiscQuestionaireOnlyModal: false,
