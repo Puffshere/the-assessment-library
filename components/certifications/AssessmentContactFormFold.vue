@@ -9,7 +9,7 @@
                     </h2>
                 </div>
             </div>
-            <form @submit.prevent="submitForm">
+            <form @submit.prevent="onSubmit">
                 <loading :active="loading" :is-full-page="true" />
                 <div class="row">
                     <div class="col-12">
@@ -106,8 +106,10 @@
                             :class="{ 'disabled': isDisabled }" style="margin-top: 20px;">
                             Submit
                         </button>
-                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1"
-                            data-size="invisible" data-callback="onReCaptchaSuccess"></div>
+                        <div ref="recaptcha" class="g-recaptcha" 
+                             data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1"
+                             data-size="invisible" 
+                             data-callback="onReCaptchaSuccess"></div>
                     </div>
                 </div>
             </form>
@@ -119,7 +121,6 @@
 import axios from 'axios';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
-
 
 export default {
     components: {
@@ -143,9 +144,23 @@ export default {
             }
         };
     },
+    mounted() {
+        window.onReCaptchaSuccess = this.onReCaptchaSuccess;
+        if (grecaptcha && grecaptcha.render) {
+            grecaptcha.render(this.$refs.recaptcha, {
+                sitekey: '6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1',
+                size: 'invisible',
+                callback: window.onReCaptchaSuccess
+            });
+        }
+    },
     methods: {
         onSubmit() {
-            grecaptcha.execute();
+            if (grecaptcha && grecaptcha.execute) {
+                grecaptcha.execute();
+            } else {
+                console.error('reCAPTCHA is not ready yet.');
+            }
         },
         async onReCaptchaSuccess(token) {
             this.recaptchaResponse = token;
@@ -156,7 +171,7 @@ export default {
             this.isDisabled = true;
             this.loading = true;
 
-            console.log('this is the recaptcah 2', this.recaptchaResponse);
+            console.log('this is the recaptcha 2', this.recaptchaResponse);
             // Split the name input into firstName and lastName
             const names = this.form.name.split(' ');
             this.form.firstName = names[0];
