@@ -106,10 +106,8 @@
                             :class="{ 'disabled': isDisabled }" style="margin-top: 20px;">
                             Submit
                         </button>
-                        <div ref="recaptcha" class="g-recaptcha" 
-                             data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1"
-                             data-size="invisible" 
-                             data-callback="onReCaptchaSuccess"></div>
+                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1"
+                            data-size="invisible" data-callback="onReCaptchaSuccess"></div>
                     </div>
                 </div>
             </form>
@@ -121,6 +119,7 @@
 import axios from 'axios';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
+
 
 export default {
     components: {
@@ -164,14 +163,12 @@ export default {
         },
         async onReCaptchaSuccess(token) {
             this.recaptchaResponse = token;
-            console.log('this is the recaptcha', this.recaptchaResponse);
             await this.submitForm();
         },
         async submitForm() {
             this.isDisabled = true;
             this.loading = true;
 
-            console.log('this is the recaptcha 2', this.recaptchaResponse);
             // Split the name input into firstName and lastName
             const names = this.form.name.split(' ');
             this.form.firstName = names[0];
@@ -228,7 +225,6 @@ export default {
                 const response = await axios.post('/api/contact/notes', { note: noteData });
 
                 const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
-                console.log("this is the updatedLead", updatedLead);
 
                 // Check to see if this contact wants to subscribe to our newsletter
                 if (this.form.newsletter === '45') {

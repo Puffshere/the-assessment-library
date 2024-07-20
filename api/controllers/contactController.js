@@ -13,7 +13,7 @@ const getCustomFields = async (req, res) => {
         });
 
         res.json(data);
-    } catch(err) {
+    } catch (err) {
         console.log(err.response.data);
         res.sendStatus(500);
     }
@@ -41,7 +41,7 @@ const getCustomField = async (req, res) => {
         });
 
         res.json(data);
-    } catch(err) {
+    } catch (err) {
         console.log(err.response.data);
         res.sendStatus(500);
     }
@@ -51,7 +51,7 @@ const createContact = async (req, res) => {
     try {
         const { data } = await axios.post(`${api}/contact/sync`, req.body, { headers });
         res.json(data);
-    } catch(err) {
+    } catch (err) {
         console.log(err.response.data);
         res.sendStatus(500);
     }
@@ -66,12 +66,9 @@ const contactNotes = async (req, res) => {
                 reltype: req.body.note.reltype
             }
         };
-
         const { data } = await axios.post(`${api}/notes`, noteData, { headers });
         res.json(data);
     } catch (err) {
-        console.error('Error creating note:', err.response ? err.response.data : err.message);
-        console.error('Request data:', req.body); // Log request data
         res.status(500).json({ error: err.message, details: err.response ? err.response.data : null });
     }
 };
@@ -85,9 +82,9 @@ const subscribeContact = async (req, res) => {
                 status: '1'
             }
         }, { headers });
-        
+
         res.sendStatus(200);
-    } catch(err) {
+    } catch (err) {
         console.log(err.response.data);
         res.sendStatus(500);
     }
@@ -103,7 +100,7 @@ const applyTag = async (req, res) => {
         }, { headers });
 
         res.sendStatus(200);
-    } catch(err) {
+    } catch (err) {
         console.log(err.response.data);
         res.sendStatus(500);
     }
@@ -130,7 +127,7 @@ const createAccountAndAssociateContact = async (req, res) => {
             accountId = data.account.id;
         } else {
             accountId = response.data.accounts[0].id;
-        }        
+        }
 
         await axios.post(`${api}/accountContacts`, {
             accountContact: {
@@ -140,7 +137,7 @@ const createAccountAndAssociateContact = async (req, res) => {
         }, { headers });
 
         res.sendStatus(200);
-    } catch(err) {
+    } catch (err) {
         console.log(err.response.data);
         res.sendStatus(200);
     }
@@ -162,7 +159,7 @@ const triggerTrackingEvent = async (req, res) => {
         });
 
         res.sendStatus(200);
-    } catch(err) {
+    } catch (err) {
         console.log(err.response.data);
         res.sendStatus(200);
     }
