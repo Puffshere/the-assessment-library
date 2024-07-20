@@ -281,6 +281,10 @@ export default {
                         {
                             url: "https://www.youtube.com/watch?v=DYHhhMePdRw",
                             mainText: "DISC Awareness Sales - Merrick"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Live+Group+Certification+Flyer+Fillable.pdf",
+                            mainText: "Group Certification Flyer - FILLABLE"
                         }
                     ]
                 },
