@@ -32,6 +32,7 @@
                             <option value="en-us" selected>English (US) - 38</option>
                             <option value="fr">French - 15</option>
                             <option value="de">German - 6</option>
+                            <option value="hu">Hungarian - 1</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 3</option>
                             <option value="ja">Japanese - 4</option>
@@ -104,6 +105,9 @@
                         <a v-else-if="lang === 'de'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfGerman.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
+                        <a v-else-if="lang === 'hu'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Self_-_Hungarian.pdf"
+                            target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else-if="lang === 'id'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfIndonesian.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
@@ -156,7 +160,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCVietnamese.pdf"
                             target="_blank" rel="noopener">DISC Self Report</a>
                         <a v-else class="hyperlink disabled">DISC Self Report</a>
-                        <a class="language-button disc" @click="discSelfModal = true">25 languages</a>
+                        <a class="language-button disc" @click="discSelfModal = true">26 languages</a>
                         <br />
 
                         <a v-if="lang === 'en-us' || lang === 'en-au' || lang === 'zh' || lang === 'nl' || lang === 'fr' || lang === 'pt' || lang === 'sv' || lang === 'vi' || lang === 'tr' || lang === 'es'"
@@ -695,7 +699,7 @@
             <!-- DISC SELF LANGUAGES MODAL -->
             <transition name="fade">
                 <section v-if="discSelfModal" class="modal-window">
-                    <div class="container">
+                    <div class="container" style="margin-top: 20px;">
                         <a title="Close" class="modal-close" @click="discSelfModal = false">Close</a>
 
                         <div class="row">
@@ -724,6 +728,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfGerman.pdf"
                                     target="_blank" rel="noopener">German</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Self_-_Hungarian.pdf"
+                                    target="_blank" rel="noopener">Hungarian</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfIndonesian.pdf"
                                     target="_blank" rel="noopener">Indonesian</a><br />

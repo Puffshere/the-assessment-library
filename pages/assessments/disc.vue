@@ -401,6 +401,7 @@
                                     <span><img src="~assets/flags/netherlands.svg" alt="Dutch DISC Assessments"> Nederlands</span>
                                     <span><img src="~assets/flags/france.svg" alt="French DISC Assessments"> Français</span>
                                     <span><img src="~assets/flags/germany.svg" alt="German DISC Assessments"> Deutsch</span>
+                                    <span><img src="~assets/flags/hungary.svg" alt="Hungary DISC Assessments"> Magyar</span>
                                     <span><img src="~assets/flags/indonesia.svg" alt="Indonesian DISC Assessments"> Indonesian</span>
                                     <span><img src="~assets/flags/japan.svg" alt="Japanese DISC Assessments"> 日本語</span>
                                     <span><img src="~assets/flags/cambodia.svg" alt="Cambodian DISC Assessments"> ភាសាខ្មែរ</span>
