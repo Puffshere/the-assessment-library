@@ -28,7 +28,7 @@
                             style="text-align: center; color: #0033c5; text-shadow: #0033c566 2.12132px 2.12132px 0px; margin-bottom: -30px;">
                             Find an Assessment Practitioner
                         </h1>
-                        <h2 style="text-align: center; font-weight: 400; margin-bottom: 150px;">
+                        <h2 style="text-align: center; font-weight: 400; margin-bottom: 0px;">
                             Want to be listed? <span style="color: #0033c5; text-decoration: underline;">Get
                                 certified</span>
                         </h2>
@@ -36,16 +36,24 @@
                 </div>
             </div>
         </section>
+        <br />
+        <search-bar></search-bar>
+        <br />
+        <br />
+        <br />
+        <br />
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
     </section>
 </template>
 
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
+import SearchBar from '@/components/coachesDirectory/SearchBar';
 
 export default {
     components: {
         LazyHydrate,
+        'search-bar': SearchBar,
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     }
