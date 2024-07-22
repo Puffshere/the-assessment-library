@@ -2,44 +2,65 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <input
-            v-model="searchQuery"
-            type="text"
-            class="form-control"
-            placeholder="Jane Doe"
-            aria-label="Search"
+          <CustomDropdown
+            v-model="name"
+            :items="names"
+            placeholder="Name"
+            customClass="search-dropdown"
+            :isSearchable="true"
           />
         </div>
         <div class="col">
-          <select v-model="location" class="form-control">
-            <option disabled value="">City, State, Zip, Country</option>
-            <option v-for="loc in locations" :key="loc" :value="loc">{{ loc }}</option>
-          </select>
+          <CustomDropdown
+            v-model="location"
+            :items="locations"
+            placeholder="Location (City, State, Zip, Country)"
+            customClass="location-dropdown"
+          />
         </div>
         <div class="col">
-          <select v-model="certification" class="form-control">
-            <option disabled value="">Certifications</option>
-            <option v-for="cert in certifications" :key="cert" :value="cert">{{ cert }}</option>
-          </select>
+          <CustomDropdown
+            v-model="certification"
+            :items="certifications"
+            placeholder="Certifications"
+            customClass="certification-dropdown"
+            :isCheckbox="true"
+          />
         </div>
         <div class="col">
-          <select v-model="sortBy" class="form-control">
-            <option disabled value="">Sort By</option>
-            <option v-for="option in sortOptions" :key="option" :value="option">{{ option }}</option>
-          </select>
+          <CustomDropdown
+            v-model="sortBy"
+            :items="sortOptions"
+            placeholder="Sort By"
+            customClass="sort-dropdown"
+            :isCheckbox="true"
+          />
         </div>
       </div>
     </div>
   </template>
   
   <script>
+  import CustomDropdown from '@/components/coachesDirectory/CustomDropdown';
+  
   export default {
+    components: {
+      CustomDropdown,
+    },
     data() {
       return {
-        searchQuery: '',
+        name: '',
+        names: [
+          'Shawn Taylor',
+          'Miranda Sanders',
+          'Amy Lewis',
+          'Brandon Parker',
+          'Tony Alessandra',
+          'Cristina Moore',
+        ],
         location: '',
-        certification: '',
-        sortBy: '',
+        certification: [],
+        sortBy: [],
         locations: [
           'New York, NY, USA',
           'Los Angeles, CA, USA',
@@ -53,10 +74,12 @@
           'Certified Practitioner (CP)',
         ],
         sortOptions: [
-          'Name',
-          'Location',
-          'Certifications',
-          'Date Added',
+          'MCP',
+          'ACP',
+          'Most Certifications',
+          'Least Certifications',
+          'A-Z',
+          'Z-A',
         ],
       };
     },
@@ -73,40 +96,18 @@
   .row {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Ensures the input fields are vertically aligned */
+    align-items: center; 
     width: 100%;
     margin: 0;
   }
   
   .col {
     flex: 1;
-    padding: 0 5px; /* Reduce padding between columns */
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 8px 10px; /* Adjust padding to reduce overall height */
-    margin-bottom: 0;
-    border-radius: 4px; /* Adjust border radius for a sleeker look */
-    border: 1px solid #ccc;
-    background-color: #fff;
-    box-sizing: border-box;
-  }
-  
-  input.form-control, select.form-control {
-    border: 1px solid #ccc;
-    background-color: #fff;
-    color: #333;
-  }
-  
-  input.form-control:focus, select.form-control:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Adjust shadow for focus */
+    padding: 0 5px;
   }
   
   .col:not(:last-child) {
-    margin-right: 0; /* Ensure no additional margins */
+    margin-right: 0;
   }
   </style>
   
