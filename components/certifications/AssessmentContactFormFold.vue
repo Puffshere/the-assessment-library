@@ -106,8 +106,8 @@
                             :class="{ 'disabled': isDisabled }" style="margin-top: 20px;">
                             Submit
                         </button>
-                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1"
-                            data-size="invisible" data-callback="onReCaptchaSuccess"></div>
+                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LcLJRYqAAAAAO7UeIA9KyndgoSMfFpqENr0OmYc"
+                            data-callback="onReCaptchaSuccess"></div>
                     </div>
                 </div>
             </form>
@@ -147,7 +147,7 @@ export default {
         window.onReCaptchaSuccess = this.onReCaptchaSuccess;
         if (grecaptcha && grecaptcha.render) {
             grecaptcha.render(this.$refs.recaptcha, {
-                sitekey: '6LfeZg4qAAAAAJaeMAH1j50AduN7eolDgsxmEsT1',
+                sitekey: '6LcLJRYqAAAAAO7UeIA9KyndgoSMfFpqENr0OmYc',
                 size: 'invisible',
                 callback: window.onReCaptchaSuccess
             });
@@ -217,28 +217,21 @@ export default {
                     }
                 });
 
-                const noteData = {
-                    note: `Form data: ${JSON.stringify(this.form)}, SalesPerson: ${JSON.stringify(salesPerson.data)}`,
-                    relid: data.contact.id,
-                    reltype: 'Subscriber'
-                };
-                const response = await axios.post('/api/contact/notes', { note: noteData });
-
                 const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
-                // Check to see if this contact wants to subscribe to our newsletter
-                if (this.form.newsletter === '45') {
-                    await axios.post(`/api/contact/${data.contact.id}/subscribe`);
-                }
+                // // Check to see if this contact wants to subscribe to our newsletter
+                // if (this.form.newsletter === '45') {
+                //     await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                // }
 
-                await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+                // await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
-                // Apply the "Certifications/Assessment page contact form" tag (tag id 1028)
-                await axios.post(`/api/contact/${data.contact.id}/tag/1028`);
+                // // Apply the "Certifications/Assessment page contact form" tag (tag id 1028)
+                // await axios.post(`/api/contact/${data.contact.id}/tag/1028`);
 
-                await axios.post(`/api/contact/${data.contact.id}/account`, {
-                    company: this.form.company
-                });
+                // await axios.post(`/api/contact/${data.contact.id}/account`, {
+                //     company: this.form.company
+                // });
 
                 this.loading = false;
                 this.isDisabled = false;

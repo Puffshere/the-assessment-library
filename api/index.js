@@ -114,9 +114,11 @@ app.get('/getCalendarPage', (req, res) => {
 app.post('/contact', async (req, res) => {
     const recaptchaResponse = req.body.contact.recaptchaResponse;
     delete req.body.contact.recaptchaResponse;
+    console.log('this is the recaptchaResponse', recaptchaResponse)
     try {
-        const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}`;
+        const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=6LcLJRYqAAAAAF3jh7B4XPnli28OZtNrFASnPqte&response=${recaptchaResponse}`;
         const { data } = await axios.post(verificationUrl);
+        console.log(data);
         if (data.success) {
             contactController.createContact(req, res);
         } else {
