@@ -145,25 +145,15 @@ export default {
     },
     mounted() {
         window.onReCaptchaSuccess = this.onReCaptchaSuccess;
-        if (grecaptcha && grecaptcha.render) {
-            grecaptcha.render(this.$refs.recaptcha, {
-                sitekey: '6LcLJRYqAAAAAO7UeIA9KyndgoSMfFpqENr0OmYc',
-                size: 'invisible',
-                callback: window.onReCaptchaSuccess
-            });
-        }
     },
     methods: {
         onSubmit() {
-            if (grecaptcha && grecaptcha.execute) {
-                grecaptcha.execute();
-            } else {
-                console.error('reCAPTCHA is not ready yet.');
-            }
+            this.submitForm();
         },
         async onReCaptchaSuccess(token) {
+            console.log('recaptcah success');
             this.recaptchaResponse = token;
-            await this.submitForm();
+            console.log(token);
         },
         async submitForm() {
             this.isDisabled = true;
@@ -219,19 +209,19 @@ export default {
 
                 const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
 
-                // // Check to see if this contact wants to subscribe to our newsletter
-                // if (this.form.newsletter === '45') {
-                //     await axios.post(`/api/contact/${data.contact.id}/subscribe`);
-                // }
+                // Check to see if this contact wants to subscribe to our newsletter
+                if (this.form.newsletter === '45') {
+                    await axios.post(`/api/contact/${data.contact.id}/subscribe`);
+                }
 
-                // await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+                await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
-                // // Apply the "Certifications/Assessment page contact form" tag (tag id 1028)
-                // await axios.post(`/api/contact/${data.contact.id}/tag/1028`);
+                // Apply the "Certifications/Assessment page contact form" tag (tag id 1028)
+                await axios.post(`/api/contact/${data.contact.id}/tag/1028`);
 
-                // await axios.post(`/api/contact/${data.contact.id}/account`, {
-                //     company: this.form.company
-                // });
+                await axios.post(`/api/contact/${data.contact.id}/account`, {
+                    company: this.form.company
+                });
 
                 this.loading = false;
                 this.isDisabled = false;
