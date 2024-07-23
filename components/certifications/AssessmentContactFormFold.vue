@@ -145,6 +145,12 @@ export default {
     },
     mounted() {
         window.onReCaptchaSuccess = this.onReCaptchaSuccess;
+        if (grecaptcha && grecaptcha.render) {
+            grecaptcha.render(this.$refs.recaptcha, {
+                sitekey: '6LcLJRYqAAAAAO7UeIA9KyndgoSMfFpqENr0OmYc',
+                callback: window.onReCaptchaSuccess
+            })
+        }
     },
     methods: {
         onSubmit() {
