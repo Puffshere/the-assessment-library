@@ -148,7 +148,7 @@ export default {
         const renderReCaptcha = () => {
             if (window.grecaptcha && window.grecaptcha.render) {
                 window.grecaptcha.render(this.$refs.recaptcha, {
-                    sitekey: '6LcLJRYqAAAAAO7UeIA9KyndgoSMfFpqENr0OmYc',
+                    sitekey: '6LfxMBYqAAAAALxg0qx1ez9zPO6ynJyvbswx7lpP',
                     callback: window.onReCaptchaSuccess
                 });
             } else {
