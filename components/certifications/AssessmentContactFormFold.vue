@@ -145,18 +145,6 @@ export default {
     },
     mounted() {
         window.onReCaptchaSuccess = this.onReCaptchaSuccess;
-        const renderReCaptcha = () => {
-            if (window.grecaptcha && window.grecaptcha.render) {
-                window.grecaptcha.render(this.$refs.recaptcha, {
-                    sitekey: '6LcLJRYqAAAAAO7UeIA9KyndgoSMfFpqENr0OmYc',
-                    callback: window.onReCaptchaSuccess
-                });
-            } else {
-                setTimeout(renderReCaptcha, 100); // Check again in 100ms
-            }
-        };
-
-        renderReCaptcha();
     },
     methods: {
         onSubmit() {
