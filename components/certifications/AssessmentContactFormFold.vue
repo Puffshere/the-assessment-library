@@ -186,7 +186,7 @@ export default {
                     message: this.form.message
                 });
 
-                const { data } = await axios.post('/api/contact', {
+                const { data } = await axios.post('/api/contact/certifications/assessment', {
                     contact: {
                         email: this.form.email,
                         firstName: this.form.firstName,
