@@ -35,7 +35,7 @@ module.exports = {
       },
     ],
     script: [
-      { src: 'https://www.google.com/recaptcha/api.js', async: true, defer: true }
+      { src: 'https://www.google.com/recaptcha/api.js?render=explicit', async: true, defer: true }
     ]
   },
 
@@ -66,8 +66,8 @@ module.exports = {
       src: '~plugins/mapbox.js',
       mode: 'client'
     },
-    { 
-      src: '~/plugins/lazy-hydration.js', ssr: false 
+    {
+      src: '~/plugins/lazy-hydration.js', ssr: false
     },
     {
       src: '~/plugins/vue-toast-notification.js',

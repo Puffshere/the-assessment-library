@@ -151,9 +151,7 @@ export default {
             this.submitForm();
         },
         async onReCaptchaSuccess(token) {
-            console.log('recaptcah success');
             this.recaptchaResponse = token;
-            console.log(token);
         },
         async submitForm() {
             this.isDisabled = true;
