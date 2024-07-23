@@ -35,7 +35,7 @@ module.exports = {
       },
     ],
     script: [
-      { src: 'https://www.google.com/recaptcha/api.js', async: true, defer: true }
+      { src: 'https://www.google.com/recaptcha/api.js?render=explicit', async: true, defer: true }
     ]
   },
 

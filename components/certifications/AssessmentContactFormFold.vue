@@ -106,7 +106,7 @@
                             :class="{ 'disabled': isDisabled }" style="margin-top: 20px;">
                             Submit
                         </button>
-                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LcLJRYqAAAAAO7UeIA9KyndgoSMfFpqENr0OmYc"
+                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfxMBYqAAAAALxg0qx1ez9zPO6ynJyvbswx7lpP"
                             data-callback="onReCaptchaSuccess"></div>
                     </div>
                 </div>
@@ -145,6 +145,12 @@ export default {
     },
     mounted() {
         window.onReCaptchaSuccess = this.onReCaptchaSuccess;
+        if (grecaptcha && grecaptcha.render) {
+            grecaptcha.render(this.$refs.recaptcha, {
+                sitekey: '6LfxMBYqAAAAALxg0qx1ez9zPO6ynJyvbswx7lpP',
+                callback: window.onReCaptchaSuccess
+            })
+        }
     },
     methods: {
         onSubmit() {
