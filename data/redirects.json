@@ -397,7 +397,7 @@
     },
     {
         "from": "/bulkpurchase.htm",
-        "to": "/collections/products"
+        "to": "https://store.assessments24x7.com/collections/products"
     },
     {
         "from": "/certifications/workshop-certification",
@@ -413,7 +413,7 @@
     },
     {
         "from": "/catalog.htm",
-        "to": "/collections/products"
+        "to": "https://store.assessments24x7.com/collections/products"
     },
     {
         "from": "/eula",
@@ -434,10 +434,6 @@
     {
         "from": "/article-pages/ThePeoplePuzzle.html/1000",
         "to": "/article-pages/ThePeoplePuzzle.html"
-    },
-    {
-        "from": "/assessments/disc/1000",
-        "to": "/partner-sample-reports/TrueColorsSample.pdf"
     },
     {
         "from": "/assessments/disc/1000",

@@ -142,6 +142,10 @@ export default function (context) {
             context.redirect('https://hiresense.com');
         }
 
+        else if (context.req.url == '/partner-sample-reports/TrueColorsSample.pdf/1000') {
+            context.redirect('https://www.assessments24x7.com/partner-sample-reports/TrueColorsSample.pdf');
+        }
+
         else if (context.req.url == '/resources/Five-Sample-EIQ.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Five-Sample-EIQ.PDF');
         }
