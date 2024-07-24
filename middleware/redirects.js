@@ -147,11 +147,11 @@ export default function (context) {
         }
 
         else if (context.req.url == '/pdfs/Dealing+With+Conflict+Sampl') {
-            context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
+            context.redirect('https://www.assessments24x7.com/pdfs/Dealing+20With+20Conflict+20Sample+20Report.pdf');
         }
 
         else if (context.req.url == '/pdfs/Dealing+With+Conflict+Sample') {
-            context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
+            context.redirect('https://www.assessments24x7.com/pdfs/Dealing+20With+20Conflict+20Sample+20Report.pdf');
         }
 
         else if (context.req.url == '/validity/Values+Validity-Research.pdf') {
