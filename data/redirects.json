@@ -498,9 +498,5 @@
     {
         "from": "/disc-virtual-training-programStay",
         "to": "/certifications/disc-virtual-training"
-    },
-    {
-        "from": "/validity/Values Validity-Research.pdf",
-        "to": "/about/validity"
     }
 ]
