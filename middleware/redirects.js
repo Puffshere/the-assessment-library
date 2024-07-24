@@ -146,15 +146,15 @@ export default function (context) {
             context.redirect('https://www.assessments24x7.com/partner-sample-reports/TrueColorsSample.pdf');
         }
 
-        else if (context.req.url == 'https://www.assessments24x7.com/pdfs/Dealing With Conflict Sampl') {
+        else if (context.req.url == '/pdfs/Dealing%With%Conflict%Sampl') {
             context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
         }
 
-        else if (context.req.url == 'https://www.assessments24x7.com/pdfs/Dealing With Conflict Sample') {
+        else if (context.req.url == '/pdfs/Dealing%With%Conflict%Sample') {
             context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
         }
 
-        else if (context.req.url == 'https://www.assessments24x7.com/validity/Values Validity-Research.pdf') {
+        else if (context.req.url == '/validity/Values%Validity-Research.pdf') {
             context.redirect('https://www.assessments24x7.com/about/validity');
         }
 
