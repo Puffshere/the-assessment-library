@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /_nuxt/
+Disallow: /.well-known/
+Sitemap: https://www.assessments24x7.com/sitemap.xml

@@ -458,5 +458,49 @@
     {
         "from": "/get-in-touch",
         "to": "/contact"
+    },
+    {
+        "from": "/DISC-",
+        "to": "/assessments/disc"
+    },
+    {
+        "from": "/article-pages/Prospecting-",
+        "to": "/article-pages/Prospecting.html"
+    },
+    {
+        "from": "/eo",
+        "to": "/"
+    },
+    {
+        "from": "/disc-and-eiq-2.asp",
+        "to": "/assessments/disc"
+    },
+    {
+        "from": "/assessments.aspLearning",
+        "to": "/assessments"
+    },
+    {
+        "from": "/reports/DISCselfSampleRe",
+        "to": "/sample-reports"
+    },
+    {
+        "from": "/certifications/assessment/1000",
+        "to": "/certifications/assessment"
+    },
+    {
+        "from": "/store/which-bird-are-you/1000",
+        "to": "https://store.assessments24x7.com/products/which-bird-are-you-ten-lesson-curriculum"
+    },
+    {
+        "from": "/assessments/performance-gap-indicator/1000",
+        "to": "/assessments/performance-gap-indicator"
+    },
+    {
+        "from": "/disc-virtual-training-programStay",
+        "to": "/certifications/disc-virtual-training"
+    },
+    {
+        "from": "/validity/Values Validity-Research.pdf",
+        "to": "/about/validity"
     }
 ]

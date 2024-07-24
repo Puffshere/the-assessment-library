@@ -146,6 +146,14 @@ export default function (context) {
             context.redirect('https://www.assessments24x7.com/partner-sample-reports/TrueColorsSample.pdf');
         }
 
+        else if (context.req.url == '/pdfs/Dealing With Conflict Sampl') {
+            context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
+        }
+
+        else if (context.req.url == '/pdfs/Dealing With Conflict Sample') {
+            context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
+        }
+
         else if (context.req.url == '/resources/Five-Sample-EIQ.pdf') {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Five-Sample-EIQ.PDF');
         }

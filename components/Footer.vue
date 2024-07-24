@@ -92,7 +92,7 @@
 
                     <!-- YouTube icon -->
                     <a class="contact-social" target="_blank" rel="noopener"
-                        href="http://www.youtube.com/assessments24x7online"
+                        href="https://www.youtube.com/assessments24x7online"
                         aria-label="Watch Assessments 24x7 on YouTube">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
