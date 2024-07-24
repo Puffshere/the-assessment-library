@@ -102,8 +102,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="learn-more-button light-blue" :disabled="isDisabled"
-                            :class="{ 'disabled': isDisabled }" style="margin-top: 20px;">
+                        <button type="submit" class="learn-more-button light-blue" :disabled="isSubmitDisabled"
+                            :class="{ 'disabled': isSubmitDisabled }" style="margin-top: 20px;">
                             Submit
                         </button>
                         <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfxMBYqAAAAALxg0qx1ez9zPO6ynJyvbswx7lpP"
@@ -120,7 +120,6 @@ import axios from 'axios';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 
-
 export default {
     components: {
         Loading
@@ -129,6 +128,7 @@ export default {
         return {
             isDisabled: false,
             loading: false,
+            recaptchaResponse: null,
             form: {
                 name: '',
                 firstName: '',
@@ -139,7 +139,7 @@ export default {
                 message: '',
                 clientType: '',
                 newsletter: '',
-                consent: ''
+                consent: false
             }
         };
     },
@@ -254,6 +254,11 @@ export default {
                 });
             }
         }
+    },
+    computed: {
+        isSubmitDisabled() {
+            return !this.form.consent || !this.recaptchaResponse;
+        }
     }
 }
 </script>
@@ -263,11 +268,6 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
-}
-
-.button.disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
 }
 
 .form {
@@ -341,6 +341,20 @@ export default {
                 color: #2729ff;
                 background-color: white;
                 border: 1px solid #2729ff;
+            }
+
+            &[disabled] {
+                cursor: not-allowed;
+                opacity: 0.5;
+                color: white;
+                background-color: #2729ff;
+                border: none;
+
+                &:hover {
+                    color: white;
+                    background-color: #2729ff;
+                    border: none;
+                }
             }
         }
     }
