@@ -93,7 +93,7 @@
                             <div class="col-6 boxes">
                                 <img src="~/assets/api.png" alt="api photo" class="" />
                                 <img src="~/assets/api-icon.png" alt="api icon" class="icon" />
-                                <h3>API Intergration</h3>
+                                <h3>API Integration</h3>
                                 <hr />
                                 <p>
                                     <span class="paragraph">Unlock the full potential of your existing systems</span>
