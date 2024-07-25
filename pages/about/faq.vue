@@ -34,9 +34,11 @@
                     <div class="col-12">
                         <h6 class="question">Does A24x7 have account sign-up fees and annual renewal fees?</h6>
                         <p class="answer">
-                            NO FEES! There are no account setup or monthly fees of any kind. However, because these accounts
+                            NO FEES! There are no account setup or monthly fees of any kind. However, because these
+                            accounts
                             include thousands of dollars
-                            in free multimedia DISC training materials, we do require a small initial assessment purchase to
+                            in free multimedia DISC training materials, we do require a small initial assessment
+                            purchase to
                             get started. We do offer our
                             optional <nuxt-link to="/about/account-plus" class="hyperlink">Account Plus</nuxt-link>
                             subscription for a recurring monthly
@@ -45,101 +47,98 @@
                     </div>
                 </div>
 
-
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">If I want to buy assessments in bulk/volume, do you offer even lower prices?
+                        <h6 class="question">If I want to buy assessments in bulk/volume, do you offer even lower
+                            prices?
                         </h6>
                         <p class="answer">
-                            Yes, we offer our clients additional discounts at a range of volumes to fit any business size or
-                            need.
-                            Our pricing is based on the volume of your purchase. We offer 4 levels: Bronze, Silver, Gold,
-                            and Platinum.
-                            If you would like a copy of our discount pricing sheet, email us at "support@assessments.ws" and
-                            we will be
-                            happy to email one to you. Please include in your email address, and whether you are an
-                            independent
-                            coach/trainer or an inside corporate coach/trainer.
+                            Yes, we offer our clients bulk/volume discounts. Our pricing is based on the volume of your
+                            assessment purchases and is priced to fit any business size or need. <span><a
+                                    href="/contact" class="hyperlink">Contact us here</a></span> for
+                            more information about volume pricing.
                         </p>
                     </div>
                 </div>
-
 
                 <div class="row">
                     <div class="col-12">
                         <h6 class="question">What are your customization and branding capabilities?</h6>
                         <p class="answer">
-                            When it comes to customization, we cover it all. Many clients desire to brand deliverables and
+                            When it comes to customization, we cover it all. Many clients desire to brand deliverables
+                            and
                             configure the assessment experience to their business
                             and customers. This is not commonly available with our competitors and industry. Our
                             customization capabilities extend to reports, web screens, emails,
                             assessment content, API’s, translations and various materials and downloads. Contact us to
                             discuss your customization needs.
-
                         </p>
                     </div>
                 </div>
 
-
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">Customer service is important to me and usually lacking with other assessment
+                        <h6 class="question">Customer service is important to me and usually lacking with other
+                            assessment
                             companies — how are you different?</h6>
                         <p class="answer">
-                            As our name implies, we provide timely, responsive, around-the-clock customer service, live and
+                            As our name implies, we provide timely, responsive, around-the-clock customer service, live
+                            and
                             online. We partner with you until
-                            your questions are thoroughly answered. Our founder has been a keynote speaker and author on the
+                            your questions are thoroughly answered. Our founder has been a keynote speaker and author on
+                            the
                             subject of customer satisfaction
                             for more than 40 years. We pride ourselves on our customer service.
-
                         </p>
                     </div>
                 </div>
 
-
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">Does A24x7 provide training materials and support for their assessments? What
+                        <h6 class="question">Does A24x7 provide training materials and support for their assessments?
+                            What
                             do they cost?</h6>
                         <p class="answer">
                             Yes, and they're FREE. We provide STRONG SUPPORT AND TRAINING MATERIALS to you AT NO CHARGE,
                             including videos, MP3s, eBooks, PowerPoint slides, exercises, handouts,
                             a Leader Guide, A/V files, etc.
-
                         </p>
                     </div>
                 </div>
-
 
                 <div class="row">
                     <div class="col-12">
                         <h6 class="question">Explain your software/server network and its security?</h6>
                         <p class="answer">
-                            Our system is built on Microsoft server platforms utilizing SQL Server and .NET technologies.
+                            Our system is built on Microsoft server platforms utilizing SQL Server and .NET
+                            technologies.
                             The servers are part of the Microsoft Azure environment. To learn more visit
                             https://azure.microsoft.com/en-us/.
                         </p>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-12">
                         <h6 class="question">Do you offer help in interpreting profile results?</h6>
                         <p class="answer">
-                            As part of our partnership, we provide you with a wealth of Trainer Material resources to help
+                            As part of our partnership, we provide you with a wealth of Trainer Material resources to
+                            help
                             you interpret and debrief reports, including a Report Debrief Guide.
-                            Our training team can also be utilized for scheduled debrief calls and brainstorming. You can
+                            Our training team can also be utilized for scheduled debrief calls and brainstorming. You
+                            can
                             also call 206-400-2746 (Pacific Time) or email (support@assessments.ws)
                             at any time if you have specific questions. We will be happy to help assist you.
                         </p>
                     </div>
                 </div>
 
-
                 <div class="row">
                     <div class="col-12">
                         <h6 class="question">What different group reporting options are available?</h6>
                         <p class="answer">
-                            We have a variety of group and team reports available within your account dashboard. Depending
+                            We have a variety of group and team reports available within your account dashboard.
+                            Depending
                             on which assessments you are using, those options will appear on the
                             group reporting page. These group reports are FREE and can be generated at any time.
 
@@ -147,34 +146,36 @@
                     </div>
                 </div>
 
-
                 <div class="row">
                     <div class="col-12">
                         <h6 class="question">Do I need to be certified to use assessments?</h6>
                         <p class="answer">
                             Absolutely not; however, HIGHLY recommended. Certification is not required to administer
                             assessments, to interpret the results or to give presentations.
-                            Many of our customers find that our certifications provide them with a deeper understanding of
+                            Many of our customers find that our certifications provide them with a deeper understanding
+                            of
                             the assessments and the tools available for report debriefing,
                             program facilitation and client coaching. There is no doubt that our certified practitioners
                             have greater success using assessments with their clients and
-                            companies. It brings a greater level of confidence producing outstanding results. Please contact
+                            companies. It brings a greater level of confidence producing outstanding results. Please
+                            contact
                             us if you are interested in becoming certified.
 
                         </p>
                     </div>
                 </div>
 
-
                 <div class="row">
                     <div class="col-12">
                         <h6 class="question">What are Assessment Credits?</h6>
                         <p class="answer">
-                            You will need to have assessment credits in order to allow participants to complete assessments.
+                            You will need to have assessment credits in order to allow participants to complete
+                            assessments.
                             One assessment report equals one assessment credit. Or, alternatively,
                             you can be set up with a billable monthly account, in which case we would pre-load your
                             assessment account with a bulk number of assessment credits. We will keep your
-                            credit card info on file, and bill your card on the first of every month ONLY for the credits
+                            credit card info on file, and bill your card on the first of every month ONLY for the
+                            credits
                             used during the preceding month.
                         </p>
                     </div>
