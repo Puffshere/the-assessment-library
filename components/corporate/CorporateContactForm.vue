@@ -63,23 +63,26 @@
                                     <div class="form-check" style="margin-top: 0px;">
                                         <input class="form-check-input" id="reseller" name="clientType" type="radio"
                                             required value="Reseller" v-model="form.clientType" />
-                                        <label class="form-check-label" for="reseller">I am a coach or trainer looking to resell assessments with my clients.</label>
+                                        <label class="form-check-label" for="reseller">I am a coach or trainer looking
+                                            to resell assessments with my clients.</label>
                                     </div>
                                     <div class="form-check" style="margin-top: -10px;">
                                         <input class="form-check-input" id="corporate" name="clientType" type="radio"
                                             required value="Corporate" v-model="form.clientType" />
-                                        <label class="form-check-label" for="corporate">I am part of a company looking to use assessments internally with my team.</label>
+                                        <label class="form-check-label" for="corporate">I am part of a company looking
+                                            to use assessments internally with my team.</label>
                                     </div>
                                     <div class="form-check" style="margin-top: -10px;">
                                         <input class="form-check-input" id="corporate" name="clientType" type="radio"
                                             required value="Retail" v-model="form.clientType" />
-                                        <label class="form-check-label" for="corporate">I am an individual looking to purchase a single assessment only.</label>
+                                        <label class="form-check-label" for="corporate">I am an individual looking to
+                                            purchase a single assessment only.</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="learn-more-button light-blue" :disabled="isSubmitDisabled"
-                            :class="{ 'disabled': isSubmitDisabled }" style="margin-top: 20px;">
+                        <button type="submit" class="learn-more-button light-blue" :disabled="isDisabled"
+                            :class="{  'button': true, 'disabled': isDisabled }" style="margin-top: 20px;">
                             Submit
                         </button>
                     </div>
@@ -275,6 +278,11 @@ h1 {
         .messageBox {
             min-height: 90px;
         }
+    }
+
+    .button.disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
     }
 
     .learn-more-button {

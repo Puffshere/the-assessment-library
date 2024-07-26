@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <button type="submit" class="white rise-on-scroll" :disabled="isDisabled"
-                        :class="{ 'disabled': isDisabled }">
+                        :class="{  'button': true, 'disabled': isDisabled }">
                             Submit
                         </button>
                     </div>

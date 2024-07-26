@@ -62,7 +62,7 @@
                 <div class="row">
                     <div class="col-12">
                         <button type="submit" class="white" :disabled="isDisabled"
-                        :class="{ 'disabled': isDisabled }">
+                        :class="{  'button': true, 'disabled': isDisabled }">
                             Submit
                         </button>
                     </div>
