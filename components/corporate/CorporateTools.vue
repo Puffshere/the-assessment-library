@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <section class="corporate-tools" id="corporateTools">
         <div class="container">
             <div class="row">
@@ -122,4 +122,4 @@ p {
         background-color: white;
     }
 }
-</style>
+</style> -->
