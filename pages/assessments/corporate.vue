@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <section>
         <LazyHydrate when-visible><main-nav class="nav"></main-nav></LazyHydrate>
         <LazyHydrate when-visible>
@@ -51,4 +51,4 @@ export default {
         }
     }
 }
-</script>
+</script> -->
