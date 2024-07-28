@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <section class="hero-fold">
         <div class="container">
             <div class="row">
@@ -129,4 +129,4 @@ h5 {
     font-weight: 700;
     color: #1f1f1f;
 }
-</style> -->
+</style>
