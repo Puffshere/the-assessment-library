@@ -48,7 +48,6 @@
     "mock-aws-s3": "^4.0.2",
     "moment": "^2.29.1",
     "mongoose": "^5.12.7",
-    "mongoose-double": "0.0.1",
     "multer": "^1.4.3",
     "net": "^1.0.2",
     "nock": "^13.5.1",
