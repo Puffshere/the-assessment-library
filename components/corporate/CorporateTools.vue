@@ -70,34 +70,10 @@ export default {
     }
 }
 
-section {
-    background: url('~assets/corporate/blue-light-background.png');
-    background-size: cover;
-}
-
-.col-12.button-container {
-    display: flex;
-    justify-content: center;
-}
-
 h1 {
     font-size: 48px;
     line-height: 48px;
     font-weight: 700;
-}
-
-h2 {
-    font-size: 32px;
-    line-height: 38px;
-    font-weight: 400;
-    color: #1f1f1f;
-}
-
-h5 {
-    font-size: 18.6666px;
-    line-height: 26px;
-    font-weight: 700;
-    color: #1f1f1f;
 }
 
 p {
@@ -115,7 +91,6 @@ p {
     color: white;
     border: 1px solid #00a8ff;
     float: right;
-
 
     &:hover {
         color: #00a8ff;

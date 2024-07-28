@@ -1,9 +1,9 @@
 <template>
     <section>
         <LazyHydrate when-visible><main-nav class="nav"></main-nav></LazyHydrate>
-        <LazyHydrate when-visible>
+        <!-- <LazyHydrate when-visible>
             <hero></hero>
-        </LazyHydrate>
+        </LazyHydrate> -->
         <LazyHydrate when-visible><stats-top></stats-top></LazyHydrate>
         <!-- <LazyHydrate when-visible>
             <tools></tools>
@@ -18,7 +18,7 @@
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
 import Nav from '@/components/Nav';
-import Hero from '@/components/corporate/CorporateHero';
+// import Hero from '@/components/corporate/CorporateHero';
 import StatsTop from '@/components/corporate/CorporateStatsTop';
 // import Tools from '@/components/corporate/CorporateTools';
 import ClientLogos from '@/components/ClientLogos';
@@ -30,7 +30,7 @@ export default {
     components: {
         LazyHydrate,
         'main-nav': Nav,
-        'hero': Hero,
+        // 'hero': Hero,
         'stats-top': StatsTop,
         // 'tools': Tools,
         'client-logos': ClientLogos,
