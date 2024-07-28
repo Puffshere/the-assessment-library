@@ -104,7 +104,6 @@ export default {
     color: white;
     border: 1px solid #1e222d;
 
-
     &:hover {
         color: #1e222d;
         background-color: white;

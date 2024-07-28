@@ -71,7 +71,7 @@ export default {
 }
 
 section {
-    background: url('~assets/coaches-disc-certification/blue-geo-background.png');
+    background: url('~assets/corporate/blue-light-background.png');
     background-size: cover;
 }
 
