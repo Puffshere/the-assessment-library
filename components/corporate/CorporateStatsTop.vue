@@ -6,25 +6,25 @@
                     <div class="col-3">
                         <p><span class="topLine">20+</span> <br />
                             <span class="bottomLine">Years in <br />
-                            Business</span>
+                                Business</span>
                         </p>
                     </div>
                     <div class="col-3">
                         <p><span class="topLine">25+</span> <br />
                             <span class="bottomLine">Assessment <br />
-                            Languages</span>
+                                Languages</span>
                         </p>
                     </div>
                     <div class="col-3">
                         <p><span class="topLine">50+</span> <br />
                             <span class="bottomLine">Supporting <br />
-                            Assessments</span>
+                                Assessments</span>
                         </p>
                     </div>
                     <div class="col-3">
                         <p><span class="topLine">34M+</span> <br />
                             <span class="bottomLine">Assessments <br />
-                            Completed</span>
+                                Completed</span>
                         </p>
                     </div>
                 </div>

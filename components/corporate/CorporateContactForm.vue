@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <button type="submit" class="learn-more-button light-blue" :disabled="isDisabled"
-                            :class="{  'button': true, 'disabled': isDisabled }" style="margin-top: 20px;">
+                            :class="{ 'button': true, 'disabled': isDisabled }" style="margin-top: 20px;">
                             Submit
                         </button>
                     </div>
@@ -125,10 +125,9 @@ export default {
             this.isDisabled = true;
             this.loading = true;
 
-            // Split the name input into firstName and lastName
             const names = this.form.name.split(' ');
             this.form.firstName = names[0];
-            this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+            this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : '';
 
             try {
                 const salesPerson = await axios.get('/api/lead/next-assignment');
@@ -291,7 +290,7 @@ h1 {
         border-radius: 40px;
         border: none;
         font-size: 18.6px;
-        line-height: 30px;
+        line-height: 18.6px;
         font-weight: 600;
         cursor: pointer;
 

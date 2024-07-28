@@ -6,25 +6,25 @@
                     <div class="col-3">
                         <p><span class="topLine">10 min</span> <br />
                             <span class="bottomLine">Avg DISC <br />
-                            completion time</span>
+                                completion time</span>
                         </p>
                     </div>
                     <div class="col-3">
                         <p><span class="topLine">7+</span> <br />
                             <span class="bottomLine">Free Team <br />
-                            Reports</span>
+                                Reports</span>
                         </p>
                     </div>
                     <div class="col-3">
                         <p><span class="topLine">360°</span> <br />
                             <span class="bottomLine">Assessment <br />
-                            options</span>
+                                options</span>
                         </p>
                     </div>
                     <div class="col-3">
                         <p><span class="topLine">ASI</span> <br />
                             <span class="bottomLine">Validated & <br />
-                            Compliant</span>
+                                Compliant</span>
                         </p>
                     </div>
                 </div>
