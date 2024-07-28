@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <section class="form" id="corporateContactForm">
         <div class="container flex-container" id="form">
             <div class="row flex-container">
@@ -306,4 +306,4 @@ h1 {
         }
     }
 }
-</style>
+</style> -->

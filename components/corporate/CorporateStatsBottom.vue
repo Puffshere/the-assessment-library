@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <section id="corporateStatsBottom">
         <div class="container">
             <div class="row">
@@ -86,4 +86,4 @@
 section {
     background-color: #0595eb;
 }
-</style>
+</style> -->
