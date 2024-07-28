@@ -24,7 +24,7 @@ import StatsTop from '@/components/corporate/CorporateStatsTop';
 import Tools from '@/components/corporate/CorporateTools';
 import ClientLogos from '@/components/ClientLogos';
 import StatsBottom from '@/components/corporate/CorporateStatsBottom';
-import ContactForm from '@/components/corporate/CorporateContactForm'
+import ContactForm from '@/components/corporate/CorporateContactForm';
 import Footer from '@/components/Footer';
 
 export default {
