@@ -5,3 +5,9 @@ log/
 test/
 spec/
 docs/
+*.md
+*.log
+.DS_Store
+coverage/
+.env
+.vscode/
