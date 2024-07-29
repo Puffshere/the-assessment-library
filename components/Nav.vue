@@ -34,8 +34,6 @@
 
                                 <div class="phone-number">
                                     <a class="hyperlink light" style="text-align: center" href="tel:+12064006647">+1 (206) 400-6647</a>
-                                    <!-- <a class="hyperlink light" href="`tel:${formattedPhoneNumber}`">{{
-                                        formattedPhoneNumber }}</a> -->
                                 </div>
                             </div>
                         </div>
@@ -394,7 +392,6 @@ export default {
     },
     data() {
         return {
-            rawPhoneNumber: '++1 (206) 400-6647', // Example initial value
             showMobileMenu: false,
             hover: {
                 assessments: false,
@@ -436,10 +433,7 @@ export default {
     computed: {
         ...mapGetters({
             cartTotalProducts: 'cart/getNumberOfCartItems'
-        }),
-        formattedPhoneNumber() {
-            return this.rawPhoneNumber.replace(/^(\+*)/, '+');
-        }
+        })
     }
 }
 </script>

@@ -121,17 +121,11 @@ export default {
     data() {
         return {
             hidden: false,
-            rawPhoneNumber: '++1 (206) 400-6647', // Example initial value
         }
     },
     created() {
         if (this.$route.query.noframe) {
             this.hidden = true;
-        }
-    },
-    computed: {
-        formattedPhoneNumber() {
-            return this.rawPhoneNumber.replace(/^(\+*)/, '+');
         }
     }
 }

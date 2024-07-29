@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <section class="hero-fold">
         <div class="container">
             <div class="row">
@@ -14,13 +14,13 @@
                         leadership & drive organizational success.
                     </h2>
                     <h5 style="font-style: italic;">
-                        <img src="~/assets/corporate/blue-arrow-icon.png" alt="blue arrow"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png" alt="blue arrow"
                             style="width: 20px; margin-right: 10px; margin-top: -3px;">Global Leader in Assessment
                         Technology <br />
-                        <img src="~/assets/corporate/blue-arrow-icon.png" alt="blue arrow"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png" alt="blue arrow"
                             style="width: 20px; margin-right: 10px; margin-top: -3px;">Powerful Platform with
                         seamless integration <br />
-                        <img src="~/assets/corporate/blue-arrow-icon.png" alt="blue arrow"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png" alt="blue arrow"
                             style="width: 20px; margin-right: 10px; margin-top: -3px;">ASI Validated, Reliable, and
                         Compliant
                     </h5>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <img src="~/assets/corporate/group-standing-graphic.png" alt="group of people smiling image"
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/group-standing-graphic.png" alt="group of people smiling image"
                         class="groupSmiling" />
                 </div>
             </div>
@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero-fold {
-    background-image: url("~assets/corporate/white-textured-background.png");
+    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/white-textured-background.png");
 
 }
 
@@ -76,7 +76,7 @@ export default {
 }
 
 .circle {
-    background-image: url("~assets/corporate/light-blue-circle-background.png");
+    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/light-blue-circle-background.png");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
@@ -129,4 +129,4 @@ h5 {
     font-weight: 700;
     color: #1f1f1f;
 }
-</style> -->
+</style>
