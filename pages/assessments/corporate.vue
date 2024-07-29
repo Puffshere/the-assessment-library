@@ -10,6 +10,7 @@
         </LazyHydrate>
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
         <LazyHydrate when-visible><stats-bottom></stats-bottom></LazyHydrate>
+        <LazyHydrate when-visible><dynamic-tools></dynamic-tools></LazyHydrate>
         <LazyHydrate when-visible><contact-form></contact-form></LazyHydrate>
         <LazyHydrate when-visible><footer-fold class="foot"></footer-fold></LazyHydrate>
     </section>
@@ -23,6 +24,7 @@ import StatsTop from '@/components/corporate/CorporateStatsTop';
 import Tools from '@/components/corporate/CorporateTools';
 import ClientLogos from '@/components/ClientLogos';
 import StatsBottom from '@/components/corporate/CorporateStatsBottom';
+import DynamicTools from '@/components/corporate/CorporateDynamicTools';
 import ContactForm from '@/components/corporate/CorporateContactForm';
 import Footer from '@/components/Footer';
 
@@ -35,6 +37,7 @@ export default {
         'tools': Tools,
         'client-logos': ClientLogos,
         'stats-bottom': StatsBottom,
+        'dynamic-tools': DynamicTools,
         'contact-form': ContactForm,
         'footer-fold': Footer
     },
