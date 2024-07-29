@@ -62,7 +62,7 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
-        },
+        }
     }
 }
 </script>
@@ -70,7 +70,6 @@ export default {
 <style lang="scss" scoped>
 .hero-fold {
     background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/white-textured-background.png");
-
 }
 
 .container {

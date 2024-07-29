@@ -33,10 +33,6 @@
     </section>
 </template>
 
-<script>
-
-</script>
-
 <style scoped>
 .container {
     padding-top: 40px;

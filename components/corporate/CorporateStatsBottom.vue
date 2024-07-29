@@ -33,10 +33,6 @@
     </section>
 </template>
 
-<script>
-
-</script>
-
 <style scoped>
 .container {
     padding-top: 40px;
@@ -81,7 +77,6 @@
     width: 45%;
     margin-bottom: 2px;
 }
-
 
 section {
     background-color: #0595eb;

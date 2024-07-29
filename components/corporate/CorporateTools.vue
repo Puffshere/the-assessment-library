@@ -8,8 +8,8 @@
                         for <span style="color: #00a8ff;">Organizational Success</span>
                     </h1>
                     <div style="position: relative;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/coworkers-graphic.png" alt="coworkers smiling"
-                            class="workersSmiling">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/coworkers-graphic.png"
+                            alt="coworkers smiling" class="workersSmiling">
                     </div>
                     <p style="max-width: 560px; float: right;">
                         Our globally recognized DISC Assessment Technology offers turnkey and customizable reports for
