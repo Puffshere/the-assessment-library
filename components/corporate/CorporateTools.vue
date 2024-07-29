@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <section class="corporate-tools" id="corporateTools">
         <div class="container">
             <div class="row">
@@ -8,7 +8,7 @@
                         for <span style="color: #00a8ff;">Organizational Success</span>
                     </h1>
                     <div style="position: relative;">
-                        <img src="~/assets/corporate/coworkers-graphic.png" alt="coworkers smiling"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/coworkers-graphic.png" alt="coworkers smiling"
                             class="workersSmiling">
                     </div>
                     <p style="max-width: 560px; float: right;">
@@ -43,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .corporate-tools {
-    background-image: url("~assets/corporate/blue-light-background.png");
+    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-light-background.png");
     width: 100%;
 }
 
@@ -97,4 +97,4 @@ p {
         background-color: white;
     }
 }
-</style> -->
+</style>
