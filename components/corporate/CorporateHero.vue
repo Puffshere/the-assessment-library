@@ -14,14 +14,17 @@
                         leadership & drive organizational success.
                     </h2>
                     <h5 style="font-style: italic;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png" alt="blue arrow"
-                            style="width: 20px; margin-right: 10px; margin-top: -3px;">Global Leader in Assessment
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png"
+                            alt="blue arrow" style="width: 20px; margin-right: 10px; margin-top: -3px;">Global Leader in
+                        Assessment
                         Technology <br />
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png" alt="blue arrow"
-                            style="width: 20px; margin-right: 10px; margin-top: -3px;">Powerful Platform with
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png"
+                            alt="blue arrow" style="width: 20px; margin-right: 10px; margin-top: -3px;">Powerful
+                        Platform with
                         seamless integration <br />
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png" alt="blue arrow"
-                            style="width: 20px; margin-right: 10px; margin-top: -3px;">ASI Validated, Reliable, and
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png"
+                            alt="blue arrow" style="width: 20px; margin-right: 10px; margin-top: -3px;">ASI Validated,
+                        Reliable, and
                         Compliant
                     </h5>
                     <div class="row" style="margin-bottom: 40px;">
@@ -34,8 +37,8 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/group-standing-graphic.png" alt="group of people smiling image"
-                        class="groupSmiling" />
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/group-standing-graphic.png"
+                        alt="group of people smiling image" class="groupSmiling" />
                 </div>
             </div>
         </div>
@@ -89,9 +92,10 @@ export default {
 }
 
 .groupSmiling {
-    width: 100%;
+    width: 500px;
     position: relative;
-    bottom: 0px;
+    bottom: -197px;
+    right: 100px;
 }
 
 .button {

@@ -31,25 +31,23 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="card" style="background-color: white; color: black;">
+            <div class="custom-row">
+                <div class="custom-col">
+                    <div class="custom-card" style="background-color: white; color: black;">
                         <p>Say goodbye to hours of prep. Our DISC Resources Library offers trainer materials, debrief
                             guides, presentations, and more. Less stress, more success.</p>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="card" style="background-color: #00a8ff; color: white;">
+                <div class="custom-col">
+                    <div class="custom-card" style="background-color: #00a8ff; color: white;">
                         <p>Need help? We've got you covered. Our support team is ready to assist with troubleshooting
-                            and
-                            training. Your success is our mission.</p>
+                            and training. Your success is our mission.</p>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="card" style="background-color: white; color: black;">
+                <div class="custom-col">
+                    <div class="custom-card" style="background-color: white; color: black;">
                         <p>With 20+ years in the game and millions of assessments completed, we know what works. Trusted
-                            by
-                            thousands of organizations globally, we bring the expertise to elevate your organization.
+                            by thousands of organizations globally, we bring the expertise to elevate your organization.
                         </p>
                     </div>
                 </div>
@@ -155,5 +153,31 @@ p {
         color: #00a8ff;
         background-color: white;
     }
+}
+
+.custom-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.custom-col {
+    flex: 0 0 auto;
+}
+
+.custom-card {
+    width: 256px;
+    height: 315px;
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.custom-row .custom-col:first-child {
+    margin-right: 20px;
+}
+
+.custom-row .custom-col:last-child {
+    margin-left: 20px;
 }
 </style>
