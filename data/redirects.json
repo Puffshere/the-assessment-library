@@ -558,5 +558,17 @@
     {
         "from": "/blog/emotional-intelligence-in-conflict//1000",
         "to": "/blog/emotional-intelligence-in-conflict"
+    },
+    {
+        "from": "/pdfs/Dealing%20With%20Conflict%20Sampl",
+        "to": "/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf"
+    },
+    {
+        "from": "/pdfs/Dealing%20With%20Conflict%20Sample",
+        "to": "/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf"
+    },
+    {
+        "from": "/validity/Values%20Validity-Research.pdf",
+        "to": "/about/validity"
     }
 ]
