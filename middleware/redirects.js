@@ -122,10 +122,6 @@ export default function (context) {
             context.redirect('https://hiresense.com');
         }
 
-        // else if (context.req.url == '/store') {
-        //     context.redirect('https://store.assessments24x7.com');
-        // }
-
         else if (context.req.url == '/hiring-and-selection-assessments.asp') {
             context.redirect('https://hiresense.com');
         }
@@ -170,6 +166,13 @@ export default function (context) {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7+DISCcert+Webinar+.pdf');
         }
 
+        else if (context.req.url == '/pdfs/Dealing%20With%20Conflict%20Sampl') {
+            context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
+        }
+        else if (context.req.url == '/pdfs/Dealing%20With%20Conflict%20Sample') {
+            context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
+        }
+        
         else if (context.req.url.match(/(\/reports\/)[\w- ]+\.pdf/gi)) {
             context.redirect('https://www.assessments24x7.com/sample-reports');
         }
