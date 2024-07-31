@@ -166,6 +166,10 @@ export default function (context) {
             context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/webinars/A24x7+DISCcert+Webinar+.pdf');
         }
 
+        else if (context.req.url == '/certifications/directory/www.radicalsparkcoaching.com') {
+            context.redirect('/certifications/directory/coaches');
+        }
+
         else if (context.req.url == '/pdfs/Dealing%20With%20Conflict%20Sampl') {
             context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
         }

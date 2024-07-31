@@ -27,7 +27,6 @@
                 </div>
             </div>
         </div>
-        <div class="circle"></div>
     </section>
 </template>
 
@@ -91,10 +90,4 @@ p {
     color: white;
 }
 
-h5 {
-    font-size: 18.6666px;
-    line-height: 26px;
-    font-weight: 700;
-    color: #1f1f1f;
-}
 </style>
