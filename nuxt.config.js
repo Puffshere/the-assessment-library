@@ -96,6 +96,10 @@ module.exports = {
   ],
   robots: {
     UserAgent: '*',
+    Disallow: [
+      '/_nuxt/',
+      '/.well-known/'
+    ],
     Sitemap: 'https://www.assessments24x7.com/sitemap.xml'
   },
   sitemap: {
