@@ -13,21 +13,19 @@
                 </h1>
             </div>
             <div class="custom-row">
-                <div class="custom-col">
-                    <div class="custom-card" style="background-color: #00a8ff; color: white;">
-                        <h2 style="text-decoration: underline; margin-top: 60px;">
-                            Small Assessment Purchase of Any Variety
-                        </h2>
-                        <h3>
-                            Tailored to your specific needs.
-                        </h3>
-                        <h2 style="text-decoration: underline; margin-top: 60px;">
-                            Purchase 1 Assessment Certification
-                        </h2>
-                        <h3>
-                            Equip your teams with the skills they need.
-                        </h3>
-                    </div>
+                <div class="card" style="background-color: #00a8ff; color: white;">
+                    <h2 style="text-decoration: underline; margin-top: 60px;">
+                        Small Assessment Purchase of Any Variety
+                    </h2>
+                    <h3>
+                        Tailored to your specific needs.
+                    </h3>
+                    <h2 style="text-decoration: underline; margin-top: 60px;">
+                        Purchase 1 Assessment Certification
+                    </h2>
+                    <h3>
+                        Equip your teams with the skills they need.
+                    </h3>
                 </div>
             </div>
             <div class="row button-container">
@@ -75,14 +73,6 @@ export default {
 .container {
     padding-top: 60px;
     padding-bottom: 80px;
-}
-
-.card {
-    width: 256px;
-    height: 315px;
-    border-radius: 20px;
-    padding: 5px 5px;
-    text-align: center;
 }
 
 h1 {
@@ -138,16 +128,11 @@ h3 {
     margin-top: -30px;
 }
 
-.custom-col {
-    flex: 0 0 auto;
-}
-
-.custom-card {
+.card {
     width: 1000px;
     height: 315px;
     border-radius: 30px;
     padding: 5px;
     text-align: center;
 }
-
 </style>
