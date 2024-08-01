@@ -361,6 +361,54 @@ Contact us today to open an account and tap into the power of assessment technol
 
 #DISCAwareness #EmotionalIntelligence #IntegratedAssessment #CommunicationSkills #SelfAwareness #HolisticPersonality #DISC #DISCProfile #Assessment24x7`,
                     postCategory: 'Promotional'
+                },
+                {
+                    id: 16,
+                    title: '25+ Languages',
+                    canvaLink: 'https://www.canva.com/design/DAGHxCcz3Fk/V_lrx6cTOkqUjmTG5cOYCw/view?utm_content=DAGHxCcz3Fk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/72TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `🌍 DISC Assessment in 25+ Languages! 🌍 We are proud to offer our hashtag#DISC assessment in over 25 languages, helping millions worldwide better understand their communication styles. Whether you're aiming to enhance team dynamics, improve leadership skills, or foster personal growth, our hashtag#multilingual DISC assessment is your gateway to success.
+Ready to unleash the power of our Assessment Technology? Connect with us today to learn how you can open an account. Be sure to ask about our private labeling and hashtag#API capabilities. `,
+                    postCategory: 'Promotional'
+                },
+                {
+                    id: 17,
+                    title: 'DISC Workplace Insights',
+                    canvaLink: 'https://www.canva.com/design/DAGJDmBrDK8/6_Xg_qgA2JRg6IGiFfm6lQ/view?utm_content=DAGJDmBrDK8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/73TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `🌟 Transform Your HR Management with One of Our Newest Assessments! 🌟
+Fresh from our showcase last week at hashtag#SHRM 2024, the hashtag#DISC Workplace Insights Report merges DISC with Critical Thinking (HVP) to redefine how you manage and develop your team. This innovative approach examines key factors like collaboration, stress response, and accountability, providing hashtag#HR professionals and hashtag#managers with essential insights to elevate your workforce. 🔄📈
+Optimize your team configuration, enhance hashtag#recruitment precision, and design targeted development programs. It’s time to elevate your workplace dynamics and achieve operational excellence.
+🔗 Discover the impact of the DISC Workplace Insights: https://lnkd.in/eMhdHEgz
+
+hashtag#SHRM24 hashtag#HRInnovation hashtag#TeamDynamics hashtag#DISCProfile hashtag#DISCinsights hashtag#Criticalthinking hashtag#HireSmart hashtag#Assessments24x7`,
+                    postCategory: 'Promotional'
+                },
+                {
+                    id: 18,
+                    title: 'DISC Executive Insights',
+                    canvaLink: 'https://www.canva.com/design/DAGJinKmhjY/V2Tp5ujk1uh5jsn50pEcxg/view?utm_content=DAGJinKmhjY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/74TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Video',
+                    instaPostAs: 'Video',
+                    ctaLink: '',
+                    caption: `🌟 Discover Leadership Excellence with another recent Assessment Release! 🌟
+Introducing the DISC Executive Insights Report, a comprehensive tool we featured at hashtag#SHRM 2024! This report merges hashtag#DISC, hashtag#Motivators, and Critical Thinking (HVP) to provide an in-depth analysis tailored for executives and leaders. 📊🤝
+
+Gain greater insights into your self-awareness, enhance your communication skills, and develop strategic plans that align with your leadership approach. Elevate your organizational influence and reach for new levels of success. 
+🔗 Explore how the DISC Executive Insights can enhance your leadership journey: 🔗 https://lnkd.in/eAchQvdd
+
+hashtag#SHRM24 hashtag#LeadershipDevelopment hashtag#DISCInsights hashtag#DISCProfile hashtag#Assessments24x7`,
+                    postCategory: 'Promotional'
                 }
             ]
         };

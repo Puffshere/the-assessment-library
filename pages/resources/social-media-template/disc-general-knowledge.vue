@@ -10,7 +10,8 @@
                             <p class="titleText">
                                 Utilize these branded Social Media templates in Canva to customize within your Canva Pro
                                 Accounts for sharing on social media. Please be aware that the additional information is
-                                provided exclusively for branding and language guidance; refrain from copying it verbatim.
+                                provided exclusively for branding and language guidance; refrain from copying it
+                                verbatim.
                             </p>
                         </div>
                     </div>
@@ -421,6 +422,21 @@ If you find these posts helpful, give that like button a tap, Share this post, a
                     instaPostAs: 'Image',
                     ctaLink: '',
                     caption: `Facts👆Did you know this? Let us know in the poll. #DISC #BehavioralAssessment #ProfessionalDevelopment #ContinuedEdcuation #OngoingLearning #DISCProfile #Assessments24x7`,
+                    postCategory: 'DISC: General Knowledge'
+                },
+                {
+                    id: 20,
+                    title: 'DISC & Wonder Woman Post',
+                    canvaLink: 'https://www.canva.com/design/DAGLISRLMBo/GzAk5A5WTGZjAkRyRb1zNw/view?utm_content=DAGLISRLMBo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/77TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Document',
+                    instaPostAs: 'Multiple Images',
+                    ctaLink: '',
+                    caption: `DISC & Wonder Woman..... What do they have in common?
+Drop us a comment to let us know if this was a surprise to you or not. 👊
+
+hashtag#LeadershipDevelopment hashtag#Psychology hashtag#HumanResources hashtag#BehavioralInsights hashtag#WonderWoman hashtag#InnovationInHR hashtag#CareerDevelopment hashtag#ProfessionalGrowth hashtag#LearningAndDevelopment hashtag#CorporateTraining hashtag#Assessment24x7 hashtag#DISC hashtag#DISCprofile`,
                     postCategory: 'DISC: General Knowledge'
                 }
             ]

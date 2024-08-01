@@ -10,7 +10,8 @@
                             <p class="titleText">
                                 Utilize these branded Social Media templates in Canva to customize within your Canva Pro
                                 Accounts for sharing on social media. Please be aware that the additional information is
-                                provided exclusively for branding and language guidance; refrain from copying it verbatim.
+                                provided exclusively for branding and language guidance; refrain from copying it
+                                verbatim.
                             </p>
                         </div>
                     </div>
@@ -206,6 +207,38 @@ Check out our blog on Platinum Rules for Success, as Dr. Tony Alessandra dives i
 Like and share this post to inspire others to achieve success with the Five C’s!
 
 #MondayMotivation #ExecuteYourPlan #StayFocused #Share #Smartgoals #Excellence #Commitment #Growthmindset #Assessments24x7`,
+                    postCategory: 'Educational'
+                },
+                {
+                    id: 7,
+                    title: 'World Listening Day Post',
+                    canvaLink: 'https://www.canva.com/design/DAGLCm08MLY/1O3Ga58iPSyhpPGqtwLJaw/view?utm_content=DAGLCm08MLY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/75TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `🌍 Today we Celebrate World Listening Day! 🎧
+Listening can be a powerful key to solving day-to-day business challenges, boosting productivity, and more... However effective listening is about true understanding and engagement. Check out our latest blog which has 17 essential listening tips to enhance that you can start practicing today to elevate your listening skills. 🔗🔗https://lnkd.in/eAHT2fjR
+
+👂And let’s amplify the impact together—share this post and inspire your team to master the art of listening!
+
+hashtag#WorldListeningDay hashtag#EffectiveListening hashtag#BusinessSuccess hashtag#Assessments24x7`,
+                    postCategory: 'Educational'
+                },
+                {
+                    id: 8,
+                    title: 'DISC World Map',
+                    canvaLink: 'https://www.canva.com/design/DAGJ5NX_GSA/wJsSsQDyh7mo4t0-Z7i6EA/view?utm_content=DAGJ5NX_GSA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+                    imageUrl: 'https://cdn.assessments24x7.com/file/assessments24x7-media/social-media-templates/76TemplateImage.png',
+                    templateSize: '1200 x 1200',
+                    linkedPostAs: 'Image',
+                    instaPostAs: 'Image',
+                    ctaLink: '',
+                    caption: `🌍 Discover DISC Styles Around the World! 🌍
+One of the results of offering DISC assessments in many languages has been the development of our recently updated DISC Around The World map, showing the percentage of each DISC behavioral style by region based on respondent language. Check it out to see how your DISC Style compares to the others in your geographic area 👉 👉👉https://lnkd.in/eUBNRWY6
+
+hashtag#DISCProfile hashtag#DISC hashtag#DISCStyles hashtag#SelfAwareness hashtag#LeadershipDevelopment hashtag#Teambuilding hashtag#Hiring hashtag#Businessdevelopment hashtag#Assessments24x7`,
                     postCategory: 'Educational'
                 }
             ]
