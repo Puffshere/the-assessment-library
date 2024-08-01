@@ -14,15 +14,23 @@
             </div>
             <div class="custom-row">
                 <div class="card" style="background-color: #00a8ff; color: white;">
-                    <h2 style="text-decoration: underline; margin-top: 60px;">
-                        Small Assessment Purchase of Any Variety
-                    </h2>
-                    <h3>
-                        Tailored to your specific needs.
-                    </h3>
+                    <div>
+                        <h2 style="text-decoration: underline; margin-top: 60px;">
+                            Small Assessment Purchase of Any Variety
+                        </h2>
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/slider-button-image.png"
+                            alt="slider button image"
+                            style="width: 100px; float: right; margin-top: -60px; margin-right: 40px;">
+                        <h3>
+                            Tailored to your specific needs.
+                        </h3>
+                    </div>
                     <h2 style="text-decoration: underline; margin-top: 60px;">
                         Purchase 1 Assessment Certification
                     </h2>
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/slider-button-image.png"
+                        alt="slider button image"
+                        style="width: 100px; float: right; margin-top: -60px; margin-right: 40px;">
                     <h3>
                         Equip your teams with the skills they need.
                     </h3>

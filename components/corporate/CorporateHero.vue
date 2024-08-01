@@ -15,19 +15,19 @@
                     </h2>
                     <h5 style="font-style: italic;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png"
-                            alt="blue arrow" style="width: 20px; margin-right: 10px; margin-top: -3px;">Global Leader in
+                            alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">Global Leader in
                         Assessment
                         Technology <br />
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png"
-                            alt="blue arrow" style="width: 20px; margin-right: 10px; margin-top: -3px;">Powerful
+                            alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">Powerful
                         Platform with
                         seamless integration <br />
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png"
-                            alt="blue arrow" style="width: 20px; margin-right: 10px; margin-top: -3px;">ASI Validated,
+                            alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">ASI Validated,
                         Reliable, and
                         Compliant
                     </h5>
-                    <div class="row" style="margin-bottom: 40px;">
+                    <div class="row" style="margin-bottom: 40px; margin-top: 36px;">
                         <button class="button" @click="scrollToTools">
                             <span>Learn More</span>
                         </button>
@@ -85,16 +85,16 @@ export default {
     width: 1000px;
     height: 600px;
     position: absolute;
-    top: 115px;
+    top: 93px;
     right: 0;
     z-index: 1;
 }
 
 .groupSmiling {
-    width: 500px;
+    width: 600px;
     position: relative;
-    bottom: -197px;
-    right: 100px;
+    bottom: -106px;
+    right: 140px;
 }
 
 .button {
@@ -120,14 +120,15 @@ h1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 38px;
     font-weight: 400;
     color: #1f1f1f;
+    margin-top: -20px;
 }
 
 h5 {
-    font-size: 18.6666px;
+    font-size: 13.6666px;
     line-height: 26px;
     font-weight: 700;
     color: #1f1f1f;

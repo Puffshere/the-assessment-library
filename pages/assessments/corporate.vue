@@ -11,6 +11,7 @@
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
         <LazyHydrate when-visible><stats-bottom></stats-bottom></LazyHydrate>
         <LazyHydrate when-visible><dynamic-tools></dynamic-tools></LazyHydrate>
+        <LazyHydrate when-visible><testimonials></testimonials></LazyHydrate>
         <LazyHydrate when-visible><start-using></start-using></LazyHydrate>
         <LazyHydrate when-visible><discover-assessments></discover-assessments></LazyHydrate>
         <LazyHydrate when-visible><contact-form></contact-form></LazyHydrate>
@@ -27,10 +28,12 @@ import Tools from '@/components/corporate/CorporateTools';
 import ClientLogos from '@/components/ClientLogos';
 import StatsBottom from '@/components/corporate/CorporateStatsBottom';
 import DynamicTools from '@/components/corporate/CorporateDynamicTools';
+import Testimonials from '@/components/corporate/CorporateTestimonials';
 import StartUsing from '@/components/corporate/CorporateStartUsing';
 import DiscoverAssessments from '@/components/corporate/CorporateDiscoverAssessments';
 import ContactForm from '@/components/corporate/CorporateContactForm';
 import Footer from '@/components/Footer';
+
 
 export default {
     components: {
@@ -42,12 +45,14 @@ export default {
         'client-logos': ClientLogos,
         'stats-bottom': StatsBottom,
         'dynamic-tools': DynamicTools,
+        'testimonials': Testimonials,
         'start-using': StartUsing,
         'discover-assessments': DiscoverAssessments,
         'contact-form': ContactForm,
         'footer-fold': Footer
     },
     head() {
+        Testimonials
         return {
             title: 'Assessments - Corporate | Assessments 24x7',
             meta: [
