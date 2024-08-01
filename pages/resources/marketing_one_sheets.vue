@@ -182,7 +182,31 @@ export default {
                     title: 'Organizational Development Assessment (download PDF)',
                     url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/5DA-MM.pdf',
                     caption: `There are 5 Disciplines for Exponential Growth that every business must get correct. Learn how your executive team, your departments and your organization sees performance in each of the 5 Disciplines.`,
-                }
+                },
+                {
+                    id: 9,
+                    title: 'DISC Awareness',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+-+Marketing+One-Sheet__.pdf',
+                    caption: ``,
+                },
+                {
+                    id: 10,
+                    title: 'DISC Leadership',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Leadership+-+Marketing+One-Sheet__.pdf',
+                    caption: ``,
+                },
+                {
+                    id: 11,
+                    title: 'DISC Workplace Insights',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Workplace+Insights+-+Marketing+One-Sheet__.pdf',
+                    caption: ``,
+                },
+                {
+                    id: 12,
+                    title: 'DISC Executive Insights',
+                    url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Executive+Insights+-+Marketing+One-Sheet__.pdf',
+                    caption: ``,
+                },
             ]
         };
     },
