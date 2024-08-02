@@ -7,7 +7,7 @@
                         alt="image of a blue circle" style="width: 400px; position: absolute; bottom: 0px;">
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-9-female-standing-image.png"
                         alt="picture of woman smiling"
-                        style="width: 264px; margin-top: 30px; position: relative; bottom: -10px;">
+                        style="width: 264px; margin-top: 31px; position: relative; bottom: -10px;">
                 </div>
                 <div class="col-7" style="margin-left: -24px;">
                     <h1>

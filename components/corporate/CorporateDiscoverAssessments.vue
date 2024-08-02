@@ -52,12 +52,13 @@ export default {
 .container {
     position: relative;
     z-index: 2;
+    height: 605px;
 }
 
 .groupSmiling {
     width: 550px;
     position: relative;
-    bottom: -169px;
+    bottom: -140px;
     right: 310px;
 }
 

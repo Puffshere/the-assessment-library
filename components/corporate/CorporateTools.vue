@@ -65,7 +65,7 @@ export default {
     .workersSmiling {
         width: 50%;
         position: absolute;
-        top: -40px;
+        top: -41px;
         left: 0px;
     }
 }

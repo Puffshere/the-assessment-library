@@ -9,6 +9,7 @@
             <tools></tools>
         </LazyHydrate>
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
+        <LazyHydrate when-visible><success></success></LazyHydrate>
         <LazyHydrate when-visible><stats-bottom></stats-bottom></LazyHydrate>
         <LazyHydrate when-visible><dynamic-tools></dynamic-tools></LazyHydrate>
         <LazyHydrate when-visible><testimonials></testimonials></LazyHydrate>
@@ -27,6 +28,7 @@ import Hero from '@/components/corporate/CorporateHero';
 import StatsTop from '@/components/corporate/CorporateStatsTop';
 import Tools from '@/components/corporate/CorporateTools';
 import ClientLogos from '@/components/ClientLogos';
+import Success from '@/components/corporate/CorporateSuccess';
 import StatsBottom from '@/components/corporate/CorporateStatsBottom';
 import DynamicTools from '@/components/corporate/CorporateDynamicTools';
 import Testimonials from '@/components/corporate/CorporateTestimonials';
@@ -45,6 +47,7 @@ export default {
         'stats-top': StatsTop,
         'tools': Tools,
         'client-logos': ClientLogos,
+        'success': Success,
         'stats-bottom': StatsBottom,
         'dynamic-tools': DynamicTools,
         'testimonials': Testimonials,
