@@ -27,7 +27,24 @@
                     </button>
                 </div>
                 <div class="col-7">
-
+                    <div class="carousel-wrapper">
+                        <div class="carousel">
+                            <div
+                                v-for="(card, index) in cards"
+                                :key="index"
+                                :class="['carousel-card', { active: activeIndex === index }]"
+                                :style="getCardStyle(index)"
+                            >
+                                <img :src="card.image" alt="Report Image" />
+                            </div>
+                            <div class="carousel-arrow left" @click="rotateLeft">
+                                <span>&laquo;</span>
+                            </div>
+                            <div class="carousel-arrow right" @click="rotateRight">
+                                <span>&raquo;</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -36,6 +53,16 @@
 
 <script>
 export default {
+    data() {
+        return {
+            activeIndex: 0,
+            cards: [
+                { image: 'https://via.placeholder.com/150x200?text=Report+1' },
+                { image: 'https://via.placeholder.com/150x200?text=Report+2' },
+                { image: 'https://via.placeholder.com/150x200?text=Report+3' }
+            ],
+        };
+    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('corporateContactForm');
@@ -43,6 +70,22 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        rotateLeft() {
+            this.activeIndex = (this.activeIndex - 1 + this.cards.length) % this.cards.length;
+        },
+        rotateRight() {
+            this.activeIndex = (this.activeIndex + 1) % this.cards.length;
+        },
+        getCardStyle(index) {
+            const positions = [
+                { transform: 'translateX(-120px) scale(0.8) translateZ(-50px)', zIndex: 0 },
+                { transform: 'translateX(0px) scale(1.2) translateZ(0px)', zIndex: 2 },
+                { transform: 'translateX(120px) scale(0.8) translateZ(-50px)', zIndex: 1 },
+            ];
+
+            const positionIndex = (index - this.activeIndex + this.cards.length) % this.cards.length;
+            return positions[positionIndex];
         }
     }
 }
@@ -51,11 +94,6 @@ export default {
 <style lang="scss" scoped>
 .success-fold {
     background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/white-textured-background.png");
-}
-
-.container {
-    position: relative;
-    z-index: 2;
 }
 
 .button {
@@ -82,14 +120,6 @@ h1 {
     font-weight: 700;
 }
 
-h2 {
-    font-size: 30px;
-    line-height: 38px;
-    font-weight: 400;
-    color: #1f1f1f;
-    margin-top: -20px;
-}
-
 h5 {
     font-size: 18.6666px;
     line-height: 22px;
@@ -102,5 +132,72 @@ p {
     font-size: 16px;
     line-height: 19px;
     margin-bottom: -8px;
+}
+
+.carousel-wrapper {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center center;
+    backface-visibility: hidden;
+    cursor: pointer;
+    
+    &.active {
+        z-index: 2;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #1e222d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.carousel-arrow.left {
+    left: -40px;
+}
+
+.carousel-arrow.right {
+    right: -40px;
 }
 </style>
