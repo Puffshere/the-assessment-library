@@ -12,6 +12,7 @@
         <LazyHydrate when-visible><stats-bottom></stats-bottom></LazyHydrate>
         <LazyHydrate when-visible><dynamic-tools></dynamic-tools></LazyHydrate>
         <LazyHydrate when-visible><testimonials></testimonials></LazyHydrate>
+        <LazyHydrate when-visible><solution></solution></LazyHydrate>
         <LazyHydrate when-visible><start-using></start-using></LazyHydrate>
         <LazyHydrate when-visible><discover-assessments></discover-assessments></LazyHydrate>
         <LazyHydrate when-visible><contact-form></contact-form></LazyHydrate>
@@ -29,6 +30,7 @@ import ClientLogos from '@/components/ClientLogos';
 import StatsBottom from '@/components/corporate/CorporateStatsBottom';
 import DynamicTools from '@/components/corporate/CorporateDynamicTools';
 import Testimonials from '@/components/corporate/CorporateTestimonials';
+import Solutions from '@/components/corporate/CorporateSolutions';
 import StartUsing from '@/components/corporate/CorporateStartUsing';
 import DiscoverAssessments from '@/components/corporate/CorporateDiscoverAssessments';
 import ContactForm from '@/components/corporate/CorporateContactForm';
@@ -46,6 +48,7 @@ export default {
         'stats-bottom': StatsBottom,
         'dynamic-tools': DynamicTools,
         'testimonials': Testimonials,
+        'solution': Solutions,
         'start-using': StartUsing,
         'discover-assessments': DiscoverAssessments,
         'contact-form': ContactForm,
