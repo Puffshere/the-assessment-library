@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <img class="logo" src="~assets/logo-footer.png"
+                    <img class="logo" src="images/logo-footer.png"
                         alt="Assessments 24x7 - Global Leader in Assessment Technology" loading="lazy">
                     <p class="about-text">
                         For 20+ years, we have provided consultants,

@@ -59,7 +59,12 @@ export default {
             cards: [
                 { image: 'https://via.placeholder.com/150x200?text=Report+1' },
                 { image: 'https://via.placeholder.com/150x200?text=Report+2' },
-                { image: 'https://via.placeholder.com/150x200?text=Report+3' }
+                { image: 'https://via.placeholder.com/150x200?text=Report+3' },
+                { image: 'https://via.placeholder.com/150x200?text=Report+4' },
+                { image: 'https://via.placeholder.com/150x200?text=Report+5' },
+                { image: 'https://via.placeholder.com/150x200?text=Report+6' },
+                { image: 'https://via.placeholder.com/150x200?text=Report+7' },
+                { image: 'https://via.placeholder.com/150x200?text=Report+8' }
             ],
         };
     },
@@ -78,14 +83,34 @@ export default {
             this.activeIndex = (this.activeIndex + 1) % this.cards.length;
         },
         getCardStyle(index) {
-            const positions = [
-                { transform: 'translateX(-120px) scale(0.8) translateZ(-50px)', zIndex: 0 },
-                { transform: 'translateX(0px) scale(1.2) translateZ(0px)', zIndex: 2 },
-                { transform: 'translateX(120px) scale(0.8) translateZ(-50px)', zIndex: 1 },
-            ];
+            const totalCards = this.cards.length;
+            const position = (index - this.activeIndex + totalCards) % totalCards;
 
-            const positionIndex = (index - this.activeIndex + this.cards.length) % this.cards.length;
-            return positions[positionIndex];
+            if (position === 0) {
+                return {
+                    transform: 'translateX(-120px) scale(0.8) translateZ(-50px)',
+                    zIndex: 1,
+                    opacity: 1,
+                };
+            } else if (position === 1) {
+                return {
+                    transform: 'translateX(0px) scale(1.2) translateZ(0px)',
+                    zIndex: 2,
+                    opacity: 1,
+                };
+            } else if (position === 2) {
+                return {
+                    transform: 'translateX(120px) scale(0.8) translateZ(-50px)',
+                    zIndex: 1,
+                    opacity: 1,
+                };
+            } else {
+                return {
+                    transform: 'translateX(120px) scale(0.8) translateZ(-50px)',
+                    zIndex: 0,
+                    opacity: 0,
+                };
+            }
         }
     }
 }
@@ -158,13 +183,16 @@ p {
     top: 50%;
     left: 50%;
     transform-style: preserve-3d;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform-origin: center center;
     backface-visibility: hidden;
     cursor: pointer;
-    
+    z-index: 0;
+    opacity: 0;
+
     &.active {
         z-index: 2;
+        opacity: 1;
     }
 
     img {
