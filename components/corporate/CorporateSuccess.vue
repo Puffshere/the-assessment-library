@@ -32,16 +32,15 @@
                             <div v-for="(card, index) in cards" :key="index"
                                 :class="['carousel-card', { active: activeIndex === index }]"
                                 :style="getCardStyle(index)">
-                                <!-- Custom Card -->
                                 <div class="custom-card">
                                     <img :src="card.image" alt="Report Image" />
                                     <div class="card-content">
                                         <h4 style="margin-top: 0px;">{{ card.title }}</h4>
                                         <h5 style="margin-top: -15px;">{{ card.description }}</h5>
                                         <h5 style="margin-top: -20px; margin-bottom: 10px;">{{ card.languages }}</h5>
-                                        <a :href="card.link" target="_blank" rel="noopener" style="cursor: pointer;">
+                                        <a :href="card.link" target="_blank" rel="noopener">
                                             <button
-                                                style="font-size: 12.6667px; font-weight: 700; color: #0033c5; border-radius: 20px; padding: 10px 20px; border: none;">Download
+                                                style="cursor: pointer; font-size: 12.6667px; font-weight: 700; color: #0033c5; border-radius: 20px; padding: 10px 20px; border: none;">Download
                                                 Sample</button>
                                         </a>
 
@@ -208,7 +207,6 @@ p {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     transform-origin: center center;
     backface-visibility: hidden;
-    cursor: pointer;
     z-index: 0;
     opacity: 0;
 
