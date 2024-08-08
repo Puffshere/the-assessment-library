@@ -68,6 +68,7 @@ export default {
         return {
             activeIndex: 0,
             cards: [
+                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCTeamSummarySample-1.png', title: 'DISC Team Summary', description: 'Free Group Report', languages: '25 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf' },
                 { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCSelfSampleReport+(2)-1.png', title: 'DISC Self', description: 'Core Report', languages: '25 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf' },
                 { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Motivators+(1)-1.png', title: 'Motivators', description: 'Core Report', languages: '16 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf' },
                 { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/EIQSampleReport-1.png', title: 'Emotional Intelligence', description: 'Core Report', languages: '9 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf' },
@@ -76,7 +77,6 @@ export default {
                 { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCworkplace-1.png', title: 'DISC Workplace Insights', description: 'Core Report', languages: '1 Language', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCworkplace.pdf' },
                 { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Executive_Insights+(2)-1.png', title: 'DISC Executive Insights', description: 'Core Report', languages: '1 Language', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf' },
                 { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/TeamDynamicsGroupSampleReport+(1)-1.png', title: 'DISC Team Dynamics', description: 'Free Group Report', languages: '25 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf' },
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCTeamSummarySample-1.png', title: 'DISC Team Summary', description: 'Free Group Report', languages: '25 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf' },
             ],
         };
     },
