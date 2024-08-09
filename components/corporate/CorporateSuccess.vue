@@ -7,7 +7,7 @@
                         Our Reports <br />
                         <span style="color: #00a8ff">Your Success</span>
                     </h1>
-                    <h3 style="margin-top: 40px;">
+                    <h3 style="margin-top: 30px;">
                         Uncover Immediate insights that would take <br />
                         years to surface otherwise.
                     </h3>
@@ -32,7 +32,14 @@
                                 :class="['carousel-card', { active: activeIndex === index }]"
                                 :style="getCardStyle(index)">
                                 <div class="custom-card">
-                                    <img :src="card.image" alt="Report Image" />
+                                    <div :class="['card-flip', { 'is-flippable': getFlippableClass(index) }]">
+                                        <div class="card-front">
+                                            <img :src="card.image" alt="Report Image" />
+                                        </div>
+                                        <div class="card-back">
+                                            <img :src="card.backImage" alt="Report Image Backside" />
+                                        </div>
+                                    </div>
                                     <div class="card-content">
                                         <h4 style="margin-top: 0px;">{{ card.title }}</h4>
                                         <h5 style="margin-top: -15px;">{{ card.description }}</h5>
@@ -42,7 +49,6 @@
                                                 style="cursor: pointer; font-size: 12.6667px; font-weight: 700; color: #0033c5; border-radius: 20px; padding: 10px 20px; border: none;">Download
                                                 Sample</button>
                                         </a>
-
                                     </div>
                                 </div>
                             </div>
@@ -66,15 +72,78 @@ export default {
         return {
             activeIndex: 0,
             cards: [
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCTeamSummarySample-1.png', title: 'DISC Team Summary', description: 'Free Group Report', languages: '25 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf' },
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCSelfSampleReport+(2)-1.png', title: 'DISC Self', description: 'Core Report', languages: '25 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf' },
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Motivators+(1)-1.png', title: 'Motivators', description: 'Core Report', languages: '16 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf' },
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/EIQSampleReport-1.png', title: 'Emotional Intelligence', description: 'Core Report', languages: '9 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf' },
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Leadership-1.png', title: 'DISC Leadership', description: 'Core Report', languages: '9 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf' },
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Awareness_(EI)-1.png', title: 'DISC Awareness', description: 'Core Report', languages: '2 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf' },
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCworkplace-1.png', title: 'DISC Workplace Insights', description: 'Core Report', languages: '1 Language', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCworkplace.pdf' },
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Executive_Insights+(2)-1.png', title: 'DISC Executive Insights', description: 'Core Report', languages: '1 Language', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf' },
-                { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/TeamDynamicsGroupSampleReport+(1)-1.png', title: 'DISC Team Dynamics', description: 'Free Group Report', languages: '25 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf' },
+                {
+                    image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCTeamSummarySample-1.png',
+                    backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCTeamSummarySample-2.png',
+                    title: 'DISC Team Summary',
+                    description: 'Free Group Report',
+                    languages: '25 Languages',
+                    link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf'
+                },
+                {
+                    image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCSelfSampleReport+(2)-1.png',
+                    backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCSelfSampleReport+(2)-2.png',
+                    title: 'DISC Self',
+                    description: 'Core Report',
+                    languages: '25 Languages',
+                    link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf'
+                },
+                {
+                    image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Motivators+(1)-1.png',
+                    backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Motivators+(1)-2.png',
+                    title: 'Motivators',
+                    description: 'Core Report',
+                    languages: '16 Languages',
+                    link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf'
+                },
+                {
+                    image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/EIQSampleReport-1.png',
+                    backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/EIQSampleReport-2.png',
+                    title: 'Emotional Intelligence',
+                    description: 'Core Report',
+                    languages: '9 Languages',
+                    link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf'
+                },
+                {
+                    image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Leadership-1.png',
+                    backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Leadership-2.png',
+                    title: 'DISC Leadership',
+                    description: 'Core Report',
+                    languages: '9 Languages',
+                    link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf'
+                },
+                {
+                    image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Awareness_(EI)-1.png',
+                    backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Awareness_(EI)-2.png',
+                    title: 'DISC Awareness',
+                    description: 'Core Report',
+                    languages: '2 Languages',
+                    link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf'
+                },
+                {
+                    image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCworkplace-1.png',
+                    backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCworkplace-2.png',
+                    title: 'DISC Workplace Insights',
+                    description: 'Core Report',
+                    languages: '1 Language',
+                    link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCworkplace.pdf'
+                },
+                {
+                    image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Executive_Insights+(2)-1.png',
+                    backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Executive_Insights+(2)-2.png',
+                    title: 'DISC Executive Insights',
+                    description: 'Core Report',
+                    languages: '1 Language',
+                    link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf'
+                },
+                {
+                    image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/TeamDynamicsGroupSampleReport+(1)-1.png',
+                    backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/TeamDynamicsGroupSampleReport+(1)-2.png',
+                    title: 'DISC Team Dynamics',
+                    description: 'Free Group Report',
+                    languages: '25 Languages',
+                    link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf'
+                }
             ],
             items: [
                 {
@@ -141,6 +210,11 @@ export default {
                     opacity: 0,
                 };
             }
+        },
+        getFlippableClass(index) {
+            const totalCards = this.cards.length;
+            const position = (index - this.activeIndex + totalCards) % totalCards;
+            return position === 1;
         }
     }
 }
@@ -153,7 +227,7 @@ export default {
 
 .container {
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .button {
@@ -235,6 +309,7 @@ p {
     }
 
     .custom-card {
+        position: relative;
         width: 100%;
         height: 100%;
         background-color: black;
@@ -245,40 +320,77 @@ p {
         justify-content: space-between;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         margin-top: -30px;
+        overflow: hidden;
+    }
 
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 10px;
+    .card-flip {
+        perspective: 1000px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-front,
+    .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 0.6s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .card-front {
+        transform: rotateY(0deg);
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .is-flippable:hover .card-front {
+        transform: rotateY(-180deg);
+    }
+
+    .is-flippable:hover .card-back {
+        transform: rotateY(0deg);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card-content {
+        color: white;
+        text-align: center;
+
+        h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
         }
 
-        .card-content {
+        p {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .card-button {
+            background-color: #00a8ff;
             color: white;
-            text-align: center;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
 
-            h3 {
-                margin: 10px 0;
-                font-size: 1.5em;
-            }
-
-            p {
-                margin: 10px 0;
-                font-size: 1em;
-            }
-
-            .card-button {
-                background-color: #00a8ff;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 1em;
-
-                &:hover {
-                    background-color: #007bb5;
-                }
+            &:hover {
+                background-color: #007bb5;
             }
         }
     }
