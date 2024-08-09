@@ -35,8 +35,7 @@
 
 <style scoped>
 .container {
-    padding-top: 40px;
-    padding-bottom: 30px;
+    padding-top: 10px;
 }
 
 .topLine {
@@ -79,6 +78,10 @@
 }
 
 section {
-    background-color: #0595eb;
+    margin: 0px 0 0;
+        padding: 30px 0;
+        background: url('~assets/artifacts/content-bg.webp');
+        background-size: cover !important;
+        background-position: center;
 }
 </style>
