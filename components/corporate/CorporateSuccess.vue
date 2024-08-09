@@ -7,20 +7,19 @@
                         Our Reports <br />
                         <span style="color: #00a8ff">Your Success</span>
                     </h1>
-                    <h3>
+                    <h3 style="margin-top: 40px;">
                         Uncover Immediate insights that would take <br />
                         years to surface otherwise.
                     </h3>
-                    <div style="color: #00a8ff; text-decoration: underline; margin-bottom: 50px;">
-                        <p>
-                            Validated Excellence
-                        </p>
-                        <p>
-                            Total Transparency
-                        </p>
-                        <p>
-                            Top Choice for Professionals
-                        </p>
+                    <div style="color: #00a8ff; margin-bottom: 50px;">
+                        <div v-for="(item, index) in items" :key="index">
+                            <p @click="toggleItem(index)" style="cursor: pointer;">
+                                <span>{{ item.expanded ? '-' : '+' }}</span> {{ item.text }}
+                            </p>
+                            <div v-if="item.expanded" style="margin-left: 20px;">
+                                <p>{{ item.additionalText }}</p>
+                            </div>
+                        </div>
                     </div>
                     <button class="button" @click="scrollToContactForm">
                         <span>Get Started</span>
@@ -77,9 +76,29 @@ export default {
                 { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISC_Executive_Insights+(2)-1.png', title: 'DISC Executive Insights', description: 'Core Report', languages: '1 Language', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf' },
                 { image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/TeamDynamicsGroupSampleReport+(1)-1.png', title: 'DISC Team Dynamics', description: 'Free Group Report', languages: '25 Languages', link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf' },
             ],
+            items: [
+                {
+                    text: 'Validated Excellence',
+                    additionalText: 'Our assessments meet APA, EEOC, AERA, and NCME standards for independent validation.',
+                    expanded: false
+                },
+                {
+                    text: 'Total Transparency',
+                    additionalText: 'Every study\'s report is available for review and sharing, ensuring trust and reliability.',
+                    expanded: false
+                },
+                {
+                    text: 'Top Choice for Leading Organizations',
+                    additionalText: 'Our assessments and reports are the preferred choice for those who value accuracy, compliance, and objectivity.',
+                    expanded: false
+                }
+            ]
         };
     },
     methods: {
+        toggleItem(index) {
+            this.items[index].expanded = !this.items[index].expanded;
+        },
         scrollToContactForm(event) {
             const element = document.getElementById('corporateContactForm');
             if (element) {
