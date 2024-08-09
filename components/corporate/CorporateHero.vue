@@ -78,7 +78,7 @@ export default {
 }
 
 .circle {
-    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/light-blue-circle-background.png");
+    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/new-blue-half-circle.png");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;

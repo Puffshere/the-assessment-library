@@ -8,7 +8,7 @@
                         for <span style="color: #00a8ff;">Organizational Success</span>
                     </h1>
                     <div style="position: relative;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/coworkers-graphic.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-3-coworkers-revised.png"
                             alt="coworkers smiling" class="workersSmiling">
                     </div>
                     <p style="max-width: 560px; float: right;">
@@ -63,10 +63,10 @@ export default {
     color: white;
 
     .workersSmiling {
-        width: 50%;
+        width: 77%;
         position: absolute;
-        top: -41px;
-        left: 0px;
+        top: -39px;
+        left: -260px;
     }
 }
 
