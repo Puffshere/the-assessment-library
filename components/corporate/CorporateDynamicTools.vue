@@ -115,7 +115,7 @@ export default {
 .corporate-dynamic-tools {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 970px;
     overflow: hidden;
 }
 

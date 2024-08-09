@@ -4,25 +4,24 @@
             <div class="row">
                 <div class="col-12" style="margin-top: -40px; margin-bottom: -20px;">
                     <div class="col-3">
-                        <p><span class="topLine">10 min</span> <br />
-                            <span class="bottomLine">Avg DISC <br />
-                                completion time</span>
+                        <p><span class="topLine2">10-12 <span style="font-size: 40px;">min.</span></span> <br />
+                            <span class="bottomLine">Avg. Completion Time</span>
                         </p>
                     </div>
                     <div class="col-3">
-                        <p><span class="topLine">7+</span> <br />
+                        <p><span class="topLine2">7+</span> <br />
                             <span class="bottomLine">Free Team <br />
                                 Reports</span>
                         </p>
                     </div>
                     <div class="col-3">
-                        <p><span class="topLine">360°</span> <br />
-                            <span class="bottomLine">Assessment <br />
-                                options</span>
+                        <p><span class="topLine2">360°</span> <br />
+                            <span class="bottomLine">Assessments <br />
+                                Availiable</span>
                         </p>
                     </div>
                     <div class="col-3">
-                        <p><span class="topLine">ASI</span> <br />
+                        <p><span class="topLine2">ASI</span> <br />
                             <span class="bottomLine">Validated & <br />
                                 Compliant</span>
                         </p>
@@ -38,7 +37,7 @@
     padding-top: 10px;
 }
 
-.topLine {
+.topLine2 {
     font-size: 48px;
     font-weight: 700;
     color: #ffbd59;
