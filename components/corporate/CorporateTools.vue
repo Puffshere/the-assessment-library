@@ -66,7 +66,7 @@ export default {
         width: 77%;
         position: absolute;
         top: -39px;
-        left: -260px;
+        left: -275px;
     }
 }
 
