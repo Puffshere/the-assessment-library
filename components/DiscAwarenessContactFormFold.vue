@@ -50,7 +50,11 @@
                         <div class="col-12">
                             <div>
                                 <label for="message">Message</label>
-                                <input v-model="form.message" type="text" id="message" class="messageBox" required>
+                                <input v-model="form.message" type="text" id="message" class="messageBox" required
+                                    minlength="5">
+                                <p v-if="form.message && form.message.length < 5" class="error">
+                                    Message must be at least 5 characters long.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -88,14 +92,26 @@ export default {
     },
     methods: {
         async submitForm() {
-            console.log('Form submitted:', this.form);
-
-            // Split the name input into firstName and lastName
-            const names = this.form.name.split(' ');
-            this.firstName = names[0];
-            this.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+            // Check if the message length is less than 5 characters
+            if (this.form.message.length < 5) {
+                this.$toast.open({
+                    message: 'Please enter at least 5 characters in the message field.',
+                    position: 'top',
+                    duration: 5000,
+                    type: 'error'
+                });
+                return;
+            }
 
             try {
+                // Form submission logic...
+                console.log('Form submitted:', this.form);
+
+                // Split the name input into firstName and lastName
+                const names = this.form.name.split(' ');
+                this.firstName = names[0];
+                this.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+
                 const salesPerson = await axios.get('/api/lead/next-assignment');
 
                 const lead = await axios.post('/api/lead', {
@@ -159,6 +175,7 @@ export default {
             }
         }
     }
+
 }
 </script>
 
@@ -187,6 +204,13 @@ h2 {
 
 .form {
     background-color: #1e222d;
+
+    .error {
+        color: #ff0000;
+        font-size: 16px;
+        margin-top: 5px;
+        position: absolute;
+    }
 
     .row {
         label {
