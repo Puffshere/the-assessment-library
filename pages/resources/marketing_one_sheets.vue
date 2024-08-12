@@ -9,7 +9,8 @@
                             <h1 class="pageTitle">MARKETING ONE-SHEETS</h1>
                             <p class="">
                                 Distribute marketing one-sheets through email attachments, print collateral, or website
-                                content. These serve as effective primers when introducing assessments and related concepts
+                                content. These serve as effective primers when introducing assessments and related
+                                concepts
                                 to employees or trainees. Customize each one-sheet with your business name and contact
                                 information, save them as PDFs, and organize in a dedicated folder for quick retrieval.
                             </p>
@@ -35,14 +36,16 @@
                                     <p class="cardTitle">ANALYSIS SERIES</p>
                                 </div>
                                 <div>
-                                    <span class="cardDescription">Critical primers and insights into the world of behavioral
+                                    <span class="cardDescription">Critical primers and insights into the world of
+                                        behavioral
                                         Assessments</span>
                                     <br>
                                     <br>
                                     <div class="row">
                                         <div class="cardBody">
                                             <div class="post" v-for="post in analysisPosts" :key="post.id">
-                                                <a :href="post.url" class="link hyperlink" target="_blank" rel="noopener">
+                                                <a :href="post.url" class="link hyperlink" target="_blank"
+                                                    rel="noopener">
                                                     {{ post.title }} </a>
                                                 <br>
                                                 <div class="gap">{{ post.caption }}</div>
@@ -80,7 +83,8 @@
                                     <div class="row">
                                         <div class="cardBody">
                                             <div class="post" v-for="post in toolsPosts" :key="post.id">
-                                                <a :href="post.url" class="link hyperlink" target="_blank" rel="noopener">
+                                                <a :href="post.url" class="link hyperlink" target="_blank"
+                                                    rel="noopener">
                                                     {{ post.title }} </a>
                                                 <br>
                                                 <div class="gap">{{ post.caption }}</div>
@@ -187,25 +191,25 @@ export default {
                     id: 9,
                     title: 'DISC Awareness',
                     url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+-+Marketing+One-Sheet__.pdf',
-                    caption: ``,
+                    caption: `This one-sheet introduces DISC Awareness, combining the power of DISC with Emotional Intelligence (EI). This dual foundation provides a unique approach to understanding and adapting to different behavioral styles and responding to emotions while enhancing communication. Notably, the one-sheet emphasizes practical engagement with emotions, both our own and those of others, making it an essential tool for those looking to improve interpersonal dynamics. Unlock a new level of communication and emotional insight that transforms interactions and fosters deeper connections.`,
                 },
                 {
                     id: 10,
                     title: 'DISC Leadership',
                     url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Leadership+-+Marketing+One-Sheet__.pdf',
-                    caption: ``,
+                    caption: `This one-sheet details the DISC Leadership Report, providing leaders with the insights needed to enhance their communication and leadership skills. By understanding your unique DISC style and the styles of those around you, you can interact, engage, guide, motivate, and lead more effectively in every situation. This document features targeted strategies for leadership success, offering specific techniques and approaches to enhance leadership capabilities. From building rapport to motivating and correcting team members, this report provides actionable guidance for navigating various leadership scenarios. Elevate your leadership skills with strategies that inspire and drive effective team collaboration.`,
                 },
                 {
                     id: 11,
                     title: 'DISC Workplace Insights',
                     url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Workplace+Insights+-+Marketing+One-Sheet__.pdf',
-                    caption: ``,
+                    caption: `This one-sheet showcases the DISC Workplace Insights, a pioneering assessment tool that merges DISC with Critical Thinking (HVP) analysis. It highlights the assessment's ability to unlock profound insights into team dynamics and individual capabilities, tailored to elevate team performance and recruitment precision. This document emphasizes applications for HR professionals and mid-level managers aiming to refine recruitment and selection processes, enhance team performance, and develop tailored employee growth strategies. Equip your HR team with this essential tool to drive exceptional results in recruitment and team management.`,
                 },
                 {
                     id: 12,
                     title: 'DISC Executive Insights',
                     url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Executive+Insights+-+Marketing+One-Sheet__.pdf',
-                    caption: ``,
+                    caption: `This one-sheet presents DISC Executive Insights, an integrated assessment combining DISC, Motivators, and Critical Thinking (HVP) for a comprehensive analysis of behavior and decision-making. Designed for top executives, senior leaders, and high-potential employees, this tool empowers users by enhancing awareness and optimizing strategic influence within organizations. The document highlights the ability to navigate complex organizational landscapes and drive productivity and change, making this assessment an indispensable resource for leadership excellence. Transform your leadership approach with insights that propel organizational success and strategic growth.`,
                 },
             ]
         };
@@ -392,15 +396,15 @@ export default {
         width: 120px;
     }
 
-    
+
     .post-inner {
         flex-direction: column;
     }
-    
+
     .image-column img {
         margin-top: -60px;
     }
-    
+
     .image-column,
     .text-column {
         padding: 0px;
@@ -431,7 +435,7 @@ export default {
 }
 
 @media (max-width: 350px) {
-    
+
     .image-column,
     .text-column {
 
