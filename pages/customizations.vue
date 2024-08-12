@@ -112,7 +112,8 @@
                                 <h3>Custom Reports</h3>
                                 <hr />
                                 <p>
-                                    <span class="paragraph">Stand out from the crowd with our customizable reports</span> that
+                                    <span class="paragraph">Stand out from the crowd with our customizable
+                                        reports</span> that
                                     cater to your specific requirements. Whether you need to tailor text,
                                     incorporate static content, adjust colors, or include graphics, we've got you
                                     covered. Our reports offer a variety of angles, providing insights that are
@@ -220,7 +221,10 @@
                                     <div>
                                         <label for="message">Message</label>
                                         <input v-model="form.message" type="text" id="message" class="messageBox"
-                                            required>
+                                            required minlength="5">
+                                        <p v-if="form.message && form.message.length < 5" class="error">
+                                            Message must be at least 5 characters long.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -294,14 +298,21 @@ export default {
             this.showThumbnail = false;
         },
         async submitForm() {
-            console.log('Form submitted:', this.form);
-
-            // Split the name input into firstName and lastName
-            const names = this.form.name.split(' ');
-            this.firstName = names[0];
-            this.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+            if (this.form.message.length < 5) {
+                this.$toast.open({
+                    message: 'Please enter at least 5 characters in the message field.',
+                    position: 'top',
+                    duration: 5000,
+                    type: 'error'
+                });
+                return;
+            }
 
             try {
+                const names = this.form.name.split(' ');
+                this.firstName = names[0];
+                this.lastName = names.length > 1 ? names.slice(1).join(' ') : '';
+
                 const salesPerson = await axios.get('/api/lead/next-assignment');
 
                 const lead = await axios.post('/api/lead', {
@@ -492,6 +503,13 @@ export default {
             display: flex;
             flex-direction: column;
             text-align: center;
+
+            .error {
+                color: #f87272;
+                font-size: 16px;
+                margin-top: 5px;
+                position: absolute;
+            }
         }
 
         h1 {
