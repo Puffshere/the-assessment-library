@@ -56,7 +56,7 @@
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                }}</option>
+                                    }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -66,7 +66,8 @@
                         <ValidationProvider v-slot="v" rules="required|min:5">
                             <textarea id="comments" name="comments" v-model="form.comments" tabindex="7"
                                 placeholder="What would you like to discuss? *" />
-                            <span class="error">{{ v.errors[0] }}</span>
+                            <p class="error" style="position: absolute; margin-top: -2px; color: #fa8a8a;">{{
+                                v.errors[0] }}</p>
                         </ValidationProvider>
                     </div>
 

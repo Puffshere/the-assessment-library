@@ -93,7 +93,7 @@
                                 <label for="comments">What would you like to discuss?</label>
                                 <textarea cols="24" rows="5" id="comments" name="comments" v-model="form.comments"
                                     tabindex="8"></textarea>
-                                <span class="error">{{ v.errors[0] }}</span>
+                                <p class="error" style="position: absolute; margin-top: -5px;">{{ v.errors[0] }}</p>
                             </ValidationProvider>
                         </div>
 
