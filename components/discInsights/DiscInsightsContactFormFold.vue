@@ -48,7 +48,11 @@
                         <div class="col-12">
                             <div class="message rise-on-scroll">
                                 <label for="message">Message</label>
-                                <input v-model="form.message" type="text" id="message" class="messageBox" required>
+                                <input v-model="form.message" type="text" id="message" class="messageBox" required
+                                    minlength="5">
+                                <p v-if="form.message && form.message.length < 5" class="error">
+                                    Message must be at least 5 characters long.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -85,7 +89,7 @@
                             </div>
                         </div>
                         <button type="submit" class="white rise-on-scroll" :disabled="isDisabled"
-                        :class="{  'button': true, 'disabled': isDisabled }">
+                            :class="{ 'button': true, 'disabled': isDisabled }">
                             Submit
                         </button>
                     </div>
@@ -138,16 +142,24 @@ export default {
             });
         },
         async submitForm() {
-            this.isDisabled = true;
-            this.loading = true;
-            console.log('Form submitted:', this.form);
-
-            // Split the name input into firstName and lastName
-            const names = this.form.name.split(' ');
-            this.form.firstName = names[0];
-            this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+            if (this.form.message.length < 5) {
+                this.$toast.open({
+                    message: 'Please enter at least 5 characters in the message field.',
+                    position: 'top',
+                    duration: 5000,
+                    type: 'error'
+                });
+                return;
+            }
 
             try {
+                this.isDisabled = true;
+                this.loading = true;
+
+                const names = this.form.name.split(' ');
+                this.form.firstName = names[0];
+                this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : '';
+
                 const salesPerson = await axios.get('/api/lead/next-assignment');
 
                 const lead = await axios.post('/api/lead', {
@@ -257,6 +269,13 @@ export default {
 .form {
     background-color: #1f232e;
     background-size: cover;
+
+    .error {
+        color: #ff0000;
+        font-size: 16px;
+        margin-top: 5px;
+        position: absolute;
+    }
 
     .row {
         label {

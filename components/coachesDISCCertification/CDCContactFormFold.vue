@@ -307,31 +307,31 @@ export default {
     }
 }
 
-// @keyframes rise-contact {
-//     from {
-//         transform: translateY(.5in);
-//         opacity: 0;
-//     }
+@keyframes rise-contact {
+    from {
+        transform: translateY(.5in);
+        opacity: 0;
+    }
 
-//     to {
-//         transform: translateY(0);
-//         opacity: 1;
-//     }
-// }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-// .form h3,
-// .form h4,
-// .form .col-6 .line,
-// .form button,
-// .form .message {
-//     opacity: 0;
-//     transform: translateY(1in);
-//     transition: all 0.5s ease-out;
-// }
+.form h3,
+.form h4,
+.form .col-6 .line,
+.form button,
+.form .message {
+    opacity: 0;
+    transform: translateY(1in);
+    transition: all 0.5s ease-out;
+}
 
-// .animate-rise-contact {
-//     animation: rise-contact .5s ease-out forwards;
-// }
+.animate-rise-contact {
+    animation: rise-contact .5s ease-out forwards;
+}
 
 @media (max-width: 1000px) {
     .body {
