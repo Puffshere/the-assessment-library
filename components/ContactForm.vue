@@ -89,7 +89,7 @@
                     <div
                         v-if="this.getStartedId !== 'wcg' && this.getStartedId !== 'viet' && this.getStartedId !== 'dc' && this.getStartedId !== 'bni'">
                         <div class="form-group">
-                            <ValidationProvider v-slot="v" rules="required">
+                            <ValidationProvider v-slot="v" rules="required|min:5">
                                 <label for="comments">What would you like to discuss?</label>
                                 <textarea cols="24" rows="5" id="comments" name="comments" v-model="form.comments"
                                     tabindex="8"></textarea>

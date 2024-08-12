@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="form-group">
-                        <ValidationProvider v-slot="v" rules="required">
+                        <ValidationProvider v-slot="v" rules="required|min:5">
                             <textarea id="comments" name="comments" v-model="form.comments" tabindex="7"
                                 placeholder="What would you like to discuss? *" />
                             <span class="error">{{ v.errors[0] }}</span>
