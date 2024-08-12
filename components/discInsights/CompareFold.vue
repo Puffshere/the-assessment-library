@@ -17,9 +17,9 @@
                                 </th>
                                 <th class="rise-on-scroll">
                                     <div style="display: flex; justify-content: center; margin-bottom: 0px;">
-                                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon"
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/disc-icon.png" alt="disc icon"
                                             style="width: 45px;">
-                                        <img src="~/assets/disc-insights/critical-thinking-icon.png"
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/critical-thinking-icon.png"
                                             alt="critical thinking icon" style="width: 45px;">
                                     </div>
                                     <div @click="scrollToWorkplaceInsights"
@@ -28,11 +28,11 @@
                                 </th>
                                 <th class="rise-on-scroll">
                                     <div style="display: flex; justify-content: center; margin-bottom: 0px;">
-                                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon"
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/disc-icon.png" alt="disc icon"
                                             style="width: 45px;">
-                                        <img src="~/assets/disc-insights/critical-thinking-icon.png"
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/critical-thinking-icon.png"
                                             alt="critical thinking icon" style="width: 45px;">
-                                        <img src="~/assets/disc-insights/motivators-icon.png" alt="motivators icon"
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/motivators-icon.png" alt="motivators icon"
                                             style="width: 45px;">
                                     </div>
                                     <div @click="scrollToExecutiveInsights"
@@ -84,13 +84,13 @@
                     style="display: flex; justify-content: center; align-items: center; margin-top: 105px;">
                     <button style="display: flex; align-items: center; justify-content: center; gap: 10px;"
                         class="button active black" @click="scrollToContactForm">
-                        <img src="~/assets/disc-insights/info.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/info.png"
                             style="width: 35px; margin-left: -66px; margin-right: 20px;" alt="info icon">
                         <span>Learn More</span>
                     </button>
                 </div>
             </div>
-            <img class="rise-on-scroll" src="~/assets/disc-insights/hero-black-graphic.png"
+            <img class="rise-on-scroll" src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/hero-black-graphic.png"
                 alt="hero black graphic image"
                 style="width: 1180px; z-index: 1; max-height: 205px; margin-left: -45px; position: absolute; bottom: 235px;" />
             <div class="blue-balls rise-on-scroll">
@@ -110,9 +110,9 @@ export default {
         return {
             activeImageIndex: 0,
             images: [
-                require('@/assets/disc-insights/3rd-fold-recruitment-precision.png'),
-                require('@/assets/disc-insights/3rd-fold-risk-mitigation.png'),
-                require('@/assets/disc-insights/3rd-fold-adaptability-insights.png')
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/3rd-fold-recruitment-precision.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/3rd-fold-risk-mitigation.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/3rd-fold-adaptability-insights.png'
             ]
         };
     },

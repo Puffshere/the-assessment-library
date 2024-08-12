@@ -4,10 +4,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="rise-on-scroll" style="display: flex; justify-content: center; margin-bottom: -20px;">
-                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon" style="width: 110px;">
-                        <img src="~/assets/disc-insights/critical-thinking-icon.png" alt="critical thinking icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/disc-icon.png" alt="disc icon" style="width: 110px;">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/critical-thinking-icon.png" alt="critical thinking icon"
                             style="width: 110px;">
-                        <img src="~/assets/disc-insights/motivators-icon.png" alt="motivators icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/motivators-icon.png" alt="motivators icon"
                             style="width: 110px;">
                     </div>
                     <h2 class="rise-on-scroll"
@@ -27,7 +27,7 @@
                             Combines DISC, Motivators, and Critical Thinking assessments for a holistic view of
                             behavioral tendencies, drivers, and decision-making potential.
                         </p>
-                        <img src="~/assets/disc-insights/comprehensive-3-model-analysis.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/comprehensive-3-model-analysis.png"
                             alt="comprehensive 3 model analysis icon"
                             style="width: 7%; margin-left: 20px; margin-right: 30px; margin-top: -40px;">
                     </div>
@@ -37,7 +37,7 @@
                             Tailored sections provide specific insights into natural and adapted styles, showcasing
                             values and approaches to work, interactions, and decisions.
                         </p>
-                        <img src="~/assets/disc-insights/customized-insights.png" alt="customized insights icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/customized-insights.png" alt="customized insights icon"
                             style="width: 7%; margin-left: 20px; margin-right: 30px; margin-top: -40px;">
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
@@ -46,7 +46,7 @@
                             Helps individuals recognize strengths and areas for improvement, fostering personal and
                             professional growth.
                         </p>
-                        <img src="~/assets/disc-insights/enhanced-self-awareness.png" alt="enhanced self awareness icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/enhanced-self-awareness.png" alt="enhanced self awareness icon"
                             style="width: 7%; margin-left: 20px; margin-right: 30px; margin-top: -40px;">
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
@@ -55,7 +55,7 @@
                             Includes communication tips and preferences to improve interactions
                             and team dynamics
                         </p>
-                        <img src="~/assets/disc-insights/effective-communication.png" alt="effective communication icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/effective-communication.png" alt="effective communication icon"
                             style="width: 7%; margin-left: 20px; margin-right: 30px; margin-top: -40px;">
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
@@ -64,12 +64,12 @@
                             Provides information for crafting targeted development plans aligned with individual
                             capabilities and career goals.
                         </p>
-                        <img src="~/assets/disc-insights/strategic-development.png" alt="strategic development icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/strategic-development.png" alt="strategic development icon"
                             style="width: 7%; margin-left: 20px; margin-right: 30px; margin-top: -40px;">
                     </div>
                 </div>
                 <div class="col-5 rise-on-scroll" style="position: relative;">
-                    <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/hero-black-graphic.png" alt="hero black graphic image"
                         style="z-index: 1 !important; width: 420px; max-height: 205px; margin-left: -15px; position: absolute; bottom: 50px; border-radius: 10px;" />
                     <img id="executiveMainImage" :src="currentImage" alt="sample report image"
                         style="position: relative; z-index: 5; border-radius: 10px; width: 90%; margin-top: 10px; z-index: 2; max-height: 490px;"
@@ -85,7 +85,7 @@
                         style="display: flex; justify-content: center; margin-bottom: -40px; gap: 20px; margin-top: 60px;">
                         <button style="text-align: center;" class="button light-blue" @click="scrollToContactForm">
                             <span>
-                                <img src="~/assets/disc-insights/info.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/info.png"
                                     style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -16px;"
                                     alt="info icon">
                             </span>
@@ -94,7 +94,7 @@
                         <button style="text-align: center;" class="button light-blue"
                             @click="downloadExecutiveSampleReport">
                             <span>
-                                <img src="~/assets/disc-insights/download.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/download.png"
                                     style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -6px;"
                                     alt="download icon">
                             </span>
@@ -112,12 +112,12 @@ export default {
     data() {
         return {
             images: [
-                require('~/assets/disc-insights/page1e.png'),
-                require('~/assets/disc-insights/page2e.png'),
-                require('~/assets/disc-insights/page3e.png'),
-                require('~/assets/disc-insights/page4e.png'),
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page1e.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page2e.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page3e.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page4e.png',
             ],
-            currentImage: require('~/assets/disc-insights/page1e.png')
+            currentImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page1e.png'
         };
     },
     methods: {

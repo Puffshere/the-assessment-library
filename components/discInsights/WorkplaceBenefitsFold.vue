@@ -2,7 +2,7 @@
     <section style="background-color: #1f232e;">
         <div class="container" style="display: flex; justify-content: center;">
             <div class="col-12" style="display: flex; flex-direction: column; align-items: center;">
-                <img class="rise-on-scroll" src="~/assets/disc-insights/balls.png" alt="balls image"
+                <img class="rise-on-scroll" src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/balls.png" alt="balls image"
                     style="width: 100px; margin-bottom: -20px;">
                 <h2 class="rise-on-scroll"
                     style="line-height: 59px; font-size: 48px; font-weight: 700; color: white; text-align: center;">
@@ -63,13 +63,13 @@
                 <div class="b rise-on-scroll" style="display: flex; justify-content: center; gap: 0px;">
                     <button style="display: flex; align-items: center; justify-content: center; gap: 10px;"
                         class="button active light-blue" @click="scrollToContactForm">
-                        <img src="~/assets/disc-insights/info.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/info.png"
                             style="width: 35px; margin-left: -66px; margin-right: 20px;" alt="info icon">
                         <span>Learn More</span>
                     </button>
                     <button style="display: flex; align-items: center; justify-content: center; gap: 10px;"
                         class="button active light-blue" @click="scrollToCompareFold">
-                        <img src="~/assets/disc-insights/compare.png" style="width: 35px; margin-left: -30px;"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/compare.png" style="width: 35px; margin-left: -30px;"
                             alt="compare icon">
                         <span>Compare to <br /> Executive Insights</span>
                     </button>
@@ -86,9 +86,9 @@ export default {
         return {
             activeImageIndex: 0,
             images: [
-                require('@/assets/disc-insights/3rd-fold-recruitment-precision.png'),
-                require('@/assets/disc-insights/3rd-fold-risk-mitigation.png'),
-                require('@/assets/disc-insights/3rd-fold-adaptability-insights.png')
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/3rd-fold-recruitment-precision.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/3rd-fold-risk-mitigation.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/3rd-fold-adaptability-insights.png'
             ]
         };
     },

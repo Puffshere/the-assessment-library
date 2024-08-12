@@ -4,9 +4,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="rise-on-scroll" style="display: flex; justify-content: center; margin-bottom: -40px;">
-                        <img src="~/assets/disc-insights/disc-icon.png" alt="disc icon" style="width: 110px;"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/disc-icon.png" alt="disc icon" style="width: 110px;"
                             id="heroImage">
-                        <img src="~/assets/disc-insights/critical-thinking-icon.png" alt="critical thinking icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/critical-thinking-icon.png" alt="critical thinking icon"
                             style="width: 110px;">
                     </div>
                     <h2 class="rise-on-scroll"
@@ -20,7 +20,7 @@
                     </p>
                 </div>
                 <div class="col-5 rise-on-scroll" style="position: relative;">
-                    <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/hero-black-graphic.png" alt="hero black graphic image"
                         style="z-index: 1 !important; width: 420px; max-height: 205px; margin-left: -15px; position: absolute; bottom: 50px; border-radius: 10px;" />
                     <img id="heroImageOnWorkplace" :src="currentImage" alt="sample report image"
                         style="position: relative; border-radius: 10px; width: 90%; margin-top: 10px; max-height: 490px; z-index: 5 !important; cursor: pointer;"
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-7 rise-on-scroll">
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
-                        <img src="~/assets/disc-insights/targeted-evaluation.png" alt="target icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/targeted-evaluation.png" alt="target icon"
                             style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Targeted Evaluation</strong><br />
@@ -41,7 +41,7 @@
                         </p>
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
-                        <img src="~/assets/disc-insights/behavioral-and-communication-analysis.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/behavioral-and-communication-analysis.png"
                             alt="behavioral analysis icon" style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Behavioral and Communication Analysis</strong><br />
@@ -50,7 +50,7 @@
                         </p>
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
-                        <img src="~/assets/disc-insights/interview-and-development-tools.png" alt="interview tools icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/interview-and-development-tools.png" alt="interview tools icon"
                             style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Interview and Development Tools</strong><br />
@@ -59,7 +59,7 @@
                         </p>
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
-                        <img src="~/assets/disc-insights/risk-assessment.png" alt="risk assessment icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/risk-assessment.png" alt="risk assessment icon"
                             style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Risk Assessment</strong><br />
@@ -68,7 +68,7 @@
                         </p>
                     </div>
                     <div class="icon-text-container" style="display: flex; align-items: center; margin-bottom: -15px;">
-                        <img src="~/assets/disc-insights/adaptability-insights.png" alt="adaptability insights icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/adaptability-insights.png" alt="adaptability insights icon"
                             style="width: 7%; margin-right: 15px; margin-top: -40px;">
                         <p>
                             <strong>Adaptability Insights</strong><br />
@@ -83,7 +83,7 @@
                         <button style="text-align: center;" class="button light-blue"
                             @click="downloadWorkplaceSampleReport">
                             <span>
-                                <img src="~/assets/disc-insights/download.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/download.png"
                                     style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -6px;"
                                     alt="download icon">
                             </span>
@@ -91,7 +91,7 @@
                         </button>
                         <button style="text-align: center;" class="button light-blue" @click="scrollToContactForm">
                             <span>
-                                <img src="~/assets/disc-insights/info.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/info.png"
                                     style="width: 35px; float: left; margin-top: -3px; margin-left: -15px; margin-right: -16px;"
                                     alt="info icon">
                             </span>
@@ -109,12 +109,12 @@ export default {
     data() {
         return {
             images: [
-                require('~/assets/disc-insights/page1.png'),
-                require('~/assets/disc-insights/page2.png'),
-                require('~/assets/disc-insights/page3.png'),
-                require('~/assets/disc-insights/page4.png'),
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page1.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page2.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page3.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page4.png',
             ],
-            currentImage: require('~/assets/disc-insights/page1.png')
+            currentImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/page1.png'
         };
     },
     methods: {

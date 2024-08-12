@@ -16,24 +16,24 @@
                         </p>
                     </div>
                     <div class="col-6" style="position: relative;">
-                        <img src="~/assets/disc-insights/hero-main-graphic.png" alt="hero main graphic image"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/hero-main-graphic.png" alt="hero main graphic image"
                             style="position: absolute; z-index: 5;" />
                     </div>
                     <div class="col-12" style="position: relative;">
-                        <img src="~/assets/disc-insights/hero-black-graphic.png" alt="hero black graphic image"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/hero-black-graphic.png" alt="hero black graphic image"
                             style="width: 100%; z-index: 1;" />
                             <button class="button" :disabled="step === 3"
                             :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '40px', width: '170px', opacity: step === 3 ? 0.5 : 1 }">
                             DISC Workplace Insights
                             <span>
-                                <img src="~/assets/disc-insights/right-arrow.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/right-arrow.png"
                                     style="width: 35px; float: right; margin-top: -3px; margin-right: -16px;" alt="right arrow icon">
                             </span>
                         </button>
                         <button class="button" :disabled="step === 3"
                             :style="{ backgroundColor: '#00a8ff', border: 'none', fontSize: '16px', minHeight: '40px', width: '170px', opacity: step === 3 ? 0.5 : 1 }">Next
                             Video<span>
-                                <img src="~/assets/disc-insights/right-arrow.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/right-arrow.png"
                                     style="width: 35px; float: right; margin-top: -3px; margin-right: -16px;" alt="right arrow icon">
                             </span>
                         </button>

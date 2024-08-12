@@ -16,12 +16,12 @@
                         </p>
                     </div>
                     <div class="col-6">
-                        <img id="heroImage" src="~/assets/disc-insights/hero-main-graphic.png"
+                        <img id="heroImage" src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/hero-main-graphic.png"
                             alt="hero main graphic image" class="interactive-image transition media"
                             style="position: relative; right: -70px; z-index: 10; cursor: pointer" />
                     </div>
                     <div class="col-12" style="position: relative;">
-                        <img class="blackGraphic" src="~/assets/disc-insights/hero-black-graphic.png"
+                        <img class="blackGraphic" src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/hero-black-graphic.png"
                             alt="hero black graphic image"
                             style="width: 116%; z-index: 1; max-height: 200px; margin-top: -180px; margin-left: -80px;" />
                         <div class="mediaButtons rise-on-scroll" style="margin-top: -125px; margin-left: -90px;">
@@ -29,7 +29,7 @@
                                 style="margin-left: 50px;">
                                 DISC <span style="text-decoration: underline;">Workplace</span> Insights
                                 <span>
-                                    <img src="~/assets/disc-insights/right-arrow.png"
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/right-arrow.png"
                                         style="width: 35px; float: right; margin-top: -3px; margin-right: -16px;"
                                         alt="right arrow icon">
                                 </span>
@@ -37,7 +37,7 @@
                             <button @click="scrollToExecutiveInsights" class="button light-blue-hero">
                                 DISC <span style="text-decoration: underline;">Executive</span> Insights
                                 <span>
-                                    <img src="~/assets/disc-insights/right-arrow.png"
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/right-arrow.png"
                                         style="width: 35px; float: right; margin-top: -3px; margin-right: -16px;"
                                         alt="right arrow icon">
                                 </span>
