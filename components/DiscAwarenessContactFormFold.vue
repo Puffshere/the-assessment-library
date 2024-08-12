@@ -104,13 +104,9 @@ export default {
             }
 
             try {
-                // Form submission logic...
-                console.log('Form submitted:', this.form);
-
-                // Split the name input into firstName and lastName
                 const names = this.form.name.split(' ');
                 this.firstName = names[0];
-                this.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; // Join the rest in case of middle names
+                this.lastName = names.length > 1 ? names.slice(1).join(' ') : ''; 
 
                 const salesPerson = await axios.get('/api/lead/next-assignment');
 
