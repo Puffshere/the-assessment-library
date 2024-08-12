@@ -7,11 +7,11 @@
                         Why DISC Certification?
                     </h1>
                     <div style="position: relative;">
-                        <img src="~/assets/coaches-disc-certification/black-woman.gif" alt="black woman"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/black-woman.gif" alt="black woman"
                             class="blackWoman">
                     </div>
                     <div class="icon-text" style="display: flex;">
-                        <img src="~/assets/coaches-disc-certification/quantifiable-impact.png" alt="Quantifiable Impact"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/quantifiable-impact.png" alt="Quantifiable Impact"
                             style="width: 5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">
                             Quantifiable Impact</h4>
@@ -22,7 +22,7 @@
                         development journey.
                     </p>
                     <div class="icon-text" style="display: flex; margin-top: 40px;">
-                        <img src="~/assets/coaches-disc-certification/high-roi-solution.png" alt="High ROI Solution"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/high-roi-solution.png" alt="High ROI Solution"
                             style="width: 5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">High ROI
                             Solution</h4>
@@ -33,7 +33,7 @@
                         coaching practice without breaking the bank.
                     </p>
                     <div class="icon-text" style="display: flex; margin-top: 20px;">
-                        <img src="~/assets/coaches-disc-certification/tailored-insights.png" alt="Tailored Insights"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/tailored-insights.png" alt="Tailored Insights"
                             style="width: 4.5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">Tailored
                             Insights</h4>
@@ -43,7 +43,7 @@
                         challenges and goals of each client, fostering a more personalized coaching experience.
                     </p>
                     <div class="icon-text" style="display: flex; margin-top: 40px;">
-                        <img src="~/assets/coaches-disc-certification/user-friendly.png" alt="User-Friendly"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/user-friendly.png" alt="User-Friendly"
                             style="width: 5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">
                             Integrative and User-Friendly</h4>
@@ -135,7 +135,7 @@ export default {
 }
 
 section {
-    background: url('~assets/coaches-disc-certification/blue-geo-background.png');
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/blue-geo-background.png');
     background-size: cover;
 }
 

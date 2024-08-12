@@ -12,7 +12,7 @@
                         </h2>
                         <h4>
                             Earn <span class="hyperlink" @click="scrollToSection" style="cursor: pointer;">ICF Credits</span> While
-                            <img src="~/assets/coaches-disc-certification/blue-arrow.png" alt="hero image"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/blue-arrow.png" alt="hero image"
                                 class="arrow">
                             <br />
                             Enhancing Your Coaching Efficacy
@@ -22,7 +22,7 @@
                         </button>
                     </div>
                     <div class="col-5">
-                        <img src="~/assets/coaches-disc-certification/man.png" alt="male business man"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/man.png" alt="male business man"
                             class="manSmiling" />
                     </div>
                 </div>

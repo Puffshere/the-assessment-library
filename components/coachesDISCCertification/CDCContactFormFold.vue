@@ -249,7 +249,7 @@ export default {
 }
 
 .form {
-    background: url('~assets/coaches-disc-certification/blue-geo-background.png');
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/blue-geo-background.png');
     background-size: cover;
 
     .error {

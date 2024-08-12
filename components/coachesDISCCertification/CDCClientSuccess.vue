@@ -6,7 +6,7 @@
                     <h1 class="title">Real Clients. Real Success.</h1>
                 </div>
                 <div class="col-4">
-                    <img src="~/assets/coaches-disc-certification/emily-bass.png" alt="emily bass picture">
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/emily-bass.png" alt="emily bass picture">
                     <p class="observe" style="padding-bottom: 5px">
                         Emily Bass <br />
                         Emily Bass Strategies, LLC
@@ -20,7 +20,7 @@
                     </button>
                 </div>
                 <div class="col-4">
-                    <img src="~/assets/coaches-disc-certification/jaymini-mistry.png" alt="jaymini mistry picture">
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/jaymini-mistry.png" alt="jaymini mistry picture">
                     <p class="observe" style="padding-bottom: 5px">
                         Jaymini Mistry <br />
                         Business Coaching Melbourne
@@ -34,7 +34,7 @@
                     </button>
                 </div>
                 <div class="col-4">
-                    <img src="~/assets/coaches-disc-certification/donna-bell.png" alt="donna bell picture">
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/donna-bell.png" alt="donna bell picture">
                     <p class="observe" style="padding-bottom: 5px">
                         Donna Bell <br />
                         Vitality Leadership

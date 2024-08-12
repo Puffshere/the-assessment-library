@@ -4,25 +4,25 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-3">
-                        <img class="icon1" src="~/assets/coaches-disc-certification/icf-logo.png" alt="icf image" style="width: 100%; margin-bottom: -12px;">
+                        <img class="icon1" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/ICF-logo.png" alt="icf image" style="width: 100%; margin-bottom: -12px;">
                         <p><span class="topLine">8.25/6.75</span> <br />
                             <span class="bottomLine">Core/RD ICF</span>
                         </p>
                     </div>
                     <div class="col-3">
-                        <img class="icon2" src="~/assets/coaches-disc-certification/shrm-logo.png" alt="shrm image">
+                        <img class="icon2" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/shrm-logo.png" alt="shrm image">
                         <p><span class="topLine">12 Credits</span> <br />
                             <span class="bottomLine">SHRM**</span>
                         </p>
                     </div>
                     <div class="col-3">
-                        <img class="icon3" src="~/assets/coaches-disc-certification/hrci-logo.png" alt="hrci image">
+                        <img class="icon3" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/hrci-logo.png" alt="hrci image">
                         <p><span class="topLine">7.5 Credits</span> <br />
                             <span class="bottomLine">HRCI*</span>
                         </p>
                     </div>
                     <div class="col-3">
-                        <img class="icon4" src="~/assets/coaches-disc-certification/atd-logo.png" alt="atd image">
+                        <img class="icon4" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/atd-logo.png" alt="atd image">
                         <p><span class="topLine">7.5 Credits</span> <br />
                             <span class="bottomLine">ATD</span>
                         </p>
@@ -92,7 +92,7 @@
 }
 
 section {
-    background: url('~assets/coaches-disc-certification/blue-geo-background.png');
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/blue-geo-background.png');
     background-size: cover;
 }
 </style>
