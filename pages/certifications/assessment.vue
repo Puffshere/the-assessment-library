@@ -83,7 +83,7 @@
                         </p>
                         <button style="" class="learn-more-button light-blue" @click="scrollToContactForm">
                             <span>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/info.png"
                                     style="width: 30px; float: left; margin-right: -16px;" alt="info icon">
                             </span>
                             <span style="margin-left: 10px; margin-bottom: 40px;">Learn More</span>
