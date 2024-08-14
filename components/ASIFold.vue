@@ -1,18 +1,18 @@
 <template>
     <section class="asi">
-        <img src="@/assets/disc-awareness/white-textured-background.png" alt="background image" class="background">
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/white-textured-background.png" alt="background image" class="background">
         <div class="container">
             <div class="box">
                 <div class="row">
-                    <img src="@/assets/disc-awareness/asi-certified.png" alt="certified logo" class="certified">
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/asi-certified.png" alt="certified logo" class="certified">
                 </div>
                 <div class="content">
                     <h1>
-                        <span class="check"><img src="@/assets/disc-awareness/checkmark.png" alt="checkmark"></span>
+                        <span class="check"><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/checkmark.png" alt="checkmark"></span>
                         <span class="words" style="padding-right: 20px;">Validated</span>
-                        <span class="check"><img src="@/assets/disc-awareness/checkmark.png" alt="checkmark"></span>
+                        <span class="check"><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/checkmark.png" alt="checkmark"></span>
                         <span class="words" style="padding-right: 20px;">Reliable</span>
-                        <span class="check"><img src="@/assets/disc-awareness/checkmark.png" alt="checkmark"></span>
+                        <span class="check"><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/checkmark.png" alt="checkmark"></span>
                         <span class="words">Compliant</span>
                     </h1>
                     <p>Our assessments are leading by example with independent validation meeting APA, EEOC, AERA, and

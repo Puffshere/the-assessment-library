@@ -17,7 +17,7 @@
                         <img class="image" src="images/Team_slide.png" alt="TPR Team Slide">
                         <ul class="slideList">
                             <a
-                                href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR+TEAM+Slides.pptx">
+                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/platinum-rule/TPR+TEAM+Slides.pptx">
                                 <li class="slideLink slideButtons">
                                     TPR TEAM Slides
                                 </li>
@@ -28,7 +28,7 @@
                         <img class="image" src="images/leadership_slide.png" alt="TPR Leadership Slide">
                         <ul class="slideList">
                             <a
-                                href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR+Leadership+Slides.pptx">
+                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/platinum-rule/TPR+Leadership+Slides.pptx">
                                 <li class="slideLink slideButtons">
                                     TPR Leadership Slides
                                 </li>
@@ -39,7 +39,7 @@
                         <img class="image" src="images/full_presentation_slide.png" alt="TPR Full Day Presentation">
                         <ul class="slideList">
                             <a
-                                href="https://f002.backblazeb2.com/file/assessments24x7-media/platinum-rule/TPR+Full-day+Presentation.pptx">
+                                href="https://cdn.assessments24x7.com/file/assessments24x7-media/platinum-rule/TPR+Full-day+Presentation.pptx">
                                 <li class="slideLink slideButtons">
                                     TPR Full-day Presentation
                                 </li>

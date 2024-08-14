@@ -7,14 +7,14 @@
                 </div>
                 <div class="col-12 flex-container">
                     <div class="boxes">
-                        <img src="~/assets/disc-awareness/d-circle.png" alt="d circle" class="icon" />
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/d-circle.png" alt="d circle" class="icon" />
                         <br />
                         <p>High D styles are naturally higher in <span style="font-weight: bold">Goal-Directed
                                 Performance</span>, but lower in <span style="font-weight: bold">Self-Awareness</span>,
                             as they focus on tasks and outcomes more than the self.</p>
                     </div>
                     <div class="boxes">
-                        <img src="~/assets/disc-awareness/i-circle.png" alt="i circle" class="icon" />
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/i-circle.png" alt="i circle" class="icon" />
                         <br />
                         <p>High I styles are naturally higher in <span style="font-weight: bold">Teamwork &
                                 Collaboration</span>, as they thrive in social
@@ -24,7 +24,7 @@
                             follow-through.</p>
                     </div>
                     <div class="boxes">
-                        <img src="~/assets/disc-awareness/s-circle.png" alt="s circle" class="icon" />
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/s-circle.png" alt="s circle" class="icon" />
                         <br />
                         <p>High S styles are naturally higher in <span style="font-weight: bold">Empathy, Sensitivity,
                                 and Appreciation</span> because they are
@@ -35,7 +35,7 @@
                         </p>
                     </div>
                     <div class="boxes">
-                        <img src="~/assets/disc-awareness/c-circle.png" alt="c circle" class="icon" />
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/c-circle.png" alt="c circle" class="icon" />
                         <br />
                         <p>High C styles are naturally higher in <span style="font-weight: bold">Connections of Cause &
                                 Effect</span> because they are very

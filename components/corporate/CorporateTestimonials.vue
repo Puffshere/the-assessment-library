@@ -4,7 +4,7 @@
             <div class="row" style="margin-bottom: 18px;">
                 <h1>Don't just take our word, take theirs.</h1>
                 <h3>How We Help Organizations Succeed</h3>
-                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/quotations.png"
+                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/quotations.png"
                     alt="image of quotation marks" style="position: absolute; z-index: 5; width: 140px; top: 100px; left: 40px;">
             </div>
             <div class="col-12" style="display: flex; flex-direction: column; align-items: center; position: relative;">

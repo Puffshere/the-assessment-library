@@ -9,7 +9,7 @@
                     </h1>
                 </div>
                 <div class="col-12 image-container">
-                    <img src="@/assets/disc-awareness/disc-and-ei-graphic.png" alt="disc and ei graphic"
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/disc-and-ei-graphic.png" alt="disc and ei graphic"
                         class="discEiGraphic">
                 </div>
                 <div class="col-12 flex-container">
@@ -23,10 +23,10 @@
                 <div class="col-12 button-container">
                     <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Awareness_(EI).pdf"
                         class="btn btn-download" target="_blank" rel="noopener" style="cursor: pointer;">
-                        <img src="@/assets/disc-awareness/download-samples-button.png" alt="Download Sample">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/download-samples-button.png" alt="Download Sample">
                     </a>
                     <a href="#discAwarenessContactForm" class="btn btn-learn" style="cursor: pointer;">
-                        <img src="@/assets/disc-awareness/learn-more-button.png" alt="Learn More">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/learn-more-button.png" alt="Learn More">
                     </a>
                 </div>
             </div>

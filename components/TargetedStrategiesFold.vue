@@ -1,6 +1,6 @@
 <template>
     <section class="targetedStrategies" id="targetedStrategies">
-        <img src="@/assets/disc-awareness/white-textured-background.png" alt="background image" class="background">
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/white-textured-background.png" alt="background image" class="background">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -20,10 +20,10 @@
                 <div class="col-12 button-container">
                     <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf"
                         class="btn btn-download" target="_blank" rel="noopener" style="cursor: pointer;">
-                        <img src="@/assets/disc-awareness/download-samples-button.png" alt="Download Sample">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/download-samples-button.png" alt="Download Sample">
                     </a>
                     <a href="#discLeadershipContactForm" class="btn btn-learn" style="cursor: pointer;">
-                        <img src="@/assets/disc-awareness/learn-more-button.png" alt="Learn More">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/learn-more-button.png" alt="Learn More">
                     </a>
                 </div>
             </div>

@@ -426,7 +426,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTGerman.pdf"
                             target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'li'" class="hyperlink"
-                            href="https://f002.backblazeb2.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators_Lithuanian.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Motivators_Lithuanian.pdf"
                             target="_blank" rel="noopener">DISC + Motivators Report</a>
                         <a v-else-if="lang === 'pt'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandMOTPort.pdf"

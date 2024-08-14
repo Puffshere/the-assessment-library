@@ -1,6 +1,6 @@
 <template>
     <section class="awarenessConcepts">
-        <img src="@/assets/disc-awareness/white-textured-background.png" alt="background image" class="background">
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/white-textured-background.png" alt="background image" class="background">
         <br />
         <br />
         <div class="container">
@@ -18,43 +18,43 @@
                     <div class="col-12">
                         <div class="col-7 conceptsList">
                             <div class="blackBoxes">
-                                <span><img src="@/assets/disc-awareness/increase-commitment-cooperation.png"
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/increase-commitment-cooperation.png"
                                         alt="rapport disc">
                                     <span style="padding-left: 15px;">Increase commitment & cooperation</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
-                                <span><img src="@/assets/disc-awareness/build-effective-teams.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/build-effective-teams.png" alt="rapport disc">
                                     <span style="padding-left: 15px;">Build effective teams</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
-                                <span><img src="@/assets/disc-awareness/resolve-prevent-conflict.png"
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/resolve-prevent-conflict.png"
                                         alt="rapport disc">
                                         <span style="padding-left: 15px;">Resolve & prevent conflict</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
-                                <span><img src="@/assets/disc-awareness/gain-endorsement-credibility-rapport.png"
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/gain-endorsement-credibility-rapport.png"
                                         alt="rapport disc">
                                         <span style="padding-left: 15px;">Gain endorsement, credibility, & rapport</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
-                                <span><img src="@/assets/disc-awareness/increase-sales.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/increase-sales.png" alt="rapport disc">
                                     <span style="padding-left: 15px;">Increase sales</span>
                                 </span>
                             </div>
                             <div class="blackBoxes">
                                 <span><img
-                                        src="@/assets/disc-awareness/understand-interpersonal-communication-behavior.png"
+                                        src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/understand-interpersonal-communication-behavior.png"
                                         alt="rapport disc">
                                         <span style="padding-left: 15px;">Understand interpersonal communication & behavior</span>
                                 </span>
                             </div>
                         </div>
                         <div class="col-6">
-                            <img src="~/assets/disc-awareness/black-female-pointing.png" alt="black female pointing"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/black-female-pointing.png" alt="black female pointing"
                                 class="womanSmiling">
                         </div>
                     </div>

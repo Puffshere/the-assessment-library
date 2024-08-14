@@ -1,6 +1,6 @@
 <template>
     <section class="strengths">
-        <img src="@/assets/disc-awareness/white-textured-background.png" alt="background image" class="background">
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/white-textured-background.png" alt="background image" class="background">
         <br />
         <br />
         <div class="container">
@@ -21,29 +21,29 @@
                                 <br />
                                 Strengths
                             </h1>
-                            <img src="@/assets/disc-awareness/underline.png" alt="underline" class="underline" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/underline.png" alt="underline" class="underline" />
                             <div class="blueBoxes position1">
-                                <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/blue-checkmark.png" alt="rapport disc">
                                     Gain insights with Emotional Intelligence (EI) by exploring the relationship with
                                     your DISC styles.
                                 </span>
                             </div>
-                            <img src="@/assets/disc-awareness/line-1.png" alt="line 1" class="line1">
-                            <img src="@/assets/disc-awareness/line-4.png" alt="line 2" class="line2">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/Line-1.png" alt="line 1" class="line1">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/Line-4.png" alt="line 2" class="line2">
                             <div class="blueBoxes position2">
-                                <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/blue-checkmark.png" alt="rapport disc">
                                     Deepen your awareness of key Emotional Intelligence components & talents.
                                 </span>
                             </div>
-                            <img src="@/assets/disc-awareness/line-3.png" alt="line 3" class="line3">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/line-3.png" alt="line 3" class="line3">
                             <div class="blueBoxes position3">
-                                <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/blue-checkmark.png" alt="rapport disc">
                                     Identify strengths and areas for development based on your EI and style.
                                 </span>
                             </div>
-                            <img src="@/assets/disc-awareness/line-4.png" alt="line 4" class="line4">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/Line-4.png" alt="line 4" class="line4">
                             <div class="blueBoxes position4">
-                                <span><img src="@/assets/disc-awareness/blue-checkmark.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Awareness/blue-checkmark.png" alt="rapport disc">
                                     Utilize a structured framework to foster personal and professional growth.
                                 </span>
                             </div>
