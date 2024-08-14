@@ -13,53 +13,29 @@
                     :class="{ 'disabled': activeImageIndex === 0 }" style="padding-left: 5px;">
                     <div class="arrow" style="transform: rotate(-45deg);"></div>
                 </div>
-                <div class="rise-on-scroll" style="display: flex; justify-content: center; min-height: 180px;">
-                    <div v-if="activeImageIndex === 0" class="testimonial-card">
-                        <img :src="images[0]" alt="client photo" class="testimonial-image" />
+                <transition name="testimonial-fade" mode="out-in">
+                    <div :key="activeImageIndex" class="testimonial-card">
+                        <img :src="images[activeImageIndex]" alt="client photo" class="testimonial-image" />
                         <div>
-                            <h5 style="font-weight: 600; margin-bottom: -10px; margin-top: 0px;">Will Mahon, DraftKings
-                            </h5>
+                            <h5 style="font-weight: 600; margin-bottom: -10px; margin-top: 0px;">{{
+                                testimonialNames[activeImageIndex] }}</h5>
                             <h5 class="testimonial-text">
-                                <span v-if="showFullText || testimonialTexts[0].length <= 150">{{ testimonialTexts[0]
-                                    }}</span>
-                                <span v-else>{{ testimonialTexts[0].substring(0, 150) }}...</span>
+                                <span v-if="showFullText || testimonialTexts[activeImageIndex].length <= 150">{{
+                                    testimonialTexts[activeImageIndex] }}</span>
+                                <span v-else>{{ testimonialTexts[activeImageIndex].substring(0, 150) }}...</span>
                             </h5>
-                            <button v-if="testimonialTexts[0].length > 150" @click="toggleText" class="read-more-btn">
+                            <button v-if="testimonialTexts[activeImageIndex].length > 150" @click="toggleText"
+                                class="read-more-btn">
                                 {{ showFullText ? 'Show Less' : 'Read More' }}
+                                <span>
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/right-arrow.png"
+                                        style="width: 20px; float: right; margin-top: 0px; margin-left: 10px;"
+                                        alt="right arrow icon">
+                                </span>
                             </button>
                         </div>
                     </div>
-                    <div v-if="activeImageIndex === 1" class="testimonial-card">
-                        <img :src="images[1]" alt="client photo" class="testimonial-image" />
-                        <div>
-                            <h5 style="font-weight: 600; margin-bottom: -10px; margin-top: 0px;">Kristin M. Stevens,
-                                Fortune 100 Insurance Company</h5>
-                            <h5 class="testimonial-text">
-                                <span v-if="showFullText || testimonialTexts[1].length <= 150">{{ testimonialTexts[1]
-                                    }}</span>
-                                <span v-else>{{ testimonialTexts[1].substring(0, 150) }}...</span>
-                            </h5>
-                            <button v-if="testimonialTexts[1].length > 150" @click="toggleText" class="read-more-btn">
-                                {{ showFullText ? 'Show Less' : 'Read More' }}
-                            </button>
-                        </div>
-                    </div>
-                    <div v-if="activeImageIndex === 2" class="testimonial-card">
-                        <img :src="images[2]" alt="client photo" class="testimonial-image" />
-                        <div>
-                            <h5 style="font-weight: 600; margin-bottom: -10px; margin-top: 0px;">Mamawa Daboh, Respace
-                            </h5>
-                            <h5 class="testimonial-text">
-                                <span v-if="showFullText || testimonialTexts[2].length <= 150">{{ testimonialTexts[2]
-                                    }}</span>
-                                <span v-else>{{ testimonialTexts[2].substring(0, 150) }}...</span>
-                            </h5>
-                            <button v-if="testimonialTexts[2].length > 150" @click="toggleText" class="read-more-btn">
-                                {{ showFullText ? 'Show Less' : 'Read More' }}
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                </transition>
                 <div class="arrow-container right-arrow" @click="nextImage"
                     :class="{ 'disabled': activeImageIndex === images.length - 1 }" style="padding-right: 5px;">
                     <div class="arrow" style="transform: rotate(135deg);"></div>
@@ -83,6 +59,11 @@ export default {
                 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/kristin-m.-stevens-headshot.png',
                 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/mamawa-daboh-headshot.png'
             ],
+            testimonialNames: [
+                "Will Mahon, DraftKings",
+                "Kristin M. Stevens, Fortune 100 Insurance Company",
+                "Mamawa Daboh, Respace"
+            ],
             testimonialTexts: [
                 "I am happy to say that we use Assessments 24x7 as our global DISC solution. We started to work with Assessments 24x7 because we were interested in the breadth of instruments that they offer. There are instruments for a large variety of cases and lots of different team dynamics. Since then, we have been really happy with the ease of using their platform. We have also been happy with the customer service that we have been provided. Every question that we have ever asked the team has been responded to really quickly and professionally. That gives Assessments 24x7 our highest recommendation.",
                 "Our Fortune 100 Insurance Company uses Assessments 24x7 Leadership Assessments for our premier Leadership Development program which all new leaders are invited to attend. The reports are in-depth and thorough and provide an exceptional foundation of self-awareness for our participants. Assessments 24x7 has been a tremendous partner to work with on this project and has bent over backward to help us customize the reports to our specifications and create an efficient administration process. The level of responsiveness, dedication, and service has been above and beyond, and we highly recommend Assessments 24x7 to others who may be searching for an assessment provider.",
@@ -91,9 +72,15 @@ export default {
         };
     },
     mounted() {
-        this.observeElements();
+        this.preloadImages();
     },
     methods: {
+        preloadImages() {
+            this.images.forEach((src) => {
+                const img = new Image();
+                img.src = src;
+            });
+        },
         toggleText() {
             this.showFullText = !this.showFullText;
         },
@@ -115,23 +102,6 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
-        },
-        observeElements() {
-            const options = {
-                threshold: 0.1
-            };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('rise');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-            const elements = document.querySelectorAll('.rise-on-scroll');
-            elements.forEach(el => {
-                observer.observe(el);
-            });
         }
     }
 }
@@ -247,6 +217,7 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: white;
     min-height: 220px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .testimonial-image {
@@ -284,14 +255,14 @@ h3 {
     color: #666666;
 }
 
-.rise-on-scroll {
-    transition: transform 1s ease-out;
-    transform: translateY(1in);
-    opacity: 0;
+.testimonial-fade-enter-active,
+.testimonial-fade-leave-active {
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.rise-on-scroll.rise {
-    transform: translateY(0);
-    opacity: 1;
+.testimonial-fade-enter,
+.testimonial-fade-leave-to {
+    opacity: 0;
+    transform: translateY(10px);
 }
 </style>
