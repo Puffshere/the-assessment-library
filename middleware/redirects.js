@@ -173,8 +173,17 @@ export default function (context) {
         else if (context.req.url == '/pdfs/Dealing%20With%20Conflict%20Sampl') {
             context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
         }
+
         else if (context.req.url == '/pdfs/Dealing%20With%20Conflict%20Sample') {
             context.redirect('https://www.assessments24x7.com/pdfs/Dealing%20With%20Conflict%20Sample%20Report.pdf');
+        }
+
+        else if (context.req.url == '/validity/validitydisc.pdf') {
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/validity/validitydisc.pdf');
+        }
+
+        else if (context.req.url == '/pdfs/Strategic%20Leadership%20Type%20Indicator%20Sample%20Report.pdf/1000') {
+            context.redirect('/pdfs/Strategic%20Leadership%20Type%20Indicator%20Sample%20Report.pdf');
         }
         
         else if (context.req.url.match(/(\/reports\/)[\w- ]+\.pdf/gi)) {

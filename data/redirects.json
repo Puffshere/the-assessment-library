@@ -562,5 +562,53 @@
     {
         "from": "/validity/Values%20Validity-Research.pdf",
         "to": "/about/validity"
+    },
+    {
+        "from": "/blog/create-results-oriented-culture//1000",
+        "to": "/blog/create-results-oriented-culture"
+    },
+    {
+        "from": "/blog/romance-and-the-four-disc-styles//1000",
+        "to": "/blog/romance-and-the-four-disc-styles"
+    },
+    {
+        "from": "/blog/stages-of-team-development//1000",
+        "to": "/blog/stages-of-team-development"
+    },
+    {
+        "from": "/blog/mirroring//1000",
+        "to": "/blog/mirroring"
+    },
+    {
+        "from": "/blog/wonder-woman//1000",
+        "to": "/blog/wonder-woman"
+    },
+    {
+        "from": "/blog/universal-leadership-attributes//1000",
+        "to": "/blog/universal-leadership-attributes"
+    },
+    {
+        "from": "/assessments/critical-thinking-hvp/1000",
+        "to": "/assessments/critical-thinking-hvp"
+    },
+    {
+        "from": "/reports/DISCselfSampl",
+        "to": "/sample-reports"
+    },
+    {
+        "from": "/privacy",
+        "to": "/legal/privacy"
+    },
+    {
+        "from": "/assessmentshttps:/www.assessments24x7.com/assessments",
+        "to": "/assessments"
+    },
+    {
+        "from": "/advice/this-5minute-quiz-is-surprisingly-accurate-about-how-you-respond-to-expectations",
+        "to": "/"
+    },
+    {
+        "from": "/blog/null",
+        "to": "/blog"
     }
 ]
