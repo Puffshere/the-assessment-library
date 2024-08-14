@@ -5,7 +5,8 @@
                 <h1>Don't just take our word, take theirs.</h1>
                 <h3>How We Help Organizations Succeed</h3>
                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/quotations.png"
-                    alt="image of quotation marks" style="position: absolute; z-index: 5; width: 140px; top: 100px; left: 40px;">
+                    alt="image of quotation marks"
+                    style="position: absolute; z-index: 5; width: 140px; top: 100px; left: 40px;">
             </div>
             <div class="col-12" style="display: flex; flex-direction: column; align-items: center; position: relative;">
                 <div class="arrow-container left-arrow" @click="prevImage"
@@ -88,6 +89,9 @@ export default {
                 "We are happy to recommend Assessments 24x7 for your assessment needs. Purchasing the assessments was probably one of the best decisions we've made so far. They have been a great tool to help guide our hiring efforts, and the results are spot-on."
             ]
         };
+    },
+    mounted() {
+        this.observeElements();
     },
     methods: {
         toggleText() {
@@ -182,6 +186,10 @@ h3 {
         color: #00a8ff;
         background-color: white;
     }
+
+    &:active {
+        background-color: rgb(124, 123, 123);
+    }
 }
 
 .arrow-container {
@@ -196,6 +204,14 @@ h3 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
+    &:hover {
+        background-color: #3258c0;
+    }
+
+    &:active {
+        background-color: #5a76c4;
+    }
 }
 
 .left-arrow {
@@ -217,11 +233,6 @@ h3 {
     height: 15px;
     border-top: 2px solid white;
     border-left: 2px solid white;
-}
-
-.arrow:hover {
-    border-top: 2px solid rgb(110, 110, 110);
-    border-left: 2px solid rgb(119, 118, 118);
 }
 
 .testimonial-card {
@@ -267,5 +278,20 @@ h3 {
 
 .read-more-btn:hover {
     color: #9d9e9e;
+}
+
+.read-more-btn:active {
+    color: #666666;
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>

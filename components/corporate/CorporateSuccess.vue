@@ -3,15 +3,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-5">
-                    <h1 style="margin-top: 80px; margin-bottom: -25px;">
+                    <h1 class="rise-on-scroll" style="margin-top: 80px; margin-bottom: -25px;">
                         Our Reports <br />
                         <span style="color: #00a8ff">Your Success</span>
                     </h1>
-                    <h3 style="margin-top: 30px;">
+                    <h3 class="rise-on-scroll" style="margin-top: 30px;">
                         Uncover Immediate insights that would take <br />
                         years to surface otherwise.
                     </h3>
-                    <div style="color: #00a8ff; margin-bottom: 50px;">
+                    <div class="rise-on-scroll" style="color: #00a8ff; margin-bottom: 50px;">
                         <div v-for="(item, index) in items" :key="index">
                             <p @click="toggleItem(index)" style="cursor: pointer;">
                                 <span>{{ item.expanded ? '-' : '+' }}</span> {{ item.text }}
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="button" @click="scrollToContactForm">
+                    <button class="button rise-on-scroll" @click="scrollToContactForm">
                         <span>Get Started</span>
                     </button>
                 </div>
@@ -45,8 +45,7 @@
                                         <h5 style="margin-top: -15px;">{{ card.description }}</h5>
                                         <h5 style="margin-top: -20px; margin-bottom: 10px;">{{ card.languages }}</h5>
                                         <a :href="card.link" target="_blank" rel="noopener">
-                                            <button
-                                                style="cursor: pointer; font-size: 12.6667px; font-weight: 700; color: #0033c5; border-radius: 20px; padding: 10px 20px; border: none;">Download
+                                            <button class="card-button">Download
                                                 Sample</button>
                                         </a>
                                     </div>
@@ -164,6 +163,9 @@ export default {
             ]
         };
     },
+    mounted() {
+        this.observeElements();
+    },
     methods: {
         toggleItem(index) {
             this.items[index].expanded = !this.items[index].expanded;
@@ -215,6 +217,23 @@ export default {
             const totalCards = this.cards.length;
             const position = (index - this.activeIndex + totalCards) % totalCards;
             return position === 1;
+        },
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
         }
     }
 }
@@ -245,6 +264,28 @@ export default {
     &:hover {
         color: #1e222d;
         background-color: white;
+    }
+
+    &:active {
+        background-color: rgb(134, 134, 134);
+    }
+}
+
+.card-button {
+    cursor: pointer;
+    font-size: 12.6667px;
+    font-weight: 700;
+    color: #0033c5;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+
+    &:hover {
+        background-color: rgb(196, 195, 195);
+    }
+
+    &:active {
+        background-color: rgb(134, 133, 133);
     }
 }
 
@@ -379,20 +420,6 @@ p {
             margin: 10px 0;
             font-size: 1em;
         }
-
-        .card-button {
-            background-color: #00a8ff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-
-            &:hover {
-                background-color: #007bb5;
-            }
-        }
     }
 }
 
@@ -410,6 +437,14 @@ p {
     cursor: pointer;
     font-size: 60px;
     z-index: 1000;
+
+    &:hover {
+        background-color: #037db9;
+    }
+
+    &:active {
+        background-color: #014d74;
+    }
 }
 
 .carousel-arrow.left {
@@ -420,5 +455,16 @@ p {
 .carousel-arrow.right {
     top: 275px;
     right: -40px;
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>

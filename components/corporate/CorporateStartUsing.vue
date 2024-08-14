@@ -8,12 +8,12 @@
         </video>
         <div class="container">
             <div class="row">
-                <h1 style="color: #0033c5;">
+                <h1 class="rise-on-scroll" style="color: #0033c5;">
                     Start Using Assessments
                 </h1>
             </div>
             <div class="custom-row">
-                <div class="card" style="background-color: #00a8ff; color: white;">
+                <div class="card rise-on-scroll" style="background-color: #00a8ff; color: white;">
                     <div>
                         <h2 style="text-decoration: underline; margin-top: 60px;">
                             Small Assessment Purchase of Any Variety
@@ -47,6 +47,9 @@
 
 <script>
 export default {
+    mounted() {
+        this.observeElements();
+    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('corporateContactForm');
@@ -54,6 +57,23 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
         }
     }
 }
@@ -128,6 +148,10 @@ h3 {
         color: #0033c5;
         background-color: white;
     }
+
+    &:active {
+        background-color: rgb(126, 126, 126);
+    }
 }
 
 .custom-row {
@@ -142,5 +166,16 @@ h3 {
     border-radius: 30px;
     padding: 5px;
     text-align: center;
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>

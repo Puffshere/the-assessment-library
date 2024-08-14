@@ -3,7 +3,7 @@
         <div class="container flex-container" id="form">
             <div class="row flex-container">
                 <div class="col-12">
-                    <h1 style="margin-top: 100px; margin-bottom: 0px;">
+                    <h1 class="rise-on-scroll" style="margin-top: 100px; margin-bottom: 0px;">
                         Ready to take your organization to the top?<br />
                         <span style="color: #00a8ff;">You‘re in the right place.</span>
                     </h1>
@@ -11,7 +11,7 @@
             </div>
             <form @submit.prevent="onSubmit">
                 <loading :active="loading" :is-full-page="true" />
-                <div class="row">
+                <div class="row rise-on-scroll">
                     <div class="col-12">
                         <div class="col-6">
                             <div class="line">
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row rise-on-scroll">
                     <div class="col-12">
                         <div class="col-6">
                             <div class="line">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row rise-on-scroll">
                     <div class="col-12">
                         <div class="col-12">
                             <div style="margin-bottom: -40px;">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <br />
-                <div class="row">
+                <div class="row rise-on-scroll">
                     <div class="col-12">
                         <div class="row">
                             <div class="col-12">
@@ -121,7 +121,27 @@ export default {
             }
         };
     },
+    mounted() {
+        this.observeElements();
+    },
     methods: {
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        },
         onSubmit() {
             this.submitForm();
         },
@@ -324,7 +344,22 @@ h1 {
                 background-color: white;
                 border: 1px solid #2729ff;
             }
+            
+            &:active {
+                background-color: rgb(128, 127, 127);
+            }
         }
     }
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>

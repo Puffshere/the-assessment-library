@@ -3,15 +3,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="title" style="margin-bottom: 0px;">
+                    <h1 class="title rise-on-scroll" style="margin-bottom: 0px;">
                         Comprehensive DISC Tools <br />
                         for <span style="color: #00a8ff;">Organizational Success</span>
                     </h1>
                     <div style="position: relative;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-3-coworkers-revised.png"
                             alt="coworkers smiling" class="workersSmiling">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/increase-icon.png"
+                            alt="increase icon" class="pop-up-on-scroll increaseIcon">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/ladder-icon.png"
+                            alt="ladder-icon" class="pop-up-on-scroll ladderIcon">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/light-bulb-icon.png"
+                            alt="light-bulb-icon" class="pop-up-on-scroll lightBulbIcon">
                     </div>
-                    <p style="max-width: 560px; float: right;">
+                    <p style="max-width: 560px; float: right;" class="rise-on-scroll">
                         Our globally recognized DISC Assessment Technology offers turnkey and customizable reports for
                         individual and team development. Choose from options like Self-awareness, Leadership, Sales, &
                         more. With 25+ languages & a suite of supporting assessments, our platform provides tailored
@@ -19,7 +25,7 @@
                         manage everything from one powerful dashboard.
                     </p>
                 </div>
-                <button class="button" style="margin-top: 20px;" @click="scrollToContactForm">
+                <button class="button rise-on-scroll" style="margin-top: 20px;" @click="scrollToContactForm">
                     Explore More
                 </button>
             </div>
@@ -29,6 +35,9 @@
 
 <script>
 export default {
+    mounted() {
+        this.observeElements();
+    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('corporateContactForm');
@@ -36,6 +45,28 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        entry.target.classList.add('pop-up');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const riseElements = document.querySelectorAll('.rise-on-scroll');
+            const popUpElements = document.querySelectorAll('.pop-up-on-scroll');
+            riseElements.forEach(el => {
+                observer.observe(el);
+            });
+            popUpElements.forEach(el => {
+                observer.observe(el);
+            });
         }
     }
 }
@@ -70,6 +101,26 @@ export default {
     }
 }
 
+.increaseIcon {
+    width: 50px;
+    position: absolute;
+    left: -40px;
+}
+
+.ladderIcon {
+    width: 50px;
+    position: absolute;
+    left: 100px;
+    top: -100px;
+}
+
+.lightBulbIcon {
+    width: 50px;
+    position: absolute;
+    left: 230px;
+    top: -80px;
+}
+
 h1 {
     font-size: 48px;
     line-height: 48px;
@@ -96,5 +147,31 @@ p {
         color: #00a8ff;
         background-color: white;
     }
+
+    &:active {
+        background-color: rgb(131, 130, 130);
+    }
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.pop-up-on-scroll {
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.pop-up-on-scroll.pop-up {
+    transform: scale(1);
+    opacity: 1;
 }
 </style>

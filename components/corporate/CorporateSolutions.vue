@@ -7,15 +7,15 @@
                         alt="image of a blue circle" style="width: 400px; position: absolute; bottom: 0px;">
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-9-female-standing-image.png"
                         alt="picture of woman smiling"
-                        style="width: 264px; margin-top: 31px; position: relative; bottom: -10px;">
+                        style="width: 264px; margin-top: 31px; position: relative; bottom: -10px;" class="rise-on-scroll">
                 </div>
                 <div class="col-7" style="margin-left: -24px;">
-                    <h1>
+                    <h1 class="rise-on-scroll">
                         <span style="color: white;">1 Solution</span> <br />
                         <span style="color: #00a8ff;">Endless Applications</span>
                     </h1>
                     <div class="row" style="margin-left: -24px; margin-top: -40px;">
-                        <div class="col-6" style="color: white; font-size: 17px; font-weight: 400;">
+                        <div class="col-6 rise-on-scroll" style="color: white; font-size: 17px; font-weight: 400;">
                             <ul>
                                 <li>
                                     Improve Hiring & Selection
@@ -31,7 +31,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-6" style="color: white; font-size: 17px; font-weight: 400;">
+                        <div class="col-6 rise-on-scroll" style="color: white; font-size: 17px; font-weight: 400;">
                             <ul>
                                 <li>
                                     Create Connected Teams
@@ -48,13 +48,13 @@
                             </ul>
                         </div>
                     </div>
-                    <h5 style="color: #ffbd59; margin-top: 20px;">
+                    <h5 class="rise-on-scroll" style="color: #ffbd59; margin-top: 20px;">
                         Make the Right, Bright Decisions professionally and personally.
                     </h5>
                     <button class="button" @click="scrollToContactForm">
                         <span>Start Your Journey</span>
                     </button>
-                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-9-blue-arrow.png"
+                    <img class="rise-on-scroll" src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-9-blue-arrow.png"
                         alt="image of blue arrow" style="width: 70px; margin-top: -45px;">
                 </div>
             </div>
@@ -64,6 +64,9 @@
 
 <script>
 export default {
+    mounted() {
+        this.observeElements();
+    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('corporateContactForm');
@@ -71,6 +74,23 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
         }
     }
 }
@@ -107,5 +127,20 @@ h5 {
         color: #00a8ff;
         background-color: white;
     }
+
+    &:active {
+        background-color: rgb(122, 121, 121);
+    }
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>

@@ -3,13 +3,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-9">
-                    <h1 style="color: white;">
+                    <h1 class="rise-on-scroll" style="color: white;">
                         Build High-Performing Teams, <br />
                         Empower Leadership, & <br />
                         Drive Success
                     </h1>
-                    <p style="margin-bottom: 40px;">
-                        DISC isn't just for recruitment—it's a daily game-changer. <br /> 
+                    <p class="rise-on-scroll" style="margin-bottom: 40px;">
+                        DISC isn't just for recruitment—it's a daily game-changer. <br />
                         Use DISC to enhance meeting dynamics, tackle workplace <br />
                         challenges, and refine leadership, sales, and customer service <br />
                         strategies. Foster a culture of understanding, efficiency, and <br />
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-3">
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/team-standing-image.png"
-                        alt="team of employees smiling image" class="groupSmiling" />
+                        alt="team of employees smiling image" class="groupSmiling rise-on-scroll" />
                 </div>
             </div>
         </div>
@@ -32,6 +32,9 @@
 
 <script>
 export default {
+    mounted() {
+        this.observeElements();
+    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('corporateContactForm');
@@ -39,6 +42,23 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
+        },
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
         }
     }
 }
@@ -76,6 +96,10 @@ export default {
         color: white;
         background-color: #0033c5;
     }
+
+    &:active {
+        background-color: #001757;
+    }
 }
 
 h1 {
@@ -91,4 +115,14 @@ p {
     color: white;
 }
 
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
+}
 </style>

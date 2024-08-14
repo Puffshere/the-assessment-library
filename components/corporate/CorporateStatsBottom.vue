@@ -3,24 +3,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-12" style="margin-top: -40px; margin-bottom: -20px;">
-                    <div class="col-3">
+                    <div class="col-3 rise-on-scroll">
                         <p><span class="topLine2">10-12 <span style="font-size: 40px;">min.</span></span> <br />
                             <span class="bottomLine">Avg. Completion Time</span>
                         </p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 rise-on-scroll">
                         <p><span class="topLine2">7+</span> <br />
                             <span class="bottomLine">Free Team <br />
                                 Reports</span>
                         </p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 rise-on-scroll">
                         <p><span class="topLine2">360°</span> <br />
                             <span class="bottomLine">Assessments <br />
                                 Availiable</span>
                         </p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 rise-on-scroll">
                         <p><span class="topLine2">ASI</span> <br />
                             <span class="bottomLine">Validated & <br />
                                 Compliant</span>
@@ -31,6 +31,33 @@
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    mounted() {
+        this.observeElements();
+    },
+    methods: {
+        observeElements() {
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('rise');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            const elements = document.querySelectorAll('.rise-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+    }
+}
+</script>
 
 <style scoped>
 .container {
@@ -82,5 +109,16 @@ section {
     background: url('~assets/artifacts/content-bg.webp');
     background-size: cover !important;
     background-position: center;
+}
+
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
 }
 </style>

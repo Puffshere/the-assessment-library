@@ -85,7 +85,6 @@ export default {
         }
     },
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -134,7 +133,6 @@ export default {
     }
 
     &:active {
-        color: #1e222d;
         background-color: rgb(172, 172, 172);
     }
 }
