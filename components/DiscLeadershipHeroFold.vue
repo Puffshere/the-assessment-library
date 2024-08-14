@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <img src="@/assets/disc-leadership/disc-leadership-graphic.png" alt="sample report image"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/disc-leadership-graphic.png" alt="sample report image"
                             class="sampleReportImage">
                     </div>
                     <div class="col-6">

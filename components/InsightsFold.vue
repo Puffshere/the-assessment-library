@@ -9,7 +9,7 @@
                                 <br />
                                 Tailored to You
                             </h3>
-                            <img src="~/assets/disc-leadership/left-icon.png" alt="d circle" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/left-icon.png" alt="d circle" class="icon" />
                             <br />
                             <p>Unlock personalized leadership strategies based on the unique DISC style to maximize
                                 impact
@@ -20,7 +20,7 @@
                                 <br />
                                 Collaboration
                             </h3>
-                            <img src="~/assets/disc-leadership/middle-icon.png" alt="i circle" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/middle-icon.png" alt="i circle" class="icon" />
                             <br />
                             <p>Learn customized communication techniques to connect authentically with diverse styles,
                                 fostering a more harmonious and productive team environment.</p>
@@ -30,7 +30,7 @@
                                 <br />
                                 Success
                             </h3>
-                            <img src="~/assets/disc-leadership/right-icon.png" alt="s circle" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/right-icon.png" alt="s circle" class="icon" />
                             <br />
                             <p>Elevate performance & organizational success by leveraging tailored leadership strategies
                                 to

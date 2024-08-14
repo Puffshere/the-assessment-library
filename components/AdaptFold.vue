@@ -17,7 +17,7 @@
 
 <style lang="scss" scoped>
 .adapt {
-    background-image: url("~assets/disc-leadership/skyline.png");
+    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/skyline.png");
     min-height: 700px;
     display: flex;
     justify-content: center;

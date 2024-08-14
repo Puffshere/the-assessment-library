@@ -15,7 +15,7 @@
                     your leadership capabilities based on your DISC profile. </p>
                     <p style="font-weight: bold;">Explore actionable guidance to navigate various leadership scenarios successfully:</p>
                 </div>
-                <img src="@/assets/disc-leadership/female-with-descriptors-around-her.png"
+                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/female-with-descriptors-around-her.png"
                     alt="female-with-descriptors-around-her" class="female">
                 <div class="col-12 button-container">
                     <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf"

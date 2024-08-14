@@ -11,7 +11,7 @@
                             <br />
                             DISC Leadership
                         </h1>
-                        <img src="@/assets/disc-leadership/underline-white.png" alt="underline white"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/underline-white.png" alt="underline white"
                             class="underline" />
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                     <div class="col-12">
                         <div class="col-7 conceptsList">
                             <div class="whiteBoxes">
-                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Enhance
                                         Self-Awareness</span>
@@ -29,7 +29,7 @@
                                 </span>
                             </div>
                             <div class="whiteBoxes">
-                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Improve Team
                                         Dynamics</span>
@@ -39,7 +39,7 @@
                                 </span>
                             </div>
                             <div class="whiteBoxes">
-                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Target
                                         Development</span>
@@ -49,7 +49,7 @@
                                 </span>
                             </div>
                             <div class="whiteBoxes">
-                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Effective
                                         Communication</span>
@@ -59,7 +59,7 @@
                                 </span>
                             </div>
                             <div class="whiteBoxes">
-                                <span><img src="@/assets/disc-leadership/blue-checkmark.png" alt="rapport disc">
+                                <span><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/blue-checkmark.png" alt="rapport disc">
                                     <span class="title"
                                         style="font-size: 22px; color: #00a8ff; font-weight: 700;">Optimize Leadership
                                         Impact</span>
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <img src="@/assets/disc-leadership/black-male.png" alt="black male" class="blackMale">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/black-male.png" alt="black male" class="blackMale">
                         </div>
                     </div>
                 </div>

@@ -62,7 +62,7 @@
                 <div class="row">
                     <div class="col-12">
                         <button type="submit" class="submitBtn">
-                            <img src="~/assets/disc-leadership/submit-button-blue.png" alt="submit icon"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Leadership/submit-button-blue.png" alt="submit icon"
                                 class="submitIcon" />
                         </button>
                     </div>
