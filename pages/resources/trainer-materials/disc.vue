@@ -292,7 +292,17 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Executive+Insights+-+Marketing+One-Sheet_v2.pdf"
                                         target="_blank" rel="noopener">DISC Executive Insights Introduction</a>
-                                    <small>A single-page descriptive document to introduce and promote DISC Executive Insights in simple and practical overview.</small>
+                                    <small>A single-page descriptive document to introduce and promote DISC Executive
+                                        Insights in simple and practical overview.</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Executive+Insights+Report+Guide_8.12.24+Final.pdf"
+                                        target="_blank" rel="noopener">DISC Executive Insights Report Guide</a>
+                                    <small>An overview guide for reviewing, interpreting, and applying the DISC
+                                        Executive Insights Report with page-by-page details and suggestions for
+                                        use.</small>
                                 </td>
                             </tr>
                         </tbody>
