@@ -4,10 +4,11 @@
             <div class="row">
                 <div class="col-5">
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-circle-background.png"
-                        alt="image of a blue circle" style="width: 400px; position: absolute; bottom: 0px;">
+                        alt="image of a blue circle" style="width: 400px; position: absolute; bottom: 0px;" class="circle">
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-9-female-standing-image.png"
                         alt="picture of woman smiling"
                         style="width: 264px; margin-top: 31px; position: relative; bottom: -10px;" class="rise-on-scroll">
+                        <hr class="hr" style="display: none;">
                 </div>
                 <div class="col-7" style="margin-left: -24px;">
                     <h1 class="rise-on-scroll">
@@ -54,7 +55,7 @@
                     <button class="button" @click="scrollToContactForm">
                         <span>Start Your Journey</span>
                     </button>
-                    <img class="rise-on-scroll" src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-9-blue-arrow.png"
+                    <img class="rise-on-scroll blueArrow" src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-9-blue-arrow.png"
                         alt="image of blue arrow" style="width: 70px; margin-top: -45px;">
                 </div>
             </div>
@@ -142,5 +143,27 @@ h5 {
 .rise-on-scroll.rise {
     transform: translateY(0);
     opacity: 1;
+}
+
+@media (max-width: 1050px) {
+    .circle {
+        display: none;
+    }
+
+    .blueArrow {
+        display: none;
+    }
+
+    .col-7 {
+        margin-left: 20px !important;
+    }
+
+    .row {
+        margin-left: 0px !important;
+    }
+
+    .hr {
+        display: block !important;
+    }
 }
 </style>
