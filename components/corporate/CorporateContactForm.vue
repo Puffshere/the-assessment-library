@@ -3,7 +3,7 @@
         <div class="container flex-container" id="form">
             <div class="row flex-container">
                 <div class="col-12">
-                    <h1 class="rise-on-scroll" style="margin-top: 100px; margin-bottom: 0px;">
+                    <h1 class="rise-on-scroll title" style="margin-top: 100px; margin-bottom: 0px;">
                         Ready to take your organization to the top?<br />
                         <span style="color: #00a8ff;">You‘re in the right place.</span>
                     </h1>
@@ -344,7 +344,7 @@ h1 {
                 background-color: white;
                 border: 1px solid #2729ff;
             }
-            
+
             &:active {
                 background-color: rgb(128, 127, 127);
             }
@@ -361,5 +361,16 @@ h1 {
 .rise-on-scroll.rise {
     transform: translateY(0);
     opacity: 1;
+}
+
+@media (max-width: 1050px) {
+    .title {
+        margin-top: 60px !important;
+    }
+
+    .learn-more-button {
+        margin-bottom: -20px !important;
+        margin: 0 auto;
+    }
 }
 </style>

@@ -8,7 +8,7 @@
         </video>
         <div class="container">
             <div class="row">
-                <h1 class="rise-on-scroll" style="color: #0033c5;">
+                <h1 class="rise-on-scroll title" style="color: #0033c5;">
                     Start Using Assessments
                 </h1>
             </div>
@@ -20,7 +20,7 @@
                         </h2>
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/slider-button-image.png"
                             alt="slider button image"
-                            style="width: 100px; float: right; margin-top: -60px; margin-right: 40px;">
+                            style="width: 100px; float: right; margin-top: -60px; margin-right: 40px;" class="slider">
                         <h3>
                             Tailored to your specific needs.
                         </h3>
@@ -30,7 +30,7 @@
                     </h2>
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/slider-button-image.png"
                         alt="slider button image"
-                        style="width: 100px; float: right; margin-top: -60px; margin-right: 40px;">
+                        style="width: 100px; float: right; margin-top: -60px; margin-right: 40px;" class="slider">
                     <h3>
                         Equip your teams with the skills they need.
                     </h3>
@@ -177,5 +177,25 @@ h3 {
 .rise-on-scroll.rise {
     transform: translateY(0);
     opacity: 1;
+}
+
+@media (max-width: 1050px) {
+    .corporate-start-using-fold {
+        height: 100%;
+    }
+
+    .title {
+        margin-top: 0px !important;
+    }
+
+    .card {
+        height: 100%;
+        margin: 10px;
+    }
+
+    .slider {
+        padding-top: 10px;
+        width: 60px !important;
+    }
 }
 </style>
