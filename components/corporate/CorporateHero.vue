@@ -168,4 +168,16 @@ h5 {
     transform: translateY(0);
     opacity: 1;
 }
+
+@media (max-width: 1050px) {
+    .groupSmiling {
+        width: 100%;
+        position: static;
+        margin-bottom: -10px;
+    }
+
+    .circle {
+        display: none;
+    }
+}
 </style>
