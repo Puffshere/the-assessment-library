@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <img src="~/assets/disc/implementation-graphic.png" alt="gear hands photo" class="gearPhoto">
+                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/implementation-graphic.png" alt="gear hands photo" class="gearPhoto">
                     </div>
                     <div class="col-6">
                         <h1>
@@ -25,7 +25,7 @@
                                 and API Integration</span> options can tailor your experience according to your specific
                             needs and
                             align with your Organization’s objectives and existing systems</p>
-                        <a href="#form"><img src="~/assets/disc/get-started-button.png" alt="get started button"
+                        <a href="#form"><img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/get-started-button.png" alt="get started button"
                                 class="getStartedButton"></a>
                     </div>
                 </div>

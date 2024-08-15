@@ -14,9 +14,9 @@
           </h1>
           <br />
           <a href="https://www.assessments24x7.com/customizations"><img
-              src="~/assets/disc/black-learn-more-button.png" alt="black learn more button"
+              src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/black-learn-more-button.png" alt="black learn more button"
               class="learnButton" /></a>
-          <img src="~/assets/disc/curvy-white-arrow.png" alt="curvy white arrow" class="whiteArrow" />
+          <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/curvy-white-arrow.png" alt="curvy white arrow" class="whiteArrow" />
         </div>
       </div>
     </div>

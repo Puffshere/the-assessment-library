@@ -1,7 +1,7 @@
 <template>
     <section class="ourDifference">
         <video autoplay muted loop id="myVideo">
-            <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/our-difference-video.mp4"
+            <source src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/our-difference-video.mp4"
                 type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
@@ -33,7 +33,7 @@
                         prompt and thorough answers to your questions.
                     </h3>
                     <div class="button-container">
-                        <a href="#form"><img src="~/assets/disc/get-started-button.png" alt="submit icon"
+                        <a href="#form"><img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/get-started-button.png" alt="submit icon"
                                 class="submitIcon" /></a>
                     </div>
                 </div>

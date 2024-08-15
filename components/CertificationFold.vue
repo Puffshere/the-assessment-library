@@ -16,7 +16,7 @@
                         </p>
                     </div>
                     <div class="col-2">
-                        <img src="~/assets/disc/blue-disc-logo.png" alt="blue disc logo" class="blueDiscLogo">
+                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/blue-disc-logo.png" alt="blue disc logo" class="blueDiscLogo">
                     </div>
                 </div>
                 <div class="row">
@@ -42,10 +42,10 @@
                                 organizations by facilitating improved communication, teamwork, leadership, and overall
                                 performance.
                             </p>
-                            <img src="~/assets/disc/certification-ceus.png" alt="credits" class="credits">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/certification-ceus.png" alt="credits" class="credits">
                         </div>
                         <div class="col-6">
-                            <img src="~/assets/disc/certification-female.png" alt="smiling woman photo"
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/certification-female.png" alt="smiling woman photo"
                                 class="womanSmiling">
                         </div>
                     </div>
