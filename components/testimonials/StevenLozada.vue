@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/banner/steven-lozada.jpg" alt="Steven Lozada">
+                    <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/Banner/steven-lozada.jpg" alt="Steven Lozada">
                 </div>
             </div>
         </div>

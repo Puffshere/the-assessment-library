@@ -341,7 +341,7 @@
                     </div>
 
                     <div class="col-4">
-                        <img class="image" src="~/assets/testimonials/banner/julie-sand.png" alt="Julie Sand">
+                        <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/Banner/julie-sand.png" alt="Julie Sand">
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/banner/rob-pickering.jpg" alt="Rob Pickering">
+                    <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/Banner/rob-pickering.jpg" alt="Rob Pickering">
                 </div>
             </div>
         </div>

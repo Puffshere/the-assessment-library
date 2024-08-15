@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/banner/susan-cranston.jpg" alt="Susan Merli">
+                    <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/Banner/susan-cranston.jpg" alt="Susan Merli">
                 </div>
             </div>
         </div>

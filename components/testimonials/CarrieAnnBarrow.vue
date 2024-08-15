@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/banner/carrie-ann-barrow.jpg" alt="Carrie-Ann Barrow">
+                    <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/Banner/carrie-ann-barrow.jpg" alt="Carrie-Ann Barrow">
                 </div>
             </div>
         </div>

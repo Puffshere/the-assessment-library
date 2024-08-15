@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/banner/corina-lorenzi.jpg" alt="Corina Lorenzi">
+                    <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/Banner/corina-lorenzi.jpg" alt="Corina Lorenzi">
                 </div>
                 
                 <div class="col-8">
