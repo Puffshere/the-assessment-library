@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-4 boxes topBox">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/applicationIcon1.png" alt="api icon" class="icon" />
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/applicationIcon1.png" alt="api icon" class="icon" />
                         <h3>
                             Team
                         </h3>
@@ -42,7 +42,7 @@
                         </p>
                     </div>
                     <div class="col-4 boxes">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/applicationIcon2.png" alt="custom reports icon" class="icon" />
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/applicationIcon2.png" alt="custom reports icon" class="icon" />
                         <h3>
                             Leadership
                         </h3>
@@ -62,7 +62,7 @@
                         </p>
                     </div>
                     <div class="col-4 boxes">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/applicationIcon3.png" alt="branding and user experience icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/applicationIcon3.png" alt="branding and user experience icon"
                             class="icon" />
                         <h3>
                             Hiring &

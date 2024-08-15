@@ -63,7 +63,7 @@ export default {
 
 <style scoped>
 .header {
-    background: url('~assets/coaches-directory/coaches-directory-header-image.png');
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/coaches-directory-header-image.png');
     background-size: cover;
     color: #fff;
     padding-top: 30px;

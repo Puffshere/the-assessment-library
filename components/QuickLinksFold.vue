@@ -11,13 +11,13 @@
                         <a href="#application" style="cursor: pointer;">
                             <div class="col-6">
                                 <h2>Application</h2>
-                                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
                             </div>
                         </a>
                         <a href="#results" style="cursor: pointer;">
                             <div class="col-6">
                                 <h2>Results</h2>
-                                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
                             </div>
                         </a>
                     </div>
@@ -25,13 +25,13 @@
                         <a href="#implementation" style="cursor: pointer;">
                             <div class="col-6">
                                 <h2>Implementation</h2>
-                                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
                             </div>
                         </a>
                         <a href="#testimonial" style="cursor: pointer;">
                             <div class="col-6">
                                 <h2>What our Clients say</h2>
-                                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
                             </div>
                         </a>
                     </div>
@@ -39,13 +39,13 @@
                         <a href="#certification" style="cursor: pointer;">
                             <div class="col-6">
                                 <h2>Certification</h2>
-                                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
                             </div>
                         </a>
                         <a href="#sampleReports" style="cursor: pointer;">
                             <div class="col-6">
                                 <h2>Sample Reports</h2>
-                                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/white-arrow.png" alt="white arrow icon" class="whiteArrow">
                             </div>
                         </a>
                     </div>

@@ -8,7 +8,7 @@
         <br />
         <div class="testimonial-container">
             <div class="quotation-marks-container">
-                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/quotation-marks.png" alt="Quotation marks" class="quotation-marks">
+                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/quotation-marks.png" alt="Quotation marks" class="quotation-marks">
             </div>
             <br />
             <br />
@@ -23,14 +23,14 @@
                 our highest recommendation.
             </p>
             <div class="testimonial-footer">
-                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/draft-kings-logo.png" alt="Draft Kings Logo" class="draft-kings-logo">
+                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/draft-kings-logo.png" alt="Draft Kings Logo" class="draft-kings-logo">
                 <div class="author-and-role">
                     <p class="author-name">Will Mahon | Draft Kings</p>
                     <p class="author-role">Talent Development Manager</p>
                     <br />
                     <a href="#" class="video-testimonial-link hyperlink">Watch Full Video Testimonial</a>
                 </div>
-                <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/will-mahon-headshot.png" alt="Will Mahon Headshot" class="author-headshot">
+                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/will-mahon-headshot.png" alt="Will Mahon Headshot" class="author-headshot">
             </div>
         </div>
     </section>

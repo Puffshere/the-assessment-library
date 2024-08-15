@@ -17,7 +17,7 @@
                     <h2 class="heroSubtext">
                         Let DISC Lead the way.
                     </h2>
-                    <a href="#form"><img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/learn-button.png" alt="learn button"
+                    <a href="#form"><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/learn-button.png" alt="learn button"
                             class="learnButton" /></a>
                 </div>
                 <div class="col-7">
@@ -28,7 +28,7 @@
                                 type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <img v-if="showThumbnail" src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/disc-video-thumbnail.png" @click="playVideo"
+                        <img v-if="showThumbnail" src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/disc-video-thumbnail.png" @click="playVideo"
                             class="video-thumbnail" />
                     </div>
                 </div>

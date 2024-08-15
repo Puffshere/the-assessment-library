@@ -4,11 +4,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/results-background-graphic.png" alt="results background graphic"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/results-background-graphic.png" alt="results background graphic"
                             class="graphic">
                     </div>
                     <div class="col-6">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/results-icon.png" alt="results icon" class="resultsIcon">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/results-icon.png" alt="results icon" class="resultsIcon">
                         <h1>
                             Results
                         </h1>

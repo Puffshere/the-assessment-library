@@ -9,9 +9,9 @@
                 </div>
                 <div class="col-12">
                     <div class="col-4 boxes">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/disc-self-report-icon.png" alt="disc self report icon" class="icon" />
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/disc-self-report-icon.png" alt="disc self report icon" class="icon" />
                         <br />
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/disc-self-report.png" alt="disc self report" class="reports" />
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/disc-self-report.png" alt="disc self report" class="reports" />
                         <br />
                         <hr />
                         <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf"
@@ -22,9 +22,9 @@
                         </a>
                     </div>
                     <div class="col-4 boxes">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/applicationIcon2.png" alt="custom reports icon" class="icon" />
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/applicationIcon2.png" alt="custom reports icon" class="icon" />
                         <br />
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/disc-leadership-report.png" alt="disc leadership report"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/disc-leadership-report.png" alt="disc leadership report"
                             class="reports" />
                         <br />
                         <hr />
@@ -36,10 +36,10 @@
                         </a>
                     </div>
                     <div class="col-4 boxes">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/disc-team-dynamics-report-icon.png" alt="disc team dynamics report icon"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/disc-team-dynamics-report-icon.png" alt="disc team dynamics report icon"
                             class="icon" />
                         <br />
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/disc-team-dynamics-report.png" alt="disc team dynamics report"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/disc-team-dynamics-report.png" alt="disc team dynamics report"
                             class="reports" />
                         <br />
                         <hr />
@@ -54,7 +54,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <a href="#form"><img src="https://f002.backblazeb2.com/file/assessments24x7-media/DISC/get-started-button.png" alt="get started button"
+                    <a href="#form"><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/get-started-button.png" alt="get started button"
                             class="getStartedBtn" /></a>
                 </div>
             </div>
@@ -77,7 +77,7 @@
     }
     
     .container {
-        background-image: url("https://f002.backblazeb2.com/file/assessments24x7-media/DISC/sample-reports-background-graphic.png");
+        background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/sample-reports-background-graphic.png");
         padding-bottom: 75px;
     }
 
