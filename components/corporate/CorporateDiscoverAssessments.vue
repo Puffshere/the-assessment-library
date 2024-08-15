@@ -15,7 +15,7 @@
                         strategies. Foster a culture of understanding, efficiency, and <br />
                         growth by embedding DISC into your business strategy.
                     </p>
-                    <div class="row" style="margin-bottom: 160px;">
+                    <div class="row buttonRow" style="margin-bottom: 160px;">
                         <button class="button" @click="scrollToContactForm">
                             <span>Discover Assessments</span>
                         </button>
@@ -124,5 +124,21 @@ p {
 .rise-on-scroll.rise {
     transform: translateY(0);
     opacity: 1;
+}
+
+@media (max-width: 1050px) {
+    .container {
+        height: 100%;
+    }
+
+    .groupSmiling {
+        width: 100%;
+        position: static;
+        margin-bottom: -8px;
+    }
+
+    .buttonRow {
+        margin-bottom: 0px !important;
+    }
 }
 </style>
