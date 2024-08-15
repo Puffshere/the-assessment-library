@@ -467,4 +467,15 @@ p {
     transform: translateY(0);
     opacity: 1;
 }
+
+@media (max-width: 1050px) {
+    .container {
+        padding-top: 0px;
+        padding-bottom: 350px;
+    }
+
+    .button {
+        margin-bottom: 0px;
+    }
+}
 </style>

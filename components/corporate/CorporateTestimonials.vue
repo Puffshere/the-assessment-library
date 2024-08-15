@@ -1,19 +1,16 @@
 <template>
     <section class="testimonials-fold">
         <div class="container">
-            <div class="row" style="margin-bottom: 18px;">
+            <div class="row title" style="margin-bottom: 18px;">
                 <h1>Don't just take our word, take theirs.</h1>
-                <h3>How We Help Organizations Succeed</h3>
+                <h3 class="subTitle">How We Help Organizations Succeed</h3>
                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/quotations.png"
                     alt="image of quotation marks"
-                    style="position: absolute; z-index: 5; width: 140px; top: 100px; left: 40px;">
+                    style="position: absolute; z-index: 5; width: 140px; top: 100px; left: 40px;"
+                    class="quotationMarks">
             </div>
             <div class="col-12" style="display: flex; flex-direction: column; align-items: center; position: relative;">
-                <div class="arrow-container left-arrow" @click="prevImage"
-                    :class="{ 'disabled': activeImageIndex === 0 }" style="padding-left: 5px;">
-                    <div class="arrow" style="transform: rotate(-45deg);"></div>
-                </div>
-                <transition name="testimonial-fade" mode="out-in">
+                <transition :name="transitionName" :mode="transitionMode">
                     <div :key="activeImageIndex" class="testimonial-card">
                         <img :src="images[activeImageIndex]" alt="client photo" class="testimonial-image" />
                         <div>
@@ -36,9 +33,15 @@
                         </div>
                     </div>
                 </transition>
-                <div class="arrow-container right-arrow" @click="nextImage"
-                    :class="{ 'disabled': activeImageIndex === images.length - 1 }" style="padding-right: 5px;">
-                    <div class="arrow" style="transform: rotate(135deg);"></div>
+                <div class="arrow-container-wrapper">
+                    <div class="arrow-container left-arrow" @click="prevImage"
+                        :class="{ 'disabled': activeImageIndex === 0 }">
+                        <div class="arrow" style="transform: rotate(-45deg); margin-left: 5px;"></div>
+                    </div>
+                    <div class="arrow-container right-arrow" @click="nextImage"
+                        :class="{ 'disabled': activeImageIndex === images.length - 1 }">
+                        <div class="arrow" style="transform: rotate(135deg); margin-right: 5px;"></div>
+                    </div>
                 </div>
             </div>
             <div class="row button-container">
@@ -54,6 +57,8 @@ export default {
         return {
             activeImageIndex: 0,
             showFullText: false,
+            transitionName: 'testimonial-fade',
+            transitionMode: 'out-in',
             images: [
                 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/will-mahon-headshot.png',
                 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/kristin-m.-stevens-headshot.png',
@@ -103,6 +108,12 @@ export default {
             }
             event.target.blur();
         }
+    },
+    watch: {
+        '$vuetify.breakpoint.smAndDown'(isSmallScreen) {
+            this.transitionName = isSmallScreen ? '' : 'testimonial-fade';
+            this.transitionMode = isSmallScreen ? '' : 'out-in';
+        }
     }
 }
 </script>
@@ -151,6 +162,8 @@ h3 {
     color: white;
     border: 1px solid #00a8ff;
     width: 220px;
+    margin-top: -20px;
+
 
     &:hover {
         color: #00a8ff;
@@ -171,25 +184,34 @@ h3 {
     background-color: #0033c5;
     border-radius: 50%;
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+}
 
-    &:hover {
-        background-color: #3258c0;
-    }
+.arrow-container-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
-    &:active {
-        background-color: #5a76c4;
-    }
+.arrow-container:hover {
+    background-color: #3258c0;
+}
+
+.arrow-container:active {
+    background-color: #5a76c4;
 }
 
 .left-arrow {
+    margin-right: 10px;
+    position: absolute;
     left: 50px;
+    top: 90px;
 }
 
 .right-arrow {
+    margin-left: 10px;
+    position: absolute;
     right: 50px;
+    top: 90px;
 }
 
 .arrow-container.disabled {
@@ -217,7 +239,6 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: white;
     min-height: 220px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .testimonial-image {
@@ -264,5 +285,53 @@ h3 {
 .testimonial-fade-leave-to {
     opacity: 0;
     transform: translateY(10px);
+}
+
+@media (max-width: 1000px) {
+    .title {
+        margin-top: 50px;
+
+        .subTitle {
+            margin-top: 60px;
+        }
+    }
+
+    .quotationMarks {
+        display: none;
+    }
+
+    .testimonial-card {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin-left: 4%;
+    }
+
+    .testimonial-image {
+        margin: 0 auto 20px;
+    }
+
+    .arrow-container-wrapper {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: 4%;
+    }
+
+    .arrow-container {
+        position: static;
+    }
+
+    .left-arrow {
+        position: static;
+    }
+
+    .right-arrow {
+        position: static;
+    }
+
+    .button {
+        margin-top: 10px;
+    }
 }
 </style>

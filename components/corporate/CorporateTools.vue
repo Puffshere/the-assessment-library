@@ -174,4 +174,22 @@ p {
     transform: scale(1);
     opacity: 1;
 }
+
+@media (max-width: 1050px) {
+    .increaseIcon {
+        position: static;
+    }
+
+    .ladderIcon {
+        position: static;
+    }
+
+    .lightBulbIcon {
+        position: static;
+    }
+
+    .workersSmiling {
+        display: none;
+    }
+}
 </style>

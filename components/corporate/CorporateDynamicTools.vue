@@ -42,7 +42,8 @@
                             <span style="color: #57b4ff;">Premium Benefits</span>
                         </h1>
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/left-white-arrow.png"
-                            alt="left white arrow image" style="width: 140px; margin-right: 110px; margin-top: 10px;">
+                            alt="left white arrow image" style="width: 140px; margin-right: 110px; margin-top: 10px;"
+                            class="whiteArrow">
                     </div>
                 </div>
             </div>
@@ -261,5 +262,42 @@ hr {
 .rise-on-scroll.rise {
     transform: translateY(0);
     opacity: 1;
+}
+
+@media (max-width: 1050px) {
+    .corporate-dynamic-tools {
+        height: 100%;
+    }
+
+    .col-3 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .whiteArrow {
+        display: none;
+    }
+
+    .custom-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-col {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .custom-col:last-child {
+        margin-bottom: 0;
+    }
+
+    .custom-row .custom-col:first-child {
+        margin-right: 0px;
+    }
+
+    .custom-row .custom-col:last-child {
+        margin-left: 0px;
+    }
 }
 </style>
