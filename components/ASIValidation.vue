@@ -46,7 +46,7 @@
     @import '~assets/scss/vars';
 
     .validation {
-        background: url('~assets/artifacts/left-rings.png') no-repeat left;
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/left-rings.png') no-repeat left;
         padding-bottom: 120px;
         margin-bottom: -60px;
 

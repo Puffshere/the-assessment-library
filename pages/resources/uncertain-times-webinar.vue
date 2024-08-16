@@ -145,7 +145,7 @@
 
         .certification {
             background: rgb(0,51,197);
-            background: url('~assets/artifacts/ribbon.png'), linear-gradient(218deg, #0999fe, #0249ec, #0999fe);
+            background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/ribbon.png'), linear-gradient(218deg, #0999fe, #0249ec, #0999fe);
             background-size: cover;
             background-position: center;
             padding: 80px 0 0;

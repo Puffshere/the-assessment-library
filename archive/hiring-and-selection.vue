@@ -285,7 +285,7 @@
         }
 
         .finding-talent {
-            background: url('~assets/artifacts/content-bg.png');
+            background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/content-bg.png');
             background-size: cover !important;
             background-position: center;
             padding: 60px 0;

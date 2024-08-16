@@ -105,7 +105,7 @@
     @import '~assets/scss/vars';
 
     .validation-mini {
-        background: url('~assets/artifacts/right-rings.png') no-repeat right;
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/right-rings.png') no-repeat right;
         padding-bottom: 100px;
         margin-bottom: -60px;
         padding-top: 70px;

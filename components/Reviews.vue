@@ -137,7 +137,7 @@
     @import '~assets/scss/vars';
 
     .reviews {
-        background: url('~assets/artifacts/ribbon.png'), linear-gradient(100deg, #2c23ed, #00a8ff);
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/ribbon.png'), linear-gradient(100deg, #2c23ed, #00a8ff);
         background-size: cover !important;
         padding: 100px 0 120px;
         margin: 60px 0 0;

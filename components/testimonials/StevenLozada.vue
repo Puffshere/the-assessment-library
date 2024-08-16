@@ -30,7 +30,7 @@
 
 <style lang="scss" scoped>
     .testimonial {
-        background: url('~assets/artifacts/content-bg.jpg');
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/content-bg.jpg');
         background-size: cover !important;
         background-position: center;
         padding: 40px 0;

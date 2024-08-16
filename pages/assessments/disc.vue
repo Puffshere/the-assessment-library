@@ -575,7 +575,7 @@
 
     .certification {
         background: rgb(0,51,197);
-        background: url('~assets/artifacts/ribbon.png'), linear-gradient(218deg, #0999fe, #0249ec, #0999fe);
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/ribbon.png'), linear-gradient(218deg, #0999fe, #0249ec, #0999fe);
         background-size: cover;
         background-position: center;
         padding: 80px 0 0;
@@ -630,7 +630,7 @@
     }
 
     .assessment-content {
-        background: url('~assets/artifacts/left-rings.png') no-repeat, linear-gradient(90deg, rgba(30,34,45,1) 0%, rgba(48,53,66,1) 100%);
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/left-rings.png') no-repeat, linear-gradient(90deg, rgba(30,34,45,1) 0%, rgba(48,53,66,1) 100%);
         background-position: left;
         padding: 100px 0 90px;
         margin: 80px 0;

@@ -38,7 +38,7 @@
     @import '~assets/scss/vars';
 
     .keyword-fold {
-        background: url('~assets/artifacts/right-rings.png') no-repeat, linear-gradient(90deg, rgba(30,34,45,1) 0%, rgba(48,53,66,1) 100%);
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/right-rings.png') no-repeat, linear-gradient(90deg, rgba(30,34,45,1) 0%, rgba(48,53,66,1) 100%);
         background-position: right;
         padding: 100px 0 90px;
         margin: 0 0 30px;

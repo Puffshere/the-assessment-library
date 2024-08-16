@@ -40,7 +40,7 @@
                                             'arrow-down': sortBy === 'city' && sortDirection === 'desc',
                                             'arrow-side': sortDirection === 'side'
                                         }">
-                                            <img src='~assets/artifacts/icons8-arrow-20.png'>
+                                            <img src='https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/icons8-arrow-20.png'>
                                         </span>
                                     </th>
                                     <th class="state">
@@ -51,7 +51,7 @@
                                             'arrow-down': sortBy === 'state' && sortDirection === 'desc',
                                             'arrow-side': sortDirection === 'side'
                                         }">
-                                            <img src='~assets/artifacts/icons8-arrow-20.png'>
+                                            <img src='https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/icons8-arrow-20.png'>
                                         </span>
                                     </th>
                                     <th class="country">
@@ -62,7 +62,7 @@
                                             'arrow-down': sortBy === 'country' && sortDirection === 'desc',
                                             'arrow-side': sortDirection === 'side'
                                         }">
-                                            <img src='~assets/artifacts/icons8-arrow-20.png'>
+                                            <img src='https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/icons8-arrow-20.png'>
                                         </span>
                                     </th>
                                 </tr>

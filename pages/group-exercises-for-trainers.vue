@@ -116,7 +116,7 @@ export default {
 
 <style lang="scss" scoped>
 .top {
-    background: url('~assets/artifacts/left-rings-flipped.png') no-repeat, linear-gradient(90deg, rgb(241, 241, 241) 0%, rgba(231, 230, 230, 0.89) 100%);
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/left-rings-flipped.png') no-repeat, linear-gradient(90deg, rgb(241, 241, 241) 0%, rgba(231, 230, 230, 0.89) 100%);
     background-position: right;
     width: 100%;
     margin-bottom: -60px;
@@ -180,7 +180,7 @@ export default {
 }
 
 .assessment-content {
-    background: url('~assets/artifacts/left-rings.png') no-repeat, linear-gradient(135deg, rgb(37, 128, 214) 0%, rgb(8, 86, 134) 100%);
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/left-rings.png') no-repeat, linear-gradient(135deg, rgb(37, 128, 214) 0%, rgb(8, 86, 134) 100%);
     background-position: left;
     padding: 100px 0 90px;
     margin: 60px 0;

@@ -494,7 +494,7 @@ export default {
     }
 
     .assessment-content {
-        background: url('~assets/artifacts/left-rings.png') no-repeat, linear-gradient(90deg, rgba(30, 34, 45, 1) 0%, rgba(48, 53, 66, 1) 100%);
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/left-rings.png') no-repeat, linear-gradient(90deg, rgba(30, 34, 45, 1) 0%, rgba(48, 53, 66, 1) 100%);
         background-position: left;
         padding: 100px 0 90px;
         margin: 80px 0;
