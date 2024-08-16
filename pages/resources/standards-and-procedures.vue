@@ -236,7 +236,7 @@ export default {
                             mainText: 'Mission, Vision, Core Values PowerPoint',
                         },
                         {
-                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Assessments+24x7+Org+Chart+2024.pdf',
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Assessments+24x7+Org+Chart+-+August+2024.pdf',
                             mainText: 'A24x7 Org Chart - 2024',
                         }
                     ]
