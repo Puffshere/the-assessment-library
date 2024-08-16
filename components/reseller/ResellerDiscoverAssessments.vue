@@ -4,16 +4,16 @@
             <div class="row">
                 <div class="col-9">
                     <h1 class="rise-on-scroll" style="color: white;">
-                        Build High-Performing Teams, <br />
-                        Empower Leadership, & <br />
-                        Drive Success
+                        Make Assessments the <br />
+                        Foundation of Your <br />
+                        Business Success
                     </h1>
                     <p class="rise-on-scroll" style="margin-bottom: 40px;">
-                        DISC isn't just for recruitment—it's a daily game-changer. <br />
-                        Use DISC to enhance meeting dynamics, tackle workplace <br />
-                        challenges, and refine leadership, sales, and customer service <br />
-                        strategies. Foster a culture of understanding, efficiency, and <br />
-                        growth by embedding DISC into your business strategy.
+                        Transform your business with the power of DISC Assessment <br />
+                        Technology. Partner with us to deliver unparalleled insights <br />
+                        and solutions, ensuring your clients achieve their highest <br />
+                        potential. Ready to take the next step? Contact us today and <br />
+                        make DISC the cornerstone of your success.
                     </p>
                     <div class="row buttonRow" style="margin-bottom: 160px;">
                         <button class="button" @click="scrollToContactForm">
@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 .discover-assessments-fold {
-    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-light-background.png");
+    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/reseller/Copy+of+Blue+Light+Background.png");
 }
 
 .container {

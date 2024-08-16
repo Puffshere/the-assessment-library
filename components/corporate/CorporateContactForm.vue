@@ -3,7 +3,7 @@
         <div class="container flex-container" id="form">
             <div class="row flex-container">
                 <div class="col-12">
-                    <h1 class="rise-on-scroll title" style="margin-top: 100px; margin-bottom: 0px;">
+                    <h1 class="rise-on-scroll title" style="margin-top: 50px; margin-bottom: 0px;">
                         Ready to take your organization to the top?<br />
                         <span style="color: #00a8ff;">You‘re in the right place.</span>
                     </h1>

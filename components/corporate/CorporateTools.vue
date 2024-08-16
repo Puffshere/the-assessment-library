@@ -10,6 +10,7 @@
                     <div style="position: relative;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-3-coworkers-revised.png"
                             alt="coworkers smiling" class="workersSmiling">
+                            <hr style="display: none;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/increase-icon.png"
                             alt="increase icon" class="pop-up-on-scroll increaseIcon">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/ladder-icon.png"
@@ -188,8 +189,19 @@ p {
         position: static;
     }
 
-    .workersSmiling {
-        display: none;
+    .col-12 {
+        .workersSmiling {
+            width: 100%;
+            position: static;
+            top: 0px;
+            left: 0px;
+        }
+    }
+
+    hr {
+        display: block !important;
+        margin-top: -3px;
+        margin-bottom: 20px;
     }
 }
 </style>

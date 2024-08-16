@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <h1 class="rise-on-scroll title" style="color: #0033c5;">
-                    Start Using Assessments
+                    Kickstart Your Assessment Solutions
                 </h1>
             </div>
             <div class="custom-row">

@@ -1,25 +1,32 @@
 <template>
-    <section class="reseller-catalyst" id="resellerCatalyst">
+    <section class="reseller-customize-it" id="resellerCustomizeIt">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/reseller/Fold+3+Icon.png"
-                        alt="fold 3 icon image" class="icon">
-                    <h1 class="title rise-on-scroll" style="margin-bottom: 0px; text-align: center;">
-                        <span style="color: #00a8ff;">The Catalyst</span> for Leading <br />
-                        Assessment Providers
+                    <h1 class="title rise-on-scroll" style="margin-bottom: 0px; margin-top: -10px;">
+                        Customize it, Market it, <span style="color: #00a8ff;">and Sell it.</span>
                     </h1>
-                    <p style="text-align: center; padding: 0px 60px;" class="rise-on-scroll">
-                        Discover the assessment technology trusted by top industry players. We are the engine powering
-                        many mainstream assessment companies, offering private labeling services that coaches, business
-                        owners, and recruiters can customize and brand as their own. Integrate our technology seamlessly
-                        into your systems, choose turnkey solutions to quickly add your logos and branding, or go full
-                        scale with custom reports, domains, payment systems, and more. By partnering with us, you're
-                        tapping into the source that fuels success for countless professionals and organizations.
-                        Elevate your business and provide unmatched assessment solutions directly from the experts.
+                    <div style="position: relative;">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/reseller/Male+Graphic.png"
+                            alt="man smilling" class="manSmiling">
+                        <hr style="display: none;">
+                    </div>
+                    <p style="max-width: 720px; float: right;" class="rise-on-scroll">
+                        Our globally recognized DISC Assessment Technology offers turnkey and customizable reports for
+                        individual and team development. Empower your clients with solutions for Self-awareness,
+                        Leadership, Sales, and more. With 25+ languages and a suite of supporting assessments, our
+                        platform provides tailored solutions for every business need. Partnering with us gives you
+                        access to limitless white-labeled solutions. Seamlessly integrate our tools through API,
+                        generate detailed reports, and manage everything from one dashboard. Customize, market, and sell
+                        the assessments however you want.
+                    </p>
+                    <p class="rise-on-scroll"
+                        style="color: #ffbd59; margin-top: 10px; float: right; font-weight: 700; line-height: 26px;">
+                        Trusted by thousands of coaches and consultants worldwide, we help <br />
+                        elevate performance and drive success.
                     </p>
                 </div>
-                <button class="button rise-on-scroll" @click="scrollToContactForm">
+                <button class="button rise-on-scroll" style="margin-top: 20px;" @click="scrollToContactForm">
                     Explore More
                 </button>
             </div>
@@ -67,14 +74,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.reseller-catalyst {
-    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-light-background.png");
+.reseller-customize-it {
+    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/reseller/Copy+of+Blue+Light+Background.png");
     width: 100%;
 }
 
 .container {
     padding-top: 80px;
-    padding-bottom: 70px;
+    padding-bottom: 75px;
 }
 
 .title {
@@ -83,21 +90,15 @@ export default {
     line-height: 60px;
 }
 
-.icon {
-    width: 130px;
-    margin-top: -30px;
-    margin-bottom: 20px;
-}
-
 .col-12 {
     text-align: right;
     color: white;
 
-    .workersSmiling {
-        width: 77%;
+    .manSmiling {
+        width: 480px;
         position: absolute;
-        top: -39px;
-        left: -275px;
+        top: -29px;
+        left: -60px;
     }
 }
 
@@ -137,14 +138,15 @@ p {
     font-size: 18.6667px;
     line-height: 26px;
     cursor: pointer;
-    background-color: #00a8ff;
+    background-color: white;
     border-radius: 40px;
-    color: white;
-    border: 1px solid #00a8ff;
+    color: #2729ff;
+    border: 1px solid white;
+    float: right;
 
     &:hover {
-        color: #00a8ff;
-        background-color: white;
+        color: white;
+        background-color: #2729ff;
     }
 
     &:active {
@@ -174,20 +176,6 @@ p {
     opacity: 1;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.col-12 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 @media (max-width: 1050px) {
     .increaseIcon {
         position: static;
@@ -201,8 +189,19 @@ p {
         position: static;
     }
 
-    .workersSmiling {
-        display: none;
+    .col-12 {
+        .manSmiling {
+            width: 100%;
+            position: static;
+            top: 0px;
+            left: 0px;
+        }
+    }
+
+    hr {
+        display: block !important;
+        margin-top: 0px;
+        margin-bottom: 20px;
     }
 }
 </style>

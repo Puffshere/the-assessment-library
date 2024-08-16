@@ -2,8 +2,8 @@
     <section class="reseller-testimonials-fold">
         <div class="container">
             <div class="row title" style="margin-bottom: 18px;">
-                <h1>Don't just take our word, take theirs.</h1>
-                <h3 class="subTitle">How We Help Organizations Succeed</h3>
+                <h1>Don't just take our word, take theirs too.</h1>
+                <h3 class="subTitle">We're here to fuel your business success.</h3>
                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/quotations.png"
                     alt="image of quotation marks"
                     style="position: absolute; z-index: 5; width: 140px; top: 100px; left: 40px;"
@@ -60,19 +60,19 @@ export default {
             transitionName: 'testimonial-fade',
             transitionMode: 'out-in',
             images: [
-                'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/will-mahon-headshot.png',
-                'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/kristin-m.-stevens-headshot.png',
-                'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/mamawa-daboh-headshot.png'
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/reseller/Brad+Yoho.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/reseller/Liz+Hanson.png',
+                'https://cdn.assessments24x7.com/file/assessments24x7-media/reseller/Roeland+C.+Schaart.png'
             ],
             testimonialNames: [
-                "Will Mahon, DraftKings",
-                "Kristin M. Stevens, Fortune 100 Insurance Company",
-                "Mamawa Daboh, Respace"
+                "Brad Yoho, Dave Yoho Associates",
+                "Liz Hanson, Athlete Assessments",
+                "Roeland C. Schaart, Vitae-Coaching"
             ],
             testimonialTexts: [
-                "I am happy to say that we use Assessments 24x7 as our global DISC solution. We started to work with Assessments 24x7 because we were interested in the breadth of instruments that they offer. There are instruments for a large variety of cases and lots of different team dynamics. Since then, we have been really happy with the ease of using their platform. We have also been happy with the customer service that we have been provided. Every question that we have ever asked the team has been responded to really quickly and professionally. That gives Assessments 24x7 our highest recommendation.",
-                "Our Fortune 100 Insurance Company uses Assessments 24x7 Leadership Assessments for our premier Leadership Development program which all new leaders are invited to attend. The reports are in-depth and thorough and provide an exceptional foundation of self-awareness for our participants. Assessments 24x7 has been a tremendous partner to work with on this project and has bent over backward to help us customize the reports to our specifications and create an efficient administration process. The level of responsiveness, dedication, and service has been above and beyond, and we highly recommend Assessments 24x7 to others who may be searching for an assessment provider.",
-                "We are happy to recommend Assessments 24x7 for your assessment needs. Purchasing the assessments was probably one of the best decisions we've made so far. They have been a great tool to help guide our hiring efforts, and the results are spot-on."
+                "We have utilized the DISC Profile in our business for over 40 years. We have had several providers during this time and have for the most part been satisfied, but in 2015 a situation arose where we had to find a new provider immediately. Tony Alessandra and his team sold us on their custom solution and consequently it was one of the best business decisions we have ever made. Our current customers were thrilled at the ease of use of the new system, and as a result, it has been incredibly easy to onboard new customers……..",
+                "Confidence — that is what I love about working with Assessments 24x7 — the confidence I have in their team, their back office, their excellence in support and service, and their \"can do\" approach to our requests! Our business relies on them and I always know that we are in very capable hands. Thank you Assessments 24x7!",
+                "As an international peak performance impact coach and International Coach Federation Master Certified Coach, I help leaders and entrepreneurs have more impact in what they do. Before starting a coaching project, I always have clients complete an assessment in one of the evidence-based coaching solutions to better understand their behavior and their internal motivators…."
             ]
         };
     },

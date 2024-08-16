@@ -10,6 +10,7 @@
         </LazyHydrate>
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
         <LazyHydrate when-visible><success></success></LazyHydrate>
+        <LazyHydrate when-visible><customize-it></customize-it></LazyHydrate>
         <LazyHydrate when-visible><stats-bottom></stats-bottom></LazyHydrate>
         <LazyHydrate when-visible><dynamic-tools></dynamic-tools></LazyHydrate>
         <LazyHydrate when-visible><testimonials></testimonials></LazyHydrate>
@@ -29,6 +30,7 @@ import StatsTop from '@/components/corporate/CorporateStatsTop';
 import Catalyst from '@/components/reseller/ResellerCatalyst';
 import ClientLogos from '@/components/ClientLogos';
 import Success from '@/components/corporate/CorporateSuccess';
+import CustomizeIt from '@/components/reseller/ResellerCustomizeIt';
 import StatsBottom from '@/components/corporate/CorporateStatsBottom';
 import DynamicTools from '@/components/reseller/ResellerDynamicTools';
 import Testimonials from '@/components/reseller/ResellerTestimonials';
@@ -48,6 +50,7 @@ export default {
         'catalyst': Catalyst,
         'client-logos': ClientLogos,
         'success': Success,
+        'customize-it': CustomizeIt,
         'stats-bottom': StatsBottom,
         'dynamic-tools': DynamicTools,
         'testimonials': Testimonials,
