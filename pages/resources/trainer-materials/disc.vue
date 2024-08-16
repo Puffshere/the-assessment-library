@@ -624,7 +624,10 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Intro+to+DISC_Birds+8.2024.pptx"
-                                        target="_blank" rel="noopener">Taking Flight with DISC Introductory Training Presentation</a>
+                                        target="_blank" rel="noopener">Taking Flight with DISC Introductory Training
+                                        Presentation</a>
+                                    <small>A 90-minute general DISC overview using the bird language of Eagle, Parrot,
+                                        Dove and Owl to be used with the DISC Adult Birds assessment report.</small>
                                 </td>
                             </tr>
                         </tbody>
