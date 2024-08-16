@@ -6,7 +6,7 @@
         </LazyHydrate>
         <LazyHydrate when-visible><stats-top></stats-top></LazyHydrate>
         <LazyHydrate when-visible>
-            <tools></tools>
+            <catalyst></catalyst>
         </LazyHydrate>
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
         <LazyHydrate when-visible><success></success></LazyHydrate>
@@ -26,7 +26,7 @@ import LazyHydrate from 'vue-lazy-hydration';
 import Nav from '@/components/Nav';
 import Hero from '@/components/reseller/ResellerHero';
 import StatsTop from '@/components/corporate/CorporateStatsTop';
-import Tools from '@/components/reseller/ResellerTools';
+import Catalyst from '@/components/reseller/ResellerCatalyst';
 import ClientLogos from '@/components/ClientLogos';
 import Success from '@/components/corporate/CorporateSuccess';
 import StatsBottom from '@/components/corporate/CorporateStatsBottom';
@@ -45,7 +45,7 @@ export default {
         'main-nav': Nav,
         'hero': Hero,
         'stats-top': StatsTop,
-        'tools': Tools,
+        'catalyst': Catalyst,
         'client-logos': ClientLogos,
         'success': Success,
         'stats-bottom': StatsBottom,

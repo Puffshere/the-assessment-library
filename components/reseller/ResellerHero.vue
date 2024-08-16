@@ -59,7 +59,7 @@ export default {
             event.target.blur();
         },
         scrollToTools(event) {
-            const element = document.getElementById('resellerTools');
+            const element = document.getElementById('resellerCatalyst');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
