@@ -621,6 +621,12 @@
                                         Presentation</a>
                                 </td>
                             </tr>
+                            <tr v-if="certified">
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Intro+to+DISC_Birds+8.2024.pptx"
+                                        target="_blank" rel="noopener">Taking Flight with DISC Introductory Training Presentation</a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
 
