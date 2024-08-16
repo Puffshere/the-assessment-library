@@ -187,7 +187,7 @@
                     <div class="col-12">
                         <div class="review">
                             <div class="col-3">
-                                <img class="image" src="~/assets/testimonials/emily-bass.jpg" alt="Emily Bass">
+                                <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/emily-bass.jpg" alt="Emily Bass">
                             </div>
                             <div class="col-9">
                                 <div class="review-stars">

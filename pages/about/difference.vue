@@ -57,7 +57,7 @@
                         </blockquote>
 
                         <div class="testimonial-attr" style="position:relative;margin-top:10px">
-                            <img style="width:34px;margin-right:4px" src="~/assets/testimonials/cameron-starnes.png"
+                            <img style="width:34px;margin-right:4px" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/cameron-starnes.png"
                                 alt="Cameron Starnes Assessments 24x7 Testimonial">
                             <h4 style="display:inline-block;margin-top:10px">Cameron Starnes</h4>
                             <p style="position:absolute;left:42px;top:18px;font-size:10pt">Certified DISC Practitioner -

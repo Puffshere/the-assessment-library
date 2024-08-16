@@ -32,7 +32,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/susan-cranston.jpg" alt="Susan Merli">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/susan-cranston.jpg" alt="Susan Merli">
                         </div>
 
                         <div class="col-9">
@@ -71,7 +71,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/will-mahon.jpg" alt="Will Mahon">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/will-mahon.jpg" alt="Will Mahon">
                         </div>
 
                         <div class="col-9">
@@ -111,7 +111,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/kyle-gillette.jpg" alt="Kyle Gillette">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/kyle-gillette.jpg" alt="Kyle Gillette">
                         </div>
 
                         <div class="col-9">
@@ -146,7 +146,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/roel-schaart.jpg" alt="Roel Schaart">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/roel-schaart.jpg" alt="Roel Schaart">
                         </div>
 
                         <div class="col-9">
@@ -194,7 +194,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/jarrod-glandt.jpg" alt="Verl Workman">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/jarrod-glandt.jpg" alt="Verl Workman">
                         </div>
 
                         <div class="col-9">
@@ -226,7 +226,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/rebecca-gibbons.jpg" alt="Rebecca Maxwell">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/rebecca-gibbons.jpg" alt="Rebecca Maxwell">
                         </div>
 
                         <div class="col-9">
@@ -259,7 +259,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/kevin-mccarthy.jpg" alt="Kevin McCarthy">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/kevin-mccarthy.jpg" alt="Kevin McCarthy">
                         </div>
 
                         <div class="col-9">
@@ -293,7 +293,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/verl-workman.jpg" alt="Verl Workman">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/verl-workman.jpg" alt="Verl Workman">
                         </div>
 
                         <div class="col-9">
@@ -333,7 +333,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/twaski-simmons.jpg" alt="Twaski Simmons">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/twaski-simmons.jpg" alt="Twaski Simmons">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -382,7 +382,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/kristin-stevens.jpg" alt="Kristin M. Stevens">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/kristin-stevens.jpg" alt="Kristin M. Stevens">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -418,7 +418,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/steve-sisler.jpg" alt="Steve Sisler">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/steve-sisler.jpg" alt="Steve Sisler">
                         </div>
 
                         <div class="col-9">
@@ -453,7 +453,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/emily-bass.jpg" alt="Emily Bass">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/emily-bass.jpg" alt="Emily Bass">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -493,7 +493,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/faith-ralston.jpg" alt="Faith Ralston">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/faith-ralston.jpg" alt="Faith Ralston">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -527,7 +527,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/john-chilkotowsky.jpg"
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/john-chilkotowsky.jpg"
                                 alt="John Chilkotowsky">
                         </div>
                         <div class="col-9">
@@ -561,7 +561,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/bob-veverka.jpg" alt="Bob Veverka">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/bob-veverka.jpg" alt="Bob Veverka">
                         </div>
 
                         <div class="col-9">
@@ -592,7 +592,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/jaymini-mistry.jpg" alt="Jaymini Mistry">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/jaymini-mistry.jpg" alt="Jaymini Mistry">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -625,7 +625,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/tamara-phallan.jpg" alt="Tamara Phallan">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/tamara-phallan.jpg" alt="Tamara Phallan">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -660,7 +660,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/liz-hanson.jpg" alt="Liz Hanson">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/liz-hanson.jpg" alt="Liz Hanson">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -692,7 +692,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/catherine-mcanally.jpg"
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/catherine-mcanally.jpg"
                                 alt="Catherine D. McAnally">
                         </div>
                         <div class="col-9">
@@ -731,7 +731,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/greg-thompson.jpg" alt="Greg Thompson">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/greg-thompson.jpg" alt="Greg Thompson">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -765,7 +765,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/joseph-roqueplot.jpg" alt="Joseph Roqueplot">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/joseph-roqueplot.jpg" alt="Joseph Roqueplot">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -796,7 +796,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/steve-graham.jpg" alt="Steve Graham">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/steve-graham.jpg" alt="Steve Graham">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -824,7 +824,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/nathan-schock.jpg" alt="Nathan Schock">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/nathan-schock.jpg" alt="Nathan Schock">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -858,7 +858,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/mark-carn.jpg" alt="Mark Carn">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/mark-carn.jpg" alt="Mark Carn">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -892,7 +892,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/jamie-grettum.jpg" alt="Jamie Grettum">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/jamie-grettum.jpg" alt="Jamie Grettum">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -926,7 +926,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/matt-trent.jpg" alt="Matt Trent">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/matt-trent.jpg" alt="Matt Trent">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -963,7 +963,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/barb-kyes.jpg" alt="Barb Kyes">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/barb-kyes.jpg" alt="Barb Kyes">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -998,7 +998,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/andreas-nest.jpg" alt="Andreas Nest">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/andreas-nest.jpg" alt="Andreas Nest">
                         </div>
                         <div class="col-9">
                             <div class="review-stars">
@@ -1028,7 +1028,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/don-hutson.jpg" alt="Don Hutson">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/don-hutson.jpg" alt="Don Hutson">
                         </div>
 
                         <div class="col-9">
@@ -1059,7 +1059,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/brad-yoho.jpg" alt="Brad Yoho">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/brad-yoho.jpg" alt="Brad Yoho">
                         </div>
 
                         <div class="col-9">
@@ -1111,7 +1111,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/deb-calvert.jpg" alt="Deb Calvert">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/deb-calvert.jpg" alt="Deb Calvert">
                         </div>
 
                         <div class="col-9">
@@ -1141,7 +1141,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/pedro-pinto.jpg" alt="Pedro Pinto">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/pedro-pinto.jpg" alt="Pedro Pinto">
                         </div>
 
                         <div class="col-9">
@@ -1175,7 +1175,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/stephen-moore.jpg"
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/stephen-moore.jpg"
                                 alt="Stephen Moore Ovation Group">
                         </div>
 
@@ -1206,7 +1206,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/jim-palcewicz.jpg" alt="Jim Palcewicz">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/jim-palcewicz.jpg" alt="Jim Palcewicz">
                         </div>
 
                         <div class="col-9">
@@ -1242,7 +1242,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/donna-bell.jpg" alt="Donna Bell">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/donna-bell.jpg" alt="Donna Bell">
                         </div>
 
                         <div class="col-9">
@@ -1278,7 +1278,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/stacy-hill.jpg" alt="Stacy Hill, Ed.D.">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/stacy-hill.jpg" alt="Stacy Hill, Ed.D.">
                         </div>
 
                         <div class="col-9">
@@ -1323,7 +1323,7 @@
                 <div class="col-12">
                     <div class="review">
                         <div class="col-3">
-                            <img class="image" src="~/assets/testimonials/fiona-stevenson.png" alt="Fiona Stevenson">
+                            <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/fiona-stevenson.png" alt="Fiona Stevenson">
                         </div>
 
                         <div class="col-9">

@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <img class="image" src="~/assets/testimonials/mamawa-daboh.jpg" alt="Mamawa Daboh">
+                    <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/mamawa-daboh.jpg" alt="Mamawa Daboh">
                 </div>
 
                 <div class="col-8">

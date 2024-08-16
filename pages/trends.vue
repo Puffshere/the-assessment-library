@@ -143,7 +143,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <img style="width: 90%; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1)" src="~/assets/testimonials/susan-cranston.jpg" alt="Susan Merli">
+                        <img style="width: 90%; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1)" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Testimonials/susan-cranston.jpg" alt="Susan Merli">
                     </div>
 
                     <div class="col-8">
