@@ -2,13 +2,13 @@
   <section>
     <LazyHydrate when-visible><main-nav class="nav"></main-nav></LazyHydrate>
     <LazyHydrate when-visible><hero></hero></LazyHydrate>
-    <LazyHydrate when-visible><icf-credits></icf-credits></LazyHydrate>
+    <!-- <LazyHydrate when-visible><icf-credits></icf-credits></LazyHydrate>
     <LazyHydrate when-visible><strive></strive></LazyHydrate>
     <LazyHydrate when-visible><why-disc></why-disc></LazyHydrate>
     <LazyHydrate when-visible><client-success></client-success></LazyHydrate>
     <LazyHydrate when-visible><foundation></foundation></LazyHydrate>
     <LazyHydrate when-visible><what-you-recieve></what-you-recieve></LazyHydrate>
-    <LazyHydrate when-visible><contact-form></contact-form></LazyHydrate>
+    <LazyHydrate when-visible><contact-form></contact-form></LazyHydrate> -->
     <LazyHydrate when-visible><footer-fold class="foot"></footer-fold></LazyHydrate>
   </section>
 </template>
