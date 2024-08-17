@@ -47,9 +47,6 @@
 
 <script>
 export default {
-    // mounted() {
-    //     this.observeElements();
-    // },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('resellerContactForm');
@@ -158,7 +155,7 @@ h5 {
 }
 
 .rise-on-scroll {
-    transition: transform 1s ease-out;
+    transition: transform 0.5s ease-out;
     transform: translateY(1in);
     opacity: 0;
 }
