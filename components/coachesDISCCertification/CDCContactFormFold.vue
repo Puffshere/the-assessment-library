@@ -64,9 +64,9 @@
                 </div>
                 <br />
                 <div class="row">
-                    <div class="col-12">
-                        <button type="submit" class="white" :disabled="isDisabled"
-                            :class="{ 'button': true, 'disabled': isDisabled }">
+                    <div class="col-12" style="display: flex; justify-content: center;">
+                        <button type="submit" :disabled="isDisabled"
+                            :class="{ 'button': true, 'disabled': isDisabled }" style="background-color: white; color: blue; margin-bottom: 120px;">
                             Submit
                         </button>
                     </div>
@@ -105,8 +105,8 @@ export default {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
                     entry.target.classList.add('animate-rise-contact');
-                    entry.target.classList.add('animated'); // Mark the element as animated
-                    observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target); 
                 }
             });
         },
@@ -240,6 +240,14 @@ export default {
         flex-direction: column;
         text-align: center;
     }
+}
+
+.formTitle {
+    text-align: center;
+}
+
+.formSubText {
+    text-align: center;
 }
 
 .button.disabled {
