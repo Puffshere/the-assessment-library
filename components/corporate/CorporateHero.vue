@@ -48,6 +48,9 @@
 
 <script>
 export default {
+    mounted() {
+        this.observeElements(); // Start observing elements as soon as the component is mounted
+    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('corporateContactForm');
@@ -65,24 +68,25 @@ export default {
         },
         observeElements() {
             const options = {
-                threshold: 0.1
+                threshold: 0 // Trigger as soon as the element starts entering the viewport
             };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('rise');
-                        observer.unobserve(entry.target);
+                        observer.unobserve(entry.target); // Stop observing after animation starts
                     }
                 });
             }, options);
             const elements = document.querySelectorAll('.rise-on-scroll');
             elements.forEach(el => {
-                observer.observe(el);
+                observer.observe(el); // Observe each element for the rise effect
             });
         }
     },
 }
 </script>
+
 
 <style lang="scss" scoped>
 .hero-fold {
@@ -156,7 +160,7 @@ h5 {
 }
 
 .rise-on-scroll {
-    transition: transform 0.5s ease-out;
+    transition: transform 1s ease-out;
     transform: translateY(1in);
     opacity: 0;
 }
