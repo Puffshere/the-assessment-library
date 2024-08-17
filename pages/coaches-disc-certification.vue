@@ -1,7 +1,6 @@
 <template>
   <section>
     <main-nav class="nav"></main-nav>
-    <section class="body">
       <hero></hero>
        <icf-credits></icf-credits>
       <strive></strive>
@@ -10,7 +9,6 @@
       <foundation></foundation>
       <what-you-recieve></what-you-recieve>
       <contact-form></contact-form>
-    </section>
     <footer-fold class="foot"></footer-fold>
   </section>
 </template>
