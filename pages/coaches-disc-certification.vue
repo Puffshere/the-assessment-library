@@ -25,7 +25,7 @@
               </button>
             </div>
             <div class="col-5">
-              <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/man.png"
+              <img src='~assets/man.png'
                 alt="male business man" class="manSmiling" />
             </div>
           </div>
