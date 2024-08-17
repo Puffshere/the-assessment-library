@@ -113,10 +113,10 @@ h4 {
 .col-7 button {
     opacity: 0;
     transform: translateY(1in);
-    transition: all 0.5s ease-out;
+    transition: all 1s ease-out;
 }
 
 .animate-rise {
-    animation: rise 1.25s ease-out forwards;
+    animation: rise 1s ease-out forwards;
 }
 </style>

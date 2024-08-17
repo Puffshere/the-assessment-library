@@ -47,9 +47,9 @@
 
 <script>
 export default {
-    mounted() {
-        this.observeElements();
-    },
+    // mounted() {
+    //     this.observeElements();
+    // },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('resellerContactForm');
