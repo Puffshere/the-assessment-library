@@ -124,8 +124,8 @@ export default {
 @import './CDC.scss';
 
 .container {
-    margin-top: -20px;
-    padding-bottom: 100px;
+    margin-top: 0px;
+    padding-bottom: 80px;
 }
 
 h1 {
@@ -152,7 +152,7 @@ video {
 .col-12.button-container {
     display: flex;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 @keyframes rise {
