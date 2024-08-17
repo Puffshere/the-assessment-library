@@ -7,12 +7,12 @@
                         Why DISC Certification?
                     </h1>
                     <div style="position: relative;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/black-woman.gif" alt="black woman"
-                            class="blackWoman">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/black-woman.gif"
+                            alt="black woman" class="blackWoman">
                     </div>
                     <div class="icon-text" style="display: flex;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/quantifiable-impact.png" alt="Quantifiable Impact"
-                            style="width: 5%;" class="icons">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/quantifiable-impact.png"
+                            alt="Quantifiable Impact" style="width: 5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">
                             Quantifiable Impact</h4>
                     </div>
@@ -22,8 +22,8 @@
                         development journey.
                     </p>
                     <div class="icon-text" style="display: flex; margin-top: 40px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/high-roi-solution.png" alt="High ROI Solution"
-                            style="width: 5%;" class="icons">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/high-roi-solution.png"
+                            alt="High ROI Solution" style="width: 5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">High ROI
                             Solution</h4>
                     </div>
@@ -33,8 +33,8 @@
                         coaching practice without breaking the bank.
                     </p>
                     <div class="icon-text" style="display: flex; margin-top: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/tailored-insights.png" alt="Tailored Insights"
-                            style="width: 4.5%;" class="icons">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/tailored-insights.png"
+                            alt="Tailored Insights" style="width: 4.5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">Tailored
                             Insights</h4>
                     </div>
@@ -43,8 +43,8 @@
                         challenges and goals of each client, fostering a more personalized coaching experience.
                     </p>
                     <div class="icon-text" style="display: flex; margin-top: 40px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/user-friendly.png" alt="User-Friendly"
-                            style="width: 5%;" class="icons">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/user-friendly.png"
+                            alt="User-Friendly" style="width: 5%;" class="icons">
                         <h4 style="font-size: 30px; font-weight: 600; margin: auto 0px; padding-left: 20px;">
                             Integrative and User-Friendly</h4>
                     </div>
@@ -52,11 +52,11 @@
                         Our platform is designed for ease of use, ensuring you can seamlessly integrate these
                         assessments into your existing coaching practices with a simple learning curve.
                     </p>
-                </div>
-                <div class="col-12 button-container" style="margin-top: 120px;">
-                    <button class="white btn" @click="scrollToSection">
-                        Get Started Today
-                    </button>
+                    <div style="display: flex; justify-content: center; margin-top: 80px;">
+                        <button class="white btn" @click="scrollToSection">
+                            Get Started Today
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,19 +73,18 @@ export default {
             }
             event.target.blur();
         },
-        handleIntersection(entries) {
+        handleIntersection(entries, observer) {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-rise');
-                } else {
-                    entry.target.classList.remove('animate-rise');
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animate-rise', 'animated');
+                    observer.unobserve(entry.target); // Disconnect observer after animation
                 }
             });
         }
     },
     mounted() {
         const observer = new IntersectionObserver(this.handleIntersection, {
-            threshold: 0 // Adjust this as needed
+            threshold: 0.1 // Adjust this as needed
         });
 
         // Select each child element to be observed
@@ -103,7 +102,7 @@ export default {
 @import './CDC.scss';
 
 .container {
-    padding-top: 150px;
+    padding-top: 80px;
     padding-bottom: 100px;
 
     img {
@@ -129,7 +128,6 @@ export default {
     }
 }
 
-
 .icons {
     width: 5%;
 }
@@ -137,11 +135,6 @@ export default {
 section {
     background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/blue-geo-background.png');
     background-size: cover;
-}
-
-.col-12.button-container {
-    display: flex;
-    justify-content: center;
 }
 
 @media (max-width: 1130px) {
@@ -185,15 +178,17 @@ section {
 
 .title,
 .icon-text,
-p,
-button {
+p {
     opacity: 0;
     transform: translateY(1in);
     transition: all 0.5s ease-out;
 }
 
-
 .animate-rise {
     animation: rise 1s ease-out forwards;
+}
+
+.animated {
+    /* This class ensures that the element won't animate again */
 }
 </style>

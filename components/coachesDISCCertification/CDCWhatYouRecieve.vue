@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="title observe-title">
+                    <h1 class="title observe">
                         What You Receive <br />
                         with DISC Certification
                     </h1>
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="col-12 button-container">
-                <button class="blue observe" @click="scrollToSection">
+                <button class="blue" @click="scrollToSection">
                     Get Started Today
                 </button>
             </div>
@@ -96,27 +96,19 @@ export default {
             }
             event.target.blur();
         },
-        handleIntersection(entries) {
+        handleIntersection(entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-                    if (entry.target.classList.contains('observe-title')) {
-                        entry.target.classList.add('animate-rise');
-                        entry.target.classList.add('animated'); // Mark the title as animated
-                    }
-                } else {
-                    // For other elements, apply animation as usual
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-rise');
-                    } else {
-                        entry.target.classList.remove('animate-rise');
-                    }
+                    entry.target.classList.add('animate-rise');
+                    entry.target.classList.add('animated'); // Mark the element as animated
+                    observer.unobserve(entry.target); // Stop observing once the animation is triggered
                 }
             });
         }
     },
     mounted() {
         const observer = new IntersectionObserver(this.handleIntersection, {
-            threshold: Array.from({ length: 101 }, (v, i) => i / 100) // Creating smooth transition thresholds from 0 to 1
+            threshold: 0.1 // Adjust this as needed
         });
 
         // Select each child element to be observed
@@ -173,25 +165,5 @@ video {
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-.observe {
-    opacity: 0;
-    transform: translateY(1in);
-    transition: all 0.5s ease-out;
-}
-
-.observe-title {
-    opacity: 0;
-    transform: translateY(1in);
-    transition: all 0.5s ease-out;
-}
-
-.animate-rise {
-    animation: rise 1.25s ease-out forwards;
-}
-
-.animated {
-    /* This class ensures that the element won't animate again */
 }
 </style>

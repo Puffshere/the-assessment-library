@@ -81,7 +81,6 @@ import axios from 'axios';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 
-
 export default {
     components: {
         Loading
@@ -102,12 +101,12 @@ export default {
         };
     },
     methods: {
-        handleIntersection(entries) {
+        handleIntersection(entries, observer) {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
                     entry.target.classList.add('animate-rise-contact');
-                } else {
-                    entry.target.classList.remove('animate-rise-contact');
+                    entry.target.classList.add('animated'); // Mark the element as animated
+                    observer.unobserve(entry.target); // Stop observing once the animation is triggered
                 }
             });
         },
@@ -219,7 +218,7 @@ export default {
         });
 
         // Select each child element to be observed except the image on the right
-        const elements = document.querySelectorAll('.form .col-12 > h3, .form .col-12 > h4, .form .col-6 .line, .form .col-12 > button, .form .col-12 > .col-12, .form .col-12 .message');
+        const elements = document.querySelectorAll('.form .col-12 > h3, .form .col-12 > h4, .form .col-6 .line, .form .col-12 > .col-12, .form .col-12 .message');
         elements.forEach(element => {
             observer.observe(element);
         });
@@ -322,7 +321,6 @@ export default {
 .form h3,
 .form h4,
 .form .col-6 .line,
-.form button,
 .form .message {
     opacity: 0;
     transform: translateY(1in);
@@ -331,6 +329,10 @@ export default {
 
 .animate-rise-contact {
     animation: rise-contact .5s ease-out forwards;
+}
+
+.animated {
+    /* This class ensures that the element won't animate again */
 }
 
 @media (max-width: 1000px) {

@@ -177,8 +177,7 @@ section {
 }
 
 .row .words,
-.row .timeline-container,
-.row .button-container {
+.row .timeline-container {
     opacity: 0;
     transform: translateY(1in);
     transition: all 0.5s ease-out;
@@ -246,8 +245,7 @@ section {
     }
 
     .row .words,
-    .row .timeline-container,
-    .row .button-container {
+    .row .timeline-container {
         opacity: 0;
         transform: translateY(1in);
         transition: all 0.5s ease-out;
