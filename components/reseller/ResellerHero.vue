@@ -47,6 +47,9 @@
 
 <script>
 export default {
+    mounted() {
+        this.observeElements();
+    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('resellerContactForm');
@@ -64,7 +67,7 @@ export default {
         },
         observeElements() {
             const options = {
-                threshold: 0.1
+                threshold: 0
             };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -155,7 +158,7 @@ h5 {
 }
 
 .rise-on-scroll {
-    transition: transform 0.5s ease-out;
+    transition: transform 1s ease-out;
     transform: translateY(1in);
     opacity: 0;
 }

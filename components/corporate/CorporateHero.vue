@@ -49,7 +49,7 @@
 <script>
 export default {
     mounted() {
-        this.observeElements(); // Start observing elements as soon as the component is mounted
+        this.observeElements();
     },
     methods: {
         scrollToContactForm(event) {
@@ -68,19 +68,19 @@ export default {
         },
         observeElements() {
             const options = {
-                threshold: 0 // Trigger as soon as the element starts entering the viewport
+                threshold: 0
             };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('rise');
-                        observer.unobserve(entry.target); // Stop observing after animation starts
+                        observer.unobserve(entry.target);
                     }
                 });
             }, options);
             const elements = document.querySelectorAll('.rise-on-scroll');
             elements.forEach(el => {
-                observer.observe(el); // Observe each element for the rise effect
+                observer.observe(el);
             });
         }
     },
