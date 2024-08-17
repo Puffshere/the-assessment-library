@@ -826,7 +826,7 @@ export default {
 }
 
 .certification {
-    background: linear-gradient(90deg, rgba(30,34,45,1) 0%, rgba(48,53,66,1) 100%);
+    background: linear-gradient(90deg, rgba(30, 34, 45, 1) 0%, rgba(48, 53, 66, 1) 100%);
     background-size: cover;
     background-position: center;
     padding-top: 80px;
