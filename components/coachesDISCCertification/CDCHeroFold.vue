@@ -117,6 +117,6 @@ h4 {
 }
 
 .animate-rise {
-    animation: rise 1.25s ease-out forwards;
+    animation: rise 0.5s ease-out forwards;
 }
 </style>
