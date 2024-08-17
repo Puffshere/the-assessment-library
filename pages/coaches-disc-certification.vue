@@ -1,19 +1,20 @@
 <template>
   <section>
-    <main-nav class="nav"></main-nav>
-      <hero></hero>
-       <icf-credits></icf-credits>
-      <strive></strive>
-      <why-disc></why-disc>
-      <client-success></client-success>
-      <foundation></foundation>
-      <what-you-recieve></what-you-recieve>
-      <contact-form></contact-form>
-    <footer-fold class="foot"></footer-fold>
+    <LazyHydrate when-visible><main-nav class="nav"></main-nav></LazyHydrate>
+    <LazyHydrate when-visible><hero></hero></LazyHydrate>
+    <LazyHydrate when-visible><icf-credits></icf-credits></LazyHydrate>
+    <LazyHydrate when-visible><strive></strive></LazyHydrate>
+    <LazyHydrate when-visible><why-disc></why-disc></LazyHydrate>
+    <LazyHydrate when-visible><client-success></client-success></LazyHydrate>
+    <LazyHydrate when-visible><foundation></foundation></LazyHydrate>
+    <LazyHydrate when-visible><what-you-recieve></what-you-recieve></LazyHydrate>
+    <LazyHydrate when-visible><contact-form></contact-form></LazyHydrate>
+    <LazyHydrate when-visible><footer-fold class="foot"></footer-fold></LazyHydrate>
   </section>
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration';
 import Nav from '@/components/Nav';
 import Hero from '@/components/coachesDISCCertification/CDCHeroFold';
 import ICFCredits from '@/components/coachesDISCCertification/CDCICFCreditsFold';
@@ -27,6 +28,7 @@ import Footer from '@/components/Footer';
 
 export default {
   components: {
+    LazyHydrate,
     'main-nav': Nav,
     'hero': Hero,
     'icf-credits': ICFCredits,
