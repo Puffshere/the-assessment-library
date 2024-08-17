@@ -48,28 +48,26 @@ export default {
             }
             event.target.blur();
         },
-        handleIntersection(entries, observer) {
+        handleIntersection(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-rise');
-                    // Disconnect the observer once the animation has been triggered
-                    observer.unobserve(entry.target);
+                } else {
+                    entry.target.classList.remove('animate-rise');
                 }
             });
         }
     },
     mounted() {
-        if (typeof window !== 'undefined') {
-            const observer = new IntersectionObserver(this.handleIntersection, {
-                threshold: 0.1 // Adjust this as needed
-            });
+        const observer = new IntersectionObserver(this.handleIntersection, {
+            threshold: 0 // Adjust this as needed
+        });
 
-            // Select each child element to be observed
-            const elements = document.querySelectorAll('.col-7 h2, .col-7 h4, .col-7 button');
-            elements.forEach(element => {
-                observer.observe(element);
-            });
-        }
+        // Select each child element to be observed
+        const elements = document.querySelectorAll('.col-7 h2, .col-7 h4, .col-7 button');
+        elements.forEach(element => {
+            observer.observe(element);
+        });
     }
 }
 </script>
@@ -115,10 +113,10 @@ h4 {
 .col-7 button {
     opacity: 0;
     transform: translateY(1in);
-    transition: all 1.0s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .animate-rise {
-    animation: rise 1.0s ease-out forwards;
+    animation: rise 1.25s ease-out forwards;
 }
 </style>
