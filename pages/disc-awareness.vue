@@ -1,53 +1,43 @@
 <template>
-    <section>
-      <main-nav class="nav"></main-nav>
-      <section class="body">
-        <disc-awareness-hero></disc-awareness-hero>
-        <enhancing></enhancing>
-        <strengths></strengths>
-        <examples></examples>
-        <awareness-concepts></awareness-concepts>
-        <contact-form></contact-form>
-        <asi></asi>
-      </section>
-      <footer-fold class="foot"></footer-fold>
+  <section>
+    <main-nav class="nav"></main-nav>
+    <section class="body">
+      <disc-awareness-hero></disc-awareness-hero>
+      <enhancing></enhancing>
+      <strengths></strengths>
+      <examples></examples>
+      <awareness-concepts></awareness-concepts>
+      <contact-form></contact-form>
+      <asi></asi>
     </section>
-  </template>
-  
-  <script>
-  import Nav from '@/components/Nav';
-  import DiscAwarenessHero from '@/components/DiscAwarenessHeroFold';
-  import Enhancing from '@/components/EnhancingFold';
-  import Strengths from '@/components/StrengthsFold';
-  import Examples from '@/components/ExamplesFold';
-  import AwarenessConcepts from '@/components/AwarenessConceptsFold';
-  import ContactForm from '@/components/DiscAwarenessContactFormFold';
-  import Asi from '@/components/ASIFold';
-  import Footer from '@/components/Footer';
-  
-  export default {
-    components: {
-      'main-nav': Nav,
-      'disc-awareness-hero': DiscAwarenessHero,
-      'enhancing': Enhancing,
-      'strengths': Strengths,
-      'examples': Examples,
-      'awareness-concepts': AwarenessConcepts,
-      'contact-form': ContactForm,
-      'asi': Asi,
-      'footer-fold': Footer
-    },
-    head() {
-      return {
-        title: 'DISC Awareness | Assessments 24x7',
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: ''
-          }
-        ]
-      }
+    <footer-fold class="foot"></footer-fold>
+  </section>
+</template>
+
+<script>
+export default {
+  components: {
+    'main-nav': () => import('@/components/Nav'),
+    'disc-awareness-hero': () => import('@/components/DiscAwarenessHeroFold'),
+    'enhancing': () => import('@/components/EnhancingFold'),
+    'strengths': () => import('@/components/StrengthsFold'),
+    'examples': () => import('@/components/ExamplesFold'),
+    'awareness-concepts': () => import('@/components/AwarenessConceptsFold'),
+    'contact-form': () => import('@/components/DiscAwarenessContactFormFold'),
+    'asi': () => import('@/components/ASIFold'),
+    'footer-fold': () => import('@/components/Footer'),
+  },
+  head() {
+    return {
+      title: 'DISC Awareness | Assessments 24x7',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: ''
+        }
+      ]
     }
   }
-  </script>
+}
+</script>
