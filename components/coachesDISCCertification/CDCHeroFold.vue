@@ -59,6 +59,7 @@ export default {
         }
     },
     mounted() {
+    if (typeof window !== 'undefined') {
         const observer = new IntersectionObserver(this.handleIntersection, {
             threshold: 0 // Adjust this as needed
         });
@@ -69,6 +70,8 @@ export default {
             observer.observe(element);
         });
     }
+}
+
 }
 </script>
 
@@ -113,10 +116,10 @@ h4 {
 .col-7 button {
     opacity: 0;
     transform: translateY(1in);
-    transition: all 0.5s ease-out;
+    transition: all 1.0s ease-out;
 }
 
 .animate-rise {
-    animation: rise 0.5s ease-out forwards;
+    animation: rise 1.0s ease-out forwards;
 }
 </style>
