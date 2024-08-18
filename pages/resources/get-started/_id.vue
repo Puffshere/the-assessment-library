@@ -496,9 +496,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="images">
-                            <img class="image" src="~/assets/badges/new/disc-cert-badge-color-label.png" alt="">
-                            <img class="image" src="~/assets/badges/new/mot-cert-badge-color-label.png" alt="">
-                            <img class="image" src="~/assets/badges/new/eiq-cert-badge-color-label.png" alt="">
+                            <img class="image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/disc-cert-badge-color-label.png" alt="">
+                            <img class="image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/mot-cert-badge-color-label.png" alt="">
+                            <img class="image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/eiq-cert-badge-color-label.png" alt="">
                         </div>
 
                         <h2>Assessment Certifications &amp; Training</h2>

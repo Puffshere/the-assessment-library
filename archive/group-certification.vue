@@ -39,7 +39,7 @@
                     <div class="col-4">
                         <div class="program">
                             <div class="top disc">
-                                <img class="badge-image" src="~/assets/badges/new/disc-cert-badge-color-soldout.png" alt="DISC Certiciation">
+                                <img class="badge-image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/disc-cert-badge-color-soldout.png" alt="DISC Certiciation">
                                 <h3 class="title" style="margin-bottom: 0px">DISC Certification</h3>
                             </div>
 
@@ -56,7 +56,7 @@
                     <div class="col-4">
                         <div class="program">
                             <div class="top motivators">
-                                <img class="badge-image" src="~/assets/badges/new/mot-cert-badge-color-soldout.png" alt="Motivators Certiciation">
+                                <img class="badge-image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/mot-cert-badge-color-soldout.png" alt="Motivators Certiciation">
                                 <h3 class="title" style="margin-bottom: 0px">Motivators Certification</h3>
                             </div>
 
@@ -73,7 +73,7 @@
                     <div class="col-4">
                         <div class="program">
                             <div class="top eiq">
-                                <img class="badge-image" src="~/assets/badges/new/eiq-cert-badge-color.png" alt="EIQ Certiciation">
+                                <img class="badge-image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/eiq-cert-badge-color.png" alt="EIQ Certiciation">
                                 <h3 class="title" style="margin-bottom: 0px">EIQ Certification</h3>
                             </div>
 

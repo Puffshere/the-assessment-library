@@ -65,7 +65,7 @@
                     </div>
 
                     <div class="col-4">
-                        <img class="image" src="~/assets/badges/new/disc-cert-badge-color.png" alt="placeholder">
+                        <img class="image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png" alt="placeholder">
                     </div>
                 </div>
             </div>

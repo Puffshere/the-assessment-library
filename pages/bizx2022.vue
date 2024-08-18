@@ -30,13 +30,13 @@
                     <div class="col-2"></div>
 
                     <div class="col-4">
-                        <img class="certification-badge" src="~/assets/badges/new/disc-cert-badge-color-label.png" alt="DISC Certification"><br/>
+                        <img class="certification-badge" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/disc-cert-badge-color-label.png" alt="DISC Certification"><br/>
                         <h6 class="certification-title color-disc">DISC Certification<br/>$1,195 USD</h6>
                         <a href="https://buy.stripe.com/eVa28I12RbuL1Ne4gM" target="_blank" class="button">Buy DISC Certification</a>
                     </div>
 
                     <div class="col-4">
-                        <img class="certification-badge" src="~/assets/badges/new/mot-cert-badge-color-label.png" alt="Motivators Certification"><br/>
+                        <img class="certification-badge" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/mot-cert-badge-color-label.png" alt="Motivators Certification"><br/>
                         <h6 class="certification-title color-mot">Motivators Certification<br/>$1,195 USD</h6>
                         <a href="https://buy.stripe.com/aEU6oYeTH7ev4Zq28F" target="_blank" class="button mot">Buy Motivators Certification</a>
                     </div>
@@ -91,7 +91,7 @@
                         <h2 id="disc">DISC Assessment Certification</h2>
 
                         <div class="col-3">
-                            <img class="image" src="~/assets/badges/new/disc-cert-badge-color.png" alt="">
+                            <img class="image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png" alt="">
                         </div>
 
                         <div class="col-9">
@@ -134,7 +134,7 @@
                         <h2 id="motivators">Motivators Assessment Certification</h2>
 
                         <div class="col-3">
-                            <img class="image" src="~/assets/badges/new/mot-cert-badge-color.png" alt="">
+                            <img class="image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/mot-cert-badge-color.png" alt="">
                         </div>
 
                         <div class="col-9">

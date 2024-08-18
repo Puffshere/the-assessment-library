@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/disc">
-                        <img class="badge" src="~/assets/badges/new/disc-cert-badge-color-label.png" alt="DISC Trainer Materials">
+                        <img class="badge" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/disc-cert-badge-color-label.png" alt="DISC Trainer Materials">
                         <h2>DISC Trainer Materials</h2>
                         <p class="description">Click here to access the DISC trainer materials login portal.</p>
                     </nuxt-link>
@@ -29,7 +29,7 @@
 
                 <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/motivators">
-                        <img class="badge" src="~/assets/badges/new/mot-cert-badge-color-label.png" alt="Motivators Trainer Materials">
+                        <img class="badge" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/mot-cert-badge-color-label.png" alt="Motivators Trainer Materials">
                         <h2>Motivators Trainer Materials</h2>
                         <p class="description">Click here to access the Motivators trainer materials login portal.</p>
                     </nuxt-link>
@@ -37,7 +37,7 @@
 
                 <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/emotional-intelligence">
-                        <img class="badge" src="~/assets/badges/new/eiq-cert-badge-color-label.png" alt="EIQ Trainer Materials">
+                        <img class="badge" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/eiq-cert-badge-color-label.png" alt="EIQ Trainer Materials">
                         <h2>EIQ Trainer Materials</h2>
                         <p class="description">Click here to access the EIQ trainer materials login portal.</p>
                     </nuxt-link>
@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/critical-thinking">
-                        <img class="badge" src="~/assets/badges/new/hartman-cert-badge-color-label.png" alt="Critical Thinking Trainer Materials">
+                        <img class="badge" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/hartman-cert-badge-color-label.png" alt="Critical Thinking Trainer Materials">
                         <h2>Critical Thinking (HVP) Trainer Materials</h2>
                         <p class="description">Click here to access the Critical Thinking trainer materials login portal.</p>
                     </nuxt-link>
@@ -55,7 +55,7 @@
 
                 <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/learning-styles">
-                        <img class="badge" src="~/assets/badges/new/learning-cert-badge-color-label.png" alt="Learning Styles Trainer Materials">
+                        <img class="badge" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/learning-cert-badge-color-label.png" alt="Learning Styles Trainer Materials">
                         <h2>Learning Styles Trainer Materials</h2>
                         <p class="description">Click here to access the Learning Styles trainer materials login portal.</p>
                     </nuxt-link>
@@ -63,7 +63,7 @@
 
                 <div class="col-4">
                     <nuxt-link class="link" to="/resources/trainer-materials/sales-iq">
-                        <img class="badge" src="~/assets/badges/new/sales-iq-cert-badge-color-label.png" alt="Sales IQ Trainer Materials">
+                        <img class="badge" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/sales-iq-cert-badge-color-label.png" alt="Sales IQ Trainer Materials">
                         <h2>Sales IQ Trainer Materials</h2>
                         <p class="description">Click here to access the Sales IQ trainer materials login portal.</p>
                     </nuxt-link>
