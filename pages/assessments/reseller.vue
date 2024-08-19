@@ -16,16 +16,16 @@
                             to New Heights.
                         </h2>
                         <h5 style="font-style: italic;" class="rise-on-scroll">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png"
+                            <img src="~/assets/corporate/blue-arrow-icon.png/blue-arrow-icon.png"
                                 alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">Global
                             Leader in
                             Assessment
                             Technology <br />
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png"
+                            <img src="~/assets/corporate/blue-arrow-icon.png/blue-arrow-icon.png"
                                 alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">Powerful
                             Platform with
                             seamless integration <br />
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-arrow-icon.png"
+                            <img src="~/assets/corporate/blue-arrow-icon.png/blue-arrow-icon.png"
                                 alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">ASI
                             Validated,
                             Reliable, and
@@ -162,7 +162,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero-fold {
-    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/white-textured-background.png");
+    background-image: url("~assets/corporate/white-textured-background.png");
 }
 
 .container {

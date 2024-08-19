@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/reseller/Fold+3+Icon.png"
+                    <img src="~/assets/reseller/fold-3-icon.png"
                         alt="fold 3 icon image" class="icon">
                     <h1 class="title rise-on-scroll" style="margin-bottom: 0px; text-align: center;">
                         <span style="color: #00a8ff;">The Catalyst</span> for Leading <br />
