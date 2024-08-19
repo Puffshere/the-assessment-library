@@ -16,16 +16,16 @@
                             to New Heights.
                         </h2>
                         <h5 style="font-style: italic;" class="rise-on-scroll">
-                            <img src="~/assets/corporate/blue-arrow-icon.png/blue-arrow-icon.png"
+                            <img src="~/assets/corporate/blue-arrow-icon.png"
                                 alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">Global
                             Leader in
                             Assessment
                             Technology <br />
-                            <img src="~/assets/corporate/blue-arrow-icon.png/blue-arrow-icon.png"
+                            <img src="~/assets/corporate/blue-arrow-icon.png"
                                 alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">Powerful
                             Platform with
                             seamless integration <br />
-                            <img src="~/assets/corporate/blue-arrow-icon.png/blue-arrow-icon.png"
+                            <img src="~/assets/corporate/blue-arrow-icon.png"
                                 alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">ASI
                             Validated,
                             Reliable, and
