@@ -3,8 +3,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-5">
-                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-circle-background.png"
-                        alt="image of a blue circle" style="width: 400px; position: absolute; bottom: 0px;" class="circle">
+                    <!-- <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-circle-background.png"
+                        alt="image of a blue circle" style="width: 400px; position: absolute; bottom: 0px;" class="circle"> -->
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/fold-9-female-standing-image.png"
                         alt="picture of woman smiling"
                         style="width: 264px; margin-top: 31px; position: relative; bottom: -10px;" class="rise-on-scroll">

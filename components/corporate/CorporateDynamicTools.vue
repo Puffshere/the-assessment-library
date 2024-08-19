@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-3">
-                        <div class="card rise-on-scroll" style="background-color: #00a8ff;">
+                        <div class="card" style="background-color: #00a8ff;">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/icon-disc-plus-a-whole-lot-more.png"
                                 alt="image of a computer" style="width: 50px; margin-top: 20px; margin-bottom: -10px;">
                             <h4>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="card rise-on-scroll" style="background-color: white; color: #0033c5;">
+                        <div class="card" style="background-color: white; color: #0033c5;">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/icon-turnkey-or-customizable.png"
                                 alt="image of a computer" style="width: 106px; margin-top: 25px; margin-bottom: -15px;">
                             <h4 style="color: #0033c5">
@@ -49,7 +49,7 @@
             </div>
             <div class="custom-row">
                 <div class="custom-col">
-                    <div class="custom-card rise-on-scroll" style="background-color: white; color: #0033c5;">
+                    <div class="custom-card" style="background-color: white; color: #0033c5;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/icon-comprehensive-resource-library.png"
                             alt="image of a computer" style="width: 60px; margin-top: 20px; margin-bottom: -15px;">
                         <h4>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="custom-col">
-                    <div class="custom-card rise-on-scroll" style="background-color: #00a8ff; color: white;">
+                    <div class="custom-card" style="background-color: #00a8ff; color: white;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/world-class-support-team.png"
                             alt="image of a computer" style="width: 50px; margin-top: 20px; margin-bottom: -10px;">
                         <h4>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="custom-col">
-                    <div class="custom-card rise-on-scroll" style="background-color: white; color: #0033c5;">
+                    <div class="custom-card" style="background-color: white; color: #0033c5;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/icon-you-can-trust.png"
                             alt="image of a computer" style="width: 60px; margin-top: 15px; margin-bottom: -15px;">
                         <h4>
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <div class="row button-container">
-                <button class="button rise-on-scroll" @click="scrollToContactForm">
+                <button class="button" @click="scrollToContactForm">
                     Dive In
                 </button>
             </div>
@@ -100,9 +100,6 @@
 
 <script>
 export default {
-    mounted() {
-        this.observeElements();
-    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('corporateContactForm');
@@ -110,23 +107,6 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
-        },
-        observeElements() {
-            const options = {
-                threshold: 0.1
-            };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('rise');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-            const elements = document.querySelectorAll('.rise-on-scroll');
-            elements.forEach(el => {
-                observer.observe(el);
-            });
         }
     }
 }
@@ -251,17 +231,6 @@ hr {
 
 .custom-row .custom-col:last-child {
     margin-left: 20px;
-}
-
-.rise-on-scroll {
-    transition: transform 1s ease-out;
-    transform: translateY(1in);
-    opacity: 0;
-}
-
-.rise-on-scroll.rise {
-    transform: translateY(0);
-    opacity: 1;
 }
 
 @media (max-width: 1050px) {

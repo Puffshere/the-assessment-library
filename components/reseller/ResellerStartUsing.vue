@@ -8,12 +8,12 @@
         </video>
         <div class="container">
             <div class="row">
-                <h1 class="rise-on-scroll title" style="color: #0033c5;">
+                <h1 class="title" style="color: #0033c5;">
                     Kickstart Your Assessment Solutions
                 </h1>
             </div>
             <div class="custom-row">
-                <div class="card rise-on-scroll" style="background-color: #00a8ff; color: white;">
+                <div class="card" style="background-color: #00a8ff; color: white;">
                     <div>
                         <h2 style="text-decoration: underline; margin-top: 60px;">
                             Small Assessment Purchase of Any Variety
@@ -47,9 +47,6 @@
 
 <script>
 export default {
-    mounted() {
-        this.observeElements();
-    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('resellerContactForm');
@@ -57,23 +54,6 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
-        },
-        observeElements() {
-            const options = {
-                threshold: 0.1
-            };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('rise');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-            const elements = document.querySelectorAll('.rise-on-scroll');
-            elements.forEach(el => {
-                observer.observe(el);
-            });
         }
     }
 }
@@ -166,17 +146,6 @@ h3 {
     border-radius: 30px;
     padding: 5px;
     text-align: center;
-}
-
-.rise-on-scroll {
-    transition: transform 1s ease-out;
-    transform: translateY(1in);
-    opacity: 0;
-}
-
-.rise-on-scroll.rise {
-    transform: translateY(0);
-    opacity: 1;
 }
 
 @media (max-width: 1050px) {
