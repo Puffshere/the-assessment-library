@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/group-standing-graphic.png"
+                        <img src="~/assets/corporate/group-standing-graphic.png"
                             alt="group of people smiling image" class="groupSmiling" />
                     </div>
                 </div>
