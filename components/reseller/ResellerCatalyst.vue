@@ -68,7 +68,7 @@ export default {
 
 <style lang="scss" scoped>
 .reseller-catalyst {
-    background-image: url("https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/blue-light-background.png");
+    background-image: url("~assets/corporate/blue-light-background.png");
     width: 100%;
 }
 
