@@ -6,13 +6,13 @@
         <div class="row">
           <div class="col-12">
             <div class="col-7">
-              <h2 class="hero-text" style="line-height: 54px;">
+              <h2 class="" style="line-height: 54px;">
                 Unlock the Full Potential <br />
                 of Your <br />
                 Coaching <br />
                 with DISC Certification
               </h2>
-              <h4 class="hero-text">
+              <h4 class="">
                 Earn <span class="hyperlink" @click="scrollToSection" style="cursor: pointer;">ICF Credits</span> While
                 <img
                   src="~assets/coaches-disc-certification/blue-arrow.png"
@@ -20,7 +20,7 @@
                 <br />
                 Enhancing Your Coaching Efficacy
               </h4>
-              <button class="light-blue hero-text" style="margin-top: 20px;" @click="scrollToSectionButton">
+              <button class="light-blue " style="margin-top: 20px;" @click="scrollToSectionButton">
                 Get Started Today
               </button>
             </div>
