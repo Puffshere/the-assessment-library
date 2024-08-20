@@ -244,7 +244,7 @@
             async process() {
                 if (this.logoToBeUploaded && this.isLogoValid) {
                     const response = await this.$refs.fileUploader.upload('/api/upload', { 'X-Test-Header': 'vue-file-agent' }, [this.logoToBeUploaded]);
-                    this.form.logo = `https://cdn.assessments24x7.com/file/a24x7-client-logos/${response[0].data.fileName}`;
+                    this.form.logo = `https://f002.backblazeb2/file/a24x7-client-logos/${response[0].data.fileName}`;
                 }
 
                 const validated = await this.$refs.form.validate();
