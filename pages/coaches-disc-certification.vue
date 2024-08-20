@@ -88,13 +88,6 @@ export default {
       event.target.blur();
     }
   },
-  mounted() {
-    const heroTextElements = document.querySelectorAll('.hero-text');
-    heroTextElements.forEach(element => {
-      element.style.opacity = '1';
-      element.style.transform = 'translateY(0)';
-    });
-  },
   head() {
     return {
       title: 'Coaches DISC Certification | Assessments 24x7',
@@ -134,11 +127,5 @@ h4 {
   margin-top: 15px;
   opacity: 1 !important;
   transform: none !important;
-}
-
-.hero-text {
-  opacity: 0;
-  transform: translateY(1in);
-  transition: all 1s ease-out;
 }
 </style>
