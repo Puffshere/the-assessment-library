@@ -1,18 +1,18 @@
 <template>
   <section>
-    <LazyHydrate when-visible><main-nav class="nav"></main-nav></LazyHydrate>
+    <main-nav class="nav"></main-nav>
     <section>
-      <div class="container">
+      <div class="container" v-cloak>
         <div class="row">
           <div class="col-12">
             <div class="col-7">
-              <h2 style="line-height: 54px;">
+              <h2 class="hero-text" style="line-height: 54px;">
                 Unlock the Full Potential <br />
                 of Your <br />
                 Coaching <br />
                 with DISC Certification
               </h2>
-              <h4>
+              <h4 class="hero-text">
                 Earn <span class="hyperlink" @click="scrollToSection" style="cursor: pointer;">ICF Credits</span> While
                 <img
                   src="~assets/coaches-disc-certification/blue-arrow.png"
@@ -20,7 +20,7 @@
                 <br />
                 Enhancing Your Coaching Efficacy
               </h4>
-              <button class="light-blue" style="margin-top: 20px;" @click="scrollToSectionButton">
+              <button class="light-blue hero-text" style="margin-top: 20px;" @click="scrollToSectionButton">
                 Get Started Today
               </button>
             </div>
@@ -86,26 +86,13 @@ export default {
         element.scrollIntoView({ behavior: 'smooth' });
       }
       event.target.blur();
-    },
-    handleIntersection(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-rise');
-        } else {
-          entry.target.classList.remove('animate-rise');
-        }
-      });
     }
   },
   mounted() {
-    const observer = new IntersectionObserver(this.handleIntersection, {
-      threshold: 0 // Adjust this as needed
-    });
-
-    // Select each child element to be observed
-    const elements = document.querySelectorAll('.col-7 h2, .col-7 h4, .col-7 button');
-    elements.forEach(element => {
-      observer.observe(element);
+    const heroTextElements = document.querySelectorAll('.hero-text');
+    heroTextElements.forEach(element => {
+      element.style.opacity = '1';
+      element.style.transform = 'translateY(0)';
     });
   },
   head() {
@@ -125,6 +112,10 @@ export default {
 
 <style scoped>
 @import 'components/coachesDISCCertification/CDC.scss';
+
+[v-cloak] {
+  display: none;
+}
 
 .container {
   padding: 50px 0;
@@ -148,27 +139,9 @@ h4 {
   transform: none !important;
 }
 
-@keyframes rise {
-  from {
-    transform: translateY(1in);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.col-7 h2,
-.col-7 h4,
-.col-7 button {
+.hero-text {
   opacity: 0;
   transform: translateY(1in);
   transition: all 0.5s ease-out;
-}
-
-.animate-rise {
-  animation: rise 1.25s ease-out forwards;
 }
 </style>
