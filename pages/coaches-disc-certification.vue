@@ -113,9 +113,6 @@ export default {
 <style scoped>
 @import 'components/coachesDISCCertification/CDC.scss';
 
-[v-cloak] {
-  display: none;
-}
 
 .container {
   padding: 50px 0;
@@ -142,6 +139,6 @@ h4 {
 .hero-text {
   opacity: 0;
   transform: translateY(1in);
-  transition: all 0.5s ease-out;
+  transition: all 1s ease-out;
 }
 </style>
