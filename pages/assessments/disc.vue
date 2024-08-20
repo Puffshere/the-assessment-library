@@ -26,7 +26,7 @@
             <div class="container" style="padding-top: 20px; padding-bottom: 40px;">
                 <div class="row">
                     <div class="col-6">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Assessments/DISC/DISC+Assessment+2.png"
+                        <img src="~/assets/assessments/disc-assessment-fold-2-image.png"
                             alt="image of sample reports and a phone" style="width: 100%; margin-top: 30px;">
                     </div>
                     <div class="col-6">
