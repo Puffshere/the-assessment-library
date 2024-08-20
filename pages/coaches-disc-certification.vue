@@ -2,7 +2,7 @@
   <section>
     <main-nav class="nav"></main-nav>
     <section>
-      <div class="container" v-cloak>
+      <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="col-7">
