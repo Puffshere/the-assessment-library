@@ -466,14 +466,12 @@ export default {
                             mainText: 'DISC Insights',
                         },
                         {
-                            url: '',
-                            mainText: 'DISC Awareness Assessment',
-                            footNote: "*Coming Soon"
+                            url: 'https://www.assessments24x7.com/disc-awareness',
+                            mainText: 'DISC Awareness',
                         },
                         {
-                            url: '',
-                            mainText: 'DISC Leadership Assessment',
-                            footNote: "*Coming Soon"
+                            url: 'https://www.assessments24x7.com/disc-leadership',
+                            mainText: 'DISC Leadership',
                         }
                     ]
                 },
