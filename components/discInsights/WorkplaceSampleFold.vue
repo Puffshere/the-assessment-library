@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="rise-on-scroll" style="display: flex; justify-content: center; margin-bottom: -40px;">
+                    <div style="display: flex; justify-content: center; margin-bottom: -40px;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/disc-icon.png" alt="disc icon" style="width: 110px;"
                             id="heroImage">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/critical-thinking-icon.png" alt="critical thinking icon"
