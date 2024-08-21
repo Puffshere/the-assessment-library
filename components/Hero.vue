@@ -52,63 +52,10 @@
 <style lang="scss" scoped>
     @import '~assets/scss/vars';
 
-    .no-webp .hero {
-        background: url('~assets/hero.webp') !important;
-        background-size: cover !important;
-    }
-
-    .webp .hero {
-        background: url('~assets/hero.webp') !important;
-        background-size: cover !important;
-    }
-
-    .lightbox {
-        display: none;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background: rgba(0, 0, 0, 0.85);
-        z-index: 999999;
-
-        &.active {
-            display: block;
-        }
-
-        .player {
-            position: absolute;
-            left: 50%;
-            margin-left: -320px;
-            width: 640px;
-            margin-top: 200px;
-            border: 0;
-            border-radius: 20px;
-            box-shadow: 0 0 40px rgba(0,0,0,0.6);
-
-            .close {
-                content: '×';
-                position: absolute;
-                right: 11px;
-                color: #fff;
-                font-size: 24pt;
-                z-index: 9999999;
-                padding-left: 2px;
-                padding-top: 2px;
-                margin-top: 12px;
-                height: 34px;
-                width: 34px;
-                text-align: center;
-                line-height: 32px;
-                background: rgba(0,179,255,.8);
-                border-radius: 50%;
-                transition: all .3s ease;
-                cursor: pointer;
-            }
-        }
-    }
 
     .hero {
+        background: url('~assets/hero.webp');
+        background-size: cover;
         margin-bottom: 70px;
         position: relative;
         color: #fff;
@@ -136,49 +83,12 @@
             }
         }
 
-        .main-img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 20px rgba(0,0,0,.3);
-            margin: 30px 0;
-            transition: filter .3s ease-in-out;
-
-            &:hover {
-                filter: brightness(120%);
-            }
-        }
-
-        .pill {
-            border-radius: 21px;
-            padding: 10px;
-            display: block;
-            font-size: 9pt;
-            font-weight: 600;
-            background: #0033c5;
-
-            input {
-                vertical-align: baseline;
-            }
-
-            
-        }
-
         .legal-form-text {
             font-size: 9pt;
             text-align: center;
             display: block;
             margin-top: 8px;
             opacity: .85;
-        }
-    }
-
-    @media screen and (max-width: $breakpoint-large) {
-        .hero {
-            .main-img {
-                max-width: 500px;
-                margin: 50px auto 0;
-                display: block;
-            }
         }
     }
 
@@ -207,10 +117,6 @@
                 display: block;
                 width: 100%;
                 margin-bottom: 10px;
-            }
-
-            .main-img {
-                margin: 10px 0 20px;
             }
         }
     }
