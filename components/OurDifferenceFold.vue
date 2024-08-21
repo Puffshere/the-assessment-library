@@ -1,7 +1,7 @@
 <template>
     <section class="ourDifference">
         <video autoplay muted loop id="myVideo">
-            <source src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/our-difference-video.mp4"
+            <source src="videos/our-difference-video.mp4"
                 type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
