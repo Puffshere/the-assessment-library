@@ -359,6 +359,11 @@ export default {
                         {
                             url: 'https://docs.google.com/document/d/12fuqZv5N27fD8FVXpBz2fvK1Lwrlz22sxYWtEreIPx0/edit#heading=h.r58x6jaucvn',
                             mainText: 'Certification Automation Sequences',
+                        },
+                        {
+                            url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/SOP+-+CERT+-+Update+Group+Certification+Automation.pdf',
+                            mainText: 'Update Group Certification Automation',
+                            footNote: "*(SOP)"
                         }
                     ]
                 },
