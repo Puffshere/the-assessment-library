@@ -42,6 +42,12 @@
                         </thead>
 
                         <tbody>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://assessmentdownloads.com/Aug%202024%20MOT%20Update%20Details.pdf?utm_source=ActiveCampaign&utm_medium=email&utm_content=Coming%20Soon%20-%20Motivators%20Update%3A%20August%202024&utm_campaign=%5BREADY%5D%20Motivators%20update%20-%20August%202024%20%28RS%20Clients%29"
+                                        target="_blank" rel="noopener">Motivators Update August 2024</a>
+                                </td>
+                            </tr>
                             <tr v-if="certified">
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/Motivators-Certified-Debrief-Guide-8.2024_FINAL.pdf"
@@ -87,12 +93,6 @@
                                         foundational understanding of the report and should be able to generate
                                         questions for the coaching conversation. In total, the series is less than 25
                                         minutes long.</small>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a class="hyperlink"
-                                        href="https://assessmentdownloads.com/Aug%202024%20MOT%20Update%20Details.pdf?utm_source=ActiveCampaign&utm_medium=email&utm_content=Coming%20Soon%20-%20Motivators%20Update%3A%20August%202024&utm_campaign=%5BREADY%5D%20Motivators%20update%20-%20August%202024%20%28RS%20Clients%29"
-                                        target="_blank" rel="noopener">Motivators Update August 2024</a>
                                 </td>
                             </tr>
 
