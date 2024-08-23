@@ -42,26 +42,16 @@
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td><a class="hyperlink"
-                                        href="https://assessmentdownloads.com/Motivators%20Update%20Mar%202024%20Details.pdf"
-                                        target="_blank" rel="noopener">Motivators Update March 2024 PDF</a></td>
-                            </tr>
-                            <tr>
-                                <td><a class="hyperlink"
-                                        href="https://www.youtube.com/watch?v=SUjIQZ5cKOs"
-                                        target="_blank" rel="noopener">Motivators Update March 2024 VIDEO</a></td>
-                            </tr>
                             <tr v-if="certified">
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/Motivators-Certified-Debrief-Guide-Mar2024.pdf"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/Motivators-Certified-Debrief-Guide-8.2024_FINAL.pdf"
                                         target="_blank" rel="noopener">Motivators Certified Debrief Guide</a>
                                     <small>Overview and Guide for what is included in the assessment report</small>
                                 </td>
                             </tr>
                             <tr v-else>
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/Motivators_Non-Certified+Debrief+Guide_3.15.24Final.pdf"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/Motivators_Non-Certified+Debrief+Guide_8.21.24Final.pdf"
                                         target="_blank" rel="noopener">Motivators Debrief Guide</a>
                                     <small>Overview and Guide for what is included in the assessment report</small>
                                 </td>
@@ -97,6 +87,12 @@
                                         foundational understanding of the report and should be able to generate
                                         questions for the coaching conversation. In total, the series is less than 25
                                         minutes long.</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://assessmentdownloads.com/Aug%202024%20MOT%20Update%20Details.pdf?utm_source=ActiveCampaign&utm_medium=email&utm_content=Coming%20Soon%20-%20Motivators%20Update%3A%20August%202024&utm_campaign=%5BREADY%5D%20Motivators%20update%20-%20August%202024%20%28RS%20Clients%29"
+                                        target="_blank" rel="noopener">Motivators Update August 2024</a>
                                 </td>
                             </tr>
 
@@ -135,7 +131,7 @@
                                         target="_blank" rel="noopener">Agreements, Conflicts and Interesting
                                         Combinations</a>
                                     <small>Describes common agreements, conflicts and interesting combinations of
-                                        motivators with charts and details</small>
+                                        motivators with charts and details.</small>
                                 </td>
                             </tr>
 
@@ -148,9 +144,10 @@
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/Ranges_Standard+Deviations+Scores+-+MOT_Q124Final.pptx"
-                                        target="_blank" rel="noopener">Standard Deviations</a>
-                                    <small>Shares the median and standard deviations for each dimension.</small>
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/Ranges_+VL-VH+Scores+-+MOT_8.24.pptx"
+                                        target="_blank" rel="noopener">Motivators Ranges and Scores</a>
+                                    <small>Shares the details of each Motivator’s scoring and ranges for Very High to
+                                        Very Low.</small>
                                 </td>
                             </tr>
 
@@ -159,16 +156,16 @@
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/MOT+Alternative+Words_Matrix+descriptors+2024+Final.pdf"
                                         target="_blank" rel="noopener">Matrix Alternative Words</a></td>
                             </tr>
-                           
+
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/AttitudeIngredients.pdf"
                                         target="_blank" rel="noopener">Attitude Ingredients</a>
                                     <small>Reveals Identifiers, Dissatisfies/Stressors, Difficulties in relating,
-                                        Possible Jobs, TV Shows/Magazines, Ideal vacations for each Motivator</small>
+                                        Possible Jobs, TV Shows/Magazines, Ideal vacations for each Motivator.</small>
                                 </td>
                             </tr>
-                            
+
                         </tbody>
                     </table>
 
@@ -184,6 +181,14 @@
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/DISC+and+Motivators+-+1+page+combos+-+Q124+Final.pdf"
                                         target="_blank" rel="noopener">DISC & Motivators Integration - 1 page</a></td>
+                            </tr>
+                            <tr v-if="certified">
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/Motivators+Patterns+-+Final+8.2024.pptx"
+                                        target="_blank" rel="noopener">Motivators Patterns and Combinations</a>
+                                    <small>Provides insight into combinations of Motivators and alignment in patterns
+                                        with DISC.</small>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -211,14 +216,14 @@
                         <tbody>
                             <tr>
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/Motivators_2hourFacilitatorGuide2024+-+FINAL.pdf"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/Motivators_2hourFacilitatorGuide_8.2024+-+FINAL.pdf"
                                         target="_blank" rel="noopener">2-Hour Facilitator Guide</a>
                                     <small>Step-by-step instructions for facilitating 2-hour workshop</small>
                                 </td>
                             </tr>
                             <tr>
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/MotivatorsWorkshopPPT+2hour2024+FINAL.pptx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/MotivatorsWorkshopPPT+2hour_8.+2024+FINAL.pptx"
                                         target="_blank" rel="noopener">2-Hour Presentation</a>
                                     <small>Overview of Motivators, discussion and activity and report debrief
                                         opportunity.</small>
@@ -226,14 +231,14 @@
                             </tr>
                             <tr v-if="certified">
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/Motivators_4hourFacilitatorGuide2024+-+FINAL.pdf"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/Motivators_4hourFacilitatorGuide_8.2024+-+FINAL.pdf"
                                         target="_blank" rel="noopener">4-Hour Facilitator Guide</a>
                                     <small>Step-by-step instructions for facilitating 4-hour workshop</small>
                                 </td>
                             </tr>
                             <tr v-if="certified">
                                 <td><span class="new-badge">NEW</span><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/MotivatorsWorkshopPPT+4hour2024+FINAL.pptx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/MotivatorsWorkshopPPT+4hour_8.2024+FINAL.pptx"
                                         target="_blank" rel="noopener">4-Hour Presentation</a>
                                     <small>Motivators, strengths and limitations, discussion and activities, and report
                                         debrief opportunity.</small>
@@ -241,10 +246,19 @@
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/MOT+Mini+Presentation+2024+Final.pptx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/MOT+Mini+Presentation+8.2024+Final.pptx"
                                         target="_blank" rel="noopener">Mini-Motivators Presentation</a>
                                     <small>15 to 20 minute overview of Motivators introducing the what and why behind
                                         the model and highlighting the main concepts.</small>
+                                </td>
+                            </tr>
+                            <tr v-if="certified">
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/MotivatorsWorkshop_Intro90_8.+2024+FINAL.pptx"
+                                        target="_blank" rel="noopener">Introductory Motivators Workshop Presentation (90
+                                        mins)</a>
+                                    <small>For 90-minute, basic introductory workshop to Motivators, with high level
+                                        overview of key highlights of the Motivators report.</small>
                                 </td>
                             </tr>
                         </tbody>
@@ -294,12 +308,12 @@
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/A24x7+Motivators+Workshop+Activities+2024Final.pptx"
-                                        target="_blank" rel="noopener">Motivators Activities for Training Workshops</a>
+                                        target="_blank" rel="noopener">Motivators Activities for Training Workshops.</a>
                                 </td>
                             </tr>
                             <tr v-if="certified">
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/A24x7+Motivators+Strengths_Limitations+2024Final.pptx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/A24x7+Motivators+Strengths_Limitations+8.24Final.pptx"
                                         target="_blank" rel="noopener">Motivators Strengths and Limitations</a>
                                     <small>Reveals some strengths and limitations associated with each Motivator for
                                         both High and Low scores to help further understanding and awareness for each
@@ -380,62 +394,62 @@
                         <tbody>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/What+are+Motivators_EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/What+are+Motivators_EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">What are Motivators?</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Aesthetic+Motivator-EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/The+Aesthetic+Motivator-EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">The Aesthetic Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Economic+Motivator+-+EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/The+Economic+Motivator+-+EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">The Economic Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Individualistic+Motivator+EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/The+Individualistic+Motivator+EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">The Individualistic Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Power+Motivator+EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/The+Power+Motivator+EM+8.2024+Final+(1).docx"
                                         target="_blank" rel="noopener">The Power Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Altruistic+Motivator+EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/The+Altruistic+Motivator+EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">The Altruistic Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Regulatory+Motivator+EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/The+Regulatory+Motivator+EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">The Regulatory Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/The+Theoretical+Motivator+-+EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/The+Theoretical+Motivator+-+EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">The Theoretical Motivator</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/Agreements_Conflicts+EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/Agreements_Conflicts+EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">Agreements and Conflicts</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/PopulationIntensityRisk+EM+Final.docx"
-                                        target="_blank" rel="noopener">Norms, Intensities, & Risks</a></td>
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/PopulationIntensityRisk+EM+8.2024+Final.docx"
+                                        target="_blank" rel="noopener">Populations, Intensities & Risk</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/Coaching+for+Motivators+EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/Coaching+for+Motivators+EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">Coaching for Motivators</a></td>
                             </tr>
                             <tr>
                                 <td><a class="hyperlink"
-                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024update/DISCandMotivators+EM+Final.docx"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/motivators/2024AugustUpdate/DISCandMotivators+EM+8.2024+Final.docx"
                                         target="_blank" rel="noopener">DISC & Motivators</a></td>
                             </tr>
                         </tbody>
@@ -473,6 +487,15 @@
                                         you navigate, understand and explain the most recent changes in the Motivators
                                         report.</small>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://assessmentdownloads.com/Motivators%20Update%20Mar%202024%20Details.pdf"
+                                        target="_blank" rel="noopener">Motivators Update March 2024 PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td><a class="hyperlink" href="https://www.youtube.com/watch?v=SUjIQZ5cKOs"
+                                        target="_blank" rel="noopener">Motivators Update March 2024 VIDEO</a></td>
                             </tr>
                         </tbody>
                     </table>
