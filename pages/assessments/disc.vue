@@ -452,7 +452,9 @@
                     </div>
 
                     <div class="col-4">
-                        <img class="image" src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png" alt="placeholder">
+                        <img class="image"
+                            src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png"
+                            alt="placeholder">
                     </div>
                 </div>
             </div>
@@ -536,15 +538,16 @@
 
                             <h3>3. Career Development</h3>
                             <p>Beyond hiring, DISC supports career growth by offering a valuable tool for identifying
-                                areas for development. The DISC model, created by psychologist William Moulton Marston's
-                                model helps employees align their career paths with their DISC style, increasing
-                                satisfaction and loyalty.</p>
+                                areas for development and aligning employees with suitable career paths. The model,
+                                based on psychologist William Moulton Marston's work, helps individuals understand their
+                                behavioral tendencies and strengths. By matching these traits to roles and
+                                responsibilities, employees can better navigate their career trajectories.</p>
 
                             <h3>4. Enhanced Teamwork</h3>
-                            <p>DISC boosts the performance of teams by promoting understanding of each member's role,
-                                ensuring that individual strengths complement one another. Team members will better
-                                understand each other and their own roles and how their strengths and challenges
-                                complement each other.</p>
+                            <p>DISC boosts team performance by promoting understanding of each member's role, ensuring
+                                individual strengths complement one another. Team members gain insight into their own
+                                and others' roles, recognizing how their unique abilities and challenges contribute to
+                                overall group dynamics and effectiveness.</p>
 
                             <h3>5. Improve Self-Awareness</h3>
                             <p>By taking the DISC assessment, individuals gain a deeper understanding of their behavior
@@ -662,10 +665,12 @@
                     <div class="col-12">
                         <h6 class="question">What are some Common Misconceptions about DISC?</h6>
                         <p class="answer">
-                            Calling it the DISC personality test is incorrect. 1) DISC is an assessment, not a test.
-                            There are no right or wrong answers. 2) DISC does not measure personality traits. It’s an
-                            assessment tool based on William Moulton Marston's research model that helps individuals
-                            gain insight into their behavioral styles.
+                            <span style="font-weight: 700">Calling it the DISC personality test is
+                                incorrect.</span><br />
+                            1) DISC is an assessment, not a test. There are no right or wrong answers.<br />
+                            2) DISC does not measure personality traits. It’s an assessment tool based on William
+                            Moulton Marston's research model that helps individuals gain insight into their behavioral
+                            styles.
                         </p>
                     </div>
                 </div>
