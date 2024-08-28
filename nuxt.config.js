@@ -167,6 +167,9 @@ module.exports = {
   axios: {
     baseURL: process.env.PUBLISHING_API_ENDPOINT || 'https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/'
   },
+  env: {
+    NUXT_ENV_GOOGLE_MAPS_SECRET_KEY: process.env.NUXT_ENV_GOOGLE_MAPS_SECRET_KEY
+  },
 
   /*
   ** Build configuration
