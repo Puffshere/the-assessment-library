@@ -610,5 +610,9 @@
     {
         "from": "/blog/null",
         "to": "/blog"
+    },
+    {
+        "from": "/media/articles/article-3WaystoCatchSalesApplicantsWhoLietoYou.pdf",
+        "to": "/article-pages/3WaysToCatchSalesApplicantsWhoLie.html"
     }
 ]
