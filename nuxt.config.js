@@ -81,7 +81,11 @@ module.exports = {
       src: '~/plugins/calendly.js',
       mode: 'client'
     },
-    '~/plugins/zapier.js'
+    '~/plugins/zapier.js',
+    { 
+      src: '~/plugins/google-maps.js', 
+      mode: 'client' 
+    }
   ],
 
   /*
