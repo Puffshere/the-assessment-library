@@ -96,7 +96,8 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/gtm',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    '@nuxtjs/dotenv'
   ],
   robots: {
     UserAgent: '*',
