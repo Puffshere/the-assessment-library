@@ -97,7 +97,6 @@ module.exports = {
     '@nuxtjs/gtm',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxtjs/dotenv'
   ],
   robots: {
     UserAgent: '*',

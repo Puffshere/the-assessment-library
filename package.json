@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
-    "@nuxtjs/dotenv": "^1.4.2",
     "@nuxtjs/google-tag-manager": "^2.3.1",
     "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/moment": "^1.6.1",
