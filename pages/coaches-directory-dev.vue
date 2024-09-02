@@ -62,10 +62,27 @@
             </div>
             <div class="cards-container">
                 <div v-for="coach in filteredCoaches" :key="coach.Name" class="card">
-                    <h4>{{ coach.Name }}</h4>
-                    <p>{{ coach.City }}, {{ coach.State }}</p>
-                    <p><a :href="coach.Website" target="_blank">{{ coach.Website }}</a></p>
-                    <p><strong>Certifications:</strong></p>
+                    <h4 class="icons">
+                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Name+Icon.png"
+                            alt="Name Icon" class="name-icon" />
+                        {{ coach.Name }}
+                    </h4>
+                    <p class="icons">
+                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Location+Icon.png"
+                            alt="Location Icon" class="location-icon" />
+                        {{ coach.City }}, {{ coach.State }}
+                    </p>
+                    <p class="icons">
+                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Globe-URL+Icon.png"
+                            alt="Globe Icon" class="globe-icon" />
+                        {{ coach.Name }}
+                        <a :href="coach.Website" target="_blank">{{ coach.Website }}</a>
+                    </p>
+                    <p class="icons">
+                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
+                            alt="Certifications Icon" class="certifications-icon" />
+                        Certifications
+                    </p>
                     <ul>
                         <li v-if="coach.MCP">Master Certified Practitioner</li>
                         <li v-if="coach.DISC === 'certified'">DISC</li>
@@ -93,8 +110,8 @@ export default {
     data() {
         return {
             center: { lat: 37.7749, lng: -122.4194 },
-            coaches: [], // Holds coaches data fetched from the API
-            selectedName: '', // Holds the selected name from the dropdown
+            coaches: [],
+            selectedName: '',
         };
     },
     computed: {
@@ -221,6 +238,7 @@ h5 {
 
 .card h4 {
     margin-bottom: 5px;
+    font-weight: 400;
 }
 
 .card p {
@@ -234,5 +252,31 @@ h5 {
 
 .card li {
     margin-bottom: 5px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.name-icon {
+    width: 22px;
+    margin-right: 4px;
+}
+
+.location-icon {
+    width: 22px;
+    margin-right: 4px;
+}
+
+.globe-icon {
+    width: 22px;
+    margin-right: 4px;
+}
+
+.certifications-icon {
+    width: 22px;
+    margin-right: 4px;
 }
 </style>
