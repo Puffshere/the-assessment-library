@@ -19,7 +19,7 @@
                 </div>
             </div>
         </section>
-        <section style="margin-bottom: 80px;">
+        <section style="margin-bottom: 50px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
