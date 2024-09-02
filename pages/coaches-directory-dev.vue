@@ -80,7 +80,7 @@
                     <p class="icons" @click="toggleCertifications(index)" style="cursor: pointer;">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
                             alt="Certifications Icon" class="certifications-icon" />
-                        <span class="hyperlink">Certifications ({{ certificationCount(coach) }})</span>
+                        <span class="cert">Certifications ({{ certificationCount(coach) }})</span>
                     </p>
                     <ul v-if="coach.showCertifications">
                         <li v-if="coach.DISC === 'certified'">DISC</li>
@@ -138,8 +138,7 @@ export default {
         }
     },
     async created() {
-        const response = await axios.get('/api/coaches/');
-        //const response = await axios.get('http://localhost:3000/api/coaches/');
+        const response = await axios.get('http://localhost:3000/api/coaches/');
         this.coaches = response.data.coaches;
 
         // Code needed for development to speed up page performance
@@ -301,5 +300,19 @@ h5 {
 .certifications-icon {
     width: 22px;
     margin-right: 4px;
+}
+
+.cert {
+    color: #000;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    transition: background .2s linear;
+    box-shadow: inset 0 -3px 0 0 rgba(0, 168, 255, .3);
+}
+
+.cert:hover {
+    background: #ffc73e;
 }
 </style>
