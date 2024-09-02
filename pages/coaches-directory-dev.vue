@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-12">
                         <h1 style="text-align: center;">
-                            <span style="color: #00a8ff">INTERNATION DIRECTORY</span> <br />
+                            <span style="color: #00a8ff">INTERNATIONAL DIRECTORY</span> <br />
                             OF CERTIFIED PRACTITIONERS
                         </h1>
                         <h3 style="text-align: center; font-weight: 400; margin-top: -30px;">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section style="margin-bottom: 80px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -35,8 +35,7 @@
                 </div>
             </div>
         </section>
-        <br />
-        <search-bar></search-bar>
+        <search-bar :coaches="coaches" v-model="selectedName" />
         <section>
             <div class="row directory-key-row">
                 <h3 class="directory-key-title">Directory Key</h3>
@@ -62,48 +61,15 @@
                 <GmapMap :center="center" :zoom="12" class="map" />
             </div>
             <div class="cards-container">
-                <div class="card">
-                    <h4>Angie</h4>
-                    <p>Seattle, Washington</p>
-                    <p><a href="https://www.linkedin.com/feed/">https://www.linkedin.com/feed/</a></p>
+                <div v-for="coach in filteredCoaches" :key="coach.Name" class="card">
+                    <h4>{{ coach.Name }}</h4>
+                    <p>{{ coach.City }}, {{ coach.State }}</p>
+                    <p><a :href="coach.Website" target="_blank">{{ coach.Website }}</a></p>
                     <p><strong>Certifications:</strong></p>
                     <ul>
-                        <li>Master Certified Practitioner</li>
-                        <li>DISC</li>
-                        <li>Motivators</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h4>Monica</h4>
-                    <p>Portland, Oregon</p>
-                    <p><a href="https://www.linkedin.com/feed/">https://www.linkedin.com/feed/</a></p>
-                    <p><strong>Certifications:</strong></p>
-                    <ul>
-                        <li>Advanced Certified Practitioner</li>
-                        <li>DISC</li>
-                        <li>Motivators</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h4>Shawn</h4>
-                    <p>San Francisco, California</p>
-                    <p><a href="https://www.linkedin.com/feed/">https://www.linkedin.com/feed/</a></p>
-                    <p><strong>Certifications:</strong></p>
-                    <ul>
-                        <li>Certified Practitioner</li>
-                        <li>DISC</li>
-                        <li>Motivators</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h4>Jennifer</h4>
-                    <p>Los Angeles, California</p>
-                    <p><a href="https://www.linkedin.com/feed/">https://www.linkedin.com/feed/</a></p>
-                    <p><strong>Certifications:</strong></p>
-                    <ul>
-                        <li>Master Certified Practitioner</li>
-                        <li>DISC</li>
-                        <li>Motivators</li>
+                        <li v-if="coach.MCP">Master Certified Practitioner</li>
+                        <li v-if="coach.DISC === 'certified'">DISC</li>
+                        <li v-if="coach.Motivators === 'certified'">Motivators</li>
                     </ul>
                 </div>
             </div>
@@ -115,20 +81,35 @@
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
 import SearchBar from '@/components/coachesDirectory/SearchBar';
+import axios from 'axios';
 
 export default {
     components: {
         LazyHydrate,
         'search-bar': SearchBar,
         'main-nav': () => import('@/components/Nav'),
-        'footer-fold': () => import('@/components/Footer')
+        'footer-fold': () => import('@/components/Footer'),
     },
     data() {
         return {
             center: { lat: 37.7749, lng: -122.4194 },
+            coaches: [], // Holds coaches data fetched from the API
+            selectedName: '', // Holds the selected name from the dropdown
         };
-    }
-}
+    },
+    computed: {
+        filteredCoaches() {
+            if (this.selectedName) {
+                return this.coaches.filter(coach => coach.Name === this.selectedName);
+            }
+            return this.coaches;
+        },
+    },
+    async created() {
+        const response = await axios.get('/api/coaches');
+        this.coaches = response.data.coaches;
+    },
+};
 </script>
 
 <style scoped>

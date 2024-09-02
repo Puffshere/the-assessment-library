@@ -5,7 +5,7 @@
       <span class="dropdown-arrow">&#9660;</span>
     </div>
     <div v-if="isOpen" class="dropdown-menu" @click.stop>
-      <input v-if="isSearchable" type="text" v-model="searchQuery" placeholder="Search..." class="search-input"/>
+      <input v-if="isSearchable" type="text" v-model="searchQuery" placeholder="Search..." class="search-input" />
       <div v-if="isCheckbox">
         <div v-for="item in filteredItems" :key="item" class="dropdown-item">
           <input type="checkbox" :value="item" v-model="selectedItems" /> {{ item }}
