@@ -61,7 +61,7 @@
                 <GmapMap :center="center" :zoom="12" class="map" />
             </div>
             <div class="cards-container">
-                <div v-for="coach in filteredCoaches" :key="coach.Name" class="card">
+                <div v-for="(coach, index) in filteredCoaches" :key="coach.Name" class="card">
                     <h4 class="icons">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Name+Icon.png"
                             alt="Name Icon" class="name-icon" />
@@ -75,18 +75,19 @@
                     <p class="icons">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Globe-URL+Icon.png"
                             alt="Globe Icon" class="globe-icon" />
-                        {{ coach.Name }}
                         <a :href="coach.Website" target="_blank">{{ coach.Website }}</a>
                     </p>
-                    <p class="icons">
+                    <p class="icons" @click="toggleCertifications(index)" style="cursor: pointer;">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
                             alt="Certifications Icon" class="certifications-icon" />
-                        Certifications
+                        <span class="hyperlink">Certifications ({{ certificationCount(coach) }})</span>
                     </p>
-                    <ul>
-                        <li v-if="coach.MCP">Master Certified Practitioner</li>
+                    <ul v-if="coach.showCertifications">
                         <li v-if="coach.DISC === 'certified'">DISC</li>
                         <li v-if="coach.Motivators === 'certified'">Motivators</li>
+                        <li v-if="coach.EIQ === 'certified'">EIQ</li>
+                        <li v-if="coach.Hartman === 'certified'">Hartman</li>
+                        <li v-if="coach['Learning Styles'] === 'certified'">Learning Styles</li>
                     </ul>
                 </div>
             </div>
@@ -122,11 +123,33 @@ export default {
             return this.coaches;
         },
     },
-    async created() {
-        const response = await axios.get('/api/coaches');
-        this.coaches = response.data.coaches;
+    methods: {
+        certificationCount(coach) {
+            let count = 0;
+            if (coach.DISC === 'certified') count++;
+            if (coach.Motivators === 'certified') count++;
+            if (coach.EIQ === 'certified') count++;
+            if (coach.Hartman === 'certified') count++;
+            if (coach['Learning Styles'] === 'certified') count++;
+            return count;
+        },
+        toggleCertifications(index) {
+            this.coaches[index].showCertifications = !this.coaches[index].showCertifications;
+        }
     },
-};
+    async created() {
+        const response = await axios.get('/api/coaches/');
+        //const response = await axios.get('http://localhost:3000/api/coaches/');
+        this.coaches = response.data.coaches;
+
+        // Code needed for development to speed up page performance
+
+        // this.coaches = response.data.coaches.slice(0, 4).map(coach => {
+        //     coach.showCertifications = false; // Initialize the visibility state for each coach
+        //     return coach;
+        // });
+    },
+}
 </script>
 
 <style scoped>
