@@ -72,7 +72,7 @@
                         <div class="card-buttons">
                             <button class="share-button">
                                 Share <img
-                                    src="https://https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Share+Icon.png"
+                                    src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Share+Icon.png"
                                     alt="Share Icon" class="share-icon" />
                             </button>
                         </div>
@@ -321,7 +321,7 @@ h5 {
     margin-top: 15px;
 }
 
-.cards-container:hover {
+.cards-container .card:hover {
     background: linear-gradient(to right, #e0e0e0, #ffffff);
 }
 
@@ -363,7 +363,13 @@ h5 {
 }
 
 .share-button:hover {
-    background-color: #0022a3;
+    background-color: white;
+    color: #0033c5;
+    border: 1px solid #0033c5;
+}
+
+.share-button:active {
+    background-color: rgb(206, 206, 206);
 }
 
 .share-icon {
