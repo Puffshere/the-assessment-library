@@ -276,7 +276,7 @@ h5 {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     margin-right: 15px;
     padding-left: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 .card h4 {
