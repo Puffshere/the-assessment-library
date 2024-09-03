@@ -64,13 +64,13 @@
             <div class="cards-container" @scroll="onScroll">
                 <div v-for="(coach) in filteredCoaches" :key="coach.Name" class="card">
                     <div class="card-header">
-                        <h4 class="icons">
+                        <h4 class="icons" style="margin-bottom: 0px;">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Name+Icon.png"
                                 alt="Name Icon" class="name-icon" />
                             {{ coach.Name }}
                         </h4>
                         <div class="card-buttons">
-                            <button class="share-button">
+                            <button class="share-button" style="margin-top: 5px;">
                                 Share <img
                                     src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Share+Icon.png"
                                     alt="Share Icon" class="share-icon" />

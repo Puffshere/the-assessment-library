@@ -1,9 +1,13 @@
 <template>
   <div :class="['custom-dropdown', customClass]">
     <div class="dropdown-selected" @click="toggleDropdown">
-      <span class="dropdown-placeholder">
-        <strong>{{ placeholderLabel }}</strong><span class="placeholder-description"> {{ placeholderDescription }}</span>
+      <span v-if="customClass === 'location-dropdown'" class="dropdown-placeholder">
+        <strong>{{ placeholderLabel }}</strong><span style="margin-left: 40px;">{{ placeholderDescription }}</span>
       </span>
+      <span v-else-if="customClass === 'certification-dropdown' || customClass === 'sort-dropdown'">
+        <strong>{{ placeholder }}</strong>
+      </span>
+      <span v-else>{{ displayText }}</span>
       <span class="dropdown-arrow">&#9660;</span>
     </div>
     <div v-if="isOpen" class="dropdown-menu" @click.stop>
@@ -63,19 +67,20 @@ export default {
     placeholderLabel() {
       if (this.customClass === 'location-dropdown') {
         return 'Location';
-      } else if (this.customClass === 'certification-dropdown') {
-        return 'Certifications';
-      } else if (this.customClass === 'sort-dropdown') {
-        return 'Sort By';
-      } else {
-        return this.placeholder;
       }
+      return this.placeholder;
     },
     placeholderDescription() {
       if (this.customClass === 'location-dropdown') {
         return '(City, State, Zip, Country)';
       }
       return '';
+    },
+    displayText() {
+      if (this.selectedItem) {
+        return this.selectedItem;
+      }
+      return this.placeholder;
     },
     filteredItems() {
       if (!this.isSearchable || !this.searchQuery) {
