@@ -32,7 +32,7 @@
                             <option value="en-us" selected>English (US) - 38</option>
                             <option value="fr">French - 15</option>
                             <option value="de">German - 6</option>
-                            <option value="hu">Hungarian - 2</option>
+                            <option value="hu">Hungarian - 3</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 3</option>
                             <option value="ja">Japanese - 4</option>
@@ -883,6 +883,9 @@
                                 <a v-else-if="lang === 'zh'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelChinese.pdf"
                                     target="_blank" rel="noopener">DISC Team Wheel</a>
+                                <a v-else-if="lang === 'hu'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamWheel-Hungarian_SampleReport.pdf"
+                                    target="_blank" rel="noopener">DISC Team Wheel</a>
                                 <a v-else-if="lang === 'es'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelSpanishSample.pdf"
                                     target="_blank" rel="noopener">DISC Team Wheel</a>
@@ -890,7 +893,7 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelTurkishSampleReport.pdf"
                                     target="_blank" rel="noopener">DISC Team Wheel</a>
                                 <a v-else class="hyperlink disabled">DISC Team Wheel</a>
-                                <a class="language-button disc" @click="discTeamWheelReportModal = true">5
+                                <a class="language-button disc" @click="discTeamWheelReportModal = true">6
                                     languages</a><br />
 
                                 <a v-if="lang === 'en-au'" class="hyperlink"
@@ -1265,6 +1268,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelChinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamWheel-Hungarian_SampleReport.pdf"
+                                    target="_blank" rel="noopener">Hungarian</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamWheelSpanishSample.pdf"
                                     target="_blank" rel="noopener">Spanish</a><br />
