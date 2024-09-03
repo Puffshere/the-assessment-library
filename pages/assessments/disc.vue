@@ -16,7 +16,7 @@
                             profile can lead to improvements in communication and teamwork. It is a practical tool with
                             benefits in both personal development and business settings.
                         </p>
-                        <nuxt-link to="/contact" class="button outline light">Become a Member</nuxt-link>
+                        <a href="#contactForm" class="button outline light">Become a Member</a>
                     </div>
                 </div>
             </div>
@@ -41,8 +41,8 @@
                             hiring, leadership development, or sales training, DISC provides a clear framework for
                             understanding and improving human interactions in professional settings.
                         </p>
-                        <nuxt-link to="/contact" class="button" style="float: right; margin-top: 10px;">Book
-                            Demo</nuxt-link>
+                        <a href="#contactForm" class="button" style="float: right; margin-top: 10px;">Book
+                            Demo</a>
                     </div>
                 </div>
             </div>
@@ -62,8 +62,8 @@
                             into one’s behavior for consulting (Coaching). Each report is designed to boost the
                             performance of teams and individuals by leveraging the four main DISC styles.
                         </p>
-                        <nuxt-link to="/contact" class="button" style="float: left; margin-top: 10px;">Meet with an
-                            Expert</nuxt-link>
+                        <a href="#contactForm" class="button" style="float: left; margin-top: 10px;">Meet with an
+                            Expert</a>
                     </div>
 
                     <div class="col-6">
@@ -175,7 +175,8 @@
                                     C</div>
                                 <div :class="{ 'content': true, 'active': active === 'c' }">
                                     <h4>Conscientious</h4>
-                                    <p>Data, fact & analysis based. Precise & accurate, trusts in the value of structure
+                                    <p>Data, fact, & analysis based. Precise & accurate, trusts in the value of
+                                        structure
                                         & order. Sees the value of “rules.”</p>
                                 </div>
                             </div>
@@ -205,7 +206,7 @@
                         </ul><br />
 
                         <nuxt-link to="/assessments" class="button">More Assessments</nuxt-link>
-                        <nuxt-link to="/contact" class="button outline">Contact a Specialist</nuxt-link>
+                        <a href="#contactForm" class="button outline">Contact a Specialist</a>
                     </div>
                 </div>
             </div>
@@ -220,25 +221,29 @@
                             DISC Assessment Provider
                         </h2>
                         <p style="text-align: left; color: white;">
-                            Assessment 24x7 offers a comprehensive and reliable analysis of DISC Styles. The assessments
+                            Assessments 24x7 offers a comprehensive and reliable analysis of DISC Styles. The
+                            assessments
                             are detailed and tailored to suit different needs. Customers receive accurate and actionable
                             insights, which help in personal and professional growth. Using these assessments,
                             organizations can improve teamwork and communication. They are easy to administer and
-                            interpret. Assessment 24x7 provides support throughout the process, ensuring a smooth and
+                            interpret. Assessments 24x7 provides support throughout the process, ensuring a smooth and
                             effective experience for all users.
                         </p>
-                        <nuxt-link to="/contact" class="button white" style="float: left; margin-top: 10px;">Meet with
-                            an Expert</nuxt-link>
+                        <a href="#contactForm" class="button white" style="float: left; margin-top: 10px;">Meet with
+                            an Expert</a>
                     </div>
                     <div class="col-5">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Assessments/DISC/Choosing+Assessment+Provider+1.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/DISC/Choosing+Assessment+Provider+1.png"
                             alt="assessment provider image" style="width: 100%; margin-top: 40px;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <LazyHydrate when-visible><validation-mini /></LazyHydrate>
+        <LazyHydrate when-visible>
+            <validation-mini :birdVersion="false" buttonLink="#contactForm" />
+        </LazyHydrate>
+
 
         <section class="assessments-header">
             <div class="container">
@@ -295,11 +300,12 @@
 
                             <h3>DISC Team Reports & DISC 360°</h3>
                             <p>
-                                By combining individual DISC results, members can generate seven different team reports.
+                                By combining individual DISC results, members can generate up to six different team
+                                reports.
                                 <a style="color:#fff" class="hyperlink" href="/assessments/360/disc">DISC 360°
                                     reports</a> provide insight into other's perspectives of behavior.
                                 Group insights and profound behavioral correlations await discovery with these reports.
-                                All of our team reports are 100% free and unlimited.
+                                All of our team reports are 100% free and unlimited with an Account Plus subscription.
                             </p>
                         </div>
                     </div>
@@ -359,7 +365,7 @@
                 <div class="row flex-center">
                     <div class="col-8">
                         <img class="logo-img" src="~assets/whitelabel-report/disc-whitelabel.png" alt="logo-image">
-                        <h4 class="title">White Label Our DISC Assessments With Your Brand's Logo- Not ours!</h4>
+                        <h4 class="title">White Label Our DISC Assessments With Your Brand's Logo- Not Ours!</h4>
                     </div>
                 </div>
 
@@ -381,7 +387,7 @@
                             resources, and technology to be your own. We have partnered with thousands of coaches and
                             consultants around the globe to help grow their businesses.</p>
 
-                        <nuxt-link to="/contact" class="button">Partner With Us</nuxt-link>
+                        <a href="#contactForm" class="button">Partner With Us</a>
                     </div>
 
                     <div class="col-6">
@@ -406,7 +412,7 @@
                             solutions to fit your needs.
                         </p>
 
-                        <nuxt-link to="/contact" class="button">Learn More</nuxt-link>
+                        <a href="#contactForm" class="button">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -414,7 +420,7 @@
 
         <LazyHydrate when-visible><rebecca-maxwell style="margin-top:-80px;margin-bottom:80px;" /></LazyHydrate>
 
-        <section class="contact-form">
+        <section class="contact-form" id="contactForm">
             <div class="container" style="padding-bottom: 90px;">
                 <div class="row flex-center">
                     <div class="col-8">
@@ -440,8 +446,7 @@
 
                         <p>
                             Our certifications also include many benefits such as exclusive access to our DISC Certified
-                            Trainer Materials, discounted
-                            SILVER LEVEL PRICING, and 10 complimentary DISC assessments when you begin.  
+                            Trainer Materials and 10 complimentary DISC assessments upon completion.  
                         </p><br />
 
                         <nuxt-link to="/certifications/assessment" class="button outline light">Get DISC
@@ -453,7 +458,7 @@
 
                     <div class="col-4">
                         <img class="image"
-                            src="https://f002.backblazeb2.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png"
+                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png"
                             alt="placeholder">
                     </div>
                 </div>
@@ -472,21 +477,18 @@
 
                         <p>
                             The world’s most comprehensive, one-stop assessment solution wouldn’t be complete without
-                            providing customizable coaching materials. Our Core DISC and Motivator assessments have
-                            their own dedicated folders on certified member dashboards. They are complete with
-                            multimedia materials, including PowerPoints, debrief guides, facilitator guides, group
-                            exercises, handouts, videos, MP3s, prewritten email series, sales collateral, and more!
+                            providing customizable coaching materials. Our DISC Certified Practitioners have dedicated
+                            resources accessible from certified member dashboards. They are complete with multimedia
+                            materials, including PowerPoints, debrief guides, facilitator guides, group exercises,
+                            handouts, videos, MP3s, prewritten email series, sales collateral, and more!
                         </p>
 
                         <p>
-                            When you become certified in DISC, you will receive access to a certified version of each
-                            folder, containing exclusive and
-                            upgraded materials that our Master Certified Practitioners use.
-
-
+                            When you become certified in DISC, you will have full access to the exclusive, upgraded
+                            materials that our Master Certified Practitioners use.
                         </p><br />
 
-                        <nuxt-link to="/contact" class="button">Book A Demo Now</nuxt-link>
+                        <a href="#contactForm" class="button">Book A Demo Now</a>
                     </div>
 
                     <div class="col-6">
@@ -636,17 +638,6 @@
                             <br />
                             <a class="hyperlink" href="https://en.wikipedia.org/wiki/DISC_assessment" target="_blank"
                                 rel="noopener">William Moulton Marston and his research.</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <h6 class="question">Can your DISC profile change over time?</h6>
-                        <p class="answer">
-                            Typically, an average person's profile remains consistent over time. Small changes in
-                            results may happen, but major shifts in style are rare. A significant life event could alter
-                            your style.
                         </p>
                     </div>
                 </div>

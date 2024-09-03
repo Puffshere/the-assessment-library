@@ -153,7 +153,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" id="optinNo" name="newsletter" type="radio" value="46"
                                     v-model="form.newsletter" tabindex="14" />
-                                <label class="form-check-label" for="optinNo">No, thank you</label>
+                                <label class="form-check-label" for="optinNo">No, thank you.</label>
                             </div>
 
                             <span class="error">{{ v.errors[0] }}</span>

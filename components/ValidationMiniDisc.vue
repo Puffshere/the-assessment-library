@@ -98,8 +98,8 @@
 
             <div class="row">
                 <div class="col-12" style="display: flex; justify-content: center;">
-                    <nuxt-link to="/contact" class="button" style="margin-top: 10px;">Meet with an
-                        Expert</nuxt-link>
+                    <a href="#contactForm" class="button" style="margin-top: 10px;">Meet with an
+                        Expert</a>
                 </div>
             </div>
         </div>
