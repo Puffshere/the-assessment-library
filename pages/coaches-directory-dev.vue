@@ -72,7 +72,7 @@
                         <div class="card-buttons">
                             <button class="share-button">
                                 Share <img
-                                    src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Share+Icon.png"
+                                    src="https://https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Share+Icon.png"
                                     alt="Share Icon" class="share-icon" />
                             </button>
                         </div>
