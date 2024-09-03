@@ -28,8 +28,8 @@
                             Find an Assessment Practitioner
                         </h1>
                         <h2 style="text-align: center; font-weight: 400; margin-bottom: 0px;">
-                            Want to be listed? <span style="color: #0033c5; text-decoration: underline;">Get
-                                certified</span>
+                            Want to be listed? <a href="https://www.assessments24x7.com/contact" style="color: #0033c5; text-decoration: underline; cursor: pointer;">Get
+                                certified</a>
                         </h2>
                     </div>
                 </div>
@@ -88,7 +88,6 @@
                             alt="Certifications Icon" class="certifications-icon" /><span
                             style="font-weight: 600;">Certifications Pending</span>
                     </p>
-
                     <ul v-if="coach.showCertifications" class="certifications-list">
                         <li v-if="coach.ACP === 'certified'" class="practitioner-level">
                             <img src="~assets/coaches-directory/acp-seal.png" alt="ACP Seal"
