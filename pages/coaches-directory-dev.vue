@@ -163,7 +163,6 @@ export default {
     },
     async created() {
         const response = await axios.get('/api/coaches/');
-        // const response = await axios.get('http://localhost:3000/api/coaches/');
         this.coaches = response.data.coaches.map(coach => {
             coach.showCertifications = false;
             return coach;
@@ -273,13 +272,11 @@ h5 {
 
 .card {
     border: 1px solid #e0e0e0;
-    padding-left: 15px;
-    padding-bottom: 20px;
-    padding-right: 15px;
-    padding-top: -5px;
     border-radius: 8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     margin-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
 }
 
 .card h4 {
