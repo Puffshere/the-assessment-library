@@ -32,7 +32,7 @@
                             <option value="en-us" selected>English (US) - 38</option>
                             <option value="fr">French - 15</option>
                             <option value="de">German - 6</option>
-                            <option value="hu">Hungarian - 3</option>
+                            <option value="hu">Hungarian - 4</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 3</option>
                             <option value="ja">Japanese - 4</option>
@@ -813,6 +813,9 @@
                                 <a v-else-if="lang === 'fr'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupFrenchSampleReport.pdf"
                                     target="_blank" rel="noopener">DISC Team Dynamics Report</a>
+                                <a v-else-if="lang === 'hu'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Hungarian+Team+Dynamics+Report+Sample.pdf"
+                                    target="_blank" rel="noopener">DISC Team Dynamics Report</a>
                                 <a v-else-if="lang === 'no'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Norwegian_DISC_Team_Dynamics_Sample_Report.pdf"
                                     target="_blank" rel="noopener">DISC Team Dynamics Report</a>
@@ -826,7 +829,7 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleTeamReportVietnamese.pdf"
                                     target="_blank" rel="noopener">DISC Team Dynamics Report</a>
                                 <a v-else class="hyperlink disabled"></a>
-                                <a class="language-button disc" @click="discTeamDynamicsReportModal = true">9
+                                <a class="language-button disc" @click="discTeamDynamicsReportModal = true">10
                                     languages</a><br />
 
                                 <a v-if="lang === 'en-au'" class="hyperlink"
@@ -1121,6 +1124,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupFrenchSampleReport.pdf"
                                     target="_blank" rel="noopener">French</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Hungarian+Team+Dynamics+Report+Sample.pdf"
+                                    target="_blank" rel="noopener">Hungarian</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Norwegian_DISC_Team_Dynamics_Sample_Report.pdf"
                                     target="_blank" rel="noopener">Norwegian</a><br />
