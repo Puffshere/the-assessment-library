@@ -140,9 +140,14 @@ export default {
     async created() {
         //const response = await axios.get('http://localhost:3000/api/coaches/');
         const response = await axios.get('/api/coaches/');
-        this.coaches = response.data.coaches;
+
+        this.coaches = response.data.coaches.map(coach => {
+            coach.showCertifications = false; // Initialize the visibility state for each coach
+            return coach;
+        });
 
         // Code needed for development to speed up page performance
+
 
         // this.coaches = response.data.coaches.slice(0, 4).map(coach => {
         //     coach.showCertifications = false; // Initialize the visibility state for each coach
