@@ -67,7 +67,7 @@
                             alt="Name Icon" class="name-icon" />
                         {{ coach.Name }}
                     </h4>
-                    <p class="icons">
+                    <p v-if="coach.City || coach.State" class="icons">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Location+Icon.png"
                             alt="Location Icon" class="location-icon" />
                         {{ coach.City }}, {{ coach.State }}
@@ -77,17 +77,50 @@
                             alt="Globe Icon" class="globe-icon" />
                         <a :href="coach.Website" target="_blank">{{ coach.Website }}</a>
                     </p>
-                    <p class="icons" @click="toggleCertifications(coach)" style="cursor: pointer;">
+                    <p class="icons" @click="toggleCertifications(coach)" style="cursor: pointer;"
+                        v-if="certificationCount(coach) > 0">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
                             alt="Certifications Icon" class="certifications-icon" />
                         <span class="cert">Certifications ({{ certificationCount(coach) }})</span>
                     </p>
-                    <ul v-if="coach.showCertifications">
-                        <li v-if="coach.DISC === 'certified'">DISC</li>
-                        <li v-if="coach.Motivators === 'certified'">Motivators</li>
-                        <li v-if="coach.EIQ === 'certified'">EIQ</li>
-                        <li v-if="coach.Hartman === 'certified'">Hartman</li>
-                        <li v-if="coach['Learning Styles'] === 'certified'">Learning Styles</li>
+                    <p v-else class="icons">
+                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
+                            alt="Certifications Icon" class="certifications-icon" /><span style="font-weight: 600;">Certifications Pending</span>
+                    </p>
+
+                    <ul v-if="coach.showCertifications" class="certifications-list">
+                        <li v-if="coach.ACP === 'certified'" class="practitioner-level">
+                            <img src="~assets/coaches-directory/acp-seal.png"
+                                alt="ACP Seal" class="assessment-badge" />Advanced Certified Practitioner (ACP)
+                        </li>
+                        <li v-else-if="coach.MCP === 'certified'" class="practitioner-level">
+                            <img src="~assets/coaches-directory/mcp-seal.png"
+                                alt="MCP Seal" class="assessment-badge" />Certified Practitioner (CP)
+                        </li>
+                        <li v-else class="practitioner-level">
+                            <img src="~assets/coaches-directory/cp-seal.png"
+                                alt="CP Seal" class="assessment-badge" />Certified Practitioner (CP)
+                        </li>
+                        <li v-if="coach.DISC === 'certified'" class="assessment">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Assessment+Badge+-+DISC.png"
+                                alt="Assessment Badge" class="assessment-badge" />DISC
+                        </li>
+                        <li v-if="coach.Motivators === 'certified'" class="assessment">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Assessment+Badge+-+Motivators+(1).png"
+                                alt="Assessment Badge" class="assessment-badge" />Motivators
+                        </li>
+                        <li v-if="coach.EIQ === 'certified'" class="assessment">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Assessment+Badge+-+EIQ.png"
+                                alt="Assessment Badge" class="assessment-badge" />EIQ
+                        </li>
+                        <li v-if="coach.Hartman === 'certified'" class="assessment">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/hartman-cert-badge-color.png"
+                                alt="Assessment Badge" class="assessment-badge" />Hartman
+                        </li>
+                        <li v-if="coach['Learning Styles'] === 'certified'" class="assessment">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/learning-cert-badge-color.png"
+                                alt="Assessment Badge" class="assessment-badge" />Learning Styles
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -110,7 +143,7 @@ export default {
     },
     data() {
         return {
-            center: { lat: 37.7749, lng: -122.4194 },
+            center: { lat: 32.7157, lng: -117.1611 },
             coaches: [],
             selectedName: '',
             currentPage: 1,
@@ -144,7 +177,7 @@ export default {
             const scrollHeight = this.$el.querySelector('.cards-container').scrollHeight;
             const scrollTop = this.$el.querySelector('.cards-container').scrollTop;
             const clientHeight = this.$el.querySelector('.cards-container').clientHeight;
-            
+
             if (scrollTop + clientHeight >= scrollHeight - 10) {
                 this.loadMoreCoaches();
             }
@@ -303,22 +336,21 @@ h5 {
     margin-bottom: 5px;
 }
 
-.name-icon {
-    width: 22px;
-    margin-right: 4px;
-}
-
-.location-icon {
-    width: 22px;
-    margin-right: 4px;
-}
-
-.globe-icon {
-    width: 22px;
-    margin-right: 4px;
-}
-
+.name-icon,
+.location-icon,
+.globe-icon,
 .certifications-icon {
+    width: 22px;
+    margin-right: 4px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.assessment-badge {
     width: 22px;
     margin-right: 4px;
 }
@@ -335,5 +367,18 @@ h5 {
 
 .cert:hover {
     background: #ffc73e;
+}
+
+/* Indentation for practitioner levels */
+.practitioner-level {
+    padding-left: 25px;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+/* Further indentation for assessments under practitioner levels */
+.assessment {
+    margin-top: -5px;
+    padding-left: 50px;
 }
 </style>
