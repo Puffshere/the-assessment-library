@@ -6,7 +6,7 @@
         <span class="dropdown-arrow">&#9660;</span>
     </div>
     <div v-if="isOpen && filteredItems.length" class="dropdown-menu">
-        <div class="dropdown-item" @click="selectAll"><strong>All</strong></div>
+        <div class="dropdown-item" @click="selectAll"><strong>All Coaches</strong></div>
         <div v-for="item in filteredItems" :key="item" class="dropdown-item" @click="selectItem(item)">
             {{ item }}
         </div>
