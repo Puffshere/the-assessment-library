@@ -10,12 +10,11 @@
           customClass="location-dropdown" />
       </div>
       <div class="col">
-        <CustomDropdown v-model="certification" :items="certifications" placeholder="Certifications"
+        <CustomDropdown v-model="selectedCertifications" :items="certifications" placeholder="Certifications"
           customClass="certification-dropdown" :isCheckbox="true" />
       </div>
       <div class="col">
-        <CustomDropdown v-model="sortBy" :items="sortOptions" placeholder="Sort By" customClass="sort-dropdown"
-          :isCheckbox="true" />
+        <CustomDropdown v-model="sortBy" :items="sortOptions" placeholder="Sort By" customClass="sort-dropdown" />
       </div>
     </div>
   </div>
@@ -32,14 +31,14 @@ export default {
   },
   props: {
     coaches: Array,
-    value: String,  // This allows v-model to bind to the selected name
+    value: String,
   },
   data() {
     return {
       internalSelectedName: this.value,
       location: '',
-      certification: [],
-      sortBy: [],
+      selectedCertifications: [], // Tracks the selected certifications
+      sortBy: '',
       locations: [
         'New York, NY, USA',
         'Los Angeles, CA, USA',
@@ -68,6 +67,9 @@ export default {
     },
     value(newVal) {
       this.internalSelectedName = newVal;
+    },
+    selectedCertifications(newCertifications) {
+      this.$emit('certifications-filter', newCertifications);
     },
   },
 };

@@ -5,7 +5,6 @@
       <span class="dropdown-arrow">&#9660;</span>
     </div>
     <div v-if="isOpen" class="dropdown-menu" @click.stop>
-      <input v-if="isSearchable" type="text" v-model="searchQuery" placeholder="Search..." class="search-input" />
       <div v-if="isCheckbox">
         <div v-for="item in filteredItems" :key="item" class="dropdown-item">
           <input type="checkbox" :value="item" v-model="selectedItems" /> {{ item }}
@@ -13,6 +12,7 @@
         <button @click="applySelection" class="apply-button">Apply</button>
       </div>
       <div v-else>
+        <input v-if="isSearchable" type="text" v-model="searchQuery" placeholder="Search..." class="search-input" />
         <div v-for="item in filteredItems" :key="item" class="dropdown-item" @click="selectItem(item)">
           {{ item }}
         </div>
@@ -59,20 +59,17 @@ export default {
   },
   computed: {
     displayText() {
-      if (this.customClass === 'search-dropdown') {
-        return this.selectedItem || `<strong>${this.placeholder}</strong>`;
+      if (this.isCheckbox) {
+        return this.selectedItems.length > 0 ? this.selectedItems.join(', ') : `<strong>${this.placeholder}</strong>`;
       }
-      if (this.customClass === 'location-dropdown') {
-        return this.selectedItem || `<strong>Location</strong><span style="margin-left: 40px;"> (City, State, Zip, Country)</span>`;
-      }
-      return `<strong>${this.placeholder}</strong>`;
+      return this.selectedItem || `<strong>${this.placeholder}</strong>`;
     },
     filteredItems() {
       if (!this.isSearchable || !this.searchQuery) {
         return this.items;
       }
       return this.items.filter(item => item.toLowerCase().includes(this.searchQuery.toLowerCase()));
-    }
+    },
   },
   methods: {
     toggleDropdown() {
@@ -169,9 +166,5 @@ export default {
 
 .dropdown-arrow {
   margin-left: 10px;
-}
-
-.right-align {
-  float: right;
 }
 </style>

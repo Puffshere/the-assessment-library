@@ -36,7 +36,7 @@
                 </div>
             </div>
         </section>
-        <search-bar :coaches="coaches" v-model="selectedName" />
+        <search-bar :coaches="coaches" v-model="selectedName" @certifications-filter="filterByCertifications" />
         <section>
             <div class="row directory-key-row">
                 <h3 class="directory-key-title">Directory Key</h3>
@@ -162,6 +162,7 @@ export default {
             center: { lat: 32.7157, lng: -117.1611 }, // San Diego coordinates
             coaches: [],
             selectedName: '',
+            selectedCertifications: [],
             currentPage: 1,
             itemsPerPage: 10,
             loadingMore: false,
@@ -170,11 +171,37 @@ export default {
     computed: {
         filteredCoaches() {
             let result = this.coaches;
+
+            // Filter by selected name
             if (this.selectedName) {
                 result = result.filter(coach => coach.Name === this.selectedName);
             }
+
+            // Filter by selected certifications
+            if (this.selectedCertifications.length > 0) {
+                result = result.filter(coach => {
+                    return this.selectedCertifications.every(cert => {
+                        if (cert === 'Master Certified Practitioner (MCP)') {
+                            return coach.MCP === 'certified';
+                        } else if (cert === 'Advanced Certified Practitioner (ACP)') {
+                            return coach.ACP === 'certified';
+                        } else if (cert === 'Certified Practitioner (CP)') {
+                            // Check if the coach is not ACP certified but has certified assessments
+                            return coach.ACP !== 'certified' && (
+                                coach.DISC === 'certified' ||
+                                coach.Motivators === 'certified' ||
+                                coach.EIQ === 'certified' ||
+                                coach.Hartman === 'certified' ||
+                                coach['Learning Styles'] === 'certified'
+                            );
+                        }
+                        return false;
+                    });
+                });
+            }
+
             return result.slice(0, this.currentPage * this.itemsPerPage);
-        },
+        }
     },
     methods: {
         certificationCount(coach) {
@@ -209,12 +236,14 @@ export default {
                 this.loadingMore = false;
             }, 500);
         },
+        filterByCertifications(selectedCertifications) {
+            this.selectedCertifications = selectedCertifications;
+        },
     },
     async created() {
         const response = await axios.get('/api/coaches/');
         this.coaches = response.data.coaches.map(coach => {
             coach.showCertifications = false;
-            console.log('this is the coach info', coach);
             return coach;
         });
     },
