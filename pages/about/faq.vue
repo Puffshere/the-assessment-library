@@ -95,13 +95,27 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <h6 class="question">Does A24x7 provide training materials and support for their assessments?
-                            What
-                            do they cost?</h6>
+                        <h6 class="question">Does Assessments 24x7 provide training materials and support for their
+                            assessments?</h6>
                         <p class="answer">
-                            Yes, and they're FREE. We provide STRONG SUPPORT AND TRAINING MATERIALS to you AT NO CHARGE,
-                            including videos, MP3s, eBooks, PowerPoint slides, exercises, handouts,
-                            a Leader Guide, A/V files, etc.
+                            Yes, we offer comprehensive training materials and support for our assessments. These
+                            resources are available to our clients who subscribe to our Account Plus dashboard. The
+                            materials include:
+                        </p>
+                        <ul>
+                            <li>Instructional videos</li>
+                            <li>MP3 audio files</li>
+                            <li>eBooks</li>
+                            <li>PowerPoint presentations</li>
+                            <li>Practical exercises</li>
+                            <li>Handouts</li>
+                            <li>Leader's Guide</li>
+                            <li>A/V files</li>
+                        </ul>
+                        <p>
+                            These valuable training materials and support resources are part of the benefits included in
+                            our Account Plus subscription, designed to enhance your understanding and implementation of
+                            our assessments.
                         </p>
                     </div>
                 </div>
@@ -140,7 +154,7 @@
                             We have a variety of group and team reports available within your account dashboard.
                             Depending
                             on which assessments you are using, those options will appear on the
-                            group reporting page. These group reports are FREE and can be generated at any time.
+                            group reporting page.
 
                         </p>
                     </div>
