@@ -60,8 +60,8 @@
             <div class="map-container">
                 <GmapMap :center="center" :zoom="12" class="map" />
             </div>
-            <div class="cards-container">
-                <div v-for="(coach, index) in filteredCoaches" :key="coach.Name" class="card">
+            <div class="cards-container" @scroll="onScroll">
+                <div v-for="(coach) in filteredCoaches" :key="coach.Name" class="card">
                     <h4 class="icons">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Name+Icon.png"
                             alt="Name Icon" class="name-icon" />
@@ -72,12 +72,12 @@
                             alt="Location Icon" class="location-icon" />
                         {{ coach.City }}, {{ coach.State }}
                     </p>
-                    <p class="icons">
+                    <p v-if="coach.Website" class="icons">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Globe-URL+Icon.png"
                             alt="Globe Icon" class="globe-icon" />
                         <a :href="coach.Website" target="_blank">{{ coach.Website }}</a>
                     </p>
-                    <p class="icons" @click="toggleCertifications(index)" style="cursor: pointer;">
+                    <p class="icons" @click="toggleCertifications(coach)" style="cursor: pointer;">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
                             alt="Certifications Icon" class="certifications-icon" />
                         <span class="cert">Certifications ({{ certificationCount(coach) }})</span>
@@ -113,14 +113,18 @@ export default {
             center: { lat: 37.7749, lng: -122.4194 },
             coaches: [],
             selectedName: '',
+            currentPage: 1,
+            itemsPerPage: 10,
+            loadingMore: false,
         };
     },
     computed: {
         filteredCoaches() {
+            let result = this.coaches;
             if (this.selectedName) {
-                return this.coaches.filter(coach => coach.Name === this.selectedName);
+                result = result.filter(coach => coach.Name === this.selectedName);
             }
-            return this.coaches;
+            return result.slice(0, this.currentPage * this.itemsPerPage);
         },
     },
     methods: {
@@ -133,26 +137,36 @@ export default {
             if (coach['Learning Styles'] === 'certified') count++;
             return count;
         },
-        toggleCertifications(index) {
-            this.coaches[index].showCertifications = !this.coaches[index].showCertifications;
-        }
+        toggleCertifications(coach) {
+            coach.showCertifications = !coach.showCertifications;
+        },
+        onScroll() {
+            const scrollHeight = this.$el.querySelector('.cards-container').scrollHeight;
+            const scrollTop = this.$el.querySelector('.cards-container').scrollTop;
+            const clientHeight = this.$el.querySelector('.cards-container').clientHeight;
+            
+            if (scrollTop + clientHeight >= scrollHeight - 10) {
+                this.loadMoreCoaches();
+            }
+        },
+        loadMoreCoaches() {
+            if (this.loadingMore) return;
+
+            this.loadingMore = true;
+            setTimeout(() => {
+                if (this.currentPage * this.itemsPerPage < this.coaches.length) {
+                    this.currentPage += 1;
+                }
+                this.loadingMore = false;
+            }, 500);
+        },
     },
     async created() {
-        //const response = await axios.get('http://localhost:3000/api/coaches/');
         const response = await axios.get('/api/coaches/');
-
         this.coaches = response.data.coaches.map(coach => {
-            coach.showCertifications = false; // Initialize the visibility state for each coach
+            coach.showCertifications = false;
             return coach;
         });
-
-        // Code needed for development to speed up page performance
-
-
-        // this.coaches = response.data.coaches.slice(0, 4).map(coach => {
-        //     coach.showCertifications = false; // Initialize the visibility state for each coach
-        //     return coach;
-        // });
     },
 }
 </script>
