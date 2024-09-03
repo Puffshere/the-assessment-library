@@ -63,65 +63,71 @@
             <div class="cards-container" @scroll="onScroll">
                 <div v-for="(coach) in filteredCoaches" :key="coach.Name" class="card">
                     <h4 class="icons">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Name+Icon.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Name+Icon.png"
                             alt="Name Icon" class="name-icon" />
                         {{ coach.Name }}
                     </h4>
                     <p v-if="coach.City || coach.State" class="icons">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Location+Icon.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Location+Icon.png"
                             alt="Location Icon" class="location-icon" />
                         {{ coach.City }}, {{ coach.State }}
                     </p>
                     <p v-if="coach.Website" class="icons">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Globe-URL+Icon.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Globe-URL+Icon.png"
                             alt="Globe Icon" class="globe-icon" />
                         <a :href="coach.Website" target="_blank">{{ coach.Website }}</a>
                     </p>
                     <p class="icons" @click="toggleCertifications(coach)" style="cursor: pointer;"
                         v-if="certificationCount(coach) > 0">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
                             alt="Certifications Icon" class="certifications-icon" />
                         <span class="cert">Certifications ({{ certificationCount(coach) }})</span>
                     </p>
                     <p v-else class="icons">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
-                            alt="Certifications Icon" class="certifications-icon" /><span style="font-weight: 600;">Certifications Pending</span>
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Certifications+Icon.png"
+                            alt="Certifications Icon" class="certifications-icon" /><span
+                            style="font-weight: 600;">Certifications Pending</span>
                     </p>
 
                     <ul v-if="coach.showCertifications" class="certifications-list">
                         <li v-if="coach.ACP === 'certified'" class="practitioner-level">
-                            <img src="~assets/coaches-directory/acp-seal.png"
-                                alt="ACP Seal" class="assessment-badge" />Advanced Certified Practitioner (ACP)
+                            <img src="~assets/coaches-directory/acp-seal.png" alt="ACP Seal"
+                                class="assessment-badge" />Advanced Certified Practitioner (ACP)
                         </li>
                         <li v-else-if="coach.MCP === 'certified'" class="practitioner-level">
-                            <img src="~assets/coaches-directory/mcp-seal.png"
-                                alt="MCP Seal" class="assessment-badge" />Certified Practitioner (CP)
+                            <img src="~assets/coaches-directory/mcp-seal.png" alt="MCP Seal"
+                                class="assessment-badge" />Certified Practitioner (CP)
                         </li>
                         <li v-else class="practitioner-level">
-                            <img src="~assets/coaches-directory/cp-seal.png"
-                                alt="CP Seal" class="assessment-badge" />Certified Practitioner (CP)
+                            <img src="~assets/coaches-directory/cp-seal.png" alt="CP Seal"
+                                class="assessment-badge" />Certified Practitioner (CP)
                         </li>
                         <li v-if="coach.DISC === 'certified'" class="assessment">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Assessment+Badge+-+DISC.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Assessment+Badge+-+DISC.png"
                                 alt="Assessment Badge" class="assessment-badge" />DISC
                         </li>
                         <li v-if="coach.Motivators === 'certified'" class="assessment">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Assessment+Badge+-+Motivators+(1).png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Assessment+Badge+-+Motivators+(1).png"
                                 alt="Assessment Badge" class="assessment-badge" />Motivators
                         </li>
                         <li v-if="coach.EIQ === 'certified'" class="assessment">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Assessment+Badge+-+EIQ.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Assessment+Badge+-+EIQ.png"
                                 alt="Assessment Badge" class="assessment-badge" />EIQ
                         </li>
                         <li v-if="coach.Hartman === 'certified'" class="assessment">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/hartman-cert-badge-color.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/hartman-cert-badge-color.png"
                                 alt="Assessment Badge" class="assessment-badge" />Hartman
                         </li>
                         <li v-if="coach['Learning Styles'] === 'certified'" class="assessment">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/learning-cert-badge-color.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/learning-cert-badge-color.png"
                                 alt="Assessment Badge" class="assessment-badge" />Learning Styles
                         </li>
                     </ul>
+                    <p v-if="coach['ACP Rank'] !== '9999'" class="icons">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/ACP+Rank+Icon.png"
+                            alt="Rank Icon" class="assessment-badge" />
+                        <span style="color: #0033c5; font-weight: 700;">ACP Rank: {{ coach['ACP Rank'] }}</span>
+                    </p>
                 </div>
             </div>
         </section>
@@ -198,6 +204,7 @@ export default {
         const response = await axios.get('/api/coaches/');
         this.coaches = response.data.coaches.map(coach => {
             coach.showCertifications = false;
+            console.log('this is the coach info', coach);
             return coach;
         });
     },

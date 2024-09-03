@@ -1,16 +1,18 @@
 <template>
     <div :class="['custom-dropdown', customClass]">
-        <div class="dropdown-selected" @click="toggleDropdown">
-            <input v-model="searchQuery" @focus="openDropdown" @input="filterItems" class="dropdown-input"
-                :placeholder="placeholder" />
-            <span class="dropdown-arrow">&#9660;</span>
-        </div>
-        <div v-if="isOpen && filteredItems.length" class="dropdown-menu">
-            <div v-for="item in filteredItems" :key="item" class="dropdown-item" @click="selectItem(item)">
-                {{ item }}
-            </div>
+    <div class="dropdown-selected" @click="toggleDropdown">
+        <input v-model="searchQuery" @focus="openDropdown" @input="filterItems" class="dropdown-input"
+            :placeholder="placeholder" />
+        <span class="dropdown-arrow">&#9660;</span>
+    </div>
+    <div v-if="isOpen && filteredItems.length" class="dropdown-menu">
+        <div class="dropdown-item" @click="selectAll">All</div>
+        <div v-for="item in filteredItems" :key="item" class="dropdown-item" @click="selectItem(item)">
+            {{ item }}
         </div>
     </div>
+</div>
+
 </template>
 
 <script>
@@ -63,6 +65,11 @@ export default {
         selectItem(item) {
             this.searchQuery = item;
             this.$emit('input', item);
+            this.closeDropdown();
+        },
+        selectAll() {
+            this.searchQuery = '';
+            this.$emit('input', '');
             this.closeDropdown();
         },
         filterItems() {
