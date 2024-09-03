@@ -28,7 +28,8 @@
                             Find an Assessment Practitioner
                         </h1>
                         <h2 style="text-align: center; font-weight: 400; margin-bottom: 0px;">
-                            Want to be listed? <a href="https://www.assessments24x7.com/contact" style="color: #0033c5; text-decoration: underline; cursor: pointer;">Get
+                            Want to be listed? <a href="https://www.assessments24x7.com/contact"
+                                style="color: #0033c5; text-decoration: underline; cursor: pointer;">Get
                                 certified</a>
                         </h2>
                     </div>
@@ -62,11 +63,20 @@
             </div>
             <div class="cards-container" @scroll="onScroll">
                 <div v-for="(coach) in filteredCoaches" :key="coach.Name" class="card">
-                    <h4 class="icons">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Name+Icon.png"
-                            alt="Name Icon" class="name-icon" />
-                        {{ coach.Name }}
-                    </h4>
+                    <div class="card-header">
+                        <h4 class="icons">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Name+Icon.png"
+                                alt="Name Icon" class="name-icon" />
+                            {{ coach.Name }}
+                        </h4>
+                        <div class="card-buttons">
+                            <button class="share-button">
+                                Share <img
+                                    src="https://f002.backblazeb2.com/file/assessments24x7-media/Coaches+Directory/Share+Icon.png"
+                                    alt="Share Icon" class="share-icon" />
+                            </button>
+                        </div>
+                    </div>
                     <p v-if="coach.City || coach.State" class="icons">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+Directory/Location+Icon.png"
                             alt="Location Icon" class="location-icon" />
@@ -134,6 +144,7 @@
     </section>
 </template>
 
+
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
 import SearchBar from '@/components/coachesDirectory/SearchBar';
@@ -148,7 +159,7 @@ export default {
     },
     data() {
         return {
-            center: { lat: 32.7157, lng: -117.1611 },
+            center: { lat: 32.7157, lng: -117.1611 }, // San Diego coordinates
             coaches: [],
             selectedName: '',
             currentPage: 1,
@@ -200,7 +211,7 @@ export default {
         },
     },
     async created() {
-        const response = await axios.get('/api/coaches/');
+        const response = await axios.get('http://localhost:3000/api/coaches/');
         this.coaches = response.data.coaches.map(coach => {
             coach.showCertifications = false;
             console.log('this is the coach info', coach);
@@ -209,6 +220,7 @@ export default {
     },
 }
 </script>
+
 
 <style scoped>
 .header {
@@ -309,6 +321,10 @@ h5 {
     margin-top: 15px;
 }
 
+.cards-container:hover {
+    background: linear-gradient(to right, #e0e0e0, #ffffff);
+}
+
 .card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -317,6 +333,45 @@ h5 {
     padding-left: 15px;
     padding-bottom: 20px;
 }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.share-button {
+    background-color: #0033c5;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 100px;
+    position: relative;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.share-button:hover {
+    background-color: #0022a3;
+}
+
+.share-icon {
+    width: 18px;
+    position: absolute;
+    right: 3px;
+}
+
 
 .card h4 {
     margin-bottom: 5px;
@@ -375,14 +430,12 @@ h5 {
     background: #ffc73e;
 }
 
-/* Indentation for practitioner levels */
 .practitioner-level {
     padding-left: 25px;
     font-weight: 600;
     margin-top: -10px;
 }
 
-/* Further indentation for assessments under practitioner levels */
 .assessment {
     margin-top: -5px;
     padding-left: 50px;
