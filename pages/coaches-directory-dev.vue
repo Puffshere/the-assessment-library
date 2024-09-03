@@ -211,7 +211,7 @@ export default {
         },
     },
     async created() {
-        const response = await axios.get('http://localhost:3000/api/coaches/');
+        const response = await axios.get('/api/coaches/');
         this.coaches = response.data.coaches.map(coach => {
             coach.showCertifications = false;
             console.log('this is the coach info', coach);
