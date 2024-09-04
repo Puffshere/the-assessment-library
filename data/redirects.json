@@ -614,5 +614,9 @@
     {
         "from": "/media/articles/article-3WaystoCatchSalesApplicantsWhoLietoYou.pdf",
         "to": "/article-pages/3WaysToCatchSalesApplicantsWhoLie.html"
+    },
+    {
+        "from": "/assessments/performance-gap-indicator",
+        "to": "/"
     }
 ]
