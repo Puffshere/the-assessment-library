@@ -477,6 +477,14 @@ export default {
                         {
                             url: 'https://www.assessments24x7.com/disc-leadership',
                             mainText: 'DISC Leadership',
+                        },
+                        {
+                            url: 'https://www.assessments24x7.com/assessments/corporate',
+                            mainText: 'Assessments Corporate',
+                        },
+                        {
+                            url: 'https://www.assessments24x7.com/assessments/reseller',
+                            mainText: 'Assessments Reseller',
                         }
                     ]
                 },
