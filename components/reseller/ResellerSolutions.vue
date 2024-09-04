@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <h5 class="rise-on-scroll" style="color: #ffbd59; margin-top: 20px;">
-                        Make the Right, Bright Decisions professionally and personally.
+                        Make the right, bright decisions professionally and personally.
                     </h5>
                     <button class="button" @click="scrollToContactForm">
                         <span>Start Your Journey</span>

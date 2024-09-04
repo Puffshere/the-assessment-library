@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-3">
-                        <div class="card rise-on-scroll" style="background-color: #00a8ff;">
+                        <div class="card" style="background-color: #00a8ff;">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/icon-disc-plus-a-whole-lot-more.png"
                                 alt="image of a computer" style="width: 50px; margin-top: 20px; margin-bottom: -10px;">
                             <h4>
@@ -19,11 +19,11 @@
                             </h4>
                             <hr style="border: 1px solid white;">
                             <p>Our premier DISC Report is just the beginning. Access combined & integrated DISC Reports,
-                                Motivators, Emotional Intelligence, and 30+ more world-class assessments</p>
+                                Motivators, Emotional Intelligence, and 30+ more world-class assessments.</p>
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="card rise-on-scroll" style="background-color: white; color: #0033c5;">
+                        <div class="card" style="background-color: white; color: #0033c5;">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/icon-turnkey-or-customizable.png"
                                 alt="image of a computer" style="width: 106px; margin-top: 25px; margin-bottom: -15px;">
                             <h4 style="color: #0033c5">
@@ -49,7 +49,7 @@
             </div>
             <div class="custom-row">
                 <div class="custom-col">
-                    <div class="custom-card rise-on-scroll" style="background-color: white; color: #0033c5;">
+                    <div class="custom-card" style="background-color: white; color: #0033c5;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/icon-comprehensive-resource-library.png"
                             alt="image of a computer" style="width: 60px; margin-top: 20px; margin-bottom: -15px;">
                         <h4>
@@ -57,12 +57,12 @@
                             Resource Library
                         </h4>
                         <hr style=" border: 1px solid #0033c5;">
-                        <p>Say goodbye to hours of prep. Our DISC Resources Library offers trainer materials, debrief
+                        <p>Say goodbye to hours of prep. Our DISC Resource Library offers trainer materials, debrief
                             guides, presentations, and more. Less stress, more success.</p>
                     </div>
                 </div>
                 <div class="custom-col">
-                    <div class="custom-card rise-on-scroll" style="background-color: #00a8ff; color: white;">
+                    <div class="custom-card" style="background-color: #00a8ff; color: white;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/world-class-support-team.png"
                             alt="image of a computer" style="width: 50px; margin-top: 20px; margin-bottom: -10px;">
                         <h4>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="custom-col">
-                    <div class="custom-card rise-on-scroll" style="background-color: white; color: #0033c5;">
+                    <div class="custom-card" style="background-color: white; color: #0033c5;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/icon-you-can-trust.png"
                             alt="image of a computer" style="width: 60px; margin-top: 15px; margin-bottom: -15px;">
                         <h4>
@@ -90,8 +90,8 @@
                 </div>
             </div>
             <div class="row button-container">
-                <button class="button rise-on-scroll" @click="scrollToContactForm">
-                    Dive In
+                <button class="button" @click="scrollToContactForm">
+                    Speak to Specialist
                 </button>
             </div>
         </div>
@@ -195,7 +195,7 @@ hr {
     border-radius: 40px;
     color: white;
     border: 1px solid #00a8ff;
-    width: 200px;
+    width: 240px;
 
     &:hover {
         color: #00a8ff;

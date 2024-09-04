@@ -2,7 +2,7 @@
     <section class="reseller-testimonials-fold">
         <div class="container">
             <div class="row title" style="margin-bottom: 18px;">
-                <h1>Don't just take our word, take theirs too.</h1>
+                <h1>Don't just take our word for it, take theirs.</h1>
                 <h3 class="subTitle">We're here to fuel your business success.</h3>
                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/quotations.png"
                     alt="image of quotation marks"

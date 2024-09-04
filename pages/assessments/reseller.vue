@@ -5,17 +5,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-8">
-                        <h1 style="color: #00a8ff;" class="rise-on-scroll">
+                        <h1 style="color: #00a8ff;">
                             DISC Assessment <br />
                             Technology
                         </h1>
-                        <h2 class="rise-on-scroll">
+                        <h2>
                             Elevate Success with Assessments <br />
                             that <span style="color: #00a8ff; font-weight: 700;">Propel You and Your
                                 Clients</span><br />
                             to New Heights.
                         </h2>
-                        <h5 style="font-style: italic;" class="rise-on-scroll">
+                        <h5 style="font-style: italic;">
                             <img src="~/assets/corporate/blue-arrow-icon.png"
                                 alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">Global
                             Leader in
@@ -36,7 +36,7 @@
                                 <span>Learn More</span>
                             </button>
                             <button class="button" @click="scrollToContactForm">
-                                <span>Get Started</span>
+                                <span>Book Demo</span>
                             </button>
                         </div>
                     </div>
@@ -108,9 +108,6 @@ export default {
         'contact-form': ContactForm,
         'footer-fold': Footer
     },
-    mounted() {
-        this.observeElements();
-    },
     methods: {
         scrollToContactForm(event) {
             const element = document.getElementById('resellerContactForm');
@@ -125,23 +122,6 @@ export default {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
-        },
-        observeElements() {
-            const options = {
-                threshold: 0
-            };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('rise');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-            const elements = document.querySelectorAll('.rise-on-scroll');
-            elements.forEach(el => {
-                observer.observe(el);
-            });
         }
     },
     head() {
@@ -229,17 +209,6 @@ h5 {
     line-height: 26px;
     font-weight: 700;
     color: #1f1f1f;
-}
-
-.rise-on-scroll {
-    transition: transform 1s ease-out;
-    transform: translateY(1in);
-    opacity: 0;
-}
-
-.rise-on-scroll.rise {
-    transform: translateY(0);
-    opacity: 1;
 }
 
 @media (max-width: 1050px) {
