@@ -33,14 +33,16 @@
                 <div class="row" @click="handleClick">
                     <div class="col-6">
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+The+Fundamentals_+DISC.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+The+Fundamentals_+DISC.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="fundamentals">The Fundamentals: DISC</h4>
                                 <p>Foundations of DISC & advanced development resources.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Training+%26+Workshops.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Training+%26+Workshops.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="t&w">Training & Workshops</h4>
                                 <p>Training presentations, Facilitator guides, DISC group exercises, & delivery
@@ -48,21 +50,24 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Implementation+%26+Application.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Implementation+%26+Application.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="i&a">Implementation & Application</h4>
                                 <p>DISC Email Series, Target Applications Tips, & Behavioral Style Interview Guide.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+360+Resources.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+360+Resources.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="360">360 Resources</h4>
                                 <p>Supporting materials to help you with 360 Assessments.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Additional+Support+Materials.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Additional+Support+Materials.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="support">Additional Support Materials</h4>
                                 <p>Supplementary materials to enhance your understanding & application of DISC.</p>
@@ -71,35 +76,40 @@
                     </div>
                     <div class="col-6">
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Assessment+Report+Tools.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Assessment+Report+Tools.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="report&tools">Assessment Report Tools</h4>
                                 <p>Debriefing & Assessment Report Details.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Coaching+with+DISC.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Coaching+with+DISC.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="coaches">Coaching with DISC</h4>
                                 <p>DISC Coaching resources.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Marketing.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Marketing.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="marketing">Marketing</h4>
                                 <p>DISC marketing materials to help you support your business.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Product+Specific+Resources.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Product+Specific+Resources.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="product">Product Specific Resources</h4>
                                 <p>Infused & Non-infused.</p>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Quick+Links.png" alt="icon" class="icon" />
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Quick+Links.png"
+                                alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="quick&links">Quick Links</h4>
                                 <p>Latest updates, Store, FAQs, Support info, & more.</p>
@@ -170,8 +180,7 @@ export default {
             password: '',
             certified: false,
             validationError: false,
-            toggleSubcategories: false,
-            activeCategory: null // Store the active category when an h4 is clicked
+            toggleStates: {} // Store toggle states for each category
         }
     },
     methods: {
@@ -192,16 +201,13 @@ export default {
             if (event.target.tagName === 'H4') {
                 // Get the value of the data-category attribute
                 const category = event.target.dataset.category;
-                
-                // Update the activeCategory based on the clicked h4
-                this.activeCategory = category;
-                
+
+                // Toggle the state of the clicked category
+                this.$set(this.toggleStates, category, !this.toggleStates[category]);
+
                 // Now you can perform actions based on the clicked card
                 console.log("Clicked category:", category);
-                
-                // Example: Toggle subcategories based on the category
-                this.toggleSubcategories = !this.toggleSubcategories;
-                console.log("this is the toggle value", this.toggleSubcategories);
+                console.log("Toggle state:", this.toggleStates[category]);
             }
         }
     },
@@ -343,9 +349,9 @@ export default {
         }
 
         .col-6 {
-            width: 100%; /* Stack the columns on mobile */
+            width: 100%;
+            /* Stack the columns on mobile */
         }
     }
 }
-
 </style>
