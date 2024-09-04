@@ -12,6 +12,7 @@
                         <img v-else-if="id === 'tonyrobbins'" src="~/assets/get-started/tonyrobbins.png" alt="Tony Robbins" class="partner-logo">
                         <img v-else-if="id === 'engageandgrow'" src="~/assets/get-started/engage-and-grow.png" alt="Engage and Grow" class="partner-logo">
                         <img v-else-if="id === 'ref'" id="ref" src="~/assets/get-started/REF-logo-white-2000px.png" alt="REF" class="partner-logo">
+                        <img v-else-if="id === 'eci'" src="~/assets/get-started/erickson-coaching-international.png" alt="Erickson Coaching International" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png" alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png" alt="Australasia" class="partner-logo">
                         <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada" class="partner-logo">

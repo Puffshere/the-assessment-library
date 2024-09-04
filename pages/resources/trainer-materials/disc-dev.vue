@@ -30,19 +30,19 @@
         <div class="body" v-if="unlocked">
             <div class="container">
                 <br />
-                <div class="row">
+                <div class="row" @click="handleClick">
                     <div class="col-6">
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+The+Fundamentals_+DISC.png" alt="icon" class="icon" />
                             <div>
-                                <h4>The Fundamentals: DISC</h4>
+                                <h4 data-category="fundamentals">The Fundamentals: DISC</h4>
                                 <p>Foundations of DISC & advanced development resources.</p>
                             </div>
                         </div>
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Training+%26+Workshops.png" alt="icon" class="icon" />
                             <div>
-                                <h4>Training & Workshops</h4>
+                                <h4 data-category="t&w">Training & Workshops</h4>
                                 <p>Training presentations, Facilitator guides, DISC group exercises, & delivery
                                     resources.</p>
                             </div>
@@ -50,21 +50,21 @@
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Implementation+%26+Application.png" alt="icon" class="icon" />
                             <div>
-                                <h4>Implementation & Application</h4>
+                                <h4 data-category="i&a">Implementation & Application</h4>
                                 <p>DISC Email Series, Target Applications Tips, & Behavioral Style Interview Guide.</p>
                             </div>
                         </div>
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+360+Resources.png" alt="icon" class="icon" />
                             <div>
-                                <h4>360 Resources</h4>
+                                <h4 data-category="360">360 Resources</h4>
                                 <p>Supporting materials to help you with 360 Assessments.</p>
                             </div>
                         </div>
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Additional+Support+Materials.png" alt="icon" class="icon" />
                             <div>
-                                <h4>Additional Support Materials</h4>
+                                <h4 data-category="support">Additional Support Materials</h4>
                                 <p>Supplementary materials to enhance your understanding & application of DISC.</p>
                             </div>
                         </div>
@@ -73,35 +73,35 @@
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Assessment+Report+Tools.png" alt="icon" class="icon" />
                             <div>
-                                <h4>Assessment Report Tools</h4>
+                                <h4 data-category="report&tools">Assessment Report Tools</h4>
                                 <p>Debriefing & Assessment Report Details.</p>
                             </div>
                         </div>
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Coaching+with+DISC.png" alt="icon" class="icon" />
                             <div>
-                                <h4>Coaching with DISC</h4>
+                                <h4 data-category="coaches">Coaching with DISC</h4>
                                 <p>DISC Coaching resources.</p>
                             </div>
                         </div>
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Marketing.png" alt="icon" class="icon" />
                             <div>
-                                <h4>Marketing</h4>
+                                <h4 data-category="marketing">Marketing</h4>
                                 <p>DISC marketing materials to help you support your business.</p>
                             </div>
                         </div>
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Product+Specific+Resources.png" alt="icon" class="icon" />
                             <div>
-                                <h4>Product Specific Resources</h4>
+                                <h4 data-category="product">Product Specific Resources</h4>
                                 <p>Infused & Non-infused.</p>
                             </div>
                         </div>
                         <div class="card">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Quick+Links.png" alt="icon" class="icon" />
                             <div>
-                                <h4>Quick Links</h4>
+                                <h4 data-category="quick&links">Quick Links</h4>
                                 <p>Latest updates, Store, FAQs, Support info, & more.</p>
                             </div>
                         </div>
@@ -169,7 +169,9 @@ export default {
             unlocked: false,
             password: '',
             certified: false,
-            validationError: false
+            validationError: false,
+            toggleSubcategories: false,
+            activeCategory: null // Store the active category when an h4 is clicked
         }
     },
     methods: {
@@ -185,8 +187,23 @@ export default {
                 this.validationError = true;
                 this.password = '';
             }
+        },
+        handleClick(event) {
+            if (event.target.tagName === 'H4') {
+                // Get the value of the data-category attribute
+                const category = event.target.dataset.category;
+                
+                // Update the activeCategory based on the clicked h4
+                this.activeCategory = category;
+                
+                // Now you can perform actions based on the clicked card
+                console.log("Clicked category:", category);
+                
+                // Example: Toggle subcategories based on the category
+                this.toggleSubcategories = !this.toggleSubcategories;
+                console.log("this is the toggle value", this.toggleSubcategories);
+            }
         }
-
     },
     head() {
         return {
@@ -261,6 +278,7 @@ export default {
         font-size: 21.333px;
         text-decoration: underline;
         margin: 0;
+        cursor: pointer;
     }
 
     .card p {
