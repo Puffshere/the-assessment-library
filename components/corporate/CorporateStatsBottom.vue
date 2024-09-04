@@ -9,8 +9,8 @@
                         </p>
                     </div>
                     <div class="col-3 rise-on-scroll">
-                        <p><span class="topLine2">7+</span> <br />
-                            <span class="bottomLine">Free Team <br />
+                        <p><span class="topLine2">6</span> <br />
+                            <span class="bottomLine">Team <br />
                                 Reports</span>
                         </p>
                     </div>

@@ -8,8 +8,7 @@
                         <span style="color: #00a8ff">Your Success</span>
                     </h1>
                     <h3 class="rise-on-scroll" style="margin-top: 30px;">
-                        Uncover Immediate insights that would take <br />
-                        years to surface otherwise.
+                        Uncover powerful insights that might otherwise remain hidden.
                     </h3>
                     <div class="rise-on-scroll" style="color: #00a8ff; margin-bottom: 50px;">
                         <div v-for="(item, index) in items" :key="index">
@@ -22,7 +21,7 @@
                         </div>
                     </div>
                     <button class="button rise-on-scroll" @click="scrollToContactForm">
-                        <span>Get Started</span>
+                        <span>Book Demo</span>
                     </button>
                 </div>
                 <div class="col-7">

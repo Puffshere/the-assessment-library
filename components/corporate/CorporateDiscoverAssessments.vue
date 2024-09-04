@@ -9,7 +9,7 @@
                         Drive Success
                     </h1>
                     <p class="rise-on-scroll" style="margin-bottom: 40px;">
-                        DISC isn't just for recruitment—it's a daily game-changer. <br />
+                        DISC isn't just for recruitment—it's a daily game changer. <br />
                         Use DISC to enhance meeting dynamics, tackle workplace <br />
                         challenges, and refine leadership, sales, and customer service <br />
                         strategies. Foster a culture of understanding, efficiency, and <br />

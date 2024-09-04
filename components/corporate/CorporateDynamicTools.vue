@@ -19,7 +19,7 @@
                             </h4>
                             <hr style="border: 1px solid white;">
                             <p>Our premier DISC Report is just the beginning. Access combined & integrated DISC Reports,
-                                Motivators, Emotional Intelligence, and 30+ more world-class assessments</p>
+                                Motivators, Emotional Intelligence, and 30+ more world-class assessments.</p>
                         </div>
                     </div>
                     <div class="col-3">
@@ -57,7 +57,7 @@
                             Resource Library
                         </h4>
                         <hr style=" border: 1px solid #0033c5;">
-                        <p>Say goodbye to hours of prep. Our DISC Resources Library offers trainer materials, debrief
+                        <p>Say goodbye to hours of prep. Our DISC Resource Library offers trainer materials, debrief
                             guides, presentations, and more. Less stress, more success.</p>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
             </div>
             <div class="row button-container">
                 <button class="button" @click="scrollToContactForm">
-                    Dive In
+                    Speak to Specialist
                 </button>
             </div>
         </div>
@@ -195,7 +195,7 @@ hr {
     border-radius: 40px;
     color: white;
     border: 1px solid #00a8ff;
-    width: 200px;
+    width: 240px;
 
     &:hover {
         color: #00a8ff;

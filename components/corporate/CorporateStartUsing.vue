@@ -25,7 +25,7 @@
                             Tailored to your specific needs.
                         </h3>
                     </div>
-                    <h2 style="text-decoration: underline; margin-top: 60px;">
+                    <h2 style="text-decoration: underline; margin-top: 40px;">
                         Purchase 1 Assessment Certification
                     </h2>
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/slider-button-image.png"
@@ -63,7 +63,7 @@ export default {
 .corporate-start-using-fold {
     position: relative;
     width: 100%;
-    height: 74vh;
+    height: 730px;
     overflow: hidden;
 }
 
