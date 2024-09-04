@@ -598,7 +598,10 @@
                         <a class="language-button other" @click="learningStylesReportModal = true">6 languages</a><br />
 
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Learning_Styles.pdf"
+                            class="hyperlink" target="_blank" rel="noopener">DISC + Learning Styles</a>
+                        <a v-else-if="lang === 'zh'"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Learning_Styles_-_Chinese.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC + Learning Styles</a>
                         <a v-else class="hyperlink disabled">DISC + Learning Styles</a><br />
                         <a class="language-button other" @click="discPlusLearningStylesReportModal = true">2
@@ -1677,7 +1680,7 @@
                             <div class="col-12">
                                 <h1>DISC + Learning Styles</h1>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf"
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Learning_Styles.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">English</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Learning_Styles_-_Chinese.pdf"

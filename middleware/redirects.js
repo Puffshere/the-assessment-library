@@ -47,7 +47,7 @@ export default function (context) {
         }
 
         else if (context.req.url == '/reports/SampleDISCandLS.pdf') {
-            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCandLS.pdf');
+            context.redirect('https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_and_Learning_Styles.pdf');
         }
 
         else if (context.req.url == '/reports/SampleDISCSalesandLS.pdf') {
