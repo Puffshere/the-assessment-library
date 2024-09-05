@@ -30,6 +30,27 @@
         <div class="body" v-if="unlocked">
             <div class="container">
                 <br />
+                <!-- Add search and filter dropdown inputs here -->
+                <div class="input-container">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search" class="input-search" />
+                        <i class="search-icon">&#x1F50D;</i>
+                    </div>
+                    <div class="filter-dropdown">
+                        <select class="filter-select">
+                            <option>Filter by file type</option>
+                            <option>PDF</option>
+                            <option>DOC</option>
+                            <option>PPT</option>
+                            <option>MP3</option>
+                            <option>MP4</option>
+                            <option>ZIP</option>
+                            <option>URL</option>
+                        </select>
+                        <i class="dropdown-icon">&#x25BC;</i>
+                    </div>
+                </div>
+
                 <div class="row" @click="handleClick">
                     <div class="col-6">
                         <div class="card">
@@ -259,6 +280,61 @@ export default {
         line-height: 52px;
     }
 
+    .input-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+        padding: 0 35px;
+    }
+
+    .search-bar {
+        position: relative;
+        width: 68%;
+    }
+
+    .input-search {
+        width: 100%;
+        padding: 10px;
+        padding-left: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #888;
+    }
+
+    .filter-dropdown {
+        position: relative;
+        width: 30%;
+    }
+
+    .filter-select {
+        width: 100%;
+        padding: 10px;
+        padding-right: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        appearance: none;
+    }
+
+    .dropdown-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #888;
+    }
+
     .icon {
         width: 80px;
         margin-right: 20px;
@@ -292,7 +368,6 @@ export default {
         margin: 0;
     }
 
-    /* Flexbox for row */
     .row {
         display: flex;
         flex-wrap: nowrap;
@@ -350,7 +425,6 @@ export default {
 
         .col-6 {
             width: 100%;
-            /* Stack the columns on mobile */
         }
     }
 }
