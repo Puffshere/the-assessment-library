@@ -61,6 +61,34 @@
                                 <p>Foundations of DISC & advanced development resources.</p>
                             </div>
                         </div>
+                        <div v-if="toggleStates['fundamentals']" class="subcard">
+                            <p class="subcard-title">Understanding foundations of DISC</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">DISC Assessment History</a></li>
+                                <li><a href="#">DISC Direct/Indirect</a></li>
+                                <li><a href="#">DISC Open/Guarded</a></li>
+                                <li><a href="#">Description - All 4 Styles</a></li>
+                                <li><a href="#">Description - High D</a></li>
+                                <li><a href="#">Description - High I</a></li>
+                                <li><a href="#">Description - High S</a></li>
+                                <li><a href="#">Description - High C</a></li>
+                                <li><a href="#">Adaptability - All 4 Styles</a></li>
+                                <li><a href="#">Adaptability - High D</a></li>
+                                <li><a href="#">Adaptability - High I</a></li>
+                                <li><a href="#">Adaptability - High S</a></li>
+                                <li><a href="#">Adaptability - High C</a></li>
+                            </ul>
+                            <p class="subcard-title">Understanding foundations of DISC</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">Over-Under Extensions and DISC Emotions</a></li>
+                                <li><a href="#">Extensions</a></li>
+                                <li><a href="#">15 Classical DISC Style Behavioral Patterns</a></li>
+                                <li><a href="#">15 Classic DISC Styles Summary Overview</a></li>
+                                <li><a href="#">15 Classical DISC Styles: Wheel Plotting</a></li>
+                                <li><a href="#">15 Classical DISC Styles: Wheel Plotting</a></li>
+                                <li><a href="#">Tensions between the Same DISC styles</a></li>
+                            </ul>
+                        </div>
                         <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Training+%26+Workshops.png"
                                 alt="icon" class="icon" />
@@ -70,6 +98,72 @@
                                     resources.</p>
                             </div>
                         </div>
+                        <div v-if="toggleStates['t&w']" class="subcard">
+                            <p class="subcard-title">Training Presentations & Facilitator Guides</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">DISC 2-hour Facilitator Guide</a></li>
+                                <li><a href="#">DISC 2-hour Training Presentation</a></li>
+                                <li><a href="#">DISC 4-hour Facilitator Guide</a></li>
+                                <li><a href="#">DISC 4-hour Training Presentation</a></li>
+                                <li><a href="#">Mini-DISC Presentation</a></li>
+                                <li><a href="#">Team Dynamics PPT</a></li>
+                                <li><a href="#">Riddles and Team Practice PPT</a></li>
+                            </ul>
+                            <p class="subcard-title">DISC Specific Group Exercises</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">Planning a Vacation</a></li>
+                                <li><a href="#">Making a Movie</a></li>
+                                <li><a href="#">Game Show</a></li>
+                                <li><a href="#">Mazes & Labyrinths</a></li>
+                                <li><a href="#">Jigsaw Puzzles</a></li>
+                                <li><a href="#">DISC Adaptability Scenario Practice</a></li>
+                                <li><a href="#">DISC Style Situations</a></li>
+                                <li><a href="#">Coffee Break</a></li>
+                            </ul>
+                            <p class="subcard-title">General Group Exercises</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">40 Ice breakers for Small Groups</a></li>
+                                <li><a href="#">Lost on the Moon Exercise</a></li>
+                                <li><a href="#">Lost at Sea Exercise</a></li>
+                                <li><a href="#">Paper Tower Exercise</a></li>
+                            </ul>
+                            <p class="subcard-title">DISC Activity Resources</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">DISC Word Sketches (blank)</a></li>
+                                <li><a href="#">Behavior Pattern View (blank wheel)</a></li>
+                                <li><a href="#">Contract for Change (blank)</a></li>
+                                <li><a href="#">DISC Summary Editable Document</a></li>
+                                <li><a href="#">Adapting to DISC Styles (blank)</a></li>
+                                <li><a href="#">Creating Better Relationships (blank)</a></li>
+                                <li><a href="#">Tensions Worksheet (blank)</a></li>
+                                <li><a href="#">DISC Blocks – Benefits & Applications</a></li>
+                            </ul>
+                            <p class="subcard-title">Enhancing Delivery Resources - Training & Presentations</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">DISC Platinum Rule Participant eWorkbook (84 pages)</a></li>
+                                <li><a href="#">Peer Feedback Form</a></li>
+                                <li><a href="#">Facilitator Feedback Guide</a></li>
+                                <li><a href="#">Self-Feedback Form</a></li>
+                                <li><a href="#">Development Plan Sample</a></li>
+                                <li><a href="#">Coaching Guide Questions</a></li>
+                            </ul>
+                            <p class="subcard-title">Enhancing Delivery Resources - Audio and video files</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">Identifying the Styles</a></li>
+                                <li><a href="#">Songs for each Style</a></li>
+                                <li><a href="#">Leaving Voicemails for each Style</a></li>
+                                <li><a href="#">Complimenting each Style</a></li>
+                                <li><a href="#">Counseling each Style</a></li>
+                                <li><a href="#">Delegating to each Style</a></li>
+                                <li><a href="#">Motivating each Style</a></li>
+                                <li><a href="#">Making contact with each Style</a></li>
+                                <li><a href="#">Exploring with each Style</a></li>
+                                <li><a href="#">Collaborating with each Style</a></li>
+                                <li><a href="#">Getting commitment from each Style</a></li>
+                                <li><a href="#">Assuring Customer Satisfaction with each Style</a></li>
+                                <li><a href="#">KnowDISC</a></li>
+                            </ul>
+                        </div>
                         <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Implementation+%26+Application.png"
                                 alt="icon" class="icon" />
@@ -78,6 +172,27 @@
                                 <p>DISC Email Series, Target Applications Tips, & Behavioral Style Interview Guide.</p>
                             </div>
                         </div>
+
+                        <div v-if="toggleStates['i&a']" class="subcard">
+                            <ul class="subcard-links">
+                                <li><a href="#">52 Week Email Series</a></li>
+                                <li><a href="#">DISC Behavioral Style Interview Guide</a></li>
+                            </ul>
+                            <p class="subcard-title">DISC in Action Series</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">During Change</a></li>
+                                <li><a href="#">On the Phone</a></li>
+                                <li><a href="#">Leading a Meeting</a></li>
+                            </ul>
+                            <p class="subcard-title">DISC Target Applications Tips</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">Coaching Tips</a></li>
+                                <li><a href="#">Leadership Tips</a></li>
+                                <li><a href="#">Sales Tips</a></li>
+                                <li><a href="#">Service Tips</a></li>
+                            </ul>
+                        </div>
+
                         <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+360+Resources.png"
                                 alt="icon" class="icon" />
@@ -86,6 +201,15 @@
                                 <p>Supporting materials to help you with 360 Assessments.</p>
                             </div>
                         </div>
+
+                        <div v-if="toggleStates['360']" class="subcard">
+                            <ul class="subcard-links">
+                                <li><a href="#">Debrief Guide</a></li>
+                                <li><a href="#">Setting up a 360 Assessment Link in Dashboard</a></li>
+                                <li><a href="#">Setting up a 360 Assessment Link in Dashboard</a></li>
+                            </ul>
+                        </div>
+
                         <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Additional+Support+Materials.png"
                                 alt="icon" class="icon" />
@@ -94,6 +218,21 @@
                                 <p>Supplementary materials to enhance your understanding & application of DISC.</p>
                             </div>
                         </div>
+
+                        <div v-if="toggleStates['support']" class="subcard">
+                            <p class="subcard-title">Other Materials</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">The 12 Integrated DISC Style Relationships-Advanced (Retired)</a></li>
+                                <li><a href="#">People Smart in Business PDF ebook</a></li>
+                                <li><a href="#">The Platinum Rule for DISC Sales Mastery</a></li>
+                                <li><a href="#">DISC Reliability Analysis</a></li>
+                                <li><a href="#">DISC History Chart</a></li>
+                                <li><a href="#">Are You Mad at Me? Article</a></li>
+                                <li><a href="#">DISC World Map</a></li>
+                                <li><a href="#">DISC Careers</a></li>
+                            </ul>
+                        </div>
+
                     </div>
                     <div class="col-6">
                         <div class="card">
@@ -104,6 +243,27 @@
                                 <p>Debriefing & Assessment Report Details.</p>
                             </div>
                         </div>
+
+                        <div v-if="toggleStates['report&tools']" class="subcard">
+                            <p class="subcard-title">Debriefing and Assessment Report Details</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">DISC Debrief Guide</a></li>
+                                <li><a href="#">DISC Report Highlights</a></li>
+                                <li><a href="#">Natural & Adapted Graphs</a></li>
+                                <li><a href="#">Design & Explanation of the DISC Behavioral Diamond</a></li>
+                                <li><a href="#">12 Behavioral Tendencies Definitions & Explanations</a></li>
+                                <li><a href="#">Behavior Needs Under Stress</a></li>
+                                <li><a href="#">Typical Behaviors in Conflict</a></li>
+                            </ul>
+                            <p class="subcard-title">Video Resources</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">Practice Videos for Debriefing Graphs</a></li>
+                                <li><a href="#">Understanding Your DISC Report (for your clients)</a></li>
+                                <li><a href="#">Communicating with all 4 Styles (DISC)</a></li>
+                                <li><a href="#">Communicating with all 4 Styles (with Birds)</a></li>
+                            </ul>
+                        </div>
+
                         <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Coaching+with+DISC.png"
                                 alt="icon" class="icon" />
@@ -112,6 +272,11 @@
                                 <p>DISC Coaching resources.</p>
                             </div>
                         </div>
+
+                        <div v-if="toggleStates['coaches']" class="subcard">
+                            <p class="subcard-title">Coaching Guide for DISC</p>
+                        </div>
+
                         <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Marketing.png"
                                 alt="icon" class="icon" />
@@ -120,6 +285,21 @@
                                 <p>DISC marketing materials to help you support your business.</p>
                             </div>
                         </div>
+
+                        <div v-if="toggleStates['marketing']" class="subcard">
+                            <ul class="subcard-links">
+                                <li><a href="#">Mini DISC Presentation</a></li>
+                            </ul>
+                            <p class="subcard-title">Information Sheets</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">52 Week Email Series</a></li>
+                                <li><a href="#">DISC vs MBTI Article</a></li>
+                                <li><a href="#">DISC & Other Assessments Articles</a></li>
+                                <li><a href="#">Comparing 4 quadrants and 5 factors Article</a></li>
+                                <li><a href="#">Assessment 24x7 Store</a></li>
+                            </ul>
+                        </div>
+
                         <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Product+Specific+Resources.png"
                                 alt="icon" class="icon" />
@@ -128,6 +308,26 @@
                                 <p>Infused & Non-infused.</p>
                             </div>
                         </div>
+
+                        <div v-if="toggleStates['product']" class="subcard">
+                            <p class="subcard-title">Infused</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">DISC Workplace Insights - Report Guide</a></li>
+                                <li><a href="#">DISC Workplace Insights - Report Overview – Get it from Shawn (YT
+                                        link)</a></li>
+                                <li><a href="#">DISC Executive Insights - Introduction</a></li>
+                                <li><a href="#">DISC Leadership - Debrief Guide (Coming soon!)</a></li>
+                                <li><a href="#">DISC Leadership - Introduction</a></li>
+                                <li><a href="#">DISC Awareness - Debrief guide</a></li>
+                                <li><a href="#">DISC Awareness - Introduction</a></li>
+                            </ul>
+                            <p class="subcard-title">Non-Infused</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">DISC & Motivators (Coming soon!)</a></li>
+                                <li><a href="#">DISC & EIQ (Coming soon!)</a></li>
+                            </ul>
+                        </div>
+
                         <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Quick+Links.png"
                                 alt="icon" class="icon" />
@@ -136,6 +336,17 @@
                                 <p>Latest updates, Store, FAQs, Support info, & more.</p>
                             </div>
                         </div>
+
+                        <div v-if="toggleStates['quick&links']" class="subcard">
+                            <p class="subcard-title">Latest Updates</p>
+                            <ul class="subcard-links">
+                                <li><a href="#">Assessment 24x7 Store</a></li>
+                                <li><a href="#">DISC FAQ</a></li>
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -344,7 +555,6 @@ export default {
 
     .card {
         background-color: #00a8ff;
-        height: 90px;
         color: white;
         padding: 0px 30px;
         border-radius: 50px 0 0 50px;
@@ -354,6 +564,54 @@ export default {
         justify-content: flex-start;
         text-align: left;
         width: 100%;
+        position: relative;
+        z-index: 1;
+        height: 90px;
+    }
+
+    .subcard {
+        background-color: #00a8ff;
+        color: white;
+        padding: 15px 30px;
+        margin-top: -15px;
+        margin-bottom: 30px;
+        margin-left: 40px;
+        /* Adjust margin to align subcard */
+        border-radius: 0 0 7px 7px;
+        width: calc(100% - 40px);
+        position: relative;
+        z-index: 0;
+    }
+
+    .subcard-title {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: -10px;
+        margin-top: -10px;
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    .subcard-links {
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 14.6667px;
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    .subcard-links li {
+        margin-bottom: 5px;
+    }
+
+    .subcard-links a {
+        color: white;
+        text-decoration: underline;
+        font-weight: 500;
+    }
+
+    .subcard-links a:hover {
+        text-decoration: none;
     }
 
     .card h4 {
