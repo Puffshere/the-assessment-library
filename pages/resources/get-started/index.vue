@@ -18,6 +18,8 @@
                             alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'wcg'" src="~/assets/WCG-cropped.jpg" alt="Worldwide Coaching Group"
                             class="partner-logo-wcg">
+                        <img v-else-if="id === 'ypo'" src="~/assets/get-started/Logo_of_the_Young_Presidents_Organization.png" alt="YPO"
+                            class="">
                         <img v-else-if="id === 'dc'" src="~/assets/Dale-Carnegie-logo.png" alt="Dale Carnegie"
                             class="partner-logo-dc">
                         <img v-else-if="id === 'bni'" src="~/assets/BNI_logo.png" alt="BNI" class="partner-logo-bni">
@@ -526,6 +528,9 @@ export default {
         } else if (this.$route.query.id === 'eci') {
             this.url = '';
             this.id = 'eci';
+        } else if (this.$route.query.id === 'ypo') {
+            this.url = '';
+            this.id = 'ypo';
         } else if (this.$route.query.id === 'aus') {
             this.id = 'aus';
         } else if (this.$route.query.id === 'can') {
