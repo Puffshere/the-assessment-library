@@ -19,11 +19,10 @@
                         Skip sections as needed and proceed at your own pace. For
                         personalized <br />
                         training, <span><a class="hyperlink"
-                                href="https://calendly.com/molly-24x7/virtual-tour-of-your-account-dashboard?month=2024-06">book
-                                a session with Molly Kirby</a></span>. For information on <br />
+                                href="https://www.assessments24x7.com/suzette">book a session with Suzette Chaparro</a></span>. For information on <br />
                         assessments, pricing, and resources, contact
                         <span><a class="hyperlink"
-                                href="mailto:support@assessments24x7.com">support@assessments.ws</a></span>.
+                                href="mailto:support@assessments24x7.com">support@assessments24x7.com</a></span>.
                     </p>
                     <div class="buttonGroup"
                         style="margin-bottom: 25px; display: flex; justify-content: center; margin-left: 18px;">
