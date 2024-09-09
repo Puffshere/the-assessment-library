@@ -32,7 +32,7 @@
                             <option value="en-us" selected>English (US) - 38</option>
                             <option value="fr">French - 15</option>
                             <option value="de">German - 6</option>
-                            <option value="hu">Hungarian - 4</option>
+                            <option value="hu">Hungarian - 6</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 3</option>
                             <option value="ja">Japanese - 4</option>
@@ -844,6 +844,9 @@
                                 <a v-else-if="lang === 'zh'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummaryReportChinese.pdf"
                                     target="_blank" rel="noopener">DISC Team Summary Report</a>
+                                <a v-else-if="lang === 'hu'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC+Team+Summary+Report_Hungarian.pdf"
+                                    target="_blank" rel="noopener">DISC Team Summary Report</a>
                                 <a v-else-if="lang === 'es'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySpanishSampleReport.pdf"
                                     target="_blank" rel="noopener">DISC Team Summary Report</a>
@@ -851,7 +854,7 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummaryTurkishSampleReport.pdf"
                                     target="_blank" rel="noopener">DISC Team Summary Report</a>
                                 <a v-else class="hyperlink disabled">DISC Team Summary Report</a>
-                                <a class="language-button disc" @click="discTeamSummaryReportModal = true">5
+                                <a class="language-button disc" @click="discTeamSummaryReportModal = true">6
                                     languages</a><br />
 
                                 <a v-if="lang === 'en-us'" class="hyperlink"
@@ -860,8 +863,11 @@
                                 <a v-else-if="lang === 'zh'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCGroupGraphsChinese.pdf"
                                     target="_blank" rel="noopener">DISC Group Graphs</a>
+                                <a v-else-if="lang === 'hu'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC+Team+Graphs+Hungarian+Sample+Group.pdf"
+                                    target="_blank" rel="noopener">DISC Group Graphs</a>
                                 <a v-else class="hyperlink disabled">DISC Group Graphs</a><br />
-                                <a class="language-button disc" @click="discGroupGraphsModal = true">2
+                                <a class="language-button disc" @click="discGroupGraphsModal = true">3
                                     languages</a><br />
 
                                 <a v-if="lang === 'en-au'" class="hyperlink"
@@ -1168,6 +1174,9 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummaryReportChinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
                                 <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC+Team+Summary+Report_Hungarian.pdf"
+                                    target="_blank" rel="noopener">Hungarian</a><br />
+                                <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySpanishSampleReport.pdf"
                                     target="_blank" rel="noopener">Spanish</a><br />
                                 <a class="hyperlink"
@@ -1195,6 +1204,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCGroupGraphsChinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISC+Team+Graphs+Hungarian+Sample+Group.pdf"
+                                    target="_blank" rel="noopener">Hungarian</a><br />
                             </div>
                         </div>
                     </div>
