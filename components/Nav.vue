@@ -164,7 +164,7 @@
                                     <span class="title">Resources</span>
 
                                     <li class="sub-nav-item">
-                                        <a href="/blog">Blog</a>
+                                        <a href="https://blog.assessments24x7.com/">Blog</a>
                                     </li>
 
                                     <li class="sub-nav-item">
