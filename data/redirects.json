@@ -618,5 +618,845 @@
     {
         "from": "/assessments/performance-gap-indicator",
         "to": "/"
+    },
+    {
+        "from": "/blog/effective-communication-skills-do-you-know-how-to-listen",
+        "to": "https://blog.assessments24x7.com/effective-communication-skills-do-you-know-how-to-listen/"
+    },
+    {
+        "from": "/blog/disc-world-map",
+        "to": "https://blog.assessments24x7.com/disc-world-map/"
+    },
+    {
+        "from": "/blog/romance-and-the-four-disc-styles",
+        "to": "https://blog.assessments24x7.com/romance-and-the-four-disc-styles/"
+    },
+    {
+        "from": "/blog/ceo-update-brandon-parker-1st-quarter-2023",
+        "to": "https://blog.assessments24x7.com/ceo-update-brandon-parker-1st-quarter-2023/"
+    },
+    {
+        "from": "/blog/ceo-update",
+        "to": "https://blog.assessments24x7.com/ceo-update/"
+    },
+    {
+        "from": "/blog/ceo-update-brandon-parker-3rd-quarter-2022",
+        "to": "https://blog.assessments24x7.com/ceo-update-brandon-parker-3rd-quarter-2022/"
+    },
+    {
+        "from": "/blog/ceo-update-brandon-parker-1st-quarter-2022",
+        "to": "https://blog.assessments24x7.com/ceo-update-brandon-parker-1st-quarter-2022/"
+    },
+    {
+        "from": "/blog/ceo-update-brandon-parker-3rd-quarter-2021",
+        "to": "https://blog.assessments24x7.com/ceo-update-brandon-parker-3rd-quarter-2021/"
+    },
+    {
+        "from": "/blog/sharing-the-disc-styles-with-children",
+        "to": "https://blog.assessments24x7.com/sharing-the-disc-styles-with-children/"
+    },
+    {
+        "from": "/blog/disc-assessment-the-definitive-guide-to-disc",
+        "to": "https://blog.assessments24x7.com/disc-assessment-the-definitive-guide-to-disc/"
+    },
+    {
+        "from": "/blog/reduce-bias-and-discrimination-using-assessments",
+        "to": "https://blog.assessments24x7.com/reduce-bias-and-discrimination-using-assessments/"
+    },
+    {
+        "from": "/blog/ceo-update-brandon-parker-1st-quarter-2021",
+        "to": "https://blog.assessments24x7.com/ceo-update-brandon-parker-1st-quarter-2021/"
+    },
+    {
+        "from": "/blog/ceo-update-brandon-parker-4th-quarter-2020",
+        "to": "https://blog.assessments24x7.com/ceo-update-brandon-parker-4th-quarter-2020/"
+    },
+    {
+        "from": "/blog/ceo-update-brandon-parker-3rd-quarter-2020",
+        "to": "https://blog.assessments24x7.com/ceo-update-brandon-parker-3rd-quarter-2020/"
+    },
+    {
+        "from": "/blog/new-360-assessment-dashboard-interface",
+        "to": "https://blog.assessments24x7.com/new-360-assessment-dashboard-interface/"
+    },
+    {
+        "from": "/blog/assessments",
+        "to": "https://blog.assessments24x7.com/assessments/"
+    },
+    {
+        "from": "/blog/positiveness",
+        "to": "https://blog.assessments24x7.com/positiveness/"
+    },
+    {
+        "from": "/blog/vulnerable",
+        "to": "https://blog.assessments24x7.com/vulnerable/"
+    },
+    {
+        "from": "/blog/keeping-your-composure",
+        "to": "https://blog.assessments24x7.com/keeping-your-composure/"
+    },
+    {
+        "from": "/blog/business-from-the-road",
+        "to": "https://blog.assessments24x7.com/business-from-the-road/"
+    },
+    {
+        "from": "/blog/organizational-development",
+        "to": "https://blog.assessments24x7.com/organizational-development/"
+    },
+    {
+        "from": "/blog/emotional-intelligence-in-conflict",
+        "to": "https://blog.assessments24x7.com/emotional-intelligence-in-conflict/"
+    },
+    {
+        "from": "/blog/delegation-101",
+        "to": "https://blog.assessments24x7.com/delegation-101/"
+    },
+    {
+        "from": "/blog/team-conflict",
+        "to": "https://blog.assessments24x7.com/team-conflict/"
+    },
+    {
+        "from": "/blog/customer-loyalty",
+        "to": "https://blog.assessments24x7.com/customer-loyalty/"
+    },
+    {
+        "from": "/blog/attentiveness",
+        "to": "https://blog.assessments24x7.com/attentiveness/"
+    },
+    {
+        "from": "/blog/speech",
+        "to": "https://blog.assessments24x7.com/speech/"
+    },
+    {
+        "from": "/blog/talent-development",
+        "to": "https://blog.assessments24x7.com/talent-development/"
+    },
+    {
+        "from": "/blog/leadership-transparency",
+        "to": "https://blog.assessments24x7.com/leadership-transparency/"
+    },
+    {
+        "from": "/blog/toxic-workplace",
+        "to": "https://blog.assessments24x7.com/toxic-workplace/"
+    },
+    {
+        "from": "/blog/revenue",
+        "to": "https://blog.assessments24x7.com/revenue/"
+    },
+    {
+        "from": "/blog/show-up-as-a-leader",
+        "to": "https://blog.assessments24x7.com/show-up-as-a-leader/"
+    },
+    {
+        "from": "/blog/company-story",
+        "to": "https://blog.assessments24x7.com/company-story/"
+    },
+    {
+        "from": "/blog/leaders",
+        "to": "https://blog.assessments24x7.com/leaders/"
+    },
+    {
+        "from": "/blog/inspire-others",
+        "to": "https://blog.assessments24x7.com/inspire-others/"
+    },
+    {
+        "from": "/blog/brain-power",
+        "to": "https://blog.assessments24x7.com/brain-power/"
+    },
+    {
+        "from": "/blog/star-performers",
+        "to": "https://blog.assessments24x7.com/star-performers/"
+    },
+    {
+        "from": "/blog/lasting-impression",
+        "to": "https://blog.assessments24x7.com/lasting-impression/"
+    },
+    {
+        "from": "/blog/live-life",
+        "to": "https://blog.assessments24x7.com/live-life/"
+    },
+    {
+        "from": "/blog/micro-resolutions",
+        "to": "https://blog.assessments24x7.com/micro-resolutions/"
+    },
+    {
+        "from": "/blog/awareness-brings-effectiveness",
+        "to": "https://blog.assessments24x7.com/awareness-brings-effectiveness/"
+    },
+    {
+        "from": "/blog/leadership-myths",
+        "to": "https://blog.assessments24x7.com/leadership-myths/"
+    },
+    {
+        "from": "/blog/organizational-culture-of-learning",
+        "to": "https://blog.assessments24x7.com/organizational-culture-of-learning/"
+    },
+    {
+        "from": "/blog/disc-styles",
+        "to": "https://blog.assessments24x7.com/disc-styles/"
+    },
+    {
+        "from": "/blog/resilience",
+        "to": "https://blog.assessments24x7.com/resilience/"
+    },
+    {
+        "from": "/blog/customer-service-leader",
+        "to": "https://blog.assessments24x7.com/customer-service-leader/"
+    },
+    {
+        "from": "/blog/smartphone-marketing",
+        "to": "https://blog.assessments24x7.com/smartphone-marketing/"
+    },
+    {
+        "from": "/blog/biggest-supporters",
+        "to": "https://blog.assessments24x7.com/biggest-supporters/"
+    },
+    {
+        "from": "/blog/workplace-education",
+        "to": "https://blog.assessments24x7.com/workplace-education/"
+    },
+    {
+        "from": "/blog/candid-conversation",
+        "to": "https://blog.assessments24x7.com/candid-conversation/"
+    },
+    {
+        "from": "/blog/identifying-your-big-missing",
+        "to": "https://blog.assessments24x7.com/identifying-your-big-missing/"
+    },
+    {
+        "from": "/blog/stages-of-team-development",
+        "to": "https://blog.assessments24x7.com/stages-of-team-development/"
+    },
+    {
+        "from": "/blog/enthusiasm",
+        "to": "https://blog.assessments24x7.com/enthusiasm/"
+    },
+    {
+        "from": "/blog/sales-call-preparation",
+        "to": "https://blog.assessments24x7.com/sales-call-preparation/"
+    },
+    {
+        "from": "/blog/universal-leadership-attributes",
+        "to": "https://blog.assessments24x7.com/universal-leadership-attributes/"
+    },
+    {
+        "from": "/blog/high-value-experiences",
+        "to": "https://blog.assessments24x7.com/high-value-experiences/"
+    },
+    {
+        "from": "/blog/culture-of-continuous-learning",
+        "to": "https://blog.assessments24x7.com/culture-of-continuous-learning/"
+    },
+    {
+        "from": "/blog/art-of-delegation",
+        "to": "https://blog.assessments24x7.com/art-of-delegation/"
+    },
+    {
+        "from": "/blog/foundation-effective-teamwork",
+        "to": "https://blog.assessments24x7.com/foundation-effective-teamwork/"
+    },
+    {
+        "from": "/blog/strategy-success",
+        "to": "https://blog.assessments24x7.com/strategy-success/"
+    },
+    {
+        "from": "/blog/conflict-resolution-behaviors",
+        "to": "https://blog.assessments24x7.com/conflict-resolution-behaviors/"
+    },
+    {
+        "from": "/blog/leadership-mistakes",
+        "to": "https://blog.assessments24x7.com/leadership-mistakes/"
+    },
+    {
+        "from": "/blog/mirroring",
+        "to": "https://blog.assessments24x7.com/mirroring/"
+    },
+    {
+        "from": "/blog/accountability-culture",
+        "to": "https://blog.assessments24x7.com/accountability-culture/"
+    },
+    {
+        "from": "/blog/employee-engagement-fad-fundamental",
+        "to": "https://blog.assessments24x7.com/employee-engagement-fad-fundamental/"
+    },
+    {
+        "from": "/blog/wonder-woman",
+        "to": "https://blog.assessments24x7.com/wonder-woman/"
+    },
+    {
+        "from": "/blog/actions-speak-louder",
+        "to": "https://blog.assessments24x7.com/actions-speak-louder/"
+    },
+    {
+        "from": "/blog/ways-leaders-can-destroy-trust",
+        "to": "https://blog.assessments24x7.com/ways-leaders-can-destroy-trust/"
+    },
+    {
+        "from": "/blog/public-speaking-101",
+        "to": "https://blog.assessments24x7.com/public-speaking-101/"
+    },
+    {
+        "from": "/blog/company-wide-assessment",
+        "to": "https://blog.assessments24x7.com/company-wide-assessment/"
+    },
+    {
+        "from": "/blog/professional-development-commitment",
+        "to": "https://blog.assessments24x7.com/professional-development-commitment/"
+    },
+    {
+        "from": "/blog/committed-to-your-success",
+        "to": "https://blog.assessments24x7.com/committed-to-your-success/"
+    },
+    {
+        "from": "/blog/identifying-disc-styles-phone",
+        "to": "https://blog.assessments24x7.com/identifying-disc-styles-phone/"
+    },
+    {
+        "from": "/blog/break-a-promise",
+        "to": "https://blog.assessments24x7.com/break-a-promise/"
+    },
+    {
+        "from": "/blog/attributes-potential-leaders",
+        "to": "https://blog.assessments24x7.com/attributes-potential-leaders/"
+    },
+    {
+        "from": "/blog/four-behavioral-styles",
+        "to": "https://blog.assessments24x7.com/four-behavioral-styles/"
+    },
+    {
+        "from": "/blog/build-trust",
+        "to": "https://blog.assessments24x7.com/build-trust/"
+    },
+    {
+        "from": "/blog/professional-development-learning",
+        "to": "https://blog.assessments24x7.com/professional-development-learning/"
+    },
+    {
+        "from": "/blog/innovation",
+        "to": "https://blog.assessments24x7.com/innovation/"
+    },
+    {
+        "from": "/blog/increase-your-sales",
+        "to": "https://blog.assessments24x7.com/increase-your-sales/"
+    },
+    {
+        "from": "/blog/should-you-add-online-assessments",
+        "to": "https://blog.assessments24x7.com/should-you-add-online-assessments/"
+    },
+    {
+        "from": "/blog/customer-service-experience",
+        "to": "https://blog.assessments24x7.com/customer-service-experience/"
+    },
+    {
+        "from": "/blog/adaptability",
+        "to": "https://blog.assessments24x7.com/adaptability/"
+    },
+    {
+        "from": "/blog/success-beliefs",
+        "to": "https://blog.assessments24x7.com/success-beliefs/"
+    },
+    {
+        "from": "/blog/leadership-philosophy",
+        "to": "https://blog.assessments24x7.com/leadership-philosophy/"
+    },
+    {
+        "from": "/blog/adapt-personality-styles",
+        "to": "https://blog.assessments24x7.com/adapt-personality-styles/"
+    },
+    {
+        "from": "/blog/high-performance-leadership",
+        "to": "https://blog.assessments24x7.com/high-performance-leadership/"
+    },
+    {
+        "from": "/blog/job-security",
+        "to": "https://blog.assessments24x7.com/job-security/"
+    },
+    {
+        "from": "/blog/video-sales-recruitment",
+        "to": "https://blog.assessments24x7.com/video-sales-recruitment/"
+    },
+    {
+        "from": "/blog/motivating-employees",
+        "to": "https://blog.assessments24x7.com/motivating-employees/"
+    },
+    {
+        "from": "/blog/extraordinary-value",
+        "to": "https://blog.assessments24x7.com/extraordinary-value/"
+    },
+    {
+        "from": "/blog/create-results-oriented-culture",
+        "to": "https://blog.assessments24x7.com/create-results-oriented-culture/"
+    },
+    {
+        "from": "/blog/stop-meeting",
+        "to": "https://blog.assessments24x7.com/stop-meeting/"
+    },
+    {
+        "from": "/blog/defining-attribute-successful-people",
+        "to": "https://blog.assessments24x7.com/defining-attribute-successful-people/"
+    },
+    {
+        "from": "/blog/ten-tips-effective-listening",
+        "to": "https://blog.assessments24x7.com/ten-tips-effective-listening/"
+    },
+    {
+        "from": "/blog/make-learning-integral-part-business",
+        "to": "https://blog.assessments24x7.com/make-learning-integral-part-business/"
+    },
+    {
+        "from": "/blog/brain-hacks-to-land-your-ideal-job",
+        "to": "https://blog.assessments24x7.com/brain-hacks-to-land-your-ideal-job/"
+    },
+    {
+        "from": "/blog/managing-work-life-boundaries",
+        "to": "https://blog.assessments24x7.com/managing-work-life-boundaries/"
+    },
+    {
+        "from": "/blog/achieving-effective-influence-with-three-significant-insights",
+        "to": "https://blog.assessments24x7.com/achieving-effective-influence-with-three-significant-insights/"
+    },
+    {
+        "from": "/blog/high-achievers-share-six-traits",
+        "to": "https://blog.assessments24x7.com/high-achievers-share-six-traits/"
+    },
+    {
+        "from": "/blog/14-tips-for-maintaining-work-life-balance",
+        "to": "https://blog.assessments24x7.com/14-tips-for-maintaining-work-life-balance/"
+    },
+    {
+        "from": "/blog/creative-thinker",
+        "to": "https://blog.assessments24x7.com/creative-thinker/"
+    },
+    {
+        "from": "/blog/high-trust-selling",
+        "to": "https://blog.assessments24x7.com/high-trust-selling/"
+    },
+    {
+        "from": "/blog/disc-versus-mbti",
+        "to": "https://blog.assessments24x7.com/disc-versus-mbti/"
+    },
+    {
+        "from": "/blog/four-benefits-embracing-change",
+        "to": "https://blog.assessments24x7.com/four-benefits-embracing-change/"
+    },
+    {
+        "from": "/blog/sales-managers",
+        "to": "https://blog.assessments24x7.com/sales-managers/"
+    },
+    {
+        "from": "/blog/creative-leadership",
+        "to": "https://blog.assessments24x7.com/creative-leadership/"
+    },
+    {
+        "from": "/blog/sales-service-simulation-learning",
+        "to": "https://blog.assessments24x7.com/sales-service-simulation-learning/"
+    },
+    {
+        "from": "/blog/our-need-for-connection",
+        "to": "https://blog.assessments24x7.com/our-need-for-connection/"
+    },
+    {
+        "from": "/blog/foolproof-sales-training",
+        "to": "https://blog.assessments24x7.com/foolproof-sales-training/"
+    },
+    {
+        "from": "/blog/differentiate-company-competition",
+        "to": "https://blog.assessments24x7.com/differentiate-company-competition/"
+    },
+    {
+        "from": "/blog/lost-art-selling",
+        "to": "https://blog.assessments24x7.com/lost-art-selling/"
+    },
+    {
+        "from": "/blog/street-smarts",
+        "to": "https://blog.assessments24x7.com/street-smarts/"
+    },
+    {
+        "from": "/blog/employee-engagement-5-easy-pieces",
+        "to": "https://blog.assessments24x7.com/employee-engagement-5-easy-pieces/"
+    },
+    {
+        "from": "/blog/effective-communication",
+        "to": "https://blog.assessments24x7.com/effective-communication/"
+    },
+    {
+        "from": "/blog/beat-business-competition-standing",
+        "to": "https://blog.assessments24x7.com/beat-business-competition-standing/"
+    },
+    {
+        "from": "/blog/goal_setting_aim_accuracy",
+        "to": "https://blog.assessments24x7.com/goal-setting-aim-accuracy/"
+    },
+    {
+        "from": "/blog/workplace-miscommunication-offended",
+        "to": "https://blog.assessments24x7.com/workplace-miscommunication-offended/"
+    },
+    {
+        "from": "/blog/strategic-planning-cci-swot",
+        "to": "https://blog.assessments24x7.com/strategic-planning-cci-swot/"
+    },
+    {
+        "from": "/blog/11-biggest-sales-presentation-mistakes",
+        "to": "https://blog.assessments24x7.com/11-biggest-sales-presentation-mistakes/"
+    },
+    {
+        "from": "/blog/coaching-from-the-cloud",
+        "to": "https://blog.assessments24x7.com/coaching-from-the-cloud/"
+    },
+    {
+        "from": "/blog/emotional-employee-engagement",
+        "to": "https://blog.assessments24x7.com/emotional-employee-engagement/"
+    },
+    {
+        "from": "/blog/virtual-training-modern-business-imperitive",
+        "to": "https://blog.assessments24x7.com/virtual-training-modern-business-imperitive/"
+    },
+    {
+        "from": "/blog/unpacking-trust",
+        "to": "https://blog.assessments24x7.com/unpacking-trust/"
+    },
+    {
+        "from": "/blog/customer-focus-design",
+        "to": "https://blog.assessments24x7.com/customer-focus-design/"
+    },
+    {
+        "from": "/blog/essentials-team-player",
+        "to": "https://blog.assessments24x7.com/essentials-team-player/"
+    },
+    {
+        "from": "/blog/make-important-sound-interesting",
+        "to": "https://blog.assessments24x7.com/make-important-sound-interesting/"
+    },
+    {
+        "from": "/blog/communicating-through-touch",
+        "to": "https://blog.assessments24x7.com/communicating-through-touch/"
+    },
+    {
+        "from": "/blog/no-joke-humor-positively-impacts-performance",
+        "to": "https://blog.assessments24x7.com/no-joke-humor-positively-impacts-performance/"
+    },
+    {
+        "from": "/blog/disc-sales-sell-way-people-want-buy-video",
+        "to": "https://blog.assessments24x7.com/disc-sales-sell-way-people-want-buy-video/"
+    },
+    {
+        "from": "/blog/10-sales-tips-asking-effective-questions",
+        "to": "https://blog.assessments24x7.com/10-sales-tips-asking-effective-questions/"
+    },
+    {
+        "from": "/blog/blowing-whistle-workplace-conflict",
+        "to": "https://blog.assessments24x7.com/blowing-whistle-workplace-conflict/"
+    },
+    {
+        "from": "/blog/comes-brain-use-lose",
+        "to": "https://blog.assessments24x7.com/comes-brain-use-lose/"
+    },
+    {
+        "from": "/blog/misunderstanding-mother-conflict",
+        "to": "https://blog.assessments24x7.com/misunderstanding-mother-conflict/"
+    },
+    {
+        "from": "/blog/increase-brainpower-stomach",
+        "to": "https://blog.assessments24x7.com/increase-brainpower-stomach/"
+    },
+    {
+        "from": "/blog/keep-your-service-advantage-simple",
+        "to": "https://blog.assessments24x7.com/keep-your-service-advantage-simple/"
+    },
+    {
+        "from": "/blog/adaptability-to-increase-your-personal-power",
+        "to": "https://blog.assessments24x7.com/adaptability-to-increase-your-personal-power/"
+    },
+    {
+        "from": "/blog/customer-service-map-to-instant-gratification",
+        "to": "https://blog.assessments24x7.com/customer-service-map-to-instant-gratification/"
+    },
+    {
+        "from": "/blog/increase-your-charisma-podcast",
+        "to": "https://blog.assessments24x7.com/increase-your-charisma-podcast/"
+    },
+    {
+        "from": "/blog/up-your-brainpower-through-mindfulness",
+        "to": "https://blog.assessments24x7.com/up-your-brainpower-through-mindfulness/"
+    },
+    {
+        "from": "/blog/10-ways-to-make-your-leadership-presentations-powerful",
+        "to": "https://blog.assessments24x7.com/10-ways-to-make-your-leadership-presentations-powerful/"
+    },
+    {
+        "from": "/blog/the_avenues_of_communication",
+        "to": "https://blog.assessments24x7.com/the-avenues-of-communication/"
+    },
+    {
+        "from": "/blog/eight-qualities-of-a-professional-salesperson",
+        "to": "https://blog.assessments24x7.com/eight-qualities-of-a-professional-salesperson/"
+    },
+    {
+        "from": "/blog/coachs-marketing-panel-2015-users-conference-video",
+        "to": "https://blog.assessments24x7.com/coachs-marketing-panel-2015-users-conference-video/"
+    },
+    {
+        "from": "/blog/empathy-versus-sympathy-video",
+        "to": "https://blog.assessments24x7.com/empathy-versus-sympathy-video/"
+    },
+    {
+        "from": "/blog/how-to-read-a-person-like-a-book-video",
+        "to": "https://blog.assessments24x7.com/how-to-read-a-person-like-a-book-video/"
+    },
+    {
+        "from": "/blog/should-managers-take-all-the-blame",
+        "to": "https://blog.assessments24x7.com/should-managers-take-all-the-blame/"
+    },
+    {
+        "from": "/blog/a-guide-to-the-four-styles-of-sales-professionals",
+        "to": "https://blog.assessments24x7.com/a-guide-to-the-four-styles-of-sales-professionals/"
+    },
+    {
+        "from": "/blog/innovation-and-misfits",
+        "to": "https://blog.assessments24x7.com/innovation-and-misfits/"
+    },
+    {
+        "from": "/blog/me-biased-why-assessments-trump-interviews-for-making-better-hiring-decisions",
+        "to": "https://blog.assessments24x7.com/me-biased-why-assessments-trump-interviews-for-making-better-hiring-decisions/"
+    },
+    {
+        "from": "/blog/global-sales-predictions-with-sales-motivational-expert-jim-cathcart",
+        "to": "https://blog.assessments24x7.com/global-sales-predictions-with-sales-motivational-expert-jim-cathcart/"
+    },
+    {
+        "from": "/blog/how-to-read-a-person-like-a-book-podcast",
+        "to": "https://blog.assessments24x7.com/how-to-read-a-person-like-a-book-podcast/"
+    },
+    {
+        "from": "/blog/discover-your-talents",
+        "to": "https://blog.assessments24x7.com/discover-your-talents/"
+    },
+    {
+        "from": "/blog/im-speaking-in-english-and-youre-listening-in-dingbat",
+        "to": "https://blog.assessments24x7.com/im-speaking-in-english-and-youre-listening-in-dingbat/"
+    },
+    {
+        "from": "/blog/how-adaptable-are-you",
+        "to": "https://blog.assessments24x7.com/how-adaptable-are-you/"
+    },
+    {
+        "from": "/blog/tonys-timely-tips-how-do-others-see-you",
+        "to": "https://blog.assessments24x7.com/tonys-timely-tips-how-do-others-see-you/"
+    },
+    {
+        "from": "/blog/emotional-intelligence-in-conflict-resolution",
+        "to": "https://blog.assessments24x7.com/emotional-intelligence-in-conflict-resolution/"
+    },
+    {
+        "from": "/blog/tonys-timely-tips-1-how-to-make-friends-in-5-seconds",
+        "to": "https://blog.assessments24x7.com/tonys-timely-tips-1-how-to-make-friends-in-5-seconds/"
+    },
+    {
+        "from": "/blog/customer-service-the-disc-styles-way",
+        "to": "https://blog.assessments24x7.com/customer-service-the-disc-styles-way/"
+    },
+    {
+        "from": "/blog/diversity-through-disc-styles-adaptability",
+        "to": "https://blog.assessments24x7.com/diversity-through-disc-styles-adaptability/"
+    },
+    {
+        "from": "/blog/how-to-bring-out-the-best-of-your-management-style",
+        "to": "https://blog.assessments24x7.com/how-to-bring-out-the-best-of-your-management-style/"
+    },
+    {
+        "from": "/blog/demystifying-disc-compatibility-for-networking",
+        "to": "https://blog.assessments24x7.com/demystifying-disc-compatibility-for-networking/"
+    },
+    {
+        "from": "/blog/communication-adaptability-series-versatility-part-3-attentiveness",
+        "to": "https://blog.assessments24x7.com/communication-adaptability-series-versatility-part-3-attentiveness/"
+    },
+    {
+        "from": "/blog/communication-adaptability-series-versatility-part-1-resilience",
+        "to": "https://blog.assessments24x7.com/communication-adaptability-series-versatility-part-1-resilience/"
+    },
+    {
+        "from": "/blog/communication-adaptability-series-flexibility-part-5-respect-for-others",
+        "to": "https://blog.assessments24x7.com/communication-adaptability-series-flexibility-part-5-respect-for-others/"
+    },
+    {
+        "from": "/blog/communication-adaptability-series-flexibility-part-4-positiveness",
+        "to": "https://blog.assessments24x7.com/communication-adaptability-series-flexibility-part-4-positiveness/"
+    },
+    {
+        "from": "/blog/communication-adaptability-series-flexibility-part-3-empaty",
+        "to": "https://blog.assessments24x7.com/communication-adaptability-series-flexibility-part-3-empaty/"
+    },
+    {
+        "from": "/blog/communication-adaptability-flexibility-part-2-tolerance",
+        "to": "https://blog.assessments24x7.com/communication-adaptability-flexibility-part-2-tolerance/"
+    },
+    {
+        "from": "/blog/communication-adaptability-flexibility-part-i-confidence",
+        "to": "https://blog.assessments24x7.com/communication-adaptability-flexibility-part-i-confidence/"
+    },
+    {
+        "from": "/blog/demystifying-disc-style-compatibility",
+        "to": "https://blog.assessments24x7.com/demystifying-disc-style-compatibility/"
+    },
+    {
+        "from": "/blog/theplatinumrule",
+        "to": "https://blog.assessments24x7.com/theplatinumrule/"
+    },
+    {
+        "from": "/blog/introducing-the-platinum-rule",
+        "to": "https://blog.assessments24x7.com/introducing-the-platinum-rule/"
+    },
+    {
+        "from": "/blog/salesmanship-2",
+        "to": "https://blog.assessments24x7.com/salesmanship-2/"
+    },
+    {
+        "from": "/blog/risk-management-2",
+        "to": "https://blog.assessments24x7.com/risk-management-2/"
+    },
+    {
+        "from": "/blog/you-can-tell-a-persons-personality-via-a-phone-conversation",
+        "to": "https://blog.assessments24x7.com/you-can-tell-a-persons-personality-via-a-phone-conversation/"
+    },
+    {
+        "from": "/blog/shortest-distance-between-two-people",
+        "to": "https://blog.assessments24x7.com/shortest-distance-between-two-people/"
+    },
+    {
+        "from": "/blog/do-you-know-your-non-verbal-communication",
+        "to": "https://blog.assessments24x7.com/do-you-know-your-non-verbal-communication/"
+    },
+    {
+        "from": "/blog/time-management-do-you-practice-it",
+        "to": "https://blog.assessments24x7.com/time-management-do-you-practice-it/"
+    },
+    {
+        "from": "/blog/personality-styles",
+        "to": "https://blog.assessments24x7.com/personality-styles/"
+    },
+    {
+        "from": "/blog/body-language-2",
+        "to": "https://blog.assessments24x7.com/body-language-2/"
+    },
+    {
+        "from": "/blog/do-you-have-a-mission",
+        "to": "https://blog.assessments24x7.com/do-you-have-a-mission/"
+    },
+    {
+        "from": "/blog/expanding-your-mind-by-thinking-differently",
+        "to": "https://blog.assessments24x7.com/expanding-your-mind-by-thinking-differently/"
+    },
+    {
+        "from": "/blog/charisma-do-you-have-it",
+        "to": "https://blog.assessments24x7.com/charisma-do-you-have-it/"
+    },
+    {
+        "from": "/blog/risk-management",
+        "to": "https://blog.assessments24x7.com/risk-management/"
+    },
+    {
+        "from": "/blog/do-you-gravitate-to-people-just-like-you",
+        "to": "https://blog.assessments24x7.com/do-you-gravitate-to-people-just-like-you/"
+    },
+    {
+        "from": "/blog/vision-whats-so-special-about-it",
+        "to": "https://blog.assessments24x7.com/vision-whats-so-special-about-it/"
+    },
+    {
+        "from": "/blog/body-language",
+        "to": "https://blog.assessments24x7.com/body-language/"
+    },
+    {
+        "from": "/blog/do-you-know-how-to-listen-2",
+        "to": "https://blog.assessments24x7.com/do-you-know-how-to-listen-2/"
+    },
+    {
+        "from": "/blog/financial-genius-are-you-one-peter-lynch-is",
+        "to": "https://blog.assessments24x7.com/financial-genius-are-you-one-peter-lynch-is/"
+    },
+    {
+        "from": "/blog/artistic-genius-leonardo-davinci-and-walt-disney",
+        "to": "https://blog.assessments24x7.com/artistic-genius-leonardo-davinci-and-walt-disney/"
+    },
+    {
+        "from": "/blog/winston-churchill-communication-genius",
+        "to": "https://blog.assessments24x7.com/winston-churchill-communication-genius/"
+    },
+    {
+        "from": "/blog/example-of-an-applied-genius-thomas-edison",
+        "to": "https://blog.assessments24x7.com/example-of-an-applied-genius-thomas-edison/"
+    },
+    {
+        "from": "/blog/example-of-a-visionary-genius",
+        "to": "https://blog.assessments24x7.com/example-of-a-visionary-genius/"
+    },
+    {
+        "from": "/blog/visionary-genius",
+        "to": "https://blog.assessments24x7.com/visionary-genius/"
+    },
+    {
+        "from": "/blog/gifted-genius-whats-the-difference",
+        "to": "https://blog.assessments24x7.com/gifted-genius-whats-the-difference/"
+    },
+    {
+        "from": "/blog/what-are-you-aiming-for-critical-reading",
+        "to": "https://blog.assessments24x7.com/what-are-you-aiming-for-critical-reading/"
+    },
+    {
+        "from": "/blog/interruptions-how-good-are-you-are-dealing-with-them",
+        "to": "https://blog.assessments24x7.com/interruptions-how-good-are-you-are-dealing-with-them/"
+    },
+    {
+        "from": "/blog/243",
+        "to": "https://blog.assessments24x7.com/do-you-have-emotional-control-check-the-techniques-you-need/"
+    },
+    {
+        "from": "/blog/my-way-or-the-highway-is-your-thinking-too-rigid",
+        "to": "https://blog.assessments24x7.com/my-way-or-the-highway-is-your-thinking-too-rigid/"
+    },
+    {
+        "from": "/blog/ambiguity-how-do-you-deal-with-it",
+        "to": "https://blog.assessments24x7.com/ambiguity-how-do-you-deal-with-it/"
+    },
+    {
+        "from": "/blog/help-expand-your-visions-and-ideas-but-how",
+        "to": "https://blog.assessments24x7.com/help-expand-your-visions-and-ideas-but-how/"
+    },
+    {
+        "from": "/blog/do-you-know-how-much-the-art-of-listening-can-help-you",
+        "to": "https://blog.assessments24x7.com/do-you-know-how-much-the-art-of-listening-can-help-you/"
+    },
+    {
+        "from": "/blog/speaking-with-authority",
+        "to": "https://blog.assessments24x7.com/speaking-with-authority/"
+    },
+    {
+        "from": "/blog/what-is-your-silent-message-are-you-sending-it-during-work-hours",
+        "to": "https://blog.assessments24x7.com/what-is-your-silent-message-are-you-sending-it-during-work-hours/"
+    },
+    {
+        "from": "/blog/time-management-take-a-moment-to-relax",
+        "to": "https://blog.assessments24x7.com/time-management-take-a-moment-to-relax/"
+    },
+    {
+        "from": "/blog/exuding-competence",
+        "to": "https://blog.assessments24x7.com/exuding-competence/"
+    },
+    {
+        "from": "/blog/do-you-know-the-rules-of-setting-priorities",
+        "to": "https://blog.assessments24x7.com/do-you-know-the-rules-of-setting-priorities/"
+    },
+    {
+        "from": "/blog/manage-the-intangible-time-efficiency-vs-effectiveness",
+        "to": "https://blog.assessments24x7.com/manage-the-intangible-time-efficiency-vs-effectiveness/"
+    },
+    {
+        "from": "/blog/customer-interaction-do-you-hear-me-now",
+        "to": "https://blog.assessments24x7.com/customer-interaction-do-you-hear-me-now/"
+    },
+    {
+        "from": "/blog/job-interview-the-hiring-process",
+        "to": "https://blog.assessments24x7.com/job-interview-the-hiring-process/"
     }
 ]
