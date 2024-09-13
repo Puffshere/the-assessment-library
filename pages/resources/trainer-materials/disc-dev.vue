@@ -64,29 +64,59 @@
                         <div v-if="toggleStates['fundamentals']" class="subcard">
                             <p class="subcard-title">Understanding foundations of DISC</p>
                             <ul class="subcard-links">
-                                <li><a href="#">DISC Assessment History</a></li>
-                                <li><a href="#">DISC Direct/Indirect</a></li>
-                                <li><a href="#">DISC Open/Guarded</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCAssessmentHistory.pdf"
+                                        target="_blank" rel="noopener">DISC Assessment History</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDirectandIndirect.pdf"
+                                        target="_blank" rel="noopener">DISC Direct/Indirect</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOpenandGuarded.pdf"
+                                        target="_blank" rel="noopener">DISC Open/Guarded</a></li>
                                 <li><a href="#">Description - All 4 Styles</a></li>
-                                <li><a href="#">Description - High D</a></li>
-                                <li><a href="#">Description - High I</a></li>
-                                <li><a href="#">Description - High S</a></li>
-                                <li><a href="#">Description - High C</a></li>
-                                <li><a href="#">Adaptability - All 4 Styles</a></li>
-                                <li><a href="#">Adaptability - High D</a></li>
-                                <li><a href="#">Adaptability - High I</a></li>
-                                <li><a href="#">Adaptability - High S</a></li>
-                                <li><a href="#">Adaptability - High C</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighD.mp4"
+                                        target="_blank" rel="noopener">Description - High D</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighI.mp4"
+                                        target="_blank" rel="noopener">Description - High I</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighS.mp4"
+                                        target="_blank" rel="noopener">Description - High S</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighC.mp4"
+                                        target="_blank" rel="noopener">Description - High C</a></li>
+                                <li><a href="">Adaptability - All 4 Styles</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/How to Adapt_Dominance_1.25.24.mp4"
+                                        target="_blank" rel="noopener">Adaptability - High D</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/I_Influence_Adaptive_2.29.24.mp4"
+                                        target="_blank" rel="noopener">Adaptability - High I</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/S_Steadiness_Adaptive_2.29.24.mp4"
+                                        target="_blank" rel="noopener">Adaptability - High S</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/High_C_Adaptive.mp4"
+                                        target="_blank" rel="noopener">Adaptability - High C</a></li>
                             </ul>
                             <p class="subcard-title">Understanding foundations of DISC</p>
                             <ul class="subcard-links">
-                                <li><a href="#">Over-Under Extensions and DISC Emotions</a></li>
-                                <li><a href="#">Extensions</a></li>
-                                <li><a href="#">15 Classical DISC Style Behavioral Patterns</a></li>
-                                <li><a href="#">15 Classic DISC Styles Summary Overview</a></li>
-                                <li><a href="#">15 Classical DISC Styles: Wheel Plotting</a></li>
-                                <li><a href="#">15 Classical DISC Styles: Wheel Plotting</a></li>
-                                <li><a href="#">Tensions between the Same DISC styles</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOverUnderExtensions_Emotions.pdf"
+                                        target="_blank" rel="noopener">Over-Under Extensions and DISC Emotions</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Extensions.pdf"
+                                        target="_blank" rel="noopener">Extensions</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylePatternsComplete.pptx"
+                                        target="_blank" rel="noopener">15 Classical DISC Style Behavioral Patterns</a>
+                                </li>
+                                <li v-else><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15DISCstyleBehavioralPatterns.pdf"
+                                        target="_blank" rel="noopener">15 Classical DISC Style Behavioral Patterns</a>
+                                </li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicalStylesSummaryReportFinal_10.25.23.pdf"
+                                        target="_blank" rel="noopener">15 Classic DISC Styles Summary Overview</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap1.24.pdf"
+                                        target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap1.24.pptx"
+                                        target="_blank" rel="noopener">15 Classical DISC Styles: Wheel Plotting</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Tensions-Between-Same-Styles-vs2.pdf"
+                                        target="_blank" rel="noopener">Tensions between the Same DISC styles</a></li>
                             </ul>
                         </div>
                         <div class="card">
@@ -101,51 +131,104 @@
                         <div v-if="toggleStates['t&w']" class="subcard">
                             <p class="subcard-title">Training Presentations & Facilitator Guides</p>
                             <ul class="subcard-links">
-                                <li><a href="#">DISC 2-hour Facilitator Guide</a></li>
-                                <li><a href="#">DISC 2-hour Training Presentation</a></li>
-                                <li><a href="#">DISC 4-hour Facilitator Guide</a></li>
-                                <li><a href="#">DISC 4-hour Training Presentation</a></li>
-                                <li><a href="#">Mini-DISC Presentation</a></li>
-                                <li><a href="#">Team Dynamics PPT</a></li>
-                                <li><a href="#">Riddles and Team Practice PPT</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC2HourFacilitatorGuide.pdf"
+                                        target="_blank" rel="noopener">DISC 2-hour Facilitator Guide</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC2hourTrainingPresentation.ppt"
+                                        target="_blank" rel="noopener">DISC 2-hour Training Presentation</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC4HourFacilitatorGuide.pdf"
+                                        target="_blank" rel="noopener">DISC 4-hour Facilitator Guide</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC4hourTrainingPresentation.ppt"
+                                        target="_blank" rel="noopener">DISC 4-hour Training Presentation</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Mini_DISCPresentation.pptx"
+                                        target="_blank" rel="noopener">Mini-DISC Presentation</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/TeamDynamics.pptm"
+                                        target="_blank" rel="noopener">Team Dynamics PPT</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/TeamDynamicsActivities.pptm"
+                                        target="_blank" rel="noopener">Riddles and Team Practice PPT</a></li>
                             </ul>
                             <p class="subcard-title">DISC Specific Group Exercises</p>
                             <ul class="subcard-links">
-                                <li><a href="#">Planning a Vacation</a></li>
-                                <li><a href="#">Making a Movie</a></li>
-                                <li><a href="#">Game Show</a></li>
-                                <li><a href="#">Mazes & Labyrinths</a></li>
-                                <li><a href="#">Jigsaw Puzzles</a></li>
-                                <li><a href="#">DISC Adaptability Scenario Practice</a></li>
-                                <li><a href="#">DISC Style Situations</a></li>
-                                <li><a href="#">Coffee Break</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Vacation.pdf"
+                                        target="_blank" rel="noopener">Planning a Vacation</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/MakingAMovie.pdf"
+                                        target="_blank" rel="noopener">Making a Movie</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/GameShow.pptx"
+                                        target="_blank" rel="noopener">Game Show</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/MazeLabyrinthDISCActivity.pdf"
+                                        target="_blank" rel="noopener">Mazes & Labyrinths</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Jigsaw.pdf"
+                                        target="_blank" rel="noopener">Jigsaw Puzzles</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC Adaptability Scenario Practice.pdf"
+                                        target="_blank" rel="noopener">DISC Adaptability Scenario Practice</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC Style Situations.pdf"
+                                        target="_blank" rel="noopener">DISC Style Situations</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Coffee+Break+Activity.pptx"
+                                        target="_blank" rel="noopener">Coffee Break</a></li>
                             </ul>
                             <p class="subcard-title">General Group Exercises</p>
                             <ul class="subcard-links">
-                                <li><a href="#">40 Ice breakers for Small Groups</a></li>
-                                <li><a href="#">Lost on the Moon Exercise</a></li>
-                                <li><a href="#">Lost at Sea Exercise</a></li>
-                                <li><a href="#">Paper Tower Exercise</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/40icebreakers.pdf"
+                                        target="_blank" rel="noopener">40 Ice breakers for Small Groups</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostOnTheMoonExercise.pdf"
+                                        target="_blank" rel="noopener">Lost on the Moon Exercise</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/LostatSeaExercise.pdf"
+                                        target="_blank" rel="noopener">Lost at Sea Exercise</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/group-exercises/PaperTowerExercise.pdf"
+                                        target="_blank" rel="noopener">Paper Tower Exercise</a></li>
                             </ul>
                             <p class="subcard-title">DISC Activity Resources</p>
                             <ul class="subcard-links">
-                                <li><a href="#">DISC Word Sketches (blank)</a></li>
-                                <li><a href="#">Behavior Pattern View (blank wheel)</a></li>
-                                <li><a href="#">Contract for Change (blank)</a></li>
-                                <li><a href="#">DISC Summary Editable Document</a></li>
-                                <li><a href="#">Adapting to DISC Styles (blank)</a></li>
-                                <li><a href="#">Creating Better Relationships (blank)</a></li>
-                                <li><a href="#">Tensions Worksheet (blank)</a></li>
-                                <li><a href="#">DISC Blocks – Benefits & Applications</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCWordSketch.pdf"
+                                        target="_blank" rel="noopener">DISC Word Sketches (blank)</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/WheelGraphJPG.jpeg"
+                                        target="_blank" rel="noopener">Behavior Pattern View (blank wheel)</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ContractChange.docx"
+                                        target="_blank" rel="noopener">Contract for Change (blank)</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSummaryPage.pdf"
+                                        target="_blank" rel="noopener">DISC Summary Editable Document</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/AdaptingDISCStyles.pdf"
+                                        target="_blank" rel="noopener">Adapting to DISC Styles (blank)</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/CreatingBetterRelationships.pdf"
+                                        target="_blank" rel="noopener">Creating Better Relationships (blank)</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Tensions.doc"
+                                        target="_blank" rel="noopener">Tensions Worksheet (blank)</a></li>
+                                <li><a href="https://www.assessments24x7.com/disc-blocks" target="_blank"
+                                        rel="noopener">DISC Blocks – Benefits & Applications</a></li>
                             </ul>
                             <p class="subcard-title">Enhancing Delivery Resources - Training & Presentations</p>
                             <ul class="subcard-links">
-                                <li><a href="#">DISC Platinum Rule Participant eWorkbook (84 pages)</a></li>
-                                <li><a href="#">Peer Feedback Form</a></li>
-                                <li><a href="#">Facilitator Feedback Guide</a></li>
-                                <li><a href="#">Self-Feedback Form</a></li>
-                                <li><a href="#">Development Plan Sample</a></li>
-                                <li><a href="#">Coaching Guide Questions</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+eWorkbook+INTERACTIVE.pdf"
+                                        target="_blank" rel="noopener">DISC Platinum Rule Participant eWorkbook (84
+                                        pages)</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/PeerFeedbackForm.pdf"
+                                        target="_blank" rel="noopener">Peer Feedback Form</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/FacilitationFeedbackGuide.pdf"
+                                        target="_blank" rel="noopener">Facilitator Feedback Guide</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/SelfFeedbackForm.pdf"
+                                        target="_blank" rel="noopener">Self-Feedback Form</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DevelopmentPlan.docx"
+                                        target="_blank" rel="noopener">Development Plan Sample</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/CoachingGuideQuestions.pdf"
+                                        target="_blank" rel="noopener">Coaching Guide Questions</a></li>
                             </ul>
                             <p class="subcard-title">Enhancing Delivery Resources - Audio and video files</p>
                             <ul class="subcard-links">
@@ -175,21 +258,32 @@
 
                         <div v-if="toggleStates['i&a']" class="subcard">
                             <ul class="subcard-links">
-                                <li><a href="#">52 Week Email Series</a></li>
-                                <li><a href="#">DISC Behavioral Style Interview Guide</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/52+Week+DISC+email+series+updated+12-2020.pdf"
+                                        target="_blank" rel="noopener">52 Week Email Series</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCInterviewGuide.pdf"
+                                        target="_blank" rel="noopener">DISC Behavioral Style Interview Guide</a></li>
                             </ul>
                             <p class="subcard-title">DISC in Action Series</p>
                             <ul class="subcard-links">
-                                <li><a href="#">During Change</a></li>
-                                <li><a href="#">On the Phone</a></li>
-                                <li><a href="#">Leading a Meeting</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+During+Change.pdf"
+                                        target="_blank" rel="noopener">During Change</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+On+the+Phone.pdf"
+                                        target="_blank" rel="noopener">On the Phone</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Leading+a+Meeting.pdf"
+                                        target="_blank" rel="noopener">Leading a Meeting</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Workspaces.pdf"
+                                        target="_blank" rel="noopener">Workspaces</a></li>
                             </ul>
                             <p class="subcard-title">DISC Target Applications Tips</p>
                             <ul class="subcard-links">
-                                <li><a href="#">Coaching Tips</a></li>
-                                <li><a href="#">Leadership Tips</a></li>
-                                <li><a href="#">Sales Tips</a></li>
-                                <li><a href="#">Service Tips</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCCoachingTargetApplication.pdf"
+                                        target="_blank" rel="noopener">Coaching Tips</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCLeadershipTargetApplication.pdf"
+                                        target="_blank" rel="noopener">Leadership Tips</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSalesTargetApplication.pdf"
+                                        target="_blank" rel="noopener">Sales Tips</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCServiceTargetApplication.pdf"
+                                        target="_blank" rel="noopener">Service Tips</a></li>
                             </ul>
                         </div>
 
@@ -204,9 +298,13 @@
 
                         <div v-if="toggleStates['360']" class="subcard">
                             <ul class="subcard-links">
-                                <li><a href="#">Debrief Guide</a></li>
-                                <li><a href="#">Setting up a 360 Assessment Link in Dashboard</a></li>
-                                <li><a href="#">Setting up a 360 Assessment Link in Dashboard</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC360 Debrief Guide.pdf"
+                                        target="_blank" rel="noopener">Debrief Guide</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=IFEiJmud3WI" target="_blank"
+                                        rel="noopener">Setting up a 360 Assessment Link in Dashboard</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2022.pdf"
+                                        target="_blank" rel="noopener">Setting up a 360 Assessment Link in Dashboard</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -222,14 +320,27 @@
                         <div v-if="toggleStates['support']" class="subcard">
                             <p class="subcard-title">Other Materials</p>
                             <ul class="subcard-links">
-                                <li><a href="#">The 12 Integrated DISC Style Relationships-Advanced (Retired)</a></li>
-                                <li><a href="#">People Smart in Business PDF ebook</a></li>
-                                <li><a href="#">The Platinum Rule for DISC Sales Mastery</a></li>
-                                <li><a href="#">DISC Reliability Analysis</a></li>
-                                <li><a href="#">DISC History Chart</a></li>
-                                <li><a href="#">Are You Mad at Me? Article</a></li>
-                                <li><a href="#">DISC World Map</a></li>
-                                <li><a href="#">DISC Careers</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/12IntegratedDISCStyleRelationshipsAdvanced.pdf"
+                                        target="_blank" rel="noopener">The 12 Integrated DISC Style
+                                        Relationships-Advanced (Retired)</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbook.pdf"
+                                        target="_blank" rel="noopener">People Smart in Business PDF ebook</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/PlatinumRuleDISCSalesMasteryForewordDaveYoho.pdf"
+                                        target="_blank" rel="noopener">The Platinum Rule for DISC Sales Mastery</a></li>
+                                <li><a href="/about/validity">DISC Reliability Analysis</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HistoryChart.pdf"
+                                        target="_blank" rel="noopener">DISC History Chart</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/AreYouMadatMe.pdf"
+                                        target="_blank" rel="noopener">Are You Mad at Me? Article</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/DISC+World+Map.jpg"
+                                        target="_blank" rel="noopener">DISC World Map</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Careers.pdf"
+                                        target="_blank" rel="noopener">DISC Careers</a></li>
                             </ul>
                         </div>
 
@@ -247,20 +358,44 @@
                         <div v-if="toggleStates['report&tools']" class="subcard">
                             <p class="subcard-title">Debriefing and Assessment Report Details</p>
                             <ul class="subcard-links">
-                                <li><a href="#">DISC Debrief Guide</a></li>
-                                <li><a href="#">DISC Report Highlights</a></li>
-                                <li><a href="#">Natural & Adapted Graphs</a></li>
-                                <li><a href="#">Design & Explanation of the DISC Behavioral Diamond</a></li>
-                                <li><a href="#">12 Behavioral Tendencies Definitions & Explanations</a></li>
-                                <li><a href="#">Behavior Needs Under Stress</a></li>
-                                <li><a href="#">Typical Behaviors in Conflict</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Report+Certified+Debrief+Guide_vs8_8.2024.pdf"
+                                        target="_blank" rel="noopener">DISC Debrief Guide</a></li>
+                                <li v-else><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Report+Debrief+Guide_nc_vs8_8.2024.pdf"
+                                        target="_blank" rel="noopener">DISC Debrief Guide</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCReportHighlights3.pdf"
+                                        target="_blank" rel="noopener">DISC Report Highlights</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/NaturalandAdaptedGraphs.pptx"
+                                        target="_blank" rel="noopener">Natural & Adapted Graphs</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Wheel+Debrief+Guide_4.22.pdf"
+                                        target="_blank" rel="noopener">Design & Explanation of the DISC Behavioral
+                                        Diamond</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BTDescriptions.pdf"
+                                        target="_blank" rel="noopener">12 Behavioral Tendencies Definitions &
+                                        Explanations</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbookPgs3536.pdf"
+                                        target="_blank" rel="noopener">Behavior Needs Under Stress</a></li>
+                                <li v-if="certified"><a
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-in-conflict-typical-behaviors_vs2.pdf"
+                                        target="_blank" rel="noopener">Typical Behaviors in Conflict</a></li>
                             </ul>
                             <p class="subcard-title">Video Resources</p>
                             <ul class="subcard-links">
-                                <li><a href="#">Practice Videos for Debriefing Graphs</a></li>
-                                <li><a href="#">Understanding Your DISC Report (for your clients)</a></li>
-                                <li><a href="#">Communicating with all 4 Styles (DISC)</a></li>
-                                <li><a href="#">Communicating with all 4 Styles (with Birds)</a></li>
+                                <li v-if="certified"><a
+                                        href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLaNM956tOMqirauvqe885Qc"
+                                        target="_blank" rel="noopener">Practice Videos for Debriefing Graphs</a></li>
+                                <li v-if="certified"><a
+                                        href="https://www.youtube.com/playlist?list=PLTNKuyfaKqLbO8-2-hhuZ4-XZJJJME0sp"
+                                        target="_blank" rel="noopener">Understanding Your DISC Report (for your clients)
+                                    </a></li>
+                                <li v-if="certified"><a href="https://youtu.be/Y65akO9eoMo" target="_blank"
+                                        rel="noopener">Communicating with all 4 Styles (DISC)</a></li>
+                                <li v-if="certified"><a href="https://www.youtube.com/watch?v=j0KbAvu4uq0"
+                                        target="_blank" rel="noopener">Communicating with all 4 Styles (with Birds)</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -288,15 +423,21 @@
 
                         <div v-if="toggleStates['marketing']" class="subcard">
                             <ul class="subcard-links">
-                                <li><a href="#">Mini DISC Presentation</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Mini_DISCPresentation.pptx"
+                                        target="_blank" rel="noopener">Mini DISC Presentation</a></li>
                             </ul>
                             <p class="subcard-title">Information Sheets</p>
                             <ul class="subcard-links">
-                                <li><a href="#">52 Week Email Series</a></li>
-                                <li><a href="#">DISC vs MBTI Article</a></li>
-                                <li><a href="#">DISC & Other Assessments Articles</a></li>
-                                <li><a href="#">Comparing 4 quadrants and 5 factors Article</a></li>
-                                <li><a href="#">Assessment 24x7 Store</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/52+Week+DISC+email+series+updated+12-2020.pdf"
+                                        target="_blank" rel="noopener">52 Week Email Series</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCvsMBTI.pdf"
+                                        target="_blank" rel="noopener">DISC vs MBTI Article</a></li>
+                                <li><a href="/blog">DISC & Other Assessments Articles</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/comparing.pdf"
+                                        target="_blank" rel="noopener">Comparing 4 quadrants and 5 factors Article</a>
+                                </li>
+                                <li><a href="https://store.assessments24x7.com/collections/products">Assessment 24x7
+                                        Store</a></li>
                             </ul>
                         </div>
 
@@ -312,14 +453,24 @@
                         <div v-if="toggleStates['product']" class="subcard">
                             <p class="subcard-title">Infused</p>
                             <ul class="subcard-links">
-                                <li><a href="#">DISC Workplace Insights - Report Guide</a></li>
-                                <li><a href="#">DISC Workplace Insights - Report Overview – Get it from Shawn (YT
-                                        link)</a></li>
-                                <li><a href="#">DISC Executive Insights - Introduction</a></li>
-                                <li><a href="#">DISC Leadership - Debrief Guide (Coming soon!)</a></li>
-                                <li><a href="#">DISC Leadership - Introduction</a></li>
-                                <li><a href="#">DISC Awareness - Debrief guide</a></li>
-                                <li><a href="#">DISC Awareness - Introduction</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Workplace+Insights_Vs1_6.18.2024.pdf"
+                                        target="_blank" rel="noopener">DISC Workplace Insights - Report Guide</a></li>
+                                <li><a href="https://drive.google.com/file/d/1dW_3S00jyWZsPOcB_0E8k1AdKeEyGhMR/view?usp=drive_link"
+                                        target="_blank" rel="noopener">DISC Workplace Insights - Report Overview</a>
+                                </li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Workplace+Insights+-+Marketing+One-Sheet.pdf"
+                                        target="_blank" rel="noopener">DISC Workplace Insights - Introduction</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Executive+Insights+-+Marketing+One-Sheet_v2.pdf"
+                                        target="_blank" rel="noopener">DISC Executive Insights - Introduction</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Executive+Insights+Report+Guide_8.12.24+Final.pdf"
+                                        target="_blank" rel="noopener">DISC Executive Insights Report Guide</a></li>
+                                <li><a href="">DISC Leadership - Debrief Guide (Coming soon!)</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Leadership+-+Marketing+One-Sheet.pdf"
+                                        target="_blank" rel="noopener">DISC Leadership - Introduction</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+Debrief+Guide_vs3_5.24_Final.pdf"
+                                        target="_blank" rel="noopener">DISC Awareness - Debrief guide</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+-+Marketing+One-Sheet.pdf"
+                                        target="_blank" rel="noopener">DISC Awareness - Introduction</a></li>
                             </ul>
                             <p class="subcard-title">Non-Infused</p>
                             <ul class="subcard-links">
@@ -340,10 +491,12 @@
                         <div v-if="toggleStates['quick&links']" class="subcard">
                             <p class="subcard-title">Latest Updates</p>
                             <ul class="subcard-links">
-                                <li><a href="#">Assessment 24x7 Store</a></li>
-                                <li><a href="#">DISC FAQ</a></li>
-                                <li><a href="#">Support</a></li>
-                                <li><a href="#">FAQ</a></li>
+                                <li><a href="https://store.assessments24x7.com/collections/products">Assessment 24x7
+                                        Store</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCfaq.pdf"
+                                        target="_blank" rel="noopener">DISC FAQ</a></li>
+                                <li><a href="https://www.assessments24x7.com/contact">Support</a></li>
+                                <li><a href="https://www.assessments24x7.com/about/faq">FAQ</a></li>
                             </ul>
                         </div>
 
