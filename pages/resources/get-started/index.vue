@@ -1,7 +1,8 @@
 <template>
     <section class="get-started">
         <main-nav />
-        <account-modal v-if="id !== 'ccc'" :id="id" />
+        <account-modal v-if="id !== 'ccc' && id !== 'eci'" :id="id" />
+        <account-modal-eci v-if="id === 'eci'" :id="id" />
 
         <section v-if="id !== 'eci'" class="header">
             <div class="container">
@@ -18,8 +19,8 @@
                             alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'wcg'" src="~/assets/WCG-cropped.jpg" alt="Worldwide Coaching Group"
                             class="partner-logo-wcg">
-                        <img v-else-if="id === 'ypo'" src="~/assets/get-started/Logo_of_the_Young_Presidents_Organization.png" alt="YPO"
-                            class="">
+                        <img v-else-if="id === 'ypo'"
+                            src="~/assets/get-started/Logo_of_the_Young_Presidents_Organization.png" alt="YPO" class="">
                         <img v-else-if="id === 'dc'" src="~/assets/Dale-Carnegie-logo.png" alt="Dale Carnegie"
                             class="partner-logo-dc">
                         <img v-else-if="id === 'bni'" src="~/assets/BNI_logo.png" alt="BNI" class="partner-logo-bni">
@@ -55,7 +56,7 @@
                     <h1 class="section-title">Get Started</h1>
                     <p>
                         Welcome to your personal coaching dashboard! We invite you to view any and all materials
-                        that look <br /> 
+                        that look <br />
                         interesting to you, but if you’d like some guidance, follow our suggested steps below.
                     </p>
                 </div>
@@ -87,7 +88,12 @@
                                 Sign in to your account
                             </h3>
 
-                            <p class="text">
+                            <p v-if="id === 'eci'" class="text">
+                                Is this your first time logging in? You will need to update your password!
+                                <span v-if="id !== 'ccc'">Don't have an account? <a href="#" class="hyperlink"
+                                        @click="$nuxt.$emit('openAccountModalECI')">Click here</a></span>
+                            </p>
+                            <p v-else class="text">
                                 Is this your first time logging in? You will need to update your password!
                                 <span v-if="id !== 'ccc'">Don't have an account? <a href="#" class="hyperlink"
                                         @click="$nuxt.$emit('openAccountModal')">Click here</a></span>
@@ -490,12 +496,14 @@
 <script>
 import Nav from '@/components/Nav';
 import AccountModal from '@/components/AccountModal';
+import AccountModalECI from '@/components/AccountModalECI';
 import Footer from '@/components/Footer';
 
 export default {
     components: {
         'main-nav': Nav,
         'account-modal': AccountModal,
+        'account-modal-eci': AccountModalECI,
         'footer-fold': Footer
     },
     data() {
@@ -526,7 +534,7 @@ export default {
             this.url = 'wcginsights.worldwidecoachinggroup.com/';
             this.id = 'wcg';
         } else if (this.$route.query.id === 'eci') {
-            this.url = '';
+            this.url = 'a24x7profiles.com/Account/AccountLogin.aspx';
             this.id = 'eci';
         } else if (this.$route.query.id === 'ypo') {
             this.url = '';

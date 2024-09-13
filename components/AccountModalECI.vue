@@ -3,14 +3,13 @@
         <section v-if="isOpen" class="account-modal-window">
             <div class="container">
                 <a href="#" title="Close" class="modal-close" @click="close">Close</a>
-                <h1>📝 Don't Have An Account Yet?</h1>
-
-                <strong>Your account will be available in 24 hours.</strong>
-
                 <div class="row">
                     <div class="col-12">
-                        <contact-form buttonText="Request an Account" redirect="/get-started-thankyou" :isShort="true"
-                            :isGetStarted="true" acFormId="2" :getStartedId="id" />
+                        <!-- Embed the iframe to load the external URL -->
+                        <iframe src="https://a24x7profiles.com/register_acct.aspx" width="100%" height="600px"
+                            style="border:none;" ref="accountIframe" title="Account Login"
+                            @load="checkIframeForCompletion">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -21,9 +20,6 @@
 <script>
 export default {
     props: ['id'],
-    components: {
-        'contact-form': () => import('@/components/ContactForm')
-    },
     data() {
         return {
             isOpen: false
@@ -38,9 +34,24 @@ export default {
         close() {
             this.isOpen = false;
 
-            this.$nuxt.$on('openAccountModal', () => {
+            this.$nuxt.$on('openAccountModalECI', () => {
                 this.isOpen = true;
             });
+        },
+        // Check if the iframe has navigated to the thank you page
+        checkIframeForCompletion() {
+            const iframe = this.$refs.accountIframe;
+            try {
+                // Check the URL of the iframe (may be restricted by cross-origin policies)
+                const iframeURL = iframe.contentWindow.location.href;
+                if (iframeURL.includes('/get-started-thankyou')) {
+                    // Redirect the main window to the thank you page
+                    this.$router.push('/get-started-thankyou');
+                }
+            } catch (error) {
+                // Cross-origin restrictions will prevent this, handle accordingly
+                console.log('Cross-origin restriction on iframe access');
+            }
         }
     }
 }
@@ -92,38 +103,19 @@ export default {
             margin: 0;
             font-size: 18pt;
         }
-
-        .contact-form {
-            text-align: left;
-            display: flex;
-        }
     }
 
-    .validation {
-        background: #fef0f0;
-        ;
-        color: #f56c6c;
-        padding: 12px 20px;
-        border-radius: 4px;
-
-        .title,
-        .description {
-            margin: 0;
-            font-size: 10pt;
-        }
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .5s;
     }
-}
 
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity .5s;
-}
+    .fade-enter,
+    .fade-leave-to
 
-.fade-enter,
-.fade-leave-to
-
-/* .fade-leave-active below version 2.1.8 */
-    {
-    opacity: 0;
+    /* .fade-leave-active below version 2.1.8 */
+        {
+        opacity: 0;
+    }
 }
 </style>
