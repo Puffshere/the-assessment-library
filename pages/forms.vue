@@ -81,6 +81,13 @@
                             </li>
                         </a>
 
+                        <a target="_blank"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfpw0-i-_SAVAechrPhwjRIPc5qXbEjZ_dAfE1guL1djrWEMg/viewform?usp=sf_link">
+                            <li class="resource equipmentsRequest">
+                                IT Equipments Request
+                            </li>
+                        </a>
+
                         <!-- <a target="_blank" href="https://form.asana.com/?k=bN_EmGZKoRacgcvmUftsRQ&d=460673300006490">
                             <li class="resource translationRequests">
                                 Translation Requests
@@ -201,6 +208,10 @@ export default {
 
             &.accountPurchase {
                 background: linear-gradient(268deg, #25ca20, #168d11);
+            }
+
+            &.equipmentsRequest {
+                background: linear-gradient(268deg, #ff4848, #ca2020);
             }
 
             &.workshopsTraining {
