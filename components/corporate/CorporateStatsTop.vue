@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12" style="margin-top: -40px; margin-bottom: -20px;">
                     <div class="col-3">
-                        <p><span class="topLine" data-target="20">0</span><span
+                        <p><span class="topLine" data-target="25">0</span><span
                                 style="font-weight: 700; font-size: 48px; color: #ffbd59;">+</span> <br />
                             <span class="bottomLine">Years in <br />
                                 Business</span>
