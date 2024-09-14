@@ -19,7 +19,7 @@
                         Skip sections as needed and proceed at your own pace. For
                         personalized <br />
                         training, <span><a class="hyperlink"
-                                href="https://www.assessments24x7.com/suzette">book a session with Suzette Chaparro</a></span>. For information on <br />
+                                href="https://calendly.com/suzette-247/45min?back=1">book a session with Suzette Chaparro</a></span>. For information on <br />
                         assessments, pricing, and resources, contact
                         <span><a class="hyperlink"
                                 href="mailto:support@assessments24x7.com">support@assessments24x7.com</a></span>.
