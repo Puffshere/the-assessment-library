@@ -71,7 +71,9 @@
                                         target="_blank" rel="noopener">DISC Direct/Indirect</a></li>
                                 <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOpenandGuarded.pdf"
                                         target="_blank" rel="noopener">DISC Open/Guarded</a></li>
-                                <li><a href="#">Description - All 4 Styles</a></li>
+                            </ul>
+                            <p class="subcard-title">Description - All 4 Styles</p>
+                            <ul class="subcard-links">
                                 <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighD.mp4"
                                         target="_blank" rel="noopener">Description - High D</a></li>
                                 <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighI.mp4"
@@ -232,19 +234,32 @@
                             </ul>
                             <p class="subcard-title">Enhancing Delivery Resources - Audio and video files</p>
                             <ul class="subcard-links">
-                                <li><a href="#">Identifying the Styles</a></li>
-                                <li><a href="#">Songs for each Style</a></li>
-                                <li><a href="#">Leaving Voicemails for each Style</a></li>
-                                <li><a href="#">Complimenting each Style</a></li>
-                                <li><a href="#">Counseling each Style</a></li>
-                                <li><a href="#">Delegating to each Style</a></li>
-                                <li><a href="#">Motivating each Style</a></li>
-                                <li><a href="#">Making contact with each Style</a></li>
-                                <li><a href="#">Exploring with each Style</a></li>
-                                <li><a href="#">Collaborating with each Style</a></li>
-                                <li><a href="#">Getting commitment from each Style</a></li>
-                                <li><a href="#">Assuring Customer Satisfaction with each Style</a></li>
-                                <li><a href="#">KnowDISC</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Identifying+the+DISC+Styles.zip"
+                                    target="_blank" rel="noopener">Identifying the Styles</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/songs_for_each_style.zip"
+                                    target="_blank" rel="noopener">Songs for each Style</a></li>
+                                <li><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Leaving+Voicemails+for+Each+Style.zip"
+                                    target="_blank" rel="noopener">Leaving Voicemails for each Style</a></li>
+                                <li v-if="certified"><a href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/Complimenting+each+Style.zip"
+                                    target="_blank" rel="noopener">Complimenting each Style</a></li>
+                                <li v-if="certified"><a href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Counseling+each+Style.zip"
+                                    target="_blank" rel="noopener">Counseling each Style</a></li>
+                                <li v-if="certified"><a href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/Delegating+to+each+Style.zip"
+                                    target="_blank" rel="noopener">Delegating to each Style</a></li>
+                                <li v-if="certified"><a href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/Motivating+each+Style.zip"
+                                    target="_blank" rel="noopener">Motivating each Style</a></li>
+                                <li v-if="certified"><a href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/Making+Contact+with+each+Style.zip"
+                                    target="_blank" rel="noopener">Making contact with each Style</a></li>
+                                <li v-if="certified"><a href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/Exploring+with+each+Style.zip"
+                                    target="_blank" rel="noopener">Exploring with each Style</a></li>
+                                <li v-if="certified"><a href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/Collaborating+with+each+Style.zip"
+                                    target="_blank" rel="noopener">Collaborating with each Style</a></li>
+                                <li v-if="certified"><a href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/Getting+Commitment+from+each+Style.zip"
+                                    target="_blank" rel="noopener">Getting commitment from each Style</a></li>
+                                <li v-if="certified"><a href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/Assuring+Customer+Satisfaction+from+each+Style.zip"
+                                    target="_blank" rel="noopener">Assuring Customer Satisfaction with each Style</a></li>
+                                <li><a href="https://f002.backblazeb2.com/file/assessments24x7-media/trainer-materials/disc/Know+DISC.zip"
+                                    target="_blank" rel="noopener">KnowDISC</a></li>
                             </ul>
                         </div>
                         <div class="card">
@@ -474,8 +489,8 @@
                             </ul>
                             <p class="subcard-title">Non-Infused</p>
                             <ul class="subcard-links">
-                                <li><a href="#">DISC & Motivators (Coming soon!)</a></li>
-                                <li><a href="#">DISC & EIQ (Coming soon!)</a></li>
+                                <li><a href="">DISC & Motivators (Coming soon!)</a></li>
+                                <li><a href="">DISC & EIQ (Coming soon!)</a></li>
                             </ul>
                         </div>
 
