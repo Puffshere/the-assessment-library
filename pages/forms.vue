@@ -84,7 +84,7 @@
                         <a target="_blank"
                             href="https://docs.google.com/forms/d/e/1FAIpQLSfpw0-i-_SAVAechrPhwjRIPc5qXbEjZ_dAfE1guL1djrWEMg/viewform?usp=sf_link">
                             <li class="resource equipmentsRequest">
-                                IT Equipments Request
+                                IT Equipment Request
                             </li>
                         </a>
 
