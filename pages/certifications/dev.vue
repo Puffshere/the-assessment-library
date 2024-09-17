@@ -140,7 +140,7 @@
         <div class="section"
             style="background: linear-gradient(180deg, #0033C5 -2.43%, #077FF8 97.57%); min-height: 340px;">
         </div>
-        <div class="container" style="margin-top: -340px">
+        <div class="container" style="margin-top: -340px;">
             <div class="row">
                 <div class="col-12">
                     <h3 style="color: white; margin-top: 45px; margin-bottom: 110px;"><span
@@ -216,7 +216,7 @@
                                 journey.
                             </p>
                         </div>
-                        <div style="display: flex; justify-content: center;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
                             <nuxt-link to="/certifications/assessment" class="button">Assessment
                                 Certification</nuxt-link>
                             <nuxt-link to="/contact" class="button outline">Get Assessment Certified</nuxt-link>
