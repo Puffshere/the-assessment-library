@@ -146,7 +146,7 @@
                     <h3 style="color: white; margin-top: 45px; margin-bottom: 110px;"><span
                             style="color: #FFDE59;">Features</span> of Our Assessment Certification Programs
                     </h3>
-                    <div class="col-12" style="box-shadow: 3px 4px 4px 0px #00000040; border: 1px solid #FFDE59; border-radius: 10px; margin-top: -43px; background-color: white;
+                    <div class="col-12 column" style="box-shadow: 3px 4px 4px 0px #00000040; border: 1px solid #FFDE59; border-radius: 10px; margin-top: -43px; background-color: white;
                         padding-bottom: 60px !important; position: relative; z-index: 2; max-height: 1232px;">
                         <div style="padding-left: 30px; padding-right: 20px;">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Certifications/48.png"
@@ -408,6 +408,10 @@ export default {
     .certification {
         .peopleSmiling {
             margin-left: 0px;
+        }
+
+        .column {
+            max-height: 3000px !important;
         }
     }
 }
