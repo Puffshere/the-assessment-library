@@ -409,11 +409,7 @@ export default {
         .peopleSmiling {
             margin-left: 0px;
         }
-    }
-}
 
-@media (max-width: 750px) {
-    .certification {
         .column {
             max-height: 3000px !important;
         }
