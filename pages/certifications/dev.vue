@@ -216,7 +216,7 @@
                                 journey.
                             </p>
                         </div>
-                        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 55px;">
                             <nuxt-link to="/certifications/assessment" class="button">Assessment
                                 Certification</nuxt-link>
                             <nuxt-link to="/contact" class="button outline">Get Assessment Certified</nuxt-link>
