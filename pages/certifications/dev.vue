@@ -147,7 +147,7 @@
                             style="color: #FFDE59;">Features</span> of Our Assessment Certification Programs
                     </h3>
                     <div class="col-12" style="box-shadow: 3px 4px 4px 0px #00000040; border: 1px solid #FFDE59; border-radius: 10px; margin-top: -43px; background-color: white;
-                        padding-bottom: 60px; position: relative; z-index: 2;">
+                        padding-bottom: 60px !important; position: relative; z-index: 2;">
                         <div style="padding-left: 30px; padding-right: 20px;">
                             <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Certifications/48.png"
                                 alt="icon 48" style="width: 60px; margin-top: 30px; margin-bottom: -15px;">
@@ -216,7 +216,7 @@
                                 journey.
                             </p>
                         </div>
-                        <div style="display: flex; justify-content: center; margin-bottom: 55px;">
+                        <div style="display: flex; justify-content: center; padding-bottom: 60px;">
                             <nuxt-link to="/certifications/assessment" class="button">Assessment
                                 Certification</nuxt-link>
                             <nuxt-link to="/contact" class="button outline">Get Assessment Certified</nuxt-link>
