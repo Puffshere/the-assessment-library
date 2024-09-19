@@ -32,10 +32,14 @@
                 <br />
                 <!-- Add search and filter dropdown inputs here -->
                 <div class="input-container">
-                    <div class="search-bar">
+                    <div class="search-bar" style="width: 60%;">
                         <input type="text" placeholder="Search" class="input-search" />
                         <i class="search-icon">&#x1F50D;</i>
                     </div>
+                    <button @click="toggleAllCards" class="toggle-all-button">
+                        {{ areAllCardsOpen ? 'Close All' : 'Open All' }}
+                    </button>
+
                     <div class="filter-dropdown">
                         <select class="filter-select" v-model="selectedFileType">
                             <option value="All">Filter by file type</option>
@@ -477,7 +481,18 @@ export default {
             password: '',
             certified: false,
             validationError: false,
-            toggleStates: {},
+            toggleStates: {
+                fundamentals: false,
+                't&w': false,
+                'i&a': false,
+                '360': false,
+                support: false,
+                'report&tools': false,
+                coaches: false,
+                marketing: false,
+                product: false,
+                'quick&links': false,
+            },
             selectedFileType: 'All',  // File type from dropdown
             fundamentalsSections: {
                 foundations: [
@@ -676,16 +691,20 @@ export default {
                 this.password = '';
             }
         },
+        toggleAllCards() {
+            // Determine the new state: if all cards are open, set to false; otherwise, set to true
+            const newState = !this.areAllCardsOpen;
+
+            // Use Vue's `this.$set` to ensure reactivity when updating toggleStates
+            Object.keys(this.toggleStates).forEach((key) => {
+                this.$set(this.toggleStates, key, newState);
+            });
+        },
         handleClick(event) {
             if (event.target.tagName === 'H4') {
                 const category = event.target.dataset.category;
-
                 // Toggle the state of the clicked category
                 this.$set(this.toggleStates, category, !this.toggleStates[category]);
-
-                // This will now toggle between + and − based on the state
-                console.log("Clicked category:", category);
-                console.log("Toggle state:", this.toggleStates[category]);
             }
         },
         filterByType(sectionFiles) {
@@ -771,6 +790,10 @@ export default {
         },
         filteredLatestUpdates() {
             return this.filterByType(this.quickLinks.latestUpdates);
+        },
+        areAllCardsOpen() {
+            // Check if every toggle state is true
+            return Object.values(this.toggleStates).every((state) => state);
         }
     },
     head() {
@@ -828,6 +851,35 @@ export default {
         margin: 20px 0;
         padding: 0 35px;
     }
+
+    .toggle-all-button {
+        cursor: pointer;
+        height: 37px;
+        width: 80px;
+        border-radius: 5px;
+        background-color: #00a8ff;
+        color: white;
+        border: none;
+        /* Add border if necessary */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        /* Smooth transition for hover effects */
+        margin-top: 0px;
+    }
+
+    .toggle-all-button:hover {
+        background-color: #0086cc;
+        /* Slightly darker shade on hover */
+        transform: scale(1.03);
+        /* Slight zoom effect on hover */
+    }
+
+    .toggle-all-button:active {
+        /* Slightly darker shade on hover */
+        transform: scale(.9);
+        /* Slight zoom effect on hover */
+    }
+
+
 
     .search-bar {
         position: relative;
