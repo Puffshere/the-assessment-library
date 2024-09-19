@@ -8,13 +8,13 @@
                         <h1 class="section-title">Assessment Certification</h1>
                         <p>
                             Gain a competitive edge while you build your resume and portfolio with a professional
-                            certification that sets you apart from
+                            certification <br />that sets you apart from
                             others in the assessment industry.
                         </p>
                         <div style="margin-top: 40px; margin-bottom: -20px;">
                             <a href="#fold5"><span
-                                    style="color: white; font-size: 16px; text-decoration: underline; cursor: pointer;">View
-                                    Assessment Certifications</span></a>
+                                    style="color: white; font-size: 16px; text-decoration: underline; cursor: pointer;"><strong>View
+                                        Assessment Certifications</strong></span></a>
                         </div>
                     </div>
                 </div>
@@ -34,19 +34,19 @@
                         style="display: flex; justify-content: center; gap: 0px; flex-wrap: wrap; align-items: center; margin-top: 30px;">
                         <div style="text-align: center;">
                             <a href="#fold7" style="cursor: pointer;"><img class="image" style="max-width: 220px;"
-                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/mot-cert-badge-color.png"
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/mot-cert-badge-color-label.png"
                                     alt="Motivators Badge"></a>
 
                         </div>
                         <div style="text-align: center;">
                             <a href="#fold5" style="cursor: pointer;"><img class="image" style="max-width: 220px;"
-                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png"
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/disc-cert-badge-color-label.png"
                                     alt="DISC Badge"></a>
 
                         </div>
                         <div style="text-align: center;">
                             <a href="#fold8" style="cursor: pointer;"><img class="image" style="max-width: 220px;"
-                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/eiq-cert-badge-color.png"
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/eiq-cert-badge-color-label.png"
                                     alt="EIQ Badge"></a>
 
                         </div>
@@ -59,21 +59,21 @@
             <div class="row">
                 <div class="col-12">
                     <h2 style="margin-top: 50px">Learn From The Top Assessment Experts In The Industry</h2>
-                    <p>Do you want to elevate your professional impact through the use of assessments?</p>
                     <p>
+                        Do you want to elevate your professional impact through the use of assessments?
                         Our certification programs are designed by top industry experts to equip professionals with the
                         skills to utilize assessments effectively. Gain deep insights into our scientifically validated
                         tools and learn how to enhance communication, leadership, and decision-making within
                         organizations.
                     </p>
-                    <h4>100% Virtual Training. On Your Schedule.</h4>
+                    <h4>100% Virtual Training.</h4>
                     <p>
                         Our certification programs are fully online, offering both self-paced courses for maximum
                         flexibility and live, online group sessions for a more structured learning experience. Whether
                         you prefer to learn at your own pace or engage in scheduled group training, our programs provide
                         the convenience and adaptability to fit your professional needs.
                     </p>
-                    <p>Click below now to get started on your assessment certification!</p><br />
+                    <p>Click below to get started on your assessment certification!</p><br />
                     <nuxt-link to="/contact" class="button">Talk to a Specialist</nuxt-link>
                     <nuxt-link to="/assessments" class="button outline">Learn More About
                         Assessments</nuxt-link><br /><br />
@@ -85,16 +85,15 @@
                             <li>Gain deeper insights into yourself</li>
                             <li>Enhance your critical thinking skills</li>
                             <li>Ongoing, situational support from an Assessments 24x7 Master Certified Practitioner</li>
-                            <li>Receive an assessment & an in-depth, professional debrief by your Master Certified
-                                Trainer</li>
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul>
-                            <li>Access Certified Trainer Material to use in your coaching/training business, including a
-                                Debrief Guide, PowerPoint presentations, and marketing materials</li>
-                            <li>Get listed on our International Directory of Certified Practitioners linked to your
-                                website</li>
+                            <li>Full access to our Certified Trainer Materials including a Debrief Guide, PowerPoint
+                                presentations, and marketing materials</li>
+                            <li>Enhance your online presence with your profile on our <a
+                                    href="/certifications/directory/coaches">International Directory of
+                                    Certified Practitioners</a></li>
                             <li>Become the in-house expert for your company to offer effective trainings and individual
                                 or group debriefs</li>
                             <li>Maximize the effectiveness of your assessment debriefs</li>
@@ -104,7 +103,7 @@
             </div>
         </div><br /><br />
 
-        <div class="container">
+        <div class="container" id="certification">
             <p style="text-align: center; font-size: 32px; font-weight: 700; margin-top: 20px; margin-bottom: 0px;">Our
                 Assessment Certifications Programs</p>
             <div class="row">
@@ -128,23 +127,24 @@
                             Click below to get started on your assessment certification!
                         </p>
                         <button style="" class="button" @click="scrollToContactForm">
-                            <span style="margin-left: 10px;">Get Started</span>
+                            Get Started
                         </button>
                     </div>
                 </div>
                 <div class="col-12">
-                    <h2 v-if="selfPaced === false" style="padding-top: 10px">2-Day Group Course Summary:</h2>
-                    <h2 v-if="selfPaced === true" style="padding-top: 10px">Self-Paced Course Summary:</h2>
-                    <button v-if="selfPaced === false" ref="groupButton" @click="group" class="discBtn"
+                    <h2 v-if="selfPaced === false" style="padding-top: 10px; margin-bottom: -5px;">2-Day Group Course
+                        Summary:</h2>
+                    <h2 v-if="selfPaced === true" style="padding-top: 10px;">Self-Paced Course Summary:</h2>
+                    <!-- <button v-if="selfPaced === false" ref="groupButton" @click="group" class="discBtn"
                         style="background-color: #272bff;">
                         <img src="~/assets/people-group.png" style="width: 12%;" alt="people icon"> Group
-                    </button>
-                    <button v-else ref="groupButton" @click="group" class="discBtn">
+                    </button> -->
+                    <!-- <button v-else ref="groupButton" @click="group" class="discBtn">
                         <img src="~/assets/people-group.png" style="width: 12%;" alt="people icon"> Group
-                    </button>
-                    <button ref="selfPacedButton" @click="toggleSelfPaced" class="discBtn">
+                    </button> -->
+                    <!-- <button ref="selfPacedButton" @click="toggleSelfPaced" class="discBtn">
                         <img src="~/assets/head-self-paced.png" style="width: 12%;" alt="head icon"> Self-Paced
-                    </button>
+                    </button> -->
                 </div>
                 <div v-if="selfPaced === false" class="col-12">
                     <div class="col-6">
@@ -200,7 +200,6 @@
             </div>
 
             <p style="margin-left: 20px; font-size: 20px; margin-bottom: 50px;">2 half-days; 4 hours/day <span
-                    style="font-weight: 900;">|</span> 12 people max per program <span
                     style="font-weight: 900;">|</span> Zoom only; computer
                 required</p>
 
@@ -301,14 +300,14 @@
                         using assessments, ensuring your certification is a powerful addition to your professional
                         toolkit.</p>
                     <button style="margin-top: 20px;" class="button" @click="scrollToContactForm">
-                        <span style="margin-left: 10px;">Meet with Expert</span>
+                        <span style="margin-left: 10px;">Get Started</span>
                     </button>
                 </div>
             </div>
         </div>
 
         <div
-            style="background: linear-gradient(180deg, #003355 0%, #077FF8 100%); color: white; padding: 40px 20px; margin-top: 60px;">
+            style="background: linear-gradient(180deg, #0033C5 0%, #077FF8 100%); color: white; padding: 40px 20px; margin-top: 60px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -329,7 +328,7 @@
                             professional profile, demonstrating a commitment to continuous learning and making you a
                             standout candidate in competitive job markets.</p>
                         <p><strong>Competitive Advantage</strong></p>
-                        <p>Certifications from Assessments 2z4x7 equip you with industry-recognized skills and
+                        <p>Certifications from Assessments 24x7 equip you with industry-recognized skills and
                             knowledge,
                             allowing you to apply best practices and cutting-edge methodologies within your
                             organization. By
@@ -399,12 +398,12 @@
                         </p>
                         <div style="margin-top: 40px; display: flex; justify-content: flex-end; gap: 20px;">
                             <button style="padding: 10px 20px; max-height: 50px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;
-                                margin-right: 10px;" class="button" @click="scrollToContactForm">
+                                margin-right: 10px;" class="button" @click="scrollToCertification">
                                 View Assessment <br /> Certifications
                             </button>
                             <button style="padding: 10px 20px; max-height: 50px; margin-right: 0px;" class="button"
                                 @click="scrollToContactForm">
-                                Meet with Expert
+                                Get Started
                             </button>
                         </div>
                     </div>
@@ -413,14 +412,14 @@
         </div>
 
         <div
-            style="background: linear-gradient(180deg, #003355 0%, #077FF8 100%); color: white; padding: 40px 20px; margin-top: 60px; margin-bottom: 100px;">
+            style="background: linear-gradient(180deg, #0033C5 0%, #077FF8 100%); color: white; padding: 40px 20px; margin-top: 60px; margin-bottom: 100px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12" style="text-align: center;">
                         <h3 style="margin-bottom: 40px;">Choosing the Assessments 24x7 Assessment
                             Certification Program
                         </h3>
-                        <p>Choosing the Assessment 24x7 Assessment Certification Program is a smart decision for your
+                        <p>Choosing the Assessments 24x7 Assessment Certification Program is a smart decision for your
                             future. Our programs offer practical training and real-world application. You will learn
                             from experts in the field. Our hands-on approach ensures that you gain useful skills.</p>
                         <p>The certification you earn will be a valuable credential that demonstrates your commitment to
@@ -436,7 +435,7 @@
             </div>
         </div>
 
-        <contact-form></contact-form>
+        <contact-form id="contactForm"></contact-form>
 
         <section class="faq">
             <div class="container">
@@ -451,7 +450,8 @@
                         <h6 class="question">What are the requirements for enrolling in an assessment certification
                             program?</h6>
                         <p class="answer">
-                            To enroll in an assessment certification, contact us using the form below. For live, online
+                            To enroll in an assessment certification course, <a href="#contactForm">contact us here</a>.
+                            For live, online
                             group sessions, you'll also need to attend the scheduled sessions. Our programs are designed
                             to be accessible, whether you're participating in self-paced courses or live group sessions.
                         </p>
@@ -538,6 +538,12 @@ export default {
         }
     },
     methods: {
+        scrollToCertification() {
+            const element = document.getElementById('certification');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        },
         group() {
             this.selfPaced = false;
         },
