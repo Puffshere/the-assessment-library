@@ -30,7 +30,6 @@
         <div class="body" v-if="unlocked">
             <div class="container">
                 <br />
-                <!-- Add search and filter dropdown inputs here -->
                 <div class="input-container">
                     <div class="search-bar" style="width: 60%;">
                         <input type="text" placeholder="Search" class="input-search" />
@@ -493,7 +492,7 @@ export default {
                 product: false,
                 'quick&links': false,
             },
-            selectedFileType: 'All',  // File type from dropdown
+            selectedFileType: 'All',
             fundamentalsSections: {
                 foundations: [
                     { name: 'DISC Assessment History', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCAssessmentHistory.pdf', icon: 'PDF.png', certified: true },
@@ -708,13 +707,13 @@ export default {
             }
         },
         filterByType(sectionFiles) {
-            // Step 1: Filter by file type if it's not 'All'
+            // Filter by file type if it's not 'All'
             let filteredFiles = sectionFiles;
             if (this.selectedFileType !== 'All') {
                 filteredFiles = filteredFiles.filter(file => file.type === this.selectedFileType);
             }
 
-            // Step 2: Handle certification logic
+            // Handle certification logic
             if (this.certified) {
                 // Show all links but exclude non-certified duplicates marked with `isElse: true`
                 return filteredFiles.filter(file => !file.isElse);
@@ -860,26 +859,18 @@ export default {
         background-color: #00a8ff;
         color: white;
         border: none;
-        /* Add border if necessary */
         transition: background-color 0.3s ease, transform 0.2s ease;
-        /* Smooth transition for hover effects */
         margin-top: 0px;
     }
 
     .toggle-all-button:hover {
         background-color: #0086cc;
-        /* Slightly darker shade on hover */
         transform: scale(1.03);
-        /* Slight zoom effect on hover */
     }
 
     .toggle-all-button:active {
-        /* Slightly darker shade on hover */
         transform: scale(.9);
-        /* Slight zoom effect on hover */
     }
-
-
 
     .search-bar {
         position: relative;
@@ -964,7 +955,6 @@ export default {
         margin-top: -15px;
         margin-bottom: 30px;
         margin-left: 40px;
-        /* Adjust margin to align subcard */
         border-radius: 0 0 7px 7px;
         width: calc(100% - 40px);
         position: relative;
@@ -1063,7 +1053,6 @@ export default {
         }
     }
 
-    /* Media query for screens less than 768px wide */
     @media (max-width: 768px) {
         .row {
             flex-wrap: wrap;
