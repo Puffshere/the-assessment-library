@@ -32,7 +32,7 @@
                 <br />
                 <div class="input-container">
                     <div class="search-bar" style="width: 60%;">
-                        <input type="text" placeholder="Search" class="input-search" />
+                        <input type="text" placeholder="Search" class="input-search" v-model="searchQuery" />
                         <i class="search-icon">&#x1F50D;</i>
                     </div>
                     <button @click="toggleAllCards" class="toggle-all-button">
@@ -480,6 +480,7 @@ export default {
             password: '',
             certified: false,
             validationError: false,
+            searchQuery: '',
             toggleStates: {
                 fundamentals: false,
                 't&w': false,
@@ -690,6 +691,14 @@ export default {
                 this.password = '';
             }
         },
+        filterLinks(links) {
+            if (!this.searchQuery) {
+                // If the search query is empty, return all links
+                return links;
+            }
+            // Return filtered links where the name includes the search query (case-insensitive)
+            return links.filter(link => link.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
+        },
         toggleAllCards() {
             // Determine the new state: if all cards are open, set to false; otherwise, set to true
             const newState = !this.areAllCardsOpen;
@@ -725,70 +734,70 @@ export default {
     },
     computed: {
         filteredFoundations() {
-            return this.filterByType(this.fundamentalsSections.foundations);
+            return this.filterLinks(this.filterByType(this.fundamentalsSections.foundations));
         },
         filteredDescriptionStyles() {
-            return this.filterByType(this.fundamentalsSections.descriptionStyles);
+            return this.filterLinks(this.filterByType(this.fundamentalsSections.descriptionStyles));
         },
         filteredAdaptabilityStyles() {
-            return this.filterByType(this.fundamentalsSections.adaptabilityStyles);
+            return this.filterLinks(this.filterByType(this.fundamentalsSections.adaptabilityStyles));
         },
         filteredUnderstandingFoundations() {
-            return this.filterByType(this.fundamentalsSections.understandingFoundations);
+            return this.filterLinks(this.filterByType(this.fundamentalsSections.understandingFoundations));
         },
         filteredTrainingPresentationsFacilitatorGuides() {
-            return this.filterByType(this.trainingWorkshopSections.trainingPresentationsFacilitatorGuides);
+            return this.filterLinks(this.filterByType(this.trainingWorkshopSections.trainingPresentationsFacilitatorGuides));
         },
         filteredDISCSpecificGroupExercises() {
-            return this.filterByType(this.trainingWorkshopSections.dISCSpecificGroupExercises);
+            return this.filterLinks(this.filterByType(this.trainingWorkshopSections.dISCSpecificGroupExercises));
         },
         filteredGeneralGroupExercises() {
-            return this.filterByType(this.trainingWorkshopSections.generalGroupExercises);
+            return this.filterLinks(this.filterByType(this.trainingWorkshopSections.generalGroupExercises));
         },
         filteredDISCActivityResources() {
-            return this.filterByType(this.trainingWorkshopSections.dISCActivityResources);
+            return this.filterLinks(this.filterByType(this.trainingWorkshopSections.dISCActivityResources));
         },
         filteredEnhancingDeliveryResourcesTrainingPresentations() {
-            return this.filterByType(this.trainingWorkshopSections.enhancingDeliveryResourcesTrainingPresentations);
+            return this.filterLinks(this.filterByType(this.trainingWorkshopSections.enhancingDeliveryResourcesTrainingPresentations));
         },
         filteredEnhancingDeliveryResourcesAudioVideoFiles() {
-            return this.filterByType(this.trainingWorkshopSections.enhancingDeliveryResourcesAudioVideoFiles);
+            return this.filterLinks(this.filterByType(this.trainingWorkshopSections.enhancingDeliveryResourcesAudioVideoFiles));
         },
         filteredImplementationApplicationLinksWithoutTitle() {
-            return this.filterByType(this.implementationApplication.implementationApplicationLinksWithoutTitle);
+            return this.filterLinks(this.filterByType(this.implementationApplication.implementationApplicationLinksWithoutTitle));
         },
         filteredDISCActionSeries() {
-            return this.filterByType(this.implementationApplication.dISCActionSeries);
+            return this.filterLinks(this.filterByType(this.implementationApplication.dISCActionSeries));
         },
         filteredDISCTargetApplicationsTips() {
-            return this.filterByType(this.implementationApplication.dISCTargetApplicationsTips);
+            return this.filterLinks(this.filterByType(this.implementationApplication.dISCTargetApplicationsTips));
         },
         filteredThreeSixtyResourcesWithoutTitle() {
-            return this.filterByType(this.threeSixtyResources.threeSixtyResourcesWithoutTitle);
+            return this.filterLinks(this.filterByType(this.threeSixtyResources.threeSixtyResourcesWithoutTitle));
         },
         filteredOtherMaterials() {
-            return this.filterByType(this.additionalSupportMaterials.otherMaterials);
+            return this.filterLinks(this.filterByType(this.additionalSupportMaterials.otherMaterials));
         },
         filteredDebriefingAssessmentReportDetails() {
-            return this.filterByType(this.assessmentReportTools.debriefingAssessmentReportDetails);
+            return this.filterLinks(this.filterByType(this.assessmentReportTools.debriefingAssessmentReportDetails));
         },
         filteredVideoResources() {
-            return this.filterByType(this.assessmentReportTools.videoResources);
+            return this.filterLinks(this.filterByType(this.assessmentReportTools.videoResources));
         },
         filteredMarketingWithoutTitle() {
-            return this.filterByType(this.marketing.marketingWithoutTitle);
+            return this.filterLinks(this.filterByType(this.marketing.marketingWithoutTitle));
         },
         filteredInformationSheets() {
-            return this.filterByType(this.marketing.informationSheets);
+            return this.filterLinks(this.filterByType(this.marketing.informationSheets));
         },
         filteredInfused() {
-            return this.filterByType(this.productSpecificResources.infused);
+            return this.filterLinks(this.filterByType(this.productSpecificResources.infused));
         },
         filterednonInfused() {
-            return this.filterByType(this.productSpecificResources.nonInfused);
+            return this.filterLinks(this.filterByType(this.productSpecificResources.nonInfused));
         },
         filteredLatestUpdates() {
-            return this.filterByType(this.quickLinks.latestUpdates);
+            return this.filterLinks(this.filterByType(this.quickLinks.latestUpdates));
         },
         areAllCardsOpen() {
             // Check if every toggle state is true
