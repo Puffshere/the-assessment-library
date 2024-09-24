@@ -51,15 +51,15 @@
                 <!-- Date Selection Section -->
                 <div class="row date-selection">
                     <div class="col-4">
-                        <h4 style="text-decoration: underline; margin-bottom: 0px;">NOVEMBER</h4>
+                        <h4 style="text-decoration: underline; margin-bottom: 0px;"><a href="https://buy.stripe.com/8wM14E9znfL177y151" style="color: #213C85;">NOVEMBER</a></h4>
                         <div class="date-box">6th & 7th</div>
                     </div>
                     <div class="col-4" style="margin-left: -100px; margin-right: -100px;">
-                        <h4 style="text-decoration: underline; margin-bottom: 0px;">DECEMBER</h4>
+                        <h4 style="text-decoration: underline; margin-bottom: 0px;"><a href="https://buy.stripe.com/9AQdRq9znaqHdvW296" style="color: #213C85;">DECEMBER</a></h4>
                         <div class="date-box">4th & 5th</div>
                     </div>
                     <div class="col-4">
-                        <h4 style="text-decoration: underline; margin-bottom: 0px;">JANUARY</h4>
+                        <h4 style="text-decoration: underline; margin-bottom: 0px;"><a href="https://buy.stripe.com/3cs4gQ8vj7ev9fGbJH" style="color: #213C85;">JANUARY</a></h4>
                         <div class="date-box">15th & 16th</div>
                     </div>
                 </div>
