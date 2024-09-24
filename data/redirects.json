@@ -1910,5 +1910,9 @@
     {
         "from": "/blog/you-have-to-make-a-speech-nervous-2",
         "to": "https://blog.assessments24x7.com/"
+    },
+    {
+        "from": "/blog/",
+        "to": "https://blog.assessments24x7.com/"
     }
 ]
