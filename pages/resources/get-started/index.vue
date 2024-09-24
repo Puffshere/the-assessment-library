@@ -4,7 +4,7 @@
         <account-modal v-if="id !== 'ccc' && id !== 'eci'" :id="id" />
         <account-modal-eci v-if="id === 'eci'" :id="id" />
 
-        <section v-if="id !== 'eci'" class="header">
+        <section v-if="id !== 'eci' && id !== 'ec'" class="header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -21,6 +21,8 @@
                             class="partner-logo-wcg">
                         <img v-else-if="id === 'ypo'"
                             src="~/assets/get-started/Logo_of_the_Young_Presidents_Organization.png" alt="YPO" class="">
+                        <!-- <img v-else-if="id === 'ec'"
+                            src="" alt="ec" class=""> -->
                         <img v-else-if="id === 'dc'" src="~/assets/Dale-Carnegie-logo.png" alt="Dale Carnegie"
                             class="partner-logo-dc">
                         <img v-else-if="id === 'bni'" src="~/assets/BNI_logo.png" alt="BNI" class="partner-logo-bni">
@@ -41,6 +43,24 @@
                             but if you’d like some guidance, follow our suggested steps below.
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section v-else-if="id === 'ec'" class="ec-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="~/assets/assessmentLogoWhite.png"
+                            alt="Erickson Coaching" class="partner-logo" style="margin-bottom: 20px;">
+                    </div>
+                    <hr style="max-width: 80%; margin: 0 auto;">
+                    <br />
+                    <h1 class="section-title">Get Started</h1>
+                    <p>
+                        Welcome to your personal coaching dashboard! We invite you to view any and all materials
+                        that look <br />
+                        interesting to you, but if you’d like some guidance, follow our suggested steps below.
+                    </p>
                 </div>
             </div>
         </section>
@@ -539,6 +559,9 @@ export default {
         } else if (this.$route.query.id === 'ypo') {
             this.url = '';
             this.id = 'ypo';
+        } else if (this.$route.query.id === 'ec') {
+            this.url = '';
+            this.id = 'ec';
         } else if (this.$route.query.id === 'aus') {
             this.id = 'aus';
         } else if (this.$route.query.id === 'can') {
@@ -617,6 +640,24 @@ export default {
         .partner-logo-bni {
             max-width: 300px;
             margin-bottom: 35px;
+        }
+    }
+
+    .ec-header {
+        background: linear-gradient(180deg, #0033C5 0%, #077FF8 100%);
+        color: #fff;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+
+        .section-title {
+            font-size: 30pt;
+            margin-top: 0;
+        }
+
+        .partner-logo {
+            width: 60%;
         }
     }
 
