@@ -21,8 +21,6 @@
                             class="partner-logo-wcg">
                         <img v-else-if="id === 'ypo'"
                             src="~/assets/get-started/Logo_of_the_Young_Presidents_Organization.png" alt="YPO" class="">
-                        <!-- <img v-else-if="id === 'ec'"
-                            src="" alt="ec" class=""> -->
                         <img v-else-if="id === 'dc'" src="~/assets/Dale-Carnegie-logo.png" alt="Dale Carnegie"
                             class="partner-logo-dc">
                         <img v-else-if="id === 'bni'" src="~/assets/BNI_logo.png" alt="BNI" class="partner-logo-bni">
@@ -46,39 +44,13 @@
                 </div>
             </div>
         </section>
-        <section v-else-if="id === 'ec'" class="ec-header">
+        <section v-else class="ec-header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img src="~/assets/assessmentLogoWhite.png"
-                            alt="Erickson Coaching" class="partner-logo" style="margin-bottom: 20px;">
+                        <img src="~/assets/assessmentLogoWhite.png" alt="Erickson Coaching" class="partner-logo"
+                            style="margin-bottom: 50px; margin-top: 40px;">
                     </div>
-                    <hr style="max-width: 80%; margin: 0 auto;">
-                    <br />
-                    <h1 class="section-title">Get Started</h1>
-                    <p>
-                        Welcome to your personal coaching dashboard! We invite you to view any and all materials
-                        that look <br />
-                        interesting to you, but if you’d like some guidance, follow our suggested steps below.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section v-else class="eci-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <img src="~/assets/get-started/erickson-coaching-international.png"
-                            alt="Erickson Coaching International" class="partner-logo" style="margin-bottom: 20px;">
-                    </div>
-                    <hr style="max-width: 80%; margin: 0 auto;">
-                    <br />
-                    <h1 class="section-title">Get Started</h1>
-                    <p>
-                        Welcome to your personal coaching dashboard! We invite you to view any and all materials
-                        that look <br />
-                        interesting to you, but if you’d like some guidance, follow our suggested steps below.
-                    </p>
                 </div>
             </div>
         </section>
@@ -88,12 +60,14 @@
                 <div class="col-12">
                     <h2>Quick Start Guide</h2>
 
-                    <p>
-                        Welcome to your personal coaching dashboard! Be sure to have a look at the announcements on the
-                        left side of your dashboard.
-                        We invite you to view any and all materials that look interesting to you, but if you’d like some
-                        guidance, follow our
-                        suggested steps below.
+                    <p style="margin-bottom: 40px;">
+                        Welcome to your personal coaching dashboard! Before signing in, please ensure that you have
+                        completed the verification process you received in your email. To get started, please follow the
+                        three steps below to sign in and learn more about using your account.
+                        <br />
+                        <br />
+                        Note: If you haven't received your account verification email, please check your spam or junk
+                        folders. Look for an email with the subject line: New account setup - verification.
                     </p>
                 </div>
             </div>
@@ -143,13 +117,13 @@
                             <div class="row">
                                 <div class="col-6">
                                     <iframe style="width:100%" height="239"
-                                        src="https://www.youtube.com/embed/b0ee18iEhkU" frameborder="0"
+                                        src="https://www.youtube.com/embed/mxXrKA5629M" frameborder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                     <a class="hyperlink"
                                         href="https://www.youtube.com/watch?v=b0ee18iEhkU&feature=emb_logo"
                                         rel="noopener">
-                                        General Account Settings (2:00)
+                                        General Account Settings (2:43)
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px"
                                             fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px"
@@ -169,13 +143,13 @@
 
                                 <div class="col-6">
                                     <iframe style="width:100%" height="239"
-                                        src="https://www.youtube.com/embed/0XRVr4fc8sc" frameborder="0"
+                                        src="https://www.youtube.com/embed/Vt_8AM_-2jM" frameborder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                     <a class="hyperlink"
                                         href="https://www.youtube.com/watch?v=0XRVr4fc8sc&feature=emb_logo"
                                         target="_blank" rel="noopener">
-                                        Features on Your Home Page (5:07)
+                                        Features on Your Home Page (6:14)
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px"
                                             fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px"
@@ -195,13 +169,13 @@
 
                                 <div class="col-6">
                                     <iframe style="width:100%" height="239"
-                                        src="https://www.youtube.com/embed/-wcs-p1FFps" frameborder="0"
+                                        src="https://www.youtube.com/embed/-xnQzh6gnvk" frameborder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                     <a class="hyperlink"
                                         href="https://www.youtube.com/watch?v=-wcs-p1FFps&feature=emb_logo"
                                         target="_blank" rel="noopener">
-                                        Setting Up Assessment Access Links (8:05)
+                                        Setting Up Assessment Access Links (10:50)
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px"
                                             fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px"
@@ -221,13 +195,13 @@
 
                                 <div class="col-6">
                                     <iframe style="width:100%" height="239"
-                                        src="https://www.youtube.com/embed/outCzOuSXXg" frameborder="0"
+                                        src="https://www.youtube.com/embed/GG9dzjEk2j0" frameborder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                     <a class="hyperlink"
                                         href="https://www.youtube.com/watch?v=outCzOuSXXg&feature=emb_logo"
                                         target="_blank" rel="noopener">
-                                        Managing Assessment Users and Reports (5:02)
+                                        Managing Assessment Users and Reports (6:48)
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" height="14px" width="14px"
                                             fill="#000000" viewBox="0 0 100 100" version="1.1" x="0px" y="0px"
@@ -276,7 +250,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div v-if="id !== 'eci'" class="row">
                 <div class="col-12">
                     <div class="step">
                         <div class="icon">4</div>
@@ -300,7 +274,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" v-if="id !== 'eci'">
                 <div class="col-12">
                     <div class="step">
                         <div class="icon">5</div>
@@ -323,7 +297,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" v-if="id !== 'eci'">
                 <div class="col-12">
                     <div class="step">
                         <div class="icon">6</div>
@@ -344,7 +318,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" v-if="id !== 'eci'">
                 <div class="col-12">
                     <div class="step">
                         <div class="icon">7</div>
@@ -363,7 +337,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" v-if="id !== 'eci'">
                 <div class="col-6">
                     <h2>Want even more resources to help get you started?</h2>
                     <p>
@@ -473,7 +447,7 @@
                 </div>
             </div>
 
-            <section class="certifications">
+            <section class="certifications" v-if="id !== 'eci'">
                 <div class="row">
                     <div class="col-12">
                         <div class="images">
@@ -559,9 +533,6 @@ export default {
         } else if (this.$route.query.id === 'ypo') {
             this.url = '';
             this.id = 'ypo';
-        } else if (this.$route.query.id === 'ec') {
-            this.url = '';
-            this.id = 'ec';
         } else if (this.$route.query.id === 'aus') {
             this.id = 'aus';
         } else if (this.$route.query.id === 'can') {

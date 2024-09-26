@@ -18,8 +18,6 @@
                             alt="REF" class="partner-logo">
                         <img v-else-if="id === 'eci'" src="~/assets/get-started/erickson-coaching-international.png"
                             alt="Erickson Coaching International" class="partner-logo">
-                        <img v-else-if="id === 'ec'" src="~/assets/assessmentLogoWhite.png"
-                            alt="Erickson Coaching" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png"
                             alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png"
