@@ -70,7 +70,7 @@ export default {
 
     .container {
         width: 100%;
-        max-width: 800px;
+        max-width: 1000px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -80,7 +80,6 @@ export default {
         text-align: center;
         height: 100%;
         max-height: 700px;
-        overflow-y: scroll;
         border-radius: 10px;
 
         .modal-close {
