@@ -32,7 +32,7 @@
                             <option value="en-us" selected>English (US) - 38</option>
                             <option value="fr">French - 15</option>
                             <option value="de">German - 6</option>
-                            <option value="hu">Hungarian - 6</option>
+                            <option value="hu">Hungarian - 7</option>
                             <option value="id">Indonesian - 1</option>
                             <option value="it">Italian - 3</option>
                             <option value="ja">Japanese - 4</option>
@@ -879,11 +879,14 @@
                                 <a v-else-if="lang === 'zh'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCBehavioralTendenciesChinese.pdf"
                                     target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
+                                <a v-else-if="lang === 'hu'" class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Behavioral+Tendencies+Group+Report+Hungarian+Sample.pdf"
+                                    target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
                                 <a v-else-if="lang === 'tr'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCBehTendenciesTeamTurkishSampleReport.pdf"
                                     target="_blank" rel="noopener">DISC Behavioral Tendencies</a>
                                 <a v-else class="hyperlink disabled">DISC Behavioral Tendencies</a>
-                                <a class="language-button disc" @click="discBehavioralTendenciesReportModal = true">4
+                                <a class="language-button disc" @click="discBehavioralTendenciesReportModal = true">5
                                     languages</a><br />
 
                                 <a v-if="lang === 'en-au'" class="hyperlink"
@@ -1261,6 +1264,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCBehavioralTendenciesChinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Behavioral+Tendencies+Group+Report+Hungarian+Sample.pdf"
+                                    target="_blank" rel="noopener">Hungarian</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCBehTendenciesTeamTurkishSampleReport.pdf"
                                     target="_blank" rel="noopener">Turkish</a>
