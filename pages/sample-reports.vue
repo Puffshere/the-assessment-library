@@ -642,9 +642,12 @@
                         <a v-else class="hyperlink disabled">Sales IQ Report</a>
                         <a class="language-button other" @click="salesIQReportModal = true">9 languages</a><br />
 
-                        <a v-if="lang === 'en-us'"
+                        <a v-if="lang === 'en-us'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf"
-                            class="hyperlink" target="_blank" rel="noopener">Sales IQ Team Report</a>
+                            target="_blank" rel="noopener">Sales IQ Team Report</a>
+                        <a v-else-if="lang === 'zh'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusGroupReport_Chinese.pdf"
+                            target="_blank" rel="noopener">Sales IQ Team Report</a>
                         <a v-else-if="lang === 'fr'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportfrench.pdf"
                             target="_blank" rel="noopener">Sales IQ Team Report</a>
@@ -657,8 +660,9 @@
                         <a v-else-if="lang === 'vi'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreportvietnamese.pdf"
                             target="_blank" rel="noopener">Sales IQ Team Report</a>
+
                         <a v-else class="hyperlink disabled">Sales IQ Team Report</a>
-                        <a class="language-button other" @click="salesIQTeamReportModal = true">5 languages</a><br />
+                        <a class="language-button other" @click="salesIQTeamReportModal = true">6 languages</a><br />
                     </div>
                 </div>
 
@@ -1760,8 +1764,9 @@
                             <div class="col-12">
                                 <h1>Sales IQ Team Reports</h1>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf"
-                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf"
+                                    target="_blank" rel="noopener">English</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusGroupReport_Chinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
