@@ -251,24 +251,24 @@ export default {
                             footNote: "*NOTE Save as a pdf before sending to clients"
                         },
                         {
-                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+Q1-2024.pdf",
-                            mainText: "CP Pricing Q1-2024"
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+Q3-2024.pdf",
+                            mainText: "CP Pricing Q3-2024"
                         },
                         {
-                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+Q1-2024%2BDWL.pdf",
-                            mainText: "CP Pricing Q1-2024+DWL"
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+CP+%2BDWL+Q3-2024.pdf",
+                            mainText: "CP Pricing Q3-2024+DWL"
                         },
                         {
                             url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Additional+Reports+Sheet_CP.pdf",
                             mainText: "CP Additional Reports page"
                         },
                         {
-                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+Q1-2024.pdf",
-                            mainText: "RS Pricing Q1-2024"
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+Q3-2024.pdf",
+                            mainText: "RS Pricing Q3-2024"
                         },
                         {
-                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+Q1-2024%2BDWL.pdf",
-                            mainText: "RS Pricing Q1-2024+DWL"
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Pricing+RS+%2BDWL+Q3-2024.pdf",
+                            mainText: "RS Pricing Q3-2024+DWL"
                         },
                         {
                             url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/247-Additional+Reports+Sheet_RS.pdf",
