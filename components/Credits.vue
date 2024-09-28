@@ -25,7 +25,7 @@
                 <div class="col-3 col-6-sm">
                     <img v-if="isLight" class="provider-image" src="~assets/icf-dark.png" alt="icf">
                     <img v-else class="provider-image" src="~assets/icf.png" alt="icf">
-                    <span class="credit">{{ icfCore }}/{{ icfRD }}</span>
+                    <span class="credit">{{ icfCore }}/{{ icfRD }} Credits</span>
                     <p class="institute">Core/RD ICF</p>
                 </div>
             </div>
