@@ -64,31 +64,54 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label><strong>Which best describes your need for certification? *</strong></label>
-                                    <div class="form-check" style="margin-top: 0px;">
+                                    <div class="form-check" style="margin-top: -10px;">
                                         <input class="form-check-input" id="reseller" name="clientType" type="radio"
                                             required value="Reseller" v-model="form.clientType" />
                                         <label class="form-check-label" for="reseller">I am a coach or trainer looking
-                                            to resell assessments with my clients.</label>
+                                            to get certified.</label>
                                     </div>
                                     <div class="form-check" style="margin-top: -10px;">
                                         <input class="form-check-input" id="corporate" name="clientType" type="radio"
                                             required value="Corporate" v-model="form.clientType" />
-                                        <label class="form-check-label" for="corporate">I am part of a company looking
-                                            to use assessments internally with my team.</label>
+                                        <label class="form-check-label" for="corporate">I work for company and would
+                                            like to get certified.</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label><strong>Join our exclusive mailing list? *</strong></label>
+                                    <div class="form-check" style="margin-top: -10px;">
+                                        <input class="form-check-input" id="optinYes" name="newsletter" type="radio"
+                                            required value="45" v-model="form.newsletter" tabindex="13" />
+                                        <label class="form-check-label" for="optinYes">Yes, please!</label>
                                     </div>
                                     <div class="form-check" style="margin-top: -10px;">
-                                        <input class="form-check-input" id="corporate" name="clientType" type="radio"
-                                            required value="Retail" v-model="form.clientType" />
-                                        <label class="form-check-label" for="corporate">I am an individual looking to
-                                            purchase a single assessment only.</label>
+                                        <input class="form-check-input" id="optinNo" name="newsletter" type="radio"
+                                            required value="46" v-model="form.newsletter" tabindex="14" />
+                                        <label class="form-check-label" for="optinNo">No, thank you</label>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input" id="consent" name="consent" type="checkbox" required
+                                        v-model="form.consent" tabindex="15" />
+                                    <label class="form-check-label" for="consent">
+                                        I agree to the <nuxt-link to="/legal/privacy" target="_blank" rel="noopener"
+                                            class="hyperlink">Privacy
+                                            Policy</nuxt-link> and
+                                        <nuxt-link to="/legal/compliance" target="_blank" rel="noopener"
+                                            class="hyperlink">GDPR
+                                            Policy</nuxt-link> and
+                                        give
+                                        my consent. *
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="learn-more-button light-blue" :disabled="isDisabled"
-                            :class="{ 'button': true, 'disabled': isDisabled }" style="margin-top: 20px;">
+                        <button type="submit" class="learn-more-button light-blue" :disabled="isSubmitDisabled"
+                            :class="{ 'disabled': isSubmitDisabled }" style="margin-top: 20px;">
                             Submit
                         </button>
+                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfxMBYqAAAAALxg0qx1ez9zPO6ynJyvbswx7lpP"
+                            data-callback="onReCaptchaSuccess"></div>
                     </div>
                 </div>
             </form>
@@ -110,6 +133,7 @@ export default {
         return {
             isDisabled: false,
             loading: false,
+            recaptchaResponse: null,
             form: {
                 name: '',
                 firstName: '',
@@ -119,11 +143,25 @@ export default {
                 company: '',
                 message: '',
                 clientType: '',
+                newsletter: '',
+                consent: false
             }
         };
     },
     mounted() {
         this.observeElements();
+        window.onReCaptchaSuccess = this.onReCaptchaSuccess;
+        const renderReCaptcha = () => {
+            if (window.grecaptcha && window.grecaptcha.render) {
+                window.grecaptcha.render(this.$refs.recaptcha, {
+                    sitekey: '6LfxMBYqAAAAALxg0qx1ez9zPO6ynJyvbswx7lpP',
+                    callback: window.onReCaptchaSuccess
+                });
+            } else {
+                setTimeout(renderReCaptcha, 100); // Check again in 100ms
+            }
+        };
+        renderReCaptcha();
     },
     methods: {
         observeElements() {
@@ -146,6 +184,9 @@ export default {
         onSubmit() {
             this.submitForm();
         },
+        async onReCaptchaSuccess(token) {
+            this.recaptchaResponse = token;
+        },
         async submitForm() {
             if (this.form.message.length < 5) {
                 this.$toast.open({
@@ -157,14 +198,14 @@ export default {
                 return;
             }
 
+            this.isDisabled = true;
+            this.loading = true;
+
+            const names = this.form.name.split(' ');
+            this.form.firstName = names[0];
+            this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : '';
+
             try {
-                this.isDisabled = true;
-                this.loading = true;
-
-                const names = this.form.name.split(' ');
-                this.form.firstName = names[0];
-                this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : '';
-
                 const salesPerson = await axios.get('/api/lead/next-assignment');
 
                 const lead = await axios.post('/api/lead', {
@@ -177,7 +218,7 @@ export default {
                     message: this.form.message
                 });
 
-                const { data } = await axios.post('/api/contact', {
+                const { data } = await axios.post('/api/contact/certifications/assessment', {
                     contact: {
                         email: this.form.email,
                         firstName: this.form.firstName,
@@ -185,6 +226,7 @@ export default {
                         phone: this.form.phoneNumber,
                         company: this.form.company,
                         message: this.form.message,
+                        recaptchaResponse: this.recaptchaResponse,
                         fieldValues: [
                             {
                                 field: '79', // Sales Person Assignment
@@ -216,7 +258,7 @@ export default {
                 await axios.post(`/api/contact/${data.contact.id}/tag/43`);
 
                 // Apply the "Certifications/Assessment page contact form" tag (tag id 1028)
-                //await axios.post(`/api/contact/${data.contact.id}/tag/1028`);
+                await axios.post(`/api/contact/${data.contact.id}/tag/1028`);
 
                 await axios.post(`/api/contact/${data.contact.id}/account`, {
                     company: this.form.company
@@ -243,6 +285,11 @@ export default {
                     type: 'error'
                 });
             }
+        }
+    },
+    computed: {
+        isSubmitDisabled() {
+            return !this.form.consent || !this.recaptchaResponse;
         }
     }
 }
@@ -331,12 +378,7 @@ h1 {
         position: absolute;
         bottom: 350px;
         right: 0;
-        z-index: -1;
-    }
-
-    .button.disabled {
-        cursor: not-allowed;
-        opacity: 0.6;
+        z-index: -5;
     }
 
     .learn-more-button {
@@ -345,7 +387,7 @@ h1 {
         border-radius: 40px;
         border: none;
         font-size: 18.6px;
-        line-height: 18.6px;
+        line-height: 30px;
         font-weight: 600;
         cursor: pointer;
 
@@ -359,8 +401,18 @@ h1 {
                 border: 1px solid #2729ff;
             }
 
-            &:active {
-                background-color: rgb(128, 127, 127);
+            &[disabled] {
+                cursor: not-allowed;
+                opacity: 0.5;
+                color: white;
+                background-color: #2729ff;
+                border: none;
+
+                &:hover {
+                    color: white;
+                    background-color: #2729ff;
+                    border: none;
+                }
             }
         }
     }
