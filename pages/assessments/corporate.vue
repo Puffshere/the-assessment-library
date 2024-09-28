@@ -66,7 +66,8 @@
         </LazyHydrate>
         <LazyHydrate when-visible><start-using></start-using></LazyHydrate>
         <LazyHydrate when-visible><discover-assessments></discover-assessments></LazyHydrate>
-        <LazyHydrate when-visible><contact-form></contact-form></LazyHydrate>
+        <br />
+        <LazyHydrate when-visible><contact-form style="margin-bottom: 50px;"></contact-form></LazyHydrate>
         <LazyHydrate when-visible><footer-fold class="foot"></footer-fold></LazyHydrate>
     </section>
 </template>
@@ -84,7 +85,7 @@ import Testimonials from '@/components/corporate/CorporateTestimonials';
 import Solutions from '@/components/corporate/CorporateSolutions';
 import StartUsing from '@/components/corporate/CorporateStartUsing';
 import DiscoverAssessments from '@/components/corporate/CorporateDiscoverAssessments';
-import ContactForm from '@/components/corporate/CorporateContactForm';
+import ContactForm from '@/components/certifications/AssessmentContactFormFold';
 import Footer from '@/components/Footer';
 
 
