@@ -621,6 +621,12 @@
                         <a v-else-if="lang === 'fr'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf"
                             target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'de'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusGerman.pdf"
+                            target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'ja'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusJapanese.pdf"
+                            target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'no'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIqPlus_NorwegianSampleReport.pdf"
                             target="_blank" rel="noopener">Sales IQ Report</a>
@@ -640,7 +646,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusVietnamese.pdf"
                             target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else class="hyperlink disabled">Sales IQ Report</a>
-                        <a class="language-button other" @click="salesIQReportModal = true">9 languages</a><br />
+                        <a class="language-button other" @click="salesIQReportModal = true">11 languages</a><br />
 
                         <a v-if="lang === 'en-us'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf"
@@ -1723,13 +1729,21 @@
                             <div class="col-12">
                                 <h1>Sales IQ Reports</h1>
 
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf"
-                                    class="hyperlink" target="_blank" rel="noopener">English</a><br />
-                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusChinese.pdf"
-                                    class="hyperlink" target="_blank" rel="noopener">Chinese</a><br />
+                                <a class="hyperlink" 
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf"
+                                    target="_blank" rel="noopener">English</a><br />
+                                <a class="hyperlink" 
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusChinese.pdf"
+                                    target="_blank" rel="noopener">Chinese</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQFrench.pdf"
                                     target="_blank" rel="noopener">French</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusGerman.pdf"
+                                    target="_blank" rel="noopener">German</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusJapanese.pdf"
+                                    target="_blank" rel="noopener">Japanese</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIqPlus_NorwegianSampleReport.pdf"
                                     target="_blank" rel="noopener">Norwegian</a><br />
