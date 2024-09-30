@@ -33,7 +33,6 @@
                 </div>
             </div>
         </section>
-
         <section class="body">
             <div class="container box-container"
                 style="background-color: white; border-radius: 20px; min-height: 250px; margin-top: -38px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25); text-align: center;">
@@ -47,7 +46,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="row date-selection">
                     <div class="col-4">
                         <h4 style="text-decoration: underline; margin-bottom: 0px;">
@@ -68,7 +66,6 @@
                         <a href="https://buy.stripe.com/3cs4gQ8vj7ev9fGbJH" class="date-box">15th & 16th</a>
                     </div>
                 </div>
-
                 <div class="row features">
                     <div class="col-12">
                         <ul class="features-list">
@@ -83,11 +80,9 @@
                 </div>
             </div>
             <div class="container">
-
                 <div class="row">
                     <h2 class="twoDay" style="padding-top: 50px">2-Day Group Course Summary:</h2>
                     <div class="col-12">
-
                         <div class="col-6">
                             <ul class="course-summary">
                                 <li class="topic disc">Choose a two-day session that works for you</li>
@@ -108,21 +103,15 @@
                     hrciProgramId="582706" />
             </div>
         </section>
-
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
 
-
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
 
-export default {
-    data() {
-        return {
 
-        }
-    },
+export default {
     head() {
         return {
             title: 'Get DISC Certified at BizX 2024 - Special Pricing for ActionCOACH Attendees | Assessments 24x7',
@@ -140,9 +129,6 @@ export default {
         "main-nav": () => import("@/components/Nav"),
         "footer-fold": () => import("@/components/Footer"),
         'credits': () => import('@/components/Credits')
-    },
-    methods: {
-
     }
 };
 </script>
@@ -212,13 +198,11 @@ export default {
                 margin-bottom: -5px;
                 display: flex;
                 justify-content: center;
-                /* Keeps the items aligned horizontally on larger screens */
 
                 li {
                     display: flex;
                     align-items: center;
                     margin: 0 15px;
-                    /* Adds space between list items on larger screens */
                     font-size: 14px;
                     color: #0033C5;
                     font-weight: 700;
@@ -270,14 +254,11 @@ export default {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    /* Center items horizontally */
                     gap: 20px;
-                    /* Add some spacing between the stacked items */
                 }
 
                 h4 {
                     text-align: center;
-                    /* Center-align the headers when stacked */
                 }
             }
 
