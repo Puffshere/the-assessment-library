@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-8">
-                            <h1><strong>
+                            <h1 style="margin-bottom: -10px;"><strong>
                                     Live Group <br />
                                     DISC Certification
                                 </strong>
@@ -36,35 +36,39 @@
 
         <section class="body">
             <div class="container box-container"
-                style="background-color: white; border-radius: 20px; min-height: 250px; margin-top: -60px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25); text-align: center;">
+                style="background-color: white; border-radius: 20px; min-height: 250px; margin-top: -38px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25); text-align: center;">
                 <div class="row">
-                    <div class="col-12" style="margin-top: -60px;">
+                    <div class="col-12" style="margin-top: -45px;">
                         <h3 style="color: #213C85;">
                             <strong>Select Your Dates Below to Register and Secure Your Spot!</strong>
                         </h3>
                         <p style="font-size: 14px; margin-top: -20px; margin-bottom: -10px;">
-                            2 half-days; 4 hours/day | 12 people max per program | Zoom only; computer required
+                            2 half-days; 4 hours/day | Zoom only; computer required
                         </p>
                     </div>
                 </div>
 
-                <!-- Date Selection Section -->
                 <div class="row date-selection">
                     <div class="col-4">
-                        <h4 style="text-decoration: underline; margin-bottom: 0px;"><a href="https://buy.stripe.com/8wM14E9znfL177y151" style="color: #213C85;">NOVEMBER</a></h4>
-                        <div class="date-box">6th & 7th</div>
+                        <h4 style="text-decoration: underline; margin-bottom: 0px;">
+                            <a href="https://buy.stripe.com/8wM14E9znfL177y151" style="color: #213C85;">NOVEMBER</a>
+                        </h4>
+                        <a href="https://buy.stripe.com/8wM14E9znfL177y151" class="date-box">6th & 7th</a>
                     </div>
                     <div class="col-4" style="margin-left: -100px; margin-right: -100px;">
-                        <h4 style="text-decoration: underline; margin-bottom: 0px;"><a href="https://buy.stripe.com/9AQdRq9znaqHdvW296" style="color: #213C85;">DECEMBER</a></h4>
-                        <div class="date-box">4th & 5th</div>
+                        <h4 style="text-decoration: underline; margin-bottom: 0px;">
+                            <a href="https://buy.stripe.com/9AQdRq9znaqHdvW296" style="color: #213C85;">DECEMBER</a>
+                        </h4>
+                        <a href="https://buy.stripe.com/9AQdRq9znaqHdvW296" class="date-box">2nd & 3rd</a>
                     </div>
                     <div class="col-4">
-                        <h4 style="text-decoration: underline; margin-bottom: 0px;"><a href="https://buy.stripe.com/3cs4gQ8vj7ev9fGbJH" style="color: #213C85;">JANUARY</a></h4>
-                        <div class="date-box">15th & 16th</div>
+                        <h4 style="text-decoration: underline; margin-bottom: 0px;">
+                            <a href="https://buy.stripe.com/3cs4gQ8vj7ev9fGbJH" style="color: #213C85;">JANUARY</a>
+                        </h4>
+                        <a href="https://buy.stripe.com/3cs4gQ8vj7ev9fGbJH" class="date-box">15th & 16th</a>
                     </div>
                 </div>
 
-                <!-- Features Section -->
                 <div class="row features">
                     <div class="col-12">
                         <ul class="features-list">
@@ -121,12 +125,12 @@ export default {
     },
     head() {
         return {
-            title: 'BIZX DISC Certification - Promo | Assessments 24x7',
+            title: 'Get DISC Certified at BizX 2024 - Special Pricing for ActionCOACH Attendees | Assessments 24x7',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: ''
+                    content: 'Unlock special pricing on DISC Certification exclusively for ActionCOACH members. Gain essential DISC training and implementation skills to enhance team success. Sign up by November 15 for discounted rates!'
                 }
             ]
         }
@@ -175,23 +179,18 @@ export default {
                 display: flex;
                 justify-content: center;
                 gap: 0px;
-                /* Adjust spacing between the columns */
                 margin-top: 10px;
-                /* Adjust margin to bring content closer */
                 margin-bottom: 20px;
-                /* Adjust as needed to maintain design balance */
 
                 h4 {
                     color: #213C85;
                     font-weight: bold;
                     text-align: center;
-                    /* Center-aligns the month titles */
                 }
 
                 .date-box {
                     background-color: #FFDE59;
                     padding: 10px 20px;
-                    /* Adjust padding to balance the box */
                     border-radius: 10px;
                     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
                     font-weight: bold;
@@ -200,10 +199,10 @@ export default {
                     font-size: 24px;
                     text-align: center;
                     margin: 0 auto;
-                    /* Centers the box within the flex item */
+                    display: block;
+                    text-decoration: none;
                 }
             }
-
 
             .features-list {
                 list-style: none;
@@ -228,7 +227,6 @@ export default {
             }
         }
     }
-
 
     .course-summary {
         list-style: none;
