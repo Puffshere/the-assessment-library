@@ -25,7 +25,7 @@
                                 Regular $1,595 | Sign up by Nov 15
                             </p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4 woman">
                             <img src="~/assets/bizx/female.png" alt="Picture of a female smiling"
                                 style="width: 100%; margin-top: 15px;">
                         </div>
@@ -85,7 +85,7 @@
             <div class="container">
 
                 <div class="row">
-                    <h2 style="padding-top: 50px">2-Day Group Course Summary:</h2>
+                    <h2 class="twoDay" style="padding-top: 50px">2-Day Group Course Summary:</h2>
                     <div class="col-12">
 
                         <div class="col-6">
@@ -207,17 +207,21 @@ export default {
             .features-list {
                 list-style: none;
                 padding: 0;
+                margin: 0;
+                margin-top: 16px;
+                margin-bottom: -5px;
                 display: flex;
                 justify-content: center;
-                margin-bottom: -5px;
+                /* Keeps the items aligned horizontally on larger screens */
 
                 li {
+                    display: flex;
+                    align-items: center;
                     margin: 0 15px;
+                    /* Adds space between list items on larger screens */
                     font-size: 14px;
                     color: #0033C5;
                     font-weight: 700;
-                    display: flex;
-                    align-items: center;
 
                     img {
                         width: 20px;
@@ -248,7 +252,70 @@ export default {
 }
 
 @media (max-width: 1200px) {
+    .bizx {
+        .hero {
+            .container {
+                .row {
+                    .woman {
+                        margin-top: -80px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
 
-    .bizx {}
+        .body {
+            .box-container {
+                .date-selection {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    /* Center items horizontally */
+                    gap: 20px;
+                    /* Add some spacing between the stacked items */
+                }
+
+                h4 {
+                    text-align: center;
+                    /* Center-align the headers when stacked */
+                }
+            }
+
+            .container {
+                .row {
+                    .twoDay {
+                        text-align: center;
+                        font-size: 18pt;
+                    }
+                }
+            }
+        }
+
+        .features-list {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            margin: 0 0px !important;
+            font-size: 10pt !important;
+        }
+    }
+}
+
+@media (max-width: 429px) {
+    .bizx {
+
+        .features-list {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            font-size: 8pt !important;
+        }
+    }
 }
 </style>
