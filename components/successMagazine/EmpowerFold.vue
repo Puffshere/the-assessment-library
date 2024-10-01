@@ -1,5 +1,6 @@
 <template>
     <section>
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png" alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
         <div class="container">
             <div class="row">
                 <div class="col-12">

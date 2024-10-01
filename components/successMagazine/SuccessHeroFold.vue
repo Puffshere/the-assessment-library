@@ -1,6 +1,7 @@
 <template>
     <section class="hero" style="padding-top: 10px;">
         <div class="container">
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold1-graphic.png" alt="fold 1 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
             <div class="row">
                 <div class="col-12">
                     <div class="col-8">
