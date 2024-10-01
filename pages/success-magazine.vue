@@ -4,6 +4,8 @@
         <section class="body">
             <hero></hero>
             <video-fold></video-fold>
+            <hr>
+            <empower-fold></empower-fold>
         </section>
         <footer-fold class="foot"></footer-fold>
     </section>
@@ -13,6 +15,7 @@
 import Nav from '@/components/Nav';
 import Hero from '@/components/successMagazine/SuccessHeroFold';
 import VideoFold from '@/components/successMagazine/VideoFold';
+import EmpowerFold from '@/components/successMagazine/EmpowerFold';
 import Footer from '@/components/Footer';
 
 export default {
@@ -20,6 +23,7 @@ export default {
         'main-nav': Nav,
         'hero': Hero,
         'video-fold': VideoFold,
+        'empower-fold': EmpowerFold,
         'footer-fold': Footer
     },
     head() {

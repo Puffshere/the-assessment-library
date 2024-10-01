@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-4">
                         <img src="~/assets/success-magazine/success-magazine-female-holding-globe.png"
-                            alt="woman holding globe" style="width: 244px; margin-bottom: -16px;">
+                            alt="woman holding globe" style="width: 244px; margin-bottom: -16px;" class="globe">
                     </div>
                 </div>
             </div>
@@ -65,6 +65,19 @@ h2 {
 }
 
 @media (max-width: 1200px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     .heroBtn {
         margin-right: 0px !important;
     }
