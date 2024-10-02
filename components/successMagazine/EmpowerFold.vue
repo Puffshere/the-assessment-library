@@ -1,6 +1,7 @@
 <template>
     <section>
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png" alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png" alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: 60px;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -75,8 +76,11 @@ button {
     flex-shrink: 0;
     border-radius: 4px;
     background: #E0AD2B;
+    color: white;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    border: none;
+    text-decoration: underline;
 }
 
 @media (max-width: 1200px) {

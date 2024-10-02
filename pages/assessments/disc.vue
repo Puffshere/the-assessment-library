@@ -516,7 +516,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="tenKeyBenefits">
             <div class="container" style="padding-bottom: 60px;">
                 <h2 style="font-size: 24pt; line-height: 28pt; text-align: center; padding-top: 20px;">10 Key Benefits
                     of the DISC Assessment</h2>

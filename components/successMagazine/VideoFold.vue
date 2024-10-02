@@ -1,6 +1,6 @@
 <template>
     <div class="section">
-        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold2-graphic.png" alt="fold 2 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold2-graphic.png" alt="fold 2 graphic" style="position: absolute; right: 0px;">
         <div class="container">
             <div class="row">
                 <h2>
@@ -67,5 +67,7 @@ button {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     color: white;
     cursor: pointer;
+    border: none;
+    text-decoration: underline;
 }
 </style>
