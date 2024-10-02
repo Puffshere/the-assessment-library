@@ -4,7 +4,7 @@
         <section class="body">
             <hero></hero>
             <video-fold></video-fold>
-            <logos-fold></logos-fold>
+            <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
             <empower-fold></empower-fold>
             <stats-top-fold></stats-top-fold>
             <unlock-fold></unlock-fold>
@@ -18,7 +18,7 @@
 import Nav from '@/components/Nav';
 import Hero from '@/components/successMagazine/SuccessHeroFold';
 import VideoFold from '@/components/successMagazine/VideoFold';
-import LogosFold from '@/components/successMagazine/LogosFold';
+import LazyHydrate from 'vue-lazy-hydration';
 import EmpowerFold from '@/components/successMagazine/EmpowerFold';
 import StatsTopFold from '@/components/successMagazine/StatsTopFold';
 import UnlockFold from '@/components/successMagazine/UnlockFold';
@@ -27,10 +27,11 @@ import Footer from '@/components/Footer';
 
 export default {
     components: {
+        LazyHydrate,
         'main-nav': Nav,
         'hero': Hero,
         'video-fold': VideoFold,
-        'logos-fold': LogosFold,
+        'client-logos': () => import('@/components/ClientLogos'),
         'empower-fold': EmpowerFold,
         'stats-top-fold': StatsTopFold,
         'unlock-fold': UnlockFold,
