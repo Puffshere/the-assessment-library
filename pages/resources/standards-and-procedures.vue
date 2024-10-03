@@ -418,8 +418,16 @@ export default {
                     name: 'Marketing',
                     links: [
                         {
-                            url: 'https://docs.google.com/spreadsheets/d/1fqxFWCx70mT4cPVZTfEfwibgwJPsj9-qXGY_cEEi15g/edit#gid=17462517',
-                            mainText: 'Social Media Calendar'
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Assessments+24x7_Brand+Guidelines.pdf",
+                            mainText: "Assessments 24x7 Brand Guide"
+                        },
+                        {
+                            url: "https://drive.google.com/drive/folders/17k1alNMDGLYKUHNS5Wx41Y22NRhIadcA",
+                            mainText: "Current Brand Assets"
+                        },
+                        {
+                            url: 'https://app.asana.com/0/1173350571913513/1173350571913513',
+                            mainText: 'Marketing Focus Calendar'
                         },
                         {
                             url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Marketing+Review+Process+-+Emails%2C+Marketing+Sheets%2C+Landing+Pages%2C++Social+Posts.pdf',
