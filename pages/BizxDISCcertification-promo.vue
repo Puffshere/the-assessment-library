@@ -22,7 +22,7 @@
                                 $995 SPECIAL
                             </p>
                             <p style="font-size: 10px; margin-left: 18px; margin-top: -40px; margin-bottom: 88px;">
-                                Regular $1,595 | Sign up by Nov 15
+                                Regularly $1,595 | Sign up by Nov 15
                             </p>
                         </div>
                         <div class="col-4 woman">
