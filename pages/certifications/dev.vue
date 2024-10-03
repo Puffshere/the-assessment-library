@@ -27,11 +27,9 @@
                     <div style="padding-left: 30px; padding-right: 20px;">
                         <h4 style="font-weight: 700; color: #0460F1">Self-paced or Group, 100% Online Training</h4>
                         <p style="margin-bottom: 30px;">
-                            Our certification programs are one-on-one and group instructor-led sessions. They are fully
-                            online. These
-                            are not cookie-cutter online classes. They are carefully designed training
-                            curriculums ensuring a focused
-                            and personalized learning experience.
+                            “Our fully online certification programs include either one-on-one or group instructor-led
+                            sessions. These are not cookie-cutter online classes; they are carefully designed training
+                            curriculums ensuring a focused and personalized learning experience.”
                         </p>
                     </div>
                 </div>
@@ -74,16 +72,13 @@
                                     Certificate Program?
                                 </h2>
                                 <p style="margin-bottom: 30px;">
-                                    Assessments 24x7 certification programs are a formal system
-                                    used to confirm proficiency in our core assessments: DISC,
-                                    Motivators, and Emotional Intelligence.
-                                    Completing the
+                                    Assessments 24x7 certification programs are a formal system used to <br />
+                                    confirm proficiency in our core assessments: DISC, Motivators, <br />
+                                    and Emotional Intelligence. Completing the
                                     components of the certification signifies adherence to industry
                                     standards, making certification a valuable credential to provide
-                                    to employers and
-                                    clients, resulting in improved job prospects and
-                                    opportunities for professional
-                                    development.
+                                    to employers and clients, resulting in improved job prospects and
+                                    opportunities for professional development.
                                 </p>
                                 <nuxt-link to="/contact" class="button outline" style="margin-right: 0px;">Get
                                     Assessment Certified</nuxt-link>
@@ -104,7 +99,7 @@
                         Certification is designed to provide you with the ability to debrief a client’s DISC report with
                         confidence and accuracy and use the assessments for a variety of client needs.
                     </p>
-                    <nuxt-link class="hyperlink" to="/certifications/assessment#disc">DISC Assessment Certification
+                    <nuxt-link class="hyperlink" to="/certifications/assessment#fold5">DISC Assessment Certification
                         &rarr;</nuxt-link>
                 </div>
                 <div class="col-4">
@@ -197,7 +192,7 @@
                             </h4>
                             <p style="margin-bottom: 30px;">
                                 Our group training courses emphasize real-world application, allowing participants
-                                to practice skills through peers in the course. This hands-on method not only builds
+                                to practice skills with peers in the course. This hands-on method not only builds
                                 confidence but ensures knowledge is applied effectively, making the learning process
                                 both relevant and engaging.
                             </p>
@@ -258,7 +253,9 @@
                     <div class="col-12">
                         <h6 class="question">How do I enroll in a course?</h6>
                         <p class="answer">
-                            Enrolling is easy reach out to us at sales@assessments24x7.com or complete our contact form.
+                            “Enrolling is easy! Reach out to us at <a class="hyperlink"
+                                href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a> or complete
+                            <a class="hyperlink" href="/contact">our contact form</a>.”
                         </p>
                     </div>
                 </div>
