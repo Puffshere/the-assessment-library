@@ -57,7 +57,7 @@
                         <h4 style="text-decoration: underline; margin-bottom: 0px;">
                             <a href="https://buy.stripe.com/9AQdRq9znaqHdvW296" style="color: #213C85;">DECEMBER</a>
                         </h4>
-                        <a href="https://buy.stripe.com/9AQdRq9znaqHdvW296" class="date-box">2nd & 3rd</a>
+                        <a href="https://buy.stripe.com/9AQdRq9znaqHdvW296" class="date-box">4th & 5th</a>
                     </div>
                     <div class="col-4">
                         <h4 style="text-decoration: underline; margin-bottom: 0px;">
