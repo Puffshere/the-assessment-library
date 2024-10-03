@@ -16,11 +16,12 @@
                     <h2>Introduction To Your Online Assessment Account</h2>
                     <p style="line-height: 20px; margin-top: -10px; margin-bottom: 50px;">Here are our recommended steps
                         based on thousands of account setups. <br />
-                        Skip sections as needed and proceed at your own pace. For
-                        personalized <br />
-                        training, <span><a class="hyperlink"
-                                href="https://calendly.com/suzette-247/45min?back=1">book a session with Suzette Chaparro</a></span>. For information on <br />
-                        assessments, pricing, and resources, contact
+                        Skip sections as needed and proceed at your own pace.
+                        To schedule a one-on-one <br />dashboard tour, 
+                        <a class="hyperlink"
+                            href="https://calendly.com/suzette-247/45min?back=1">click here to book a session with a
+                            member of our support team</a>. For information on assessments, <br />
+                            pricing, and resources, contact
                         <span><a class="hyperlink"
                                 href="mailto:support@assessments24x7.com">support@assessments24x7.com</a></span>.
                     </p>
@@ -62,8 +63,7 @@
                                     style="width: 18px; padding-right: 5px; margin-bottom: -3px;"
                                     alt="cert page buttons">
                             </span>Jump to individual section</button>
-                        <button class="button mainButton" @click="supplementalVideos"
-                            style="font-size: 16px;"><span>
+                        <button class="button mainButton" @click="supplementalVideos" style="font-size: 16px;"><span>
                                 <img src="~/assets/supplemental-icon.png" style="width:20px; padding-right: 5px;"
                                     alt="supplemental icon image">
                             </span>Supplemental videos</button>
