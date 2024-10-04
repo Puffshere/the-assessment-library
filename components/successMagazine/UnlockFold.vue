@@ -61,10 +61,9 @@ export default {
         secondButtonLink(event) {
             window.location.href = 'https://www.assessments24x7.com/assessments/disc#tenKeyBenefits';
             event.target.blur();
-        },
+        }
     }
 }
-
 </script>
 
 <style scoped>
@@ -87,6 +86,8 @@ button {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     text-decoration: underline;
     cursor: pointer;
+    font-size: 8.25pt;
+    font-weight: 700;
 }
 
 .firstButton {

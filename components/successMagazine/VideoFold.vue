@@ -61,7 +61,6 @@ button {
     margin-top: 20px;
     width: 125px;
     height: 36px;
-    flex-shrink: 0;
     border-radius: 4px;
     background: #E0AD2B;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -69,5 +68,7 @@ button {
     cursor: pointer;
     border: none;
     text-decoration: underline;
+    font-weight: 700;
+    font-size: 8.25pt;
 }
 </style>

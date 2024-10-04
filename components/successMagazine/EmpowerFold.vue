@@ -81,6 +81,8 @@ button {
     cursor: pointer;
     border: none;
     text-decoration: underline;
+    font-weight: 700;
+    font-size: 8.25pt;
 }
 
 @media (max-width: 1200px) {

@@ -50,17 +50,13 @@ h2 {
 .heroBtn {
     width: 125px;
     height: 36px;
-    flex-shrink: 0;
     border-radius: 6px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     color: #00A7FE;
     text-align: center;
-    font-family: Poppins;
-    font-size: 11px;
-    font-style: normal;
+    font-size: 8.25pt;
     font-weight: 700;
-    line-height: normal;
     text-decoration-line: underline;
     cursor: pointer;
     border: none;

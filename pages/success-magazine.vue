@@ -8,6 +8,8 @@
             <empower-fold></empower-fold>
             <stats-top-fold></stats-top-fold>
             <unlock-fold></unlock-fold>
+            <testimonial-fold></testimonial-fold>
+            <explore-fold></explore-fold>
             <about-fold></about-fold>
         </section>
         <footer-fold class="foot"></footer-fold>
@@ -22,6 +24,8 @@ import LazyHydrate from 'vue-lazy-hydration';
 import EmpowerFold from '@/components/successMagazine/EmpowerFold';
 import StatsTopFold from '@/components/successMagazine/StatsTopFold';
 import UnlockFold from '@/components/successMagazine/UnlockFold';
+import TestimonialFold from '@/components/successMagazine/TestimonialFold';
+import ExploreFold from '@/components/successMagazine/ExploreFold';
 import AboutFold from '@/components/successMagazine/AboutFold';
 import Footer from '@/components/Footer';
 
@@ -35,6 +39,8 @@ export default {
         'empower-fold': EmpowerFold,
         'stats-top-fold': StatsTopFold,
         'unlock-fold': UnlockFold,
+        'testimonial-fold': TestimonialFold,
+        'explore-fold': ExploreFold,
         'about-fold': AboutFold,
         'footer-fold': Footer
     },
