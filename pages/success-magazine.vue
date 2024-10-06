@@ -10,7 +10,10 @@
             <unlock-fold></unlock-fold>
             <testimonial-fold></testimonial-fold>
             <explore-fold></explore-fold>
+            <enhance-fold></enhance-fold>
+            <stats-bottom-fold></stats-bottom-fold>
             <about-fold></about-fold>
+            <transformation-fold></transformation-fold>
         </section>
         <footer-fold class="foot"></footer-fold>
     </section>
@@ -26,7 +29,10 @@ import StatsTopFold from '@/components/successMagazine/StatsTopFold';
 import UnlockFold from '@/components/successMagazine/UnlockFold';
 import TestimonialFold from '@/components/successMagazine/TestimonialFold';
 import ExploreFold from '@/components/successMagazine/ExploreFold';
+import EnhanceFold from '@/components/successMagazine/EnhanceFold';
+import StatsBottomFold from '@/components/successMagazine/StatsBottomFold';
 import AboutFold from '@/components/successMagazine/AboutFold';
+import TransformationFold from '@/components/successMagazine/TransformationFold';
 import Footer from '@/components/Footer';
 
 export default {
@@ -41,7 +47,10 @@ export default {
         'unlock-fold': UnlockFold,
         'testimonial-fold': TestimonialFold,
         'explore-fold': ExploreFold,
+        'enhance-fold': EnhanceFold,
+        'stats-bottom-fold': StatsBottomFold,
         'about-fold': AboutFold,
+        'transformation-fold': TransformationFold,
         'footer-fold': Footer
     },
     head() {

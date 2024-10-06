@@ -1,10 +1,13 @@
 <template>
-    <section class="about">
+    <section class="about" style="margin-top: -120px;">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png" alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
         <div class="container" style="margin-top: 0px;">
             <div class="row">
                 <div class="col-12 column" style="box-shadow: 3px 4px 4px 0px #00000040; border: 1px solid #FFDE59; border-radius: 10px; background-color: white;
                         position: relative; z-index: 2;">
+                        <h2 style="text-align: center; margin-top: 40px; margin-bottom: -10px; color: #213C85; font-size: 18pt; font-weight: 700;">
+                            About our Certification Programs
+                        </h2>
                     <div style="padding-left: 30px; padding-right: 20px;">
                         <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Certifications/48.png"
                             alt="icon 48" style="width: 60px; margin-top: 30px; margin-bottom: -15px;">
