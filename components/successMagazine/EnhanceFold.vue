@@ -67,12 +67,13 @@
         </section>
         <section class="bottomButtons" style="padding-bottom: 120px;">
             <div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
-                <button @click="firstButtonLink" class="firstButton">
+                <button @click="handleFirstButtonClick($event)" class="firstButton">
                     Take Your Free Assessment
                 </button>
-                <button @click="secondButtonLink" class="secondButton">
+                <button @click="handleSecondButtonClick($event)" class="secondButton">
                     10 Key Benefits of DISC
                 </button>
+
             </div>
         </section>
     </div>
@@ -225,6 +226,25 @@ export default {
                     opacity: 0,
                 };
             }
+        },
+        handleFirstButtonClick(event) {
+            event.stopPropagation();
+            this.firstButtonLink(event);
+        },
+        handleSecondButtonClick(event) {
+            event.stopPropagation();
+            this.secondButtonLink(event);
+        },
+        firstButtonLink(event) {
+            const element = document.getElementById('successMagazineContactForm');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        secondButtonLink(event) {
+            window.location.href = 'https://www.assessments24x7.com/assessments/disc#tenKeyBenefits';
+            event.target.blur();
         },
         getFlippableClass(index) {
             const totalCards = this.cards.length;
