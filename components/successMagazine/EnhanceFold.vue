@@ -24,6 +24,10 @@
             </div>
         </section>
         <section>
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png"
+                alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png"
+                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: 60px;">
             <div class="container" style="margin-top: -200px; min-height: 650px;">
                 <div class="row">
                     <div class="col-12">
@@ -65,7 +69,7 @@
                 </div>
             </div>
         </section>
-        <section class="bottomButtons" style="padding-bottom: 120px;">
+        <section class="bottomButtons" style="padding-bottom: 100px;">
             <div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
                 <button @click="handleFirstButtonClick($event)" class="firstButton">
                     Take Your Free Assessment

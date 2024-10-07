@@ -11,9 +11,11 @@
             <testimonial-fold></testimonial-fold>
             <explore-fold></explore-fold>
             <enhance-fold></enhance-fold>
+            <certification-fold></certification-fold>
             <stats-bottom-fold></stats-bottom-fold>
             <about-fold></about-fold>
             <transformation-fold></transformation-fold>
+            <contact-form-fold></contact-form-fold>
         </section>
         <footer-fold class="foot"></footer-fold>
     </section>
@@ -30,9 +32,11 @@ import UnlockFold from '@/components/successMagazine/UnlockFold';
 import TestimonialFold from '@/components/successMagazine/TestimonialFold';
 import ExploreFold from '@/components/successMagazine/ExploreFold';
 import EnhanceFold from '@/components/successMagazine/EnhanceFold';
+import CertificationFold from '@/components/successMagazine/CertificationFold';
 import StatsBottomFold from '@/components/successMagazine/StatsBottomFold';
 import AboutFold from '@/components/successMagazine/AboutFold';
 import TransformationFold from '@/components/successMagazine/TransformationFold';
+import ContactFormFold from '@/components/successMagazine/ContactFormFold';
 import Footer from '@/components/Footer';
 
 export default {
@@ -48,9 +52,11 @@ export default {
         'testimonial-fold': TestimonialFold,
         'explore-fold': ExploreFold,
         'enhance-fold': EnhanceFold,
+        'certification-fold': CertificationFold,
         'stats-bottom-fold': StatsBottomFold,
         'about-fold': AboutFold,
         'transformation-fold': TransformationFold,
+        'contact-form-fold': ContactFormFold,
         'footer-fold': Footer
     },
     head() {
