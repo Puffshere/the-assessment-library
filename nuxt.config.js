@@ -152,7 +152,8 @@ module.exports = {
       '/tools/email-dev',
       '/tools/email-original',
       '/resources/standards-and-procedures',
-      '/hiresense-calc'
+      '/hiresense-calc',
+      '/blog/**'
     ]
   },
   gtm: {
