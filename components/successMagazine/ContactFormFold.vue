@@ -44,8 +44,8 @@
   }
   
   .form-container {
-    width: 100%; /* Adjust width if needed */
-    max-width: 800px; /* Set a maximum width to control form size */
+    width: 100%; 
+    max-width: 800px; 
     padding: 20px;
 }
 
