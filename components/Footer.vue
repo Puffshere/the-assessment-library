@@ -20,7 +20,7 @@
                             <li class="link"><nuxt-link to="/">Home</nuxt-link></li>
                             <li class="link"><nuxt-link to="/assessments">Assessments</nuxt-link></li>
                             <li class="link"><nuxt-link to="/certifications">Certifications</nuxt-link></li>
-                            <li class="link"><nuxt-link to="https://blog.assessments24x7.com/">Blog</nuxt-link></li>
+                            <li class="link"><a href="https://blog.assessments24x7.com/">Blog</a></li>
                             <li class="link"><nuxt-link to="/about">About</nuxt-link></li>
                             <li class="link"><nuxt-link to="/contact">Contact</nuxt-link></li>
                         </ul>
