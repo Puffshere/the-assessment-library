@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
-                <button @click="firstButtonLink" class="firstButton">
+                <button @click="scrollToContactFormSection" class="firstButton">
                     Take Your Free Assessment
                 </button>
                 <button @click="secondButtonLink" class="secondButton">
@@ -51,8 +51,8 @@
 <script>
 export default {
     methods: {
-        firstButtonLink(event) {
-            const element = document.getElementById('successMagazineContactForm');
+        scrollToContactFormSection(event) {
+            const element = document.getElementById('contactFormSection');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }

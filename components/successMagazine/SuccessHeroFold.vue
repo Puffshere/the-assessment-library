@@ -12,13 +12,13 @@
                             style="margin-top: -45px; margin-bottom: 60px; color: #F8CD55; font-style: italic; font-weight: 400;">
                             Empowering Transformation.
                         </h2>
-                        <button class="heroBtn" style="margin-right: 15px;">
+                        <button @click="scrollToEmpowerSection" class="heroBtn" style="margin-right: 15px;">
                             Free DISC
                         </button>
-                        <button class="heroBtn" style="margin-right: 15px;">
+                        <button @click="scrollToExploreSection" class="heroBtn" style="margin-right: 15px;">
                             Book Demo
                         </button>
-                        <button class="heroBtn">
+                        <button @click="scrollToCertificationsSection" class="heroBtn">
                             Get Certified
                         </button>
                     </div>
@@ -31,6 +31,35 @@
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    methods: {
+        scrollToEmpowerSection(event) {
+            const element = document.getElementById('empowerSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        scrollToExploreSection(event) {
+            const element = document.getElementById('exploreSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        scrollToCertificationsSection(event) {
+            const element = document.getElementById('certificationsSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        }
+    }
+}
+</script>
+
 
 <style scoped>
 .hero {

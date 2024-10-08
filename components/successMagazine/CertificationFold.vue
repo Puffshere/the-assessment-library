@@ -1,6 +1,6 @@
 <template>
     <div class="body">
-        <section class="topSection" style="padding-bottom: 180px;">
+        <section id="certificationsSection" class="topSection" style="padding-bottom: 180px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">

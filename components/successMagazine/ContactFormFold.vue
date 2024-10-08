@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="contactFormSection">
       <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
         <div class="row">
           <h1>

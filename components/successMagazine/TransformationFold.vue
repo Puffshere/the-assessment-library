@@ -22,7 +22,7 @@
                             using assessments, ensuring your certification is a powerful addition to your professional
                             toolkit.
                         </p>
-                        <button @click="testimonialLink">
+                        <button @click="scrollToContactFormSection">
                             Speak to a Specialist
                         </button>
                     </div>
@@ -35,8 +35,11 @@
 <script>
 export default {
     methods: {
-        testimonialLink(event) {
-            window.location.href = 'https://www.assessments24x7.com/about/testimonials';
+        scrollToContactFormSection(event) {
+            const element = document.getElementById('contactFormSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
             event.target.blur();
         }
     }

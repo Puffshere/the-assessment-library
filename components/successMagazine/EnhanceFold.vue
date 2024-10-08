@@ -240,7 +240,7 @@ export default {
             this.secondButtonLink(event);
         },
         firstButtonLink(event) {
-            const element = document.getElementById('successMagazineContactForm');
+            const element = document.getElementById('contactFormSection');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }

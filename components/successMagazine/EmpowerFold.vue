@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="empowerSection">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png" alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png" alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: 60px;">
         <div class="container">
@@ -43,7 +43,7 @@
                             and reducing workplace friction. Enhance your interpersonal dynamics <br />
                             today—click below for your complimentary assessment.
                         </p>
-                        <button>
+                        <button @click="scrollToContactFormSection">
                             Take Your Free Assessment
                         </button>
                     </div>
@@ -57,6 +57,20 @@
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    methods: {
+        scrollToContactFormSection(event) {
+            const element = document.getElementById('contactFormSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        }
+    }
+}
+</script>
 
 <style scoped>
 .container {

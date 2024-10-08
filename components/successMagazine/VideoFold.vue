@@ -19,13 +19,28 @@
                         type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>
-                <button>
+                <button @click="scrollToContactFormSection">
                     Book Demo
                 </button>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        scrollToContactFormSection(event) {
+            const element = document.getElementById('contactFormSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        }
+    }
+}
+</script>
+
 
 <style scoped>
 .container {

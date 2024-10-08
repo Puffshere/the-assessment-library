@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section>
+        <section id="exploreSection">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png"
                 alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png"
@@ -40,7 +40,7 @@
                                 systems—our platform does it all.
                             </p>
                             <div style="display: flex; justify-content: flex-end; margin-top: 40px;">
-                                <button class="topButton">
+                                <button @click="scrollToContactFormSection" class="topButton">
                                     Book Live Demo
                                 </button>
                             </div>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div style="display: flex; justify-content: center; margin-top: 80px;">
-                    <button class="bottomButton">
+                    <button @click="scrollToContactFormSection" class="bottomButton">
                         Book Live Demo
                     </button>
                 </div>
@@ -147,6 +147,20 @@
         </section>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        scrollToContactFormSection(event) {
+            const element = document.getElementById('contactFormSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        }
+    }
+}
+</script>
 
 <style scoped>
 h1 {
