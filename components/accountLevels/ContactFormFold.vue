@@ -1,6 +1,8 @@
 <template>
   <section id="contactFormSection">
     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png"
+      alt="fold 4 graphic" style="position: absolute; right: 0px; margin-bottom: -800px;">
+    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png"
       alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: -900px;">
     <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
       <div class="row">
