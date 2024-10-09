@@ -1,6 +1,6 @@
 <template>
     <div class="body">
-        <section class="topSection" style="padding-bottom: 180px;">
+        <section class="topSection" style="padding-bottom: 200px;">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
                 alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 0px;">
             <div class="container">
@@ -24,22 +24,29 @@
                 </div>
             </div>
         </section>
-        <section class="bottomButtons" style="padding-bottom: 100px;">
-            <div class="container" style="min-height: 607px;">
+        <section class="bottomButtons" style="padding-bottom: 70px;">
+            <div class="container" style="min-height: 500px;">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12" style="margin-top: -160px;">
+                        <h2>
+                            Choose the right plan for your needs
+                        </h2>
+                        <div class="col-4 card">
 
+                        </div>
+                        <div class="col-4 card">
+
+                        </div>
+                        <div class="col-4 card">
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
-                <button class="firstButton">
-                    Take Your Free Assessment
+            <div class="row" style="display: flex; justify-content: center; margin-top: 0px;">
+                <button>
+                    Book Live Demo
                 </button>
-                <button class="secondButton">
-                    10 Key Benefits of DISC
-                </button>
-
             </div>
         </section>
     </div>
@@ -73,8 +80,8 @@ h1 {
 
 h2 {
     font-size: 18pt;
-    color: #213C85;
-    text-align: right;
+    color: #FFDE59;
+    text-align: center;
     font-weight: 700;
 }
 
@@ -84,28 +91,29 @@ h2 {
     background-position: center;
 
     button {
-        width: 184px;
-        height: 36px;
-        border-radius: 4px;
-        background: #0C3ECC;
+        width: 220px;
+        height: 41px;
+        border-radius: 8px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         text-decoration: underline;
         cursor: pointer;
-        font-size: 8.25pt;
         font-weight: 700;
-        font-family: Nunito Sans;
-    }
-
-    .firstButton {
         color: white;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 10.5pt;
         border: none;
-        margin-right: 30px;
+        background: #0033C5;
     }
+}
 
-    .secondButton {
-        border: 1px solid #E0AD2B;
-        background: rgba(12, 62, 204, 0.00);
-        color: #0D3FCD;
-    }
+.card {
+    background-color: white;
+    width: 298px;
+    height: 500px;
+    border-radius: 14px;
+    border: 1px solid #E0AD2B;
+    background: #FFF;
+    box-shadow: 6px 6px 4px 0px rgba(0, 0, 0, 0.25);
 }
 </style>

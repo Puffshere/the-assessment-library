@@ -6,6 +6,7 @@
             <harness-fold></harness-fold>
             <explore-cards-fold></explore-cards-fold>
             <contact-form-fold></contact-form-fold>
+            <faq-fold></faq-fold>
         </section>
         <footer-fold class="foot"></footer-fold>
     </section>
@@ -18,6 +19,7 @@ import HeroFold from '@/components/accountLevels/HeroFold';
 import HarnessFold from '@/components/accountLevels/HarnessFold';
 import ExploreCardsFold from '@/components/accountLevels/ExploreCardsFold';
 import ContactFormFold from '@/components/accountLevels/ContactFormFold';
+import FAQFold from '@/components/accountLevels/FAQFold';
 import Footer from '@/components/Footer';
 
 export default {
@@ -28,6 +30,7 @@ export default {
         'harness-fold': HarnessFold,
         'explore-cards-fold': ExploreCardsFold,
         'contact-form-fold': ContactFormFold,
+        'faq-fold': FAQFold,
         'footer-fold': Footer
     },
     head() {

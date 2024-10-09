@@ -1,6 +1,6 @@
 <template>
         <section class="cards">
-            <div class="container" style="padding-bottom: 80px;">
+            <div class="container" style="padding-bottom: 60px;">
                 <div class="row">
                     <div class="col-12" style="display: flex; justify-content: center; flex-wrap: wrap;">
                         <div class="col-6 card-column">
@@ -167,20 +167,20 @@ p {
 }
 
 button {
-    width: 184px;
-    height: 36px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: none;
-    cursor: pointer;
-    color: #FFF;
-    text-align: center;
-    font-size: 8.25pt;
-    font-weight: 700;
-    text-decoration-line: underline;
-    background: #0C3ECC;
-    font-family: Nunito Sans;
-}
+        width: 220px;
+        height: 41px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 10.5pt;
+        border: none;
+        background: #0033C5;
+    }
 
 .cards {
     background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/skyline-background.png');
