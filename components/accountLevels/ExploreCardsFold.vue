@@ -133,6 +133,8 @@ img {
 
 p {
     font-size: 10.5pt;
+    line-height: 14.33pt;
+    font-family: Nunito Sans;
 }
 
 .cardHeader {
@@ -143,9 +145,10 @@ p {
     color: white;
     text-align: center;
     align-content: center;
-    font-size: 16px;
+    font-size: 12pt;
     font-weight: 700;
     line-height: 130%;
+    font-family: Nunito Sans;
 }
 
 .cardImage {
@@ -156,7 +159,7 @@ p {
 .text {
     color: #0033C5;
     text-align: center;
-    font-size: 14px;
+    font-size: 10.5pt;
     font-weight: 400;
     line-height: 130%;
     padding: 0px 30px;
@@ -176,6 +179,7 @@ button {
     font-weight: 700;
     text-decoration-line: underline;
     background: #0C3ECC;
+    font-family: Nunito Sans;
 }
 
 .cards {

@@ -1,9 +1,10 @@
 -<template>
     <section>
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
+                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 0px;">
         <div class="container" style="padding-top: 50px; padding-bottom: 40px;">
             <div class="row">
                 <div class="col-12">
-
                     <div class="col-6">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Account+Levels+Graphics+(5).png"
                             alt="image of woman" style="width: 100%;">
@@ -60,6 +61,8 @@ section {
 p {
     margin-top: 0px;
     font-size: 10.5pt;
+    font-family: Nunito Sans;
+    line-height: 14.33pt;
 }
 
 img {
