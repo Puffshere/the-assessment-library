@@ -592,7 +592,8 @@ export default {
                     { name: 'During Change', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+During+Change.pdf', icon: 'PDF.png' },
                     { name: 'On the Phone', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+On+the+Phone.pdf', icon: 'PDF.png' },
                     { name: 'Leading a Meeting', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Leading+a+Meeting.pdf', icon: 'PDF.png' },
-                    { name: 'Workspaces', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Workspaces.pdf', icon: 'PDF.png' }
+                    { name: 'Workspaces', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Workspaces.pdf', icon: 'PDF.png' },
+                    { name: 'Bosses', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/DISC+in+Action+-+Bosses.pdf', icon: 'PDF.png' }
                 ],
                 dISCTargetApplicationsTips: [
                     { name: 'Coaching Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCCoachingTargetApplication.pdf', icon: 'PDF.png' },

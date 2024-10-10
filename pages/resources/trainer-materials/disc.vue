@@ -1192,6 +1192,11 @@
                                         href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Workspaces.pdf"
                                         target="_blank" rel="noopener">DISC in Action - Workspaces</a></td>
                             </tr>
+                            <tr>
+                                <td><a class="hyperlink"
+                                        href="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/DISC+in+Action+-+Bosses.pdf"
+                                        target="_blank" rel="noopener">DISC in Action - Bosses</a></td>
+                            </tr>
                         </tbody>
                     </table>
 
