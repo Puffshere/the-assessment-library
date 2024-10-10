@@ -109,10 +109,10 @@ module.exports = {
   sitemap: {
     hostname: 'https://www.assessments24x7.com',
     gzip: true,
-    routes: async () => {
-      const { data } = await axios.get('https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/posts/?key=1cd8f26ccc1cb09274574d0e00&limit=all&fields=slug');
-      return data.posts.map(post => `/blog/${post.slug}`);
-    },
+    // routes: async () => {
+    //   const { data } = await axios.get('https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/posts/?key=1cd8f26ccc1cb09274574d0e00&limit=all&fields=slug');
+    //   return data.posts.map(post => `/blog/${post.slug}`);
+    // },
     exclude: [
       '/disccert-account-setup',
       '/account-setup',
