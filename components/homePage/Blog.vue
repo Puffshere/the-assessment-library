@@ -23,24 +23,13 @@
 </template>
 
 <script>
-import LazyHydrate from 'vue-lazy-hydration';
-
 export default {
-    components: {
-        LazyHydrate,
-        'main-nav': () => import('@/components/Nav'),
-        'validation-mini': () => import('@/components/ValidationMiniDisc'),
-        'contact-form': () => import('@/components/ContactForm'),
-        'rebecca-maxwell': () => import('@/components/testimonials/RebeccaMaxwell'),
-        'footer-fold': () => import('@/components/Footer'),
-        'credits': () => import('@/components/Credits')
-    },
     data() {
         return {
             active: 'd',
             interrupted: false,
+            blogLoading: true, // Renamed loading state to avoid conflicts
             posts: [],
-            loading: true,
             structuredDataBreadcrumbs: {
                 "@context": "http://schema.org",
                 "@type": "BreadcrumbList",
@@ -69,12 +58,24 @@ export default {
         changeActive(active) {
             this.active = active;
             this.interrupted = true;
+        },
+        scrollToContactFormSection() {
+            const contactFormSection = document.getElementById('contactForm');
+            if (contactFormSection) {
+                contactFormSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     },
     async created() {
-        const response = await this.$axios.get(`posts/?key=1cd8f26ccc1cb09274574d0e00&limit=4&filter=tag:disc`);
-        this.posts = response.data.posts;
-        this.loading = false;
+        this.blogLoading = true; // Set loading to true before request
+        try {
+            const response = await this.$axios.get(`posts/?key=1cd8f26ccc1cb09274574d0e00&limit=4&filter=tag:disc`);
+            this.posts = response.data.posts;
+        } catch (error) {
+            console.error("Error fetching posts:", error);
+        } finally {
+            this.blogLoading = false; // Set loading to false after the request completes
+        }
     },
     mounted() {
         window.setInterval(() => {
