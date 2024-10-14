@@ -2,7 +2,7 @@
     <div class="main">
         <main-nav active="home"></main-nav>
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-            alt="fold 4 graphic" style="position: absolute; right: 0px; padding-top: 150px; width: 45%;">
+            alt="fold 4 graphic" style="position: absolute; right: 0px; padding-top: 180px; width: 45%;">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
             alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
         <div class="container">
@@ -17,10 +17,8 @@
                         <h2>
                             Online assessments that work for <br />
                             <div class="rotating-text-container">
-                                <transition-group name="slide" tag="div">
-                                    <span v-if="!transitioning" :key="currentTextIndex" class="rotating-text"
-                                        style="color: #E0AD2B; font-weight: 700;">{{ currentText }}</span>
-                                </transition-group>
+                                <span class="rotating-text" style="color: #E0AD2B; font-weight: 700;">{{ currentText
+                                    }}</span>
                             </div>
                         </h2>
                         <br />
@@ -74,30 +72,58 @@ export default {
     data() {
         return {
             texts: ["you", "your business", "your teams", "your clients"],
+            currentText: "",
             currentTextIndex: 0,
-            transitioning: false
+            typing: false
         };
     },
-    computed: {
-        currentText() {
-            return this.texts[this.currentTextIndex];
-        }
-    },
     mounted() {
-        this.startTextRotation();
+        this.startTypingEffect();
     },
     methods: {
-        startTextRotation() {
-            setInterval(() => {
-                this.transitioning = true;
-                setTimeout(() => {
-                    this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
-                    this.transitioning = false;
-                }, 2000);
-            }, 6000);
+        startTypingEffect() {
+            const typeSpeed = 100;
+            const deleteSpeed = 50;
+            const delayBetweenPhrases = 1000;
+
+            const typeText = () => {
+                const fullText = this.texts[this.currentTextIndex];
+                let charIndex = 0;
+                this.typing = true;
+
+                const typeChar = () => {
+                    if (charIndex < fullText.length) {
+                        this.currentText += fullText.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(typeChar, typeSpeed);
+                    } else {
+                        setTimeout(deleteText, delayBetweenPhrases);
+                    }
+                };
+
+                typeChar();
+            };
+
+            const deleteText = () => {
+                let charIndex = this.currentText.length;
+
+                const deleteChar = () => {
+                    if (charIndex > 0) {
+                        this.currentText = this.currentText.substring(0, charIndex - 1);
+                        charIndex--;
+                        setTimeout(deleteChar, deleteSpeed);
+                    } else {
+                        this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
+                        setTimeout(typeText, delayBetweenPhrases);
+                    }
+                };
+
+                deleteChar();
+            };
+
+            typeText();
         },
         scrollToContactForm() {
-
         }
     }
 }
@@ -131,28 +157,12 @@ h2 {
     margin-top: 0em;
     height: 1.5em;
     overflow: hidden;
+    display: inline-block;
 }
 
 .rotating-text {
-    display: inline-block;
-    position: absolute;
-    top: 0;
+    display: inline;
     white-space: nowrap;
-}
-
-.slide-enter-active,
-.slide-leave-active {
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-}
-
-.slide-enter {
-    transform: translateX(100%);
-    opacity: 0;
-}
-
-.slide-leave-to {
-    transform: translateX(-100%);
-    opacity: 0;
 }
 
 p {
@@ -178,5 +188,24 @@ button {
     font-size: 10.5pt;
     border: none;
     background: #0033C5;
+}
+
+.rotating-text-container::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    color: #E0AD2B;
+    font-weight: 700;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 </style>
