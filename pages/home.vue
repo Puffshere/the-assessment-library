@@ -2,7 +2,7 @@
     <div class="main">
         <main-nav active="home"></main-nav>
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-            alt="fold 4 graphic" style="position: absolute; right: 0px; padding-top: 180px; width: 45%;">
+            alt="fold 4 graphic" style="position: absolute; right: 0px; padding-top: 145px; width: 45%;">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
             alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
         <div class="container">
@@ -41,6 +41,9 @@
             </div>
         </div>
         <LazyHydrate when-visible>
+            <worlds-leading></worlds-leading>
+        </LazyHydrate>
+        <LazyHydrate when-visible>
             <reviews></reviews>
         </LazyHydrate>
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
@@ -62,6 +65,7 @@ export default {
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
+        'worlds-leading': () => import('@/components/homePage/WorldsLeadingFold'),
         'reviews': () => import('@/components/homePage/Reviews'),
         'client-logos': () => import('@/components/ClientLogos'),
         'blog': () => import('@/components/homePage/Blog'),
@@ -138,14 +142,14 @@ export default {
 h1 {
     color: #213C85;
     font-family: Poppins;
-    font-size: 36px;
+    font-size: 27pt;
     font-weight: 700;
 }
 
 h2 {
     color: #213C85;
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 18pt;
     font-weight: 400;
     overflow: hidden;
     position: relative;
