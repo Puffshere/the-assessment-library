@@ -13,7 +13,7 @@
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Yrs+in+business.png"
                             alt="card 1 image" class="card-image">
                         <div class="cardNumber">
-                            25
+                            25+
                         </div>
                         <div class="cardText">
                             Years <br />
