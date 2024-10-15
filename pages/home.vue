@@ -50,6 +50,9 @@
             <budget-fold></budget-fold>
         </LazyHydrate>
         <LazyHydrate when-visible>
+            <asi-fold></asi-fold>
+        </LazyHydrate>
+        <LazyHydrate when-visible>
             <reviews></reviews>
         </LazyHydrate>
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
@@ -74,6 +77,7 @@ export default {
         'worlds-leading': () => import('@/components/homePage/WorldsLeadingFold'),
         'powerful-fold': () => import('@/components/homePage/PowerfulFold'),
         'budget-fold': () => import('@/components/homePage/BudgetFold'),
+        'asi-fold': () => import('@/components/homePage/ASIFold'),
         'reviews': () => import('@/components/homePage/Reviews'),
         'client-logos': () => import('@/components/ClientLogos'),
         'blog': () => import('@/components/homePage/Blog'),

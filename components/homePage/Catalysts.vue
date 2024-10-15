@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="content-wrapper">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Home+Page/Corporate+Icon.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Corporate+Icon.png"
                             alt="corporate image" style="width: 70px;">
                         <h3 style="margin-top: 8px;">Empowering Teams & Organizations</h3>
                         <p style="padding-bottom: 30px; margin-top: -10px;">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-6">
                     <div class="content-wrapper">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Home+Page/Coaching+Icon.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Coaching+Icon.png"
                             alt="coaching image" style="width: 90px;">
                         <h3>The Bridge Between You and Your Clients</h3>
                         <p style="padding-bottom: 11px; margin-top: -10px;">
@@ -45,7 +45,6 @@
 export default {
     methods: {
         scrollToContactForm() {
-            // Your scroll function here
         }
     }
 }
@@ -85,7 +84,7 @@ h2 {
     box-sizing: border-box;
     border-radius: 14px;
     border: 1px solid #e0ad2b44;
-    background: rgba(255, 255, 255, 0.32); /* Background transparency without affecting content */
+    background: rgba(255, 255, 255, 0.32);
     box-shadow: 4px 4px 4px 0px rgba(112, 112, 112, 0.25);
     padding: 20px 40px;
 }
