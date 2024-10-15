@@ -23,7 +23,7 @@
                                 Learn More
                             </button>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4 seal">
                             <img class="image" src="~assets/asi-certified.png"
                                 alt="Scientifically Validated Assessments by ASI" style="width: 283px;">
                         </div>
@@ -37,7 +37,7 @@
                     <div class="col-12">
                         <div class="col-6">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/woman+-+fold+8.png"
-                                alt="woman with a headset" style="width: 445px; margin-top: -150px;">
+                                alt="woman with a headset" style="width: 445px; margin-top: -150px;" class="personImage">
                         </div>
                         <div class="col-6">
                             <h2 style="text-align: right;">
@@ -58,7 +58,7 @@
                             <h2 style="text-align: left;">
                                 <span style="color: #E0AD2B;">No</span> barriers
                             </h2>
-                            <p style="text-align: left;">
+                            <p style="text-align: left;" class="bottomText">
                                 We’re all about accessibility and affordability. Our Global Affiliate Network spans over
                                 50 countries and we support assessments in more than 25 languages. In addition, we offer
                                 flexible pricing options, with no membership fees, annual fees, or setup costs.
@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-6">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Man+-+Fold+8.png"
-                                alt="man smiling" style="width: 445px; float: right; margin-top: -220px; margin-bottom: -90px;">
+                                alt="man smiling" style="width: 445px; float: right; margin-top: -220px; margin-bottom: -90px;" class="personImage">
                         </div>
                     </div>
                 </div>
@@ -84,14 +84,14 @@
 h2 {
     color: #0459DF;
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 18pt;
     font-weight: 700;
 }
 
 p {
     color: #0459DF;
     font-family: "Nunito Sans";
-    font-size: 14px;
+    font-size: 10.5pt;
     font-weight: 400;
 }
 
@@ -116,5 +116,25 @@ button {
     background-size: cover;
     background-position: center;
     padding-bottom: -75px;
+}
+
+@media (max-width: 1200px) {
+    .personImage {
+        width: 100% !important;
+    }
+
+    .seal {
+        display: flex;
+        justify-content: center;
+    }
+
+    .image {
+        width: 50% !important;
+        margin-top: 40px;
+    }
+
+    .bottomText {
+        margin-bottom: 240px;
+    }
 }
 </style>

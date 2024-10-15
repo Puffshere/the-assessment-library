@@ -1,7 +1,7 @@
 <template>
     <section>
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-            alt="fold 4 graphic" style="position: absolute; right: -150px; padding-top: 50px; width: 45%;">
+            alt="fold 4 graphic" style="position: absolute; right: -150px; padding-top: 53px; width: 45%;">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
             alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
         <div class="container">
@@ -9,7 +9,13 @@
                 <div class="col-12">
                     <div class="col-5">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Homepage+Graphic+-+Fold+4.png"
-                            alt="image of black woman and computer" style="width: 100%; margin-top: -40px;">
+                            alt="image of black woman and computer" style="width: 100%; margin-top: -50px;">
+                        <div class="lightBox">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/light-bulb.png"
+                                alt="image of a light bulb" style="margin-left: -20px;">
+                            <span class="lightBoxText">Ask about our API integration, customization and white-label
+                                options</span>
+                        </div>
                     </div>
                     <div class="col-7" style="text-align: right;">
                         <h2>
@@ -35,7 +41,7 @@
 <style scoped>
 .container {
     padding-top: 50px;
-    padding-bottom: 140px;
+    padding-bottom: 85px;
 }
 
 h2 {
@@ -68,5 +74,38 @@ button {
     font-weight: 700;
     background-color: white;
     border: 1px solid #E0AD2B;
+}
+
+.lightBox {
+    display: flex;
+    align-items: center;
+    width: 565px;
+    height: 33px;
+    border-radius: 7px;
+    border: 1px solid #F5F5F5;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+.light-bulb {
+    width: 70px;
+    margin-left: -20px;
+}
+
+.lightBoxText {
+    color: #213C85;
+    font-family: "Nunito Sans";
+    font-size: 10.5pt;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+    .lightBox {
+        width: 100%;
+        padding: 30px 10px !important;
+    }
 }
 </style>
