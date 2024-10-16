@@ -145,7 +145,7 @@
             <div class="row">
                 <div class="col-12">
                     <div style="display: flex; justify-content: center; margin-top: 10px;">
-                        <button @click="scrollToContactFormSection">
+                        <button @click="jumpToReviews">
                             View Testimonials
                         </button>
                     </div>
@@ -154,6 +154,17 @@
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    methods: {
+        jumpToReviews(event) {
+            window.location.href = 'https://www.assessments24x7.com/about/testimonials';
+            event.target.blur();
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 @import '~assets/scss/vars';

@@ -19,7 +19,7 @@
                                 Assessments 24x7 has one of the highest Cronbach scores for our DISC assessment, which
                                 indicates exceptional consistency and reliability.
                             </p>
-                            <button @click="scrollToContactForm" style="margin-top: 20px;">
+                            <button @click="jumpToValidityPage" style="margin-top: 20px;">
                                 Learn More
                             </button>
                         </div>
@@ -74,6 +74,17 @@
         </section>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        jumpToValidityPage(event) {
+            window.location.href = 'https://www.assessments24x7.com/about/validity';
+            event.target.blur();
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 @import '~assets/scss/vars';

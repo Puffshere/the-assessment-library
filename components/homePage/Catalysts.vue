@@ -14,7 +14,7 @@
                             of more than 900 specialized assessments, supporting everything from picking the right
                             employees to developing leaders, building strong teams, and resolving conflicts.
                         </p>
-                        <button @click="scrollToContactForm" style="margin-bottom: 10px;">
+                        <button @click="jumpToCorporatePage" style="margin-bottom: 10px;">
                             Solutions for Corporations
                         </button>
                     </div>
@@ -31,7 +31,7 @@
                             over half increase their service fees. Lifetime certification provides access to over
                             500 training materials, including PowerPoints, videos, and group exercises.
                         </p>
-                        <button @click="scrollToContactForm" style="margin-bottom: 10px;">
+                        <button @click="jumpToResellerPage" style="margin-bottom: 10px;">
                             Solutions for Coaches and Consultants
                         </button>
                     </div>
@@ -44,7 +44,13 @@
 <script>
 export default {
     methods: {
-        scrollToContactForm() {
+        jumpToCorporatePage(event) {
+            window.location.href = 'https://www.assessments24x7.com/assessments/corporate';
+            event.target.blur();
+        },
+        jumpToResellerPage(event) {
+            window.location.href = 'https://www.assessments24x7.com/assessments/reseller';
+            event.target.blur();
         }
     }
 }

@@ -139,7 +139,12 @@ export default {
 
             typeText();
         },
-        scrollToContactForm() {
+        scrollToContactForm(event) {
+            const element = document.getElementById('contactFormSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
         }
     }
 }

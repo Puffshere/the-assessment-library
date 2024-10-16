@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="row" style="display: flex; justify-content: center; padding-top: 0px;">
-                        <button @click="scrollToContactForm">
+                        <button @click="jumpToPlatformPageChecklist">
                             Compare Plans
                         </button>
                     </div>
@@ -50,6 +50,17 @@
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    methods: {
+        jumpToPlatformPageChecklist(event) {
+            window.location.href = 'https://www.assessments24x7.com/';
+            event.target.blur();
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 @import '~assets/scss/vars';

@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div style="display: flex; justify-content: center; margin-top: 60px;">
-                <button @click="scrollToContactFormSection">
+                <button @click="jumpToBlog">
                     Read More
                 </button>
             </div>
@@ -59,11 +59,9 @@ export default {
             this.active = active;
             this.interrupted = true;
         },
-        scrollToContactFormSection() {
-            const contactFormSection = document.getElementById('contactForm');
-            if (contactFormSection) {
-                contactFormSection.scrollIntoView({ behavior: 'smooth' });
-            }
+        jumpToBlog(event) {
+            window.location.href = 'https://blog.assessments24x7.com/';
+            event.target.blur();
         }
     },
     async created() {

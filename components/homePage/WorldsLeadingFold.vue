@@ -64,6 +64,20 @@
     </section>
 </template>
 
+<script>
+export default {
+    methods: {
+        scrollToContactForm(event) {
+            const element = document.getElementById('contactFormSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        }
+    }
+}
+</script>
+
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 
