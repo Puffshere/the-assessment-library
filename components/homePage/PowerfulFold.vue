@@ -28,7 +28,7 @@
                             reports, manage sub-accounts, access certification materials and online training resources,
                             seamlessly integrate with LMS, CRM, HR, and recruiting systems — and more!
                         </p>
-                        <button @click="jumpToPlatformPage" style="margin-top: 50px;">
+                        <button @click="scrollToContactForm" style="margin-top: 50px;">
                             Learn More
                         </button>
                     </div>
@@ -41,8 +41,11 @@
 <script>
 export default {
     methods: {
-        jumpToPlatformPage(event) {
-            window.location.href = 'https://www.assessments24x7.com/';
+        scrollToContactForm(event) {
+            const element = document.getElementById('contactFormSection');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
             event.target.blur();
         }
     }
