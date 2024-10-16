@@ -38,7 +38,9 @@
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .container {
     padding-top: 50px;
     padding-bottom: 85px;
@@ -55,7 +57,7 @@ h2 {
 p {
     color: #213C85;
     text-align: right;
-    font-family: "Nunito Sans";
+    font-family: $nunito-family;
     font-size: 10.5;
     font-weight: 400;
 }
@@ -96,7 +98,7 @@ button {
 
 .lightBoxText {
     color: #213C85;
-    font-family: "Nunito Sans";
+    font-family: $nunito-family;
     font-size: 10.5pt;
     font-weight: 400;
     line-height: 1.5;

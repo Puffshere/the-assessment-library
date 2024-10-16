@@ -145,7 +145,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .container {
     padding-top: 50px;
     padding-bottom: 70px;
@@ -183,7 +185,7 @@ h2 {
 
 p {
     color: #213C85;
-    font-family: "Nunito Sans";
+    font-family: $nunito-family;
     font-size: 10.5pt;
     font-weight: 400;
     margin-top: -30px;

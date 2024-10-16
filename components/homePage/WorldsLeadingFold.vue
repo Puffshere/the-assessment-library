@@ -64,7 +64,9 @@
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 section {
     background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/skyline-background.png');
     background-size: cover;
@@ -123,7 +125,7 @@ h1 {
 
 .cardText {
     color: #0033C5;
-    font-family: "Nunito Sans";
+    font-family: $nunito-family;
     font-size: 15pt;
     font-weight: 400;
     margin-top: -30px;

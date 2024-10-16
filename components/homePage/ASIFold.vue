@@ -75,7 +75,9 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .container {
     padding-top: 50px;
     margin-bottom: 123px;
@@ -90,7 +92,7 @@ h2 {
 
 p {
     color: #0459DF;
-    font-family: "Nunito Sans";
+    font-family: $nunito-family;
     font-size: 10.5pt;
     font-weight: 400;
 }

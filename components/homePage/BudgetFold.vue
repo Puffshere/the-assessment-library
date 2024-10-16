@@ -51,7 +51,9 @@
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 section {
     background: linear-gradient(180deg, #0033C5 -2.43%, #0459DF 45.98%, #B9C5D9 96.95%);
 }
@@ -72,7 +74,7 @@ h2 {
 p {
     color: white;
     text-align: center;
-    font-family: "Nunito Sans";
+    font-family: $nunito-family;
     font-size: 10.5pt;
     font-weight: 400;
     margin-bottom: 40px;
@@ -113,7 +115,7 @@ p {
 
 .card-text {
     color: #0033C5;
-    font-family: "Nunito Sans";
+    font-family: $nunito-family;
     font-size: 10.5pt;
     font-weight: 400;
     margin-bottom: 20px;
