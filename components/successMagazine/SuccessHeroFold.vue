@@ -13,7 +13,7 @@
                             style="margin-top: -45px; margin-bottom: 60px; color: #F8CD55; font-style: italic; font-weight: 400;">
                             Empowering Transformation.
                         </h2>
-                        <button @click="scrollToEmpowerSection" class="heroBtn" style="margin-right: 15px;">
+                        <button @click="scrollToEmpowerSection" class="heroBtn btn" style="margin-right: 15px;">
                             Free DISC
                         </button>
                         <button @click="scrollToExploreSection" class="heroBtn" style="margin-right: 15px;">
@@ -60,7 +60,6 @@ export default {
     }
 }
 </script>
-
 
 <style scoped>
 .hero {
@@ -110,6 +109,11 @@ h2 {
 
     .heroBtn {
         margin-right: 0px !important;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        margin-right: 20px !important;
     }
 }
 </style>
