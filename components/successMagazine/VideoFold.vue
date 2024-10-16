@@ -13,7 +13,7 @@
                     best in you and your team. Let the <br />
                     transformation begin.
                 </p>
-                <video autoplay muted loop id="myVideo">
+                <video id="myVideo" controls>
                     <source
                         src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold2-video.mp4"
                         type="video/mp4">
@@ -74,16 +74,17 @@ video {
 
 button {
     margin-top: 20px;
-    width: 125px;
-    height: 36px;
-    border-radius: 4px;
-    background: #E0AD2B;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: white;
-    cursor: pointer;
-    border: none;
-    text-decoration: underline;
+    color: #FFF;
+    background: #0033C5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 132px;
+    height: 41px;
+    border-radius: 7px;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10.5pt;
     font-weight: 700;
-    font-size: 8.25pt;
+    text-decoration-line: underline;
+    cursor: pointer;
 }
 </style>

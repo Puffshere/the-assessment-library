@@ -72,7 +72,7 @@
         <section class="bottomButtons" style="padding-bottom: 100px;">
             <div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
                 <button @click="handleFirstButtonClick($event)" class="firstButton">
-                    Take Your Free Assessment
+                    Take Free Assessment
                 </button>
                 <button @click="handleSecondButtonClick($event)" class="secondButton">
                     10 Key Benefits of DISC
@@ -297,15 +297,17 @@ h2 {
 
 .bottomButtons {
     button {
+        background: #0033C5;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         width: 184px;
-        height: 36px;
-        border-radius: 4px;
-        background: #0C3ECC;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        text-decoration: underline;
-        cursor: pointer;
-        font-size: 8.25pt;
+        height: 41px;
+        border-radius: 7px;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 10.5pt;
         font-weight: 700;
+        text-decoration-line: underline;
+        cursor: pointer;
     }
 
     .firstButton {
@@ -316,7 +318,7 @@ h2 {
 
     .secondButton {
         border: 1px solid #E0AD2B;
-        background: rgba(12, 62, 204, 0.00);
+        background: white;
         color: #0D3FCD;
     }
 }

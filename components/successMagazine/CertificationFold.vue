@@ -144,17 +144,17 @@ p {
 }
 
 button {
-    width: 184px;
-    height: 36px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: none;
-    cursor: pointer;
     color: #FFF;
+    background: #0033C5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 190px;
+    height: 41px;
+    border-radius: 7px;
     text-align: center;
-    font-size: 8.25pt;
+    font-family: Poppins;
+    font-size: 10.5pt;
     font-weight: 700;
     text-decoration-line: underline;
-    background: #0C3ECC;
+    cursor: pointer;
 }
 </style>

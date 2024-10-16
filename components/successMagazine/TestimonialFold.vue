@@ -67,11 +67,11 @@ button {
     border-radius: 4px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: none;
+    border: 1px solid #E0AD2B;
     margin-top: 10px;
     text-decoration: underline;
     color: #0C3ECC;
-    font-size: 8.25pt;
+    font-size: 10.5pt;
     font-weight: 700;
     cursor: pointer;
 }

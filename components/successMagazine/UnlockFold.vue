@@ -38,7 +38,7 @@
             </div>
             <div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
                 <button @click="scrollToContactFormSection" class="firstButton">
-                    Take Your Free Assessment
+                    Take Free Assessment
                 </button>
                 <button @click="secondButtonLink" class="secondButton">
                     10 Key Benefits of DISC
@@ -79,15 +79,17 @@ export default {
 }
 
 button {
+    background: #0033C5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 184px;
-    height: 36px;
-    border-radius: 4px;
-    background: #E0AD2B;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 8.25pt;
+    height: 41px;
+    border-radius: 7px;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10.5pt;
     font-weight: 700;
+    text-decoration-line: underline;
+    cursor: pointer;
 }
 
 .firstButton {
@@ -98,7 +100,7 @@ button {
 
 .secondButton {
     border: 1px solid #E0AD2B;
-    background: rgba(12, 62, 204, 0.00);
+    background: white;
     color: #0D3FCD;
 }
 </style>

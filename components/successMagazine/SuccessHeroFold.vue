@@ -1,7 +1,8 @@
 <template>
     <section class="hero" style="padding-top: 10px;">
         <div class="container">
-            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold1-graphic.png" alt="fold 1 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold1-graphic.png"
+                alt="fold 1 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
             <div class="row">
                 <div class="col-12">
                     <div class="col-8">
@@ -78,17 +79,19 @@ h2 {
 
 .heroBtn {
     width: 125px;
-    height: 36px;
-    border-radius: 6px;
+    height: 41px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #E0AD2B;
     background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: #00A7FE;
+    color: #0033C5;
     text-align: center;
-    font-size: 8.25pt;
+    font-family: Poppins;
+    font-size: 10.5pt;
     font-weight: 700;
+    line-height: 37.333px;
     text-decoration-line: underline;
-    cursor: pointer;
-    border: none;
+    cursor: pointer
 }
 
 @media (max-width: 1200px) {

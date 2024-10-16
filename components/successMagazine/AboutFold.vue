@@ -83,10 +83,9 @@
                         </p>
                     </div>
                     <div style="display: flex; justify-content: center; padding-bottom: 60px;">
-                        <nuxt-link to="/certifications" class="button">Assessment
-                            Certification</nuxt-link>
+                        <nuxt-link to="/certifications" class="button">Certification Options</nuxt-link>
                         <button @click="scrollToContactFormSection">
-                            Speak to a Specialist
+                            Get Certified
                         </button>
                     </div>
                 </div>
@@ -115,36 +114,37 @@ export default {
     padding-bottom: 80px;
 }
 
+.button {
+    color: #FFF;
+    background: #0033C5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 184px;
+    height: 41px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10.5pt;
+    font-weight: 700;
+    text-decoration-line: underline;
+    cursor: pointer;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 8px;
+}
 
-    button {
-        width: 194px;
-        height: 36px;
-        border-radius: 4px;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        text-decoration: underline;
-        cursor: pointer;
-        font-size: 8.25pt;
-        font-weight: 700;
-        border: 1px solid #E0AD2B;
-        background: rgba(12, 62, 204, 0.00);
-        color: #0D3FCD;
-    }
-
-    .button {
-        width: 194px;
-        height: 36px;
-        border-radius: 4px;
-        background: #0C3ECC;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        text-decoration: underline;
-        cursor: pointer;
-        font-size: 8.25pt;
-        font-weight: 700;
-        color: white;
-        border: none;
-        margin-right: 30px;
-    }
-
- 
-    
+button {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 184px;
+    height: 41px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10.5pt;
+    font-weight: 700;
+    text-decoration-line: underline;
+    cursor: pointer;
+    border: 1px solid #E0AD2B;
+    background: white;
+    color: #0D3FCD;
+}
 </style>

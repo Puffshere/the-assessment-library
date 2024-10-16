@@ -40,7 +40,7 @@
                                 systems—our platform does it all.
                             </p>
                             <div style="display: flex; justify-content: flex-end; margin-top: 40px;">
-                                <button @click="scrollToContactFormSection" class="topButton">
+                                <button @click="scrollToContactFormSection">
                                     Book Live Demo
                                 </button>
                             </div>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div style="display: flex; justify-content: center; margin-top: 80px;">
-                    <button @click="scrollToContactFormSection" class="bottomButton">
+                    <button @click="scrollToContactFormSection">
                         Book Live Demo
                     </button>
                 </div>
@@ -209,29 +209,21 @@ p {
     font-weight: 400;
     line-height: 130%;
     padding: 0px 30px;
-    /* 18.2px */
 }
 
 button {
-    width: 184px;
-    height: 36px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: none;
-    cursor: pointer;
     color: #FFF;
+    background: #0033C5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 184px;
+    height: 41px;
+    border-radius: 7px;
     text-align: center;
-    font-size: 8.25pt;
+    font-family: Poppins;
+    font-size: 10.5pt;
     font-weight: 700;
     text-decoration-line: underline;
-}
-
-.topButton {
-    background: #E0AD2B;
-}
-
-.bottomButton {
-    background: #0C3ECC;
+    cursor: pointer;
 }
 
 .cards {

@@ -1,7 +1,9 @@
 <template>
     <section id="freedisc">
-        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png" alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
-        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png" alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: 60px;">
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png"
+            alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png"
+            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: 60px;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -44,7 +46,7 @@
                             today—click below for your complimentary assessment.
                         </p>
                         <button @click="scrollToContactFormSection">
-                            Take Your Free Assessment
+                            Take Free Assessment
                         </button>
                     </div>
                     <div class="col-4">
@@ -85,18 +87,18 @@ h1 {
 }
 
 button {
+    color: #FFF;
+    background: #0033C5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 184px;
-    height: 36px;
-    flex-shrink: 0;
-    border-radius: 4px;
-    background: #E0AD2B;
-    color: white;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    border: none;
-    text-decoration: underline;
+    height: 41px;
+    border-radius: 7px;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10.5pt;
     font-weight: 700;
-    font-size: 8.25pt;
+    text-decoration-line: underline;
+    cursor: pointer;
 }
 
 @media (max-width: 1200px) {

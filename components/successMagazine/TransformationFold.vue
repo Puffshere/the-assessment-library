@@ -65,17 +65,18 @@ p {
 
 button {
     width: 184px;
-    height: 36px;
+    height: 41px;
     border-radius: 4px;
+    border: 1px solid #E0AD2B;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: none;
     margin-top: 10px;
     text-decoration: underline;
-    color: #E0AD2B;
-    font-size: 8.25pt;
+    color: #0D3FCD;
+    font-size: 10.5pt;
     font-weight: 700;
     cursor: pointer;
+    font-family: Poppins;
 }
 
 img {
