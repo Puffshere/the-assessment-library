@@ -36,7 +36,7 @@
 export default {
     methods: {
         scrollToEmpowerSection(event) {
-            const element = document.getElementById('empowerSection');
+            const element = document.getElementById('freedisc');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
@@ -50,7 +50,7 @@ export default {
             event.target.blur();
         },
         scrollToCertificationsSection(event) {
-            const element = document.getElementById('certificationsSection');
+            const element = document.getElementById('getcertified');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }

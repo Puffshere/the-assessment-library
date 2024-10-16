@@ -14,7 +14,7 @@
                         <p style="margin-top: -35px;">
                             Unlock maximum potential with Assessments 24x7, a platform engineered to enhance and
                             streamline your assessment processes. Experience a suite of tools designed to provide deep
-                            insights, seamless integration, and unparalleled customization that can transform how you
+                            insight, seamless integration, and unparalleled customization that can transform how you
                             interact with clients and manage your services. Here's how our platform can elevate your
                             professional capabilities:
                         </p>

@@ -38,7 +38,7 @@
                             Our instructors are skilled professionals with years of experience and extensive
                             knowledge in our core assessments. They guide participants with clear and concise
                             instructions. Each instructor is committed to student success and provides valuable
-                            insights and practical advice, ensuring a productive learning experience.
+                            insight and practical advice, ensuring a productive learning experience.
                         </p>
                     </div>
                     <div style="padding-left: 30px; padding-right: 20px;">
@@ -63,7 +63,7 @@
                         </h4>
                         <p style="margin-bottom: 30px;">
                             Our group training courses emphasize real-world application, allowing participants
-                            to practice skills through peers in the course. This hands-on method not only builds
+                            to practice skills with peers in the course. This hands-on method not only builds
                             confidence but ensures knowledge is applied effectively, making the learning process
                             both relevant and engaging.
                         </p>

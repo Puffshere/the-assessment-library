@@ -1,6 +1,6 @@
 <template>
     <div class="body">
-        <section id="certificationsSection" class="topSection" style="padding-bottom: 180px;">
+        <section id="getcertified" class="topSection" style="padding-bottom: 180px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -8,7 +8,7 @@
                             Our Assessment Certification Programs
                         </h1>
                         <p style="color: white; text-align: center; margin-top: -20px;">
-                            Whether independent facilitators, corporate trainers, coaches or consultants, Certified
+                            Whether independent facilitators, corporate trainers, coaches, or consultants, Certified
                             Practitioners offer unique expertise and perspective, receive higher contracts and salaries,
                             rate stronger when interacting with others, and succeed in attracting more clients and
                             referrals. Not only does certification training differentiate our clients, each of our
@@ -35,7 +35,7 @@
                                 Are you looking for mastery-level understanding of DISC with the expertise and training
                                 to differentiate you from other coaches, consultants, and trainers? Our DISC Assessment
                                 Certification is designed to provide you with the ability to debrief a client’s DISC
-                                report with confidence and accuracy and use the assessments for a variety of client
+                                report with confidence and accuracy and to use the assessment for a variety of client
                                 needs.
                             </p>
                             <div style="display: flex; justify-content: center; margin-top: 50px;">

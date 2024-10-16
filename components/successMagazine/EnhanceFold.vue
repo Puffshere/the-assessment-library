@@ -94,7 +94,7 @@ export default {
                     backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCTeamSummarySample-2.png',
                     title: 'DISC Team Summary',
                     description: 'Free Group Report',
-                    languages: '25 Languages',
+                    languages: '10 Languages',
                     link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf'
                 },
                 {

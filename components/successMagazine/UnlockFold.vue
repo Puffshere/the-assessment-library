@@ -14,7 +14,7 @@
                         </h2>
                         <p>
                             Assessments 24x7 offers cutting-edge, scientifically validated DISC assessment technology
-                            that provides deep insights into behavior and communication. Our DISC tools are tailored for
+                            that provides deep insight into behavior and communication. Our DISC tools are tailored for
                             diverse personal and professional needs, empowering coaches, HR professionals, and
                             organizations to improve teamwork, boost individual performance, and enhance leadership. Key
                             benefits include:
@@ -24,7 +24,7 @@
                                 An intuitive platform with customizable reports
                             </li>
                             <li>
-                                Independent validation ensuring accuracy and reliability
+                                Independent validation, ensuring accuracy and reliability
                             </li>
                             <li>
                                 Exceptional support and flexible pricing for a seamless experience

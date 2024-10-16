@@ -61,12 +61,12 @@ export default {
     },
     head() {
         return {
-            title: 'Success Magazine | Assessments 24x7',
+            title: 'Success Magazine Features Assessments 24x7 - DISC Leadership & Team Growth',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: ''
+                    content: 'Discover how Assessments 24x7, featured in Success Magazine, empowers leaders and teams with trusted DISC tools for improving communication, performance, and self-awareness.'
                 }
             ]
         }

@@ -1,5 +1,5 @@
 <template>
-    <section id="empowerSection">
+    <section id="freedisc">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png" alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png" alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: 60px;">
         <div class="container">
@@ -10,7 +10,7 @@
                             Empower Your Success with DISC
                         </h1>
                         <p>
-                            The DISC assessment measures and provides insights into four primary <br />
+                            The DISC assessment measures and provides insight into four primary <br />
                             behavioral tendencies and emotions, exploring how they combine into a unique <br />
                             personal blend:
                         </p>
