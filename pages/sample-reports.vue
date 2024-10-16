@@ -24,7 +24,7 @@
                         <label for="lang">Filter by Language:</label>
                         <select class="input" id="lang" v-model="lang">
                             <option value="ar">Arabic - 2</option>
-                            <option value="en-au">Australian - 10</option>
+                            <option value="en-au">Australian - 11</option>
                             <option value="bg">Bulgarian - 1</option>
                             <option value="zh">Chinese (Mandarin) - 17</option>
                             <option value="zh-t">Chinese (Traditional) - 1</option>
@@ -359,6 +359,9 @@
                         <a v-else-if="lang === 'ar'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Arabic.pdf"
                             target="_blank" rel="noopener">Motivators Self Report</a>
+                        <a v-else-if="lang === 'en-au'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators_-_Australian.pdf"
+                            target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else-if="lang === 'zh'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Chinese.pdf"
                             target="_blank" rel="noopener">Motivators Self Report</a>
@@ -402,7 +405,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Vietnamese.pdf"
                             target="_blank" rel="noopener">Motivators Self Report</a>
                         <a v-else class="hyperlink disabled">Motivators Self Report</a>
-                        <a class="language-button mot" @click="motSelfReportModal = true">16 languages</a><br />
+                        <a class="language-button mot" @click="motSelfReportModal = true">17 languages</a><br />
 
                         <a v-if="lang === 'en-us' || lang === 'zh' || lang === 'sv' || lang === 'nl' || lang === 'fr' || lang === 'pt-br'"
                             @click="motTeamReportsModal = true" class="hyperlink" target="_blank"
@@ -1447,6 +1450,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Arabic.pdf"
                                     target="_blank" rel="noopener">Arabic</a><br />
+                                <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators_-_Australian.pdf"
+                                    target="_blank" rel="noopener">Australian</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Motivators_Assessment_Chinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
