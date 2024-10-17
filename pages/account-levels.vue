@@ -35,12 +35,12 @@ export default {
     },
     head() {
         return {
-            title: 'Account Levels | Assessments 24x7',
+            title: 'Account Levels | Flexible, Customizable Plans | Assessments 24x7',
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: ''
+                    content: 'Discover flexible account levels at Assessments 24x7 to fit your organization’s assessment needs. No minimum purchase requirements, with robust tools and customization options.'
                 }
             ]
         }

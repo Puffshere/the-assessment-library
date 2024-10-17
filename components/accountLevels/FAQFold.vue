@@ -22,7 +22,7 @@
                             organizations with our powerful assessment platform. Our proprietary system efficiently
                             processes 3000+ DISC, Motivators, and other behavioral assessments daily, providing over
                             10,000 customized reports in a wide range of languages. Seamlessly integrating with LMS,
-                            CRM, HR and recruiting systems, our platform ensures a smoother, cohesive experience for
+                            CRM, HR and recruiting systems, our platform ensures a smooth, cohesive experience for
                             users.</p>
                     </div>
                 </div>
@@ -34,7 +34,8 @@
                     </div>
                     <div class="faq-answer" v-if="openFaqIndex === 1">
                         <p>No worries! Our friendly and knowledgeable customer service team is here to help you, 24x7!
-                            Just give us a call at 206-400-6647. We’ll talk you through our plan options and help you
+                            Just give us a call at 206-400-6647 or <span style="text-decoration: underline;"><a href="#contactFormSection">complete our contact form above.</a></span> We’ll talk you
+                            through our plan options and help you
                             choose the one that’s just right for you. And remember, you can change plans at any time to
                             suit your needs.</p>
                     </div>
@@ -91,7 +92,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 section {
     background: linear-gradient(180deg, #0033C5 -2.43%, #077FF8 97.57%);
     background-position: center;
@@ -105,6 +108,10 @@ h2 {
     font-size: 18pt;
     text-align: center;
     font-weight: 700;
+}
+
+p {
+    font-family: $nunito-family;
 }
 
 .faq {

@@ -71,16 +71,15 @@
                                 Enhanced
                             </h3>
                             <h4>
-                                For Next-Level Benefits
+                                For next-level benefits
                             </h4>
                             <div class="cardPrice">
                                 $99/Month
                             </div>
                             <div class="cardBody">
                                 <p>
-                                    <span style="padding-left: 10px;"><strong><span
-                                                style="text-decoration: underline; text-decoration-color: #FFDE59;">Everything
-                                                in Essentials</span>, and:</strong></span>
+                                    <span style="padding-left: 10px;"><strong>Everything
+                                            in essentials, and:</strong></span>
                                 </p>
                                 <ul class="plan-features">
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
@@ -101,16 +100,15 @@
                                 Enterprise
                             </h3>
                             <h4>
-                                For Ultimate Customization
+                                For ultimate customization
                             </h4>
                             <div class="cardPrice">
                                 $299/Month
                             </div>
                             <div class="cardBody">
                                 <p>
-                                    <span style="padding-left: 10px;"><strong><span
-                                                style="text-decoration: underline; text-decoration-color: #FFDE59;">Everything
-                                                in Enhanced</span>, and:</strong></span>
+                                    <span style="padding-left: 10px;"><strong>Everything
+                                            in enhanced, and:</strong></span>
                                 </p>
                                 <ul class="plan-features">
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
@@ -149,6 +147,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .topSection {
     background: linear-gradient(180deg, #0033C5 -2.43%, #3298FF 54.34%);
     background-position: center;
@@ -178,8 +178,8 @@ h3 {
 h4 {
     color: #0033C5;
     text-align: center;
-    font-family: Poppins;
-    font-size: 10.5pt;
+    font-family: $nunito-family;
+    font-size: 1em;
     font-weight: 400;
     margin-top: -14px;
     margin-bottom: 15px;
@@ -246,13 +246,14 @@ h4 {
     list-style: none;
     padding: 0;
     text-align: left;
-    font-size: 8.25pt;
+    font-size: 10.5pt;
     line-height: 1.5;
     padding-left: 10px;
+    font-family: $nunito-family;
 }
 
 .plan-features li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
 }

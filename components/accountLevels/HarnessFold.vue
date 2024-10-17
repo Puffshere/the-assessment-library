@@ -16,7 +16,7 @@
                         </h2>
                         <p>
                             Manage every aspect of the assessment process — from ordering and administering assessments
-                            to accessing comprehensive reports and insights — with Assessments 24x7’s robust and
+                            to accessing comprehensive reports — with Assessments 24x7’s robust and
                             customizable dashboard. Our powerful benchmarking tools and comprehensive assessment
                             options, from standard to 360s, provide in-depth analysis tailored to your needs. Plus,
                             private labeling ensures your assessments reflect your brand. <br />
@@ -60,7 +60,6 @@ section {
 
 p {
     margin-top: 0px;
-    font-size: 10.5pt;
     font-family: Nunito Sans;
     line-height: 14.33pt;
 }

@@ -53,7 +53,7 @@
                                     alt="image 1" style="width: 100%;" class="cardImage">
                                 <p class="text">
                                     Generate free group reports based on individual report data. Quickly view and print
-                                    collective insights for team building or group coaching. This feature is perfect for
+                                    collective data for team building or group coaching. This feature is perfect for
                                     easily comparing how team members score in relation to one another.
                                 </p>
                             </div>
@@ -132,7 +132,6 @@ img {
 }
 
 p {
-    font-size: 10.5pt;
     line-height: 14.33pt;
     font-family: Nunito Sans;
 }
@@ -163,7 +162,6 @@ p {
     font-weight: 400;
     line-height: 130%;
     padding: 0px 30px;
-    /* 18.2px */
 }
 
 button {
