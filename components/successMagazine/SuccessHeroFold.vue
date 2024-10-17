@@ -36,28 +36,32 @@
 <script>
 export default {
     methods: {
-        scrollToEmpowerSection(event) {
-            const element = document.getElementById('freedisc?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-            event.target.blur();
-        },
-        scrollToExploreSection(event) {
-            const element = document.getElementById('bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-            event.target.blur();
-        },
-        scrollToCertificationsSection(event) {
-            const element = document.getElementById('getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-            event.target.blur();
+    scrollToEmpowerSection(event) {
+        const element = document.getElementById('freedisc?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            window.location.hash = 'freedisc?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24';
         }
+        event.target.blur();
+    },
+    scrollToExploreSection(event) {
+        const element = document.getElementById('bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            window.location.hash = 'bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24';
+        }
+        event.target.blur();
+    },
+    scrollToCertificationsSection(event) {
+        const element = document.getElementById('getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            window.location.hash = 'getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24';
+        }
+        event.target.blur();
     }
+}
+
 }
 </script>
 

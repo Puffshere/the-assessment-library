@@ -1,5 +1,5 @@
 <template>
-    <div class="section" id="bookdemo">
+    <div class="section">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold2-graphic.png" alt="fold 2 graphic" style="position: absolute; right: 0px;">
         <div class="container">
             <div class="row">
