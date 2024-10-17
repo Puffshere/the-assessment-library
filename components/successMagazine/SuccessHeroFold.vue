@@ -37,21 +37,21 @@
 export default {
     methods: {
         scrollToEmpowerSection(event) {
-            const element = document.getElementById('freedisc');
+            const element = document.getElementById('freedisc?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
         },
         scrollToExploreSection(event) {
-            const element = document.getElementById('exploreSection');
+            const element = document.getElementById('bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
         },
         scrollToCertificationsSection(event) {
-            const element = document.getElementById('getcertified');
+            const element = document.getElementById('getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }

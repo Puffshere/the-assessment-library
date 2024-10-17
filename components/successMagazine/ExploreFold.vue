@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section id="exploreSection">
+        <section id="bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-graphic.png"
                 alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -10px;">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold4-left-graphic.png"

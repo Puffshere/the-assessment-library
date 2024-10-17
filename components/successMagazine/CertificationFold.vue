@@ -1,6 +1,6 @@
 <template>
     <div class="body">
-        <section id="getcertified" class="topSection" style="padding-bottom: 180px;">
+        <section id="getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24" class="topSection" style="padding-bottom: 180px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
