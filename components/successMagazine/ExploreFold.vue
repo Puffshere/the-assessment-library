@@ -162,7 +162,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 h1 {
     font-size: 27pt;
     font-weight: 700;
@@ -181,6 +183,7 @@ img {
 }
 
 p {
+    font-family: $nunito-family;
     font-size: 10.5pt;
 }
 

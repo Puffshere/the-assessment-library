@@ -47,7 +47,9 @@ export default {
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 section {
     background: linear-gradient(180deg, #0033C5 -2.43%, #077FF8 97.57%);
     background-position: center;
@@ -60,6 +62,7 @@ section {
 
 p {
     margin-top: 0px;
+    font-family: $nunito-family;
     font-size: 10.5pt;
 }
 

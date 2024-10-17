@@ -38,7 +38,7 @@
                                 report with confidence and accuracy and to use the assessment for a variety of client
                                 needs.
                             </p>
-                            <div style="display: flex; justify-content: center; margin-top: 50px;">
+                            <div style="display: flex; justify-content: center; margin-top: 68px;">
                                 <button @click="discCertification">
                                     DISC Certification
                                 </button>
@@ -79,7 +79,7 @@
                                 consistently support and share what’s needed for creating beneficial interpersonal
                                 outcomes with strong EIQ.
                             </p>
-                            <div style="display: flex; justify-content: center; margin-top: 29px;">
+                            <div style="display: flex; justify-content: center; margin-top: 69px;">
                                 <button @click="eiqCertification">
                                     EIQ Certification
                                 </button>
@@ -114,6 +114,8 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .topSection {
     background: linear-gradient(180deg, #0033C5 -2.43%, #077FF8 97.57%);
     background-position: center;
@@ -139,7 +141,8 @@ h3 {
 }
 
 p {
-    font-size: 14px;
+    font-family: $nunito-family;
+    font-size: 10.5pt;
     text-align: center;
 }
 

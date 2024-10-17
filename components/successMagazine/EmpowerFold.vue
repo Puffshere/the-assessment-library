@@ -74,7 +74,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .container {
     padding-top: 20px;
     padding-bottom: 80px;
@@ -84,6 +86,11 @@ h1 {
     font-size: 27pt;
     color: #213985;
     font-weight: 700;
+}
+
+p {
+    font-family: $nunito-family;
+    font-size: 10.5pt;
 }
 
 button {

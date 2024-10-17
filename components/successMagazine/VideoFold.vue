@@ -42,7 +42,9 @@ export default {
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .container {
     padding-top: 25px;
     padding-bottom: 80px;
@@ -60,6 +62,11 @@ export default {
 
 h2 {
     font-size: 18pt;
+}
+
+p {
+    font-family: $nunito-family;
+    font-size: 10.5pt;
 }
 
 video {

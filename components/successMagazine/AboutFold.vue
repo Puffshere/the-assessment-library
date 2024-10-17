@@ -108,10 +108,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .about {
     padding-top: 40px;
     padding-bottom: 80px;
+}
+
+p {
+    font-family: $nunito-family;
+    font-size: 10.5pt;
 }
 
 .button {

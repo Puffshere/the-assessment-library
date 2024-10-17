@@ -66,7 +66,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .container {
     padding-top: 30px;
     padding-bottom: 90px;
@@ -76,6 +78,11 @@ export default {
     background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/skyline-background.png');
     background-size: cover;
     background-position: center;
+}
+
+p {
+    font-family: $nunito-family;
+    font-size: 10.5pt;
 }
 
 button {

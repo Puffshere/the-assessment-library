@@ -277,6 +277,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/vars';
+
 .topSection {
     background: linear-gradient(180deg, #0033C5 -2.43%, #077FF8 97.57%);
     background-position: center;
@@ -293,6 +295,11 @@ h2 {
     color: #213C85;
     text-align: right;
     font-weight: 700;
+}
+
+p {
+    font-family: $nunito-family;
+    font-size: 10.5pt;
 }
 
 .bottomButtons {
