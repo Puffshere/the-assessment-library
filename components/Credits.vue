@@ -25,21 +25,8 @@
                 <div class="col-3 col-6-sm">
                     <img v-if="isLight" class="provider-image" src="~assets/icf-dark.png" alt="icf">
                     <img v-else class="provider-image" src="~assets/icf.png" alt="icf">
-                    <span class="credit">{{ icfCore }}/{{ icfRD }} Credits</span>
-                    <p class="institute">Core/RD ICF</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <p style="color: #777; font-size: 9pt; text-align: center; margin-top: -12px;">
-                        * The use of this official seal confirms that this Activity has met HR Certification Institute's&reg; (HRCI&reg;) criteria for
-                        recertification credit pre-approval. This Program, ID No. {{ hrciProgramId }}, has been approved for {{ hrci }} HR (General)
-                        recertification credit hours toward aPHR&trade;, aPHRi&trade;, PHR&reg;, PHRca&reg;, SPHR&reg;, GPHR&reg;, PHRi&trade; and 
-                        SPHRi&trade; recertification through HR Certification Institute&reg; (HRCI&reg;).
-                        
-                        ** Assessments 24x7 is recognized by SHRM to offer Professional Development Credits (PDCs) for SHRM-CP&reg; or SHRM-SCP&reg;.
-                    </p>
+                    <span class="credit">5.25 Core / 12.5 RD Credits</span>
+                    <p class="institute">ICF</p>
                 </div>
             </div>
         </div>
@@ -68,18 +55,16 @@
         }
 
         .credit {
-            font-size: 23pt;
             text-align: center;
-            color: #fff;
+            color: #213C85;
             display: block;
             font-weight: 700;
         }
 
         .institute {
             text-align: center;
-            font-size: 18pt;
             margin-top: -2px;
-            color: #fff;
+            color: #213C85;
         }
 
         .provider-image {

@@ -42,7 +42,7 @@
                             <strong>Select Your Dates Below to Register and Secure Your Spot!</strong>
                         </h3>
                         <p style="font-size: 14px; margin-top: -20px; margin-bottom: -10px;">
-                            2 half-days; 4 hours/day | Zoom only; computer required
+                            8:00 am - 12:00 pm Pacific Time each day | Zoom only; computer required
                         </p>
                     </div>
                 </div>
