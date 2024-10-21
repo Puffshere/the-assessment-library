@@ -16,17 +16,17 @@
                             to New Heights.
                         </h2>
                         <h5 style="font-style: italic;">
-                            <img src="~/assets/corporate/blue-arrow-icon.png"
-                                alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">Global
+                            <img src="~/assets/corporate/blue-arrow-icon.png" alt="blue arrow"
+                                style="width: 15px; margin-right: 10px; margin-top: -3px;">Global
                             Leader in
                             Assessment
                             Technology <br />
-                            <img src="~/assets/corporate/blue-arrow-icon.png"
-                                alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">Powerful
+                            <img src="~/assets/corporate/blue-arrow-icon.png" alt="blue arrow"
+                                style="width: 15px; margin-right: 10px; margin-top: -3px;">Powerful
                             Platform with
                             seamless integration <br />
-                            <img src="~/assets/corporate/blue-arrow-icon.png"
-                                alt="blue arrow" style="width: 15px; margin-right: 10px; margin-top: -3px;">ASI
+                            <img src="~/assets/corporate/blue-arrow-icon.png" alt="blue arrow"
+                                style="width: 15px; margin-right: 10px; margin-top: -3px;">ASI
                             Validated,
                             Reliable, and
                             Compliant
@@ -41,8 +41,8 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <img src="~/assets/corporate/group-standing-graphic.png"
-                            alt="group of people smiling image" class="groupSmiling" />
+                        <img src="~/assets/corporate/group-standing-graphic.png" alt="group of people smiling image"
+                            class="groupSmiling" />
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@ import Nav from '@/components/Nav';
 import StatsTop from '@/components/corporate/CorporateStatsTop';
 import Catalyst from '@/components/reseller/ResellerCatalyst';
 import ClientLogos from '@/components/ClientLogos';
-import Success from '@/components/corporate/CorporateSuccess';
+import Success from '@/components/reseller/ResellerSuccess';
 import CustomizeIt from '@/components/reseller/ResellerCustomizeIt';
 import StatsBottom from '@/components/corporate/CorporateStatsBottom';
 import DynamicTools from '@/components/reseller/ResellerDynamicTools';

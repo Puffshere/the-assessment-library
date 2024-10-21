@@ -1,5 +1,5 @@
 <template>
-    <section class="contact-form" id="contactForm">
+    <section class="contact-form" id="resellerContactForm">
         <div class="container" style="padding-bottom: 20px;">
             <div class="row">
                 <div class="col-12">
