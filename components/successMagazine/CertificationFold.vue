@@ -25,7 +25,7 @@
                 <div class="row" style="margin-top: -160px;">
                     <div class="col-12">
                         <div class="col-4">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Assessments24x7_Badge_DISC.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Badge.png"
                                 alt="disc cert badge image" style="width: 100%;">
                             <h3>
                                 DISC <br />
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Assessments24x7_Badge_Motivators.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Motivators+Badge.png"
                                 alt="motivators cert badge image" style="width: 100%;">
                             <h3>
                                 Motivators <br />
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Assessments24x7_Badge_EIQ.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/EIQ+Badge.png"
                                 alt="eiq cert badge image" style="width: 100%;">
                             <h3>
                                 Emotional Intelligence <br />
