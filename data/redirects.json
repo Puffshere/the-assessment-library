@@ -1914,5 +1914,17 @@
     {
         "from": "/blog/",
         "to": "https://blog.assessments24x7.com/"
+    },
+    {
+        "from": "/blog/delegate-for-development/",
+        "to": "https://blog.assessments24x7.com/"
+    },
+    {
+        "from": "/blog/essentials-team-player/",
+        "to": "https://blog.assessments24x7.com/essentials-team-player/"
+    },
+    {
+        "from": "/blog/foolproof-sales-training/",
+        "to": "https://blog.assessments24x7.com/foolproof-sales-training/"
     }
 ]
