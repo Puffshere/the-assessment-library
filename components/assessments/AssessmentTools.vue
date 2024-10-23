@@ -20,8 +20,8 @@
                             feedback to their teams.
                         </p>
                         <div class="button-container">
-                            <button class="blue">Learn More</button>
-                            <button class="light">Contact Us</button>
+                            <button @click="learnMoreButton" class="blue">Learn More</button>
+                            <button @click="contactButton" class="light">Contact Us</button>
                         </div>
                     </div>
                 </div>
@@ -33,11 +33,12 @@
 <script>
 export default {
     methods: {
-        scrollToContactForm(event) {
-            const element = document.getElementById('');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+        learnMoreButton(event) {
+            window.location.href = '/about/why-use-assessments';
+            event.target.blur();
+        },
+        contactButton(event) {
+            window.location.href = '/contact';
             event.target.blur();
         }
     }

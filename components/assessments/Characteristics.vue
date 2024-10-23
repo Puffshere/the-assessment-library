@@ -77,7 +77,7 @@
                                         informed decisions based on standardized data.
                                     </p>
                                     <div style="display: flex; justify-content: center; margin-top: 30px;">
-                                        <button class="blue">
+                                        <button @click="learnMoreButton" class="blue">
                                             Learn More
                                         </button>
                                     </div>
@@ -100,11 +100,8 @@
 <script>
 export default {
     methods: {
-        scrollToContactForm(event) {
-            const element = document.getElementById('');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+        learnMoreButton(event) {
+            window.location.href = '/contact';
             event.target.blur();
         }
     }

@@ -13,7 +13,7 @@
                         performance, and potential. Whether in the classroom or corporate setting, our tools support
                         your goals with reliable, valid, and fair assessments.
                     </p>
-                    <button class="blue" style="margin-top: 10px; margin-bottom: 30px;">
+                    <button @click="learnMoreButton" class="blue" style="margin-top: 10px; margin-bottom: 30px;">
                         Book Live Demo
                     </button>
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/choosing-grahpic.webp" alt="choosing image" style="width: 100%;">
@@ -26,11 +26,8 @@
 <script>
 export default {
     methods: {
-        scrollToContactForm(event) {
-            const element = document.getElementById('');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+        learnMoreButton(event) {
+            window.location.href = '/contact';
             event.target.blur();
         }
     }

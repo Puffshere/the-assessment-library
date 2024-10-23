@@ -32,8 +32,7 @@
                         empathetic leaders.
                     </p>
                     <div class="button-container">
-                            <button class="blue">Learn More</button>
-                            <button class="light">Contact Us</button>
+                            <button @click="learnMoreButton" class="blue">Learn More</button>
                         </div>
                     <br />
                 </div>
@@ -369,6 +368,12 @@ export default {
                     type: 'application/ld+json'
                 },
             ]
+        }
+    },
+    methods: {
+        learnMoreButton(event) {
+            window.location.href = '/contact';
+            event.target.blur();
         }
     }
 }
