@@ -70,5 +70,9 @@
     font-weight: 700;
     background-color: white;
     border: 1px solid #E0AD2B;
+
+    &:hover {
+        border: 1px solid #b68c23;
+    }
 }
 </style>
