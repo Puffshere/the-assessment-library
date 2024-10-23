@@ -20,39 +20,45 @@
                             in Business
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Certified+Practitioners.png"
-                            alt="card 2 image" class="card-image">
-                        <div class="cardNumber">
-                            2300+
+                    <a style="text-decoration: none; color: #0033C5" href="/certifications">
+                        <div class="card">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Certified+Practitioners.png"
+                                alt="card 2 image" class="card-image">
+                            <div class="cardNumber">
+                                2300+
+                            </div>
+                            <div class="cardText">
+                                Certified <br />
+                                Practitioners
+                            </div>
                         </div>
-                        <div class="cardText">
-                            Certified <br />
-                            Practitioners
+                    </a>
+                    <a style="text-decoration: none; color: #0033C5" href="/assessments">
+                        <div class="card">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Assessments+administered.png"
+                                alt="card 3 image" class="card-image">
+                            <div class="cardNumber">
+                                34m+
+                            </div>
+                            <div class="cardText">
+                                Assessments <br />
+                                Administered
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Assessments+administered.png"
-                            alt="card 3 image" class="card-image">
-                        <div class="cardNumber">
-                            34m+
+                    </a>
+                    <a style="text-decoration: none; color: #0033C5" href="/about/partners">
+                        <div class="card">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Countries.png"
+                                alt="card 4 image" class="card-image">
+                            <div class="cardNumber">
+                                54
+                            </div>
+                            <div class="cardText">
+                                Countries Around <br />
+                                the Globe
+                            </div>
                         </div>
-                        <div class="cardText">
-                            Assessments <br />
-                            Administered
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Countries.png"
-                            alt="card 4 image" class="card-image">
-                        <div class="cardNumber">
-                            54
-                        </div>
-                        <div class="cardText">
-                            Countries Around <br />
-                            the Globe
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="row" style="display: flex; justify-content: center; padding-top: 80px;">
                     <button class="blue" @click="scrollToContactForm">
