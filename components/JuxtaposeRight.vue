@@ -28,11 +28,11 @@
                     </div>
 
                     <nuxt-link class="button" :to="href">{{ linkText }} &rarr;</nuxt-link>
-                    <nuxt-link class="button outline" to="/contact">Contact Us</nuxt-link>
+                    <nuxt-link class="button goldButton" to="/contact">Contact Us</nuxt-link>
                 </div>
 
                 <div class="col-4">
-                    <img v-if="image == 'motivators'" class="image" src="~/assets/motivators.png" :alt="alt"> 
+                    <img v-if="image == 'motivators'" class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/Motivators+Icon+for+Assessments.webp" :alt="alt"> 
                     <img v-if="image == 'critical-thinking'" class="image" src="~/assets/critical-thinking.png" :alt="alt"> 
                 </div>
             </div>
@@ -49,4 +49,20 @@
 
 <style lang="scss" scoped>
     @import '~assets/scss/juxtapose';
+
+    .goldButton {
+    width: 184px !important;
+    height: 41px;
+    border-radius: 8px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: Poppins;
+    font-size: 10.5pt;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: #0033C5;
+    text-align: center;
+    font-weight: 700;
+    background-color: white;
+    border: 1px solid #E0AD2B;
+}
 </style>

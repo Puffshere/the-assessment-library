@@ -1,7 +1,7 @@
 @import '~assets/scss/vars';
 
 .juxtapose {
-    padding: 100px 0;
+    padding: 70px 0;
 
     h3 {
         font-size: 30pt;
@@ -14,11 +14,14 @@
         margin-bottom: 40px;
     }
 
+    .goldButton {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
     .image {
-        width: 200%;
-        margin-left: -100%;
+        width: 100%;
         border-radius: 10px;
-        box-shadow: 0 30px 30px rgba(0,0,0,.1);
     }
 
     &.right {
@@ -26,10 +29,6 @@
             margin-left: 0;
             margin-right: -100%;
         }
-    }
-
-    &.left {
-        background: #f5f7f9 !important;
     }
 
     .languages {
@@ -97,6 +96,11 @@
 
         .image {
             display: none;
+        }
+
+        .goldButton {
+            padding-left: 0px;
+            padding-right: 0px;
         }
     }
 
