@@ -265,6 +265,10 @@ export default {
         }
     }
 
+    p {
+        color: #213C85 !important;
+    }
+
     button {
         width: 220px;
         height: 41px;

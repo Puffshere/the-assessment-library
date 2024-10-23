@@ -2,7 +2,7 @@
     <section class="related-posts">
         <div class="container" style="margin-top: 0px;">
             <div class="row related-posts-container">
-                <p class="posts-title">Read our blog</p>
+                <h3 class="posts-title">Read our blog</h3>
                 <div class="col-3 col-6-sm post" v-for="post in posts" :key="post.id">
                     <nuxt-link :to="`/blog/${post.slug}`">
                         <img class="image"
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div style="display: flex; justify-content: center; margin-top: 60px;">
-                <button @click="jumpToBlog">
+                <button class="blue" @click="jumpToBlog">
                     Read More
                 </button>
             </div>
@@ -90,6 +90,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
+@import '~assets/scss/new-styles';
 
 .related-posts {
     margin: 0px 0 100px;
@@ -98,13 +99,10 @@ export default {
         padding: 14px 0;
 
         .posts-title {
-            color: #213C85;
-            text-align: center;
-            font-family: Poppins;
-            font-size: 24px;
-            font-weight: 700;
             margin-top: 40px;
             margin-bottom: 50px;
+            text-align: center;
+            color: #213C85
         }
 
         .post {
@@ -132,25 +130,11 @@ export default {
                     line-height: 15pt;
                     margin-top: 20px;
                     margin-bottom: 0;
+                    color: #213C85;
+                    text-align: center;
                 }
             }
         }
-    }
-
-    button {
-        width: 153px;
-        height: 41px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        text-decoration: underline;
-        cursor: pointer;
-        font-weight: 700;
-        color: white;
-        text-align: center;
-        font-family: Poppins;
-        font-size: 10.5pt;
-        border: none;
-        background: #0033C5;
     }
 }
 

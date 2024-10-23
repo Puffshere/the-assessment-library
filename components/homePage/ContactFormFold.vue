@@ -1,16 +1,16 @@
 <template>
   <section id="contactFormSection">
     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-      alt="fold 4 graphic" style="position: absolute; right: 0px; margin-bottom: -830px; width: 45%;">
+      alt="fold 4 graphic" style="position: absolute; right: 0px; margin-bottom: -835px; width: 45%;">
     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
       alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 980px;">
     <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
       <div class="row">
-        <h2>
+        <h2 style="margin-top: 12px; margin-bottom: -20px;">
           <span style="color: #0033C5;">Let's connect</span> <br />
         </h2>
         <p>
-          Connect with us to get instandt support and answers to all your assessment-related questions.
+          Connect with us to get instant support and answers to all your assessment-related questions.
         </p>
         <div class="col-12 d-flex justify-content-center">
           <div class="form-container">
@@ -30,7 +30,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~assets/scss/vars';
+@import '~assets/scss/new-styles';
+
 section {
   background-size: cover;
   background-position: center;
@@ -42,7 +45,6 @@ section {
 }
 
 h2 {
-  font-size: 18pt;
   font-weight: 700;
   text-align: center;
 }
@@ -50,8 +52,6 @@ h2 {
 p {
   color: #213C85;
   text-align: center;
-  font-family: "Nunito Sans";
-  font-size: 10.5pt;
 }
 
 .form-container {

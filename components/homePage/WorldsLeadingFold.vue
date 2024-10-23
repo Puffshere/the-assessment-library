@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="row" style="display: flex; justify-content: center; padding-top: 80px;">
-                    <button @click="scrollToContactForm">
+                    <button class="blue" @click="scrollToContactForm">
                         Book Live Demo
                     </button>
                 </div>
@@ -80,6 +80,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
+@import '~assets/scss/new-styles';
 
 section {
     background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/skyline-background.png');
@@ -93,10 +94,8 @@ section {
 }
 
 h1 {
-    color: #0033C5;
+    color: #213C85;
     font-family: Poppins;
-    font-size: 36px;
-    font-weight: 700;
     text-align: center;
 }
 
@@ -143,22 +142,6 @@ h1 {
     font-size: 15pt;
     font-weight: 400;
     margin-top: -30px;
-}
-
-button {
-    width: 184px;
-    height: 41px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    text-decoration: underline;
-    cursor: pointer;
-    font-weight: 700;
-    color: white;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 10.5pt;
-    border: none;
-    background: #0033C5;
 }
 
 @media (max-width: 1200px) {

@@ -18,9 +18,9 @@
                         </div>
                     </div>
                     <div class="col-7" style="text-align: right;">
-                        <h2>
+                        <h3>
                             Powerful platform
-                        </h2>
+                        </h3>
                         <p>
                             Assessments 24x7 powers millions of assessments worldwide through our proprietary platform —
                             streamlined and customizable, with the horsepower to tackle all your requirements. Order and
@@ -28,7 +28,7 @@
                             reports, manage sub-accounts, access certification materials and online training resources,
                             seamlessly integrate with LMS, CRM, HR, and recruiting systems — and more!
                         </p>
-                        <button @click="scrollToContactForm" style="margin-top: 50px;">
+                        <button class="light" @click="scrollToContactForm" style="margin-top: 50px;">
                             Learn More
                         </button>
                     </div>
@@ -54,42 +54,22 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
+@import '~assets/scss/new-styles';
 
 .container {
     padding-top: 50px;
     padding-bottom: 85px;
 }
 
-h2 {
+h3 {
     color: #213C85;
     text-align: right;
     font-family: Poppins;
-    font-size: 18pt;
-    font-weight: 700;
 }
 
 p {
     color: #213C85;
     text-align: right;
-    font-family: $nunito-family;
-    font-size: 10.5;
-    font-weight: 400;
-}
-
-button {
-    width: 184px;
-    height: 41px;
-    border-radius: 8px;
-    text-decoration: underline;
-    cursor: pointer;
-    font-family: Poppins;
-    font-size: 10.5pt;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    color: #0033C5;
-    text-align: center;
-    font-weight: 700;
-    background-color: white;
-    border: 1px solid #E0AD2B;
 }
 
 .lightBox {
