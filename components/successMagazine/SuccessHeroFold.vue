@@ -13,7 +13,7 @@
                             style="margin-top: -45px; margin-bottom: 60px; color: #F8CD55; font-style: italic; font-weight: 400;">
                             Empowering Transformation.
                         </h2>
-                        <button @click="scrollToEmpowerSection" class="heroBtn btn" style="margin-right: 15px;">
+                        <button @click="freeDiscButton" class="heroBtn btn" style="margin-right: 15px;">
                             Free DISC
                         </button>
                         <button @click="scrollToExploreSection" class="heroBtn" style="margin-right: 15px;">
@@ -24,8 +24,8 @@
                         </button>
                     </div>
                     <div class="col-4">
-                        <img src="~/assets/success-magazine/hero_woman_globe.webp"
-                            alt="woman holding globe" style="width: 247px; margin-bottom: -16px;" class="globe">
+                        <img src="~/assets/success-magazine/hero_woman_globe.webp" alt="woman holding globe"
+                            style="width: 247px; margin-bottom: -16px;" class="globe">
                     </div>
                 </div>
             </div>
@@ -36,31 +36,27 @@
 <script>
 export default {
     methods: {
-    scrollToEmpowerSection(event) {
-        const element = document.getElementById('freedisc?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            window.location.hash = 'freedisc?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24';
+        freeDiscButton(event) {
+            window.location.href = 'https://assessments247.net/?R*t%28GQg%27==R';
+            event.target.blur();
+        },
+        scrollToExploreSection(event) {
+            const element = document.getElementById('bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                window.location.hash = 'bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24';
+            }
+            event.target.blur();
+        },
+        scrollToCertificationsSection(event) {
+            const element = document.getElementById('getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                window.location.hash = 'getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24';
+            }
+            event.target.blur();
         }
-        event.target.blur();
-    },
-    scrollToExploreSection(event) {
-        const element = document.getElementById('bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            window.location.hash = 'bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24';
-        }
-        event.target.blur();
-    },
-    scrollToCertificationsSection(event) {
-        const element = document.getElementById('getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            window.location.hash = 'getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24';
-        }
-        event.target.blur();
     }
-}
 
 }
 </script>
