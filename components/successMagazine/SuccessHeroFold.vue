@@ -24,8 +24,8 @@
                         </button>
                     </div>
                     <div class="col-4">
-                        <img src="~/assets/success-magazine/Success_Magazine_Woman_holding_globe.png"
-                            alt="woman holding globe" style="width: 244px; margin-bottom: -16px;" class="globe">
+                        <img src="~/assets/success-magazine/hero_woman_globe.webp"
+                            alt="woman holding globe" style="width: 247px; margin-bottom: -16px;" class="globe">
                     </div>
                 </div>
             </div>

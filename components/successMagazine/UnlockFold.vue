@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+with+assessment.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+and+phone+(1).webp"
                             alt="image of assessments and phone" style="width: 100%; margin-top: 50px;">
                     </div>
                     <div class="col-6">

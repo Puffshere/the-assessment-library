@@ -5,7 +5,7 @@
                 <div class="col-12">
 
                     <div class="col-5">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Practitioner+Certified+Graphic+(1).png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Practitioner+Certified+Graphic+(2).webp"
                             alt="image of woman" style="width: 100%;">
                     </div>
                     <div class="col-7" style="text-align: right; color: white; margin-top: -10px;">

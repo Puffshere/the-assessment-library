@@ -15,7 +15,7 @@
                         About our Certification Programs
                     </h2>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/48.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Comprehensive+Curriculum+(1).webp"
                             alt="icon 48" style="width: 60px; margin-top: 30px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Comprehensive Curriculum
@@ -29,7 +29,7 @@
                         </p>
                     </div>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/48.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Expert+Instructors+(1).webp"
                             alt="icon 48" style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Expert Instructors
@@ -42,7 +42,7 @@
                         </p>
                     </div>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/48.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Flexible+Learning+(2).webp"
                             alt="icon 48" style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Flexible Learning Options
@@ -56,7 +56,7 @@
                         </p>
                     </div>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/48.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Practical+Application+(1).webp"
                             alt="icon 48" style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Practical Application
@@ -69,7 +69,7 @@
                         </p>
                     </div>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/48.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Support+and+Resources+(1).webp"
                             alt="icon 48" style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Support and Resources

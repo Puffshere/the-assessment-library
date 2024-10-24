@@ -50,7 +50,7 @@
                         </button>
                     </div>
                     <div class="col-4">
-                        <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Success+Magazine/DISC+High+Five.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/High+Five+-+DISC++(1).webp"
                             alt="high five image" style="width: 176%; margin-top: 60px; margin-left: -35px;"
                             class="image">
                     </div>
