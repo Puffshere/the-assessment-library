@@ -1,18 +1,18 @@
 -<template>
     <section>
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
-                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 0px;">
+                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 0px;" class="wave">
         <div class="container" style="padding-top: 50px; padding-bottom: 40px;">
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Account+Levels+Graphics+(5).png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Woman+at+computer.png"
                             alt="image of woman" style="width: 100%;">
                     </div>
                     <div class="col-6" style="text-align: left; color: white; margin-top: -10px;">
                         <h2>
-                            <span style="color: #FFDE59;">Harness the full potential</span> <br />
-                            of your dashboard
+                            Harness the full potential <br />
+                            <span style="color: #FFDE59;">of your dashboard</span>
                         </h2>
                         <p>
                             Manage every aspect of the assessment process — from ordering and administering assessments
@@ -44,7 +44,6 @@ export default {
         }
     }
 }
-
 </script>
 
 <style scoped>
@@ -58,6 +57,11 @@ section {
     padding-bottom: 45px;
 }
 
+h2 {
+    font-size: 2em;
+    line-height: 1.25em;
+}
+
 p {
     margin-top: 0px;
     font-family: Nunito Sans;
@@ -66,5 +70,11 @@ p {
 
 img {
     border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .wave {
+        display: none;
+    }
 }
 </style>

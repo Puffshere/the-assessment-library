@@ -2,7 +2,7 @@
     <div class="body">
         <section class="topSection" style="padding-bottom: 200px;">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
-                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 0px;">
+                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 0px;" class="wave">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -27,7 +27,7 @@
             <div class="container" style="min-height: 500px;">
                 <div class="row">
                     <div class="col-12" style="margin-top: -160px;">
-                        <h2>
+                        <h2 style="color: white;">
                             Choose the right plan for your needs
                         </h2>
                         <div class="col-4 card">
@@ -42,13 +42,13 @@
                             </div>
                             <div class="cardBody">
                                 <p>
-                                    <span style="padding-left: 10px;"><strong>Features you'll love:</strong></span>
+                                    <span style="padding-left: 10px; color: #213C85;"><strong>Features you'll love:</strong></span>
                                 </p>
                                 <ul class="plan-features">
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Standard Dashboard</li>
+                                            alt="Checkmark"> Standard dashboard</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Usage Statistics and exports</li>
+                                            alt="Checkmark"> Usage statistics and exports</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
                                             alt="Checkmark"> On demand purchasing</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
@@ -62,7 +62,7 @@
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
                                             alt="Checkmark"> Dashboard white label design</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> View Reports/Users</li>
+                                            alt="Checkmark"> View reports/users</li>
                                 </ul>
                             </div>
                         </div>
@@ -78,18 +78,18 @@
                             </div>
                             <div class="cardBody">
                                 <p>
-                                    <span style="padding-left: 10px;"><strong>Everything
-                                            in essentials, and:</strong></span>
+                                    <span style="padding-left: 10px; color: #213C85;"><strong>Everything
+                                            in Essentials, and:</strong></span>
                                 </p>
                                 <ul class="plan-features">
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Collaboration Reporting</li>
+                                            alt="Checkmark"> Collaboration reporting</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Training Materials</li>
+                                            alt="Checkmark"> Training materials</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Group Reporting</li>
+                                            alt="Checkmark"> Group reporting</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Sub Accounts</li>
+                                            alt="Checkmark"> Sub accounts</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
                                             alt="Checkmark"> API access</li>
                                 </ul>
@@ -107,14 +107,14 @@
                             </div>
                             <div class="cardBody">
                                 <p>
-                                    <span style="padding-left: 10px;"><strong>Everything
-                                            in enhanced, and:</strong></span>
+                                    <span style="padding-left: 10px; color: #213C85;"><strong>Everything
+                                            in Enhanced, and:</strong></span>
                                 </p>
                                 <ul class="plan-features">
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
                                             alt="Checkmark"> Custom domain</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> DISC Benchmark tool</li>
+                                            alt="Checkmark"> DISC benchmark tool</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
                                             alt="Checkmark"> Lead generation tool</li>
                                 </ul>
@@ -149,29 +149,30 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 
+
 .topSection {
     background: linear-gradient(180deg, #0033C5 -2.43%, #3298FF 54.34%);
     background-position: center;
 }
 
 h1 {
-    font-size: 27pt;
+    font-size: 2em;
     font-weight: 700;
     color: #213C85;
 }
 
 h2 {
-    font-size: 18pt;
+    font-size: 1.5em;
     color: #FFDE59;
     text-align: center;
     font-weight: 700;
 }
 
 h3 {
-    color: #0033C5;
+    color: #213C85;
     text-align: center;
     font-family: Poppins;
-    font-size: 15pt;
+    font-size: 1.25em;
     font-weight: 700;
 }
 
@@ -201,7 +202,7 @@ h4 {
         color: white;
         text-align: center;
         font-family: Poppins;
-        font-size: 10.5pt;
+        font-size: 1em;
         border: none;
         background: #0033C5;
     }
@@ -210,7 +211,7 @@ h4 {
 .card {
     background-color: white;
     width: 298px;
-    height: 520px;
+    height: 540px;
     border-radius: 14px;
     border: 1px solid #E0AD2B;
     background: #FFF;
@@ -234,7 +235,7 @@ h4 {
 
 .cardBody {
     width: 271px;
-    height: 328px;
+    height: 350px;
     border-radius: 7px;
     border: 1px solid #F5F5F5;
     background: #FFF;
@@ -246,10 +247,11 @@ h4 {
     list-style: none;
     padding: 0;
     text-align: left;
-    font-size: 10.5pt;
+    font-size: 1em;
     line-height: 1.5;
     padding-left: 10px;
     font-family: $nunito-family;
+    color: #213C85;
 }
 
 .plan-features li {
@@ -262,4 +264,17 @@ h4 {
     margin-right: 10px;
     width: 18px;
 }
+
+@media (max-width: 1200px) {
+    .col-4.card {
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .wave {
+        display: none;
+    }
+}
+
 </style>

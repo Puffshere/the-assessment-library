@@ -9,9 +9,9 @@
                                     style="position: absolute; margin-top: -20px; margin-left: -20px;">
                                     Order, send, and track assessments
                                 </div>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Order%2C+send%2C+and+track+(1).png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Copy+of+Image+1+-+Platform.png"
                                     alt="image 1" style="width: 100%;" class="cardImage">
-                                <p class="text">
+                                <p>
                                     Purchase assessments as you need them. They’re available instantly on your dashboard
                                     — 24x7. Track and manage assessment completions and send reminders as needed.
                                 </p>
@@ -19,11 +19,11 @@
                             <div class="card" style="margin-bottom: 100px;">
                                 <div class="cardHeader"
                                     style="position: absolute; margin-top: -20px; margin-left: -20px;">
-                                    Create Private-Label Interfaces and Reports
+                                    Create private-label interfaces and reports
                                 </div>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Private+Label+Interface.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Copy+of+Image+3+-+Platform.png"
                                     alt="image 1" style="width: 100%;" class="cardImage">
-                                <p class="text">
+                                <p>
                                     Reinforce your brand and stand out from competitors with customized content. Add
                                     your logo to reports and personalize website headers and footers to match your
                                     company branding.
@@ -34,9 +34,9 @@
                                     style="position: absolute; margin-top: -20px; margin-left: -20px;">
                                     Tap into DISC lead generation
                                 </div>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Lead+Gen+Image.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Copy+of+Image+5+-+Platform.png"
                                     alt="image 1" style="width: 100%;" class="cardImage">
-                                <p class="text">
+                                <p>
                                     Reach hundreds of new prospects, build your clientele, and grow your brand with
                                     advanced tools and resources designed to maximize your reach and impact. Available
                                     exclusively with our Enterprise plan.
@@ -49,9 +49,9 @@
                                     style="position: absolute; margin-top: -20px; margin-left: -20px;">
                                     Generate comprehensive reports
                                 </div>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Group+Reporting+Image.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Copy+of+Image+2+-+Platform.png"
                                     alt="image 1" style="width: 100%;" class="cardImage">
-                                <p class="text">
+                                <p>
                                     Generate free group reports based on individual report data. Quickly view and print
                                     collective data for team building or group coaching. This feature is perfect for
                                     easily comparing how team members score in relation to one another.
@@ -60,11 +60,11 @@
                             <div class="card" style="margin-bottom: 100px;">
                                 <div class="cardHeader"
                                     style="position: absolute; margin-top: -20px; margin-left: -20px;">
-                                    Optimize Hiring with DISC Benchmarking
+                                    Optimize hiring with DISC benchmarking
                                 </div>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Benchmarking+Graphic.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Copy+of+Image+4+-+Platform.png"
                                     alt="image 1" style="width: 100%;" class="cardImage">
-                                <p class="text">
+                                <p>
                                     Our DISC Benchmark System features 100+ job templates, or you can create your own,
                                     to compare applicants’ DISC styles against established job benchmarks, ensuring a
                                     better fit.
@@ -75,9 +75,9 @@
                                     style="position: absolute; margin-top: -20px; margin-left: -20px;">
                                     Integrate into your CRM, LMS, HRM, and more
                                 </div>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/API+Integration+Image.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Copy+of+Image+6+-+Platform.png"
                                     alt="image 1" style="width: 100%;" class="cardImage">
-                                <p class="text">
+                                <p>
                                     Unlock the full potential of your systems with seamless API integration, allowing
                                     you to streamline assessment management and align it effortlessly with your existing
                                     business processes, from your LMS to HR and employee tracking systems.
@@ -114,26 +114,18 @@ section {
     padding-top: 100px;
 }
 
-h1 {
-    font-size: 27pt;
-    font-weight: 700;
-    color: #213C85;
-}
-
-h2 {
-    font-size: 18pt;
-    color: #213C85;
-    text-align: right;
-    font-weight: 700;
-}
-
 img {
     margin-top: -20px;
 }
 
 p {
-    line-height: 14.33pt;
     font-family: Nunito Sans;
+    color: #0033C5;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.25em;
+    font-weight: 400;
+    padding: 0px 30px;
 }
 
 .cardHeader {
@@ -144,7 +136,7 @@ p {
     color: white;
     text-align: center;
     align-content: center;
-    font-size: 12pt;
+    font-size: 1em;
     font-weight: 700;
     line-height: 130%;
     font-family: Nunito Sans;
@@ -153,15 +145,6 @@ p {
 .cardImage {
     padding: 0px 30px;
     padding-top: 70px;
-}
-
-.text {
-    color: #0033C5;
-    text-align: center;
-    font-size: 10.5pt;
-    font-weight: 400;
-    line-height: 130%;
-    padding: 0px 30px;
 }
 
 button {
@@ -175,7 +158,7 @@ button {
         color: white;
         text-align: center;
         font-family: Poppins;
-        font-size: 10.5pt;
+        font-size: 1em;
         border: none;
         background: #0033C5;
     }
@@ -189,7 +172,7 @@ button {
 
 .card {
     width: 438px;
-    height: 351px;
+    height: 390px;
     border-radius: 10px;
     border: 1px solid #E6E153;
     background: #FFF;

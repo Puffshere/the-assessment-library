@@ -1,13 +1,11 @@
 <template>
     <section>
-        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
-            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 0px;">
         <div class="container" style="padding-top: 50px; padding-bottom: 40px;">
             <div class="row">
                 <div class="col-12">
-                    <h2>
+                    <h3>
                         Platform and plans <span style="color: #FFDE59">FAQ</span>
-                    </h2>
+                    </h3>
                 </div>
             </div>
             <div class="faq">
@@ -103,15 +101,16 @@ section {
     padding-bottom: 40px;
 }
 
-h2 {
+h3 {
     color: white;
-    font-size: 18pt;
+    font-size: 1.5em;
     text-align: center;
     font-weight: 700;
 }
 
 p {
     font-family: $nunito-family;
+    font-size: 1em;
 }
 
 .faq {
@@ -138,7 +137,7 @@ p {
 
 .faq-question p {
     font-weight: 700;
-    color: #0033C5;
+    color: #213C85;
     margin: 0;
 }
 
@@ -153,6 +152,6 @@ p {
 
 .faq-answer {
     margin-top: 10px;
-    color: #333;
+    color: #213C85;
 }
 </style>

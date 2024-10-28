@@ -1,14 +1,14 @@
 <template>
   <section id="contactFormSection">
     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-      alt="fold 4 graphic" style="position: absolute; right: 0px; margin-bottom: -800px; width: 45%;">
+      alt="fold 4 graphic" style="position: absolute; right: 0px; margin-bottom: -845px; width: 45%;">
       <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
       alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 950px;">
     <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
       <div class="row">
-        <h2>
-          <span style="color: #0033C5;">Experience our platform — Book a live demo!</span> <br />
-        </h2>
+        <h3>
+          <span style="color: #213C85;">Experience our platform — Book a live demo!</span> <br />
+        </h3>
         <div class="col-12 d-flex justify-content-center">
           <div class="form-container">
             <contact-form style="background: white;" />
@@ -38,8 +38,8 @@ section {
   padding-top: 40px;
 }
 
-h2 {
-  font-size: 18pt;
+h3 {
+  font-size: 1.5em;
   font-weight: 700;
   text-align: center;
 }
@@ -61,5 +61,11 @@ h2 {
 .col-12 {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .img {
+        display: none;
+    }
 }
 </style>
