@@ -2,25 +2,22 @@
     <section class="skeleton">
         <main-nav />
 
-        <section class="body">
+        <section class="body hero">
             <div class="container">
                 <div class="row">
                     <div class="col-7">
-                        <h1 style="text-align: left; color: #0033c5; margin-top: 40px; margin-bottom: 0px;">DISC</h1>
-                        <h3 style="text-align: left; color: #0033c5; margin-top: 0px; margin-bottom: 5px;">Trainer
-                            Materials</h3>
-                        <p style="text-align: left; margin-top: 0px; margin-bottom: 40px;">
-                            The Training Materials library is your comprehensive resource for coaching and debriefing
-                            tools,
-                            additional insight & information on the assessment,
-                            reports and models, and gives quick access to class/workshop materials you may need. Explore
-                            these at your leisure - you will find there are many
-                            useful and valuable resources to support your continued development, understanding and
-                            application!
+                        <h2 style="text-align: left; color: white; margin-top: 40px; margin-bottom: -40px;">DISC</h2>
+                        <h2 style="text-align: left; color: #FFDE59; margin-bottom: 5px; font-weight: 400;">
+                            Certified
+                            Trainer Materials</h2>
+                        <p style="text-align: left; margin-top: 0px; margin-bottom: 40px; color: white;">
+                            Your go-to resource for coaching tools, assessment insights, reports, and quick access to
+                            class materials. Explore these valuable resources at your leisure to support your ongoing
+                            development and application.
                         </p>
                     </div>
                     <div class="col-5">
-                        <img src="~/assets/coaches-directory/trainer-materials-header-image.png"
+                        <img src="~/assets/coaches-directory/trainer-materials-disc-hero-image.png"
                             alt="coaches directory hero image" class="heroImage">
                     </div>
                 </div>
@@ -28,6 +25,10 @@
         </section>
 
         <div class="body" v-if="unlocked">
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Account+Levels+Graphics+(3)+14.png"
+            alt="fold 4 graphic" style="position: absolute; right: -150px; bottom: 365px; width: 45%;">
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Account+Levels+Graphics+(3)+18.png"
+            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
             <div class="container">
                 <br />
                 <div class="input-container">
@@ -821,14 +822,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.skeleton {
-    background-color: #00a8ff;
+@import '~assets/scss/vars';
+@import '~assets/scss/new-styles';
 
-    .body {
-        background-color: white;
-        text-align: center;
-        margin: 20px;
-        border-radius: 20px;
+.skeleton {
+    .hero {
+        background: linear-gradient(180deg, #0033C5 -2.43%, #077FF8 97.57%);
+        padding: 20px 0 30px 0;
     }
 
     .container {
@@ -838,26 +838,15 @@ export default {
     }
 
     .heroImage {
-        width: 100%;
-        margin-top: 40px;
-    }
-
-    h1 {
-        font-size: 90.6665px;
-        line-height: 100px;
-        font-weight: 700;
-    }
-
-    h3 {
-        font-size: 37.334px;
-        line-height: 52px;
+        width: 80%;
+        margin-top: -20px;
     }
 
     .input-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 20px 0;
+        margin: 40px 0;
         padding: 0 35px;
     }
 
@@ -865,17 +854,19 @@ export default {
         cursor: pointer;
         height: 37px;
         width: 80px;
-        border-radius: 5px;
-        background-color: #00a8ff;
-        color: white;
-        border: none;
+        border-radius: 6px;
+        background-color: white;
+        color: #213C85;
+        border: 1px solid #D9D9D9;
         transition: background-color 0.3s ease, transform 0.2s ease;
         margin-top: 0px;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-family: $nunito-family;
     }
 
     .toggle-all-button:hover {
-        background-color: #0086cc;
-        transform: scale(1.03);
+        background-color: rgb(250, 250, 250);
+        //transform: scale(1.03);
     }
 
     .toggle-all-button:active {
@@ -943,10 +934,10 @@ export default {
     }
 
     .card {
-        background-color: #00a8ff;
-        color: white;
+        background-color: white;
+        color: #213C85;
         padding: 0px 30px;
-        border-radius: 50px 0 0 50px;
+        border-radius: 50px 7px 7px 50px;
         margin-bottom: 15px;
         display: flex;
         align-items: center;
@@ -955,12 +946,23 @@ export default {
         width: 100%;
         position: relative;
         z-index: 1;
-        height: 90px;
+        height: 93px;
+        filter: drop-shadow(4px 4px 4px rgba(0, 51, 197, 0.44));
+
+        h4 {
+            margin-top: -10px !important;
+        }
+
+        p {
+            margin-top: -5px !important;
+        }
     }
 
+
     .subcard {
-        background-color: #00a8ff;
-        color: white;
+        background-color: white;
+        color: #213C85;
+        ;
         padding: 15px 30px;
         margin-top: -15px;
         margin-bottom: 30px;
@@ -969,6 +971,7 @@ export default {
         width: calc(100% - 40px);
         position: relative;
         z-index: 0;
+        filter: drop-shadow(4px 4px 4px rgba(0, 51, 197, 0.44));
     }
 
     .subcard-title {
@@ -993,7 +996,8 @@ export default {
     }
 
     .subcard-links a {
-        color: white;
+        color: #213C85;
+        ;
         text-decoration: underline;
         font-weight: 500;
     }
