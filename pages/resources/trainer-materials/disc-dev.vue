@@ -26,9 +26,9 @@
 
         <div class="body" v-if="unlocked">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Account+Levels+Graphics+(3)+14.png"
-            alt="fold 4 graphic" style="position: absolute; right: -150px; bottom: 365px; width: 45%;">
+                alt="fold 4 graphic" style="position: absolute; right: -150px; bottom: 365px; width: 45%;">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Account+Levels+Graphics+(3)+18.png"
-            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
+                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
             <div class="container">
                 <br />
                 <div class="input-container">
@@ -67,6 +67,7 @@
                                 <p>Foundations of DISC & advanced development resources.</p>
                             </div>
                         </div>
+                        <br />
                         <div v-if="toggleStates['fundamentals']" class="subcard">
                             <p class="subcard-title">Understanding foundations of DISC</p>
                             <ul class="subcard-links">
@@ -78,6 +79,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">Description - All 4 Styles</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDescriptionStyles" :key="link.url">
@@ -88,6 +90,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">Adaptability - All 4 Styles</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredAdaptabilityStyles" :key="link.url">
@@ -98,7 +101,8 @@
                                     </a>
                                 </li>
                             </ul>
-                            <p class="subcard-title">Understanding foundations of DISC</p>
+                            <br />
+                            <p class="subcard-title">Advanced Development Resources</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredUnderstandingFoundations" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
@@ -120,6 +124,7 @@
                                     resources.</p>
                             </div>
                         </div>
+                        <br />
                         <div v-if="toggleStates['t&w']" class="subcard">
                             <p class="subcard-title">Training Presentations & Facilitator Guides</p>
                             <ul class="subcard-links">
@@ -131,6 +136,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">DISC Specific Group Exercises</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDISCSpecificGroupExercises" :key="link.url">
@@ -141,6 +147,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">General Group Exercises</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredGeneralGroupExercises" :key="link.url">
@@ -151,6 +158,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">DISC Activity Resources</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDISCActivityResources" :key="link.url">
@@ -161,6 +169,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">Enhancing Delivery Resources - Training & Presentations</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredEnhancingDeliveryResourcesTrainingPresentations"
@@ -172,6 +181,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">Enhancing Delivery Resources - Audio and video files</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredEnhancingDeliveryResourcesAudioVideoFiles" :key="link.url">
@@ -204,6 +214,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">DISC in Action Series</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDISCActionSeries" :key="link.url">
@@ -214,6 +225,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">DISC Target Applications Tips</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDISCTargetApplicationsTips" :key="link.url">
@@ -259,7 +271,7 @@
                                 <p>Supplementary materials to enhance your understanding & application of DISC.</p>
                             </div>
                         </div>
-
+                        <br />
                         <div v-if="toggleStates['support']" class="subcard">
                             <p class="subcard-title">Other Materials</p>
                             <ul class="subcard-links">
@@ -285,7 +297,7 @@
                                 <p>Debriefing & Assessment Report Details.</p>
                             </div>
                         </div>
-
+                        <br />
                         <div v-if="toggleStates['report&tools']" class="subcard">
                             <p class="subcard-title">Debriefing and Assessment Report Details</p>
                             <ul class="subcard-links">
@@ -297,6 +309,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">Video Resources</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredVideoResources" :key="link.url">
@@ -319,9 +332,9 @@
                                 <p>DISC Coaching resources.</p>
                             </div>
                         </div>
-
+                        <br />
                         <div v-if="toggleStates['coaches']" class="subcard">
-                            <p class="subcard-title">Coaching Guide for DISC</p>
+                            <p class="subcard-title" style="font-weight: 400;">Business Coaching Guide - COMING SOON</p>
                         </div>
 
                         <div class="card">
@@ -345,6 +358,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">Information Sheets</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredInformationSheets" :key="link.url">
@@ -367,7 +381,7 @@
                                 <p>Infused & Non-infused.</p>
                             </div>
                         </div>
-
+                        <br />
                         <div v-if="toggleStates['product']" class="subcard">
                             <p class="subcard-title">Infused</p>
                             <ul class="subcard-links">
@@ -379,6 +393,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <br />
                             <p class="subcard-title">Non-Infused</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filterednonInfused" :key="link.url">
@@ -401,7 +416,7 @@
                                 <p>Latest updates, Store, FAQs, Support info, & more.</p>
                             </div>
                         </div>
-
+                        <br />
                         <div v-if="toggleStates['quick&links']" class="subcard">
                             <p class="subcard-title">Latest Updates</p>
                             <ul class="subcard-links">
