@@ -6,18 +6,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-7">
-                        <h2 style="text-align: left; color: white; margin-top: 40px; margin-bottom: -40px;">DISC</h2>
+                        <h2 style="text-align: left; color: white; margin-top: 40px; margin-bottom: -40px;" class="disc">DISC</h2>
                         <h2 style="text-align: left; color: #FFDE59; margin-bottom: 5px; font-weight: 400;">
-                            Certified
-                            Trainer Materials</h2>
-                        <p style="text-align: left; margin-top: 0px; margin-bottom: 40px; color: white;">
-                            Your go-to resource for coaching tools, assessment insights, reports, and quick access to
-                            class materials. Explore these valuable resources at your leisure to support your ongoing
-                            development and application.
+                            <span v-if="certified">Certified
+                                Trainer Materials</span>
+                            <span v-else>Trainer Materials</span>
+                        </h2>
+                        <p style="text-align: left; margin-top: 0px; margin-bottom: 40px; color: white;" class="heroText">
+                            The Training Materials library is your comprehensive resource for coaching and debriefing
+                            tools, providing additional insight and information on the assessment reports and models,
+                            and giving quick access to class or workshop materials. Explore these at your leisure! There
+                            are many useful and valuable resources to support your continued development, understanding,
+                            and application!
                         </p>
                     </div>
                     <div class="col-5">
-                        <img src="~/assets/coaches-directory/trainer-materials-disc-hero-image.png"
+                        <img v-if="certified"
+                            src="~/assets/coaches-directory/certified-trainer-materials-disc-hero-image.png"
+                            alt="coaches directory hero image" class="heroImageCertified">
+                        <img v-else src="~/assets/coaches-directory/non-certified-disc-trainer-materials-hero-image.png"
                             alt="coaches directory hero image" class="heroImage">
                     </div>
                 </div>
@@ -26,34 +33,34 @@
 
         <div class="body" v-if="unlocked">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Account+Levels+Graphics+(3)+14.png"
-                alt="fold 4 graphic" style="position: absolute; right: -150px; bottom: 365px; width: 45%;">
+                alt="fold 4 graphic" style="position: absolute; right: -150px; bottom: 365px; width: 45%;" class="dots">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Account+Levels+Graphics+(3)+18.png"
-                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
+                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;" class="dots">
             <div class="container">
                 <br />
                 <div class="input-container">
-                    <div class="search-bar" style="width: 60%;">
-                        <input type="text" placeholder="Search" class="input-search" v-model="searchQuery" />
-                        <i class="search-icon">&#x1F50D;</i>
-                    </div>
-                    <button @click="toggleAllCards" class="toggle-all-button">
-                        {{ areAllCardsOpen ? 'Close All' : 'Open All' }}
-                    </button>
+    <div class="search-bar" style="width: 60%;">
+        <input type="text" placeholder="Search" class="input-search" v-model="searchQuery" />
+        <i class="search-icon">&#x1F50D;</i>
+    </div>
+    <button @click="toggleAllCards" class="toggle-all-button">
+        {{ areAllCardsOpen ? 'Close All' : 'Open All' }}
+    </button>
+    <div class="filter-dropdown">
+        <select class="filter-select" v-model="selectedFileType">
+            <option value="All">Filter by file type</option>
+            <option value="PDF">PDF</option>
+            <option value="DOC">DOC</option>
+            <option value="PPT">PPT</option>
+            <option value="MP3">MP3</option>
+            <option value="MP4">MP4</option>
+            <option value="ZIP">ZIP</option>
+            <option value="URL">URL</option>
+        </select>
+        <i class="dropdown-icon">&#x25BC;</i>
+    </div>
+</div>
 
-                    <div class="filter-dropdown">
-                        <select class="filter-select" v-model="selectedFileType">
-                            <option value="All">Filter by file type</option>
-                            <option value="PDF">PDF</option>
-                            <option value="DOC">DOC</option>
-                            <option value="PPT">PPT</option>
-                            <option value="MP3">MP3</option>
-                            <option value="MP4">MP4</option>
-                            <option value="ZIP">ZIP</option>
-                            <option value="URL">URL</option>
-                        </select>
-                        <i class="dropdown-icon">&#x25BC;</i>
-                    </div>
-                </div>
 
                 <div class="row" @click="handleClick">
                     <div class="col-6">
@@ -64,11 +71,11 @@
                                 <h4 data-category="fundamentals">
                                     {{ toggleStates['fundamentals'] ? '−' : '+' }} The Fundamentals: DISC
                                 </h4>
-                                <p>Foundations of DISC & advanced development resources.</p>
+                                <p>Foundations of DISC & advanced development resources</p>
                             </div>
                         </div>
-                        <br />
                         <div v-if="toggleStates['fundamentals']" class="subcard">
+                            <br />
                             <p class="subcard-title">Understanding foundations of DISC</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredFoundations" :key="link.url">
@@ -121,25 +128,15 @@
                                     {{ toggleStates['t&w'] ? '−' : '+' }} Training & Workshops
                                 </h4>
                                 <p>Training presentations, Facilitator guides, DISC group exercises, & delivery
-                                    resources.</p>
+                                    resources</p>
                             </div>
                         </div>
-                        <br />
+
                         <div v-if="toggleStates['t&w']" class="subcard">
+                            <br />
                             <p class="subcard-title">Training Presentations & Facilitator Guides</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredTrainingPresentationsFacilitatorGuides" :key="link.url">
-                                    <a :href="link.url" target="_blank" rel="noopener">
-                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
-                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
-                                        {{ link.name }}
-                                    </a>
-                                </li>
-                            </ul>
-                            <br />
-                            <p class="subcard-title">DISC Specific Group Exercises</p>
-                            <ul class="subcard-links">
-                                <li v-for="link in filteredDISCSpecificGroupExercises" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
                                         <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
                                             :alt="`${link.type.toLowerCase()} icon`" class="icons">
@@ -162,6 +159,17 @@
                             <p class="subcard-title">DISC Activity Resources</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDISCActivityResources" :key="link.url">
+                                    <a :href="link.url" target="_blank" rel="noopener">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </a>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="subcard-title">DISC Specific Group Exercises</p>
+                            <ul class="subcard-links">
+                                <li v-for="link in filteredDISCSpecificGroupExercises" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
                                         <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
                                             :alt="`${link.type.toLowerCase()} icon`" class="icons">
@@ -200,10 +208,9 @@
                                 <h4 data-category="i&a">
                                     {{ toggleStates['i&a'] ? '−' : '+' }} Implementation & Application
                                 </h4>
-                                <p>DISC Email Series, Target Applications Tips, & Behavioral Style Interview Guide.</p>
+                                <p>DISC Email Series, Target Applications Tips, & Behavioral Style Interview Guide</p>
                             </div>
                         </div>
-
                         <div v-if="toggleStates['i&a']" class="subcard">
                             <ul class="subcard-links">
                                 <li v-for="link in filteredImplementationApplicationLinksWithoutTitle" :key="link.url">
@@ -245,7 +252,7 @@
                                 <h4 data-category="360">
                                     {{ toggleStates['360'] ? '−' : '+' }} 360 Resources
                                 </h4>
-                                <p>Supporting materials to help you with 360 Assessments.</p>
+                                <p>Supporting materials to help you with 360 Assessments</p>
                             </div>
                         </div>
 
@@ -261,18 +268,18 @@
                             </ul>
                         </div>
 
-                        <div class="card">
+                        <div class="card mediaCards">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Additional+Support+Materials.png"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="support">
                                     {{ toggleStates['support'] ? '−' : '+' }} Additional Support Materials
                                 </h4>
-                                <p>Supplementary materials to enhance your understanding & application of DISC.</p>
+                                <p>Supplementary materials to enhance your understanding & application of DISC</p>
                             </div>
                         </div>
-                        <br />
                         <div v-if="toggleStates['support']" class="subcard">
+                            <br />
                             <p class="subcard-title">Other Materials</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredOtherMaterials" :key="link.url">
@@ -294,11 +301,11 @@
                                 <h4 data-category="report&tools">
                                     {{ toggleStates['report&tools'] ? '−' : '+' }} Assessment Report Tools
                                 </h4>
-                                <p>Debriefing & Assessment Report Details.</p>
+                                <p>Debriefing & Assessment Report Details</p>
                             </div>
                         </div>
-                        <br />
                         <div v-if="toggleStates['report&tools']" class="subcard">
+                            <br />
                             <p class="subcard-title">Debriefing and Assessment Report Details</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDebriefingAssessmentReportDetails" :key="link.url">
@@ -329,12 +336,15 @@
                                 <h4 data-category="coaches">
                                     {{ toggleStates['coaches'] ? '−' : '+' }} Coaching with DISC
                                 </h4>
-                                <p>DISC Coaching resources.</p>
+                                <p>DISC Coaching resources</p>
                             </div>
                         </div>
-                        <br />
                         <div v-if="toggleStates['coaches']" class="subcard">
+                            <br />
                             <p class="subcard-title" style="font-weight: 400;">Business Coaching Guide - COMING SOON</p>
+                            <br />
+                            <p class="subcard-title" style="font-weight: 400;">Coaching with DISC - COMING SOON</p>
+                            <br />
                         </div>
 
                         <div class="card">
@@ -344,7 +354,7 @@
                                 <h4 data-category="marketing">
                                     {{ toggleStates['marketing'] ? '−' : '+' }} Marketing
                                 </h4>
-                                <p>DISC marketing materials to help you support your business.</p>
+                                <p>DISC marketing materials to help you support your business</p>
                             </div>
                         </div>
 
@@ -378,15 +388,20 @@
                                 <h4 data-category="product">
                                     {{ toggleStates['product'] ? '−' : '+' }} Product Specific Resources
                                 </h4>
-                                <p>Infused & Non-infused.</p>
+                                <p>Infused & Non-infused</p>
                             </div>
                         </div>
-                        <br />
                         <div v-if="toggleStates['product']" class="subcard">
+                            <br />
                             <p class="subcard-title">Infused</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredInfused" :key="link.url">
-                                    <a :href="link.url" target="_blank" rel="noopener">
+                                    <span v-if="!link.url">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </span>
+                                    <a v-else :href="link.url" target="_blank" rel="noopener">
                                         <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
                                             :alt="`${link.type.toLowerCase()} icon`" class="icons">
                                         {{ link.name }}
@@ -397,7 +412,12 @@
                             <p class="subcard-title">Non-Infused</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filterednonInfused" :key="link.url">
-                                    <a :href="link.url" target="_blank" rel="noopener">
+                                    <span v-if="!link.url">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </span>
+                                    <a v-else :href="link.url" target="_blank" rel="noopener">
                                         <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
                                             :alt="`${link.type.toLowerCase()} icon`" class="icons">
                                         {{ link.name }}
@@ -413,11 +433,11 @@
                                 <h4 data-category="quick&links">
                                     {{ toggleStates['quick&links'] ? '−' : '+' }} Quick Links
                                 </h4>
-                                <p>Latest updates, Store, FAQs, Support info, & more.</p>
+                                <p>Latest updates, Store, FAQs, Support info, & more</p>
                             </div>
                         </div>
-                        <br />
                         <div v-if="toggleStates['quick&links']" class="subcard">
+                            <br />
                             <p class="subcard-title">Latest Updates</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredLatestUpdates" :key="link.url">
@@ -529,7 +549,7 @@ export default {
                     { name: 'Adaptability - High C', type: 'MP4', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/High_C_Adaptive.mp4', icon: 'MP4.png' }
                 ],
                 understandingFoundations: [
-                    { name: 'Over-Under Extensions and DISC Emotions', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOverUnderExtensions_Emotions.pdf', icon: 'PDF.png', certified: true },
+                    // { name: 'Over-Under Extensions and DISC Emotions', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOverUnderExtensions_Emotions.pdf', icon: 'PDF.png', certified: true },
                     { name: 'Extensions', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Extensions.pdf', icon: 'PDF.png', certified: true },
                     { name: '15 Classical DISC Style Behavioral Patterns', type: 'PPT', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylePatternsComplete.pptx', icon: 'PPT.png', certified: true },
                     { name: '15 Classical DISC Style Behavioral Patterns', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15DISCstyleBehavioralPatterns.pdf', icon: 'PDF.png', isElse: true },
@@ -584,24 +604,24 @@ export default {
                     { name: 'Coaching Guide Questions', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/CoachingGuideQuestions.pdf', icon: 'PDF.png' }
                 ],
                 enhancingDeliveryResourcesAudioVideoFiles: [
-                    { name: 'Identifying the Styles', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Identifying+the+DISC+Styles.zip', icon: 'Zip.png' },
-                    { name: 'Songs for each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/songs_for_each_style.zip', icon: 'Zip.png' },
-                    { name: 'Leaving Voicemails for each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Leaving+Voicemails+for+Each+Style.zip', icon: 'Zip.png' },
-                    { name: 'Complimenting each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Complimenting+each+Style.zip', icon: 'Zip.png', certified: true },
-                    { name: 'Counseling each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Counseling+each+Style.zip', icon: 'Zip.png', certified: true },
-                    { name: 'Delegating to each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Delegating+to+each+Style.zip', icon: 'Zip.png', certified: true },
-                    { name: 'Motivating each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Motivating+each+Style.zip', icon: 'Zip.png', certified: true },
-                    { name: 'Making contact with each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Making+Contact+with+each+Style.zip', icon: 'Zip.png', certified: true },
-                    { name: 'Exploring with each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Exploring+with+each+Style.zip', icon: 'Zip.png', certified: true },
-                    { name: 'Collaborating with each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Collaborating+with+each+Style.zip', icon: 'Zip.png', certified: true },
-                    { name: 'Getting commitment from each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Getting+Commitment+from+each+Style.zip', icon: 'Zip.png', certified: true },
-                    { name: 'Assuring Customer Satisfaction with each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Assuring+Customer+Satisfaction+from+each+Style.zip', icon: 'Zip.png', certified: true },
-                    { name: 'KnowDISC', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Know+DISC.zip', icon: 'Zip.png' }
+                    // { name: 'Identifying the Styles', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Identifying+the+DISC+Styles.zip', icon: 'Zip.png' },
+                    // { name: 'Songs for each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/songs_for_each_style.zip', icon: 'Zip.png' },
+                    // { name: 'Leaving Voicemails for each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Leaving+Voicemails+for+Each+Style.zip', icon: 'Zip.png' },
+                    // { name: 'Complimenting each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Complimenting+each+Style.zip', icon: 'Zip.png', certified: true },
+                    // { name: 'Counseling each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Counseling+each+Style.zip', icon: 'Zip.png', certified: true },
+                    // { name: 'Delegating to each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Delegating+to+each+Style.zip', icon: 'Zip.png', certified: true },
+                    // { name: 'Motivating each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Motivating+each+Style.zip', icon: 'Zip.png', certified: true },
+                    // { name: 'Making contact with each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Making+Contact+with+each+Style.zip', icon: 'Zip.png', certified: true },
+                    // { name: 'Exploring with each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Exploring+with+each+Style.zip', icon: 'Zip.png', certified: true },
+                    // { name: 'Collaborating with each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Collaborating+with+each+Style.zip', icon: 'Zip.png', certified: true },
+                    // { name: 'Getting commitment from each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Getting+Commitment+from+each+Style.zip', icon: 'Zip.png', certified: true },
+                    // { name: 'Assuring Customer Satisfaction with each Style', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Assuring+Customer+Satisfaction+from+each+Style.zip', icon: 'Zip.png', certified: true },
+                    { name: 'KnowDISC videos', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Know+DISC.zip', icon: 'Zip.png' }
                 ]
             },
             implementationApplication: {
                 implementationApplicationLinksWithoutTitle: [
-                    { name: '52 Week Email Series', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/52+Week+DISC+email+series+updated+12-2020.pdf', icon: 'PDF.png' },
+                    // { name: '52 Week Email Series', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/52+Week+DISC+email+series+updated+12-2020.pdf', icon: 'PDF.png' },
                     { name: 'DISC Behavioral Style Interview Guide', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCInterviewGuide.pdf', icon: 'PDF.png' }
                 ],
                 dISCActionSeries: [
@@ -633,7 +653,7 @@ export default {
                     { name: 'DISC Reliability Analysis', type: 'URL', url: '/about/validity', icon: 'URL.png' },
                     { name: 'DISC History Chart', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HistoryChart.pdf', icon: 'PDF.png', certified: true },
                     { name: 'Are You Mad at Me? Article', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/AreYouMadatMe.pdf', icon: 'PDF.png', certified: true },
-                    { name: 'DISC World Map', type: 'JPG', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+World+Map.jpg', icon: 'JPG.png' },
+                    { name: 'DISC World Map', type: 'JPG', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/DISC+World+Map.jpg', icon: 'JPG.png' },
                     { name: 'DISC Careers', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Careers.pdf', icon: 'PDF.png' },
                 ]
             },
@@ -854,6 +874,11 @@ export default {
 
     .heroImage {
         width: 80%;
+        margin-top: 0px;
+    }
+
+    .heroImageCertified {
+        width: 80%;
         margin-top: -20px;
     }
 
@@ -936,8 +961,8 @@ export default {
     }
 
     .icon {
-        width: 80px;
-        margin-right: 20px;
+        width: 90px;
+        margin-right: 0px;
         margin-left: -25px;
         vertical-align: middle;
     }
@@ -991,19 +1016,21 @@ export default {
 
     .subcard-title {
         font-weight: 700;
-        font-size: 16px;
+        font-size: 1em;
         margin-bottom: -10px;
         margin-top: -10px;
         text-align: left;
         margin-left: 35px;
+        font-family: $nunito-family;
     }
 
     .subcard-links {
         list-style-type: none;
         padding-left: 0;
-        font-size: 14.6667px;
+        font-size: 1em;
         text-align: left;
         margin-left: 35px;
+        font-family: $nunito-family;
     }
 
     .subcard-links li {
@@ -1083,13 +1110,87 @@ export default {
     }
 
     @media (max-width: 768px) {
-        .row {
-            flex-wrap: wrap;
-        }
-
-        .col-6 {
-            width: 100%;
-        }
+    .row {
+        flex-wrap: wrap;
     }
+
+    .col-6 {
+        width: 100%;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 20px); /* Full width with 10px padding on each side */
+        margin: 0 auto; /* Center horizontally */
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .input-container > * {
+        width: 100%;
+        margin-bottom: 10px; /* Add spacing between each element */
+    }
+
+    .search-bar {
+        width: 100% !important;
+        position: relative;
+    }
+
+    .toggle-all-button,
+    .filter-dropdown {
+        width: 100%;
+    }
+
+    .filter-select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .card {
+        padding: 0px 5px 0px 20px;
+    }
+
+    .disc {
+        margin-bottom: 10px !important;
+    }
+
+    .heroText {
+        margin-top: 20px !important;
+        font-size: 1em !important;
+        line-height: 1.25em;
+    }
+
+    h2 {
+        line-height: 32px;
+    }
+
+    h4 {
+        font-size: 14px !important;
+        line-height: 16px;
+        margin-bottom: 10px !important;
+    }
+
+    p {
+        font-size: 12px !important;
+        line-height: 14px;
+    }
+
+    .mediaCards {
+        margin-bottom: -20px;
+    }
+}
+
 }
 </style>
