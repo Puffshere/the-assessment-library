@@ -63,7 +63,6 @@
                     </div>
                 </div>
 
-
                 <div class="row" @click="handleClick">
                     <div class="col-6">
                         <div class="card">
@@ -748,9 +747,8 @@ export default {
             });
         },
         handleClick(event) {
-            if (event.target.tagName === 'H4') {
-                const category = event.target.dataset.category;
-                // Toggle the state of the clicked category
+            if (event.target.tagName === 'H4' || event.target.classList.contains('icon')) {
+                const category = event.target.closest('.card').querySelector('h4').dataset.category;
                 this.$set(this.toggleStates, category, !this.toggleStates[category]);
             }
         },
@@ -967,6 +965,7 @@ export default {
         margin-right: 0px;
         margin-left: -25px;
         vertical-align: middle;
+        cursor: pointer;
     }
 
     .icons {
