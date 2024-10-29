@@ -6,13 +6,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-7">
-                        <h2 style="text-align: left; color: white; margin-top: 40px; margin-bottom: -40px;" class="disc">DISC</h2>
+                        <h2 style="text-align: left; color: white; margin-top: 40px; margin-bottom: -40px;"
+                            class="disc">DISC</h2>
                         <h2 style="text-align: left; color: #FFDE59; margin-bottom: 5px; font-weight: 400;">
                             <span v-if="certified">Certified
                                 Trainer Materials</span>
                             <span v-else>Trainer Materials</span>
                         </h2>
-                        <p style="text-align: left; margin-top: 0px; margin-bottom: 40px; color: white;" class="heroText">
+                        <p style="text-align: left; margin-top: 0px; margin-bottom: 40px; color: white;"
+                            class="heroText">
                             The Training Materials library is your comprehensive resource for coaching and debriefing
                             tools, providing additional insight and information on the assessment reports and models,
                             and giving quick access to class or workshop materials. Explore these at your leisure! There
@@ -39,27 +41,27 @@
             <div class="container">
                 <br />
                 <div class="input-container">
-    <div class="search-bar" style="width: 60%;">
-        <input type="text" placeholder="Search" class="input-search" v-model="searchQuery" />
-        <i class="search-icon">&#x1F50D;</i>
-    </div>
-    <button @click="toggleAllCards" class="toggle-all-button">
-        {{ areAllCardsOpen ? 'Close All' : 'Open All' }}
-    </button>
-    <div class="filter-dropdown">
-        <select class="filter-select" v-model="selectedFileType">
-            <option value="All">Filter by file type</option>
-            <option value="PDF">PDF</option>
-            <option value="DOC">DOC</option>
-            <option value="PPT">PPT</option>
-            <option value="MP3">MP3</option>
-            <option value="MP4">MP4</option>
-            <option value="ZIP">ZIP</option>
-            <option value="URL">URL</option>
-        </select>
-        <i class="dropdown-icon">&#x25BC;</i>
-    </div>
-</div>
+                    <div class="search-bar" style="width: 60%;">
+                        <input type="text" placeholder="Search" class="input-search" v-model="searchQuery" />
+                        <i class="search-icon">&#x1F50D;</i>
+                    </div>
+                    <button @click="toggleAllCards" class="toggle-all-button">
+                        {{ areAllCardsOpen ? 'Close All' : 'Open All' }}
+                    </button>
+                    <div class="filter-dropdown">
+                        <select class="filter-select" v-model="selectedFileType">
+                            <option value="All">Filter by file type</option>
+                            <option value="PDF">PDF</option>
+                            <option value="DOC">DOC</option>
+                            <option value="PPT">PPT</option>
+                            <option value="MP3">MP3</option>
+                            <option value="MP4">MP4</option>
+                            <option value="ZIP">ZIP</option>
+                            <option value="URL">URL</option>
+                        </select>
+                        <i class="dropdown-icon">&#x25BC;</i>
+                    </div>
+                </div>
 
 
                 <div class="row" @click="handleClick">
@@ -268,7 +270,7 @@
                             </ul>
                         </div>
 
-                        <div class="card mediaCards">
+                        <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Additional+Support+Materials.png"
                                 alt="icon" class="icon" />
                             <div>
@@ -294,7 +296,7 @@
 
                     </div>
                     <div class="col-6">
-                        <div class="card">
+                        <div class="card mediaCards">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Assessment+Report+Tools.png"
                                 alt="icon" class="icon" />
                             <div>
@@ -1002,7 +1004,6 @@ export default {
     .subcard {
         background-color: white;
         color: #213C85;
-        ;
         padding: 15px 30px;
         margin-top: -15px;
         margin-bottom: 30px;
@@ -1039,7 +1040,6 @@ export default {
 
     .subcard-links a {
         color: #213C85;
-        ;
         text-decoration: underline;
         font-weight: 500;
     }
@@ -1110,87 +1110,100 @@ export default {
     }
 
     @media (max-width: 768px) {
-    .row {
-        flex-wrap: wrap;
-    }
+        .row {
+            flex-wrap: wrap;
+        }
 
-    .col-6 {
-        width: 100%;
-    }
+        .col-6 {
+            width: 100%;
+        }
 
-    .input-container {
-        display: flex;
-        flex-direction: column;
-        width: calc(100% - 20px); /* Full width with 10px padding on each side */
-        margin: 0 auto; /* Center horizontally */
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
 
-    .input-container > * {
-        width: 100%;
-        margin-bottom: 10px; /* Add spacing between each element */
-    }
+        .input-container>* {
+            width: 100%;
+            margin-bottom: 10px;
+        }
 
-    .search-bar {
-        width: 100% !important;
-        position: relative;
-    }
+        .search-bar {
+            width: 100% !important;
+            position: relative;
+        }
 
-    .toggle-all-button,
-    .filter-dropdown {
-        width: 100%;
-    }
+        .toggle-all-button,
+        .filter-dropdown {
+            width: 100%;
+        }
 
-    .filter-select {
-        width: 100%;
-        box-sizing: border-box;
-    }
+        .filter-select {
+            width: 100%;
+            box-sizing: border-box;
+        }
 
-    .search-icon {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-    .dots {
-        display: none;
-    }
+        .dots {
+            display: none;
+        }
 
-    .card {
-        padding: 0px 5px 0px 20px;
-    }
+        .card {
+            padding: 0px 5px 0px 20px;
+        }
 
-    .disc {
-        margin-bottom: 10px !important;
-    }
+        .disc {
+            margin-bottom: 10px !important;
+        }
 
-    .heroText {
-        margin-top: 20px !important;
-        font-size: 1em !important;
-        line-height: 1.25em;
-    }
+        .heroText {
+            margin-top: 20px !important;
+            font-size: 1em !important;
+            line-height: 1.25em;
+        }
 
-    h2 {
-        line-height: 32px;
-    }
+        h2 {
+            line-height: 32px;
+        }
 
-    h4 {
-        font-size: 14px !important;
-        line-height: 16px;
-        margin-bottom: 10px !important;
-    }
+        h4 {
+            font-size: 14px !important;
+            line-height: 16px;
+            margin-bottom: 10px !important;
+        }
 
-    p {
-        font-size: 12px !important;
-        line-height: 14px;
-    }
+        p {
+            font-size: 12px !important;
+            line-height: 14px;
+        }
 
-    .mediaCards {
-        margin-bottom: -20px;
+        .mediaCards {
+            margin-top: -35px;
+        }
+
+        .subcard {
+            margin-left: 20px;
+        }
+
+        .subcard-title {
+            margin-left: 0px;
+            font-size: 1em !important;
+        }
+
+        .subcard-links {
+            margin-left: 0px;
+        }
     }
-}
 
 }
 </style>
