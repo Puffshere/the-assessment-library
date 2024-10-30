@@ -45,7 +45,7 @@
                             and reducing workplace friction. Enhance your interpersonal dynamics <br />
                             today—click below for your complimentary assessment.
                         </p>
-                        <button @click="scrollToContactFormSection">
+                        <button @click="freeDiscButton">
                             Take Free Assessment
                         </button>
                     </div>
@@ -63,11 +63,8 @@
 <script>
 export default {
     methods: {
-        scrollToContactFormSection(event) {
-            const element = document.getElementById('contactFormSection');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+        freeDiscButton(event) {
+            window.location.href = 'https://assessments247.net/?R*t%28GQg%27==R';
             event.target.blur();
         }
     }
@@ -106,6 +103,10 @@ button {
     font-weight: 700;
     text-decoration-line: underline;
     cursor: pointer;
+}
+
+li {
+    font-family: $nunito-family;
 }
 
 @media (max-width: 1200px) {

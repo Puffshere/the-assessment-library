@@ -104,7 +104,7 @@
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Group+Reporting+Image.png"
                                     alt="image 1" style="width: 100%;" class="cardImage">
                                 <p class="text">
-                                    Generate free group reports based on individual report data. Quickly view and print
+                                    Generate group reports based on individual report data. Quickly view and print
                                     collective insights for team building or group coaching. This feature is perfect for
                                     easily comparing how team members score in relation to one another.
                                 </p>

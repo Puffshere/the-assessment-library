@@ -16,7 +16,7 @@
                         <button @click="freeDiscButton" class="heroBtn btn" style="margin-right: 15px;">
                             Free DISC
                         </button>
-                        <button @click="scrollToExploreSection" class="heroBtn" style="margin-right: 15px;">
+                        <button @click="scrollToContactFormSection" class="heroBtn" style="margin-right: 15px;">
                             Book Demo
                         </button>
                         <button @click="scrollToCertificationsSection" class="heroBtn">
@@ -40,11 +40,10 @@ export default {
             window.location.href = 'https://assessments247.net/?R*t%28GQg%27==R';
             event.target.blur();
         },
-        scrollToExploreSection(event) {
-            const element = document.getElementById('bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24');
+        scrollToContactFormSection(event) {
+            const element = document.getElementById('contactFormSection');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
-                window.location.hash = 'bookdemo?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24';
             }
             event.target.blur();
         },

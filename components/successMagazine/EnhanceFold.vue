@@ -93,7 +93,7 @@ export default {
                     image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCTeamSummarySample-1.png',
                     backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/DISCTeamSummarySample-2.png',
                     title: 'DISC Team Summary',
-                    description: 'Free Group Report',
+                    description: 'Group Report',
                     languages: '10 Languages',
                     link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamSummarySample.pdf'
                 },
@@ -157,7 +157,7 @@ export default {
                     image: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/TeamDynamicsGroupSampleReport+(1)-1.png',
                     backImage: 'https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/TeamDynamicsGroupSampleReport+(1)-2.png',
                     title: 'DISC Team Dynamics',
-                    description: 'Free Group Report',
+                    description: 'Group Report',
                     languages: '25 Languages',
                     link: 'https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf'
                 }
@@ -240,10 +240,7 @@ export default {
             this.secondButtonLink(event);
         },
         firstButtonLink(event) {
-            const element = document.getElementById('contactFormSection');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+            window.location.href = 'https://assessments247.net/?R*t%28GQg%27==R';
             event.target.blur();
         },
         secondButtonLink(event) {

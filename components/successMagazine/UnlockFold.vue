@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
-                <button @click="scrollToContactFormSection" class="firstButton">
+                <button @click="freeDiscButton" class="firstButton">
                     Take Free Assessment
                 </button>
                 <button @click="secondButtonLink" class="secondButton">
@@ -51,11 +51,8 @@
 <script>
 export default {
     methods: {
-        scrollToContactFormSection(event) {
-            const element = document.getElementById('contactFormSection');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+        freeDiscButton(event) {
+            window.location.href = 'https://assessments247.net/?R*t%28GQg%27==R';
             event.target.blur();
         },
         secondButtonLink(event) {
@@ -83,6 +80,10 @@ export default {
 p {
     font-family: $nunito-family;
     font-size: 10.5pt;
+}
+
+li {
+    font-family: $nunito-family;
 }
 
 button {
