@@ -26,9 +26,9 @@
                         <h4>The bridge between you and your clients</h4>
                         <p style="padding-bottom: 7px; margin-top: -10px;">
                             You’ll impress clients with your valuable insights, thanks to seamless access to over 50
-                            assessments and reports through the Assessments 24x7 premium dashboard. After
-                            certification, 84% of coaches and consultants feel more confident during sessions, and
-                            over half increase their service fees. Lifetime certification provides access to over 500
+                            assessments and reports through the Assessments 24x7 premium dashboard. After certification,
+                            coaches and consultants report feeling more confident during sessions, and many increase
+                            their service fees. Lifetime certification provides access to over 500
                             training material assets, including PowerPoints, videos, and group exercises.
                         </p>
                         <button class="light" @click="jumpToResellerPage" style="margin-bottom: 10px;">

@@ -37,7 +37,8 @@
                     <div class="col-12">
                         <div class="col-6">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/woman+-+fold+8.png"
-                                alt="woman with a headset" style="width: 445px; margin-top: -150px;" class="personImage">
+                                alt="woman with a headset" style="width: 445px; margin-top: -150px;"
+                                class="personImage">
                         </div>
                         <div class="col-6">
                             <h3 style="text-align: right;">
@@ -45,8 +46,8 @@
                             </h3>
                             <p style="text-align: right;">
                                 We’re here around the clock to troubleshoot all aspects of your user experience,
-                                with most issues resolved in 24 hours or less. We’re proud that 88% of our customers
-                                rate our support as responsive and helpful!
+                                with most issues resolved in 24 hours or less. Our customers consistently rate our
+                                support as extremely responsive and helpful!
                             </p>
                         </div>
                     </div>
@@ -65,7 +66,9 @@
                         </div>
                         <div class="col-6">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Man+-+Fold+8.png"
-                                alt="man smiling" style="width: 445px; float: right; margin-top: -220px; margin-bottom: -90px;" class="personImage">
+                                alt="man smiling"
+                                style="width: 445px; float: right; margin-top: -220px; margin-bottom: -90px;"
+                                class="personImage">
                         </div>
                     </div>
                 </div>

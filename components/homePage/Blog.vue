@@ -88,6 +88,73 @@ export default {
 }
 </script>
 
+<!-- <script>
+export default {
+    data() {
+        return {
+            active: 'd',
+            interrupted: false,
+            blogLoading: true, // Renamed loading state to avoid conflicts
+            posts: [],
+            structuredDataBreadcrumbs: {
+                "@context": "http://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": "1",
+                        "item": {
+                            "@id": "https://assessments24x7.com/assessments",
+                            "name": "Assessments"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": "2",
+                        "item": {
+                            "@id": "https://assessments24x7.com/assessments/disc",
+                            "name": "DISC Assessment"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    methods: {
+        changeActive(active) {
+            this.active = active;
+            this.interrupted = true;
+        },
+        jumpToBlog(event) {
+            window.location.href = 'https://blog.assessments24x7.com/';
+            event.target.blur();
+        }
+    },
+    async created() {
+        this.blogLoading = true; // Set loading to true before request
+        try {
+            // Assuming there's an endpoint to get the latest blog posts from your blog.
+            const response = await this.$axios.get(`https://blog.assessments24x7.com/ghost/api/content/posts/?key=YOUR_API_KEY&limit=4&order=published_at DESC`);
+            this.posts = response.data.posts;
+        } catch (error) {
+            console.error("Error fetching posts:", error);
+        } finally {
+            this.blogLoading = false; // Set loading to false after the request completes
+        }
+    },
+    mounted() {
+        window.setInterval(() => {
+            if (!this.interrupted) {
+                if (this.active === 'd') { this.active = 'i'; }
+                else if (this.active === 'i') { this.active = 's'; }
+                else if (this.active === 's') { this.active = 'c'; }
+                else { this.active = 'd'; }
+            }
+        }, 3000);
+    }
+}
+</script> -->
+
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
