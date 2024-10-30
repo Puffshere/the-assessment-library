@@ -80,7 +80,7 @@
                                 outcomes with strong EIQ.
                             </p>
                             <div style="display: flex; justify-content: center; margin-top: 69px;">
-                                <button @click="eiqCertification">
+                                <button class="bottomButton" @click="eiqCertification">
                                     EIQ Certification
                                 </button>
                             </div>
@@ -159,5 +159,22 @@ button {
     font-weight: 700;
     text-decoration-line: underline;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    img {
+        display: block;            // Make images block-level elements
+        width: 80% !important;     // Set the width to 80%
+        margin: 0 auto !important; // Center the image horizontally
+    }
+}
+
+button {
+    margin-top: -30px;
+    margin-bottom: 80px;
+}
+
+.bottomButton {
+    margin-bottom: -20px !important;
 }
 </style>

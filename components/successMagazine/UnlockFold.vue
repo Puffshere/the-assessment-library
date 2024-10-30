@@ -110,4 +110,22 @@ button {
     background: white;
     color: #0D3FCD;
 }
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .firstButton,
+    .secondButton {
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+
 </style>

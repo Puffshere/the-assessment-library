@@ -83,8 +83,8 @@
                         </p>
                     </div>
                     <div style="display: flex; justify-content: center; padding-bottom: 60px;">
-                        <nuxt-link to="/certifications" class="button">Certification Options</nuxt-link>
-                        <button @click="scrollToContactFormSection">
+                        <nuxt-link to="/certifications" class="button firstButton">Certification Options</nuxt-link>
+                        <button class="secondButton" @click="scrollToContactFormSection">
                             Get Certified
                         </button>
                     </div>
@@ -154,4 +154,31 @@ button {
     background: white;
     color: #0D3FCD;
 }
+
+@media (max-width: 768px) {
+    .about .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .button-container,
+    .about .row div {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100%;
+    }
+
+    .button,
+    .firstButton,
+    .secondButton {
+        margin-bottom: 15px !important;
+        width: 80% !important;
+        max-width: 300px !important;
+        text-align: center;
+    }
+}
+
+
 </style>

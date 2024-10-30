@@ -22,11 +22,11 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="col-6">
+                        <div class="col-6 exploreBody">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Explore+our+Powerful+Assessment+Graphic+(1).webp"
                                 alt="image of woman in front of computer" style="width: 100%; margin-top: -20px;">
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 exploreBody">
                             <h2>
                                 Advanced, Customizable Technology
                             </h2>
@@ -55,7 +55,7 @@
             <div class="container" style="padding-bottom: 80px;">
                 <div class="row">
                     <div class="col-12" style="display: flex; justify-content: center; flex-wrap: wrap;">
-                        <div class="col-6 card-column">
+                        <div class="col-6 exploreBody card-column">
                             <div class="card" style="margin-top: -30px; margin-bottom: 100px;">
                                 <div class="cardHeader"
                                     style="position: absolute; margin-top: -20px; margin-left: -20px;">
@@ -95,7 +95,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-6 card-column">
+                        <div class="col-6 exploreBody card-column">
                             <div class="card" style="margin-top: -30px; margin-bottom: 100px;">
                                 <div class="cardHeader"
                                     style="position: absolute; margin-top: -20px; margin-left: -20px;">
@@ -257,8 +257,8 @@ button {
         align-items: center;
     }
 
-    .col-6 {
-        width: 100%;
+    .exploreBody {
+        width: 95%;
     }
 
     .mobileCard {
@@ -268,6 +268,10 @@ button {
     .card,
     .cardHeader {
         padding: 0px 40px;
+    }
+
+    .cardHeader {
+        height: 60px;
     }
 }
 </style>

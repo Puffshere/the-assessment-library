@@ -512,4 +512,28 @@ p {
     top: 275px;
     right: -40px;
 }
+
+@media (max-width: 768px) {
+    .bottomButtons .row {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .firstButton,
+    .secondButton {
+        margin-bottom: 15px;
+        width: 80% !important;
+        max-width: 300px;
+        margin-right: 0px !important;
+    }
+
+    .carousel-arrow.left {
+        left: 0px;
+    }
+
+    .carousel-arrow.right {
+        right: -10px;
+    }
+}
 </style>
