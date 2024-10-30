@@ -15,7 +15,7 @@
                             assessment-related activities, and our fully integrated and intuitive dashboard is the
                             guidance system that puts you in control of it all — at your fingertips, 24x7, on any
                             device.
-                            Whether you’re a solo-practitioner coach, a small consulting business, a midsize company or
+                            Whether you’re a solo-practitioner coach, a small consulting business, a midsize company, or
                             a multinational corporation with thousands of employees, Assessments 24x7 has a plan that is
                             right for your specific assessment needs and volume.
                         </p>
@@ -50,11 +50,10 @@
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
                                             alt="Checkmark"> Usage statistics and exports</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> On demand purchasing</li>
+                                            alt="Checkmark"> On-demand purchasing</li>
+                                    
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Groups</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Assessment links/inviting</li>
+                                            alt="Checkmark"> Assessment links/invitations</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
                                             alt="Checkmark"> User upload/import</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
@@ -89,7 +88,7 @@
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
                                             alt="Checkmark"> Group reporting</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Sub accounts</li>
+                                            alt="Checkmark"> Sub-accounts</li>
                                     <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
                                             alt="Checkmark"> API access</li>
                                 </ul>
@@ -211,7 +210,7 @@ h4 {
 .card {
     background-color: white;
     width: 298px;
-    height: 540px;
+    height: 520px;
     border-radius: 14px;
     border: 1px solid #E0AD2B;
     background: #FFF;
@@ -235,7 +234,7 @@ h4 {
 
 .cardBody {
     width: 271px;
-    height: 350px;
+    height: 330px;
     border-radius: 7px;
     border: 1px solid #F5F5F5;
     background: #FFF;
