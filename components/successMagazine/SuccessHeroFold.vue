@@ -107,6 +107,30 @@ h2 {
     }
 
     .heroBtn {
+        margin-right: 10px !important;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        margin-right: 10px !important;
+    }
+}
+
+@media (max-width: 437px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .heroBtn {
         margin-right: 0px !important;
         margin-bottom: 15px;
     }

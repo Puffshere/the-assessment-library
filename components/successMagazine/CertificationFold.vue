@@ -1,6 +1,7 @@
 <template>
     <div class="body">
-        <section id="getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24" class="topSection" style="padding-bottom: 180px;">
+        <section id="getcertified?utm_source=success_magazine&utm_medium=digital_ad&utm_campaign=success_nov24"
+            class="topSection" style="padding-bottom: 180px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -161,11 +162,12 @@ button {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     img {
-        display: block;            // Make images block-level elements
-        width: 80% !important;     // Set the width to 80%
-        margin: 0 auto !important; // Center the image horizontally
+        display: block;
+        width: 80% !important;
+        max-width: 400px;
+        margin: 0 auto !important;
     }
 }
 
