@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img class="image" src="/images/DISC-Motivators-Emblem.png" alt="Motivators Certification">
+                    <img class="image" src="/images/motivators-cert-badge.png" alt="Motivators Certification">
                 </div>
             </div>
             <div class="row">
@@ -27,7 +27,7 @@
                     <h2>For your email signature:</h2>
                     <code>
                         <pre>
-&lt;img src="https://www.assessments24x7.com/images/DISC-Motivators-Emblem.png" alt="Motivators Certification"/&gt;</pre>
+&lt;img src="https://www.assessments24x7.com/images/motivators-cert-badge.png" alt="Motivators Certification"/&gt;</pre>
                     </code>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     <code>
                         <pre>
 &lt;a href="https://www.assessments24x7.com" title="Assessments 24x7" target="_blank"&gt;
-    &lt;img src="http://www.assessments24x7.com/images/DISC-Motivators-Emblem.png" alt="Motivators Certification" style="border:none;" /&gt;
+    &lt;img src="http://www.assessments24x7.com/images/motivators-cert-badge.png" alt="Motivators Certification" style="border:none;" /&gt;
 &lt;/a&gt;</pre>
                     </code>
                 </div>

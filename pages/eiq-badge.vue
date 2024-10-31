@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img class="image" src="/images/eiq-badge.png" alt="EIQ Certification">
+                    <img class="image" src="/images/eiq-cert-badge.png" alt="EIQ Certification">
                 </div>
             </div>
             <div class="row">
@@ -27,7 +27,7 @@
                     <h2>For your email signature:</h2>
                     <code>
                             <pre>
-    &lt;img src="https://www.assessments24x7.com/images/eiq-badge.png" alt="EIQ Certification"/&gt;</pre>
+    &lt;img src="https://www.assessments24x7.com/images/eiq-cert-badge.png" alt="EIQ Certification"/&gt;</pre>
                         </code>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     <code>
                             <pre>
     &lt;a href="https://www.assessments24x7.com" title="Assessments 24x7" target="_blank"&gt;
-        &lt;img src="http://www.assessments24x7.com/images/eiq-badge.png" alt="EIQ Certification" style="border:none;" /&gt;
+        &lt;img src="http://www.assessments24x7.com/images/eiq-cert-badge.png" alt="EIQ Certification" style="border:none;" /&gt;
     &lt;/a&gt;</pre>
                         </code>
                 </div>
