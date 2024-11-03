@@ -4,12 +4,14 @@
             <div class="row related-posts-container">
                 <h3 class="posts-title">Read our blog</h3>
                 <div class="col-3 col-6-sm post" v-for="post in posts" :key="post.id">
-                    <nuxt-link :to="`/blog/${post.slug}`">
+                    <nuxt-link v-if="isValidSlug(post.slug)" :to="`/blog/${post.slug}`">
                         <img class="image" :src="getImageUrl(post)" alt="post feature image" />
-                        <h3 class="title" :title="post.title.rendered">
-                            {{ truncateTitle(post.title.rendered) }}
-                        </h3>
+                        <h3 class="title" v-html="truncateTitle(post.title.rendered)"></h3>
                     </nuxt-link>
+                    <div v-else>
+                        <img class="image" :src="getImageUrl(post)" alt="post feature image" />
+                        <h3 class="title" v-html="truncateTitle(post.title.rendered)"></h3>
+                    </div>
                 </div>
             </div>
             <div style="display: flex; justify-content: center; margin-top: 60px;">
@@ -63,16 +65,26 @@ export default {
             event.target.blur();
         },
         getImageUrl(post) {
-            return post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]
-                ? post._embedded['wp:featuredmedia'][0].source_url
-                : 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80';
+            if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
+                return post._embedded['wp:featuredmedia'][0].source_url;
+            }
+            return 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80';
         },
         truncateTitle(title) {
-            const maxLength = 100; // Adjust to match approximately 2 lines
-            if (title.length > maxLength) {
-                return title.slice(0, maxLength) + '...';
+            const parser = new DOMParser();
+            const decodedTitle = parser.parseFromString(`<!doctype html><body>${title}`, 'text/html').body.textContent;
+            const maxLength = 140; // Adjust to match approximately 2 lines
+            if (decodedTitle.length > maxLength) {
+                return decodedTitle.slice(0, maxLength) + '...';
             }
-            return title;
+            return decodedTitle;
+        },
+        isValidSlug(slug) {
+            if (!slug || typeof slug !== 'string' || slug.trim() === '') {
+                console.warn("Invalid slug detected for post:", slug);
+                return false;
+            }
+            return true;
         }
     },
     async created() {
@@ -88,21 +100,6 @@ export default {
             this.blogLoading = false; // Set loading to false after the request completes
         }
     },
-
-    // Latest 4 posts:
-
-    // https://blog.assessments24x7.com/wp-json/wp/v2/posts?per_page=4&order=desc
-
-    // By category:
-
-    // https://blog.assessments24x7.com/wp-json/wp/v2/posts?per_page=4&order=desc&categories=CATEGORY_ID
-
-    // Currently we have 4 categories:
-
-    // 1. Blog(id = 1), this category has 212 blog posts
-    // 2. Featured(id = 6), this category has 4 blog posts
-    // 3. Press Release(id = 7), this category has 2 blog posts
-    // 4. Team(id = 8), this category has 1 blog post
 
     mounted() {
         window.setInterval(() => {
@@ -167,7 +164,7 @@ export default {
                     color: #213C85;
                     text-align: center;
                     display: -webkit-box;
-                    -webkit-line-clamp: 2;
+                    -webkit-line-clamp: 2; 
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
