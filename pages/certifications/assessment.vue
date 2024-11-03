@@ -31,22 +31,22 @@
                         an assessment certification can open up new job opportunities and career <br />
                         advancements.</p>
                     <div class="badge-container"
-                        style="display: flex; justify-content: center; gap: 0px; flex-wrap: wrap; align-items: center; margin-top: 30px;">
+                        style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 30px;">
                         <div style="text-align: center;">
                             <a href="#fold7" style="cursor: pointer;"><img class="image" style="max-width: 220px;"
-                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/mot-cert-badge-color-label.png"
+                                    src="/images/motivators-cert-badge.png"
                                     alt="Motivators Badge"></a>
 
                         </div>
                         <div style="text-align: center;">
                             <a href="#fold5" style="cursor: pointer;"><img class="image" style="max-width: 220px;"
-                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/disc-cert-badge-color-label.png"
+                                    src="/images/disc-cert-badge.png"
                                     alt="DISC Badge"></a>
 
                         </div>
                         <div style="text-align: center;">
                             <a href="#fold8" style="cursor: pointer;"><img class="image" style="max-width: 220px;"
-                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/eiq-cert-badge-color-label.png"
+                                    src="/images/eiq-cert-badge.png"
                                     alt="EIQ Badge"></a>
 
                         </div>
@@ -111,7 +111,7 @@
                     <h2>DISC Assessment Certification</h2>
                     <div class="col-3">
                         <img class="image"
-                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png"
+                            src="/images/disc-cert-badge.png"
                             alt="disc-cert-badge">
                     </div>
                     <div class="col-9">
@@ -210,7 +210,7 @@
                     <h2 id="motivators">Motivators Assessment Certification</h2>
                     <div class="col-3">
                         <img class="image"
-                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/mot-cert-badge-color.png"
+                            src="/images/motivators-cert-badge.png"
                             alt="mot-cert-badge">
                     </div>
                     <div class="col-9">
@@ -250,7 +250,7 @@
                     <h2 id="eiq">Emotional Intelligence Certification</h2>
                     <div class="col-3">
                         <img class="image"
-                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/eiq-cert-badge-color.png"
+                            src="/images/eiq-cert-badge.png"
                             alt="eiq-cert-badge">
                     </div>
                     <div class="col-9">

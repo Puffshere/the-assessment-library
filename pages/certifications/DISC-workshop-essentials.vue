@@ -183,7 +183,7 @@
 
             <div class="row cert-div">
                 <div class="col-3 cert">
-                    <img class="image-DISC-Cert" src="/images/DISC-Cert-Emblem.png" alt="DISC Certification">
+                    <img class="image-DISC-Cert" src="/images/disc-cert-badge.png" alt="DISC Certification">
                 </div>
 
                 <div class="col-9">

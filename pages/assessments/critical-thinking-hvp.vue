@@ -272,7 +272,7 @@
             </div>
         </section>
 
-        <section class="certification">
+        <!-- <section class="certification">
             <div class="container">
                 <div class="row">
                     <div class="col-8">
@@ -301,7 +301,7 @@
             </div>
         </section>
 
-        <credits shrm="7.5" hrci="6.5" atd="6.5" icfCore="5.5" icfRD="9.6" hrciProgramId="582707" />
+        <credits shrm="7.5" hrci="6.5" atd="6.5" icfCore="5.5" icfRD="9.6" hrciProgramId="582707" /> -->
 
         <section class="faq">
             <div class="container">
