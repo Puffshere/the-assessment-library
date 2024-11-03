@@ -4,10 +4,10 @@
             <div class="row related-posts-container">
                 <h3 class="posts-title">Read our blog</h3>
                 <div class="col-3 col-6-sm post" v-for="post in posts" :key="post.id">
-                    <nuxt-link v-if="isValidSlug(post.slug)" :to="`/blog/${post.slug}`">
+                    <a v-if="isValidSlug(post.slug)" :href="`https://blog.assessments24x7.com/${post.slug}`">
                         <img class="image" :src="getImageUrl(post)" alt="post feature image" />
                         <h3 class="title" v-html="truncateTitle(post.title.rendered)"></h3>
-                    </nuxt-link>
+                    </a>
                     <div v-else>
                         <img class="image" :src="getImageUrl(post)" alt="post feature image" />
                         <h3 class="title" v-html="truncateTitle(post.title.rendered)"></h3>
@@ -73,7 +73,7 @@ export default {
         truncateTitle(title) {
             const parser = new DOMParser();
             const decodedTitle = parser.parseFromString(`<!doctype html><body>${title}`, 'text/html').body.textContent;
-            const maxLength = 140; // Adjust to match approximately 2 lines
+            const maxLength = 150; // Adjust to match approximately 2 lines
             if (decodedTitle.length > maxLength) {
                 return decodedTitle.slice(0, maxLength) + '...';
             }
