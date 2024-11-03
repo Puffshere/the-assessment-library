@@ -30,103 +30,107 @@
                         <h2 style="color: white;">
                             Choose the right plan for your needs
                         </h2>
-                        <div class="col-4 card">
-                            <h3>
-                                Essentials
-                            </h3>
-                            <h4>
-                                For fundamental features
-                            </h4>
-                            <div class="cardPrice">
-                                Free
+                        <div class="row"
+                            style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+                            <div class="col-4 card">
+                                <h3>
+                                    Essentials
+                                </h3>
+                                <h4>
+                                    For fundamental features
+                                </h4>
+                                <div class="cardPrice">
+                                    Free
+                                </div>
+                                <div class="cardBody">
+                                    <p>
+                                        <span style="padding-left: 10px; color: #213C85;"><strong>Features you'll
+                                                love:</strong></span>
+                                    </p>
+                                    <ul class="plan-features">
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Standard dashboard</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Usage statistics and exports</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> On-demand purchasing</li>
+
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Assessment links/invitations</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> User upload/import</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Custom report logo</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Dashboard white label design</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> View reports/users</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="cardBody">
-                                <p>
-                                    <span style="padding-left: 10px; color: #213C85;"><strong>Features you'll love:</strong></span>
-                                </p>
-                                <ul class="plan-features">
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Standard dashboard</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Usage statistics and exports</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> On-demand purchasing</li>
-                                    
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Assessment links/invitations</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> User upload/import</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Custom report logo</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Dashboard white label design</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> View reports/users</li>
-                                </ul>
+                            <div class="col-4 card">
+                                <h3>
+                                    Enhanced
+                                </h3>
+                                <h4>
+                                    For next-level benefits
+                                </h4>
+                                <div class="cardPrice">
+                                    $99/Month
+                                </div>
+                                <div class="cardBody">
+                                    <p>
+                                        <span style="padding-left: 10px; color: #213C85;"><strong>Everything
+                                                in Essentials, and:</strong></span>
+                                    </p>
+                                    <ul class="plan-features">
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Collaboration reporting</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Training materials</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Group reporting</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Sub-accounts</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> API access</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4 card">
-                            <h3>
-                                Enhanced
-                            </h3>
-                            <h4>
-                                For next-level benefits
-                            </h4>
-                            <div class="cardPrice">
-                                $99/Month
-                            </div>
-                            <div class="cardBody">
-                                <p>
-                                    <span style="padding-left: 10px; color: #213C85;"><strong>Everything
-                                            in Essentials, and:</strong></span>
-                                </p>
-                                <ul class="plan-features">
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Collaboration reporting</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Training materials</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Group reporting</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Sub-accounts</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> API access</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-4 card">
-                            <h3>
-                                Enterprise
-                            </h3>
-                            <h4>
-                                For ultimate customization
-                            </h4>
-                            <div class="cardPrice">
-                                $299/Month
-                            </div>
-                            <div class="cardBody">
-                                <p>
-                                    <span style="padding-left: 10px; color: #213C85;"><strong>Everything
-                                            in Enhanced, and:</strong></span>
-                                </p>
-                                <ul class="plan-features">
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Custom domain</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> DISC benchmark tool</li>
-                                    <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
-                                            alt="Checkmark"> Lead generation tool</li>
-                                </ul>
+                            <div class="col-4 card">
+                                <h3>
+                                    Enterprise
+                                </h3>
+                                <h4>
+                                    For ultimate customization
+                                </h4>
+                                <div class="cardPrice">
+                                    $299/Month
+                                </div>
+                                <div class="cardBody">
+                                    <p>
+                                        <span style="padding-left: 10px; color: #213C85;"><strong>Everything
+                                                in Enhanced, and:</strong></span>
+                                    </p>
+                                    <ul class="plan-features">
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Custom domain</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> DISC benchmark tool</li>
+                                        <li><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Checkmark+.png"
+                                                alt="Checkmark"> Lead generation tool</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
-                <button @click="scrollToContactForm">
-                    Book Live Demo
-                </button>
-            </div>
+                <div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
+                    <button @click="scrollToContactForm">
+                        Book Live Demo
+                    </button>
+                </div>
         </section>
     </div>
 </template>
@@ -275,5 +279,4 @@ h4 {
         display: none;
     }
 }
-
 </style>
