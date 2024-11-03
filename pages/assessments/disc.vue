@@ -458,7 +458,7 @@
 
                     <div class="col-4">
                         <img class="image"
-                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png"
+                            src="/images/disc-cert-badge.png"
                             alt="placeholder">
                     </div>
                 </div>
