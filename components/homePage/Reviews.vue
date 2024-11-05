@@ -1,156 +1,165 @@
 <template>
     <section class="reviews">
-        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-            alt="fold 4 graphic" style="position: absolute; right: 0px; padding-top: 233px; width: 45%;" class="accents">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
             alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: -93px;" class="accents">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p class="section-title">What our clients and partners say</p>
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="section-title">What our clients and partners say</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="review-container">
-                        <div class="col-4">
-                            <div class="review">
-                                <div class="review-avatar stephen-moore lazyload"></div>
-                                <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
-                                        alt="Alignable">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="review-container">
+                            <div class="col-4">
+                                <div class="review">
+                                    <div class="review-avatar stephen-moore lazyload"></div>
+                                    <div class="social-icon">
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                            alt="Alignable">
+                                    </div>
+                                    <div class="review-stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <p class="review-name"><strong>Stephen Moore</strong> - Ovation Group</p>
+                                    <p class="review-body">Assessments 24x7 is the gold standard for assessment
+                                        technology.
+                                        Their interfaces are intuitive, their support is best in class and their staff
+                                        are
+                                        remarkably knowledgeable.</p>
                                 </div>
-                                <div class="review-stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                </div>
-                                <p class="review-name"><strong>Stephen Moore</strong> - Ovation Group</p>
-                                <p class="review-body">Assessments 24x7 is the gold standard for assessment technology.
-                                    Their interfaces are intuitive, their support is best in class and their staff are
-                                    remarkably knowledgeable.</p>
                             </div>
-                        </div>
 
-                        <div class="col-4">
-                            <div class="review">
-                                <div class="review-avatar arif-boysan lazyload"></div>
-                                <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
-                                        alt="Alignable">
+                            <div class="col-4">
+                                <div class="review">
+                                    <div class="review-avatar arif-boysan lazyload"></div>
+                                    <div class="social-icon">
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                            alt="Alignable">
+                                    </div>
+                                    <div class="review-stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <p class="review-name"><strong>Arif Boysan</strong> - Action Coach</p>
+                                    <p class="review-body">The assessment and learning tools are powerful. If you are
+                                        working with a team or an individual, you must have this tool. It’s the
+                                        difference
+                                        between flying blind vs. having perfect vision.</p>
                                 </div>
-                                <div class="review-stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                </div>
-                                <p class="review-name"><strong>Arif Boysan</strong> - Action Coach</p>
-                                <p class="review-body">The assessment and learning tools are powerful. If you are
-                                    working with a team or an individual, you must have this tool. It’s the difference
-                                    between flying blind vs. having perfect vision.</p>
                             </div>
-                        </div>
 
-                        <div class="col-4">
-                            <div class="review">
-                                <div class="review-avatar cindy-miller lazyload"></div>
-                                <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
-                                        alt="Alignable">
+                            <div class="col-4">
+                                <div class="review">
+                                    <div class="review-avatar cindy-miller lazyload"></div>
+                                    <div class="social-icon">
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                            alt="Alignable">
+                                    </div>
+                                    <div class="review-stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <p class="review-name"><strong>Cindy Miller</strong> - Cindy Miller Golf</p>
+                                    <p class="review-body">Dr. Tony Alessandra and Assessments 24x7 have created an
+                                        amazing
+                                        suite of assessments that can help you and your company improve performance.</p>
                                 </div>
-                                <div class="review-stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                </div>
-                                <p class="review-name"><strong>Cindy Miller</strong> - Cindy Miller Golf</p>
-                                <p class="review-body">Dr. Tony Alessandra and Assessments 24x7 have created an amazing
-                                    suite of assessments that can help you and your company improve performance.</p>
                             </div>
-                        </div>
 
-                        <div class="col-4">
-                            <div class="review">
-                                <div class="review-avatar john-chappelear lazyload"></div>
-                                <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
-                                        alt="Alignable">
+                            <div class="col-4">
+                                <div class="review">
+                                    <div class="review-avatar john-chappelear lazyload"></div>
+                                    <div class="social-icon">
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                            alt="Alignable">
+                                    </div>
+                                    <div class="review-stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <p class="review-name"><strong>John Chappelear</strong> - Changing the Focus</p>
+                                    <p class="review-body">I’ve worked with Tony and Assessments 24x7 for over 10 years.
+                                        Tony is a great speaker and friend, I am very pleased to provide this
+                                        recommendation.</p>
                                 </div>
-                                <div class="review-stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                </div>
-                                <p class="review-name"><strong>John Chappelear</strong> - Changing the Focus</p>
-                                <p class="review-body">I’ve worked with Tony and Assessments 24x7 for over 10 years.
-                                    Tony is a great speaker and friend, I am very pleased to provide this
-                                    recommendation.</p>
                             </div>
-                        </div>
 
-                        <div class="col-4">
-                            <div class="review">
-                                <div class="review-avatar jay-mcdowell lazyload"></div>
-                                <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
-                                        alt="Alignable">
+                            <div class="col-4">
+                                <div class="review">
+                                    <div class="review-avatar jay-mcdowell lazyload"></div>
+                                    <div class="social-icon">
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                            alt="Alignable">
+                                    </div>
+                                    <div class="review-stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <p class="review-name"><strong>Jay McDowell</strong> - Performance Strategies</p>
+                                    <p class="review-body">The Assessments, Dr. Tony and the entire Assessments 24x7
+                                        Team
+                                        are absolutely 5-Stars. I have been using their products for several years and
+                                        their
+                                        range of products and their quality are second to none...</p>
                                 </div>
-                                <div class="review-stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                </div>
-                                <p class="review-name"><strong>Jay McDowell</strong> - Performance Strategies</p>
-                                <p class="review-body">The Assessments, Dr. Tony and the entire Assessments 24x7 Team
-                                    are absolutely 5-Stars. I have been using their products for several years and their
-                                    range of products and their quality are second to none...</p>
                             </div>
-                        </div>
 
-                        <div class="col-4">
-                            <div class="review">
-                                <div class="review-avatar scott-higby lazyload"></div>
-                                <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
-                                        alt="Alignable">
+                            <div class="col-4">
+                                <div class="review">
+                                    <div class="review-avatar scott-higby lazyload"></div>
+                                    <div class="social-icon">
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                            alt="Alignable">
+                                    </div>
+                                    <div class="review-stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <p class="review-name"><strong>Scott Higby</strong> - Studio C Creative</p>
+                                    <p class="review-body">I've been working with Dr Tony Alessandra since his early
+                                        research on personality types, decades ago. He is a leading expert in the field,
+                                        and
+                                        I've learned a lot from him!</p>
                                 </div>
-                                <div class="review-stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                </div>
-                                <p class="review-name"><strong>Scott Higby</strong> - Studio C Creative</p>
-                                <p class="review-body">I've been working with Dr Tony Alessandra since his early
-                                    research on personality types, decades ago. He is a leading expert in the field, and
-                                    I've learned a lot from him!</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div style="display: flex; justify-content: center; margin-top: 10px;">
-                        <button @click="jumpToReviews">
-                            View Testimonials
-                        </button>
+                <div class="row">
+                    <div class="col-12">
+                        <div style="display: flex; justify-content: center; margin-top: 10px;">
+                            <button @click="jumpToReviews">
+                                View Testimonials
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
+                alt="fold 4 graphic" class="accents-right">
         </div>
     </section>
 </template>
@@ -170,6 +179,18 @@ export default {
 @import '~assets/scss/vars';
 
 .reviews {
+    .container-wrapper {
+        position: relative;
+    }
+
+    .accents-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        z-index: -1;
+    }
+
     .container {
         margin-top: -30px;
         padding-bottom: 60px;
@@ -187,10 +208,8 @@ export default {
         margin-top: 20px;
 
         .review {
-            //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             padding: 5px 10px;
-            //background: #fff;
             position: relative;
             min-height: 210px;
             max-height: 210px;
@@ -299,7 +318,9 @@ export default {
 }
 
 @media (max-width: 1200px) {
-    .accents {
+
+    .accents,
+    .accents-right {
         display: none;
     }
 }

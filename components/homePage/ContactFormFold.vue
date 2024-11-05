@@ -1,23 +1,25 @@
 <template>
   <section id="contactFormSection">
-    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-      alt="fold 4 graphic" style="position: absolute; right: 0px; margin-bottom: -835px; width: 45%;" class="accents">
     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
       alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 980px;" class="accents">
-    <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
-      <div class="row">
-        <h2 style="margin-top: 12px; margin-bottom: -20px;">
-          <span style="color: #0033C5;">Let's connect</span> <br />
-        </h2>
-        <p>
-          Connect with us to get instant support and answers to all your assessment-related questions.
-        </p>
-        <div class="col-12 d-flex justify-content-center">
-          <div class="form-container">
-            <contact-form style="background: white;" />
+    <div class="container-wrapper">
+      <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
+        <div class="row">
+          <h2 style="margin-top: 12px; margin-bottom: -20px;">
+            <span style="color: #0033C5;">Let's connect</span> <br />
+          </h2>
+          <p>
+            Connect with us to get instant support and answers to all your assessment-related questions.
+          </p>
+          <div class="col-12 d-flex justify-content-center">
+            <div class="form-container">
+              <contact-form style="background: white;" />
+            </div>
           </div>
         </div>
       </div>
+      <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
+        alt="fold 4 graphic" class="accents-right">
     </div>
   </section>
 </template>
@@ -42,6 +44,20 @@ section {
   align-items: center;
   justify-content: center;
   padding-top: 40px;
+  position: relative;
+}
+
+.container-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.accents-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 45%;
+  z-index: -1;
 }
 
 h2 {
@@ -74,8 +90,10 @@ p {
 }
 
 @media (max-width: 1200px) {
-    .accents {
-        display: none;
-    }
+
+  .accents,
+  .accents-right {
+    display: none;
+  }
 }
 </style>

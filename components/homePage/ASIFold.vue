@@ -1,34 +1,39 @@
 <template>
     <div>
         <section>
-            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-                alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -40px; width: 45%;" class="accents">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
                 alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="col-8" style="text-align: left;">
-                            <h3 style="padding-top: 20px;">
-                                Validated, reliable, compliant
-                            </h3>
-                            <p style="padding-right: 50px;">
-                                Our assessments are validated by ASI to adhere to the highest standards set by the
-                                American
-                                Psychological Association and the Equal Employment Opportunity Commission. In addition,
-                                Assessments 24x7 has one of the highest Cronbach scores for our DISC assessment, which
-                                indicates exceptional consistency and reliability.
-                            </p>
-                            <button class="blue" @click="jumpToValidityPage" style="margin-top: 20px;">
-                                Learn More
-                            </button>
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col-8" style="text-align: left;">
+                                <h3 style="padding-top: 20px;">
+                                    Validated, reliable, compliant
+                                </h3>
+                                <p style="padding-right: 50px;">
+                                    Our assessments are validated by ASI to adhere to the highest standards set by the
+                                    American
+                                    Psychological Association and the Equal Employment Opportunity Commission. In
+                                    addition,
+                                    Assessments 24x7 has one of the highest Cronbach scores for our DISC assessment,
+                                    which
+                                    indicates exceptional consistency and reliability.
+                                </p>
+                                <button class="blue" @click="jumpToValidityPage" style="margin-top: 20px;">
+                                    Learn More
+                                </button>
+                            </div>
+                            <div class="col-4 seal">
+                                <img class="image" src="~assets/asi-certified.png"
+                                    alt="Scientifically Validated Assessments by ASI" style="width: 283px;">
+                            </div>
                         </div>
-                        <div class="col-4 seal">
-                            <img class="image" src="~assets/asi-certified.png"
-                                alt="Scientifically Validated Assessments by ASI" style="width: 283px;">
-                        </div>
+
                     </div>
                 </div>
+                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
+                    alt="fold 4 graphic" class="accents-right" style="bottom: -123px;">
             </div>
         </section>
         <section class="bottom">
@@ -92,6 +97,18 @@ export default {
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
 
+.container-wrapper {
+    position: relative;
+}
+
+.accents-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    z-index: -1;
+}
+
 .container {
     padding-top: 50px;
     margin-bottom: 123px;
@@ -135,7 +152,8 @@ p {
         margin-bottom: 240px;
     }
 
-    .accents {
+    .accents,
+    .accents-right {
         display: none;
     }
 }
