@@ -247,6 +247,10 @@ p {
         padding-bottom: 30px;
     }
 
+    h1 {
+        margin-top: 0px;
+    }
+
     .accents,
     .accents-right {
         display: none;

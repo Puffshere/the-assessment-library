@@ -134,6 +134,10 @@ p {
 }
 
 @media (max-width: 1200px) {
+    .container {
+        padding-top: 0px;
+    }
+
     .personImage {
         width: 70% !important;
     }
@@ -145,7 +149,8 @@ p {
 
     .image {
         width: 50% !important;
-        margin-top: 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .bottomText {
