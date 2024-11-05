@@ -19,8 +19,8 @@
                             <div class="card-text">
                                 For Fundamental Features
                             </div>
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Home+Page/Level+1.png"
-                                alt="Essentials Plan Image" class="card-image">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Level+1.png"
+                                alt="Essentials Plan Image" class="card-image first">
                         </div>
                         <div class="card">
                             <div class="card-title">
@@ -29,8 +29,8 @@
                             <div class="card-text">
                                 For Next-Level Benefits
                             </div>
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Home+Page/Level+2.png"
-                                alt="Enhanced Plan Image" class="card-image">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Level+2.png"
+                                alt="Enhanced Plan Image" class="card-image second">
                         </div>
                         <div class="card">
                             <div class="card-title">
@@ -39,7 +39,7 @@
                             <div class="card-text">
                                 For Ultimate Customization
                             </div>
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Home+Page/level+3.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/level+3.png"
                                 alt="Enterprise Plan Image" class="card-image">
                         </div>
                     </div>
@@ -139,7 +139,47 @@ p {
     height: auto;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
+    .card {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .card-image {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 854px) {
+    .first {
+        margin-top: 25px;
+    }
+
+    .second {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 830px) {
+    .first {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 766px) {
+    .second {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 561px) {
+    .second {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 550px) {
     .card-container {
         flex-direction: column;
         align-items: center;
@@ -153,6 +193,10 @@ p {
     .card-image {
         width: 150px;
         margin-bottom: 20px;
+    }
+
+    .second {
+        margin-top: 0px;
     }
 }
 </style>

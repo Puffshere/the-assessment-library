@@ -1,9 +1,9 @@
 <template>
   <section id="contactFormSection">
     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-      alt="fold 4 graphic" style="position: absolute; right: 0px; margin-bottom: -835px; width: 45%;">
+      alt="fold 4 graphic" style="position: absolute; right: 0px; margin-bottom: -835px; width: 45%;" class="accents">
     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
-      alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 980px;">
+      alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 980px;" class="accents">
     <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
       <div class="row">
         <h2 style="margin-top: 12px; margin-bottom: -20px;">
@@ -71,5 +71,11 @@ p {
 .col-12 {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .accents {
+        display: none;
+    }
 }
 </style>

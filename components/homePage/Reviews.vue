@@ -1,9 +1,9 @@
 <template>
     <section class="reviews">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-            alt="fold 4 graphic" style="position: absolute; right: 0px; padding-top: 233px; width: 45%;">
+            alt="fold 4 graphic" style="position: absolute; right: 0px; padding-top: 233px; width: 45%;" class="accents">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
-            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: -93px;">
+            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: -93px;" class="accents">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -295,6 +295,12 @@ export default {
             line-height: 21pt;
             margin: 10px 0;
         }
+    }
+}
+
+@media (max-width: 1200px) {
+    .accents {
+        display: none;
     }
 }
 </style>

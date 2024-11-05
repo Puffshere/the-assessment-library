@@ -2,9 +2,10 @@
     <div class="main">
         <main-nav active="home"></main-nav>
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-            alt="fold 4 graphic" style="position: absolute; right: 0px; padding-top: 145px; width: 45%;">
+            alt="fold 4 graphic" style="position: absolute; right: 0px; padding-top: 145px; width: 45%;"
+            class="accents">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
-            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
+            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -480,7 +481,6 @@ p {
 }
 
 @keyframes blink {
-
     0%,
     100% {
         opacity: 1;
@@ -488,6 +488,20 @@ p {
 
     50% {
         opacity: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    img {
+        width: 70% !important;
+    }
+
+    .container {
+        padding-top: 0px;
+    }
+
+    .accents {
+        display: none;
     }
 }
 </style>

@@ -1,15 +1,15 @@
 <template>
     <section>
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-            alt="fold 4 graphic" style="position: absolute; right: -150px; padding-top: 53px; width: 45%;">
+            alt="fold 4 graphic" style="position: absolute; right: -150px; padding-top: 53px; width: 45%;" class="accents">
         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
-            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
+            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="col-5">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Homepage+Graphic+-+Fold+4.png"
-                            alt="image of black woman and computer" style="width: 100%; margin-top: -50px;">
+                            alt="image of black woman and computer" style="width: 100%; margin-top: -50px;" class="woman">
                         <div class="lightBox">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/light-bulb.png"
                                 alt="image of a light bulb" style="margin-left: -20px;">
@@ -102,6 +102,14 @@ p {
     .lightBox {
         width: 100%;
         padding: 30px 10px !important;
+    }
+
+    .accents {
+        display: none;
+    }
+
+    .woman {
+        width: 70% !important;
     }
 }
 </style>

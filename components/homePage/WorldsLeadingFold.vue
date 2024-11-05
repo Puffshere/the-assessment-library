@@ -150,10 +150,33 @@ h1 {
     margin-top: -30px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .cards-container {
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 202px 202px; 
+        grid-auto-rows: 226px; 
+        gap: 20px; 
+        justify-content: center;
+    }
+
+    .card {
+        width: 202px; 
+        height: 226px; 
     }
 }
+
+@media (max-width: 500px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; 
+    }
+
+    .card {
+        width: 202px; 
+        height: 226px; 
+    }
+}
+
 </style>

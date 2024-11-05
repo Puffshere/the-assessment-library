@@ -2,9 +2,9 @@
     <div>
         <section>
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-                alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -40px; width: 45%;">
+                alt="fold 4 graphic" style="position: absolute; right: 0px; margin-top: -40px; width: 45%;" class="accents">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
-                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;">
+                alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -118,7 +118,7 @@ p {
 
 @media (max-width: 1200px) {
     .personImage {
-        width: 100% !important;
+        width: 70% !important;
     }
 
     .seal {
@@ -133,6 +133,10 @@ p {
 
     .bottomText {
         margin-bottom: 240px;
+    }
+
+    .accents {
+        display: none;
     }
 }
 </style>
