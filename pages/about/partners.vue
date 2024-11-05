@@ -7,14 +7,14 @@
                 <div class="container">
                     <a href="#" title="Close" class="modal-close" @click="close">Close</a>
                     <span>
-                        <img v-if="id === 'aus'" class="partner-logo" src="~/assets/partner-logos/australasia-logo.png"
+                        <img v-if="id === 'aus'" class="partner-logo" src="~/assets/partner-logos/Assessments24x7_Logo_Australasia.webp"
                             alt="Australasia partners with Assessments 24x7">
                         <img v-if="id === 'neth_bel'" class="partner-logo"
-                            src="~/assets/partner-logos/netherlands-belgium-logo.png"
+                            src="~/assets/partner-logos/Assessments24x7_Logo_Netherlands-Belgium.webp"
                             alt="Netherlands Belgium partners with Assessments 24x7">
-                        <img v-if="id === 'eur'" class="partner-logo" src="~/assets/partner-logos/europe-logo.png"
+                        <img v-if="id === 'eur'" class="partner-logo" src="~/assets/partner-logos/Assessments24x7_Logo_Europe.webp"
                             alt="Europe partners with Assessments 24x7">
-                        <img v-if="id === 'viet'" class="partner-logo" src="~/assets/partner-logos/vietnam-logo.png"
+                        <img v-if="id === 'viet'" class="partner-logo" src="~/assets/partner-logos/Assessments24x7_Logo_Vietnam.webp"
                             alt="Vietnam partners with Assessments 24x7">
                         <h4 class="subText">For more information on this partner please fill out the form below:</h4>
                     </span>
@@ -61,7 +61,7 @@
                 <div class="row">
                     <div id="id" class="partner">
                         <div class="col-6">
-                            <img class="logo" src="~/assets/partner-logos/australasia-logo.png"
+                            <img class="logo" src="~/assets/partner-logos/Assessments24x7_Logo_Australasia.webp"
                                 alt="Australasia partners with Assessments 24x7">
                             <div class="countries">
                                 <h4 class="countriesCovered">
@@ -95,7 +95,7 @@
                     </div>
                     <div class="partner">
                         <div class="col-6">
-                            <img class="logo" src="~/assets/partner-logos/europe-logo.png"
+                            <img class="logo" src="~/assets/partner-logos/Assessments24x7_Logo_Europe.webp"
                                 alt="Europe partners with Assessments 24x7">
                             <div class="countries">
                                 <h4 class="countriesCovered">
@@ -136,7 +136,7 @@
                 <div class="row">
                     <div class="partner">
                         <div class="col-6">
-                            <img class="logo" src="~/assets/partner-logos/vietnam-logo.png"
+                            <img class="logo" src="~/assets/partner-logos/Assessments24x7_Logo_Vietnam.webp"
                                 alt="Vietnam partners with Assessments 24x7">
                             <div class="countries">
                                 <h4 class="countriesCovered">
@@ -165,7 +165,7 @@
 
                     <div class="partner">
                         <div class="col-6">
-                            <img class="logo" src="~/assets/partner-logos/netherlands-belgium-logo.png"
+                            <img class="logo" src="~/assets/partner-logos/Assessments24x7_Logo_Netherlands-Belgium.webp"
                                 alt="Netherlands Belgium partners with Assessments 24x7">
                             <div class="countries">
                                 <h4 class="countriesCovered">

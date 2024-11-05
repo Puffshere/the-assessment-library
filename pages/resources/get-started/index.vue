@@ -24,15 +24,15 @@
                         <img v-else-if="id === 'dc'" src="~/assets/Dale-Carnegie-logo.png" alt="Dale Carnegie"
                             class="partner-logo-dc">
                         <img v-else-if="id === 'bni'" src="~/assets/BNI_logo.png" alt="BNI" class="partner-logo-bni">
-                        <img v-else-if="id === 'aus'" src="~/assets/partner-logos/australasia-logo.png"
+                        <img v-else-if="id === 'aus'" src="~/assets/partner-logos/Assessments24x7_Logo_Australasia.webp"
                             alt="Australasia" class="partner-logo affiliate">
-                        <img v-else-if="id === 'can'" src="~/assets/partner-logos/canada-logo.png" alt="Canada"
+                        <img v-else-if="id === 'can'" src="~/assets/partner-logos/Assessments24x7_Logo_Canada.webp" alt="Canada"
                             class="partner-logo affiliate">
-                        <img v-else-if="id === 'eur'" src="~/assets/partner-logos/europe-logo.png" alt="Europe"
+                        <img v-else-if="id === 'eur'" src="~/assets/partner-logos/Assessments24x7_Logo_Europe.webp" alt="Europe"
                             class="partner-logo affiliate">
-                        <img v-else-if="id === 'neth_bel'" src="~/assets/partner-logos/netherlands-belgium-logo.png"
+                        <img v-else-if="id === 'neth_bel'" src="~/assets/partner-logos/Assessments24x7_Logo_Netherlands-Belgium.webp"
                             alt="Netherlands/Belgium" class="partner-logo affiliate">
-                        <img v-else-if="id === 'viet'" src="~/assets/partner-logos/vietnam-logo.png" alt="Vietnam"
+                        <img v-else-if="id === 'viet'" src="~/assets/partner-logos/Assessments24x7_Logo_Vietnam.webp" alt="Vietnam"
                             class="partner-logo affiliate">
                         <h1 class="section-title">Get Started</h1>
                         <p>

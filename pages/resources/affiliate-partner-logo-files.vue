@@ -72,30 +72,30 @@ export default {
         return {
             topRowTemplates: [
                 {
-                    image: '/images/australasia-logo.png',
+                    image: '/images/Assessments24x7_Logo_Australasia.webp',
                     link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-australasia-logo..png', text: 'A24x7 – Australasia Logo (.png version)' },
                     link2: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Assessments+24x7+Australasia+Logo+Vector.ai', text: 'A24x7 – Australasia logo (.ai version)' },
                 },
                 // {
-                //     image: '/images/canada-logo.png',
-                //     link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-canada-logo.png', text: 'A24x7 – Canada Logo (.png version)' },
+                //     image: '/images/Assessments24x7_Logo_Canada.webp',
+                //     link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-Assessments24x7_Logo_Canada.webp', text: 'A24x7 – Canada Logo (.png version)' },
                 //     link2: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Assessments+24x7+Canada+Logo+Vector.ai', text: 'A24x7 – Canada logo (.ai version)' },
                 // }
                 {
-                    image: '/images/netherlands-belgium-logo.png',
-                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-netherlands-belgium-logo.png', text: 'A24x7 – Netherlands/Belgium Logo (.png version)' },
+                    image: '/images/Assessments24x7_Logo_Netherlands-Belgium.webp',
+                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-Assessments24x7_Logo_Netherlands-Belgium.webp', text: 'A24x7 – Netherlands/Belgium Logo (.png version)' },
                     link2: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Assessments+24x7+Netherlands-Belgium+Logo+Vector.ai', text: 'A24x7 – Netherlands/Belgium logo (.ai version)' },
                 }
             ],
             bottomRowTemplates: [
                 {
-                    image: '/images/europe-logo.png',
-                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-europe-logo.png', text: 'A24x7 – Europe Logo (.png version)' },
+                    image: '/images/Assessments24x7_Logo_Europe.webp',
+                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-Assessments24x7_Logo_Europe.webp', text: 'A24x7 – Europe Logo (.png version)' },
                     link2: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Assessments+24x7+Europe+Logo+Vector.ai', text: 'A24x7 – Europe logo (.ai version)' },
                 },
                 {
-                    image: '/images/vietnam-logo.png',
-                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-vietnam-logo.png', text: 'A24x7 – Vietnam Logo (.png version)' },
+                    image: '/images/Assessments24x7_Logo_Vietnam.webp',
+                    link1: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/A24x7-Assessments24x7_Logo_Vietnam.webp', text: 'A24x7 – Vietnam Logo (.png version)' },
                     link2: { url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/Partners+%26+Affiliates/Assessments+24x7+Logo+Vector+Vietnam.ai', text: 'A24x7 – Vietnam logo (.ai version)' },
                 }
             ],
