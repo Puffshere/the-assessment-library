@@ -3,8 +3,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <img v-if="image == 'disc'" class="image"
-                        src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/DISC+Icon+for+Assessments.webp"
+                    <img v-if="image == 'disc'" class="image" style="margin-top: 50px;"
+                        src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/DISC+Image+-+Assessments+Page.webp"
                         :alt="alt">
                     <img v-if="image == 'eiq'" class="image" src="~/assets/eiq.png" :alt="alt">
                     <img v-if="image == 'learning-styles'" class="image" src="~/assets/learning-styles.png" :alt="alt">

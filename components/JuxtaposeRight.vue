@@ -50,8 +50,8 @@
                 </div>
 
                 <div class="col-4">
-                    <img v-if="image == 'motivators'" class="image"
-                        src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/Motivators+Icon+for+Assessments.webp"
+                    <img v-if="image == 'motivators'" class="image" style="margin-top: 50px;"
+                        src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/Motivators+Image+-+Assessments+Page.webp"
                         :alt="alt">
                     <img v-if="image == 'critical-thinking'" class="image" src="~/assets/critical-thinking.png"
                         :alt="alt">
