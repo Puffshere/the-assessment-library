@@ -90,7 +90,7 @@
             <div class="row" style="margin-bottom: 80px;">
                 <div class="col-4">
                     <img class="image"
-                        src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/disc-cert-badge-color.png"
+                        src="/images/disc-cert-badge.png"
                         alt="disc-cert-badge">
                     <h3>DISC Assessment Certification Program</h3>
                     <p>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-4">
                     <img class="image"
-                        src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/mot-cert-badge-color.png"
+                        src="/images/motivators-cert-badge.png"
                         alt="mot-cert-badge">
                     <h3>Motivators Assessment Certification Program</h3>
                     <p>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="col-4">
                     <img class="image"
-                        src="https://cdn.assessments24x7.com/file/assessments24x7-media/badges/new/eiq-cert-badge-color.png"
+                        src="/images/eiq-cert-badge.png"
                         alt="eiq-cert-badge">
                     <h3>Emotional Intelligence Certification Program</h3>
                     <p>
