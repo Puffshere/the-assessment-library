@@ -50,13 +50,13 @@
             background: transparent;
 
             .credit, .institute {
-                color: #000;
+                color: #213C85;
             }
         }
 
         .credit {
             text-align: center;
-            color: #213C85;
+            color: white;
             display: block;
             font-weight: 700;
         }
@@ -64,7 +64,7 @@
         .institute {
             text-align: center;
             margin-top: -2px;
-            color: #213C85;
+            color: white;
         }
 
         .provider-image {
