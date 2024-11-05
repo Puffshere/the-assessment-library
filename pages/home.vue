@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-6">
                             <img src="~/assets/home-page/hero-fold-image.png" alt="image of man raising fist"
-                                style="width: 100%;">
+                                class="hero-image">
                         </div>
                     </div>
                 </div>
@@ -232,18 +232,33 @@ p {
     }
 }
 
+.hero-image {
+    width: 100%;
+}
+
 @media (max-width: 1200px) {
     img {
+        margin-top: 20px !important;
         width: 70% !important;
     }
 
     .container {
         padding-top: 0px;
+        padding-bottom: 30px;
     }
 
     .accents,
     .accents-right {
         display: none;
+    }
+
+    .hero-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        align-self: center;
     }
 }
 </style>

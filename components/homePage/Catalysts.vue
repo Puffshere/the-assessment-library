@@ -129,4 +129,17 @@ button {
         font-size: 20pt;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .light {
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .light {
+        font-size: .75em
+    }
+}
 </style>
