@@ -36,7 +36,7 @@
 
                 <div class="col-6">
                     <vue-calendly url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5"
-                        :height="650" style="width: 100%; height: 650px; overflow: hidden;">
+                        :height="650" style="width: 100%; min-height: 650px !important; overflow: hidden;">
                     </vue-calendly>
 
                     <p style="text-align: center; font-size: 10pt;">
