@@ -13,7 +13,7 @@
                             style="margin-top: -45px; margin-bottom: 60px; color: #F8CD55; font-style: italic; font-weight: 400;">
                             Empowering Transformation.
                         </h2>
-                        <button @click="freeDiscButton" class="heroBtn btn" style="margin-right: 15px;">
+                        <button @click="freeDiscButton" class="heroBtn btn">
                             Free DISC
                         </button>
                         <button @click="scrollToContactFormSection" class="heroBtn" style="margin-right: 15px;">
