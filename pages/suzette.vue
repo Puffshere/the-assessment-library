@@ -34,7 +34,10 @@
                 </div>
 
                 <div class="col-6">
-                    <vue-calendly url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5"
+                        data-resize="true" style="min-width:320px; max-height:650px;">
+                    </div>
                 
                     <p style="text-align: center; font-size: 10pt;">
                         You can also email me at <a class="hyperlink" href="mailto:suzette@assessments24x7.com">suzette@assessments24x7.com</a><br/>

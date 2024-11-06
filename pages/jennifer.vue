@@ -21,7 +21,10 @@
                         I’d like the opportunity to discuss your assessment and certification needs in detail. Choose a time slot from the calendar and we’ll get the conversation started!<br/><br/>
                     </p><br/>
 
-                    <vue-calendly url="https://calendly.com/jen24x7?text_color=000000&primary_color=0033c5" :height="650"></vue-calendly>
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/jen24x7?text_color=000000&primary_color=0033c5"
+                        data-resize="true" style="min-width:320px; max-height:650px;">
+                    </div>
 
                     <p style="text-align: center; font-size: 10pt;">
                         You can also email me at <a class="hyperlink" href="mailto:training@assessments24x7.com">training@assessments24x7.com</a><br/>
