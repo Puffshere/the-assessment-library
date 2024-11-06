@@ -34,9 +34,8 @@
                     </p><br />
                 </div>
 
-                <div class="col-6">
-                    <vue-calendly url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5"
-                        :height="650" style="width: 100%; min-height: 650px !important; overflow: hidden;">
+                <div class="col-6" style="min-height: 650px !important;">
+                    <vue-calendly url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5" :height="650">
                     </vue-calendly>
 
                     <p style="text-align: center; font-size: 10pt;">
@@ -46,12 +45,7 @@
                     </p>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-12">
-
-                </div>
-            </div>
+            <br />
         </div>
 
         <footer-fold></footer-fold>
