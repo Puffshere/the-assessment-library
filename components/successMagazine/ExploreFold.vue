@@ -24,13 +24,7 @@
                     <div class="col-12">
                         <div class="col-6 exploreBody">
 
-                            <picture>
-                                <source
-                                    srcset="https://cdn.assessments24x7.com/file/assessments24x7-media/Success%20Magazine/Explore%20our%20Powerful%20Assessment%20Graphic%20(1).webp"
-                                    type="image/webp">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success%20Magazine/explore-graphic.png"
-                                    alt="Explore fold hero image" style="width: 100%; margin-top: -20px;">
-                            </picture>
+                            <img class="explore-hero-image" alt="Explore fold hero image" style="width: 100%; margin-top: -20px;">
 
 
 
@@ -168,11 +162,36 @@ export default {
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
-            event.target.blur();
+            if (event) {
+                event.target.blur();
+            }
+        },
+        checkWebPSupport(callback) {
+            const webP = new Image();
+            webP.onload = webP.onerror = function () {
+                callback(webP.height === 2);
+            };
+            webP.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiI=";
+        },
+        setHeroImage() {
+            const imgElement = document.querySelector('.explore-hero-image');
+            if (imgElement) {
+                this.checkWebPSupport((supported) => {
+                    if (supported) {
+                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success%20Magazine/Explore%20our%20Powerful%20Assessment%20Graphic%20(1).webp";
+                    } else {
+                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success%20Magazine/explore-graphic.png";
+                    }
+                });
+            }
         }
+    },
+    mounted() {
+        this.setHeroImage();
     }
 }
 </script>
+
 
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
