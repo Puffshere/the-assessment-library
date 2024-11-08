@@ -66,7 +66,7 @@
                 <div class="row" @click="handleClick">
                     <div class="col-6">
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+The+Fundamentals_+DISC.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+The+Fundamentals_+DISC.png"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="fundamentals">
