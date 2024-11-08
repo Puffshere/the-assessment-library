@@ -26,11 +26,12 @@
 
                             <picture>
                                 <source
-                                    srcset="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Explore+our+Powerful+Assessment+Graphic+(1).webp"
+                                    srcset="https://cdn.assessments24x7.com/file/assessments24x7-media/Success%20Magazine/Explore%20our%20Powerful%20Assessment%20Graphic%20(1).webp"
                                     type="image/webp" style="width: 100%; margin-top: -20px;">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/explore-graphic.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success%20Magazine/explore-graphic.png"
                                     alt="Explore fold hero image" style="width: 100%; margin-top: -20px;">
                             </picture>
+
 
 
                             <!-- <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Explore+our+Powerful+Assessment+Graphic+(1).webp"
