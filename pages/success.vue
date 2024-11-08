@@ -41,7 +41,6 @@ import Footer from '@/components/Footer';
 
 export default {
     components: {
-        LazyHydrate,
         'main-nav': Nav,
         'hero': Hero,
         'video-fold': VideoFold,
