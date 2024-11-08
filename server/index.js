@@ -10,6 +10,7 @@ let config = require('../nuxt.config.js');
 config.dev = !(app.env === 'production');
 
 // Set up CORS to allow requests from bs-local.com
+// Set up CORS middleware before any other routes or middleware
 app.use(cors({
   origin: (ctx) => {
     if (ctx.request.header.origin && ctx.request.header.origin.includes('bs-local.com')) {
@@ -17,8 +18,9 @@ app.use(cors({
     }
     return false; // Disallow all other origins by default
   },
-  credentials: true, // Allow credentials to be sent with requests
+  credentials: true,
 }));
+
 
 async function start() {
   // Instantiate nuxt.js

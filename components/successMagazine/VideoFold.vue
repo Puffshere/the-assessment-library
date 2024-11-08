@@ -1,6 +1,7 @@
 <template>
     <div class="section">
-        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold2-graphic.png" alt="fold 2 graphic" style="position: absolute; right: 0px;">
+        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold2-graphic.png"
+            alt="fold 2 graphic" style="position: absolute; right: 0px;" class="graphic">
         <div class="container">
             <div class="row">
                 <h2>
@@ -93,5 +94,11 @@ button {
     font-weight: 700;
     text-decoration-line: underline;
     cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .graphic {
+        display: none;
+    }
 }
 </style>
