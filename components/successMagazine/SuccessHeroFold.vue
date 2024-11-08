@@ -92,6 +92,10 @@ h2 {
     cursor: pointer
 }
 
+.btn {
+    margin-right: 20px;
+}
+
 @media (max-width: 1200px) {
     .container {
         display: flex;
