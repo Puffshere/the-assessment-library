@@ -66,7 +66,7 @@
                 <div class="row" @click="handleClick">
                     <div class="col-6">
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+The+Fundamentals_+DISC.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+The+Fundamentals_+DISC.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="fundamentals">
@@ -122,7 +122,7 @@
                             </ul>
                         </div>
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Training+%26+Workshops.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Training+%26+Workshops.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="t&w">
@@ -203,7 +203,7 @@
                             </ul>
                         </div>
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Implementation+%26+Application.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Implementation+%26+Application.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="i&a">
@@ -247,7 +247,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+360+Resources.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+360+Resources.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="360">
@@ -270,7 +270,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Additional+Support+Materials.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Additional+Support+Materials.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="support">
@@ -296,7 +296,7 @@
                     </div>
                     <div class="col-6">
                         <div class="card mediaCards">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Assessment+Report+Tools.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Assessment+Report+Tools.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="report&tools">
@@ -331,7 +331,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Coaching+with+DISC.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Coaching+with+DISC.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="coaches">
@@ -344,12 +344,10 @@
                             <br />
                             <p class="subcard-title" style="font-weight: 400;">Business Coaching Guide - COMING SOON</p>
                             <br />
-                            <p class="subcard-title" style="font-weight: 400;">Coaching with DISC - COMING SOON</p>
-                            <br />
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Marketing.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Marketing.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="marketing">
@@ -383,7 +381,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Product+Specific+Resources.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Product+Specific+Resources.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="product">
@@ -395,8 +393,54 @@
                         <div v-if="toggleStates['product']" class="subcard">
                             <br />
                             <p class="subcard-title">Infused</p>
+                            <p class="subcard-subTitle">DISC Workplace Insights</p>
                             <ul class="subcard-links">
-                                <li v-for="link in filteredInfused" :key="link.url">
+                                <li v-for="link in filteredDiscWorkplaceInsights" :key="link.url">
+                                    <span v-if="!link.url">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </span>
+                                    <a v-else :href="link.url" target="_blank" rel="noopener">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="subcard-subTitle">DISC Executive Insights</p>
+                            <ul class="subcard-links">
+                                <li v-for="link in filteredDiscExecutiveInsights" :key="link.url">
+                                    <span v-if="!link.url">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </span>
+                                    <a v-else :href="link.url" target="_blank" rel="noopener">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="subcard-subTitle">DISC Leadership</p>
+                            <ul class="subcard-links">
+                                <li v-for="link in filteredDiscLeadership" :key="link.url">
+                                    <span v-if="!link.url">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </span>
+                                    <a v-else :href="link.url" target="_blank" rel="noopener">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="subcard-subTitle">DISC Awareness</p>
+                            <ul class="subcard-links">
+                                <li v-for="link in filteredDiscAwareness" :key="link.url">
                                     <span v-if="!link.url">
                                         <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
                                             :alt="`${link.type.toLowerCase()} icon`" class="icons">
@@ -410,7 +454,7 @@
                                 </li>
                             </ul>
                             <br />
-                            <p class="subcard-title">Non-Infused</p>
+                            <p class="subcard-title" style="margin-bottom: 10px;">Non-Infused</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filterednonInfused" :key="link.url">
                                     <span v-if="!link.url">
@@ -428,7 +472,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Quick+Links.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Quick+Links.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="quick&links">
@@ -630,7 +674,9 @@ export default {
                     { name: 'On the Phone', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+On+the+Phone.pdf', icon: 'PDF.png' },
                     { name: 'Leading a Meeting', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Leading+a+Meeting.pdf', icon: 'PDF.png' },
                     { name: 'Workspaces', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+in+Action+-+Workspaces.pdf', icon: 'PDF.png' },
-                    { name: 'Bosses', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/DISC+in+Action+-+Bosses.pdf', icon: 'PDF.png' }
+                    { name: 'Bosses', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/DISC+in+Action+-+Bosses.pdf', icon: 'PDF.png' },
+                    { name: '52 Week Email Series', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/52+Week+DISC+email+series+updated+12-2020.pdf', icon: 'PDF.png' }
+
                 ],
                 dISCTargetApplicationsTips: [
                     { name: 'Coaching Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCCoachingTargetApplication.pdf', icon: 'PDF.png' },
@@ -649,7 +695,7 @@ export default {
             additionalSupportMaterials: {
                 otherMaterials: [
                     { name: 'The 12 Integrated DISC Style Relationships-Advanced (Retired)', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/12IntegratedDISCStyleRelationshipsAdvanced.pdf', icon: 'PDF.png', certified: true },
-                    { name: 'People Smart in Business PDF ebook', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbook.pdf', icon: 'PDF.png', certified: true },
+                    { name: 'People Smart in Business PDF ebook', type: 'PDF', url: 'https://drive.google.com/file/d/1OcrMRFfmitfCYt4tIXWe-d_TIBRLPWSy/view?usp=sharing', icon: 'PDF.png', certified: true },
                     { name: 'The Platinum Rule for DISC Sales Mastery', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/PlatinumRuleDISCSalesMasteryForewordDaveYoho.pdf', icon: 'PDF.png', certified: true },
                     { name: 'DISC Reliability Analysis', type: 'URL', url: '/about/validity', icon: 'URL.png' },
                     { name: 'DISC History Chart', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HistoryChart.pdf', icon: 'PDF.png', certified: true },
@@ -681,7 +727,6 @@ export default {
                     { name: 'Mini DISC Presentation', type: 'PPT', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Mini_DISCPresentation.pptx', icon: 'PPT.png' }
                 ],
                 informationSheets: [
-                    { name: '52 Week Email Series', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/52+Week+DISC+email+series+updated+12-2020.pdf', icon: 'PDF.png' },
                     { name: 'DISC vs MBTI Article', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCvsMBTI.pdf', icon: 'PDF.png' },
                     { name: 'DISC & Other Assessments Articles', type: 'URL', url: '/blog', icon: 'URL.png' },
                     { name: 'Comparing 4 quadrants and 5 factors Article', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/comparing.pdf', icon: 'PDF.png' },
@@ -689,17 +734,25 @@ export default {
                 ]
             },
             productSpecificResources: {
-                infused: [
+                discWorkplaceInsights: [
                     { name: 'DISC Workplace Insights - Report Guide', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Workplace+Insights_Vs1_6.18.2024.pdf', icon: 'PDF.png' },
                     { name: 'DISC Workplace Insights - Report Overview', type: 'URL', url: 'https://drive.google.com/file/d/1dW_3S00jyWZsPOcB_0E8k1AdKeEyGhMR/view?usp=drive_link', icon: 'URL.png' },
-                    { name: 'DISC Workplace Insights - Introduction', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Workplace+Insights+-+Marketing+One-Sheet.pdf', icon: 'PDF.png' },
+                    { name: 'DISC Workplace Insights - Introduction', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Workplace+Insights+-+Marketing+One-Sheet.pdf', icon: 'PDF.png' }
+                ],
+                discExecutiveInsights: [
                     { name: 'DISC Executive Insights - Introduction', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Executive+Insights+-+Marketing+One-Sheet_v2.pdf', icon: 'PDF.png' },
                     { name: 'DISC Executive Insights Report Guide', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Executive+Insights+Report+Guide_8.12.24+Final.pdf', icon: 'PDF.png' },
+                    { name: 'DISC Executive Insights - Report Overview', type: 'URL', url: 'https://youtu.be/ez5ClwGO7Po', icon: 'URL.png' }
+                ],
+                discLeadership: [
                     { name: 'DISC Leadership - Debrief Guide (Coming soon!)', type: 'PDF', url: '', icon: 'PDF.png' },
-                    { name: 'DISC Leadership - Introduction', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Leadership+-+Marketing+One-Sheet.pdf', icon: 'PDF.png' },
+                    { name: 'DISC Leadership - Introduction', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Leadership+-+Marketing+One-Sheet.pdf', icon: 'PDF.png' }
+                ],
+                discAwareness: [
                     { name: 'DISC Awareness - Debrief guide', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+Debrief+Guide_vs3_5.24_Final.pdf', icon: 'PDF.png' },
                     { name: 'DISC Awareness - Introduction', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Awareness+-+Marketing+One-Sheet.pdf', icon: 'PDF.png' }
                 ],
+
                 nonInfused: [
                     { name: 'DISC & Motivators (Coming soon!)', type: 'PDF', url: '', icon: 'PDF.png' },
                     { name: 'DISC & EIQ (Coming soon!)', type: 'PDF', url: '', icon: 'PDF.png' }
@@ -827,8 +880,17 @@ export default {
         filteredInformationSheets() {
             return this.filterLinks(this.filterByType(this.marketing.informationSheets));
         },
-        filteredInfused() {
-            return this.filterLinks(this.filterByType(this.productSpecificResources.infused));
+        filteredDiscWorkplaceInsights() {
+            return this.filterLinks(this.filterByType(this.productSpecificResources.discWorkplaceInsights));
+        },
+        filteredDiscExecutiveInsights() {
+            return this.filterLinks(this.filterByType(this.productSpecificResources.discExecutiveInsights));
+        },
+        filteredDiscLeadership() {
+            return this.filterLinks(this.filterByType(this.productSpecificResources.discLeadership));
+        },
+        filteredDiscAwareness() {
+            return this.filterLinks(this.filterByType(this.productSpecificResources.discAwareness));
         },
         filterednonInfused() {
             return this.filterLinks(this.filterByType(this.productSpecificResources.nonInfused));
@@ -1020,6 +1082,16 @@ export default {
         margin-bottom: -10px;
         margin-top: -10px;
         text-align: left;
+        margin-left: 15px;
+        font-family: $nunito-family;
+    }
+
+    .subcard-subTitle {
+        font-weight: 700;
+        font-size: 1em;
+        margin-bottom: -10px;
+        margin-top: 20px;
+        text-align: left;
         margin-left: 35px;
         font-family: $nunito-family;
     }
@@ -1029,7 +1101,7 @@ export default {
         padding-left: 0;
         font-size: 1em;
         text-align: left;
-        margin-left: 35px;
+        margin-left: 45px;
         font-family: $nunito-family;
     }
 
