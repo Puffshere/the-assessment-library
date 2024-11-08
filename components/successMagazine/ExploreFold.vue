@@ -23,6 +23,16 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-6 exploreBody">
+
+                            <picture>
+                                <!-- Static paths for easier troubleshooting -->
+                                <source srcset="/assets/partner-logos/astra-zeneca.webp" type="image/webp">
+                                <img src="/assets/partner-logos/astra-zeneca.png"
+                                    alt="Astra Zeneca uses Assessments 24x7">
+                            </picture>
+
+
+
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Explore+our+Powerful+Assessment+Graphic+(1).webp"
                                 alt="image of woman in front of computer" style="width: 100%; margin-top: -20px;">
                         </div>
