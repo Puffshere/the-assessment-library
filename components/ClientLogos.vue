@@ -3,22 +3,22 @@
         <div class="container">
             <div class="logo-row">
                 <div class="logo-item">
-                    <img :src="require('@/assets/partner-logos/astra-zeneca.webp')" alt="Astra Zeneca uses Assessments 24x7">
+                    <img src="~/assets/partner-logos/astra-zeneca.webp" alt="Astra Zeneca uses Assessments 24x7">
                 </div>
                 <div class="logo-item">
-                    <img :src="require('@/assets/partner-logos/verizon.webp')" alt="Verizon uses Assessments 24x7">
+                    <img src="~/assets/partner-logos/verizon.webp" alt="Verizon uses Assessments 24x7">
                 </div>
                 <div class="logo-item">
-                    <img :src="require('@/assets/partner-logos/canon.webp')" alt="Canon uses Assessments 24x7">
+                    <img src="~/assets/partner-logos/canon.webp" alt="Canon uses Assessments 24x7">
                 </div>
                 <div class="logo-item">
-                    <img :src="require('@/assets/partner-logos/boston-scientific.webp')" alt="Boston Scientific uses Assessments 24x7">
+                    <img src="~/assets/partner-logos/boston-scientific.webp" alt="Boston Scientific uses Assessments 24x7">
                 </div>
                 <div class="logo-item">
-                    <img :src="require('@/assets/partner-logos/panasonic.webp')" alt="Panasonic uses Assessments 24x7">
+                    <img src="~/assets/partner-logos/panasonic.webp" alt="Panasonic uses Assessments 24x7">
                 </div>
                 <div class="logo-item">
-                    <img :src="require('@/assets/partner-logos/tony-robbins.webp')" alt="Tony Robbins uses Assessments 24x7">
+                    <img src="~/assets/partner-logos/tony-robbins.webp" alt="Tony Robbins uses Assessments 24x7">
                 </div>
             </div>
         </div>
