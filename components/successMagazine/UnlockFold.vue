@@ -4,8 +4,14 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <img ref="unlockImage" class="unlock-image" alt="image of assessments and phone"
-                            style="width: 100%; margin-top: 50px;">
+                        <picture>
+                            <source
+                                srcset="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+and+phone+(1).webp"
+                                type="image/webp">
+                            <img
+                                src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+with+assessment.png"
+                                alt="Image of assessments and phone" style="width: 100%; margin-top: 50px;" />
+                        </picture>
                     </div>
                     <div class="col-6">
                         <h2 style="color: #213C85;">
