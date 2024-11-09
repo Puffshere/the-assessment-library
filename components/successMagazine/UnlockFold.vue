@@ -71,7 +71,7 @@ export default {
             webP.onerror = function () {
                 callback(false);
             };
-            webP.src = "/assets/success-magazine/hero_woman_globe.webp";
+            webP.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4WAoAAAAQAAAABwAIAwAAQUxQSDIAAAABcAEAAwA1WQA=";
         },
         setUnlockImage() {
             const imgElement = this.$refs.unlockImage;
