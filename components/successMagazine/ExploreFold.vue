@@ -24,7 +24,8 @@
                     <div class="col-12">
                         <div class="col-6 exploreBody">
 
-                            <img class="explore-hero-image" alt="Explore fold hero image" style="width: 100%; margin-top: -20px;">
+                            <img class="explore-hero-image" alt="Explore fold hero image"
+                                style="width: 100%; margin-top: -20px;">
 
 
 
@@ -168,10 +169,13 @@ export default {
         },
         checkWebPSupport(callback) {
             const webP = new Image();
-            webP.onload = webP.onerror = function () {
-                callback(webP.height === 2);
+            webP.onload = function () {
+                callback(true);
             };
-            webP.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiI=";
+            webP.onerror = function () {
+                callback(false);
+            };
+            webP.src = "~/assets/success-magazine/hero_woman_globe.webp";
         },
         setHeroImage() {
             const imgElement = document.querySelector('.explore-hero-image');

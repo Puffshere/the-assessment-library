@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+and+phone+(1).webp"
-                            alt="image of assessments and phone" style="width: 100%; margin-top: 50px;">
+                        <img ref="unlockImage" class="unlock-image" alt="image of assessments and phone"
+                            style="width: 100%; margin-top: 50px;">
                     </div>
                     <div class="col-6">
                         <h2 style="color: #213C85;">
@@ -53,12 +53,43 @@ export default {
     methods: {
         freeDiscButton(event) {
             window.location.href = 'https://assessments247.net/?R*t%28GQg%27==R';
-            event.target.blur();
+            if (event) {
+                event.target.blur();
+            }
         },
         secondButtonLink(event) {
             window.location.href = 'https://www.assessments24x7.com/assessments/disc#tenKeyBenefits';
-            event.target.blur();
+            if (event) {
+                event.target.blur();
+            }
+        },
+        checkWebPSupport(callback) {
+            const webP = new Image();
+            webP.onload = function () {
+                callback(true);
+            };
+            webP.onerror = function () {
+                callback(false);
+            };
+            webP.src = "/assets/success-magazine/hero_woman_globe.webp";
+        },
+        setUnlockImage() {
+            const imgElement = this.$refs.unlockImage;
+            if (imgElement) {
+                this.checkWebPSupport((supported) => {
+                    if (supported) {
+                        console.log("Setting WebP image source.");
+                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+and+phone+(1).webp";
+                    } else {
+                        console.log("Setting PNG fallback image source.");
+                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+with+assessment.png";
+                    }
+                });
+            }
         }
+    },
+    mounted() {
+        this.setUnlockImage();
     }
 }
 </script>
@@ -127,6 +158,4 @@ button {
         max-width: 300px;
     }
 }
-
-
 </style>
