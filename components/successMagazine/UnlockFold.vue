@@ -4,14 +4,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
-                        <picture>
-                            <source
-                                srcset="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+and+phone+(1).webp"
-                                type="image/webp">
-                            <img
-                                src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+with+assessment.png"
-                                alt="Image of assessments and phone" style="width: 100%; margin-top: 50px;" />
-                        </picture>
+                        <img ref="unlockImage" class="unlock-image"
+                             data-webp="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+and+phone+(1).webp"
+                             data-png="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+with+assessment.png"
+                             alt="Image of assessments and phone" style="width: 100%; margin-top: 50px;">
                     </div>
                     <div class="col-6">
                         <h2 style="color: #213C85;">
@@ -68,35 +64,7 @@ export default {
             if (event) {
                 event.target.blur();
             }
-        },
-        checkWebPSupport(callback) {
-            const webP = new Image();
-            webP.onload = function () {
-                callback(true);
-            };
-            webP.onerror = function () {
-                callback(false);
-            };
-            webP.crossOrigin = "anonymous"; // Ensure no CORS issues arise
-            webP.src = "~/assets/success-magazine/hero_woman_globe.webp";
-        },
-        setUnlockImage() {
-            const imgElement = this.$refs.unlockImage;
-            if (imgElement) {
-                this.checkWebPSupport((supported) => {
-                    if (supported) {
-                        console.log("Setting WebP image source.");
-                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+and+phone+(1).webp";
-                    } else {
-                        console.log("Setting PNG fallback image source.");
-                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+with+assessment.png";
-                    }
-                });
-            }
         }
-    },
-    mounted() {
-        this.setUnlockImage();
     }
 }
 </script>
