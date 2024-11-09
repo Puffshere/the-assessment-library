@@ -50,9 +50,12 @@
                         </button>
                     </div>
                     <div class="col-4">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/High+Five+-+DISC++(1).webp"
+                        <!-- <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/High+Five+-+DISC++(1).webp"
                             alt="high five image" style="width: 176%; margin-top: 60px; margin-left: -35px;"
-                            class="image">
+                            class="image"> -->
+
+
+                            <img class="high-five-image image" alt="high five image" style="width: 176%; margin-top: 60px; margin-left: -35px;">
                     </div>
                 </div>
             </div>
@@ -66,7 +69,29 @@ export default {
         freeDiscButton(event) {
             window.location.href = 'https://assessments247.net/?R*t%28GQg%27==R';
             event.target.blur();
+        },
+        checkWebPSupport(callback) {
+            const webP = new Image();
+            webP.onload = webP.onerror = function () {
+                callback(webP.height === 2);
+            };
+            webP.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiI=";
+        },
+        setHighFiveImage() {
+            const imgElement = document.querySelector('.high-five-image');
+            if (imgElement) {
+                this.checkWebPSupport((supported) => {
+                    if (supported) {
+                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/High+Five+-+DISC++(1).webp";
+                    } else {
+                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/high-five.png";
+                    }
+                });
+            }
         }
+    },
+    mounted() {
+        this.setHighFiveImage();
     }
 }
 </script>
