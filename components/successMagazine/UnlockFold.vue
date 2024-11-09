@@ -4,10 +4,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-6">
+                        <!-- Image element that will be dynamically updated based on OS -->
                         <img ref="unlockImage" class="unlock-image"
-                             data-webp="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+and+phone+(1).webp"
-                             data-png="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+with+assessment.png"
-                             alt="Image of assessments and phone" style="width: 100%; margin-top: 50px;">
+                            alt="Image of assessments and phone" style="width: 100%; margin-top: 50px;">
                     </div>
                     <div class="col-6">
                         <h2 style="color: #213C85;">
@@ -65,37 +64,45 @@ export default {
                 event.target.blur();
             }
         },
-        checkWebPSupport(callback) {
-            const webP = new Image();
-            webP.onload = function () {
-                callback(true);
-            };
-            webP.onerror = function () {
-                callback(false);
-            };
-            // Use a known valid WebP image for testing
-            webP.src = "~/assets/success-magazine/hero_woman_globe.webp";
+        detectOperatingSystem() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Detect iOS devices
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+            // Detect Android devices
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+            // Detect Windows devices
+            if (/windows/i.test(userAgent)) {
+                return "Windows";
+            }
+            // Default fallback
+            return "other";
         },
         setUnlockImage() {
             const imgElement = this.$refs.unlockImage;
             if (imgElement) {
-                const webpUrl = imgElement.dataset.webp;
-                const pngUrl = imgElement.dataset.png;
+                const os = this.detectOperatingSystem();
 
-                this.checkWebPSupport((supported) => {
-                    if (supported) {
-                        imgElement.src = webpUrl;
-                    } else {
-                        imgElement.src = pngUrl;
-                    }
-                });
+                if (os === "iOS") {
+                    // iOS devices may have trouble with WebP, so use PNG
+                    console.log("iOS detected. Setting PNG fallback image source.");
+                    imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+with+assessment.png";
+                } else {
+                    // For other systems, use WebP for better compression
+                    console.log(`${os} detected. Setting WebP image source.`);
+                    imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Report+and+phone+(1).webp";
+                }
             } else {
                 console.error("Image element not found.");
             }
         }
     },
     mounted() {
-        // Call the method to set the correct image source based on WebP support
+        // Call the method to set the correct image source based on OS detection
         this.setUnlockImage();
     }
 }
