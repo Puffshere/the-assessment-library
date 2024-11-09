@@ -74,7 +74,7 @@ export default {
                 callback(false);
             };
             // Use a known valid WebP image for testing
-            webP.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4WAoAAAAQAAAABwAIAwAAQUxQSDIAAAABcAEAAwA1WQA=";
+            webP.src = "~/assets/success-magazine/hero_woman_globe.webp";
         },
         setUnlockImage() {
             const imgElement = this.$refs.unlockImage;
