@@ -50,12 +50,8 @@
                         </button>
                     </div>
                     <div class="col-4">
-                        <!-- <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/High+Five+-+DISC++(1).webp"
-                            alt="high five image" style="width: 176%; margin-top: 60px; margin-left: -35px;"
-                            class="image"> -->
-
-
-                            <img class="high-five-image image" alt="high five image" style="width: 176%; margin-top: 60px; margin-left: -35px;">
+                        <img class="high-five-image image" alt="high five image"
+                            style="width: 176%; margin-top: 60px; margin-left: -35px;">
                     </div>
                 </div>
             </div>
@@ -140,6 +136,12 @@ li {
         margin: 0 auto !important;
         margin-top: 50px !important;
         margin-bottom: -100px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 200px;
     }
 }
 </style>
