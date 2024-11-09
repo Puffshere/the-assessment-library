@@ -64,7 +64,39 @@ export default {
             if (event) {
                 event.target.blur();
             }
+        },
+        checkWebPSupport(callback) {
+            const webP = new Image();
+            webP.onload = function () {
+                callback(true);
+            };
+            webP.onerror = function () {
+                callback(false);
+            };
+            // Use a known valid WebP image for testing
+            webP.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4WAoAAAAQAAAABwAIAwAAQUxQSDIAAAABcAEAAwA1WQA=";
+        },
+        setUnlockImage() {
+            const imgElement = this.$refs.unlockImage;
+            if (imgElement) {
+                const webpUrl = imgElement.dataset.webp;
+                const pngUrl = imgElement.dataset.png;
+
+                this.checkWebPSupport((supported) => {
+                    if (supported) {
+                        imgElement.src = webpUrl;
+                    } else {
+                        imgElement.src = pngUrl;
+                    }
+                });
+            } else {
+                console.error("Image element not found.");
+            }
         }
+    },
+    mounted() {
+        // Call the method to set the correct image source based on WebP support
+        this.setUnlockImage();
     }
 }
 </script>
