@@ -15,8 +15,8 @@
                         About our Certification Programs
                     </h2>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Comprehensive+Curriculum+(1).webp"
-                            alt="icon 48" style="width: 60px; margin-top: 30px; margin-bottom: -15px;">
+                        <img ref="curriculumImage" alt="icon 48"
+                            style="width: 60px; margin-top: 30px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Comprehensive Curriculum
                         </h4>
@@ -29,8 +29,8 @@
                         </p>
                     </div>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Expert+Instructors+(1).webp"
-                            alt="icon 48" style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
+                        <img ref="expertInstructorsImage" alt="icon 48"
+                            style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Expert Instructors
                         </h4>
@@ -42,8 +42,8 @@
                         </p>
                     </div>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Flexible+Learning+(2).webp"
-                            alt="icon 48" style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
+                        <img ref="flexibleImage" alt="icon 48"
+                            style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Flexible Learning Options
                         </h4>
@@ -56,8 +56,8 @@
                         </p>
                     </div>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Practical+Application+(1).webp"
-                            alt="icon 48" style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
+                        <img ref="practicalImage" alt="icon 48"
+                            style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Practical Application
                         </h4>
@@ -69,8 +69,8 @@
                         </p>
                     </div>
                     <div style="padding-left: 30px; padding-right: 20px;">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Support+and+Resources+(1).webp"
-                            alt="icon 48" style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
+                        <img ref="supportImage" alt="icon 48"
+                            style="width: 60px; margin-top: -5px; margin-bottom: -15px;">
                         <h4 style="font-weight: 700; margin-bottom: -10px;">
                             Support and Resources
                         </h4>
@@ -95,7 +95,10 @@
 </template>
 
 <script>
+import { detectOSMixin } from '@/mixins/detectOSMixin';
+
 export default {
+    mixins: [detectOSMixin],
     methods: {
         scrollToContactFormSection(event) {
             const element = document.getElementById('contactFormSection');
@@ -104,7 +107,45 @@ export default {
             }
             event.target.blur();
         }
+    },
+    mounted() {
+        const imgElement1 = this.$refs.curriculumImage;
+        const imgElement2 = this.$refs.expertInstructorsImage;
+        const imgElement3 = this.$refs.flexibleImage;
+        const imgElement4 = this.$refs.practicalImage;
+        const imgElement5 = this.$refs.supportImage;
+
+        this.setUnlockImage(
+            imgElement1,
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Comprehensive+Curriculum.png",
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Comprehensive+Curriculum+(1).webp"
+        );
+
+        this.setUnlockImage(
+            imgElement2,
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Success+Magazine_Expert+Instructors+1.png",
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Expert+Instructors+(1).webp"
+        );
+
+        this.setUnlockImage(
+            imgElement3,
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Flexible+Learning+(2).png",
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Flexible+Learning+(2).webp"
+        );
+
+        this.setUnlockImage(
+            imgElement4,
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Practical+Application+(1).png",
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Practical+Application+(1).webp"
+        );
+
+        this.setUnlockImage(
+            imgElement5,
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Support+and+Resources+(1).png",
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Support+and+Resources+(1).webp"
+        );
     }
+
 }
 </script>
 
@@ -179,6 +220,4 @@ button {
         text-align: center;
     }
 }
-
-
 </style>

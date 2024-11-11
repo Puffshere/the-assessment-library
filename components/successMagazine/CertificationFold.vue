@@ -61,7 +61,7 @@
                                 behavior and emotions.
                             </p>
                             <div style="display: flex; justify-content: center; margin-top: 50px;">
-                                <button @click="motCertification">
+                                <button @click="motCertification" class="buttonSize">
                                     Motivators Certification
                                 </button>
                             </div>
@@ -178,5 +178,11 @@ button {
 
 .bottomButton {
     margin-bottom: -20px !important;
+}
+
+@media (max-width: 600px) {
+    .buttonSize {
+        width: 200px;
+    }
 }
 </style>
