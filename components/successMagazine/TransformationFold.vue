@@ -5,14 +5,12 @@
                 <div class="col-12">
 
                     <div class="col-5">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Certificate+-+Interview.webp"
-                            alt="image of woman" style="width: 100%;">
+                        <img ref="unlockImage" alt="image of woman" style="width: 100%;">
                     </div>
                     <div class="col-7" style="text-align: right; color: white; margin-top: -10px;">
                         <h2>
                             <span style="color: #FFDE59;">Empower your Transformation</span> <br />
                             through Assessment Certification
-
                         </h2>
                         <p>
                             An assessment certification from Assessments 24x7 demonstrates your expertise with specific
@@ -33,7 +31,10 @@
 </template>
 
 <script>
+import { detectOSMixin } from '@/mixins/detectOSMixin';
+
 export default {
+    mixins: [detectOSMixin],
     methods: {
         scrollToContactFormSection(event) {
             const element = document.getElementById('contactFormSection');
@@ -42,6 +43,14 @@ export default {
             }
             event.target.blur();
         }
+    },
+    mounted() {
+        const imgElement = this.$refs.unlockImage;
+        this.setUnlockImage(
+            imgElement,
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Certificate+-+Interview.png",
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/DISC+Certificate+-+Interview.webp"
+        );
     }
 }
 

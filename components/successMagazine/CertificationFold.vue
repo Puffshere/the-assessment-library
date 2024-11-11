@@ -182,7 +182,7 @@ button {
 
 @media (max-width: 600px) {
     .buttonSize {
-        width: 200px;
+        width: 220px !important;
     }
 }
 </style>
