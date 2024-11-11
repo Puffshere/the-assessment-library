@@ -50,7 +50,7 @@
                         </button>
                     </div>
                     <div class="col-4">
-                        <img class="high-five-image image" alt="high five image"
+                        <img ref="unlockImage" class="image" alt="high five image"
                             style="width: 176%; margin-top: 60px; margin-left: -35px;">
                     </div>
                 </div>
@@ -60,37 +60,23 @@
 </template>
 
 <script>
+import { detectOSMixin } from '@/mixins/detectOSMixin';
+
 export default {
+    mixins: [detectOSMixin],
     methods: {
         freeDiscButton(event) {
             window.location.href = 'https://assessments247.net/?R*t%28GQg%27==R';
             event.target.blur();
-        },
-        checkWebPSupport(callback) {
-            const webP = new Image();
-            webP.onload = function () {
-                callback(true);
-            };
-            webP.onerror = function () {
-                callback(false);
-            };
-            webP.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4WAoAAAAQAAAABwAIAwAAQUxQSDIAAAABcAEAAwA1WQA=";
-        },
-        setHighFiveImage() {
-            const imgElement = document.querySelector('.high-five-image');
-            if (imgElement) {
-                this.checkWebPSupport((supported) => {
-                    if (supported) {
-                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/High+Five+-+DISC++(1).webp";
-                    } else {
-                        imgElement.src = "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/high-five.png";
-                    }
-                });
-            }
         }
     },
     mounted() {
-        this.setHighFiveImage();
+        const imgElement = this.$refs.unlockImage;
+        this.setUnlockImage(
+            imgElement,
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/high-five.png",
+            "https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/High+Five+-+DISC++(1).webp"
+        );
     }
 }
 </script>
