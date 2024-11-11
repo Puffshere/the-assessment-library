@@ -17,11 +17,11 @@
                     <p style="line-height: 20px; margin-top: -10px; margin-bottom: 50px;">Here are our recommended steps
                         based on thousands of account setups. <br />
                         Skip sections as needed and proceed at your own pace.
-                        To schedule a one-on-one <br />dashboard tour, 
-                        <a class="hyperlink"
-                            href="https://calendly.com/suzette-247/45min?back=1">click here to book a session with a
+                        To schedule a one-on-one <br />dashboard tour,
+                        <a class="hyperlink" href="https://calendly.com/suzette-247/45min?back=1">click here to book a
+                            session with a
                             member of our support team</a>. For information on assessments, <br />
-                            pricing, and resources, contact
+                        pricing, and resources, contact
                         <span><a class="hyperlink"
                                 href="mailto:support@assessments24x7.com">support@assessments24x7.com</a></span>.
                     </p>
@@ -99,7 +99,8 @@
                     </div>
                     <div class="row media" style="margin-top: 50px;">
                         <div class="col-6">
-                            <iframe style="width:100%" height="540" src="https://www.youtube.com/embed/-xnQzh6gnvk"
+                            <iframe style="width:100%" height="540"
+                                src="https://cdn.assessments24x7.com/file/assessments24x7-media/videos/Setting+Up+Assessment+Access+Links+2025.mp4"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
