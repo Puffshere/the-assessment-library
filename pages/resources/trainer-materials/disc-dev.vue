@@ -492,6 +492,8 @@
                                         {{ link.name }}
                                     </a>
                                 </li>
+                                <a class="icons" href="mailto:hello@assessments24x7.com">Request my Certification badge
+                                    or certificate</a>
                             </ul>
                         </div>
 
