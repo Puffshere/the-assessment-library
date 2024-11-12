@@ -28,7 +28,7 @@
                             <div class="review">
                                 <div class="review-avatar tamarra-causley-robinson lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -46,7 +46,7 @@
                             <div class="review">
                                 <div class="review-avatar kyle-gillette lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -64,7 +64,7 @@
                             <div class="review">
                                 <div class="review-avatar paul-scaffidi lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>

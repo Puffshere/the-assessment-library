@@ -1,6 +1,6 @@
 <template>
     <section class="reviews">
-        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
+        <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp"
             alt="fold 4 graphic" style="position: absolute; left: 0px; margin-top: -93px;" class="accents">
         <div class="container-wrapper">
             <div class="container">
@@ -17,7 +17,7 @@
                                 <div class="review">
                                     <div class="review-avatar stephen-moore lazyload"></div>
                                     <div class="social-icon">
-                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.webp"
                                             alt="Alignable">
                                     </div>
                                     <div class="review-stars">
@@ -40,7 +40,7 @@
                                 <div class="review">
                                     <div class="review-avatar arif-boysan lazyload"></div>
                                     <div class="social-icon">
-                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.webp"
                                             alt="Alignable">
                                     </div>
                                     <div class="review-stars">
@@ -62,7 +62,7 @@
                                 <div class="review">
                                     <div class="review-avatar cindy-miller lazyload"></div>
                                     <div class="social-icon">
-                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.webp"
                                             alt="Alignable">
                                     </div>
                                     <div class="review-stars">
@@ -83,7 +83,7 @@
                                 <div class="review">
                                     <div class="review-avatar john-chappelear lazyload"></div>
                                     <div class="social-icon">
-                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.webp"
                                             alt="Alignable">
                                     </div>
                                     <div class="review-stars">
@@ -104,7 +104,7 @@
                                 <div class="review">
                                     <div class="review-avatar jay-mcdowell lazyload"></div>
                                     <div class="social-icon">
-                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.webp"
                                             alt="Alignable">
                                     </div>
                                     <div class="review-stars">
@@ -127,7 +127,7 @@
                                 <div class="review">
                                     <div class="review-avatar scott-higby lazyload"></div>
                                     <div class="social-icon">
-                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.png"
+                                        <img class="lazyload" data-src="~/assets/social-icons/alignable.webp"
                                             alt="Alignable">
                                     </div>
                                     <div class="review-stars">
@@ -158,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
+            <img src="~/assets/home-page/homeHeroFoldBottomRight.webp"
                 alt="fold 4 graphic" class="accents-right">
         </div>
     </section>
@@ -214,6 +214,8 @@ export default {
             min-height: 210px;
             max-height: 210px;
             margin-bottom: 26px;
+            z-index: 5;
+            background-color: white;
 
             .review-avatar {
                 width: 62px;
@@ -229,27 +231,27 @@ export default {
 
             .lazyloaded {
                 &.stephen-moore {
-                    background: url('~assets/review-avatars/stephen-moore.jpeg');
+                    background: url('~assets/review-avatars/stephen-moore.webp');
                 }
 
                 &.arif-boysan {
-                    background: url('~assets/review-avatars/arif-boysan.jpeg');
+                    background: url('~assets/review-avatars/arif-boysan.webp');
                 }
 
                 &.cindy-miller {
-                    background: url('~assets/review-avatars/cindy-miller.jpeg');
+                    background: url('~assets/review-avatars/cindy-miller.webp');
                 }
 
                 &.john-chappelear {
-                    background: url('~assets/review-avatars/john-chappelear.jpeg');
+                    background: url('~assets/review-avatars/john-chappelear.webp');
                 }
 
                 &.jay-mcdowell {
-                    background: url('~assets/review-avatars/jay-mcdowell.jpeg');
+                    background: url('~assets/review-avatars/jay-mcdowell.webp');
                 }
 
                 &.scott-higby {
-                    background: url('~assets/review-avatars/scott-higby.jpeg');
+                    background: url('~assets/review-avatars/scott-higby.webp');
                 }
             }
 

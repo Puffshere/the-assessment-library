@@ -1,7 +1,7 @@
 <template>
     <div>
         <section>
-            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
+            <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp"
                 alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
             <div class="container-wrapper">
                 <div class="container">
@@ -25,14 +25,14 @@
                                 </button>
                             </div>
                             <div class="col-4 seal">
-                                <img class="image" src="~assets/asi-certified.png"
+                                <img class="image" src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/asi-certified.webp"
                                     alt="Scientifically Validated Assessments by ASI" style="width: 283px;">
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
+                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp"
                     alt="fold 4 graphic" class="accents-right" style="bottom: -123px;">
             </div>
         </section>
@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-6">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/woman+-+fold+8.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/womanFold8Image.webp"
                                 alt="woman with a headset" style="width: 445px; margin-top: -150px;"
                                 class="personImage">
                         </div>
@@ -70,7 +70,7 @@
                             </p>
                         </div>
                         <div class="col-6">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Man+-+Fold+8.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/manFold8Image.webp"
                                 alt="man smiling"
                                 style="width: 445px; float: right; margin-top: -220px; margin-bottom: -90px;"
                                 class="personImage">
@@ -127,7 +127,7 @@ p {
 }
 
 .bottom {
-    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/skyline-background.png');
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/skyline-background.webp');
     background-size: cover;
     background-position: center;
     padding-bottom: -75px;

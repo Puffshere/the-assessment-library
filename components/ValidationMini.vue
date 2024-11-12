@@ -33,7 +33,7 @@
                             <div class="review" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="review-avatar ellie-gates lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -51,7 +51,7 @@
                             <div class="review" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="review-avatar felicia-miller-johnson lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -69,7 +69,7 @@
                             <div class="review" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="review-avatar lorraine-terry lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>

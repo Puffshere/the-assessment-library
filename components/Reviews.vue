@@ -17,7 +17,7 @@
                             <div class="review">
                                 <div class="review-avatar stephen-moore lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -35,7 +35,7 @@
                             <div class="review">
                                 <div class="review-avatar arif-boysan lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -53,7 +53,7 @@
                             <div class="review">
                                 <div class="review-avatar cindy-miller lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -71,7 +71,7 @@
                             <div class="review">
                                 <div class="review-avatar john-chappelear lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -89,7 +89,7 @@
                             <div class="review">
                                 <div class="review-avatar jay-mcdowell lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -107,7 +107,7 @@
                             <div class="review">
                                 <div class="review-avatar scott-higby lazyload"></div>
                                 <div class="social-icon">
-                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.png" alt="Alignable">
+                                    <img class="lazyload" data-src="~/assets/social-icons/alignable.webp" alt="Alignable">
                                 </div>
                                 <div class="review-stars">
                                     <span class="star">★</span>
@@ -180,12 +180,12 @@
                 }
 
                 .lazyloaded {
-                    &.stephen-moore { background: url('~assets/review-avatars/stephen-moore.jpeg'); }
-                    &.arif-boysan { background: url('~assets/review-avatars/arif-boysan.jpeg'); }
-                    &.cindy-miller { background: url('~assets/review-avatars/cindy-miller.jpeg'); }
-                    &.john-chappelear { background: url('~assets/review-avatars/john-chappelear.jpeg'); }
-                    &.jay-mcdowell { background: url('~assets/review-avatars/jay-mcdowell.jpeg'); }
-                    &.scott-higby { background: url('~assets/review-avatars/scott-higby.jpeg'); }
+                    &.stephen-moore { background: url('~assets/review-avatars/stephen-moore.webp'); }
+                    &.arif-boysan { background: url('~assets/review-avatars/arif-boysan.webp'); }
+                    &.cindy-miller { background: url('~assets/review-avatars/cindy-miller.webp'); }
+                    &.john-chappelear { background: url('~assets/review-avatars/john-chappelear.webp'); }
+                    &.jay-mcdowell { background: url('~assets/review-avatars/jay-mcdowell.webp'); }
+                    &.scott-higby { background: url('~assets/review-avatars/scott-higby.webp'); }
                 }
 
                 .social-icon img {
