@@ -36,7 +36,7 @@
                             </button>
                         </div>
                         <div class="col-6">
-                            <img src="~/assets/home-page/hero-fold-image.png" alt="image of man raising fist"
+                            <img src="~/assets/home-page/hero-fold-image.webp" alt="image of man raising fist"
                                 class="hero-image">
                         </div>
                     </div>
