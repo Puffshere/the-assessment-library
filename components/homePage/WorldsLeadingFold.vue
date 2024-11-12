@@ -10,7 +10,7 @@
 
                 <div class="col-12 cards-container">
                     <div class="card">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Yrs+in+business.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/yrsInBusiness.webp"
                             alt="card 1 image" class="card-image">
                         <div class="cardNumber">
                             25+
@@ -22,7 +22,7 @@
                     </div>
                     <a style="text-decoration: none; color: #0033C5" href="/certifications">
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Certified+Practitioners.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/certifiedPractitioners.webp"
                                 alt="card 2 image" class="card-image">
                             <div class="cardNumber">
                                 2300+
@@ -35,7 +35,7 @@
                     </a>
                     <a style="text-decoration: none; color: #0033C5" href="/assessments">
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Assessments+administered.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/assessmentsAdministered.webp"
                                 alt="card 3 image" class="card-image">
                             <div class="cardNumber">
                                 34m+
@@ -48,7 +48,7 @@
                     </a>
                     <a style="text-decoration: none; color: #0033C5" href="/about/partners">
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Fold+2+-+Countries.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/countries.webp"
                                 alt="card 4 image" class="card-image">
                             <div class="cardNumber">
                                 54
@@ -89,7 +89,7 @@ export default {
 @import '~assets/scss/new-styles';
 
 section {
-    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/skyline-background.png');
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/skyline-background.webp');
     background-size: cover;
     background-position: center;
 }

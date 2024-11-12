@@ -1,8 +1,8 @@
 <template>
     <div class="main">
         <main-nav active="home"></main-nav>
-        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
-            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
+        <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
+            style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
         <div class="container-wrapper">
             <div class="container">
                 <div class="row">
@@ -41,8 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
-                    alt="fold 4 graphic" class="accents-right">
+                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
             </div>
         </div>
 
