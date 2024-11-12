@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="content-wrapper">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Corporate+Icon.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/CorporateIcon.webp"
                             alt="corporate image" style="width: 70px;">
                         <h4 style="margin-top: 8px;">Empowering teams & organizations</h4>
                         <p style="padding-bottom: 31px; margin-top: -10px;">
