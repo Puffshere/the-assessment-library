@@ -129,15 +129,22 @@ button {
         font-size: 20pt;
     }
 
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers all the child elements horizontally */
+    }
+
     .bottomBtn {
-        min-width: 295px !important;
+        min-width: 265px !important;
+        margin: 20px 0 0 0; /* Add some top margin to space it from other elements */
     }
 }
+
 
 @media screen and (max-width: 450px) {
     .light {
         width: 100%;
-
     }
 }
 
