@@ -19,7 +19,7 @@
                             <div class="card-text">
                                 For Fundamental Features
                             </div>
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Level+1.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/level1.webp"
                                 alt="Essentials Plan Image" class="card-image first">
                         </div>
                         <div class="card">
@@ -29,7 +29,7 @@
                             <div class="card-text">
                                 For Next-Level Benefits
                             </div>
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Level+2.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/level2.webp"
                                 alt="Enhanced Plan Image" class="card-image second">
                         </div>
                         <div class="card">

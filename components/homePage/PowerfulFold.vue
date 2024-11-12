@@ -1,17 +1,17 @@
 <template>
     <section>
-        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
+        <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp"
             alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
         <div class="container-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="col-5">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Homepage+Graphic+-+Fold+4.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/powerfulFoldHomePageImage.webp"
                                 alt="image of black woman and computer" style="width: 100%; margin-top: -50px;"
                                 class="woman">
                             <div class="lightBox">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/light-bulb.png"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/light-bulb.webp"
                                     alt="image of a light bulb" style="margin-left: -20px;">
                                 <span class="lightBoxText">Ask about our API integration, customization and white-label
                                     options</span>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
+            <img src="~/assets/home-page/homeHeroFoldBottomRight.webp"
                 alt="fold 4 graphic" class="accents-right">
         </div>
     </section>

@@ -1,6 +1,6 @@
 <template>
   <section id="contactFormSection">
-    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+1_3_5+-+Upper+Left.png"
+    <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp"
       alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 980px;" class="accents">
     <div class="container-wrapper">
       <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Account+Levels/Fold+5+-+Bottom+right.png"
+      <img src="~/assets/home-page/homeHeroFoldBottomRight.webp"
         alt="fold 4 graphic" class="accents-right">
     </div>
   </section>
