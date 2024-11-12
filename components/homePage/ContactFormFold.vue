@@ -96,4 +96,11 @@ p {
     display: none;
   }
 }
+
+@media (max-width: 450px) {
+
+  p {
+    padding: 0 20px !important;
+  }
+}
 </style>
