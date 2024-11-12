@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-6">
                     <div class="content-wrapper">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/Coaching+Icon.png"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/coachingIcon.webp"
                             alt="coaching image" style="width: 90px; margin-bottom: -4px;">
                         <h4>The bridge between you and your clients</h4>
                         <p style="padding-bottom: 7px; margin-top: -10px;">
@@ -66,7 +66,7 @@ section {
 }
 
 .cards {
-    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/skyline-background.png');
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/skyline-background.webp');
     background-size: cover;
     background-position: center;
     min-height: 604px;
@@ -132,15 +132,14 @@ button {
     .content-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centers all the child elements horizontally */
+        align-items: center;
     }
 
     .bottomBtn {
         min-width: 265px !important;
-        margin: 20px 0 0 0; /* Add some top margin to space it from other elements */
+        margin: 20px 0 0 0;
     }
 }
-
 
 @media screen and (max-width: 450px) {
     .light {
