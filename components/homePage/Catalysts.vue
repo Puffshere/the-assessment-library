@@ -31,7 +31,7 @@
                             their service fees. Lifetime certification provides access to over 500
                             training material assets, including PowerPoints, videos, and group exercises.
                         </p>
-                        <button class="light" @click="jumpToResellerPage" style="margin-bottom: 10px;">
+                        <button class="light bottomBtn" @click="jumpToResellerPage" style="margin-bottom: 10px;">
                             Solutions for Coaches and Consultants
                         </button>
                     </div>
@@ -127,6 +127,10 @@ button {
 
     h2 {
         font-size: 20pt;
+    }
+
+    .bottomBtn {
+        min-width: 295px !important;
     }
 }
 

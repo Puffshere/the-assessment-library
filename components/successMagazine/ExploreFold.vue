@@ -23,15 +23,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="col-6 exploreBody">
-
                             <img class="explore-hero-image" alt="Explore fold hero image"
                                 style="width: 100%; margin-top: -20px;">
-
-
-
-
-                            <!-- <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/Explore+our+Powerful+Assessment+Graphic+(1).webp"
-                                alt="image of woman in front of computer" style="width: 100%; margin-top: -20px;"> -->
                         </div>
                         <div class="col-6 exploreBody">
                             <h2>
