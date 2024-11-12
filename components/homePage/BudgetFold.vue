@@ -58,7 +58,7 @@
 export default {
     methods: {
         jumpToPlatformPageChecklist(event) {
-            window.location.href = 'https://www.assessments24x7.com/account-levels';
+            window.location.href = 'https://www.assessments24x7.com/about/account-levels';
             event.target.blur();
         }
     }
