@@ -8,15 +8,6 @@
         <LazyHydrate when-visible>
             <what-are></what-are>
         </LazyHydrate>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div class="container">
             <div class="row">
                 <div class="col-12">
