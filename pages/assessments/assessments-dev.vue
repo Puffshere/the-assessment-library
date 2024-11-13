@@ -8,7 +8,7 @@
         <LazyHydrate when-visible>
             <what-are></what-are>
         </LazyHydrate>
-
+        <br />
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -32,8 +32,8 @@
                         empathetic leaders.
                     </p>
                     <div class="button-container">
-                            <button @click="learnMoreButton" class="blue">Learn More</button>
-                        </div>
+                        <button @click="learnMoreButton" class="blue">Learn More</button>
+                    </div>
                     <br />
                 </div>
             </div>
@@ -105,10 +105,16 @@
                 ]" />
         </LazyHydrate>
 
-        <LazyHydrate when-visible><characteristics /></LazyHydrate>
+        <LazyHydrate when-visible>
+            <characteristics />
+        </LazyHydrate>
         <LazyHydrate when-visible><corina-lorenzi /></LazyHydrate>
-        <LazyHydrate when-visible><choosing /></LazyHydrate>
-        <LazyHydrate when-visible><faq /></LazyHydrate>
+        <LazyHydrate when-visible>
+            <choosing />
+        </LazyHydrate>
+        <LazyHydrate when-visible>
+            <faq />
+        </LazyHydrate>
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </div>
 </template>
