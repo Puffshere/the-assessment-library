@@ -13,7 +13,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="heading-container">
-                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/Checkmark.webp"
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/checkmark.webp"
                                             alt="checkmark icon" class="checkmark-icon">
                                         <h5>Reliability</h5>
                                     </div>
@@ -28,7 +28,7 @@
                                     </p>
                                     <br />
                                     <div class="heading-container">
-                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/Checkmark.webp"
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/checkmark.webp"
                                             alt="checkmark icon" class="checkmark-icon">
                                         <h5>Validity</h5>
                                     </div>
@@ -46,7 +46,7 @@
                                     </p>
                                     <br />
                                     <div class="heading-container">
-                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/Checkmark.webp"
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/checkmark.webp"
                                             alt="checkmark icon" class="checkmark-icon">
                                         <h5>Fairness</h5>
                                     </div>
@@ -61,7 +61,7 @@
                                     </p>
                                     <br />
                                     <div class="heading-container">
-                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/Checkmark.webp"
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/checkmark.webp"
                                             alt="checkmark icon" class="checkmark-icon">
                                         <h5>Standardization</h5>
                                     </div>

@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-5">
-                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/Assessment+Tools+Image.webp"
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/assessmentsToolsImage.webp"
                             alt="assessment tools image" style="width: 80%; margin-top: 30px;">
                     </div>
                     <div class="col-7" style="text-align: right;">

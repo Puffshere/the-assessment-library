@@ -18,7 +18,7 @@
                                 <h3 style="margin-bottom: 40px;">
                                     Types of Assessment Tools
                                 </h3>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HR+icon.webp"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
                                     alt="hr icon" style="width: 70px;">
                                 <p>
                                     <strong>Assessment Tools for Human Resources</strong><br />
@@ -30,7 +30,7 @@
                                         surveys</strong> to identify talent, foster growth, and improve team
                                     performance.
                                 </p>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HR+icon.webp"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
                                     alt="hr icon" style="width: 70px;">
                                 <p>
                                     <strong>Assessment Tools for Coaching</strong><br />
@@ -43,7 +43,7 @@
                                     that leads to
                                     tangible outcomes.
                                 </p>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HR+icon.webp"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
                                     alt="hr icon" style="width: 70px;">
                                 <p>
                                     <strong>Assessment Tools for Leadership Development</strong><br />

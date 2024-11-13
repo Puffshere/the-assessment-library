@@ -16,7 +16,7 @@
                     <button @click="learnMoreButton" class="blue" style="margin-top: 10px; margin-bottom: 30px;">
                         Book Live Demo
                     </button>
-                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/choosing-grahpic.webp" alt="choosing image" style="width: 100%;">
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/choosingGraphic.webp" alt="choosing image" style="width: 100%;">
                 </div>
             </div>
         </div>
