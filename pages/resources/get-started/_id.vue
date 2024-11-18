@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img v-if="id === 'ccc'" src="~/assets/get-started/ccc.svg" alt="CCC" class="partner-logo">
+                        <img v-if="id === 'ccc'" src="~/assets/get-started/newCCCImage.png" alt="CCC" class="partner-logo">
                         <img v-else-if="id === 'actioncoach'" src="~/assets/get-started/actioncoach.png"
                             alt="ActionCOACH" class="partner-logo">
                         <img v-else-if="id === 'tonyrobbins'" src="~/assets/get-started/tonyrobbins.png"
