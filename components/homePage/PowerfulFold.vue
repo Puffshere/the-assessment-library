@@ -1,7 +1,7 @@
 <template>
     <section>
-        <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp"
-            alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
+        <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
+            style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
         <div class="container-wrapper">
             <div class="container">
                 <div class="row">
@@ -21,10 +21,11 @@
                             <h3>
                                 Powerful platform
                             </h3>
-                            <p>
+                            <p style=" position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
                                 Assessments 24x7 powers millions of assessments worldwide through our proprietary
                                 platform —
-                                streamlined and customizable, with the processing power to tackle all your requirements. Order
+                                streamlined and customizable, with the processing power to tackle all your requirements.
+                                Order
                                 and
                                 administer assessments, access reports, view insights, analyze group and conflict
                                 resolution
@@ -32,15 +33,14 @@
                                 resources,
                                 seamlessly integrate with LMS, CRM, HR, and recruiting systems — and more!
                             </p>
-                            <button class="light" @click="scrollToContactForm" style="margin-top: 50px;">
+                            <button class="light" @click="scrollToContactForm" style="margin-top: 40px;">
                                 Learn More
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <img src="~/assets/home-page/homeHeroFoldBottomRight.webp"
-                alt="fold 4 graphic" class="accents-right">
+            <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
         </div>
     </section>
 </template>

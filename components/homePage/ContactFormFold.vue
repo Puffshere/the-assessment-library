@@ -1,7 +1,7 @@
 <template>
   <section id="contactFormSection">
-    <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp"
-      alt="fold 4 graphic" style="position: absolute; left: 0px; margin-bottom: 980px;" class="accents">
+    <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
+      style="position: absolute; left: 0px; margin-bottom: 855px;" class="accents">
     <div class="container-wrapper">
       <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
         <div class="row">
@@ -11,15 +11,14 @@
           <p>
             Connect with us to get instant support and answers to all your assessment-related questions.
           </p>
-          <div class="col-12 d-flex justify-content-center">
+          <div class="col-12 justify-content-center">
             <div class="form-container">
               <contact-form style="background: white;" />
             </div>
           </div>
         </div>
       </div>
-      <img src="~/assets/home-page/homeHeroFoldBottomRight.webp"
-        alt="fold 4 graphic" class="accents-right">
+      <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
     </div>
   </section>
 </template>
@@ -39,7 +38,7 @@ export default {
 section {
   background-size: cover;
   background-position: center;
-  min-height: 1088px;
+  min-height: 960px;
   display: flex;
   align-items: center;
   justify-content: center;

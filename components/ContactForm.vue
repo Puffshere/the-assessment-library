@@ -26,11 +26,11 @@
                         <ValidationProvider v-slot="v" rules="required">
                             <label for="country">Country *</label>
                             <input type="text" id="country" name="country" v-model="form.country" list="countries"
-                                autocomplete="country" tabindex="7">
+                                autocomplete="country" tabindex="5">
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                    }}</option>
+                                }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -42,7 +42,7 @@
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required|numeric">
                             <label for="phone">Phone Number *</label>
-                            <input id="phone" name="phone" type="tel" v-model="form.phone" tabindex="4" />
+                            <input id="phone" name="phone" type="tel" v-model="form.phone" tabindex="2" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
@@ -53,10 +53,10 @@
                             <ValidationProvider v-slot="v" rules="required">
                                 <label for="source">How did you hear about us? *</label>
 
-                                <select id="source" name="source" v-model="form.source" tabindex="6">
+                                <select id="source" name="source" v-model="form.source" tabindex="4">
                                     <option v-for="source in sources" :key="source.id" :value="source.value">{{
                                         source.label
-                                        }}</option>
+                                    }}</option>
                                 </select>
 
                                 <span class="error">{{ v.errors[0] }}</span>
@@ -67,7 +67,7 @@
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
                             <label for="company">Company/Organization *</label>
-                            <input id="company" name="company" type="text" v-model="form.company" tabindex="5" />
+                            <input id="company" name="company" type="text" v-model="form.company" tabindex="6" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
@@ -85,7 +85,7 @@
                             <ValidationProvider v-slot="v" rules="required|min:5">
                                 <label for="comments">What would you like to discuss?</label>
                                 <textarea cols="24" rows="5" id="comments" name="comments" v-model="form.comments"
-                                    tabindex="8"></textarea>
+                                    tabindex="7"></textarea>
                                 <p class="error" style="position: absolute; margin-top: -5px;">{{ v.errors[0] }}</p>
                             </ValidationProvider>
                         </div>
@@ -96,7 +96,7 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" id="reseller" name="clientType" type="radio"
-                                        value="Reseller" v-model="form.clientType" tabindex="9" />
+                                        value="Reseller" v-model="form.clientType" tabindex="8" />
                                     <label class="form-check-label" for="reseller">I am a <strong>coach or
                                             trainer</strong>
                                         looking to resell assessments with my clients.</label>
@@ -104,7 +104,7 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" id="corporate" name="clientType" type="radio"
-                                        value="Corporate" v-model="form.clientType" tabindex="10" />
+                                        value="Corporate" v-model="form.clientType" tabindex="9" />
                                     <label class="form-check-label" for="corporate">I am part of a
                                         <strong>company</strong>
                                         looking to use assessments internally with my team.</label>
@@ -112,7 +112,7 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" id="retail" name="clientType" type="radio"
-                                        value="Retail" v-model="form.clientType" tabindex="11" />
+                                        value="Retail" v-model="form.clientType" tabindex="10" />
                                     <label class="form-check-label" for="retail">I am an <strong>individual</strong>
                                         looking
                                         to purchase a single assessment only.</label>
@@ -126,7 +126,7 @@
                         <label>Are you affiliated with one of the following organizations?</label>
 
                         <select id="affiliation" name="affiliation" v-model="form.affiliation" style="max-width: 310px;"
-                            tabindex="12">
+                            tabindex="11">
                             <option v-for="affiliation in affiliations" :key="affiliation.id"
                                 :value="affiliation.value">{{
                                     affiliation.label }}</option>
@@ -139,13 +139,13 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" id="optinYes" name="newsletter" type="radio" value="45"
-                                    v-model="form.newsletter" tabindex="13" />
+                                    v-model="form.newsletter" tabindex="12" />
                                 <label class="form-check-label" for="optinYes">Yes, please!</label>
                             </div>
 
                             <div class="form-check">
                                 <input class="form-check-input" id="optinNo" name="newsletter" type="radio" value="46"
-                                    v-model="form.newsletter" tabindex="14" />
+                                    v-model="form.newsletter" tabindex="13" />
                                 <label class="form-check-label" for="optinNo">No, thank you.</label>
                             </div>
 
@@ -157,7 +157,7 @@
                         <ValidationProvider v-slot="v" rules="required">
                             <div class="form-check">
                                 <input class="form-check-input" id="consent" name="consent" type="checkbox" required
-                                    v-model="form.consent" tabindex="15" />
+                                    v-model="form.consent" tabindex="14" />
                                 <label class="form-check-label" for="consent">
                                     I agree to the <nuxt-link to="/legal/privacy" target="_blank" rel="noopener"
                                         class="hyperlink">Privacy
