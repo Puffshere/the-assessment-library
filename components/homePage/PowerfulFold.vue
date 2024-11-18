@@ -24,7 +24,7 @@
                             <p>
                                 Assessments 24x7 powers millions of assessments worldwide through our proprietary
                                 platform —
-                                streamlined and customizable, with the horsepower to tackle all your requirements. Order
+                                streamlined and customizable, with the processing power to tackle all your requirements. Order
                                 and
                                 administer assessments, access reports, view insights, analyze group and conflict
                                 resolution

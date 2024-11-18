@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <h1>
-                        The World's Leading Assessment Platform
+                        The World's Leading Assessment Technology (SaaS) Platform
                     </h1>
                 </div>
 
