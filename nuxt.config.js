@@ -82,9 +82,9 @@ module.exports = {
       mode: 'client'
     },
     '~/plugins/zapier.js',
-    { 
-      src: '~/plugins/google-maps.js', 
-      mode: 'client' 
+    {
+      src: '~/plugins/google-maps.js',
+      mode: 'client'
     }
   ],
 
@@ -171,6 +171,19 @@ module.exports = {
   env: {
     NUXT_ENV_GOOGLE_MAPS_SECRET_KEY: process.env.NUXT_ENV_GOOGLE_MAPS_SECRET_KEY
   },
+
+  // This code is to explicitly allow Vue.js DevTools
+  vue: {
+    config: {
+      devtools: true
+    }
+  },
+
+
+  devServer: {
+    disableHostCheck: true
+  },
+
 
   /*
   ** Build configuration
