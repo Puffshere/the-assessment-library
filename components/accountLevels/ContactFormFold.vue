@@ -31,7 +31,7 @@ export default {
 section {
   background-size: cover;
   background-position: center;
-  min-height: 1088px;
+  min-height: 960px;
   display: flex;
   align-items: center;
   justify-content: center;
