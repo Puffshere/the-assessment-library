@@ -106,7 +106,7 @@ export default {
 section {
     margin: 0px 0 0;
     padding: 30px 0;
-    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/content-bg.webp');
+    background: url('~assets/corporate/content-bg.webp');
     background-size: cover !important;
     background-position: center;
 }
