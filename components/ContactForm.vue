@@ -8,8 +8,8 @@
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
-                            <label for="firstName">First Name *</label>
-                            <input id="firstName" name="firstName" type="text" v-model="form.firstName" tabindex="1" />
+                            <label for="fullName">Full Name *</label>
+                            <input id="fullName" name="fullName" type="text" v-model="form.fullName" tabindex="1" />
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
                     </div>
@@ -24,21 +24,13 @@
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required">
-                            <label for="company">Company/Organization *</label>
-                            <input id="company" name="company" type="text" v-model="form.company" tabindex="5" />
-                            <span class="error">{{ v.errors[0] }}</span>
-                        </ValidationProvider>
-                    </div>
-
-                    <div class="form-group">
-                        <ValidationProvider v-slot="v" rules="required">
                             <label for="country">Country *</label>
                             <input type="text" id="country" name="country" v-model="form.country" list="countries"
                                 autocomplete="country" tabindex="7">
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                }}</option>
+                                    }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -46,13 +38,6 @@
                 </div>
 
                 <div class="col-6">
-                    <div class="form-group">
-                        <ValidationProvider v-slot="v" rules="required">
-                            <label for="lastName">Last Name *</label>
-                            <input id="lastName" name="lastName" type="text" v-model="form.lastName" tabindex="2" />
-                            <span class="error">{{ v.errors[0] }}</span>
-                        </ValidationProvider>
-                    </div>
 
                     <div class="form-group">
                         <ValidationProvider v-slot="v" rules="required|numeric">
@@ -71,12 +56,20 @@
                                 <select id="source" name="source" v-model="form.source" tabindex="6">
                                     <option v-for="source in sources" :key="source.id" :value="source.value">{{
                                         source.label
-                                    }}</option>
+                                        }}</option>
                                 </select>
 
                                 <span class="error">{{ v.errors[0] }}</span>
                             </ValidationProvider>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <ValidationProvider v-slot="v" rules="required">
+                            <label for="company">Company/Organization *</label>
+                            <input id="company" name="company" type="text" v-model="form.company" tabindex="5" />
+                            <span class="error">{{ v.errors[0] }}</span>
+                        </ValidationProvider>
                     </div>
                 </div>
 
@@ -229,8 +222,7 @@ export default {
             isDisabled: false,
             isPartnerId: '',
             form: {
-                firstName: '',
-                lastName: '',
+                fullName: '',
                 email: '',
                 phone: '',
                 company: '',
@@ -537,11 +529,15 @@ export default {
                         break;
                 }
                 if (this.isPartnerId === "aus" || this.isPartnerId === "eur" || this.isPartnerId === "viet") {
+                    // Split full name into first name and last name
+                    const [firstName, ...lastNameArray] = this.form.fullName.trim().split(' ');
+                    const lastName = lastNameArray.join(' ');
+
                     try {
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Cristina Moore",
-                            firstName: this.form.firstName,
-                            lastName: this.form.lastName,
+                            firstName: firstName,
+                            lastName: lastName,
                             phone: this.form.phone,
                             email: this.form.email,
                             country: this.form.country
@@ -561,8 +557,8 @@ export default {
                         const { data } = await axios.post('/api/contact', {
                             contact: {
                                 email: this.form.email,
-                                firstName: this.form.firstName,
-                                lastName: this.form.lastName,
+                                firstName: firstName,
+                                lastName: lastName,
                                 phone: this.form.phone,
                                 country: this.form.country,
                                 fieldValues: [
@@ -677,11 +673,14 @@ export default {
                     }
                 }
                 if (this.isPartnerId === "neth_bel") {
+                    // Split full name into first name and last name
+                    const [firstName, ...lastNameArray] = this.form.fullName.trim().split(' ');
+                    const lastName = lastNameArray.join(' ');
                     try {
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Angie Fairbanks",
-                            firstName: this.form.firstName,
-                            lastName: this.form.lastName,
+                            firstName: firstName,
+                            lastName: lastName,
                             phone: this.form.phone,
                             email: this.form.email,
                             country: this.form.country
@@ -701,8 +700,8 @@ export default {
                         const { data } = await axios.post('/api/contact', {
                             contact: {
                                 email: this.form.email,
-                                firstName: this.form.firstName,
-                                lastName: this.form.lastName,
+                                firstName: firstName,
+                                lastName: lastName,
                                 phone: this.form.phone,
                                 country: this.form.country,
                                 fieldValues: [
@@ -807,12 +806,15 @@ export default {
                     }
                 }
                 if (this.isPartnerId === "can") {
+                    // Split full name into first name and last name
+                    const [firstName, ...lastNameArray] = this.form.fullName.trim().split(' ');
+                    const lastName = lastNameArray.join(' ');
                     try {
                         const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {
                             salesPerson: salesPerson.data,
-                            firstName: this.form.firstName,
-                            lastName: this.form.lastName,
+                            firstName: firstName,
+                            lastName: lastName,
                             phone: this.form.phone,
                             email: this.form.email,
                             country: this.form.country
@@ -832,8 +834,8 @@ export default {
                         const { data } = await axios.post('/api/contact', {
                             contact: {
                                 email: this.form.email,
-                                firstName: this.form.firstName,
-                                lastName: this.form.lastName,
+                                firstName: firstName,
+                                lastName: lastName,
                                 phone: this.form.phone,
                                 country: this.form.country,
                                 fieldValues: [
@@ -938,11 +940,14 @@ export default {
                     }
                 }
                 if (this.getStartedId === "wcg" || this.getStartedId === "dc" || this.getStartedId === "bni") {
+                    // Split full name into first name and last name
+                    const [firstName, ...lastNameArray] = this.form.fullName.trim().split(' ');
+                    const lastName = lastNameArray.join(' ');
                     try {
                         const lead = await axios.post('/api/lead', {
                             salesPerson: "Cristina Moore",
-                            firstName: this.form.firstName,
-                            lastName: this.form.lastName,
+                            firstName: firstName,
+                            lastName: lastName,
                             phone: this.form.phone,
                             email: this.form.email,
                             country: this.form.country
@@ -962,8 +967,8 @@ export default {
                         const { data } = await axios.post('/api/contact', {
                             contact: {
                                 email: this.form.email,
-                                firstName: this.form.firstName,
-                                lastName: this.form.lastName,
+                                firstName: firstName,
+                                lastName: lastName,
                                 phone: this.form.phone,
                                 country: this.form.country,
                                 fieldValues: [
@@ -1060,12 +1065,15 @@ export default {
                     }
                 }
                 if (this.getStartedId !== "wcg" && this.isPartnerId !== "aus" && this.isPartnerId !== "can" && this.isPartnerId !== "eur" && this.isPartnerId !== "neth_bel" && this.isPartnerId !== "viet" && this.getStartedId !== "dc" && this.getStartedId !== "bni") {
+                    // Split full name into first name and last name
+                    const [firstName, ...lastNameArray] = this.form.fullName.trim().split(' ');
+                    const lastName = lastNameArray.join(' ');
                     try {
                         const salesPerson = await axios.get('/api/lead/next-assignment');
                         const lead = await axios.post('/api/lead', {
                             salesPerson: salesPerson.data,
-                            firstName: this.form.firstName,
-                            lastName: this.form.lastName,
+                            firstName: firstName,
+                            lastName: lastName,
                             phone: this.form.phone,
                             email: this.form.email,
                             country: this.form.country
@@ -1085,8 +1093,8 @@ export default {
                         const { data } = await axios.post('/api/contact', {
                             contact: {
                                 email: this.form.email,
-                                firstName: this.form.firstName,
-                                lastName: this.form.lastName,
+                                firstName: firstName,
+                                lastName: lastName,
                                 phone: this.form.phone,
                                 country: this.form.country,
                                 fieldValues: [

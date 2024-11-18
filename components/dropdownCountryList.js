@@ -1,4 +1,5 @@
 export const dropdownCountries = [
+    { label: 'United States of America' },
     { label: 'Afghanistan' },
     { label: 'Albania' },
     { label: 'Algeria' },
@@ -198,7 +199,6 @@ export const dropdownCountries = [
     { label: 'Ukraine' },
     { label: 'United Arab Emirates' },
     { label: 'United Kingdom' },
-    { label: 'United States of America' },
     { label: 'Upper Volta' },
     { label: 'Uruguay' },
     { label: 'Uzbekistan' },
