@@ -72,12 +72,12 @@
                                 <h4 data-category="fundamentals">
                                     {{ toggleStates['fundamentals'] ? '−' : '+' }} The Fundamentals: DISC
                                 </h4>
-                                <p>Foundations of DISC & advanced development resources</p>
+                                <p>Foundations Of DISC & Advanced Development Resources</p>
                             </div>
                         </div>
                         <div v-if="toggleStates['fundamentals']" class="subcard">
                             <br />
-                            <p class="subcard-title">Understanding foundations of DISC</p>
+                            <p class="subcard-title">Understanding Foundations of DISC</p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredFoundations" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
@@ -128,8 +128,8 @@
                                 <h4 data-category="t&w">
                                     {{ toggleStates['t&w'] ? '−' : '+' }} Training & Workshops
                                 </h4>
-                                <p>Training presentations, Facilitator guides, DISC group exercises, & delivery
-                                    resources</p>
+                                <p>Training Presentations, Facilitator Guides, DISC Group Exercises, & Delivery
+                                    Resources</p>
                             </div>
                         </div>
 
@@ -253,7 +253,7 @@
                                 <h4 data-category="360">
                                     {{ toggleStates['360'] ? '−' : '+' }} 360 Resources
                                 </h4>
-                                <p>Supporting materials to help you with 360 Assessments</p>
+                                <p>Supporting Materials To Help You With 360 Assessments</p>
                             </div>
                         </div>
 
@@ -276,7 +276,7 @@
                                 <h4 data-category="support">
                                     {{ toggleStates['support'] ? '−' : '+' }} Additional Support Materials
                                 </h4>
-                                <p>Supplementary materials to enhance your understanding & application of DISC</p>
+                                <p>Supplementary Materials To Enhance Your Understanding & Application Of DISC</p>
                             </div>
                         </div>
                         <div v-if="toggleStates['support']" class="subcard">
@@ -337,7 +337,7 @@
                                 <h4 data-category="coaches">
                                     {{ toggleStates['coaches'] ? '−' : '+' }} Coaching with DISC
                                 </h4>
-                                <p>DISC Coaching resources</p>
+                                <p>DISC Coaching Resources</p>
                             </div>
                         </div>
                         <div v-if="toggleStates['coaches']" class="subcard">
@@ -353,7 +353,7 @@
                                 <h4 data-category="marketing">
                                     {{ toggleStates['marketing'] ? '−' : '+' }} Marketing
                                 </h4>
-                                <p>DISC marketing materials to help you support your business</p>
+                                <p>DISC Marketing Materials To Help You Support Your Business</p>
                             </div>
                         </div>
 
@@ -478,7 +478,7 @@
                                 <h4 data-category="quick&links">
                                     {{ toggleStates['quick&links'] ? '−' : '+' }} Quick Links
                                 </h4>
-                                <p>Latest updates, Store, FAQs, Support info, & more</p>
+                                <p>Latest Updates, Store, FAQs, Support Info, & More</p>
                             </div>
                         </div>
                         <div v-if="toggleStates['quick&links']" class="subcard">
