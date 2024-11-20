@@ -104,7 +104,7 @@ section {
 }
 
 @media (max-width: 1200px) {
-    section {
+    .section {
         height: auto;
         margin-bottom: 20px;
     }
