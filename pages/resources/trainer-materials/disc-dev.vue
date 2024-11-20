@@ -77,7 +77,14 @@
                         </div>
                         <div v-if="toggleStates['fundamentals']" class="subcard">
                             <br />
-                            <p class="subcard-title">Understanding Foundations of DISC</p>
+                            <p class="subcard-title">Understanding Foundations of DISC
+                                <span class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: -2px; margin-top: -14px;"><span
+                                        class="tooltip-text">A curated collection of resources to introduce you to DISC
+                                        methodology & its diverse applications.</span>
+                                </span>
+                            </p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredFoundations" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
@@ -110,7 +117,12 @@
                                 </li>
                             </ul>
                             <br />
-                            <p class="subcard-title">Advanced Development Resources</p>
+                            <p class="subcard-title">Advanced Development Resources<span class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: 2px; margin-top: -14px;"><span
+                                        class="tooltip-text">Materials designed for a deeper understanding & development
+                                        of DISC strategies.</span>
+                                </span></p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredUnderstandingFoundations" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
@@ -135,7 +147,12 @@
 
                         <div v-if="toggleStates['t&w']" class="subcard">
                             <br />
-                            <p class="subcard-title">Training Presentations & Facilitator Guides</p>
+                            <p class="subcard-title">Training Presentations & Facilitator Guides<span class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: 2px; margin-top: -14px;"><span
+                                        class="tooltip-text">Ready-to-use presentations aimed at facilitating DISC
+                                        training sessions and team development.</span>
+                                </span></p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredTrainingPresentationsFacilitatorGuides" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
@@ -179,7 +196,13 @@
                                 </li>
                             </ul>
                             <br />
-                            <p class="subcard-title">Enhancing Delivery Resources - Training & Presentations</p>
+                            <p class="subcard-title">Enhancing Delivery Resources - Training & Presentations<span
+                                    class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: 2px; margin-top: -14px;"><span
+                                        class="tooltip-text">Additional materials and tools to refine your training and
+                                        presenting techniques with a DISC focus.</span>
+                                </span></p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredEnhancingDeliveryResourcesTrainingPresentations"
                                     :key="link.url">
@@ -191,7 +214,13 @@
                                 </li>
                             </ul>
                             <br />
-                            <p class="subcard-title">Enhancing Delivery Resources - Audio and video files</p>
+                            <p class="subcard-title">Enhancing Delivery Resources - Audio and video files<span
+                                    class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: 2px; margin-top: -14px;"><span
+                                        class="tooltip-text">Audio and video files to augment your DISC presentations
+                                        and training sessions, making them more interactive and engaging.</span>
+                                </span></p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredEnhancingDeliveryResourcesAudioVideoFiles" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
@@ -307,7 +336,12 @@
                         </div>
                         <div v-if="toggleStates['report&tools']" class="subcard">
                             <br />
-                            <p class="subcard-title">Debriefing and Assessment Report Details</p>
+                            <p class="subcard-title">Debriefing and Assessment Report Details<span class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: 2px; margin-top: -14px;"><span
+                                        class="tooltip-text">Guides and Resources for using the report content
+                                        effectively.</span>
+                                </span></p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDebriefingAssessmentReportDetails" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
@@ -1063,7 +1097,6 @@ export default {
         }
     }
 
-
     .subcard {
         background-color: white;
         color: #213C85;
@@ -1182,6 +1215,38 @@ export default {
         }
     }
 
+    .tooltip {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .tooltip-text {
+        visibility: hidden;
+        width: 300px;
+        background-color: #213C85;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        z-index: 120;
+        bottom: -70px;
+        /* Position the tooltip above the icon */
+        left: 50%;
+        margin-left: -100px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 12px;
+        line-height: 1.2em;
+    }
+
+    .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
     @media (max-width: 768px) {
         .row {
             flex-wrap: wrap;
@@ -1271,6 +1336,7 @@ export default {
         .subcard-title {
             margin-left: 0px;
             font-size: 1em !important;
+            line-height: 1.5em;
         }
 
         .subcard-links {
