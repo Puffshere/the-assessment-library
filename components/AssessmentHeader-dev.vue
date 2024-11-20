@@ -172,6 +172,10 @@
         }
     }
 
+    ul {
+        font-family: $nunito-family;
+    }
+
     @media screen and (max-width: $breakpoint-med) {
         .feature-callout {
             .icon {

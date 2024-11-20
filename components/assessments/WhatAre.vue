@@ -22,32 +22,30 @@
                                     alt="hr icon" style="width: 70px;">
                                 <p>
                                     <strong>Assessment Tools for Human Resources</strong><br />
-                                    Our HR <strong>assessment tools</strong> help streamline recruitment, support
+                                    Our HR assessment tools help streamline recruitment, support
                                     employee career
                                     development, and optimize performance management. Tools such as DISC Leadership,
-                                    DISC Workplace Insights, and DISC 360° provide valuable <strong>assessment methods
-                                        and
-                                        surveys</strong> to identify talent, foster growth, and improve team
+                                    DISC Workplace Insights, and DISC 360° provide valuable assessment methods
+                                    and
+                                    surveys to identify talent, foster growth, and improve team
                                     performance.
                                 </p>
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
                                     alt="hr icon" style="width: 70px;">
                                 <p>
                                     <strong>Assessment Tools for Coaching</strong><br />
-                                    In the coaching industry, <strong>assessment tools</strong> and
-                                    <strong>surveys</strong> are essential for developing
+                                    In the coaching industry, assessment tools and surveys are essential for developing
                                     self-awareness, identifying strengths, and guiding personal and professional
                                     development. Tools like DISC and Motivators assessments provide critical insights
                                     that allow coaches to design personalized development plans and measure clients'
-                                    progress over time, ensuring a more effective <strong>assessment process</strong>
-                                    that leads to
+                                    progress over time, ensuring a more effective assessment process that leads to
                                     tangible outcomes.
                                 </p>
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
                                     alt="hr icon" style="width: 70px;">
                                 <p>
                                     <strong>Assessment Tools for Leadership Development</strong><br />
-                                    Leadership development relies on effective <strong>assessment tools</strong> to evaluate
+                                    Leadership development relies on effective assessment tools to evaluate
                                     competencies, communication styles, and emotional intelligence. By using tools such
                                     as DISC Executive Insights and Motivators, organizations can cultivate stronger
                                     leadership teams, align leaders' behaviors with company goals, and promote long-term

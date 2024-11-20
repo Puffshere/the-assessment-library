@@ -18,7 +18,7 @@
                                         <h5>Reliability</h5>
                                     </div>
                                     <p>
-                                        Reliability refers to the consistency of an <strong>assessment tool</strong>.
+                                        Reliability refers to the consistency of an assessment tool.
                                         Reliable tools produce stable results across different scenarios and times,
                                         regardless of external factors. Assessments 24x7's tools are built on
                                         scientifically validated frameworks, ensuring that results remain consistent
@@ -33,7 +33,7 @@
                                         <h5>Validity</h5>
                                     </div>
                                     <p>
-                                        A valid <strong>assessment tool</strong> accurately measures what it is intended
+                                        A valid assessment tool accurately measures what it is intended
                                         to measure, ensuring that results are meaningful and reliable. At Assessments
                                         24x7,
                                         our assessments are rigorously tested for content, construct, and
@@ -51,7 +51,7 @@
                                         <h5>Fairness</h5>
                                     </div>
                                     <p>
-                                        Fairness ensures that an <strong>assessment tool</strong> is free from bias and
+                                        Fairness ensures that an assessment tool is free from bias and
                                         provides equal opportunities for all participants. Our assessments undergo
                                         thorough analysis to eliminate biases related to gender, age, ethnicity, and
                                         other
@@ -67,7 +67,7 @@
                                     </div>
                                     <p>
                                         Standardization in the questionnaire ensures consistency in testing methods.
-                                        Standardized <strong>assessment tools</strong> offer a uniform process for
+                                        Standardized assessment tools offer a uniform process for
                                         administration, scoring, and interpretation, ensuring that all participants are
                                         assessed under the same conditions. This ensures that the results are comparable
                                         across individuals and groups. At Assessments 24x7, our tools follow a
@@ -77,8 +77,8 @@
                                         informed decisions based on standardized data.
                                     </p>
                                     <div style="display: flex; justify-content: center; margin-top: 30px;">
-                                        <button @click="learnMoreButton" class="blue">
-                                            Learn More
+                                        <button @click="learnMoreButton" class="blue" style="width: 325px;">
+                                            Learn More About Our Validation Process
                                         </button>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@
 export default {
     methods: {
         learnMoreButton(event) {
-            window.location.href = '/contact';
+            window.location.href = '/about/validity';
             event.target.blur();
         }
     }

@@ -5,18 +5,19 @@
                 <div class="col-12" style="text-align: center;">
                     <h1>
                         Choosing Assessment 24x7 as Your <br />
-                        Right Assessment Tool Provider
+                        Assessment Tool Provider
                     </h1>
                     <p>
-                        When choosing an <strong>assessment tool</strong> provider, select one that offers customizable solutions to fit
-                        your needs. Assessments 24x7 provides user-friendly options that accurately measure skills,
-                        performance, and potential. Whether in the classroom or corporate setting, our tools support
-                        your goals with reliable, valid, and fair assessments.
+                        Assessments 24x7 offers intuitive, customizable tools that effectively gauge behavioral styles,
+                        communication dynamics, and interpersonal tendencies. Our assessments support diverse
+                        environments, from educational settings to corporate landscapes, ensuring insights that are
+                        reliable, valid, and equitable.
                     </p>
                     <button @click="learnMoreButton" class="blue" style="margin-top: 10px; margin-bottom: 30px;">
                         Book Live Demo
                     </button>
-                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/choosingGraphic.webp" alt="choosing image" style="width: 100%;">
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/choosingGraphic.webp"
+                        alt="choosing image" style="width: 100%;">
                 </div>
             </div>
         </div>
