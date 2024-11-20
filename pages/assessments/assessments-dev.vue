@@ -416,4 +416,17 @@ img {
     justify-content: left;
     gap: 20px;
 }
+
+.container {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px 15px;
+        margin-bottom: 30px;
+    }
+}
 </style>

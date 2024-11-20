@@ -78,9 +78,15 @@
     </section>
 </template>
 
+
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
+
+section {
+    height: auto;
+    margin-bottom: 30px;
+}
 
 .section {
     height: 748px;
@@ -94,7 +100,22 @@
     background: #FFF;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0 40px 10px 40px;
+    margin-bottom: 40px;
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+    .section {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .bottomContainer {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
 </style>
