@@ -20,7 +20,7 @@
                                 style="text-decoration: underline;">Trust-Based Leadership</span> | <span
                                 style="text-decoration: underline;">Sales Optimization</span>
                         </p>
-                        <button @click="heroButton" class="light" style="margin-top: 20px;">
+                        <button @click="modulesButton" class="light" style="margin-top: 20px;">
                             View Modules
                         </button>
                     </div>
@@ -64,201 +64,97 @@
             </div>
         </section>
 
+        <section>
+            <div class="content-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 style="margin-bottom: 20px; color: #213C85;" class="comprehensiveHeader">Comprehensive
+                                resources included with each
+                                DISC
+                                workshop module</h3>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h3 style="margin-bottom: 20px; color: #213C85;">Comprehensive resources included with each DISC
-                        workshop module</h3>
+                            <p style="color: #213C85; font-weight: 700; margin-bottom: -15px;">
+                                Each DISC workshop module provides instructors with all the tools needed to deliver
+                                impactful
+                                training sessions, including:
+                            </p>
 
-                    <p style="color: #213C85; font-weight: 700; margin-bottom: -15px;">
-                        Each DISC workshop module provides instructors with all the tools needed to deliver impactful
-                        training sessions, including:
-                    </p>
+                            <ul style="color: #213C85;">
+                                <li>Presentation & Training Materials – PowerPoint presentations, leader and participant
+                                    guides,
+                                    and engaging activities</li>
+                                <li>Marketing Resources – Ready-to-use materials to promote workshops effectively</li>
+                                <li>Orientation Video – A guide to using all materials within the module</li>
+                            </ul>
 
-                    <ul style="color: #213C85;">
-                        <li>Presentation & Training Materials – PowerPoint presentations, leader and participant guides,
-                            and engaging activities</li>
-                        <li>Marketing Resources – Ready-to-use materials to promote workshops effectively</li>
-                        <li>Orientation Video – A guide to using all materials within the module</li>
-                    </ul>
+                            <br />
 
-                    <br />
+                            <div class="row cert-div">
+                                <div class="col-1 cert">
+                                    <img class="image-DISC-Cert" src="/images/disc-cert-badge.png"
+                                        alt="DISC Certification">
+                                </div>
 
-                    <div class="row cert-div">
-                        <div class="col-3 cert">
-                            <img class="image-DISC-Cert" src="/images/disc-cert-badge.png" alt="DISC Certification">
+                                <div class="col-9">
+                                    <p class="disc-cert-text">
+                                        DISC Certification is required prior to purchasing any DISC Workshop Leader
+                                        Essentials
+                                        package.
+                                    </p>
+                                    <br />
+                                    <p class="disc-cert-text bottomText" style="margin-top: -40px">
+                                        Continuing Education credits are not available for DISC Workshop Leader
+                                        Essentials
+                                        programs.
+                                    </p>
+                                </div><br />
+                            </div>
+
+                            <br />
+
+                            <p style="color: #213C85; font-weight: 700; margin-bottom: 0px;">
+                                Getting started checklist: To launch your workshop smoothly, follow these steps:
+                            </p>
+                            <div class="col-6">
+                                <ol style="color: #213C85;">
+                                    <li>
+                                        Watch the orientation video
+                                    </li>
+                                    <li>
+                                        Review the workshop training video
+                                    </li>
+                                    <li>
+                                        Study training materials & other resources
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="col-6">
+                                <ol style="color: #213C85;" start="4">
+                                    <li class="listedItem">
+                                        Market your workshop
+                                    </li>
+                                    <li>
+                                        Prepare using the included Planning Checklist
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
 
-                        <div class="col-9">
-                            <p class="disc-cert-text">
-                                DISC Certification is required prior to purchasing any DISC Workshop Leader Essentials
-                                package.
-                                <br />
-                                Continuing Education credits are not available for DISC Workshop Leader Essentials
-                                programs.
-                            </p>
-                        </div><br />
                     </div>
-
-                    <br />
-
-                    <p style="color: #213C85; font-weight: 700; margin-bottom: -15px;">
-                        Getting started checklist: To launch your workshop smoothly, follow these steps:
-                    </p>
-
-                </div>
-            </div>
-        </div><br /><br />
-
-        <section class="table">
-            <div class="container" style="color: white; padding: 50px 0px 50px 0px;">
-                <div class="row">
-                    <div class="col-3">
-                        <img class="image" src="~/assets/workshop-certification-images/communication.jpeg"
-                            alt="Self-awareness and Communication">
-                    </div>
-
-                    <div class="col-9">
-                        <h3>Self-awareness and Communication</h3>
-
-                        <p>
-                            This course helps workshop participants gain a deeper understanding of themselves and how
-                            they
-                            interact with others. It reveals each participant's unique behavioral style and provides
-                            practical
-                            guidance on how to use this knowledge to improve communication and relationships.
-                            Most interpersonal conflict is caused by misunderstanding and communication breakdowns. By
-                            understanding their own behavioral style and the styles of others, anyone can learn to
-                            communicate
-                            more effectively and build stronger relationships. This can lead to reduced conflict,
-                            increased
-                            productivity, and improved performance in both professional and personal relationships.
-                        </p>
+                    <div class="button-container"
+                        style="gap: 20px; display: flex; justify-content: left; margin: 40px 0px;">
+                        <button @click="modulesButton" class="light">View Modules</button>
+                        <button @click="contactButton" class="blue">Book Live Demo</button>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-3">
-                        <img class="image" src="~/assets/workshop-certification-images/peer-to-leader.jpeg"
-                            alt="Transitioning from Peer to Leader">
-                    </div>
-
-                    <div class="col-9">
-                        <h3>Transitioning from Peer to Leader</h3>
-
-                        <p>
-                            Transitioning from Peer to Leader prepares new leaders for the many challenges of their new
-                            role.
-                            Participants will learn how to effectively communicate with employees, manage performance
-                            expectations, and develop action plans. The course is centered around understanding the
-                            different
-                            roles and responsibilities of successful contributors as they make the transition to
-                            leadership.
-                            Participants will learn how to use DISC communication skills to navigate employee stressors
-                            and
-                            build strong relationships. They will also learn how to set clear expectations and provide
-                            feedback
-                            in a way that motivates employees. Moving from peer to leader can be a significant change,
-                            but
-                            this
-                            course can help new leaders make a smoother transition by gaining the critical skills and
-                            knowledge
-                            they need to take on their new role.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-3">
-                        <img class="image" src="~/assets/workshop-certification-images/trust.jpeg"
-                            alt="Trust-Based Leadership">
-                    </div>
-
-                    <div class="col-9">
-                        <h3>Trust-based Leadership</h3>
-
-                        <p>
-                            Trust is the foundation of all strong relationships. The most critical relationships in an
-                            organization are those between leaders and individual contributors. DISC Workshop Leader
-                            Essentials:
-                            Trust-based Leadership can help organizations create an environment of leadership influence
-                            rooted
-                            in trust by teaching effective communication, credibility, and confidence. Participants will
-                            grow to
-                            understand the impact of their leadership style on others, communicate effectively with
-                            different
-                            behavioral styles, build credibility and earn trust, create an environment of accountability
-                            and
-                            responsibility, and identify individual and team needs. By focusing on the leadership roles
-                            and
-                            responsibilities that create trusting relationships, organizations can ensure a productive
-                            work
-                            environment focused on growth and retention.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-3">
-                        <img class="image" src="~/assets/workshop-certification-images/make-teams-work.jpeg"
-                            alt="Making Teams Work">
-                    </div>
-
-                    <div class="col-9">
-                        <h3>Making Teams Work</h3>
-
-                        <p>
-                            Teamwork is the combined action of a group of people, especially when it is effective and
-                            efficient.
-                            This DISC workshop can help organizations develop the skills, strategies, and tools they
-                            need to
-                            create teams that excel. During this team-focused skill-building course, participants will
-                            learn
-                            to
-                            assemble and interact with teams based on complementary behaviors as well as embracing and
-                            understanding diversity and its benefits. This will help to improve communication,
-                            cooperation,
-                            and
-                            results-based outcomes. Participants will also learn to distinguish varying beliefs and
-                            behaviors
-                            using the insightful DISC Team Dynamics report.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-3">
-                        <img class="image" src="~/assets/workshop-certification-images/sales.jpeg"
-                            alt="Sales Optimization">
-                    </div>
-
-                    <div class="col-9">
-                        <h3>Sales Optimization</h3>
-
-                        <p>
-                            DISC is a powerful tool that can be used to improve sales performance by understanding the
-                            behavioral styles of others and adapting your selling strategy to identify and meet the
-                            needs of
-                            your prospects. This can lead to more closed deals and stronger, longer relationships with
-                            clients.
-                            In addition to identifying behavioral, communication, and buying styles, this course will
-                            also
-                            teach
-                            participants to build and maintain relationships with clients, transform buyers into brand
-                            advocates, identify client needs, manage expectations, and complete a thorough exploration
-                            of a
-                            sales process from A to Z. This course is ideal for sales professionals of all levels who
-                            want
-                            to
-                            improve their sales skills and build customer retention.
-                        </p><br />
-                    </div>
-                </div>
+                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
             </div>
         </section>
-
-        <div class="section">
+        <br />
+        <br />
+        <modules-fold></modules-fold>
+        <div class="section" id="video">
             <div class="container"
                 style="padding-top: 25px; padding-bottom: 70px; display: flex; justify-content: center;">
                 <div class="row videoRow">
@@ -271,11 +167,11 @@
                     </p>
                     <video id="myVideo" controls>
                         <source
-                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/Success+Magazine/fold2-video.mp4"
+                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/DWLE+Tour+-+11.12.24.mp4"
                             type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
-                    <button @click="scrollToContactFormSection" class="blue" style="margin-top: 20px;">
+                    <button @click="contactButton" class="blue" style="margin-top: 20px;">
                         Get Started
                     </button>
                 </div>
@@ -289,11 +185,13 @@
 
 <script>
 import LazyHydrate from 'vue-lazy-hydration';
+import ModulesFold from '@/components/discWorkshopEssentials/ModulesFold';
 
 export default {
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
+        'modules-fold': ModulesFold,
         'kevin-mccarthy': () => import('@/components/testimonials/KevinMcCarthy'),
         'footer-fold': () => import('@/components/Footer'),
         'credits': () => import('@/components/Credits')
@@ -344,18 +242,22 @@ export default {
         }
     },
     methods: {
-        heroButton(event) {
-            const element = document.getElementById('');
+        modulesButton(event) {
+            const element = document.getElementById('modules');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             event.target.blur();
         },
         empowerButton(event) {
-            const element = document.getElementById('');
+            const element = document.getElementById('video');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
+            event.target.blur();
+        },
+        contactButton(event) {
+            window.location.href = 'https://www.assessments24x7.com/contact';
             event.target.blur();
         }
     }
@@ -393,13 +295,21 @@ export default {
         ;
     }
 
+    .container-wrapper {
+        position: relative;
+    }
+
+    .accents-right {
+        position: absolute;
+        right: 0;
+        bottom: 0px;
+        width: 45%;
+        z-index: 5;
+    }
+
     .boxImage {
         margin-top: 20px;
         width: 87%;
-    }
-
-    .table {
-        background: linear-gradient(180deg, #0033C5 -2.43%, #077FF8 97.57%);
     }
 
     video {
@@ -434,13 +344,8 @@ export default {
         }
     }
 
-    .image {
-        width: 100%;
-        border-radius: 20px;
-    }
-
     .cert {
-        text-align: center;
+        margin-right: 20px;
     }
 
     .cert-credits {
@@ -457,9 +362,8 @@ export default {
     }
 
     .image-DISC-Cert {
-        width: 30%;
+        width: 59px;
         border-radius: 20px;
-        margin-left: 20px;
     }
 
     .disc-cert-text {
@@ -484,6 +388,12 @@ export default {
         }
     }
 
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
     @media (max-width: 1029px) {
         .hero {
             padding-top: 0px !important;
@@ -493,6 +403,52 @@ export default {
             margin-bottom: 20px;
         }
 
+        .listedItem {
+            margin-top: -48px;
+        }
+
+        .light {
+            margin: 0px !important;
+        }
+
+        .button-container {
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0px !important;
+        }
+
+        .button-container button {
+            margin: 0px 0;
+        }
+
+        .comprehensiveHeader {
+            text-align: center;
+        }
+
+        .cert-div {
+            flex-direction: column;
+            text-align: center;
+            padding: 0px 10px;
+        }
+
+        .cert {
+            margin-right: 0;
+            margin-bottom: -10px;
+            margin-top: 20px;
+        }
+
+        .image-DISC-Cert {
+            width: 80px;
+        }
+
+        .disc-cert-text {
+            text-align: left;
+        }
+
+        .bottomText {
+            margin-top: -25px !important;
+            margin-bottom: 0px;
+        }
     }
 }
 </style>
