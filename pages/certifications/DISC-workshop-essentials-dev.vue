@@ -20,7 +20,7 @@
                                 style="text-decoration: underline;">Trust-Based Leadership</span> | <span
                                 style="text-decoration: underline;">Sales Optimization</span>
                         </p>
-                        <button @click="modulesButton" class="light" style="margin-top: 20px;">
+                        <button @click="modulesButton" class="light heroBtn" style="margin-top: 20px;">
                             View Modules
                         </button>
                     </div>
@@ -66,6 +66,7 @@
 
         <section>
             <div class="content-wrapper">
+                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="accent graphic" class="accents-right">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -97,6 +98,7 @@
                                 </div>
 
                                 <div class="col-9">
+                                    programs.
                                     <p class="disc-cert-text">
                                         DISC Certification is required prior to purchasing any DISC Workshop Leader
                                         Essentials
@@ -106,7 +108,6 @@
                                     <p class="disc-cert-text bottomText" style="margin-top: -40px">
                                         Continuing Education credits are not available for DISC Workshop Leader
                                         Essentials
-                                        programs.
                                     </p>
                                 </div><br />
                             </div>
@@ -130,7 +131,7 @@
                                 </ol>
                             </div>
                             <div class="col-6">
-                                <ol style="color: #213C85;" start="4">
+                                <ol style="color: #213C85;" start="4" class="lastListed">
                                     <li class="listedItem">
                                         Market your workshop
                                     </li>
@@ -148,7 +149,6 @@
                         <button @click="contactButton" class="blue">Book Live Demo</button>
                     </div>
                 </div>
-                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
             </div>
         </section>
         <br />
@@ -171,7 +171,7 @@
                             type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
-                    <button @click="contactButton" class="blue" style="margin-top: 20px;">
+                    <button @click="contactButton" class="blue videoBtn" style="margin-top: 20px;">
                         Get Started
                     </button>
                 </div>
@@ -295,16 +295,16 @@ export default {
         ;
     }
 
-    .container-wrapper {
+    .content-wrapper {
         position: relative;
     }
 
     .accents-right {
         position: absolute;
+        bottom: -90px;
         right: 0;
-        bottom: 0px;
-        width: 45%;
-        z-index: 5;
+        max-width: 45%;
+        z-index: -1;
     }
 
     .boxImage {
@@ -396,19 +396,34 @@ export default {
 
     @media (max-width: 1029px) {
         .hero {
+            padding-bottom: 60px !important;
+        }
+
+        .hero,
+        h2,
+        h4,
+        p {
             padding-top: 0px !important;
+            text-align: center !important;
+        }
+
+        .heroBtn {
+            margin: 30px 0px !important;
         }
 
         button {
             margin-bottom: 20px;
         }
 
-        .listedItem {
-            margin-top: -48px;
+        .boxImage {
+            width: 70%;
+            margin: 20px auto !important;
+            margin-bottom: -20px !important;
+            display: block;
         }
 
-        .light {
-            margin: 0px !important;
+        .listedItem {
+            margin-top: -48px;
         }
 
         .button-container {
@@ -448,6 +463,24 @@ export default {
         .bottomText {
             margin-top: -25px !important;
             margin-bottom: 0px;
+        }
+
+        .accents-right {
+            display: none;
+        }
+
+        .text-button-container {
+            align-items: center !important;
+            text-align: center;
+        }
+
+        .text-button-container button {
+            margin: 20px auto !important;
+            align-self: center;
+        }
+
+        .videoBtn {
+            margin-bottom: -20px;
         }
     }
 }
