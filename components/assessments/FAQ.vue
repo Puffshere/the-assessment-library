@@ -36,7 +36,7 @@
                 <div class="col-12">
                     <h4 class="question">Are the assessment tools provided by Assessment 24x7 customizable?</h4>
                     <p class="answer">
-                        Yes, Assessments 24x7 offers <a href="/customizations">highly customizable tools</a> that can be
+                        Yes, Assessments 24x7 offers <a href="/customizations" class="hyperlink">highly customizable tools</a> that can be
                         adapted to meet the unique
                         requirements of any organization or coaching practice. With flexible options for branding,
                         reporting, and language, our assessments can be precisely configured to align with your specific

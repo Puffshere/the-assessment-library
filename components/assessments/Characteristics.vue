@@ -77,7 +77,7 @@
                                         informed decisions based on standardized data.
                                     </p>
                                     <div style="display: flex; justify-content: center; margin-top: 30px;">
-                                        <button @click="learnMoreButton" class="blue" style="width: 325px;">
+                                        <button @click="learnMoreButton" class="blue" style="min-width: 325px;">
                                             Learn More About Our Validation Process
                                         </button>
                                     </div>

@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="disc">
                 <div class="col-12">
                     <div class="section-hero disc">
                         <img class="globe-tex" src="~assets/globe-bg.png">
@@ -329,7 +329,7 @@
 
             <br /><br /><br />
 
-            <div class="row">
+            <div class="row" id="motivators">
                 <div class="col-12">
                     <div class="section-hero mot">
                         <img class="globe-tex" src="~assets/globe-bg.png">
@@ -1758,10 +1758,10 @@
                             <div class="col-12">
                                 <h1>Sales IQ Reports</h1>
 
-                                <a class="hyperlink" 
+                                <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlus.pdf"
                                     target="_blank" rel="noopener">English</a><br />
-                                <a class="hyperlink" 
+                                <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusChinese.pdf"
                                     target="_blank" rel="noopener">Chinese</a><br />
                                 <a class="hyperlink"
