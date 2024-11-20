@@ -1,65 +1,74 @@
 <template>
     <section>
-        <div class="container" style="position: relative; z-index: 10;">
-            <div class="row">
-                <div class="col-12" style="color: white;">
-                    <h3>
-                        What Are Assessment Tools?
-                    </h3>
-                    <p>
-                        Our assessment tools evaluate communication styles, motivators, and emotional intelligence.
-                        These tools yield essential assessment data that help organizations align workforce strategies
-                        with business goals. From improving employee performance to enhancing team collaboration,
-                        assessment results drive decision-making and best practices in HR, coaching, and leadership.
-                    </p>
-                    <div class="bottomContainer" style="color: #252430; text-align: center;">
-                        <div class="row">
-                            <div class="col-12">
-                                <h3 style="margin-bottom: 40px;">
-                                    Types of Assessment Tools
-                                </h3>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
-                                    alt="hr icon" style="width: 70px;">
-                                <p>
-                                    <strong>Assessment Tools for Human Resources</strong><br />
-                                    Our HR assessment tools help streamline recruitment, support
-                                    employee career
-                                    development, and optimize performance management. Tools such as <a
-                                        href="/sample-reports/#disc" class="hyperlink">DISC Leadership</a>,
-                                    <a href="/sample-reports/#disc" class="hyperlink">DISC Workplace Insights</a>, and
-                                    <a href="/sample-reports/#disc" class="hyperlink">DISC 360°</a> provide valuable
-                                    assessment methods
-                                    and
-                                    surveys to identify talent, foster growth, and improve team
-                                    performance.
-                                </p>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
-                                    alt="hr icon" style="width: 70px;">
-                                <p>
-                                    <strong>Assessment Tools for Coaching</strong><br />
-                                    In the coaching industry, assessment tools and surveys are essential for developing
-                                    self-awareness, identifying strengths, and guiding personal and professional
-                                    development. Tools like <a href="/sample-reports/#disc" class="hyperlink">DISC</a>
-                                    and <a href="/sample-reports/#motivators" class="hyperlink">Motivators</a>
-                                    assessments provide critical insights
-                                    that allow coaches to design personalized development plans and measure clients'
-                                    progress over time, ensuring a more effective assessment process that leads to
-                                    tangible outcomes.
-                                </p>
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
-                                    alt="hr icon" style="width: 70px;">
-                                <p>
-                                    <strong>Assessment Tools for Leadership Development</strong><br />
-                                    Leadership development relies on effective assessment tools to evaluate
-                                    competencies, communication styles, and emotional intelligence. By using tools such
-                                    as <a href="/sample-reports/#disc" class="hyperlink">DISC Executive Insights</a> and
-                                    <a href="/sample-reports/#motivators" class="hyperlink">Motivators</a>,
-                                    organizations can cultivate stronger
-                                    leadership teams, align leaders' behaviors with company goals, and promote long-term
-                                    success through targeted development programs. These tools also facilitate
-                                    team-building, conflict resolution, and enhanced communication within leadership
-                                    teams.
-                                </p>
+        <div class="section">
+            <div class="container" style="position: relative; z-index: 10;">
+                <div class="row">
+                    <div class="col-12" style="color: white;">
+                        <h3>
+                            What Are Assessment Tools?
+                        </h3>
+                        <p>
+                            Our assessment tools evaluate communication styles, motivators, and emotional intelligence.
+                            These tools yield essential assessment data that help organizations align workforce
+                            strategies
+                            with business goals. From improving employee performance to enhancing team collaboration,
+                            assessment results drive decision-making and best practices in HR, coaching, and leadership.
+                        </p>
+                        <div class="bottomContainer" style="color: #252430; text-align: center;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 style="margin-bottom: 40px;">
+                                        Types of Assessment Tools
+                                    </h3>
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
+                                        alt="hr icon" style="width: 70px;">
+                                    <p>
+                                        <strong>Assessment Tools for Human Resources</strong><br />
+                                        Our HR assessment tools help streamline recruitment, support
+                                        employee career
+                                        development, and optimize performance management. Tools such as <a
+                                            href="/sample-reports/#disc" class="hyperlink">DISC Leadership</a>,
+                                        <a href="/sample-reports/#disc" class="hyperlink">DISC Workplace Insights</a>,
+                                        and
+                                        <a href="/sample-reports/#disc" class="hyperlink">DISC 360°</a> provide valuable
+                                        assessment methods
+                                        and
+                                        surveys to identify talent, foster growth, and improve team
+                                        performance.
+                                    </p>
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
+                                        alt="hr icon" style="width: 70px;">
+                                    <p>
+                                        <strong>Assessment Tools for Coaching</strong><br />
+                                        In the coaching industry, assessment tools and surveys are essential for
+                                        developing
+                                        self-awareness, identifying strengths, and guiding personal and professional
+                                        development. Tools like <a href="/sample-reports/#disc"
+                                            class="hyperlink">DISC</a>
+                                        and <a href="/sample-reports/#motivators" class="hyperlink">Motivators</a>
+                                        assessments provide critical insights
+                                        that allow coaches to design personalized development plans and measure clients'
+                                        progress over time, ensuring a more effective assessment process that leads to
+                                        tangible outcomes.
+                                    </p>
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HRIcon.webp"
+                                        alt="hr icon" style="width: 70px;">
+                                    <p>
+                                        <strong>Assessment Tools for Leadership Development</strong><br />
+                                        Leadership development relies on effective assessment tools to evaluate
+                                        competencies, communication styles, and emotional intelligence. By using tools
+                                        such
+                                        as <a href="/sample-reports/#disc" class="hyperlink">DISC Executive Insights</a>
+                                        and
+                                        <a href="/sample-reports/#motivators" class="hyperlink">Motivators</a>,
+                                        organizations can cultivate stronger
+                                        leadership teams, align leaders' behaviors with company goals, and promote
+                                        long-term
+                                        success through targeted development programs. These tools also facilitate
+                                        team-building, conflict resolution, and enhanced communication within leadership
+                                        teams.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -73,7 +82,7 @@
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
 
-section {
+.section {
     height: 748px;
     background: linear-gradient(180deg, #0033C5 -2.43%, #077FF8 97.57%);
 }
