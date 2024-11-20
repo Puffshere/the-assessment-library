@@ -66,7 +66,7 @@
                 <div class="row" @click="handleClick">
                     <div class="col-6">
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+The+Fundamentals_+DISC.png"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/The+Fundamentals_+DISC.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="fundamentals">
@@ -134,7 +134,7 @@
                             </ul>
                         </div>
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Training+%26+Workshops.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Training+%26+Workshops.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="t&w">
@@ -232,7 +232,7 @@
                             </ul>
                         </div>
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Implementation+%26+Application.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Implementation+%26+Application.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="i&a">
@@ -276,7 +276,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+360+Resources.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/360+Resources.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="360">
@@ -299,7 +299,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Additional+Support+Materials.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Additional+Support+Materials.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="support">
@@ -325,7 +325,7 @@
                     </div>
                     <div class="col-6">
                         <div class="card mediaCards">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Assessment+Report+Tools.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Assessment+Report+Tools.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="report&tools">
@@ -365,7 +365,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Coaching+with+DISC.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Coaching+with+DISC.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="coaches">
@@ -381,7 +381,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Marketing.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Marketing.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="marketing">
@@ -415,7 +415,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Product+Specific+Resources.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Product+Specific+Resources.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="product">
@@ -506,7 +506,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/%2B+Quick+Links.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Quick+Links.webp"
                                 alt="icon" class="icon" />
                             <div>
                                 <h4 data-category="quick&links">
