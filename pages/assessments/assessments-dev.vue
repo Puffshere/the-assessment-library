@@ -8,7 +8,7 @@
         <LazyHydrate when-visible>
             <what-are></what-are>
         </LazyHydrate>
-        <div class="container" style="position: relative; z-index: 1;">
+        <div class="container content" style="position: relative; z-index: 1;">
             <div class="row">
                 <div class="col-12">
                     <h5 style="margin-bottom: 0px;">DISC and Motivators – The Foundation Assessments</h5>
@@ -417,14 +417,14 @@ img {
     gap: 20px;
 }
 
-.container {
+.content {
     position: relative;
     z-index: 1;
     margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
-    .container {
+    .content {
         padding: 10px 15px;
         margin-bottom: 30px;
     }
