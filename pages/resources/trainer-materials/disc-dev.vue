@@ -1229,14 +1229,13 @@ export default {
         text-align: center;
         border-radius: 5px;
         padding: 10px;
-        position: absolute;
+        position: fixed;
         z-index: 120;
-        bottom: -70px;
-        /* Position the tooltip above the icon */
         left: 50%;
-        margin-left: -100px;
+        margin-top: 30px;
+        transform: translateX(-50%);
         opacity: 0;
-        transition: opacity 0.3s;
+        transition: opacity 0.3s, top 0.3s;
         font-size: 12px;
         line-height: 1.2em;
     }
@@ -1245,7 +1244,6 @@ export default {
         visibility: visible;
         opacity: 1;
     }
-
 
     @media (max-width: 768px) {
         .row {
@@ -1343,6 +1341,5 @@ export default {
             margin-left: 0px;
         }
     }
-
 }
 </style>
