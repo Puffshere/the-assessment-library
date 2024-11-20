@@ -104,6 +104,11 @@ section {
 }
 
 @media (max-width: 1200px) {
+    section {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
     .bottomContainer {
         padding: 20px;
         margin-bottom: 30px;
