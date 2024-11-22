@@ -84,7 +84,7 @@
 @import '~assets/scss/new-styles';
 
 section {
-    height: auto;
+    height: 900px;
     margin-bottom: 30px;
 }
 

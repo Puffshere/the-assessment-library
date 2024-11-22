@@ -126,7 +126,6 @@ section {
     padding: 0 40px 10px 40px;
 }
 
-/* Styles for aligning the heading with the checkmark on the same line */
 .heading-container {
     display: flex;
     align-items: center;
@@ -143,7 +142,6 @@ section {
 h5 {
     margin: 0;
     margin-bottom: -15px;
-    /* Remove default margin to ensure proper vertical alignment */
 }
 
 .sectionMiddle {
@@ -163,10 +161,9 @@ h5 {
     }
 
     section {
-    height: auto;
-    margin-bottom: 0px;
-}
-
+        height: auto;
+        margin-bottom: 0px;
+    }
 
     .sectionMiddle {
         display: none !important;
