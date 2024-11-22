@@ -159,15 +159,21 @@ h5 {
 @media (max-width: 1200px) {
     .total {
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
 
+    section {
+    height: auto;
+    margin-bottom: 0px;
+}
+
+
     .sectionMiddle {
-        display: none;
+        display: none !important;
     }
 
     .sectionBottom {
-        display: none;
+        display: none !important;
     }
 }
 </style>
