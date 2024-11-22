@@ -104,8 +104,13 @@ section {
 }
 
 @media (max-width: 1200px) {
+    section {
+        height: auto !important;
+        margin-bottom: 20px;
+    }
+    
     .section {
-        height: auto;
+        height: auto !important;
         margin-bottom: 20px;
     }
 
