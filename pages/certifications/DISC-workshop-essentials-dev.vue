@@ -11,14 +11,19 @@
                         <h4
                             style="text-align: left; color: white; font-weight: 400; margin-top: -15px; line-height: normal;">
                             Five ready-to-use training modules <br />
-                            for DISC Certified Trainer
+                            for DISC Certified Trainers
                         </h4>
                         <p class="heroText">
-                            <span style="text-decoration: underline;">Self-Awareness and Communication</span> | <span
-                                style="text-decoration: underline;">Transitioning from Peer to Leader</span> <br />
-                            <span style="text-decoration: underline;">Making Teams Work</span> | <span
-                                style="text-decoration: underline;">Trust-Based Leadership</span> | <span
-                                style="text-decoration: underline;">Sales Optimization</span>
+                            <span style="text-decoration: underline;"><a href="#self-awareness" class="hyperlink"
+                                    style="color: white;">Self-Awareness and Communication</a></span> | <span
+                                style="text-decoration: underline;"><a href="#transitioning" class="hyperlink"
+                                    style="color: white;">Transitioning from Peer to Leader</a></span> <br />
+                            <span style="text-decoration: underline;"><a href="#team-work" class="hyperlink"
+                                    style="color: white;">Making Teams Work</a></span> | <span
+                                style="text-decoration: underline;"><a href="#trust-based" class="hyperlink"
+                                    style="color: white;">Trust-Based Leadership</a></span> | <span
+                                style="text-decoration: underline;"><a href="#sales-optimization" class="hyperlink"
+                                    style="color: white;">Sales Optimization</a></span>
                         </p>
                         <button @click="modulesButton" class="light heroBtn" style="margin-top: 20px;">
                             View Modules
@@ -98,7 +103,6 @@
                                 </div>
 
                                 <div class="col-9">
-                                    programs.
                                     <p class="disc-cert-text">
                                         DISC Certification is required prior to purchasing any DISC Workshop Leader
                                         Essentials
@@ -107,7 +111,7 @@
                                     <br />
                                     <p class="disc-cert-text bottomText" style="margin-top: -40px">
                                         Continuing Education credits are not available for DISC Workshop Leader
-                                        Essentials
+                                        Essentials programs.
                                     </p>
                                 </div><br />
                             </div>
@@ -167,7 +171,7 @@
                     </p>
                     <video id="myVideo" controls>
                         <source
-                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/DWLE+Tour+-+11.12.24.mp4"
+                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Workshop+Essentials/DWLE+Tour+-+11.21.24___.mp4"
                             type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
@@ -367,7 +371,7 @@ export default {
     }
 
     .disc-cert-text {
-        color: #0033C5;
+        color: #213C85;
     }
 
     .course-summary {

@@ -12,7 +12,7 @@
                             </div>
                         </div>
                         <div class="col-8 col-md-9">
-                            <div class="card">
+                            <div class="card" id="self-awareness">
                                 <div class="card-header">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Workshop+Essentials/Self+Awareness+Icon.webp"
                                         alt="self-awareness icon" class="icons" style="margin-top: 15px;">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="col-8 col-md-9">
-                            <div class="card">
+                            <div class="card" id="transitioning">
                                 <div class="card-header">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Workshop+Essentials/Transitioning+from+peer+to+leader+Icon.webp"
                                         alt="transitioning icon" class="icons" style="margin-top: 15px;">
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="col-8 col-md-9">
-                            <div class="card">
+                            <div class="card" id="trust-based">
                                 <div class="card-header">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Workshop+Essentials/Trust+Based+Leadership+Icon.webp"
                                         alt="trust-based icon" class="icons" style="margin-top: 15px;">
@@ -121,7 +121,7 @@
                             </div>
                         </div>
                         <div class="col-8 col-md-9">
-                            <div class="card">
+                            <div class="card" id="team-work">
                                 <div class="card-header">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Workshop+Essentials/Making+Teams+Work+Icon.webp"
                                         alt="making teams icon" class="icons">
@@ -158,7 +158,7 @@
                             </div>
                         </div>
                         <div class="col-8 col-md-9">
-                            <div class="card">
+                            <div class="card" id="sales-optimization">
                                 <div class="card-header">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Workshop+Essentials/Sales+Optimization+Icon.webp"
                                         alt="sales optimization icon" class="icons" style="margin-top: 15px;">
@@ -188,7 +188,7 @@
                 </div>
             </div>
             <div style="display: flex; justify-content: center; margin-top: 60px;">
-                <button @click="contact">
+                <button @click="contact" class="light">
                     Get Started
                 </button>
             </div>

@@ -20,7 +20,6 @@
                                     <h3 style="margin-bottom: 40px;">
                                         Types of Assessment Tools
                                     </h3>
-
                                     <div class="icon-title-container">
                                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Assessments/HR+icon.webp"
                                             alt="human resources icon" class="icon">
@@ -72,7 +71,6 @@
                                         resolution, and enhanced communication
                                         within leadership teams.
                                     </p>
-
                                 </div>
                             </div>
                         </div>
