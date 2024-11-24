@@ -614,8 +614,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~assets/scss/vars';
-@import '~assets/scss/new-styles';
+
 
 .assessment-certification {
     .header {
@@ -771,58 +770,58 @@ export default {
     }
 }
 
-.contactFormSection {
-    background-size: cover;
-    background-position: center;
-    min-height: 960px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 40px;
-    position: relative;
+// .contactFormSection {
+//     background-size: cover;
+//     background-position: center;
+//     min-height: 960px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding-top: 40px;
+//     position: relative;
 
-    .container-wrapper {
-        position: relative;
-        width: 100%;
-    }
+//     .container-wrapper {
+//         position: relative;
+//         width: 100%;
+//     }
 
-    .accents-right {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 45%;
-        z-index: -1;
-    }
+//     .accents-right {
+//         position: absolute;
+//         right: 0;
+//         bottom: 0;
+//         width: 45%;
+//         z-index: -1;
+//     }
 
-    h2 {
-        font-weight: 700;
-        text-align: center;
-    }
+//     h2 {
+//         font-weight: 700;
+//         text-align: center;
+//     }
 
-    p {
-        color: #213C85;
-        text-align: center;
-    }
+//     p {
+//         color: #213C85;
+//         text-align: center;
+//     }
 
-    .form-container {
-        width: 100%;
-        max-width: 800px;
-        padding: 20px;
-    }
+//     .form-container {
+//         width: 100%;
+//         max-width: 800px;
+//         padding: 20px;
+//     }
 
-    .container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+//     .container {
+//         height: 100%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//     }
 
-    .col-12 {
-        display: flex;
-        justify-content: center;
-    }
-}
+//     .col-12 {
+//         display: flex;
+//         justify-content: center;
+//     }
+// }
 
 .faq {
     margin-bottom: 80px;
