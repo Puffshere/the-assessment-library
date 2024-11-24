@@ -781,7 +781,6 @@ export default {
     padding-top: 40px;
     position: relative;
 
-
     .container-wrapper {
         position: relative;
         width: 100%;
