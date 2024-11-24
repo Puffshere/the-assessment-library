@@ -440,7 +440,7 @@
                         </p>
                         <div class="col-12 justify-content-center">
                             <div class="form-container">
-                                <contact-form style="background: white;" />
+                                <contact-form-fold style="background: white;" />
                             </div>
                         </div>
                     </div>
@@ -508,7 +508,7 @@ export default {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
-        'contact-form': () => import('@/components/contactForm'),
+        'contact-form-fold': () => import('@/components/contactForm'),
         'footer-fold': () => import('@/components/Footer'),
         'credits': () => import('@/components/Credits')
     },
