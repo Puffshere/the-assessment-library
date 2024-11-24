@@ -426,7 +426,7 @@
             </div>
         </div>
 
-        <section class="contactFormSection">
+        <!-- <section class="contactFormSection">
             <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
                 style="position: absolute; left: 0px; margin-bottom: 855px;" class="accents">
             <div class="container-wrapper">
@@ -447,7 +447,7 @@
                 </div>
                 <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
             </div>
-        </section>
+        </section> -->
 
         <section class="faq">
             <div class="container">
