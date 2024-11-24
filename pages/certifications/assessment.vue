@@ -426,7 +426,7 @@
             </div>
         </div>
 
-        <section id="contactFormSection">
+        <section class="contactFormSection">
             <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
                 style="position: absolute; left: 0px; margin-bottom: 855px;" class="accents">
             <div class="container-wrapper">
@@ -771,7 +771,7 @@ export default {
     }
 }
 
-#contactFormSection {
+.contactFormSection {
     background-size: cover;
     background-position: center;
     min-height: 960px;
