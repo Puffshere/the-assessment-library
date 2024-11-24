@@ -850,11 +850,4 @@ export default {
         margin-bottom: 18px;
     }
 }
-
-@media (max-width: 1200px) {
-    .accents,
-    .accents-right {
-        display: none;
-    }
-}
 </style>
