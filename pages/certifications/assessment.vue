@@ -34,17 +34,20 @@
                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 30px;">
                         <div style="text-align: center;">
                             <a href="#fold7" style="cursor: pointer;"><img class="image" style="max-width: 220px;"
-                                    src="/images/motivators-cert-badge.png" alt="Motivators Badge"></a>
+                                    src="/images/motivators-cert-badge.png"
+                                    alt="Motivators Badge"></a>
 
                         </div>
                         <div style="text-align: center;">
                             <a href="#fold5" style="cursor: pointer;"><img class="image" style="max-width: 220px;"
-                                    src="/images/disc-cert-badge.png" alt="DISC Badge"></a>
+                                    src="/images/disc-cert-badge.png"
+                                    alt="DISC Badge"></a>
 
                         </div>
                         <div style="text-align: center;">
                             <a href="#fold8" style="cursor: pointer;"><img class="image" style="max-width: 220px;"
-                                    src="/images/eiq-cert-badge.png" alt="EIQ Badge"></a>
+                                    src="/images/eiq-cert-badge.png"
+                                    alt="EIQ Badge"></a>
 
                         </div>
                     </div>
@@ -107,7 +110,9 @@
                 <div class="col-12" id="fold5">
                     <h2>DISC Assessment Certification</h2>
                     <div class="col-3">
-                        <img class="image" src="/images/disc-cert-badge.png" alt="disc-cert-badge">
+                        <img class="image"
+                            src="/images/disc-cert-badge.png"
+                            alt="disc-cert-badge">
                     </div>
                     <div class="col-9">
                         <p>
@@ -204,7 +209,9 @@
                 <div class="col-12" id="fold7">
                     <h2 id="motivators">Motivators Assessment Certification</h2>
                     <div class="col-3">
-                        <img class="image" src="/images/motivators-cert-badge.png" alt="mot-cert-badge">
+                        <img class="image"
+                            src="/images/motivators-cert-badge.png"
+                            alt="mot-cert-badge">
                     </div>
                     <div class="col-9">
                         <p>
@@ -242,7 +249,9 @@
                 <div class="col-12" id="fold8">
                     <h2 id="eiq">Emotional Intelligence Certification</h2>
                     <div class="col-3">
-                        <img class="image" src="/images/eiq-cert-badge.png" alt="eiq-cert-badge">
+                        <img class="image"
+                            src="/images/eiq-cert-badge.png"
+                            alt="eiq-cert-badge">
                     </div>
                     <div class="col-9">
                         <p>
@@ -403,7 +412,7 @@
         </div>
 
         <div
-            style="background: linear-gradient(180deg, #0033C5 0%, #077FF8 100%); color: white; padding: 40px 20px; margin-top: 60px; margin-bottom: 36px;">
+            style="background: linear-gradient(180deg, #0033C5 0%, #077FF8 100%); color: white; padding: 40px 20px; margin-top: 60px; margin-bottom: 100px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12" style="text-align: center;">
@@ -426,28 +435,7 @@
             </div>
         </div>
 
-        <section class="contactFormSection">
-            <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
-                style="position: absolute; left: 0px; margin-bottom: 855px;" class="accents">
-            <div class="container-wrapper">
-                <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
-                    <div class="row">
-                        <h2 style="margin-top: 12px; margin-bottom: -20px;">
-                            <span style="color: #0033C5;">Let's connect</span> <br />
-                        </h2>
-                        <p>
-                            Connect with us to get instant support and answers to all your assessment-related questions.
-                        </p>
-                        <div class="col-12 justify-content-center">
-                            <div class="form-container">
-                                <contact-form-fold style="background: white;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
-            </div>
-        </section>
+        <contact-form id="contactForm"></contact-form>
 
         <section class="faq">
             <div class="container">
@@ -508,7 +496,7 @@ export default {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
-        'contact-form-fold': () => import('@/components/contactForm'),
+        'contact-form': () => import('@/components/certifications/AssessmentContactFormFold'),
         'footer-fold': () => import('@/components/Footer'),
         'credits': () => import('@/components/Credits')
     },
@@ -849,16 +837,6 @@ export default {
 
     .answer {
         margin-bottom: 18px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .contactFormSection {
-
-        .accents,
-        .accents-right {
-            display: none;
-        }
     }
 }
 </style>
