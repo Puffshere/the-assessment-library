@@ -83,7 +83,8 @@
                             <li>Enhance your critical thinking skills</li>
                             <li>Ongoing, situational support from an Assessments 24x7 Master Certified Practitioner</li>
                             <li>Enhance your online presence with your profile on our <a
-                                    href="/certifications/directory/coaches">International Directory of
+                                    href="/certifications/directory/coaches" class="hyperlink">International Directory
+                                    of
                                     Certified Practitioners</a></li>
                         </ul>
                     </div>
@@ -369,7 +370,7 @@
 
         <LazyHydrate when-visible><susan-cranston /></LazyHydrate>
 
-        <div class="container">
+        <div class="container workshop">
             <div class="row">
                 <div class="col-12" style="display: flex; align-items: center; justify-content: space-between;">
                     <div class="col-4">
@@ -387,10 +388,11 @@
                             certificate that validates your expertise and can advance your career. Join us to strengthen
                             your abilities and gain recognition in your field.
                         </p>
-                        <div style="margin-top: 40px; display: flex; justify-content: flex-end; gap: 20px;">
+                        <div style="margin-top: 40px; display: flex; justify-content: flex-end; gap: 20px;"
+                            class="buttonGroup">
                             <button style="padding: 10px 20px; max-height: 50px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;
-                                margin-right: 10px;" class="button" @click="scrollToCertification">
-                                View Assessment <br /> Certifications
+                                margin-right: 10px; min-width: 270px;" class="button" @click="scrollToCertification">
+                                View Assessment Certifications
                             </button>
                             <button style="padding: 10px 20px; max-height: 50px; margin-right: 0px;" class="button"
                                 @click="scrollToContactForm">
@@ -457,7 +459,8 @@
                         <h6 class="question">What are the requirements for enrolling in an assessment certification
                             program?</h6>
                         <p class="answer">
-                            To enroll in an assessment certification course, <a href="#contactForm">contact us here</a>.
+                            To enroll in an assessment certification course, <a href="#contactForm"
+                                class="hyperlink">contact us here</a>.
                             For live, online
                             group sessions, you'll also need to attend the scheduled sessions. Our programs are designed
                             to be accessible, whether you're participating in self-paced courses or live group sessions.
@@ -831,6 +834,33 @@ export default {
 
     .answer {
         margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    div[style*="display: flex"] {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .buttonGroup {
+        .button {
+            min-width: 320px !important;
+            justify-content: center !important;
+        }
+    }
+
+    .workshop {
+
+        .col-8,
+        h3 {
+            text-align: center !important;
+            padding-left: 0px !important;
+        }
+
+        p {
+            text-align: left !important;
+        }
     }
 }
 </style>
