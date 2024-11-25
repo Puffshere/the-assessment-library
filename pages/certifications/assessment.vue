@@ -613,7 +613,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
-// @import '~assets/scss/new-styles';
 
 .assessment-certification {
     .header {
