@@ -162,6 +162,10 @@ section {
             }
         }
     }
+
+    .title {
+        font-size: 3em;
+    }
 }
 
 @keyframes rise {
