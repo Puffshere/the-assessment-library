@@ -17,8 +17,9 @@
                     <h2 class="heroSubtext">
                         Let DISC Lead the way.
                     </h2>
-                    <a href="#form"><img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/learn-button.png" alt="learn button"
-                            class="learnButton" /></a>
+                    <a href="#form"><img
+                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/learn-button.png"
+                            alt="learn button" class="learnButton" /></a>
                 </div>
                 <div class="col-7">
                     <div class="video-container">
@@ -28,8 +29,9 @@
                                 type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <img v-if="showThumbnail" src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/disc-video-thumbnail.png" @click="playVideo"
-                            class="video-thumbnail" />
+                        <img v-if="showThumbnail"
+                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC/disc-video-thumbnail.png"
+                            @click="playVideo" class="video-thumbnail" />
                     </div>
                 </div>
             </div>
@@ -176,6 +178,10 @@ h1 {
 }
 
 @media (max-width: 1000px) {
+    h1 {
+        margin-left: 0px !important;
+    }
+
     .hero .row {
         flex-direction: column;
     }
