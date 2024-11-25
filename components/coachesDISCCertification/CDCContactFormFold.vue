@@ -14,214 +14,32 @@
                     </h4>
                 </div>
             </div>
-            <form @submit.prevent="submitForm">
-                <loading :active="loading" :is-full-page="true" />
-                <div class="row">
-                    <div class="col-12">
-                        <div class="col-6">
-                            <div class="line">
-                                <label for="name">Name</label>
-                                <input v-model="form.name" type="text" id="name" required>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="line">
-                                <label for="email">Email</label>
-                                <input v-model="form.email" type="email" id="email" required>
+            <section class="contactFormSection">
+                    <div class="container-wrapper">
+                        <div class="container d-flex justify-content-center align-items-center"
+                            style="padding-bottom: 100px;">
+                            <div class="row">
+                                <div class="col-12 justify-content-center">
+                                    <div class="form-container">
+                                        <contact-form style="background: white;" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="col-6">
-                            <div class="line">
-                                <label for="phoneNumber">Phone Number</label>
-                                <input v-model="form.phoneNumber" type="text" id="phoneNumber" required>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="line">
-                                <label for="company">Company</label>
-                                <input v-model="form.company" type="text" id="company" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="col-12">
-                            <div class="message">
-                                <label for="message">Message</label>
-                                <input v-model="form.message" type="text" id="message" class="messageBox" required
-                                    minlength="5">
-                                <p v-if="form.message && form.message.length < 5" class="error">
-                                    Message must be at least 5 characters long.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-12" style="display: flex; justify-content: center;">
-                        <button type="submit" :disabled="isDisabled"
-                            :class="{ 'button': true, 'disabled': isDisabled }" style="background-color: white; color: blue; margin-bottom: 120px;">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </form>
+                </section>
         </div>
     </section>
 </template>
 
 <script>
-import axios from 'axios';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 
 export default {
     components: {
-        Loading
-    },
-    data() {
-        return {
-            isDisabled: false,
-            loading: false,
-            form: {
-                name: '',
-                firstName: '',
-                lastName: '',
-                email: '',
-                phoneNumber: '',
-                company: '',
-                message: ''
-            }
-        };
-    },
-    methods: {
-        handleIntersection(entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-                    entry.target.classList.add('animate-rise-contact');
-                    entry.target.classList.add('animated');
-                    observer.unobserve(entry.target); 
-                }
-            });
-        },
-        async submitForm() {
-            if (this.form.message.length < 5) {
-                this.$toast.open({
-                    message: 'Please enter at least 5 characters in the message field.',
-                    position: 'top',
-                    duration: 5000,
-                    type: 'error'
-                });
-                return;
-            }
-
-            try {
-                this.isDisabled = true;
-                this.loading = true;
-
-                const names = this.form.name.split(' ');
-                this.form.firstName = names[0];
-                this.form.lastName = names.length > 1 ? names.slice(1).join(' ') : '';
-
-                const salesPerson = await axios.get('/api/lead/next-assignment');
-
-                const lead = await axios.post('/api/lead', {
-                    salesPerson: salesPerson.data,
-                    firstName: this.form.firstName,
-                    lastName: this.form.lastName,
-                    phone: this.form.phoneNumber,
-                    email: this.form.email,
-                    company: this.form.company,
-                    message: this.form.message
-                });
-
-                const { data } = await axios.post('/api/contact', {
-                    contact: {
-                        email: this.form.email,
-                        firstName: this.form.firstName,
-                        lastName: this.form.lastName,
-                        phone: this.form.phoneNumber,
-                        company: this.form.company,
-                        message: this.form.message,
-                        fieldValues: [
-                            {
-                                field: '79', // Sales Person Assignment
-                                value: salesPerson.data
-                            },
-                            {
-                                field: '21', // How did you hear about us?
-                                value: 'ICF'
-                            },
-                            {
-                                field: '4', // Client type (reseller vs corporate),
-                                value: 'Reseller'
-                            },
-
-                        ]
-                    }
-                });
-
-                const noteData = {
-                    note: `Form data: ${JSON.stringify(this.form)}, SalesPerson: ${JSON.stringify(salesPerson.data)}`,
-                    relid: data.contact.id,
-                    reltype: 'Subscriber'
-                };
-                const response = await axios.post('/api/contact/notes', { note: noteData });
-
-                const updatedLead = await axios.put(`/api/lead/${lead.data._id}/${data.contact.id}`);
-
-                // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
-                await axios.post(`/api/contact/${data.contact.id}/tag/43`);
-
-                // Apply the "ATD 2024 Get in Touch Form" tag (tag id 998)
-                await axios.post(`/api/contact/${data.contact.id}/tag/998`);
-
-                // Apply the "ICF Landing Page" tag (tag id 1016)
-                await axios.post(`/api/contact/${data.contact.id}/tag/1016`);
-
-                // Create an account and associate the contact to it
-                await axios.post(`/api/contact/${data.contact.id}/account`, {
-                    company: this.form.company
-                });
-
-                this.loading = false;
-                this.isDisabled = false;
-
-                this.$toast.open({
-                    message: 'Your information has been successfully submitted!',
-                    position: 'top',
-                    duration: 8000,
-                    type: 'success'
-                });
-
-                this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
-
-            } catch (err) {
-                this.$toast.open({
-                    message: 'An unexpected error has occurred. Please try again later.',
-                    position: 'top',
-                    duration: 8000,
-                    type: 'error'
-                });
-            }
-        }
-    },
-    mounted() {
-        const observer = new IntersectionObserver(this.handleIntersection, {
-            threshold: 0.1 // Adjust this as needed
-        });
-
-        // Select each child element to be observed except the image on the right
-        const elements = document.querySelectorAll('.form .col-12 > h3, .form .col-12 > h4, .form .col-6 .line, .form .col-12 > .col-12, .form .col-12 .message');
-        elements.forEach(element => {
-            observer.observe(element);
-        });
+        Loading,
+        'contact-form': () => import('@/components/ContactForm'),
     }
 }
 </script>
@@ -229,18 +47,6 @@ export default {
 <style lang="scss" scoped>
 @import './CDC.scss';
 
-.body {
-    .container {
-        padding-top: 25px;
-        padding-bottom: 145px;
-    }
-
-    .flex-container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-}
 
 .formTitle {
     text-align: center;
@@ -258,6 +64,7 @@ export default {
 .form {
     background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Coaches+DISC+Certification/blue-geo-background.png');
     background-size: cover;
+    padding-top: 10px;
 
     .error {
         color: #ff7575;
@@ -314,33 +121,44 @@ export default {
     }
 }
 
-@keyframes rise-contact {
-    from {
-        transform: translateY(.5in);
-        opacity: 0;
+.contactFormSection {
+    background-size: cover;
+    background-position: center;
+    min-height: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .container-wrapper {
+        position: relative;
+        width: 100%;
     }
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
+    h2 {
+        margin-top: 0px;
+        font-weight: 700;
+        text-align: center;
     }
-}
 
-.form h3,
-.form h4,
-.form .col-6 .line,
-.form .message {
-    opacity: 0;
-    transform: translateY(1in);
-    transition: all 0.5s ease-out;
-}
+    .form-container {
+        width: 100%;
+        max-width: 800px;
+        padding: 20px;
+    }
 
-.animate-rise-contact {
-    animation: rise-contact .5s ease-out forwards;
-}
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-.animated {
-    /* This class ensures that the element won't animate again */
+    .col-12 {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 1000px) {
