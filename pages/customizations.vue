@@ -7,19 +7,6 @@
             <img src="~/assets/blue-glow.png" alt="assessments24x7 logo" class="blue3" />
             <img src="~/assets/blue-glow.png" alt="assessments24x7 logo" class="blue4" />
             <section class="title">
-                <!-- <div class="container">
-                    <div class="row flex-container">
-                        <div class="col-5">
-                            <img src="~/assets/logo-footer.png" alt="assessments24x7 logo" class="logo" />
-                        </div>
-                        <div class="col-5">
-                            <hr class="titleHr">
-                        </div>
-                        <div class="col-2">
-                            <img src="~/assets/ATD_New_Orleans_Logo.png" alt="ATD" class="atdLogo" />
-                        </div>
-                    </div>
-                </div> -->
                 <div class="brTitleSpacing">
                     <br />
                     <br />
@@ -211,7 +198,7 @@ export default {
     },
     data() {
         return {
-            showThumbnail: true, // Control visibility of the thumbnail
+            showThumbnail: true,
         };
     },
     head() {
