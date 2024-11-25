@@ -435,7 +435,25 @@
             </div>
         </div>
 
-        <!-- <contact-form id="contactForm"></contact-form> -->
+        <section class="contactFormSection" id="contactForm">
+            <div class="container-wrapper">
+                <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
+                    <div class="row">
+                        <h2 style="margin-top: 12px; margin-bottom: -20px;">
+                            <span style="color: #0033C5;">Let's connect</span> <br />
+                        </h2>
+                        <p>
+                            Connect with us to get instant support and answers to all your assessment-related questions.
+                        </p>
+                        <div class="col-12 justify-content-center">
+                            <div class="form-container">
+                                <contact-form-fold style="background: white;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="faq">
             <div class="container">
@@ -496,7 +514,7 @@ export default {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
-        'contact-form': () => import('@/components/contactForm'),
+        'contact-form': () => import('@/components/ContactForm'),
         'footer-fold': () => import('@/components/Footer'),
         'credits': () => import('@/components/Credits')
     },
