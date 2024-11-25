@@ -435,7 +435,7 @@
             </div>
         </div>
 
-        <contact-form id="contactForm"></contact-form>
+        <!-- <contact-form id="contactForm"></contact-form> -->
 
         <section class="faq">
             <div class="container">
@@ -496,7 +496,7 @@ export default {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
-        'contact-form': () => import('@/components/certifications/AssessmentContactFormFold'),
+        'contact-form-fold': () => import('@/components/contactForm'),
         'footer-fold': () => import('@/components/Footer'),
         'credits': () => import('@/components/Credits')
     },
@@ -772,14 +772,6 @@ export default {
     .container-wrapper {
         position: relative;
         width: 100%;
-    }
-
-    .accents-right {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 45%;
-        z-index: -1;
     }
 
     h2 {
