@@ -496,7 +496,7 @@ export default {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'susan-cranston': () => import('@/components/testimonials/SusanCranston'),
-        'contact-form-fold': () => import('@/components/contactForm'),
+        'contact-form': () => import('@/components/certifications/AssessmentContactFormFold'),
         'footer-fold': () => import('@/components/Footer'),
         'credits': () => import('@/components/Credits')
     },
