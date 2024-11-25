@@ -613,7 +613,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
-@import '~assets/scss/new-styles';
+// @import '~assets/scss/new-styles';
 
 .assessment-certification {
     .header {
@@ -861,6 +861,10 @@ export default {
         p {
             text-align: left !important;
         }
+    }
+
+    .learn-more-button2 {
+        min-width: 200px !important;
     }
 }
 </style>
