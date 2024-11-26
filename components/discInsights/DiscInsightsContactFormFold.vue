@@ -117,12 +117,21 @@ export default {
     }
 }
 
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
+}
 
 @media (max-width: 1000px) {
     h2 {
         font-size: 38px;
         font-weight: 400;
-        margin-top: -20px;
         margin-bottom: 0px;
     }
 
@@ -133,16 +142,5 @@ export default {
             }
         }
     }
-}
-
-.rise-on-scroll {
-    transition: transform 1s ease-out;
-    transform: translateY(1in);
-    opacity: 0;
-}
-
-.rise-on-scroll.rise {
-    transform: translateY(0);
-    opacity: 1;
 }
 </style>
