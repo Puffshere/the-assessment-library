@@ -457,7 +457,7 @@
                     </div>
 
                     <div class="col-4">
-                        <img class="image"
+                        <img class="image discBadge"
                             src="/images/disc-cert-badge.png"
                             alt="placeholder">
                     </div>
@@ -1284,7 +1284,7 @@ export default {
     }
 }
 
-@media screen and (max-width: $breakpoint-med) {
+@media screen and (max-width: 1200px) {
     .hero {
         h1 {
             font-size: 23pt;
@@ -1344,6 +1344,19 @@ export default {
         font-size: 24pt !important;
         margin: 0;
         line-height: 28pt !important;
+    }
+
+    .discBadge {
+        margin: -10px auto !important;
+        width: 80% !important;
+        display: flex;
+        justify-content: center !important;
+        padding-bottom: 10px;
+    }
+
+    .benefits {
+        padding: 0 10px;
+        width: 95% !important;
     }
 }
 </style>
