@@ -77,17 +77,16 @@ export default {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
                     entry.target.classList.add('animate-rise', 'animated');
-                    observer.unobserve(entry.target); // Disconnect observer after animation
+                    observer.unobserve(entry.target);
                 }
             });
         }
     },
     mounted() {
         const observer = new IntersectionObserver(this.handleIntersection, {
-            threshold: 0.1 // Adjust this as needed
+            threshold: 0.1 
         });
 
-        // Select each child element to be observed
         const elements = document.querySelectorAll(
             '.col-12 > h1, .col-12 > .icon-text, .col-12 > p, .col-12 > button'
         );
@@ -192,7 +191,5 @@ p {
     animation: rise 1s ease-out forwards;
 }
 
-.animated {
-    /* This class ensures that the element won't animate again */
-}
+.animated {}
 </style>
