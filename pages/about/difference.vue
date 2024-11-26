@@ -335,8 +335,8 @@
         <section class="contact">
             <div class="container">
                 <div class="row">
-                    <div class="col-8">
-                        <h3>Want to learn more? Contact us using the form below: </h3>
+                    <div class="col-8 form">
+                        <h3 class="contactFormTitle">Want to learn more? Contact us using the form below: </h3>
 
                         <contact-form acFormId="7" />
                     </div>
@@ -521,6 +521,22 @@ export default {
             position: absolute;
             left: -91234px;
         }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .assessment-content {
+        background: url('') no-repeat, linear-gradient(90deg, rgba(30, 34, 45, 1) 0%, rgba(48, 53, 66, 1) 100%) !important;
+    }
+
+    .contactFormTitle {
+        text-align: center;
+        font-size: 2em;
+        margin-top: 0px;
+    }
+
+    .form {
+        margin-bottom: 60px !important;
     }
 }
 </style>

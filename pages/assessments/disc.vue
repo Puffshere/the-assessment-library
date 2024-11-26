@@ -457,9 +457,7 @@
                     </div>
 
                     <div class="col-4">
-                        <img class="image discBadge"
-                            src="/images/disc-cert-badge.png"
-                            alt="placeholder">
+                        <img class="image discBadge" src="/images/disc-cert-badge.png" alt="placeholder">
                     </div>
                 </div>
             </div>
