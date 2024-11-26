@@ -17,8 +17,8 @@
                                 </th>
                                 <th class="rise-on-scroll">
                                     <div style="display: flex; justify-content: center; margin-bottom: 0px;">
-                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/disc-icon.png" alt="disc icon"
-                                            style="width: 45px;">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/disc-icon.png"
+                                            alt="disc icon" style="width: 45px;">
                                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/critical-thinking-icon.png"
                                             alt="critical thinking icon" style="width: 45px;">
                                     </div>
@@ -28,12 +28,12 @@
                                 </th>
                                 <th class="rise-on-scroll">
                                     <div style="display: flex; justify-content: center; margin-bottom: 0px;">
-                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/disc-icon.png" alt="disc icon"
-                                            style="width: 45px;">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/disc-icon.png"
+                                            alt="disc icon" style="width: 45px;">
                                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/critical-thinking-icon.png"
                                             alt="critical thinking icon" style="width: 45px;">
-                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/motivators-icon.png" alt="motivators icon"
-                                            style="width: 45px;">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/motivators-icon.png"
+                                            alt="motivators icon" style="width: 45px;">
                                     </div>
                                     <div @click="scrollToExecutiveInsights"
                                         style="text-decoration: underline; font-weight: 700; font-size: 24px; cursor: pointer">
@@ -74,8 +74,10 @@
                             </tr>
                             <tr class="rise-on-scroll">
                                 <td data-label="Compare"><strong>Performance Indicators</strong></td>
-                                <td data-label="DISC Workplace Insights">Satisfactory/ <br />Cautionary ratings</td>
-                                <td data-label="DISC Executive Insights">Comprehensive, tailored insights</td>
+                                <div class="tableEntry">
+                                    <td data-label="DISC Workplace Insights">Satisfactory/ <br />Cautionary ratings</td>
+                                    <td data-label="DISC Executive Insights">Comprehensive, tailored insights</td>
+                                </div>
                             </tr>
                         </tbody>
                     </table>
@@ -90,7 +92,8 @@
                     </button>
                 </div>
             </div>
-            <img class="rise-on-scroll" src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/hero-black-graphic.png"
+            <img class="rise-on-scroll"
+                src="https://cdn.assessments24x7.com/file/assessments24x7-media/DISC+Insights/hero-black-graphic.png"
                 alt="hero black graphic image"
                 style="width: 1180px; z-index: 1; max-height: 205px; margin-left: -45px; position: absolute; bottom: 235px;" />
             <div class="blue-balls rise-on-scroll">
@@ -229,6 +232,17 @@ export default {
     border-radius: 50%;
 }
 
+.rise-on-scroll {
+    transition: transform 1s ease-out;
+    transform: translateY(1in);
+    opacity: 0;
+}
+
+.rise-on-scroll.rise {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 @media (max-width: 1000px) {
     .container {
         padding-bottom: 110px;
@@ -280,16 +294,13 @@ export default {
     .comparison-table td:last-child {
         border-bottom: 2px solid #dddddd;
     }
-}
 
-.rise-on-scroll {
-    transition: transform 1s ease-out;
-    transform: translateY(1in);
-    opacity: 0;
-}
+    .tableEntry {
+        font-size: 0.85em !important;
+    }
 
-.rise-on-scroll.rise {
-    transform: translateY(0);
-    opacity: 1;
+    .blue-balls {
+        bottom: 0px;
+    }
 }
 </style>
