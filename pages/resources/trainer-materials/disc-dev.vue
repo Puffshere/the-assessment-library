@@ -65,66 +65,37 @@
 
                 <div class="row" @click="handleClick">
                     <div class="col-6">
-                        <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/The+Fundamentals_+DISC.webp"
+                        <div class="card mediaCards">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Assessment+Report+Tools.webp"
                                 alt="icon" class="icon" />
                             <div>
-                                <h4 data-category="fundamentals">
-                                    {{ toggleStates['fundamentals'] ? '−' : '+' }} The Fundamentals: DISC
+                                <h4 data-category="report&tools">
+                                    {{ toggleStates['report&tools'] ? '−' : '+' }} Assessment Report Tools
                                 </h4>
-                                <p>Foundations Of DISC & Advanced Development Resources</p>
+                                <p>Debriefing & Assessment Report Details</p>
                             </div>
                         </div>
-                        <div v-if="toggleStates['fundamentals']" class="subcard">
+                        <div v-if="toggleStates['report&tools']" class="subcard">
                             <br />
-                            <p class="subcard-title">Understanding Foundations of DISC
-                                <span class="tooltip">
-                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
-                                        alt="info icon" style="width: 14px; margin-left: -2px; margin-top: -14px;"><span
-                                        class="tooltip-text">A curated collection of resources to introduce you to DISC
-                                        methodology & its diverse applications.</span>
-                                </span>
-                            </p>
-                            <ul class="subcard-links">
-                                <li v-for="link in filteredFoundations" :key="link.url">
-                                    <a :href="link.url" target="_blank" rel="noopener">
-                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
-                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
-                                        {{ link.name }}
-                                    </a>
-                                </li>
-                            </ul>
-                            <br />
-                            <p class="subcard-title">Description - All 4 Styles</p>
-                            <ul class="subcard-links">
-                                <li v-for="link in filteredDescriptionStyles" :key="link.url">
-                                    <a :href="link.url" target="_blank" rel="noopener">
-                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
-                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
-                                        {{ link.name }}
-                                    </a>
-                                </li>
-                            </ul>
-                            <br />
-                            <p class="subcard-title">Adaptability - All 4 Styles</p>
-                            <ul class="subcard-links">
-                                <li v-for="link in filteredAdaptabilityStyles" :key="link.url">
-                                    <a :href="link.url" target="_blank" rel="noopener">
-                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
-                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
-                                        {{ link.name }}
-                                    </a>
-                                </li>
-                            </ul>
-                            <br />
-                            <p class="subcard-title">Advanced Development Resources<span class="tooltip">
+                            <p class="subcard-title">Debriefing and Assessment Report Details<span class="tooltip">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
                                         alt="info icon" style="width: 14px; margin-left: 2px; margin-top: -14px;"><span
-                                        class="tooltip-text">Materials designed for a deeper understanding & development
-                                        of DISC strategies.</span>
+                                        class="tooltip-text">Guides and Resources for using the report content
+                                        effectively.</span>
                                 </span></p>
                             <ul class="subcard-links">
-                                <li v-for="link in filteredUnderstandingFoundations" :key="link.url">
+                                <li v-for="link in filteredDebriefingAssessmentReportDetails" :key="link.url">
+                                    <a :href="link.url" target="_blank" rel="noopener">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </a>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="subcard-title">Video Resources</p>
+                            <ul class="subcard-links">
+                                <li v-for="link in filteredVideoResources" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
                                         <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
                                             :alt="`${link.type.toLowerCase()} icon`" class="icons">
@@ -174,7 +145,14 @@
                                 </li>
                             </ul>
                             <br />
-                            <p class="subcard-title">DISC Activity Resources</p>
+                            <p class="subcard-title">DISC Activity Resources
+                                <span class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: -2px; margin-top: -14px;"><span
+                                        class="tooltip-text">Fill in the blank activity worksheets and resources for use
+                                        with DISC training sessions.</span>
+                                </span>
+                            </p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDISCActivityResources" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
@@ -185,7 +163,14 @@
                                 </li>
                             </ul>
                             <br />
-                            <p class="subcard-title">DISC Specific Group Exercises</p>
+                            <p class="subcard-title">DISC Specific Group Exercises
+                                <span class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: -2px; margin-top: -14px;"><span
+                                        class="tooltip-text">A variety of fun activities for group interaction,
+                                        practice, and application using the DISC Model.</span>
+                                </span>
+                            </p>
                             <ul class="subcard-links">
                                 <li v-for="link in filteredDISCSpecificGroupExercises" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
@@ -324,26 +309,28 @@
 
                     </div>
                     <div class="col-6">
-                        <div class="card mediaCards">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Assessment+Report+Tools.webp"
+                        <div class="card">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/The+Fundamentals_+DISC.webp"
                                 alt="icon" class="icon" />
                             <div>
-                                <h4 data-category="report&tools">
-                                    {{ toggleStates['report&tools'] ? '−' : '+' }} Assessment Report Tools
+                                <h4 data-category="fundamentals">
+                                    {{ toggleStates['fundamentals'] ? '−' : '+' }} The Fundamentals: DISC
                                 </h4>
-                                <p>Debriefing & Assessment Report Details</p>
+                                <p>Foundations of DISC & Advanced Development Resources</p>
                             </div>
                         </div>
-                        <div v-if="toggleStates['report&tools']" class="subcard">
+                        <div v-if="toggleStates['fundamentals']" class="subcard">
                             <br />
-                            <p class="subcard-title">Debriefing and Assessment Report Details<span class="tooltip">
+                            <p class="subcard-title">Understanding Foundations of DISC
+                                <span class="tooltip">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
-                                        alt="info icon" style="width: 14px; margin-left: 2px; margin-top: -14px;"><span
-                                        class="tooltip-text">Guides and Resources for using the report content
-                                        effectively.</span>
-                                </span></p>
+                                        alt="info icon" style="width: 14px; margin-left: -2px; margin-top: -14px;"><span
+                                        class="tooltip-text">A curated collection of resources to introduce you to DISC
+                                        methodology & its diverse applications.</span>
+                                </span>
+                            </p>
                             <ul class="subcard-links">
-                                <li v-for="link in filteredDebriefingAssessmentReportDetails" :key="link.url">
+                                <li v-for="link in filteredFoundations" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
                                         <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
                                             :alt="`${link.type.toLowerCase()} icon`" class="icons">
@@ -352,9 +339,48 @@
                                 </li>
                             </ul>
                             <br />
-                            <p class="subcard-title">Video Resources</p>
+                            <p class="subcard-title">Description - All 4 Styles
+                                <span class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: -2px; margin-top: -14px;"><span
+                                        class="tooltip-text">Short videos describing each style.</span>
+                                </span>
+                            </p>
                             <ul class="subcard-links">
-                                <li v-for="link in filteredVideoResources" :key="link.url">
+                                <li v-for="link in filteredDescriptionStyles" :key="link.url">
+                                    <a :href="link.url" target="_blank" rel="noopener">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </a>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="subcard-title">Adaptability - All 4 Styles
+                                <span class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: -2px; margin-top: -14px;"><span
+                                        class="tooltip-text">Short videos showing how to adapt to each style.</span>
+                                </span>
+                            </p>
+                            <ul class="subcard-links">
+                                <li v-for="link in filteredAdaptabilityStyles" :key="link.url">
+                                    <a :href="link.url" target="_blank" rel="noopener">
+                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                        {{ link.name }}
+                                    </a>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="subcard-title">Advanced Development Resources<span class="tooltip">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                        alt="info icon" style="width: 14px; margin-left: 2px; margin-top: -14px;"><span
+                                        class="tooltip-text">Materials designed for a deeper understanding & development
+                                        of DISC strategies.</span>
+                                </span></p>
+                            <ul class="subcard-links">
+                                <li v-for="link in filteredUnderstandingFoundations" :key="link.url">
                                     <a :href="link.url" target="_blank" rel="noopener">
                                         <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
                                             :alt="`${link.type.toLowerCase()} icon`" class="icons">
@@ -526,7 +552,9 @@
                                         {{ link.name }}
                                     </a>
                                 </li>
-                                <a class="icons" href="mailto:hello@assessments24x7.com">Request my Certification badge
+                                <a class="icons"
+                                    href="mailto:hello@assessments24x7.com?subject=Certification%20badge%20request">Request
+                                    my Certification badge
                                     or certificate</a>
                             </ul>
                         </div>
@@ -614,8 +642,8 @@ export default {
             fundamentalsSections: {
                 foundations: [
                     { name: 'DISC Assessment History', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCAssessmentHistory.pdf', icon: 'PDF.png', certified: true },
-                    { name: 'DISC Direct/Indirect', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDirectandIndirect.pdf', icon: 'PDF.png' },
-                    { name: 'DISC Open/Guarded', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOpenandGuarded.pdf', icon: 'PDF.png' }
+                    { name: 'DISC Direct/Indirect Behaviors', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCDirectandIndirect.pdf', icon: 'PDF.png' },
+                    { name: 'DISC Open/Guarded Behaviors', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOpenandGuarded.pdf', icon: 'PDF.png' }
                 ],
                 descriptionStyles: [
                     { name: 'Description - High D', type: 'MP4', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/HighD.mp4', icon: 'MP4.png' },
@@ -632,11 +660,14 @@ export default {
                 understandingFoundations: [
                     // { name: 'Over-Under Extensions and DISC Emotions', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCOverUnderExtensions_Emotions.pdf', icon: 'PDF.png', certified: true },
                     { name: 'Extensions', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Extensions.pdf', icon: 'PDF.png', certified: true },
+                    { name: 'Behavior Needs Under Stress', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbookPgs3536.pdf', icon: 'PDF.png', certified: true },
+                    { name: 'Typical Behaviors in Conflict', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-in-conflict-typical-behaviors_vs2.pdf', icon: 'PDF.png', certified: true },
+                    { name: '12 Behavioral Tendencies Definitions & Explanations', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BTDescriptions.pdf', icon: 'PDF.png' },
                     { name: '15 Classical DISC Style Behavioral Patterns', type: 'PPT', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylePatternsComplete.pptx', icon: 'PPT.png', certified: true },
                     { name: '15 Classical DISC Style Behavioral Patterns', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15DISCstyleBehavioralPatterns.pdf', icon: 'PDF.png', isElse: true },
                     { name: '15 Classic DISC Styles Summary Overview', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicalStylesSummaryReportFinal_10.25.23.pdf', icon: 'PDF.png', certified: true },
-                    { name: '15 Classical DISC Styles: Wheel Plotting', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap1.24.pdf', icon: 'PDF.png', certified: true },
-                    { name: '15 Classical DISC Styles: Wheel Plotting', type: 'PPT', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap1.24.pptx', icon: 'PPT.png' },
+                    { name: '15 Classical DISC Styles: Wheel Plotting PDF', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap1.24.pdf', icon: 'PDF.png', certified: true },
+                    { name: '15 Classical DISC Styles: Wheel Plotting PowerPoint', type: 'PPT', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/15ClassicStylesPatternMap1.24.pptx', icon: 'PPT.png' },
                     { name: 'Tensions between the Same DISC styles', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Tensions-Between-Same-Styles-vs2.pdf', icon: 'PDF.png', certified: true }
                 ],
             },
@@ -670,7 +701,7 @@ export default {
                     { name: 'DISC Word Sketches (blank)', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCWordSketch.pdf', icon: 'PDF.png', certified: true },
                     { name: 'Behavior Pattern View (blank wheel)', type: 'JPG', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/WheelGraphJPG.jpeg', icon: 'JPG.png', certified: true },
                     { name: 'Contract for Change (blank)', type: 'DOC', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/ContractChange.docx', icon: 'Doc.png', certified: true },
-                    { name: 'DISC Summary Editable Document', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSummaryPage.pdf', icon: 'PDF.png' },
+                    { name: 'DISC Summary Editable Document (blank)', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSummaryPage.pdf', icon: 'PDF.png' },
                     { name: 'Adapting to DISC Styles (blank)', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/AdaptingDISCStyles.pdf', icon: 'PDF.png', certified: true },
                     { name: 'Creating Better Relationships (blank)', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/CreatingBetterRelationships.pdf', icon: 'PDF.png', certified: true },
                     { name: 'Tensions Worksheet (blank)', type: 'DOC', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Tensions.doc', icon: 'Doc.png' },
@@ -682,7 +713,7 @@ export default {
                     { name: 'Facilitator Feedback Guide', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/FacilitationFeedbackGuide.pdf', icon: 'PDF.png' },
                     { name: 'Self-Feedback Form', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/SelfFeedbackForm.pdf', icon: 'PDF.png' },
                     { name: 'Development Plan Sample', type: 'DOC', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DevelopmentPlan.docx', icon: 'Doc.png' },
-                    { name: 'Coaching Guide Questions', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/CoachingGuideQuestions.pdf', icon: 'PDF.png' }
+                    { name: 'Facilitator/Trainer Development Questions', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Facilitator+Trainer+Development+Questions.pdf', icon: 'PDF.png' }
                 ],
                 enhancingDeliveryResourcesAudioVideoFiles: [
                     // { name: 'Identifying the Styles', type: 'ZIP', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Identifying+the+DISC+Styles.zip', icon: 'Zip.png' },
@@ -723,9 +754,9 @@ export default {
             },
             threeSixtyResources: {
                 threeSixtyResourcesWithoutTitle: [
-                    { name: 'Debrief Guide', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC360 Debrief Guide.pdf', icon: 'PDF.png' },
-                    { name: 'Setting up a 360 Assessment Link in Dashboard', type: 'URL', url: 'https://www.youtube.com/watch?v=IFEiJmud3WI', icon: 'URL.png' },
-                    { name: 'Setting up a 360 Assessment Link in Dashboard', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2022.pdf', icon: 'PDF.png' }
+                    { name: '360 Debrief Guide', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC360 Debrief Guide.pdf', icon: 'PDF.png' },
+                    { name: 'Setting up a 360 Assessment Link in Dashboard (Video)', type: 'URL', url: 'https://www.youtube.com/watch?v=IFEiJmud3WI', icon: 'URL.png' },
+                    { name: 'Setting up a 360 Assessment Link in Dashboard (PDF)', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/360Instructions2022.pdf', icon: 'PDF.png' }
                 ]
             },
             additionalSupportMaterials: {
@@ -738,18 +769,16 @@ export default {
                     { name: 'Are You Mad at Me? Article', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/AreYouMadatMe.pdf', icon: 'PDF.png', certified: true },
                     { name: 'DISC World Map', type: 'JPG', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/downloads/DISC+World+Map.jpg', icon: 'JPG.png' },
                     { name: 'DISC Careers', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Careers.pdf', icon: 'PDF.png' },
+                    { name: 'Design & Explanation of the DISC Behavioral Diamond', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Wheel+Debrief+Guide_4.22.pdf', icon: 'PDF.png' }
+
                 ]
             },
             assessmentReportTools: {
                 debriefingAssessmentReportDetails: [
                     { name: 'DISC Debrief Guide', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Report+Certified+Debrief+Guide_vs8_8.2024.pdf', icon: 'PDF.png', certified: true },
                     { name: 'DISC Debrief Guide', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Report+Debrief+Guide_nc_vs8_8.2024.pdf', icon: 'PDF.png', isElse: true },
-                    { name: 'DISC Report Highlights', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCReportHighlights3.pdf', icon: 'PDF.png', certified: true },
-                    { name: 'Natural & Adapted Graphs', type: 'PPT', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/NaturalandAdaptedGraphs.pptx', icon: 'PPT.png' },
-                    { name: 'Design & Explanation of the DISC Behavioral Diamond', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC+Wheel+Debrief+Guide_4.22.pdf', icon: 'PDF.png' },
-                    { name: '12 Behavioral Tendencies Definitions & Explanations', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/BTDescriptions.pdf', icon: 'PDF.png' },
-                    { name: 'Behavior Needs Under Stress', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCeWorkbookPgs3536.pdf', icon: 'PDF.png', certified: true },
-                    { name: 'Typical Behaviors in Conflict', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISC-in-conflict-typical-behaviors_vs2.pdf', icon: 'PDF.png', certified: true }
+                    // { name: 'DISC Report Highlights', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCReportHighlights3.pdf', icon: 'PDF.png', certified: true },
+                    { name: 'Natural & Adapted Graphs', type: 'PPT', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/NaturalandAdaptedGraphs.pptx', icon: 'PPT.png' }
                 ],
                 videoResources: [
                     { name: 'Practice Videos for Debriefing Graphs', type: 'URL', url: 'https://www.youtube.com/playlist?list=PLTNKuyfaKqLaNM956tOMqirauvqe885Qc', icon: 'URL.png', certified: true },
@@ -760,7 +789,8 @@ export default {
             },
             marketing: {
                 marketingWithoutTitle: [
-                    { name: 'Mini DISC Presentation', type: 'PPT', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Mini_DISCPresentation.pptx', icon: 'PPT.png' }
+                    { name: 'Mini DISC Presentation', type: 'PPT', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/Mini_DISCPresentation.pptx', icon: 'PPT.png' },
+                    { name: 'Assessment 24x7 Store', type: 'URL', url: 'https://store.assessments24x7.com/collections/products', icon: 'URL.png' },
                 ],
                 informationSheets: [
                     { name: 'DISC vs MBTI Article', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCvsMBTI.pdf', icon: 'PDF.png' },
@@ -796,10 +826,9 @@ export default {
             },
             quickLinks: {
                 latestUpdates: [
-                    { name: 'Assessment 24x7 Store', type: 'URL', url: 'https://store.assessments24x7.com/collections/products', icon: 'URL.png' },
                     { name: 'DISC FAQ', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCfaq.pdf', icon: 'PDF.png' },
-                    { name: 'Support', type: 'URL', url: 'https://www.assessments24x7.com/contact', icon: 'URL.png' },
-                    { name: 'FAQ', type: 'URL', url: 'https://www.assessments24x7.com/about/faq', icon: 'URL.png' }
+                    { name: 'Support', type: 'Email', url: 'mailto:support@assessments24x7.com?subject=Support%20Request', icon: 'URL.png' }
+                    // { name: 'FAQ', type: 'URL', url: 'https://www.assessments24x7.com/about/faq', icon: 'URL.png' }
                 ]
             }
         }
