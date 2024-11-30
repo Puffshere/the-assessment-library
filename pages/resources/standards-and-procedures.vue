@@ -415,6 +415,18 @@ export default {
                             url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Deactivating+a+Custom+Domain+SOP.pdf",
                             mainText: "Deactivating a Custom Domain SOP"
                         },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Report+Customization+Menu+for+Sales.pdf",
+                            mainText: "Customization menu for sales"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Internal+SOP+for+new+Customization+Projects.pdf",
+                            mainText: "Internal SOP new customizations"
+                        },
+                        {
+                            url: "https://cdn.assessments24x7.com/file/assessments24x7-media/employee-docs/Creating+a+new+MDS.pdf",
+                            mainText: "Creating a new MDS"
+                        },
                     ]
                 },
                 {
