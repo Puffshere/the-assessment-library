@@ -256,6 +256,11 @@
                                             :alt="`${link.type.toLowerCase()} icon`" class="icons">
                                         {{ link.name }}
                                     </a>
+                                    <span class="tooltip">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/info+icon.webp"
+                                            alt="info icon" style="width: 14px; margin-left: -2px; margin-top: -14px;">
+                                        <span class="tooltip-text">{{ link.description }}</span>
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -745,12 +750,43 @@ export default {
                     { name: '52 Week Email Series', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/52+Week+DISC+email+series+updated+12-2020.pdf', icon: 'PDF.png' }
 
                 ],
+                // dISCTargetApplicationsTips: [
+                //     { name: 'Coaching Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCCoachingTargetApplication.pdf', icon: 'PDF.png' },
+                //     { name: 'Leadership Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCLeadershipTargetApplication.pdf', icon: 'PDF.png' },
+                //     { name: 'Sales Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSalesTargetApplication.pdf', icon: 'PDF.png' },
+                //     { name: 'Service Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCServiceTargetApplication.pdf', icon: 'PDF.png' }
+                // ]
                 dISCTargetApplicationsTips: [
-                    { name: 'Coaching Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCCoachingTargetApplication.pdf', icon: 'PDF.png' },
-                    { name: 'Leadership Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCLeadershipTargetApplication.pdf', icon: 'PDF.png' },
-                    { name: 'Sales Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSalesTargetApplication.pdf', icon: 'PDF.png' },
-                    { name: 'Service Tips', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCServiceTargetApplication.pdf', icon: 'PDF.png' }
+                    {
+                        name: 'Coaching Tips',
+                        type: 'PDF',
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCCoachingTargetApplication.pdf',
+                        icon: 'PDF.png',
+                        description: 'Strategies for Asking, Listening, Coaching, Praising, and Challenging.'
+                    },
+                    {
+                        name: 'Sales Tips',
+                        type: 'PDF',
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCSalesTargetApplication.pdf',
+                        icon: 'PDF.png',
+                        description: 'Strategies for the stages of the selling cycle – Connecting, Assessing, Solving, Confirming, and Assuring.'
+                    },
+                    {
+                        name: 'Leadership Tips',
+                        type: 'PDF',
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCLeadershipTargetApplication.pdf',
+                        icon: 'PDF.png',
+                        description: 'Strategies for Developing, Adapting, Helping, Motivating, Complimenting, Counseling, Correcting, Delegating, & Acknowledging.'
+                    },
+                    {
+                        name: 'Service Tips',
+                        type: 'PDF',
+                        url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCServiceTargetApplication.pdf',
+                        icon: 'PDF.png',
+                        description: 'Strategies to communicate effectively in the Service process. Greeting, Valuing, Asking, Listening, Helping, & Inviting.'
+                    }
                 ]
+
             },
             threeSixtyResources: {
                 threeSixtyResourcesWithoutTitle: [
@@ -1261,7 +1297,7 @@ export default {
         position: fixed;
         z-index: 120;
         left: 50%;
-        margin-top: 30px;
+        margin-top: 26px;
         transform: translateX(-50%);
         opacity: 0;
         transition: opacity 0.3s, top 0.3s;
