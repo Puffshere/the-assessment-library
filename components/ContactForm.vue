@@ -30,7 +30,7 @@
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                    }}</option>
+                                }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -56,7 +56,7 @@
                                 <select id="source" name="source" v-model="form.source" tabindex="4">
                                     <option v-for="source in sources" :key="source.id" :value="source.value">{{
                                         source.label
-                                        }}</option>
+                                    }}</option>
                                 </select>
 
                                 <span class="error">{{ v.errors[0] }}</span>
@@ -529,7 +529,6 @@ export default {
                         break;
                 }
 
-
                 // Get current page URL to determine tag to apply
                 let currentPageUrl = window.location.pathname.toLowerCase().trim();
 
@@ -537,8 +536,6 @@ export default {
                 if (currentPageUrl.endsWith('/')) {
                     currentPageUrl = currentPageUrl.slice(0, -1);
                 }
-
-                console.log("Current Page URL:", currentPageUrl); // Log to verify the URL
 
                 // Map URLs to corresponding tags
                 const pageTags = {
@@ -560,12 +557,6 @@ export default {
 
                 // Find the tag for the current page
                 const currentPageTag = pageTags[currentPageUrl] || null;
-
-                console.log("This is the selected tag", currentPageTag);
-
-
-
-
 
                 if (this.isPartnerId === "aus" || this.isPartnerId === "eur" || this.isPartnerId === "viet") {
                     // Split full name into first name and last name
