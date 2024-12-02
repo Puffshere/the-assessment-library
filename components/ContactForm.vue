@@ -528,6 +528,36 @@ export default {
                         this.getStartedAccountName = 'Netherlands/Belgium';
                         break;
                 }
+
+
+                // Get current page URL to determine tag to apply
+                const currentPageUrl = window.location.pathname;
+
+                // Map URLs to corresponding tags
+                const pageTags = {
+                    "/": "1042",
+                    "/contact": "1043",
+                    "/certifications/assessment": "1044",
+                    "/assessments/disc": "1045",
+                    "/about/difference": "1046",
+                    "/about/account-levels": "1047",
+                    "/assessments/corporate": "1048",
+                    "/assessments/reseller": "1049",
+                    "/customizations": "1050",
+                    "/disc": "1051",
+                    "/coaches-disc-certification": "1052",
+                    "/discinsights": "1053",
+                    "/disc-awareness": "1054",
+                    "/disc-leadership": "1055",
+                };
+
+                // Find the tag for the current page
+                const currentPageTag = pageTags[currentPageUrl] || null;
+
+
+
+
+
                 if (this.isPartnerId === "aus" || this.isPartnerId === "eur" || this.isPartnerId === "viet") {
                     // Split full name into first name and last name
                     const [firstName, ...lastNameArray] = this.form.fullName.trim().split(' ');
@@ -642,6 +672,13 @@ export default {
                         if (this.isPartnerId === 'viet') {
                             await axios.post(`/api/contact/${data.contact.id}/tag/909`);
                         };
+
+                        // Apply the general tag for the page the form was submitted from
+                        if (currentPageTag) {
+                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
+                                tag: currentPageTag
+                            });
+                        }
 
                         // Create an account and associate the contact to it
                         await axios.post(`/api/contact/${data.contact.id}/account`, {
@@ -775,6 +812,13 @@ export default {
                         if (this.isPartnerId === 'neth_bel') {
                             await axios.post(`/api/contact/${data.contact.id}/tag/983`);
                         };
+
+                        // Apply the general tag for the page the form was submitted from
+                        if (currentPageTag) {
+                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
+                                tag: currentPageTag
+                            });
+                        }
 
                         // Create an account and associate the contact to it
                         await axios.post(`/api/contact/${data.contact.id}/account`, {
@@ -910,6 +954,13 @@ export default {
                             await axios.post(`/api/contact/${data.contact.id}/tag/910`);
                         };
 
+                        // Apply the general tag for the page the form was submitted from
+                        if (currentPageTag) {
+                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
+                                tag: currentPageTag
+                            });
+                        }
+
                         // Create an account and associate the contact to it
                         await axios.post(`/api/contact/${data.contact.id}/account`, {
                             company: this.form.company
@@ -1033,6 +1084,13 @@ export default {
                         // If this is a the Get Started flow, we need to add a special tag to trigger email alerts
                         if (this.isGetStarted) {
                             await axios.post(`/api/contact/${data.contact.id}/tag/149`);
+                        }
+
+                        // Apply the general tag for the page the form was submitted from
+                        if (currentPageTag) {
+                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
+                                tag: currentPageTag
+                            });
                         }
 
                         // Create an account and associate the contact to it
@@ -1163,6 +1221,13 @@ export default {
 
                         // Apply the "Contact Form -> Filled Out Contact Form" tag (tag id 43)
                         await axios.post(`/api/contact/${data.contact.id}/tag/43`);
+
+                        // Apply the general tag for the page the form was submitted from
+                        if (currentPageTag) {
+                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
+                                tag: currentPageTag
+                            });
+                        }
 
                         // Create an account and associate the contact to it
                         await axios.post(`/api/contact/${data.contact.id}/account`, {
