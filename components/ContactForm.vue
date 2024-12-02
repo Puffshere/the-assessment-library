@@ -30,7 +30,7 @@
                             <datalist id="countries">
                                 <option v-for="country in filteredCountries" :key="country.id" :value="country.label">{{
                                     country.label
-                                }}</option>
+                                    }}</option>
                             </datalist>
                             <span class="error">{{ v.errors[0] }}</span>
                         </ValidationProvider>
@@ -56,7 +56,7 @@
                                 <select id="source" name="source" v-model="form.source" tabindex="4">
                                     <option v-for="source in sources" :key="source.id" :value="source.value">{{
                                         source.label
-                                    }}</option>
+                                        }}</option>
                                 </select>
 
                                 <span class="error">{{ v.errors[0] }}</span>
@@ -238,13 +238,13 @@ export default {
         }
     },
     async created() {
-        let foo = await axios.get('/api/contact/custom-fields');
+        let foo = await axios.get('http://localhost:3000/api/contact/custom-fields');
         console.log(foo.data);
 
-        let response = await axios.get('/api/contact/custom-field/21');
+        let response = await axios.get('http://localhost:3000/api/contact/custom-field/21');
         this.sources = response.data.fieldOptions;
 
-        response = await axios.get('/api/contact/custom-field/64');
+        response = await axios.get('http://localhost:3000/api/contact/custom-field/64');
         this.affiliations = response.data.fieldOptions;
 
         switch (this.getStartedId) {
@@ -531,7 +531,14 @@ export default {
 
 
                 // Get current page URL to determine tag to apply
-                const currentPageUrl = window.location.pathname;
+                let currentPageUrl = window.location.pathname.toLowerCase().trim();
+
+                // Normalize the URL to handle trailing slashes
+                if (currentPageUrl.endsWith('/')) {
+                    currentPageUrl = currentPageUrl.slice(0, -1);
+                }
+
+                console.log("Current Page URL:", currentPageUrl); // Log to verify the URL
 
                 // Map URLs to corresponding tags
                 const pageTags = {
@@ -553,6 +560,8 @@ export default {
 
                 // Find the tag for the current page
                 const currentPageTag = pageTags[currentPageUrl] || null;
+
+                console.log("This is the selected tag", currentPageTag);
 
 
 
@@ -675,9 +684,7 @@ export default {
 
                         // Apply the general tag for the page the form was submitted from
                         if (currentPageTag) {
-                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
-                                tag: currentPageTag
-                            });
+                            await axios.post(`/api/contact/${data.contact.id}/tag/${currentPageTag}`);
                         }
 
                         // Create an account and associate the contact to it
@@ -815,9 +822,7 @@ export default {
 
                         // Apply the general tag for the page the form was submitted from
                         if (currentPageTag) {
-                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
-                                tag: currentPageTag
-                            });
+                            await axios.post(`/api/contact/${data.contact.id}/tag/${currentPageTag}`);
                         }
 
                         // Create an account and associate the contact to it
@@ -956,9 +961,7 @@ export default {
 
                         // Apply the general tag for the page the form was submitted from
                         if (currentPageTag) {
-                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
-                                tag: currentPageTag
-                            });
+                            await axios.post(`/api/contact/${data.contact.id}/tag/${currentPageTag}`);
                         }
 
                         // Create an account and associate the contact to it
@@ -1088,9 +1091,7 @@ export default {
 
                         // Apply the general tag for the page the form was submitted from
                         if (currentPageTag) {
-                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
-                                tag: currentPageTag
-                            });
+                            await axios.post(`/api/contact/${data.contact.id}/tag/${currentPageTag}`);
                         }
 
                         // Create an account and associate the contact to it
@@ -1224,9 +1225,7 @@ export default {
 
                         // Apply the general tag for the page the form was submitted from
                         if (currentPageTag) {
-                            await axios.post(`/api/contact/${data.contact.id}/tag`, {
-                                tag: currentPageTag
-                            });
+                            await axios.post(`/api/contact/${data.contact.id}/tag/${currentPageTag}`);
                         }
 
                         // Create an account and associate the contact to it
