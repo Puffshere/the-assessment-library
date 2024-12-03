@@ -94,7 +94,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a tabindex="23" href="/sample-reports#hiring-selection">Hiring &amp;
+                                <a tabindex="23" href="/discinsights">Hiring &amp;
                                     Selection</a>
                             </li>
 
@@ -293,7 +293,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="https://www.hiresense.com" target="_blank" rel="noopener">Hiring & Selection</a>
+                    <a href="/discinsights" target="_blank" rel="noopener">Hiring & Selection</a>
                 </li>
 
                 <li class="nav-item">
