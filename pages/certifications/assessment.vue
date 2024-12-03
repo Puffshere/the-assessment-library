@@ -186,7 +186,7 @@
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/Calendar+copy+1.png"
                         alt="Calendar Icon" style="width: 30px; height: 30px;">
-                    <span style="font-size: 20px;">February 12 & 14</span>
+                    <span style="font-size: 20px;">February 12 & 13</span>
                 </div>
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Certifications/Calendar+copy+1.png"
