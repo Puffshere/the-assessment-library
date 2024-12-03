@@ -5,7 +5,8 @@
         <client-only>
             <div class="map">
                 <MglMap :access-token="token" :map-style="style" :zoom="zoom" :center="center" v-if="leaders">
-                    <MglGeojsonLayer sourceId="points" :source="geoJsonSource" layerId="leaders" :layer="geoJsonlayer" />
+                    <MglGeojsonLayer sourceId="points" :source="geoJsonSource" layerId="leaders"
+                        :layer="geoJsonlayer" />
                 </MglMap>
             </div>
         </client-only>
@@ -15,14 +16,16 @@
                 <div class="col-12">
                     <h1 class="title">Network of DISC Workshop Leaders</h1>
                     <p>
-                        These experienced trainers have been selected for their abilities to engage, teach, and wow learners
+                        These experienced trainers have been selected for their abilities to engage, teach, and wow
+                        learners
                         by challenging participants
-                        to think differently, focus new ideas in a way that really works, and leave training sessions eager
+                        to think differently, focus new ideas in a way that really works, and leave training sessions
+                        eager
                         to apply their new skills.
                     </p>
 
-                    <nuxt-link to="/certifications/workshop-certification" class="button">Discover our Training
-                        Program</nuxt-link>
+                    <nuxt-link to="/certifications/DISC-workshop-essentials" class="button">Purchase DISC Workshop
+                        Leader Essentials</nuxt-link>
                 </div>
             </div>
 
@@ -34,13 +37,15 @@
                                 <tr>
                                     <th>Trainer</th>
                                     <th class="city">
-                                        <button class="location-button city" @click="sortByLocation('city')">City</button>
+                                        <button class="location-button city"
+                                            @click="sortByLocation('city')">City</button>
                                         <span class="filter-icon city" :class="{
                                             'arrow-up': sortBy === 'city' && sortDirection === 'asc',
                                             'arrow-down': sortBy === 'city' && sortDirection === 'desc',
                                             'arrow-side': sortDirection === 'side'
                                         }">
-                                            <img src='https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/icons8-arrow-20.png'>
+                                            <img
+                                                src='https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/icons8-arrow-20.png'>
                                         </span>
                                     </th>
                                     <th class="state">
@@ -51,7 +56,8 @@
                                             'arrow-down': sortBy === 'state' && sortDirection === 'desc',
                                             'arrow-side': sortDirection === 'side'
                                         }">
-                                            <img src='https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/icons8-arrow-20.png'>
+                                            <img
+                                                src='https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/icons8-arrow-20.png'>
                                         </span>
                                     </th>
                                     <th class="country">
@@ -62,7 +68,8 @@
                                             'arrow-down': sortBy === 'country' && sortDirection === 'desc',
                                             'arrow-side': sortDirection === 'side'
                                         }">
-                                            <img src='https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/icons8-arrow-20.png'>
+                                            <img
+                                                src='https://cdn.assessments24x7.com/file/assessments24x7-media/Artifacts/icons8-arrow-20.png'>
                                         </span>
                                     </th>
                                 </tr>
