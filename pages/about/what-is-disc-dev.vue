@@ -26,7 +26,6 @@
                         DISC Overview
                     </button>
                 </div>
-
             </div>
         </section>
 
@@ -58,6 +57,37 @@
                                     personal development.
                                 </p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="usedFor">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-7">
+                            <p style="padding: 0px 10px;">
+                                DISC teaches users how to identify the predictable aspects of behavior and communication
+                                and
+                                to use that knowledge to their advantage. The ability to create a strong and immediate
+                                connection with others is a fundamental skill in sales, management, executive-level
+                                leadership, and everyday life. The goal of DISC is to help users build and maximize
+                                productive relationships. Users don’t need to change their personality traits; they need
+                                to
+                                recognize what drives and motivates others and determine the best ways to effectively
+                                interact with them. The comprehensive, yet simple, DISC reports teach users specific
+                                skills
+                                to improve their personal interactions that create immediate results.
+                            </p>
+                        </div>
+                        <div class="col-5">
+                            <h4 class="section-title">What is the <br />DISC assessment <br /><span
+                                    style="color: #00A8FF;">used
+                                    for?</span></h4>
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/blue+arrow.webp"
+                                alt="blue arrow" style="width: 30%; margin-top: -10px; margin-right: -180px;">
                         </div>
                     </div>
                 </div>
@@ -202,6 +232,25 @@ export default {
         font-weight: 400;
         line-height: 1.5;
         text-decoration: underline;
+    }
+}
+
+.usedFor {
+    background-color: #1E222D;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    p {
+        text-align: left;
+    }
+
+    h4 {
+        text-align: right;
+        line-height: 1.5em;
+        margin-top: 20px;
     }
 }
 
