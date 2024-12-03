@@ -143,6 +143,105 @@
             </div>
         </section>
 
+        <section class="facts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="section-title">What Does DISC <span style="color: #00A8FF;">Stand For?</span></h3>
+                        <p style="padding: 0px 10px;">
+                            DISC represents the four styles of Dominance, Influence, Steadiness, and Conscientiousness.
+                            Each style provides insights into behaviors and priorities by analyzing responses to
+                            specific questions. While the four DISC styles emphasize observable behaviors, it also
+                            relates closely to concepts like conscientiousness, reflecting a commitment to understanding
+                            and adapting to various communication styles.
+                            Dominance, influence, steadiness, and conscientiousness represent four key behavioral
+                            styles. DISC offers insights into individuals’ unique patterns and identifies their main
+                            characteristics. Understanding DISC principles helps grasp how different people interact and
+                            work, improving communication and collaboration within teams.
+                        </p>
+                        <br />
+                        <h3 class="section-title">What Does <span style="color: #00A8FF;">DISC Measure?</span></h3>
+                        <p style="padding: 0px 10px;">
+                            DISC measures observable behavior and emotions. It does not measure intelligence, education,
+                            experience, aptitude, mental health, or values.
+                            You may gain greater insight into how you respond to challenges, how you influence and
+                            interact with others, how you operate at your preferred pace, and how well you follow
+                            directions and function with structure in place, as well as many other patterns.
+                            When you are aware of these dimensions and know how to apply them effectively, you can use
+                            your style strengths or modify your style weaknesses to meet your needs and the needs of
+                            others. <br />
+                            <br />
+                            <span style="color: #00A8FF;">A DISC report has three parts:</span> <br />
+                            <br />
+                            Part I helps you understand each DISC style and identifies characteristics, including the
+                            defining patterns of each behavioral style. The overview of the model is provided to help
+                            you with a strong foundation of understanding in directness, openness, pace, priority, and
+                            the emotions of each style. <br />
+                            <br />
+                            Part II focuses on understanding your unique qualities and reveals insights that highlight
+                            what sets your style apart. You’ll receive narratives and visuals that support your
+                            understanding of your style as well as bullet-point lists including Communication Do's and
+                            Don’ts, Your Workplace Tendencies, Potential Areas of Improvement, How You Respond to
+                            Stress, and your 12 Behavioral Tendencies at Work. This section is all about you, and there
+                            are several pages devoted to helping you achieve a deeper understanding of your style
+                            blend.<br />
+                            <br />
+                            Part III explores adaptability and offers actionable recommendations for you and others who
+                            interact with you. This section is designed as a resource to assist you in communicating
+                            more effectively with others and includes multiple tools to help you practice your new DISC
+                            knowledge and guide your continued development and implementation in your everyday
+                            environments.
+                        </p>
+                        <br />
+                        <h3 class="section-title">How DISC Behavior <span style="color: #00A8FF;">Assessments
+                                Work?</span></h3>
+                        <p style="padding: 0px 10px;">
+                            The good news about DISC assessments is that there are no right or wrong answers. They're
+                            also simple to take online, with some assessments taking as little as 10 minutes to
+                            complete.
+                            Although a person’s Natural profile tends to stay fairly consistent over time, the Adapted
+                            style can change based on the environment, situation, or relationship and is a reflection of
+                            a moment in time. Some may consider taking the assessment again several years apart because
+                            the accuracy of the assessment itself is continually improved. Keep in mind, changes to
+                            behavioral style can also occur due to seasons of life and emotional experiences. It’s
+                            always a good idea to continue to evaluate your behavioral patterns to build awareness of
+                            how you are responding to various situations, environments, and relationships.
+                            Scoring and reporting can either be done electronically or in a few simple steps if you take
+                            a paper version of the assessment. <br />
+                            <br />
+                            Taking a DISC assessment involves answering a questionnaire about your own behavior by
+                            choosing descriptors most like you and least like you. From your selections, an algorithm
+                            returns your personal behavioral blend and your scores produce a profile report. You'll be
+                            able to read about your unique behavioral style, your tendencies, needs, preferred
+                            environment for greatest opportunities to be effective, and strategies for adapting behavior
+                            appropriately with others. You will also learn more about your strengths and potential
+                            challenges.
+                            Reports also include insights about other DISC styles so you can learn more about how others
+                            act and what their strengths and weaknesses are as well. When you do this in a work team
+                            setting, you will end up with a greater understanding of your workplace colleagues to help
+                            you with effective communication strategies going forward.<br />
+                            <br />
+                            Some people are concerned that DISC profiles can place unfair labels on people. For example,
+                            you might have heard someone dismiss someone’s action or comments with a remark like “She’s
+                            a D, what do you expect?” Assigning labels and rationalizing poor behavior are not what DISC
+                            profiles are about. Not all D styles behave or respond in the same way, especially when we
+                            consider the style blend. A DC will behave differently than a DI, even though their primary
+                            style is the same. DISC simply helps people better understand behavioral and communication
+                            preferences and priorities.
+                        </p>
+                    </div>
+                </div>
+                <div class="row button-container">
+                    <button class="teal">
+                        Sample Reports
+                    </button>
+                    <button class="light">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <footer-fold />
     </div>
 </template>
@@ -332,6 +431,27 @@ export default {
     }
 }
 
+.facts {
+    background-color: #1E222D;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+
+
+    .button-container {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .button-container button {
+        display: inline-block;
+        margin: 0 20px;
+    }
+}
+
+
 @media (max-width: 768px) {
     .header .button-container button {
         flex-direction: column;
@@ -344,6 +464,17 @@ export default {
         .button-container button {
             flex-direction: column;
             margin: 10px;
+        }
+    }
+
+    .facts {
+        padding: 20px 5px;
+        padding-bottom: 60px !important;
+
+        .button-container button {
+            flex-direction: column;
+            margin: 10px;
+            margin-top: -20px;
         }
     }
 }
