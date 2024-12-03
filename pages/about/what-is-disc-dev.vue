@@ -94,6 +94,55 @@
             </div>
         </section>
 
+        <section class="overview">
+            <div class="container-wrapper">
+                <div class="container" style="color: #213C85;">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>
+                                DISC overview
+                            </h3>
+                            <p style=" position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
+                                The DISC profile is a simple, practical, and easy-to-remember model that focuses on
+                                individual patterns of observable behavior and emotions. It measures the intensity of
+                                characteristics using scales of directness, openness, pace, and priority to create a
+                                unique blend of four behavioral styles: <br />
+                            <ul>
+                                <li>Dominance (D)</li>
+                                <li>Influence (I)</li>
+                                <li>Steadiness (S)</li>
+                                <li>Conscientiousness (C)</li>
+                            </ul>
+                            When a person uses the DISC model, they can identify their own blend of styles,
+                            recognize and adapt to the styles of others, and develop a better communication process
+                            that allows them to interact effectively with others to build mutually beneficial
+                            relationships. This is applicable in any setting, including working with teams, sales,
+                            leadership, or in other business and personal relationships. <br />
+                            <br />
+                            Using DISC can provide insight into behavioral tensions, causes of stress,
+                            problem-solving, and ways to respond more effectively to conflict. When these items are
+                            identified for each individual, it leads to better relationships, both personally and
+                            professional. For example, salespeople using DISC can develop finely-tuned selling
+                            skills based on identifying and responding to a customer's style. In personal
+                            relationships, understanding the needs, emotions, and fears of others can help us build
+                            mutually-beneficial partnerships.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row button-container">
+                        <button class="teal">
+                            Sample Reports
+                        </button>
+                        <button class="light">
+                            Book Live Demo
+                        </button>
+                    </div>
+                </div>
+                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
+            </div>
+        </section>
+
         <footer-fold />
     </div>
 </template>
@@ -254,10 +303,48 @@ export default {
     }
 }
 
+.overview {
+    .container-wrapper {
+        position: relative;
+    }
+
+    .accents-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        z-index: -1;
+    }
+
+    .container {
+        padding-top: 50px;
+        padding-bottom: 85px;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .button-container button {
+        display: inline-block;
+        margin: 0 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .header .button-container button {
         flex-direction: column;
         margin: 10px;
+    }
+
+    .overview {
+        padding: 0px 10px;
+
+        .button-container button {
+            flex-direction: column;
+            margin: 10px;
+        }
     }
 }
 </style>
