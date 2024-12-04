@@ -481,6 +481,39 @@
             </div>
         </section>
 
+        <section class="validation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="image-container">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/asi-certified.webp"
+                                alt="asi certified badge" style="width: 90px; margin-bottom: -14px;">
+                        </div>
+                        <h3 class="section-title">Our reporting, research, <span style="color: #00A8FF;">and
+                                validation</span></h3>
+                        <p style="padding: 0px 10px;">
+                            Assessments 24x7 maintains the highest standards of development and application through
+                            extensive research and we diligently work to validate and ensure our reports are accurate.
+                            Each report is designed to provide clear interpretations and feedback based on the
+                            individual’s self-perception score that is then confirmed with face validity (to ensure the
+                            assessment measures what it says it will measure). <br>
+                            <br />
+                            We also practice a philosophy of transparency and openly share our rigorous reporting,
+                            research, and validation information to ensure a high degree of confidence for use in
+                            business, non-profit, coaching, or counseling. Our research reports are publicly <a href=""
+                                style="color: #00A8FF;" class="hyperlink">available
+                                here.</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row button-container">
+                    <button class="light">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <footer-fold />
     </div>
 </template>
@@ -575,7 +608,6 @@ export default {
     text-align: center;
     padding-top: 0px;
     padding-bottom: 60px;
-
 
     .button-container {
         text-align: center;
@@ -678,7 +710,6 @@ export default {
     padding-top: 30px;
     padding-bottom: 80px;
 
-
     .button-container {
         text-align: center;
         margin-top: 40px;
@@ -704,6 +735,25 @@ export default {
         border: 1px solid #E0AD2B;
         background: #FFF;
         box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.validation {
+    background-color: #1E222D;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 55px;
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .button-container button {
+        display: inline-block;
+        margin: 0 20px;
     }
 }
 
