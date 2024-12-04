@@ -514,6 +514,133 @@
             </div>
         </section>
 
+        <section class="sampleReports">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="section-title">DISC Assessment Test <span style="color: #00A8FF;">Sample
+                                Reports</span></h3>
+                        <p style="padding: 0px 10px; margin-bottom: 55px;">
+                            Click on the links for each assessment below to view each sample report. Note that the
+                            foundations of the reports are the same: each DISC assessment begins with the DISC-Self
+                            report, and the Leadership, Sales, Service, and Coaching reports provide a specific appendix
+                            for each focused content area to help you apply DISC.
+                        </p>
+                        <div class="card" style="padding-top: 30px;">
+                            <div class="row content-container">
+                                <div class="image-container">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC+Self.webp"
+                                        alt="disc self icon" style="width: 25px; margin-left: 3px; margin-right: 2px;">
+                                </div>
+                                <span class="hyperlink">DISC Self</span>
+                            </div>
+                            <p class="content-text">
+                                Describes "you" based on your observable behavior and can provide insights for others
+                                regarding your communication preferences as well as how you will likely interact with
+                                and respond to them. This self-perception report allows you to observe and evaluate your
+                                behavioral responses in various environments. By exploring your behavior and
+                                communication in a variety of environments, situations or relationships, you can
+                                determine the most effective communication strategy or course of action to take with
+                                others.
+                            </p>
+                            <br />
+                            <div class="row content-container">
+                                <div class="image-container">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC+Leadership.webp"
+                                        alt="disc leadership icon" style="width: 30px;">
+                                </div>
+                                <span class="hyperlink">DISC Leadership</span>
+                            </div>
+                            <p class="content-text">
+                                After the DISC-Self portion of the report, this report provides simple, practical tools
+                                to help use DISC as a leader in Developing, Adapting, Helping, Motivating,
+                                Complimenting, Counseling, Correcting, Delegating, & Acknowledging.
+                            </p>
+                            <br />
+                            <div class="row content-container">
+                                <div class="image-container">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC+Sales.webp"
+                                        alt="disc sales icon" style="width: 30px;">
+                                </div>
+                                <span class="hyperlink">DISC Sales</span>
+                            </div>
+                            <p class="content-text">
+                                This report uses individual assessment data to provide information about your sales
+                                priorities and preferences. You’ll also learn how to connect better with customers whose
+                                priorities and preferences differ from yours through the five stages of the selling
+                                cycle – Connecting, Assessing, Solving, Confirming, and Assuring.
+                            </p>
+                            <br />
+                            <div class="row content-container">
+                                <div class="image-container">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC+Service.webp"
+                                        alt="disc service icon" style="width: 30px;">
+                                </div>
+                                <span class="hyperlink">DISC Service</span>
+                            </div>
+                            <p class="content-text">
+                                This helps you to understand how you can use your strengths and improve upon your
+                                weaknesses to improve customer service in your organization by communicating effectively
+                                in the service process – Greet, Value, Ask, Listen, Help, Invite.
+                            </p>
+                            <br />
+                            <div class="row content-container">
+                                <div class="image-container">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC+Coaching.webp"
+                                        alt="disc coaching icon" style="width: 30px;">
+                                </div>
+                                <span class="hyperlink">DISC Coaching</span>
+                            </div>
+                            <p class="content-text">
+                                Coaches really enjoy helping people, and this report helps determine how you can best
+                                provide this type of mentoring based on your strengths and skills and the interactions
+                                you have with others. DISC Coaching focuses on 5 ways to mentor and support others -
+                                Ask, Listen, Coach, Praise, and Challenge.
+                            </p>
+                            <br />
+                            <div class="row content-container">
+                                <div class="image-container">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC+and+Motivators.webp"
+                                        alt="disc disc and motivators icon" style="width: 30px;">
+                                </div>
+                                <span class="hyperlink">DISC-Motivators Combination</span>
+                            </div>
+                            <p class="content-text">
+                                By combining DISC and Motivators, you can not only apply what you’ve learned about your
+                                behaviors and emotions but also align them in ways that reflect what matters most to you
+                                (your motivations). This combination report allows end-users to evaluate how their
+                                behavior is in alignment with or in a position of tension against their core values and
+                                motivational drivers.
+                            </p>
+                            <br />
+                            <div class="row content-container">
+                                <div class="image-container">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC+Virtual+Training.webp"
+                                        alt="disc virtual training icon" style="width: 30px;">
+                                </div>
+                                <span class="hyperlink">DISC Virtual Training</span>
+                            </div>
+                            <p class="content-text">
+                                An interactive program that trains, tracks, monitors, and measures every student in
+                                real-time to give a deeper, more comprehensive foundation of DISC through a video
+                                series. This program can be re-visited by each user repeatedly as necessary to keep the
+                                information fresh and accessible at any time.
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="row button-container">
+                    <button class="teal">
+                        Sample Reports
+                    </button>
+                    <button class="light">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <footer-fold />
     </div>
 </template>
@@ -757,6 +884,64 @@ export default {
     }
 }
 
+.sampleReports {
+    background-color: #1E222D;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 100px;
+
+    .card {
+        color: #213C85;
+        text-align: left;
+        margin: 0 auto;
+        width: 97%;
+        flex-shrink: 0;
+        border-radius: 18px;
+        border: 1px solid #E0AD2B;
+        background: #FFF;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 20px;
+    }
+
+    .content-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 6px;
+    }
+
+    .image-container {
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+
+    .hyperlink {
+        font-size: 20px;
+        color: #213C85;
+        cursor: pointer;
+    }
+
+    .content-text {
+        margin: 0;
+        line-height: 1.5;
+        color: #213C85;
+        padding: 0 10px;
+        padding-bottom: 10px;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .button-container button {
+        display: inline-block;
+        margin: 0 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .header .button-container button {
         flex-direction: column;
@@ -803,6 +988,16 @@ export default {
 
         li {
             padding-right: 10px;
+        }
+    }
+
+    .sampleReports {
+        padding: 20px 5px;
+        padding-bottom: 60px !important;
+
+        .button-container button {
+            flex-direction: column;
+            margin: 10px;
         }
     }
 }
