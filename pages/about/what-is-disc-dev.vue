@@ -242,6 +242,245 @@
             </div>
         </section>
 
+        <section class="styleOverview">
+            <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
+                style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
+            <div class="container-wrapper">
+                <div class="container" style="color: #213C85;">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 style="text-align: center; margin-bottom: -10px">
+                                DISC style overview
+                            </h3>
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="image-container">
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/D+Style+Graph.webp"
+                                                alt="d style graph" style="width: 120%; margin-top: 95px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-10">
+                                        <P>
+                                            <span style="font-weight: 700;">Dominance (D)</span> <br />
+                                            <br />
+                                            People with the D style place an emphasis on shaping the environment by
+                                            overcoming opposition to accomplish results. They are fast-paced and
+                                            task-focused. <br />
+                                            <br />
+                                            A person with a D style…
+                                        </P>
+                                        <ul>
+                                            <li>
+                                                is motivated by winning, competition, and success
+                                            </li>
+                                            <li>
+                                                focuses on accepting challenges, taking action, and achieving immediate
+                                                results
+                                            </li>
+                                            <li>
+                                                is described as direct, demanding, forceful, strong-willed, driven,
+                                                determined, and self-confident
+                                            </li>
+                                            <li>
+                                                may be limited by lack of concern for others, impatience, and
+                                                stubbornness
+                                            </li>
+                                            <li>
+                                                may fear losing control, being taken advantage of, or being seen as
+                                                vulnerable; values competency, action, concrete results, and challenges
+                                            </li>
+                                            <li>
+                                                values results and action, getting things done now
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="margin-top: -20px;">
+                                        <p style="padding: 0 10px;">
+                                            When communicating with D-style individuals, give them the bottom line, be
+                                            brief
+                                            and quick, focus your DISCussion, avoid making generalizations, refrain from
+                                            repeating yourself, and focus on solutions rather than problems. Allow them
+                                            to
+                                            make choices and have control.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="image-container">
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/I+Style+Graph.webp"
+                                                alt="i style graph" style="width: 120%; margin-top: 80px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-10">
+                                        <P>
+                                            <span style="font-weight: 700;">Influence (I)</span> <br />
+                                            <br />
+                                            People with the I style place an emphasis on shaping the environment by
+                                            influencing or persuading others. They are fast-paced and
+                                            relationship-focused. <br />
+                                            <br />
+                                            A person with a I style…
+                                        </P>
+                                        <ul>
+                                            <li>
+                                                is motivated by social recognition, group activities, and networking
+                                            </li>
+                                            <li>
+                                                focuses on spontaneity, collaboration, and expressing enthusiasm
+                                            </li>
+                                            <li>
+                                                is described as convincing, charming, enthusiastic, charismatic,
+                                                trusting, and optimistic
+                                            </li>
+                                            <li>
+                                                may be limited by a lack of follow-through, impulsiveness, and being
+                                                disorganized
+                                            </li>
+                                            <li>
+                                                may fear loss of social approval, being alone or ignored; values
+                                                spontaneity, dreaming, freedom of expression, and a variety of
+                                                relationships
+                                            </li>
+                                            <li>
+                                                values social acceptance and interaction, fun, and excitement
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="margin-top: -20px;">
+                                        <p style="padding: 0 10px;">
+                                            When communicating with I-style individuals, share your experiences, allow
+                                            them time to ask questions and talk openly, and don’t get frustrated with a
+                                            quickly moving, sometimes scattered conversation. Focus on the positives,
+                                            avoid overloading them with details, and don't interrupt. <br />
+                                            Follow up in writing.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="image-container">
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/S+Style+Graph.webp"
+                                                alt="s style graph" style="width: 120%; margin-top: 60px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-10">
+                                        <P>
+                                            <span style="font-weight: 700;">Steadiness (S)</span> <br />
+                                            <br />
+                                            People with the S style place an emphasis on cooperating with others within
+                                            existing circumstances to carry out the task in a steady and predictable
+                                            manner. They are slower-paced and relationship-focused. <br />
+                                            <br />
+                                            A person with a S style…
+                                        </P>
+                                        <ul>
+                                            <li>
+                                                is motivated by cooperation, opportunities to help, and sincere
+                                                appreciation
+                                            </li>
+                                            <li>
+                                                focuses on collaboration, maintaining stability, and giving support
+                                            </li>
+                                            <li>
+                                                is described as calm, patient, predictable, deliberate, stable, and
+                                                consistent
+                                            </li>
+                                            <li>
+                                                may be limited by being indecisive, overly accommodating, and an
+                                                inclination to avoid sudden change without an opportunity to plan
+                                            </li>
+                                            <li>
+                                                may fear sudden change, loss of stability, and offending others
+                                            </li>
+                                            <li>
+                                                values loyalty, helping others, and security
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="margin-top: -20px;">
+                                        <p style="padding: 0 10px;">
+                                            When communicating with the S style individuals, be personal and amiable,
+                                            express your interest in them and what you expect from them, take time to
+                                            provide clarification. They may need some time to process. Be polite, and
+                                            avoid being confrontational, overly aggressive, or rude.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="image-container">
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/C+Style+Graph.webp"
+                                                alt="c style graph" style="width: 120%; margin-top: 52px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-10">
+                                        <P>
+                                            <span style="font-weight: 700;">Conscientiousness (C)</span> <br />
+                                            <br />
+                                            People with the C style place an emphasis on working meticulously within
+                                            existing circumstances to ensure quality and accuracy. They are slower-paced
+                                            and task-focused. <br />
+                                            <br />
+                                            A person with a C style…
+                                        </P>
+                                        <ul>
+                                            <li>
+                                                is motivated by opportunities to gain more information and build their
+                                                knowledge, show their expertise, and produce high-quality, accurate work
+                                            </li>
+                                            <li>
+                                                focuses on ensuring accuracy, maintaining procedures and protocols, and
+                                                challenging assumptions with evidence and data
+                                            </li>
+                                            <li>
+                                                is described as careful, cautious, systematic, diplomatic, accurate, and
+                                                tactful
+                                            </li>
+                                            <li>
+                                                may be limited by being overcritical, overanalyzing, and isolating
+                                                themselves
+                                            </li>
+                                            <li>
+                                                may fear criticism and being wrong
+                                            </li>
+                                            <li>
+                                                values quality and accuracy
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="margin-top: -20px;">
+                                        <p style="padding: 0 10px;">
+                                            When communicating with a C-style individual, focus on facts and details;
+                                            minimize "pep talk" or emotional language; be patient, persistent, and
+                                            diplomatic. C styles need time to process and respond so be sure to allow
+                                            time for them to gather their thoughts and resources to formulate the best
+                                            response they can offer.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer-fold />
     </div>
 </template>
@@ -451,6 +690,22 @@ export default {
     }
 }
 
+.styleOverview {
+    .container-wrapper {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .card {
+        margin: 70px auto;
+        width: 850px;
+        flex-shrink: 0;
+        border-radius: 18px;
+        border: 1px solid #E0AD2B;
+        background: #FFF;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+}
 
 @media (max-width: 768px) {
     .header .button-container button {
@@ -474,7 +729,30 @@ export default {
         .button-container button {
             flex-direction: column;
             margin: 10px;
-            margin-top: -20px;
+        }
+    }
+
+    .styleOverview {
+        .card {
+            width: 100%;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            width: 30% !important;
+            margin-top: 20px !important;
+        }
+
+        p {
+            padding: 0 10px;
+        }
+
+        li {
+            padding-right: 10px;
         }
     }
 }
