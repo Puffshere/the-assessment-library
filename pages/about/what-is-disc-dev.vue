@@ -641,6 +641,57 @@
             </div>
         </section>
 
+        <section class="profile">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="section-title">Which DISC Profile <span style="color: #00A8FF;">or Vendor is
+                                    Best?</span></h3>
+                            <p style=" position: relative; z-index: 10; padding-bottom: 10px;">
+                                The assessment industry is largely unregulated and DISC is what's termed “open-source
+                                research.” This means anyone can produce an assessment and call it a DISC profile. As a
+                                result, the scientific accuracy of DISC profiles varies widely. We recommend only
+                                considering DISC profiles that have published validity & reliability studies. Even among
+                                providers with validated DISC profiles, the scope and quality of the reporting can vary
+                                widely. So, we recommend narrowing one's search to validated DISC profiles only, then
+                                comparing those providers’ sample reports. Other important considerations include:
+                                <br />
+                            <ul>
+                                <li>What is the technology provided by the DISC profile provider to purchase, deliver,
+                                    and manage the assessments?</li>
+                                <li>Which validated DISC profile providers offer certification programs that are
+                                    independently recognized and accredited by continuing education institutions
+                                    like ICF, SHRM, HRCI and ATD?</li>
+                                <li>What are the DISC profile costs?</li>
+                                <li>Are DISC profile team reports and trainer materials included?</li>
+                            </ul>
+                            Look for options to choose profiles focused on your general self-awareness and understanding
+                            or specific areas including management, leadership, sales, or service to name a few. <br />
+                            <br />
+                            Another consideration could be how to differentiate yourself from other coaches or
+                            professionals with the product. For example, you can take your career to the next level
+                            by <span style="text-decoration: underline;">becoming a Certified DISC Practitioner.</span>
+                            At Assessments 24x7, becoming DISC Certified is
+                            just one of the many development options offered. <br />
+                            <br />
+                            Lastly, examine the other programs and assessments available to support your clients and
+                            customers. At Assessments 24x7, there are five Core Assessment certification programs,
+                            designed specifically for coaches and corporate trainers, including DISC, Motivators, HVP,
+                            Emotional Intelligence, and Learning Styles. Each self-paced, flexible training program
+                            includes 1-on-1 instructor-led sessions (via Zoom or Skype) for your convenience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row button-container">
+                        <button class="teal">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer-fold />
     </div>
 </template>
@@ -942,6 +993,30 @@ export default {
     }
 }
 
+.profile {
+    background-color: #1E222D;
+
+    .container-wrapper {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 50px;
+        padding-bottom: 85px;
+        color: white;
+    }
+
+    .button-container {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .button-container button {
+        display: inline-block;
+        margin: 0 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .header .button-container button {
         flex-direction: column;
@@ -998,6 +1073,24 @@ export default {
         .button-container button {
             flex-direction: column;
             margin: 10px;
+        }
+    }
+
+    .profile {
+        .container {
+            padding-top: 20px !important;
+        }
+
+        h3 {
+            padding: 0 10px;
+        }
+
+        p {
+            padding: 0 10px;
+        }
+
+        li {
+            padding-right: 10px;
         }
     }
 }
