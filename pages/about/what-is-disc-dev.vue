@@ -692,6 +692,46 @@
             </div>
         </section>
 
+        <section class="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="image-container">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/Info+Icon.webp"
+                                alt="info icon" style="width: 63px; margin-bottom: -12px;">
+                        </div>
+                        <h3 style="margin-bottom: 0px;">DISC assessment pricing and more information</h3>
+                        <p style="padding: 0px 10px;">
+                            Assessments 24x7’s DISC system has multiple products and services available for purchase.
+                            These include: Assessments and Profiles, Facilitation Kits, Group Reports, Starter Packages,
+                            Continuing Education Credits (<a href="https://coachingfederation.org/"
+                                class="hyperlink">ICF</a>, <a href="https://www.shrm.org/"
+                                class="hyperlink">SHRM</a>, <a href="https://www.hrci.org/"
+                                class="hyperlink">HRCI</a> and <a href="https://www.td.org/" class="hyperlink">ATD</a>),
+                            Books, Training Tools and,
+                            Certification options, and more. <br>
+                            <br />
+                            There are also ready-to-teach DISC workshops available for those who want to have a complete
+                            solution to training DISC in a variety of contexts including: Self-Awareness &
+                            Communication, Transitioning from Peer to Leader, Trust-based Leadership, Making Teams Work,
+                            and Sales Optimization. <br />
+                            <br />
+                            To find out more about our pricing, including wholesale pricing information,
+                            contact us by calling <a href="tel:12064006647" class="hyperlink">+1 (206) 400-6647</a> or
+                            send us an email
+                            at <a href="mailto:sales@assessments24x7.com"
+                                class="hyperlink">sales@assessments24x7.com</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="row button-container">
+                    <button class="light">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <footer-fold />
     </div>
 </template>
@@ -1008,6 +1048,25 @@ export default {
 
     .button-container {
         text-align: left;
+        margin-top: 20px;
+    }
+
+    .button-container button {
+        display: inline-block;
+        margin: 0 20px;
+    }
+}
+
+.pricing {
+    background-color: white;
+    background-size: cover;
+    color: #213C85;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 70px;
+
+    .button-container {
+        text-align: center;
         margin-top: 20px;
     }
 
