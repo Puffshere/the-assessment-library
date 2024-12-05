@@ -641,6 +641,68 @@
             </div>
         </section>
 
+        <section class="cornerstone">
+            <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
+                style="position: absolute; left: 0px;" class="accents">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="image-container">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/Balls.webp"
+                                alt="balls icon" style="width: 220px; margin-bottom: 0px;">
+                        </div>
+                        <h3 style="margin-bottom: 0px;">Cornerstone Principles of a DISC Workplace</h3>
+                        <div class="card-container">
+                            <div class="upperCard">
+                                <img class="card-icon"
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/yellow%20check.webp"
+                                    alt="yellow check icon">
+                                <p>All DISC styles are equally valuable, and everyone is a blend of all four styles.</p>
+                            </div>
+                            <div class="upperCard">
+                                <img class="card-icon"
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/yellow%20check.webp"
+                                    alt="yellow check icon">
+                                <p>All DISC styles have unique strengths and challenges and no one style is better than
+                                    another.</p>
+                            </div>
+                            <div class="upperCard">
+                                <img class="card-icon"
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/yellow%20check.webp"
+                                    alt="yellow check icon">
+                                <p>Your work style is also influenced by other factors that are not measured by <a
+                                        href="/assessments/disc" class="hyperlink">DISC</a>, such as life experiences,
+                                    education, <a href="/assessments/motivators/" class="hyperlink">Motivations</a>, <a
+                                        href="/assessments/emotional-intelligence/" class="hyperlink">Emotional
+                                        Intelligence</a>, and maturity level.</p>
+                            </div>
+                            <div class="lowerCard">
+                                <img class="card-icon"
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/yellow%20check.webp"
+                                    alt="yellow check icon">
+                                <p>Understanding yourself better is the first step to becoming more effective when
+                                    working with others.</p>
+                            </div>
+                            <div class="lowerCard">
+                                <img class="card-icon"
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/yellow%20check.webp"
+                                    alt="yellow check icon">
+                                <p>Learning about the DISC styles of other people can help you understand their
+                                    priorities, needs, and fears and how they may differ from your own.</p>
+                            </div>
+                            <div class="lowerCard">
+                                <img class="card-icon"
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/yellow%20check.webp"
+                                    alt="yellow check icon">
+                                <p>You can improve the quality of your workplace interactions by using DISC to build
+                                    more effective, mutually beneficial relationships.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="profile">
             <div class="container-wrapper">
                 <div class="container">
@@ -1130,6 +1192,49 @@ export default {
     .button-container button {
         display: inline-block;
         margin: 0 20px;
+    }
+}
+
+.cornerstone {
+    background-color: white;
+    background-size: cover;
+    color: #213C85;
+    text-align: center;
+    padding-bottom: 100px;
+
+    .container {
+        padding-top: 30px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+        max-width: 950px;
+        margin: 40px auto 0 auto;
+    }
+
+    .upperCard,
+    .lowerCard {
+        width: 260px;
+        height: 230px;
+        flex-shrink: 0;
+        border-radius: 18px;
+        border: 1px solid #E0AD2B;
+        background: #FFF;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-icon {
+        width: 29px;
+        margin-top: 10px;
     }
 }
 
