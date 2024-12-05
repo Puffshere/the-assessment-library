@@ -732,6 +732,106 @@
             </div>
         </section>
 
+        <section class="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 style="margin-bottom: 0px;">Frequently asked questions</h3>
+                        <div class="lineContainer">
+                            <div class="yellowLine"></div>
+                        </div>
+                        <p style="padding: 0px 10px;">
+                            <span class="question">
+                                How Long Does the DISC Assessment Take?
+                            </span> <br />
+                            <br />
+                            In most cases, it takes 10-15 minutes to complete the questionnaire. <br />
+                            <br />
+                            When you begin the assessment, you will make 26 selections of the words or phrases that are
+                            most like you and the words or phrases that are least like you. From these choices, the
+                            report algorithm determines the balance of your DISC blend and returns the comprehensive
+                            report tool. <br />
+                            <br />
+                            It is important to note that not all vendors will have the same DISC assessment process.
+                            Some offer computer adaptive testing with up to 80 questions, and others provide a 28-item
+                            forced-choice questionnaire. <br />
+                            <br />
+                            Because DISC is not a copyrighted model, vendors are free to use their own process. However,
+                            there are only a small handful of valid, scientifically-backed versions of DISC assessments
+                            out there. Be sure you examine the validity of the tools and pay special attention to the
+                            last time the data was validated. <br />
+                            <br />
+                            <span class="question">
+                                Can you fail a DISC assessment?
+                            </span> <br />
+                            <br />
+                            A common misconception about DISC profile tests is that you can pass or fail them. Unlike
+                            traditional tests, there are no right or wrong answers in DISC. It is a behavioral inventory
+                            that measures your natural and adjusted behavioral styles. <br />
+                            <br />
+                            <span class="question">
+                                Can DISC be integrated with other personality assessments?
+                            </span> <br />
+                            <br />
+                            Yes, DISC can work with other personality tests. Combining them provides a fuller view of a
+                            person's traits. It might help in understanding different aspects of behavior and
+                            preferences. Although DISC focuses mainly on behavior, using it alongside other assessments
+                            gives a more rounded insight into a person's characteristics. This approach can be useful
+                            for personal growth, team development, and leadership training. <br />
+                            <br />
+                            <span class="question">
+                                How often should I retake a DISC assessment?
+                            </span> <br />
+                            <br />
+                            Retake a DISC assessment every few years. Your behavior and preferences can change. Taking
+                            the test again ensures accurate and current results. <br />
+                            <br />
+                            <span class="question">
+                                Is DISC used to measure personality traits?
+                            </span> <br />
+                            <br />
+                            No, the DISC assessment does not measure personality traits in the traditional sense. Rather
+                            than assessing personality traits, DISC focuses on observable behaviors and communication
+                            styles, helping individuals understand their tendencies in various interactions and
+                            environments. <br />
+                            <br />
+                            <span class="question">
+                                Who Created DISC?
+                            </span> <br />
+                            <br />
+                            Dr. William Moulton Marston was a lawyer and physiological psychologist who first introduced
+                            the DISC model in his 1928 book Emotions of Normal People. A man of many talents, Marston
+                            was also credited with helping to develop the first polygraph test, creating the character
+                            Wonder Woman, and authoring several self-help books. <br />
+                            <br />
+                            Marston conducted research on human emotions and, based on those findings, postulated that
+                            people illustrate their emotions using the behavior types of Dominance (D), Inducement (I),
+                            Submission (S), and Compliance (C), or DISC for short. <br />
+                            <br />
+                            Marston did not create an actual assessment tool from his theories, but based on his work,
+                            others did. In 1956, Walter Clarke, an industrial psychologist, first constructed an
+                            assessment that confirmed Marston’s theories. He created the Activity Vector Analysis, a
+                            psychometric tool that was designed for use by businesses to help them choose qualified
+                            employees. <br />
+                            <br />
+                            In 1965, DISC findings were published in the Journal of Clinical Psychology. The test format
+                            continued to evolve when a "Self-Description" test forced respondents to make a choice
+                            between two or more terms. <br />
+                            <br />
+                            While the assessments used today have evolved from the original work of Marston and Clarke,
+                            the same premise of four behavioral styles is used as the foundation and the continued
+                            development of the DISC tool. <br />
+                            <br />
+                            Understanding the history of DISC, from Marston’s theory to its modern application,
+                            underscores its reliability as a behavior-based tool for personal and professional
+                            development. <br />
+                            <br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer-fold />
     </div>
 </template>
@@ -1073,6 +1173,42 @@ export default {
     .button-container button {
         display: inline-block;
         margin: 0 20px;
+    }
+}
+
+.faq {
+    background-color: white;
+    background-size: cover;
+    color: #213C85;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    h3 {
+        text-align: center;
+    }
+
+    .lineContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .yellowLine {
+        width: 100%;
+        max-width: calc(100% - 20px);
+        height: 6px;
+        flex-shrink: 0;
+        background: #E0AD2B;
+        margin: 10px 0 20px 0;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .question {
+        font-weight: 700;
+        text-decoration: underline;
     }
 }
 
