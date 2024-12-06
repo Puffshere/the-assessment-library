@@ -43,7 +43,7 @@
                             <option value="no">Norwegian - 3</option>
                             <option value="pl">Polish - 1</option>
                             <option value="pt">Portuguese - 6</option>
-                            <option value="pt-br">Portuguese (Brazil) - 4</option>
+                            <option value="pt-br">Portuguese (Brazil) - 5</option>
                             <option value="ru">Russian - 6</option>
                             <option value="es">Spanish - 11</option>
                             <option value="sv">Swedish - 7</option>
@@ -639,6 +639,9 @@
                         <a v-else-if="lang === 'pt'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusPortuguese.pdf"
                             target="_blank" rel="noopener">Sales IQ Report</a>
+                        <a v-else-if="lang === 'pt-br'" class="hyperlink"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Sales_IQ_Plus_-_Portuguese_(Brazil).pdf"
+                            target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else-if="lang === 'es'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusSpanish.pdf"
                             target="_blank" rel="noopener">Sales IQ Report</a>
@@ -652,7 +655,7 @@
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusVietnamese.pdf"
                             target="_blank" rel="noopener">Sales IQ Report</a>
                         <a v-else class="hyperlink disabled">Sales IQ Report</a>
-                        <a class="language-button other" @click="salesIQReportModal = true">11 languages</a><br />
+                        <a class="language-button other" @click="salesIQReportModal = true">12 languages</a><br />
 
                         <a v-if="lang === 'en-us'" class="hyperlink"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/salesiqteamreport.pdf"
@@ -1785,6 +1788,9 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusPortuguese.pdf"
                                     target="_blank" rel="noopener">Portuguese</a><br />
+                                    <a class="hyperlink"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Sales_IQ_Plus_-_Portuguese_(Brazil).pdf"
+                                    target="_blank" rel="noopener">Portuguese (Brazil)</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusSpanish.pdf"
                                     target="_blank" rel="noopener">Spanish</a><br />
