@@ -824,7 +824,7 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupAustralianSampleReport.pdf"
                                     target="_blank" rel="noopener">DISC Team Dynamics Report</a>
                                 <a v-else-if="lang === 'en-us'" class="hyperlink"
-                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamDynamics.pdf"
                                     target="_blank" rel="noopener">DISC Team Dynamics Report</a>
                                 <a v-else-if="lang === 'zh'" class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamDynamicsReportChinese.pdf"
@@ -1158,7 +1158,7 @@
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupAustralianSampleReport.pdf"
                                     target="_blank" rel="noopener">Australian</a><br />
                                 <a class="hyperlink"
-                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/TeamDynamicsGroupSampleReport.pdf"
+                                    href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamDynamics.pdf"
                                     target="_blank" rel="noopener">English</a><br />
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCTeamDynamicsReportChinese.pdf"
