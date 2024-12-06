@@ -37,8 +37,8 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="col-5">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC+Model.webp"
-                                    alt="image of a laptop computer" style="width: 70%; margin-top: 0px;">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/Laptop%20with%20DISC%20model.webp"
+                                    alt="image of a laptop computer" style="width: 277px; margin-top: 0px;">
                                 <div class="lightBox">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/light-bulb.webp"
                                         alt="image of a light bulb" style="margin-left: -20px;">
@@ -60,6 +60,8 @@
                         </div>
                     </div>
                 </div>
+                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
+
             </div>
         </section>
 
@@ -521,40 +523,187 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="col-5">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/powerfulFoldHomePageImage.webp"
-                                    alt="image of black woman and computer" style="width: 100%; margin-top: -50px;"
-                                    class="woman">
-                                <div class="lightBox">
-                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/light-bulb.webp"
-                                        alt="image of a light bulb" style="margin-left: -20px;">
-                                    <span class="lightBoxText">Ask about our API integration, customization and
-                                        white-label
-                                        options</span>
+                            <h4 style="text-align: center;">
+                                How DISC assessments <br />
+                                are conducted
+                            </h4>
+                            <div class="row" style="margin-bottom: 60px;">
+                                <div class="col-9" style="text-align: left;">
+                                    <p
+                                        style="position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
+                                        <span style="font-weight: 700; font-family: poppins;">1. Questionnaire</span>
+                                        <br />
+                                        <br />
+                                        Taking a DISC assessment is a quick self-assessment process that provides a
+                                        comprehensive report on your behavioral style. This assessment tool is a
+                                        valuable resource for both personal growth and professional development. You are
+                                        the expert on yourself, and there are no right or wrong answers. The online
+                                        questionnaire takes about 15 to 20 minutes to complete.
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC+Questionnaire.webp"
+                                        alt="disc questionnaire" style="width: 185px; margin-top: -120px;"
+                                        class="discQuestionnaire">
                                 </div>
                             </div>
-                            <div class="col-7" style="text-align: right;">
-                                <h3>
-                                    Powerful platform
-                                </h3>
-                                <p
-                                    style=" position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
-                                    Assessments 24x7 powers millions of assessments worldwide through our proprietary
-                                    platform —
-                                    streamlined and customizable, with the processing power to tackle all your
-                                    requirements.
-                                    Order
-                                    and
-                                    administer assessments, access reports, view insights, analyze group and conflict
-                                    resolution
-                                    reports, manage sub-accounts, access certification materials and online training
-                                    resources,
-                                    seamlessly integrate with LMS, CRM, HR, and recruiting systems — and more!
-                                </p>
-                                <button class="light" @click="scrollToContactForm" style="margin-top: 40px;">
-                                    Learn More
-                                </button>
+                            <div class="row" style="margin-bottom: 80px;">
+                                <div class="col-3">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC%20Report%20image.webp"
+                                        alt="disc report image" style="width: 253px; margin-top: 0px;"
+                                        class="discReportImage">
+                                </div>
+                                <div class="col-9" style="text-align: right;">
+                                    <p
+                                        style="position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
+                                        <span style="font-weight: 700; font-family: poppins;">2. Scoring and
+                                            Analyses</span>
+                                        <br />
+                                        <br />
+                                        The DISC assessment is scored electronically, and results are presented in a
+                                        comprehensive report. This report includes two primary graphs representing the
+                                        respondent’s Adapted Style and Natural Style, highlighting both situational and
+                                        instinctive behavioral patterns. The Behavioral Pattern View (BPV) visually
+                                        represents the intensity of each DISC style and indicates how styles combine to
+                                        form a unique behavioral profile, displayed in a circular graph for easy
+                                        reference. <br />
+                                        <br />
+                                        This format provides insight into each individual’s style and enables meaningful
+                                        interpretation, especially helpful for coaches and facilitators. The report also
+                                        examines 12 Behavioral Tendencies, assessing how the respondent’s DISC styles
+                                        combine to influence areas like decision-making, communication, and stress
+                                        responses. This detailed approach allows individuals to gain a nuanced
+                                        understanding of their behavior and adapt effectively in varied contexts.
+                                    </p>
+                                </div>
                             </div>
+                            <div class="row" style="margin-bottom: 80px;">
+                                <div class="col-9" style="text-align: left;">
+                                    <p
+                                        style="position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
+                                        <span style="font-weight: 700; font-family: poppins;">3. Feedback</span>
+                                        <br />
+                                        <br />
+                                        Upon completing the DISC assessment, you’ll receive a personalized report that
+                                        highlights both your primary DISC style and a blend of behavioral patterns. This
+                                        report provides valuable insights into your natural interactions and adaptive
+                                        behaviors, enhancing your self-awareness and fostering stronger personal and
+                                        professional relationships. You’ll gain practical recommendations for enhancing
+                                        communication and adapting to the DISC styles of others, ultimately fostering
+                                        more productive personal and professional relationships. The feedback is
+                                        designed to be clear and actionable, enabling you to implement meaningful
+                                        changes that strengthen connections with colleagues, clients, and peers.
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC%20Model.webp"
+                                        alt="disc laptop" style="width: 313px; margin-top: 0px;" class="discLaptop">
+                                </div>
+                            </div>
+                            <div class="row" style="margin-bottom: 80px;">
+                                <div class="col-4">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/Application%20Image.webp"
+                                        alt="application image" style="width: 293px; margin-top: 0px;"
+                                        class="applicationImage">
+                                </div>
+                                <div class="col-8" style="text-align: right;">
+                                    <p
+                                        style="position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
+                                        <span style="font-weight: 700; font-family: poppins;">4. Application</span>
+                                        <br />
+                                        <br />
+                                        Using DISC theory as a foundation, individuals and teams can develop strategies
+                                        to adapt behaviors, improve communication, and foster collaboration. Applying
+                                        this knowledge can significantly improve interactions by helping you adjust your
+                                        communication to the preferences of others. In team environments, recognizing
+                                        each member’s DISC style can streamline role assignments and optimize
+                                        productivity by matching tasks to individual strengths. DISC’s applications
+                                        extend across diverse areas, proving valuable in both professional and personal
+                                        settings:
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/ArrowLeft2.webp"
+                                    alt="arrow left 2 image"
+                                    style="width: 170px; margin-top: -120px; margin-left: 350px; transform: rotate(-31.226deg);"
+                                    class="arrowLeft2Image">
+                            </div>
+                            <div class="row" style="margin-top: -40px;">
+                                <p>
+                                    <span style="font-family: poppins;">DISC Assessment applications include:</span>
+                                    <br />
+                                    <br />
+                                <ul>
+                                    <li>Hiring & Selection using Benchmarking - Empowers HR teams and managers to
+                                        evaluate
+                                        candidates against performance benchmarks, facilitating better hiring decisions.
+                                    </li>
+                                    <li>Change Management - Equips teams with strategies to manage behavioral
+                                        adjustments, fostering openness and acceptance.
+                                    </li>
+                                    <li>Coaching - Provides tools to help individuals unlock their potential, enhancing
+                                        guidance and support.
+                                    </li>
+                                    <li>Conflict Resolution - Improves clarity, empathy, and rapport between individuals
+                                        with different behavioral styles.
+                                    </li>
+                                    <li>Customer Service - Guides service teams in consistently delivering high-quality
+                                        interactions that are responsive to various styles.
+                                    </li>
+                                    <li>Leadership Programs - Using DISC insights, leaders can develop a more adaptable
+                                        leadership style that resonates with each team member’s unique behavioral
+                                        preferences.
+                                    </li>
+                                    <li>Management Skills - Builds managers' ability to genuinely engage, inspire, and
+                                        challenge their teams.
+                                    </li>
+                                    <li>Mentoring - Provides insights to support the development of high-potential
+                                        employees and fast-trackers.
+                                    </li>
+                                    <li>Sales Training - Enhances revenue by equipping sales professionals with tools to
+                                        understand and adapt to customer preferences.
+                                    </li>
+                                    <li>Team Building - Assists in creating cohesive teams based on complementary
+                                        strengths, with insights to address gaps as needed.
+                                    </li>
+                                    <li>Productive Meetings - Helps plan meetings that incorporate DISC styles for
+                                        optimal outcomes and engagement.
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                            <div class="row" style="margin-top: 80px;">
+                                <div class="col-9" style="text-align: left;">
+                                    <p
+                                        style="position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
+                                        <span style="font-weight: 700; font-family: poppins;">5. Continued
+                                            Learning</span>
+                                        <br />
+                                        <br />
+                                        The DISC assessment is a starting point for ongoing development and
+                                        self-awareness. Regularly revisiting your feedback report strengthens your
+                                        understanding of your behavioral patterns and provides an opportunity to refine
+                                        your interpersonal skills. Participating in DISC workshops, training sessions,
+                                        or getting <a class="hyperlink" href="">DISC certified</a> can help deepen your
+                                        practical knowledge and
+                                        implementation. Sharing your DISC report with your team can open lines of
+                                        communication, promoting stronger collaboration and mutual support. Leveraging
+                                        DISC tools and resources supports continued growth, enabling you to build on
+                                        your strengths and develop adaptive communication techniques.
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/Continued%20Learning%20Graphic.webp"
+                                        alt="continued learning graphic" style="width: 301px; margin-top: 0px;"
+                                        class="continuedLearningGraphic">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row button-container">
+                            <button class="teal">
+                                Book Live Demo
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1052,6 +1201,15 @@ export default {
     .container-wrapper {
         padding-top: 60px;
         padding-bottom: 60px;
+        position: relative;
+    }
+
+    .accents-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        z-index: -1;
     }
 
     .lightBox {
@@ -1203,41 +1361,24 @@ export default {
         padding-bottom: 85px;
     }
 
-    h3 {
+    h4 {
         color: #213C85;
-        text-align: right;
         font-family: Poppins;
+        line-height: 1.5em;
     }
 
     p {
         color: #213C85;
-        text-align: right;
     }
 
-    .lightBox {
-        display: flex;
-        align-items: center;
-        width: 565px;
-        height: 33px;
-        border-radius: 7px;
-        border: 1px solid #F5F5F5;
-        background: #FFF;
-        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        margin-top: 35px;
-        margin-left: 10px;
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
     }
 
-    .light-bulb {
-        width: 70px;
-        margin-left: -20px;
-    }
-
-    .lightBoxText {
-        color: #213C85;
-        font-family: $nunito-family;
-        font-size: 10.5pt;
-        font-weight: 400;
-        line-height: 1.5;
+    .button-container button {
+        display: inline-block;
+        margin: 0 20px;
     }
 }
 
