@@ -1,7 +1,7 @@
 <template>
     <section class="table" id="modules">
         <div class="container" style="color: white; padding: 30px 0px 50px 0px;">
-            <h1 style="text-align: center; margin-bottom: 50px;">The Five DISC workshop modules</h1>
+            <h1 style="text-align: center; margin-bottom: 50px;">The Five DISC Workshop Modules</h1>
             <div class="modules">
                 <div class="module">
                     <div class="row align-items-center">
