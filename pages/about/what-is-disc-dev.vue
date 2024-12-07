@@ -1219,7 +1219,6 @@ export default {
     }
 
     .button-container button {
-        display: inline-block;
         margin: 0 20px;
     }
 }
@@ -1310,7 +1309,6 @@ export default {
     }
 
     .button-container button {
-        display: inline-block;
         margin: 0 20px;
     }
 }
@@ -1329,7 +1327,6 @@ export default {
     }
 
     .button-container button {
-        display: inline-block;
         margin: 0 20px;
     }
 }
@@ -1365,7 +1362,6 @@ export default {
     }
 
     .button-container button {
-        display: inline-block;
         margin: 0 20px;
     }
 }
@@ -1462,7 +1458,6 @@ export default {
     }
 
     .button-container button {
-        display: inline-block;
         margin: 0 20px;
     }
 }
@@ -1635,6 +1630,12 @@ export default {
 
         li {
             padding-right: 10px;
+        }
+    }
+
+    .conducted {
+        .arrowLeft2Image {
+            display: none;
         }
     }
 
