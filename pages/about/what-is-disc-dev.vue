@@ -18,7 +18,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="row button-container">
+                <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
                     <button @click="sampleReportsButton" class="teal topBtn">
                         Sample Reports
                     </button>
@@ -1215,12 +1215,7 @@ export default {
     padding-bottom: 60px;
 
     .topBtn {
-        margin-top: 20px;
-        margin-right: 20px;
-    }
-
-    .bottomBtn {
-        margin-left: 20px;
+        margin-right: 40px;
     }
 }
 
@@ -1589,9 +1584,26 @@ export default {
 }
 
 @media (max-width: 768px) {
-    .header button {
-        flex-direction: column;
-        margin: 10px 20px 10px 20px;
+    .header {
+        .btns {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .topBtn {
+        margin-right: 0px;
+    }
+
+    .topBtn,
+    .bottomBtn {
+        margin-bottom: 20px;
+    }
+
+    .bottomBtn:last-child {
+        margin-bottom: 0;
+    }
     }
 
     .usedFor {
