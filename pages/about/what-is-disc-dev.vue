@@ -1212,13 +1212,9 @@ export default {
     text-align: center;
     padding-top: 0px;
     padding-bottom: 60px;
-
-    .button-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
+    
     .topBtn {
+        margin-top: 20px;
         margin-right: 20px;
     }
 
@@ -1585,7 +1581,7 @@ export default {
 }
 
 @media (max-width: 768px) {
-    .header .button-container button {
+    .header button {
         flex-direction: column;
         margin: 10px 20px 10px 20px;
     }
