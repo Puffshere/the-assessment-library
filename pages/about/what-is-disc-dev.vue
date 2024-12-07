@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="row button-container">
-                    <button @click="sampleReportsButton" class="teal">
+                    <button @click="sampleReportsButton" class="teal topBtn">
                         Sample Reports
                     </button>
                     <button @click="scrollToOverview" class="light">
@@ -1543,7 +1543,6 @@ export default {
     }
 
     .button-container button {
-        display: inline-block;
         margin: 0 20px;
     }
 }
@@ -1585,9 +1584,15 @@ export default {
 }
 
 @media (max-width: 768px) {
-    .header .button-container button {
+    .header
+
+    .topBtn {
+        margin-bottom: 20px !important;
+    }
+
+     .button-container button {
         flex-direction: column;
-        margin: 10px;
+        //margin: 10px;
     }
 
     .overview {
@@ -1636,6 +1641,10 @@ export default {
     .conducted {
         .arrowLeft2Image {
             display: none;
+        }
+
+        .continuedLearningGraphic {
+            margin-bottom: 40px;
         }
     }
 
