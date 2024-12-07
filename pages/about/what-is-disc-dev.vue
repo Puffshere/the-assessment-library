@@ -19,10 +19,10 @@
                     </div>
                 </div>
                 <div class="row button-container">
-                    <button class="teal">
+                    <button @click="sampleReportsButton" class="teal">
                         Sample Reports
                     </button>
-                    <button class="light">
+                    <button @click="scrollToOverview" class="light">
                         DISC Overview
                     </button>
                 </div>
@@ -96,7 +96,7 @@
             </div>
         </section>
 
-        <section class="overview">
+        <section class="overview" id="overview">
             <div class="container-wrapper">
                 <div class="container" style="color: #213C85;">
                     <div class="row">
@@ -133,10 +133,10 @@
                         </div>
                     </div>
                     <div class="row button-container">
-                        <button class="teal">
+                        <button @click="sampleReportsButton" class="teal">
                             Sample Reports
                         </button>
-                        <button class="light">
+                        <button @click="contactFormButton" class="light">
                             Book Live Demo
                         </button>
                     </div>
@@ -234,10 +234,10 @@
                     </div>
                 </div>
                 <div class="row button-container">
-                    <button class="teal">
+                    <button @click="sampleReportsButton" class="teal">
                         Sample Reports
                     </button>
-                    <button class="light">
+                    <button @click="contactFormButton" class="light">
                         Learn More
                     </button>
                 </div>
@@ -509,7 +509,7 @@
                     </div>
                 </div>
                 <div class="row button-container">
-                    <button class="light">
+                    <button @click="learnMoreButton" class="light">
                         Learn More
                     </button>
                 </div>
@@ -701,7 +701,7 @@
                             </div>
                         </div>
                         <div class="row button-container">
-                            <button class="teal">
+                            <button @click="contactFormButton" class="teal">
                                 Book Live Demo
                             </button>
                         </div>
@@ -828,10 +828,10 @@
                     </div>
                 </div>
                 <div class="row button-container">
-                    <button class="teal">
+                    <button @click="sampleReportsButton" class="teal">
                         Sample Reports
                     </button>
-                    <button class="light">
+                    <button @click="contactFormButton" class="light">
                         Learn More
                     </button>
                 </div>
@@ -943,7 +943,7 @@
                         </div>
                     </div>
                     <div class="row button-container">
-                        <button class="teal">
+                        <button @click="contactFormButton" class="teal">
                             Learn More
                         </button>
                     </div>
@@ -984,7 +984,7 @@
                     </div>
                 </div>
                 <div class="row button-container">
-                    <button class="light">
+                    <button @click="contactFormButton" class="light">
                         Learn More
                     </button>
                 </div>
@@ -1100,6 +1100,33 @@ export default {
     components: {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
+    },
+    methods: {
+        sampleReportsButton(event) {
+            window.location.href = '/sample-reports';
+            if (event) {
+                event.target.blur();
+            }
+        },
+        scrollToOverview(event) {
+            const element = document.getElementById('overview');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        contactFormButton(event) {
+            window.location.href = '/contact';
+            if (event) {
+                event.target.blur();
+            }
+        },
+        learnMoreButton(event) {
+            window.location.href = '/about/validity';
+            if (event) {
+                event.target.blur();
+            }
+        }
     },
     data() {
         return {
@@ -1234,7 +1261,7 @@ export default {
         color: #213C85;
         font-family: $nunito-family;
         font-size: 1em;
-        font-weight: 400;
+        font-weight: 700;
         line-height: 1.5;
         text-decoration: underline;
     }
