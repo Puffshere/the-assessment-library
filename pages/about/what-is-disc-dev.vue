@@ -68,7 +68,7 @@
         <section class="usedFor">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 usedFor-content">
                         <div class="col-7">
                             <p style="padding: 0px 10px;">
                                 DISC teaches users how to identify the predictable aspects of behavior and communication
@@ -89,7 +89,8 @@
                                     style="color: #00A8FF;">used
                                     for?</span></h4>
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/blue+arrow.webp"
-                                alt="blue arrow" style="width: 30%; margin-top: -10px; margin-right: -180px;">
+                                alt="blue arrow" style="width: 30%; margin-top: -10px; margin-right: -180px;"
+                                class="blueArrow">
                         </div>
                     </div>
                 </div>
@@ -1212,7 +1213,7 @@ export default {
     text-align: center;
     padding-top: 0px;
     padding-bottom: 60px;
-    
+
     .topBtn {
         margin-top: 20px;
         margin-right: 20px;
@@ -1282,6 +1283,13 @@ export default {
         text-align: right;
         line-height: 1.5em;
         margin-top: 20px;
+    }
+
+    .usedFor-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        /* Default desktop order */
     }
 }
 
@@ -1584,6 +1592,16 @@ export default {
     .header button {
         flex-direction: column;
         margin: 10px 20px 10px 20px;
+    }
+
+    .usedFor {
+        .usedFor-content {
+            flex-direction: column-reverse;
+        }
+
+        .blueArrow {
+            display: none !important;
+        }
     }
 
     .overview {
