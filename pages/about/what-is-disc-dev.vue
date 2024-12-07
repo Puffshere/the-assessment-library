@@ -548,7 +548,7 @@
                                         class="discQuestionnaire">
                                 </div>
                             </div>
-                            <div class="row" style="margin-bottom: 80px;">
+                            <div class="row scoring" style="margin-bottom: 80px;">
                                 <div class="col-3">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/DISC%20Report%20image.webp"
                                         alt="disc report image" style="width: 253px; margin-top: 0px;"
@@ -601,7 +601,7 @@
                                         alt="disc laptop" style="width: 313px; margin-top: 0px;" class="discLaptop">
                                 </div>
                             </div>
-                            <div class="row" style="margin-bottom: 80px;">
+                            <div class="row application" style="margin-bottom: 80px;">
                                 <div class="col-4">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/What+Is+DISC/Application%20Image.webp"
                                         alt="application image" style="width: 293px; margin-top: 0px;"
@@ -630,7 +630,7 @@
                                     style="width: 170px; margin-top: -120px; margin-left: 350px; transform: rotate(-31.226deg);"
                                     class="arrowLeft2Image">
                             </div>
-                            <div class="row" style="margin-top: -40px;">
+                            <div class="row include" style="margin-top: -40px;">
                                 <p>
                                     <span style="font-family: poppins;">DISC Assessment applications include:</span>
                                     <br />
@@ -674,7 +674,7 @@
                                 </ul>
                                 </p>
                             </div>
-                            <div class="row" style="margin-top: 80px;">
+                            <div class="row continuedLearning" style="margin-top: 80px;">
                                 <div class="col-9" style="text-align: left;">
                                     <p
                                         style="position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
@@ -829,10 +829,10 @@
                     </div>
                 </div>
                 <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
-                    <button @click="sampleReportsButton" class="teal">
+                    <button @click="sampleReportsButton" class="teal topBtn">
                         Sample Reports
                     </button>
-                    <button @click="contactFormButton" class="light">
+                    <button @click="contactFormButton" class="light bottomBtn">
                         Learn More
                     </button>
                 </div>
@@ -1683,12 +1683,28 @@ export default {
             margin-top: 0px !important;
         }
 
+        .scoring {
+            margin-top: -20px !important;
+        }
+
+        .application {
+            margin-top: -40px !important;
+        }
+
+        .include {
+            margin-top: -60px !important;
+        }
+
         .continuedLearningGraphic {
             margin-bottom: 40px;
         }
 
+        .continuedLearning {
+            margin-top: 40px !important;
+        }
+
         .feedback {
-            margin-top: -50px !important;
+            margin-top: -70px !important;
         }
     }
 
@@ -1733,6 +1749,10 @@ export default {
         li {
             padding-right: 10px;
         }
+    }
+
+    .pricing {
+        padding-bottom: 40px !important;
     }
 }
 </style>
