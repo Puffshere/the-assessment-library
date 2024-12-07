@@ -22,7 +22,7 @@
                     <button @click="sampleReportsButton" class="teal topBtn">
                         Sample Reports
                     </button>
-                    <button @click="scrollToOverview" class="light">
+                    <button @click="scrollToOverview" class="light bottomBtn">
                         DISC Overview
                     </button>
                 </div>
@@ -1218,8 +1218,12 @@ export default {
         margin-top: 20px;
     }
 
-    .button-container button {
-        margin: 0 20px;
+    .topBtn {
+        margin-right: 20px;
+    }
+
+    .bottomBtn {
+        margin-left: 20px;
     }
 }
 
@@ -1399,10 +1403,7 @@ export default {
         margin-top: 20px;
     }
 
-    .button-container button {
-        display: inline-block;
-        margin: 0 20px;
-    }
+
 }
 
 .sampleReports {
@@ -1584,15 +1585,9 @@ export default {
 }
 
 @media (max-width: 768px) {
-    .header
-
-    .topBtn {
-        margin-bottom: 20px !important;
-    }
-
-     .button-container button {
+    .header .button-container button {
         flex-direction: column;
-        //margin: 10px;
+        margin: 10px 20px 10px 20px;
     }
 
     .overview {
