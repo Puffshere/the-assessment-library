@@ -153,7 +153,8 @@ module.exports = {
       '/tools/email-original',
       '/resources/standards-and-procedures',
       '/hiresense-calc',
-      '/blog/**'
+      '/blog/**',
+      '/about/what-is-disc-dev'
     ]
   },
   gtm: {
