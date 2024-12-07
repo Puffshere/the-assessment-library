@@ -133,11 +133,11 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row button-container">
-                        <button @click="sampleReportsButton" class="teal">
+                    <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button @click="sampleReportsButton" class="teal topBtn">
                             Sample Reports
                         </button>
-                        <button @click="contactFormButton" class="light">
+                        <button @click="contactFormButton" class="light bottomBtn">
                             Book Live Demo
                         </button>
                     </div>
@@ -234,11 +234,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="row button-container">
-                    <button @click="sampleReportsButton" class="teal">
+                <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
+                    <button @click="sampleReportsButton" class="teal topBtn">
                         Sample Reports
                     </button>
-                    <button @click="contactFormButton" class="light">
+                    <button @click="contactFormButton" class="light bottmBtn">
                         Learn More
                     </button>
                 </div>
@@ -578,7 +578,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row" style="margin-bottom: 80px;">
+                            <div class="row feedback" style="margin-bottom: 80px;">
                                 <div class="col-9" style="text-align: left;">
                                     <p
                                         style="position: relative; z-index: 10; background-color: white; padding-bottom: 10px;">
@@ -828,7 +828,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row button-container">
+                <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
                     <button @click="sampleReportsButton" class="teal">
                         Sample Reports
                     </button>
@@ -1306,13 +1306,8 @@ export default {
         padding-bottom: 85px;
     }
 
-    .button-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .button-container button {
-        margin: 0 20px;
+    .topBtn {
+        margin-right: 40px;
     }
 }
 
@@ -1324,13 +1319,8 @@ export default {
     padding-top: 30px;
     padding-bottom: 80px;
 
-    .button-container {
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .button-container button {
-        margin: 0 20px;
+    .topBtn {
+        margin-right: 40px;
     }
 }
 
@@ -1452,13 +1442,8 @@ export default {
         padding-bottom: 10px;
     }
 
-    .button-container {
-        text-align: center;
-        margin-top: 60px;
-    }
-
-    .button-container button {
-        margin: 0 20px;
+    .topBtn {
+        margin-right: 40px;
     }
 }
 
@@ -1586,24 +1571,24 @@ export default {
 @media (max-width: 768px) {
     .header {
         .btns {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center;
-    }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .topBtn {
-        margin-right: 0px;
-    }
+        .topBtn {
+            margin-right: 0px;
+        }
 
-    .topBtn,
-    .bottomBtn {
-        margin-bottom: 20px;
-    }
+        .topBtn,
+        .bottomBtn {
+            margin-bottom: 20px;
+        }
 
-    .bottomBtn:last-child {
-        margin-bottom: 0;
-    }
+        .bottomBtn:last-child {
+            margin-bottom: 0;
+        }
     }
 
     .usedFor {
@@ -1619,9 +1604,24 @@ export default {
     .overview {
         padding: 0px 10px;
 
-        .button-container button {
+        .btns {
+            display: flex;
             flex-direction: column;
-            margin: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .topBtn {
+            margin-right: 0px;
+        }
+
+        .topBtn,
+        .bottomBtn {
+            margin-bottom: 20px;
+        }
+
+        .bottomBtn:last-child {
+            margin-bottom: 0;
         }
     }
 
@@ -1629,9 +1629,24 @@ export default {
         padding: 20px 5px;
         padding-bottom: 60px !important;
 
-        .button-container button {
+        .btns {
+            display: flex;
             flex-direction: column;
-            margin: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .topBtn {
+            margin-right: 0px;
+        }
+
+        .topBtn,
+        .bottomBtn {
+            margin-bottom: 20px;
+        }
+
+        .bottomBtn:last-child {
+            margin-bottom: 0;
         }
     }
 
@@ -1664,8 +1679,16 @@ export default {
             display: none;
         }
 
+        .discQuestionnaire {
+            margin-top: 0px !important;
+        }
+
         .continuedLearningGraphic {
             margin-bottom: 40px;
+        }
+
+        .feedback {
+            margin-top: -50px !important;
         }
     }
 
@@ -1673,9 +1696,24 @@ export default {
         padding: 20px 5px;
         padding-bottom: 60px !important;
 
-        .button-container button {
+        .btns {
+            display: flex;
             flex-direction: column;
-            margin: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .topBtn {
+            margin-right: 0px;
+        }
+
+        .topBtn,
+        .bottomBtn {
+            margin-bottom: 20px;
+        }
+
+        .bottomBtn:last-child {
+            margin-bottom: 0;
         }
     }
 
