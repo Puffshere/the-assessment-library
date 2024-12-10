@@ -229,6 +229,5 @@ module.exports = {
     middleware: ['domain-routing'], // Ensure the middleware runs globally
   },
   
-  
   telemetry: false
 }
