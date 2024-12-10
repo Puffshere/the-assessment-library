@@ -76,6 +76,7 @@
 import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
+    name: 'index',
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),

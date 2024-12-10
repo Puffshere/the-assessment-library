@@ -215,8 +215,20 @@ module.exports = {
   ],
 
   router: {
-    middleware: ['domain-routing'] // Add your domain-routing middleware here
+    extendRoutes(routes, resolve) {
+      // Add a dynamic route for the government domain
+      routes.push({
+        path: '/',
+        name: 'government-root',
+        component: resolve(__dirname, 'pages/government-page.vue'),
+        condition(req) {
+          return req.headers.host === 'governmentassessments24x7.com';
+        },
+      });
+    },
+    middleware: ['domain-routing'], // Ensure the middleware runs globally
   },
+  
   
   telemetry: false
 }
