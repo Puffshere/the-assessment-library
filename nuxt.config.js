@@ -154,7 +154,9 @@ module.exports = {
       '/resources/standards-and-procedures',
       '/hiresense-calc',
       '/blog/**',
-      '/about/what-is-disc-dev'
+      '/about/what-is-disc-dev',
+      '/corporate-dev',
+      '/government-page'
     ]
   },
   gtm: {
