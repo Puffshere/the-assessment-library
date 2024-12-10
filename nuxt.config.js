@@ -215,32 +215,19 @@ module.exports = {
   ],
 
   router: {
-    middleware: ['domain-routing'], // Add your middleware globally
     extendRoutes(routes, resolve) {
-      // Remove default routes and redefine
-      routes.splice(0, routes.length);
-  
-      routes.push(
-        {
-          path: '/', // Root path for governmentassessments24x7.com
-          name: 'government-root',
-          component: resolve(__dirname, 'pages/government-page.vue'),
-          condition(req) {
-            return req.headers.host === 'governmentassessments24x7.com';
-          },
+      // Add a dynamic route for the government domain
+      routes.push({
+        path: '/',
+        name: 'government-root',
+        component: resolve(__dirname, 'pages/government-page.vue'),
+        condition(req) {
+          return req.headers.host === 'governmentassessments24x7.com';
         },
-        {
-          path: '/', // Root path for assessments24x7.com
-          name: 'index',
-          component: resolve(__dirname, 'pages/index.vue'),
-          condition(req) {
-            return req.headers.host === 'assessments24x7.com';
-          },
-        }
-      );
+      });
     },
+    middleware: ['domain-routing'], // Ensure the middleware runs globally
   },
-  
   
   
   telemetry: false
