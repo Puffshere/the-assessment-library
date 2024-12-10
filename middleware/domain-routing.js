@@ -1,20 +1,19 @@
 export default function ({ req, route, redirect }) {
     const host = req.headers.host;
   
-    // If on the government domain, ensure the government page is served at root
-    if (host === 'governmentassessments24x7.com') {
-      // Redirect /government-page to /
-      if (route.path === '/government-page') {
-        return redirect('/');
-      }
+    // Serve government-page.vue at `/` for governmentassessments24x7.com
+    if (host === 'governmentassessments24x7.com' && route.path === '/') {
+      return; // Let Nuxt render the root page, which will be dynamically set in the routes
     }
   
-    // If on the assessments domain, ensure the default page is served at root
-    if (host === 'assessments24x7.com') {
-      // Redirect /government-page to /
-      if (route.path === '/government-page') {
-        return redirect('/');
-      }
+    // Redirect /government-page to / for governmentassessments24x7.com
+    if (host === 'governmentassessments24x7.com' && route.path === '/government-page') {
+      return redirect('/');
+    }
+  
+    // Prevent access to /government-page on assessments24x7.com
+    if (host === 'assessments24x7.com' && route.path === '/government-page') {
+      return redirect('/');
     }
   }
   
