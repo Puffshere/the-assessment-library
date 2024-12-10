@@ -1,16 +1,20 @@
-export default function ({ req, redirect, route }) {
+export default function ({ req, app, route, redirect }) {
     const host = req.headers.host;
   
     if (host === 'governmentassessments24x7.com' && route.path === '/') {
-      // Dynamically render the government page for this domain
-      return { name: 'government-page' }; // Match the name of your government-page route
+      // Dynamically load the government page at root
+      app.context.route.matched = [
+        {
+          components: {
+            default: app.$nuxt.$options.components['pages/government-page'],
+          },
+        },
+      ];
     }
   
-    if (host === 'assessments24x7.com' && route.name === 'government-page') {
-      // Prevent government-page from being accessible on assessments24x7.com
-      return { name: 'index' }; // Match the name of your root route (index)
+    if (route.path === '/government-page') {
+      // Redirect /government-page to / for both domains
+      return redirect('assessments24x7.com/');
     }
-  
-    // Default: Do nothing, let Nuxt handle routing normally
   }
   

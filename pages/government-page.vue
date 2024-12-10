@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h1>Hello World!</h1>
+        <h1>Coming Soon governmentassessments.com!</h1>
     </section>
 </template>
 
