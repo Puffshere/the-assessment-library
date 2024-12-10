@@ -215,7 +215,15 @@ module.exports = {
   ],
 
   router: {
-    middleware: ['redirects', 'domain-routing'],
+    middleware: ['redirects'], // Keep existing middleware
+    extendRoutes(routes, resolve) {
+      routes.forEach((route) => {
+        if (route.path === '/') {
+          route.component = resolve(__dirname, 'pages/government-page.vue');
+        }
+      });
+    }
   },
+  
   telemetry: false
 }
