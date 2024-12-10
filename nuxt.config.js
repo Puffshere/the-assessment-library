@@ -215,7 +215,18 @@ module.exports = {
   ],
 
   router: {
-    middleware: ['redirects', 'domain-routing'],
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/',
+        component: (req) => {
+          const host = req.headers.host;
+          if (host === 'governmentassessments24x7.com') {
+            return resolve(__dirname, 'pages/government-page.vue');
+          }
+          return resolve(__dirname, 'pages/index.vue');
+        }
+      });
+    }
   },
   telemetry: false
 }
