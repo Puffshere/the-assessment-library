@@ -1,7 +1,9 @@
 <template>
     <div>
-        <section style="text-align: center;">
-            <h1>Coming Soon governmentassessments.com!</h1>
+        <section class="banner">
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/SDVOSB+Logo.webp"
+                alt="sdvosb logo" style="width: 68px; height: 58px; ">
+            <h3>Service-Disabled Veteran-Owned Small Business</h3>
         </section>
 
         <hr class="blueLine">
@@ -176,6 +178,23 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
+
+.banner {
+    text-align: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(90deg, #0033C5 0%, #077FF8 100%);
+    height: 83px;
+    display: flex;
+
+    h3 {
+        margin: auto 0;
+    }
+
+    img {
+        margin: auto 10px auto 0;
+    }
+}
 
 .testimonial {
     background-color: #1E222D;
