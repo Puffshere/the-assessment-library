@@ -1,10 +1,11 @@
 <template>
   <section id="GovernmentContactFormSection">
     <div class="container-wrapper">
-      <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 100px;">
+      <div class="container d-flex justify-content-center align-items-center" style="padding-bottom: 60px;">
         <div class="row">
-          <h3 style="margin-top: 12px; margin-bottom: 0px;">
-            <span style="color: #1E222D;"><span style="color: #00A8FF;">Enhance</span> your mission success today</span> <br />
+          <h3 style="margin-top: 40px; margin-bottom: 30px;">
+            <span style="color: #1E222D;"><span style="color: #00A8FF;">Enhance</span> your mission success today</span>
+            <br />
           </h3>
           <div class="col-12 justify-content-center">
             <div class="form-container">
@@ -74,9 +75,7 @@ p {
   justify-content: center;
 }
 
-@media (max-width: 1200px) {
-
-}
+@media (max-width: 1200px) {}
 
 @media (max-width: 450px) {
 
