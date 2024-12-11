@@ -6,6 +6,41 @@
 
         <hr class="blueLine">
 
+        <section class="testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <img class="image"
+                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Will+Fenick+Testimonial+Image.webp"
+                            alt="Will Fenick">
+                    </div>
+                    <div class="col-8">
+                        <blockquote>
+                            <img class="quote"
+                                src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Blue+Quotations.webp"
+                                alt="blue quotations image">
+                            <p>
+                                I took the DISC assessment a few years ago, and the information I learned transformed
+                                how I navigated my personal and professional journey post-service. I wish I had embraced
+                                the Assessment 24x7 approach sooner—it would have been invaluable during my career. In
+                                that spirit, I'm very excited to make these assessments available to our government
+                                sector professionals today."
+                            </p>
+                            <footer>
+                                <cite>William R. Fenick, CAPT, USN (Retired),</cite>
+                                CEO, Government Assessments 24x7<br />
+                            </footer>
+                            <button class="lightTeal" style="margin-top: 30px;">
+                                Get Started
+                            </button>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
         <section class="elevate">
             <div class="container-wrapper">
                 <div class="container">
@@ -141,6 +176,53 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
+
+.testimonial {
+    background-color: #1E222D;
+    padding: 40px 0;
+    color: #fff;
+
+    .image {
+        width: 260px;
+        border-radius: 50%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        margin: 0 auto;
+        display: block;
+    }
+
+    blockquote {
+        position: relative;
+        text-align: right;
+        margin-top: 30px;
+
+        p {
+            margin-left: 60px;
+            position: relative;
+        }
+
+        .quote {
+            position: absolute;
+            top: -40px;
+            left: -25px;
+            width: 80px;
+        }
+
+        footer {
+            font-size: 10pt;
+            margin-top: 10px;
+
+            cite {
+                font-weight: 800;
+                display: block;
+                font-size: 12pt;
+            }
+
+            .hyperlink {
+                color: #fff;
+            }
+        }
+    }
+}
 
 .elevate {
     .container-wrapper {
