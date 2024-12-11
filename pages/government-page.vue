@@ -1,8 +1,80 @@
 <template>
     <div>
-        <section>
+        <section style="text-align: center;">
             <h1>Coming Soon governmentassessments.com!</h1>
         </section>
+
+        <hr class="blueLine">
+
+        <section class="stats">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-3">
+                            <p><span class="topLine">10 Min.</span><br />
+                                <span class="bottomLine">Avg. Assessment <br />
+                                    Completion Time</span>
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <p><span class="topLine">7+</span><br />
+                                <span class="bottomLine">Free Team <br />
+                                    Reports</span>
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <p><span class="topLine">50+</span><br />
+                                <span class="bottomLine">Suite of <br />
+                                    Supporting Assessments</span>
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <p><span class="topLine">ASI</span><br />
+                                <span class="bottomLine">Validated & <br />
+                                    Compliant</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
+        <section class="asi">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col-4 seal">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/asi-certified.webp"
+                                    alt="Scientifically Validated Assessments by ASI"
+                                    style="width: 212px; margin-top: 40px;">
+                            </div>
+                            <div class="col-8" style="text-align: right;">
+                                <h3 style="padding-top: 20px;">
+                                    <span style="color: #00A8FF;">Validated,</span> reliable, compliant
+                                </h3>
+                                <p>
+                                    Our assessments are validated by ASI to adhere to the highest standards set by the
+                                    American
+                                    Psychological Association and the Equal Employment Opportunity Commission. In
+                                    addition,
+                                    Assessments 24x7 has one of the highest Cronbach scores for our DISC assessment,
+                                    which
+                                    indicates exceptional consistency and reliability.
+                                </p>
+                                <button class="teal" style="margin-top: 20px;">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
 
         <contact-form-fold></contact-form-fold>
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
@@ -28,14 +100,69 @@ export default {
 @import '~assets/scss/new-styles';
 
 
-/* Add any styles specific to this page here */
-section {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+.stats {
+    background-color: #1E222D;
+    background-position: center;
+    min-height: 192px;
+
+    .topLine {
+        color: #00A8FF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        font-size: 27pt;
+        font-weight: 700;
+    }
+
+    .bottomLine {
+        font-size: 11.25pt;
+        font-weight: 400;
+    }
+
+    .col-3 {
+        text-align: center;
+        color: white;
+    }
 }
 
-h1 {
-    text-align: center;
-    color: #333;
+.asi {
+    .container-wrapper {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 50px;
+        margin-bottom: 123px;
+    }
+
+    h3 {
+        color: #1E222D;
+        ;
+        font-weight: 700;
+    }
+
+    p {
+        color: #1E222D;
+        ;
+    }
+
+    .bottom {
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/skyline-background.webp');
+        background-size: cover;
+        background-position: center;
+        padding-bottom: -75px;
+    }
+}
+
+.blueLine {
+    width: 100%;
+    height: 6px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, #0033C5 0%, #077FF8 100%);
+    margin: 0;
+    margin-bottom: -1px;
 }
 </style>
