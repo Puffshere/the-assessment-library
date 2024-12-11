@@ -6,6 +6,49 @@
 
         <hr class="blueLine">
 
+        <section class="elevate">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col-8" style="text-align: left;">
+                                <h3>
+                                    <span style="color: #00A8FF;">Elevate</span> team dynamics accross <br />
+                                    Government entities with DISC
+                                </h3>
+                                <p>
+                                    The DISC Assessment reveals four primary behavioral styles—Dominance, Influence,
+                                    Steadiness, and Conscientiousness—helping government teams communicate effectively,
+                                    collaborate seamlessly, and reduce friction. <br />
+                                    <br />
+                                    D (Dominance): Confident and results-driven, focused on solving problems. <br />
+                                    I (Influence): Persuasive and enthusiastic, excelling at building relationships.
+                                    <br />
+                                    S (Steadiness): Reliable and supportive, promoting consistency and teamwork. <br />
+                                    C (Conscientiousness): Analytical and precise, ensuring accuracy and quality. <br />
+                                    <br />
+                                    When paired with tools like <a href="/assessments/motivators"
+                                        class="hyperlink">Motivators</a> and <a
+                                        href="assessments/emotional-intelligence" class="hyperlink">Emotional
+                                        Intelligence</a> assessments,
+                                    DISC becomes a cornerstone for developing mission-ready teams.
+                                </p>
+                                <button class="teal" style="margin-top: 25px;">
+                                    Learn More
+                                </button>
+                            </div>
+                            <div class="col-4 seal">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Laptop+with+DISC+Model.webp"
+                                    alt="laptop image" style="width: 305px; margin-top: 110px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
         <section class="stats">
             <div class="container">
                 <div class="row">
@@ -99,6 +142,32 @@ export default {
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
 
+.elevate {
+    .container-wrapper {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        color: #1E222D;
+        font-weight: 700;
+    }
+
+    p {
+        color: #1E222D;
+    }
+
+    .bottom {
+        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/skyline-background.webp');
+        background-size: cover;
+        background-position: center;
+        padding-bottom: -75px;
+    }
+}
 
 .stats {
     background-color: #1E222D;
@@ -140,13 +209,11 @@ export default {
 
     h3 {
         color: #1E222D;
-        ;
         font-weight: 700;
     }
 
     p {
         color: #1E222D;
-        ;
     }
 
     .bottom {
