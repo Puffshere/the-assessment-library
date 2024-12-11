@@ -201,12 +201,15 @@
                             class="hyperlink" target="_blank" rel="noopener">DISC Summary</a>
                         <a v-else class="hyperlink disabled">DISC Summary</a>
                         <a class="language-button disc" @click="discSummaryReportModal = true">10 languages</a><br />
+
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Sales.pdf"
-                            class="hyperlink" target="_blank" rel="noopener">DISC Sales</a><br />
+                            class="hyperlink" target="_blank" rel="noopener">DISC Sales</a>
+                        <a v-else class="hyperlink disabled">DISC Sales</a><br />
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Leadership.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Leadership</a>
+                        <a v-else class="hyperlink disabled">DISC Leadership</a>
                     </div>
                 </div>
 
@@ -493,9 +496,11 @@
                         <a v-if="lang === 'en-us'"
                             href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCworkplace.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Workplace Insights</a>
+                        <a v-else class="hyperlink disabled">DISC Workplace Insights</a><br />
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_DISC_Executive_Insights.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCworkplace.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Executive Insights</a>
+                        <a v-else class="hyperlink disabled">DISC Executive Insights</a><br />
                     </div>
                 </div>
 
@@ -1788,7 +1793,7 @@
                                 <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SalesIQPlusPortuguese.pdf"
                                     target="_blank" rel="noopener">Portuguese</a><br />
-                                    <a class="hyperlink"
+                                <a class="hyperlink"
                                     href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Sales_IQ_Plus_-_Portuguese_(Brazil).pdf"
                                     target="_blank" rel="noopener">Portuguese (Brazil)</a><br />
                                 <a class="hyperlink"
