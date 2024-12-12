@@ -110,6 +110,31 @@
 
         <hr class="blueLine">
 
+        <section class="mission">
+            <div class="container-wrapper">
+                <div class="container" style="color: #213C85;">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col-5">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Government+A24x7+Logo.webp"
+                                    alt="our mission logo" style="width: 341px; margin-top: 50px;">
+                            </div>
+                            <div class="col-7" style="text-align: right;">
+                                <p>Empowering government leaders at every level to strengthen collaboration, inspire
+                                    leadership, and drive meaningful outcomes through secure, science-backed solutions.
+                                </p>
+                                <button class="teal" style="margin-top: 30px;">
+                                    Speak with Specialist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
         <section class="testimonial">
             <div class="container">
                 <div class="row">
@@ -391,6 +416,49 @@ export default {
 
     .lastCardText {
         padding-top: 15px;
+    }
+}
+
+.mission {
+    .container-wrapper {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        position: relative;
+    }
+
+    .accents-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        z-index: -1;
+    }
+
+    .lightBox {
+        display: flex;
+        align-items: center;
+        width: 260px;
+        height: 33px;
+        border-radius: 7px;
+        border: 1px solid #F5F5F5;
+        background: #FFF;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-top: 35px;
+        margin-left: 10px;
+    }
+
+    .light-bulb {
+        width: 70px;
+        margin-left: -20px;
+    }
+
+    .lightBoxText {
+        color: #213C85;
+        font-family: $nunito-family;
+        font-size: 1em;
+        font-weight: 700;
+        line-height: 1.5;
+        text-decoration: underline;
     }
 }
 
