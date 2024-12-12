@@ -6,6 +6,35 @@
             <h3>Service-Disabled Veteran-Owned Small Business</h3>
         </section>
 
+        <section class="hero">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12" style="text-align: center;">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Government+A24x7+Logo.webp"
+                                alt="government assessments 24x7 logo" style="width: 272px">
+                            <h1>
+                                <span style="color: #077FF8;">Trusted Assessment Solutions for the</span><br />
+                                <span style="color: #E0AD2B;">U.S. Government</span>
+                            </h1>
+                            <h3 style="font-weight: 400;">
+                                Empowering federal, state, and local agencies with <br />
+                                tools for team success and mission accomplishment
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button @click="sampleReportsButton" class="teal topBtn">
+                            View Products
+                        </button>
+                        <button @click="scrollToOverview" class="lightTeal bottomBtn">
+                            Book Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <hr class="blueLine">
 
         <section class="testimonial">
@@ -196,6 +225,22 @@ export default {
     }
 }
 
+.hero {
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Flag+background+-+Hero.webp');
+    background-size: cover;
+    /* Changes scaling to fit the element without cropping */
+    background-repeat: no-repeat;
+    /* Prevents tiling if the image doesn't fill the container */
+    background-position: center;
+    /* Keeps the image centered */
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    .topBtn {
+        margin-right: 40px;
+    }
+}
+
 .testimonial {
     background-color: #1E222D;
     padding: 40px 0;
@@ -332,5 +377,29 @@ export default {
     background: linear-gradient(90deg, #0033C5 0%, #077FF8 100%);
     margin: 0;
     margin-bottom: -1px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        .btns {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .topBtn {
+            margin-right: 0px;
+        }
+
+        .topBtn,
+        .bottomBtn {
+            margin-bottom: 20px;
+        }
+
+        .bottomBtn:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 </style>
