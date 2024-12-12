@@ -24,10 +24,10 @@
                         </div>
                     </div>
                     <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
-                        <button @click="sampleReportsButton" class="teal topBtn">
+                        <button class="teal topBtn">
                             View Products
                         </button>
-                        <button @click="scrollToOverview" class="lightTeal bottomBtn">
+                        <button class="lightTeal bottomBtn">
                             Book Live Demo
                         </button>
                     </div>

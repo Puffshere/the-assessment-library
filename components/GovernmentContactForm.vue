@@ -200,13 +200,13 @@ export default {
         }
     },
     async created() {
-        let foo = await axios.get('/api/contact/custom-fields');
+        let foo = await axios.get('http://localhost:3000/api/contact/custom-fields');
         console.log(foo.data);
 
-        let response = await axios.get('/api/contact/custom-field/21');
+        let response = await axios.get('http://localhost:3000/api/contact/custom-field/21');
         this.sources = response.data.fieldOptions;
 
-        response = await axios.get('/api/contact/custom-field/64');
+        response = await axios.get('http://localhost:3000/api/contact/custom-field/64');
         this.affiliations = response.data.fieldOptions;
 
         switch (this.getStartedId) {
