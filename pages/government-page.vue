@@ -226,13 +226,9 @@ export default {
 }
 
 .hero {
-    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Flag+background+-+Hero.webp');
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Flag+background+-+Hero.webp') lightgray -8.012px -77px / 100.765% 211.194% no-repeat;
     background-size: cover;
-    /* Changes scaling to fit the element without cropping */
-    background-repeat: no-repeat;
-    /* Prevents tiling if the image doesn't fill the container */
     background-position: center;
-    /* Keeps the image centered */
     padding-top: 50px;
     padding-bottom: 80px;
 
