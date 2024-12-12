@@ -47,51 +47,51 @@
                         </h3>
                     </div>
                     <div class="col-12 cards-container">
-                        <div class="card">
+                        <div class="card firstCards">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/yrsInBusiness.webp"
                                 alt="card 1 image" class="card-image">
-                            <div class="cardNumber">
+                            <div class="cardNumber firstCardNumber">
                                 25+
                             </div>
-                            <div class="cardText">
+                            <div class="cardText firstCardText">
                                 Years <br />
                                 in Business
                             </div>
                         </div>
                         <a style="text-decoration: none; color: #0033C5" href="/certifications">
-                            <div class="card">
+                            <div class="card firstCards">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/certifiedPractitioners.webp"
                                     alt="card 2 image" class="card-image">
-                                <div class="cardNumber">
+                                <div class="cardNumber firstCardNumber">
                                     2300+
                                 </div>
-                                <div class="cardText">
+                                <div class="cardText firstCardText">
                                     Certified <br />
                                     Practitioners
                                 </div>
                             </div>
                         </a>
                         <a style="text-decoration: none; color: #0033C5" href="/assessments">
-                            <div class="card">
+                            <div class="card firstCards">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/assessmentsAdministered.webp"
                                     alt="card 3 image" class="card-image">
-                                <div class="cardNumber">
+                                <div class="cardNumber firstCardNumber">
                                     34m+
                                 </div>
-                                <div class="cardText">
+                                <div class="cardText firstCardText">
                                     Assessments <br />
                                     Administered
                                 </div>
                             </div>
                         </a>
                         <a style="text-decoration: none; color: #0033C5" href="/about/partners">
-                            <div class="lastCard">
+                            <div class="card">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/SDVOSB+Logo.webp"
                                     alt="card 4 image" class="lastCard-image">
-                                <div class="lastCardNumber">
+                                <div class="cardNumber lastCardNumber">
                                     SDVOSB
                                 </div>
-                                <div class="cardText">
+                                <div class="cardText lastCardText">
                                     Service-Disabled <br />
                                     Vertan-Ownned <br />
                                     Small Business
@@ -342,24 +342,12 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
         text-align: center;
-        padding: 10px;
     }
 
-    .lastCard {
-        width: 202px;
-        height: 226px;
-        border-radius: 10px;
-        border: 1px solid #E6E153;
-        background: #FFF;
-        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .firstCards {
+        padding: 10px;
         justify-content: space-evenly;
-        text-align: center;
-        padding: 10px 10px 0px 10px;
     }
 
     .card-image {
@@ -370,8 +358,8 @@ export default {
 
     .lastCard-image {
         width: 50px;
-        margin-top: -14px;
-        margin-bottom: -10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     .cardNumber {
@@ -379,15 +367,15 @@ export default {
         font-family: Poppins;
         font-size: 32pt;
         font-weight: 700;
+    }
+
+    .firstCardNumber {
         margin-top: -20px;
     }
 
     .lastCardNumber {
-        color: #00A8FF;
-        font-family: Poppins;
-        font-size: 32pt;
-        font-weight: 700;
-        margin-top: -10px;
+        margin-top: -9px;
+        margin-bottom: -14px;
     }
 
     .cardText {
@@ -395,7 +383,14 @@ export default {
         font-family: $nunito-family;
         font-size: 14pt;
         font-weight: 400;
+    }
+
+    .firstCardText {
         margin-top: -30px;
+    }
+
+    .lastCardText {
+        padding-top: 15px;
     }
 }
 
