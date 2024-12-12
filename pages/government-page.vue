@@ -2,7 +2,7 @@
     <div>
         <section class="banner">
             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/SDVOSB+Logo.webp"
-                alt="sdvosb logo" style="width: 68px; height: 58px; ">
+                alt="sdvosb logo" style="width: 68px; height: 58px;">
             <h3>Service-Disabled Veteran-Owned Small Business</h3>
         </section>
 
@@ -29,6 +29,79 @@
                         </button>
                         <button class="lightTeal bottomBtn">
                             Book Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
+        <section class="trusted">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 style="color: white; text-align: center;">
+                            <span style="color: #00A8FF;">The trusted</span> assessment platform <br />
+                            for Government teams
+                        </h3>
+                    </div>
+                    <div class="col-12 cards-container">
+                        <div class="card">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/yrsInBusiness.webp"
+                                alt="card 1 image" class="card-image">
+                            <div class="cardNumber">
+                                25+
+                            </div>
+                            <div class="cardText">
+                                Years <br />
+                                in Business
+                            </div>
+                        </div>
+                        <a style="text-decoration: none; color: #0033C5" href="/certifications">
+                            <div class="card">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/certifiedPractitioners.webp"
+                                    alt="card 2 image" class="card-image">
+                                <div class="cardNumber">
+                                    2300+
+                                </div>
+                                <div class="cardText">
+                                    Certified <br />
+                                    Practitioners
+                                </div>
+                            </div>
+                        </a>
+                        <a style="text-decoration: none; color: #0033C5" href="/assessments">
+                            <div class="card">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/assessmentsAdministered.webp"
+                                    alt="card 3 image" class="card-image">
+                                <div class="cardNumber">
+                                    34m+
+                                </div>
+                                <div class="cardText">
+                                    Assessments <br />
+                                    Administered
+                                </div>
+                            </div>
+                        </a>
+                        <a style="text-decoration: none; color: #0033C5" href="/about/partners">
+                            <div class="lastCard">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/SDVOSB+Logo.webp"
+                                    alt="card 4 image" class="lastCard-image">
+                                <div class="lastCardNumber">
+                                    SDVOSB
+                                </div>
+                                <div class="cardText">
+                                    Service-Disabled <br />
+                                    Vertan-Ownned <br />
+                                    Small Business
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row" style="display: flex; justify-content: center; padding-top: 80px;">
+                        <button class="lightTeal">
+                            Learn More
                         </button>
                     </div>
                 </div>
@@ -237,6 +310,95 @@ export default {
     }
 }
 
+.trusted {
+    background-color: #1E222D;
+
+    .container {
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+
+    h1 {
+        color: #213C85;
+        font-family: Poppins;
+        text-align: center;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 202px;
+        height: 226px;
+        border-radius: 10px;
+        border: 1px solid #E6E153;
+        background: #FFF;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .lastCard {
+        width: 202px;
+        height: 226px;
+        border-radius: 10px;
+        border: 1px solid #E6E153;
+        background: #FFF;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        padding: 10px 10px 0px 10px;
+    }
+
+    .card-image {
+        width: 50px;
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
+
+    .lastCard-image {
+        width: 50px;
+        margin-top: -14px;
+        margin-bottom: -10px;
+    }
+
+    .cardNumber {
+        color: #00A8FF;
+        font-family: Poppins;
+        font-size: 32pt;
+        font-weight: 700;
+        margin-top: -20px;
+    }
+
+    .lastCardNumber {
+        color: #00A8FF;
+        font-family: Poppins;
+        font-size: 32pt;
+        font-weight: 700;
+        margin-top: -10px;
+    }
+
+    .cardText {
+        color: #0033C5;
+        font-family: $nunito-family;
+        font-size: 14pt;
+        font-weight: 400;
+        margin-top: -30px;
+    }
+}
+
 .testimonial {
     background-color: #1E222D;
     padding: 40px 0;
@@ -375,6 +537,23 @@ export default {
     margin-bottom: -1px;
 }
 
+@media (max-width: 900px) {
+    .trusted {
+        .cards-container {
+            display: grid;
+            grid-template-columns: 202px 202px;
+            grid-auto-rows: 226px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            width: 202px;
+            height: 226px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         .btns {
@@ -395,6 +574,22 @@ export default {
 
         .bottomBtn:last-child {
             margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .trusted {
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 202px;
+            height: 226px;
         }
     }
 }
