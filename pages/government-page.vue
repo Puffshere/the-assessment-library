@@ -1187,7 +1187,7 @@ export default {
         img {
             width: 48px !important;
             height: 38px !important;
-            margin: auto auto auto auto !important;
+            margin: auto 0px auto 20px !important;
         }
 
         h3 {
