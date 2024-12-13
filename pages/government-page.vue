@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="banner">
-            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/SDVOSB+Logo.webp"
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/SDVOSB+Logo+-+White.webp"
                 alt="sdvosb logo" style="width: 68px; height: 58px;">
             <h3>Service-Disabled Veteran-Owned Small Business</h3>
         </section>
@@ -17,7 +17,7 @@
                                 <span style="color: #077FF8;">Trusted Assessment Solutions for the</span><br />
                                 <span style="color: #E0AD2B;">U.S. Government</span>
                             </h1>
-                            <h3 style="font-weight: 400;">
+                            <h3 style="font-weight: 400; color: #1E222D;">
                                 Empowering federal, state, and local agencies with <br />
                                 tools for team success and mission accomplishment
                             </h3>
@@ -139,67 +139,55 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 style="color: white; text-align: center;">
-                            <span style="color: #00A8FF;">The trusted</span> assessment platform <br />
-                            for Government teams
+                        <h3 style="text-align: center;">
+                            <span style="color: #00A8FF;">Core</span> products
                         </h3>
+                        <p style="text-align: center;">
+                            From individual staff to your offices, departments, and commands, our tools can support your
+                            strategic plans, objectives, or mission by enhancing communication with DISC, uncovering
+                            performance drivers with Motivators, strengthening leadership through Emotional
+                            Intelligence, and providing comprehensive feedback for growth with 360 Assessments.
+                        </p>
                     </div>
                     <div class="col-12 cards-container">
-                        <div class="card firstCards">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/yrsInBusiness.webp"
+                        <div class="card">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/emotional_intelligence_sample_report.webp"
                                 alt="card 1 image" class="card-image">
-                            <div class="cardNumber firstCardNumber">
-                                25+
-                            </div>
-                            <div class="cardText firstCardText">
-                                Years <br />
-                                in Business
-                            </div>
+                            <p style="margin-bottom: -28px;">
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Emotional <br />
+                                    Intelligence</a> <br />
+                                Uncover what drives individuals to perform at their best, aligning their motivations
+                                with organizational goals.
+                            </p>
                         </div>
-                        <a style="text-decoration: none; color: #0033C5" href="/certifications">
-                            <div class="card firstCards">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/certifiedPractitioners.webp"
-                                    alt="card 2 image" class="card-image">
-                                <div class="cardNumber firstCardNumber">
-                                    2300+
-                                </div>
-                                <div class="cardText firstCardText">
-                                    Certified <br />
-                                    Practitioners
-                                </div>
-                            </div>
-                        </a>
-                        <a style="text-decoration: none; color: #0033C5" href="/assessments">
-                            <div class="card firstCards">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/assessmentsAdministered.webp"
-                                    alt="card 3 image" class="card-image">
-                                <div class="cardNumber firstCardNumber">
-                                    34m+
-                                </div>
-                                <div class="cardText firstCardText">
-                                    Assessments <br />
-                                    Administered
-                                </div>
-                            </div>
-                        </a>
-                        <a style="text-decoration: none; color: #0033C5" href="/about/partners">
-                            <div class="card">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/SDVOSB+Logo.webp"
-                                    alt="card 4 image" class="lastCard-image">
-                                <div class="cardNumber lastCardNumber">
-                                    SDVOSB
-                                </div>
-                                <div class="cardText lastCardText">
-                                    Service-Disabled <br />
-                                    Vertan-Ownned <br />
-                                    Small Business
-                                </div>
-                            </div>
-                        </a>
+                        <div class="card">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/disc_sample_report_image.webp"
+                                alt="card 2 image" class="card-image">
+                            <p style="margin-bottom: -70px;">
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">DISC Self</a> <br />
+                                Identify observable behaviors and communication styles to enhance team dynamics,
+                                improve collaboration, and build stronger connections.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/motivators_sample_report_image.webp"
+                                alt="card 3 image" class="card-image">
+                            <p style="margin-bottom: -70px;">
+                                <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf"
+                                    class="hyperlink" target="_blank" rel="noopener">Motivators</a> <br />
+                                Strengthen leadership by developing self-awareness, social awareness, and the
+                                ability to navigate interpersonal relationships effectively.
+                            </p>
+                        </div>
                     </div>
-                    <div class="row" style="display: flex; justify-content: center; padding-top: 80px;">
-                        <button class="lightTeal">
-                            Learn More
+                    <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="teal topBtn">
+                            View Sample Reports
+                        </button>
+                        <button class="lightTeal bottomBtn">
+                            Book Live Demo
                         </button>
                     </div>
                 </div>
@@ -397,7 +385,7 @@ export default {
 }
 
 .hero {
-    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Flag+background+-+Hero.webp') lightgray -8.012px -77px / 100.765% 211.194% no-repeat;
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Fold+1+-+2500+x+718.webp') rgb(255, 255, 255) -8.012px -77px / 100.765% 211.194% no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 50px;
@@ -536,86 +524,49 @@ export default {
 }
 
 .products {
-    background-color: #1E222D;
+    background: url('https://f002.backblazeb2.com/file/assessments24x7-media/Government/Fold+4+-+2500+x+718.webp') rgb(255, 255, 255) -0.247px -6px / 100.034% 158.607% no-repeat;
 
     .container {
         padding-top: 30px;
         padding-bottom: 70px;
     }
 
-    h1 {
-        color: #213C85;
-        font-family: Poppins;
-        text-align: center;
+    p {
+        color: #1E222D;
     }
 
     .cards-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-        margin-top: 20px;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 10px;
+        margin-bottom: 60px;
     }
 
     .card {
-        width: 202px;
-        height: 226px;
-        border-radius: 10px;
-        border: 1px solid #E6E153;
+        width: 185px;
+        min-height: 430px;
+        border-radius: 12px;
+        border: 1px solid #E0E0E0;
         background: #FFF;
-        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 4px 4px 4px 0px rgba(7, 127, 248, 0.25);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
-
-    .firstCards {
-        padding: 10px;
-        justify-content: space-evenly;
+        padding: 5px;
     }
 
     .card-image {
-        width: 50px;
-        margin-top: -20px;
+        width: 149px;
+        height: 193px;
+        margin-top: 10px;
         margin-bottom: -10px;
     }
 
-    .lastCard-image {
-        width: 50px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .cardNumber {
-        color: #00A8FF;
-        font-family: Poppins;
-        font-size: 32pt;
-        font-weight: 700;
-    }
-
-    .firstCardNumber {
-        margin-top: -20px;
-    }
-
-    .lastCardNumber {
-        margin-top: -9px;
-        margin-bottom: -14px;
-    }
-
-    .cardText {
-        color: #0033C5;
-        font-family: $nunito-family;
-        font-size: 14pt;
-        font-weight: 400;
-    }
-
-    .firstCardText {
-        margin-top: -30px;
-    }
-
-    .lastCardText {
-        padding-top: 15px;
+    .topBtn {
+        margin-right: 40px;
     }
 }
 
@@ -789,6 +740,28 @@ export default {
 
 @media (max-width: 768px) {
     .hero {
+        .btns {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .topBtn {
+            margin-right: 0px;
+        }
+
+        .topBtn,
+        .bottomBtn {
+            margin-bottom: 20px;
+        }
+
+        .bottomBtn:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .products {
         .btns {
             display: flex;
             flex-direction: column;
