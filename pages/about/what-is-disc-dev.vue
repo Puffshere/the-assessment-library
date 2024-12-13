@@ -686,7 +686,7 @@
                                         self-awareness. Regularly revisiting your feedback report strengthens your
                                         understanding of your behavioral patterns and provides an opportunity to refine
                                         your interpersonal skills. Participating in DISC workshops, training sessions,
-                                        or getting <a class="hyperlink" href="">DISC certified</a> can help deepen your
+                                        or getting <a class="hyperlink" href="/certifications/assessment">DISC certified</a> can help deepen your
                                         practical knowledge and
                                         implementation. Sharing your DISC report with your team can open lines of
                                         communication, promoting stronger collaboration and mutual support. Leveraging
