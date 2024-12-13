@@ -344,6 +344,87 @@
 
         <hr class="blueLine">
 
+        <section class="choose">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Government+A24x7+Logo.webp"
+                            alt="government assessments 24x7 logo" style="width: 162px; margin-bottom: 10px;">
+                        <h3 style="color: #1E222D; text-align: center; margin-bottom: 0px;">
+                            <span style="color: #00A8FF;">Why</span> Choose Government Assessments 24x7?
+                        </h3>
+                    </div>
+                    <div class="col-12">
+                        <div class="row cards-container">
+                            <div class="card">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                    alt="checkmark image" class="card-image">
+                                <p>
+                                    Proven Results, <br />
+                                    Trusted <br />
+                                    Globally
+                                </p>
+                            </div>
+                            <div class="card">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                    alt="checkmark image" class="card-image">
+                                <p>
+                                    Veteran-Owned <br />
+                                    and <br />
+                                    Mission-Driven
+                                </p>
+                            </div>
+                            <div class="card">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                    alt="checkmark image" class="card-image">
+                                <p>
+                                    Validated and <br />
+                                    Reliable <br />
+                                    Assessments
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row cards-container">
+                            <div class="card">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                    alt="checkmark image" class="card-image">
+                                <p>
+                                    Customizable <br />
+                                    Platform and <br />
+                                    Branded Reports
+                                </p>
+                            </div>
+                            <div class="card">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                    alt="checkmark image" class="card-image">
+                                <p>
+                                    Secure and <br />
+                                    Compliant <br />
+                                    Technology
+                                </p>
+                            </div>
+                            <div class="card">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                    alt="checkmark image" class="card-image">
+                                <p>
+                                    Unmatched <br />
+                                    Customer <br />
+                                    Support
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="display: flex; justify-content: center; padding-top: 70px;">
+                        <button class="lightTeal">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
         <contact-form-fold></contact-form-fold>
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
 
@@ -697,6 +778,54 @@ export default {
     }
 }
 
+.choose {
+    background: url('https://f002.backblazeb2.com/file/assessments24x7-media/Government/Fold+10+-+2500+x+718.webp') rgb(255, 255, 255) -0.247px -6px / 100.034% 158.607% no-repeat;
+
+    .container {
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+
+    p {
+        font-weight: 700;
+        color: #00A8FF;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 156px;
+        height: 155px;
+        border-radius: 12px;
+        border: 1px solid #E0E0E0;
+        background: #FFF;
+        box-shadow: 4px 4px 4px 0px rgba(7, 127, 248, 0.25);
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        justify-content: space-evenly;
+    }
+
+    .card-image {
+        width: 45px;
+        margin-top: 10px;
+    }
+
+    .cardText {
+        color: #0033C5;
+        font-family: $nunito-family;
+        font-size: 14pt;
+        font-weight: 400;
+    }
+}
+
 .blueLine {
     width: 100%;
     height: 6px;
@@ -723,6 +852,21 @@ export default {
     }
 
     .products {
+        .cards-container {
+            display: grid;
+            grid-template-columns: 202px 202px;
+            grid-auto-rows: 226px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            width: 202px;
+            height: 226px;
+        }
+    }
+
+    .choose {
         .cards-container {
             display: grid;
             grid-template-columns: 202px 202px;
@@ -800,6 +944,20 @@ export default {
     }
 
     .products {
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 202px;
+            height: 226px;
+        }
+    }
+
+    .choose {
         .cards-container {
             display: flex;
             flex-direction: column;
