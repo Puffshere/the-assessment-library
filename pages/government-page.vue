@@ -24,10 +24,10 @@
                         </div>
                     </div>
                     <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
-                        <button class="teal topBtn">
+                        <button @click="scrollToProducts" class="teal topBtn">
                             View Products
                         </button>
-                        <button class="lightTeal bottomBtn">
+                        <button @click="scrollToContactForm" class="lightTeal bottomBtn">
                             Book Live Demo
                         </button>
                     </div>
@@ -100,7 +100,7 @@
                         </a>
                     </div>
                     <div class="row" style="display: flex; justify-content: center; padding-top: 80px;">
-                        <button class="lightTeal">
+                        <button @click="scrollToContactForm" class="lightTeal">
                             Learn More
                         </button>
                     </div>
@@ -123,7 +123,7 @@
                                 <p>Empowering government leaders at every level to strengthen collaboration, inspire
                                     leadership, and drive meaningful outcomes through secure, science-backed solutions.
                                 </p>
-                                <button class="teal" style="margin-top: 30px;">
+                                <button @click="scrollToContactForm" class="teal" style="margin-top: 30px;">
                                     Speak with Specialist
                                 </button>
                             </div>
@@ -135,7 +135,7 @@
 
         <hr class="blueLine">
 
-        <section class="products">
+        <section class="products" id="products">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -183,10 +183,10 @@
                         </div>
                     </div>
                     <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
-                        <button class="teal topBtn">
+                        <button @click="sampleReportsButton" class="teal topBtn">
                             View Sample Reports
                         </button>
-                        <button class="lightTeal bottomBtn">
+                        <button @click="scrollToContactForm" class="lightTeal bottomBtn">
                             Book Live Demo
                         </button>
                     </div>
@@ -317,10 +317,10 @@
                                 </div>
                             </div>
                             <div class="row btns" style="display: flex; justify-content: center; margin-top: 70px;">
-                                <button class="teal topBtn">
-                                    View Products
+                                <button @click="sampleReportsButton" class="teal topBtn">
+                                    View Sample Reports
                                 </button>
-                                <button class="lightTeal bottomBtn">
+                                <button @click="scrollToContactForm" class="lightTeal bottomBtn">
                                     Book Live Demo
                                 </button>
                             </div>
@@ -356,7 +356,7 @@
                                 <cite>William R. Fenick, CAPT, USN (Retired),</cite>
                                 CEO, Government Assessments 24x7<br />
                             </footer>
-                            <button class="lightTeal" style="margin-top: 30px;">
+                            <button @click="scrollToContactForm" class="lightTeal" style="margin-top: 30px;">
                                 Get Started
                             </button>
                         </blockquote>
@@ -394,8 +394,8 @@
                                         Intelligence</a> assessments,
                                     DISC becomes a cornerstone for developing mission-ready teams.
                                 </p>
-                                <button class="teal" style="margin-top: 25px;">
-                                    Learn More
+                                <button @click="sampleReportsButton" class="teal" style="margin-top: 25px;">
+                                    View Sample Reports
                                 </button>
                             </div>
                             <div class="col-4 seal">
@@ -468,7 +468,7 @@
                                     which
                                     indicates exceptional consistency and reliability.
                                 </p>
-                                <button class="teal" style="margin-top: 20px;">
+                                <button @click="scrollToContactForm" class="teal" style="margin-top: 20px;">
                                     Learn More
                                 </button>
                             </div>
@@ -610,7 +610,7 @@
                         </div>
                     </div>
                     <div class="row" style="display: flex; justify-content: center; padding-top: 70px;">
-                        <button class="lightTeal">
+                        <button @click="scrollToContactForm" class="lightTeal">
                             Get Started
                         </button>
                     </div>
@@ -620,7 +620,7 @@
 
         <hr class="blueLine">
 
-        <contact-form-fold></contact-form-fold>
+        <contact-form-fold id="contactForm"></contact-form-fold>
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
 
     </div>
@@ -636,6 +636,28 @@ export default {
         'contact-form-fold': () => import('@/components/government/GovernmentContactFormFold'),
         'footer-fold': () => import('@/components/Footer')
     },
+    methods: {
+        sampleReportsButton(event) {
+            window.location.href = '/sample-reports';
+            if (event) {
+                event.target.blur();
+            }
+        },
+        scrollToProducts(event) {
+            const element = document.getElementById('products');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        scrollToContactForm(event) {
+            const element = document.getElementById('contactForm');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        }
+    }
 };
 </script>
 
