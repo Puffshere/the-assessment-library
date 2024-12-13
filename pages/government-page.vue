@@ -683,7 +683,7 @@ export default {
 }
 
 .hero {
-    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Fold+1+-+2500+x+718.webp') rgb(255, 255, 255) -8.012px -77px / 100.765% 211.194% no-repeat;
+    background: url('/images/governmentHeroFold.webp') rgb(255, 255, 255) -8.012px -77px / 100.765% 211.194% no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 50px;
