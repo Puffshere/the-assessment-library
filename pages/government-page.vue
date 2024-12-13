@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-12 cards-container">
                         <div class="card firstCards">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/yrsInBusiness.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/calendar.webp"
                                 alt="card 1 image" class="card-image">
                             <div class="cardNumber firstCardNumber">
                                 25+
@@ -60,7 +60,7 @@
                         </div>
                         <a style="text-decoration: none; color: #0033C5" href="/certifications">
                             <div class="card firstCards">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/certifiedPractitioners.webp"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/star.webp"
                                     alt="card 2 image" class="card-image">
                                 <div class="cardNumber firstCardNumber">
                                     2300+
@@ -73,7 +73,7 @@
                         </a>
                         <a style="text-decoration: none; color: #0033C5" href="/assessments">
                             <div class="card firstCards">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/assessmentsAdministered.webp"
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/head.webp"
                                     alt="card 3 image" class="card-image">
                                 <div class="cardNumber firstCardNumber">
                                     34m+
@@ -116,8 +116,8 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="col-5">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Government+A24x7+Logo.webp"
-                                    alt="our mission logo" style="width: 341px; margin-top: 50px;">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Our+Mission.webp"
+                                    alt="our mission logo" style="width: 341px; margin-top: 30px;">
                             </div>
                             <div class="col-7" style="text-align: right;">
                                 <p>Empowering government leaders at every level to strengthen collaboration, inspire
@@ -189,6 +189,95 @@
                         <button class="lightTeal bottomBtn">
                             Book Live Demo
                         </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
+        <section class="security">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row feedback" style="margin-bottom: 0px;">
+                                <div class="col-9" style="text-align: left;">
+                                    <h3>
+                                        <span style="color: #00A8FF;">Built</span> for Government security
+                                    </h3>
+                                    <p>
+                                        Upon completing the DISC assessment, you’ll receive a personalized report that
+                                        highlights both your primary DISC style and a blend of behavioral patterns. This
+                                        report provides valuable insights into your natural interactions and adaptive
+                                        behaviors, enhancing your self-awareness and fostering stronger personal and
+                                        professional relationships. You’ll gain practical recommendations for enhancing
+                                        communication and adapting to the DISC styles of others, ultimately fostering
+                                        more productive personal and professional relationships. The feedback is
+                                        designed to be clear and actionable, enabling you to implement meaningful
+                                        changes that strengthen connections with colleagues, clients, and peers.
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/man.webp"
+                                        alt="image of man" style="width: 357px; margin-top: 0px;" class="discLaptop">
+                                </div>
+                            </div>
+                            <div class="row application" style="margin-bottom: 0px;">
+                                <div class="col-4">
+                                    <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/woman_on_computer.webp"
+                                        alt="image of woman on computer" style="width: 324px; margin-top: 0px;"
+                                        class="applicationImage">
+                                </div>
+                                <div class="col-8" style="text-align: right;">
+                                    <h3>
+                                        <span style="color: #00A8FF;">Optimized</span> for your mission
+                                    </h3>
+                                    <p>
+                                        Using DISC theory as a foundation, individuals and teams can develop strategies
+                                        to adapt behaviors, improve communication, and foster collaboration. Applying
+                                        this knowledge can significantly improve interactions by helping you adjust your
+                                        communication to the preferences of others. In team environments, recognizing
+                                        each member’s DISC style can streamline role assignments and optimize
+                                        productivity by matching tasks to individual strengths. DISC’s applications
+                                        extend across diverse areas, proving valuable in both professional and personal
+                                        settings:
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row continuedLearning" style="margin-top: 0px;">
+                                <div class="col-9" style="text-align: left;">
+                                    <h3>
+                                        <span style="color: #00A8FF;">Engineered</span> for team success
+                                    </h3>
+                                    <p>
+                                        The DISC assessment is a starting point for ongoing development and
+                                        self-awareness. Regularly revisiting your feedback report strengthens your
+                                        understanding of your behavioral patterns and provides an opportunity to refine
+                                        your interpersonal skills. Participating in DISC workshops, training sessions,
+                                        or getting <a class="hyperlink" href="">DISC certified</a> can help deepen your
+                                        practical knowledge and
+                                        implementation. Sharing your DISC report with your team can open lines of
+                                        communication, promoting stronger collaboration and mutual support. Leveraging
+                                        DISC tools and resources supports continued growth, enabling you to build on
+                                        your strengths and develop adaptive communication techniques.
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/man_smiling.webp"
+                                        alt="image of man smiling" style="width: 389px; margin-top: 0px;"
+                                        class="continuedLearningGraphic">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
+                            <button class="teal topBtn">
+                                View Products
+                            </button>
+                            <button class="lightTeal bottomBtn">
+                                Book Live Demo
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -651,6 +740,36 @@ export default {
     }
 }
 
+.security {
+    .topBtn {
+        margin-right: 40px;
+    }
+
+    .container-wrapper {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 50px;
+        padding-bottom: 85px;
+    }
+
+    h4 {
+        color: #213C85;
+        font-family: Poppins;
+        line-height: 1.5em;
+    }
+
+    p {
+        color: #213C85;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
 .testimonial {
     background-color: #1E222D;
     padding: 40px 0;
@@ -925,6 +1044,61 @@ export default {
         .bottomBtn:last-child {
             margin-bottom: 0;
         }
+    }
+
+    .security {
+        .arrowLeft2Image {
+            display: none;
+        }
+
+        .discQuestionnaire {
+            margin-top: 0px !important;
+        }
+
+        .scoring {
+            margin-top: -20px !important;
+        }
+
+        .application {
+            margin-top: -40px !important;
+        }
+
+        .include {
+            margin-top: -60px !important;
+        }
+
+        .continuedLearningGraphic {
+            margin-bottom: 40px;
+        }
+
+        .continuedLearning {
+            margin-top: 40px !important;
+        }
+
+        .feedback {
+            margin-top: -70px !important;
+        }
+
+        .btns {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .topBtn {
+            margin-right: 0px;
+        }
+
+        .topBtn,
+        .bottomBtn {
+            margin-bottom: 20px;
+        }
+
+        .bottomBtn:last-child {
+            margin-bottom: 0;
+        }
+
     }
 }
 
