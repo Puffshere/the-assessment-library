@@ -201,82 +201,128 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="row feedback" style="margin-bottom: 0px;">
-                                <div class="col-9" style="text-align: left;">
+                            <div class="row top" style="margin-bottom: 0px;">
+                                <div class="col-7" style="text-align: left; margin-top: 20px;">
                                     <h3>
                                         <span style="color: #00A8FF;">Built</span> for Government security
                                     </h3>
-                                    <p>
-                                        Upon completing the DISC assessment, you’ll receive a personalized report that
-                                        highlights both your primary DISC style and a blend of behavioral patterns. This
-                                        report provides valuable insights into your natural interactions and adaptive
-                                        behaviors, enhancing your self-awareness and fostering stronger personal and
-                                        professional relationships. You’ll gain practical recommendations for enhancing
-                                        communication and adapting to the DISC styles of others, ultimately fostering
-                                        more productive personal and professional relationships. The feedback is
-                                        designed to be clear and actionable, enabling you to implement meaningful
-                                        changes that strengthen connections with colleagues, clients, and peers.
-                                    </p>
+                                    <div class="feature">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
+                                            alt="Checkmark" class="checkmark-icon">
+                                        <div>
+                                            <strong>Certified & Accredited</strong> <br />
+                                            ISO 27001 and FedRAMP readiness.
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="feature">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
+                                            alt="Checkmark" class="checkmark-icon">
+                                        <div>
+                                            <strong>Data Privacy First</strong> <br />
+                                            Strict adherence to government data protection standards.
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="feature">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
+                                            alt="Checkmark" class="checkmark-icon">
+                                        <div>
+                                            <strong>Robust Security Measures</strong> <br />
+                                            Encryption, access controls, and 24/7 system monitoring.
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-3">
-                                    <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/man.webp"
-                                        alt="image of man" style="width: 357px; margin-top: 0px;" class="discLaptop">
+                                <div class="col-5">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/man.webp"
+                                        alt="manImage" style="width: 357px; margin-top: -10px;">
                                 </div>
                             </div>
-                            <div class="row application" style="margin-bottom: 0px;">
-                                <div class="col-4">
-                                    <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/woman_on_computer.webp"
-                                        alt="image of woman on computer" style="width: 324px; margin-top: 0px;"
-                                        class="applicationImage">
+                            <div class="row" style="margin-bottom: 0px;">
+                                <div class="col-5">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/woman_on_computer.webp"
+                                        alt="image of woman on computer" style="width: 324px; margin-top: -25px;" class="womanSmiling">
                                 </div>
-                                <div class="col-8" style="text-align: right;">
+                                <div class="col-7" style="text-align: right; margin-top: 30px;">
                                     <h3>
                                         <span style="color: #00A8FF;">Optimized</span> for your mission
                                     </h3>
-                                    <p>
-                                        Using DISC theory as a foundation, individuals and teams can develop strategies
-                                        to adapt behaviors, improve communication, and foster collaboration. Applying
-                                        this knowledge can significantly improve interactions by helping you adjust your
-                                        communication to the preferences of others. In team environments, recognizing
-                                        each member’s DISC style can streamline role assignments and optimize
-                                        productivity by matching tasks to individual strengths. DISC’s applications
-                                        extend across diverse areas, proving valuable in both professional and personal
-                                        settings:
-                                    </p>
+                                    <div class="feature2">
+                                        <div>
+                                            <strong>Scientifically Validated Tools</strong> <br />
+                                            Enhance individual and team performance with proven assessments.
+                                        </div>
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
+                                            alt="Checkmark" class="checkmark-icon2">
+                                    </div>
+                                    <br />
+                                    <div class="feature2">
+                                        <div>
+                                            <strong>Customizable Solutions</strong> <br />
+                                            Tailored to fit your mission and organizational needs.
+                                        </div>
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
+                                            alt="Checkmark" class="checkmark-icon2">
+                                    </div>
+                                    <br />
+                                    <div class="feature2">
+                                        <div>
+                                            <strong>Exceptional Support</strong> <br />
+                                            Backed by unparalleled customer service to ensure seamless implementation
+                                            and ongoing success.
+                                        </div>
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
+                                            alt="Checkmark" class="checkmark-icon2" style="margin-top: 20px">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row continuedLearning" style="margin-top: 0px;">
-                                <div class="col-9" style="text-align: left;">
+                            <div class="row" style="margin-top: 0px;">
+                                <div class="col-7" style="text-align: left; margin-top: 40px;">
                                     <h3>
                                         <span style="color: #00A8FF;">Engineered</span> for team success
                                     </h3>
-                                    <p>
-                                        The DISC assessment is a starting point for ongoing development and
-                                        self-awareness. Regularly revisiting your feedback report strengthens your
-                                        understanding of your behavioral patterns and provides an opportunity to refine
-                                        your interpersonal skills. Participating in DISC workshops, training sessions,
-                                        or getting <a class="hyperlink" href="">DISC certified</a> can help deepen your
-                                        practical knowledge and
-                                        implementation. Sharing your DISC report with your team can open lines of
-                                        communication, promoting stronger collaboration and mutual support. Leveraging
-                                        DISC tools and resources supports continued growth, enabling you to build on
-                                        your strengths and develop adaptive communication techniques.
-                                    </p>
+                                    <div class="feature">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
+                                            alt="Checkmark" class="checkmark-icon">
+                                        <div>
+                                            <strong>Enhanced Communication</strong> <br />
+                                            Build stronger connections with tools that foster clarity and understanding.
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="feature">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
+                                            alt="Checkmark" class="checkmark-icon">
+                                        <div>
+                                            <strong>Improved Team Morale</strong> <br />
+                                            Strengthen trust and collaboration to create a motivated, cohesive team.
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="feature">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
+                                            alt="Checkmark" class="checkmark-icon">
+                                        <div>
+                                            <strong>Increased Productivity</strong> <br />
+                                            Equip your teams with insights that streamline workflows and boost
+                                            efficiency.
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-3">
-                                    <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/man_smiling.webp"
-                                        alt="image of man smiling" style="width: 389px; margin-top: 0px;"
-                                        class="continuedLearningGraphic">
+                                <div class="col-5">
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/man_smiling.webp"
+                                        alt="image of man smiling" style="width: 389px; margin-top: 20px;"
+                                        class="manSmilingImage">
                                 </div>
                             </div>
-                        </div>
-                        <div class="row btns" style="display: flex; justify-content: center; margin-top: 20px;">
-                            <button class="teal topBtn">
-                                View Products
-                            </button>
-                            <button class="lightTeal bottomBtn">
-                                Book Live Demo
-                            </button>
+                            <div class="row btns" style="display: flex; justify-content: center; margin-top: 70px;">
+                                <button class="teal topBtn">
+                                    View Products
+                                </button>
+                                <button class="lightTeal bottomBtn">
+                                    Book Live Demo
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -694,7 +740,7 @@ export default {
 }
 
 .products {
-    background: url('https://f002.backblazeb2.com/file/assessments24x7-media/Government/Fold+4+-+2500+x+718.webp') rgb(255, 255, 255) -0.247px -6px / 100.034% 158.607% no-repeat;
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Fold+4+-+2500+x+718.webp') rgb(255, 255, 255) -0.247px -6px / 100.034% 158.607% no-repeat;
 
     .container {
         padding-top: 30px;
@@ -741,10 +787,6 @@ export default {
 }
 
 .security {
-    .topBtn {
-        margin-right: 40px;
-    }
-
     .container-wrapper {
         position: relative;
     }
@@ -764,9 +806,44 @@ export default {
         color: #213C85;
     }
 
+    .feature {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .checkmark-icon {
+        width: 21px;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+
+    .feature2 {
+        display: flex;
+
+        justify-content: right;
+        align-items: flex-start;
+    }
+
+    .checkmark-icon2 {
+        width: 21px;
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+
+    .feature,
+    .feature2 div {
+        font-size: 1em;
+        line-height: normal;
+        font-family: $nunito-family;
+    }
+
     .button-container {
         text-align: center;
         margin-top: 20px;
+    }
+
+    .topBtn {
+        margin-right: 40px;
     }
 }
 
@@ -898,7 +975,7 @@ export default {
 }
 
 .choose {
-    background: url('https://f002.backblazeb2.com/file/assessments24x7-media/Government/Fold+10+-+2500+x+718.webp') rgb(255, 255, 255) -0.247px -6px / 100.034% 158.607% no-repeat;
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Fold+10+-+2500+x+718.webp') rgb(255, 255, 255) -0.247px -6px / 100.034% 158.607% no-repeat;
 
     .container {
         padding-top: 30px;
@@ -1047,36 +1124,13 @@ export default {
     }
 
     .security {
-        .arrowLeft2Image {
-            display: none;
+        .top {
+            margin-top: -35px !important;
         }
 
-        .discQuestionnaire {
-            margin-top: 0px !important;
-        }
-
-        .scoring {
-            margin-top: -20px !important;
-        }
-
-        .application {
-            margin-top: -40px !important;
-        }
-
-        .include {
-            margin-top: -60px !important;
-        }
-
-        .continuedLearningGraphic {
-            margin-bottom: 40px;
-        }
-
-        .continuedLearning {
+        .womanSmiling {
             margin-top: 40px !important;
-        }
-
-        .feedback {
-            margin-top: -70px !important;
+            margin-bottom: -40px !important;
         }
 
         .btns {
