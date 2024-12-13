@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-12" style="text-align: center;">
                             <img src="/images/governmentAssessmentLogo.webp" alt="government assessments 24x7 logo"
-                                style="width: 272px">
+                                style="width: 272px" class="logo">
                             <h1>
                                 <span style="color: #077FF8;">Trusted Assessment Solutions for the</span><br />
                                 <span style="color: #E0AD2B;">U.S. Government</span>
@@ -230,7 +230,7 @@
                                 </div>
                                 <div class="col-5">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/man.webp"
-                                        alt="manImage" style="width: 357px; margin-top: -10px;">
+                                        alt="manImage" style="width: 357px; margin-top: -10px;" class="man">
                                 </div>
                             </div>
                             <div class="row" style="margin-bottom: 0px;">
@@ -395,7 +395,7 @@
                             </div>
                             <div class="col-4 seal">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Laptop+with+DISC+Model.webp"
-                                    alt="laptop image" style="width: 305px; margin-top: 110px;">
+                                    alt="laptop image" style="width: 305px; margin-top: 110px;" class="laptop">
                             </div>
                         </div>
                     </div>
@@ -448,7 +448,7 @@
                             <div class="col-4 seal">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/asi-certified.webp"
                                     alt="Scientifically Validated Assessments by ASI"
-                                    style="width: 212px; margin-top: 40px;">
+                                    style="width: 212px; margin-top: 40px;" class="asiBadge">
                             </div>
                             <div class="col-8" style="text-align: right;">
                                 <h3 style="padding-top: 20px;">
@@ -546,7 +546,7 @@
                             </div>
                         </div>
                         <div class="row cards-container">
-                            <div class="card">
+                            <div class="card cardSpace">
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
@@ -604,7 +604,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="display: flex; justify-content: center; padding-top: 70px;">
+                    <div class="row btn" style="display: flex; justify-content: center; padding-top: 70px;">
                         <button @click="scrollToContactForm" class="lightTeal">
                             Get Started
                         </button>
@@ -987,13 +987,6 @@ export default {
     p {
         color: #1E222D;
     }
-
-    .bottom {
-        background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Home+Page/skyline-background.webp');
-        background-size: cover;
-        background-position: center;
-        padding-bottom: -75px;
-    }
 }
 
 .stats {
@@ -1187,7 +1180,24 @@ export default {
 }
 
 @media (max-width: 768px) {
+    .banner {
+        font-size: .5em !important;
+
+        img {
+            width: 48px !important;
+            height: 38px !important;
+            margin: auto 0px auto 20px !important;
+        }
+    }
+
     .hero {
+        background: url('');
+        background-color: rgb(229, 230, 231) !important;
+
+        .logo {
+            width: 50% !important;
+        }
+
         .btns {
             display: flex;
             flex-direction: column;
@@ -1210,6 +1220,9 @@ export default {
     }
 
     .products {
+        background: url('');
+        background-color: rgb(229, 230, 231) !important;
+
         .btns {
             display: flex;
             flex-direction: column;
@@ -1236,9 +1249,18 @@ export default {
             margin-top: -35px !important;
         }
 
+        .man {
+            width: 100% !important;
+        }
+
         .womanSmiling {
             margin-top: 40px !important;
             margin-bottom: -40px !important;
+            width: 100% !important;
+        }
+
+        .manSmilingImage {
+            width: 100% !important;
         }
 
         .btns {
@@ -1261,6 +1283,64 @@ export default {
             margin-bottom: 0;
         }
 
+    }
+
+    .testimonial {
+        .image {
+            width: 70% !important;
+        }
+
+        blockquote {
+            p {
+                margin-left: 0px;
+                margin-right: -20px !important;
+                margin-top: 60px !important;
+            }
+        }
+
+        .quote {
+            top: -50px !important;
+            left: -25px;
+            width: 60px !important;
+        }
+    }
+
+    .elevate {
+        .container {
+            padding-top: 20px !important;
+        }
+
+        .laptop {
+            margin-top: 40px !important;
+        }
+    }
+
+    .asi {
+        img {
+            margin-top: -20px !important;
+            margin-bottom: -20px !important;
+        }
+
+        .asiBadge {
+            width: 50% !important;
+        }
+
+        .container {
+            margin-bottom: 60px !important;
+        }
+    }
+
+    .choose {
+        background: url('');
+        background-color: rgb(229, 230, 231) !important;
+
+        .cardSpace {
+            margin-top: -20px !important;
+        }
+
+        .btn {
+            padding-top: 40px !important;
+        }
     }
 }
 
