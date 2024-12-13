@@ -112,7 +112,7 @@
                         <div class="col-12">
                             <div class="col-5">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Our+Mission.webp"
-                                    alt="our mission logo" style="width: 341px; margin-top: 30px;">
+                                    alt="our mission logo" style="width: 341px; margin-top: 30px;" class="missionLogo">
                             </div>
                             <div class="col-7" style="text-align: right;">
                                 <p>Empowering government leaders at every level to strengthen collaboration, inspire
@@ -480,7 +480,8 @@
                 <div class="row">
                     <div class="col-12" style="text-align: center;">
                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Government+A24x7+Logo.webp"
-                            alt="government assessments 24x7 logo" style="width: 162px; margin-bottom: 10px;">
+                            alt="government assessments 24x7 logo" style="width: 162px; margin-bottom: 10px;"
+                            class="companyLogo">
                         <h3 style="color: #1E222D; text-align: center; margin-bottom: 0px;">
                             <span style="color: #00A8FF;">Why</span> Choose Government Assessments 24x7?
                         </h3>
@@ -1186,7 +1187,11 @@ export default {
         img {
             width: 48px !important;
             height: 38px !important;
-            margin: auto 0px auto 20px !important;
+            margin: auto auto auto auto !important;
+        }
+
+        h3 {
+            margin: auto auto auto auto !important;
         }
     }
 
@@ -1216,6 +1221,12 @@ export default {
 
         .bottomBtn:last-child {
             margin-bottom: 0;
+        }
+    }
+
+    .mission {
+        .missionLogo {
+            width: 100% !important;
         }
     }
 
@@ -1312,6 +1323,7 @@ export default {
 
         .laptop {
             margin-top: 40px !important;
+            width: 100% !important;
         }
     }
 
@@ -1336,6 +1348,10 @@ export default {
 
         .cardSpace {
             margin-top: -20px !important;
+        }
+
+        .companyLogo {
+            width: 50% !important;
         }
 
         .btn {
