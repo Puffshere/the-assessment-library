@@ -1,8 +1,7 @@
 <template>
     <div>
         <section class="banner">
-            <img src="/images/SDVOSB.webp"
-                alt="sdvosb logo" style="width: 68px; height: 58px;">
+            <img src="/images/SDVOSB.webp" alt="sdvosb logo" style="width: 68px; height: 58px;">
             <h3>Service-Disabled Veteran-Owned Small Business</h3>
         </section>
 
@@ -11,8 +10,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12" style="text-align: center;">
-                            <img src="/images/governmentAssessmentLogo.webp"
-                                alt="government assessments 24x7 logo" style="width: 272px">
+                            <img src="/images/governmentAssessmentLogo.webp" alt="government assessments 24x7 logo"
+                                style="width: 272px">
                             <h1>
                                 <span style="color: #077FF8;">Trusted Assessment Solutions for the</span><br />
                                 <span style="color: #E0AD2B;">U.S. Government</span>
@@ -48,8 +47,7 @@
                     </div>
                     <div class="col-12 cards-container">
                         <div class="card firstCards">
-                            <img src="/images/Government_calendar.webp"
-                                alt="card 1 image" class="card-image">
+                            <img src="/images/Government_calendar.webp" alt="card 1 image" class="card-image">
                             <div class="cardNumber firstCardNumber">
                                 25+
                             </div>
@@ -60,8 +58,7 @@
                         </div>
                         <a style="text-decoration: none; color: #0033C5" href="/certifications">
                             <div class="card firstCards">
-                                <img src="/images/Government_star.webp"
-                                    alt="card 2 image" class="card-image">
+                                <img src="/images/Government_star.webp" alt="card 2 image" class="card-image">
                                 <div class="cardNumber firstCardNumber">
                                     2300+
                                 </div>
@@ -73,8 +70,7 @@
                         </a>
                         <a style="text-decoration: none; color: #0033C5" href="/assessments">
                             <div class="card firstCards">
-                                <img src="/images/Government_head.webp"
-                                    alt="card 3 image" class="card-image">
+                                <img src="/images/Government_head.webp" alt="card 3 image" class="card-image">
                                 <div class="cardNumber firstCardNumber">
                                     34m+
                                 </div>
@@ -86,8 +82,7 @@
                         </a>
                         <a style="text-decoration: none; color: #0033C5" href="/about/partners">
                             <div class="card">
-                                <img src="/images/Government_SDVOSB.webp"
-                                    alt="card 4 image" class="lastCard-image">
+                                <img src="/images/Government_SDVOSB.webp" alt="card 4 image" class="lastCard-image">
                                 <div class="cardNumber lastCardNumber">
                                     SDVOSB
                                 </div>
@@ -1081,6 +1076,7 @@ export default {
         width: 156px;
         height: 155px;
         perspective: 1000px;
+        cursor: pointer;
     }
 
     .card-inner {
