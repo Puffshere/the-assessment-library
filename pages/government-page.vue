@@ -241,7 +241,8 @@
                             <div class="row" style="margin-bottom: 0px;">
                                 <div class="col-5">
                                     <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/woman_on_computer.webp"
-                                        alt="image of woman on computer" style="width: 324px; margin-top: -25px;" class="womanSmiling">
+                                        alt="image of woman on computer" style="width: 324px; margin-top: -25px;"
+                                        class="womanSmiling">
                                 </div>
                                 <div class="col-7" style="text-align: right; margin-top: 30px;">
                                     <h3>
@@ -492,60 +493,119 @@
                     <div class="col-12">
                         <div class="row cards-container">
                             <div class="card">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
-                                    alt="checkmark image" class="card-image">
-                                <p>
-                                    Proven Results, <br />
-                                    Trusted <br />
-                                    Globally
-                                </p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                            alt="checkmark image" class="card-image">
+                                        <p>
+                                            Proven Results, <br />
+                                            Trusted <br />
+                                            Globally
+                                        </p>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>
+                                            With 50+ years of expertise, our assessments improve communication,
+                                            productivity, and organizational goals.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
-                                    alt="checkmark image" class="card-image">
-                                <p>
-                                    Veteran-Owned <br />
-                                    and <br />
-                                    Mission-Driven
-                                </p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                            alt="checkmark image" class="card-image">
+                                        <p>
+                                            Veteran-Owned <br />
+                                            and <br />
+                                            Mission-Driven
+                                        </p>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>
+                                            As an SDVOSB, we understand government needs and are committed to mission
+                                            success at every level.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
-                                    alt="checkmark image" class="card-image">
-                                <p>
-                                    Validated and <br />
-                                    Reliable <br />
-                                    Assessments
-                                </p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                            alt="checkmark image" class="card-image">
+                                        <p>
+                                            Validated and <br />
+                                            Reliable <br />
+                                            Assessments
+                                        </p>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>
+                                            Validated by ASI, our assessments stand out in an unregulated industry with
+                                            scientific backing.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cards-container">
                             <div class="card">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
-                                    alt="checkmark image" class="card-image">
-                                <p>
-                                    Customizable <br />
-                                    Platform and <br />
-                                    Branded Reports
-                                </p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                            alt="checkmark image" class="card-image">
+                                        <p>
+                                            Customizable <br />
+                                            Platform and <br />
+                                            Branded Reports
+                                        </p>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>
+                                            Tailor assessments and reports to align with your organization’s goals and
+                                            branding.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
-                                    alt="checkmark image" class="card-image">
-                                <p>
-                                    Secure and <br />
-                                    Compliant <br />
-                                    Technology
-                                </p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                            alt="checkmark image" class="card-image">
+                                        <p>
+                                            Secure and <br />
+                                            Compliant <br />
+                                            Technology
+                                        </p>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>
+                                            Our platform combines robust security with tools to empower mission-focused
+                                            teams.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
-                                    alt="checkmark image" class="card-image">
-                                <p>
-                                    Unmatched <br />
-                                    Customer <br />
-                                    Support
-                                </p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Checkmark.webp"
+                                            alt="checkmark image" class="card-image">
+                                        <p>
+                                            Unmatched <br />
+                                            Customer <br />
+                                            Support
+                                        </p>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>
+                                            Our team ensures a seamless experience from onboarding to implementation.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -998,27 +1058,57 @@ export default {
     .card {
         width: 156px;
         height: 155px;
+        perspective: 1000px;
+    }
+
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
         border-radius: 12px;
         border: 1px solid #E0E0E0;
         background: #FFF;
         box-shadow: 4px 4px 4px 0px rgba(7, 127, 248, 0.25);
+        display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        justify-content: center;
         padding: 10px;
-        justify-content: space-evenly;
+    }
+
+    .card-front {
+        z-index: 2;
+        transform: rotateY(0);
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+        background: #FFF;
+        color: #FFF;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1em;
     }
 
     .card-image {
         width: 45px;
-        margin-top: 10px;
-    }
-
-    .cardText {
-        color: #0033C5;
-        font-family: $nunito-family;
-        font-size: 14pt;
-        font-weight: 400;
+        margin-top: 20px;
     }
 }
 
