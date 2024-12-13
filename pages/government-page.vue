@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="banner">
-            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/SDVOSB+Logo+-+White.webp"
+            <img src="/images/SDVOSB.webp"
                 alt="sdvosb logo" style="width: 68px; height: 58px;">
             <h3>Service-Disabled Veteran-Owned Small Business</h3>
         </section>
