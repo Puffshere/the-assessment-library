@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-12 cards-container">
                         <div class="card firstCards">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/calendar.webp"
+                            <img src="/images/Government_calendar.webp"
                                 alt="card 1 image" class="card-image">
                             <div class="cardNumber firstCardNumber">
                                 25+
@@ -60,7 +60,7 @@
                         </div>
                         <a style="text-decoration: none; color: #0033C5" href="/certifications">
                             <div class="card firstCards">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/star.webp"
+                                <img src="/images/Government_star.webp"
                                     alt="card 2 image" class="card-image">
                                 <div class="cardNumber firstCardNumber">
                                     2300+
@@ -73,7 +73,7 @@
                         </a>
                         <a style="text-decoration: none; color: #0033C5" href="/assessments">
                             <div class="card firstCards">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/head.webp"
+                                <img src="/images/Government_head.webp"
                                     alt="card 3 image" class="card-image">
                                 <div class="cardNumber firstCardNumber">
                                     34m+
@@ -86,7 +86,7 @@
                         </a>
                         <a style="text-decoration: none; color: #0033C5" href="/about/partners">
                             <div class="card">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/SDVOSB+Logo.webp"
+                                <img src="/images/Government_SDVOSB.webp"
                                     alt="card 4 image" class="lastCard-image">
                                 <div class="cardNumber lastCardNumber">
                                     SDVOSB
