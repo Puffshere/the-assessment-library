@@ -11,7 +11,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12" style="text-align: center;">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Government+A24x7+Logo.webp"
+                            <img src="/images/governmentAssessmentLogo.webp"
                                 alt="government assessments 24x7 logo" style="width: 272px">
                             <h1>
                                 <span style="color: #077FF8;">Trusted Assessment Solutions for the</span><br />
