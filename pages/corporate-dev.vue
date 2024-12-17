@@ -335,7 +335,7 @@
                         <div class="col-12">
                             <div class="col-4">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Customer+Service+rep.webp"
-                                    alt="image of customer service rep" style="width: 266px;">
+                                    alt="image of customer service rep" style="width: 266px;" class="customerRep">
                             </div>
                             <div class="col-8" style="text-align: right;">
                                 <h3 style="padding-top: 20px;">
@@ -373,16 +373,17 @@
                                     Intelligence (EIQ), 360° Feedback, and more, designed to provide valuable insights
                                     for hiring, team building, and leadership development.
                                 </p>
-                                <button class="light" @click="jumpToSampleReports" style="margin-top: 20px;">
-                                    View Sample Reports
-                                </button>
+                                <div class="btn">
+                                    <button class="light" @click="jumpToSampleReports" style="margin-top: 20px;">
+                                        View Sample Reports
+                                    </button>
+                                </div>
                             </div>
                             <div class="col-4">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Sample+Reports.webp"
                                     alt="Image of sample reports" style="width: 246px; margin-top: 10px;"
                                     class="reportImage">
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -977,6 +978,7 @@ export default {
 
         .heroImage {
             margin-top: 20px !important;
+            width: 90% !important;
         }
 
         .accents,
@@ -1015,6 +1017,11 @@ export default {
         .btn {
             padding: 0 10px !important;
         }
+
+        .accents,
+        .accents-right {
+            display: none;
+        }
     }
 
     .testimonial {
@@ -1038,6 +1045,11 @@ export default {
         .cards-container {
             gap: 0px !important;
         }
+
+        .accents,
+        .accents-right {
+            display: none;
+        }
     }
 
     .worldwide {
@@ -1050,12 +1062,27 @@ export default {
         .btn {
             padding: 0 10px !important;
         }
+
+        .customerRep {
+            width: 70% !important;
+        }
     }
 
     .sampleReports {
         .reportImage {
             margin-top: 40px !important;
-            margin-left: 50px !important;
+            width: 70% !important;
+        }
+
+        .col-4 {
+            display: flex;
+            justify-content: center;
+        }
+
+        h3,
+        p,
+        .btn {
+            padding: 0 10px !important;
         }
     }
 
@@ -1067,6 +1094,11 @@ export default {
         h3,
         p {
             padding: 0 10px !important;
+        }
+
+        .accents,
+        .accents-right {
+            display: none;
         }
     }
 }
