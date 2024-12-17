@@ -553,6 +553,7 @@ export default {
                     "/discinsights": "1053",
                     "/disc-awareness": "1054",
                     "/disc-leadership": "1055",
+                    "/corporate": "1071"
                 };
 
                 // Find the tag for the current page
