@@ -23,8 +23,8 @@
                             </div>
                             <div class="col-4">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Corporate+hero+image.webp"
-                                    alt="image of a laptop"
-                                    style="width: 338px; margin-top: -40px; margin-bottom: -50px;">
+                                    alt="hero image" style="width: 338px; margin-top: -40px; margin-bottom: -50px;"
+                                    class="heroImage">
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                             </div>
                             <div class="col-5">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Platform+Image.webp"
-                                    alt="image of a laptop" style="width: 413px;">
+                                    alt="image of a laptop" style="width: 413px;" class="laptopImage">
                             </div>
                         </div>
                         <div class="row">
@@ -347,9 +347,11 @@
                                     customer service is here around the clock, resolving most issues in 24 hours or
                                     less, no matter your time zone.
                                 </p>
-                                <button class="light" @click="scrollToContactForm" style="margin-top: 20px;">
-                                    Learn More
-                                </button>
+                                <div class="btn">
+                                    <button class="light" @click="scrollToContactForm" style="margin-top: 20px;">
+                                        Learn More
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -377,7 +379,8 @@
                             </div>
                             <div class="col-4">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Sample+Reports.webp"
-                                    alt="Image of sample reports" style="width: 246px; margin-top: 10px;">
+                                    alt="Image of sample reports" style="width: 246px; margin-top: 10px;"
+                                    class="reportImage">
                             </div>
 
                         </div>
@@ -967,8 +970,104 @@ export default {
 }
 
 @media (max-width: 900px) {
+    .hero {
+        h1 {
+            margin-top: -20px !important;
+        }
+
+        .heroImage {
+            margin-top: 20px !important;
+        }
+
+        .accents,
+        .accents-right {
+            display: none;
+        }
+    }
+
     .trusted .row {
         padding: 0 10px !important;
+
+        p {
+            padding: 0 10px !important;
+            text-align: left;
+        }
+    }
+
+    .exclusive {
+        .container {
+            padding-bottom: 70px !important;
+        }
+
+        h3 {
+            margin-top: -10px !important;
+            padding: 0 10px !important;
+        }
+
+        p {
+            padding: 0 10px !important;
+        }
+
+        .laptopImage {
+            width: 70% !important;
+        }
+
+        .btn {
+            padding: 0 10px !important;
+        }
+    }
+
+    .testimonial {
+        .quote {
+            margin-left: 40px;
+            margin-top: -30px !important;
+        }
+
+        h3 {
+            margin-top: 70px !important;
+        }
+    }
+
+    .partner {
+
+        h3,
+        p {
+            padding: 0 10px !important;
+        }
+
+        .cards-container {
+            gap: 0px !important;
+        }
+    }
+
+    .worldwide {
+
+        h3,
+        p {
+            padding: 0 10px !important;
+        }
+
+        .btn {
+            padding: 0 10px !important;
+        }
+    }
+
+    .sampleReports {
+        .reportImage {
+            margin-top: 40px !important;
+            margin-left: 50px !important;
+        }
+    }
+
+    #contactForm {
+        .container {
+            padding-bottom: 60px !important;
+        }
+
+        h3,
+        p {
+            padding: 0 10px !important;
+        }
     }
 }
 
