@@ -2,13 +2,16 @@
     <div class="main">
         <main-nav active="assessments" />
         <LazyHydrate when-visible><assessments-header /></LazyHydrate>
-
-        <div class="container">
+        <LazyHydrate when-visible>
+            <assessment-tools></assessment-tools>
+        </LazyHydrate>
+        <LazyHydrate when-visible>
+            <what-are></what-are>
+        </LazyHydrate>
+        <div class="container content" style="position: relative; z-index: 1;">
             <div class="row">
                 <div class="col-12">
-                    <br /><br />
-
-                    <h2>DISC and Motivators – The Foundation Assessments</h2>
+                    <h5 style="margin-bottom: 0px;">DISC and Motivators – The Foundation Assessments</h5>
                     <p>
                         Whether they are used individually or in combination with each other, DISC and Motivators
                         continue to be two of
@@ -27,11 +30,15 @@
                         more insightful,
                         empathetic leaders.
                     </p>
-
-                    <br /><br />
+                    <div class="button-container">
+                        <button @click="learnMoreButton" class="blue">Learn More</button>
+                    </div>
+                    <br />
                 </div>
             </div>
         </div>
+
+        <LazyHydrate when-visible><overview-360 /></LazyHydrate>
 
         <LazyHydrate when-visible>
             <juxtapose-left title="DISC" body="Our most popular assessment and the world’s #1 behavioral tool, DISC provides a highly-detailed analysis of each individual’s Natural and 
@@ -97,8 +104,16 @@
                 ]" />
         </LazyHydrate>
 
-        <LazyHydrate when-visible><overview-360 /></LazyHydrate>
+        <LazyHydrate when-visible>
+            <characteristics />
+        </LazyHydrate>
         <LazyHydrate when-visible><corina-lorenzi /></LazyHydrate>
+        <LazyHydrate when-visible>
+            <choosing />
+        </LazyHydrate>
+        <LazyHydrate when-visible>
+            <faq />
+        </LazyHydrate>
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </div>
 </template>
@@ -111,12 +126,16 @@ export default {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'simple-hero': () => import('@/components/SimpleHero'),
-        'assessments-header': () => import('@/components/AssessmentsHeader'),
+        'assessments-header': () => import('@/components/AssessmentHeader-dev'),
+        'assessment-tools': () => import('@/components/assessments/AssessmentTools'),
+        'what-are': () => import('@/components/assessments/WhatAre'),
+        'overview-360': () => import('@/components/Overview360'),
         'juxtapose-left': () => import('@/components/JuxtaposeLeft'),
         'juxtapose-right': () => import('@/components/JuxtaposeRight'),
-        'keyword-fold': () => import('@/components/KeywordFold'),
-        'overview-360': () => import('@/components/Overview360'),
+        'characteristics': () => import('@/components/assessments/Characteristics'),
         'corina-lorenzi': () => import('@/components/testimonials/CorinaLorenzi'),
+        'choosing': () => import('@/components/assessments/Choosing'),
+        'faq': () => import('@/components/assessments/FAQ'),
         'footer-fold': () => import('@/components/Footer')
     },
     data() {
@@ -355,13 +374,21 @@ export default {
                 },
             ]
         }
+    },
+    methods: {
+        learnMoreButton(event) {
+            window.location.href = '/contact';
+            event.target.blur();
+        }
     }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scroped>
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900');
 @import '~assets/scss/app';
+@import '~assets/scss/vars';
+@import '~assets/scss/new-styles';
 
 *,
 ::after,
@@ -381,5 +408,25 @@ body {
 img {
     vertical-align: middle;
     border-style: none;
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 10px 15px;
+        margin-bottom: 30px;
+    }
 }
 </style>
