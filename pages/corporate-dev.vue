@@ -1,7 +1,58 @@
 <template>
     <div class="main">
         <main-nav active="corporate"></main-nav>
-        <corporate-header></corporate-header>
+
+        <section class="hero">
+            <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
+                style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="col-12" style="text-align: left;">
+                        <div class="row">
+                            <div class="col-8">
+                                <h1 style="color: #213C85; text-align: left; margin-top: 20px;">
+                                    Elevating Corporations to <br />
+                                    New Levels of Success
+                                </h1>
+                                <h3 style="color: #E0AD2B; font-weight: 400; margin-top: -10px;">
+                                    One assessment at a time 🚀
+                                </h3>
+                                <button class="blue" @click="scrollToContactForm">
+                                    Book Live Demo
+                                </button>
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Corporate+hero+image.webp"
+                                    alt="image of a laptop"
+                                    style="width: 338px; margin-top: -40px; margin-bottom: -50px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
+            </div>
+        </section>
+
+        <section class="trusted">
+            <div class="container">
+                <div class="row" style="padding: 0 100px;">
+                    <h3>
+                        Trusted by top companies worldwide
+                    </h3>
+                    <p>
+                        No matter the size or complexity of your company and the markets you serve, Assessments 24x7
+                        has you covered! For more than 25 years, we’ve been the provider of choice for industry-leading
+                        businesses worldwide who use DISC and specialized behavioral assessments to elevate corporate
+                        culture, maximize training results, exceed productivity goals, produce world-class leaders, and
+                        build
+                        highly productive teams. We are proud to count some of the top companies in the world — from
+                        small corporations to Fortune 500 companies — among our satisfied customers.
+                    </p>
+                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Arrow+Left.webp"
+                        alt="curly arrow image" style="width: 159px; align-items: center; margin-top: -20px;">
+                </div>
+            </div>
+        </section>
 
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
 
@@ -58,7 +109,7 @@
                         </div>
                         <div class="row btn" style="display: flex; justify-content: left; padding-top: 10px;">
                             <div class="col-12">
-                                <button class="blue">
+                                <button class="blue" @click="scrollToContactForm">
                                     Book Live Demo
                                 </button>
                             </div>
@@ -87,7 +138,7 @@
                                     platform.</span> That gives Assessments
                                 24x7 our highest recommendation.”
                             </h3>
-                            <button class="light" style="margin-top: 10px;">
+                            <button class="light" @click="jumpToReviews" style="margin-top: 10px;">
                                 View Testimonials
                             </button>
                         </blockquote>
@@ -267,7 +318,7 @@
                             </div>
                         </div>
                         <div class="row btn" style="display: flex; justify-content: center; padding-top: 70px;">
-                            <button class="blue">
+                            <button class="blue" @click="scrollToContactForm">
                                 Book Live Demo
                             </button>
                         </div>
@@ -296,7 +347,7 @@
                                     customer service is here around the clock, resolving most issues in 24 hours or
                                     less, no matter your time zone.
                                 </p>
-                                <button class="light" style="margin-top: 20px;">
+                                <button class="light" @click="scrollToContactForm" style="margin-top: 20px;">
                                     Learn More
                                 </button>
                             </div>
@@ -320,7 +371,7 @@
                                     Intelligence (EIQ), 360° Feedback, and more, designed to provide valuable insights
                                     for hiring, team building, and leadership development.
                                 </p>
-                                <button class="light" style="margin-top: 20px;">
+                                <button class="light" @click="jumpToSampleReports" style="margin-top: 20px;">
                                     View Sample Reports
                                 </button>
                             </div>
@@ -371,8 +422,6 @@
 
 <script>
 import Nav from '@/components/Nav';
-import SimpleHero from '@/components/SimpleHero';
-import CorporateHeader from '@/components/CorporateHeader';
 import Footer from '@/components/Footer';
 import LazyHydrate from 'vue-lazy-hydration';
 
@@ -380,8 +429,6 @@ export default {
     components: {
         LazyHydrate,
         'main-nav': Nav,
-        'simple-hero': SimpleHero,
-        'corporate-header': CorporateHeader,
         'client-logos': () => import('@/components/ClientLogos'),
         'contact-form': () => import('@/components/ContactForm'),
         'footer-fold': Footer
@@ -614,6 +661,23 @@ export default {
                 },
             ]
         }
+    },
+    methods: {
+        scrollToContactForm(event) {
+            const element = document.getElementById('contactForm');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            event.target.blur();
+        },
+        jumpToReviews(event) {
+            window.location.href = 'https://www.assessments24x7.com/about/testimonials';
+            event.target.blur();
+        },
+        jumpToSampleReports(event) {
+            window.location.href = 'https://www.assessments24x7.com/sample-reports';
+            event.target.blur();
+        }
     }
 }
 </script>
@@ -621,6 +685,35 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
+
+.hero {
+    .container-wrapper {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 70px;
+        padding-bottom: 90px;
+    }
+
+    .accents-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        z-index: -1;
+    }
+}
+
+.trusted {
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Business+Skyline+Background.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    color: #213C85;
+    text-align: center;
+    margin-bottom: -80px;
+}
 
 .exclusive {
     .container-wrapper {
@@ -870,6 +963,12 @@ export default {
         .accents-right {
             display: none;
         }
+    }
+}
+
+@media (max-width: 900px) {
+    .trusted .row {
+        padding: 0 10px !important;
     }
 }
 
