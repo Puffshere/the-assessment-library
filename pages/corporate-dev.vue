@@ -5,6 +5,97 @@
 
         <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
 
+        <section class="exclusive">
+            <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
+                style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="col-12" style="text-align: left;">
+                        <div class="row">
+                            <div class="col-7">
+                                <h3 style="color: #213C85; text-align: left; margin-top: 30px;">
+                                    An exclusive platform to fit your unique needs
+                                </h3>
+                                <p style="font-weight: 400; color: #213C85;">
+                                    Our powerful, industry-leading platform is your starting point and the foundation
+                                    for
+                                    your success in accessing, administering, and managing the full range of Assessments
+                                    24x7’s products. Featuring infinite customization capabilities and seamless
+                                    integration
+                                    with your company’s LMS, CRM, HR, and recruiting systems, the platform features a
+                                    robust
+                                    yet intuitive dashboard that can be branded with your company logo and relevant
+                                    content.
+                                    The dashboard is accessible from any device, giving you instant access to your
+                                    account
+                                    anytime, wherever you may be.
+                                </p>
+                            </div>
+                            <div class="col-5">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Platform+Image.webp"
+                                    alt="image of a laptop" style="width: 413px;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p style="color: #213C85;">
+                                    On the Assessments 24x7 platform, you’ll find more than 100 benchmarking templates
+                                    integrated with DISC to enhance your hiring and recruitment, as well as a library of
+                                    more
+                                    than 30 specialized assessments designed to encourage positive outcomes in your
+                                    employees’
+                                    personal and professional lives. <br />
+                                    <br />
+                                    Best of all, our platform is backed by the most skilled and responsive customer
+                                    service
+                                    team
+                                    in the industry, so you’ll get the answers and troubleshooting help you need
+                                    whenever
+                                    you
+                                    need it.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row btn" style="display: flex; justify-content: left; padding-top: 10px;">
+                            <div class="col-12">
+                                <button class="blue">
+                                    Book Live Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
+            </div>
+        </section>
+
+        <section class="testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <img class="image"
+                            src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Testimonial+-+Will+Mahon.webp"
+                            alt="Will Mahon">
+                    </div>
+                    <div class="col-8">
+                        <blockquote>
+                            <img class="quote"
+                                src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/yellowQuotes.webp"
+                                alt="yellow quotations image">
+                            <h3 style="font-weight: 400;">
+                                We have been really happy with the ease of <span style="font-weight: 700;">using their
+                                    platform.</span> That gives Assessments
+                                24x7 our highest recommendation.”
+                            </h3>
+                            <button class="light" style="margin-top: 10px;">
+                                View Testimonials
+                            </button>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="partner">
             <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
                 style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
@@ -530,6 +621,57 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
+
+.exclusive {
+    .container-wrapper {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 70px;
+        padding-bottom: 90px;
+    }
+
+    .accents-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        z-index: -1;
+    }
+}
+
+.testimonial {
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Business+Skyline+Background.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    color: #213C85;
+
+    .image {
+        width: 234px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    blockquote {
+        position: relative;
+        text-align: right;
+        margin-top: 50px;
+
+        p {
+            margin-left: 80px;
+            position: relative;
+        }
+
+        .quote {
+            position: absolute;
+            top: -40px;
+            left: -75px;
+            width: 102px;
+        }
+    }
+}
 
 .partner {
     .container-wrapper {
