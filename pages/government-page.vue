@@ -146,8 +146,10 @@
                     </div>
                     <div class="col-12 cards-container">
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/emotional_intelligence_sample_report.webp"
-                                alt="card 1 image" class="card-image">
+                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf"
+                                target="_blank" rel="noopener"><img
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/emotional_intelligence_sample_report.webp"
+                                    alt="card 1 image" class="card-image"></a>
                             <p style="margin-bottom: -28px;">
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Emotional <br />
@@ -157,8 +159,10 @@
                             </p>
                         </div>
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/disc_sample_report_image.webp"
-                                alt="card 2 image" class="card-image">
+                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf"
+                                class="hyperlink" target="_blank" rel="noopener"><img
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/disc_sample_report_image.webp"
+                                    alt="card 2 image" class="card-image"></a>
                             <p style="margin-bottom: -70px;">
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/DISCSelfSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">DISC Self</a> <br />
@@ -167,8 +171,10 @@
                             </p>
                         </div>
                         <div class="card">
-                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/motivators_sample_report_image.webp"
-                                alt="card 3 image" class="card-image">
+                            <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf"
+                                class="hyperlink" target="_blank" rel="noopener"><img
+                                    src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/motivators_sample_report_image.webp"
+                                    alt="card 3 image" class="card-image"></a>
                             <p style="margin-bottom: -70px;">
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Motivators</a> <br />
@@ -229,13 +235,13 @@
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/man.webp"
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Built+for+Government+security.webp"
                                         alt="manImage" style="width: 357px; margin-top: -10px;" class="man">
                                 </div>
                             </div>
                             <div class="row" style="margin-bottom: 0px;">
                                 <div class="col-5">
-                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/woman_on_computer.webp"
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Optimized+for+your+mission.webp"
                                         alt="image of woman on computer" style="width: 324px; margin-top: -25px;"
                                         class="womanSmiling">
                                 </div>
@@ -306,7 +312,7 @@
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/man_smiling.webp"
+                                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Engineered+for+Team+Success+Image.webp"
                                         alt="image of man smiling" style="width: 389px; margin-top: 20px;"
                                         class="manSmilingImage">
                                 </div>
@@ -632,6 +638,18 @@ export default {
         'contact-form-fold': () => import('@/components/government/GovernmentContactFormFold'),
         'footer-fold': () => import('@/components/Footer')
     },
+    head() {
+        return {
+            title: 'DISC Assessments for Government | Assessments 24x7',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Boost team collaboration and leadership with DISC Assessments tailored for government agencies. Explore solutions to enhance performance and communication.'
+                }
+            ]
+        }
+    },
     methods: {
         sampleReportsButton(event) {
             window.location.href = '/sample-reports';
@@ -850,12 +868,12 @@ export default {
         align-items: center;
         text-align: center;
         padding: 5px;
+        padding-top: 15px;
     }
 
     .card-image {
         width: 149px;
         height: 193px;
-        margin-top: 10px;
         margin-bottom: -10px;
     }
 
