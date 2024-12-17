@@ -3,6 +3,247 @@
         <main-nav active="corporate"></main-nav>
         <corporate-header></corporate-header>
 
+        <LazyHydrate when-visible><client-logos></client-logos></LazyHydrate>
+
+        <section class="partner">
+            <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
+                style="position: absolute; left: 0px; margin-bottom: 900px;" class="accents">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12" style="text-align: center;">
+                            <h3 style="color: #213C85; text-align: center; margin-bottom: 0px;">
+                                Your partner for organizational excellence and business success
+                            </h3>
+                            <p style="font-weight: 400;">
+                                Assessments 24x7 is an indispensable partner for corporations and HR professionals,
+                                offering
+                                a level of analysis and insight that many other providers lack. Our powerful tools
+                                include
+                                over 30 assessments, including ASI-validated DISC and Motivators, as well as Emotional
+                                Intelligence and many other impactful options. Insights from these assessments and tools
+                                are
+                                the starting point for better-informed and more effective decision-making:
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <div class="row cards-container">
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <p>
+                                                Smart <br />
+                                                Hiring
+                                            </p>
+                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Smarter+Hiring+Icon.webp"
+                                                alt="smarter hiring icon" class="card-image">
+                                        </div>
+                                        <div class="card-back">
+                                            <p>
+                                                Hire and select employees who fit the job and the team — and remain
+                                                engaged
+                                                and productive.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <p>
+                                                Employee <br />
+                                                Retention
+                                            </p>
+                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Employee+Retention+Icon.webp"
+                                                alt="employee retention icon" class="card-image">
+                                        </div>
+                                        <div class="card-back">
+                                            <p>
+                                                Enhance employee satisfaction and retention.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <p>
+                                                Conflict <br />
+                                                Resolution
+                                            </p>
+                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Conflict+Resolution+Icon.webp"
+                                                alt="conflict resolution icon" class="card-image">
+                                        </div>
+                                        <div class="card-back">
+                                            <p>
+                                                Minimize the potential for workplace conflicts.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <p>
+                                                Team <br />
+                                                Building
+                                            </p>
+                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Team+Building+Icon.webp"
+                                                alt="team building icon" class="card-image">
+                                        </div>
+                                        <div class="card-back">
+                                            <p>
+                                                Develop connected, cohesive, and effective teams that get the results
+                                                you
+                                                need.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row cards-container">
+                                <div class="card cardSpace">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <p>
+                                                Performance & <br />
+                                                Profits
+                                            </p>
+                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Performance+and+Profits+Icon.webp"
+                                                alt="performance and profits icon" class="card-image">
+                                        </div>
+                                        <div class="card-back">
+                                            <p>
+                                                Increase sales performance, creativity, and profits.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <p>
+                                                Impactful <br />
+                                                Training
+                                            </p>
+                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Impactful+Training+Icon.webp"
+                                                alt="impactful training icon" class="card-image">
+                                        </div>
+                                        <div class="card-back">
+                                            <p>
+                                                Make employee training experiences more relevant, meaningful and
+                                                motivational.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <p>
+                                                Leadership <br />
+                                                Development
+                                            </p>
+                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Leadership+Development+Icon.webp"
+                                                alt="leadership and development icon" class="card-image"
+                                                style="width: 70px;">
+                                        </div>
+                                        <div class="card-back">
+                                            <p>
+                                                Create true leaders who have deep insights into the dynamics of
+                                                interpersonal and workplace behavior.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <p>
+                                                Corporate <br />
+                                                Culture
+                                            </p>
+                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Corporate+Culture+Icon.webp"
+                                                alt="corporate culture icon" class="card-image">
+                                        </div>
+                                        <div class="card-back">
+                                            <p>
+                                                Strengthen corporate culture to align with organizational goals.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row btn" style="display: flex; justify-content: center; padding-top: 70px;">
+                            <button class="blue">
+                                Book Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <img src="~/assets/home-page/homeHeroFoldBottomRight.webp" alt="fold 4 graphic" class="accents-right">
+            </div>
+        </section>
+
+        <section class="worldwide">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col-4">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Customer+Service+rep.webp"
+                                    alt="image of customer service rep" style="width: 266px;">
+                            </div>
+                            <div class="col-8" style="text-align: right;">
+                                <h3 style="padding-top: 20px;">
+                                    Worldwide service 24x7
+                                </h3>
+                                <p>
+                                    Wherever you are, Assessments 24x7 supports you! With tools recognized globally and
+                                    available in 25+ languages, serving clients in more than 50 countries. Our top-rated
+                                    customer service is here around the clock, resolving most issues in 24 hours or
+                                    less, no matter your time zone.
+                                </p>
+                                <button class="light" style="margin-top: 20px;">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sampleReports">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col-8" style="text-align: left;">
+                                <h3 style="color: white;">
+                                    Explore our <span style="color: #FFDE59;">sample reports</span>
+                                </h3>
+                                <p style="color: white;">
+                                    Explore our diverse range of reports, including DISC, Motivators, Emotional
+                                    Intelligence (EIQ), 360° Feedback, and more, designed to provide valuable insights
+                                    for hiring, team building, and leadership development.
+                                </p>
+                                <button class="light" style="margin-top: 20px;">
+                                    View Sample Reports
+                                </button>
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Sample+Reports.webp"
+                                    alt="Image of sample reports" style="width: 246px; margin-top: 10px;">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contactForm">
             <img src="~/assets/home-page/homeHeroFoldUpperLeft.webp" alt="fold 4 graphic"
                 style="position: absolute; left: 0px; margin-bottom: 915px;" class="accents">
@@ -42,12 +283,15 @@ import Nav from '@/components/Nav';
 import SimpleHero from '@/components/SimpleHero';
 import CorporateHeader from '@/components/CorporateHeader';
 import Footer from '@/components/Footer';
+import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
     components: {
+        LazyHydrate,
         'main-nav': Nav,
         'simple-hero': SimpleHero,
         'corporate-header': CorporateHeader,
+        'client-logos': () => import('@/components/ClientLogos'),
         'contact-form': () => import('@/components/ContactForm'),
         'footer-fold': Footer
     },
@@ -286,6 +530,141 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
+
+.partner {
+    .container-wrapper {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+
+    p {
+        font-weight: 700;
+        color: #213C85;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 156px;
+        height: 155px;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 12px;
+        border: 1px solid #E0E0E0;
+        background: #FFF;
+        box-shadow: 4px 4px 4px 0px rgba(7, 127, 248, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .card-front {
+        z-index: 2;
+        transform: rotateY(0);
+
+        p {
+            margin-top: 0px;
+        }
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+        background: #FFF;
+        color: #FFF;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1em;
+
+        p {
+            font-weight: 400;
+        }
+    }
+
+    .card-image {
+        width: 80px;
+        margin-top: -10px;
+    }
+
+    .accents-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        z-index: -1;
+    }
+}
+
+.worldwide {
+    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Business+Skyline+Background.webp');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 50px;
+
+    .container-wrapper {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 50px;
+    }
+
+    h3 {
+        color: #213C85;
+        font-weight: 700;
+    }
+
+    p {
+        color: #213C85;
+        ;
+    }
+}
+
+.sampleReports {
+    background: linear-gradient(180deg, #0033C5 -2.43%, #077FF8 97.57%);
+
+    .container-wrapper {
+        position: relative;
+    }
+
+    .container {
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+}
 
 #contactForm {
     background-size: cover;
