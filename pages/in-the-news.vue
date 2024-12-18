@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="yellowCircle">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/InTheNews/Yellow+circle.webp"
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/InTheNews/moreYellowCircle.webp"
                                 alt="image of a yellow circle" style="width: 66px; height: 66px;">
                             <h1 style="margin-left: -25px; margin-top: 15px;">
                                 In the News
@@ -21,6 +21,8 @@
                 </div>
             </div>
         </section>
+
+        <LazyHydrate when-visible><in-the-news></in-the-news></LazyHydrate>
 
         <section class="curious">
             <div class="container">
@@ -48,6 +50,7 @@ export default {
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
+        'in-the-news': () => import('@/components/inTheNews/InTheNewsBlog.vue'),
         'footer-fold': () => import('@/components/Footer')
     },
     methods: {
