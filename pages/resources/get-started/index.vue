@@ -534,7 +534,7 @@ export default {
             this.url = 'btsassessments.com';
             this.id = 'bt';
         } else if (this.$route.query.id === 'btvision') {
-            this.url = '';
+            this.url = 'vision-assessments.com/';
             this.id = 'btvision';
         } else if (this.$route.query.id === 'tonyrobbins') {
             this.url = 'assessment.tonyrobbins.com';

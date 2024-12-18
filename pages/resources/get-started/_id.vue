@@ -715,7 +715,7 @@ export default {
         } else if (this.id === 'bt') {
             this.url = 'btsassessments.com';
         } else if (this.id === 'btvision') {
-            this.url = 'btsassessments.com';
+            this.url = 'vision-assessments.com/';
         } else if (this.id === 'tonyrobbins') {
             this.url = 'assessment.tonyrobbins.com';
         } else if (this.id === 'engageandgrow') {
