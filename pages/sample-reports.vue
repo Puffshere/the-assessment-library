@@ -498,7 +498,7 @@
                             class="hyperlink" target="_blank" rel="noopener">DISC Workplace Insights</a>
                         <a v-else class="hyperlink disabled">DISC Workplace Insights</a><br />
                         <a v-if="lang === 'en-us'"
-                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCworkplace.pdf"
+                            href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/SampleDISCExecutive.pdf"
                             class="hyperlink" target="_blank" rel="noopener">DISC Executive Insights</a>
                         <a v-else class="hyperlink disabled">DISC Executive Insights</a><br />
                     </div>
