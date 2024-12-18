@@ -8,7 +8,7 @@
                     <div class="col-12">
                         <div class="yellowCircle">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/InTheNews/moreYellowCircle.webp"
-                                alt="image of a yellow circle" style="width: 66px; height: 66px;">
+                                alt="image of a yellow circle" class="yellowImage">
                             <h1 style="margin-left: -25px; margin-top: 15px;">
                                 In the News
                             </h1>
@@ -71,6 +71,11 @@ export default {
     color: white;
     text-align: center;
     margin: 0 0px;
+
+    .yellowImage {
+        width: 66px;
+        height: 66px;
+    }
 
     .container {
         padding: 60px 0 40px 0;
