@@ -6,7 +6,9 @@
             <div class="container">
                 <div class="related-posts-container">
                     <div v-for="post in paginatedPosts" :key="post.id" class="post">
-                        <h3 class="post-title" v-html="truncateTitle(post.title.rendered)"></h3>
+                        <a :href="`https://blog.assessments24x7.com/${post.slug}`">
+                            <h3 class="post-title" v-html="truncateTitle(post.title.rendered)"></h3>
+                        </a>
                         <p class="post-meta">
                             <strong>Author:</strong> {{ getAuthorName(post) }} | {{ formatDate(post.date) }}
                         </p>
