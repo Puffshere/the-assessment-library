@@ -1,11 +1,11 @@
 <template>
     <section class="get-started">
         <main-nav />
-        <account-modal v-if="id !== 'ccc' && id !== 'eci' && id !== 'bt'" :id="id" />
+        <account-modal v-if="id !== 'ccc' && id !== 'eci' && id !== 'bt' && id !== 'btvision'" :id="id" />
         <account-modal-eci v-if="id === 'eci'" :id="id" />
-        <account-modal-bt v-if="id === 'bt'" :id="id" />
+        <account-modal-bt v-if="id === 'bt' || id === 'btvision'" :id="id" />
 
-        <section v-if="id !== 'eci' && id !== 'ec' && id !== 'bt'" class="header">
+        <section v-if="id !== 'eci' && id !== 'ec' && id !== 'bt' && id !== 'btvision'" class="header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </section>
-        <section v-else-if="id === 'bt'" class="bt-header">
+        <section v-else-if="id === 'bt' || id === 'btvision'" class="bt-header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -674,6 +674,24 @@ export default {
 
     .bt-header {
         background-color: #154489;
+        color: #fff;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+
+        .section-title {
+            font-size: 30pt;
+            margin-top: 0;
+        }
+
+        .partner-logo {
+            width: 60%;
+        }
+    }
+
+    .btvision-header {
+        background-color: #254f8d;
         color: #fff;
         text-align: center;
         padding-top: 20px;

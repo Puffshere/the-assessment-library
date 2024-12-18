@@ -7,7 +7,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img v-if="id === 'ccc'" src="~/assets/get-started/newCCCImage.png" alt="CCC" class="partner-logo">
+                        <img v-if="id === 'ccc'" src="~/assets/get-started/newCCCImage.png" alt="CCC"
+                            class="partner-logo">
                         <img v-else-if="id === 'actioncoach'" src="~/assets/get-started/actioncoach.png"
                             alt="ActionCOACH" class="partner-logo">
                         <img v-else-if="id === 'tonyrobbins'" src="~/assets/get-started/tonyrobbins.png"
@@ -18,20 +19,23 @@
                             alt="REF" class="partner-logo">
                         <img v-else-if="id === 'eci'" src="~/assets/get-started/erickson-coaching-international.png"
                             alt="Erickson Coaching International" class="partner-logo">
-                        <img v-else-if="id === 'bt'" src="~/assets/get-started/BT_logo_blue.png"
-                            alt="brian tracy" class="partner-logo">
+                        <img v-else-if="id === 'bt'" src="~/assets/get-started/BT_logo_blue.png" alt="brian tracy"
+                            class="partner-logo">
+                        <img v-else-if="id === 'btvision'" src="~/assets/get-started/BT_logo_blue.png" alt="brian tracy"
+                            class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png"
                             alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/Assessments24x7_Logo_Australasia.webp"
                             alt="Australasia" class="partner-logo">
-                        <img v-else-if="id === 'can'" src="~/assets/partner-logos/Assessments24x7_Logo_Canada.webp" alt="Canada"
-                            class="partner-logo">
-                        <img v-else-if="id === 'eur'" src="~/assets/partner-logos/Assessments24x7_Logo_Europe.webp" alt="Europe"
-                            class="partner-logo">
-                        <img v-else-if="id === 'neth_bel'" src="~/assets/partner-logos/Assessments24x7_Logo_Netherlands-Belgium.webp"
+                        <img v-else-if="id === 'can'" src="~/assets/partner-logos/Assessments24x7_Logo_Canada.webp"
+                            alt="Canada" class="partner-logo">
+                        <img v-else-if="id === 'eur'" src="~/assets/partner-logos/Assessments24x7_Logo_Europe.webp"
+                            alt="Europe" class="partner-logo">
+                        <img v-else-if="id === 'neth_bel'"
+                            src="~/assets/partner-logos/Assessments24x7_Logo_Netherlands-Belgium.webp"
                             alt="Netherlands/Belgium" class="partner-logo">
-                        <img v-else-if="id === 'viet'" src="~/assets/partner-logos/Assessments24x7_Logo_Vietnam.webp" alt="Vietnam"
-                            class="partner-logo">
+                        <img v-else-if="id === 'viet'" src="~/assets/partner-logos/Assessments24x7_Logo_Vietnam.webp"
+                            alt="Vietnam" class="partner-logo">
                         <h1 v-if="id === 'ref'" class="section-title" id="reff">Get Started</h1>
                         <h1 v-else class="section-title">Get Started</h1>
 
@@ -279,8 +283,8 @@
                                             @click="$nuxt.$emit('openAccountModal')">Click here</a></span>
                                 </p>
 
-                                <a class="link" :href="`https://${url}`" target="_blank"
-                                    rel="noopener">https://{{ url }}</a>
+                                <a class="link" :href="`https://${url}`" target="_blank" rel="noopener">https://{{ url
+                                    }}</a>
                             </div>
                         </div>
                     </div>
