@@ -311,7 +311,7 @@ export default {
 @media (max-width: 900px) {
     .related-posts {
         .container {
-            padding-top: 50px;
+            padding-top: 60px;
             padding-bottom: 80px;
         }
     }
