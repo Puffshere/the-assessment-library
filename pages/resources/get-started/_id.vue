@@ -18,6 +18,8 @@
                             alt="REF" class="partner-logo">
                         <img v-else-if="id === 'eci'" src="~/assets/get-started/erickson-coaching-international.png"
                             alt="Erickson Coaching International" class="partner-logo">
+                        <img v-else-if="id === 'bt'" src="~/assets/get-started/BT_logo_blue.png"
+                            alt="brian tracy" class="partner-logo">
                         <img v-else-if="id === 'swc'" src="~/assets/get-started/southwestern-consulting.png"
                             alt="Southwestern Consulting" class="partner-logo">
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/Assessments24x7_Logo_Australasia.webp"
@@ -706,6 +708,10 @@ export default {
             this.url = 'cccassessments.com';
         } else if (this.id === 'actioncoach') {
             this.url = 'actioncoachassessments.com';
+        } else if (this.id === 'bt') {
+            this.url = 'btsassessments.com';
+        } else if (this.id === 'btvision') {
+            this.url = 'btsassessments.com';
         } else if (this.id === 'tonyrobbins') {
             this.url = 'assessment.tonyrobbins.com';
         } else if (this.id === 'engageandgrow') {

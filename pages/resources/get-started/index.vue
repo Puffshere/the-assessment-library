@@ -1,14 +1,16 @@
 <template>
     <section class="get-started">
         <main-nav />
-        <account-modal v-if="id !== 'ccc' && id !== 'eci'" :id="id" />
+        <account-modal v-if="id !== 'ccc' && id !== 'eci' && id !== 'bt'" :id="id" />
         <account-modal-eci v-if="id === 'eci'" :id="id" />
+        <account-modal-bt v-if="id === 'bt'" :id="id" />
 
-        <section v-if="id !== 'eci' && id !== 'ec'" class="header">
+        <section v-if="id !== 'eci' && id !== 'ec' && id !== 'bt'" class="header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img v-if="id === 'ccc'" src="~/assets/get-started/newCCCImage.png" alt="CCC" class="partner-logo">
+                        <img v-if="id === 'ccc'" src="~/assets/get-started/newCCCImage.png" alt="CCC"
+                            class="partner-logo">
                         <img v-else-if="id === 'actioncoach'" src="~/assets/get-started/actioncoach.png"
                             alt="ActionCOACH" class="partner-logo">
                         <img v-else-if="id === 'tonyrobbins'" src="~/assets/get-started/tonyrobbins.png"
@@ -26,20 +28,31 @@
                         <img v-else-if="id === 'bni'" src="~/assets/BNI_logo.png" alt="BNI" class="partner-logo-bni">
                         <img v-else-if="id === 'aus'" src="~/assets/partner-logos/Assessments24x7_Logo_Australasia.webp"
                             alt="Australasia" class="partner-logo affiliate">
-                        <img v-else-if="id === 'can'" src="~/assets/partner-logos/Assessments24x7_Logo_Canada.webp" alt="Canada"
-                            class="partner-logo affiliate">
-                        <img v-else-if="id === 'eur'" src="~/assets/partner-logos/Assessments24x7_Logo_Europe.webp" alt="Europe"
-                            class="partner-logo affiliate">
-                        <img v-else-if="id === 'neth_bel'" src="~/assets/partner-logos/Assessments24x7_Logo_Netherlands-Belgium.webp"
+                        <img v-else-if="id === 'can'" src="~/assets/partner-logos/Assessments24x7_Logo_Canada.webp"
+                            alt="Canada" class="partner-logo affiliate">
+                        <img v-else-if="id === 'eur'" src="~/assets/partner-logos/Assessments24x7_Logo_Europe.webp"
+                            alt="Europe" class="partner-logo affiliate">
+                        <img v-else-if="id === 'neth_bel'"
+                            src="~/assets/partner-logos/Assessments24x7_Logo_Netherlands-Belgium.webp"
                             alt="Netherlands/Belgium" class="partner-logo affiliate">
-                        <img v-else-if="id === 'viet'" src="~/assets/partner-logos/Assessments24x7_Logo_Vietnam.webp" alt="Vietnam"
-                            class="partner-logo affiliate">
+                        <img v-else-if="id === 'viet'" src="~/assets/partner-logos/Assessments24x7_Logo_Vietnam.webp"
+                            alt="Vietnam" class="partner-logo affiliate">
                         <h1 class="section-title">Get Started</h1>
                         <p>
                             Welcome to your personal coaching dashboard! We invite you to view any and all materials
                             that look interesting to you,
                             but if you’d like some guidance, follow our suggested steps below.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section v-else-if="id === 'bt'" class="bt-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="~/assets/brian_tracy_white.png" alt="Brian Tracy" class="partner-logo"
+                            style="margin-bottom: 50px; margin-top: 40px;">
                     </div>
                 </div>
             </div>
@@ -491,6 +504,7 @@
 import Nav from '@/components/Nav';
 import AccountModal from '@/components/AccountModal';
 import AccountModalECI from '@/components/AccountModalECI';
+import AccountModalBT from '@/components/AccountModalBT';
 import Footer from '@/components/Footer';
 
 export default {
@@ -498,6 +512,7 @@ export default {
         'main-nav': Nav,
         'account-modal': AccountModal,
         'account-modal-eci': AccountModalECI,
+        'account-modal-bt': AccountModalBT,
         'footer-fold': Footer
     },
     data() {
@@ -515,6 +530,12 @@ export default {
         } else if (this.$route.query.id === 'actioncoach') {
             this.url = 'actioncoachassessments.com';
             this.id = 'actioncoach';
+        } else if (this.$route.query.id === 'bt') {
+            this.url = 'btsassessments.com';
+            this.id = 'bt';
+        } else if (this.$route.query.id === 'btvision') {
+            this.url = '';
+            this.id = 'btvision';
         } else if (this.$route.query.id === 'tonyrobbins') {
             this.url = 'assessment.tonyrobbins.com';
             this.id = 'tonyrobbins';
@@ -648,6 +669,24 @@ export default {
         .partner-logo {
             width: 100%;
             max-width: 300px;
+        }
+    }
+
+    .bt-header {
+        background-color: #154489;
+        color: #fff;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+
+        .section-title {
+            font-size: 30pt;
+            margin-top: 0;
+        }
+
+        .partner-logo {
+            width: 60%;
         }
     }
 
