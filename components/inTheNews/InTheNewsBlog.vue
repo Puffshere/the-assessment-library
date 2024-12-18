@@ -311,7 +311,8 @@ export default {
 @media (max-width: 900px) {
     .related-posts {
         .container {
-            padding-top: 80px;
+            padding-top: 50px;
+            padding-bottom: 80px;
         }
     }
 
@@ -364,6 +365,10 @@ export default {
                 }
             }
         }
+    }
+
+    .pagination {
+        gap: 10px !important;
     }
 }
 </style>
