@@ -15,11 +15,26 @@
                         </h2>
                         <p style="text-align: left; margin-top: 0px; margin-bottom: 40px; color: white;"
                             class="heroText">
-                            The Training Materials library is your comprehensive resource for coaching and debriefing
-                            tools, providing additional insight and information on the assessment reports and models,
-                            and giving quick access to class or workshop materials. Explore these at your leisure! There
-                            are many useful and valuable resources to support your continued development, understanding,
-                            and application!
+                            <span v-if="!certified && !unlocked">The Training Materials library is your comprehensive
+                                resource for
+                                coaching and debriefing
+                                tools, providing additional insight and information on the assessment reports and
+                                models,
+                                and giving quick access to class or workshop materials. Explore these at your leisure!
+                                There
+                                are many useful and valuable resources to support your continued development,
+                                understanding,
+                                and application!</span>
+                            <span v-if="certified && unlocked">Your go-to resource for coaching tools, assessment
+                                insights, reports,
+                                and quick access to class materials. Explore these valuable resources at your leisure to
+                                support your ongoing development and application.</span>
+                            <span v-if="!certified && unlocked">This is an abridged library of some DISC resources to
+                                support our
+                                clients using DISC in an introductory capacity. A comprehensive library of DISC training
+                                and resources is available for our certified DISC Practitioners and Account Plus
+                                clients. If you are interested in accessing our full library, please contact us for
+                                information on certification or an Account Plus.</span>
                         </p>
                     </div>
                     <div class="col-5">
@@ -92,17 +107,19 @@
                                     </a>
                                 </li>
                             </ul>
-                            <br />
-                            <p class="subcard-title">Video Resources</p>
-                            <ul class="subcard-links">
-                                <li v-for="link in filteredVideoResources" :key="link.url">
-                                    <a :href="link.url" target="_blank" rel="noopener">
-                                        <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
-                                            :alt="`${link.type.toLowerCase()} icon`" class="icons">
-                                        {{ link.name }}
-                                    </a>
-                                </li>
-                            </ul>
+                            <div v-if="certified">
+                                <br />
+                                <p class="subcard-title">Video Resources</p>
+                                <ul class="subcard-links">
+                                    <li v-for="link in filteredVideoResources" :key="link.url">
+                                        <a :href="link.url" target="_blank" rel="noopener">
+                                            <img :src="`https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/${link.icon}`"
+                                                :alt="`${link.type.toLowerCase()} icon`" class="icons">
+                                            {{ link.name }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card">
                             <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/2024+disc/Training+%26+Workshops.webp"
@@ -832,7 +849,7 @@ export default {
                     { name: 'DISC vs MBTI Article', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/DISCvsMBTI.pdf', icon: 'PDF.png' },
                     { name: 'DISC & Other Assessments Articles', type: 'URL', url: '/blog', icon: 'URL.png' },
                     { name: 'Comparing 4 quadrants and 5 factors Article', type: 'PDF', url: 'https://cdn.assessments24x7.com/file/assessments24x7-media/trainer-materials/disc/comparing.pdf', icon: 'PDF.png' },
-                    { name: 'Assessment 24x7 Store', type: 'URL', url: 'https://store.assessments24x7.com/collections/products', icon: 'URL.png' },
+                    // { name: 'Assessment 24x7 Store', type: 'URL', url: 'https://store.assessments24x7.com/collections/products', icon: 'URL.png' },
                 ]
             },
             productSpecificResources: {
