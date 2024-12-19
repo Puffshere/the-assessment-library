@@ -717,7 +717,7 @@ export default {
 }
 
 .trusted {
-    background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Business+Skyline+Background.webp');
+    background: url('~assets/corporate/corporate_business_skyline_background.webp');
     background-size: cover;
     background-position: center;
     padding: 40px 0;
