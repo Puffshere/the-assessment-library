@@ -36,6 +36,38 @@
 
         <hr class="blueLine">
 
+        <section class="logos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            <span style="color: #00A8FF;">Government entities</span> that benefit from our assessment
+                            products:
+                        </p>
+                        <div class="logoWrapper">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/DC3+Logo.webp"
+                                alt="" class="dc3">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/MDOT+Logo.webp"
+                                alt="" class="mdot">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/FL+Criminial+Investigations+Logo.webp"
+                                alt="" class="fl">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/Defense+Contract+Audit+Agency+Logo.webp"
+                                alt="" class="def">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/AFOSI+Logo.webp"
+                                alt="" class="afosi">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/City+of+Atlanta+Logo.webp"
+                                alt="" class="atlanta">
+                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/Oklahoma+State+Health+Department+Logo.webp"
+                                alt="" class="okhd">
+                            <!-- <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/LA+County+Superior+Court+Logo.webp" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
         <section class="trusted">
             <div class="container">
                 <div class="row">
@@ -708,6 +740,66 @@ export default {
     }
 }
 
+.logos {
+    .container {
+        padding: 20px 0 60px 0;
+    }
+
+    .logoWrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        img {
+            display: block;
+        }
+
+        .dc3 {
+            width: 73px;
+            height: 73px;
+        }
+
+        .mdot {
+            width: 105px;
+            height: 41px;
+        }
+
+        .fl {
+            width: 48px;
+            height: 69px;
+        }
+
+        .def {
+            width: 72px;
+            height: 71px;
+        }
+
+        .afosi {
+            width: 77px;
+            height: 70px;
+        }
+
+        .atlanta {
+            width: 72px;
+            height: 73px;
+        }
+
+        .okhd {
+            width: 141px;
+            height: 38px;
+        }
+    }
+
+    p {
+        font-size: 0.875em;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 0 30px 0;
+    }
+}
+
 .trusted {
     background-color: #1E222D;
 
@@ -1151,6 +1243,20 @@ export default {
     margin-bottom: -1px;
 }
 
+@media (max-width: 1024px) {
+    .logos {
+        .logoWrapper {
+            justify-content: space-evenly;
+            gap: 30px;
+
+            img {
+                flex: none;
+                margin: 0;
+            }
+        }
+    }
+}
+
 @media (max-width: 900px) {
     .trusted {
         .cards-container {
@@ -1418,6 +1524,20 @@ export default {
         .card {
             width: 202px;
             height: 226px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .logos {
+        .logoWrapper {
+            flex-direction: column;
+            gap: 20px;
+
+            img {
+                flex: none;
+                width: auto;
+            }
         }
     }
 }
