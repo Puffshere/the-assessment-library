@@ -22,7 +22,7 @@
                                 </button>
                             </div>
                             <div class="col-4">
-                                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Corporate+hero+image.webp"
+                                <img src="~assets/corporate/corporate_hero_image.webp"
                                     alt="hero image" style="width: 338px; margin-top: -40px; margin-bottom: -50px;"
                                     class="heroImage">
                             </div>
@@ -48,7 +48,7 @@
                         highly productive teams. We are proud to count some of the top companies in the world — from
                         small corporations to Fortune 500 companies — among our satisfied customers.
                     </p>
-                    <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Arrow+Left.webp"
+                    <img src="~assets/corporate/corporate_arrow_left.webp"
                         alt="curly arrow image" style="width: 159px; align-items: center; margin-top: -20px;">
                 </div>
             </div>
@@ -170,7 +170,7 @@
                         </div>
                         <div class="col-12">
                             <div class="row cards-container">
-                                <div class="card">
+                                <div class="card left spacing">
                                     <div class="card-inner">
                                         <div class="card-front">
                                             <p>
@@ -189,7 +189,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card right spacing">
                                     <div class="card-inner">
                                         <div class="card-front">
                                             <p>
@@ -206,7 +206,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card left">
                                     <div class="card-inner">
                                         <div class="card-front">
                                             <p>
@@ -223,7 +223,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card right">
                                     <div class="card-inner">
                                         <div class="card-front">
                                             <p>
@@ -244,7 +244,7 @@
                                 </div>
                             </div>
                             <div class="row cards-container">
-                                <div class="card cardSpace">
+                                <div class="card left cardSpace spacing">
                                     <div class="card-inner">
                                         <div class="card-front">
                                             <p>
@@ -261,7 +261,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card right spacing">
                                     <div class="card-inner">
                                         <div class="card-front">
                                             <p>
@@ -279,7 +279,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card left">
                                     <div class="card-inner">
                                         <div class="card-front">
                                             <p>
@@ -298,7 +298,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card right">
                                     <div class="card-inner">
                                         <div class="card-front">
                                             <p>
@@ -369,8 +369,15 @@
                                     Explore our <span style="color: #FFDE59;">sample reports</span>
                                 </h3>
                                 <p style="color: white;">
-                                    Explore our diverse range of reports, including DISC, Motivators, Emotional
-                                    Intelligence (EIQ), 360° Feedback, and more, designed to provide valuable insights
+                                    Explore our diverse range of reports, including <a href="/assessments/disc"
+                                        class="hyperlink"
+                                        style="color: white; text-shadow: 2px 1px 1px black;">DISC</a>, <a
+                                        href="/assessments/motivators" class="hyperlink"
+                                        style="color: white; text-shadow: 2px 1px 1px black;">Motivators</a>, <a
+                                        href="/assessments/emotional-intelligence" class="hyperlink"
+                                        style="color: white; text-shadow: 2px 1px 1px black;">Emotional
+                                        Intelligence (EIQ)</a>, 360° Feedback, and more, designed to provide valuable
+                                    insights
                                     for hiring, team building, and leadership development.
                                 </p>
                                 <div class="btn">
@@ -1040,6 +1047,18 @@ export default {
         h3,
         p {
             padding: 0 10px !important;
+        }
+
+        .left {
+            margin-right: 10px;
+        }
+
+        .right {
+            margin-left: 10px;
+        }
+
+        .spacing {
+            margin-bottom: 20px;
         }
 
         .cards-container {
