@@ -45,21 +45,21 @@
                             products:
                         </p>
                         <div class="logoWrapper">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/DC3+Logo.webp"
+                            <img src="~assets/government-logos/DC3 Logo.webp"
                                 alt="" class="dc3">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/MDOT+Logo.webp"
+                            <img src="~assets/government-logos/MDOT Logo.webp"
                                 alt="" class="mdot">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/FL+Criminial+Investigations+Logo.webp"
+                            <img src="~assets/government-logos/FL Criminial Investigations Logo.webp"
                                 alt="" class="fl">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/Defense+Contract+Audit+Agency+Logo.webp"
+                            <img src="~assets/government-logos/Defense Contract Audit Agency Logo.webp"
                                 alt="" class="def">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/AFOSI+Logo.webp"
+                            <img src="~assets/government-logos/AFOSI Logo.webp"
                                 alt="" class="afosi">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/City+of+Atlanta+Logo.webp"
+                            <img src="~assets/government-logos/City of Atlanta Logo.webp"
                                 alt="" class="atlanta">
-                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/Oklahoma+State+Health+Department+Logo.webp"
+                            <img src="~assets/government-logos/Oklahoma State Health Department Logo.webp"
                                 alt="" class="okhd">
-                            <!-- <img src="https://f002.backblazeb2.com/file/assessments24x7-media/Government/LA+County+Superior+Court+Logo.webp" alt=""> -->
+                            <!-- <img src="~assets/government-logos/LA County Superior Court Logo.webp" alt=""> -->
                         </div>
                     </div>
                 </div>
