@@ -177,7 +177,7 @@
                                                 Smart <br />
                                                 Hiring
                                             </p>
-                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Smarter+Hiring+Icon.webp"
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Smarter+Hiring+Icon.webp"
                                                 alt="smarter hiring icon" class="card-image">
                                         </div>
                                         <div class="card-back">
@@ -196,7 +196,7 @@
                                                 Employee <br />
                                                 Retention
                                             </p>
-                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Employee+Retention+Icon.webp"
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Employee+Retention+Icon.webp"
                                                 alt="employee retention icon" class="card-image">
                                         </div>
                                         <div class="card-back">
@@ -213,7 +213,7 @@
                                                 Conflict <br />
                                                 Resolution
                                             </p>
-                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Conflict+Resolution+Icon.webp"
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Conflict+Resolution+Icon.webp"
                                                 alt="conflict resolution icon" class="card-image">
                                         </div>
                                         <div class="card-back">
@@ -230,7 +230,7 @@
                                                 Team <br />
                                                 Building
                                             </p>
-                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Team+Building+Icon.webp"
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Team+Building+Icon.webp"
                                                 alt="team building icon" class="card-image">
                                         </div>
                                         <div class="card-back">
@@ -251,7 +251,7 @@
                                                 Performance & <br />
                                                 Profits
                                             </p>
-                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Performance+and+Profits+Icon.webp"
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Performance+and+Profits+Icon.webp"
                                                 alt="performance and profits icon" class="card-image">
                                         </div>
                                         <div class="card-back">
@@ -268,12 +268,12 @@
                                                 Impactful <br />
                                                 Training
                                             </p>
-                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Impactful+Training+Icon.webp"
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Impactful+Training+Icon.webp"
                                                 alt="impactful training icon" class="card-image">
                                         </div>
                                         <div class="card-back">
                                             <p>
-                                                Make employee training experiences more relevant, meaningful and
+                                                Make employee training experiences more relevant, meaningful, and
                                                 motivational.
                                             </p>
                                         </div>
@@ -286,7 +286,7 @@
                                                 Leadership <br />
                                                 Development
                                             </p>
-                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Leadership+Development+Icon.webp"
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Leadership+Development+Icon.webp"
                                                 alt="leadership and development icon" class="card-image"
                                                 style="width: 70px;">
                                         </div>
@@ -305,7 +305,7 @@
                                                 Corporate <br />
                                                 Culture
                                             </p>
-                                            <img src="https://f002.backblazeb2.com/file/assessments24x7-media/corporate/Corporate+Culture+Icon.webp"
+                                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/corporate/Corporate+Culture+Icon.webp"
                                                 alt="corporate culture icon" class="card-image">
                                         </div>
                                         <div class="card-back">
