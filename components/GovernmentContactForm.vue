@@ -491,15 +491,16 @@ export default {
                         break;
                 }
 
-                // Get current page URL to determine tag to apply
                 let currentPageUrl = window.location.pathname.toLowerCase().trim();
 
-                // Normalize the URL to handle trailing slashes
                 if (currentPageUrl.endsWith('/')) {
                     currentPageUrl = currentPageUrl.slice(0, -1);
                 }
 
-                // Map URLs to corresponding tags
+                if (!currentPageUrl || currentPageUrl === "") {
+                    currentPageUrl = "/";
+                }
+
                 const pageTags = {
                     "/": "1074",
                     "/contact": "1043",
@@ -518,8 +519,8 @@ export default {
                     "/government-page": "1074"
                 };
 
-                // Find the tag for the current page
                 const currentPageTag = pageTags[currentPageUrl] || null;
+                console.log("This is the current page tag", currentPageTag);
 
                 if (this.isPartnerId === "aus" || this.isPartnerId === "eur" || this.isPartnerId === "viet") {
                     // Split full name into first name and last name
@@ -1078,7 +1079,6 @@ export default {
                     }
                 }
                 if (this.getStartedId !== "wcg" && this.isPartnerId !== "aus" && this.isPartnerId !== "can" && this.isPartnerId !== "eur" && this.isPartnerId !== "neth_bel" && this.isPartnerId !== "viet" && this.getStartedId !== "dc" && this.getStartedId !== "bni") {
-                    // Split full name into first name and last name
                     const [firstName, ...lastNameArray] = this.form.fullName.trim().split(' ');
                     const lastName = lastNameArray.join(' ');
                     try {
