@@ -501,7 +501,7 @@ export default {
 
                 // Map URLs to corresponding tags
                 const pageTags = {
-                    "/": "1042",
+                    "/": "1070",
                     "/contact": "1043",
                     "/certifications/assessment": "1044",
                     "/assessments/disc": "1045",

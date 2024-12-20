@@ -9,7 +9,7 @@ module.exports = {
     htmlAttrs: {
       lang: 'en',
     },
-    title: 'Assessments 24x7 | Global Leaders in Assessment Technology',
+    title: 'DISC Assessments for Government | Assessments 24x7',
     meta: [
       // unused javascript
       // { charset: 'utf-8' },
@@ -20,7 +20,7 @@ module.exports = {
       // unused javascript
       // { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      { hid: 'description', name: 'description', content: 'Let our assessment technology change your life. Revolutionize your experience with expertise from the industry\'s top assessment service provider.' }
+      { hid: 'description', name: 'description', content: 'Boost team collaboration and leadership with DISC Assessments tailored for government agencies. Explore solutions to enhance performance and communication.' }
     ],
     link: [
       {
@@ -104,10 +104,10 @@ module.exports = {
       '/_nuxt/',
       '/.well-known/'
     ],
-    Sitemap: 'https://www.assessments24x7.com/sitemap.xml'
+    Sitemap: 'https://www.governmentassessments.com/sitemap.xml'
   },
   sitemap: {
-    hostname: 'https://www.assessments24x7.com',
+    hostname: 'https://www.governmentassessments.com',
     gzip: true,
     // routes: async () => {
     //   const { data } = await axios.get('https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/posts/?key=1cd8f26ccc1cb09274574d0e00&limit=all&fields=slug');
