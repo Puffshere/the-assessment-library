@@ -25,15 +25,28 @@ async function start() {
     await nuxt.ready();
   }
 
-  // Middleware to serve different content based on hostname
+  // Middleware to serve different manifest.json based on hostname
   app.use(async (ctx, next) => {
-    console.log('Hostname:', ctx.hostname); // Log the hostname for debugging
+    if (ctx.path === '/manifest.json') {
+      if (ctx.hostname.includes('governmentassessments.com')) {
+        ctx.type = 'application/json';
+        ctx.body = require('../static/manifest-government.json');
+      } else {
+        ctx.type = 'application/json';
+        ctx.body = require('../static/manifest-assessments.json');
+      }
+    } else {
+      await next();
+    }
+  });
+
+  // Middleware to handle hostname-specific page routing
+  app.use(async (ctx, next) => {
     if (ctx.hostname.includes('governmentassessments.com')) {
-      ctx.req.url = '/government-page';
+      ctx.req.url = '/government-page'; // Modify URL to serve government page
     }
     await next();
   });
-
 
   // Nuxt rendering middleware
   app.use(ctx => {

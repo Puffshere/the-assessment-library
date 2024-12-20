@@ -1,0 +1,17 @@
+{
+    "name": "Government Assessments",
+    "short_name": "GovAssess",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "description": "Government Assessments - Trusted tools for government professionals.",
+    "icons": [
+      {
+        "src": "/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  
