@@ -501,7 +501,7 @@ export default {
 
                 // Map URLs to corresponding tags
                 const pageTags = {
-                    "/": "1070",
+                    "/": "1074",
                     "/contact": "1043",
                     "/certifications/assessment": "1044",
                     "/assessments/disc": "1045",
@@ -515,7 +515,7 @@ export default {
                     "/discinsights": "1053",
                     "/disc-awareness": "1054",
                     "/disc-leadership": "1055",
-                    "/government-page": "1070"
+                    "/government-page": "1074"
                 };
 
                 // Find the tag for the current page
