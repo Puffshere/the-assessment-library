@@ -25,20 +25,21 @@ async function start() {
     await nuxt.ready();
   }
 
-  // Middleware to check the hostname and redirect to /government-page if necessary
+  // Middleware to serve different content based on hostname
   app.use(async (ctx, next) => {
+    console.log('Hostname:', ctx.hostname); // Log the hostname for debugging
     if (ctx.hostname.includes('governmentassessments.com')) {
-      ctx.redirect('/government-page');
-      return;
+      ctx.req.url = '/government-page';
     }
     await next();
   });
 
-  // Nuxt render middleware
+
+  // Nuxt rendering middleware
   app.use(ctx => {
     ctx.status = 200;
     ctx.respond = false; // Bypass Koa's built-in response handling
-    ctx.req.ctx = ctx; // This might be useful later on, e.g., in nuxtServerInit or with nuxt-stash
+    ctx.req.ctx = ctx; // Useful in nuxtServerInit or with nuxt-stash
     nuxt.render(ctx.req, ctx.res);
   });
 
