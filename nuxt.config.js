@@ -215,7 +215,7 @@ module.exports = {
   ],
 
   router: {
-    middleware: ['redirects', 'hostRedirect'],
+    middleware: 'redirects'
   },
   telemetry: false
 }
