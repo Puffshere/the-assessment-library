@@ -18,7 +18,8 @@
                             </h1>
                             <h3 style="font-weight: 400; color: #1E222D;">
                                 Empowering federal, state, and local agencies with <br />
-                                tools for team success and mission accomplishment
+                                tools for team success and achieving
+                                mission objectives.
                             </h3>
                         </div>
                     </div>
@@ -40,25 +41,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <p>
+                        <h2>
                             <span style="color: #00A8FF;">Government entities</span> that benefit from our assessment
                             products:
-                        </p>
+                        </h2>
                         <div class="logoWrapper">
-                            <img src="~assets/government-logos/DC3 Logo.webp"
-                                alt="" class="dc3">
-                            <img src="~assets/government-logos/MDOT Logo.webp"
-                                alt="" class="mdot">
-                            <img src="~assets/government-logos/FL Criminial Investigations Logo.webp"
-                                alt="" class="fl">
-                            <img src="~assets/government-logos/Defense Contract Audit Agency Logo.webp"
-                                alt="" class="def">
-                            <img src="~assets/government-logos/AFOSI Logo.webp"
-                                alt="" class="afosi">
-                            <img src="~assets/government-logos/City of Atlanta Logo.webp"
-                                alt="" class="atlanta">
-                            <img src="~assets/government-logos/Oklahoma State Health Department Logo.webp"
-                                alt="" class="okhd">
+                            <img src="~assets/government-logos/DC3 Logo.webp" alt="" class="dc3">
+                            <img src="~assets/government-logos/MDOT Logo.webp" alt="" class="mdot">
+                            <img src="~assets/government-logos/FL Criminial Investigations Logo.webp" alt="" class="fl">
+                            <img src="~assets/government-logos/Defense Contract Audit Agency Logo.webp" alt=""
+                                class="def">
+                            <img src="~assets/government-logos/AFOSI Logo.webp" alt="" class="afosi">
+                            <img src="~assets/government-logos/City of Atlanta Logo.webp" alt="" class="atlanta">
+                            <img src="~assets/government-logos/Oklahoma State Health Department Logo.webp" alt=""
+                                class="okhd">
                             <!-- <img src="~assets/government-logos/LA County Superior Court Logo.webp" alt=""> -->
                         </div>
                     </div>
@@ -74,7 +70,7 @@
                     <div class="col-12">
                         <h3 style="color: white; text-align: center;">
                             <span style="color: #00A8FF;">The trusted</span> assessment platform <br />
-                            for Government teams
+                            for government teams
                         </h3>
                     </div>
                     <div class="col-12 cards-container">
@@ -120,7 +116,7 @@
                                 </div>
                                 <div class="cardText lastCardText">
                                     Service-Disabled <br />
-                                    Vertan-Ownned <br />
+                                    Veteran-Owned <br />
                                     Small Business
                                 </div>
                             </div>
@@ -186,8 +182,8 @@
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/EIQSampleReport.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Emotional <br />
                                     Intelligence</a> <br />
-                                Uncover what drives individuals to perform at their best, aligning their motivations
-                                with organizational goals.
+                                Strengthen leadership by developing self-awareness, social awareness, and the
+                                ability to navigate interpersonal relationships effectively.
                             </p>
                         </div>
                         <div class="card">
@@ -210,8 +206,9 @@
                             <p style="margin-bottom: -70px;">
                                 <a href="https://cdn.assessments24x7.com/file/assessments24x7-media/reports/Report_Sample_Motivators.pdf"
                                     class="hyperlink" target="_blank" rel="noopener">Motivators</a> <br />
-                                Strengthen leadership by developing self-awareness, social awareness, and the
-                                ability to navigate interpersonal relationships effectively.
+                                <span>Uncover what drives individuals to perform at their best, aligning their
+                                    motivations
+                                    with organizational goals.</span>
                             </p>
                         </div>
                     </div>
@@ -237,7 +234,7 @@
                             <div class="row top" style="margin-bottom: 0px;">
                                 <div class="col-7" style="text-align: left; margin-top: 20px;">
                                     <h3>
-                                        <span style="color: #00A8FF;">Built</span> for Government security
+                                        <span style="color: #00A8FF;">Built</span> for government security
                                     </h3>
                                     <div class="feature">
                                         <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Yellow+check.webp"
@@ -407,19 +404,23 @@
                         <div class="col-12">
                             <div class="col-8" style="text-align: left;">
                                 <h3>
-                                    <span style="color: #00A8FF;">Elevate</span> team dynamics accross <br />
-                                    Government entities with DISC
+                                    <span style="color: #00A8FF;">Elevate</span> team dynamics across <br />
+                                    government entities with DISC
                                 </h3>
                                 <p>
                                     The DISC Assessment reveals four primary behavioral styles—Dominance, Influence,
                                     Steadiness, and Conscientiousness—helping government teams communicate effectively,
                                     collaborate seamlessly, and reduce friction. <br />
                                     <br />
-                                    D (Dominance): Confident and results-driven, focused on solving problems. <br />
-                                    I (Influence): Persuasive and enthusiastic, excelling at building relationships.
+                                    <strong>D (Dominance):</strong> Confident and results-driven, focused on solving
+                                    problems <br />
+                                    <strong>I (Influence):</strong> Persuasive and enthusiastic, excelling at building
+                                    relationships
                                     <br />
-                                    S (Steadiness): Reliable and supportive, promoting consistency and teamwork. <br />
-                                    C (Conscientiousness): Analytical and precise, ensuring accuracy and quality. <br />
+                                    <strong>S (Steadiness):</strong> Reliable and supportive, promoting consistency and
+                                    teamwork <br />
+                                    <strong>C (Conscientiousness):</strong> Analytical and precise, ensuring accuracy
+                                    and quality <br />
                                     <br />
                                     When paired with tools like <a href="/assessments/motivators"
                                         class="hyperlink">Motivators</a> and <a
@@ -950,7 +951,7 @@ export default {
 
     .card {
         width: 185px;
-        min-height: 430px;
+        min-height: 450px;
         border-radius: 12px;
         border: 1px solid #E0E0E0;
         background: #FFF;
@@ -1485,6 +1486,13 @@ export default {
 }
 
 @media (max-width: 500px) {
+    .logos {
+        h2 {
+            font-size: 1.5em !important;
+            text-align: center;
+        }
+    }
+
     .trusted {
         .cards-container {
             display: flex;
