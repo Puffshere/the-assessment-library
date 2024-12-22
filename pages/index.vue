@@ -162,7 +162,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 style="text-align: center;">
+                        <h3 style="text-align: center; color: #1E222D;">
                             <span style="color: #00A8FF;">Core</span> products
                         </h3>
                         <p style="text-align: center;">
@@ -233,7 +233,7 @@
                         <div class="col-12">
                             <div class="row top" style="margin-bottom: 0px;">
                                 <div class="col-7" style="text-align: left; margin-top: 20px;">
-                                    <h3>
+                                    <h3 style="color: #1E222D;">
                                         <span style="color: #00A8FF;">Built</span> for government security
                                     </h3>
                                     <div class="feature">
@@ -275,7 +275,7 @@
                                         class="womanSmiling">
                                 </div>
                                 <div class="col-7" style="text-align: right; margin-top: 30px;">
-                                    <h3>
+                                    <h3 style="color: #1E222D;">
                                         <span style="color: #00A8FF;">Optimized</span> for your mission
                                     </h3>
                                     <div class="feature2">
@@ -309,7 +309,7 @@
                             </div>
                             <div class="row" style="margin-top: 0px;">
                                 <div class="col-7" style="text-align: left; margin-top: 40px;">
-                                    <h3>
+                                    <h3 style="color: #1E222D;">
                                         <span style="color: #00A8FF;">Engineered</span> for team success
                                     </h3>
                                     <div class="feature">
