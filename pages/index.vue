@@ -656,7 +656,7 @@
         <hr class="blueLine">
 
         <contact-form-fold id="contactForm"></contact-form-fold>
-        <!-- <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate> -->
+        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
 
     </div>
 </template>
@@ -669,7 +669,7 @@ export default {
     components: {
         LazyHydrate,
         'contact-form-fold': () => import('@/components/government/GovernmentContactFormFold'),
-        // 'footer-fold': () => import('@/components/Footer')
+        'footer-fold': () => import('@/components/Footer')
     },
     head() {
         return {
