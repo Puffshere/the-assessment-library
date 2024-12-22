@@ -998,6 +998,7 @@ export default {
     .feature {
         display: flex;
         align-items: flex-start;
+        color: #1E222D;
     }
 
     .checkmark-icon {
@@ -1008,7 +1009,7 @@ export default {
 
     .feature2 {
         display: flex;
-
+        color: #1E222D;
         justify-content: right;
         align-items: flex-start;
     }
