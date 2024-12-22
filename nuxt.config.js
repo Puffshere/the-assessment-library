@@ -104,10 +104,10 @@ module.exports = {
       '/_nuxt/',
       '/.well-known/'
     ],
-    Sitemap: 'https://www.governmentassessments.com/sitemap.xml'
+    Sitemap: 'https://www.governmentassessments24x7.com/sitemap.xml'
   },
   sitemap: {
-    hostname: 'https://www.governmentassessments.com',
+    hostname: 'https://www.governmentassessments24x7.com',
     gzip: true,
     // routes: async () => {
     //   const { data } = await axios.get('https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/posts/?key=1cd8f26ccc1cb09274574d0e00&limit=all&fields=slug');
