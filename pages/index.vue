@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>
+                        <h2 style="color: #1E222D;">
                             <span style="color: #00A8FF;">Government entities</span> that benefit from our assessment
                             products:
                         </h2>
