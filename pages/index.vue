@@ -307,7 +307,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" style="margin-top: 0px;">
+                            <div class="row bottom" style="margin-top: 0px;">
                                 <div class="col-7" style="text-align: left; margin-top: 40px;">
                                     <h3 style="color: #1E222D;">
                                         <span style="color: #00A8FF;">Engineered</span> for team success
@@ -1322,8 +1322,9 @@ export default {
     }
 
     .hero {
-        background: url('');
-        background-color: rgb(229, 230, 231) !important;
+        background: url('~assets/government-page/Government_American Flag background graphic.webp');
+        background-size: cover;
+        background-position: center;
 
         .logo {
             width: 50% !important;
@@ -1357,8 +1358,9 @@ export default {
     }
 
     .products {
-        background: url('');
-        background-color: rgb(229, 230, 231) !important;
+        background: url('~assets/government-page/Government_American Flag background graphic.webp');
+        background-size: cover;
+        background-position: center;
 
         .btns {
             display: flex;
@@ -1384,20 +1386,31 @@ export default {
     .security {
         .top {
             margin-top: -35px !important;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: column-reverse;
         }
 
         .man {
-            width: 100% !important;
+            width: 80% !important;
+            margin-top: 10px !important;
         }
 
         .womanSmiling {
             margin-top: 40px !important;
             margin-bottom: -40px !important;
-            width: 100% !important;
+            width: 70% !important;
         }
 
         .manSmilingImage {
-            width: 100% !important;
+            width: 80% !important;
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 30px 0 -30px 0 !important;
         }
 
         .btns {
@@ -1469,8 +1482,9 @@ export default {
     }
 
     .choose {
-        background: url('');
-        background-color: rgb(229, 230, 231) !important;
+        background: url('~assets/government-page/Government_American Flag background graphic.webp');
+        background-size: cover;
+        background-position: center;
 
         .cardSpace {
             margin-top: -20px !important;
