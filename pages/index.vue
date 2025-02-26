@@ -140,13 +140,13 @@
                         <div class="col-12">
                             <div class="col-5">
                                 <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Our+Mission.webp"
-                                    alt="our mission logo" style="width: 341px; margin-top: 30px;" class="missionLogo">
+                                    alt="our mission logo" style="width: 341px;" class="missionLogo">
                             </div>
                             <div class="col-7" style="text-align: right;">
                                 <p>Empowering government leaders at every level to strengthen collaboration, inspire
                                     leadership, and drive meaningful outcomes through secure, science-backed solutions.
                                 </p>
-                                <button @click="scrollToContactForm" class="teal" style="margin-top: 30px;">
+                                <button @click="scrollToContactForm" class="teal">
                                     Speak with Specialist
                                 </button>
                             </div>
@@ -887,7 +887,7 @@ export default {
 
 .mission {
     .container-wrapper {
-        padding-top: 60px;
+        padding-top: 30px;
         padding-bottom: 60px;
         position: relative;
     }
@@ -925,6 +925,10 @@ export default {
         font-weight: 700;
         line-height: 1.5;
         text-decoration: underline;
+    }
+
+    button {
+        margin-top: 30px;
     }
 }
 
