@@ -422,9 +422,9 @@
                                     <strong>C (Conscientiousness):</strong> Analytical and precise, ensuring accuracy
                                     and quality <br />
                                     <br />
-                                    When paired with tools like <a href="/assessments/motivators"
+                                    When paired with tools like <a href="https://assessments24x7.com/assessments/motivators"
                                         class="hyperlink">Motivators</a> and <a
-                                        href="assessments/emotional-intelligence" class="hyperlink">Emotional
+                                        href="https://assessments24x7.com/assessments/emotional-intelligence" class="hyperlink">Emotional
                                         Intelligence</a> assessments,
                                     DISC becomes a cornerstone for developing mission-ready teams.
                                 </p>
@@ -685,7 +685,7 @@ export default {
     },
     methods: {
         sampleReportsButton(event) {
-            window.location.href = '/sample-reports';
+            window.location.href = 'https://assessments24x7.com/sample-reports';
             if (event) {
                 event.target.blur();
             }
