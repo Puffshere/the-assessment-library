@@ -22,7 +22,7 @@
                             <li class="link"><a href="https://assessments24x7.com/certifications">Certifications</a></li>
                             <li class="link"><a href="https://blog.assessments24x7.com/">Blog</a></li>
                             <li class="link"><a href="https://assessments24x7.com/about">About</a></li>
-                            <li class="link"><a href="https://assessments24x7.com/contact">Contact</a></li>
+                            <li class="link"><nuxt-link to="/contact">Contact</nuxt-link></li>
                         </ul>
                     </div>
 
