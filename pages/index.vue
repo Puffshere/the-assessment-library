@@ -226,6 +226,37 @@
 
         <hr class="blueLine">
 
+        <section class="proudly">
+            <div class="container">
+                <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Star+White.webp"
+                    alt="image of a star" class="star">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>
+                            <span style="color: #00A8FF;">Proudly</span> <span style="color: #fff;">SBA Certified &
+                                Approved</span>
+                        </h3>
+                        <div class="logoWrapper">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Veteran-Owned.webp"
+                                alt="verteran owned badge">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Service-Disabled+Veteran-Owned-Certified.webp"
+                                alt="service disabled veteran owned certified badge">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/HUBZone+Certified.webp"
+                                alt="hubzone certified badge">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/EDWOSB+Certified.webp"
+                                alt="edwosb certified badge">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/WOSB+Certified.webp"
+                                alt="wosb certified badge">
+                            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/8(a)+Certified.webp"
+                                alt="8(a) certified badge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
         <section class="security">
             <div class="container-wrapper">
                 <div class="container">
@@ -422,9 +453,11 @@
                                     <strong>C (Conscientiousness):</strong> Analytical and precise, ensuring accuracy
                                     and quality <br />
                                     <br />
-                                    When paired with tools like <a href="https://assessments24x7.com/assessments/motivators"
+                                    When paired with tools like <a
+                                        href="https://assessments24x7.com/assessments/motivators"
                                         class="hyperlink">Motivators</a> and <a
-                                        href="https://assessments24x7.com/assessments/emotional-intelligence" class="hyperlink">Emotional
+                                        href="https://assessments24x7.com/assessments/emotional-intelligence"
+                                        class="hyperlink">Emotional
                                         Intelligence</a> assessments,
                                     DISC becomes a cornerstone for developing mission-ready teams.
                                 </p>
@@ -506,6 +539,28 @@
                                     Learn More
                                 </button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="blueLine">
+
+        <section class="latest">
+            <img src="https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Star+White.webp"
+                alt="image of a star" class="star">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>
+                            Check out our latest press release announcing <br />
+                            Goverenment Assessments 24x7
+                        </h3>
+                        <div class="buttonWrapper">
+                            <button @click="pressReleaseButton" class="teal">
+                                View Press Release
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -686,6 +741,16 @@ export default {
     methods: {
         sampleReportsButton(event) {
             window.location.href = 'https://assessments24x7.com/sample-reports';
+            if (event) {
+                event.target.blur();
+            }
+        },
+        pressReleaseButton(event) {
+            window.open(
+                'https://www.businesswire.com/news/home/20250225403810/en',
+                '_blank',
+                'noopener'
+            );
             if (event) {
                 event.target.blur();
             }
@@ -979,6 +1044,37 @@ export default {
     }
 }
 
+.proudly {
+    background: #1E222D;
+    padding: 30px 10px 90px 10px;
+    position: relative;
+
+    .star {
+        width: 128px;
+        position: absolute;
+        top: 125px;
+        right: 100px;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .logoWrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        img {
+            display: block;
+            width: 75px;
+        }
+    }
+}
+
 .security {
     .container-wrapper {
         position: relative;
@@ -1161,6 +1257,31 @@ export default {
     }
 }
 
+.latest {
+    background: #1E222D;
+    color: #fff;
+    padding: 65px 10px 110px 10px;
+    position: relative;
+
+    .star {
+        width: 128px;
+        position: absolute;
+        top: 50px;
+        right: 400px;
+    }
+
+    h3 {
+        text-align: center;
+        padding-bottom: 10px;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    .buttonWrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .choose {
     background: url('https://cdn.assessments24x7.com/file/assessments24x7-media/Government/Fold+10+-+2500+x+718.webp') rgb(255, 255, 255) -0.247px -6px / 100.034% 158.607% no-repeat;
 
@@ -1180,6 +1301,7 @@ export default {
         justify-content: center;
         gap: 40px;
         margin-top: 20px;
+        margin-left: 20px;
     }
 
     .card {
@@ -1261,40 +1383,28 @@ export default {
             }
         }
     }
+
+    .proudly {
+        .logoWrapper {
+            justify-content: space-evenly;
+            gap: 30px;
+
+            img {
+                flex: none;
+                margin: 0;
+            }
+        }
+    }
+
+    .testimonial {
+        .image {
+            width: 70% !important;
+        }
+    }
 }
 
 @media (max-width: 900px) {
     .trusted {
-        .cards-container {
-            display: grid;
-            grid-template-columns: 202px 202px;
-            grid-auto-rows: 226px;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .card {
-            width: 202px;
-            height: 226px;
-        }
-    }
-
-    .products {
-        .cards-container {
-            display: grid;
-            grid-template-columns: 202px 202px;
-            grid-auto-rows: 226px;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .card {
-            width: 202px;
-            height: 226px;
-        }
-    }
-
-    .choose {
         .cards-container {
             display: grid;
             grid-template-columns: 202px 202px;
@@ -1440,10 +1550,6 @@ export default {
     }
 
     .testimonial {
-        .image {
-            width: 70% !important;
-        }
-
         blockquote {
             p {
                 margin-left: 0px;
@@ -1484,27 +1590,17 @@ export default {
             margin-bottom: 60px !important;
         }
     }
+}
 
+@media (max-width: 612px) {
     .choose {
-        background: url('~assets/government-page/Government_American Flag background graphic.webp');
-        background-size: cover;
-        background-position: center;
-
-        .cardSpace {
-            margin-top: -20px !important;
-        }
-
-        .companyLogo {
-            width: 50% !important;
-        }
-
-        .btn {
-            padding-top: 40px !important;
+        .cards-container {
+            margin-left: 0px !important;
         }
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 577px) {
     .logos {
         h2 {
             font-size: 1.5em !important;
