@@ -18,24 +18,24 @@
                     <div class="col-6">
                         <ul class="footer-links">
                             <li class="link"><nuxt-link to="/">Home</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/assessments">Assessments</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/certifications">Certifications</nuxt-link></li>
+                            <li class="link"><a href="https://assessments24x7.com/assessments">Assessments</a></li>
+                            <li class="link"><a href="https://assessments24x7.com/certifications">Certifications</a></li>
                             <li class="link"><a href="https://blog.assessments24x7.com/">Blog</a></li>
-                            <li class="link"><nuxt-link to="/about">About</nuxt-link></li>
+                            <li class="link"><a href="https://assessments24x7.com/about">About</a></li>
                             <li class="link"><nuxt-link to="/contact">Contact</nuxt-link></li>
                         </ul>
                     </div>
 
                     <div class="col-6">
                         <ul class="footer-links">
-                            <li class="link"><nuxt-link to="/about/testimonials">Testimonials</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/about/what-is-disc">What is DISC?</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/about/faq">FAQs</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/certifications/directory/coaches">Coach
-                                    Directory</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/certifications/directory/workshop-leaders">Workshop
-                                    Leaders</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/about/validity">Validity Studies</nuxt-link></li>
+                            <li class="link"><a href="https://assessments24x7.com/about/testimonials">Testimonials</a></li>
+                            <li class="link"><a href="https://assessments24x7.com/about/what-is-disc">What is DISC?</a></li>
+                            <li class="link"><a href="https://assessments24x7.com/about/faq">FAQs</a></li>
+                            <li class="link"><a href="https://assessments24x7.com/certifications/directory/coaches">Coach
+                                    Directory</a></li>
+                            <li class="link"><a href="https://assessments24x7.com/certifications/directory/workshop-leaders">Workshop
+                                    Leaders</a></li>
+                            <li class="link"><a href="https://assessments24x7.com/about/validity">Validity Studies</a></li>
                         </ul>
                     </div>
                 </div>

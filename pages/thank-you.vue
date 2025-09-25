@@ -17,49 +17,14 @@
                 <div class="col-12">
                     <img alt="Message Sent"
                         src="https://cdn.assessments24x7.com/file/assessments24x7-media/illustrations/sent-message.png"
-                        width="200" style="margin:20px auto 0 auto;display:block">
-
+                        width="200">
                     <h2 style="text-align:center;margin-bottom:0">Your information has been submitted</h2>
-
-                    <div v-if="clientType !== 'Retail'">
-                        <div v-if="this.agent === 'suzette'" class="calendly-inline-widget"
-                            data-url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5"
-                            data-resize="true" style="min-width:320px; max-height:650px;">
-                        </div>
-                        <div v-if="this.agent === 'cristina'" class="calendly-inline-widget"
-                            data-url="https://calendly.com/suzette-247/30min?text_color=000000&primary_color=0033c5"
-                            data-resize="true" style="min-width:320px; max-height:650px;">
-                        </div>
-                        <div v-if="this.agent === 'angie'" class="calendly-inline-widget"
-                            data-url="https://calendly.com/angiew-1/30min?text_color=000000&primary_color=0033c5"
-                            data-resize="true" style="min-width:320px; max-height:650px;">
-                        </div>
-                        <div v-if="this.agent === 'monica'" class="calendly-inline-widget"
-                            data-url="https://calendly.com/monica-saare/30min?text_color=000000&primary_color=0033c5"
-                            data-resize="true" style="min-width:320px; max-height:650px;">
-                        </div>
-
-                        <br />
-                        <p style="text-align:center">
-                            We’d like the opportunity to discuss your assessment and certification needs in detail.
-                            Please use the calendar to schedule a
-                            quick call. You can also email us at <a class="hyperlink"
-                                href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a>
-                            or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
-                        </p><br />
-                    </div>
-
-                    <div v-else>
-                        <br />
-                        <p style="text-align:center">
-                            We’d like the opportunity to discuss your assessment and certification needs in detail. A
-                            representative will contact you shortly.
-                            You can also email us at <a class="hyperlink"
-                                href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a>
-                            or call us at <a class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>
-                        </p><br />
-                    </div>
-
+                    <p style="text-align: center;">
+                        We’d like the opportunity to discuss your assessment and certification needs in detail. Please
+                        email us at <a class="hyperlink"
+                            href="mailto:sales@assessments24x7.com">sales@assessments24x7.com</a> or call us at <a
+                            class="hyperlink" href="tel:12064006647">+1 (206) 400-6647</a>.
+                    </p>
                     <br /><br /><br />
                 </div>
             </div>
@@ -70,95 +35,21 @@
 </template>
 
 <script>
-import axios from 'axios';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
 export default {
-    head() {
-        return {
-            script: [
-                {
-                    src: 'https://assets.calendly.com/assets/external/widget.js'
-                }
-            ]
-        }
-    },
     components: {
         'main-nav': Nav,
         'footer-fold': Footer
-    },
-    data() {
-        return {
-            agent: '',
-            clientType: ''
-        }
-    },
-    mounted() {
-        window.addEventListener('message', this.onCalendlyEvent);
-    },
-    destroyed() {
-        window.removeEventListener('message', this.onCalendlyEvent);
-    },
-    async created() {
-        if (process.browser) {
-            this.$gtm.push({ event: 'Thank You' });
-        }
-
-        let salesPerson = {
-            value: 'Suzette Chaparro'
-        };
-
-        if (this.$route.query.contactId) {
-            const { data } = await axios.get(`/api/contact/${this.$route.query.contactId}`);
-            salesPerson = data.fieldValues.find(obj => {
-                return obj.field === '79'; // 79 is the field id for Salesperson Assignment in AC
-            });
-        } else {
-            this.agent = 'suzette';
-        }
-
-        if (this.$route.query.clientType) {
-            this.clientType = this.$route.query.clientType;
-        }
-
-        if (salesPerson.value === 'Suzette Chaparro') {
-            this.agent = 'suzette';
-        } else if (salesPerson.value === 'Angie Warner') {
-            this.agent = 'angie';
-        } else if (salesPerson.value === 'Monica Saare') {
-            this.agent = 'monica';
-        }
-    },
-    methods: {
-        onCalendlyEvent(e) {
-            if (e.data.event && e.data.event.indexOf('calendly') === 0) {
-                if (e.data.event === 'calendly.event_scheduled') {
-
-                    const data = {
-                        contactId: this.$route.query.contactId
-                    }
-
-                    if (this.$route.query.contactId) {
-                        // Tell Zapier to apply tags:
-                        // Tag ID 7 - Call Booked
-                        // Tag ID 849 - Booked on Thank You Page Promo
-                        this.$zapier.post('/hooks/catch/2424937/bmtl8xa/', JSON.stringify(data), {
-                            withCredentials: false,
-                            transformRequest: [(data, headers) => {
-                                delete headers.post['Content-Type'];
-                                return data;
-                            }]
-                        });
-                    }
-                }
-            }
-        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/vars';
+@import '~assets/scss/new-styles';
+
 .skeleton {
     .header {
         background: url('~assets/about.jpg');
@@ -174,15 +65,13 @@ export default {
         }
     }
 
-    h1 {
-        font-size: 30pt;
-        line-height: 34pt;
-        margin-bottom: 0;
+    img {
+        margin: 20px auto 0 auto;
+        display: block
     }
 
-    h2 {
-        font-size: 20pt;
-        line-height: 24pt;
+    h1 {
+        margin-bottom: 0px;
     }
 }
 </style>
