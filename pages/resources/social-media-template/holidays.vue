@@ -199,7 +199,7 @@ No matter which costume you relate to, DISC can help you:
 Ready to embrace your unique behavior style and take the first step towards personal growth and success? Tag a colleague who needs to DISCover their inner Taco, Clown, Moana, Disco Cowgirl, Skeleton, or Squints!
 Or better yet... Take a DISC Assessment! 🔗https://discstyles.com/
 
-Angie Warner, Jared Moore, Cristina Moore, Amy Lewis, Suzette Chaparro, Monica Saare
+Angie Warner, Amy Lewis, Suzette Chaparro, Monica Saare
 
 #DISCAssessments #DISCStyle #BehavioralStyle #SelfDiscovery #UnlockYourPotential #Happyhalloween`,
                     postCategory: 'Holidays'

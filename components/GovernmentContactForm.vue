@@ -529,7 +529,7 @@ export default {
 
                     try {
                         const lead = await axios.post('/api/lead', {
-                            salesPerson: "Cristina Moore",
+                            salesPerson: "",
                             firstName: firstName,
                             lastName: lastName,
                             phone: this.form.phone,
@@ -586,7 +586,7 @@ export default {
                                     },
                                     {
                                         field: '79', // Salesperson Assignment,
-                                        value: "Cristina Moore"
+                                        value: ""
                                     },
                                     {
                                         field: '80', // Get Started Account Affiliation
@@ -954,7 +954,7 @@ export default {
                     const lastName = lastNameArray.join(' ');
                     try {
                         const lead = await axios.post('/api/lead', {
-                            salesPerson: "Cristina Moore",
+                            salesPerson: "",
                             firstName: firstName,
                             lastName: lastName,
                             phone: this.form.phone,
@@ -1011,7 +1011,7 @@ export default {
                                     },
                                     {
                                         field: '79', // Salesperson Assignment,
-                                        value: "Cristina Moore"
+                                        value: ""
                                     },
                                     {
                                         field: '80', // Get Started Account Affiliation
