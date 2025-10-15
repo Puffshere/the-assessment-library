@@ -710,7 +710,7 @@
 
         <hr class="blueLine">
 
-        <contact-form-fold id="contactForm"></contact-form-fold>
+        <!-- <contact-form-fold id="contactForm"></contact-form-fold> -->
         <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
 
     </div>
