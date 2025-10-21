@@ -38,7 +38,7 @@ module.exports = {
       ssr: false
     },
     '~plugins/lazysizes.client.js',
-    '~plugins/persisted-state.client.js',
+    //'~plugins/persisted-state.client.js',
     '~plugins/filters.js',
     '~plugins/region-select.js',
     '~plugins/file-agent.js',
