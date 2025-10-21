@@ -24,7 +24,7 @@ module.exports = {
       {
         rel: 'manifest',
         type: 'image/x-icon',
-        href: '/static/manifest.json'
+        href: '/manifest.json'
       },
     ],
     script: [
