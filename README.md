@@ -1,6 +1,6 @@
-# Assessments 24x7 Website
+# Government Assessments 24x7 Website
 
-> The official website of Assessments 24x7.
+> The official website of Government Assessments 24x7.
 
 ## Build Setup
 
