@@ -720,7 +720,7 @@
 import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
-    name: 'government-page', // This name is referenced in the middleware
+    name: 'government-page',
     components: {
         LazyHydrate,
         'contact-form-fold': () => import('@/components/government/GovernmentContactFormFold'),

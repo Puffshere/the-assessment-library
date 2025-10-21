@@ -2,23 +2,16 @@ const pkg = require('./package');
 const axios = require('axios');
 
 module.exports = {
-  /*
-  ** Headers of the page
-  */
   head: {
     htmlAttrs: {
       lang: 'en',
     },
     title: 'DISC Assessments for Government | Assessments 24x7',
     meta: [
-      // unused javascript
-      // { charset: 'utf-8' },
       { name: 'google-site-verification', content: 'v4C06rU0Io2gGicg0vVafnrpu4kcC98GFIalGto2Cwc' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#01A8FF' },
       { name: 'msapplication-navbutton-color', content: '#01A8FF' },
-      // unused javascript
-      // { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       { hid: 'description', name: 'description', content: 'Boost team collaboration and leadership with DISC Assessments tailored for government agencies. Explore solutions to enhance performance and communication.' }
     ],
@@ -38,15 +31,7 @@ module.exports = {
       { src: 'https://www.google.com/recaptcha/api.js?render=explicit', async: true, defer: true }
     ]
   },
-
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
-
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
     {
       src: '~plugins/tag-manager.js',
@@ -87,12 +72,7 @@ module.exports = {
       mode: 'client'
     }
   ],
-
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/gtm',
     '@nuxtjs/sitemap',
@@ -109,53 +89,8 @@ module.exports = {
   sitemap: {
     hostname: 'https://www.governmentassessments24x7.com',
     gzip: true,
-    // routes: async () => {
-    //   const { data } = await axios.get('https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/posts/?key=1cd8f26ccc1cb09274574d0e00&limit=all&fields=slug');
-    //   return data.posts.map(post => `/blog/${post.slug}`);
-    // },
     exclude: [
-      '/disccert-account-setup',
-      '/account-setup',
-      '/account-setup-thank-you',
       '/thank-you',
-      '/get-started',
-      '/get-started-thankyou',
-      '/resources/trainer-materials',
-      '/resources/trainer-materials/**',
-      '/badge',
-      '/disc-workshop-leader-badge',
-      '/eiq-badge',
-      '/motivators-badge',
-      '/pgi-badge',
-      '/platinum-rule-badge',
-      '/platinum-rule-eworkbook-thankyou',
-      '/trends-thankyou',
-      '/forms',
-      '/hs-badge',
-      '/hvp-badge',
-      '/learning-styles-badge',
-      '/logos',
-      '/login',
-      '/resources/lock/**',
-      '/cardone-communication-coach',
-      '/store/purchase-confirmation',
-      '/store/collections/products',
-      '/store',
-      '/resources/hiresense-training-library',
-      '/angie',
-      '/angie-w',
-      '/jennifer',
-      '/monica',
-      '/suzette',
-      '/cathy',
-      '/cristina',
-      '/tools/email-dev',
-      '/tools/email-original',
-      '/resources/standards-and-procedures',
-      '/hiresense-calc',
-      '/blog/**',
-      '/about/what-is-disc-dev',
-      '/corporate-dev',
       '/government-page'
     ]
   },
@@ -165,34 +100,16 @@ module.exports = {
     pageTracking: true,
     scriptDefer: true
   },
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    baseURL: process.env.PUBLISHING_API_ENDPOINT || 'https://a24x7-publishing.herokuapp.com/ghost/api/v3/content/'
-  },
-  env: {
-    NUXT_ENV_GOOGLE_MAPS_SECRET_KEY: process.env.NUXT_ENV_GOOGLE_MAPS_SECRET_KEY
-  },
-
-  // This code is to explicitly allow Vue.js DevTools
   vue: {
     config: {
       devtools: true
     }
   },
-
-
   devServer: {
     disableHostCheck: true
   },
-
-
-  /*
-  ** Build configuration
-  */
   build: {
-    extend(config, { isDev, isClient, loaders: { vue } }) {
+    extend(config, { isClient, loaders: { vue } }) {
       if (isClient) {
         vue.transformAssetUrls.img = ['data-src', 'src']
         vue.transformAssetUrls.source = ['data-srcset', 'srcset']
@@ -209,11 +126,9 @@ module.exports = {
       ]
     }
   },
-
   serverMiddleware: [
     '~/api/index.js'
   ],
-
   router: {
     middleware: 'redirects'
   },
