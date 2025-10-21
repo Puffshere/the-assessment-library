@@ -1,6 +1,5 @@
 <template>
     <section class="not-found">
-        <main-nav/>
 
         <section class="header">
             <div class="container">
@@ -18,74 +17,68 @@
                     <h2>The page you are looking for does not exist...</h2>
 
                     <p>
-                        You have reached a page that either no longer exists, or has been moved. Please check the spelling of the page you are trying to 
-                        visit and try again. If you believe this is a mistake, please send our team a message at 
+                        You have reached a page that either no longer exists, or has been moved. Please check the
+                        spelling of the page you are trying to
+                        visit and try again. If you believe this is a mistake, please send our team a message at
                         <a class="hyperlink" href="mailto:hello@assessments24x7.com">hello@assessments24x7.com</a>
-                    </p><br/>
+                    </p><br />
 
                     <nuxt-link class="button" to="/">Go To The Homepage</nuxt-link>
                     <nuxt-link class="button secondary" to="/about/why-use-assessments">Why Use Assessments?</nuxt-link>
-                    <br/><br/>
+                    <br /><br />
                 </div>
 
 
-                <div class="col-4">
-                    <blog-sidebar count="4" />
-                </div>
             </div>
         </div>
 
-        <footer-fold/>
+        <footer-fold />
     </section>
 </template>
 
 <script>
-    import Nav from '@/components/Nav';
-    import Footer from '@/components/Footer';
+import Footer from '@/components/Footer';
 
-    export default {
-        props: ['error'],
-        components: {
-            'main-nav': Nav,
-            'footer-fold': Footer,
-            'blog-sidebar': () => import('@/components/BlogSidebarLatest'),
-            'contact-sidebar': () => import('@/components/ContactSidebar')
-        },
-        created() {
-            if (this.error.statusCode === 404) {
-                if (process.browser) {
-                    this.$gtm.push({ event: 'Not Found' });
-                }
+export default {
+    props: ['error'],
+    components: {
+        'footer-fold': Footer,
+    },
+    created() {
+        if (this.error.statusCode === 404) {
+            if (process.browser) {
+                this.$gtm.push({ event: 'Not Found' });
             }
         }
     }
+}
 </script>
 
 <style lang="scss" scoped>
-    .not-found {
-        .header {
-            background: url('~assets/about.jpg');
-            background-size: cover;
-            color: #fff;
-            text-align: center;
-            padding: 70px 0;
-            margin-bottom: 30px;
+.not-found {
+    .header {
+        background: url('~assets/about.jpg');
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 70px 0;
+        margin-bottom: 30px;
 
-            .section-title {
-                font-size: 30pt;
-                margin-top: 0;
-            }
-        }
-
-        h1 {
+        .section-title {
             font-size: 30pt;
-            line-height: 34pt;
-            margin-bottom: 0;
-        }
-
-        h2 {
-            font-size: 20pt;
-            line-height: 24pt;
+            margin-top: 0;
         }
     }
+
+    h1 {
+        font-size: 30pt;
+        line-height: 34pt;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 20pt;
+        line-height: 24pt;
+    }
+}
 </style>

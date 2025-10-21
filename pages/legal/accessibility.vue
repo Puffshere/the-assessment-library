@@ -1,6 +1,5 @@
 <template>
     <section class="accessibility">
-        <main-nav />
 
         <section class="header">
             <div class="container">
@@ -124,12 +123,10 @@
 </template>
 
 <script>
-import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
 export default {
     components: {
-        'main-nav': Nav,
         'footer-fold': Footer
     },
     data() {
