@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <h1>
-                        Welcome your your Assessment Library!
+                        Welcome to your Assessment Library!
                     </h1>
                     <h4 v-if="loggedIn === true">
                         Choose a book to get started on your Assessment Journey!
