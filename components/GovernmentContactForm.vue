@@ -132,11 +132,13 @@
                         </ValidationProvider>
                     </div>
                     <br />
-                    <button :disabled="isDisabled" :class="['teal', { 'button': true, 'disabled': isDisabled }]"
+                    <button :disabled="disableSubmit" :class="['teal', { 'button': true, 'disabled': disableSubmit }]"
                         type="button" @click="process">
                         {{ buttonText || 'Submit' }}
-                    </button>
-
+                    </button> <br />
+                    <br />
+                    <div ref="recaptcha" class="g-recaptcha" data-sitekey="6LfhZAIsAAAAAA5UNBBqBYunGlOLIA5a-UHDxxbX"
+                        data-callback="onReCaptchaSuccess" tabindex="15"></div>
                 </div>
             </ValidationObserver>
         </form>
@@ -179,8 +181,9 @@ export default {
             loading: true,
             sources: [],
             affiliations: [],
+            recaptchaResponse: null,
             getStartedAccountName: 'Assessments 24x7',
-            isDisabled: false,
+            submitting: false,
             isPartnerId: '',
             form: {
                 fullName: '',
@@ -197,6 +200,38 @@ export default {
                 country: ''
             },
         }
+    },
+    mounted() {
+        window.onReCaptchaSuccess = this.onReCaptchaSuccess;
+        const ensureReCaptchaScript = () => {
+            if (!document.getElementById('recaptcha-api')) {
+                const s = document.createElement('script');
+                s.id = 'recaptcha-api';
+                s.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+                s.async = true;
+                s.defer = true;
+                document.head.appendChild(s);
+            }
+        };
+        const tryRender = () => {
+            if (window.grecaptcha && window.grecaptcha.render && this.$refs.recaptcha) {
+                window.grecaptcha.ready(() => {
+                    if (!this._recaptchaId) {
+                        this._recaptchaId = window.grecaptcha.render(this.$refs.recaptcha, {
+                            sitekey: '6LfhZAIsAAAAAA5UNBBqBYunGlOLIA5a-UHDxxbX',
+                            callback: window.onReCaptchaSuccess
+                        });
+                    }
+                });
+            } else {
+                this._recaptchaTimer = setTimeout(tryRender, 300);
+            }
+        };
+        ensureReCaptchaScript();
+        tryRender();
+    },
+    beforeDestroy() {
+        if (this._recaptchaTimer) clearTimeout(this._recaptchaTimer);
     },
     async created() {
         let foo = await axios.get('/api/contact/custom-fields');
@@ -262,8 +297,11 @@ export default {
         this.loading = false;
     },
     methods: {
+        async onReCaptchaSuccess(token) {
+            this.recaptchaResponse = token;
+        },
         async process() {
-            this.isDisabled = true;
+            this.submitting = true;
 
             const validated = await this.$refs.form.validate();
 
@@ -553,6 +591,7 @@ export default {
                             lastName: lastName,
                             phone: this.form.phone,
                             country: this.form.country,
+                            recaptchaResponse: this.recaptchaResponse,
                             fieldValues: [
                                 {
                                     field: '21', // How did you hear about us?
@@ -644,7 +683,7 @@ export default {
                     this.$router.push(this.redirect || `/thank-you?clientType=${this.form.clientType}&contactId=${data.contact.id}`);
 
                 } catch (err) {
-                    this.isDisabled = false;
+                    this.submitting = false;
                     this.loading = false;
                     this.$toast.open({
                         message: 'An unexpected error has occured. Please try again later.',
@@ -654,7 +693,7 @@ export default {
                     });
                 }
             } else {
-                this.isDisabled = false;
+                this.submitting = false;
             }
         },
         async trackConversion(contactId) {
@@ -680,6 +719,9 @@ export default {
     computed: {
         filteredCountries() {
             return this.importCountry.filter(country => country.label.toLowerCase().startsWith(this.form.country.toLowerCase()));
+        },
+        disableSubmit() {
+            return this.submitting || !this.form.consent || !this.recaptchaResponse;
         }
     }
 }

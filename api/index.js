@@ -53,8 +53,25 @@ app.get('/contact/:contactId', (req, res) => {
     contactController.getContact(req, res);
 });
 
+// app.post('/contact', async (req, res) => {
+//     contactController.createContact(req, res);
+// });
+
 app.post('/contact', async (req, res) => {
-    contactController.createContact(req, res);
+    const recaptchaResponse = req.body.contact.recaptchaResponse;
+    delete req.body.contact.recaptchaResponse;
+    try {
+        console.log("this is the recatcha test.")
+        const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}`;
+        const { data } = await axios.post(verificationUrl);
+        if (data.success) {
+            contactController.createContact(req, res);
+        } else {
+            res.status(400).json({ message: 'reCAPTCHA verification failed', errors: data['error-codes'] });
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
 });
 
 app.post('/contact/certifications/assessment', async (req, res) => {

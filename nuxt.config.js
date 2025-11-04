@@ -100,10 +100,25 @@ module.exports = {
     pageTracking: true,
     scriptDefer: true
   },
+  env: {
+    // # Recaptcha key V2
+    RECAPTCHA_SECRET_KEY: process.env.RECAPTCHA_SECRET_KEY,
+
+    // # Recaptcha key V3
+    RECAPTCHA_SECRET_KEY_V3: process.env.RECAPTCHA_SECRET_KEY_V3,
+
+    BASE_URL: 'https://governmentassessments24x7.com/',
+  },
   vue: {
     config: {
       devtools: true
     }
+  },
+  axios: {
+    // for server‑side calls
+    baseURL: process.env.BASE_URL || 'https://www.governmentassessments24x7.com/',
+    // for client‑side (browser) calls
+    browserBaseURL: process.env.BASE_URL || 'https://www.governmentassessments24x7.com/',
   },
   devServer: {
     disableHostCheck: true
