@@ -1,11 +1,11 @@
 {
-  "name": "Assessments 24x7",
-  "short_name": "Assessments",
+  "name": "The Assessment Library",
+  "short_name": "The Assessment Library",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#01A8FF",
-  "description": "Government Assessments 24x7 - Your trusted source for professional assessments.",
+  "description": "A website for scenario-based, story-based assessments.",
   "icons": [
     {
       "src": "/images/discRoundLogo.png",

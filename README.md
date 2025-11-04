@@ -1,6 +1,6 @@
-# Government Assessments 24x7 Website
+# TheAssessmentLibrary
 
-> The official website of Government Assessments 24x7.
+> The official website of The Assessment Library.
 
 ## Build Setup
 

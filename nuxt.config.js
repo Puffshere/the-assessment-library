@@ -6,14 +6,14 @@ module.exports = {
     htmlAttrs: {
       lang: 'en',
     },
-    title: 'DISC Assessments for Government | Assessments 24x7',
+    title: 'The Assessment Library',
     meta: [
       { name: 'google-site-verification', content: 'v4C06rU0Io2gGicg0vVafnrpu4kcC98GFIalGto2Cwc' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#01A8FF' },
       { name: 'msapplication-navbutton-color', content: '#01A8FF' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      { hid: 'description', name: 'description', content: 'Boost team collaboration and leadership with DISC Assessments tailored for government agencies. Explore solutions to enhance performance and communication.' }
+      { hid: 'description', name: 'description', content: 'A website for scenario-based, story-based assessments' }
     ],
     link: [
       {
@@ -84,10 +84,10 @@ module.exports = {
       '/_nuxt/',
       '/.well-known/'
     ],
-    Sitemap: 'https://www.governmentassessments24x7.com/sitemap.xml'
+    Sitemap: ''
   },
   sitemap: {
-    hostname: 'https://www.governmentassessments24x7.com',
+    hostname: 'https://www.theassessmentlibrary.com',
     gzip: true,
     exclude: [
       '/thank-you',
@@ -107,7 +107,7 @@ module.exports = {
     // # Recaptcha key V3
     RECAPTCHA_SECRET_KEY_V3: process.env.RECAPTCHA_SECRET_KEY_V3,
 
-    BASE_URL: 'https://governmentassessments24x7.com/',
+    BASE_URL: 'https://theassessmentlibrary.com/',
   },
   vue: {
     config: {
@@ -116,9 +116,9 @@ module.exports = {
   },
   axios: {
     // for server‑side calls
-    baseURL: process.env.BASE_URL || 'https://www.governmentassessments24x7.com/',
+    baseURL: process.env.BASE_URL || 'https://www.theassessmentlibrary/',
     // for client‑side (browser) calls
-    browserBaseURL: process.env.BASE_URL || 'https://www.governmentassessments24x7.com/',
+    browserBaseURL: process.env.BASE_URL || 'https://www.theassessmentlibrary.com/',
   },
   devServer: {
     disableHostCheck: true

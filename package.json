@@ -1,7 +1,7 @@
 {
-  "name": "governmentassessments24x7",
+  "name": "theassessmentlibrary",
   "version": "1.0.0",
-  "description": "The official website for Government Assessments 24x7.",
+  "description": "The official website for scenario-based assessments",
   "author": "Shawn Taylor <shawn@assessments247.com>",
   "private": true,
   "scripts": {
