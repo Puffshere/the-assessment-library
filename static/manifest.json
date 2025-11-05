@@ -8,14 +8,14 @@
   "description": "A website for scenario-based, story-based assessments.",
   "icons": [
     {
-      "src": "/images/discRoundLogo.png",
+      "src": "/images/blue-book.webp",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "/images/discRoundLogo.png",
+      "src": "/images/blue-book.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ]
 }
