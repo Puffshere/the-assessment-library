@@ -2,6 +2,7 @@
     <section class="library">
 
         <section class="header">
+            <img src="~assets/logo-without-background.png" alt="image of logo" class="logo">
             <button @click="signOut" class="teal">Sign Out</button>
             <div class="container">
                 <div class="row">
@@ -185,6 +186,15 @@ export default {
         background-color: rgba(161, 156, 147, 0.521);
         position: relative;
         box-shadow: 5px 5px 10px #0814368e;
+        position: relative;
+
+        .logo {
+            width: 300px;
+            position: absolute;
+            left: 20px;
+            top: -40px;
+
+        }
 
         button {
             position: absolute;
@@ -384,6 +394,22 @@ export default {
 }
 
 @media (max-width: 600px) {
+    .library {
+        .header {
+            .logo {
+                position: relative;
+                left: 0px;
+                top: 0px;
+                margin-bottom: -40px;
+            }
+
+            h1 {
+                line-height: 1.25em;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
     .stacks {
         .container {
             .backpanel {
