@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <h1>
-                        Welcome to your Assessment Library!
+                        Welcome to The Assessment Library!
                     </h1>
                     <h4 v-if="loggedIn === true">
                         Choose a book to get started on your Assessment Journey!
@@ -181,15 +181,19 @@ export default {
     .header {
         text-align: center;
         padding: 40px 16px 40px 16px;
-        color: #213C85;
-        background-color: rgba(211, 211, 211, 0.521);
+        color: #12304d;
+        background-color: rgba(161, 156, 147, 0.521);
         position: relative;
-        box-shadow: 5px 5px 10px #213c858e;
+        box-shadow: 5px 5px 10px #0814368e;
 
         button {
             position: absolute;
             right: 20px;
             top: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
         }
 
         h4 {
@@ -202,7 +206,7 @@ export default {
     .login {
         text-align: center;
         padding: 70px 16px 80px 16px;
-        color: #213C85;
+        color: #12304d;
 
         .row {
             display: flex;
@@ -269,7 +273,7 @@ export default {
     .stacks {
         text-align: center;
         padding: 20px 16px 90px 16px;
-        color: #213C85;
+        color: #12304d;
 
         .container {
             position: relative;
