@@ -6,7 +6,10 @@
             <button @click="signOut" class="teal">Sign Out</button>
             <div class="container">
                 <div class="row">
-                    <h1>
+                    <h1 v-if="loggedIn === true">
+                        Welcome to Your Assessment Library!
+                    </h1>
+                    <h1 v-else>
                         Welcome to The Assessment Library!
                     </h1>
                     <h4 v-if="loggedIn === true">
