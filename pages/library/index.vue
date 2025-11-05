@@ -27,7 +27,7 @@
                     </h4>
                     <div class="col-6" style="margin-left: 70px;">
                         <a href="/library/jessicas-first-job"><img class="darkBlue"
-                                src="~assets/library/dark-blue-book.jpeg" alt="image of a dark blue book"></a>
+                                src="~assets/library/dark-blue-book.webp" alt="image of a dark blue book"></a>
                         <br />
                         <p class="title">
                             Jessica's First Job
@@ -39,7 +39,7 @@
                         </p>
                     </div>
                     <div class="col-6" style="margin-left: -70px;">
-                        <a href="/library/shanes-day-at-the-park"><img class="red" src="~assets/library/red-book.jpg"
+                        <a href="/library/shanes-day-at-the-park"><img class="red" src="~assets/library/red-book.webp"
                                 alt="image of a red book"></a>
                         <br />
                         <p class="title redText">

@@ -20,6 +20,8 @@
 
         <section v-if="loggedIn === true" class="stacks">
             <div class="container">
+                <div class="backpanel" aria-hidden="true"></div>
+
                 <div class="shelf"></div>
                 <div class="row">
                     <h4>
@@ -27,7 +29,7 @@
                     </h4>
                     <div class="col-6" style="margin-left: 70px;">
                         <a href="/library/jessicas-first-job"><img class="darkBlue"
-                                src="~assets/library/dark-blue-book.jpeg" alt="image of a dark blue book"></a>
+                                src="~assets/library/dark-blue-book.webp" alt="image of a dark blue book"></a>
                         <br />
                         <p class="title">
                             Jessica's First Job
@@ -39,7 +41,7 @@
                         </p>
                     </div>
                     <div class="col-6" style="margin-left: -70px;">
-                        <a href="/library/shanes-day-at-the-park"><img class="red" src="~assets/library/red-book.jpg"
+                        <a href="/library/shanes-day-at-the-park"><img class="red" src="~assets/library/red-book.webp"
                                 alt="image of a red book"></a>
                         <br />
                         <p class="title redText">
@@ -242,11 +244,6 @@ export default {
                 font-weight: 400;
                 line-height: normal;
                 text-decoration-line: underline;
-                text-decoration-style: solid;
-                text-decoration-skip-ink: auto;
-                text-decoration-thickness: auto;
-                text-underline-offset: auto;
-                text-underline-position: from-font;
                 cursor: pointer;
             }
 
@@ -277,7 +274,17 @@ export default {
         .container {
             position: relative;
 
-            /* vertical posts */
+            .backpanel {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 60px;
+                right: 60px;
+                background-color: rgba(161, 139, 114, 0.527);
+                z-index: 0;
+                border-radius: 3px;
+            }
+
             &::before,
             &::after {
                 content: "";
@@ -286,9 +293,10 @@ export default {
                 bottom: 0;
                 width: 20px;
                 background-color: rgb(100, 55, 13);
-                z-index: 0;
+                z-index: 2;
                 pointer-events: none;
                 border-radius: 3px;
+                box-shadow: 5px 5px 10px #412604;
             }
 
             &::before {
@@ -319,12 +327,11 @@ export default {
             margin: 30px 20px;
             background-color: rgb(100, 55, 13);
             border-radius: 3px;
-            box-shadow: 5px 5px 10px #412604;;
+            box-shadow: 5px 5px 10px #412604;
         }
 
         .col-6 {
             text-align: center;
-
 
             .darkBlue {
                 margin-top: 40px;
@@ -374,12 +381,19 @@ export default {
 
 @media (max-width: 600px) {
     .stacks {
-        .container::before {
-            left: 16px;
-        }
+        .container {
+            .backpanel {
+                left: 36px;
+                right: 36px;
+            }
 
-        .stacks .container::after {
-            right: 16px;
+            &::before {
+                left: 16px;
+            }
+
+            &::after {
+                right: 16px;
+            }
         }
 
         .shelf {
