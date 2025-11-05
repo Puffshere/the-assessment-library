@@ -12,7 +12,8 @@
             </section>
 
             <section class="questionnaire">
-                <img src="~/assets/library/boy-at-the-park.webp" alt="image of a boy at the park" class="boyAtThePark" />
+                <img src="~/assets/library/boy-at-the-park.webp" alt="image of a boy at the park"
+                    class="boyAtThePark" />
                 <div class="container">
                     <div v-if="currentQuestion !== totalQuestions" :key="currentQuestion">
                         <p style="font-weight: 700;" class="chapter" v-html="questions[currentQuestion - 1].timeline">
@@ -142,6 +143,7 @@
                 </div>
             </section>
         </transition>
+        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
     </div>
 </template>
 
@@ -151,6 +153,7 @@ import LazyHydrate from 'vue-lazy-hydration';
 export default {
     components: {
         LazyHydrate,
+        'footer-fold': () => import('@/components/Footer')
     },
     data() {
         return {
@@ -659,8 +662,8 @@ export default {
             }
         },
         jumpToLibrary(event) {
-            event?.target?.blur?.();
-            this.$router.push('/library');
+            window.location.href = '/';
+            event.target.blur();
         },
         calculateTotals() {
             // Initialize counts for each personality trait

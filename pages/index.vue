@@ -3,7 +3,7 @@
 
         <section class="header">
             <img src="~assets/logo-without-background.png" alt="image of logo" class="logo">
-            <button @click="signOut" class="teal">Sign Out</button>
+            <button v-if="loggedIn === true" @click="signOut" class="teal">Sign Out</button>
             <div class="container">
                 <div class="row">
                     <h1 v-if="loggedIn === true">
@@ -126,6 +126,7 @@
             </div>
         </section>
 
+        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
     </section>
 </template>
 
@@ -135,6 +136,7 @@ import LazyHydrate from 'vue-lazy-hydration';
 export default {
     components: {
         LazyHydrate,
+        'footer-fold': () => import('@/components/Footer')
     },
     head() {
         return {
@@ -181,11 +183,9 @@ export default {
 @import '~assets/scss/new-styles';
 
 .library {
-
     .header {
         text-align: center;
         padding: 40px 16px 40px 16px;
-        color: #12304d;
         background-color: rgba(161, 156, 147, 0.521);
         position: relative;
         box-shadow: 5px 5px 10px #0814368e;
@@ -196,7 +196,6 @@ export default {
             position: absolute;
             left: 20px;
             top: -40px;
-
         }
 
         button {
@@ -219,7 +218,6 @@ export default {
     .login {
         text-align: center;
         padding: 70px 16px 80px 16px;
-        color: #12304d;
 
         .row {
             display: flex;
@@ -230,9 +228,9 @@ export default {
             height: 400px;
             width: 500px;
             border-radius: 11px;
-            border: 1px solid #E0AD2B;
+            border: 3px solid #025baf67;
             background: #FFF;
-            box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
             position: relative;
 
             .form-group {
@@ -254,7 +252,6 @@ export default {
 
             .forgotPassword,
             .signUp {
-                color: #213C85;
                 font-family: Inter;
                 font-size: 12px;
                 font-style: normal;
@@ -265,7 +262,6 @@ export default {
             }
 
             .signUpText {
-                color: #213C85;
                 font-family: Inter;
                 font-size: 12px;
                 font-style: normal;
@@ -285,7 +281,7 @@ export default {
 
     .stacks {
         text-align: center;
-        padding: 20px 16px 90px 16px;
+        padding: 40px 16px 80px 16px;
         color: #12304d;
 
         .container {
@@ -333,8 +329,10 @@ export default {
             background-color: rgba(112, 71, 9, 0.185);
             position: relative;
             z-index: 1;
-            width: 150px;
-            padding: 5px;
+            width: 155px;
+            padding: 5px 5px 5px 10px;
+            border: 1px solid #38240a;
+            box-shadow: 5px 5px 10px #412604;
         }
 
         .shelf {
@@ -399,11 +397,14 @@ export default {
 @media (max-width: 600px) {
     .library {
         .header {
+            padding: 40px 16px 30px 16px;
+
             .logo {
                 position: relative;
                 left: 0px;
                 top: 0px;
                 margin-bottom: -40px;
+                margin-top: -50px;
             }
 
             h1 {
@@ -411,34 +412,62 @@ export default {
                 margin-bottom: 40px;
             }
         }
-    }
 
-    .stacks {
-        .container {
-            .backpanel {
-                left: 36px;
-                right: 36px;
+        .stacks {
+            .container {
+                .backpanel {
+                    left: 6px;
+                    right: 6px;
+                }
+
+                &::before {
+                    left: 6px;
+                }
+
+                &::after {
+                    right: 6px;
+                }
+
+                h4 {
+                    text-align: left;
+                    margin-top: -22px;
+                    margin-bottom: -30px;
+                    margin-left: 30px;
+                    background-color: rgba(112, 71, 9, 0.185);
+                    position: relative;
+                    z-index: 1;
+                    width: 155px;
+                    padding: 5px 5px 5px 10px;
+                    border: 1px solid #38240a;
+                    box-shadow: 5px 5px 10px #412604;
+                }
             }
 
-            &::before {
-                left: 16px;
+            .shelf {
+                margin: 24px 0px;
             }
 
-            &::after {
-                right: 16px;
+            h1 {
+                margin-left: 16px;
+            }
+
+            .col-6 {
+                margin-left: 0px !important;
             }
         }
 
-        .shelf {
-            margin: 24px 16px;
-        }
+        .login {
+            .card {
+                width: 100%;
 
-        h1 {
-            margin-left: 16px;
-        }
+                .form-group {
+                    text-align: center;
 
-        .col-6 {
-            margin-left: 0px !important;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

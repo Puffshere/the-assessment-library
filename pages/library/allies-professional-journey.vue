@@ -143,6 +143,7 @@
                 </div>
             </section>
         </transition>
+        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
     </div>
 </template>
 
@@ -152,6 +153,7 @@ import LazyHydrate from 'vue-lazy-hydration';
 export default {
     components: {
         LazyHydrate,
+        'footer-fold': () => import('@/components/Footer')
     },
     data() {
         return {
@@ -664,8 +666,8 @@ export default {
             }
         },
         jumpToLibrary(event) {
-            event?.target?.blur?.();
-            this.$router.push('/library');
+            window.location.href = '/';
+            event.target.blur();
         },
         calculateTotals() {
             // Initialize counts for each personality trait
