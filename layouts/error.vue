@@ -31,18 +31,14 @@
 
             </div>
         </div>
-
-        <footer-fold />
     </section>
 </template>
 
 <script>
-import Footer from '@/components/Footer';
 
 export default {
     props: ['error'],
     components: {
-        'footer-fold': Footer,
     },
     created() {
         if (this.error.statusCode === 404) {
@@ -57,8 +53,6 @@ export default {
 <style lang="scss" scoped>
 .not-found {
     .header {
-        background: url('~assets/about.jpg');
-        background-size: cover;
         color: #fff;
         text-align: center;
         padding: 70px 0;
