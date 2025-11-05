@@ -659,8 +659,8 @@ export default {
             }
         },
         jumpToLibrary(event) {
-            window.location.href = '/library';
-            event.target.blur();
+            event?.target?.blur?.();
+            this.$router.push('/library');
         },
         calculateTotals() {
             // Initialize counts for each personality trait
