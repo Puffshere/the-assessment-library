@@ -48,10 +48,6 @@ module.exports = {
     },
     '~/plugins/vue-moment.js',
     {
-      src: '~plugins/mapbox.js',
-      mode: 'client'
-    },
-    {
       src: '~/plugins/lazy-hydration.js', ssr: false
     },
     {
@@ -61,15 +57,6 @@ module.exports = {
     {
       src: '~/plugins/aos',
       ssr: false
-    },
-    {
-      src: '~/plugins/calendly.js',
-      mode: 'client'
-    },
-    '~/plugins/zapier.js',
-    {
-      src: '~/plugins/google-maps.js',
-      mode: 'client'
     }
   ],
   modules: [
@@ -90,8 +77,7 @@ module.exports = {
     hostname: 'https://www.theassessmentlibrary.com',
     gzip: true,
     exclude: [
-      '/thank-you',
-      '/government-page'
+      '/thank-you'
     ]
   },
   gtm: {
@@ -144,8 +130,5 @@ module.exports = {
   serverMiddleware: [
     '~/api/index.js'
   ],
-  router: {
-    middleware: 'redirects'
-  },
   telemetry: false
 }

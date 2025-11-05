@@ -15,16 +15,8 @@
             <div class="row">
                 <div class="col-8">
                     <h2>The page you are looking for does not exist...</h2>
-
-                    <p>
-                        You have reached a page that either no longer exists, or has been moved. Please check the
-                        spelling of the page you are trying to
-                        visit and try again. If you believe this is a mistake, please send our team a message at
-                        <a class="hyperlink" href="mailto:hello@assessments24x7.com">hello@assessments24x7.com</a>
-                    </p><br />
-
+                    <br />
                     <nuxt-link class="button" to="/">Go To The Homepage</nuxt-link>
-                    <nuxt-link class="button secondary" to="/about/why-use-assessments">Why Use Assessments?</nuxt-link>
                     <br /><br />
                 </div>
 

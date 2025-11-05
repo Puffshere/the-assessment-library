@@ -9,7 +9,7 @@
                 link: [
                     {
                         rel: 'canonical',
-                        href: 'https://www.assessments24x7.com' + this.$route.path
+                        href: 'https://www.theassessmentlibrary.com' + this.$route.path
                     }
                 ]
             }
