@@ -852,18 +852,22 @@ export default {
 
                 &.disc {
                     background: #e93d2f;
+                    color: #fff;
                 }
 
                 &.influence {
                     background: #ffbd05;
+                    color: #fff;
                 }
 
                 &.steadiness {
                     background: #0dab49;
+                    color: #fff;
                 }
 
                 &.conscientiousness {
                     background: #1666ff;
+                    color: #fff;
                 }
             }
         }
