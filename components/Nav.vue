@@ -2,7 +2,7 @@
     <header class="main-nav" :class="{ 'is-scrolled': hasScrolled }" role="banner">
         <div class="container">
             <div class="row bar" :aria-label="'Main navigation for The Assessment Library'">
-                <!-- Brand -->
+
                 <div class="brand">
                     <nuxt-link to="/" class="brand-link" aria-label="Go to The Assessment Library home">
                         <span class="logo-mark" aria-hidden="true">

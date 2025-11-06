@@ -9,7 +9,7 @@
 $ npm install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ npm run dev:nuxt
 
 # build for production and launch server
 $ npm install

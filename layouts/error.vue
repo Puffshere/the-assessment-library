@@ -16,6 +16,7 @@
                 <div class="col-8">
                     <h2>The page you are looking for does not exist...</h2>
                     <br />
+                    <h1>Or this page is currently under construction!!!</h1>
                     <nuxt-link class="button" to="/">Go To The Homepage</nuxt-link>
                     <br /><br />
                 </div>
