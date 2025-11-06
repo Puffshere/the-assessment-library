@@ -1,5 +1,6 @@
 <template>
     <section class="library">
+        <main-nav></main-nav>
 
         <section class="header">
             <img src="~assets/logo-without-background.png" alt="image of logo" class="logo">
@@ -136,6 +137,7 @@ import LazyHydrate from 'vue-lazy-hydration';
 export default {
     components: {
         LazyHydrate,
+        'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
     head() {
@@ -194,7 +196,7 @@ export default {
         .logo {
             width: 300px;
             position: absolute;
-            left: 20px;
+            left: 40px;
             top: -40px;
         }
 

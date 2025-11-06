@@ -1,6 +1,7 @@
 <template>
     <div>
         <section class="page">
+            <main-nav></main-nav>
 
             <section class="title">
                 <button @click="jumpToLibrary" class="teal">Library</button>
@@ -149,6 +150,7 @@ import LazyHydrate from 'vue-lazy-hydration';
 export default {
     components: {
         LazyHydrate,
+        'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
     data() {

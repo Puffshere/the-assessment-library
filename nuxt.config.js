@@ -26,6 +26,10 @@ module.exports = {
         type: 'image/x-icon',
         href: '/manifest.json'
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap'
+      }
     ],
     script: [
       { src: 'https://www.google.com/recaptcha/api.js?render=explicit', async: true, defer: true }
