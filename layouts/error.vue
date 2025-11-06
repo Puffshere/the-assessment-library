@@ -1,29 +1,24 @@
 <template>
     <section class="not-found">
+        <main-nav></main-nav>
 
         <section class="header">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h1 v-if="error.statusCode === 404" class="section-title">404 - Page Not Found</h1>
-                    </div>
+                    <h1 class="error" v-if="error.statusCode === 404">404 - Page Not Found</h1>
+                    <br />
+                    <h4>The page you are looking for does not exist...</h4>
+                    <br />
+                    <h1>Or this page is currently under construction!!!</h1>
+                    <br />
+                    <br />
+                    <br />
+                    <button class="teal" @click="jumpHome">Return Home</button>
                 </div>
             </div>
         </section>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-8">
-                    <h2>The page you are looking for does not exist...</h2>
-                    <br />
-                    <h1>Or this page is currently under construction!!!</h1>
-                    <nuxt-link class="button" to="/">Go To The Homepage</nuxt-link>
-                    <br /><br />
-                </div>
-
-
-            </div>
-        </div>
+        <LazyHydrate when-visible><footer-fold></footer-fold></LazyHydrate>
     </section>
 </template>
 
@@ -32,6 +27,8 @@
 export default {
     props: ['error'],
     components: {
+        'main-nav': () => import('@/components/Nav'),
+        'footer-fold': () => import('@/components/Footer')
     },
     created() {
         if (this.error.statusCode === 404) {
@@ -39,33 +36,45 @@ export default {
                 this.$gtm.push({ event: 'Not Found' });
             }
         }
+    },
+    methods: {
+        jumpHome(event) {
+            window.location.href = '/';
+            event.target.blur();
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/vars';
+@import '~assets/scss/new-styles';
+
 .not-found {
     .header {
         color: #fff;
         text-align: center;
-        padding: 70px 0;
-        margin-bottom: 30px;
+        padding: 40px 16px 80px;
 
-        .section-title {
-            font-size: 30pt;
-            margin-top: 0;
+        .error {
+            color: #e93d2f;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        h4 {
+            margin-bottom: 0;
         }
     }
+}
 
-    h1 {
-        font-size: 30pt;
-        line-height: 34pt;
-        margin-bottom: 0;
-    }
-
-    h2 {
-        font-size: 20pt;
-        line-height: 24pt;
+@media (max-width: 600px) {
+    .not-found {
+        .header {
+            padding: 20px 16px 100px;
+        }
     }
 }
 </style>
