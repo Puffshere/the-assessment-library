@@ -157,6 +157,25 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
+    head() {
+        return {
+            title: 'The Assessment Library | Allie\'s Professional Journey',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: ''
+                }
+            ],
+            __dangerouslyDisableSanitizers: ['script'],
+            script: [
+                {
+                    innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
+                    type: 'application/ld+json'
+                }
+            ]
+        }
+    },
     data() {
         return {
             currentQuestion: 1,

@@ -142,7 +142,7 @@ export default {
     },
     head() {
         return {
-            title: '',
+            title: 'The Assessment Library | Home',
             meta: [
                 {
                     hid: 'description',

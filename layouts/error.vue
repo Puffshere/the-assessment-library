@@ -30,6 +30,25 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
+    head() {
+        return {
+            title: 'The Assessment Library | Error',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: ''
+                }
+            ],
+            __dangerouslyDisableSanitizers: ['script'],
+            script: [
+                {
+                    innerHTML: JSON.stringify(this.structuredDataBreadcrumbs),
+                    type: 'application/ld+json'
+                }
+            ]
+        }
+    },
     created() {
         if (this.error.statusCode === 404) {
             if (process.browser) {
