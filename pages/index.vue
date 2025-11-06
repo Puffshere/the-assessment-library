@@ -4,7 +4,7 @@
 
         <section class="header">
             <img src="~assets/logo-without-background.png" alt="image of logo" class="logo">
-            <button v-if="loggedIn === true" @click="signOut" class="teal">Sign Out</button>
+            <button v-if="loggedIn === true" @click="signOut" class="teal">Dashboard</button>
             <div class="container">
                 <div class="row">
                     <h1 v-if="loggedIn === true">
