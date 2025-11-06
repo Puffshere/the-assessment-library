@@ -193,6 +193,11 @@ export default {
         box-shadow: 5px 5px 10px #0814368e;
         position: relative;
 
+        .teal {
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
         .logo {
             width: 300px;
             position: absolute;
@@ -412,6 +417,12 @@ export default {
             h1 {
                 line-height: 1.25em;
                 margin-bottom: 40px;
+            }
+
+            .teal {
+                width: 120px;
+                margin-top: 0;
+                margin-right: 0;
             }
         }
 
