@@ -1047,8 +1047,13 @@ export default {
         .questionnaire {
             .container {
                 min-height: 543px !important;
+                padding: 0 16px 60px ;
             }
         }
+    }
+
+    .modal-window .container {
+        top: 0px;
     }
 }
 </style>

@@ -802,8 +802,8 @@ export default {
     }
 
     .questionnaire {
-        margin: 0 0 0px 0;
-        padding: 0 0 0px 0;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
         font-family: $nunito-family;
         min-height: 58vh;
         position: relative;
@@ -1049,8 +1049,13 @@ export default {
         .questionnaire {
             .container {
                 min-height: 543px !important;
+                padding: 0 16px 60px ;
             }
         }
+    }
+
+    .modal-window .container {
+        top: 0px;
     }
 }
 </style>

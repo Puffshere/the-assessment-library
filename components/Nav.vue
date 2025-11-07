@@ -166,7 +166,7 @@ $shadow: rgba(0, 0, 0, 0.08);
 .main-nav {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1000000;
     width: 100%;
     background: $paper;
     transition: box-shadow 160ms ease, background-color 160ms ease;
