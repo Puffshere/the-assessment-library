@@ -114,7 +114,7 @@ export default {
 
     .worlds-first {
         text-align: center;
-        padding: 50px 16px 70px 16px;
+        padding: 45px 16px 70px 16px;
         color: #12304d;
         background: url('~assets/homePage/landscape-background.webp');
         background-size: cover;
