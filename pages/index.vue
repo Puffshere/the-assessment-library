@@ -94,6 +94,33 @@
                 class="classroom" />
         </section>
 
+        <section class="personality">
+            <div class="container">
+                <div class="row">
+                    <h1>
+                        A Personality That <br class="line-break" /> Grows With You
+                    </h1>
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                    <div class="line line4"></div>
+                    <img src="~assets/homePage/people_reading.webp" alt="image of people reading on a stack of books" />
+                    <p>
+                        Traditional assessments freeze you in time. <br />
+                        Our story-based assessments grow with you as you
+                        read more books, <br />
+                        face new challenges, and choose new paths. <br />
+                        Your DISC profile becomes a living
+                        reflection of your development — <br />
+                        not just who you are today, but who you’re becoming.
+                    </p>
+                    <button class="green">
+                        See How Growth Works
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
@@ -164,13 +191,24 @@ export default {
             font-weight: 400;
             font-family: $nunito-family;
         }
+
+        &:after {
+            background: linear-gradient(to right, $color-d 25%, $color-i 25%, $color-i 50%, $color-s 50%, $color-s 75%, $color-c 75%);
+            position: absolute;
+            content: '';
+            height: 10px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+        }
     }
 
     .worlds-first {
         text-align: center;
         padding: 45px 16px 70px 16px;
         color: #12304d;
-        background: url('~assets/homePage/landscape-background.webp');
+        background: url('~assets/backgrounds/landscape-background.webp');
         background-size: cover;
         background-position: center;
 
@@ -201,7 +239,19 @@ export default {
     .learn {
         padding: 60px 16px 80px;
         margin: 0 500px;
-        box-shadow: 2px 2px 2px gray;
+        box-shadow: 2px 0px 2px gray;
+        position: relative;
+
+        &:after {
+            background: linear-gradient(to right, $color-d 25%, $color-i 25%, $color-i 50%, $color-s 50%, $color-s 75%, $color-c 75%);
+            position: absolute;
+            content: '';
+            height: 10px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+        }
 
         img {
             width: 400px;
@@ -236,11 +286,71 @@ export default {
         }
 
         h4 {
+            margin-top: 60px;
             margin-bottom: 0;
         }
 
         p {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .personality {
+        padding: 80px 16px 0;
+        position: relative;
+
+        h1 {
+            font-family: 'Merriweather', 'Georgia', serif;
+            line-height: 40px;
+            position: absolute;
+        }
+
+        .line {
+            position: absolute;
+            height: 6px;
+        }
+
+        .line1 {
+            width: 350px;
+            background-color: #e93f2fda;
+            top: 120px;
+        }
+
+        .line2 {
+            width: 300px;
+            background-color: #ffbc05a6;
+            top: 140px;
+        }
+
+        .line3 {
+            width: 250px;
+            background-color: #0dab4a62;
+            top: 160px;
+        }
+
+        .line4 {
+            width: 200px;
+            background-color: #1668ff2f;
+            top: 180px;
+        }
+
+        p {
+            font-family: 'Merriweather', 'Georgia', serif;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            text-align: right;
+        }
+
+        .green {
+            position: absolute;
+            top: 200px;
+            right: 0;
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: -70px;
         }
     }
 }
@@ -295,6 +405,59 @@ export default {
 
             img {
                 width: 60%;
+            }
+        }
+
+        .personality {
+            padding: 20px 16px 100px;
+
+            h1 {
+                position: relative;
+                margin-bottom: 0px;
+            }
+
+            p {
+                position: relative;
+                top: 0px;
+            }
+
+            .green {
+                position: relative;
+                top: 30px;
+            }
+
+            img {
+                width: 100%;
+                margin-top: 60px;
+                margin-bottom: 10px;
+            }
+
+            .line {
+                position: relative;
+            }
+
+            .line1 {
+                width: 90%;
+                background-color: #e93f2fda;
+                top: 20px;
+            }
+
+            .line2 {
+                width: 70%;
+                background-color: #ffbc05a6;
+                top: 30px;
+            }
+
+            .line3 {
+                width: 50%;
+                background-color: #0dab4a62;
+                top: 40px;
+            }
+
+            .line4 {
+                width: 30%;
+                background-color: #1668ff2f;
+                top: 50px;
             }
         }
     }
