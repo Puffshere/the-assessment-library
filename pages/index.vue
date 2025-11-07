@@ -227,24 +227,24 @@ export default {
             white-space: nowrap;
             overflow: hidden;
             border-right: 2px solid currentColor;
-            animation:
-                typing 6.5s steps(28, end) 0.3s infinite,
-                caret 1s step-end infinite;
-            width: 0;
             font-family: 'Merriweather', 'Georgia', serif;
+
+            animation:
+                typing 9s steps(28, end) 0.3s infinite,
+                caret 1.2s step-end infinite;
+            width: 0;
         }
 
         @keyframes typing {
-
             0% {
                 width: 0;
             }
 
-            55% {
+            35% {
                 width: 100%;
             }
 
-            75% {
+            88% {
                 width: 100%;
             }
 
@@ -264,6 +264,7 @@ export default {
                 border-right-color: currentColor;
             }
         }
+
     }
 
     .worlds-first {
