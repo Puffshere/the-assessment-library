@@ -385,6 +385,7 @@ $shadow: rgba(0, 0, 0, 0.08);
 .action-btn,
 .teal,
 .light {
+    font-family: 'Merriweather', 'Georgia', serif;
     display: inline-flex;
     align-items: center;
     justify-content: center;
