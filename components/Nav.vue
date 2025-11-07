@@ -25,12 +25,12 @@
 
                 <!-- Right side actions (desktop) -->
                 <div class="actions desktop">
-                    <button v-if="loggedIn" class="light action-btn" @click="$emit('sign-out')">
+                    <button v-if="loggedIn" class="teal action-btn" @click="logoutAndGoHome">
                         Sign Out
                     </button>
-                    <nuxt-link v-else to="/auth/login" class="teal action-btn">
+                    <button v-else type="button" class="teal action-btn" @click="goToLogin">
                         Sign In
-                    </nuxt-link>
+                    </button>
                 </div>
 
                 <!-- Mobile hamburger -->
@@ -61,12 +61,12 @@
                     </li>
                 </ul>
                 <div class="mobile-actions">
-                    <button v-if="loggedIn" class="light full" @click="handleSignOutFromMobile">
+                    <button v-if="loggedIn" class="teal full" @click="logoutAndGoHome">
                         Sign Out
                     </button>
-                    <nuxt-link v-else to="/auth/login" class="teal full" @click.native="closeMobile">
+                    <button v-else type="button" class="teal action-btn" @click="goToLogin">
                         Sign In
-                    </nuxt-link>
+                    </button>
                 </div>
             </nav>
         </transition>
@@ -74,11 +74,10 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
     name: 'MainNav',
-    props: {
-        loggedIn: { type: Boolean, default: false }
-    },
     data() {
         return {
             mobileOpen: false,
@@ -91,54 +90,65 @@ export default {
             ]
         }
     },
+    computed: {
+        ...mapState(['loggedIn'])
+    },
+
     mounted() {
         this.onScroll = () => { this.hasScrolled = window.pageYOffset > 4 }
         window.addEventListener('scroll', this.onScroll, { passive: true })
-
-        this.unwatch = this.$watch('$route.fullPath', () => this.closeMobile())
     },
+
     beforeDestroy() {
         window.removeEventListener('scroll', this.onScroll)
-        if (this.unwatch) this.unwatch()
         this.enableScroll()
     },
     methods: {
+        ...mapActions(['login', 'logout']),
+
         isActive(to) {
-            if (to === '/') return this.$route.path === '/'
-            return this.$route.path.startsWith(to)
+            const p = this.$route.path
+            return to === '/' ? p === '/' : p.startsWith(to)
         },
-        toggleMobile() {
-            this.mobileOpen = !this.mobileOpen
-            if (this.mobileOpen) {
-                this.disableScroll()
-                this.$nextTick(() => {
-                    const first = this.$el.querySelector('.mobile-link')
-                    if (first) first.focus()
-                })
-            } else {
-                this.enableScroll()
+
+        async logoutAndGoHome() {
+            await this.logout()
+            this.closeMobile()
+            if (this.$route.path !== '/') {
+                this.$router.push('/')
             }
         },
+
+        goToLogin() {
+            this.$router.push('/auth/login')
+        },
+
+        toggleMobile() {
+            this.mobileOpen = !this.mobileOpen
+            this.mobileOpen ? this.disableScroll() : this.enableScroll()
+        },
+
         closeMobile() {
             if (!this.mobileOpen) return
             this.mobileOpen = false
             this.enableScroll()
         },
-        handleSignOutFromMobile() {
-            this.$emit('sign-out')
-            this.closeMobile()
-        },
+
         disableScroll() {
             document.documentElement.style.overflow = 'hidden'
             document.body.style.overflow = 'hidden'
         },
+
         enableScroll() {
             document.documentElement.style.overflow = ''
             document.body.style.overflow = ''
         }
     }
+
 }
 </script>
+
+
 
 <style scoped lang="scss">
 /* --- Color tokens (align with your brand) --- */
@@ -401,6 +411,7 @@ $shadow: rgba(0, 0, 0, 0.08);
     cursor: pointer;
     border: 1px solid transparent;
     transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    min-width: 90px !important;
 
     &:active {
         transform: translateY(1px);

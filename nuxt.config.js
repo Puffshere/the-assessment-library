@@ -46,6 +46,7 @@ module.exports = {
     '~plugins/filters.js',
     '~plugins/region-select.js',
     '~plugins/file-agent.js',
+    '~/plugins/auth-state.client.js',
     {
       src: '~plugins/webp-modernizr.js',
       ssr: false
