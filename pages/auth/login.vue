@@ -97,10 +97,21 @@ export default {
         box-shadow: 5px 5px 10px #0814368e;
         min-height: 269px;
 
+        &:after {
+            background: linear-gradient(to right, $color-d 25%, $color-i 25%, $color-i 50%, $color-s 50%, $color-s 75%, $color-c 75%);
+            position: absolute;
+            content: '';
+            height: 10px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+
         .logo {
             width: 300px;
             position: absolute;
-            left: 40px;
+            left: 80px;
             top: -25px;
         }
 
