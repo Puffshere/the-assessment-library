@@ -17,7 +17,6 @@
             </div>
         </section>
 
-        <!-- Public welcome content area (keep/expand as you like) -->
         <section class="welcome">
             <div class="container">
                 <div class="row">

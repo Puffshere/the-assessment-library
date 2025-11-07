@@ -97,7 +97,6 @@ export default {
     },
     methods: {
         goDashboard() {
-            // wire to a real dashboard later if needed
             this.$router.push('/library')
         }
     },

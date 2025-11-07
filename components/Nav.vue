@@ -110,7 +110,6 @@ export default {
             const p = this.$route.path
             return to === '/' ? p === '/' : p.startsWith(to)
         },
-
         async logoutAndGoHome() {
             await this.logout()
             this.closeMobile()
@@ -118,45 +117,38 @@ export default {
                 this.$router.push('/')
             }
         },
-
         goToLogin() {
             this.$router.push('/auth/login')
         },
-
         toggleMobile() {
             this.mobileOpen = !this.mobileOpen
             this.mobileOpen ? this.disableScroll() : this.enableScroll()
         },
-
         closeMobile() {
             if (!this.mobileOpen) return
             this.mobileOpen = false
             this.enableScroll()
         },
-
         disableScroll() {
             document.documentElement.style.overflow = 'hidden'
             document.body.style.overflow = 'hidden'
         },
-
         enableScroll() {
             document.documentElement.style.overflow = ''
             document.body.style.overflow = ''
         }
     }
-
 }
 </script>
 
 
 
 <style scoped lang="scss">
-/* --- Color tokens (align with your brand) --- */
-$blue: #12304d; // deep brand blue
-$sky: #00A8FF; // bright blue
-$gold: #FFDE59; // accent gold
-$ink: #1b1b1b; // text
-$paper: #ffffff; // background
+$blue: #12304d;
+$sky: #00A8FF;
+$gold: #FFDE59;
+$ink: #1b1b1b;
+$paper: #ffffff;
 $shadow: rgba(0, 0, 0, 0.08);
 
 /* Utility */
@@ -197,9 +189,7 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
-/* --- Brand --- */
 .brand {
-    /* no global left push; control via media queries */
     flex: 1 1 auto;
 
     .brand-link {
@@ -208,7 +198,6 @@ $shadow: rgba(0, 0, 0, 0.08);
         gap: 12px;
         text-decoration: none;
         min-width: 0;
-        /* allow truncation inside flex */
     }
 
     .brand-text {
@@ -222,10 +211,8 @@ $shadow: rgba(0, 0, 0, 0.08);
         text-overflow: ellipsis;
         max-width: 100%;
         margin: 0;
-        /* remove negative/right margins */
     }
 
-    /* Simple 4-book icon representing DISC colors */
     .logo-mark {
         display: inline-flex;
         gap: 3px;
@@ -255,7 +242,6 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
-/* --- Mobile defaults (shown) --- */
 .links.desktop,
 .actions.desktop {
     display: none;
@@ -272,7 +258,6 @@ $shadow: rgba(0, 0, 0, 0.08);
     background: #fff;
     cursor: pointer;
     margin-left: auto;
-    /* push to far right */
 
     .hamburger-box {
         width: 18px;
@@ -461,17 +446,14 @@ $shadow: rgba(0, 0, 0, 0.08);
     opacity: 0;
 }
 
-/* ---------- Mobile/Tablet specific fix (≤959px) ---------- */
 @media (max-width: 959px) {
     .main-nav .bar {
         justify-content: flex-start;
-        /* brand left, hamburger right */
         gap: 8px;
     }
 
     .main-nav .brand {
         margin-left: 20px !important;
-        /* small left padding on mobile */
     }
 
     .teal {
@@ -479,7 +461,6 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
-/* ---------- Desktop layout (≥960px) ---------- */
 @media (min-width: 960px) {
     .links.desktop {
         display: flex;
@@ -491,7 +472,6 @@ $shadow: rgba(0, 0, 0, 0.08);
         gap: 8px;
     }
 
-    /* hide mobile UI on desktop */
     .hamburger.mobile,
     .mobile,
     .mobile-drawer.mobile,
@@ -499,7 +479,6 @@ $shadow: rgba(0, 0, 0, 0.08);
         display: none !important;
     }
 
-    /* desktop-specific brand offset */
     .main-nav .brand {
         margin-left: 120px;
     }

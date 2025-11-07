@@ -9,7 +9,6 @@ export const mutations = {
 }
 
 export const actions = {
-  // hydrate from localStorage on client
   nuxtClientInit ({ commit }) {
     if (process.client) {
       const saved = localStorage.getItem('tal_logged_in')
