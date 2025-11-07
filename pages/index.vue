@@ -73,6 +73,27 @@
             </div>
         </section>
 
+        <section class="kids">
+            <img src="~assets/backgrounds/classroom_top_background.webp" alt="image of the top of a classroom"
+                class="classroom" />
+            <div class="container">
+                <div class="row">
+                    <h4>
+                        From Playground to Boardroom, Stories That Fit Every Stage of Life
+                    </h4>
+                    <p>
+                        Whether you’re 9 or 49, there’s a story waiting for you. <br />
+                        Children discover their communication style on the playground. <br />
+                        Professionals refine their leadership style through workplace adventures. <br />
+                        Every book in the Assessment Library meets you where you are — and grows with you from story to
+                        story.
+                    </p>
+                </div>
+            </div>
+            <img src="~assets/backgrounds/classroom_bottom_background.webp" alt="image of the bottom of a classroom"
+                class="classroom" />
+        </section>
+
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
@@ -180,6 +201,7 @@ export default {
     .learn {
         padding: 60px 16px 80px;
         margin: 0 500px;
+        box-shadow: 2px 2px 2px gray;
 
         img {
             width: 400px;
@@ -197,6 +219,28 @@ export default {
             button {
                 margin-top: 40px;
             }
+        }
+    }
+
+    .kids {
+        padding: 0px 0px 0;
+        text-align: center;
+        font-family: 'Merriweather', 'Georgia', serif;
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .classroom {
+            width: 100%;
+        }
+
+        h4 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 40px;
         }
     }
 }

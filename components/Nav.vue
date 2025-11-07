@@ -172,6 +172,7 @@ $shadow: rgba(0, 0, 0, 0.08);
     width: 100%;
     background: $paper;
     transition: box-shadow 160ms ease, background-color 160ms ease;
+    box-shadow: 2px 2px 2px gray;
 
     &.is-scrolled {
         box-shadow: 0 6px 18px $shadow;
