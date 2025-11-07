@@ -934,7 +934,7 @@ export default {
     }
 
     h5 {
-        line-height: 1em;
+        line-height: 1.25em;
         margin: 0 0 0 0;
     }
 
@@ -1001,6 +1001,8 @@ export default {
     height: 300px;
     border: 1px solid #cccccc28;
     padding: 0 10px;
+    margin-top: -10px;
+    margin-bottom: 30px;
 }
 
 .bar {
