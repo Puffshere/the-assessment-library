@@ -40,6 +40,39 @@
             </div>
         </section>
 
+        <section class="learn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="~assets/homePage/people-at-the-table.webp" alt="image of people sitting at the table">
+                    </div>
+                    <div class="col-6 text">
+                        <h1>
+                            Learn by <br class="line-break" />
+                            Living the Story
+                        </h1>
+                        <p>
+                            Forget filling bubbles and reading static reports <br />
+                            <br />
+                            Each Assessment Library book places you <br class="line-break" />
+                            inside a living scenario - a workplace <br class="line-break" />
+                            challenge, a friendship, a first job, a bold <br class="line-break" />
+                            career move. <br />
+                            <br />
+                            Your choices shape the story and reveal your <br class="line-break" />
+                            natural DISC tendencies as they unfold. <br />
+                            <br />
+                            Because the best way to understand <strong>yourself</strong> <br />
+                            is to live your decisions.
+                        </p>
+                        <button class="blue" @click="jumpToLogin($event)">
+                            Explore the Stories
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
     </section>
 </template>
@@ -143,6 +176,29 @@ export default {
             margin-top: 180px;
         }
     }
+
+    .learn {
+        padding: 60px 16px 80px;
+        margin: 0 500px;
+
+        img {
+            width: 400px;
+        }
+
+        .text {
+            text-align: right;
+
+            h1 {
+                line-height: 40px;
+                margin-bottom: 0;
+                font-family: 'Merriweather', 'Georgia', serif;
+            }
+
+            button {
+                margin-top: 40px;
+            }
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -186,6 +242,15 @@ export default {
                     margin-top: 0px;
                     margin-right: -20px;
                 }
+            }
+        }
+
+        .learn {
+            padding: 40px 16px 60px;
+            margin: 0 0;
+
+            img {
+                width: 60%;
             }
         }
     }
