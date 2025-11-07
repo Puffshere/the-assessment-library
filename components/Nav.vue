@@ -25,10 +25,10 @@
 
                 <!-- Right side actions (desktop) -->
                 <div class="actions desktop">
-                    <button v-if="loggedIn" class="teal action-btn" @click="logoutAndGoHome">
+                    <button v-if="loggedIn" class="green action-btn" @click="logoutAndGoHome">
                         Sign Out
                     </button>
-                    <button v-else type="button" class="teal action-btn" @click="goToLogin">
+                    <button v-else type="button" class="green action-btn" @click="goToLogin">
                         Sign In
                     </button>
                 </div>
@@ -61,10 +61,10 @@
                     </li>
                 </ul>
                 <div class="mobile-actions">
-                    <button v-if="loggedIn" class="teal full" @click="logoutAndGoHome">
+                    <button v-if="loggedIn" class="green full" @click="logoutAndGoHome">
                         Sign Out
                     </button>
-                    <button v-else type="button" class="teal action-btn" @click="goToLogin">
+                    <button v-else type="button" class="green action-btn" @click="goToLogin">
                         Sign In
                     </button>
                 </div>
@@ -403,10 +403,10 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
-.teal {
+.green {
     margin-left: 150px;
-    background: #0dab49;
     color: #fff;
+    background: #008b67;
     box-shadow: 0 4px 10px rgba($sky, 0.35);
 
     &:hover {
