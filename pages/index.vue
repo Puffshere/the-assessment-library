@@ -8,10 +8,16 @@
 
             <div class="container">
                 <div class="row">
-                    <h1>Welcome to The Assessment Library!</h1>
+                    <h1>
+                        <span style="font-weight: 600;">Welcome to</span>
+                        <span class="type-wrap">
+                            <span class="hero-placeholder"> The Assessment Library!</span>
+                            <span class="hero-typed" aria-hidden="true"> The Assessment Library!</span>
+                        </span>
+                    </h1>
                     <h4>
-                        scenario-based, story-driven DISC assessments that grow with you. <br />The more you read the
-                        more you learn!
+                        Discover a new way to learn about yourself — one story,
+                        <br class="line-break" />one choice, one chapter at a time.
                     </h4>
                 </div>
             </div>
@@ -34,7 +40,7 @@
                     </div>
                     <div class="col-6 image">
                         <img src="~assets/homePage/sitting-woman-with-book.webp"
-                            alt="image of a woman sitting reading a book">
+                            alt="image of a woman sitting reading a book" />
                     </div>
                 </div>
             </div>
@@ -44,7 +50,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <img src="~assets/homePage/people-at-the-table.webp" alt="image of people sitting at the table">
+                        <img src="~assets/homePage/people-at-the-table.webp"
+                            alt="image of people sitting at the table" />
                     </div>
                     <div class="col-6 text">
                         <h1>
@@ -78,15 +85,14 @@
                 class="classroom" />
             <div class="container">
                 <div class="row">
-                    <h4>
-                        From Playground to Boardroom, Stories That Fit Every Stage of Life
-                    </h4>
+                    <h4>From Playground to Boardroom, Stories That Fit Every Stage of Life</h4>
                     <p>
                         Whether you’re 9 or 49, there’s a story waiting for you. <br />
                         Children discover their communication style on the playground. <br />
-                        Professionals refine their leadership style through workplace adventures. <br />
-                        Every book in the Assessment Library meets you where you are — and grows with you from story to
-                        story.
+                        Professionals refine their leadership style through workplace
+                        adventures. <br />
+                        Every book in the Assessment Library meets you where you are — and
+                        grows with you from story to story.
                     </p>
                 </div>
             </div>
@@ -107,14 +113,14 @@
                     <img src="~assets/homePage/people_reading.webp" alt="image of people reading on a stack of books" />
                     <p>
                         Traditional assessments freeze you in time. <br />
-                        Our story-based assessments grow with you as you
-                        read more books, <br />
+                        Our story-based assessments grow with you as you read more books,
+                        <br />
                         face new challenges, and choose new paths. <br />
-                        Your DISC profile becomes a living
-                        reflection of your development — <br />
+                        Your DISC profile becomes a living reflection of your development —
+                        <br />
                         not just who you are today, but who you’re becoming.
                     </p>
-                    <button class="green">
+                    <button class="green" @click="jumpToLogin($event)">
                         See How Growth Works
                     </button>
                 </div>
@@ -201,6 +207,62 @@ export default {
             left: 0;
             bottom: 0;
             z-index: 2;
+        }
+
+        .type-wrap {
+            position: relative;
+            display: inline-block;
+            vertical-align: baseline;
+        }
+
+        .hero-placeholder {
+            visibility: hidden;
+            white-space: nowrap;
+            font-family: 'Merriweather', 'Georgia', serif;
+        }
+
+        .hero-typed {
+            position: absolute;
+            inset: 0 auto auto 0;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid currentColor;
+            animation:
+                typing 6.5s steps(28, end) 0.3s infinite,
+                caret 1s step-end infinite;
+            width: 0;
+            font-family: 'Merriweather', 'Georgia', serif;
+        }
+
+        @keyframes typing {
+
+            0% {
+                width: 0;
+            }
+
+            55% {
+                width: 100%;
+            }
+
+            75% {
+                width: 100%;
+            }
+
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes caret {
+
+            0%,
+            100% {
+                border-right-color: transparent;
+            }
+
+            50% {
+                border-right-color: currentColor;
+            }
         }
     }
 
@@ -346,6 +408,7 @@ export default {
             position: absolute;
             top: 200px;
             right: 0;
+            min-width: 210px;
         }
 
         img {
@@ -362,7 +425,7 @@ export default {
         }
 
         .header {
-            padding: 40px 16px 30px 16px;
+            padding: 30px 16px 30px 16px;
 
             .logo {
                 position: relative;
@@ -375,6 +438,7 @@ export default {
             h1 {
                 line-height: 1.25em;
                 margin-bottom: 40px;
+                font-size: 24px;
             }
 
             .teal {
