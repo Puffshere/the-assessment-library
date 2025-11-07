@@ -10,20 +10,32 @@
                 <div class="row">
                     <h1>Welcome to The Assessment Library!</h1>
                     <h4>
-                        Scenario-based, story-driven DISC assessments that grow with you. <br />The more you read the
+                        scenario-based, story-driven DISC assessments that grow with you. <br />The more you read the
                         more you learn!
                     </h4>
                 </div>
             </div>
         </section>
 
-        <section class="welcome">
+        <section class="worlds-first">
             <div class="container">
                 <div class="row">
-                    <p>
-                        Explore interactive stories that reveal your DISC style through choices you make.
-                        Sign in to check out a book and begin your assessment journey.
-                    </p>
+                    <div class="col-6 textSide">
+                        <h1>
+                            World's first <br class="line-break" />
+                            scenario-based, story- <br class="line-break" />
+                            based assessments
+                        </h1>
+                        <p>
+                            Create a DISC profile that grows <br class="line-break" />
+                            with you as you read your story.
+                        </p>
+                        <button class="green" @click="jumpToLogin($event)">Get Started</button>
+                    </div>
+                    <div class="col-6 image">
+                        <img src="~assets/homePage/sitting-woman-with-book.webp"
+                            alt="image of a woman sitting reading a book">
+                    </div>
                 </div>
             </div>
         </section>
@@ -47,6 +59,12 @@ export default {
             meta: [
                 { hid: 'description', name: 'description', content: '' }
             ]
+        }
+    },
+    methods: {
+        jumpToLogin(event) {
+            event?.target?.blur()
+            this.$router.push('/auth/login')
         }
     }
 }
@@ -72,7 +90,7 @@ export default {
         .logo {
             width: 300px;
             position: absolute;
-            left: 40px;
+            left: 80px;
             top: -25px;
         }
 
@@ -94,20 +112,45 @@ export default {
         }
     }
 
-    .welcome {
+    .worlds-first {
         text-align: center;
-        padding: 40px 16px 80px 16px;
+        padding: 50px 16px 70px 16px;
         color: #12304d;
+        background: url('~assets/homePage/landscape-background.webp');
+        background-size: cover;
+        background-position: center;
 
-        p {
-            max-width: 760px;
-            margin: 0 auto;
+        .textSide {
+            text-align: left;
+
+            h1 {
+                font-family: 'Merriweather', 'Georgia', serif;
+                line-height: 40px;
+                margin-top: 30px;
+            }
+
+            p {
+                font-family: 'Merriweather', 'Georgia', serif;
+            }
+
+            button {
+                margin-top: 40px;
+            }
+        }
+
+        img {
+            width: 700px;
+            margin-top: 180px;
         }
     }
 }
 
 @media (max-width: 600px) {
     .home {
+        .line-break {
+            display: none;
+        }
+
         .header {
             padding: 40px 16px 30px 16px;
 
@@ -129,6 +172,20 @@ export default {
                 margin-top: 0;
                 margin-right: 0;
                 position: static;
+            }
+        }
+
+        .worlds-first {
+            padding: 20px 16px 60px;
+
+            .image {
+                text-align: right;
+
+                img {
+                    width: 300px;
+                    margin-top: 0px;
+                    margin-right: -20px;
+                }
             }
         }
     }
