@@ -395,9 +395,9 @@ $shadow: rgba(0, 0, 0, 0.08);
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-    border: 1px solid transparent;
-    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
     min-width: 90px !important;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     &:active {
         transform: translateY(1px);
@@ -408,7 +408,6 @@ $shadow: rgba(0, 0, 0, 0.08);
     margin-left: 150px;
     color: #fff;
     background: #008b67;
-    box-shadow: 0 4px 10px rgba($sky, 0.35);
 
     &:hover {
         filter: saturate(110%);
@@ -425,7 +424,6 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
-/* --- Animations --- */
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 160ms ease;
