@@ -1,6 +1,3 @@
-const pkg = require('./package');
-const axios = require('axios');
-
 module.exports = {
   head: {
     htmlAttrs: {
@@ -52,9 +49,7 @@ module.exports = {
       ssr: false
     },
     '~/plugins/vue-moment.js',
-    {
-      src: '~/plugins/lazy-hydration.js', ssr: false
-    },
+    '~/plugins/lazy-hydration.js',
     {
       src: '~/plugins/vue-toast-notification.js',
       mode: 'client'
@@ -98,7 +93,7 @@ module.exports = {
     // # Recaptcha key V3
     RECAPTCHA_SECRET_KEY_V3: process.env.RECAPTCHA_SECRET_KEY_V3,
 
-    BASE_URL: 'https://theassessmentlibrary.com/',
+    BASE_URL: process.env.BASE_URL || 'http://localhost:3000'
   },
   vue: {
     config: {
@@ -106,10 +101,11 @@ module.exports = {
     }
   },
   axios: {
-    // for server‑side calls
-    baseURL: process.env.BASE_URL || 'https://www.theassessmentlibrary/',
-    // for client‑side (browser) calls
-    browserBaseURL: process.env.BASE_URL || 'https://www.theassessmentlibrary.com/',
+    // Used by server-side (SSR, serverMiddleware)
+    baseURL: process.env.API_BASE_URL || 'http://localhost:3000',
+
+    // Used by code running in the browser
+    browserBaseURL: process.env.BROWSER_API_BASE_URL || 'http://localhost:3000'
   },
   devServer: {
     disableHostCheck: true
@@ -125,12 +121,7 @@ module.exports = {
         fs: 'empty'
       }
     },
-    transpile: ['vue-mapbox', '@nuxtjs/axios', 'vee-validate/dist/rules'],
-    babel: {
-      plugins: [
-        ['@babel/plugin-proposal-private-methods', { loose: true }]
-      ]
-    }
+    transpile: ['@nuxtjs/axios', 'vee-validate/dist/rules', 'vue-lazy-hydration']
   },
   serverMiddleware: [
     '~/api/index.js'

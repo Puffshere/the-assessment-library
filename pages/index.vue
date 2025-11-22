@@ -127,16 +127,13 @@
             </div>
         </section>
 
-        <LazyHydrate when-visible><footer-fold /></LazyHydrate>
+        <footer-fold />
     </section>
 </template>
 
 <script>
-import LazyHydrate from 'vue-lazy-hydration'
-
 export default {
     components: {
-        LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },

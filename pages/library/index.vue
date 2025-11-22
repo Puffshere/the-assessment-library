@@ -89,7 +89,7 @@
 import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
-    middleware: 'auth',
+    middleware: ['auth'],
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),

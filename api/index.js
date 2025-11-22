@@ -5,23 +5,28 @@ import bodyParser from 'body-parser';
 import uploadController from './controllers/uploadController';
 import multer from 'multer';
 import cors from 'cors';
-import axios from 'axios';
 import path from 'path';
+
+// ✅ NEW: import auth routes
+import authRoutes from './routes/auth.js';
 
 const upload = multer();
 const app = express();
 
-const cosmos = {
-    name: 'website',
-    username: 'assessments24x7',
-    password: '3pUpfMCc0E28ghdRLYOLFkbm7oCocvGg2zbSR6FegubepttZar5nfsx6WCvOx4SMkAeQ1DVwp7lfH8onG6diVQ==',
-    host: 'assessments24x7.mongo.cosmos.azure.com',
-    port: '10255',
-    opts: '?ssl=true&sslverifycertificate=false'
-};
+// ✅ Use env var for Mongo connection
+// api/index.js
+const connectionString = process.env.MONGO_URI
 
-const connectionString = `mongodb://${cosmos.username}:${cosmos.password}@${cosmos.host}:${cosmos.port}/${cosmos.name}${cosmos.opts}`;
-mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
+if (!connectionString) {
+  console.error('❌ MONGO_URI is not defined. Please set it in your .env file.');
+} else {
+  mongoose
+    .connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('✅ Connected to MongoDB'))
+    .catch(err => {
+      console.error('❌ MongoDB connection error:', err.message);
+    });
+}
 
 // Serving static files 
 app.use(express.static(path.join(__dirname, 'static')));
@@ -31,27 +36,30 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// ✅ REGISTER ROUTES *before* the 404
+// Final URL from browser: /api/auth/login
+app.use('/auth', authRoutes);
+
 app.get('/', (req, res) => {
-    res.json({
-        status: 200,
-        message: 'Welcome to the The Assessment Library!'
-    });
+  res.json({
+    status: 200,
+    message: 'Welcome to the The Assessment Library!'
+  });
 });
 
 app.post('/upload', upload.single('file'), (req, res) => {
-    uploadController.upload(req, res);
+  uploadController.upload(req, res);
 });
 
+// ✅ 404 handler LAST
 app.use((req, res, next) => {
-    res.status(404).json({
-        status: 404,
-        message: 'The requested endpoint does not exist'
-    });
+  res.status(404).json({
+    status: 404,
+    message: 'The requested endpoint does not exist'
+  });
 });
 
 export default {
-    path: '/api',
-    handler: app
+  path: '/api',
+  handler: app
 };
-
-module.exports = { connectionString };
