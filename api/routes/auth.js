@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import User from '../models/User.js';
 import * as authController from '../controllers/authController.js';
+import CreditTransaction from '../models/CreditTransaction.js';
 
 const router = express.Router();
 
@@ -73,9 +74,18 @@ router.post('/register', async (req, res) => {
             name,
             email,
             password,
+            creditsBalance: 1,
+            totalCreditsPurchased: 1
         });
 
         await user.save();
+
+        await CreditTransaction.create({
+            user: user._id,
+            type: 'admin_adjustment',
+            credits: 1,
+            note: 'Signup bonus credit'
+        });
 
         const token = jwt.sign(
             { id: user._id, email: user.email },
@@ -90,6 +100,7 @@ router.post('/register', async (req, res) => {
                 id: user._id,
                 name: user.name,
                 email: user.email,
+                creditsBalance: user.creditsBalance
             },
         });
     } catch (err) {
@@ -99,7 +110,6 @@ router.post('/register', async (req, res) => {
 });
 
 router.post('/forgot-password', authController.forgotPassword);
-
 router.post('/reset-password', authController.resetPassword);
 
 export default router;
