@@ -1,4 +1,3 @@
-// api/models/User.js
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
@@ -13,7 +12,7 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: true, // stored as a bcrypt hash
+      required: true,
     },
     name: {
       type: String,
@@ -24,13 +23,18 @@ const userSchema = new mongoose.Schema(
       enum: ['admin', 'user'],
       default: 'user',
     },
+    resetPasswordToken: {
+      type: String,
+    },
+    resetPasswordExpires: {
+      type: Date,
+    },
   },
   {
     timestamps: true,
   }
 );
 
-// Hash password before saving (only if it was modified)
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
 
@@ -43,7 +47,6 @@ userSchema.pre('save', async function (next) {
   }
 });
 
-// Helper method (optional)
 userSchema.methods.comparePassword = function (candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };

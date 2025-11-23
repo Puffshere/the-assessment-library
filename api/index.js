@@ -7,14 +7,11 @@ import multer from 'multer';
 import cors from 'cors';
 import path from 'path';
 
-// ✅ NEW: import auth routes
 import authRoutes from './routes/auth.js';
 
 const upload = multer();
 const app = express();
 
-// ✅ Use env var for Mongo connection
-// api/index.js
 const connectionString = process.env.MONGO_URI
 
 if (!connectionString) {
@@ -28,16 +25,12 @@ if (!connectionString) {
     });
 }
 
-// Serving static files 
 app.use(express.static(path.join(__dirname, 'static')));
 
 app.use(helmet());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-// ✅ REGISTER ROUTES *before* the 404
-// Final URL from browser: /api/auth/login
 app.use('/auth', authRoutes);
 
 app.get('/', (req, res) => {
@@ -51,7 +44,6 @@ app.post('/upload', upload.single('file'), (req, res) => {
   uploadController.upload(req, res);
 });
 
-// ✅ 404 handler LAST
 app.use((req, res, next) => {
   res.status(404).json({
     status: 404,

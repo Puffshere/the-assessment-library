@@ -20,7 +20,6 @@
                     <div class="card">
                         <h4>Sign in to view your Library.</h4>
 
-                        <!-- real form -->
                         <form @submit.prevent="logIn">
                             <div class="form-group">
                                 <input id="email" type="email" placeholder="Enter Email" v-model="form.email" required
@@ -33,9 +32,11 @@
                             </div>
 
                             <p v-if="error" class="error-msg">{{ error }}</p>
+                            <p v-if="resetMessage" class="success-msg">{{ resetMessage }}</p>
+
 
                             <p class="forgotPasswordParent">
-                                <a class="forgotPassword">Forgot Password</a>
+                                <a class="forgotPassword" @click.prevent="forgotPassword">Forgot Password</a>
                             </p>
 
                             <p class="signUpText">
@@ -67,27 +68,58 @@ export default {
         return {
             form: { email: '', password: '' },
             error: '',
+            resetMessage: '',
             loading: false
         }
     },
     methods: {
         ...mapActions(['login']),
+
         async logIn() {
-            this.error = ''
-            this.loading = true
+            this.error = '';
+            this.resetMessage = '';
+            this.loading = true;
 
             try {
                 await this.login({
                     email: this.form.email,
                     password: this.form.password
-                })
+                });
 
-                const next = this.$route.query.next || '/library'
-                this.$router.push(next)
+                const next = this.$route.query.next || '/library';
+                this.$router.push(next);
+
             } catch (e) {
-                this.error = e.message || 'Invalid email or password.'
+                this.error = e.message || 'Invalid email or password.';
             } finally {
-                this.loading = false
+                this.loading = false;
+            }
+        },
+
+        async forgotPassword() {
+            this.error = '';
+            this.resetMessage = '';
+
+            const email = this.form.email;
+
+            if (!email) {
+                this.error = 'Please enter your email first.';
+                return;
+            }
+
+            try {
+                const res = await this.$axios.post('/api/auth/forgot-password', { email });
+
+                this.resetMessage =
+                    res.data.message ||
+                    'If an account with that email exists, a password reset link has been sent.';
+
+            } catch (err) {
+                console.error(err);
+
+                this.error =
+                    err.response?.data?.message ||
+                    'Failed to send reset email. Please try again.';
             }
         }
     },
@@ -99,6 +131,7 @@ export default {
     }
 }
 </script>
+
 
 <style scoped lang="scss">
 @import '~assets/scss/vars';
@@ -206,6 +239,12 @@ export default {
                 margin: 0 auto;
             }
         }
+    }
+
+    .success-msg {
+        color: #0a7d00;
+        margin: 6px 0 8px;
+        font-size: 14px;
     }
 }
 
