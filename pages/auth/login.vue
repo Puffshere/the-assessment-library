@@ -86,7 +86,7 @@ export default {
                     password: this.form.password
                 });
 
-                const next = this.$route.query.next || '/library';
+                const next = this.$route.query.next || '/dashboard';
                 this.$router.push(next);
 
             } catch (e) {
@@ -95,7 +95,6 @@ export default {
                 this.loading = false;
             }
         },
-
         async forgotPassword() {
             this.error = '';
             this.resetMessage = '';

@@ -15,7 +15,6 @@
                     </nuxt-link>
                 </div>
 
-                <!-- Desktop Nav -->
                 <nav class="links desktop" role="navigation" aria-label="Primary">
                     <nuxt-link v-for="item in navItems" :key="item.to" :to="item.to" exact
                         :class="['link', isActive(item.to) ? 'active' : '']">
@@ -23,7 +22,6 @@
                     </nuxt-link>
                 </nav>
 
-                <!-- Right side actions (desktop) -->
                 <div class="actions desktop">
                     <button v-if="loggedIn" class="green action-btn" @click="logoutAndGoHome">
                         Sign Out
@@ -33,7 +31,6 @@
                     </button>
                 </div>
 
-                <!-- Mobile hamburger -->
                 <button class="hamburger mobile" :aria-expanded="mobileOpen ? 'true' : 'false'"
                     aria-controls="mobile-menu" @click="toggleMobile" @keyup.enter.space.prevent="toggleMobile">
                     <span class="hamburger-box" aria-hidden="true">
@@ -44,7 +41,6 @@
             </div>
         </div>
 
-        <!-- Mobile Drawer -->
         <transition name="fade">
             <div v-if="mobileOpen" class="backdrop mobile" @click="closeMobile" />
         </transition>
@@ -83,7 +79,7 @@ export default {
             mobileOpen: false,
             hasScrolled: false,
             navItems: [
-                { label: 'Home', to: '/' },
+                { label: 'Dashboard', to: '/dashboard' },
                 { label: 'Library', to: '/library' },
                 { label: 'About', to: '/about' },
                 { label: 'Contact', to: '/contact' }
@@ -142,7 +138,6 @@ export default {
 </script>
 
 
-
 <style scoped lang="scss">
 $blue: #12304d;
 $sky: #00A8FF;
@@ -151,7 +146,6 @@ $ink: #1b1b1b;
 $paper: #ffffff;
 $shadow: rgba(0, 0, 0, 0.08);
 
-/* Utility */
 .sr-only {
     position: absolute !important;
     width: 1px;
@@ -164,7 +158,6 @@ $shadow: rgba(0, 0, 0, 0.08);
     border: 0;
 }
 
-/* --- Header shell --- */
 .main-nav {
     position: sticky;
     top: 0;
@@ -350,7 +343,6 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
-/* --- Link styles (shared) --- */
 .link {
     position: relative;
     display: inline-flex;
@@ -382,7 +374,6 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
-/* --- Buttons --- */
 .action-btn,
 .teal,
 .light {

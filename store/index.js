@@ -1,4 +1,3 @@
-// store/index.js
 export const state = () => ({
   loggedIn: false,
   user: null,
@@ -26,10 +25,13 @@ export const actions = {
       if (savedToken || savedFlag === '1') {
         commit('SET_LOGGED_IN', true)
         commit('SET_TOKEN', savedToken)
+
+        if (savedToken) {
+          this.$axios.setToken(savedToken, 'Bearer')
+        }
       }
     }
   },
-
   async login({ commit }, { email, password }) {
     try {
       const res = await this.$axios.$post('/api/auth/login', {
@@ -37,25 +39,23 @@ export const actions = {
         password
       })
 
-      // Update Vuex
       commit('SET_LOGGED_IN', true)
       commit('SET_USER', res.user)
       commit('SET_TOKEN', res.token)
 
-      // Persist to localStorage
+      this.$axios.setToken(res.token, 'Bearer')
+
       if (process.client) {
         localStorage.setItem('tal_logged_in', '1')
         localStorage.setItem('tal_token', res.token)
       }
 
-      // Return something if the component wants it
       return res
     } catch (err) {
       const msg = err?.response?.data?.message || 'Login failed'
       throw new Error(msg)
     }
   },
-
   async register({ commit }, { name, email, password }) {
     try {
       const res = await this.$axios.$post('/api/auth/register', {
@@ -64,12 +64,12 @@ export const actions = {
         password
       })
 
-      // mark logged in
       commit('SET_LOGGED_IN', true)
       commit('SET_USER', res.user)
       commit('SET_TOKEN', res.token)
 
-      // persist
+      this.$axios.setToken(res.token, 'Bearer')
+
       if (process.client) {
         localStorage.setItem('tal_logged_in', '1')
         localStorage.setItem('tal_token', res.token)
@@ -81,12 +81,12 @@ export const actions = {
       throw new Error(msg)
     }
   },
-
-
   logout({ commit }) {
     commit('SET_LOGGED_IN', false)
     commit('SET_USER', null)
     commit('SET_TOKEN', null)
+
+    this.$axios.setToken(false)
 
     if (process.client) {
       localStorage.removeItem('tal_logged_in')

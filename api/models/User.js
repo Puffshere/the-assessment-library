@@ -29,6 +29,16 @@ const userSchema = new mongoose.Schema(
     resetPasswordExpires: {
       type: Date,
     },
+    creditsBalance: {
+      type: Number,
+      default: 0,
+      min: 0,
+    },
+    totalCreditsPurchased: {
+      type: Number,
+      default: 0,
+      min: 0,
+    }
   },
   {
     timestamps: true,

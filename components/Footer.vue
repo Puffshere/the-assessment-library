@@ -20,7 +20,7 @@
                     <div class="col-6">
                         <ul class="footer-links">
                             <li class="link"><nuxt-link to="/">Home</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/">Dashboard</nuxt-link></li>
+                            <li class="link"><nuxt-link to="/dashboard">Dashboard</nuxt-link></li>
                             <li class="link"><nuxt-link to="/">Results</nuxt-link></li>
                             <li class="link"><nuxt-link to="/">Subscriptions</nuxt-link></li>
                             <li class="link"><nuxt-link to="/">About</nuxt-link></li>

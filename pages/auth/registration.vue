@@ -108,7 +108,7 @@ export default {
             try {
                 await this.$store.dispatch('register', { name, email, password })
 
-                this.$router.push('/library')
+                this.$router.push('/dashboard')
             } catch (e) {
                 this.error = e.message || 'Registration failed. Please check your details and try again.'
             }

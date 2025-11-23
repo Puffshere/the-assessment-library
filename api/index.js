@@ -13,6 +13,7 @@ const upload = multer();
 const app = express();
 
 const connectionString = process.env.MONGO_URI
+const dashboardRoutes = require('./routes/dashboard');
 
 if (!connectionString) {
   console.error('❌ MONGO_URI is not defined. Please set it in your .env file.');
@@ -32,6 +33,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/auth', authRoutes);
+app.use('/dashboard', dashboardRoutes);
 
 app.get('/', (req, res) => {
   res.json({
