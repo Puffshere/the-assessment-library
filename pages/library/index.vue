@@ -25,8 +25,8 @@
                     <div class="col-6" style="margin-left: 70px;">
                         <!-- Jessica's First Job -->
                         <img class="darkBlue" src="~assets/library/dark-blue-book.webp" alt="image of a dark blue book"
-                            :aria-disabled="checkingOut" :class="{ disabled: checkingOut }"
-                            @click="checkoutBook(books.jessica)" />
+                            :aria-disabled="isBookDisabled(books.jessica)"
+                            :class="{ disabled: isBookDisabled(books.jessica) }" @click="checkoutBook(books.jessica)" />
                         <br />
                         <p class="title">Jessica's First Job</p>
                         <p>
@@ -38,8 +38,8 @@
                     <div class="col-6" style="margin-left: -70px;">
                         <!-- Roger's New Business -->
                         <img class="red" src="~assets/library/red-book.webp" alt="image of a red book"
-                            :aria-disabled="checkingOut" :class="{ disabled: checkingOut }"
-                            @click="checkoutBook(books.roger)" />
+                            :aria-disabled="isBookDisabled(books.roger)"
+                            :class="{ disabled: isBookDisabled(books.roger) }" @click="checkoutBook(books.roger)" />
                         <br />
                         <p class="title redText">Roger's New Business</p>
                         <p>
@@ -57,8 +57,8 @@
                     <div class="col-6" style="margin-left: 70px;">
                         <!-- Allie's Professional Journey -->
                         <img class="pink" src="~assets/library/pink-book.webp" alt="image of a pink book"
-                            :aria-disabled="checkingOut" :class="{ disabled: checkingOut }"
-                            @click="checkoutBook(books.allie)" />
+                            :aria-disabled="isBookDisabled(books.allie)"
+                            :class="{ disabled: isBookDisabled(books.allie) }" @click="checkoutBook(books.allie)" />
                         <br />
                         <p class="title">Allie's Professional Journey</p>
                         <p>
@@ -70,8 +70,8 @@
                     <div class="col-6" style="margin-left: -70px;">
                         <!-- Shane's Day at the Park -->
                         <img class="blue" src="~assets/library/blue-book.webp" alt="image of a blue book"
-                            :aria-disabled="checkingOut" :class="{ disabled: checkingOut }"
-                            @click="checkoutBook(books.shane)" />
+                            :aria-disabled="isBookDisabled(books.shane)"
+                            :class="{ disabled: isBookDisabled(books.shane) }" @click="checkoutBook(books.shane)" />
                         <br />
                         <p class="title blueText">Shane's Day at the Park</p>
                         <p>
@@ -108,25 +108,29 @@ export default {
                     id: 'jessica',
                     title: "Jessica's First Job",
                     slug: 'jessicas-first-job',
-                    assessmentId: '69258aa1e9badcb4aafc2dcd'
+                    assessmentId: '69258aa1e9badcb4aafc2dcd',
+                    creditsCost: 2
                 },
                 roger: {
                     id: 'roger',
                     title: "Roger's New Business",
                     slug: 'rogers-new-business',
-                    assessmentId: '69258ab0e9badcb4aafc2dcf'
+                    assessmentId: '69258ab0e9badcb4aafc2dcf',
+                    creditsCost: 2
                 },
                 allie: {
                     id: 'allie',
                     title: "Allie's Professional Journey",
                     slug: 'allies-professional-journey',
-                    assessmentId: '69258abde9badcb4aafc2dd1'
+                    assessmentId: '69258abde9badcb4aafc2dd1',
+                    creditsCost: 1
                 },
                 shane: {
                     id: 'shane',
                     title: "Shane's Day at the Park",
                     slug: 'shanes-day-at-the-park',
-                    assessmentId: '6925f33de9badcb4aafc2df9'
+                    assessmentId: '6925f33de9badcb4aafc2df9',
+                    creditsCost: 1
                 }
             }
         }
@@ -137,15 +141,47 @@ export default {
         },
         currentUser() {
             return this.$store.state.user
+        },
+        creditsBalance() {
+            return (this.currentUser && this.currentUser.creditsBalance) || 0
+        }
+    },
+    async mounted() {
+        if (this.loggedIn) {
+            try {
+                const res = await this.$axios.$get('/api/dashboard')
+                this.$store.commit('SET_USER', {
+                    ...(this.currentUser || {}),
+                    ...res.user
+                })
+            } catch (e) {
+                console.error('Failed to refresh user on library page:', e)
+            }
         }
     },
     methods: {
         goDashboard() {
             this.$router.push('/dashboard')
         },
+        canCheckout(book) {
+            const cost = book.creditsCost || 1
+            return this.creditsBalance >= cost
+        },
+        isBookDisabled(book) {
+            if (this.checkingOut) return true
+            if (!this.loggedIn) return false
+            return !this.canCheckout(book)
+        },
         async checkoutBook(book) {
             if (!book || !book.assessmentId) {
                 console.error('Book is missing assessmentId:', book)
+                return
+            }
+
+            if (this.loggedIn && !this.canCheckout(book)) {
+                alert(
+                    'You do not have enough credits to start this assessment. Please purchase more credits from your Dashboard.'
+                )
                 return
             }
 
@@ -154,8 +190,9 @@ export default {
                 return
             }
 
+            const cost = book.creditsCost || 1
             const confirmed = window.confirm(
-                `Spend 1 credit to start "${book.title}"?`
+                `Spend ${cost} credit${cost === 1 ? '' : 's'} to start "${book.title}"?`
             )
             if (!confirmed) return
 
@@ -167,28 +204,26 @@ export default {
 
                 const res = await this.$axios.$post(
                     '/api/checkout',
-                    {
-                        assessmentId: book.assessmentId
-                    },
+                    { assessmentId: book.assessmentId },
                     token
                         ? {
-                            headers: {
-                                Authorization: `Bearer ${token}`
-                            }
+                            headers: { Authorization: `Bearer ${token}` }
                         }
                         : {}
                 )
+
                 if (res.user) {
                     this.$store.commit('SET_USER', {
                         ...(this.currentUser || {}),
                         ...res.user
                     })
                 }
+
                 const sessionId =
                     res.sessionId ||
-                        res.sessionId === 0
+                    (res.sessionId === 0
                         ? res.sessionId
-                        : res.session?._id || res.session?.id
+                        : res.session?._id || res.session?.id)
 
                 if (!sessionId) {
                     console.error('No sessionId returned from checkout:', res)
@@ -197,9 +232,8 @@ export default {
                     )
                     return
                 }
-                this.$router.push(
-                    `/dashboard`
-                )
+
+                this.$router.push('/dashboard')
             } catch (err) {
                 const code = err?.response?.data?.code
                 const msg = err?.response?.data?.message
@@ -289,7 +323,7 @@ export default {
 
             &::before,
             &::after {
-                content: "";
+                content: '';
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -342,7 +376,11 @@ export default {
             .blue,
             .red {
                 cursor: pointer;
-                transition: transform 0.15s ease, box-shadow 0.15s ease, border-radius 0.15s ease;
+                transition: transform 0.15s ease,
+                    box-shadow 0.15s ease,
+                    border-radius 0.15s ease,
+                    filter 0.15s ease,
+                    opacity 0.15s ease;
                 border-radius: 15px;
             }
 
@@ -377,10 +415,12 @@ export default {
             }
 
             .disabled {
-                opacity: 0.6;
+                opacity: 0.5;
+                filter: grayscale(90%);
                 cursor: not-allowed;
                 transform: none !important;
                 box-shadow: none !important;
+                pointer-events: none;
             }
 
             .title {
