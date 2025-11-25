@@ -124,37 +124,34 @@ export default {
     data() {
         return {
             checkingOut: false,
-            // Map each book to its assessment + route info
             books: {
                 jessica: {
                     id: 'jessica',
                     title: "Jessica's First Job",
-                    slug: 'jessicas-first-job', // ✅ slug for URL
-                    // ✅ put the real Assessment _id from MongoDB here
+                    slug: 'jessicas-first-job',
                     assessmentId: '69258aa1e9badcb4aafc2dcd'
                 },
                 roger: {
                     id: 'roger',
                     title: "Roger's New Business",
-                    slug: 'rogers-new-business', // ✅ slug for URL
+                    slug: 'rogers-new-business',
                     assessmentId: '69258ab0e9badcb4aafc2dcf'
                 },
                 allie: {
                     id: 'allie',
                     title: "Allie's Professional Journey",
-                    slug: 'allies-professional-journey', // ✅ slug for URL
+                    slug: 'allies-professional-journey',
                     assessmentId: '69258abde9badcb4aafc2dd1'
                 },
                 shane: {
                     id: 'shane',
                     title: "Shane's Day at the Park",
-                    slug: 'shanes-day-at-the-park', // ✅ slug for URL
+                    slug: 'shanes-day-at-the-park',
                     assessmentId: '69258acae9badcb4aafc2dd3'
                 }
             }
         }
     },
-
     computed: {
         loggedIn() {
             return this.$store.state.loggedIn
@@ -163,7 +160,6 @@ export default {
             return this.$store.state.user
         }
     },
-
     methods: {
         goDashboard() {
             this.$router.push('/dashboard')
@@ -192,9 +188,8 @@ export default {
                 const token = this.$store.state.token
 
                 const res = await this.$axios.$post(
-                    '/api/library/checkout',
+                    '/api/checkout',
                     {
-                        // ✅ send the Assessment ObjectId, not slug
                         assessmentId: book.assessmentId
                     },
                     token
@@ -205,16 +200,12 @@ export default {
                           }
                         : {}
                 )
-
-                // Optional: update user in Vuex if backend returns it
                 if (res.user) {
                     this.$store.commit('SET_USER', {
                         ...(this.currentUser || {}),
                         ...res.user
                     })
                 }
-
-                // ✅ Get sessionId from response
                 const sessionId =
                     res.sessionId ||
                     res.sessionId === 0
@@ -228,8 +219,6 @@ export default {
                     )
                     return
                 }
-
-                // ✅ Go straight into the assessment session
                 this.$router.push(
                     `/dashboard`
                 )

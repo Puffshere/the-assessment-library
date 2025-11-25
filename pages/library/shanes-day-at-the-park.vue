@@ -2,13 +2,14 @@
     <div>
         <section class="page">
             <main-nav></main-nav>
-            
+
             <section class="title">
                 <button @click="jumpToLibrary" class="teal">Library</button>
                 <div class="shadow">
                     <div style="padding: 30px 0 20px 0;">
                         <h1>Shane's Day at the Park!</h1>
-                        <h3 class="chapter" v-html="questions[currentQuestion - 1].chapter"></h3>
+                        <h3 v-if="questions[currentQuestion - 1]" class="chapter"
+                            v-html="questions[currentQuestion - 1].chapter"></h3>
                     </div>
                 </div>
             </section>
@@ -17,7 +18,8 @@
                 <img src="~/assets/library/boy-at-the-park.webp" alt="image of a boy at the park"
                     class="boyAtThePark" />
                 <div class="container">
-                    <div v-if="currentQuestion !== totalQuestions" :key="currentQuestion">
+                    <div v-if="currentQuestion !== totalQuestions && questions[currentQuestion - 1]"
+                        :key="currentQuestion">
                         <p style="font-weight: 700;" class="chapter" v-html="questions[currentQuestion - 1].timeline">
                         </p>
                         <div class="line"></div>
@@ -33,36 +35,33 @@
                         </div>
                     </div>
 
-                    <div v-else>
+                    <div v-else-if="questions[currentQuestion - 1]">
                         <div v-if="topScore === 'D'">
                             <p style="font-weight: 700;" class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline">
-                            </p>
+                                v-html="questions[currentQuestion - 1].timeline"></p>
                             <div class="line dominance"></div>
                             <p v-html="questions[currentQuestion - 1].dominanceConclusion"></p>
                         </div>
                         <div v-if="topScore === 'I'">
                             <p style="font-weight: 700;" class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline">
-                            </p>
+                                v-html="questions[currentQuestion - 1].timeline"></p>
                             <div class="line influence"></div>
                             <p v-html="questions[currentQuestion - 1].influenceConclusion"></p>
                         </div>
                         <div v-if="topScore === 'S'">
                             <p style="font-weight: 700;" class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline">
-                            </p>
+                                v-html="questions[currentQuestion - 1].timeline"></p>
                             <div class="line steadiness" style="color: #0dab49;"></div>
                             <p v-html="questions[currentQuestion - 1].steadinessConclusion"></p>
                         </div>
                         <div v-else-if="topScore === 'C'">
                             <p style="font-weight: 700;" class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline">
-                            </p>
+                                v-html="questions[currentQuestion - 1].timeline"></p>
                             <div class="line consientousness"></div>
                             <p v-html="questions[currentQuestion - 1].conscientiousnessConclusion"></p>
                         </div>
                     </div>
+
                     <div v-if="currentQuestion === totalQuestions" class="button-wrapper">
                         <div v-if="topScore === 'D'">
                             <button class="gold disc" @click="breakdownModal = true">See Breakdown</button>
@@ -81,7 +80,6 @@
             </section>
         </section>
 
-        <!-- Breakdown MODAL -->
         <transition name="fade">
             <section v-if="breakdownModal" class="modal-window">
                 <div class="container" style="margin-top: 20px;">
@@ -180,6 +178,11 @@ export default {
     },
     data() {
         return {
+            sessionId:
+            this.$route.query.sessionId || this.$route.query.session || this.$route.params.sessionId || null,
+            valueToTrait: { 1: 'D', 2: 'I', 3: 'S', 4: 'C' },
+            traitToValue: { D: 1, I: 2, S: 3, C: 4 },
+
             currentQuestion: 1,
             totalQuestions: 26,
             topScore: '',
@@ -189,7 +192,6 @@ export default {
             SPercentage: 0,
             CPercentage: 0,
 
-            // Kid-friendly style titles/descriptions for the modal
             DstyleTitle: 'The Go-Getter',
             IstyleTitle: 'The Encourager',
             SstyleTitle: 'The Peacemaker',
@@ -303,10 +305,10 @@ export default {
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What should he do to keep the day rolling?</p>
                         `,
                     answers: [
-                        { text: "He mapped out a short obstacle course using cones, a hopscotch square, and the big tree as a marker.", value: 4, nextQuestion: 7 }, // C -> to 7? original mapping: answers go to 7/8/9/10. Keep same mapping as original: 1->7, 2->8, 3->9, 4->10. Adjust:
+                        { text: "He mapped out a short obstacle course using cones, a hopscotch square, and the big tree as a marker.", value: 4, nextQuestion: 7 }, // C
                         { text: "He started a cheerful countdown and invited anyone nearby to join the next game.", value: 2, nextQuestion: 8 },                   // I
                         { text: "He checked on a couple of kids sitting out and asked if they wanted easy roles to feel included.", value: 3, nextQuestion: 9 },    // S
-                        { text: "He challenged himself and a few others to try a timed run from the bench to the slide and back.", value: 1, nextQuestion: 7 },     // D (we need a D path to 7)
+                        { text: "He challenged himself and a few others to try a timed run from the bench to the slide and back.", value: 1, nextQuestion: 7 },     // D
                     ],
                 },
 
@@ -671,31 +673,118 @@ export default {
             ],
         };
     },
-    mounted() {
+    async mounted() {
         this.isClient = true;
+
+        if (!this.sessionId) return;
+
+        try {
+            const res = await this.$axios.$get(`/api/sessions/${this.sessionId}`, {
+                headers: {
+                    Authorization: `Bearer ${this.$store.state.token}`
+                }
+            });
+
+            const session = res.session || res;
+
+            if (!session) return;
+
+            if (session.answers && session.answers.length) {
+                const sorted = [...session.answers].sort(
+                    (a, b) => Number(a.questionId) - Number(b.questionId)
+                );
+                this.selectedAnswers = sorted.map(a => this.traitToValue[a.response]);
+            }
+
+            if (session.status === 'completed') {
+                this.currentQuestion = this.totalQuestions;
+                if (this.selectedAnswers.length) {
+                    this.calculateTotals();
+                }
+            } else {
+                const idx = typeof session.currentQuestionIndex === 'number'
+                    ? session.currentQuestionIndex
+                    : 0;
+                this.currentQuestion = idx + 1;
+            }
+        } catch (err) {
+            console.error('Error loading session:', err);
+        }
     },
     methods: {
-        selectAnswer(answer) {
-            if (this.selectedAnswers.length <= 8) {
-                this.selectedAnswers.push(answer.value); // Storing the value (D=1, I=2, S=3, C=4)
-                this.currentQuestion = answer.nextQuestion;
-            } else {
-                this.currentQuestion = answer.nextQuestion;
+        async selectAnswer(answer) {
+            const questionNumber = this.currentQuestion;
+            const questionId = String(questionNumber);
+            const value = answer.value;
+            const trait = this.valueToTrait[value];
+
+            const nextQuestion = answer.nextQuestion;
+            const nextQuestionIndex = nextQuestion - 1;
+            const isFinal = nextQuestion === this.totalQuestions;
+
+            this.selectedAnswers.push(value);
+            this.currentQuestion = nextQuestion;
+
+            console.log('SELECT ANSWER', {
+                sessionId: this.sessionId,
+                questionId,
+                trait,
+                nextQuestionIndex,
+                isFinal
+            });
+
+            if (this.sessionId) {
+                try {
+                    let scorePayload;
+                    if (isFinal) {
+                        this.calculateTotals();
+                        scorePayload = {
+                            total: this.selectedAnswers.length,
+                            breakdown: {
+                                D: Number(this.DPercentage),
+                                I: Number(this.IPercentage),
+                                S: Number(this.SPercentage),
+                                C: Number(this.CPercentage),
+                            },
+                        };
+                    }
+
+                    const res = await this.$axios.$post(
+                        `/api/sessions/${this.sessionId}/answer`,
+                        {
+                            questionId,
+                            response: trait,
+                            nextQuestionIndex,
+                            isFinal,
+                            score: scorePayload,
+                        },
+                        {
+                            headers: {
+                                Authorization: `Bearer ${this.$store.state.token}`
+                            }
+                        }
+                    );
+                    console.log('ANSWER SAVED', res);
+                } catch (err) {
+                    console.error('Error saving answer:', err);
+                }
+            } else if (isFinal) {
                 this.calculateTotals();
             }
         },
+
         jumpToLibrary(event) {
             window.location.href = '/';
-            event.target.blur();
+            if (event && event.target) {
+                event.target.blur();
+            }
         },
         calculateTotals() {
-            // Initialize counts for each personality trait
             let DCount = 0;
             let ICount = 0;
             let SCount = 0;
             let CCount = 0;
 
-            // Loop through the selected answers and count each personality trait
             this.selectedAnswers.forEach(answer => {
                 switch (answer) {
                     case 1:
@@ -715,14 +804,12 @@ export default {
                 }
             });
 
-            // Calculate total answers to get percentage
-            const totalAnswers = this.selectedAnswers.length;
+            const totalAnswers = this.selectedAnswers.length || 1; // avoid divide by zero
             const DPercentage = ((DCount / totalAnswers) * 100).toFixed(2);
             const IPercentage = ((ICount / totalAnswers) * 100).toFixed(2);
             const SPercentage = ((SCount / totalAnswers) * 100).toFixed(2);
             const CPercentage = ((CCount / totalAnswers) * 100).toFixed(2);
 
-            // You can also store these percentages in a new data property for further use
             this.DPercentage = DPercentage;
             this.IPercentage = IPercentage;
             this.SPercentage = SPercentage;
@@ -737,18 +824,13 @@ export default {
 
             if (topPercentage === parseFloat(this.DPercentage)) {
                 this.topScore = 'D';
-                console.log("Top personality trait: ", this.topScore);
             } else if (topPercentage === parseFloat(this.IPercentage)) {
                 this.topScore = 'I';
-                console.log("Top personality trait: ", this.topScore);
             } else if (topPercentage === parseFloat(this.SPercentage)) {
                 this.topScore = 'S';
-                console.log("Top personality trait: ", this.topScore);
             } else {
                 this.topScore = 'C';
-                console.log("Top personality trait: ", this.topScore);
             }
-
         }
     }
 }
@@ -757,7 +839,6 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
-
 
 .page {
     z-index: 10;
@@ -1021,7 +1102,6 @@ export default {
     font-weight: bold;
 }
 
-
 .line {
     background: #00A8FF;
     margin-top: -10px;
@@ -1050,7 +1130,7 @@ export default {
         .questionnaire {
             .container {
                 min-height: 543px !important;
-                padding: 0 16px 60px ;
+                padding: 0 16px 60px;
             }
         }
     }

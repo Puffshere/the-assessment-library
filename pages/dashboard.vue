@@ -46,7 +46,6 @@
 
                     <div class="panel">
                         <h2 class="panel-title">Your Assessments</h2>
-
                         <div v-if="!dashboard.sessions.length" class="empty-state">
                             <p>You haven’t started any assessments yet.</p>
                             <p>
@@ -54,9 +53,7 @@
                                 assessment, it will show up here.
                             </p>
                         </div>
-
                         <div v-else class="sessions">
-                            <!-- READY TO BEGIN -->
                             <div v-if="notStartedSessions.length" class="section-block">
                                 <h3>Ready to Begin</h3>
                                 <ul>
@@ -78,8 +75,6 @@
                                     </li>
                                 </ul>
                             </div>
-
-                            <!-- IN PROGRESS -->
                             <div v-if="inProgressSessions.length" class="section-block">
                                 <h3>In Progress</h3>
                                 <ul>
@@ -101,8 +96,6 @@
                                     </li>
                                 </ul>
                             </div>
-
-                            <!-- COMPLETED -->
                             <div v-if="completedSessions.length" class="section-block">
                                 <h3>Completed</h3>
                                 <ul>
@@ -127,8 +120,6 @@
                                     </li>
                                 </ul>
                             </div>
-
-                            <!-- Fallback if we somehow have sessions but none fit any bucket -->
                             <div v-if="
                                 !notStartedSessions.length &&
                                 !inProgressSessions.length &&
@@ -217,42 +208,34 @@ export default {
             })
         },
 
-        async goToSession(session) {
-            try {
-                // 1. Build slug from backend or fallback title
-                const titleToRoute = {
-                    "Shane's Day at the Park": 'shanes-day-at-the-park',
-                    "Allie's Professional Journey": 'allies-professional-journey',
-                    "Jessica's First Job": 'jessicas-first-job',
-                    "Roger's New Business": 'rogers-new-business'
-                };
-
-                const slug = session.assessmentSlug || titleToRoute[session.assessmentTitle];
-
-                if (!slug) {
-                    console.warn("No route mapping for session", session);
-                    return;
-                }
-
-                // 2. Mark the session as started (sets status = 'in_progress')
-                await this.$axios.$post(
-                    `/api/library/sessions/${session.id}/mark-started`,
-                    {},
-                    {
-                        headers: {
-                            Authorization: `Bearer ${this.$store.state.token}`
-                        }
-                    }
-                );
-
-                // 3. Navigate to the assessment page
-                this.$router.push(`/library/${slug}`);
-
-            } catch (err) {
-                console.error("Failed to mark session as started:", err);
-                alert("Could not start the assessment. Please try again.");
+        goToSession(session) {
+            const titleToRoute = {
+                "Shane's Day at the Park": 'shanes-day-at-the-park',
+                "Allie's Professional Journey": 'allies-professional-journey',
+                "Jessica's First Job": 'jessicas-first-job',
+                "Roger's New Business": 'rogers-new-business'
             }
+
+            const slug = session.assessmentSlug || titleToRoute[session.assessmentTitle]
+
+            if (!slug) {
+                console.warn('No route mapping for session', session)
+                return
+            }
+
+            const sessionId = session.id || session._id
+
+            if (!sessionId) {
+                console.warn('No sessionId on session', session)
+                return
+            }
+
+            this.$router.push({
+                path: `/library/${slug}`,
+                query: { sessionId }
+            })
         }
+
 
     },
 

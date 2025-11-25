@@ -1,7 +1,9 @@
 export const state = () => ({
   loggedIn: false,
   user: null,
-  token: null
+  token: null,
+
+  sessionsByAssessmentId: {}
 })
 
 export const mutations = {
@@ -13,6 +15,17 @@ export const mutations = {
   },
   SET_TOKEN(state, token) {
     state.token = token
+  },
+
+  SET_SESSION_FOR_ASSESSMENT(state, { assessmentId, session }) {
+    state.sessionsByAssessmentId = {
+      ...state.sessionsByAssessmentId,
+      [assessmentId]: session
+    }
+  },
+
+  CLEAR_SESSIONS(state) {
+    state.sessionsByAssessmentId = {}
   }
 }
 
@@ -32,6 +45,7 @@ export const actions = {
       }
     }
   },
+
   async login({ commit }, { email, password }) {
     try {
       const res = await this.$axios.$post('/api/auth/login', {
@@ -56,6 +70,7 @@ export const actions = {
       throw new Error(msg)
     }
   },
+
   async register({ commit }, { name, email, password }) {
     try {
       const res = await this.$axios.$post('/api/auth/register', {
@@ -81,10 +96,12 @@ export const actions = {
       throw new Error(msg)
     }
   },
+
   logout({ commit }) {
     commit('SET_LOGGED_IN', false)
     commit('SET_USER', null)
     commit('SET_TOKEN', null)
+    commit('CLEAR_SESSIONS') // 👈 also wipe sessions
 
     this.$axios.setToken(false)
 
