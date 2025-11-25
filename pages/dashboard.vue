@@ -55,7 +55,8 @@
                         </div>
                         <div v-else class="sessions">
                             <div v-if="notStartedSessions.length" class="section-block">
-                                <h3>Ready to Begin</h3>
+                                <h3 style="color: #e93d2f;">Ready to Begin</h3>
+                                <hr />
                                 <ul>
                                     <li v-for="s in notStartedSessions" :key="s.id" class="session-row">
                                         <div class="session-main">
@@ -76,7 +77,8 @@
                                 </ul>
                             </div>
                             <div v-if="inProgressSessions.length" class="section-block">
-                                <h3>In Progress</h3>
+                                <h3 style="color: #e93d2f;">In Progress</h3>
+                                <hr />
                                 <ul>
                                     <li v-for="s in inProgressSessions" :key="s.id" class="session-row">
                                         <div class="session-main">
@@ -97,7 +99,8 @@
                                 </ul>
                             </div>
                             <div v-if="completedSessions.length" class="section-block">
-                                <h3>Completed</h3>
+                                <h3 style="color: #e93d2f;">Completed</h3>
+                                <hr />
                                 <ul>
                                     <li v-for="s in completedSessions" :key="s.id" class="session-row">
                                         <div class="session-main">
