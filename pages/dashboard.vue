@@ -89,7 +89,7 @@
                                             </div>
                                         </div>
                                         <div class="session-actions">
-                                            <button class="outline small" @click="goToSession(s)">
+                                            <button class="outline small light" @click="goToSession(s)">
                                                 Resume
                                             </button>
                                         </div>
@@ -113,7 +113,7 @@
                                             </div>
                                         </div>
                                         <div class="session-actions">
-                                            <button class="outline small">
+                                            <button class="outline small green">
                                                 View Results
                                             </button>
                                         </div>
