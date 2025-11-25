@@ -1,65 +1,43 @@
-// models/Assessment.js
 const mongoose = require('mongoose');
 
-const questionSchema = new mongoose.Schema(
+const scenarioAnswerSchema = new mongoose.Schema(
   {
-    questionId: {
-      type: String,
-      required: true,
-    },
-    text: {
-      type: String,
-      required: true,
-    },
-    type: {
-      type: String,
-      enum: ['single_choice', 'multiple_choice', 'likert', 'open_ended'],
-      default: 'single_choice',
-    },
-    options: [
-      {
-        value: String,   // e.g. 'A', 'B', 'C', or numeric value
-        label: String,   // text shown to user
-        // Optional scoring info for DISC/etc:
-        scoreMap: {
-          type: Map,
-          of: Number,
-        },
-      },
-    ],
-    // Optional: weight, DISC dimension, etc.
+    text: { type: String, required: true },
+    value: { type: Number, required: true },
+    nextQuestion: { type: Number, required: true }
+  },
+  { _id: false }
+);
+
+const scenarioQuestionSchema = new mongoose.Schema(
+  {
+    chapter: { type: String },
+    timeline: { type: String },
+    question: { type: String },
+    answers: [scenarioAnswerSchema],
+
+    dominanceConclusion: String,
+    influenceConclusion: String,
+    steadinessConclusion: String,
+    conscientiousnessConclusion: String
   },
   { _id: false }
 );
 
 const assessmentSchema = new mongoose.Schema(
   {
-    slug: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
+    slug: { type: String, required: true, unique: true },
+    title: { type: String, required: true },
     description: String,
-    creditsCost: {
-      type: Number,
-      default: 1, // how many credits this assessment uses
-      min: 0,
-    },
-    isActive: {
-      type: Boolean,
-      default: true,
-    },
-    questions: [questionSchema],
+    creditsCost: { type: Number, default: 1, min: 0 },
+    isActive: { type: Boolean, default: true },
 
-    // Optional scoring config for DISC, etc.
+    questions: [scenarioQuestionSchema],
+
     scoringConfig: {
-      // example: store how to map each question/option to DISC scores
-      type: Object,
-    },
+      valueToTrait: { type: Map, of: String },
+      traitToValue: { type: Map, of: Number }
+    }
   },
   { timestamps: true }
 );

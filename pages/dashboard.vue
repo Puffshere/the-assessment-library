@@ -148,7 +148,6 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
-
     data() {
         return {
             loading: true,
@@ -163,7 +162,6 @@ export default {
             }
         }
     },
-
     computed: {
         notStartedSessions() {
             return this.dashboard.sessions.filter(
@@ -181,7 +179,6 @@ export default {
             return this.dashboard.sessions.filter(s => s.status === 'completed')
         }
     },
-
     async mounted() {
         this.loading = true
         this.error = null
@@ -198,7 +195,6 @@ export default {
             this.loading = false
         }
     },
-
     methods: {
         formatDate(dateStr) {
             if (!dateStr) return '—'
@@ -210,38 +206,32 @@ export default {
                 day: 'numeric'
             })
         },
-
         goToSession(session) {
-            const titleToRoute = {
+            const TITLE_TO_SLUG = {
                 "Shane's Day at the Park": 'shanes-day-at-the-park',
                 "Allie's Professional Journey": 'allies-professional-journey',
                 "Jessica's First Job": 'jessicas-first-job',
                 "Roger's New Business": 'rogers-new-business'
             }
 
-            const slug = session.assessmentSlug || titleToRoute[session.assessmentTitle]
+            const slug =
+                session.assessmentSlug ||
+                (session.assessment && session.assessment.slug) ||
+                TITLE_TO_SLUG[session.assessmentTitle] ||
+                null
 
             if (!slug) {
+                alert('We could not find a route for this assessment yet.')
                 console.warn('No route mapping for session', session)
-                return
-            }
-
-            const sessionId = session.id || session._id
-
-            if (!sessionId) {
-                console.warn('No sessionId on session', session)
                 return
             }
 
             this.$router.push({
                 path: `/library/${slug}`,
-                query: { sessionId }
+                query: { session: session.id || session._id }
             })
         }
-
-
     },
-
     head() {
         return {
             title: 'Dashboard | The Assessment Library',

@@ -58,6 +58,8 @@ app.post('/sessions', sessionsController.authenticate, sessionsController.create
 app.get('/sessions/:id', sessionsController.authenticate, sessionsController.getSessionById);
 app.post('/sessions/:id/answer', sessionsController.authenticate, sessionsController.saveAnswer);
 
+app.get('/assessments/:slug', assessmentController.getAssessmentBySlug);
+
 app.post('/upload', upload.single('file'), (req, res) => {
   uploadController.upload(req, res);
 });

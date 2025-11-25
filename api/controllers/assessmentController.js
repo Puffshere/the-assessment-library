@@ -97,7 +97,29 @@ const markSessionStarted = async (req, res) => {
   }
 };
 
+const getAssessmentBySlug = async (req, res) => {
+  try {
+    const { slug } = req.params;
+
+    const assessment = await Assessment.findOne({
+      slug,
+      isActive: true
+    }).lean();
+
+    if (!assessment) {
+      return res.status(404).json({ message: 'Assessment not found' });
+    }
+
+    return res.json({ assessment });
+  } catch (err) {
+    console.error('getAssessmentBySlug error:', err);
+    return res.status(500).json({ message: 'Server error' });
+  }
+};
+
+
 module.exports = {
   checkout,
   markSessionStarted,
+  getAssessmentBySlug
 };

@@ -1,10 +1,8 @@
-// api/controllers/dashboard.js
 const jwt = require('jsonwebtoken');
 
 let User = require('../models/User');
 User = User.default || User;
 
-// Ensure Assessment model is registered for populate()
 require('../models/Assessment');
 
 const AssessmentSession = require('../models/AssessmentSession');
@@ -42,25 +40,29 @@ exports.getDashboard = async function (req, res) {
       .sort({ updatedAt: -1 })
       .lean();
 
-    const formattedSessions = sessions.map((s) => {
-      const hasScore = s.score && typeof s.score === 'object';
+    const formattedSessions = sessions
+      .filter(s => s.assessment && s.assessment.slug)
+      .map((s) => {
+        const hasScore = s.score && typeof s.score === 'object';
 
-      return {
-        id: s._id,
-        assessmentTitle: s.assessment ? s.assessment.title : 'Unknown assessment',
-        assessmentSlug: s.assessment ? s.assessment.slug : null,
-        status: s.status || 'not_started',
-        startedAt: s.startedAt,
-        completedAt: s.completedAt,
-        scoreTotal:
-          hasScore && typeof s.score.total === 'number' ? s.score.total : null,
-        scoreBreakdown: hasScore && s.score.breakdown ? s.score.breakdown : null,
-        currentQuestionIndex:
-          typeof s.currentQuestionIndex === 'number'
-            ? s.currentQuestionIndex
-            : 0,
-      };
-    });
+        return {
+          id: s._id,
+          assessmentTitle: s.assessment.title,
+          assessmentSlug: s.assessment.slug,
+          status: s.status || 'not_started',
+          startedAt: s.startedAt,
+          completedAt: s.completedAt,
+          scoreTotal:
+            hasScore && typeof s.score.total === 'number'
+              ? s.score.total
+              : null,
+          scoreBreakdown: hasScore && s.score.breakdown ? s.score.breakdown : null,
+          currentQuestionIndex:
+            typeof s.currentQuestionIndex === 'number'
+              ? s.currentQuestionIndex
+              : 0,
+        };
+      });
 
     return res.json({
       user: {
@@ -74,7 +76,6 @@ exports.getDashboard = async function (req, res) {
     });
   } catch (err) {
     console.error('Error loading dashboard', err);
-    // Temporarily surface the real error while we’re debugging
     return res
       .status(500)
       .json({ message: err.message || 'Failed to load dashboard' });

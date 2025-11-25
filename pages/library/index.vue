@@ -24,14 +24,9 @@
 
                     <div class="col-6" style="margin-left: 70px;">
                         <!-- Jessica's First Job -->
-                        <img
-                            class="darkBlue"
-                            src="~assets/library/dark-blue-book.webp"
-                            alt="image of a dark blue book"
-                            :aria-disabled="checkingOut"
-                            :class="{ disabled: checkingOut }"
-                            @click="checkoutBook(books.jessica)"
-                        />
+                        <img class="darkBlue" src="~assets/library/dark-blue-book.webp" alt="image of a dark blue book"
+                            :aria-disabled="checkingOut" :class="{ disabled: checkingOut }"
+                            @click="checkoutBook(books.jessica)" />
                         <br />
                         <p class="title">Jessica's First Job</p>
                         <p>
@@ -42,14 +37,9 @@
 
                     <div class="col-6" style="margin-left: -70px;">
                         <!-- Roger's New Business -->
-                        <img
-                            class="red"
-                            src="~assets/library/red-book.webp"
-                            alt="image of a red book"
-                            :aria-disabled="checkingOut"
-                            :class="{ disabled: checkingOut }"
-                            @click="checkoutBook(books.roger)"
-                        />
+                        <img class="red" src="~assets/library/red-book.webp" alt="image of a red book"
+                            :aria-disabled="checkingOut" :class="{ disabled: checkingOut }"
+                            @click="checkoutBook(books.roger)" />
                         <br />
                         <p class="title redText">Roger's New Business</p>
                         <p>
@@ -66,14 +56,9 @@
 
                     <div class="col-6" style="margin-left: 70px;">
                         <!-- Allie's Professional Journey -->
-                        <img
-                            class="pink"
-                            src="~assets/library/pink-book.webp"
-                            alt="image of a pink book"
-                            :aria-disabled="checkingOut"
-                            :class="{ disabled: checkingOut }"
-                            @click="checkoutBook(books.allie)"
-                        />
+                        <img class="pink" src="~assets/library/pink-book.webp" alt="image of a pink book"
+                            :aria-disabled="checkingOut" :class="{ disabled: checkingOut }"
+                            @click="checkoutBook(books.allie)" />
                         <br />
                         <p class="title">Allie's Professional Journey</p>
                         <p>
@@ -84,14 +69,9 @@
 
                     <div class="col-6" style="margin-left: -70px;">
                         <!-- Shane's Day at the Park -->
-                        <img
-                            class="blue"
-                            src="~assets/library/blue-book.webp"
-                            alt="image of a blue book"
-                            :aria-disabled="checkingOut"
-                            :class="{ disabled: checkingOut }"
-                            @click="checkoutBook(books.shane)"
-                        />
+                        <img class="blue" src="~assets/library/blue-book.webp" alt="image of a blue book"
+                            :aria-disabled="checkingOut" :class="{ disabled: checkingOut }"
+                            @click="checkoutBook(books.shane)" />
                         <br />
                         <p class="title blueText">Shane's Day at the Park</p>
                         <p>
@@ -120,7 +100,6 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
-
     data() {
         return {
             checkingOut: false,
@@ -147,7 +126,7 @@ export default {
                     id: 'shane',
                     title: "Shane's Day at the Park",
                     slug: 'shanes-day-at-the-park',
-                    assessmentId: '69258acae9badcb4aafc2dd3'
+                    assessmentId: '6925f33de9badcb4aafc2df9'
                 }
             }
         }
@@ -164,7 +143,6 @@ export default {
         goDashboard() {
             this.$router.push('/dashboard')
         },
-
         async checkoutBook(book) {
             if (!book || !book.assessmentId) {
                 console.error('Book is missing assessmentId:', book)
@@ -194,10 +172,10 @@ export default {
                     },
                     token
                         ? {
-                              headers: {
-                                  Authorization: `Bearer ${token}`
-                              }
-                          }
+                            headers: {
+                                Authorization: `Bearer ${token}`
+                            }
+                        }
                         : {}
                 )
                 if (res.user) {
@@ -208,7 +186,7 @@ export default {
                 }
                 const sessionId =
                     res.sessionId ||
-                    res.sessionId === 0
+                        res.sessionId === 0
                         ? res.sessionId
                         : res.session?._id || res.session?.id
 
@@ -239,7 +217,6 @@ export default {
             }
         }
     },
-
     head() {
         return {
             title: 'Your Library | The Assessment Library',
@@ -360,14 +337,15 @@ export default {
         .col-6 {
             text-align: center;
 
-          .darkBlue,
-.pink,
-.blue,
-.red {
-    cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, border-radius 0.15s ease;
-    border-radius: 15px; /* ← Add this */
-}
+            .darkBlue,
+            .pink,
+            .blue,
+            .red {
+                cursor: pointer;
+                transition: transform 0.15s ease, box-shadow 0.15s ease, border-radius 0.15s ease;
+                border-radius: 15px;
+            }
+
             .darkBlue {
                 margin-top: 40px;
                 height: 170px;

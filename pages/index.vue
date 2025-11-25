@@ -4,7 +4,9 @@
 
         <section class="header">
             <img src="~assets/logo-without-background.png" alt="image of logo" class="logo" />
-            <button v-if="loggedIn === true" class="teal">Dashboard</button>
+            <button v-if="loggedIn" class="teal" @click="goToDashboard">
+                Dashboard
+            </button>
 
             <div class="container">
                 <div class="row">
@@ -149,6 +151,10 @@ export default {
         jumpToLogin(event) {
             event?.target?.blur()
             this.$router.push('/auth/login')
+        },
+        goToDashboard(event) {
+            event?.target?.blur()
+            this.$router.push('/dashboard')
         }
     }
 }

@@ -12,7 +12,8 @@
     "generate": "nuxt generate",
     "test": "ava",
     "proxy": "ngrok.exe http 3000 -subdomain=a24x7",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "load:shane": "node scripts/loadShaneQuestions.js"
   },
   "dependencies": {
     "@koa/cors": "^5.0.0",
