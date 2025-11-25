@@ -24,6 +24,7 @@
                 </div>
 
                 <div v-else class="grid">
+                    <!-- ACCOUNT OVERVIEW -->
                     <div class="panel">
                         <h2 class="panel-title">Account Overview</h2>
                         <p class="user-name">
@@ -44,8 +45,10 @@
                         </div>
                     </div>
 
+                    <!-- SESSIONS -->
                     <div class="panel">
                         <h2 class="panel-title">Your Assessments</h2>
+
                         <div v-if="!dashboard.sessions.length" class="empty-state">
                             <p>You haven’t started any assessments yet.</p>
                             <p>
@@ -53,82 +56,135 @@
                                 assessment, it will show up here.
                             </p>
                         </div>
+
                         <div v-else class="sessions">
+                            <!-- NOT STARTED -->
                             <div v-if="notStartedSessions.length" class="section-block">
                                 <h3 style="color: #e93d2f;">Ready to Begin</h3>
                                 <hr />
                                 <ul>
-                                    <li v-for="s in notStartedSessions" :key="s.id" class="session-row">
-                                        <div class="session-main">
-                                            <div class="session-title">
-                                                {{ s.assessmentTitle }}
+                                    <li
+                                        v-for="s in notStartedSessions"
+                                        :key="s.id"
+                                        class="session-row"
+                                    >
+                                        <div class="session-row-top">
+                                            <div class="session-main">
+                                                <div class="session-title">
+                                                    {{ s.assessmentTitle }}
+                                                </div>
+                                                <div class="session-meta">
+                                                    Added:
+                                                    <span>{{ formatDate(s.createdAt || s.startedAt) }}</span>
+                                                </div>
                                             </div>
-                                            <div class="session-meta">
-                                                Added:
-                                                <span>{{ formatDate(s.createdAt || s.startedAt) }}</span>
+                                            <div class="session-actions">
+                                                <button class="blue small" @click="goToSession(s)">
+                                                    Start
+                                                </button>
                                             </div>
-                                        </div>
-                                        <div class="session-actions">
-                                            <button class="blue small" @click="goToSession(s)">
-                                                Start
-                                            </button>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
+
+                            <!-- IN PROGRESS -->
                             <div v-if="inProgressSessions.length" class="section-block">
                                 <h3 style="color: #e93d2f;">In Progress</h3>
                                 <hr />
                                 <ul>
-                                    <li v-for="s in inProgressSessions" :key="s.id" class="session-row">
-                                        <div class="session-main">
-                                            <div class="session-title">
-                                                {{ s.assessmentTitle }}
+                                    <li
+                                        v-for="s in inProgressSessions"
+                                        :key="s.id"
+                                        class="session-row"
+                                        :class="{ 'has-progress': hasProgress(s) }"
+                                    >
+                                        <div class="session-row-top">
+                                            <div class="session-main">
+                                                <div class="session-title">
+                                                    {{ s.assessmentTitle }}
+                                                </div>
+                                                <div class="session-meta">
+                                                    Started:
+                                                    <span>{{ formatDate(s.startedAt) }}</span>
+                                                </div>
                                             </div>
-                                            <div class="session-meta">
-                                                Started:
-                                                <span>{{ formatDate(s.startedAt) }}</span>
+                                            <div class="session-actions">
+                                                <button
+                                                    class="outline small light"
+                                                    @click="goToSession(s)"
+                                                >
+                                                    Resume
+                                                </button>
                                             </div>
                                         </div>
-                                        <div class="session-actions">
-                                            <button class="outline small light" @click="goToSession(s)">
-                                                Resume
-                                            </button>
+
+                                        <!-- Progress bar lives under the row but aligned to the button -->
+                                        <div
+                                            v-if="hasProgress(s)"
+                                            class="session-progress"
+                                        >
+                                            <div class="progress-bar">
+                                                <div
+                                                    class="progress-bar-inner"
+                                                    :style="getProgressStyle(s)"
+                                                ></div>
+                                            </div>
+                                            <div class="progress-label">
+                                                {{ getProgressLabel(s) }}
+                                            </div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
+
+                            <!-- COMPLETED -->
                             <div v-if="completedSessions.length" class="section-block">
                                 <h3 style="color: #e93d2f;">Completed</h3>
                                 <hr />
                                 <ul>
-                                    <li v-for="s in completedSessions" :key="s.id" class="session-row">
-                                        <div class="session-main">
-                                            <div class="session-title">
-                                                {{ s.assessmentTitle }}
+                                    <li
+                                        v-for="s in completedSessions"
+                                        :key="s.id"
+                                        class="session-row"
+                                    >
+                                        <div class="session-row-top">
+                                            <div class="session-main">
+                                                <div class="session-title">
+                                                    {{ s.assessmentTitle }}
+                                                </div>
+                                                <div class="session-meta">
+                                                    Completed:
+                                                    <span>{{ formatDate(s.completedAt) }}</span>
+                                                    <span
+                                                        v-if="s.scoreTotal !== null"
+                                                        class="score-pill"
+                                                    >
+                                                        Score: {{ s.scoreTotal }}
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <div class="session-meta">
-                                                Completed:
-                                                <span>{{ formatDate(s.completedAt) }}</span>
-                                                <span v-if="s.scoreTotal !== null" class="score-pill">
-                                                    Score: {{ s.scoreTotal }}
-                                                </span>
+                                            <div class="session-actions">
+                                                <button class="outline small green">
+                                                    View Results
+                                                </button>
                                             </div>
-                                        </div>
-                                        <div class="session-actions">
-                                            <button class="outline small green">
-                                                View Results
-                                            </button>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                            <div v-if="
-                                !notStartedSessions.length &&
-                                !inProgressSessions.length &&
-                                !completedSessions.length
-                            " class="empty-state">
-                                <p>Assessments found, but none are in-progress or completed yet.</p>
+
+                            <div
+                                v-if="
+                                    !notStartedSessions.length &&
+                                    !inProgressSessions.length &&
+                                    !completedSessions.length
+                                "
+                                class="empty-state"
+                            >
+                                <p>
+                                    Assessments found, but none are in-progress or completed yet.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -230,6 +286,78 @@ export default {
                 path: `/library/${slug}`,
                 query: { session: session.id || session._id }
             })
+        },
+        hasProgress(session) {
+            return (
+                typeof session.currentQuestionIndex === 'number' &&
+                session.currentQuestionIndex >= 0
+            )
+        },
+        getChapterProgress(session) {
+            const totalChapters = 10
+            const idx = Number(session.currentQuestionIndex) || 0
+
+            const estimatedChapter =
+                Math.floor((idx / Math.max(session.totalQuestions || 26, 1)) * totalChapters) +
+                1
+
+            const currentChapter = Math.min(
+                totalChapters,
+                Math.max(1, estimatedChapter)
+            )
+            const percent = (currentChapter / totalChapters) * 100
+
+            return { currentChapter, totalChapters, percent }
+        },
+        getProgressLabel(session) {
+            const { currentChapter, totalChapters } = this.getChapterProgress(
+                session
+            )
+            return `Chapter ${currentChapter} of ${totalChapters}`
+        },
+        getProgressPercent(session) {
+            return this.getChapterProgress(session).percent
+        },
+        getTopTrait(session) {
+            const breakdown =
+                session.scoreBreakdown ||
+                (session.score && session.score.breakdown) ||
+                null
+
+            if (!breakdown) return null
+
+            const entries = Object.entries(breakdown).filter(
+                ([trait, value]) =>
+                    ['D', 'I', 'S', 'C'].includes(trait) &&
+                    typeof value === 'number'
+            )
+
+            if (!entries.length) return null
+
+            entries.sort((a, b) => b[1] - a[1])
+            return entries[0][0]
+        },
+        getTraitColor(session) {
+            const top = this.getTopTrait(session)
+
+            switch (top) {
+                case 'D':
+                    return '#e93d2f'
+                case 'I':
+                    return '#ffbd05'
+                case 'S':
+                    return '#0dab49'
+                case 'C':
+                    return '#1666ff'
+                default:
+                    return '#00A8FF'
+            }
+        },
+        getProgressStyle(session) {
+            return {
+                width: this.getProgressPercent(session) + '%',
+                '--progress-color': this.getTraitColor(session)
+            }
         }
     },
     head() {
@@ -262,13 +390,15 @@ export default {
         min-height: 160px;
 
         &:after {
-            background: linear-gradient(to right,
-                    $color-d 25%,
-                    $color-i 25%,
-                    $color-i 50%,
-                    $color-s 50%,
-                    $color-s 75%,
-                    $color-c 75%);
+            background: linear-gradient(
+                to right,
+                $color-d 25%,
+                $color-i 25%,
+                $color-i 50%,
+                $color-s 50%,
+                $color-s 75%,
+                $color-c 75%
+            );
             position: absolute;
             content: '';
             height: 10px;
@@ -359,7 +489,7 @@ export default {
     }
 
     .sessions {
-        .section-block+.section-block {
+        .section-block + .section-block {
             margin-top: 24px;
         }
 
@@ -375,15 +505,22 @@ export default {
         }
 
         .session-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             padding: 10px 0;
             border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
             &:last-child {
                 border-bottom: none;
             }
+
+            &.has-progress {
+                padding-bottom: 12px;
+            }
+        }
+
+        .session-row-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .session-main {
@@ -422,13 +559,41 @@ export default {
                 padding: 6px 10px;
             }
         }
+
+        .session-progress {
+            margin-top: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .progress-bar {
+            width: 170px;
+            height: 6px;
+            border-radius: 999px;
+            background: #e4edf7;
+            overflow: hidden;
+        }
+
+        .progress-bar-inner {
+            height: 100%;
+            border-radius: inherit;
+            background-color: var(--progress-color, #00a8ff);
+            transition: width 0.35s ease, background-color 0.2s ease;
+        }
+
+        .progress-label {
+            font-size: 11px;
+            margin-top: 2px;
+            color: #143180;
+        }
     }
 
     .empty-state {
         font-size: 14px;
         color: #555;
 
-        p+p {
+        p + p {
             margin-top: 6px;
         }
     }
