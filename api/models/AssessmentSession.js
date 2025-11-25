@@ -49,8 +49,8 @@ const assessmentSessionSchema = new mongoose.Schema(
 
     status: {
       type: String,
-      enum: ['in_progress', 'completed', 'abandoned'],
-      default: 'in_progress',
+      enum: ['not_started', 'in_progress', 'completed', 'abandoned'],
+      default: 'not_started',
       index: true,
     },
 

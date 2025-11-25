@@ -56,6 +56,30 @@
                         </div>
 
                         <div v-else class="sessions">
+                            <!-- READY TO BEGIN -->
+                            <div v-if="notStartedSessions.length" class="section-block">
+                                <h3>Ready to Begin</h3>
+                                <ul>
+                                    <li v-for="s in notStartedSessions" :key="s.id" class="session-row">
+                                        <div class="session-main">
+                                            <div class="session-title">
+                                                {{ s.assessmentTitle }}
+                                            </div>
+                                            <div class="session-meta">
+                                                Added:
+                                                <span>{{ formatDate(s.createdAt || s.startedAt) }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="session-actions">
+                                            <button class="blue small" @click="goToSession(s)">
+                                                Start
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- IN PROGRESS -->
                             <div v-if="inProgressSessions.length" class="section-block">
                                 <h3>In Progress</h3>
                                 <ul>
@@ -70,7 +94,7 @@
                                             </div>
                                         </div>
                                         <div class="session-actions">
-                                            <button class="outline small">
+                                            <button class="outline small" @click="goToSession(s)">
                                                 Resume
                                             </button>
                                         </div>
@@ -78,6 +102,7 @@
                                 </ul>
                             </div>
 
+                            <!-- COMPLETED -->
                             <div v-if="completedSessions.length" class="section-block">
                                 <h3>Completed</h3>
                                 <ul>
@@ -103,7 +128,12 @@
                                 </ul>
                             </div>
 
-                            <div v-if="!inProgressSessions.length && !completedSessions.length" class="empty-state">
+                            <!-- Fallback if we somehow have sessions but none fit any bucket -->
+                            <div v-if="
+                                !notStartedSessions.length &&
+                                !inProgressSessions.length &&
+                                !completedSessions.length
+                            " class="empty-state">
                                 <p>Assessments found, but none are in-progress or completed yet.</p>
                             </div>
                         </div>
@@ -141,8 +171,17 @@ export default {
     },
 
     computed: {
+        notStartedSessions() {
+            return this.dashboard.sessions.filter(
+                s =>
+                    s.status === 'not_started' ||
+                    (!s.startedAt && s.status !== 'completed')
+            )
+        },
         inProgressSessions() {
-            return this.dashboard.sessions.filter(s => s.status === 'in_progress')
+            return this.dashboard.sessions.filter(
+                s => s.status === 'in_progress' && s.startedAt
+            )
         },
         completedSessions() {
             return this.dashboard.sessions.filter(s => s.status === 'completed')
@@ -176,7 +215,45 @@ export default {
                 month: 'short',
                 day: 'numeric'
             })
+        },
+
+        async goToSession(session) {
+            try {
+                // 1. Build slug from backend or fallback title
+                const titleToRoute = {
+                    "Shane's Day at the Park": 'shanes-day-at-the-park',
+                    "Allie's Professional Journey": 'allies-professional-journey',
+                    "Jessica's First Job": 'jessicas-first-job',
+                    "Roger's New Business": 'rogers-new-business'
+                };
+
+                const slug = session.assessmentSlug || titleToRoute[session.assessmentTitle];
+
+                if (!slug) {
+                    console.warn("No route mapping for session", session);
+                    return;
+                }
+
+                // 2. Mark the session as started (sets status = 'in_progress')
+                await this.$axios.$post(
+                    `/api/library/sessions/${session.id}/mark-started`,
+                    {},
+                    {
+                        headers: {
+                            Authorization: `Bearer ${this.$store.state.token}`
+                        }
+                    }
+                );
+
+                // 3. Navigate to the assessment page
+                this.$router.push(`/library/${slug}`);
+
+            } catch (err) {
+                console.error("Failed to mark session as started:", err);
+                alert("Could not start the assessment. Please try again.");
+            }
         }
+
     },
 
     head() {

@@ -4,7 +4,6 @@
 
         <section class="header">
             <img src="~assets/logo-without-background.png" alt="image of logo" class="logo" />
-            <button class="teal" @click="goDashboard">Dashboard</button>
 
             <div class="container">
                 <div class="row">
@@ -18,15 +17,21 @@
             <div class="container">
                 <div class="backpanel" aria-hidden="true"></div>
 
+                <!-- ADULT SHELF -->
                 <div class="shelf"></div>
                 <div class="row">
                     <h4>Adult Shelf</h4>
 
                     <div class="col-6" style="margin-left: 70px;">
-                        <nuxt-link to="/library/jessicas-first-job">
-                            <img class="darkBlue" src="~assets/library/dark-blue-book.webp"
-                                alt="image of a dark blue book" />
-                        </nuxt-link>
+                        <!-- Jessica's First Job -->
+                        <img
+                            class="darkBlue"
+                            src="~assets/library/dark-blue-book.webp"
+                            alt="image of a dark blue book"
+                            :aria-disabled="checkingOut"
+                            :class="{ disabled: checkingOut }"
+                            @click="checkoutBook(books.jessica)"
+                        />
                         <br />
                         <p class="title">Jessica's First Job</p>
                         <p>
@@ -36,9 +41,15 @@
                     </div>
 
                     <div class="col-6" style="margin-left: -70px;">
-                        <nuxt-link to="/library/shanes-day-at-the-park">
-                            <img class="red" src="~assets/library/red-book.webp" alt="image of a red book" />
-                        </nuxt-link>
+                        <!-- Roger's New Business -->
+                        <img
+                            class="red"
+                            src="~assets/library/red-book.webp"
+                            alt="image of a red book"
+                            :aria-disabled="checkingOut"
+                            :class="{ disabled: checkingOut }"
+                            @click="checkoutBook(books.roger)"
+                        />
                         <br />
                         <p class="title redText">Roger's New Business</p>
                         <p>
@@ -48,14 +59,21 @@
                     </div>
                 </div>
 
+                <!-- KIDS SHELF -->
                 <div class="shelf"></div>
                 <div class="row">
                     <h4>Kids Shelf</h4>
 
                     <div class="col-6" style="margin-left: 70px;">
-                        <nuxt-link to="/library/allies-professional-journey">
-                            <img class="pink" src="~assets/library/pink-book.webp" alt="image of a pink book" />
-                        </nuxt-link>
+                        <!-- Allie's Professional Journey -->
+                        <img
+                            class="pink"
+                            src="~assets/library/pink-book.webp"
+                            alt="image of a pink book"
+                            :aria-disabled="checkingOut"
+                            :class="{ disabled: checkingOut }"
+                            @click="checkoutBook(books.allie)"
+                        />
                         <br />
                         <p class="title">Allie's Professional Journey</p>
                         <p>
@@ -65,9 +83,15 @@
                     </div>
 
                     <div class="col-6" style="margin-left: -70px;">
-                        <nuxt-link to="/library/shanes-day-at-the-park">
-                            <img class="blue" src="~assets/library/blue-book.webp" alt="image of a blue book" />
-                        </nuxt-link>
+                        <!-- Shane's Day at the Park -->
+                        <img
+                            class="blue"
+                            src="~assets/library/blue-book.webp"
+                            alt="image of a blue book"
+                            :aria-disabled="checkingOut"
+                            :class="{ disabled: checkingOut }"
+                            @click="checkoutBook(books.shane)"
+                        />
                         <br />
                         <p class="title blueText">Shane's Day at the Park</p>
                         <p>
@@ -90,16 +114,143 @@ import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
     middleware: ['auth'],
+
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
-    methods: {
-        goDashboard() {
-            this.$router.push('/library')
+
+    data() {
+        return {
+            checkingOut: false,
+            // Map each book to its assessment + route info
+            books: {
+                jessica: {
+                    id: 'jessica',
+                    title: "Jessica's First Job",
+                    slug: 'jessicas-first-job', // ✅ slug for URL
+                    // ✅ put the real Assessment _id from MongoDB here
+                    assessmentId: '69258aa1e9badcb4aafc2dcd'
+                },
+                roger: {
+                    id: 'roger',
+                    title: "Roger's New Business",
+                    slug: 'rogers-new-business', // ✅ slug for URL
+                    assessmentId: '69258ab0e9badcb4aafc2dcf'
+                },
+                allie: {
+                    id: 'allie',
+                    title: "Allie's Professional Journey",
+                    slug: 'allies-professional-journey', // ✅ slug for URL
+                    assessmentId: '69258abde9badcb4aafc2dd1'
+                },
+                shane: {
+                    id: 'shane',
+                    title: "Shane's Day at the Park",
+                    slug: 'shanes-day-at-the-park', // ✅ slug for URL
+                    assessmentId: '69258acae9badcb4aafc2dd3'
+                }
+            }
         }
     },
+
+    computed: {
+        loggedIn() {
+            return this.$store.state.loggedIn
+        },
+        currentUser() {
+            return this.$store.state.user
+        }
+    },
+
+    methods: {
+        goDashboard() {
+            this.$router.push('/dashboard')
+        },
+
+        async checkoutBook(book) {
+            if (!book || !book.assessmentId) {
+                console.error('Book is missing assessmentId:', book)
+                return
+            }
+
+            if (!this.loggedIn) {
+                this.$router.push('/auth/login')
+                return
+            }
+
+            const confirmed = window.confirm(
+                `Spend 1 credit to start "${book.title}"?`
+            )
+            if (!confirmed) return
+
+            if (this.checkingOut) return
+            this.checkingOut = true
+
+            try {
+                const token = this.$store.state.token
+
+                const res = await this.$axios.$post(
+                    '/api/library/checkout',
+                    {
+                        // ✅ send the Assessment ObjectId, not slug
+                        assessmentId: book.assessmentId
+                    },
+                    token
+                        ? {
+                              headers: {
+                                  Authorization: `Bearer ${token}`
+                              }
+                          }
+                        : {}
+                )
+
+                // Optional: update user in Vuex if backend returns it
+                if (res.user) {
+                    this.$store.commit('SET_USER', {
+                        ...(this.currentUser || {}),
+                        ...res.user
+                    })
+                }
+
+                // ✅ Get sessionId from response
+                const sessionId =
+                    res.sessionId ||
+                    res.sessionId === 0
+                        ? res.sessionId
+                        : res.session?._id || res.session?.id
+
+                if (!sessionId) {
+                    console.error('No sessionId returned from checkout:', res)
+                    alert(
+                        'Assessment started but no session ID was returned. Please contact support.'
+                    )
+                    return
+                }
+
+                // ✅ Go straight into the assessment session
+                this.$router.push(
+                    `/dashboard`
+                )
+            } catch (err) {
+                const code = err?.response?.data?.code
+                const msg = err?.response?.data?.message
+
+                if (code === 'INSUFFICIENT_CREDITS') {
+                    alert(
+                        'You do not have enough credits to start this assessment. Please purchase more credits from your Dashboard.'
+                    )
+                } else {
+                    console.error('Checkout error:', err)
+                    alert(msg || 'Error starting assessment. Please try again.')
+                }
+            } finally {
+                this.checkingOut = false
+            }
+        }
+    },
+
     head() {
         return {
             title: 'Your Library | The Assessment Library',
@@ -108,6 +259,7 @@ export default {
     }
 }
 </script>
+
 
 <style scoped lang="scss">
 @import '~assets/scss/vars';
@@ -219,30 +371,49 @@ export default {
         .col-6 {
             text-align: center;
 
+          .darkBlue,
+.pink,
+.blue,
+.red {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-radius 0.15s ease;
+    border-radius: 15px; /* ← Add this */
+}
             .darkBlue {
                 margin-top: 40px;
                 height: 170px;
                 width: auto;
-                cursor: pointer;
             }
 
             .pink {
                 margin-top: 40px;
                 height: 170px;
                 width: auto;
-                cursor: pointer;
             }
 
             .blue {
                 width: 200px;
                 margin-top: 60px;
-                cursor: pointer;
             }
 
             .red {
                 width: 150px;
                 margin-top: 40px;
-                cursor: pointer;
+            }
+
+            .darkBlue:hover,
+            .pink:hover,
+            .blue:hover,
+            .red:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+            }
+
+            .disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                transform: none !important;
+                box-shadow: none !important;
             }
 
             .title {

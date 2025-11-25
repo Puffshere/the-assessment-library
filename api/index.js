@@ -14,6 +14,8 @@ const app = express();
 
 const connectionString = process.env.MONGO_URI
 const dashboardRoutes = require('./routes/dashboard');
+const libraryRoutes = require('./routes/library');
+
 
 if (!connectionString) {
   console.error('❌ MONGO_URI is not defined. Please set it in your .env file.');
@@ -34,6 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/auth', authRoutes);
 app.use('/dashboard', dashboardRoutes);
+app.use('/library', libraryRoutes);
 
 app.get('/', (req, res) => {
   res.json({
