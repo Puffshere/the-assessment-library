@@ -459,6 +459,7 @@ export default {
             h1 {
                 line-height: 1.25em;
                 margin-bottom: 40px;
+                margin-top: 10px;
             }
 
             .teal {

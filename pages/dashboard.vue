@@ -451,6 +451,12 @@ export default {
         box-shadow: 5px 5px 10px #0814368e;
         min-height: 160px;
 
+        h1 {
+            line-height: 1.25em;
+            margin-bottom: 30px !important;
+            margin-top: 10px;
+        }
+
         .logo {
             width: 270px;
             position: absolute;
@@ -700,25 +706,42 @@ export default {
             .logo {
                 position: relative;
                 width: 300px;
-                left: 0px;
-                top: 0px;
+                left: 0;
+                top: 0;
                 margin-bottom: -40px;
                 margin-top: -50px;
             }
         }
 
+        /* stack everything in a single column */
         .grid {
             flex-direction: column;
         }
 
+        /* make all panels full width */
+        .panel,
+        .panel-assessments {
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        /* let the assessments panel grow with its content */
         .panel-assessments {
             max-height: none;
             min-height: auto;
 
-            .panel-assessments .scroll-area {
+            /* fix: target its scroll area directly */
+            .scroll-area {
                 overflow-y: visible;
+                max-height: none;
+            }
+
+            button {
+                width: 110px;
             }
         }
     }
 }
+
 </style>

@@ -57,10 +57,10 @@
                     </li>
                 </ul>
                 <div class="mobile-actions">
-                    <button v-if="loggedIn" class="green full" @click="logoutAndGoHome">
+                    <button v-if="loggedIn" class="steel" @click="logoutAndGoHome">
                         Sign Out
                     </button>
-                    <button v-else type="button" class="green action-btn" @click="goToLogin">
+                    <button v-else type="button" class="steel" @click="goToLogin">
                         Sign In
                     </button>
                 </div>
@@ -285,7 +285,6 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
-/* --- Mobile drawer --- */
 .backdrop.mobile {
     position: fixed;
     inset: 0;
@@ -387,7 +386,7 @@ $shadow: rgba(0, 0, 0, 0.08);
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-    width: 90px !important;
+    width: 90px;
     border: none;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
@@ -398,6 +397,15 @@ $shadow: rgba(0, 0, 0, 0.08);
 
 .green {
     margin-left: 150px;
+    color: #fff;
+    background: #008b67;
+
+    &:hover {
+        filter: saturate(110%);
+    }
+}
+
+.steel {
     color: #fff;
     background: #008b67;
 
@@ -474,4 +482,6 @@ $shadow: rgba(0, 0, 0, 0.08);
         margin-left: 120px;
     }
 }
+
+@media (min-width: 600px) {}
 </style>
