@@ -3,6 +3,7 @@
         <main-nav />
 
         <section class="header">
+            <img src="~assets/logo-without-background.png" alt="image of logo" class="logo" />
             <div class="container">
                 <div class="row">
                     <h1>Your Library Dashboard</h1>
@@ -23,68 +24,9 @@
                     {{ error }}
                 </div>
                 <div v-else class="grid">
-                    <div class="panel panel-wide">
-                        <div v-if="selectedResult">
-                            <h2 class="panel-title">
-                                Results for {{ selectedResult.assessmentTitle }}
-                            </h2>
-
-                            <div class="results-layout">
-                                <!-- Chart -->
-                                <div class="chart-col">
-                                    <div class="chart">
-                                        <div class="bar"
-                                            :style="{ height: DPercentage + '%', backgroundColor: '#f44336' }"
-                                            :title="'D: ' + DPercentage + '%'">
-                                            <div class="label">D</div>
-                                        </div>
-                                        <div class="bar"
-                                            :style="{ height: IPercentage + '%', backgroundColor: '#ffbd05' }"
-                                            :title="'I: ' + IPercentage + '%'">
-                                            <div class="label">I</div>
-                                        </div>
-                                        <div class="bar"
-                                            :style="{ height: SPercentage + '%', backgroundColor: '#0dab49' }"
-                                            :title="'S: ' + SPercentage + '%'">
-                                            <div class="label">S</div>
-                                        </div>
-                                        <div class="bar"
-                                            :style="{ height: CPercentage + '%', backgroundColor: '#1666ff' }"
-                                            :title="'C: ' + CPercentage + '%'">
-                                            <div class="label">C</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Text -->
-                                <div class="text-col">
-                                    <h5>These are your results.</h5>
-                                    <hr class="shortLine top" />
-                                    <ul>
-                                        <li>This is your D percentage: {{ DPercentage }}</li>
-                                        <li>This is your I percentage: {{ IPercentage }}</li>
-                                        <li>This is your S percentage: {{ SPercentage }}</li>
-                                        <li>This is your C percentage: {{ CPercentage }}</li>
-                                    </ul>
-
-                                    <h5 class="mt-16">Your primary style</h5>
-                                    <hr class="shortLine bottom" />
-
-                                    <p v-if="topScore" class="type">
-                                        <strong>{{ styleTitle }}</strong>
-                                        {{ styleDescription }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Default content when nothing is selected -->
-                        <div v-else>
-                            <h2 class="panel-title">Overall Totals</h2>
-                            <p>Assessments Started: {{ dashboard.sessions.length }}</p>
-                            <p>Assessments Completed: {{ completedSessions.length }}</p>
-                        </div>
-                    </div>
+                    <results-panel :selected-result="selectedResult" :sessions="dashboard.sessions"
+                        :assessments-started="dashboard.sessions.length"
+                        :assessments-completed="completedSessions.length" @clear-results="selectedResult = null" />
 
                     <!-- ACCOUNT OVERVIEW -->
                     <div class="panel">
@@ -237,7 +179,8 @@ export default {
 
     components: {
         'main-nav': () => import('@/components/Nav'),
-        'footer-fold': () => import('@/components/Footer')
+        'footer-fold': () => import('@/components/Footer'),
+        'results-panel': () => import('@/components/ResultsPanel.vue')
     },
     data() {
         return {
@@ -494,7 +437,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
 
@@ -506,6 +449,13 @@ export default {
         position: relative;
         box-shadow: 5px 5px 10px #0814368e;
         min-height: 160px;
+
+        .logo {
+            width: 270px;
+            position: absolute;
+            left: 80px;
+            top: -25px;
+        }
 
         &:after {
             background: linear-gradient(to right,
@@ -583,14 +533,6 @@ export default {
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
         }
-    }
-
-    .panel-wide {
-        flex: 0 0 100%;
-        max-width: 100%;
-        height: 450px;
-        display: flex;
-        flex-direction: column;
     }
 
     .panel-title {
@@ -747,59 +689,25 @@ export default {
             margin-top: 6px;
         }
     }
-
-    .results-layout {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-
-        h5 {
-            margin-top: 15px;
-        }
-    }
-
-    .chart-col {
-        flex: 0 0 260px;
-    }
-
-    .text-col {
-        flex: 1 1 260px;
-    }
-
-    .chart {
-        display: flex;
-        align-items: flex-end;
-        gap: 12px;
-        height: 180px;
-
-        .bar {
-            flex: 1 1 0;
-            border-radius: 6px 6px 0 0;
-            position: relative;
-        }
-
-        .label {
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-weight: 600;
-        }
-    }
-
-    .mt-16 {
-        margin-top: 16px;
-    }
 }
 
 @media (max-width: 768px) {
     .dashboard {
-        .grid {
-            flex-direction: column;
+        .header {
+            padding: 40px 16px 30px;
+
+            .logo {
+                position: relative;
+                width: 300px;
+                left: 0px;
+                top: 0px;
+                margin-bottom: -40px;
+                margin-top: -50px;
+            }
         }
 
-        .panel-wide {
-            height: auto;
+        .grid {
+            flex-direction: column;
         }
 
         .panel-assessments {
