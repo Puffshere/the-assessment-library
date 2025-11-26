@@ -24,6 +24,35 @@ const scenarioQuestionSchema = new mongoose.Schema(
   { _id: false }
 );
 
+// ✅ NEW: category sub-schema (no _id)
+const categorySchema = new mongoose.Schema(
+  {
+    // Top-level shelf: Adult / Kids
+    shelf: {
+      type: String,
+      enum: ['Adult', 'Kids'],
+      required: true
+    },
+
+    // Subcategories under that shelf
+    subcategories: [
+      {
+        type: String,
+        enum: [
+          'Relationships',
+          'Career',
+          'Sports',
+          'School',
+          'Playground',
+          'Personal Growth',
+          'Life Skills'
+        ]
+      }
+    ]
+  },
+  { _id: false }
+);
+
 const assessmentSchema = new mongoose.Schema(
   {
     slug: { type: String, required: true, unique: true },
@@ -31,6 +60,9 @@ const assessmentSchema = new mongoose.Schema(
     description: String,
     creditsCost: { type: Number, default: 1, min: 0 },
     isActive: { type: Boolean, default: true },
+
+    // ✅ attach category here
+    category: categorySchema,
 
     questions: [scenarioQuestionSchema],
 

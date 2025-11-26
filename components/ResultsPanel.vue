@@ -10,11 +10,38 @@
                 </template>
             </h2>
 
+            <!-- Overall dominant trait (only in overall mode) -->
             <p v-if="!selectedResult && overallTopTraitTitle" class="overall-top-trait"
                 :style="{ color: overallTopTraitColor }">
                 <span class="overall-top-label">Overall Dominant Trait:</span><br />
                 <span class="overall-top-name">{{ overallTopTraitTitle }}</span>
             </p>
+
+            <!-- Custom Dropdown -->
+            <div class="category-dropdown" v-if="!selectedResult">
+                <button class="dropdown-button" @click="toggleDropdown" :style="{ backgroundColor: dropdownColor }">
+                    {{ selectedCategoryLabel }}
+                    <span class="arrow">▾</span>
+                </button>
+
+                <div v-if="dropdownOpen" class="dropdown-menu">
+                    <div class="group">
+                        <div class="group-label">Adult</div>
+                        <div class="item" @click="pickCategory('all')">All assessments</div>
+                        <div class="item" v-for="opt in adultOptions" :key="opt.value" @click="pickCategory(opt.value)">
+                            {{ opt.label }}
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="group-label">Kids</div>
+                        <div class="item" v-for="opt in kidsOptions" :key="opt.value" @click="pickCategory(opt.value)">
+                            {{ opt.label }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <button v-if="selectedResult" class="red" @click="$emit('clear-results')"
                 aria-label="Clear selected results">
@@ -22,6 +49,7 @@
             </button>
         </div>
 
+        <!-- DETAIL VIEW (single assessment) -->
         <div v-if="selectedResult" class="results-layout">
             <div class="chart-col">
                 <div class="chart" v-if="hasData">
@@ -66,6 +94,7 @@
             </div>
         </div>
 
+        <!-- OVERALL VIEW -->
         <div v-else class="overall-layout">
             <div v-if="hasData" class="overall-chart">
                 <div class="chart">
@@ -96,8 +125,11 @@
             </p>
 
             <h6 class="overall-meta">
-                <p>Assessments Completed: {{ assessmentsCompleted }}</p>
-                <p>Assessments Started: {{ assessmentsStarted }}</p>
+                <p>Assessments Started: <span style="font-size: 24px; margin-left: 10px;">{{ assessmentsStarted
+                        }}</span></p>
+                <p>Assessments Completed: <span style="font-size: 24px; margin-left: 10px;">{{ assessmentsCompleted
+                        }}</span>
+                </p>
             </h6>
         </div>
     </div>
@@ -143,15 +175,62 @@ export default {
             default: 0
         }
     },
+    data() {
+        return {
+            // null = all assessments
+            // other values are "shelf:Adult", "shelf:Kids", "sub:Relationships", etc.
+            selectedCategoryFilter: 'all',
+            dropdownOpen: false
+        }
+    },
     computed: {
+        dropdownColor() {
+            // If we have data for the current filter, use that trait color.
+            // Otherwise fall back to your teal-ish default.
+            return this.hasData ? this.overallTopTraitColor : '#86d6ee'
+        },
+        // 🔽 Build a list of available category filters from sessions
+        selectedCategoryLabel() {
+            const map = {
+                all: 'All assessments',
+                'shelf:Adult': 'Adult',
+                'shelf:Kids': 'Kids',
+                'sub:Relationships': 'Relationships',
+                'sub:Career': 'Career',
+                'sub:Sports': 'Sports',
+                'sub:School': 'School',
+                'sub:Playground': 'Playground',
+                'sub:Personal Growth': 'Personal Growth',
+                'sub:Life Skills': 'Life Skills',
+            }
+            return map[this.selectedCategoryFilter] || 'Choose category'
+        },
+        adultOptions() {
+            return [
+                { value: 'shelf:Adult', label: 'All Adult assessments' },
+                { value: 'sub:Relationships', label: 'Relationships' },
+                { value: 'sub:Career', label: 'Career' },
+                { value: 'sub:School', label: 'School' },
+                { value: 'sub:Personal Growth', label: 'Personal Growth' },
+                { value: 'sub:Life Skills', label: 'Life Skills' },
+            ]
+        },
+
+        kidsOptions() {
+            return [
+                { value: 'shelf:Kids', label: 'All Kids assessments' },
+                { value: 'sub:Relationships', label: 'Relationships' },
+                { value: 'sub:School', label: 'School' },
+                { value: 'sub:Playground', label: 'Playground' },
+            ]
+        },
         overallTopTrait() {
             const b = this.overallBreakdown
             if (!b) return null
 
             const entries = Object.entries(b).filter(
                 ([trait, value]) =>
-                    ['D', 'I', 'S', 'C'].includes(trait) &&
-                    typeof value === 'number'
+                    ['D', 'I', 'S', 'C'].includes(trait) && typeof value === 'number'
             )
             if (!entries.length) return null
             entries.sort((a, b) => b[1] - a[1])
@@ -174,18 +253,48 @@ export default {
                     return '#143180'
             }
         },
+
+        // ✅ Completed sessions, filtered by category (if any)
         completedSessions() {
-            return this.sessions.filter(s => s.status === 'completed')
+            const base = this.sessions.filter(s => s.status === 'completed')
+
+            const filter = this.selectedCategoryFilter
+
+            // No filter or "all" => return everything
+            if (!filter || filter === 'all') {
+                return base
+            }
+
+            const parts = filter.split(':')
+            if (parts.length !== 2) {
+                return base
+            }
+
+            const [type, name] = parts
+
+            return base.filter(s => {
+                const cat = s.category || {}
+
+                if (type === 'shelf') {
+                    return cat.shelf === name
+                }
+
+                if (type === 'sub') {
+                    return Array.isArray(cat.subcategories) &&
+                        cat.subcategories.includes(name)
+                }
+
+                return true
+            })
         },
+
+
         selectedBreakdown() {
             if (!this.selectedResult) return null
             const s = this.selectedResult
-            return (
-                s.scoreBreakdown ||
-                (s.score && s.score.breakdown) ||
-                null
-            )
+            return s.scoreBreakdown || (s.score && s.score.breakdown) || null
         },
+
         overallBreakdown() {
             const completed = this.completedSessions
             if (!completed.length) return null
@@ -193,10 +302,7 @@ export default {
             const totals = { D: 0, I: 0, S: 0, C: 0 }
 
             completed.forEach(s => {
-                const b =
-                    s.scoreBreakdown ||
-                    (s.score && s.score.breakdown) ||
-                    null
+                const b = s.scoreBreakdown || (s.score && s.score.breakdown) || null
 
                 if (!b) return
 
@@ -218,10 +324,9 @@ export default {
                 C: (totals.C / grandTotal) * 100
             }
         },
+
         displayBreakdown() {
-            return this.selectedResult
-                ? this.selectedBreakdown
-                : this.overallBreakdown
+            return this.selectedResult ? this.selectedBreakdown : this.overallBreakdown
         },
         hasData() {
             return !!this.displayBreakdown
@@ -248,8 +353,7 @@ export default {
 
             const entries = Object.entries(b).filter(
                 ([trait, value]) =>
-                    ['D', 'I', 'S', 'C'].includes(trait) &&
-                    typeof value === 'number'
+                    ['D', 'I', 'S', 'C'].includes(trait) && typeof value === 'number'
             )
             if (!entries.length) return null
             entries.sort((a, b) => b[1] - a[1])
@@ -260,6 +364,15 @@ export default {
         },
         primaryStyleDescription() {
             return this.topTrait ? STYLE_TEXT[this.topTrait].description : ''
+        }
+    },
+    methods: {
+        toggleDropdown() {
+            this.dropdownOpen = !this.dropdownOpen
+        },
+        pickCategory(val) {
+            this.selectedCategoryFilter = val
+            this.dropdownOpen = false
         }
     }
 }
@@ -325,7 +438,10 @@ export default {
     align-items: flex-end;
     gap: 12px;
     height: 180px;
-    padding-bottom: 40px;
+    background: #f8f8f8;
+    padding: 0px 24px 40px 24px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #12304d8c;
 
     .bar {
         flex: 1 1 0;
@@ -378,6 +494,76 @@ export default {
         font-size: 14px;
         color: #555;
         text-align: center;
+    }
+}
+
+
+
+
+
+
+.category-dropdown {
+    position: relative;
+    margin-top: 12px;
+
+    .dropdown-button {
+        border-radius: 6px;
+        padding: 8px 16px;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        width: 180px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+            border-color: #888;
+        }
+    }
+
+    .arrow {
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 42px;
+        left: 0;
+        width: 220px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+        padding: 6px 0;
+    }
+
+    .group {
+        margin-bottom: 6px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .group-label {
+        font-weight: 700;
+        background: #00679b;
+        padding: 6px 12px;
+        font-size: 13px;
+        color: #fff;
+    }
+
+    .item {
+        padding: 6px 12px;
+        cursor: pointer;
+        font-size: 14px;
+
+        &:hover {
+            background: #f3f3f3;
+        }
     }
 }
 

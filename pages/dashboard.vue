@@ -557,7 +557,7 @@ export default {
         background: #ebebeb;
         padding: 0px 16px 10px 16px;
         text-align: center;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        box-shadow: 4px 4px 8px #12304d8e;
 
         .credits-label {
             font-size: 24px;

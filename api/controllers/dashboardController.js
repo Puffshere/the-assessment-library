@@ -36,7 +36,7 @@ exports.getDashboard = async function (req, res) {
     }
 
     const sessions = await AssessmentSession.find({ user: user._id })
-      .populate('assessment', 'title slug')
+      .populate('assessment', 'title slug category')
       .sort({ updatedAt: -1 })
       .lean();
 
@@ -61,6 +61,7 @@ exports.getDashboard = async function (req, res) {
             typeof s.currentQuestionIndex === 'number'
               ? s.currentQuestionIndex
               : 0,
+          category: s.assessment.category || null,
         };
       });
 
