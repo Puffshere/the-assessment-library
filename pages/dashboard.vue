@@ -22,8 +22,70 @@
                 <div v-else-if="error" class="status-block error">
                     {{ error }}
                 </div>
-
                 <div v-else class="grid">
+                    <div class="panel panel-wide">
+                        <div v-if="selectedResult">
+                            <h2 class="panel-title">
+                                Results for {{ selectedResult.assessmentTitle }}
+                            </h2>
+
+                            <div class="results-layout">
+                                <!-- Chart -->
+                                <div class="chart-col">
+                                    <div class="chart">
+                                        <div class="bar"
+                                            :style="{ height: DPercentage + '%', backgroundColor: '#f44336' }"
+                                            :title="'D: ' + DPercentage + '%'">
+                                            <div class="label">D</div>
+                                        </div>
+                                        <div class="bar"
+                                            :style="{ height: IPercentage + '%', backgroundColor: '#ffbd05' }"
+                                            :title="'I: ' + IPercentage + '%'">
+                                            <div class="label">I</div>
+                                        </div>
+                                        <div class="bar"
+                                            :style="{ height: SPercentage + '%', backgroundColor: '#0dab49' }"
+                                            :title="'S: ' + SPercentage + '%'">
+                                            <div class="label">S</div>
+                                        </div>
+                                        <div class="bar"
+                                            :style="{ height: CPercentage + '%', backgroundColor: '#1666ff' }"
+                                            :title="'C: ' + CPercentage + '%'">
+                                            <div class="label">C</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text -->
+                                <div class="text-col">
+                                    <h5>These are your results.</h5>
+                                    <hr class="shortLine top" />
+                                    <ul>
+                                        <li>This is your D percentage: {{ DPercentage }}</li>
+                                        <li>This is your I percentage: {{ IPercentage }}</li>
+                                        <li>This is your S percentage: {{ SPercentage }}</li>
+                                        <li>This is your C percentage: {{ CPercentage }}</li>
+                                    </ul>
+
+                                    <h5 class="mt-16">Your primary style</h5>
+                                    <hr class="shortLine bottom" />
+
+                                    <p v-if="topScore" class="type">
+                                        <strong>{{ styleTitle }}</strong>
+                                        {{ styleDescription }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Default content when nothing is selected -->
+                        <div v-else>
+                            <h2 class="panel-title">Overall Totals</h2>
+                            <p>Assessments Started: {{ dashboard.sessions.length }}</p>
+                            <p>Assessments Completed: {{ completedSessions.length }}</p>
+                        </div>
+                    </div>
+
                     <!-- ACCOUNT OVERVIEW -->
                     <div class="panel">
                         <h2 class="panel-title">Account Overview</h2>
@@ -46,7 +108,7 @@
                     </div>
 
                     <!-- SESSIONS -->
-                    <div class="panel">
+                    <div class="panel panel-assessments" @wheel.prevent="onAssessmentsWheel">
                         <h2 class="panel-title">Your Assessments</h2>
 
                         <div v-if="!dashboard.sessions.length" class="empty-state">
@@ -57,17 +119,14 @@
                             </p>
                         </div>
 
-                        <div v-else class="sessions">
+                        <!-- Scrollable list area -->
+                        <div v-else class="sessions scroll-area">
                             <!-- NOT STARTED -->
                             <div v-if="notStartedSessions.length" class="section-block">
                                 <h3 style="color: #e93d2f;">Ready to Begin</h3>
                                 <hr />
                                 <ul>
-                                    <li
-                                        v-for="s in notStartedSessions"
-                                        :key="s.id"
-                                        class="session-row"
-                                    >
+                                    <li v-for="s in notStartedSessions" :key="s.id" class="session-row">
                                         <div class="session-row-top">
                                             <div class="session-main">
                                                 <div class="session-title">
@@ -93,12 +152,8 @@
                                 <h3 style="color: #e93d2f;">In Progress</h3>
                                 <hr />
                                 <ul>
-                                    <li
-                                        v-for="s in inProgressSessions"
-                                        :key="s.id"
-                                        class="session-row"
-                                        :class="{ 'has-progress': hasProgress(s) }"
-                                    >
+                                    <li v-for="s in inProgressSessions" :key="s.id" class="session-row"
+                                        :class="{ 'has-progress': hasProgress(s) }">
                                         <div class="session-row-top">
                                             <div class="session-main">
                                                 <div class="session-title">
@@ -110,25 +165,15 @@
                                                 </div>
                                             </div>
                                             <div class="session-actions">
-                                                <button
-                                                    class="outline small light"
-                                                    @click="goToSession(s)"
-                                                >
+                                                <button class="outline small light" @click="goToSession(s)">
                                                     Resume
                                                 </button>
                                             </div>
                                         </div>
 
-                                        <!-- Progress bar lives under the row but aligned to the button -->
-                                        <div
-                                            v-if="hasProgress(s)"
-                                            class="session-progress"
-                                        >
+                                        <div v-if="hasProgress(s)" class="session-progress">
                                             <div class="progress-bar">
-                                                <div
-                                                    class="progress-bar-inner"
-                                                    :style="getProgressStyle(s)"
-                                                ></div>
+                                                <div class="progress-bar-inner" :style="getProgressStyle(s)"></div>
                                             </div>
                                             <div class="progress-label">
                                                 {{ getProgressLabel(s) }}
@@ -143,11 +188,7 @@
                                 <h3 style="color: #e93d2f;">Completed</h3>
                                 <hr />
                                 <ul>
-                                    <li
-                                        v-for="s in completedSessions"
-                                        :key="s.id"
-                                        class="session-row"
-                                    >
+                                    <li v-for="s in completedSessions" :key="s.id" class="session-row">
                                         <div class="session-row-top">
                                             <div class="session-main">
                                                 <div class="session-title">
@@ -156,16 +197,13 @@
                                                 <div class="session-meta">
                                                     Completed:
                                                     <span>{{ formatDate(s.completedAt) }}</span>
-                                                    <span
-                                                        v-if="s.scoreTotal !== null"
-                                                        class="score-pill"
-                                                    >
+                                                    <span v-if="s.scoreTotal !== null" class="score-pill">
                                                         Score: {{ s.scoreTotal }}
                                                     </span>
                                                 </div>
                                             </div>
                                             <div class="session-actions">
-                                                <button class="outline small green">
+                                                <button class="outline small green" @click="viewResults(s)">
                                                     View Results
                                                 </button>
                                             </div>
@@ -174,14 +212,11 @@
                                 </ul>
                             </div>
 
-                            <div
-                                v-if="
-                                    !notStartedSessions.length &&
-                                    !inProgressSessions.length &&
-                                    !completedSessions.length
-                                "
-                                class="empty-state"
-                            >
+                            <div v-if="
+                                !notStartedSessions.length &&
+                                !inProgressSessions.length &&
+                                !completedSessions.length
+                            " class="empty-state">
                                 <p>
                                     Assessments found, but none are in-progress or completed yet.
                                 </p>
@@ -208,6 +243,15 @@ export default {
         return {
             loading: true,
             error: null,
+            selectedResult: null,
+            DstyleTitle: 'Dominance (D)',
+            DstyleDescription: 'You are direct, decisive, and results-oriented.',
+            IstyleTitle: 'Influence (I)',
+            IstyleDescription: 'You are outgoing, persuasive, and people-oriented.',
+            SstyleTitle: 'Steadiness (S)',
+            SstyleDescription: 'You are patient, reliable, and supportive.',
+            CstyleTitle: 'Conscientiousness (C)',
+            CstyleDescription: 'You are detail-oriented, analytical, and precise.',
             dashboard: {
                 user: {
                     name: '',
@@ -233,6 +277,70 @@ export default {
         },
         completedSessions() {
             return this.dashboard.sessions.filter(s => s.status === 'completed')
+        },
+        selectedBreakdown() {
+            if (!this.selectedResult) return null
+            const s = this.selectedResult
+            return (
+                s.scoreBreakdown ||
+                (s.score && s.score.breakdown) ||
+                null
+            )
+        },
+        DPercentage() {
+            const b = this.selectedBreakdown
+            return b && typeof b.D === 'number' ? b.D : 0
+        },
+        IPercentage() {
+            const b = this.selectedBreakdown
+            return b && typeof b.I === 'number' ? b.I : 0
+        },
+        SPercentage() {
+            const b = this.selectedBreakdown
+            return b && typeof b.S === 'number' ? b.S : 0
+        },
+        CPercentage() {
+            const b = this.selectedBreakdown
+            return b && typeof b.C === 'number' ? b.C : 0
+        },
+        topScore() {
+            if (!this.selectedBreakdown) return null
+            const entries = Object.entries(this.selectedBreakdown).filter(
+                ([trait, value]) =>
+                    ['D', 'I', 'S', 'C'].includes(trait) &&
+                    typeof value === 'number'
+            )
+            if (!entries.length) return null
+            entries.sort((a, b) => b[1] - a[1])
+            return entries[0][0]
+        },
+        styleTitle() {
+            switch (this.topScore) {
+                case 'D':
+                    return this.DstyleTitle
+                case 'I':
+                    return this.IstyleTitle
+                case 'S':
+                    return this.SstyleTitle
+                case 'C':
+                    return this.CstyleTitle
+                default:
+                    return ''
+            }
+        },
+        styleDescription() {
+            switch (this.topScore) {
+                case 'D':
+                    return this.DstyleDescription
+                case 'I':
+                    return this.IstyleDescription
+                case 'S':
+                    return this.SstyleDescription
+                case 'C':
+                    return this.CstyleDescription
+                default:
+                    return ''
+            }
         }
     },
     async mounted() {
@@ -358,6 +466,16 @@ export default {
                 width: this.getProgressPercent(session) + '%',
                 '--progress-color': this.getTraitColor(session)
             }
+        },
+
+        viewResults(session) {
+            this.selectedResult = session
+        },
+        onAssessmentsWheel(event) {
+            const panel = event.currentTarget
+            const list = panel.querySelector('.scroll-area')
+            if (!list) return
+            list.scrollTop += event.deltaY
         }
     },
     head() {
@@ -390,15 +508,13 @@ export default {
         min-height: 160px;
 
         &:after {
-            background: linear-gradient(
-                to right,
-                $color-d 25%,
-                $color-i 25%,
-                $color-i 50%,
-                $color-s 50%,
-                $color-s 75%,
-                $color-c 75%
-            );
+            background: linear-gradient(to right,
+                    $color-d 25%,
+                    $color-i 25%,
+                    $color-i 50%,
+                    $color-s 50%,
+                    $color-s 75%,
+                    $color-c 75%);
             position: absolute;
             content: '';
             height: 10px;
@@ -448,6 +564,35 @@ export default {
         padding: 24px;
     }
 
+    .panel-assessments {
+        flex: 1 1 320px;
+        max-height: 386px;
+        min-height: 386px;
+        display: flex;
+        flex-direction: column;
+
+        .panel-title {
+            flex: 0 0 auto;
+            margin-bottom: 30px;
+        }
+
+        .scroll-area {
+            flex: 1 1 auto;
+            overflow-y: auto;
+            padding-right: 8px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    .panel-wide {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+    }
+
     .panel-title {
         font-size: 20px;
         margin-bottom: 16px;
@@ -466,30 +611,35 @@ export default {
 
     .credits-card {
         border-radius: 10px;
-        background: #f9f9f9;
-        padding: 16px;
+        background: #ebebeb;
+        padding: 0px 16px 10px 16px;
         text-align: center;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 
         .credits-label {
-            font-size: 14px;
-            margin-bottom: 4px;
+            font-size: 24px;
+            padding-top: 20px;
+            margin-bottom: -20px;
         }
 
         .credits-value {
             font-size: 32px;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .small {
             font-size: 14px;
             padding: 6px 12px;
         }
+
+        button {
+            margin-bottom: 12px;
+        }
     }
 
     .sessions {
-        .section-block + .section-block {
+        .section-block+.section-block {
             margin-top: 24px;
         }
 
@@ -593,9 +743,52 @@ export default {
         font-size: 14px;
         color: #555;
 
-        p + p {
+        p+p {
             margin-top: 6px;
         }
+    }
+
+    .results-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        h5 {
+            margin-top: 15px;
+        }
+    }
+
+    .chart-col {
+        flex: 0 0 260px;
+    }
+
+    .text-col {
+        flex: 1 1 260px;
+    }
+
+    .chart {
+        display: flex;
+        align-items: flex-end;
+        gap: 12px;
+        height: 180px;
+
+        .bar {
+            flex: 1 1 0;
+            border-radius: 6px 6px 0 0;
+            position: relative;
+        }
+
+        .label {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 600;
+        }
+    }
+
+    .mt-16 {
+        margin-top: 16px;
     }
 }
 
@@ -603,6 +796,19 @@ export default {
     .dashboard {
         .grid {
             flex-direction: column;
+        }
+
+        .panel-wide {
+            height: auto;
+        }
+
+        .panel-assessments {
+            max-height: none;
+            min-height: auto;
+
+            .panel-assessments .scroll-area {
+                overflow-y: visible;
+            }
         }
     }
 }

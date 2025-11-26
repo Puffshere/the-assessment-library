@@ -8,22 +8,35 @@
 
                 <div class="shadow">
                     <div style="padding: 30px 0 20px 0;">
-                        <h1>Shane's Day at the Park!</h1>
-                        <h3 v-if="questions[currentQuestion - 1]" class="chapter"
-                            v-html="questions[currentQuestion - 1].chapter"></h3>
+                        <h1>{{ displayTitle }}</h1>
+                        <h3
+                            v-if="questions[currentQuestion - 1]"
+                            class="chapter"
+                            v-html="questions[currentQuestion - 1].chapter"
+                        ></h3>
                     </div>
                 </div>
             </section>
 
             <section class="questionnaire">
-                <img src="~/assets/library/boy-at-the-park.webp" alt="image of a boy at the park"
-                    class="boyAtThePark" />
+                <!-- hero image now from DB, with a safe fallback -->
+                <img
+                    :src="heroImage"
+                    :alt="heroAltText"
+                    class="boyAtThePark"
+                />
 
                 <div class="container">
-                    <div v-if="currentQuestion !== totalQuestions && questions[currentQuestion - 1]"
-                        :key="currentQuestion">
-                        <p style="font-weight: 700;" class="chapter" v-html="questions[currentQuestion - 1].timeline">
-                        </p>
+                    <!-- QUESTION FLOW -->
+                    <div
+                        v-if="currentQuestion !== totalQuestions && questions[currentQuestion - 1]"
+                        :key="currentQuestion"
+                    >
+                        <p
+                            style="font-weight: 700;"
+                            class="chapter"
+                            v-html="questions[currentQuestion - 1].timeline"
+                        ></p>
 
                         <div class="line"></div>
 
@@ -32,44 +45,61 @@
                         </div>
 
                         <div class="answers">
-                            <button class="answerButtons"
-                                v-for="(answer, index) in questions[currentQuestion - 1].answers" :key="index"
-                                @click="selectAnswer(answer)">
+                            <button
+                                class="answerButtons"
+                                v-for="(answer, index) in questions[currentQuestion - 1].answers"
+                                :key="index"
+                                @click="selectAnswer(answer)"
+                            >
                                 <span class="selection" v-html="answer.text"></span>
                             </button>
                         </div>
                     </div>
 
+                    <!-- FINAL CONCLUSION PAGE -->
                     <div v-else-if="questions[currentQuestion - 1]">
                         <div v-if="topScore === 'D'">
-                            <p style="font-weight: 700;" class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline"></p>
+                            <p
+                                style="font-weight: 700;"
+                                class="chapter"
+                                v-html="questions[currentQuestion - 1].timeline"
+                            ></p>
                             <div class="line dominance"></div>
                             <p v-html="questions[currentQuestion - 1].dominanceConclusion"></p>
                         </div>
 
                         <div v-if="topScore === 'I'">
-                            <p style="font-weight: 700;" class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline"></p>
+                            <p
+                                style="font-weight: 700;"
+                                class="chapter"
+                                v-html="questions[currentQuestion - 1].timeline"
+                            ></p>
                             <div class="line influence"></div>
                             <p v-html="questions[currentQuestion - 1].influenceConclusion"></p>
                         </div>
 
                         <div v-if="topScore === 'S'">
-                            <p style="font-weight: 700;" class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline"></p>
+                            <p
+                                style="font-weight: 700;"
+                                class="chapter"
+                                v-html="questions[currentQuestion - 1].timeline"
+                            ></p>
                             <div class="line steadiness" style="color: #0dab49;"></div>
                             <p v-html="questions[currentQuestion - 1].steadinessConclusion"></p>
                         </div>
 
                         <div v-else-if="topScore === 'C'">
-                            <p style="font-weight: 700;" class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline"></p>
+                            <p
+                                style="font-weight: 700;"
+                                class="chapter"
+                                v-html="questions[currentQuestion - 1].timeline"
+                            ></p>
                             <div class="line consientousness"></div>
                             <p v-html="questions[currentQuestion - 1].conscientiousnessConclusion"></p>
                         </div>
                     </div>
 
+                    <!-- BREAKDOWN BUTTON -->
                     <div v-if="currentQuestion === totalQuestions" class="button-wrapper">
                         <div v-if="topScore === 'D'">
                             <button class="gold disc" @click="breakdownModal = true">See Breakdown</button>
@@ -90,6 +120,7 @@
             </section>
         </section>
 
+        <!-- BREAKDOWN MODAL (unchanged) -->
         <transition name="fade">
             <section v-if="breakdownModal" class="modal-window">
                 <div class="container" style="margin-top: 20px;">
@@ -102,20 +133,32 @@
 
                             <div class="col-4">
                                 <div class="chart">
-                                    <div class="bar" :style="{ height: DPercentage + '%', backgroundColor: '#f44336' }"
-                                        :title="'D: ' + DPercentage + '%'">
+                                    <div
+                                        class="bar"
+                                        :style="{ height: DPercentage + '%', backgroundColor: '#f44336' }"
+                                        :title="'D: ' + DPercentage + '%'"
+                                    >
                                         <div class="label">D</div>
                                     </div>
-                                    <div class="bar" :style="{ height: IPercentage + '%', backgroundColor: '#ffbd05' }"
-                                        :title="'I: ' + IPercentage + '%'">
+                                    <div
+                                        class="bar"
+                                        :style="{ height: IPercentage + '%', backgroundColor: '#ffbd05' }"
+                                        :title="'I: ' + IPercentage + '%'"
+                                    >
                                         <div class="label">I</div>
                                     </div>
-                                    <div class="bar" :style="{ height: SPercentage + '%', backgroundColor: '#0dab49' }"
-                                        :title="'S: ' + SPercentage + '%'">
+                                    <div
+                                        class="bar"
+                                        :style="{ height: SPercentage + '%', backgroundColor: '#0dab49' }"
+                                        :title="'S: ' + SPercentage + '%'"
+                                    >
                                         <div class="label">S</div>
                                     </div>
-                                    <div class="bar" :style="{ height: CPercentage + '%', backgroundColor: '#1666ff' }"
-                                        :title="'C: ' + CPercentage + '%'">
+                                    <div
+                                        class="bar"
+                                        :style="{ height: CPercentage + '%', backgroundColor: '#1666ff' }"
+                                        :title="'C: ' + CPercentage + '%'"
+                                    >
                                         <div class="label">C</div>
                                     </div>
                                 </div>
@@ -180,14 +223,15 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
+
     head() {
         return {
-            title: "The Assessment Library | Shane's Day At The Park",
+            title: this.pageTitle,
             meta: [
                 {
                     hid: 'description',
                     name: 'description',
-                    content: ''
+                    content: this.metaDescription
                 }
             ],
             __dangerouslyDisableSanitizers: ['script'],
@@ -199,8 +243,14 @@ export default {
             ]
         };
     },
+
     data() {
         return {
+            assessmentSlug: this.$route.params.slug, // "shanes-day-at-the-park"
+
+            // DB-loaded assessment object
+            assessment: null,
+
             sessionId:
                 this.$route.query.sessionId ||
                 this.$route.query.session ||
@@ -240,8 +290,41 @@ export default {
             questions: []
         };
     },
+
     computed: {
+        displayTitle() {
+            return (this.assessment && this.assessment.title) || "Assessment";
+        },
+
+        heroImage() {
+            // If heroImageUrl is a full URL to B2, just use it.
+            // Fallback to your original local Shane image.
+            if (this.assessment && this.assessment.heroImageUrl) {
+                return this.assessment.heroImageUrl;
+            }
+            return require('~/assets/library/boy-at-the-park.webp');
+        },
+
+        heroAltText() {
+            return (
+                (this.assessment && this.assessment.heroAltText) ||
+                `${this.displayTitle} cover illustration`
+            );
+        },
+
+        metaDescription() {
+            return (
+                (this.assessment && this.assessment.description) ||
+                'Interactive DISC story assessment from The Assessment Library.'
+            );
+        },
+
+        pageTitle() {
+            return `The Assessment Library | ${this.displayTitle}`;
+        },
+
         structuredDataBreadcrumbs() {
+            const slug = this.assessmentSlug;
             return {
                 '@context': 'https://schema.org',
                 '@type': 'BreadcrumbList',
@@ -255,13 +338,14 @@ export default {
                     {
                         '@type': 'ListItem',
                         position: 2,
-                        name: "Shane's Day at the Park",
-                        item: 'https://theassessmentlibrary.com/library/shanes-day-at-the-park'
+                        name: this.displayTitle,
+                        item: `https://theassessmentlibrary.com/library/${slug}`
                     }
                 ]
             };
         }
     },
+
     async mounted() {
         this.isClient = true;
 
@@ -275,28 +359,40 @@ export default {
             console.error('Error loading session:', err);
         }
     },
+
     methods: {
         async loadAssessment() {
             try {
-                const res = await this.$axios.$get('/api/assessments/shanes-day-at-the-park');
+                const res = await this.$axios.$get(
+                    `/api/assessments/${this.assessmentSlug}`
+                );
                 const assessment = res.assessment || res;
+
+                this.assessment = assessment || null;
 
                 if (assessment && Array.isArray(assessment.questions)) {
                     this.questions = assessment.questions;
                     this.totalQuestions = assessment.questions.length;
                 } else {
-                    console.warn('No questions found for Shane assessment');
+                    console.warn(
+                        'No questions found for assessment slug:',
+                        this.assessmentSlug
+                    );
                 }
             } catch (err) {
                 console.error('Error loading assessment:', err);
             }
         },
+
         async loadSession() {
-            const res = await this.$axios.$get(`/api/sessions/${this.sessionId}`, {
-                headers: {
-                    Authorization: `Bearer ${this.$store.state.token}`
+            const res = await this.$axios.$get(
+                `/api/sessions/${this.sessionId}`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${this.$store.state.token}`
+                    }
                 }
-            });
+            );
 
             const session = res.session || res;
             if (!session) return;
@@ -305,7 +401,9 @@ export default {
                 const sorted = [...session.answers].sort(
                     (a, b) => Number(a.questionId) - Number(b.questionId)
                 );
-                this.selectedAnswers = sorted.map((a) => this.traitToValue[a.response]);
+                this.selectedAnswers = sorted.map(
+                    (a) => this.traitToValue[a.response]
+                );
             }
 
             if (session.status === 'completed') {
@@ -321,6 +419,7 @@ export default {
                 this.currentQuestion = idx + 1;
             }
         },
+
         async selectAnswer(answer) {
             if (!answer) return;
 
@@ -334,14 +433,6 @@ export default {
 
             this.selectedAnswers.push(value);
             this.currentQuestion = nextQuestion;
-
-            console.log('SELECT ANSWER', {
-                sessionId: this.sessionId,
-                questionId,
-                trait,
-                nextQuestionIndex,
-                isFinal
-            });
 
             if (this.sessionId) {
                 try {
@@ -360,7 +451,7 @@ export default {
                         };
                     }
 
-                    const res = await this.$axios.$post(
+                    await this.$axios.$post(
                         `/api/sessions/${this.sessionId}/answer`,
                         {
                             questionId,
@@ -375,8 +466,6 @@ export default {
                             }
                         }
                     );
-
-                    console.log('ANSWER SAVED', res);
                 } catch (err) {
                     console.error('Error saving answer:', err);
                 }
@@ -384,12 +473,14 @@ export default {
                 this.calculateTotals();
             }
         },
+
         jumpToLibrary(event) {
             window.location.href = '/';
             if (event && event.target) {
                 event.target.blur();
             }
         },
+
         calculateTotals() {
             let DCount = 0;
             let ICount = 0;
@@ -449,8 +540,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* keep your SCSS exactly as you had it */
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
+
 
 .page {
     z-index: 10;
