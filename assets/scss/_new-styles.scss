@@ -51,36 +51,67 @@ button {
     font-family: 'Merriweather', 'Georgia', serif;
     font-size: 10.5pt;
     border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button.blue {
     background-color: #00679b;
     color: white;
+
+    &:hover {
+        background: #ddd;
+        color: #12304d;
+    }
 }
 
 button.red {
     background-color: #e93d2f;
     color: white;
+
+    &:hover {
+        background: #ddd;
+        color: #12304d;
+    }
 }
 
 button.light {
     background-color: white;
     color: #0033C5;
     border: 1px solid #E0AD2B;
+
+    &:hover {
+        background: #ddd;
+        color: #12304d;
+    }
 }
 
 button.teal {
     background-color: #00679b;
     color: white;
+
+    &:hover {
+        background: #ddd;
+        color: #12304d;
+    }
 }
 
 button.lightTeal {
     border: 1px solid #00679b;
     background-color: white;
     color: #00679b;
+
+    &:hover {
+        background: #ddd;
+        color: #12304d;
+    }
 }
 
 button.green {
     background-color: #008b67;
     color: white;
+
+    &:hover {
+        background: #ddd;
+        color: #12304d;
+    }
 }

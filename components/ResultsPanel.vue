@@ -300,10 +300,6 @@ export default {
     right: 6px;
     transition: background 0.2s ease;
     z-index: 1;
-
-    &:hover {
-        background: #ddd;
-    }
 }
 
 .results-layout {
