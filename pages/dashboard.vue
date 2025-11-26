@@ -137,11 +137,12 @@
                                                     {{ s.assessmentTitle }}
                                                 </div>
                                                 <div class="session-meta">
+                                                    <span v-if="getTopTrait(s)" class="score-pill"
+                                                        :style="{ backgroundColor: getTraitColor(s), color: '#fff', borderRadius: '5px', padding: '1px 8px', maxHeight: '20px', marginLeft: '0px', marginRight: '10px' }">
+                                                        {{ getTopTrait(s) }}
+                                                    </span>
                                                     Completed:
                                                     <span>{{ formatDate(s.completedAt) }}</span>
-                                                    <span v-if="s.scoreTotal !== null" class="score-pill">
-                                                        Score: {{ s.scoreTotal }}
-                                                    </span>
                                                 </div>
                                             </div>
                                             <div class="session-actions">
