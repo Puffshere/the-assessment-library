@@ -126,9 +126,9 @@
 
             <h6 class="overall-meta">
                 <p>Assessments Started: <span style="font-size: 24px; margin-left: 10px;">{{ assessmentsStarted
-                        }}</span></p>
+                }}</span></p>
                 <p>Assessments Completed: <span style="font-size: 24px; margin-left: 10px;">{{ assessmentsCompleted
-                        }}</span>
+                }}</span>
                 </p>
             </h6>
         </div>
@@ -177,19 +177,14 @@ export default {
     },
     data() {
         return {
-            // null = all assessments
-            // other values are "shelf:Adult", "shelf:Kids", "sub:Relationships", etc.
             selectedCategoryFilter: 'all',
             dropdownOpen: false
         }
     },
     computed: {
         dropdownColor() {
-            // If we have data for the current filter, use that trait color.
-            // Otherwise fall back to your teal-ish default.
             return this.hasData ? this.overallTopTraitColor : '#86d6ee'
         },
-        // 🔽 Build a list of available category filters from sessions
         selectedCategoryLabel() {
             const map = {
                 all: 'All assessments',
@@ -215,7 +210,6 @@ export default {
                 { value: 'sub:Life Skills', label: 'Life Skills' },
             ]
         },
-
         kidsOptions() {
             return [
                 { value: 'shelf:Kids', label: 'All Kids assessments' },
@@ -253,8 +247,6 @@ export default {
                     return '#143180'
             }
         },
-
-        // ✅ Completed sessions, filtered by category (if any)
         completedSessions() {
             const base = this.sessions.filter(s => s.status === 'completed')
 
@@ -287,14 +279,11 @@ export default {
                 return true
             })
         },
-
-
         selectedBreakdown() {
             if (!this.selectedResult) return null
             const s = this.selectedResult
             return s.scoreBreakdown || (s.score && s.score.breakdown) || null
         },
-
         overallBreakdown() {
             const completed = this.completedSessions
             if (!completed.length) return null
@@ -324,7 +313,6 @@ export default {
                 C: (totals.C / grandTotal) * 100
             }
         },
-
         displayBreakdown() {
             return this.selectedResult ? this.selectedBreakdown : this.overallBreakdown
         },
@@ -497,11 +485,6 @@ export default {
     }
 }
 
-
-
-
-
-
 .category-dropdown {
     position: relative;
     margin-top: 12px;
@@ -576,6 +559,10 @@ export default {
         height: 150px !important;
     }
 
+    .chart-col {
+        flex: 0 0 130px;
+    }
+
     .results-layout {
         flex-direction: column;
     }
@@ -594,6 +581,14 @@ export default {
             text-align: left;
             margin-top: 12px;
         }
+    }
+
+    .red {
+        position: relative;
+        top: 6px;
+        right: 6px;
+        transition: background 0.2s ease;
+        z-index: 1;
     }
 }
 </style>
