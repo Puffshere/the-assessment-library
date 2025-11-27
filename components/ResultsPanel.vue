@@ -26,8 +26,8 @@
 
                 <div v-if="dropdownOpen" class="dropdown-menu">
                     <div class="group">
+                        <div class="top" @click="pickCategory('all')">All assessments</div>
                         <div class="group-label">Adult</div>
-                        <div class="item" @click="pickCategory('all')">All assessments</div>
                         <div class="item" v-for="opt in adultOptions" :key="opt.value" @click="pickCategory(opt.value)">
                             {{ opt.label }}
                         </div>
@@ -554,7 +554,7 @@ export default {
         background: white;
         border: 1px solid #ccc;
         border-radius: 6px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.336);
         z-index: 1000;
         padding: 6px 0;
     }
@@ -573,6 +573,19 @@ export default {
         padding: 6px 12px;
         font-size: 13px;
         color: #fff;
+    }
+
+    .top {
+        background: #e93f2f;
+        color: #fff;
+        padding: 6px 12px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+
+        &:hover {
+            background: #e93f2fb4;
+        }
     }
 
     .item {
