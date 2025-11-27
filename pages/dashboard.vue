@@ -537,7 +537,7 @@ export default {
 
         .panel-title {
             flex: 0 0 auto;
-            margin-bottom: 30px;
+            margin-bottom: 0px;
         }
 
         .scroll-area {
@@ -734,11 +734,6 @@ export default {
         .panel-assessments {
             max-height: none;
             min-height: auto;
-
-            .panel-title {
-                padding-bottom: 0px;
-                margin-bottom: 0px;
-            }
 
             .scroll-area {
                 overflow-y: visible;
