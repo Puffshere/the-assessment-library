@@ -117,9 +117,36 @@ const getAssessmentBySlug = async (req, res) => {
   }
 };
 
+const getAssessmentsForLibrary = async (req, res) => {
+  try {
+    const forLibrary = req.query.forLibrary === 'true';
+
+    const slugs = [
+      'jessicas-first-job',
+      'rogers-new-business',
+      'allies-professional-journey',
+      'shanes-day-at-the-park'
+    ];
+
+    const assessments = await Assessment.find(
+      {
+        isActive: true,
+        slug: { $in: slugs }
+      },
+      'slug title description creditsCost estimatedCompletion wordsLength heroImageUrl'
+    ).lean();
+
+    res.json({ assessments });
+  } catch (err) {
+    console.error('Error loading assessments for library:', err);
+    res.status(500).json({ message: 'Failed to load assessments' });
+  }
+}
+
 
 module.exports = {
   checkout,
   markSessionStarted,
-  getAssessmentBySlug
+  getAssessmentBySlug,
+  getAssessmentsForLibrary
 };

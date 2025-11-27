@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 const scenarioAnswerSchema = new mongoose.Schema(
   {
     text: { type: String, required: true },
@@ -54,22 +55,33 @@ const assessmentSchema = new mongoose.Schema(
     slug: { type: String, required: true, unique: true },
     title: { type: String, required: true },
     description: String,
+
     creditsCost: { type: Number, default: 1, min: 0 },
     isActive: { type: Boolean, default: true },
 
     heroImageUrl: { type: String },
 
+    estimatedCompletion: {
+      type: Number,
+      default: 20
+    },
+
+    wordsLength: {
+      type: Number,
+      default: 4000
+    },
+
     category: categorySchema,
 
-    DstyleTitle: { type: String },
-    IstyleTitle: { type: String },
-    SstyleTitle: { type: String },
-    CstyleTitle: { type: String },
+    DstyleTitle: String,
+    IstyleTitle: String,
+    SstyleTitle: String,
+    CstyleTitle: String,
 
-    DstyleDescription: { type: String },
-    IstyleDescription: { type: String },
-    SstyleDescription: { type: String },
-    CstyleDescription: { type: String },
+    DstyleDescription: String,
+    IstyleDescription: String,
+    SstyleDescription: String,
+    CstyleDescription: String,
 
     questions: [scenarioQuestionSchema],
 

@@ -16,7 +16,7 @@
             </section>
 
             <section class="questionnaire">
-                <img :src="heroImage" :alt="heroAltText" :class="imageClass" />
+                <img :src="heroImage" :alt="heroAltText" :class="['hero-illustration', imageClass]" />
 
                 <div class="container">
                     <!-- QUESTION FLOW -->
@@ -206,6 +206,7 @@ export default {
         return {
             assessmentSlug: this.$route.params.slug,
             assessment: null,
+            heroImageUrl: '',
             sessionId:
                 this.$route.query.sessionId ||
                 this.$route.query.session ||
@@ -254,18 +255,8 @@ export default {
         },
         heroImage() {
             if (this.assessment && this.assessment.heroImageUrl) {
-                return this.assessment.heroImageUrl;
+                return this.assessment && this.assessment.heroImageUrl;
             }
-
-            const slug = this.$route.params.slug;
-
-            const imageBySlug = {
-                'shanes-day-at-the-park': require('~/assets/library/boy-at-the-park.webp'),
-                'allies-professional-journey': require('~/assets/story0514/bookcase.webp'),
-                'jessicas-first-job': require('~/assets/library/first-job.jpg'),
-            };
-
-            return imageBySlug[slug] || require('~/assets/library/boy-at-the-park.webp');
         },
         heroAltText() {
             return (
@@ -320,21 +311,23 @@ export default {
     methods: {
         async loadAssessment() {
             try {
-                const res = await this.$axios.$get(
-                    `/api/assessments/${this.assessmentSlug}`
-                );
+                const res = await this.$axios.$get(`/api/assessments/${this.assessmentSlug}`);
+
+                console.log('RAW /api/assessments response:', res);
+
                 const assessment = res.assessment || res;
 
+                console.log('Parsed assessment object:', assessment);
+                console.log('heroImageUrl from API:', assessment && assessment.heroImageUrl);
+
                 this.assessment = assessment || null;
+                this.heroImageUrl = assessment && assessment.heroImageUrl ? assessment.heroImageUrl : '';
 
                 if (assessment && Array.isArray(assessment.questions)) {
                     this.questions = assessment.questions;
                     this.totalQuestions = assessment.questions.length;
                 } else {
-                    console.warn(
-                        'No questions found for assessment slug:',
-                        this.assessmentSlug
-                    );
+                    console.warn('No questions found for assessment slug:', this.assessmentSlug);
                 }
             } catch (err) {
                 console.error('Error loading assessment:', err);
@@ -501,6 +494,7 @@ export default {
     z-index: 10;
     color: #213c85;
     position: relative;
+
     background: linear-gradient(to right, #1f232e 50%, #ffffff 50%);
 
     .container {
@@ -524,55 +518,48 @@ export default {
         }
 
         h1 {
-            margin-bottom: 0px;
-            margin-top: 0px;
+            margin: 0;
             font-family: Georgia, 'Times New Roman', Times, serif;
             line-height: 36px;
         }
 
         h3 {
-            margin-top: 0px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-top: 0;
             margin-bottom: 5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
     }
 
     .questionnaire {
-        margin: 0 0 0px 0;
-        padding: 0 0 0px 0;
+        margin: 0;
+        padding: 0;
         font-family: $nunito-family;
-        min-height: 58vh;
         position: relative;
+        min-height: 58vh;
+
+        .hero-illustration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 360px;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
 
         .container {
             position: relative;
             background: #fff;
-            z-index: 1;
+            z-index: 2;
             min-height: 585px;
-        }
-
-        .boyAtThePark {
-            position: absolute;
-            z-index: -10000;
-            width: 21%;
-            max-height: 585px;
-        }
-
-        .bookcaseLeft {
-            position: absolute;
-            z-index: -10000;
-            max-height: 61.03vh;
-        }
-
-        .firstJobLeft {
-            position: absolute;
-            z-index: -10000;
-            width: 28%;
-            max-height: 600px;
+            padding: 0 20px 60px;
+            margin-left: 360px;
+            box-sizing: border-box;
         }
 
         .chapter {
-            margin: 0 0 0 0;
+            margin: 0;
             padding: 40px 0 20px 0;
         }
 
@@ -594,11 +581,10 @@ export default {
             color: #213c85;
             width: 100%;
             background: #fff;
-            box-shadow: none;
             text-align: left;
-            height: auto;
             line-height: 1.5em;
             margin: 0 0 0 20px;
+            box-shadow: none;
         }
 
         .button-wrapper {
@@ -686,13 +672,12 @@ export default {
 
     h5 {
         line-height: 1.25em;
-        margin: 0 0 0 0;
+        margin: 0;
     }
 
     .shortLine {
         background: #00a8ff;
         height: 6px;
-        width: 250px;
         margin: 10px auto 0 auto;
         float: left;
 
@@ -806,6 +791,24 @@ export default {
 
     .modal-window .container {
         top: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        background: #f5f5f5;
+
+        .questionnaire {
+            .hero-illustration {
+                display: none;
+            }
+
+            .container {
+                margin-left: 0;
+                padding: 20px 16px 40px;
+                min-height: auto;
+            }
+        }
     }
 }
 </style>
