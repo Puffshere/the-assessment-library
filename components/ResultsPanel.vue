@@ -611,8 +611,9 @@ export default {
     }
 
     .chart {
-        padding-top: 10px !important;
+        padding-top: 0px !important;
         height: 150px !important;
+        margin-top: 30px;
     }
 
     .chart-col {
