@@ -3,429 +3,417 @@ const mongoose = require('mongoose');
 const Assessment = require('../api/models/Assessment');
 
 const questions = [
-                // -----------------------------------Chapter 1--------------------------------
 
-                // --------------------------------Question1--------------------------------1
-                {
-                    chapter: 'Chapter 1: Welcome to the Park',
-                    timeline: `Morning`,
-                    question: `<p>The sun peeked over the trees as Shane stepped onto the soft grass, sneakers squeaking just a little. Today was a big park day—slides, swings, and maybe even a game on the big open field. He could feel the cool morning breeze and hear kids laughing in the distance.</p>
-                    <p>Near the sandbox, a few kids were gathering soccer cones. By the picnic tables, others were trading snack ideas and silly jokes. At the climbing wall, a line was forming. Shane took a breath and thought about what to do first.</p>
-                    <p>He looked around and made a plan to start his morning just right.</p>`,
-                    answers: [
-                        // Order mixed so mapping isn’t obvious
-                        { text: `He walked over to the group by the cones and suggested a quick way to split teams so a game could start right away.`, value: 1, nextQuestion: 2 },   // D
-                        { text: `He waved at a few kids by the picnic tables and asked if anyone wanted to try the new slide together.`, value: 2, nextQuestion: 3 },          // I
-                        { text: `He noticed a younger kid looking unsure near the swings and offered to help them get started.`, value: 3, nextQuestion: 4 },                 // S
-                        { text: `He checked the park map and read the sign with playground rules to decide the safest, smartest place to begin.`, value: 4, nextQuestion: 5 }, // C
-                    ]
-                },
+    // -----------------------------------Chapter 1--------------------------------
 
-                // -----------------------------------Chapter 2--------------------------------
+    // --------------------------------Question1--------------------------------1
+    {
+        chapter: "Chapter 1: First Day, Fresh Start",
+        timeline: `Orientation Morning`,
+        question: `Jessica, 30, stepped through the revolving doors of BrightPath Analytics—her first role since finishing college. The lobby hummed with elevator chimes and the smell of fresh coffee. She smoothed her blazer, feeling a mix of nerves and excitement as she clipped on a visitor badge and followed the signs to onboarding.</p>Her new supervisor, Maya, handed her a slim laptop and a welcome folder. “Team kickoff in the glass conference room in ten,” Maya said with a warm smile. Jessica glanced over the agenda—introductions, project preview, and a short working session.</p>Jessica paused outside the conference room, hearing friendly chatter inside and seeing slides queued on a big screen.</p>
+          `,
+        answers: [
+            { text: `She took a steady breath, walked in first, and opened with a crisp introduction that set a focused tone for the meeting.`, value: 1, nextQuestion: 2 }, // D
+            { text: `She entered with an easy smile, greeting people by name from their badges and sparking light conversation.`, value: 2, nextQuestion: 3 }, // I
+            { text: `She slipped into a seat, watched how the group interacted, and waited for the right moment to contribute.`, value: 3, nextQuestion: 4 }, // S
+            { text: `She settled quietly near the slides, reviewing the agenda and noting the structure so she could follow along.`, value: 4, nextQuestion: 5 }, // C
+        ]
+    },
 
-                // --------------------------------Question2D--------------------------------2
-                {
-                    chapter: 'Chapter 2: First Moves',
-                    timeline: `Late Morning`,
-                    question:
-                        `<p>Shane jogged to the field and pointed out a simple way to form teams: “Cones on that side, water bottles on this side!” Kids nodded, and the game started fast. The first kickoff whooshed across the grass, and everyone cheered.</p> 
-                        <p>A taller kid smiled and said, “Nice idea, that made it easy.” Shane grinned but kept his eyes on the field—there was still plenty to do to keep things moving smoothly.</p>
-                        <p>He wondered how to keep the game fair and the pace strong.</p>`,
-                    answers: [
-                        { text: "He offered to be the timekeeper for quick rounds so everyone got turns and the game stayed lively.", value: 4, nextQuestion: 6 }, // C (mixed order)
-                        { text: "He clapped and encouraged both teams, keeping spirits high whenever a round ended.", value: 2, nextQuestion: 6 },           // I
-                        { text: "He made sure the newer players knew where to stand and felt comfortable joining in.", value: 3, nextQuestion: 6 },         // S
-                        { text: "He suggested a quick challenge—first team to three goals—so everyone focused and played their best.", value: 1, nextQuestion: 6 }, // D
-                    ]
-                },
+    // -----------------------------------Chapter 2--------------------------------
 
-                // --------------------------------Question2I--------------------------------3
-                {
-                    chapter: 'Chapter 2: First Moves',
-                    timeline: `Late Morning`,
-                    question:
-                        `<p>Shane laughed along with the kids by the picnic tables and invited a few to try the big slide. Soon, a tiny parade of friends marched up the stairs, cheering when each person zoomed down.</p> 
-                        <p>One kid asked, “What should we do next?” Shane liked how everyone was smiling and wanted the fun to keep rolling.</p>`,
-                    answers: [
-                        { text: "He proposed a quick group vote on the next activity so everyone felt part of the plan.", value: 3, nextQuestion: 6 },    // S
-                        { text: "He pointed to the field and said, “Let’s try a mini relay—first team to tag the cone wins!”", value: 1, nextQuestion: 6 }, // D
-                        { text: "He suggested telling a short, silly story while taking turns on the swings to keep the mood bright.", value: 2, nextQuestion: 6 }, // I
-                        { text: "He grabbed a scrap paper to jot simple rules for the relay so nobody got confused.", value: 4, nextQuestion: 6 },      // C
-                    ],
-                },
+    // --------------------------------Question2D--------------------------------2
+    {
+        chapter: 'Chapter 2: The Kickoff',
+        timeline: `Late Morning – Team Kickoff`,
+        question:
+            `Jessica’s confident opener helped the meeting start on time. The team reviewed a customer-retention project with a tight pilot date. Afterward, Maya pulled her aside. “Nice presence,” she said. “We’ll need someone to drive a workstream. Interested?”</p>Jessica knew first impressions mattered. Taking visible responsibility could build momentum—if she chose her next move wisely.</p>Considering her options, she decided to respond in a way that matched how she wanted to show up.</p>
+            `,
+        answers: [
+            { text: "Volunteer to own a deliverable and outline a quick action plan to get the pilot moving.", value: 1, nextQuestion: 6 }, // D
+            { text: "Suggest a short meet-and-greet later so teammates can connect and swap ideas.", value: 2, nextQuestion: 6 }, // I
+            { text: "Offer to support an existing workstream and keep things running smoothly.", value: 3, nextQuestion: 6 }, // S
+            { text: "Ask clarifying questions about scope, data sources, and success criteria before accepting.", value: 4, nextQuestion: 6 }, // C
+        ]
+    },
 
-                // --------------------------------Question2S--------------------------------4
-                {
-                    chapter: 'Chapter 2: First Moves',
-                    timeline: `Late Morning`,
-                    question:
-                        `<p>Shane knelt by the swing and showed the younger kid how to kick their legs forward and back. “You’ve got it,” he said softly, giving a gentle push. The smile that followed made Shane’s chest feel warm.</p>
-                    <p>Nearby, a few kids waved, inviting them to join a simple game on the grass. Shane wanted to help everyone feel included.</p>`,
-                    answers: [
-                        { text: "He suggested partners so nobody felt left out, making sure everyone had a buddy.", value: 3, nextQuestion: 6 },        // S
-                        { text: "He cheered for each try and kept everyone laughing between turns.", value: 2, nextQuestion: 6 },                      // I
-                        { text: "He outlined quick turns and a clear order so the game stayed smooth.", value: 4, nextQuestion: 6 },                   // C
-                        { text: "He set a goal—first team to tag all cones—so the group had something exciting to finish.", value: 1, nextQuestion: 6 }, // D
-                    ],
-                },
+    // --------------------------------Question2I--------------------------------3
+    {
+        chapter: 'Chapter 2: The Kickoff',
+        timeline: `Late Morning – Team Kickoff`,
+        question:
+            `Inside the glass room, Jessica’s friendly intro loosened shoulders and sparked chatter. The project brief promised cross-team collaboration and a fast pilot. Maya noticed the way the group leaned in when Jessica spoke and asked if she’d help coordinate early communication.</p>Jessica weighed how to keep energy high without losing focus on the deadline.</p>
+            `,
+        answers: [
+            { text: "Set bold targets and energize the group to move quickly toward them.", value: 1, nextQuestion: 6 }, // D
+            { text: "Plan quick huddles and an open chat to keep ideas flowing and people engaged.", value: 2, nextQuestion: 6 }, // I
+            { text: "Pair up with key teammates to build supportive relationships for the long haul.", value: 3, nextQuestion: 6 }, // S
+            { text: "Create a shared checklist so everyone sees expectations and quality bars.", value: 4, nextQuestion: 6 }, // C
+        ],
+    },
 
-                // --------------------------------Question2C--------------------------------5
-                {
-                    chapter: 'Chapter 2: First Moves',
-                    timeline: `Late Morning`,
-                    question:
-                        `<p>Shane read the playground sign and pointed out where running was safe and where walking made sense. He noticed a perfect spot for a relay that wouldn’t bump into the sandbox line.</p>
-                        <p>A kid said, “Good eye!” Shane smiled, thinking about the best way to start without any confusion.</p>`,
-                    answers: [
-                        { text: `He drew a quick path in the dirt so everyone could see where to go and when to tag.`, value: 4, nextQuestion: 6 },      // C
-                        { text: "He called out teams and shouted, “Ready, set, go!” to get things going right away.", value: 1, nextQuestion: 6 },     // D
-                        { text: "He asked if anyone was nervous and paired them with a friendly partner.", value: 3, nextQuestion: 6 },               // S
-                        { text: "He hyped up the group with a fun chant before the first run.", value: 2, nextQuestion: 6 },                         // I
-                    ],
-                },
+    // --------------------------------Question2S--------------------------------4
+    {
+        chapter: 'Chapter 2: The Kickoff',
+        timeline: `Late Morning – Team Kickoff`,
+        question:
+            `Jessica observed quietly, noting who asked questions and who preferred to listen. When she spoke, it was to connect dots and make sure quieter voices were included. The room relaxed.</p>Afterward, Maya asked her to help keep coordination calm and consistent as the pilot ramped up.</p>
+            `,
+        answers: [
+            { text: "Draft a simple path to milestone one and keep everyone marching toward it.", value: 1, nextQuestion: 6 }, // D
+            { text: "Plan a short, positive check-in where people can share wins and ideas.", value: 2, nextQuestion: 6 }, // I
+            { text: "Offer steady support and predictable updates so no one feels rushed.", value: 3, nextQuestion: 6 }, // S
+            { text: "Clarify roles, timelines, and definitions of done to prevent surprises.", value: 4, nextQuestion: 6 }, // C
+        ],
+    },
 
-                // -----------------------------------Chapter 3--------------------------------6
-                {
-                    chapter: 'Chapter 3: Snack Time Strategy',
-                    timeline: `Snack Time`,
-                    question:
-                        `<p>By snack time, Shane knew where the water fountain was and which bench had the best shade. Kids compared granola bars and swapped apple slices. The field was open again, and the swings had a shorter line.</p>
-                        <p>Shane took a sip of water and looked around. The day still had plenty of adventure left. He thought about the next fun thing to try.</p>
-                        <p>What should he do to keep the day rolling?</p>`,
-                    answers: [
-                        { text: "He mapped out a short obstacle course using cones, a hopscotch square, and the big tree as a marker.", value: 4, nextQuestion: 7 }, // C
-                        { text: "He started a cheerful countdown and invited anyone nearby to join the next game.", value: 2, nextQuestion: 8 },                   // I
-                        { text: "He checked on a couple of kids sitting out and asked if they wanted easy roles to feel included.", value: 3, nextQuestion: 9 },    // S
-                        { text: "He challenged himself and a few others to try a timed run from the bench to the slide and back.", value: 1, nextQuestion: 7 },     // D
-                    ],
-                },
+    // --------------------------------Question2C--------------------------------5
+    {
+        chapter: 'Chapter 2: The Kickoff',
+        timeline: `Late Morning – Team Kickoff`,
+        question:
+            `Jessica listened and captured details: data fields, sample sizes, and handoffs. When she chimed in, she framed trade-offs clearly. Heads nodded around the table.</p>Maya asked if she’d take point on requirements for the first test cohort.</p>
+            `,
+        answers: [
+            { text: "Map the objective and set near-term goals to keep velocity high.", value: 1, nextQuestion: 6 }, // D
+            { text: "Invite a short brainstorming session to keep the team excited and connected.", value: 2, nextQuestion: 6 }, // I
+            { text: "Offer to coordinate quietly, keeping progress steady and predictable.", value: 3, nextQuestion: 6 }, // S
+            { text: "Create a concise spec: inputs, outputs, and acceptance tests.", value: 4, nextQuestion: 6 }, // C
+        ],
+    },
 
-                // --------------------------------Question4D--------------------------------7
-                {
-                    chapter: 'Chapter 4: Game On',
-                    timeline: `Early Afternoon`,
-                    question:
-                        `<p>The whistle Shane found in his pocket (okay, it was just a pretend whistle sound) made everyone laugh, but it also got attention. He set a quick pace: “Three rounds, short breaks, go!”</p>
-                        <p>The games moved fast and felt exciting. Shane liked how everyone stayed focused and how the rounds finished strong. Now it was time to keep the fun sharp.</p>
-                        <p>He considered the best next step.</p>`,
-                    answers: [
-                        { text: "He kept the rounds short and speedy so everyone stayed pumped.", value: 1, nextQuestion: 11 }, // D
-                        { text: "He paused to cheer for both sides, making sure high-fives kept coming.", value: 2, nextQuestion: 11 }, // I
-                        { text: "He checked that each person had a simple role they felt good about.", value: 3, nextQuestion: 11 }, // S
-                        { text: "He wrote tiny score marks in the dirt so the results were clear.", value: 4, nextQuestion: 11 }, // C
-                    ],
-                },
+    // -----------------------------------Chapter 3--------------------------------6
 
-                // --------------------------------Question4I--------------------------------8
-                {
-                    chapter: 'Chapter 4: Game On',
-                    timeline: `Early Afternoon`,
-                    question:
-                        `<p>Shane’s countdown echoed across the grass and got more kids to join. He made a goofy team name for each group, and everyone giggled.</p>
-                        <p>The air felt lighter, and the games went smoother when people smiled. Still, he wanted the next part to run even better.</p>`,
-                    answers: [
-                        { text: "He introduced a quick “switch spots” rule to keep the game moving.", value: 4, nextQuestion: 11 }, // C
-                        { text: "He kept the energy up with claps and chants between turns.", value: 2, nextQuestion: 11 }, // I
-                        { text: "He set a target—first team to reach the tree wins—so there was a clear finish.", value: 1, nextQuestion: 11 }, // D
-                        { text: "He checked that shy kids had partners to help them feel comfy.", value: 3, nextQuestion: 11 }, // S
-                    ],
-                },
+    {
+        chapter: 'Chapter 3: The First Sprint',
+        timeline: `Afternoon – Week 1`,
+        question:
+            `By the afternoon of her first week, Jessica understood the team’s rhythms. A sprint board filled with sticky notes showed promise—and bottlenecks. A pilot review loomed on the calendar.</p>Maya pinged her for a status chat. “We’ll need strong progress before Friday,” she said.</p>Jessica considered how to respond under pressure:</p>
+            `,
+        answers: [
+            { text: "Own the most critical tasks and push for quick wins to unblock the team.", value: 1, nextQuestion: 7 }, // D
+            { text: "Host a creative huddle to surface ideas and re-energize everyone.", value: 2, nextQuestion: 8 }, // I
+            { text: "Lay out a calm plan and sequence the work to reduce stress.", value: 3, nextQuestion: 9 }, // S
+            { text: "Audit the board, clarify dependencies, and reset estimates.", value: 4, nextQuestion: 10 }, // C
+        ],
+    },
 
-                // --------------------------------Question4S--------------------------------9
-                {
-                    chapter: 'Chapter 4: Game On',
-                    timeline: `Early Afternoon`,
-                    question:
-                        `<p>Shane made sure the kids on the bench had easy ways to join—counting, cheering, or holding a cone. Smiles started popping up like bubbles.</p>
-                        <p>It felt good when everyone had a place. He wanted to keep the pace steady and kind.</p>`,
-                    answers: [
-                        { text: "He created gentle turns so no one felt rushed or skipped.", value: 3, nextQuestion: 11 }, // S
-                        { text: "He encouraged quick mini-challenges so the rhythm stayed lively.", value: 1, nextQuestion: 11 }, // D
-                        { text: "He suggested a cheer after each round to keep things bright.", value: 2, nextQuestion: 11 }, // I
-                        { text: "He marked a simple route with two cones to prevent crowding.", value: 4, nextQuestion: 11 }, // C
-                    ],
-                },
+    // --------------------------------Question4D--------------------------------7
+    {
+        chapter: 'Chapter 4: Making Calls',
+        timeline: `End of Week 1`,
+        question:
+            `Owning the hard tasks gave the sprint a jolt. Jessica set daily touchpoints and trimmed distractions. People appreciated the clarity.</p>As the review neared, she had to choose how to drive the final push.</p>
+            `,
+        answers: [
+            { text: "Press forward decisively and remove any blockers on the spot.", value: 1, nextQuestion: 11 }, // D
+            { text: "Rally the team with a quick, upbeat sync to finish strong together.", value: 2, nextQuestion: 11 }, // I
+            { text: "Slow the pace slightly to ensure each person feels supported.", value: 3, nextQuestion: 11 }, // S
+            { text: "Break remaining work into precise, trackable steps.", value: 4, nextQuestion: 11 }, // C
+        ],
+    },
 
-                // --------------------------------Question4C--------------------------------10
-                {
-                    chapter: 'Chapter 4: Game On',
-                    timeline: `Early Afternoon`,
-                    question:
-                        `<p>Shane drew a tiny course in the dust and showed where to start, turn, and tag. It made everything feel organized and easy to follow.</p>
-                        <p>Watching people zip through the path, he thought about making the next rounds even smoother.</p>`,
-                    answers: [
-                        { text: "He added a small challenge: two hops at the turn to keep focus sharp.", value: 1, nextQuestion: 11 }, // D
-                        { text: "He taught a quick chant so kids remembered the steps with a smile.", value: 2, nextQuestion: 11 }, // I
-                        { text: "He paired faster runners with helpers so everyone felt supported.", value: 3, nextQuestion: 11 }, // S
-                        { text: "He kept a neat tally so turns and scores stayed clear.", value: 4, nextQuestion: 11 }, // C
-                    ],
-                },
+    // --------------------------------Question4I--------------------------------8
+    {
+        chapter: 'Chapter 4: Making Calls',
+        timeline: `End of Week 1`,
+        question:
+            `The brainstorm lifted the mood. Ideas flowed, and volunteers stepped up. Now the team needed direction without losing the spark.</p>Jessica weighed her next move.</p>
+            `,
+        answers: [
+            { text: "Channel the energy into bold, immediate actions.", value: 1, nextQuestion: 11 }, // D
+            { text: "Keep morale high with brief, fun check-ins during the push.", value: 2, nextQuestion: 11 }, // I
+            { text: "Touch base one-on-one to make sure each person is comfortable.", value: 3, nextQuestion: 11 }, // S
+            { text: "Publish crisp guidelines so everyone knows the bar and the plan.", value: 4, nextQuestion: 11 }, // C
+        ],
+    },
 
-                // --------------------------------Question5--------------------------------11
-                {
-                    chapter: 'Chapter 5: Midday Momentum',
-                    timeline: `Midday`,
-                    question:
-                        `<p>By midday, the sun felt warmer and the games had a nice rhythm. Shane noticed a fresh group of kids arriving with skateboards and jump ropes.</p>
-                        <p>There was time for one more big activity before the afternoon stretched long. Shane wanted it to feel awesome for everyone.</p>
-                        <p>He thought about the best next idea.</p>`,
-                    answers: [
-                        { text: "He set a bold goal—beat the best time from earlier—so everyone had something exciting to chase.", value: 1, nextQuestion: 12 }, // D -> 12
-                        { text: "He suggested a silly-hat relay (imaginary hats totally count) to keep everyone laughing.", value: 2, nextQuestion: 13 }, // I -> 13
-                        { text: "He checked with each kid to see what they wanted to try and offered gentle roles for anyone unsure.", value: 3, nextQuestion: 14 }, // S -> 14
-                        { text: "He reviewed the course and moved a cone to make the turns clearer and safer.", value: 4, nextQuestion: 15 }, // C -> 15
-                    ],
-                },
+    // --------------------------------Question4S--------------------------------9
+    {
+        chapter: 'Chapter 4: Making Calls',
+        timeline: `End of Week 1`,
+        question:
+            `A clear, calm plan steadied the sprint. Tension faded. With the review tomorrow, Jessica considered how to keep momentum without creating chaos.</p>She decided to…</p>
+            `,
+        answers: [
+            { text: "Drive the team faster toward the deadline with firm priorities.", value: 1, nextQuestion: 11 }, // D
+            { text: "Add a touch of levity and collaboration to keep spirits up.", value: 2, nextQuestion: 11 }, // I
+            { text: "Confirm everyone’s tasks and be available for support.", value: 3, nextQuestion: 11 }, // S
+            { text: "Tighten the timeline and milestone checklist.", value: 4, nextQuestion: 11 }, // C
+        ],
+    },
 
-                // --------------------------------Question6D--------------------------------12
-                {
-                    chapter: 'Chapter 6: The Push',
-                    timeline: `Early Afternoon`,
-                    question:
-                        `<p>Shane pointed to the tree and said, “Let’s try to beat our best time!” Everyone lined up, bouncing on their toes.</p>
-                        <p>He liked how a clear target made people focus. Now he just needed to keep things crisp and fair.</p>
-                        <p>What should he do next?</p>`,
-                    answers: [
-                        { text: "He kept the clock tight and called quick starts to keep the pace strong.", value: 1, nextQuestion: 16 }, // D -> 16
-                        { text: "He hyped each run with cheers so the energy stayed high.", value: 2, nextQuestion: 16 }, // I
-                        { text: "He offered calm reminders and gave nervous runners a thumbs-up before they began.", value: 3, nextQuestion: 16 }, // S
-                        { text: "He double-checked the finish line so the timing felt clear to everyone.", value: 4, nextQuestion: 16 }, // C
-                    ],
-                },
+    // --------------------------------Question4C--------------------------------10
+    {
+        chapter: 'Chapter 4: Making Calls',
+        timeline: `End of Week 1`,
+        question:
+            `Clarifying dependencies revealed a few risks. Jessica flagged them early and aligned handoffs across teams.</p>Now she needed the best final-stretch approach.</p>
+            `,
+        answers: [
+            { text: "Adopt a bolder stance and push the pace to deliver.", value: 1, nextQuestion: 11 }, // D
+            { text: "Keep people engaged with recognition and quick wins.", value: 2, nextQuestion: 11 }, // I
+            { text: "Ensure each person has what they need and feels supported.", value: 3, nextQuestion: 11 }, // S
+            { text: "Lock the plan with detailed steps and quality gates.", value: 4, nextQuestion: 11 }, // C
+        ],
+    },
 
-                // --------------------------------Question6I--------------------------------13
-                {
-                    chapter: 'Chapter 6: The Push',
-                    timeline: `Early Afternoon`,
-                    question:
-                        `<p>With giggles and pretend hats, the relay felt like a celebration. Shane could tell people tried harder when the mood was fun.</p>
-                        <p>He wanted to guide the group toward a great finish while keeping the smiles going.</p>`,
-                    answers: [
-                        { text: "He set quick, simple goals for each round so progress felt exciting.", value: 1, nextQuestion: 16 }, // D
-                        { text: "He kept the cheers rolling and joked about “hat styles” between turns.", value: 2, nextQuestion: 16 }, // I
-                        { text: "He checked in with quiet kids and made sure they felt ready for their part.", value: 3, nextQuestion: 16 }, // S
-                        { text: "He clarified the tagging spot so nobody got mixed up at the finish.", value: 4, nextQuestion: 16 }, // C
-                    ],
-                },
+    // --------------------------------Question5--------------------------------11
+    {
+        chapter: 'Chapter 5: Review Day',
+        timeline: `Week 2 – Morning`,
+        question:
+            `Review day arrived. Jessica walked the room through the pilot progress, crisp slides and real results. The executive panel nodded along.</p>A new email popped up afterward: “Phase Two: Larger Cohort, Multi-team Coordination.” The stakes rose—and so did the opportunity.</p>Jessica chose how to guide the next leg:</p>
+            `,
+        answers: [
+            { text: "Take command of the most impactful path to the goal.", value: 1, nextQuestion: 12 }, // D
+            { text: "Keep energy high and celebrate milestones to sustain momentum.", value: 2, nextQuestion: 13 }, // I
+            { text: "Check in with each partner team to ensure smooth handoffs.", value: 3, nextQuestion: 14 }, // S
+            { text: "Double-check data quality and refine the plan before scaling.", value: 4, nextQuestion: 15 }, // C
+        ],
+    },
 
-                // --------------------------------Question6S--------------------------------14
-                {
-                    chapter: 'Chapter 6: The Push',
-                    timeline: `Early Afternoon`,
-                    question:
-                        `<p>Shane walked the line, offering gentle encouragement. A nervous look turned into a small grin after his quiet, “You’ve got this.”</p>
-                        <p>He wanted the last stretch to feel steady and friendly.</p>`,
-                    answers: [
-                        { text: "He nudged the pace a little faster to keep things moving well.", value: 1, nextQuestion: 16 }, // D
-                        { text: "He led a quick clap pattern to keep spirits up between runs.", value: 2, nextQuestion: 16 }, // I
-                        { text: "He maintained simple turns so nobody felt rushed or skipped.", value: 3, nextQuestion: 16 }, // S
-                        { text: "He reviewed the route one more time so it stayed smooth.", value: 4, nextQuestion: 16 }, // C
-                    ],
-                },
+    // --------------------------------Question6D--------------------------------12
+    {
+        chapter: 'Chapter 6: Bigger Stage',
+        timeline: `Week 3 – Midweek`,
+        question:
+            `With more teams involved, Jessica drove crisp stand-ups and decisions. When blockers surfaced, she cleared them swiftly.</p>As deadlines converged, she picked a finish-line tactic.</p>
+            `,
+        answers: [
+            { text: "Tighten focus: results first, distractions later.", value: 1, nextQuestion: 16 }, // D
+            { text: "Motivate with urgency while keeping spirits up.", value: 2, nextQuestion: 16 }, // I
+            { text: "Break work into tiny, supported steps for each owner.", value: 3, nextQuestion: 16 }, // S
+            { text: "Run one last quality sweep to ensure no surprises.", value: 4, nextQuestion: 16 }, // C
+        ],
+    },
 
-                // --------------------------------Question6C--------------------------------15
-                {
-                    chapter: 'Chapter 6: The Push',
-                    timeline: `Early Afternoon`,
-                    question:
-                        `<p>Shane stepped the cones a bit wider and drew a clean line for tagging. It felt organized and safe, which made people run better.</p>
-                        <p>A few kids thanked him for making the turn easier to see. He nodded, already thinking ahead.</p>`,
-                    answers: [
-                        { text: "He kicked off the final round with a strong countdown and quick starts.", value: 1, nextQuestion: 16 }, // D
-                        { text: "He boosted the crowd with cheers so each runner felt brave.", value: 2, nextQuestion: 16 }, // I
-                        { text: "He paired a newer runner with a buddy to help them feel calm.", value: 3, nextQuestion: 16 }, // S
-                        { text: "He watched the finish line closely to record times fairly.", value: 4, nextQuestion: 16 }, // C
-                    ],
-                },
+    // --------------------------------Question6I--------------------------------13
+    {
+        chapter: 'Chapter 6: Bigger Stage',
+        timeline: `Week 3 – Midweek`,
+        question:
+            `Jessica amped up connection—quick recognitions, open chat, and shared wins. The room buzzed again.</p>To land the phase, she decided to…</p>
+            `,
+        answers: [
+            { text: "Set sharp targets and pace the team toward them.", value: 1, nextQuestion: 16 }, // D
+            { text: "Keep enthusiasm high with brief, energizing touchpoints.", value: 2, nextQuestion: 16 }, // I
+            { text: "Offer supportive one-on-ones for anyone feeling stretched.", value: 3, nextQuestion: 16 }, // S
+            { text: "Delegate clearly with quality expectations documented.", value: 4, nextQuestion: 16 }, // C
+        ],
+    },
 
-                // --------------------------------Question7--------------------------------16
-                {
-                    chapter: 'Chapter 7: New Faces',
-                    timeline: `Mid-Afternoon`,
-                    question:
-                        `<p>When the relay wrapped, Shane noticed a kid named Jay arriving with a bright blue backpack and a curious smile. Jay waved shyly.</p>
-                        <p>Shane liked meeting new friends at the park. He wanted Jay to feel welcome and ready to jump in.</p>
-                        <p>He chose how to start.</p>`,
-                    answers: [
-                        { text: "He explained the game in two quick steps and suggested they try a short round right away.", value: 1, nextQuestion: 17 }, // D -> 17
-                        { text: "He told a friendly joke and invited Jay to pick a team name.", value: 2, nextQuestion: 18 }, // I -> 18
-                        { text: "He offered to walk the course with Jay so it felt easy and comfortable.", value: 3, nextQuestion: 19 }, // S -> 19
-                        { text: "He pointed out the cones and finish line so Jay understood exactly how it worked.", value: 4, nextQuestion: 20 }, // C -> 20
-                    ],
-                },
+    // --------------------------------Question6S--------------------------------14
+    {
+        chapter: 'Chapter 6: Bigger Stage',
+        timeline: `Week 3 – Midweek`,
+        question:
+            `Jessica noticed the pace wearing on a few teammates. She brought a steady presence, reducing noise and clarifying priorities.</p>For the close, she chose to…</p>
+            `,
+        answers: [
+            { text: "Push a bit faster and keep eyes on the deadline.", value: 1, nextQuestion: 16 }, // D
+            { text: "Maintain positivity and collaboration to finish strong.", value: 2, nextQuestion: 16 }, // I
+            { text: "Continue one-to-one support to balance workload.", value: 3, nextQuestion: 16 }, // S
+            { text: "Review progress carefully to catch any gaps.", value: 4, nextQuestion: 16 }, // C
+        ],
+    },
 
-                // --------------------------------Question8D--------------------------------17
-                {
-                    chapter: 'Chapter 8: Team Spark',
-                    timeline: `Later Afternoon`,
-                    question:
-                        `<p>“Two steps: start here, tag there,” Shane said, smiling. Jay nodded, ready to try. The first dash was quick and clean.</p>
-                        <p>Shane liked that simple plans helped people jump in fast. Now he wanted to keep the pace strong and the fun bright.</p>`,
-                    answers: [
-                        { text: "He set a tiny target for the next run so Jay could feel a win right away.", value: 1, nextQuestion: 21 }, // D -> 21
-                        { text: "He cheered loudly for Jay and made a silly drumbeat on his knees.", value: 2, nextQuestion: 21 }, // I
-                        { text: "He checked if Jay wanted a buddy for the next round.", value: 3, nextQuestion: 21 }, // S
-                        { text: "He added a cone to make the turn clearer before they tried again.", value: 4, nextQuestion: 21 }, // C
-                    ],
-                },
+    // --------------------------------Question6C--------------------------------15
+    {
+        chapter: 'Chapter 6: Bigger Stage',
+        timeline: `Week 3 – Midweek`,
+        question:
+            `Jessica triple-checked the metrics and felt confident the plan would hold. One more decision remained: how to steer the final sprint.</p>
+            `,
+        answers: [
+            { text: "Lead the charge with crisp, timely calls.", value: 1, nextQuestion: 16 }, // D
+            { text: "Keep people energized and focused on the impact.", value: 2, nextQuestion: 16 }, // I
+            { text: "Encourage balance and prevent last-minute stress.", value: 3, nextQuestion: 16 }, // S
+            { text: "Conduct a thorough last review to ensure accuracy.", value: 4, nextQuestion: 16 }, // C
+        ],
+    },
 
-                // --------------------------------Question8I--------------------------------18
-                {
-                    chapter: 'Chapter 8: Team Spark',
-                    timeline: `Later Afternoon`,
-                    question:
-                        `<p>Shane’s joke landed, and Jay laughed, choosing “Blue Rockets” as a team name. A couple of kids joined their side with big grins.</p>
-                        <p>The group felt connected, and the next round started with cheers.</p>`,
-                    answers: [
-                        { text: "He set a playful challenge to keep everyone buzzing.", value: 1, nextQuestion: 21 }, // D
-                        { text: "He led a chant so the Blue Rockets felt unstoppable.", value: 2, nextQuestion: 21 }, // I
-                        { text: "He checked that no one was left out and that everyone had a turn coming.", value: 3, nextQuestion: 21 }, // S
-                        { text: "He clarified where to tag so finishes stayed neat.", value: 4, nextQuestion: 21 }, // C
-                    ],
-                },
+    // --------------------------------Question7--------------------------------16
+    {
+        chapter: 'Chapter 7: Growing Trust',
+        timeline: `Month 2 – Monday`,
+        question:
+            `Phase Two shipped. Jessica’s judgment earned trust beyond her immediate team. Soon, a cross-functional initiative launched—and a seasoned analyst named Priya joined to partner with her.</p>Jessica considered how to set the tone with her new teammate.</p>
+            `,
+        answers: [
+            { text: "Set clear expectations early and define ownership.", value: 1, nextQuestion: 17 }, // D
+            { text: "Welcome Priya enthusiastically and spark collaborative energy.", value: 2, nextQuestion: 18 }, // I
+            { text: "Build a reliable cadence and create space for questions.", value: 3, nextQuestion: 19 }, // S
+            { text: "Co-design a detailed plan with data checks and milestones.", value: 4, nextQuestion: 20 }, // C
+        ],
+    },
 
-                // --------------------------------Question8S--------------------------------19
-                {
-                    chapter: 'Chapter 8: Team Spark',
-                    timeline: `Later Afternoon`,
-                    question:
-                        `<p>Shane walked the course slowly with Jay, pointing to the start and finish while chatting about favorite snacks. Jay relaxed and smiled.</p>
-                        <p>Now the group could keep going together, steady and friendly.</p>`,
-                    answers: [
-                        { text: "He nudged the pace with a short, exciting round next.", value: 1, nextQuestion: 21 }, // D
-                        { text: "He kept the mood light with a quick clap rhythm.", value: 2, nextQuestion: 21 }, // I
-                        { text: "He made sure everyone had a clear turn in the order.", value: 3, nextQuestion: 21 }, // S
-                        { text: "He used a soft voice to remind people of the route so it stayed smooth.", value: 4, nextQuestion: 21 }, // C
-                    ],
-                },
+    // --------------------------------Question8D--------------------------------17
+    {
+        chapter: 'Chapter 8: Wider Impact',
+        timeline: `Month 2 – Late Week`,
+        question:
+            `With roles set, velocity rose. Jessica tracked outcomes and kept the bigger picture visible. Priya appreciated the decisiveness.</p>As scope expanded, Jessica weighed how to keep results sharp.</p>
+            `,
+        answers: [
+            { text: "Maintain firm goals and deadlines that cut through noise.", value: 1, nextQuestion: 21 }, // D
+            { text: "Invite Priya to champion team energy while staying on pace.", value: 2, nextQuestion: 21 }, // I
+            { text: "Offer frequent check-ins to keep everyone supported.", value: 3, nextQuestion: 21 }, // S
+            { text: "Refine the plan into crisp tasks before execution.", value: 4, nextQuestion: 21 }, // C
+        ],
+    },
 
-                // --------------------------------Question8C--------------------------------20
-                {
-                    chapter: 'Chapter 8: Team Spark',
-                    timeline: `Later Afternoon`,
-                    question:
-                        `<p>Shane pointed to each cone and explained the tag spot. Jay nodded, grateful for the clear guide.</p>
-                        <p>The next run could be even better with the right touch.</p>`,
-                    answers: [
-                        { text: "He launched a quick round to build momentum.", value: 1, nextQuestion: 21 }, // D
-                        { text: "He added a happy cheer so the start felt brave.", value: 2, nextQuestion: 21 }, // I
-                        { text: "He paired Jay with a teammate who promised kind support.", value: 3, nextQuestion: 21 }, // S
-                        { text: "He kept the course tidy so the turn was easy to spot.", value: 4, nextQuestion: 21 }, // C
-                    ],
-                },
+    // --------------------------------Question8I--------------------------------18
+    {
+        chapter: 'Chapter 8: Wider Impact',
+        timeline: `Month 2 – Late Week`,
+        question:
+            `Jessica and Priya energized meetings, turning updates into idea sessions. Momentum grew, and leadership noticed.</p>Next, Jessica focused on sustaining both pace and connection.</p>
+            `,
+        answers: [
+            { text: "Set ambitious but reachable targets to aim for together.", value: 1, nextQuestion: 21 }, // D
+            { text: "Use short, creative jams to keep the spark alive.", value: 2, nextQuestion: 21 }, // I
+            { text: "Check individually that workload feels healthy.", value: 3, nextQuestion: 21 }, // S
+            { text: "Mind the details without losing the upbeat tone.", value: 4, nextQuestion: 21 }, // C
+        ],
+    },
 
-                // --------------------------------Question9--------------------------------21
-                {
-                    chapter: 'Chapter 9: Big Afternoon Plan',
-                    timeline: `Afternoon`,
-                    question:
-                        `<p>The park buzzed with energy. Skateboards rolled past the path, and a kite wiggled in the sky. Shane felt proud of the day so far.</p>
-                        <p>There was time for one more “big thing” before everyone had to head home. He wanted it to feel like a perfect finish.</p>
-                        <p>He looked around and decided:</p>`,
-                    answers: [
-                        { text: "He set a final target—beat the best team time by one second—and explained it fast.", value: 1, nextQuestion: 22 }, // D -> 22
-                        { text: "He suggested a celebration round where everyone runs once and the group cheers the loudest.", value: 2, nextQuestion: 23 }, // I -> 23
-                        { text: "He arranged the line so every kid who wanted a turn got one, no rush.", value: 3, nextQuestion: 24 }, // S -> 24
-                        { text: "He adjusted two cones and marked a clearer finish to avoid ties.", value: 4, nextQuestion: 25 }, // C -> 25
-                    ],
-                },
+    // --------------------------------Question8S--------------------------------19
+    {
+        chapter: 'Chapter 8: Wider Impact',
+        timeline: `Month 2 – Late Week`,
+        question:
+            `Jessica prioritized stability. Priya settled in quickly, trusting the predictable rhythm.</p>To balance care with speed, Jessica chose to…</p>
+            `,
+        answers: [
+            { text: "Nudge the pace forward with clear priority calls.", value: 1, nextQuestion: 21 }, // D
+            { text: "Keep engagement high with collaborative moments.", value: 2, nextQuestion: 21 }, // I
+            { text: "Maintain steady support and approachable check-ins.", value: 3, nextQuestion: 21 }, // S
+            { text: "Track tasks closely and align on schedule details.", value: 4, nextQuestion: 21 }, // C
+        ],
+    },
 
-                // --------------------------------Question10D--------------------------------22
-                {
-                    chapter: 'Chapter 10: Final Dash',
-                    timeline: 'Late Afternoon',
-                    question:
-                        `<p>“Last push!” Shane called. The plan was simple and bold, and kids loved the challenge. Shoes thumped the grass.</p>
-                        <p>With the end of the day near, he wanted it to feel strong and fair.</p>
-                        <p>What would make the finish awesome?</p>`,
-                    answers: [
-                        { text: "He kept the starts quick and the focus sharp for one more run.", value: 1, nextQuestion: 26 }, // D -> end
-                        { text: "He got the crowd cheering to boost bravery for the last dash.", value: 2, nextQuestion: 26 }, // I
-                        { text: "He checked that everyone who wanted a turn had one lined up.", value: 3, nextQuestion: 26 }, // S
-                        { text: "He counted down clearly and watched the line to record the time right.", value: 4, nextQuestion: 26 }, // C
-                    ],
-                },
+    // --------------------------------Question8C--------------------------------20
+    {
+        chapter: 'Chapter 8: Wider Impact',
+        timeline: `Month 2 – Late Week`,
+        question:
+            `Jessica and Priya diagrammed the next phase on a whiteboard—inputs, owners, quality checks. Confidence rose.</p>Still, she had to decide how tightly to hold to process versus speed.</p>
+            `,
+        answers: [
+            { text: "Prioritize rapid delivery while guarding key standards.", value: 1, nextQuestion: 21 }, // D
+            { text: "Keep people engaged and aware of why the work matters.", value: 2, nextQuestion: 21 }, // I
+            { text: "Check that the team feels supported as details intensify.", value: 3, nextQuestion: 21 }, // S
+            { text: "Lean into thorough reviews to keep quality high.", value: 4, nextQuestion: 21 }, // C
+        ],
+    },
 
-                // --------------------------------Question10I--------------------------------23
-                {
-                    chapter: 'Chapter 10: Final Dash',
-                    timeline: 'Late Afternoon',
-                    question:
-                        `<p>Shane’s celebration round idea had everyone smiling. The air felt like a happy drumbeat.</p>
-                        <p>He wanted to end on a note that felt big and kind.</p>`,
-                    answers: [
-                        { text: "He set a quick end-goal to keep the last run exciting.", value: 1, nextQuestion: 26 }, // D
-                        { text: "He led one last cheer so the park echoed with laughter.", value: 2, nextQuestion: 26 }, // I
-                        { text: "He made sure the turn order included anyone still waiting.", value: 3, nextQuestion: 26 }, // S
-                        { text: "He checked the route so the finish line was easy to see.", value: 4, nextQuestion: 26 }, // C
-                    ],
-                },
+    // --------------------------------Question9--------------------------------21
+    {
+        chapter: 'Chapter 9: The Cross-Company Launch',
+        timeline: `Month 3 – Planning Week`,
+        question:
+            `The pilot’s success unlocked a company-wide launch. Leaders asked Jessica to help shape strategy while Priya coordinated execution.</p>With more eyes watching, Jessica chose her approach.</p>
+            `,
+        answers: [
+            { text: "Own the strategic outline and let Priya drive daily motion.", value: 1, nextQuestion: 22 }, // D
+            { text: "Inspire the broader team and co-lead upbeat working sessions.", value: 2, nextQuestion: 23 }, // I
+            { text: "Keep a steady cadence and protect team well-being.", value: 3, nextQuestion: 24 }, // S
+            { text: "Co-author a robust plan with metrics and reviews.", value: 4, nextQuestion: 25 }, // C
+        ],
+    },
 
-                // --------------------------------Question10S--------------------------------24
-                {
-                    chapter: 'Chapter 10: Final Dash',
-                    timeline: 'Late Afternoon',
-                    question:
-                        `<p>Shane looked at the line and gave a gentle nod. Every kid who wanted to play had a spot. That felt right.</p>
-                        <p>Now it was time to wrap up in a friendly way.</p>`,
-                    answers: [
-                        { text: "He suggested a short, exciting final round to finish strong.", value: 1, nextQuestion: 26 }, // D
-                        { text: "He kept the clapping going so each turn felt special.", value: 2, nextQuestion: 26 }, // I
-                        { text: "He stayed near the line to help quieter kids feel ready.", value: 3, nextQuestion: 26 }, // S
-                        { text: "He reminded everyone where to tag so the end felt neat.", value: 4, nextQuestion: 26 }, // C
-                    ],
-                },
+    // --------------------------------Question10D--------------------------------22
+    {
+        chapter: 'Chapter 10: Visible Leadership',
+        timeline: 'Month 3 – Execution Window',
+        question:
+            `Jessica’s clear strategy aligned multiple groups. Status meetings were crisp and outcomes-oriented. Confidence in the launch grew.</p>Near the finish, she considered one last push.</p>
+            `,
+        answers: [
+            { text: "Raise the bar and drive toward an ambitious final date.", value: 1, nextQuestion: 26 }, // D
+            { text: "Rally the org with one motivating all-hands checkpoint.", value: 2, nextQuestion: 26 }, // I
+            { text: "Create breathing room so teams finish well without burnout.", value: 3, nextQuestion: 26 }, // S
+            { text: "Run a final quality pass across every stream.", value: 4, nextQuestion: 26 }, // C
+        ],
+    },
 
-                // --------------------------------Question10C--------------------------------25
-                {
-                    chapter: 'Chapter 10: Final Dash',
-                    timeline: 'Late Afternoon',
-                    question:
-                        `<p>Two cones slid into better spots, and a simple chalk line made the finish clear. “That helps,” someone said.</p>
-                        <p>The last part of the day was ready to shine.</p>`,
-                    answers: [
-                        { text: "He kicked off one focused last round with a strong countdown.", value: 1, nextQuestion: 26 }, // D
-                        { text: "He started a cheerful chant to power people to the finish.", value: 2, nextQuestion: 26 }, // I
-                        { text: "He checked that the line felt calm and fair for the final turns.", value: 3, nextQuestion: 26 }, // S
-                        { text: "He watched the finish closely to keep time right and clear.", value: 4, nextQuestion: 26 }, // C
-                    ],
-                },
+    // --------------------------------Question10I--------------------------------23
+    {
+        chapter: 'Chapter 10: Visible Leadership',
+        timeline: 'Month 3 – Execution Window',
+        question:
+            `The cross-company energy was contagious. Jessica and Priya kept recognition front and center, and updates felt like celebrations of progress.</p>To land the launch, Jessica chose to…</p>
+            `,
+        answers: [
+            { text: "Clarify expectations and push through the final yards.", value: 1, nextQuestion: 26 }, // D
+            { text: "Host a brief, inspiring sync to carry momentum over the line.", value: 2, nextQuestion: 26 }, // I
+            { text: "Check individually that no one is overloaded before go-live.", value: 3, nextQuestion: 26 }, // S
+            { text: "Conduct a last joint review with Priya for accuracy.", value: 4, nextQuestion: 26 }, // C
+        ],
+    },
 
-                // --------------------------------QuestionEND--------------------------------26
-                {
-                    chapter: 'The Conclusion',
-                    timeline: 'Sunset',
-                    dominanceConclusion:
-                        `<p>As the sky turned orange, Shane looked over the field where the cones still made neat triangles. He had a knack for getting things started and keeping them moving. When friends needed a plan, he gave one. When a game needed a push, he brought it.</p>
-                        <p>Being a Go-Getter means he likes goals and action. He helps the group try new things and finish strong. People trust him to be brave and to make quick choices when it’s time to play.</p>
-                        <p>Shane’s superpower is turning “let’s play” into “let’s do it!” He reminds others that courage plus kindness makes amazing days happen.</p>`,
-                    influenceConclusion:
-                        `<p>As the light softened, Shane heard echoes of cheers and friendly laughter. He had started chants, told jokes, and made new friends feel at home. Games felt brighter when he was around.</p>
-                        <p>Being an Encourager means he spreads energy and helps people feel brave. He brings smiles to the group and keeps everyone excited to join in.</p>
-                        <p>Shane’s superpower is lifting spirits. He reminds others that fun grows when we share it.</p>`,
-                    steadinessConclusion:
-                        `<p>As the swings slowed, Shane noticed calm faces and easy grins. He made sure everyone had a turn, and he stayed patient. Kids who were unsure at first finished the day feeling proud.</p>
-                        <p>Being a Peacemaker means he’s steady and kind. He helps people feel safe and included, and he keeps the day moving at a gentle, friendly pace.</p>
-                        <p>Shane’s superpower is caring. He reminds others that the best games include every kid.</p>`,
-                    conscientiousnessConclusion:
-                        `<p>As the sun slipped behind the trees, the chalk line and tidy cones made the field look just right. Shane noticed what helped the games run well and fixed tiny problems so everyone could focus on the fun.</p>
-                        <p>Being a Problem Solver means he thinks ahead and cares about how things work. He keeps rules clear and plans smart, which makes playing easier for everyone.</p>
-                        <p>Shane’s superpower is thoughtful planning. He reminds others that a little care makes big fun happen.</p>`
-                }
-            ];
+    // --------------------------------Question10S--------------------------------24
+    {
+        chapter: 'Chapter 10: Visible Leadership',
+        timeline: 'Month 3 – Execution Window',
+        question:
+            `The final stretch can fray nerves, but Jessica kept a calm center. She ensured resources were available and no one felt stranded.</p>Her closing approach would be to…</p>
+            `,
+        answers: [
+            { text: "Increase urgency with clear direction for the home stretch.", value: 1, nextQuestion: 26 }, // D
+            { text: "Keep morale high and celebrate near-wins on the way.", value: 2, nextQuestion: 26 }, // I
+            { text: "Provide steady support so tasks finish comfortably.", value: 3, nextQuestion: 26 }, // S
+            { text: "Track each checklist item carefully before moving on.", value: 4, nextQuestion: 26 }, // C
+        ],
+    },
+
+    // --------------------------------Question10C--------------------------------25
+    {
+        chapter: 'Chapter 10: Visible Leadership',
+        timeline: 'Month 3 – Execution Window',
+        question:
+            `Jessica scanned dashboards and spot-checked samples. Quality looked strong, but time was tight. She weighed speed against polish.</p>Her final decision:</p>
+            `,
+        answers: [
+            { text: "Prioritize swift delivery and resolve small items post-launch.", value: 1, nextQuestion: 26 }, // D
+            { text: "Motivate the group while keeping attention on what matters most.", value: 2, nextQuestion: 26 }, // I
+            { text: "Slow slightly so teams can finish at a sustainable pace.", value: 3, nextQuestion: 26 }, // S
+            { text: "Perfect details now to launch with exceptional quality.", value: 4, nextQuestion: 26 }, // C
+        ],
+    },
+
+    // --------------------------------QuestionEND--------------------------------26
+    {
+        chapter: 'The Conclusion',
+        timeline: 'Five Years Later',
+        dominanceConclusion:
+            `Jessica quickly became known for decisive execution. Within a year, she was leading complex launches that cut through red tape and delivered visible results. Her direct style inspired confidence when timelines were tight.</p>By year three she was a senior program lead, trusted to set strategy for high-impact efforts. Teams rallied around her clear calls and bias for action.</p>Five years in, she owned a portfolio of initiatives that reshaped customer retention at scale. Colleagues sought her when outcomes mattered most.</p>If you lead with bold goals, fast decisions, and accountability, your natural Dominance style is your edge—keep pairing it with quick listening and win-win alignment to multiply your impact.</p>
+            `,
+        influenceConclusion:
+            `Jessica’s gift for connection lifted every room she entered. In her first year she built cross-team bridges that accelerated pilots and made work feel fun and purposeful.</p>By year three she was the culture carrier for major initiatives—facilitating creative jams, telling the story of the work, and bringing out the best in partners and stakeholders.</p>Five years later, she guided change efforts that depended on collaboration and buy-in. Engagement scores rose wherever she worked.</p>If you naturally energize and influence, your Strength is connection—keep pairing it with clear priorities and follow-through to turn enthusiasm into durable outcomes.</p>
+            `,
+        steadinessConclusion:
+            `Jessica built her reputation on steadiness. She calmed hectic launches with clear rhythms, reliable updates, and a genuine care for people.</p>By year three, leaders tapped her to stabilize complex programs and mentor new teammates. Projects under her guidance met deadlines without drama.</p>Five years in, she led operations that valued trust, continuity, and thoughtful change. Teams thrived because they felt safe to do great work.</p>If you bring balance, patience, and support, your Steadiness is a superpower—keep pairing it with timely assertiveness so your voice shapes the path, not just the pace.</p>
+            `,
+        conscientiousnessConclusion:
+            `Jessica’s precision became legendary. She prevented issues before they surfaced and elevated quality across teams.</p>By year three, she owned analytics and process improvements that made launches predictable and trustworthy.</p>Five years later, she led initiatives where accuracy and clarity were the difference between good and great. Her standards elevated everyone’s work.</p>If you’re naturally thorough and exacting, your Conscientious style sets the bar—keep pairing it with speed decisions and visible storytelling so your insights drive action at scale.</p>
+            `
+    }
+];
 
 (async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URI);
-    await Assessment.updateOne(
-      { slug: 'shanes-day-at-the-park' },
-      { $set: { questions } }
-    );
-    console.log('Updated questions for Shane’s Day at the Park');
-  } catch (err) {
-    console.error(err);
-  } finally {
-    await mongoose.disconnect();
-    process.exit(0);
-  }
+    try {
+        await mongoose.connect(process.env.MONGO_URI);
+        await Assessment.updateOne(
+            { slug: 'jessicas-first-job' },
+            { $set: { questions } }
+        );
+        console.log('Updated questions for Jessica\'s First Job');
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await mongoose.disconnect();
+        process.exit(0);
+    }
 })();

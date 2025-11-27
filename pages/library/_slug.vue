@@ -9,34 +9,21 @@
                 <div class="shadow">
                     <div style="padding: 30px 0 20px 0;">
                         <h1>{{ displayTitle }}</h1>
-                        <h3
-                            v-if="questions[currentQuestion - 1]"
-                            class="chapter"
-                            v-html="questions[currentQuestion - 1].chapter"
-                        ></h3>
+                        <h3 v-if="questions[currentQuestion - 1]" class="chapter"
+                            v-html="questions[currentQuestion - 1].chapter"></h3>
                     </div>
                 </div>
             </section>
 
             <section class="questionnaire">
-                <!-- hero image now from DB, with a safe fallback -->
-                <img
-                    :src="heroImage"
-                    :alt="heroAltText"
-                    class="boyAtThePark"
-                />
+                <img :src="heroImage" :alt="heroAltText" :class="imageClass" />
 
                 <div class="container">
                     <!-- QUESTION FLOW -->
-                    <div
-                        v-if="currentQuestion !== totalQuestions && questions[currentQuestion - 1]"
-                        :key="currentQuestion"
-                    >
-                        <p
-                            style="font-weight: 700;"
-                            class="chapter"
-                            v-html="questions[currentQuestion - 1].timeline"
-                        ></p>
+                    <div v-if="currentQuestion !== totalQuestions && questions[currentQuestion - 1]"
+                        :key="currentQuestion">
+                        <p style="font-weight: 700;" class="chapter" v-html="questions[currentQuestion - 1].timeline">
+                        </p>
 
                         <div class="line"></div>
 
@@ -45,12 +32,9 @@
                         </div>
 
                         <div class="answers">
-                            <button
-                                class="answerButtons"
-                                v-for="(answer, index) in questions[currentQuestion - 1].answers"
-                                :key="index"
-                                @click="selectAnswer(answer)"
-                            >
+                            <button class="answerButtons"
+                                v-for="(answer, index) in questions[currentQuestion - 1].answers" :key="index"
+                                @click="selectAnswer(answer)">
                                 <span class="selection" v-html="answer.text"></span>
                             </button>
                         </div>
@@ -59,41 +43,29 @@
                     <!-- FINAL CONCLUSION PAGE -->
                     <div v-else-if="questions[currentQuestion - 1]">
                         <div v-if="topScore === 'D'">
-                            <p
-                                style="font-weight: 700;"
-                                class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline"
-                            ></p>
+                            <p style="font-weight: 700;" class="chapter"
+                                v-html="questions[currentQuestion - 1].timeline"></p>
                             <div class="line dominance"></div>
                             <p v-html="questions[currentQuestion - 1].dominanceConclusion"></p>
                         </div>
 
                         <div v-if="topScore === 'I'">
-                            <p
-                                style="font-weight: 700;"
-                                class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline"
-                            ></p>
+                            <p style="font-weight: 700;" class="chapter"
+                                v-html="questions[currentQuestion - 1].timeline"></p>
                             <div class="line influence"></div>
                             <p v-html="questions[currentQuestion - 1].influenceConclusion"></p>
                         </div>
 
                         <div v-if="topScore === 'S'">
-                            <p
-                                style="font-weight: 700;"
-                                class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline"
-                            ></p>
+                            <p style="font-weight: 700;" class="chapter"
+                                v-html="questions[currentQuestion - 1].timeline"></p>
                             <div class="line steadiness" style="color: #0dab49;"></div>
                             <p v-html="questions[currentQuestion - 1].steadinessConclusion"></p>
                         </div>
 
                         <div v-else-if="topScore === 'C'">
-                            <p
-                                style="font-weight: 700;"
-                                class="chapter"
-                                v-html="questions[currentQuestion - 1].timeline"
-                            ></p>
+                            <p style="font-weight: 700;" class="chapter"
+                                v-html="questions[currentQuestion - 1].timeline"></p>
                             <div class="line consientousness"></div>
                             <p v-html="questions[currentQuestion - 1].conscientiousnessConclusion"></p>
                         </div>
@@ -133,32 +105,20 @@
 
                             <div class="col-4">
                                 <div class="chart">
-                                    <div
-                                        class="bar"
-                                        :style="{ height: DPercentage + '%', backgroundColor: '#f44336' }"
-                                        :title="'D: ' + DPercentage + '%'"
-                                    >
+                                    <div class="bar" :style="{ height: DPercentage + '%', backgroundColor: '#f44336' }"
+                                        :title="'D: ' + DPercentage + '%'">
                                         <div class="label">D</div>
                                     </div>
-                                    <div
-                                        class="bar"
-                                        :style="{ height: IPercentage + '%', backgroundColor: '#ffbd05' }"
-                                        :title="'I: ' + IPercentage + '%'"
-                                    >
+                                    <div class="bar" :style="{ height: IPercentage + '%', backgroundColor: '#ffbd05' }"
+                                        :title="'I: ' + IPercentage + '%'">
                                         <div class="label">I</div>
                                     </div>
-                                    <div
-                                        class="bar"
-                                        :style="{ height: SPercentage + '%', backgroundColor: '#0dab49' }"
-                                        :title="'S: ' + SPercentage + '%'"
-                                    >
+                                    <div class="bar" :style="{ height: SPercentage + '%', backgroundColor: '#0dab49' }"
+                                        :title="'S: ' + SPercentage + '%'">
                                         <div class="label">S</div>
                                     </div>
-                                    <div
-                                        class="bar"
-                                        :style="{ height: CPercentage + '%', backgroundColor: '#1666ff' }"
-                                        :title="'C: ' + CPercentage + '%'"
-                                    >
+                                    <div class="bar" :style="{ height: CPercentage + '%', backgroundColor: '#1666ff' }"
+                                        :title="'C: ' + CPercentage + '%'">
                                         <div class="label">C</div>
                                     </div>
                                 </div>
@@ -223,7 +183,6 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
-
     head() {
         return {
             title: this.pageTitle,
@@ -243,38 +202,29 @@ export default {
             ]
         };
     },
-
     data() {
         return {
-            assessmentSlug: this.$route.params.slug, // "shanes-day-at-the-park"
-
-            // DB-loaded assessment object
+            assessmentSlug: this.$route.params.slug,
             assessment: null,
-
             sessionId:
                 this.$route.query.sessionId ||
                 this.$route.query.session ||
                 this.$route.params.sessionId ||
                 null,
-
             valueToTrait: { 1: 'D', 2: 'I', 3: 'S', 4: 'C' },
             traitToValue: { D: 1, I: 2, S: 3, C: 4 },
-
             currentQuestion: 1,
             totalQuestions: 0,
             topScore: '',
             selectedAnswers: [],
-
             DPercentage: 0,
             IPercentage: 0,
             SPercentage: 0,
             CPercentage: 0,
-
             DstyleTitle: 'The Go-Getter',
             IstyleTitle: 'The Encourager',
             SstyleTitle: 'The Peacemaker',
             CstyleTitle: 'The Problem Solver',
-
             DstyleDescription:
                 "You like to jump in, make things happen, and try new challenges. You're brave, you set goals, and you help the group get moving when it’s time to play.",
             IstyleDescription:
@@ -283,46 +233,55 @@ export default {
                 'You’re steady, kind, and patient. You make sure everyone is included and that games feel fair, friendly, and calm.',
             CstyleDescription:
                 'You notice details and think things through. You like clear rules, careful plans, and helping the team solve tricky problems the right way.',
-
             breakdownModal: false,
             isClient: false,
-
             questions: []
         };
     },
-
     computed: {
+        imageClass() {
+            const slug = this.$route.params.slug;
+
+            return {
+                'boyAtThePark': slug === 'shanes-day-at-the-park',
+                'bookcaseLeft': slug === 'allies-professional-journey',
+                'firstJobLeft': slug === 'jessicas-first-job',
+                'rogersBusinessLeft': slug === 'rogers-new-business'
+            };
+        },
         displayTitle() {
             return (this.assessment && this.assessment.title) || "Assessment";
         },
-
         heroImage() {
-            // If heroImageUrl is a full URL to B2, just use it.
-            // Fallback to your original local Shane image.
             if (this.assessment && this.assessment.heroImageUrl) {
                 return this.assessment.heroImageUrl;
             }
-            return require('~/assets/library/boy-at-the-park.webp');
-        },
 
+            const slug = this.$route.params.slug;
+
+            const imageBySlug = {
+                'shanes-day-at-the-park': require('~/assets/library/boy-at-the-park.webp'),
+                'allies-professional-journey': require('~/assets/story0514/bookcase.webp'),
+                'jessicas-first-job': require('~/assets/library/first-job.jpg'),
+            };
+
+            return imageBySlug[slug] || require('~/assets/library/boy-at-the-park.webp');
+        },
         heroAltText() {
             return (
                 (this.assessment && this.assessment.heroAltText) ||
                 `${this.displayTitle} cover illustration`
             );
         },
-
         metaDescription() {
             return (
                 (this.assessment && this.assessment.description) ||
                 'Interactive DISC story assessment from The Assessment Library.'
             );
         },
-
         pageTitle() {
             return `The Assessment Library | ${this.displayTitle}`;
         },
-
         structuredDataBreadcrumbs() {
             const slug = this.assessmentSlug;
             return {
@@ -345,7 +304,6 @@ export default {
             };
         }
     },
-
     async mounted() {
         this.isClient = true;
 
@@ -359,7 +317,6 @@ export default {
             console.error('Error loading session:', err);
         }
     },
-
     methods: {
         async loadAssessment() {
             try {
@@ -383,7 +340,6 @@ export default {
                 console.error('Error loading assessment:', err);
             }
         },
-
         async loadSession() {
             const res = await this.$axios.$get(
                 `/api/sessions/${this.sessionId}`,
@@ -419,7 +375,6 @@ export default {
                 this.currentQuestion = idx + 1;
             }
         },
-
         async selectAnswer(answer) {
             if (!answer) return;
 
@@ -473,14 +428,12 @@ export default {
                 this.calculateTotals();
             }
         },
-
         jumpToLibrary(event) {
             window.location.href = '/';
             if (event && event.target) {
                 event.target.blur();
             }
         },
-
         calculateTotals() {
             let DCount = 0;
             let ICount = 0;
@@ -539,11 +492,10 @@ export default {
 };
 </script>
 
+
 <style lang="scss" scoped>
-/* keep your SCSS exactly as you had it */
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
-
 
 .page {
     z-index: 10;
@@ -604,6 +556,19 @@ export default {
             z-index: -10000;
             width: 21%;
             max-height: 585px;
+        }
+
+        .bookcaseLeft {
+            position: absolute;
+            z-index: -10000;
+            max-height: 61.03vh;
+        }
+
+        .firstJobLeft {
+            position: absolute;
+            z-index: -10000;
+            width: 28%;
+            max-height: 600px;
         }
 
         .chapter {

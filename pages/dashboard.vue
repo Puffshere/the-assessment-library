@@ -7,9 +7,7 @@
             <div class="container">
                 <div class="row">
                     <h1>Your Library Dashboard</h1>
-                    <h4>
-                        See your assessments, scores, and available credits in one place.
-                    </h4>
+                    <h4>See your assessments, scores, and available credits in one place.</h4>
                 </div>
             </div>
         </section>
@@ -411,7 +409,6 @@ export default {
                 '--progress-color': this.getTraitColor(session)
             }
         },
-
         viewResults(session) {
             this.selectedResult = session
         },
@@ -449,12 +446,15 @@ export default {
         background-color: rgba(161, 156, 147, 0.521);
         position: relative;
         box-shadow: 5px 5px 10px #0814368e;
-        min-height: 160px;
 
         h1 {
-            line-height: 1.25em;
-            margin-bottom: 30px !important;
-            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        h4 {
+            margin-top: -10px;
+            font-weight: 400;
+            font-family: $nunito-family;
         }
 
         .logo {
@@ -479,16 +479,6 @@ export default {
             left: 0;
             bottom: 0;
             z-index: 2;
-        }
-
-        h1 {
-            margin-bottom: 12px;
-        }
-
-        h4 {
-            margin-top: -4px;
-            font-weight: 400;
-            font-family: $nunito-family;
         }
     }
 
@@ -713,12 +703,10 @@ export default {
             }
         }
 
-        /* stack everything in a single column */
         .grid {
             flex-direction: column;
         }
 
-        /* make all panels full width */
         .panel,
         .panel-assessments {
             flex: 0 0 100%;
@@ -726,12 +714,10 @@ export default {
             width: 100%;
         }
 
-        /* let the assessments panel grow with its content */
         .panel-assessments {
             max-height: none;
             min-height: auto;
 
-            /* fix: target its scroll area directly */
             .scroll-area {
                 overflow-y: visible;
                 max-height: none;
@@ -743,5 +729,4 @@ export default {
         }
     }
 }
-
 </style>

@@ -42,95 +42,104 @@
                 </div>
             </div>
 
-
             <button v-if="selectedResult" class="red" @click="$emit('clear-results')"
                 aria-label="Clear selected results">
                 Remove
             </button>
         </div>
 
-        <!-- DETAIL VIEW (single assessment) -->
-        <div v-if="selectedResult" class="results-layout">
-            <div class="chart-col">
-                <div class="chart" v-if="hasData">
-                    <div class="bar" :style="{ height: dPercent + '%', backgroundColor: '#f44336' }"
-                        :title="'D: ' + dPercent.toFixed(1) + '%'">
-                        <div class="label">D</div>
+        <!-- SCROLLABLE BODY -->
+        <div class="panel-body">
+            <!-- DETAIL VIEW (single assessment) -->
+            <div v-if="selectedResult" class="results-layout">
+                <div class="chart-col">
+                    <div class="chart" v-if="hasData">
+                        <div class="bar" :style="{ height: dPercent + '%', backgroundColor: '#f44336' }"
+                            :title="'D: ' + dPercent.toFixed(1) + '%'">
+                            <div class="label">D</div>
+                        </div>
+                        <div class="bar" :style="{ height: iPercent + '%', backgroundColor: '#ffbd05' }"
+                            :title="'I: ' + iPercent.toFixed(1) + '%'">
+                            <div class="label">I</div>
+                        </div>
+                        <div class="bar" :style="{ height: sPercent + '%', backgroundColor: '#0dab49' }"
+                            :title="'S: ' + sPercent.toFixed(1) + '%'">
+                            <div class="label">S</div>
+                        </div>
+                        <div class="bar" :style="{ height: cPercent + '%', backgroundColor: '#1666ff' }"
+                            :title="'C: ' + cPercent.toFixed(1) + '%'">
+                            <div class="label">C</div>
+                        </div>
                     </div>
-                    <div class="bar" :style="{ height: iPercent + '%', backgroundColor: '#ffbd05' }"
-                        :title="'I: ' + iPercent.toFixed(1) + '%'">
-                        <div class="label">I</div>
-                    </div>
-                    <div class="bar" :style="{ height: sPercent + '%', backgroundColor: '#0dab49' }"
-                        :title="'S: ' + sPercent.toFixed(1) + '%'">
-                        <div class="label">S</div>
-                    </div>
-                    <div class="bar" :style="{ height: cPercent + '%', backgroundColor: '#1666ff' }"
-                        :title="'C: ' + cPercent.toFixed(1) + '%'">
-                        <div class="label">C</div>
+                    <p v-else class="no-data">
+                        No DISC breakdown available for this assessment yet.
+                    </p>
+                </div>
+
+                <div class="text-col">
+                    <h5>These are your results.</h5>
+                    <hr class="shortLine top" />
+                    <ul v-if="hasData">
+                        <li>This is your D percentage: {{ dPercent.toFixed(1) }}</li>
+                        <li>This is your I percentage: {{ iPercent.toFixed(1) }}</li>
+                        <li>This is your S percentage: {{ sPercent.toFixed(1) }}</li>
+                        <li>This is your C percentage: {{ cPercent.toFixed(1) }}</li>
+                    </ul>
+
+                    <h5 class="mt-16">Your primary style</h5>
+                    <hr class="shortLine bottom" />
+                    <p v-if="primaryStyleTitle" class="type">
+                        <strong>{{ primaryStyleTitle }}</strong>
+                        {{ primaryStyleDescription }}
+                    </p>
+                </div>
+            </div>
+
+            <!-- OVERALL VIEW -->
+            <div v-else class="overall-layout">
+                <div v-if="hasData" class="overall-chart">
+                    <div class="chart">
+                        <div class="bar" :style="{ height: dPercent + '%', backgroundColor: '#f44336' }"
+                            :title="'D: ' + dPercent.toFixed(1) + '%'">
+                            <div class="value">{{ dPercent.toFixed(1) }}%</div>
+                            <div class="label">D</div>
+                        </div>
+                        <div class="bar" :style="{ height: iPercent + '%', backgroundColor: '#ffbd05' }"
+                            :title="'I: ' + iPercent.toFixed(1) + '%'">
+                            <div class="value">{{ iPercent.toFixed(1) }}%</div>
+                            <div class="label">I</div>
+                        </div>
+                        <div class="bar" :style="{ height: sPercent + '%', backgroundColor: '#0dab49' }"
+                            :title="'S: ' + sPercent.toFixed(1) + '%'">
+                            <div class="value">{{ sPercent.toFixed(1) }}%</div>
+                            <div class="label">S</div>
+                        </div>
+                        <div class="bar" :style="{ height: cPercent + '%', backgroundColor: '#1666ff' }"
+                            :title="'C: ' + cPercent.toFixed(1) + '%'">
+                            <div class="value">{{ cPercent.toFixed(1) }}%</div>
+                            <div class="label">C</div>
+                        </div>
                     </div>
                 </div>
                 <p v-else class="no-data">
-                    No DISC breakdown available for this assessment yet.
+                    You don’t have any completed assessments with DISC results yet.
                 </p>
+
+                <h6 class="overall-meta">
+                    <p>
+                        Assessments Started:
+                        <span style="font-size: 24px; margin-left: 10px;">
+                            {{ assessmentsStarted }}
+                        </span>
+                    </p>
+                    <p>
+                        Assessments Completed:
+                        <span style="font-size: 24px; margin-left: 10px;">
+                            {{ assessmentsCompleted }}
+                        </span>
+                    </p>
+                </h6>
             </div>
-
-            <div class="text-col">
-                <h5>These are your results.</h5>
-                <hr class="shortLine top" />
-                <ul v-if="hasData">
-                    <li>This is your D percentage: {{ dPercent.toFixed(1) }}</li>
-                    <li>This is your I percentage: {{ iPercent.toFixed(1) }}</li>
-                    <li>This is your S percentage: {{ sPercent.toFixed(1) }}</li>
-                    <li>This is your C percentage: {{ cPercent.toFixed(1) }}</li>
-                </ul>
-
-                <h5 class="mt-16">Your primary style</h5>
-                <hr class="shortLine bottom" />
-                <p v-if="primaryStyleTitle" class="type">
-                    <strong>{{ primaryStyleTitle }}</strong>
-                    {{ primaryStyleDescription }}
-                </p>
-            </div>
-        </div>
-
-        <!-- OVERALL VIEW -->
-        <div v-else class="overall-layout">
-            <div v-if="hasData" class="overall-chart">
-                <div class="chart">
-                    <div class="bar" :style="{ height: dPercent + '%', backgroundColor: '#f44336' }"
-                        :title="'D: ' + dPercent.toFixed(1) + '%'">
-                        <div class="value">{{ dPercent.toFixed(1) }}%</div>
-                        <div class="label">D</div>
-                    </div>
-                    <div class="bar" :style="{ height: iPercent + '%', backgroundColor: '#ffbd05' }"
-                        :title="'I: ' + iPercent.toFixed(1) + '%'">
-                        <div class="value">{{ iPercent.toFixed(1) }}%</div>
-                        <div class="label">I</div>
-                    </div>
-                    <div class="bar" :style="{ height: sPercent + '%', backgroundColor: '#0dab49' }"
-                        :title="'S: ' + sPercent.toFixed(1) + '%'">
-                        <div class="value">{{ sPercent.toFixed(1) }}%</div>
-                        <div class="label">S</div>
-                    </div>
-                    <div class="bar" :style="{ height: cPercent + '%', backgroundColor: '#1666ff' }"
-                        :title="'C: ' + cPercent.toFixed(1) + '%'">
-                        <div class="value">{{ cPercent.toFixed(1) }}%</div>
-                        <div class="label">C</div>
-                    </div>
-                </div>
-            </div>
-            <p v-else class="no-data">
-                You don’t have any completed assessments with DISC results yet.
-            </p>
-
-            <h6 class="overall-meta">
-                <p>Assessments Started: <span style="font-size: 24px; margin-left: 10px;">{{ assessmentsStarted
-                }}</span></p>
-                <p>Assessments Completed: <span style="font-size: 24px; margin-left: 10px;">{{ assessmentsCompleted
-                }}</span>
-                </p>
-            </h6>
         </div>
     </div>
 </template>
@@ -182,6 +191,30 @@ export default {
         }
     },
     computed: {
+        styleText() {
+            const base = STYLE_TEXT
+            const src = this.selectedResult || {}
+
+            const build = trait => {
+                const titleKey = `${trait}styleTitle`
+                const descKey = `${trait}styleDescription`
+
+                const title = src[titleKey]
+                const description = src[descKey]
+
+                return {
+                    title: title || base[trait].title,
+                    description: description || base[trait].description
+                }
+            }
+
+            return {
+                D: build('D'),
+                I: build('I'),
+                S: build('S'),
+                C: build('C')
+            }
+        },
         dropdownColor() {
             return this.hasData ? this.overallTopTraitColor : '#86d6ee'
         },
@@ -196,7 +229,7 @@ export default {
                 'sub:School': 'School',
                 'sub:Playground': 'Playground',
                 'sub:Personal Growth': 'Personal Growth',
-                'sub:Life Skills': 'Life Skills',
+                'sub:Life Skills': 'Life Skills'
             }
             return map[this.selectedCategoryFilter] || 'Choose category'
         },
@@ -207,7 +240,7 @@ export default {
                 { value: 'sub:Career', label: 'Career' },
                 { value: 'sub:School', label: 'School' },
                 { value: 'sub:Personal Growth', label: 'Personal Growth' },
-                { value: 'sub:Life Skills', label: 'Life Skills' },
+                { value: 'sub:Life Skills', label: 'Life Skills' }
             ]
         },
         kidsOptions() {
@@ -215,7 +248,7 @@ export default {
                 { value: 'shelf:Kids', label: 'All Kids assessments' },
                 { value: 'sub:Relationships', label: 'Relationships' },
                 { value: 'sub:School', label: 'School' },
-                { value: 'sub:Playground', label: 'Playground' },
+                { value: 'sub:Playground', label: 'Playground' }
             ]
         },
         overallTopTrait() {
@@ -223,15 +256,14 @@ export default {
             if (!b) return null
 
             const entries = Object.entries(b).filter(
-                ([trait, value]) =>
-                    ['D', 'I', 'S', 'C'].includes(trait) && typeof value === 'number'
+                ([trait, value]) => ['D', 'I', 'S', 'C'].includes(trait) && typeof value === 'number'
             )
             if (!entries.length) return null
             entries.sort((a, b) => b[1] - a[1])
             return entries[0][0]
         },
         overallTopTraitTitle() {
-            return this.overallTopTrait ? STYLE_TEXT[this.overallTopTrait].title : ''
+            return this.overallTopTrait ? this.styleText[this.overallTopTrait].title : ''
         },
         overallTopTraitColor() {
             switch (this.overallTopTrait) {
@@ -252,7 +284,6 @@ export default {
 
             const filter = this.selectedCategoryFilter
 
-            // No filter or "all" => return everything
             if (!filter || filter === 'all') {
                 return base
             }
@@ -272,8 +303,7 @@ export default {
                 }
 
                 if (type === 'sub') {
-                    return Array.isArray(cat.subcategories) &&
-                        cat.subcategories.includes(name)
+                    return Array.isArray(cat.subcategories) && cat.subcategories.includes(name)
                 }
 
                 return true
@@ -292,7 +322,6 @@ export default {
 
             completed.forEach(s => {
                 const b = s.scoreBreakdown || (s.score && s.score.breakdown) || null
-
                 if (!b) return
 
                     ;['D', 'I', 'S', 'C'].forEach(trait => {
@@ -340,18 +369,17 @@ export default {
             if (!b) return null
 
             const entries = Object.entries(b).filter(
-                ([trait, value]) =>
-                    ['D', 'I', 'S', 'C'].includes(trait) && typeof value === 'number'
+                ([trait, value]) => ['D', 'I', 'S', 'C'].includes(trait) && typeof value === 'number'
             )
             if (!entries.length) return null
             entries.sort((a, b) => b[1] - a[1])
             return entries[0][0]
         },
         primaryStyleTitle() {
-            return this.topTrait ? STYLE_TEXT[this.topTrait].title : ''
+            return this.topTrait ? this.styleText[this.topTrait].title : ''
         },
         primaryStyleDescription() {
-            return this.topTrait ? STYLE_TEXT[this.topTrait].description : ''
+            return this.topTrait ? this.styleText[this.topTrait].description : ''
         }
     },
     methods: {
@@ -376,9 +404,16 @@ export default {
     position: relative;
 }
 
+/* scrollable inner area */
+// .panel-body {
+//     flex: 1 1 auto;
+//     overflow-y: auto;
+//     padding-right: 8px;
+// }
+
 .results-header {
     position: relative;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     min-height: 50px;
 
     .overall-top-trait {
@@ -410,6 +445,7 @@ export default {
 
     h5 {
         margin-top: 15px;
+        margin-bottom: 0;
     }
 }
 
@@ -555,7 +591,14 @@ export default {
         height: auto;
     }
 
+    .panel-body {
+        overflow-y: visible;
+        max-height: none;
+        padding-right: 0;
+    }
+
     .chart {
+        padding-top: 10px !important;
         height: 150px !important;
     }
 

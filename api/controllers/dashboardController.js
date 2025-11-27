@@ -36,7 +36,13 @@ exports.getDashboard = async function (req, res) {
     }
 
     const sessions = await AssessmentSession.find({ user: user._id })
-      .populate('assessment', 'title slug category')
+      .populate(
+        'assessment',
+        // ⬇️ include the style fields from Assessment, plus what you already had
+        'title slug category ' +
+          'DstyleTitle IstyleTitle SstyleTitle CstyleTitle ' +
+          'DstyleDescription IstyleDescription SstyleDescription CstyleDescription'
+      )
       .sort({ updatedAt: -1 })
       .lean();
 
@@ -44,11 +50,12 @@ exports.getDashboard = async function (req, res) {
       .filter(s => s.assessment && s.assessment.slug)
       .map((s) => {
         const hasScore = s.score && typeof s.score === 'object';
+        const a = s.assessment || {};
 
         return {
           id: s._id,
-          assessmentTitle: s.assessment.title,
-          assessmentSlug: s.assessment.slug,
+          assessmentTitle: a.title,
+          assessmentSlug: a.slug,
           status: s.status || 'not_started',
           startedAt: s.startedAt,
           completedAt: s.completedAt,
@@ -56,12 +63,23 @@ exports.getDashboard = async function (req, res) {
             hasScore && typeof s.score.total === 'number'
               ? s.score.total
               : null,
-          scoreBreakdown: hasScore && s.score.breakdown ? s.score.breakdown : null,
+          scoreBreakdown:
+            hasScore && s.score.breakdown ? s.score.breakdown : null,
           currentQuestionIndex:
             typeof s.currentQuestionIndex === 'number'
               ? s.currentQuestionIndex
               : 0,
-          category: s.assessment.category || null,
+          category: a.category || null,
+
+          DstyleTitle: a.DstyleTitle,
+          IstyleTitle: a.IstyleTitle,
+          SstyleTitle: a.SstyleTitle,
+          CstyleTitle: a.CstyleTitle,
+
+          DstyleDescription: a.DstyleDescription,
+          IstyleDescription: a.IstyleDescription,
+          SstyleDescription: a.SstyleDescription,
+          CstyleDescription: a.CstyleDescription,
         };
       });
 

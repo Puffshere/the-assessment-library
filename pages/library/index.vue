@@ -4,7 +4,6 @@
 
         <section class="header">
             <img src="~assets/logo-without-background.png" alt="image of logo" class="logo" />
-
             <div class="container">
                 <div class="row">
                     <h1>Welcome to Your Assessment Library!</h1>
@@ -268,21 +267,26 @@ export default {
 .library {
     .header {
         text-align: center;
-        padding: 40px 16px 40px 16px;
+        padding: 40px 16px;
         background-color: rgba(161, 156, 147, 0.521);
         position: relative;
         box-shadow: 5px 5px 10px #0814368e;
 
-        .teal {
-            margin-top: 20px;
-            margin-right: 20px;
+        h1 {
+            margin-bottom: 0px;
+        }
+
+        h4 {
+            margin-top: -10px;
+            font-weight: 400;
+            font-family: $nunito-family;
         }
 
         .logo {
-            width: 300px;
+            width: 270px;
             position: absolute;
-            left: 40px;
-            top: -40px;
+            left: 80px;
+            top: -25px;
         }
 
         button {
@@ -291,15 +295,23 @@ export default {
             top: 20px;
         }
 
-        h1 {
-            margin-bottom: 10px;
+        &:after {
+            background: linear-gradient(to right,
+                    $color-d 25%,
+                    $color-i 25%,
+                    $color-i 50%,
+                    $color-s 50%,
+                    $color-s 75%,
+                    $color-c 75%);
+            position: absolute;
+            content: '';
+            height: 10px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
         }
 
-        h4 {
-            margin-top: -20px;
-            font-weight: 400;
-            font-family: $nunito-family;
-        }
     }
 
     .stacks {
@@ -466,6 +478,23 @@ export default {
                 width: 120px;
                 margin-top: 0;
                 margin-right: 0;
+            }
+
+            &:after {
+                background: linear-gradient(to right,
+                        $color-d 25%,
+                        $color-i 25%,
+                        $color-i 50%,
+                        $color-s 50%,
+                        $color-s 75%,
+                        $color-c 75%);
+                position: absolute;
+                content: '';
+                height: 10px;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 2;
             }
         }
 

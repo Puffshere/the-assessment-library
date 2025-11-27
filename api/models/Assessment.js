@@ -24,17 +24,13 @@ const scenarioQuestionSchema = new mongoose.Schema(
   { _id: false }
 );
 
-// ✅ NEW: category sub-schema (no _id)
 const categorySchema = new mongoose.Schema(
   {
-    // Top-level shelf: Adult / Kids
     shelf: {
       type: String,
       enum: ['Adult', 'Kids'],
       required: true
     },
-
-    // Subcategories under that shelf
     subcategories: [
       {
         type: String,
@@ -61,8 +57,19 @@ const assessmentSchema = new mongoose.Schema(
     creditsCost: { type: Number, default: 1, min: 0 },
     isActive: { type: Boolean, default: true },
 
-    // ✅ attach category here
+    heroImageUrl: { type: String },
+
     category: categorySchema,
+
+    DstyleTitle: { type: String },
+    IstyleTitle: { type: String },
+    SstyleTitle: { type: String },
+    CstyleTitle: { type: String },
+
+    DstyleDescription: { type: String },
+    IstyleDescription: { type: String },
+    SstyleDescription: { type: String },
+    CstyleDescription: { type: String },
 
     questions: [scenarioQuestionSchema],
 
