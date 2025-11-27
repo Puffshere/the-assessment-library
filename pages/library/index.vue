@@ -21,18 +21,10 @@
                 <div class="row">
                     <h4>Adult Shelf</h4>
 
-                    <div
-                        v-for="book in adultBooks"
-                        :key="book._id || book.slug"
-                        :class="['col-6', book.positionClass]"
-                    >
-                        <img
-                            :class="[book.imgClass, { disabled: isBookDisabled(book) }]"
-                            :src="book.imgSrc"
-                            :alt="`image of a ${book.imgClass} book`"
-                            :aria-disabled="isBookDisabled(book)"
-                            @click="openBookModal(book)"
-                        />
+                    <div v-for="book in adultBooks" :key="book._id || book.slug" :class="['col-6', book.positionClass]">
+                        <img :class="[book.imgClass, { disabled: isBookDisabled(book) }]" :src="book.imgSrc"
+                            :alt="`image of a ${book.imgClass} book`" :aria-disabled="isBookDisabled(book)"
+                            @click="openBookModal(book)" />
                         <br />
                         <p class="title" :class="book.titleClass">{{ book.title }}</p>
                         <p>{{ book.description }}</p>
@@ -44,18 +36,10 @@
                 <div class="row">
                     <h4>Kids Shelf</h4>
 
-                    <div
-                        v-for="book in kidsBooks"
-                        :key="book._id || book.slug"
-                        :class="['col-6', book.positionClass]"
-                    >
-                        <img
-                            :class="[book.imgClass, { disabled: isBookDisabled(book) }]"
-                            :src="book.imgSrc"
-                            :alt="`image of a ${book.imgClass} book`"
-                            :aria-disabled="isBookDisabled(book)"
-                            @click="openBookModal(book)"
-                        />
+                    <div v-for="book in kidsBooks" :key="book._id || book.slug" :class="['col-6', book.positionClass]">
+                        <img :class="[book.imgClass, { disabled: isBookDisabled(book) }]" :src="book.imgSrc"
+                            :alt="`image of a ${book.imgClass} book`" :aria-disabled="isBookDisabled(book)"
+                            @click="openBookModal(book)" />
                         <br />
                         <p class="title" :class="book.titleClass">{{ book.title }}</p>
                         <p>{{ book.description }}</p>
@@ -127,13 +111,8 @@
                     </div>
 
                     <div class="button-container">
-                        <button
-                            v-if="canAffordSelected"
-                            class="blue"
-                            type="button"
-                            :disabled="checkingOut"
-                            @click="confirmPurchase"
-                        >
+                        <button v-if="canAffordSelected" class="blue" type="button" :disabled="checkingOut"
+                            @click="confirmPurchase">
                             <span v-if="!checkingOut">
                                 Use {{ selectedBook.creditsCost }}
                                 credit<span v-if="selectedBook.creditsCost !== 1">s</span> &amp; Start
@@ -141,7 +120,7 @@
                             <span v-else>Starting assessment…</span>
                         </button>
 
-                        <button v-else class="blue" type="button" @click="goToBuyCredits">
+                        <button v-else class="blue" type="button" @click="buyCredits">
                             Purchase More Credits
                         </button>
 
@@ -168,7 +147,6 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
-
     data() {
         return {
             checkingOut: false,
@@ -180,7 +158,6 @@ export default {
             libraryBooks: []
         }
     },
-
     computed: {
         loggedIn() {
             return this.$store.state.loggedIn
@@ -202,7 +179,6 @@ export default {
             return this.libraryBooks.filter(b => b.shelf === 'Kids')
         }
     },
-
     async mounted() {
         if (this.loggedIn) {
             try {
@@ -218,7 +194,6 @@ export default {
 
         this.fetchAssessments()
     },
-
     methods: {
         async fetchAssessments() {
             this.loadingAssessments = true
@@ -283,7 +258,6 @@ export default {
                 this.loadingAssessments = false
             }
         },
-
         goDashboard() {
             this.$router.push('/dashboard')
         },
@@ -306,7 +280,6 @@ export default {
             this.selectedBook = null
             this.checkingOut = false
         },
-
         async confirmPurchase() {
             if (!this.selectedBook || this.checkingOut) return
 
@@ -329,8 +302,8 @@ export default {
                     { assessmentId: book._id },
                     token
                         ? {
-                              headers: { Authorization: `Bearer ${token}` }
-                          }
+                            headers: { Authorization: `Bearer ${token}` }
+                        }
                         : {}
                 )
 
@@ -373,13 +346,32 @@ export default {
                 this.checkingOut = false
             }
         },
+        async buyCredits() {
+            try {
+                const token = this.$store.state.token
 
-        goToBuyCredits() {
-            this.closeBookModal()
-            this.$router.push('/dashboard')
+                const res = await this.$axios.$post(
+                    '/api/credits/add-one',
+                    {},
+                    token
+                        ? { headers: { Authorization: `Bearer ${token}` } }
+                        : {}
+                )
+
+                if (res && typeof res.creditsBalance === 'number') {
+                    this.$store.commit('SET_USER', {
+                        ...(this.currentUser || {}),
+                        creditsBalance: res.creditsBalance
+                    })
+                } else {
+                    console.warn('Unexpected response from /api/credits/add-one:', res)
+                }
+            } catch (err) {
+                console.error('Error adding credit from modal:', err)
+                alert('Could not add a test credit right now. Please try again.')
+            }
         }
     },
-
     head() {
         return {
             title: 'Your Library | The Assessment Library',
@@ -425,15 +417,13 @@ export default {
         }
 
         &:after {
-            background: linear-gradient(
-                to right,
-                $color-d 25%,
-                $color-i 25%,
-                $color-i 50%,
-                $color-s 50%,
-                $color-s 75%,
-                $color-c 75%
-            );
+            background: linear-gradient(to right,
+                    $color-d 25%,
+                    $color-i 25%,
+                    $color-i 50%,
+                    $color-s 50%,
+                    $color-s 75%,
+                    $color-c 75%);
             position: absolute;
             content: '';
             height: 10px;
@@ -673,6 +663,7 @@ export default {
 .col-left {
     margin-left: 70px;
 }
+
 .col-right {
     margin-left: -70px;
 }
@@ -703,15 +694,13 @@ export default {
             }
 
             &:after {
-                background: linear-gradient(
-                    to right,
-                    $color-d 25%,
-                    $color-i 25%,
-                    $color-i 50%,
-                    $color-s 50%,
-                    $color-s 75%,
-                    $color-c 75%
-                );
+                background: linear-gradient(to right,
+                        $color-d 25%,
+                        $color-i 25%,
+                        $color-i 50%,
+                        $color-s 50%,
+                        $color-s 75%,
+                        $color-c 75%);
                 position: absolute;
                 content: '';
                 height: 10px;

@@ -10,6 +10,8 @@ import uploadController from './controllers/uploadController';
 import assessmentController from './controllers/assessmentController.js';
 import dashboardController from './controllers/dashboardController.js';
 import sessionsController from './controllers/sessionsController.js';
+import creditsController from './controllers/creditsController.js';
+
 
 const upload = multer();
 const app = express();
@@ -65,6 +67,12 @@ app.get('/assessments/:slug', assessmentController.getAssessmentBySlug);
 app.post('/upload', upload.single('file'), (req, res) => {
   uploadController.upload(req, res);
 });
+
+app.post(
+  '/credits/add-one',
+  sessionsController.authenticate,
+  creditsController.addOneCredit
+);
 
 app.use((req, res, next) => {
   res.status(404).json({
