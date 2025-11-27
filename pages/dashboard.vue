@@ -718,6 +718,11 @@ export default {
             max-height: none;
             min-height: auto;
 
+            .panel-title {
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+            }
+
             .scroll-area {
                 overflow-y: visible;
                 max-height: none;
