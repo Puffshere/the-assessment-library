@@ -509,12 +509,18 @@ export default {
             .red {
                 cursor: pointer;
                 transition:
-                    transform 0.15s ease,
-                    box-shadow 0.15s ease,
+                    transform 1s ease,
                     border-radius 0.15s ease,
                     filter 0.15s ease,
                     opacity 0.15s ease;
                 border-radius: 15px;
+            }
+
+            .darkBlue,
+            .blue {
+                transform-style: preserve-3d;
+                transform: perspective(800px) rotateX(48deg) translateY(-20px);
+                transform-origin: bottom center;
             }
 
             .darkBlue {
@@ -527,6 +533,7 @@ export default {
                 margin-top: 40px;
                 height: 170px;
                 width: auto;
+
             }
 
             .blue {
@@ -543,8 +550,7 @@ export default {
             .pink:hover,
             .blue:hover,
             .red:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+                transform: perspective(800px) rotateX(-12deg) translateY(-10px);
             }
 
             .disabled {
