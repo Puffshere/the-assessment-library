@@ -304,21 +304,21 @@ export default {
     },
     methods: {
         async purchaseCredit() {
-        try {
-            // This hits the Express route /credits/add-one (prefixed with /api by Nuxt)
-            const res = await this.$axios.$post('/api/credits/add-one')
+            try {
+                // This hits the Express route /credits/add-one (prefixed with /api by Nuxt)
+                const res = await this.$axios.$post('/api/credits/add-one')
 
-            if (res && typeof res.creditsBalance === 'number') {
-                // Update the local dashboard so the UI reflects the new balance
-                this.dashboard.user.creditsBalance = res.creditsBalance
-            } else {
-                console.warn('Unexpected response from /api/credits/add-one:', res)
+                if (res && typeof res.creditsBalance === 'number') {
+                    // Update the local dashboard so the UI reflects the new balance
+                    this.dashboard.user.creditsBalance = res.creditsBalance
+                } else {
+                    console.warn('Unexpected response from /api/credits/add-one:', res)
+                }
+            } catch (err) {
+                console.error('Error adding credit:', err)
+                alert('Could not add a test credit right now.')
             }
-        } catch (err) {
-            console.error('Error adding credit:', err)
-            alert('Could not add a test credit right now.')
-        }
-    },
+        },
         formatDate(dateStr) {
             if (!dateStr) return '—'
             const d = new Date(dateStr)
@@ -544,7 +544,6 @@ export default {
             flex: 1 1 auto;
             overflow-y: auto;
             padding-right: 8px;
-            scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
         }
     }
