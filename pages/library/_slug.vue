@@ -506,6 +506,7 @@ export default {
     }
 
     .title {
+        margin-top: 64px;
         padding: 0px 0 15px 0;
         margin-bottom: 0px;
         text-align: center;

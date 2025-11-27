@@ -171,6 +171,7 @@ export default {
         background-color: rgba(161, 156, 147, 0.521);
         position: relative;
         box-shadow: 5px 5px 10px #0814368e;
+        margin-top: 64px;
 
         .teal {
             margin-top: 20px;

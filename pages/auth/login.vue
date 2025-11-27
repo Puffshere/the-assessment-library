@@ -138,6 +138,7 @@ export default {
 
 .library {
     .header {
+        margin-top: 64px;
         text-align: center;
         padding: 40px 16px 40px 16px;
         background-color: rgba(161, 156, 147, 0.521);

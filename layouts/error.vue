@@ -71,6 +71,7 @@ export default {
 
 .not-found {
     .header {
+        margin-top: 64px;
         color: #fff;
         text-align: center;
         padding: 40px 16px 80px;
