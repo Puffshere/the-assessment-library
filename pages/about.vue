@@ -241,6 +241,8 @@
                 </div>
             </div>
         </section>
+
+        <footer-fold />
     </section>
 </template>
 
