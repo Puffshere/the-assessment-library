@@ -33,23 +33,23 @@
         </section>
 
         <!-- HOW IT WORKS -->
-        <section class="about-section how-it-works">
+        <section class="how-it-works">
             <div class="container">
                 <div class="row">
-                    <div class="section-header">
-                        <h2>How The Assessment Library Works</h2>
-                        <p>
-                            Everything is organized around “books” – interactive stories that
-                            guide you through real-life scenarios while quietly measuring your
-                            DISC style in the background.
-                        </p>
-                    </div>
+                    <h2>How The Assessment Library Works</h2>
+                    <p>
+                        Everything is organized around “books” – interactive stories that
+                        guide you through real-life scenarios while quietly <br class="line-break" />measuring your
+                        DISC style in the background.
+                    </p>
                 </div>
 
                 <div class="row steps-grid">
-                    <article class="step">
-                        <div class="step-icon placeholder"></div>
-                        <h3>1. Choose a Book</h3>
+
+                    <article class="step" @click="jumpToLibrary">
+                        <img src="~assets/homePage/sitting-woman-with-book.webp"
+                            alt="image of a woman sitting reading a book" />
+                        <h4>1. Choose a Book</h4>
                         <p>
                             Explore the Library and pick a book that fits your life right now —
                             whether it’s professional growth, everyday relationships, or
@@ -58,8 +58,9 @@
                     </article>
 
                     <article class="step">
-                        <div class="step-icon placeholder"></div>
-                        <h3>2. Live the Story</h3>
+                        <img src="~assets/homePage/people-at-the-table.webp" alt="image of people sitting at the table"
+                            style="width: 77px" />
+                        <h4>2. Live the Story</h4>
                         <p>
                             Read through a rich, branching story and answer questions about what
                             you’d do next. Each choice reflects your natural DISC style –
@@ -67,9 +68,10 @@
                         </p>
                     </article>
 
-                    <article class="step">
-                        <div class="step-icon placeholder"></div>
-                        <h3>3. See Your Results</h3>
+                    <article class="step" @click="jumpToLibrary">
+                        <img src="~assets/homePage/people_reading.webp"
+                            alt="image of people reading on a stack of books" />
+                        <h4>3. See Your Results</h4>
                         <p>
                             After finishing a book, your Dashboard reveals charts, insights,
                             and your dominant DISC trait.
@@ -77,8 +79,8 @@
                     </article>
 
                     <article class="step">
-                        <div class="step-icon placeholder"></div>
-                        <h3>4. Unlock More with Credits</h3>
+                        <img src="~assets/logo-without-background.png" alt="image of logo" class="logo" />
+                        <h4>4. Unlock More with Credits</h4>
                         <p>
                             Each credit unlocks a new book to explore. Purchase additional credits
                             anytime to continue your journey.
@@ -369,8 +371,35 @@ export default {
         }
     }
 
-    .about-page {
-        background: #f7f7fa;
+    .how-it-works {
+        padding: 60px 16px 80px;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 50px;
+        }
+
+        img {
+            width: 150px;
+        }
+
+        .logo {
+            margin-top: -20px;
+            margin-bottom: -30px;
+        }
+
+        .step {
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
     }
 
     /* === PLACEHOLDERS === */
@@ -392,16 +421,6 @@ export default {
 
     .account-image {
         height: 240px;
-    }
-
-    .about-section {
-        padding: 60px 0;
-    }
-
-    .section-header {
-        text-align: center;
-        max-width: 760px;
-        margin: 0 auto 32px;
     }
 
     /* Grid layouts trimmed for length — same as previous version */
@@ -430,7 +449,7 @@ export default {
         background: #fff;
         padding: 20px;
         border-radius: 16px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+        box-shadow: 5px 5px 10px #0814368e;
     }
 
     .step-icon {
@@ -462,24 +481,6 @@ export default {
         border-radius: 20px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
-
-    /* Outline button */
-    .outline-btn {
-        border-radius: 8px;
-        padding: 10px 22px;
-        border: 2px solid #12304d;
-        background: transparent;
-        font-weight: 700;
-        font-family: 'Merriweather', 'Georgia', serif;
-        cursor: pointer;
-        color: #12304d;
-    }
-
-    .outline-btn:hover {
-        background: #12304d;
-        color: #fff;
-    }
-
 }
 
 @media (max-width: 1024px) {
@@ -492,8 +493,12 @@ export default {
 
 @media (max-width: 768px) {
     .about {
+        .line-break {
+            display: none;
+        }
+
         .header {
-            padding: 20px 16px 80px;
+            padding: 20px 16px 60px;
 
             h1 {
                 line-height: 1.25em;
@@ -514,6 +519,10 @@ export default {
                     width: 100%;
                 }
             }
+        }
+
+        .how-it-works {
+            padding: 20px 16px 60px;
         }
 
         .steps-grid,
