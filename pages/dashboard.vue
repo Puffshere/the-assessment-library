@@ -710,6 +710,11 @@ export default {
         .header {
             padding: 40px 16px 30px;
 
+            h1 {
+                line-height: 1.25em;
+                margin-bottom: 40px;
+            }
+
             .logo {
                 position: relative;
                 width: 300px;
