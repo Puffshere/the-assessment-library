@@ -11,6 +11,7 @@ import assessmentController from './controllers/assessmentController.js';
 import dashboardController from './controllers/dashboardController.js';
 import sessionsController from './controllers/sessionsController.js';
 import creditsController from './controllers/creditsController.js';
+import contactController from './controllers/contactController.js';
 
 
 const upload = multer();
@@ -63,6 +64,8 @@ app.post('/sessions/:id/answer', sessionsController.authenticate, sessionsContro
 app.get('/assessments', assessmentController.getAssessmentsForLibrary);
 
 app.get('/assessments/:slug', assessmentController.getAssessmentBySlug);
+
+app.post('/contact', contactController.submitContact);
 
 app.post('/upload', upload.single('file'), (req, res) => {
   uploadController.upload(req, res);

@@ -31,11 +31,11 @@
                     <div class="col-6">
                         <ul class="footer-links">
                             <li class="link"><nuxt-link to="/">Testimonials</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/">What is DISC?</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/">FAQs</nuxt-link></li>
                             <li class="link"><nuxt-link to="/">New Releases</nuxt-link></li>
                             <li class="link"><nuxt-link to="/">Coming Soon!</nuxt-link></li>
                             <li class="link"><nuxt-link to="/">Refer a Friend</nuxt-link></li>
+                            <li class="link"><nuxt-link to="/contact">Contact Us</nuxt-link></li>
+                            <li class="link"><nuxt-link to="/">FAQs</nuxt-link></li>
                         </ul>
                     </div>
                 </div>

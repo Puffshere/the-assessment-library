@@ -14,6 +14,21 @@ async function sendPasswordResetEmail({ to, name, resetUrl }) {
     });
 }
 
+async function sendContactNotificationEmail({ name, email, subject, message }) {
+    return client.sendEmailWithTemplate({
+        From: 'no-reply@theassessmentlibrary.com',
+        To: process.env.CONTACT_NOTIFY_TO || 'shawncurtistaylor@hotmail.com',
+        TemplateAlias: process.env.POSTMARK_CONTACT_FORM,
+        TemplateModel: {
+            name,
+            email,
+            subject,
+            message,
+        },
+    });
+}
+
 module.exports = {
     sendPasswordResetEmail,
+    sendContactNotificationEmail,
 };
