@@ -74,7 +74,12 @@
                     <p v-else class="no-data">
                         No DISC breakdown available for this assessment yet.
                     </p>
+                    <button v-if="selectedResult && topTrait && conclusionHtml" class="conclusion-button"
+                        :style="{ backgroundColor: topTraitColor }" @click="showConclusionModal = true">
+                        Breakdown
+                    </button>
                 </div>
+
 
                 <div class="text-col">
                     <h5>These are your results.</h5>
@@ -140,6 +145,24 @@
                     </p>
                 </h6>
             </div>
+
+            <div v-if="showConclusionModal && conclusionHtml" class="conclusion-modal-backdrop"
+                @click.self="closeConclusionModal">
+                <div class="conclusion-modal">
+                    <button class="conclusion-modal-close red" @click="closeConclusionModal">close</button>
+
+                    <h3 class="conclusion-modal-title">Conclusion</h3>
+
+                    <p v-if="conclusionTimeline" style="font-weight: 700;" class="chapter" v-html="conclusionTimeline">
+                    </p>
+
+                    <div class="line" :class="topTraitLineClass"></div>
+
+                    <p v-html="conclusionHtml"></p>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </template>
@@ -187,7 +210,10 @@ export default {
     data() {
         return {
             selectedCategoryFilter: 'all',
-            dropdownOpen: false
+            dropdownOpen: false,
+            showConclusionModal: false,
+            conclusionTimelineData: '',
+            conclusionHtmlData: ''
         }
     },
     computed: {
@@ -380,19 +406,157 @@ export default {
         },
         primaryStyleDescription() {
             return this.topTrait ? this.styleText[this.topTrait].description : ''
+        },
+
+        /* ---------- NEW COMPUTED PROPS FOR MODAL ---------- */
+
+        // Color for the button + line based on the user's topTrait
+        topTraitColor() {
+            switch (this.topTrait) {
+                case 'D':
+                    return '#f44336'
+                case 'I':
+                    return '#ffbd05'
+                case 'S':
+                    return '#0dab49'
+                case 'C':
+                    return '#1666ff'
+                default:
+                    return '#143180'
+            }
+        },
+
+        // Class used on the colored line inside the modal
+        topTraitLineClass() {
+            switch (this.topTrait) {
+                case 'D':
+                    return 'dominance'
+                case 'I':
+                    return 'influence'
+                case 'S':
+                    return 'steadiness'
+                case 'C':
+                    return 'conscientiousness'
+                default:
+                    return ''
+            }
+        },
+
+        conclusionTimeline() {
+            // 1) If selectedResult already has timeline, use it.
+            if (this.selectedResult && this.selectedResult.timeline) {
+                return this.selectedResult.timeline
+            }
+            // 2) Otherwise, use the value we fetched from the assessment
+            return this.conclusionTimelineData
+        },
+
+        conclusionHtml() {
+            // 1) If selectedResult already contains conclusion fields, use those
+            if (this.selectedResult && this.topTrait) {
+                const s = this.selectedResult
+
+                switch (this.topTrait) {
+                    case 'D':
+                        if (s.dominanceConclusion) return s.dominanceConclusion
+                        break
+                    case 'I':
+                        if (s.influenceConclusion) return s.influenceConclusion
+                        break
+                    case 'S':
+                        if (s.steadinessConclusion) return s.steadinessConclusion
+                        break
+                    case 'C':
+                        if (s.conscientiousnessConclusion) return s.conscientiousnessConclusion
+                        break
+                }
+            }
+
+            // 2) Fallback: use the value we fetched from the assessment
+            return this.conclusionHtmlData
+        }
+    },
+    watch: {
+        selectedResult: {
+            immediate: true,
+            handler(newVal) {
+                // Clear when nothing selected
+                if (!newVal) {
+                    this.conclusionTimelineData = ''
+                    this.conclusionHtmlData = ''
+                    return
+                }
+                // Fetch conclusion for this session
+                this.fetchConclusionForSession(newVal)
+            }
         }
     },
     methods: {
+        async fetchConclusionForSession(session) {
+            try {
+                // Adjust these fallbacks to match your actual session shape
+                const slug =
+                    session.assessmentSlug ||
+                    (session.assessment && session.assessment.slug)
+
+                if (!slug) {
+                    console.warn('No assessmentSlug found on session', session)
+                    return
+                }
+
+                const res = await this.$axios.$get(`/api/assessments/${slug}`)
+                const assessment = res.assessment || res
+
+                if (!assessment || !Array.isArray(assessment.questions) || !assessment.questions.length) {
+                    console.warn('Assessment has no questions', assessment)
+                    return
+                }
+
+                // In _slug.vue you use questions[currentQuestion - 1] for the final page.
+                // Here we’ll assume the last question contains the conclusions.
+                const lastQuestion = assessment.questions[assessment.questions.length - 1]
+
+                this.conclusionTimelineData = lastQuestion.timeline || ''
+
+                const trait = this.topTrait
+                let html = ''
+
+                switch (trait) {
+                    case 'D':
+                        html = lastQuestion.dominanceConclusion || ''
+                        break
+                    case 'I':
+                        html = lastQuestion.influenceConclusion || ''
+                        break
+                    case 'S':
+                        html = lastQuestion.steadinessConclusion || ''
+                        break
+                    case 'C':
+                        html = lastQuestion.conscientiousnessConclusion || ''
+                        break
+                }
+
+                this.conclusionHtmlData = html
+            } catch (err) {
+                console.error('Error fetching conclusion for session', err)
+            }
+        },
         toggleDropdown() {
             this.dropdownOpen = !this.dropdownOpen
         },
         pickCategory(val) {
             this.selectedCategoryFilter = val
             this.dropdownOpen = false
+        },
+
+        // NEW: closes the conclusion modal
+        closeConclusionModal() {
+            this.showConclusionModal = false
         }
     }
 }
 </script>
+
 
 <style scoped lang="scss">
 .panel-wide {
@@ -403,13 +567,6 @@ export default {
     flex-direction: column;
     position: relative;
 }
-
-/* scrollable inner area */
-// .panel-body {
-//     flex: 1 1 auto;
-//     overflow-y: auto;
-//     padding-right: 8px;
-// }
 
 .results-header {
     position: relative;
@@ -428,6 +585,87 @@ export default {
         font-size: 32px;
         line-height: 1.1;
     }
+}
+
+.conclusion-button {
+    margin-top: 16px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+        transform: none;
+    }
+
+    &:focus {
+        transform: scale(0.8);
+    }
+}
+
+.conclusion-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.conclusion-modal {
+    background: #ffffff;
+    max-width: 700px;
+    width: 90%;
+    border-radius: 10px;
+    padding: 24px 28px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.conclusion-modal-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #12304d;
+}
+
+.conclusion-modal-close {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.line {
+    height: 4px;
+    border-radius: 2px;
+    margin: 10px 0 18px;
+}
+
+.line.dominance {
+    background: #f44336;
+}
+
+.line.influence {
+    background: #ffbd05;
+}
+
+.line.steadiness {
+    background: #0dab49;
+}
+
+.line.conscientiousness {
+    background: #1666ff;
 }
 
 .red {
@@ -613,7 +851,7 @@ export default {
     .chart {
         padding-top: 0px !important;
         height: 150px !important;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .chart-col {
@@ -637,6 +875,22 @@ export default {
             position: static;
             text-align: left;
             margin-top: 12px;
+        }
+    }
+
+    .conclusion-modal {
+        position: relative;
+
+        .conclusion-modal-close {
+            position: absolute;
+            margin-top: 0px;
+            margin-right: 0px;
+            right: 16px;
+            top: 16px;
+        }
+
+        .conclusion-modal-title {
+            margin-top: 50px;
         }
     }
 

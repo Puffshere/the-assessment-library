@@ -604,6 +604,10 @@ export default {
                     transform: scale(0.95);
                 }
 
+                &:active {
+                    transform: none;
+                }
+
                 &:focus {
                     transform: scale(0.8);
                 }

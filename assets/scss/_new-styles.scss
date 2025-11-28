@@ -51,7 +51,20 @@ button {
     font-family: 'Merriweather', 'Georgia', serif;
     font-size: 10.5pt;
     border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(0.95);
+    }
+
+    &:active {
+        transform: scale(0.8);
+    }
+
+    // cool effect: 
+    //    &:focus {
+    //     transform: scale(0,8) !important;
+    // }
 }
 
 button.blue {

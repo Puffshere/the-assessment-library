@@ -746,8 +746,7 @@ export default {
             }
 
             button {
-                width: 110px;
-            }
+                width: 110px;            }
         }
     }
 }
