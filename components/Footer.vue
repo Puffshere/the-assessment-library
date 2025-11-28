@@ -21,10 +21,10 @@
                         <ul class="footer-links">
                             <li class="link"><nuxt-link to="/">Home</nuxt-link></li>
                             <li class="link"><nuxt-link to="/dashboard">Dashboard</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/">Results</nuxt-link></li>
-                            <li class="link"><nuxt-link to="/">Subscriptions</nuxt-link></li>
+                            <li class="link"><nuxt-link to="/library">Library</nuxt-link></li>
                             <li class="link"><nuxt-link to="/about">About</nuxt-link></li>
                             <li class="link"><nuxt-link to="/">Account</nuxt-link></li>
+                            <li class="link"><nuxt-link to="/">Subscriptions</nuxt-link></li>
                         </ul>
                     </div>
 
