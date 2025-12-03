@@ -123,7 +123,9 @@ const getAssessmentsForLibrary = async (req, res) => {
       'jessicas-first-job',
       'rogers-new-business',
       'allies-professional-journey',
-      'shanes-day-at-the-park'
+      'shanes-day-at-the-park',
+      'trevors-day-at-school',
+      'westons-birthday'
     ];
 
     const assessments = await Assessment.find(

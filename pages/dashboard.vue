@@ -334,7 +334,9 @@ export default {
                 "Shane's Day at the Park": 'shanes-day-at-the-park',
                 "Allie's Professional Journey": 'allies-professional-journey',
                 "Jessica's First Job": 'jessicas-first-job',
-                "Roger's New Business": 'rogers-new-business'
+                "Roger's New Business": 'rogers-new-business',
+                "Trevor's Day at School": 'trevors-day-at-school',
+                "Weston's Birthday": 'westons-birthday'
             }
 
             const slug =

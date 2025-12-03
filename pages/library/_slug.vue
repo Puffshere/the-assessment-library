@@ -247,7 +247,9 @@ export default {
                 'boyAtThePark': slug === 'shanes-day-at-the-park',
                 'bookcaseLeft': slug === 'allies-professional-journey',
                 'firstJobLeft': slug === 'jessicas-first-job',
-                'rogersBusinessLeft': slug === 'rogers-new-business'
+                'rogersBusinessLeft': slug === 'rogers-new-business',
+                'trevorsDayAtSchool': slug === 'trevors-day-at-school',
+                'westonsBirthday': slug === 'westons-birthday'
             };
         },
         displayTitle() {

@@ -23,7 +23,7 @@
 
                     <div v-for="book in adultBooks" :key="book._id || book.slug" class="col-6 book-card">
                         <div class="hero-box" :class="{ disabled: isBookDisabled(book) }" @click="openBookModal(book)">
-                            <span class="badge badge--adult">Adult Story</span>
+                            <span class="badge badge--adult">Coming Soon!</span>
 
                             <div class="hero-box-inner">
                                 <img v-if="book.heroImageUrl" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`"
@@ -44,7 +44,7 @@
 
                     <div v-for="book in kidsBooks" :key="(book._id || book.slug) + '-kids'" class="col-6 book-card">
                         <div class="hero-box" :class="{ disabled: isBookDisabled(book) }" @click="openBookModal(book)">
-                            <span class="badge badge--kids">Kids Story</span>
+                            <span class="badge badge--kids">Coming Soon!</span>
 
                             <div class="hero-box-inner">
                                 <img v-if="book.heroImageUrl" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`"
