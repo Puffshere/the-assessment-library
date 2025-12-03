@@ -18,30 +18,42 @@
 
                 <!-- ADULT SHELF -->
                 <div class="shelf"></div>
-                <div class="row">
+                <div class="row shelf-row">
                     <h4>Adult Shelf</h4>
 
-                    <div v-for="book in adultBooks" :key="book._id || book.slug" :class="['col-6', book.positionClass]">
-                        <img :class="[book.imgClass, { disabled: isBookDisabled(book) }]" :src="book.imgSrc"
-                            :alt="`image of a ${book.imgClass} book`" :aria-disabled="isBookDisabled(book)"
-                            @click="openBookModal(book)" />
-                        <br />
-                        <p class="title" :class="book.titleClass">{{ book.title }}</p>
+                    <div v-for="book in adultBooks" :key="book._id || book.slug" class="col-6 book-card">
+                        <div class="hero-box" :class="{ disabled: isBookDisabled(book) }" @click="openBookModal(book)">
+                            <span class="badge badge--adult">Adult Story</span>
+
+                            <div class="hero-box-inner">
+                                <img v-if="book.heroImageUrl" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`"
+                                    class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
+                                    loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                            </div>
+                        </div>
+
+                        <p class="title">{{ book.title }}</p>
                         <p>{{ book.description }}</p>
                     </div>
                 </div>
 
                 <!-- KIDS SHELF -->
                 <div class="shelf"></div>
-                <div class="row">
+                <div class="row shelf-row">
                     <h4>Kids Shelf</h4>
 
-                    <div v-for="book in kidsBooks" :key="book._id || book.slug" :class="['col-6', book.positionClass]">
-                        <img :class="[book.imgClass, { disabled: isBookDisabled(book) }]" :src="book.imgSrc"
-                            :alt="`image of a ${book.imgClass} book`" :aria-disabled="isBookDisabled(book)"
-                            @click="openBookModal(book)" />
-                        <br />
-                        <p class="title" :class="book.titleClass">{{ book.title }}</p>
+                    <div v-for="book in kidsBooks" :key="(book._id || book.slug) + '-kids'" class="col-6 book-card">
+                        <div class="hero-box" :class="{ disabled: isBookDisabled(book) }" @click="openBookModal(book)">
+                            <span class="badge badge--kids">Kids Story</span>
+
+                            <div class="hero-box-inner">
+                                <img v-if="book.heroImageUrl" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`"
+                                    class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
+                                    loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                            </div>
+                        </div>
+
+                        <p class="title">{{ book.title }}</p>
                         <p>{{ book.description }}</p>
                     </div>
                 </div>
@@ -50,6 +62,11 @@
 
                 <div v-if="loadingAssessments" class="status">Stacking shelves…</div>
                 <div v-else-if="loadError" class="status error">{{ loadError }}</div>
+
+                <!-- Safety message if the API really returns nothing -->
+                <div v-else-if="!adultBooks.length && !kidsBooks.length" class="status">
+                    No assessments are available in your library yet.
+                </div>
             </div>
         </section>
 
@@ -155,7 +172,9 @@ export default {
 
             loadingAssessments: false,
             loadError: null,
-            libraryBooks: []
+            libraryBooks: [],
+
+            heroLoaded: {}
         }
     },
     computed: {
@@ -172,13 +191,22 @@ export default {
             if (!this.selectedBook) return false
             return this.canCheckout(this.selectedBook)
         },
+
         adultBooks() {
-            return this.libraryBooks.filter(b => b.shelf === 'Adult')
+            return (this.libraryBooks || []).filter(b => {
+                const shelf = (b.category && b.category.shelf) || ''
+                return shelf.toLowerCase() === 'adult'
+            })
         },
+
         kidsBooks() {
-            return this.libraryBooks.filter(b => b.shelf === 'Kids')
+            return (this.libraryBooks || []).filter(b => {
+                const shelf = (b.category && b.category.shelf) || ''
+                return shelf.toLowerCase() === 'kids'
+            })
         }
     },
+
     async mounted() {
         if (this.loggedIn) {
             try {
@@ -206,51 +234,9 @@ export default {
 
                 const assessments = (res && res.assessments) || []
 
-                const metaBySlug = {
-                    'jessicas-first-job': {
-                        shelf: 'Adult',
-                        imgClass: 'darkBlue',
-                        imgSrc: require('~/assets/library/dark-blue-book.webp'),
-                        positionClass: 'col-left',
-                        titleClass: ''
-                    },
-                    'rogers-new-business': {
-                        shelf: 'Adult',
-                        imgClass: 'red',
-                        imgSrc: require('~/assets/library/red-book.webp'),
-                        positionClass: 'col-right',
-                        titleClass: 'redText'
-                    },
-                    'allies-professional-journey': {
-                        shelf: 'Kids',
-                        imgClass: 'pink',
-                        imgSrc: require('~/assets/library/pink-book.webp'),
-                        positionClass: 'col-left',
-                        titleClass: ''
-                    },
-                    'shanes-day-at-the-park': {
-                        shelf: 'Kids',
-                        imgClass: 'blue',
-                        imgSrc: require('~/assets/library/blue-book.webp'),
-                        positionClass: 'col-right',
-                        titleClass: 'blueText'
-                    }
-                }
-
-                const order = [
-                    'jessicas-first-job',
-                    'rogers-new-business',
-                    'allies-professional-journey',
-                    'shanes-day-at-the-park'
-                ]
+                console.log('Library assessments:', assessments)
 
                 this.libraryBooks = assessments
-                    .filter(a => metaBySlug[a.slug])
-                    .map(a => ({
-                        ...a,
-                        ...metaBySlug[a.slug]
-                    }))
-                    .sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug))
             } catch (err) {
                 console.error('Failed to load assessments for library:', err)
                 this.loadError = 'Failed to load assessments.'
@@ -370,6 +356,10 @@ export default {
                 console.error('Error adding credit from modal:', err)
                 alert('Could not add a test credit right now. Please try again.')
             }
+        },
+        markHeroLoaded(id) {
+            if (!id) return
+            this.$set(this.heroLoaded, id, true)
         }
     },
     head() {
@@ -495,88 +485,128 @@ export default {
             position: relative;
             z-index: 1;
             height: 20px;
-            margin: 30px 20px;
+            margin: 30px 10px;
             background-color: rgb(100, 55, 13);
             border-radius: 3px;
             box-shadow: 5px 5px 10px #412604;
         }
 
-        .col-6 {
+        .shelf-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center; // center the cards within the row
+            gap: 24px;
+
+            /* match the backpanel: left/right inset = 60px each */
+            max-width: calc(100% - 120px); // 100% minus 60px + 60px
+            margin: 0 auto; // center this block inside the container
+            box-sizing: border-box;
+        }
+
+        /* make sure the "Adult Shelf" / "Kids Shelf" label takes a full row */
+        .shelf-row>h4 {
+            flex: 0 0 100%;
+            margin-left: 0px;
+        }
+
+        .book-card {
             text-align: center;
+            flex: 1 1 240px;
+            max-width: 260px;
+            margin: 0 auto;
+            margin-left: 40px;
 
-            .darkBlue,
-            .pink,
-            .blue,
-            .red {
+            .hero-box {
+                position: relative;
+                margin: 30px auto 0;
                 cursor: pointer;
-                transition:
-                    transform 1s ease,
-                    border-radius 0.15s ease,
-                    filter 0.15s ease,
-                    opacity 0.15s ease;
-                border-radius: 15px;
-            }
 
-            .darkBlue,
-            .blue {
-                transform-style: preserve-3d;
-                transform: perspective(800px) rotateX(48deg) translateY(-20px);
-                transform-origin: bottom center;
-            }
+                background: linear-gradient(135deg,
+                        $color-d 0%,
+                        $color-i 25%,
+                        $color-s 60%,
+                        $color-c 100%);
+                padding: 2px;
+                border-radius: 16px;
 
-            .darkBlue {
-                margin-top: 40px;
-                height: 170px;
-                width: auto;
-            }
+                transition: transform 0.28s ease, box-shadow 0.25s ease;
 
-            .pink {
-                margin-top: 40px;
-                height: 170px;
-                width: auto;
+                .hero-box-inner {
+                    border-radius: 14px;
+                    overflow: hidden;
+                    background: #000;
+                    width: 100%;
+                    height: 160px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+                }
 
-            }
+                .hero-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: blur(6px);
+                    opacity: 0.7;
+                    transition: filter 0.4s ease, opacity 0.4s ease;
+                }
 
-            .blue {
-                width: 200px;
-                margin-top: 60px;
-            }
+                .hero-img--loaded {
+                    filter: blur(0);
+                    opacity: 1;
+                }
 
-            .red {
-                width: 150px;
-                margin-top: 40px;
-            }
+                &:hover {
+                    transform: translateY(-8px) scale(1.02) rotateZ(-0.4deg);
+                    box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.35);
+                }
 
-            .darkBlue:hover,
-            .pink:hover,
-            .blue:hover,
-            .red:hover {
-                transform: perspective(800px) rotateX(-12deg) translateY(-10px);
-            }
+                &.disabled {
+                    cursor: not-allowed;
 
-            .disabled {
-                opacity: 0.5;
-                filter: grayscale(90%);
-                cursor: pointer;
-                transform: none !important;
-                box-shadow: none !important;
+                    .hero-box-inner {
+                        box-shadow: none;
+                    }
+
+                    .hero-img {
+                        filter: grayscale(80%);
+                        opacity: 0.5;
+                    }
+                }
+
+                .badge {
+                    position: absolute;
+                    top: 8px;
+                    left: 12px;
+                    font-size: 11px;
+                    font-weight: 700;
+                    padding: 4px 8px;
+                    border-radius: 999px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    letter-spacing: 0.04em;
+                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+                }
+
+                .badge--adult {
+                    background: rgba($color-d, 0.9);
+                }
+
+                .badge--kids {
+                    background: rgba($color-i, 0.9);
+                }
             }
 
             .title {
+                margin-top: 14px;
                 font-style: italic;
                 font-weight: 700;
             }
 
-            .redText {
-                margin-top: 16px;
-            }
-
-            .blueText {
-                margin-top: 25px;
-            }
-
             p {
-                padding: 0 50px;
+                padding: 0 10px;
             }
         }
     }
@@ -667,14 +697,6 @@ export default {
     }
 }
 
-.col-left {
-    margin-left: 70px;
-}
-
-.col-right {
-    margin-left: -70px;
-}
-
 @media (max-width: 600px) {
     .library {
         .header {
@@ -736,8 +758,8 @@ export default {
                 h4 {
                     text-align: left;
                     margin-top: -22px;
-                    margin-bottom: -30px;
-                    margin-left: 30px;
+                    margin-bottom: 0px;
+                    margin-left: 0px;
                     background-color: rgba(112, 71, 9, 0.185);
                     position: relative;
                     z-index: 1;
@@ -756,8 +778,15 @@ export default {
                 margin-left: 16px;
             }
 
-            .col-6 {
-                margin-left: 0px !important;
+            .shelf-row {
+                padding: 0 12px 0px;
+                gap: 16px;
+            }
+
+            .book-card {
+                flex: 1 0 100%;
+                max-width: 100%;
+                margin-left: 0;
             }
         }
 

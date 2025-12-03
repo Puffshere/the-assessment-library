@@ -119,8 +119,6 @@ const getAssessmentBySlug = async (req, res) => {
 
 const getAssessmentsForLibrary = async (req, res) => {
   try {
-    const forLibrary = req.query.forLibrary === 'true';
-
     const slugs = [
       'jessicas-first-job',
       'rogers-new-business',
@@ -133,7 +131,8 @@ const getAssessmentsForLibrary = async (req, res) => {
         isActive: true,
         slug: { $in: slugs }
       },
-      'slug title description creditsCost estimatedCompletion wordsLength heroImageUrl'
+      // 👇 add category here
+      'slug title description creditsCost estimatedCompletion wordsLength heroImageUrl category'
     ).lean();
 
     res.json({ assessments });
@@ -141,7 +140,7 @@ const getAssessmentsForLibrary = async (req, res) => {
     console.error('Error loading assessments for library:', err);
     res.status(500).json({ message: 'Failed to load assessments' });
   }
-}
+};
 
 
 module.exports = {
