@@ -48,7 +48,7 @@
 
                 <div class="shelf"></div>
 
-                <div v-if="loadingAssessments" class="status">Loading books…</div>
+                <div v-if="loadingAssessments" class="status">Stacking shelves…</div>
                 <div v-else-if="loadError" class="status error">{{ loadError }}</div>
             </div>
         </section>
