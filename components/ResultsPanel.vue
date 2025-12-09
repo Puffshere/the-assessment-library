@@ -550,7 +550,7 @@ export default {
     position: relative;
     margin-bottom: 0;
     min-height: 50px;
-    margin-top: -20px;
+    margin-top: 0px;
 
     .overall-top-trait {
         margin-top: 8px;
