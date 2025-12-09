@@ -22,9 +22,29 @@
                     {{ error }}
                 </div>
                 <div v-else class="grid">
-                    <results-panel :selected-result="selectedResult" :sessions="dashboard.sessions"
-                        :assessments-started="dashboard.sessions.length"
-                        :assessments-completed="completedSessions.length" @clear-results="selectedResult = null" />
+                    <div class="results-wrapper">
+                        <div class="results-tabs">
+                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'first' }"
+                                @click="activeResultsView = 'first'">
+                                1st person
+                            </div>
+
+                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'third' }"
+                                @click="activeResultsView = 'third'">
+                                3rd person
+                            </div>
+                        </div>
+
+                        <!-- 1st person view -->
+                        <results-panel v-if="activeResultsView === 'first'" :selected-result="selectedResult"
+                            :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
+                            :assessments-completed="completedSessions.length" @clear-results="selectedResult = null" />
+
+                        <!-- 3rd person view -->
+                        <results-panel-third-person v-else :selected-result="selectedResult"
+                            :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
+                            :assessments-completed="completedSessions.length" />
+                    </div>
 
                     <!-- ACCOUNT OVERVIEW -->
                     <div class="panel">
@@ -180,13 +200,15 @@ export default {
     components: {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer'),
-        'results-panel': () => import('@/components/ResultsPanel.vue')
+        'results-panel': () => import('@/components/ResultsPanel.vue'),
+        'results-panel-third-person': () => import('@/components/ResultsPanelThirdPerson.vue')
     },
     data() {
         return {
             loading: true,
             error: null,
             selectedResult: null,
+            activeResultsView: 'first',
             DstyleTitle: 'Dominance (D)',
             DstyleDescription: 'You are direct, decisive, and results-oriented.',
             IstyleTitle: 'Influence (I)',
@@ -520,6 +542,7 @@ export default {
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
+        margin-top: 40px;
     }
 
     .panel {
@@ -705,6 +728,60 @@ export default {
             margin-top: 6px;
         }
     }
+
+    .results-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    .results-tabs {
+        position: absolute;
+        top: -36px;
+        left: 16px;
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+    }
+
+    .results-tab {
+        border: 3px solid #025baf67;
+        border-bottom: none;
+        border-radius: 8px 8px 0 0;
+        padding: 6px 14px;
+        background: #f0f4fa;
+        font-size: 14px;
+        font-weight: 500;
+        color: #143180;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: 11;
+        transition: background 0.2s ease, color 0.2s ease;
+        transform: scale(0.95);
+        height: 36px;
+
+        &.is-active {
+            height: 40px;
+            background: #fff;
+            color: #0d4ca5;
+            box-shadow: none;
+            padding-bottom: 5px;
+
+            margin-bottom: 0px;
+            border-bottom: 2px solid #fff;
+            z-index: 20;
+        }
+
+        &:active {
+            transform: scale(0.8);
+        }
+    }
+
+    results-panel,
+    results-panel-third-person {
+        position: relative;
+        z-index: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -748,7 +825,8 @@ export default {
             }
 
             button {
-                width: 110px;            }
+                width: 110px;
+            }
         }
     }
 }

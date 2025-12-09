@@ -6,7 +6,7 @@
                     Results for {{ selectedResult.assessmentTitle }}
                 </template>
                 <template v-else>
-                    Overall Totals
+                    Awareness Totals
                 </template>
             </h2>
 
@@ -49,7 +49,6 @@
         </div>
 
         <div class="panel-body">
-            <!-- DETAIL VIEW (single assessment) -->
             <div v-if="selectedResult" class="results-layout">
                 <div class="chart-col">
                     <div class="chart" v-if="hasData">
