@@ -43,7 +43,7 @@
                         <!-- 3rd person view -->
                         <results-panel-third-person v-else :selected-result="selectedResult"
                             :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
-                            :assessments-completed="completedSessions.length" />
+                            :assessments-completed="completedSessions.length" @clear-results="selectedResult = null" />
                     </div>
 
                     <!-- ACCOUNT OVERVIEW -->
