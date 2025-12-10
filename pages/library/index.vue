@@ -25,7 +25,7 @@
                         <div class="hero-box" :class="{ disabled: isBookDisabled(book) }" @click="openBookModal(book)">
                             <span class="badge badge--adult">Coming Soon!</span>
 
-                            <div class="hero-box-inner">
+                            <div class="hero-box-inner" tabindex="0">
                                 <img v-if="book.heroImageUrl" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`"
                                     class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
                                     loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
@@ -46,7 +46,7 @@
                         <div class="hero-box" :class="{ disabled: isBookDisabled(book) }" @click="openBookModal(book)">
                             <span class="badge badge--kids">Coming Soon!</span>
 
-                            <div class="hero-box-inner">
+                            <div class="hero-box-inner" tabindex="0">
                                 <img v-if="book.heroImageUrl" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`"
                                     class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
                                     loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
@@ -495,16 +495,13 @@ export default {
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
-            justify-content: center; // center the cards within the row
+            justify-content: center;
             gap: 24px;
-
-            /* match the backpanel: left/right inset = 60px each */
-            max-width: calc(100% - 120px); // 100% minus 60px + 60px
-            margin: 0 auto; // center this block inside the container
+            max-width: calc(100% - 120px);
+            margin: 0 auto;
             box-sizing: border-box;
         }
 
-        /* make sure the "Adult Shelf" / "Kids Shelf" label takes a full row */
         .shelf-row>h4 {
             flex: 0 0 100%;
             margin-left: 0px;
@@ -521,11 +518,12 @@ export default {
                 position: relative;
                 margin: 30px auto 0;
                 cursor: pointer;
+                perspective: 900px;
 
                 background: linear-gradient(135deg,
                         $color-d 0%,
                         $color-i 25%,
-                        $color-s 60%,
+                        $color-s 50%,
                         $color-c 100%);
                 padding: 2px;
                 border-radius: 16px;
@@ -541,7 +539,29 @@ export default {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    transform-origin: center bottom;
+
+                    &:hover {
+                        transform: translateY(-1px);
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                    }
+
+                    &:active {
+                        transform: none;
+                    }
+
+                    &:focus {
+                        outline: none;
+
+                        transform:
+                            translateY(-18px) translateZ(40px) rotateX(6deg);
+
+                        box-shadow:
+                            0 18px 35px rgba(0, 0, 0, 0.5);
+
+                        z-index: 5;
+                    }
                 }
 
                 .hero-img {
@@ -550,7 +570,7 @@ export default {
                     object-fit: cover;
                     filter: blur(6px);
                     opacity: 0.7;
-                    transition: filter 0.4s ease, opacity 0.4s ease;
+
                 }
 
                 .hero-img--loaded {
