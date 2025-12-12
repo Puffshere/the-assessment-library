@@ -49,6 +49,10 @@
         </div>
 
         <div class="panel-body">
+            <div class="confidence-slot" style="width: 280px;">
+                <ConfidenceBar :value="73" />
+            </div>
+
             <!-- DETAIL VIEW (single assessment) -->
             <div v-if="selectedResult" class="results-layout">
                 <div class="chart-col">
@@ -78,7 +82,6 @@
                         Breakdown
                     </button>
                 </div>
-
 
                 <div class="text-col">
                     <h5>These are your results.</h5>
@@ -203,6 +206,9 @@ export default {
             type: Number,
             default: 0
         }
+    },
+    components: {
+        'ConfidenceBar': () => import('@/components/ConfidenceMeter.vue'),
     },
     data() {
         return {
@@ -536,7 +542,10 @@ export default {
 </script>
 
 
-<style scoped lang="scss">
+<style lang="scss">
+@import '~assets/scss/vars';
+@import '~assets/scss/new-styles';
+
 .panel-wide {
     flex: 0 0 100%;
     max-width: 100%;
@@ -564,6 +573,13 @@ export default {
         font-size: 32px;
         line-height: 1.1;
     }
+}
+
+.confidence-slot {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .conclusion-button {
@@ -818,13 +834,17 @@ export default {
 
 @media (max-width: 768px) {
     .panel-wide {
-        height: auto;
+        height: auto !important;
     }
 
     .panel-body {
         overflow-y: visible;
         max-height: none;
         padding-right: 0;
+    }
+
+    .confidence-slot {
+        position: relative;
     }
 
     .chart {

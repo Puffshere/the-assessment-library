@@ -26,12 +26,17 @@
                         <div class="results-tabs">
                             <div class="results-tab" :class="{ 'is-active': activeResultsView === 'first' }"
                                 @click="activeResultsView = 'first'">
-                                1st person
+                                1st Person
+                            </div>
+
+                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'second' }"
+                                @click="activeResultsView = 'second'">
+                                3rd Person
                             </div>
 
                             <div class="results-tab" :class="{ 'is-active': activeResultsView === 'third' }"
                                 @click="activeResultsView = 'third'">
-                                3rd person
+                                3rd Person Participants
                             </div>
                         </div>
 
@@ -739,7 +744,7 @@ export default {
         top: -36px;
         left: 16px;
         display: flex;
-        gap: 8px;
+        gap: 0px;
         z-index: 10;
     }
 
@@ -806,6 +811,22 @@ export default {
 
         .grid {
             flex-direction: column;
+        }
+
+        .results-tabs {
+            position: absolute;
+            top: -36px;
+            left: 6px;
+            display: flex;
+            gap: 0px;
+            z-index: 10;
+        }
+
+        .results-tab {
+            padding: 3px 14px;
+            line-height: 14px;
+            font-size: 14px;
+            height: 36px;
         }
 
         .panel,

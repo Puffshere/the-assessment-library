@@ -3,22 +3,15 @@
         <div class="results-header">
             <h2 class="panel-title">
                 <template v-if="selectedResult">
-                    Results for {{ selectedResult.assessmentTitle }}
+                    Awareness Scores for: <br /> {{ selectedResult.assessmentTitle }}
                 </template>
                 <template v-else>
-                    Awareness Totals
+                    Story Collaborators
                 </template>
             </h2>
 
-            <!-- Overall dominant trait (only in overall mode) -->
-            <p v-if="!selectedResult && overallTopTraitTitle" class="overall-top-trait"
-                :style="{ color: overallTopTraitColor }">
-                <span class="overall-top-label">Overall Dominant Trait:</span><br />
-                <span class="overall-top-name">{{ overallTopTraitTitle }}</span>
-            </p>
-
             <!-- Custom Dropdown -->
-            <div class="category-dropdown" v-if="!selectedResult">
+            <!-- <div class="category-dropdown" v-if="!selectedResult">
                 <button class="dropdown-button" @click="toggleDropdown" :style="{ backgroundColor: dropdownColor }">
                     {{ selectedCategoryLabel }}
                     <span class="arrow">▾</span>
@@ -40,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <button v-if="selectedResult" class="red" @click="$emit('clear-results')"
                 aria-label="Clear selected results">
@@ -50,7 +43,7 @@
 
         <div class="panel-body">
             <div v-if="selectedResult" class="results-layout">
-                <div class="chart-col">
+                <!-- <div class="chart-col">
                     <div class="chart" v-if="hasData">
                         <div class="bar" :style="{ height: dPercent + '%', backgroundColor: '#f44336' }"
                             :title="'D: ' + dPercent.toFixed(1) + '%'">
@@ -76,10 +69,10 @@
                         :style="{ backgroundColor: topTraitColor }" @click="showConclusionModal = true">
                         Breakdown
                     </button>
-                </div>
+                </div> -->
 
 
-                <div class="text-col">
+                <!-- <div class="text-col">
                     <h5>These are your results.</h5>
                     <hr class="shortLine top" />
                     <ul v-if="hasData">
@@ -95,12 +88,12 @@
                         <strong>{{ primaryStyleTitle }}</strong>
                         {{ primaryStyleDescription }}
                     </p>
-                </div>
+                </div> -->
             </div>
 
             <!-- OVERALL VIEW -->
             <div v-else class="overall-layout">
-                <div v-if="hasData" class="overall-chart">
+                <!--   <div v-if="hasData" class="overall-chart">
                     <div class="chart">
                         <div class="bar" :style="{ height: dPercent + '%', backgroundColor: '#f44336' }"
                             :title="'D: ' + dPercent.toFixed(1) + '%'">
@@ -127,16 +120,36 @@
                 <p v-else class="no-data">
                     You don’t have any completed assessments with DISC results yet.
                 </p>
-
+ -->
                 <h6 class="overall-meta">
+                    <p style="font-style: italic; font-size: 18px;">Outgoing</p>
+                    <hr style="border: 0; border-top: 3px solid #e93d2f;" />
+
                     <p>
-                        Assessments Started:
+                        Pending Assessments:
                         <span style="font-size: 24px; margin-left: 10px;">
                             {{ assessmentsStarted }}
                         </span>
                     </p>
                     <p>
-                        Assessments Completed:
+                        Completed:
+                        <span style="font-size: 24px; margin-left: 10px;">
+                            {{ assessmentsCompleted }}
+                        </span>
+                    </p>
+                    <br />
+                    <p style="font-style: italic; font-size: 18px;">
+                        Incoming
+                    </p>
+                    <hr style="border: 0; border-top: 3px solid #1666ff;;" />
+                    <p>
+                        Pending Assessments:
+                        <span style="font-size: 24px; margin-left: 10px;">
+                            {{ assessmentsCompleted }}
+                        </span>
+                    </p>
+                    <p>
+                        Completed:
                         <span style="font-size: 24px; margin-left: 10px;">
                             {{ assessmentsCompleted }}
                         </span>
