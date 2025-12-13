@@ -13,8 +13,8 @@
                     <h1>
                         <span style="font-weight: 600;">Welcome to</span>
                         <span class="type-wrap">
-                            <span class="hero-placeholder"> <span style="color: #623700; text-shadow: 1px 1px 1px black;">The Assessment Library!</span></span>
-                            <span class="hero-typed" aria-hidden="true"> <span style="color: #623700; text-shadow: 1px 1px 1px black;">The Assessment Library!</span></span>
+                            <span class="hero-placeholder"> <span style="color: #12304d; text-shadow: 1px 1px 1px white; font-style: italic;">The Assessment Library!</span></span>
+                            <span class="hero-typed" aria-hidden="true"> <span style="color: #12304d; text-shadow: 1px 1px 1px white; font-style: italic;">The Assessment Library!</span></span>
                         </span>
                     </h1>
                     <h4>
