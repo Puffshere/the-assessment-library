@@ -51,10 +51,10 @@
                         How it works (simple + scannable)
                     </h4>
                     <p class="details" style="font-size: 18px;">
-                        <span style="color: #e93d2f; text-decoration: underline; font-size: 20px;">1st person:</span>
+                        <span style="font-weight: 700; text-decoration: underline; font-size: 20px;">1st person:</span>
                         You take the assessment as yourself <br />
                         <br />
-                        <span style="color: #1666ff; text-decoration: underline; font-size: 20px;">3rd person:</span>
+                        <span style="font-weight: 700; text-decoration: underline; font-size: 20px;">3rd person:</span>
                         Friends & family take the same story as you <br />
                         <br />
                         <span style="color: #0dab49; text-decoration: underline; font-size: 20px;">Confidence
