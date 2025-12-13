@@ -6,7 +6,7 @@
             <img src="~assets/logo-without-background.png" alt="image of logo" class="logo" />
             <div class="container">
                 <div class="row">
-                    <h1>Welcome to Your Assessment Library!</h1>
+                    <h1>Welcome to <span style="color: #623700; text-shadow: 1px 1px 1px black;">Your Assessment Library!</span></h1>
                     <h4>Choose a book to get started on your Assessment Journey!</h4>
                 </div>
             </div>
@@ -540,6 +540,7 @@ export default {
                 border-radius: 8px;
                 padding: 6px 0px;
                 box-shadow: 5px 5px 10px #412604;
+                text-shadow: 1px 1px 1px black;
             }
         }
 

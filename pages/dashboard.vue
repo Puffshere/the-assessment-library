@@ -6,7 +6,7 @@
             <img src="~assets/logo-without-background.png" alt="image of logo" class="logo" />
             <div class="container">
                 <div class="row">
-                    <h1>Your Library Dashboard</h1>
+                    <h1>Your Library <span style="color: #e93d2f; text-shadow: 1px 1px 1px black;">Dashboard</span></h1>
                     <h4>See your assessments, scores, and available credits in one place.</h4>
                 </div>
             </div>

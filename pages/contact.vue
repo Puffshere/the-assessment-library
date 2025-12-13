@@ -6,7 +6,7 @@
             <img src="~assets/logo-without-background.png" alt="image of logo" class="logo" />
             <div class="container">
                 <div class="row">
-                    <h1>Contact The Assessment Library</h1>
+                    <h1><span style="color: #1666ff; text-shadow: 1px 1px 1px black;">Contact</span> The Assessment Library</h1>
                     <h4>
                         Have a question about your assessments, credits, or account? We’re here to help.
                     </h4>

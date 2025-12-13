@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h1>About The Assessment Library</h1>
+                        <h1><span style="color: #ffbd05; text-shadow: 1px 1px 1px black;">About</span> The Assessment Library</h1>
                         <h4>
                             A story-based DISC® assessment experience that turns personal growth
                             into an engaging journey for adults and kids.
@@ -28,6 +28,42 @@
                     <div class="col-6">
                         <img src="~assets/backgrounds/classroom_background.webp" alt="image of a classroom">
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="insight">
+            <div class="container">
+                <div class="row">
+                    <h1>
+                        "<span style="color: #0dab49; text-shadow: 1px 1px 1px black;">Confidence</span> grows when insight is shared."
+                    </h1>
+                    <p>
+                        You don’t just answer questions about yourself — you invite the people who know you best to step
+                        into your story and respond as they think you would. Every completed perspective strengthens
+                        your understanding and increases your Confidence Meter.
+                    </p>
+
+                    <div class="confidence-slot" style="width: 280px;">
+                        <ConfidenceBar :value="73" />
+                    </div>
+                    <h4>
+                        How it works (simple + scannable)
+                    </h4>
+                    <p class="details" style="font-size: 18px;">
+                        <span style="color: #e93d2f; text-decoration: underline; font-size: 20px;">1st person:</span>
+                        You take the assessment as yourself <br />
+                        <br />
+                        <span style="color: #1666ff; text-decoration: underline; font-size: 20px;">3rd person:</span>
+                        Friends & family take the same story as you <br />
+                        <br />
+                        <span style="color: #0dab49; text-decoration: underline; font-size: 20px;">Confidence
+                            Meter:</span> Each completed book sharpens the signal and reduces guesswork
+                    </p>
+                    <h4>
+                        This isn’t about being “right.” It’s about alignment. The more perspectives you gather, the
+                        clearer and more reliable your results become.
+                    </h4>
                 </div>
             </div>
         </section>
@@ -253,6 +289,7 @@ export default {
     name: 'AboutPage',
     components: {
         'main-nav': () => import('@/components/Nav'),
+        'ConfidenceBar': () => import('@/components/ConfidenceMeter.vue'),
         'footer-fold': () => import('@/components/Footer'),
         'results-panel': () => import('@/components/ResultsPanel.vue')
     },
@@ -263,7 +300,6 @@ export default {
     },
     mounted() {
         if (process.client) {
-            // Read your actual auth values from localStorage
             const talToken = localStorage.getItem('tal_token');
             const talLoggedIn = localStorage.getItem('tal_logged_in');
 
@@ -274,11 +310,9 @@ export default {
                     const parsed = JSON.parse(storedState);
                     fromState = !!(parsed.auth && parsed.auth.isAuthenticated);
                 } catch (e) {
-                    // ignore parse errors
                 }
             }
 
-            // consider user authenticated if ANY of these indicate true
             this.isAuthenticated =
                 !!talToken || talLoggedIn === '1' || fromState;
         }
@@ -290,10 +324,8 @@ export default {
             }
 
             if (this.isAuthenticated) {
-                // ✅ already logged in – go straight to target
                 this.$router.push(path);
             } else {
-                // 🚪 not logged in – send to login and remember where they wanted to go
                 this.$router.push({
                     path: '/auth/login',
                     query: { redirect: path }
@@ -309,7 +341,6 @@ export default {
     }
 };
 </script>
-
 
 
 <style lang="scss">
@@ -371,9 +402,37 @@ export default {
         }
     }
 
+    .insight {
+        padding: 60px 16px 80px;
+        text-align: center;
+        position: relative;
+        box-shadow: 5px 5px 10px #412604;
+
+        h1 {
+            font-style: italic;
+        }
+
+        .confidence-slot {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .details {
+            background: rgb(238, 238, 238);
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 10px #412604;
+        }
+    }
+
     .how-it-works {
         padding: 60px 16px 80px;
         text-align: center;
+        background: linear-gradient(135deg,
+                #efe3d6 0%,
+                #dcc5ad 50%,
+                #c4a484 100%);
+        box-shadow: 5px 5px 10px #412604;
 
         h2 {
             margin-bottom: 0;
