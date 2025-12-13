@@ -12,66 +12,86 @@
             </div>
         </section>
 
+        <!-- Stacks wrapper -->
         <section class="stacks">
             <div class="container">
-                <div class="backpanel" aria-hidden="true"></div>
 
-                <!-- ADULT SHELF -->
-                <div class="shelf"></div>
-                <div class="row shelf-row">
-                    <h4>Adult Shelf</h4>
-
-                    <div v-for="book in adultBooks" :key="book._id || book.slug" class="col-6 book-card">
-                        <div class="hero-box" :class="{ disabled: isBookDisabled(book) }" @click="openBookModal(book)">
-                            <span class="badge badge--adult">Coming Soon!</span>
-
-                            <div class="hero-box-inner" tabindex="0">
-                                <img v-if="book.heroImageUrl" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`"
-                                    class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
-                                    loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
-                            </div>
+                <transition name="stacks-fade" mode="out-in" appear>
+                    <div :key="showShelves ? 'shelves' : 'exterior'">
+                        <!-- EXTERIOR -->
+                        <div v-if="!showShelves" class="stacks-loading" aria-live="polite">
+                            <div class="status">Stacking shelves…</div>
+                            <img src="images/library.webp" alt="Library exterior" class="library-exterior" />
                         </div>
 
-                        <p class="title">{{ book.title }}</p>
-                        <p>{{ book.description }}</p>
-                    </div>
-                </div>
+                        <!-- SHELVES -->
+                        <div v-else class="stacks-shelves">
+                            <div class="backpanel" aria-hidden="true"></div>
 
-                <!-- KIDS SHELF -->
-                <div class="shelf"></div>
-                <div class="row shelf-row">
-                    <h4>Kids Shelf</h4>
+                            <!-- ADULT SHELF -->
+                            <div class="shelf"></div>
+                            <div class="row shelf-row">
+                                <h4>Adult Shelf</h4>
 
-                    <div v-for="book in kidsBooks" :key="(book._id || book.slug) + '-kids'" class="col-6 book-card">
-                        <div class="hero-box" :class="{ disabled: isBookDisabled(book) }" @click="openBookModal(book)">
-                            <span class="badge badge--kids">Coming Soon!</span>
+                                <div v-for="book in adultBooks" :key="book._id || book.slug" class="col-6 book-card">
+                                    <div class="hero-box" :class="{ disabled: isBookDisabled(book) }"
+                                        @click="openBookModal(book)">
+                                        <span class="badge badge--adult">Coming Soon!</span>
 
-                            <div class="hero-box-inner" tabindex="0">
-                                <img v-if="book.heroImageUrl" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`"
-                                    class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
-                                    loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                        <div class="hero-box-inner" tabindex="0">
+                                            <img v-if="book.heroImageUrl" :src="book.heroImageUrl"
+                                                :alt="`Cover for ${book.title}`" class="hero-img"
+                                                :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
+                                                loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                        </div>
+                                    </div>
+
+                                    <p class="title">{{ book.title }}</p>
+                                    <p>{{ book.description }}</p>
+                                </div>
+                            </div>
+
+                            <!-- KIDS SHELF -->
+                            <div class="shelf"></div>
+                            <div class="row shelf-row">
+                                <h4>Kids Shelf</h4>
+
+                                <div v-for="book in kidsBooks" :key="(book._id || book.slug) + '-kids'"
+                                    class="col-6 book-card">
+                                    <div class="hero-box" :class="{ disabled: isBookDisabled(book) }"
+                                        @click="openBookModal(book)">
+                                        <span class="badge badge--kids">Coming Soon!</span>
+
+                                        <div class="hero-box-inner" tabindex="0">
+                                            <img v-if="book.heroImageUrl" :src="book.heroImageUrl"
+                                                :alt="`Cover for ${book.title}`" class="hero-img"
+                                                :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
+                                                loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                        </div>
+                                    </div>
+
+                                    <p class="title">{{ book.title }}</p>
+                                    <p>{{ book.description }}</p>
+                                </div>
+                            </div>
+
+                            <div class="shelf"></div>
+
+                            <div v-if="loadError" class="status error">{{ loadError }}</div>
+                            <div v-else-if="!adultBooks.length && !kidsBooks.length" class="status">
+                                No assessments are available in your library yet.
                             </div>
                         </div>
-
-                        <p class="title">{{ book.title }}</p>
-                        <p>{{ book.description }}</p>
                     </div>
-                </div>
+                </transition>
 
-                <div class="shelf"></div>
 
-                <div v-if="loadingAssessments" class="status">Stacking shelves…</div>
-                <div v-else-if="loadError" class="status error">{{ loadError }}</div>
-
-                <!-- Safety message if the API really returns nothing -->
-                <div v-else-if="!adultBooks.length && !kidsBooks.length" class="status">
-                    No assessments are available in your library yet.
-                </div>
             </div>
         </section>
 
-        <!-- BOOK MODAL -->
-        <div v-if="showBookModal && selectedBook" class="book-modal-backdrop" @click.self="closeBookModal">
+        <!-- BOOK MODAL (never during exterior/loading) -->
+        <div v-if="showBookModal && selectedBook && showShelves" class="book-modal-backdrop"
+            @click.self="closeBookModal">
             <div class="book-modal">
                 <div class="container">
                     <button type="button" class="red" @click="closeBookModal" aria-label="Close">
@@ -164,17 +184,23 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
+
     data() {
         return {
             checkingOut: false,
             showBookModal: false,
             selectedBook: null,
 
-            loadingAssessments: false,
+            loadingAssessments: true,
             loadError: null,
             libraryBooks: [],
 
-            heroLoaded: {}
+            heroLoaded: {},
+
+            showExterior: true,
+            showShelves: false,
+            exteriorMinMs: 5000,
+            _exteriorTimer: null
         }
     },
     computed: {
@@ -191,14 +217,12 @@ export default {
             if (!this.selectedBook) return false
             return this.canCheckout(this.selectedBook)
         },
-
         adultBooks() {
             return (this.libraryBooks || []).filter(b => {
                 const shelf = (b.category && b.category.shelf) || ''
                 return shelf.toLowerCase() === 'adult'
             })
         },
-
         kidsBooks() {
             return (this.libraryBooks || []).filter(b => {
                 const shelf = (b.category && b.category.shelf) || ''
@@ -206,8 +230,19 @@ export default {
             })
         }
     },
-
+    watch: {
+        loadingAssessments(val) {
+            if (val) {
+                this.closeBookModal()
+                this.showShelves = false
+                this.showExterior = true
+                this.startExteriorTimer()
+            }
+        }
+    },
     async mounted() {
+        this.closeBookModal()
+
         if (this.loggedIn) {
             try {
                 const res = await this.$axios.$get('/api/dashboard')
@@ -220,12 +255,36 @@ export default {
             }
         }
 
+        this.startExteriorTimer()
+
         this.fetchAssessments()
     },
+    beforeDestroy() {
+        if (this._exteriorTimer) clearTimeout(this._exteriorTimer)
+    },
     methods: {
+        startExteriorTimer() {
+            if (this._exteriorTimer) clearTimeout(this._exteriorTimer)
+            this._exteriorTimer = setTimeout(() => {
+                if (!this.loadingAssessments) {
+                    this.showExterior = false
+                    this.showShelves = true
+                }
+            }, this.exteriorMinMs)
+        },
+        finishExteriorIfReady() {
+            if (!this.loadingAssessments) {
+                if (this.showExterior && !this.showShelves) {
+                }
+            }
+        },
         async fetchAssessments() {
+            this.closeBookModal()
+
             this.loadingAssessments = true
             this.loadError = null
+
+            const start = Date.now()
 
             try {
                 const res = await this.$axios.$get('/api/assessments', {
@@ -233,15 +292,21 @@ export default {
                 })
 
                 const assessments = (res && res.assessments) || []
-
-                console.log('Library assessments:', assessments)
-
                 this.libraryBooks = assessments
             } catch (err) {
                 console.error('Failed to load assessments for library:', err)
                 this.loadError = 'Failed to load assessments.'
             } finally {
                 this.loadingAssessments = false
+
+                const elapsed = Date.now() - start
+                const remaining = Math.max(0, this.exteriorMinMs - elapsed)
+
+                if (this._exteriorTimer) clearTimeout(this._exteriorTimer)
+                this._exteriorTimer = setTimeout(() => {
+                    this.showExterior = false
+                    this.showShelves = true
+                }, remaining)
             }
         },
         goDashboard() {
@@ -258,6 +323,12 @@ export default {
         },
         openBookModal(book) {
             if (!book) return
+            if (this.loadingAssessments) return
+            if (!this.showShelves) return
+            if (this.checkingOut) return
+            if (!this.loggedIn) return
+            if (this.isBookDisabled(book)) return
+
             this.selectedBook = book
             this.showBookModal = true
         },
@@ -268,6 +339,8 @@ export default {
         },
         async confirmPurchase() {
             if (!this.selectedBook || this.checkingOut) return
+            if (this.loadingAssessments) return
+            if (!this.showShelves) return
 
             const book = this.selectedBook
 
@@ -287,9 +360,7 @@ export default {
                     '/api/checkout',
                     { assessmentId: book._id },
                     token
-                        ? {
-                            headers: { Authorization: `Bearer ${token}` }
-                        }
+                        ? { headers: { Authorization: `Bearer ${token}` } }
                         : {}
                 )
 
@@ -302,15 +373,11 @@ export default {
 
                 const sessionId =
                     res.sessionId ||
-                    (res.sessionId === 0
-                        ? res.sessionId
-                        : res.session?._id || res.session?.id)
+                    (res.sessionId === 0 ? res.sessionId : res.session?._id || res.session?.id)
 
                 if (!sessionId) {
                     console.error('No sessionId returned from checkout:', res)
-                    alert(
-                        'Assessment started but no session ID was returned. Please contact support.'
-                    )
+                    alert('Assessment started but no session ID was returned. Please contact support.')
                     return
                 }
 
@@ -339,9 +406,7 @@ export default {
                 const res = await this.$axios.$post(
                     '/api/credits/add-one',
                     {},
-                    token
-                        ? { headers: { Authorization: `Bearer ${token}` } }
-                        : {}
+                    token ? { headers: { Authorization: `Bearer ${token}` } } : {}
                 )
 
                 if (res && typeof res.creditsBalance === 'number') {
@@ -365,7 +430,7 @@ export default {
     head() {
         return {
             title: 'Your Library | The Assessment Library',
-            meta: [{ hid: 'description', name: 'description', content: '' }]
+            meta: [{ hid: 'description', name: 'description', content: 'This is the Library including the bookshelves for The Assessment Library.' }]
         }
     }
 }
@@ -374,6 +439,20 @@ export default {
 <style scoped lang="scss">
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
+
+.stacks-fade-enter-active,
+.stacks-fade-leave-active,
+.stacks-fade-appear-active {
+    transition: opacity 2500ms ease, transform 2500ms ease;
+}
+
+.stacks-fade-enter,
+.stacks-fade-appear,
+.stacks-fade-leave-to {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
 
 .library {
     .header {
@@ -429,6 +508,40 @@ export default {
         text-align: center;
         padding: 40px 16px 80px 16px;
         color: #12304d;
+
+        .stacks-loading {
+            position: relative;
+            z-index: 1;
+
+            .library-exterior {
+                display: block;
+                width: 100%;
+                max-width: calc(100% - 120px);
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px #412604;
+            }
+
+            .status {
+                margin-top: 30px;
+                font-style: italic;
+                font-size: 24px;
+                font-weight: 400;
+                background: linear-gradient(to bottom,
+                        rgb(90, 45, 10) 0%,
+                        rgb(120, 70, 25) 50%,
+                        rgb(131, 94, 62) 100%);
+
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+
+
+                color: #fff;
+                border-radius: 8px;
+                padding: 6px 0px;
+                box-shadow: 5px 5px 10px #412604;
+            }
+        }
 
         .container {
             position: relative;
@@ -553,13 +666,8 @@ export default {
 
                     &:focus {
                         outline: none;
-
-                        transform:
-                            translateY(-18px) translateZ(40px) rotateX(6deg);
-
-                        box-shadow:
-                            0 18px 35px rgba(0, 0, 0, 0.5);
-
+                        transform: translateY(-18px) translateZ(40px) rotateX(6deg);
+                        box-shadow: 0 18px 35px rgba(0, 0, 0, 0.5);
                         z-index: 5;
                     }
                 }
@@ -570,7 +678,6 @@ export default {
                     object-fit: cover;
                     filter: blur(6px);
                     opacity: 0.7;
-
                 }
 
                 .hero-img--loaded {
@@ -761,6 +868,12 @@ export default {
         }
 
         .stacks {
+            .stacks-loading {
+                .library-exterior {
+                    max-width: 100%;
+                }
+            }
+
             .container {
                 .backpanel {
                     left: 6px;
