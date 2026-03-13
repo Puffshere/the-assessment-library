@@ -21,3 +21,10 @@ $ pm2 start npm -- start
 # if the server is running and a new build needs released
 pm2 restart npm
 ```
+
+
+### for work apps use:
+$ nvm use 16
+
+### and for this app use:
+$ nvm use 20.11.1
