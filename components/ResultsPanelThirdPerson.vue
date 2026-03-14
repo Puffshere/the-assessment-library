@@ -82,6 +82,10 @@
               Completed:
               <span style="font-size: 24px; margin-left: 10px;">{{ completedInvitations.length }}</span>
             </p>
+            <p>
+              Outstanding:
+              <span style="font-size: 24px; margin-left: 10px; color: #ffbd05;">{{ outstandingInvitationCount }}</span>
+            </p>
           </h6>
         </div>
 
@@ -338,6 +342,9 @@ export default {
         })
       })
       return count
+    },
+    outstandingInvitationCount() {
+      return this.totalInvitationCount - this.completedInvitations.length
     },
     thirdPersonAggregateBreakdown() {
       const completed = this.completedInvitations
