@@ -50,7 +50,7 @@
 
         <div class="panel-body">
             <div class="confidence-slot" style="width: 280px;">
-                <ConfidenceBar :value="73" />
+                <ConfidenceBar :value="firstPersonConfidence" />
             </div>
 
             <!-- DETAIL VIEW (single assessment) -->
@@ -307,6 +307,10 @@ export default {
                 default:
                     return '#143180'
             }
+        },
+        firstPersonConfidence() {
+            // 100% confidence reached at 50 completed assessments
+            return Math.min(100, Math.round(this.assessmentsCompleted / 50 * 100))
         },
         completedSessions() {
             const base = this.sessions.filter(s => s.status === 'completed')

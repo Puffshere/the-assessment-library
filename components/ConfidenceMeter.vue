@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <h4>
-                    Confidence: 73%
+                    Confidence: {{ clampedValue }}%
                 </h4>
                 <div class="confidence-bar" role="img" :aria-label="`Confidence ${clampedValue}%`">
                     <div class="confidence-bar__fill" :style="{ width: clampedValue + '%' }">

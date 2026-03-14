@@ -38,6 +38,11 @@
                                 @click="activeResultsView = 'third'">
                                 3rd Person Participants
                             </div>
+
+                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'fourth' }"
+                                @click="activeResultsView = 'fourth'">
+                                For Others
+                            </div>
                         </div>
 
                         <!-- 1st person view -->
@@ -45,10 +50,94 @@
                             :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
                             :assessments-completed="completedSessions.length" @clear-results="selectedResult = null" />
 
-                        <!-- 3rd person view -->
-                        <results-panel-third-person v-else :selected-result="selectedResult"
+                        <!-- 3rd person views -->
+                        <results-panel-third-person v-else-if="activeResultsView === 'second' || activeResultsView === 'third'"
+                            :selected-result="selectedResult"
+                            :active-view="activeResultsView"
                             :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
-                            :assessments-completed="completedSessions.length" @clear-results="selectedResult = null" />
+                            :assessments-completed="completedSessions.length"
+                            :completed-sessions="completedSessions"
+                            @clear-results="selectedResult = null" />
+
+                        <!-- For Others view -->
+                        <div v-else-if="activeResultsView === 'fourth'" class="panel panel-wide panel-for-others">
+
+                            <!-- DETAIL VIEW -->
+                            <template v-if="selectedForOthersResult">
+                                <div class="results-header">
+                                    <h2 class="panel-title">{{ selectedForOthersResult.assessmentTitle }}</h2>
+                                    <button class="red" @click="selectedForOthersResult = null" aria-label="Back to list">Back</button>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="results-layout">
+                                        <div class="chart-col">
+                                            <div class="chart" v-if="forOthersBreakdown">
+                                                <div class="bar" :style="{ height: forOthersPct('D') + '%', backgroundColor: '#f44336' }" :title="'D: ' + forOthersPct('D').toFixed(1) + '%'">
+                                                    <div class="label">D</div>
+                                                </div>
+                                                <div class="bar" :style="{ height: forOthersPct('I') + '%', backgroundColor: '#ffbd05' }" :title="'I: ' + forOthersPct('I').toFixed(1) + '%'">
+                                                    <div class="label">I</div>
+                                                </div>
+                                                <div class="bar" :style="{ height: forOthersPct('S') + '%', backgroundColor: '#0dab49' }" :title="'S: ' + forOthersPct('S').toFixed(1) + '%'">
+                                                    <div class="label">S</div>
+                                                </div>
+                                                <div class="bar" :style="{ height: forOthersPct('C') + '%', backgroundColor: '#1666ff' }" :title="'C: ' + forOthersPct('C').toFixed(1) + '%'">
+                                                    <div class="label">C</div>
+                                                </div>
+                                            </div>
+                                            <p v-else class="no-data">No score breakdown available.</p>
+                                        </div>
+                                        <div class="text-col">
+                                            <h5>These are the scores you believed <strong>{{ selectedForOthersResult.inviterName }}</strong> would have gotten.</h5>
+                                            <hr class="shortLine top" />
+                                            <ul v-if="forOthersBreakdown">
+                                                <li>D: {{ forOthersPct('D').toFixed(1) }}%</li>
+                                                <li>I: {{ forOthersPct('I').toFixed(1) }}%</li>
+                                                <li>S: {{ forOthersPct('S').toFixed(1) }}%</li>
+                                                <li>C: {{ forOthersPct('C').toFixed(1) }}%</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+
+                            <!-- LIST VIEW -->
+                            <template v-else>
+                                <h2 class="panel-title">Assessments I've Taken for Others</h2>
+                                <div v-if="!dashboard.thirdPersonSessions.length" class="empty-state">
+                                    <p>You haven't taken any assessments on behalf of others yet.</p>
+                                    <p>When someone invites you to take an assessment, it will appear here once completed.</p>
+                                </div>
+                                <div v-else class="sessions scroll-area">
+                                    <ul>
+                                        <li v-for="s in dashboard.thirdPersonSessions" :key="s.id" class="session-row">
+                                            <div class="session-row-top">
+                                                <div class="session-main">
+                                                    <div class="session-title">{{ s.assessmentTitle }}</div>
+                                                    <div class="session-meta">
+                                                        For: <strong>{{ s.inviterName }}</strong>
+                                                        <span v-if="s.completedAt" style="margin-left: 8px;">
+                                                            &middot; Completed: {{ formatDate(s.completedAt) }}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="session-actions">
+                                                    <button v-if="s.status === 'completed' && s.scoreBreakdown"
+                                                        class="outline small green"
+                                                        @click="selectedForOthersResult = s">
+                                                        View Results
+                                                    </button>
+                                                    <span v-else class="score-pill"
+                                                        :style="{ backgroundColor: '#ffbd05', color: '#fff', borderRadius: '5px', padding: '3px 10px', fontSize: '12px', fontWeight: '600' }">
+                                                        In Progress
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </template>
+                        </div>
                     </div>
 
                     <!-- ACCOUNT OVERVIEW -->
@@ -213,6 +302,7 @@ export default {
             loading: true,
             error: null,
             selectedResult: null,
+            selectedForOthersResult: null,
             activeResultsView: 'first',
             DstyleTitle: 'Dominance (D)',
             DstyleDescription: 'You are direct, decisive, and results-oriented.',
@@ -228,7 +318,8 @@ export default {
                     email: '',
                     creditsBalance: 0
                 },
-                sessions: []
+                sessions: [],
+                thirdPersonSessions: []
             }
         }
     },
@@ -297,6 +388,11 @@ export default {
                 default:
                     return ''
             }
+        },
+        forOthersBreakdown() {
+            const s = this.selectedForOthersResult
+            if (!s) return null
+            return s.scoreBreakdown || (s.score && s.score.breakdown) || null
         },
         styleDescription() {
             switch (this.topScore) {
@@ -458,6 +554,10 @@ export default {
         viewResults(session) {
             this.selectedResult = session
         },
+        forOthersPct(trait) {
+            const b = this.forOthersBreakdown
+            return b && typeof b[trait] === 'number' ? b[trait] : 0
+        },
         onAssessmentsWheel(event) {
             const panel = event.currentTarget
             const list = panel.querySelector('.scroll-area')
@@ -576,6 +676,20 @@ export default {
             overflow-y: auto;
             padding-right: 8px;
             -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    .panel-for-others {
+        max-height: 450px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        .scroll-area {
+            flex: 1 1 auto;
+            overflow-y: auto;
+            padding-right: 8px;
+            max-height: 380px;
         }
     }
 

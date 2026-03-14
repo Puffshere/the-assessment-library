@@ -37,25 +37,47 @@ const authenticate = async (req, res, next) => {
 
 const createOrGetSession = async (req, res) => {
   try {
-    const { assessmentId } = req.body;
+    const { assessmentId, isThirdPerson, thirdPersonParticipantId, thirdPersonInvitationId, thirdPersonForUserId } = req.body;
     if (!assessmentId) {
       return res.status(400).json({ message: 'assessmentId required' });
     }
 
-    let session = await AssessmentSession.findOne({
-      user: req.user._id,
-      assessment: assessmentId,
-      status: { $in: ['not_started', 'in_progress', 'completed'] }
-    });
+    let session;
+
+    if (isThirdPerson) {
+      session = await AssessmentSession.findOne({
+        user: req.user._id,
+        assessment: assessmentId,
+        isThirdPerson: true,
+        thirdPersonParticipantId,
+        thirdPersonInvitationId
+      });
+    } else {
+      session = await AssessmentSession.findOne({
+        user: req.user._id,
+        assessment: assessmentId,
+        isThirdPerson: { $ne: true },
+        status: { $in: ['not_started', 'in_progress', 'completed'] }
+      });
+    }
 
     if (!session) {
-      session = await AssessmentSession.create({
+      const sessionData = {
         user: req.user._id,
         assessment: assessmentId,
         currentQuestionIndex: 0,
         answers: [],
         status: 'not_started'
-      });
+      };
+
+      if (isThirdPerson) {
+        sessionData.isThirdPerson = true;
+        sessionData.thirdPersonParticipantId = thirdPersonParticipantId;
+        sessionData.thirdPersonInvitationId = thirdPersonInvitationId;
+        sessionData.thirdPersonForUserId = thirdPersonForUserId;
+      }
+
+      session = await AssessmentSession.create(sessionData);
     }
 
     res.json(session);
@@ -129,6 +151,27 @@ const saveAnswer = async (req, res) => {
     }
 
     await session.save();
+
+    // If this is a 3rd-person session and it just completed, update the invitation
+    if (isFinal && session.isThirdPerson && session.thirdPersonParticipantId && session.thirdPersonInvitationId) {
+      try {
+        const Participant = require('../models/Participant');
+        const participant = await Participant.findById(session.thirdPersonParticipantId);
+        if (participant) {
+          const invitation = participant.invitations.id(session.thirdPersonInvitationId);
+          if (invitation) {
+            invitation.status = 'completed';
+            invitation.responseSessionId = session._id;
+            if (score && score.breakdown) {
+              invitation.responseBreakdown = score.breakdown;
+            }
+            await participant.save();
+          }
+        }
+      } catch (err) {
+        console.error('Error updating participant invitation on completion:', err);
+      }
+    }
 
     res.json({
       success: true,

@@ -73,6 +73,10 @@ const assessmentSessionSchema = new mongoose.Schema(
     completedAt: {
       type: Date,
     },
+    isThirdPerson: { type: Boolean, default: false },
+    thirdPersonParticipantId: { type: mongoose.Schema.Types.ObjectId, ref: 'Participant' },
+    thirdPersonInvitationId: { type: mongoose.Schema.Types.ObjectId },
+    thirdPersonForUserId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
   },
   { timestamps: true }
 );

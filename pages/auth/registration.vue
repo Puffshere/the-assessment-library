@@ -92,7 +92,9 @@ export default {
             nameReadonly: true,
             emailReadonly: true,
             passReadonly: true,
-            confirmReadonly: true
+            confirmReadonly: true,
+            participantId: this.$route.query.participant || null,
+            invitationId: this.$route.query.invitation || null
         }
     },
     methods: {
@@ -106,9 +108,17 @@ export default {
             }
 
             try {
-                await this.$store.dispatch('register', { name, email, password })
+                await this.$store.dispatch('register', {
+                    name, email, password,
+                    participantId: this.participantId,
+                    invitationId: this.invitationId
+                })
 
-                this.$router.push('/dashboard')
+                if (this.participantId && this.invitationId) {
+                    this.$router.push(`/invite-intro?participant=${this.participantId}&invitation=${this.invitationId}`)
+                } else {
+                    this.$router.push('/dashboard')
+                }
             } catch (e) {
                 this.error = e.message || 'Registration failed. Please check your details and try again.'
             }

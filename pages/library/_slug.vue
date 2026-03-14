@@ -16,6 +16,10 @@
             </section>
 
             <section class="questionnaire">
+                <!-- 3rd Person Banner -->
+                <div v-if="isThirdPerson && thirdPersonInviterName" class="third-person-banner">
+                  <span>You're answering these questions as you think <strong>{{ thirdPersonInviterName }}</strong> would answer them.</span>
+                </div>
                 <img :src="heroImage" :alt="heroAltText" :class="['hero-illustration', imageClass]" />
 
                 <div class="container">
@@ -236,7 +240,12 @@ export default {
                 'You notice details and think things through. You like clear rules, careful plans, and helping the team solve tricky problems the right way.',
             breakdownModal: false,
             isClient: false,
-            questions: []
+            questions: [],
+            isThirdPerson: false,
+            thirdPersonInviterName: '',
+            thirdPersonParticipantId: this.$route.query.participant || null,
+            thirdPersonInvitationId: this.$route.query.invitation || null,
+            thirdPersonForUserId: null
         };
     },
     computed: {
@@ -301,6 +310,15 @@ export default {
         this.isClient = true;
 
         await this.loadAssessment();
+
+        // Handle 3rd-person invite
+        if (this.$route.query.participant && this.$route.query.invitation) {
+            await this.loadInviteContext();
+        }
+
+        if (this.isThirdPerson && !this.sessionId) {
+            await this.createThirdPersonSession();
+        }
 
         if (!this.sessionId) return;
 
@@ -368,6 +386,41 @@ export default {
                         ? session.currentQuestionIndex
                         : 0;
                 this.currentQuestion = idx + 1;
+            }
+        },
+        async loadInviteContext() {
+            try {
+                const res = await this.$axios.$get('/api/participants/verify-invite', {
+                    params: {
+                        participant: this.$route.query.participant,
+                        invitation: this.$route.query.invitation
+                    },
+                    headers: { Authorization: `Bearer ${this.$store.state.token}` }
+                });
+                this.isThirdPerson = true;
+                this.thirdPersonInviterName = res.inviterName;
+                this.thirdPersonForUserId = res.inviterUserId;
+            } catch (err) {
+                console.error('Error loading invite context:', err);
+                // Don't block the page — just proceed normally if invite context fails
+            }
+        },
+        async createThirdPersonSession() {
+            try {
+                if (!this.assessment || !(this.assessment._id || this.assessment.id)) return;
+                const res = await this.$axios.$post('/api/sessions', {
+                    assessmentId: this.assessment._id || this.assessment.id,
+                    isThirdPerson: true,
+                    thirdPersonParticipantId: this.thirdPersonParticipantId,
+                    thirdPersonInvitationId: this.thirdPersonInvitationId,
+                    thirdPersonForUserId: this.thirdPersonForUserId
+                }, {
+                    headers: { Authorization: `Bearer ${this.$store.state.token}` }
+                });
+                const session = res.session || res;
+                this.sessionId = session._id || session.id;
+            } catch (err) {
+                console.error('Error creating 3rd-person session:', err);
             }
         },
         async selectAnswer(answer) {
@@ -539,6 +592,18 @@ export default {
         font-family: $nunito-family;
         position: relative;
         min-height: 58vh;
+
+        .third-person-banner {
+            position: relative;
+            z-index: 3;
+            background: linear-gradient(135deg, #12304d, #1666ff);
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-family: $nunito-family;
+            strong { color: #ffbd05; }
+        }
 
         .hero-illustration {
             position: absolute;

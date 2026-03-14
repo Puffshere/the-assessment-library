@@ -35,7 +35,7 @@ exports.getDashboard = async function (req, res) {
       return res.status(401).json({ message: 'User not found' });
     }
 
-    const sessions = await AssessmentSession.find({ user: user._id })
+    const sessions = await AssessmentSession.find({ user: user._id, isThirdPerson: { $ne: true } })
       .populate(
         'assessment',
         // ⬇️ include the style fields from Assessment, plus what you already had
@@ -83,6 +83,36 @@ exports.getDashboard = async function (req, res) {
         };
       });
 
+    // Fetch 3rd-person sessions (assessments this user completed on behalf of others)
+    const thirdPersonRaw = await AssessmentSession.find({
+      user: user._id,
+      isThirdPerson: true
+    })
+      .populate({
+        path: 'thirdPersonParticipantId',
+        populate: { path: 'invitedBy', select: 'name email' }
+      })
+      .populate('assessment', 'title slug')
+      .sort({ updatedAt: -1 })
+      .lean();
+
+    const thirdPersonSessions = thirdPersonRaw.map(s => {
+      const participant = s.thirdPersonParticipantId;
+      const inviter = participant && participant.invitedBy;
+      const a = s.assessment || {};
+      const hasScore = s.score && typeof s.score === 'object';
+      return {
+        id: s._id,
+        assessmentTitle: a.title || '',
+        assessmentSlug: a.slug || '',
+        inviterName: inviter ? (inviter.name || inviter.email) : 'Unknown',
+        status: s.status || 'not_started',
+        startedAt: s.startedAt,
+        completedAt: s.completedAt,
+        scoreBreakdown: hasScore && s.score.breakdown ? s.score.breakdown : null
+      };
+    });
+
     return res.json({
       user: {
         id: user._id,
@@ -92,6 +122,7 @@ exports.getDashboard = async function (req, res) {
           typeof user.creditsBalance === 'number' ? user.creditsBalance : 0,
       },
       sessions: formattedSessions,
+      thirdPersonSessions,
     });
   } catch (err) {
     console.error('Error loading dashboard', err);

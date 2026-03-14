@@ -23,6 +23,7 @@
                 </nav>
 
                 <div class="actions desktop">
+                    <span v-if="loggedIn && firstName" class="user-greeting">Hi, {{ firstName }}</span>
                     <button v-if="loggedIn" class="green action-btn" @click="logoutAndGoHome">
                         Sign Out
                     </button>
@@ -57,6 +58,7 @@
                     </li>
                 </ul>
                 <div class="mobile-actions">
+                    <span v-if="loggedIn && firstName" class="mobile-greeting">Hi, {{ firstName }}</span>
                     <button v-if="loggedIn" class="steel" @click="logoutAndGoHome">
                         Sign Out
                     </button>
@@ -87,7 +89,11 @@ export default {
         }
     },
     computed: {
-        ...mapState(['loggedIn'])
+        ...mapState(['loggedIn', 'user']),
+        firstName() {
+            if (!this.user || !this.user.name) return ''
+            return this.user.name.split(' ')[0]
+        }
     },
 
     mounted() {
@@ -375,6 +381,28 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
+.user-greeting {
+    position: absolute;
+    left: 0;
+    right: 90px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    font-weight: 600;
+    color: $blue;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.mobile-greeting {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: $blue;
+    padding: 4px 8px 2px;
+}
+
 .action-btn,
 .teal,
 .light {
@@ -471,6 +499,8 @@ $shadow: rgba(0, 0, 0, 0.08);
     .actions.desktop {
         display: inline-flex;
         gap: 8px;
+        position: relative;
+        margin-right: 60px;
     }
 
     .hamburger.mobile,
@@ -481,7 +511,7 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 
     .main-nav .brand {
-        margin-left: 120px;
+        margin-left: 80px;
     }
 }
 

@@ -12,6 +12,7 @@ import dashboardController from './controllers/dashboardController.js';
 import sessionsController from './controllers/sessionsController.js';
 import creditsController from './controllers/creditsController.js';
 import contactController from './controllers/contactController.js';
+import participantsController from './controllers/participantsController.js';
 
 
 const upload = multer();
@@ -76,6 +77,11 @@ app.post(
   sessionsController.authenticate,
   creditsController.addOneCredit
 );
+
+app.get('/participants', sessionsController.authenticate, participantsController.getParticipants);
+app.post('/participants', sessionsController.authenticate, participantsController.addParticipant);
+app.post('/participants/:id/invite', sessionsController.authenticate, participantsController.inviteToAssessment);
+app.get('/participants/verify-invite', sessionsController.authenticate, participantsController.verifyInvite);
 
 app.use((req, res, next) => {
   res.status(404).json({

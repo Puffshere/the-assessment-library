@@ -6,6 +6,8 @@ const UserModule = require('../models/User');
 const User = UserModule.default || UserModule;
 
 const CreditTransaction = require('../models/CreditTransaction');
+const Participant = require('../models/Participant');
+const Assessment = require('../models/Assessment');
 const { sendPasswordResetEmail } = require('../utils/postmarkClient');
 
 const login = async (req, res) => {
@@ -58,7 +60,7 @@ const login = async (req, res) => {
 
 const register = async (req, res) => {
   try {
-    let { name, email, password } = req.body;
+    let { name, email, password, participantId, invitationId } = req.body;
 
     if (!name || !email || !password) {
       return res.status(400).json({ error: 'All fields are required.' });
@@ -87,6 +89,29 @@ const register = async (req, res) => {
       credits: 1,
       note: 'Signup bonus credit',
     });
+
+    // Grant extra credits when registering via an invite link
+    if (participantId && invitationId) {
+      try {
+        const participant = await Participant.findById(participantId);
+        const invitation = participant && participant.invitations.id(invitationId);
+        if (invitation) {
+          const assessment = await Assessment.findOne({ slug: invitation.assessmentSlug }).select('creditsCost');
+          const bonusCredits = (assessment && assessment.creditsCost) || 1;
+          user.creditsBalance += bonusCredits;
+          user.totalCreditsPurchased += bonusCredits;
+          await user.save();
+          await CreditTransaction.create({
+            user: user._id,
+            type: 'admin_adjustment',
+            credits: bonusCredits,
+            note: `Invite bonus: credits to take "${invitation.assessmentTitle}"`,
+          });
+        }
+      } catch (err) {
+        console.error('Error granting invite bonus credits:', err);
+      }
+    }
 
     const token = jwt.sign(
       { id: user._id, email: user.email },

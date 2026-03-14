@@ -71,12 +71,13 @@ export const actions = {
     }
   },
 
-  async register({ commit }, { name, email, password }) {
+  async register({ commit }, { name, email, password, participantId, invitationId }) {
     try {
       const res = await this.$axios.$post('/api/auth/register', {
         name,
         email,
-        password
+        password,
+        ...(participantId && invitationId ? { participantId, invitationId } : {})
       })
 
       commit('SET_LOGGED_IN', true)
