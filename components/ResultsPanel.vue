@@ -49,7 +49,7 @@
         </div>
 
         <div class="panel-body">
-            <div class="confidence-slot" style="width: 280px;">
+            <div v-if="!selectedResult" class="confidence-slot" style="width: 280px;">
                 <ConfidenceBar :value="firstPersonConfidence" />
             </div>
 
@@ -165,7 +165,7 @@
             </div>
 
             <!-- Generate Full Report button -->
-            <div class="gr-trigger-wrap">
+            <div v-if="!selectedResult" class="gr-trigger-wrap">
                 <button class="gr-trigger-btn" @click="showReportModal = true">
                     Generate Full Report
                 </button>
@@ -868,6 +868,12 @@ export default {
     }
 }
 
+.gr-trigger-wrap {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
 @media (max-width: 768px) {
     .panel-wide {
         height: auto !important;
@@ -937,12 +943,14 @@ export default {
         z-index: 1;
         margin-bottom: 25px;
     }
-}
 
-.gr-trigger-wrap {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
+    .gr-trigger-wrap {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 16px;
+        text-align: center;
+    }
 }
 
 .gr-trigger-btn {
@@ -955,10 +963,14 @@ export default {
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.2s ease;
 
     &:hover {
         background: #333;
+    }
+
+    &:focus {
+        transform: scale(0.8);
     }
 }
 </style>

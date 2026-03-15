@@ -36,6 +36,13 @@
             </div>
           </div>
         </div>
+
+        <!-- Breakdown button — shown when comparison data is available -->
+        <div v-if="firstPersonBreakdownForDisplay && thirdPersonAggregateBreakdown" class="breakdown-btn-wrap">
+          <button class="blue breakdown-btn" @click="showComparisonModal = true">
+            View Self vs. Others Breakdown
+          </button>
+        </div>
       </div>
 
       <div class="panel-body">
@@ -89,13 +96,6 @@
           </h6>
         </div>
 
-        <!-- Comparison button -->
-        <div v-if="selectedAssessmentFilter !== 'all' && thirdPersonAggregateBreakdown && firstPersonBreakdownForFilter" class="comparison-btn-wrap">
-          <button class="blue small" @click="showComparisonModal = true">
-            View 1st vs. 3rd Person Breakdown
-          </button>
-        </div>
-
         <!-- Generate Full Report button -->
         <div class="gr-trigger-wrap">
           <button class="gr-trigger-btn" @click="showReportModal = true">
@@ -146,9 +146,8 @@
               <div class="participant-name">{{ p.name }}</div>
               <div class="participant-email">{{ p.email }}</div>
               <div v-if="p.invitations && p.invitations.length" class="inv-badges">
-                <template v-for="inv in p.invitations">
+                <div v-for="inv in p.invitations" :key="inv._id" class="inv-badge-group">
                   <span
-                    :key="inv._id + '-status'"
                     class="inv-badge"
                     :style="{ backgroundColor: statusColor(inv.status) }"
                   >
@@ -156,14 +155,13 @@
                   </span>
                   <span
                     v-if="inv.status === 'completed' && confidenceScore(inv) !== null"
-                    :key="inv._id + '-confidence'"
                     class="inv-badge confidence-badge"
                     :style="{ backgroundColor: '#12304d' }"
                     :title="`Confidence: how well ${p.name} perceived your style`"
                   >
                     {{ confidenceScore(inv) }}% match
                   </span>
-                </template>
+                </div>
               </div>
             </div>
             <button class="outline small invite-btn" @click="openInvite(p)">Invite</button>
@@ -177,33 +175,60 @@
   <!-- COMPARISON MODAL — outside panel to avoid stacking context issues -->
   <div v-if="showComparisonModal" class="modal-backdrop" @click.self="showComparisonModal = false">
     <div class="invite-modal comparison-modal">
-      <h3 class="modal-title">1st vs. 3rd Person Breakdown</h3>
-      <p class="modal-subtitle">How you actually scored vs. how others perceived you would score on <strong>{{ selectedAssessmentLabel }}</strong>.</p>
+      <h3 class="modal-title">Self vs. Others Breakdown</h3>
+      <p class="modal-subtitle">
+        How you perceive yourself vs. how others perceive you —
+        <strong>{{ selectedAssessmentLabel }}</strong>.
+      </p>
+
+      <!-- Trait-by-trait table -->
       <table class="comparison-table">
         <thead>
           <tr>
             <th>Trait</th>
-            <th>Your Score</th>
-            <th>Others' Perception</th>
-            <th>Difference</th>
+            <th>You</th>
+            <th>Others</th>
+            <th>Gap</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="t in ['D', 'I', 'S', 'C']" :key="t">
-            <td class="trait-cell" :style="{ color: traitColor(t), fontWeight: 700 }">{{ t }}</td>
-            <td>{{ firstPersonBreakdownForFilter[t].toFixed(1) }}%</td>
-            <td>{{ thirdPersonAggregateBreakdown[t].toFixed(1) }}%</td>
-            <td :style="{ color: traitDiffColor(t), fontWeight: 600 }">
-              {{ traitDiff(t) > 0 ? '+' : '' }}{{ traitDiff(t).toFixed(1) }}%
-            </td>
+          <tr v-for="row in comparisonTraits" :key="row.trait">
+            <td class="trait-cell" :style="{ color: traitColor(row.trait), fontWeight: 700 }">{{ row.trait }}</td>
+            <td>{{ row.self.toFixed(1) }}%</td>
+            <td>{{ row.others.toFixed(1) }}%</td>
+            <td><span class="gap-pill" :style="{ backgroundColor: row.gapColor }">{{ row.gapLevel }}</span></td>
           </tr>
         </tbody>
       </table>
-      <p class="comparison-note">
-        Perception accuracy:
-        <strong :style="{ color: perceptionAccuracyColor }">{{ perceptionAccuracy }}%</strong>
-        — how closely others' answers matched your own.
-      </p>
+
+      <!-- Written summary -->
+      <p class="comparison-note">{{ comparisonSummary }}</p>
+
+      <!-- Side-by-side bar chart -->
+      <div class="cp-chart-wrap">
+        <div class="cp-chart">
+          <div v-for="row in comparisonTraits" :key="'modal-cpc-' + row.trait" class="cp-trait-col">
+            <div class="cp-bar-pair">
+              <div
+                class="cp-bar-self"
+                :style="{ height: row.self + '%', backgroundColor: traitColor(row.trait) + '66' }"
+                :title="'You: ' + row.self.toFixed(1) + '%'"
+              ></div>
+              <div
+                class="cp-bar-others"
+                :style="{ height: row.others + '%', backgroundColor: traitColor(row.trait) }"
+                :title="'Others: ' + row.others.toFixed(1) + '%'"
+              ></div>
+            </div>
+            <div class="cp-bar-trait-label" :style="{ color: traitColor(row.trait) }">{{ row.trait }}</div>
+          </div>
+        </div>
+        <div class="cp-legend">
+          <span class="cp-leg-item"><span class="cp-leg-swatch cp-leg-self"></span>You</span>
+          <span class="cp-leg-item"><span class="cp-leg-swatch cp-leg-others"></span>Others</span>
+        </div>
+      </div>
+
       <div class="modal-actions" style="margin-top: 20px;">
         <button class="outline small" @click="showComparisonModal = false">Close</button>
       </div>
@@ -404,8 +429,13 @@ export default {
       return entries[0][0]
     },
     thirdPersonConfidence() {
-      // 10 completed invitations = 100% confidence
-      return Math.min(100, this.completedInvitations.length * 10)
+      const count = this.completedInvitations.length
+      if (this.selectedAssessmentFilter === 'all') {
+        // Same formula as 1st person: 50 completions = 100%
+        return Math.min(100, Math.round(count / 50 * 100))
+      }
+      // Single assessment: 10 completions = 100%
+      return Math.min(100, count * 10)
     },
     aggD() {
       const b = this.thirdPersonAggregateBreakdown
@@ -423,9 +453,60 @@ export default {
       const b = this.thirdPersonAggregateBreakdown
       return b ? b.C : 0
     },
+    firstPersonBreakdownAll() {
+      const sessions = (this.completedSessions || []).filter(s => s.scoreBreakdown)
+      if (!sessions.length) return null
+      const totals = { D: 0, I: 0, S: 0, C: 0 }
+      sessions.forEach(s => ['D', 'I', 'S', 'C'].forEach(t => {
+        totals[t] += parseFloat(s.scoreBreakdown[t]) || 0
+      }))
+      const count = sessions.length
+      return { D: totals.D / count, I: totals.I / count, S: totals.S / count, C: totals.C / count }
+    },
     firstPersonBreakdownForFilter() {
       if (this.selectedAssessmentFilter === 'all') return null
       return this.completedSessionsBySlug[this.selectedAssessmentFilter] || null
+    },
+    firstPersonBreakdownForDisplay() {
+      if (this.selectedAssessmentFilter === 'all') return this.firstPersonBreakdownAll
+      return this.firstPersonBreakdownForFilter
+    },
+    comparisonTraits() {
+      const fp = this.firstPersonBreakdownForDisplay
+      const tp = this.thirdPersonAggregateBreakdown
+      if (!fp || !tp) return []
+      const NAMES = { D: 'Dominance', I: 'Influence', S: 'Steadiness', C: 'Conscientiousness' }
+      return ['D', 'I', 'S', 'C'].map(t => {
+        const self = fp[t] || 0
+        const others = tp[t] || 0
+        const diff = others - self
+        const absDiff = Math.abs(diff)
+        const gapLevel = absDiff <= 5 ? 'Close' : absDiff <= 15 ? 'Moderate' : 'Significant'
+        const gapColor = absDiff <= 5 ? '#0dab49' : absDiff <= 15 ? '#ffbd05' : '#e93d2f'
+        return { trait: t, name: NAMES[t], self, others, diff, absDiff, gapLevel, gapColor }
+      })
+    },
+    comparisonSummary() {
+      const traits = this.comparisonTraits
+      if (!traits.length) return ''
+      const significant = traits.filter(t => t.gapLevel === 'Significant')
+      const moderate = traits.filter(t => t.gapLevel === 'Moderate')
+      if (significant.length === 0 && moderate.length === 0) {
+        return 'Others perceive your personality style very similarly to how you see yourself — strong self-awareness across all traits.'
+      }
+      const parts = []
+      if (significant.length) {
+        const names = significant.map(t => {
+          const dir = t.diff > 0 ? 'higher' : 'lower'
+          return `${t.name} (others rated you ${dir})`
+        })
+        parts.push(`Significant gaps in ${names.join(' and ')}.`)
+      }
+      if (moderate.length) {
+        const names = moderate.map(t => t.name)
+        parts.push(`Moderate differences in ${names.join(' and ')}.`)
+      }
+      return parts.join(' ')
     },
     perceptionAccuracy() {
       const fp = this.firstPersonBreakdownForFilter
@@ -615,7 +696,7 @@ export default {
     },
     statusColor(status) {
       switch (status) {
-        case 'invited': return '#1666ff'
+        case 'invited': return '#e93d2f'
         case 'started': return '#ffbd05'
         case 'completed': return '#0dab49'
         default: return '#888'
@@ -726,8 +807,19 @@ export default {
 
 .inv-badges {
   display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.inv-badge-group {
+  display: flex;
   flex-wrap: wrap;
   gap: 4px;
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .inv-badge {
@@ -824,13 +916,143 @@ export default {
   flex-wrap: wrap;
 }
 
-.comparison-btn-wrap {
-  margin-top: 16px;
-  text-align: center;
+.breakdown-btn-wrap {
+  margin-top: 10px;
+}
+
+.breakdown-btn {
+  transition: transform 0.2s ease;
+
+  &:focus {
+    transform: scale(0.8);
+  }
+}
+
+.cp-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #12304d;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 12px;
+
+  th {
+    text-align: left;
+    padding: 4px 5px;
+    border-bottom: 2px solid #dce8f0;
+    color: #12304d;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  td {
+    padding: 5px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.gap-pill {
+  display: inline-block;
+  font-size: 9px;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cp-summary {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 14px;
+  font-style: italic;
+}
+
+.cp-chart-wrap {
+  width: 100%;
+}
+
+.cp-chart {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+  height: 100px;
+  padding-bottom: 4px;
+}
+
+.cp-trait-col {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cp-bar-pair {
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
+  height: 90px;
+  width: 100%;
+  justify-content: center;
+}
+
+.cp-bar-self,
+.cp-bar-others {
+  width: 14px;
+  min-height: 3px;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.3s;
+}
+
+.cp-bar-trait-label {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.cp-legend {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #555;
+}
+
+.cp-leg-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cp-leg-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.cp-leg-self {
+  background: rgba(100, 100, 100, 0.35);
+}
+
+.cp-leg-others {
+  background: #555;
 }
 
 .comparison-modal {
-  max-width: 520px;
+  max-width: 560px;
 }
 
 .comparison-table {
@@ -869,10 +1091,17 @@ export default {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.gr-trigger-wrap {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
 @media (max-width: 768px) {
   .panel-wide {
     height: auto;
     min-height: 300px;
+    padding-top: 12px;
   }
 
   .participants-body {
@@ -889,12 +1118,32 @@ export default {
     }
   }
 
+  .inv-badge-group {
+    margin-bottom: 6px;
+  }
+
+  .participants-header {
+    flex-wrap: wrap;
+
+    .add-btn {
+      flex: 0 0 100%;
+      margin-top: 8px;
+    }
+  }
+
   .participant-row {
     flex-wrap: wrap;
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
 
     .invite-btn {
       margin-left: 0;
       margin-top: 8px;
+      width: auto;
+      padding: 4px 12px;
+      font-size: 12px;
+      height: auto;
     }
   }
 
@@ -905,12 +1154,14 @@ export default {
       width: 100%;
     }
   }
-}
 
-.gr-trigger-wrap {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
+  .gr-trigger-wrap {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 16px;
+    text-align: center;
+  }
 }
 
 .gr-trigger-btn {
@@ -923,10 +1174,14 @@ export default {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s ease;
 
   &:hover {
     background: #333;
+  }
+
+  &:focus {
+    transform: scale(0.8);
   }
 }
 </style>

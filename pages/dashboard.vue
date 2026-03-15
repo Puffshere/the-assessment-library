@@ -36,7 +36,8 @@
 
                             <div class="results-tab" :class="{ 'is-active': activeResultsView === 'third' }"
                                 @click="activeResultsView = 'third'">
-                                3rd Person Participants
+                                <span class="tab-label-desktop">3rd Person Participants</span>
+                                <span class="tab-label-mobile">Participants</span>
                             </div>
 
                             <div class="results-tab" :class="{ 'is-active': activeResultsView === 'fourth' }"
@@ -858,6 +859,8 @@ export default {
         width: 100%;
     }
 
+    .tab-label-mobile { display: none; }
+
     .results-tabs {
         position: absolute;
         top: -36px;
@@ -930,22 +933,31 @@ export default {
 
         .grid {
             flex-direction: column;
+            margin-top: 10px;
         }
 
         .results-tabs {
-            position: absolute;
-            top: -36px;
-            left: 6px;
+            position: static;
             display: flex;
-            gap: 0px;
-            z-index: 10;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-bottom: 0;
         }
 
+        .tab-label-desktop { display: none; }
+        .tab-label-mobile { display: inline; }
+
         .results-tab {
-            padding: 3px 14px;
-            line-height: 14px;
-            font-size: 14px;
-            height: 36px;
+            flex: 0 0 50%;
+            max-width: 50%;
+            text-align: center;
+            border-radius: 0;
+            border-bottom: 3px solid #025baf67;
+            height: auto;
+            padding: 8px 4px;
+            font-size: 13px;
+            line-height: 1.3;
+            box-sizing: border-box;
         }
 
         .panel,
