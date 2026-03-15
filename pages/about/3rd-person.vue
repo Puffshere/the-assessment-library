@@ -93,6 +93,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="hero-perk-badge">
+                    🎁 Every person you invite receives a <strong>free credit</strong> to take their own 1st Person assessment and start their own self-awareness journey
+                </div>
             </div>
         </section>
 
@@ -244,6 +247,12 @@
                             accurate and trustworthy the resulting picture becomes.
                         </p>
                     </div>
+                    <div class="circle-gift-banner">
+                        <div class="circle-gift-icon">🎁</div>
+                        <div class="circle-gift-text">
+                            <p><strong>Inviting someone is also a gift.</strong> Every person you invite automatically receives one free credit to take their own 1st Person assessment — so your outreach doesn't just help you understand yourself better, it gives the people in your life a chance to start their own self-awareness journey at no cost.</p>
+                        </div>
+                    </div>
                     <div class="circle-grid">
                         <article class="circle-card">
                             <div class="circle-icon" style="background: #e8f4fd; color: #1666ff;">💼</div>
@@ -328,6 +337,11 @@
                                 Each invitee receives a unique link. They read the same story-based scenarios
                                 you completed and select the responses they believe you would choose. No account
                                 required — just the link and a few minutes of their time.
+                            </p>
+                            <p class="step-bonus">
+                                🎁 As a thank-you for helping you grow, every invitee automatically receives
+                                <strong>one free credit</strong> to take their own 1st Person assessment —
+                                starting their own self-awareness journey at no cost.
                             </p>
                         </div>
                     </div>
@@ -738,6 +752,10 @@
                             one of the most valuable things you can understand about yourself.
                             Start building that picture today — one trusted perspective at a time.
                         </p>
+                        <p class="cta-gift-note">
+                            🎁 And remember — every person you invite receives a <strong>free credit</strong>
+                            to begin their own 1st Person assessment. Your invitation is a gift that keeps giving.
+                        </p>
                         <div class="button-container cta-btns">
                             <button @click="jumpToDashboard" class="teal">Go to Dashboard</button>
                             <button @click="jumpToLibrary" class="light">Browse the Library</button>
@@ -846,6 +864,21 @@ export default {
             align-items: center;
             justify-content: center;
         }
+    }
+
+    // ── HERO PERK BADGE ───────────────────────────────────────────────────
+    .hero-perk-badge {
+        margin-top: 32px;
+        padding: 14px 24px;
+        background: rgba(13, 171, 73, 0.1);
+        border-radius: 12px;
+        border-left: 4px solid $color-s;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        font-size: 15px;
+        color: #1d5c35;
+        font-family: $nunito-family;
+        line-height: 1.5;
+        text-align: center;
     }
 
     // ── MIRROR CARD ───────────────────────────────────────────────────────
@@ -1199,6 +1232,30 @@ export default {
         }
     }
 
+    .circle-gift-banner {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 24px 28px;
+        box-shadow: 5px 5px 10px #412604;
+        margin-bottom: 28px;
+
+        .circle-gift-icon {
+            font-size: 36px;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .circle-gift-text p {
+            margin: 0;
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+        }
+    }
+
     .circle-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -1282,6 +1339,18 @@ export default {
             line-height: 1.7;
             margin: 0;
         }
+    }
+
+    .step-bonus {
+        margin-top: 12px;
+        padding: 12px 16px;
+        background: rgba(13, 171, 73, 0.08);
+        border-left: 3px solid $color-s;
+        border-radius: 0 8px 8px 0;
+        font-size: 14px;
+        color: #2d6a3f;
+        font-family: $nunito-family;
+        line-height: 1.6;
     }
 
     .step-connector {
@@ -1739,6 +1808,18 @@ export default {
             color: #444;
             margin-bottom: 0;
         }
+    }
+
+    .cta-gift-note {
+        margin-top: 20px;
+        font-size: 15px;
+        color: #2d6a3f;
+        background: rgba(13, 171, 73, 0.08);
+        border-radius: 12px;
+        padding: 14px 20px;
+        display: inline-block;
+        font-family: $nunito-family;
+        line-height: 1.6;
     }
 
     .cta-btns {
