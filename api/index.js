@@ -13,6 +13,7 @@ import sessionsController from './controllers/sessionsController.js';
 import creditsController from './controllers/creditsController.js';
 import contactController from './controllers/contactController.js';
 import participantsController from './controllers/participantsController.js';
+import reportsController from './controllers/reportsController.js';
 
 
 const upload = multer();
@@ -77,6 +78,8 @@ app.post(
   sessionsController.authenticate,
   creditsController.addOneCredit
 );
+
+app.post('/reports/generate', sessionsController.authenticate, reportsController.generateReport);
 
 app.get('/participants', sessionsController.authenticate, participantsController.getParticipants);
 app.post('/participants', sessionsController.authenticate, participantsController.addParticipant);

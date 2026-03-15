@@ -182,6 +182,7 @@
             :third-person-breakdown="null"
             :credits-balance="creditsBalance"
             @close="showReportModal = false"
+            @credits-deducted="$emit('credits-deducted', $event)"
         />
     </div>
 </template>
@@ -666,6 +667,12 @@ export default {
 }
 
 .conclusion-modal-close {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
     margin-right: 20px;
 }
@@ -940,7 +947,7 @@ export default {
 
 .gr-trigger-btn {
     padding: 8px 16px;
-    background: #12304d;
+    background: #444;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -951,7 +958,7 @@ export default {
     transition: background 0.2s;
 
     &:hover {
-        background: #1a4a70;
+        background: #333;
     }
 }
 </style>

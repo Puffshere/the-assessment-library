@@ -341,7 +341,7 @@ export async function buildReport (options) {
   drawFooter(doc, userName)
 
   // ── Content sections ────────────────────────────────────────────────────────
-  var sections = buildSections(type, primaryBreakdown, userName)
+  var sections = options.sections || buildSections(type, primaryBreakdown, userName)
   sections.forEach(function (s) {
     addSection(doc, s.heading, s.paras, counter, userName)
   })

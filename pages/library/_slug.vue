@@ -704,14 +704,17 @@ export default {
 }
 
 .modal-close {
-    color: #aaa;
-    line-height: 50px;
+    color: #e93d2f;
     font-size: 12pt;
     position: absolute;
     right: 0;
-    text-align: center;
     top: 0;
-    width: 70px;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     cursor: pointer;
 

@@ -50,7 +50,8 @@
                             :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
                             :assessments-completed="completedSessions.length"
                             :credits-balance="dashboard.user.creditsBalance"
-                            @clear-results="selectedResult = null" />
+                            @clear-results="selectedResult = null"
+                            @credits-deducted="dashboard.user.creditsBalance = $event" />
 
                         <!-- 3rd person views -->
                         <results-panel-third-person v-else-if="activeResultsView === 'second' || activeResultsView === 'third'"
@@ -60,7 +61,8 @@
                             :assessments-completed="completedSessions.length"
                             :completed-sessions="completedSessions"
                             :credits-balance="dashboard.user.creditsBalance"
-                            @clear-results="selectedResult = null" />
+                            @clear-results="selectedResult = null"
+                            @credits-deducted="dashboard.user.creditsBalance = $event" />
 
                         <!-- For Others view -->
                         <div v-else-if="activeResultsView === 'fourth'" class="panel panel-wide panel-for-others">
