@@ -163,7 +163,23 @@
                     <p v-html="conclusionHtml"></p>
                 </div>
             </div>
+
+            <!-- Generate Full Report button -->
+            <div class="gr-trigger-wrap">
+                <button class="gr-trigger-btn" @click="showReportModal = true">
+                    Generate Full Report
+                </button>
+            </div>
         </div>
+
+        <!-- Report modal — inside root div so template has one root element -->
+        <GenerateReportModal
+            v-if="showReportModal"
+            :first-person-confidence="firstPersonConfidence"
+            :third-person-confidence="0"
+            :fully-confident-individuals="[]"
+            @close="showReportModal = false"
+        />
     </div>
 </template>
 
@@ -209,6 +225,7 @@ export default {
     },
     components: {
         'ConfidenceBar': () => import('@/components/ConfidenceMeter.vue'),
+        'GenerateReportModal': () => import('@/components/GenerateReportModal.vue')
     },
     data() {
         return {
@@ -216,7 +233,8 @@ export default {
             dropdownOpen: false,
             showConclusionModal: false,
             conclusionTimelineData: '',
-            conclusionHtmlData: ''
+            conclusionHtmlData: '',
+            showReportModal: false
         }
     },
     computed: {
@@ -904,6 +922,29 @@ export default {
         transition: background 0.2s ease;
         z-index: 1;
         margin-bottom: 25px;
+    }
+}
+
+.gr-trigger-wrap {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
+.gr-trigger-btn {
+    padding: 8px 16px;
+    background: #12304d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s;
+
+    &:hover {
+        background: #1a4a70;
     }
 }
 </style>

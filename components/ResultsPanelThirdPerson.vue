@@ -95,6 +95,13 @@
             View 1st vs. 3rd Person Breakdown
           </button>
         </div>
+
+        <!-- Generate Full Report button -->
+        <div class="gr-trigger-wrap">
+          <button class="gr-trigger-btn" @click="showReportModal = true">
+            Generate Full Report
+          </button>
+        </div>
       </div>
 
     </template>
@@ -235,6 +242,15 @@
     </div>
   </div>
 
+  <!-- Report modal — inside .tp-root so template has one root element -->
+  <GenerateReportModal
+    v-if="showReportModal"
+    :first-person-confidence="0"
+    :third-person-confidence="thirdPersonConfidence"
+    :fully-confident-individuals="fullyConfidentIndividuals"
+    @close="showReportModal = false"
+  />
+
   </div><!-- end .tp-root -->
 </template>
 
@@ -256,7 +272,8 @@ const TRAIT_COLORS = {
 export default {
   name: 'ResultsPanelThirdPerson',
   components: {
-    'ConfidenceBar': () => import('@/components/ConfidenceMeter.vue')
+    'ConfidenceBar': () => import('@/components/ConfidenceMeter.vue'),
+    'GenerateReportModal': () => import('@/components/GenerateReportModal.vue')
   },
   props: {
     activeView: {
@@ -298,7 +315,8 @@ export default {
       inviteTarget: null,
       inviteSlug: '',
       inviteLoading: false,
-      inviteError: null
+      inviteError: null,
+      showReportModal: false
     }
   },
   computed: {
@@ -441,6 +459,22 @@ export default {
         }
       })
       return map
+    },
+    fullyConfidentIndividuals() {
+      const results = []
+      this.participants.forEach(p => {
+        ;(p.invitations || []).forEach(inv => {
+          if (inv.status !== 'completed' || !inv.responseBreakdown) return
+          const score = this.confidenceScore(inv)
+          if (score !== null && parseFloat(score) >= 100) {
+            results.push({
+              key: p._id + '-' + inv._id,
+              label: inv.assessmentTitle + ' (' + p.name + ')'
+            })
+          }
+        })
+      })
+      return results
     }
   },
   mounted() {
@@ -862,6 +896,29 @@ export default {
     button {
       width: 100%;
     }
+  }
+}
+
+.gr-trigger-wrap {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.gr-trigger-btn {
+  padding: 8px 16px;
+  background: #12304d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+
+  &:hover {
+    background: #1a4a70;
   }
 }
 </style>

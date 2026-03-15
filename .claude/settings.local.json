@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && npm run build 2>&1 | grep -E \"ERROR|error|warning|Ready|failed|success\" | tail -15)",
+      "Bash(node -e \"const pkg = require\\('./node_modules/openai/package.json'\\); console.log\\('engines:', JSON.stringify\\(pkg.engines\\)\\); console.log\\('main:', pkg.main\\); console.log\\('type:', pkg.type\\);\" 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && node -e \"require\\('./api/index.js'\\)\" 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && npm run build 2>&1 | grep -E \"ERROR|error TS|SyntaxError|Invalid\" | head -20)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && npm run build 2>&1 | tail -5)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && node -e \"require\\('./api/server.js'\\)\" 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && node server/index.js 2>&1 | head -30)",
+      "Bash(node -e \"const pkg = require\\('./node_modules/jspdf/package.json'\\); console.log\\('main:', pkg.main\\); console.log\\('type:', pkg.type\\); console.log\\('exports:', JSON.stringify\\(pkg.exports, null, 2\\)\\)\" 2>&1)",
+      "Bash(node -e \"require\\('./node_modules/jspdf'\\)\" 2>&1)",
+      "Bash(ls \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\\\\api\\\\utils\\\\\" 2>&1 && ls \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\\\\api\\\\controllers\\\\\" 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && dir api /s /b 2>&1 | head -30)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && npm run build 2>&1 | grep -E \"ERROR|error TS|SyntaxError|✓|√|Ready|failed\" | head -20)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && npm run build 2>&1 | grep -E \"ERROR|SyntaxError|√|✓|Ready|failed\" | head -15)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && timeout 20 node server/index.js 2>&1 | grep -E \"SyntaxError|Invalid or unexpected|READY|listening|ERROR\" | head -10)"
+    ]
+  }
+}
