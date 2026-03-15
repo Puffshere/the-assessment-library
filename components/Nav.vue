@@ -16,10 +16,28 @@
                 </div>
 
                 <nav class="links desktop" role="navigation" aria-label="Primary">
-                    <nuxt-link v-for="item in navItems" :key="item.to" :to="item.to" exact
-                        :class="['link', isActive(item.to) ? 'active' : '']">
-                        {{ item.label }}
-                    </nuxt-link>
+                    <template v-for="item in navItems">
+                        <div v-if="item.dropdown" :key="item.to" class="nav-dropdown-wrap">
+                            <nuxt-link :to="item.to" exact :class="['link', isActive(item.to) ? 'active' : '']">
+                                {{ item.label }}
+                            </nuxt-link>
+                            <div class="nav-dropdown">
+                                <nuxt-link
+                                    v-for="sub in item.dropdown"
+                                    :key="sub.to"
+                                    :to="sub.to"
+                                    class="nav-dropdown-item"
+                                    :class="isActive(sub.to) ? 'active' : ''"
+                                >
+                                    {{ sub.label }}
+                                </nuxt-link>
+                            </div>
+                        </div>
+                        <nuxt-link v-else :key="item.to + '-link'" :to="item.to" exact
+                            :class="['link', isActive(item.to) ? 'active' : '']">
+                            {{ item.label }}
+                        </nuxt-link>
+                    </template>
                 </nav>
 
                 <div class="actions desktop">
@@ -50,12 +68,23 @@
             <nav v-if="mobileOpen" id="mobile-menu" class="mobile-drawer mobile" role="dialog" aria-modal="true"
                 aria-label="Mobile menu" ref="drawer">
                 <ul class="mobile-list">
-                    <li v-for="item in navItems" :key="item.to">
-                        <nuxt-link :to="item.to" class="mobile-link" :class="isActive(item.to) ? 'active' : ''"
-                            @click.native="closeMobile">
-                            {{ item.label }}
-                        </nuxt-link>
-                    </li>
+                    <template v-for="item in navItems">
+                        <li :key="item.to">
+                            <nuxt-link :to="item.to" class="mobile-link" :class="isActive(item.to) ? 'active' : ''"
+                                @click.native="closeMobile">
+                                {{ item.label }}
+                            </nuxt-link>
+                        </li>
+                        <template v-if="item.dropdown">
+                            <li v-for="sub in item.dropdown" :key="sub.to" class="mobile-sub-item">
+                                <nuxt-link :to="sub.to" class="mobile-link mobile-sub-link"
+                                    :class="isActive(sub.to) ? 'active' : ''"
+                                    @click.native="closeMobile">
+                                    {{ sub.label }}
+                                </nuxt-link>
+                            </li>
+                        </template>
+                    </template>
                 </ul>
                 <div class="mobile-actions">
                     <span v-if="loggedIn && firstName" class="mobile-greeting">Hi, {{ firstName }}</span>
@@ -83,7 +112,15 @@ export default {
             navItems: [
                 { label: 'Dashboard', to: '/dashboard' },
                 { label: 'Library', to: '/library' },
-                { label: 'About', to: '/about' },
+                {
+                    label: 'About', to: '/about',
+                    dropdown: [
+                        { label: 'Confidence', to: '/about/confidence' },
+                        { label: '1st Person', to: '/about/1st-person' },
+                        { label: '3rd Person', to: '/about/3rd-person' },
+                        { label: 'Full Reports', to: '/about/full-reports' }
+                    ]
+                },
                 { label: 'Contact', to: '/contact' }
             ]
         }
@@ -516,4 +553,76 @@ $shadow: rgba(0, 0, 0, 0.08);
 }
 
 @media (min-width: 600px) {}
+
+/* ── About dropdown ──────────────────────────────────────────────────────── */
+
+.nav-dropdown-wrap {
+    position: relative;
+
+    &:hover .nav-dropdown {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    min-width: 180px;
+    padding: 6px;
+    margin-top: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 160ms ease, transform 160ms ease;
+    z-index: 100;
+
+    /* Bridge the gap so moving the cursor downward never breaks hover */
+    &::before {
+        content: '';
+        position: absolute;
+        top: -12px;
+        left: 0;
+        right: 0;
+        height: 12px;
+    }
+}
+
+.nav-dropdown-item {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: $ink;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 120ms ease, color 120ms ease;
+    white-space: nowrap;
+
+    &:hover {
+        background: rgba($blue, 0.06);
+        color: $blue;
+    }
+
+    &.active {
+        color: $blue;
+    }
+}
+
+.mobile-sub-item {
+    margin-left: 20px;
+}
+
+.mobile-sub-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    padding: 8px 8px !important;
+}
 </style>
