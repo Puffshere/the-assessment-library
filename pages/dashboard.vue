@@ -48,7 +48,9 @@
                         <!-- 1st person view -->
                         <results-panel v-if="activeResultsView === 'first'" :selected-result="selectedResult"
                             :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
-                            :assessments-completed="completedSessions.length" @clear-results="selectedResult = null" />
+                            :assessments-completed="completedSessions.length"
+                            :credits-balance="dashboard.user.creditsBalance"
+                            @clear-results="selectedResult = null" />
 
                         <!-- 3rd person views -->
                         <results-panel-third-person v-else-if="activeResultsView === 'second' || activeResultsView === 'third'"
@@ -57,6 +59,7 @@
                             :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
                             :assessments-completed="completedSessions.length"
                             :completed-sessions="completedSessions"
+                            :credits-balance="dashboard.user.creditsBalance"
                             @clear-results="selectedResult = null" />
 
                         <!-- For Others view -->

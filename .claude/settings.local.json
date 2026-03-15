@@ -15,7 +15,10 @@
       "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && dir api /s /b 2>&1 | head -30)",
       "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && npm run build 2>&1 | grep -E \"ERROR|error TS|SyntaxError|✓|√|Ready|failed\" | head -20)",
       "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && npm run build 2>&1 | grep -E \"ERROR|SyntaxError|√|✓|Ready|failed\" | head -15)",
-      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && timeout 20 node server/index.js 2>&1 | grep -E \"SyntaxError|Invalid or unexpected|READY|listening|ERROR\" | head -10)"
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && timeout 20 node server/index.js 2>&1 | grep -E \"SyntaxError|Invalid or unexpected|READY|listening|ERROR\" | head -10)",
+      "Bash(node -e \"const p=require\\('./node_modules/jspdf/package.json'\\); console.log\\(p.version, '| main:', p.main, '| browser:', p.browser, '| type:', p.type||'CJS'\\)\" 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && npm run build 2>&1 | grep -E \"ERROR|SyntaxError|√|✓|Ready|failed\" | head -10)",
+      "Bash(cd \"C:\\\\Users\\\\shawn\\\\Projects\\\\the-assessment-library\" && timeout 20 node server/index.js 2>&1 | grep -E \"SyntaxError|Invalid or unexpected|READY|listening|ERROR\" | head -6)"
     ]
   }
 }

@@ -248,6 +248,9 @@
     :first-person-confidence="0"
     :third-person-confidence="thirdPersonConfidence"
     :fully-confident-individuals="fullyConfidentIndividuals"
+    :first-person-breakdown="firstPersonBreakdownForFilter"
+    :third-person-breakdown="thirdPersonAggregateBreakdown"
+    :credits-balance="creditsBalance"
     @close="showReportModal = false"
   />
 
@@ -297,6 +300,10 @@ export default {
       default: 0
     },
     assessmentsCompleted: {
+      type: Number,
+      default: 0
+    },
+    creditsBalance: {
       type: Number,
       default: 0
     }

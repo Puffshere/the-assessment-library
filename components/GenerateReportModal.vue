@@ -31,8 +31,8 @@
               🔒 Requires 100% 1st Person confidence — currently {{ firstPersonConfidence }}%
             </p>
           </div>
-          <button class="gr-btn" :disabled="!option1Unlocked">
-            {{ option1Unlocked ? 'Generate' : 'Locked' }}
+          <button class="gr-btn" :disabled="!option1Unlocked || generating" @click="generate('first')">
+            {{ generating ? 'Generating…' : option1Unlocked ? 'Generate' : 'Locked' }}
           </button>
         </div>
 
@@ -49,8 +49,8 @@
               🔒 Requires 100% 3rd Person overall confidence — currently {{ thirdPersonConfidence }}%
             </p>
           </div>
-          <button class="gr-btn" :disabled="!option2Unlocked">
-            {{ option2Unlocked ? 'Generate' : 'Locked' }}
+          <button class="gr-btn" :disabled="!option2Unlocked || generating" @click="generate('third_overall')">
+            {{ generating ? 'Generating…' : option2Unlocked ? 'Generate' : 'Locked' }}
           </button>
         </div>
 
@@ -67,8 +67,8 @@
               🔒 Requires one individual 3rd Person assessment confidence to reach 100%
             </p>
           </div>
-          <button class="gr-btn" :disabled="!option3Unlocked">
-            {{ option3Unlocked ? 'Generate' : 'Locked' }}
+          <button class="gr-btn" :disabled="!option3Unlocked || generating" @click="generate('third_individual')">
+            {{ generating ? 'Generating…' : option3Unlocked ? 'Generate' : 'Locked' }}
           </button>
         </div>
 
@@ -89,12 +89,14 @@
               ⚠️ You need {{ 10 - creditsBalance }} more credit{{ 10 - creditsBalance === 1 ? '' : 's' }} to unlock this report.
             </p>
           </div>
-          <button class="gr-btn gr-btn--paid" :disabled="creditsBalance < 10">
-            {{ creditsBalance >= 10 ? 'Generate (10 Credits)' : 'Insufficient Credits' }}
+          <button class="gr-btn gr-btn--paid" :disabled="creditsBalance < 10 || generating" @click="generate('full')">
+            {{ generating ? 'Generating…' : creditsBalance >= 10 ? 'Generate (10 Credits)' : 'Insufficient Credits' }}
           </button>
         </div>
 
       </div>
+
+      <p v-if="genError" class="gr-error">{{ genError }}</p>
     </div>
   </div>
 </template>
@@ -103,22 +105,47 @@
 export default {
   name: 'GenerateReportModal',
   props: {
-    firstPersonConfidence: { type: Number, default: 0 },
-    thirdPersonConfidence: { type: Number, default: 0 },
-    fullyConfidentIndividuals: { type: Array, default: () => [] }
+    firstPersonConfidence:    { type: Number, default: 0 },
+    thirdPersonConfidence:    { type: Number, default: 0 },
+    fullyConfidentIndividuals:{ type: Array,  default: () => [] },
+    firstPersonBreakdown:     { type: Object, default: null },
+    thirdPersonBreakdown:     { type: Object, default: null },
+    creditsBalance:           { type: Number, default: 0 }
+  },
+  data () {
+    return {
+      generating: false,
+      genError: null
+    }
   },
   computed: {
-    option1Unlocked() {
-      return this.firstPersonConfidence >= 100
-    },
-    option2Unlocked() {
-      return this.thirdPersonConfidence >= 100
-    },
-    option3Unlocked() {
-      return this.fullyConfidentIndividuals.length > 0
-    },
-    creditsBalance() {
-      return (this.$store.state.user && this.$store.state.user.creditsBalance) || 0
+    option1Unlocked () { return this.firstPersonConfidence >= 100 },
+    option2Unlocked () { return this.thirdPersonConfidence >= 100 },
+    option3Unlocked () { return this.fullyConfidentIndividuals.length > 0 },
+    userName () {
+      return (this.$store.state.user && this.$store.state.user.name) || ''
+    }
+  },
+  methods: {
+    async generate (type) {
+      this.generating = true
+      this.genError = null
+      try {
+        const { buildReport, openInNewTab } = await import('@/utils/reportPdf')
+        const doc = await buildReport({
+          type,
+          userName: this.userName,
+          firstPersonBreakdown: this.firstPersonBreakdown,
+          thirdPersonBreakdown: this.thirdPersonBreakdown
+        })
+        openInNewTab(doc, type, this.userName)
+        this.$emit('close')
+      } catch (err) {
+        console.error('PDF generation error:', err)
+        this.genError = 'Failed to generate report. Please try again.'
+      } finally {
+        this.generating = false
+      }
     }
   }
 }
@@ -306,6 +333,15 @@ export default {
       border-color: #e8a800;
     }
   }
+}
+
+.gr-error {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #c00;
+  background: #fff0f0;
+  border-radius: 6px;
+  padding: 8px 12px;
 }
 
 @media (max-width: 480px) {

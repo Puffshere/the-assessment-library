@@ -178,6 +178,9 @@
             :first-person-confidence="firstPersonConfidence"
             :third-person-confidence="0"
             :fully-confident-individuals="[]"
+            :first-person-breakdown="displayBreakdown"
+            :third-person-breakdown="null"
+            :credits-balance="creditsBalance"
             @close="showReportModal = false"
         />
     </div>
@@ -219,6 +222,10 @@ export default {
             default: 0
         },
         assessmentsCompleted: {
+            type: Number,
+            default: 0
+        },
+        creditsBalance: {
             type: Number,
             default: 0
         }
