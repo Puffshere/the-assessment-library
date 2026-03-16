@@ -707,8 +707,8 @@ export default {
     color: #e93d2f;
     font-size: 12pt;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 30px;
+    top: 10px;
     width: 32px;
     height: 32px;
     padding: 4px;
@@ -778,6 +778,7 @@ export default {
     width: 100%;
     top: -70px;
     max-height: 90vh;
+    overflow-x: hidden;
     overflow-y: auto;
     padding: 40px 20px;
     background: #fff;
@@ -872,6 +873,10 @@ export default {
 @media (max-width: 768px) {
     .page {
         background: #f5f5f5;
+
+        .title button {
+            display: none;
+        }
 
         .questionnaire {
             .hero-illustration {
