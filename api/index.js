@@ -14,6 +14,7 @@ import creditsController from './controllers/creditsController.js';
 import contactController from './controllers/contactController.js';
 import participantsController from './controllers/participantsController.js';
 import reportsController from './controllers/reportsController.js';
+import paymentsController from './controllers/paymentsController.js';
 
 
 const upload = multer();
@@ -35,6 +36,10 @@ if (!connectionString) {
 app.use(express.static(path.join(__dirname, 'static')));
 app.use(helmet());
 app.use(cors());
+
+// Stripe webhook needs raw body — must be registered before bodyParser.json()
+app.post('/payments/webhook', express.raw({ type: 'application/json' }), paymentsController.handleWebhook);
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -80,6 +85,10 @@ app.post(
 );
 
 app.post('/reports/generate', sessionsController.authenticate, reportsController.generateReport);
+
+app.get('/payments/packages', paymentsController.getPackages);
+app.post('/payments/create-checkout-session', sessionsController.authenticate, paymentsController.createCheckoutSession);
+app.post('/payments/verify-and-fulfill', sessionsController.authenticate, paymentsController.verifyAndFulfill);
 
 app.get('/participants', sessionsController.authenticate, participantsController.getParticipants);
 app.post('/participants', sessionsController.authenticate, participantsController.addParticipant);

@@ -17,6 +17,12 @@ export const mutations = {
     state.token = token
   },
 
+  SET_CREDITS(state, balance) {
+    if (state.user) {
+      state.user = { ...state.user, creditsBalance: balance }
+    }
+  },
+
   SET_SESSION_FOR_ASSESSMENT(state, { assessmentId, session }) {
     state.sessionsByAssessmentId = {
       ...state.sessionsByAssessmentId,
@@ -29,21 +35,24 @@ export const mutations = {
   }
 }
 
+function restoreAuthFromStorage({ commit }, axiosInstance) {
+  if (!process.client) return
+  const savedFlag  = localStorage.getItem('tal_logged_in')
+  const savedToken = localStorage.getItem('tal_token')
+  if (savedToken || savedFlag === '1') {
+    commit('SET_LOGGED_IN', true)
+    commit('SET_TOKEN', savedToken)
+    if (savedToken) axiosInstance.setToken(savedToken, 'Bearer')
+  }
+}
+
 export const actions = {
   nuxtClientInit({ commit }) {
-    if (process.client) {
-      const savedFlag = localStorage.getItem('tal_logged_in')
-      const savedToken = localStorage.getItem('tal_token')
+    restoreAuthFromStorage({ commit }, this.$axios)
+  },
 
-      if (savedToken || savedFlag === '1') {
-        commit('SET_LOGGED_IN', true)
-        commit('SET_TOKEN', savedToken)
-
-        if (savedToken) {
-          this.$axios.setToken(savedToken, 'Bearer')
-        }
-      }
-    }
+  initFromStorage({ commit }) {
+    restoreAuthFromStorage({ commit }, this.$axios)
   },
 
   async login({ commit }, { email, password }) {

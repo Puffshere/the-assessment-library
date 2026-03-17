@@ -199,8 +199,8 @@
                             <p class="credits-value">
                                 {{ dashboard.user.creditsBalance }}
                             </p>
-                            <button class="blue small" @click="purchaseCredit">
-                                Purchase More Credits
+                            <button class="blue small" @click="showCreditModal = true">
+                                Purchase Credits
                             </button>
 
                         </div>
@@ -328,6 +328,11 @@
         </section>
 
         <footer-fold />
+
+        <credit-packages-modal
+            :show="showCreditModal"
+            @close="showCreditModal = false"
+        />
     </section>
 </template>
 
@@ -339,12 +344,14 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer'),
         'results-panel': () => import('@/components/ResultsPanel.vue'),
-        'results-panel-third-person': () => import('@/components/ResultsPanelThirdPerson.vue')
+        'results-panel-third-person': () => import('@/components/ResultsPanelThirdPerson.vue'),
+        'credit-packages-modal': () => import('@/components/CreditPackagesModal.vue')
     },
     data() {
         return {
             loading: true,
             error: null,
+            showCreditModal: false,
             selectedResult: null,
             selectedForOthersResult: null,
             activeResultsView: 'first',
@@ -478,21 +485,8 @@ export default {
         }
     },
     methods: {
-        async purchaseCredit() {
-            try {
-                // This hits the Express route /credits/add-one (prefixed with /api by Nuxt)
-                const res = await this.$axios.$post('/api/credits/add-one')
-
-                if (res && typeof res.creditsBalance === 'number') {
-                    // Update the local dashboard so the UI reflects the new balance
-                    this.dashboard.user.creditsBalance = res.creditsBalance
-                } else {
-                    console.warn('Unexpected response from /api/credits/add-one:', res)
-                }
-            } catch (err) {
-                console.error('Error adding credit:', err)
-                alert('Could not add a test credit right now.')
-            }
+        openCreditModal() {
+            this.showCreditModal = true
         },
         formatDate(dateStr) {
             if (!dateStr) return '—'

@@ -157,8 +157,8 @@
                             <span v-else>Starting assessment…</span>
                         </button>
 
-                        <button v-else class="blue" type="button" @click="buyCredits">
-                            Purchase More Credits
+                        <button v-else class="blue" type="button" @click="showCreditModal = true">
+                            Purchase Credits
                         </button>
 
                         <button class="light" type="button" @click="closeBookModal">
@@ -170,6 +170,11 @@
         </div>
 
         <LazyHydrate when-visible><footer-fold /></LazyHydrate>
+
+        <credit-packages-modal
+            :show="showCreditModal"
+            @close="showCreditModal = false"
+        />
     </section>
 </template>
 
@@ -182,13 +187,15 @@ export default {
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
-        'footer-fold': () => import('@/components/Footer')
+        'footer-fold': () => import('@/components/Footer'),
+        'credit-packages-modal': () => import('@/components/CreditPackagesModal.vue')
     },
 
     data() {
         return {
             checkingOut: false,
             showBookModal: false,
+            showCreditModal: false,
             selectedBook: null,
 
             loadingAssessments: true,
@@ -397,29 +404,6 @@ export default {
                 }
             } finally {
                 this.checkingOut = false
-            }
-        },
-        async buyCredits() {
-            try {
-                const token = this.$store.state.token
-
-                const res = await this.$axios.$post(
-                    '/api/credits/add-one',
-                    {},
-                    token ? { headers: { Authorization: `Bearer ${token}` } } : {}
-                )
-
-                if (res && typeof res.creditsBalance === 'number') {
-                    this.$store.commit('SET_USER', {
-                        ...(this.currentUser || {}),
-                        creditsBalance: res.creditsBalance
-                    })
-                } else {
-                    console.warn('Unexpected response from /api/credits/add-one:', res)
-                }
-            } catch (err) {
-                console.error('Error adding credit from modal:', err)
-                alert('Could not add a test credit right now. Please try again.')
             }
         },
         markHeroLoaded(id) {

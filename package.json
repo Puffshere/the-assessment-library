@@ -57,6 +57,7 @@
     "postmark": "^4.0.5",
     "regenerator-runtime": "^0.14.1",
     "sanitize-html": "^2.12.1",
+    "stripe": "^20.4.1",
     "uuid": "^8.3.2",
     "vee-validate": "^3.4.6",
     "vue-calendly": "0.0.4",
