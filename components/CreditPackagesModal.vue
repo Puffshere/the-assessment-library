@@ -2,11 +2,29 @@
   <transition name="modal-fade">
     <div v-if="show" class="modal-backdrop" @click.self="$emit('close')">
       <div class="credits-modal">
-        <button class="modal-close" @click="$emit('close')" aria-label="Close">&#10005;</button>
+        <div class="modal-top-bar">
+          <button class="red" @click="$emit('close')">close</button>
+        </div>
 
         <div class="modal-header">
           <h2>Purchase Credits</h2>
           <p>Each credit unlocks one assessment. Credits never expire.</p>
+        </div>
+
+        <!-- Billing toggle -->
+        <div class="billing-toggle-wrap">
+          <div class="billing-toggle">
+            <div
+              class="toggle-pill"
+              :style="{ transform: billingMode === 'monthly' ? 'translateX(100%)' : 'translateX(0)' }"
+            />
+            <button class="toggle-opt" :class="{ 'is-active': billingMode === 'one_time' }" @click="billingMode = 'one_time'">
+              One-Time
+            </button>
+            <button class="toggle-opt" :class="{ 'is-active': billingMode === 'monthly' }" @click="billingMode = 'monthly'">
+              Monthly
+            </button>
+          </div>
         </div>
 
         <div v-if="loadingPackages" class="packages-loading">
@@ -24,9 +42,11 @@
             <div v-if="pkg.credits === 5" class="popular-badge">Most Popular</div>
             <div class="pkg-credits">{{ pkg.credits }}</div>
             <div class="pkg-credits-label">Credit<span v-if="pkg.credits !== 1">s</span></div>
-            <div class="pkg-price">${{ (pkg.price / 100).toFixed(0) }}</div>
+            <div class="pkg-price">
+              ${{ formatDollars(pkg.cents) }}<span v-if="billingMode === 'monthly'" class="pkg-period">/mo</span>
+            </div>
             <div class="pkg-description">{{ pkg.description }}</div>
-            <div class="pkg-per-credit">${{ (pkg.price / pkg.credits / 100).toFixed(2) }} / credit</div>
+            <div class="pkg-per-credit">${{ perCredit(pkg) }} / credit</div>
           </div>
         </div>
 
@@ -58,6 +78,7 @@ export default {
       loadingPackages: true,
       redirecting: false,
       errorMsg: '',
+      billingMode: 'one_time',
     };
   },
 
@@ -70,6 +91,14 @@ export default {
   },
 
   methods: {
+    formatDollars(cents) {
+      return (cents / 100).toFixed(2);
+    },
+
+    perCredit(pkg) {
+      return (pkg.cents / pkg.credits / 100).toFixed(2);
+    },
+
     async loadPackages() {
       try {
         this.loadingPackages = true;
@@ -99,7 +128,7 @@ export default {
         const token = this.getToken();
         const res = await this.$axios.$post(
           '/api/payments/create-checkout-session',
-          { packageId: pkg.id },
+          { packageId: pkg.id, billingMode: this.billingMode },
           token ? { headers: { Authorization: `Bearer ${token}` } } : {}
         );
 
@@ -136,31 +165,26 @@ export default {
 .credits-modal {
   background: #fff;
   border-radius: 16px;
-  padding: 36px 32px 28px;
+  padding: 20px 32px 28px;
   max-width: 640px;
   width: 100%;
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
-.modal-close {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  color: #888;
-  line-height: 1;
-  padding: 4px 8px;
+.modal-top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
 
-  &:hover { color: #333; }
+  button.red {
+    width: 74px;
+  }
 }
 
 .modal-header {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 
   h2 {
     font-size: 1.5rem;
@@ -176,6 +200,66 @@ export default {
   }
 }
 
+/* Billing sliding toggle */
+.billing-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.billing-toggle {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #efefef;
+  border-radius: 10px;
+  padding: 4px;
+  width: 260px;
+}
+
+.toggle-pill {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  background: #00679b;
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(0, 103, 155, 0.35);
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.toggle-opt {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 7px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.18s;
+  box-shadow: none;
+  font-family: inherit;
+
+  &.is-active {
+    color: #fff;
+  }
+
+  &:hover:not(.is-active) {
+    color: #555;
+  }
+
+  // Override global button transform on hover/active
+  &:hover { transform: none; }
+  &:active { transform: none; }
+}
+
 .packages-loading {
   text-align: center;
   padding: 32px 0;
@@ -187,6 +271,7 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-bottom: 20px;
+  margin-top: 20px;
 
   @media (max-width: 520px) {
     grid-template-columns: 1fr;
@@ -254,6 +339,13 @@ export default {
   font-weight: 700;
   color: $color-d;
   margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.pkg-period {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #888;
 }
 
 .pkg-description {
@@ -290,7 +382,6 @@ export default {
   }
 }
 
-/* Transition */
 .modal-fade-enter-active,
 .modal-fade-leave-active {
   transition: opacity 0.2s;

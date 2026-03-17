@@ -17,20 +17,26 @@
 
       <div v-else class="state-success">
         <div class="icon-circle icon-circle--success">&#10003;</div>
-        <h1>Payment Successful!</h1>
+        <h1>{{ isSubscription ? 'Subscription Started!' : 'Payment Successful!' }}</h1>
         <p>
+          Successfully added
           <strong>{{ creditsAdded }} credit<span v-if="creditsAdded !== 1">s</span></strong>
-          have been added to your account.
+          to your account.
         </p>
         <p class="balance-line">
-          New balance: <span class="balance-value">{{ newBalance }}</span>
+          Your new balance: <span class="balance-value">{{ newBalance }} credit<span v-if="newBalance !== 1">s</span></span>
         </p>
-        <nuxt-link to="/dashboard" class="result-btn">
-          Go to Dashboard
-        </nuxt-link>
-        <nuxt-link to="/library" class="result-btn result-btn--outline">
-          Browse Assessments
-        </nuxt-link>
+        <p v-if="isSubscription" class="sub-renewal-note">
+          {{ creditsAdded }} credit<span v-if="creditsAdded !== 1">s</span> will be added automatically each month.
+        </p>
+        <div class="result-actions">
+          <nuxt-link to="/dashboard" class="result-btn">
+            Go to Dashboard
+          </nuxt-link>
+          <nuxt-link to="/library" class="result-btn result-btn--outline">
+            Browse Assessments
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </div>
@@ -46,7 +52,14 @@ export default {
       error: '',
       creditsAdded: 0,
       newBalance: 0,
+      isSubscription: false,
     };
+  },
+
+  computed: {
+    billingParam() {
+      return this.$route.query.billing;
+    },
   },
 
   async mounted() {
@@ -68,10 +81,10 @@ export default {
         token ? { headers: { Authorization: `Bearer ${token}` } } : {}
       );
 
-      this.creditsAdded = res.creditsAdded || 0;
-      this.newBalance = res.creditsBalance;
+      this.creditsAdded    = res.creditsAdded || 0;
+      this.newBalance      = res.creditsBalance;
+      this.isSubscription  = !!res.isSubscription;
 
-      // Update the Vuex store so header credits are in sync
       this.$store.commit('SET_CREDITS', res.creditsBalance);
     } catch (err) {
       this.error =
@@ -169,7 +182,22 @@ p {
 .balance-line {
   font-size: 0.95rem;
   color: #777;
-  margin-bottom: 28px;
+  margin-bottom: 8px;
+}
+
+.sub-renewal-note {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.result-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .balance-value {

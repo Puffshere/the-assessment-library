@@ -6,10 +6,42 @@ User = User.default || User;
 
 const CreditTransaction = require('../models/CreditTransaction');
 
+// Price IDs come from .env after running scripts/setup-stripe-products.js
+// Falls back to inline price_data if IDs are not yet set.
 const CREDIT_PACKAGES = [
-  { id: 'credits_1',  credits: 1,  price: 500,  label: '1 Credit',   description: 'Perfect for trying a single assessment' },
-  { id: 'credits_5',  credits: 5,  price: 2000, label: '5 Credits',  description: 'Great for individuals and small teams' },
-  { id: 'credits_10', credits: 10, price: 3500, label: '10 Credits', description: 'Best value for teams and organizations' },
+  {
+    id: 'credits_1',
+    credits: 1,
+    cents: 199,
+    label: '1 Credit',
+    description: 'Try a single assessment',
+    priceIds: {
+      one_time: process.env.STRIPE_PRICE_1_ONE_TIME || null,
+      monthly:  process.env.STRIPE_PRICE_1_MONTHLY  || null,
+    },
+  },
+  {
+    id: 'credits_5',
+    credits: 5,
+    cents: 799,
+    label: '5 Credits',
+    description: 'Great for individuals and small teams',
+    priceIds: {
+      one_time: process.env.STRIPE_PRICE_5_ONE_TIME || null,
+      monthly:  process.env.STRIPE_PRICE_5_MONTHLY  || null,
+    },
+  },
+  {
+    id: 'credits_10',
+    credits: 10,
+    cents: 1399,
+    label: '10 Credits',
+    description: 'Best value for teams and organizations',
+    priceIds: {
+      one_time: process.env.STRIPE_PRICE_10_ONE_TIME || null,
+      monthly:  process.env.STRIPE_PRICE_10_MONTHLY  || null,
+    },
+  },
 ];
 
 function getUserIdFromReq(req) {
@@ -24,8 +56,39 @@ function getUserIdFromReq(req) {
   }
 }
 
+async function fulfillCredits(userId, credits, packageId, paymentReference, note) {
+  const existing = await CreditTransaction.findOne({ paymentReference });
+  if (existing) return { alreadyFulfilled: true, creditsAdded: existing.credits };
+
+  const user = await User.findById(userId);
+  if (!user) throw new Error('User not found');
+
+  user.creditsBalance        = (user.creditsBalance || 0) + credits;
+  user.totalCreditsPurchased = (user.totalCreditsPurchased || 0) + credits;
+  await user.save();
+
+  await CreditTransaction.create({
+    user: user._id,
+    type: 'purchase',
+    credits,
+    paymentReference,
+    note,
+  });
+
+  return { alreadyFulfilled: false, creditsAdded: credits, newBalance: user.creditsBalance };
+}
+
+// ─── Public routes ────────────────────────────────────────────────────────────
+
 exports.getPackages = (req, res) => {
-  res.json({ packages: CREDIT_PACKAGES });
+  const packages = CREDIT_PACKAGES.map(p => ({
+    id:          p.id,
+    credits:     p.credits,
+    cents:       p.cents,
+    label:       p.label,
+    description: p.description,
+  }));
+  res.json({ packages });
 };
 
 exports.createCheckoutSession = async (req, res) => {
@@ -33,35 +96,58 @@ exports.createCheckoutSession = async (req, res) => {
     const userId = getUserIdFromReq(req);
     if (!userId) return res.status(401).json({ message: 'Not authenticated' });
 
-    const { packageId } = req.body;
+    const { packageId, billingMode = 'one_time' } = req.body;
     const pkg = CREDIT_PACKAGES.find(p => p.id === packageId);
     if (!pkg) return res.status(400).json({ message: 'Invalid package' });
 
-    const baseUrl = (process.env.BASE_URL || 'http://localhost:3000').replace(/\/$/, '');
+    const isMonthly = billingMode === 'monthly';
+    const priceId   = isMonthly ? pkg.priceIds.monthly : pkg.priceIds.one_time;
 
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      line_items: [{
-        price_data: {
-          currency: 'usd',
-          product_data: {
-            name: `${pkg.label} — The Assessment Library`,
-            description: pkg.description,
+    // Use pre-created Stripe price ID when available, otherwise build inline price_data
+    const lineItem = priceId
+      ? { price: priceId, quantity: 1 }
+      : {
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: `${pkg.label} — The Assessment Library`,
+              description: pkg.description,
+            },
+            unit_amount: pkg.cents,
+            ...(isMonthly ? { recurring: { interval: 'month' } } : {}),
           },
-          unit_amount: pkg.price,
-        },
-        quantity: 1,
-      }],
-      mode: 'payment',
-      success_url: `${baseUrl}/payment/success?session_id={CHECKOUT_SESSION_ID}`,
+          quantity: 1,
+        };
+
+    const baseUrl = (process.env.BASE_URL || 'http://localhost:3000').replace(/\/$/, '');
+    const successUrl = `${baseUrl}/payment/success?session_id={CHECKOUT_SESSION_ID}${isMonthly ? '&billing=monthly' : ''}`;
+
+    const sessionParams = {
+      payment_method_types: ['card'],
+      line_items: [lineItem],
+      mode: isMonthly ? 'subscription' : 'payment',
+      success_url: successUrl,
       cancel_url:  `${baseUrl}/payment/cancel`,
       metadata: {
         userId,
-        credits: String(pkg.credits),
-        packageId: pkg.id,
+        credits:    String(pkg.credits),
+        packageId:  pkg.id,
+        billingMode,
       },
-    });
+    };
 
+    // Store userId/credits on the subscription itself so the invoice webhook can read it
+    if (isMonthly) {
+      sessionParams.subscription_data = {
+        metadata: {
+          userId,
+          credits:   String(pkg.credits),
+          packageId: pkg.id,
+        },
+      };
+    }
+
+    const session = await stripe.checkout.sessions.create(sessionParams);
     res.json({ url: session.url });
   } catch (err) {
     console.error('Stripe createCheckoutSession error:', err);
@@ -77,40 +163,39 @@ exports.verifyAndFulfill = async (req, res) => {
     const { sessionId } = req.body;
     if (!sessionId) return res.status(400).json({ message: 'Missing session_id' });
 
-    // Idempotency — already fulfilled
-    const existing = await CreditTransaction.findOne({ paymentReference: sessionId });
-    if (existing) {
-      const user = await User.findById(userId).select('creditsBalance');
-      return res.json({ creditsBalance: user ? user.creditsBalance : 0, creditsAdded: existing.credits, alreadyFulfilled: true });
-    }
-
     const stripeSession = await stripe.checkout.sessions.retrieve(sessionId);
-    if (stripeSession.payment_status !== 'paid') {
-      return res.status(400).json({ message: 'Payment not completed' });
-    }
 
-    // Security: logged-in user must match the session owner
+    // Security: ensure the logged-in user matches the session owner
     if (stripeSession.metadata.userId !== userId) {
       return res.status(403).json({ message: 'User mismatch' });
     }
 
+    const isSubscription = stripeSession.mode === 'subscription';
+
+    // For subscriptions Stripe may report payment_status as 'no_payment_required' briefly;
+    // treat an active subscription as paid.
+    const isPaid =
+      stripeSession.payment_status === 'paid' ||
+      (isSubscription && stripeSession.status === 'complete');
+
+    if (!isPaid) {
+      return res.status(400).json({ message: 'Payment not completed' });
+    }
+
     const credits = Number(stripeSession.metadata.credits);
-    const user = await User.findById(userId);
-    if (!user) return res.status(404).json({ message: 'User not found' });
+    const note    = isSubscription
+      ? `Stripe subscription initial: ${stripeSession.metadata.packageId}`
+      : `Stripe checkout: ${stripeSession.metadata.packageId}`;
 
-    user.creditsBalance = (user.creditsBalance || 0) + credits;
-    user.totalCreditsPurchased = (user.totalCreditsPurchased || 0) + credits;
-    await user.save();
+    const result = await fulfillCredits(userId, credits, stripeSession.metadata.packageId, sessionId, note);
 
-    await CreditTransaction.create({
-      user: user._id,
-      type: 'purchase',
-      credits,
-      paymentReference: sessionId,
-      note: `Stripe checkout: ${stripeSession.metadata.packageId}`,
+    const user = await User.findById(userId).select('creditsBalance');
+    res.json({
+      creditsAdded:     result.creditsAdded,
+      creditsBalance:   user ? user.creditsBalance : result.newBalance,
+      alreadyFulfilled: result.alreadyFulfilled,
+      isSubscription,
     });
-
-    res.json({ creditsBalance: user.creditsBalance, creditsAdded: credits });
   } catch (err) {
     console.error('Stripe verifyAndFulfill error:', err);
     res.status(500).json({ message: err.message || 'Could not fulfill payment' });
@@ -123,17 +208,12 @@ exports.handleWebhook = async (req, res) => {
   if (process.env.STRIPE_WEBHOOK_SECRET) {
     const sig = req.headers['stripe-signature'];
     try {
-      event = stripe.webhooks.constructEvent(
-        req.body,
-        sig,
-        process.env.STRIPE_WEBHOOK_SECRET
-      );
+      event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
     } catch (err) {
       console.error('Stripe webhook signature error:', err.message);
       return res.status(400).send(`Webhook Error: ${err.message}`);
     }
   } else {
-    // No webhook secret configured — parse body directly (dev/test only)
     try {
       event = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
     } catch (err) {
@@ -141,36 +221,36 @@ exports.handleWebhook = async (req, res) => {
     }
   }
 
-  if (event.type === 'checkout.session.completed') {
-    const session = event.data.object;
-
-    if (session.payment_status === 'paid') {
-      try {
-        const existing = await CreditTransaction.findOne({ paymentReference: session.id });
-        if (!existing) {
-          const credits = Number(session.metadata.credits);
-          const userId  = session.metadata.userId;
-
-          const user = await User.findById(userId);
-          if (user) {
-            user.creditsBalance         = (user.creditsBalance || 0) + credits;
-            user.totalCreditsPurchased  = (user.totalCreditsPurchased || 0) + credits;
-            await user.save();
-
-            await CreditTransaction.create({
-              user: user._id,
-              type: 'purchase',
-              credits,
-              paymentReference: session.id,
-              note: `Stripe webhook: ${session.metadata.packageId}`,
-            });
-          }
-        }
-      } catch (err) {
-        console.error('Webhook fulfillment error:', err);
-        return res.status(500).send('Fulfillment error');
+  try {
+    // One-time payment fallback (in case success page never called verifyAndFulfill)
+    if (event.type === 'checkout.session.completed') {
+      const session = event.data.object;
+      if (session.mode === 'payment' && session.payment_status === 'paid') {
+        const { userId, credits, packageId } = session.metadata;
+        await fulfillCredits(
+          userId, Number(credits), packageId, session.id,
+          `Stripe webhook one-time: ${packageId}`
+        );
       }
     }
+
+    // Subscription renewal — fires each billing cycle after the first
+    if (event.type === 'invoice.paid') {
+      const invoice = event.data.object;
+      if (invoice.billing_reason === 'subscription_cycle') {
+        const subscription = await stripe.subscriptions.retrieve(invoice.subscription);
+        const { userId, credits, packageId } = subscription.metadata;
+        if (userId && credits) {
+          await fulfillCredits(
+            userId, Number(credits), packageId, invoice.id,
+            `Stripe subscription renewal: ${packageId}`
+          );
+        }
+      }
+    }
+  } catch (err) {
+    console.error('Webhook fulfillment error:', err);
+    return res.status(500).send('Fulfillment error');
   }
 
   res.json({ received: true });
