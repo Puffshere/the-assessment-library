@@ -6,6 +6,7 @@ User = User.default || User;
 require('../models/Assessment');
 
 const AssessmentSession = require('../models/AssessmentSession');
+const Participant = require('../models/Participant');
 
 exports.getDashboard = async function (req, res) {
   try {
@@ -109,9 +110,53 @@ exports.getDashboard = async function (req, res) {
         status: s.status || 'not_started',
         startedAt: s.startedAt,
         completedAt: s.completedAt,
-        scoreBreakdown: hasScore && s.score.breakdown ? s.score.breakdown : null
+        scoreBreakdown: hasScore && s.score.breakdown ? s.score.breakdown : null,
+        participantId: s.thirdPersonParticipantId ? (s.thirdPersonParticipantId._id || s.thirdPersonParticipantId) : null,
+        invitationId: s.thirdPersonInvitationId || null,
       };
     });
+
+    // Build the set of invitationIds that already have a session, so we don't
+    // duplicate entries in the "For Others" list.
+    const invitationIdsWithSessions = new Set(
+      thirdPersonRaw
+        .filter(s => s.thirdPersonInvitationId)
+        .map(s => s.thirdPersonInvitationId.toString())
+    );
+
+    // Fetch Participant records where this user is the invitee (matched by email).
+    // These are invitations received but not yet started (no session created yet).
+    let pendingInvitations = [];
+    try {
+      const participantDocs = await Participant.find({ email: user.email })
+        .populate('invitedBy', 'name email')
+        .lean();
+
+      for (const p of participantDocs) {
+        for (const inv of (p.invitations || [])) {
+          // Skip completed invitations and any that already have a session
+          if (inv.status === 'completed') continue;
+          if (invitationIdsWithSessions.has(inv._id.toString())) continue;
+
+          const inviter = p.invitedBy;
+          pendingInvitations.push({
+            participantId:    p._id,
+            invitationId:     inv._id,
+            assessmentTitle:  inv.assessmentTitle || '',
+            assessmentSlug:   inv.assessmentSlug  || '',
+            inviterName:      inviter ? (inviter.name || inviter.email) : 'Unknown',
+            invitedAt:        inv.invitedAt,
+            status:           'invited',
+          });
+        }
+      }
+    } catch (e) {
+      console.error('Error fetching pending invitations for dashboard:', e);
+    }
+
+    const pendingInviteCount =
+      pendingInvitations.length +
+      thirdPersonSessions.filter(s => s.status !== 'completed').length;
 
     return res.json({
       user: {
@@ -123,6 +168,8 @@ exports.getDashboard = async function (req, res) {
       },
       sessions: formattedSessions,
       thirdPersonSessions,
+      pendingInvitations,
+      pendingInviteCount,
     });
   } catch (err) {
     console.error('Error loading dashboard', err);

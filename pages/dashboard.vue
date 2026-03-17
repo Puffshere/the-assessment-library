@@ -41,8 +41,11 @@
                             </div>
 
                             <div class="results-tab" :class="{ 'is-active': activeResultsView === 'fourth' }"
-                                @click="activeResultsView = 'fourth'">
+                                @click="openForOthersTab">
                                 For Others
+                                <span v-if="pendingForOthersCount && !forOthersSeen" class="tab-badge">
+                                    {{ pendingForOthersCount }}
+                                </span>
                             </div>
                         </div>
 
@@ -110,37 +113,72 @@
                             <!-- LIST VIEW -->
                             <template v-else>
                                 <h2 class="panel-title">Assessments I've Taken for Others</h2>
-                                <div v-if="!dashboard.thirdPersonSessions.length" class="empty-state">
+
+                                <div v-if="!dashboard.pendingInvitations.length && !dashboard.thirdPersonSessions.length" class="empty-state">
                                     <p>You haven't taken any assessments on behalf of others yet.</p>
-                                    <p>When someone invites you to take an assessment, it will appear here once completed.</p>
+                                    <p>When someone invites you to take an assessment, it will appear here.</p>
                                 </div>
+
                                 <div v-else class="sessions scroll-area">
-                                    <ul>
-                                        <li v-for="s in dashboard.thirdPersonSessions" :key="s.id" class="session-row">
-                                            <div class="session-row-top">
-                                                <div class="session-main">
-                                                    <div class="session-title">{{ s.assessmentTitle }}</div>
-                                                    <div class="session-meta">
-                                                        For: <strong>{{ s.inviterName }}</strong>
-                                                        <span v-if="s.completedAt" style="margin-left: 8px;">
-                                                            &middot; Completed: {{ formatDate(s.completedAt) }}
-                                                        </span>
+                                    <!-- Pending invitations (link not yet clicked — no session exists) -->
+                                    <div v-if="dashboard.pendingInvitations.length" class="section-block">
+                                        <h3 style="color: #e93d2f;">Awaiting Your Response</h3>
+                                        <hr />
+                                        <ul>
+                                            <li v-for="inv in dashboard.pendingInvitations" :key="String(inv.invitationId)" class="session-row">
+                                                <div class="session-row-top">
+                                                    <div class="session-main">
+                                                        <div class="session-title">{{ inv.assessmentTitle }}</div>
+                                                        <div class="session-meta">
+                                                            From: <strong>{{ inv.inviterName }}</strong>
+                                                            <span v-if="inv.invitedAt" style="margin-left: 8px;">
+                                                                &middot; Invited: {{ formatDate(inv.invitedAt) }}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="session-actions">
+                                                        <button class="blue small"
+                                                            @click="startInvitedAssessment(inv)">
+                                                            Start
+                                                        </button>
                                                     </div>
                                                 </div>
-                                                <div class="session-actions">
-                                                    <button v-if="s.status === 'completed' && s.scoreBreakdown"
-                                                        class="outline small green"
-                                                        @click="selectedForOthersResult = s">
-                                                        View Results
-                                                    </button>
-                                                    <span v-else class="score-pill"
-                                                        :style="{ backgroundColor: '#ffbd05', color: '#fff', borderRadius: '5px', padding: '3px 10px', fontSize: '12px', fontWeight: '600' }">
-                                                        In Progress
-                                                    </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Sessions already started or completed -->
+                                    <div v-if="dashboard.thirdPersonSessions.length" class="section-block">
+                                        <h3 v-if="dashboard.pendingInvitations.length" style="color: #0dab49;">In Progress / Completed</h3>
+                                        <hr v-if="dashboard.pendingInvitations.length" />
+                                        <ul>
+                                            <li v-for="s in dashboard.thirdPersonSessions" :key="s.id" class="session-row">
+                                                <div class="session-row-top">
+                                                    <div class="session-main">
+                                                        <div class="session-title">{{ s.assessmentTitle }}</div>
+                                                        <div class="session-meta">
+                                                            For: <strong>{{ s.inviterName }}</strong>
+                                                            <span v-if="s.completedAt" style="margin-left: 8px;">
+                                                                &middot; Completed: {{ formatDate(s.completedAt) }}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="session-actions">
+                                                        <button v-if="s.status === 'completed' && s.scoreBreakdown"
+                                                            class="outline small green"
+                                                            @click="selectedForOthersResult = s">
+                                                            View Results
+                                                        </button>
+                                                        <button v-else-if="s.status !== 'completed'"
+                                                            class="outline small"
+                                                            @click="resumeThirdPersonSession(s)">
+                                                            Resume
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </template>
                         </div>
@@ -310,6 +348,7 @@ export default {
             selectedResult: null,
             selectedForOthersResult: null,
             activeResultsView: 'first',
+            forOthersSeen: false,
             DstyleTitle: 'Dominance (D)',
             DstyleDescription: 'You are direct, decisive, and results-oriented.',
             IstyleTitle: 'Influence (I)',
@@ -325,7 +364,9 @@ export default {
                     creditsBalance: 0
                 },
                 sessions: [],
-                thirdPersonSessions: []
+                thirdPersonSessions: [],
+                pendingInvitations: [],
+                pendingInviteCount: 0
             }
         }
     },
@@ -399,6 +440,11 @@ export default {
             const s = this.selectedForOthersResult
             if (!s) return null
             return s.scoreBreakdown || (s.score && s.score.breakdown) || null
+        },
+        pendingForOthersCount() {
+            return typeof this.dashboard.pendingInviteCount === 'number'
+                ? this.dashboard.pendingInviteCount
+                : 0
         },
         styleDescription() {
             switch (this.topScore) {
@@ -559,6 +605,21 @@ export default {
         },
         viewResults(session) {
             this.selectedResult = session
+        },
+        openForOthersTab() {
+            this.activeResultsView = 'fourth'
+            this.forOthersSeen = true
+        },
+        startInvitedAssessment(inv) {
+            this.$router.push(
+                `/library/${inv.assessmentSlug}?participant=${inv.participantId}&invitation=${inv.invitationId}`
+            )
+        },
+        resumeThirdPersonSession(s) {
+            const query = { session: s.id }
+            if (s.participantId) query.participant = s.participantId
+            if (s.invitationId)  query.invitation  = s.invitationId
+            this.$router.push({ path: `/library/${s.assessmentSlug}`, query })
         },
         forOthersPct(trait) {
             const b = this.forOthersBreakdown
@@ -902,6 +963,31 @@ export default {
         &:active {
             transform: scale(0.8);
         }
+
+        .tab-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            min-width: 18px;
+            height: 18px;
+            padding: 0 5px;
+            border-radius: 999px;
+            background: $color-d;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 18px;
+            text-align: center;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+            pointer-events: none;
+            animation: badge-pop 0.25s ease;
+        }
+    }
+
+    @keyframes badge-pop {
+        0%   { transform: scale(0); opacity: 0; }
+        70%  { transform: scale(1.2); }
+        100% { transform: scale(1); opacity: 1; }
     }
 
     results-panel,
@@ -958,6 +1044,11 @@ export default {
             font-size: 13px;
             line-height: 1.3;
             box-sizing: border-box;
+
+            .tab-badge {
+                top: -7px;
+                right: 4px;
+            }
         }
 
         .panel,
