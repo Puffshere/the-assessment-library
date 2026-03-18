@@ -130,7 +130,6 @@ exports.createCheckoutSession = async (req, res) => {
     const successUrl = `${baseUrl}/payment/success?session_id={CHECKOUT_SESSION_ID}${isMonthly ? '&billing=monthly' : ''}`;
 
     const sessionParams = {
-      automatic_payment_methods: { enabled: true },
       line_items: [lineItem],
       mode: isMonthly ? 'subscription' : 'payment',
       success_url: successUrl,
