@@ -1,6 +1,13 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const jwt = require('jsonwebtoken');
 
+// Warn loudly at startup if BASE_URL isn't set for a live Stripe environment
+const _baseUrl = process.env.BASE_URL || '';
+const _isLive   = (process.env.STRIPE_SECRET_KEY || '').startsWith('sk_live_');
+if (_isLive && (!_baseUrl || _baseUrl.includes('localhost'))) {
+  console.error('⚠️  PAYMENTS: BASE_URL is not set (or still points to localhost) but live Stripe keys are active. Stripe success/cancel redirects will fail. Set BASE_URL=https://your-domain.com in your environment.');
+}
+
 let User = require('../models/User');
 User = User.default || User;
 
@@ -123,7 +130,7 @@ exports.createCheckoutSession = async (req, res) => {
     const successUrl = `${baseUrl}/payment/success?session_id={CHECKOUT_SESSION_ID}${isMonthly ? '&billing=monthly' : ''}`;
 
     const sessionParams = {
-      payment_method_types: ['card'],
+      automatic_payment_methods: { enabled: true },
       line_items: [lineItem],
       mode: isMonthly ? 'subscription' : 'payment',
       success_url: successUrl,
@@ -203,50 +210,75 @@ exports.verifyAndFulfill = async (req, res) => {
 };
 
 exports.handleWebhook = async (req, res) => {
-  let event;
+  // Verify signature — required in all environments now that secret is configured
+  const sig    = req.headers['stripe-signature'];
+  const secret = process.env.STRIPE_WEBHOOK_SECRET;
 
-  if (process.env.STRIPE_WEBHOOK_SECRET) {
-    const sig = req.headers['stripe-signature'];
-    try {
-      event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
-    } catch (err) {
-      console.error('Stripe webhook signature error:', err.message);
-      return res.status(400).send(`Webhook Error: ${err.message}`);
-    }
-  } else {
-    try {
-      event = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-    } catch (err) {
-      return res.status(400).send('Invalid webhook payload');
-    }
+  if (!secret) {
+    console.error('STRIPE_WEBHOOK_SECRET is not set — webhook rejected');
+    return res.status(500).send('Webhook secret not configured');
+  }
+
+  let event;
+  try {
+    event = stripe.webhooks.constructEvent(req.body, sig, secret);
+  } catch (err) {
+    console.error('Stripe webhook signature verification failed:', err.message);
+    return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
   try {
-    // One-time payment fallback (in case success page never called verifyAndFulfill)
-    if (event.type === 'checkout.session.completed') {
-      const session = event.data.object;
-      if (session.mode === 'payment' && session.payment_status === 'paid') {
-        const { userId, credits, packageId } = session.metadata;
-        await fulfillCredits(
-          userId, Number(credits), packageId, session.id,
-          `Stripe webhook one-time: ${packageId}`
-        );
-      }
-    }
+    switch (event.type) {
 
-    // Subscription renewal — fires each billing cycle after the first
-    if (event.type === 'invoice.paid') {
-      const invoice = event.data.object;
-      if (invoice.billing_reason === 'subscription_cycle') {
-        const subscription = await stripe.subscriptions.retrieve(invoice.subscription);
-        const { userId, credits, packageId } = subscription.metadata;
-        if (userId && credits) {
+      // ── One-time purchase OR initial subscription payment ──────────────────
+      case 'checkout.session.completed': {
+        const session = event.data.object;
+
+        // One-time: fulfill immediately (idempotent — safe if success page already called verifyAndFulfill)
+        if (session.mode === 'payment' && session.payment_status === 'paid') {
+          const { userId, credits, packageId } = session.metadata;
           await fulfillCredits(
-            userId, Number(credits), packageId, invoice.id,
-            `Stripe subscription renewal: ${packageId}`
+            userId, Number(credits), packageId, session.id,
+            `Stripe one-time checkout: ${packageId}`
           );
         }
+
+        // Subscription initial payment: fulfill so credits arrive even if the
+        // success page never calls verifyAndFulfill (e.g. user closes the tab)
+        if (session.mode === 'subscription' && session.status === 'complete') {
+          const { userId, credits, packageId } = session.metadata;
+          await fulfillCredits(
+            userId, Number(credits), packageId, session.id,
+            `Stripe subscription initial: ${packageId}`
+          );
+        }
+        break;
       }
+
+      // ── Monthly renewal ────────────────────────────────────────────────────
+      case 'invoice.payment_succeeded': {
+        const invoice = event.data.object;
+
+        // Only handle renewals — the initial invoice is covered by checkout.session.completed
+        if (invoice.billing_reason === 'subscription_cycle' && invoice.subscription) {
+          const subscription = await stripe.subscriptions.retrieve(invoice.subscription);
+          const { userId, credits, packageId } = subscription.metadata;
+
+          if (userId && credits) {
+            await fulfillCredits(
+              userId, Number(credits), packageId, invoice.id,
+              `Stripe subscription renewal: ${packageId}`
+            );
+          } else {
+            console.error('Webhook invoice.payment_succeeded: missing metadata on subscription', invoice.subscription);
+          }
+        }
+        break;
+      }
+
+      default:
+        // Ignore all other event types
+        break;
     }
   } catch (err) {
     console.error('Webhook fulfillment error:', err);
