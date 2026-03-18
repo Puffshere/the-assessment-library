@@ -19,7 +19,7 @@ const CREDIT_PACKAGES = [
   {
     id: 'credits_1',
     credits: 1,
-    cents: 199,
+    cents: 299,
     label: '1 Credit',
     description: 'Try a single assessment',
     priceIds: {
