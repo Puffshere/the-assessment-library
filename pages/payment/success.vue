@@ -1,44 +1,53 @@
 <template>
-  <div class="payment-result-page">
-    <div class="result-card">
-      <div v-if="loading" class="state-loading">
-        <div class="spinner" />
-        <p>Confirming your payment…</p>
-      </div>
+  <div class="page-wrap">
+    <main-nav />
 
-      <div v-else-if="error" class="state-error">
-        <div class="icon-circle icon-circle--error">&#10005;</div>
-        <h1>Something went wrong</h1>
-        <p>{{ error }}</p>
-        <nuxt-link to="/dashboard" class="result-btn result-btn--outline">
-          Go to Dashboard
-        </nuxt-link>
-      </div>
+    <section class="success-section">
+      <div class="success-container">
 
-      <div v-else class="state-success">
-        <div class="icon-circle icon-circle--success">&#10003;</div>
-        <h1>{{ isSubscription ? 'Subscription Started!' : 'Payment Successful!' }}</h1>
-        <p>
-          Successfully added
-          <strong>{{ creditsAdded }} credit<span v-if="creditsAdded !== 1">s</span></strong>
-          to your account.
-        </p>
-        <p class="balance-line">
-          Your new balance: <span class="balance-value">{{ newBalance }} credit<span v-if="newBalance !== 1">s</span></span>
-        </p>
-        <p v-if="isSubscription" class="sub-renewal-note">
-          {{ creditsAdded }} credit<span v-if="creditsAdded !== 1">s</span> will be added automatically each month.
-        </p>
-        <div class="result-actions">
-          <nuxt-link to="/dashboard" class="result-btn">
-            Go to Dashboard
-          </nuxt-link>
-          <nuxt-link to="/library" class="result-btn result-btn--outline">
-            Browse Assessments
-          </nuxt-link>
+        <!-- Loading -->
+        <div v-if="loading" class="result-card">
+          <div class="spinner" />
+          <p class="status-text">Confirming your payment…</p>
         </div>
+
+        <!-- Error -->
+        <div v-else-if="error" class="result-card">
+          <div class="icon-circle icon-circle--error">&#10005;</div>
+          <h1>Something went wrong</h1>
+          <p class="sub-text">{{ error }}</p>
+          <div class="action-row">
+            <nuxt-link to="/dashboard" class="btn-primary">Go to Dashboard</nuxt-link>
+          </div>
+        </div>
+
+        <!-- Success -->
+        <div v-else class="result-card">
+          <div class="icon-circle icon-circle--success">&#10003;</div>
+          <h1>{{ isSubscription ? 'Subscription Started!' : 'Payment Successful!' }}</h1>
+          <p class="credits-added">
+            Successfully added
+            <strong>{{ creditsAdded }} credit<span v-if="creditsAdded !== 1">s</span></strong>
+            to your account.
+          </p>
+          <div class="balance-box">
+            <span class="balance-label">New balance</span>
+            <span class="balance-value">{{ newBalance }}</span>
+            <span class="balance-unit">credit<span v-if="newBalance !== 1">s</span></span>
+          </div>
+          <p v-if="isSubscription" class="renewal-note">
+            {{ creditsAdded }} credit<span v-if="creditsAdded !== 1">s</span> will be added to your account automatically every month.
+          </p>
+          <div class="action-row">
+            <nuxt-link to="/dashboard" class="btn-primary">Go to Dashboard</nuxt-link>
+            <nuxt-link to="/library" class="btn-outline">Browse Assessments</nuxt-link>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
+
+    <footer-fold />
   </div>
 </template>
 
@@ -46,26 +55,26 @@
 export default {
   name: 'PaymentSuccess',
 
+  components: {
+    'main-nav':    () => import('@/components/Nav'),
+    'footer-fold': () => import('@/components/Footer'),
+  },
+
   data() {
     return {
-      loading: true,
-      error: '',
-      creditsAdded: 0,
-      newBalance: 0,
+      loading:        true,
+      error:          '',
+      creditsAdded:   0,
+      newBalance:     0,
       isSubscription: false,
     };
   },
 
-  computed: {
-    billingParam() {
-      return this.$route.query.billing;
-    },
-  },
-
   async mounted() {
     const sessionId = this.$route.query.session_id;
+
     if (!sessionId) {
-      this.error = 'No payment session found.';
+      this.error   = 'No payment session found. If you completed a payment, your credits may still have been added — please check your dashboard.';
       this.loading = false;
       return;
     }
@@ -75,21 +84,21 @@ export default {
         this.$store.state.token ||
         (process.client && localStorage.getItem('tal_token')) ||
         null;
+
       const res = await this.$axios.$post(
         '/api/payments/verify-and-fulfill',
         { sessionId },
         token ? { headers: { Authorization: `Bearer ${token}` } } : {}
       );
 
-      this.creditsAdded    = res.creditsAdded || 0;
-      this.newBalance      = res.creditsBalance;
-      this.isSubscription  = !!res.isSubscription;
+      this.creditsAdded   = res.creditsAdded   || 0;
+      this.newBalance     = res.creditsBalance  || 0;
+      this.isSubscription = !!res.isSubscription;
 
       this.$store.commit('SET_CREDITS', res.creditsBalance);
     } catch (err) {
-      this.error =
-        (err.response && err.response.data && err.response.data.message) ||
-        'Could not verify payment. Please contact support if credits were not added.';
+      const msg = err.response && err.response.data && err.response.data.message;
+      this.error = msg || 'Could not confirm your payment. If credits were charged, please contact support — your credits will not be lost.';
     } finally {
       this.loading = false;
     }
@@ -100,34 +109,39 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/vars';
 
-.payment-result-page {
+.page-wrap {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+.success-section {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f0f6fb;
-  padding: 24px 16px;
+  padding: 48px 16px;
+}
+
+.success-container {
+  width: 100%;
+  max-width: 480px;
 }
 
 .result-card {
   background: #fff;
   border-radius: 20px;
   padding: 48px 40px;
-  max-width: 460px;
-  width: 100%;
   text-align: center;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
 
-  @media (max-width: 480px) {
+  @media (max-width: 520px) {
     padding: 36px 24px;
   }
 }
 
 /* Loading */
-.state-loading {
-  p { color: #666; margin-top: 20px; }
-}
-
 .spinner {
   width: 48px;
   height: 48px;
@@ -135,14 +149,20 @@ export default {
   border-top-color: $color-d;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
 
-/* Icon circles */
+.status-text {
+  color: #888;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Icon */
 .icon-circle {
   width: 72px;
   height: 72px;
@@ -150,7 +170,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin: 0 auto 24px;
 
@@ -169,60 +189,93 @@ h1 {
   font-size: 1.6rem;
   font-weight: 700;
   color: #1a1a2e;
-  margin: 0 0 12px;
+  margin: 0 0 14px;
 }
 
-p {
+.sub-text {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.credits-added {
   color: #555;
   font-size: 1rem;
+  margin: 0 0 20px;
+  line-height: 1.5;
+
+  strong { color: #1a1a2e; }
+}
+
+/* Balance box */
+.balance-box {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  background: #f0f6fb;
+  border-radius: 12px;
+  padding: 14px 28px;
+  margin-bottom: 20px;
+}
+
+.balance-label {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.balance-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1;
+}
+
+.balance-unit {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.renewal-note {
+  font-size: 0.84rem;
+  color: #888;
+  font-style: italic;
   margin: 0 0 8px;
   line-height: 1.5;
 }
 
-.balance-line {
-  font-size: 0.95rem;
-  color: #777;
-  margin-bottom: 8px;
-}
-
-.sub-renewal-note {
-  font-size: 0.85rem;
-  color: #888;
-  margin-bottom: 24px;
-  font-style: italic;
-}
-
-.result-actions {
-  margin-top: 24px;
+/* Buttons */
+.action-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 28px;
 }
 
-.balance-value {
-  font-weight: 700;
-  color: #1a1a2e;
-}
-
-.result-btn {
+.btn-primary,
+.btn-outline {
   display: inline-block;
-  margin: 6px;
   padding: 12px 28px;
-  background: $color-d;
-  color: #fff;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
   transition: opacity 0.2s;
 
-  &:hover { opacity: 0.88; }
+  &:hover { opacity: 0.85; }
+}
 
-  &--outline {
-    background: transparent;
-    border: 2px solid $color-d;
-    color: $color-d;
-  }
+.btn-primary {
+  background: $color-d;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid $color-d;
+  color: $color-d;
 }
 </style>
