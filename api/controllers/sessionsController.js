@@ -37,7 +37,7 @@ const authenticate = async (req, res, next) => {
 
 const createOrGetSession = async (req, res) => {
   try {
-    const { assessmentId, isThirdPerson, thirdPersonParticipantId, thirdPersonInvitationId, thirdPersonForUserId } = req.body;
+    const { assessmentId, isThirdPerson, thirdPersonParticipantId, thirdPersonInvitationId, thirdPersonForUserId, childProfileId } = req.body;
     if (!assessmentId) {
       return res.status(400).json({ message: 'assessmentId required' });
     }
@@ -77,6 +77,10 @@ const createOrGetSession = async (req, res) => {
         sessionData.thirdPersonForUserId = thirdPersonForUserId;
       }
 
+      if (childProfileId) {
+        sessionData.childProfileId = childProfileId;
+      }
+
       session = await AssessmentSession.create(sessionData);
     }
 
@@ -108,7 +112,7 @@ const getSessionById = async (req, res) => {
 
 const saveAnswer = async (req, res) => {
   try {
-    const { questionId, response, nextQuestionIndex, isFinal, score } = req.body;
+    const { questionId, response, nextQuestionIndex, isFinal, score, childProfileId } = req.body;
     const session = await AssessmentSession.findById(req.params.id);
 
     if (!session) {
@@ -122,6 +126,11 @@ const saveAnswer = async (req, res) => {
     if (session.status === 'not_started') {
       session.status = 'in_progress';
       session.startedAt = new Date();
+    }
+
+    // Link session to child profile if provided and not already linked
+    if (childProfileId && !session.childProfileId) {
+      session.childProfileId = childProfileId;
     }
 
     const existingIndex = session.answers.findIndex(a => a.questionId === questionId);
@@ -170,6 +179,75 @@ const saveAnswer = async (req, res) => {
         }
       } catch (err) {
         console.error('Error updating participant invitation on completion:', err);
+      }
+    }
+
+    // If assessment completed and linked to a child profile, save results to the child
+    if (isFinal && session.childProfileId) {
+      try {
+        const ChildProfileModule = require('../models/ChildProfile');
+        const ChildProfile = ChildProfileModule.default || ChildProfileModule;
+
+        const childProfile = await ChildProfile.findById(session.childProfileId);
+        if (childProfile && childProfile.parentUserId.toString() === req.user._id.toString()) {
+          // Get assessment details for the record
+          const Assessment = require('../models/Assessment');
+          const assessment = await Assessment.findById(session.assessment).select('title slug').lean();
+
+          const breakdown = score && score.breakdown
+            ? { D: Number(score.breakdown.D) || 0, I: Number(score.breakdown.I) || 0,
+                S: Number(score.breakdown.S) || 0, C: Number(score.breakdown.C) || 0 }
+            : { D: 0, I: 0, S: 0, C: 0 };
+
+          childProfile.completedAssessments.push({
+            sessionId: session._id,
+            assessmentId: session.assessment,
+            assessmentTitle: assessment ? assessment.title : '',
+            assessmentSlug: assessment ? assessment.slug : '',
+            completedAt: session.completedAt,
+            scoreBreakdown: breakdown,
+          });
+
+          // Recalculate dominant DISC type from all child assessments
+          const totals = { D: 0, I: 0, S: 0, C: 0 };
+          let count = 0;
+          for (const ca of childProfile.completedAssessments) {
+            const b = ca.scoreBreakdown;
+            if (!b) continue;
+            totals.D += Number(b.D) || 0;
+            totals.I += Number(b.I) || 0;
+            totals.S += Number(b.S) || 0;
+            totals.C += Number(b.C) || 0;
+            count++;
+          }
+          if (count) {
+            let dominant = 'D';
+            for (const trait of ['I', 'S', 'C']) {
+              if (totals[trait] > totals[dominant]) dominant = trait;
+            }
+            childProfile.currentDiscType = dominant;
+
+            // Derive stats from averaged DISC scores
+            const avg = {
+              D: totals.D / count, I: totals.I / count,
+              S: totals.S / count, C: totals.C / count,
+            };
+            const clamp = (v) => Math.round(Math.min(100, Math.max(0, v)));
+            childProfile.stats = {
+              strength: clamp(avg.D),
+              leadership: clamp(avg.D),
+              speed: clamp(avg.I),
+              creativity: clamp((avg.I + avg.C) / 2),
+              heart: clamp(avg.S),
+              wisdom: clamp((avg.S + avg.C) / 2),
+            };
+          }
+
+          childProfile.hasCompletedFirstAssessment = true;
+          await childProfile.save();
+        }
+      } catch (err) {
+        console.error('Error saving assessment to child profile:', err);
       }
     }
 

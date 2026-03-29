@@ -4,8 +4,6 @@
             <main-nav></main-nav>
 
             <section class="title">
-                <button @click="jumpToLibrary" class="teal">Library</button>
-
                 <div class="shadow">
                     <div style="padding: 30px 0 20px 0;">
                         <h1>{{ displayTitle }}</h1>
@@ -78,18 +76,35 @@
                     <!-- BREAKDOWN BUTTON -->
                     <div v-if="currentQuestion === totalQuestions" class="button-wrapper">
                         <div v-if="topScore === 'D'">
-                            <button class="gold disc" @click="breakdownModal = true">See Breakdown</button>
+                            <button class="gold disc" @click="openBreakdown">See Breakdown</button>
                         </div>
                         <div v-if="topScore === 'I'">
-                            <button class="gold influence" @click="breakdownModal = true">See Breakdown</button>
+                            <button class="gold influence" @click="openBreakdown">See Breakdown</button>
                         </div>
                         <div v-if="topScore === 'S'">
-                            <button class="gold steadiness" @click="breakdownModal = true">See Breakdown</button>
+                            <button class="gold steadiness" @click="openBreakdown">See Breakdown</button>
                         </div>
                         <div v-if="topScore === 'C'">
-                            <button class="gold conscientiousness" @click="breakdownModal = true">
+                            <button class="gold conscientiousness" @click="openBreakdown">
                                 See Breakdown
                             </button>
+                        </div>
+                    </div>
+
+                    <!-- POST-BREAKDOWN ACTIONS (shown after modal is closed for the first time) -->
+                    <div v-if="currentQuestion === totalQuestions && hasViewedBreakdown && !breakdownModal" class="post-breakdown-card-wrap">
+                        <div class="post-breakdown-card">
+                            <p v-if="!kidsViewActive" class="pba-label">What would you like to do next?</p>
+                            <div class="pba-buttons">
+                                <button class="pba-filled" @click="$router.push('/dashboard')">
+                                    <svg class="pba-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /></svg>
+                                    Return to Dashboard
+                                </button>
+                                <button v-if="!kidsViewActive" class="pba-outline" @click="goToInvite">
+                                    <svg class="pba-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                    Invite Someone to Take This Assessment
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -100,7 +115,7 @@
         <transition name="fade">
             <section v-if="breakdownModal" class="modal-window">
                 <div class="container" style="margin-top: 20px;">
-                    <a title="Close" class="modal-close" @click="breakdownModal = false">Close</a>
+                    <a title="Close" class="modal-close" @click="closeBreakdown">Close</a>
 
                     <div class="row">
                         <div class="col-12">
@@ -168,6 +183,72 @@
                     </div>
                 </div>
             </section>
+        </transition>
+
+        <!-- INVITE MODAL -->
+        <transition name="fade">
+            <div v-if="showInviteModal" class="invite-backdrop" @click.self="closeInviteModal">
+                <div class="invite-modal">
+                    <button class="invite-modal__close" @click="closeInviteModal" aria-label="Close">&times;</button>
+
+                    <h3 class="invite-modal__title">Invite Someone</h3>
+
+                    <div class="invite-modal__badge">
+                        <svg class="invite-modal__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        {{ displayTitle }}
+                    </div>
+
+                    <!-- Existing contacts -->
+                    <div v-if="inviteParticipants.length" class="invite-modal__section">
+                        <p class="invite-modal__section-label">Your contacts</p>
+                        <ul class="invite-modal__contacts">
+                            <li v-for="p in inviteParticipants" :key="p._id"
+                                class="invite-modal__contact"
+                                :class="{ 'is-selected': inviteSelectedId === p._id }"
+                                @click="selectParticipant(p._id)">
+                                <span class="invite-modal__radio">
+                                    <span v-if="inviteSelectedId === p._id" class="invite-modal__radio-dot"></span>
+                                </span>
+                                <span class="invite-modal__contact-info">
+                                    <span class="invite-modal__contact-name">{{ p.name }}</span>
+                                    <span class="invite-modal__contact-email">{{ p.email }}</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div v-else class="invite-modal__empty">
+                        <p>You don't have any contacts yet. Add one below to send your first invite.</p>
+                    </div>
+
+                    <!-- New contact (collapsible) -->
+                    <div class="invite-modal__new-section">
+                        <button class="invite-modal__new-toggle" @click="toggleNewContact">
+                            <svg class="invite-modal__chevron" :class="{ 'is-open': inviteNewExpanded }" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
+                            Invite someone new
+                        </button>
+
+                        <transition name="slide-down">
+                            <div v-if="inviteNewExpanded" class="invite-modal__new-fields">
+                                <input v-model="inviteNewName" type="text" placeholder="Name" class="invite-modal__input" />
+                                <input v-model="inviteNewEmail" type="email" placeholder="Email address" class="invite-modal__input" />
+                            </div>
+                        </transition>
+                    </div>
+
+                    <!-- Error / Success -->
+                    <p v-if="inviteError" class="invite-modal__error">{{ inviteError }}</p>
+                    <p v-if="inviteSuccess" class="invite-modal__success">{{ inviteSuccess }}</p>
+
+                    <!-- Actions -->
+                    <div class="invite-modal__actions">
+                        <button class="invite-modal__send" :disabled="inviteLoading" @click="submitInvite">
+                            {{ inviteLoading ? 'Sending...' : 'Send Invite' }}
+                        </button>
+                        <button class="invite-modal__cancel" @click="closeInviteModal">Cancel</button>
+                    </div>
+                </div>
+            </div>
         </transition>
 
         <LazyHydrate when-visible>
@@ -239,16 +320,31 @@ export default {
             CstyleDescription:
                 'You notice details and think things through. You like clear rules, careful plans, and helping the team solve tricky problems the right way.',
             breakdownModal: false,
+            hasViewedBreakdown: false,
             isClient: false,
             questions: [],
             isThirdPerson: false,
             thirdPersonInviterName: '',
             thirdPersonParticipantId: this.$route.query.participant || null,
             thirdPersonInvitationId: this.$route.query.invitation || null,
-            thirdPersonForUserId: null
+            thirdPersonForUserId: null,
+
+            // Invite modal state
+            showInviteModal: false,
+            inviteParticipants: [],
+            inviteSelectedId: null,
+            inviteNewExpanded: false,
+            inviteNewName: '',
+            inviteNewEmail: '',
+            inviteLoading: false,
+            inviteError: '',
+            inviteSuccess: ''
         };
     },
     computed: {
+        kidsViewActive() {
+            return this.$store.state.kidsViewActive;
+        },
         imageClass() {
             const slug = this.$route.params.slug;
 
@@ -454,15 +550,23 @@ export default {
                         };
                     }
 
+                    const answerPayload = {
+                        questionId,
+                        response: trait,
+                        nextQuestionIndex,
+                        isFinal,
+                        score: scorePayload
+                    };
+
+                    // Link to active child profile when in kids view
+                    const activeChild = this.$store.state.activeChildProfile;
+                    if (this.$store.state.kidsViewActive && activeChild && activeChild._id) {
+                        answerPayload.childProfileId = activeChild._id;
+                    }
+
                     await this.$axios.$post(
                         `/api/sessions/${this.sessionId}/answer`,
-                        {
-                            questionId,
-                            response: trait,
-                            nextQuestionIndex,
-                            isFinal,
-                            score: scorePayload
-                        },
+                        answerPayload,
                         {
                             headers: {
                                 Authorization: `Bearer ${this.$store.state.token}`
@@ -476,10 +580,96 @@ export default {
                 this.calculateTotals();
             }
         },
-        jumpToLibrary(event) {
-            window.location.href = '/';
-            if (event && event.target) {
-                event.target.blur();
+        openBreakdown() {
+            this.breakdownModal = true;
+        },
+        closeBreakdown() {
+            this.breakdownModal = false;
+            this.hasViewedBreakdown = true;
+        },
+        async goToInvite() {
+            this.showInviteModal = true;
+            this.inviteSelectedId = null;
+            this.inviteNewExpanded = false;
+            this.inviteNewName = '';
+            this.inviteNewEmail = '';
+            this.inviteError = '';
+            this.inviteSuccess = '';
+
+            try {
+                const res = await this.$axios.$get('/api/participants');
+                this.inviteParticipants = res || [];
+            } catch (err) {
+                console.error('Error fetching participants:', err);
+                this.inviteParticipants = [];
+            }
+        },
+        closeInviteModal() {
+            this.showInviteModal = false;
+        },
+        selectParticipant(id) {
+            this.inviteNewExpanded = false;
+            this.inviteNewName = '';
+            this.inviteNewEmail = '';
+            this.inviteSelectedId = id;
+            this.inviteError = '';
+        },
+        toggleNewContact() {
+            this.inviteNewExpanded = !this.inviteNewExpanded;
+            if (this.inviteNewExpanded) {
+                this.inviteSelectedId = null;
+            }
+            this.inviteError = '';
+        },
+        async submitInvite() {
+            this.inviteError = '';
+            this.inviteSuccess = '';
+
+            const isNew = this.inviteNewExpanded && (this.inviteNewName || this.inviteNewEmail);
+
+            if (!isNew && !this.inviteSelectedId) {
+                this.inviteError = 'Please select a contact or add a new one.';
+                return;
+            }
+
+            if (isNew) {
+                if (!this.inviteNewName.trim() || !this.inviteNewEmail.trim()) {
+                    this.inviteError = 'Name and email are required for a new contact.';
+                    return;
+                }
+            }
+
+            this.inviteLoading = true;
+
+            try {
+                let participantId;
+
+                if (isNew) {
+                    const created = await this.$axios.$post('/api/participants', {
+                        name: this.inviteNewName.trim(),
+                        email: this.inviteNewEmail.trim()
+                    });
+                    participantId = created._id;
+                    this.inviteParticipants.push(created);
+                } else {
+                    participantId = this.inviteSelectedId;
+                }
+
+                await this.$axios.$post(`/api/participants/${participantId}/invite`, {
+                    assessmentSlug: this.assessmentSlug
+                });
+
+                this.inviteSuccess = 'Invite sent!';
+                setTimeout(() => { this.closeInviteModal(); }, 1200);
+            } catch (err) {
+                const status = err.response && err.response.status;
+                if (status === 409) {
+                    this.inviteError = 'This person has already been invited to this assessment.';
+                } else {
+                    this.inviteError = (err.response && err.response.data && err.response.data.message) || 'Failed to send invite. Please try again.';
+                }
+            } finally {
+                this.inviteLoading = false;
             }
         },
         calculateTotals() {
@@ -663,7 +853,7 @@ export default {
             margin-top: 50px;
 
             button {
-                margin-bottom: 60px;
+                margin-bottom: 20px;
                 padding: 10px 20px;
                 transition: transform 0.2s ease;
 
@@ -698,6 +888,83 @@ export default {
                     background: #1666ff;
                     color: #fff;
                 }
+            }
+        }
+
+        .post-breakdown-card-wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 24px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 5000;
+        }
+
+        .post-breakdown-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            padding: 24px 32px;
+            width: fit-content;
+
+            .pba-label {
+                margin: 0 0 16px;
+                font-size: 13px;
+                font-weight: 600;
+                color: #999;
+                text-align: center;
+                letter-spacing: 0.02em;
+            }
+
+            .pba-buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .pba-icon {
+                width: 16px;
+                height: 16px;
+                flex-shrink: 0;
+            }
+
+            button {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                width: auto;
+                height: auto;
+                padding: 13px 28px;
+                font-size: 15px;
+                font-family: $nunito-family;
+                font-weight: 700;
+                border-radius: 50px;
+                cursor: pointer;
+                box-shadow: none;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+                &:hover {
+                    transform: translateY(-1px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+                }
+            }
+
+            .pba-filled {
+                background-color: #008b67;
+                color: #fff;
+                border: none;
+            }
+
+            .pba-outline {
+                background: transparent;
+                color: #008b67;
+                border: 1.5px solid #008b67;
             }
         }
     }
@@ -888,6 +1155,369 @@ export default {
                 padding: 20px 16px 40px;
                 min-height: auto;
             }
+
+            .post-breakdown-card-wrap {
+                padding: 0 8px;
+            }
+
+            .post-breakdown-card {
+                padding: 20px 16px;
+                width: auto;
+
+                .pba-buttons {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                button {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+/* ── Invite Modal ─────────────────────────────────── */
+
+.invite-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 900000;
+    padding: 20px;
+}
+
+.invite-modal {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 460px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+    font-family: $nunito-family;
+    color: #12304d;
+
+    &__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: none;
+        font-size: 22px;
+        color: #999;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: none;
+        transition: background 0.15s;
+
+        &:hover {
+            background: #f0f0f0;
+            color: #333;
+            transform: none;
+        }
+    }
+
+    &__title {
+        margin: 0 0 16px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #12304d;
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #f0f7f4;
+        color: #008b67;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 8px 16px;
+        border-radius: 50px;
+        border: 1px solid #d0e8dd;
+        margin-bottom: 20px;
+    }
+
+    &__badge-icon {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+    }
+
+    &__section {
+        margin-bottom: 12px;
+    }
+
+    &__section-label {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #999;
+        margin: 0 0 8px;
+    }
+
+    &__contacts {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #e8ecf0;
+        border-radius: 10px;
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        cursor: pointer;
+        transition: background 0.12s;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #f0f2f5;
+        }
+
+        &:hover {
+            background: #f8fafb;
+        }
+
+        &.is-selected {
+            background: #f0f7f4;
+        }
+    }
+
+    &__radio {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #c0c8d0;
+        border-radius: 50%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: border-color 0.15s;
+
+        .is-selected & {
+            border-color: #008b67;
+        }
+    }
+
+    &__radio-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #008b67;
+    }
+
+    &__contact-info {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    &__contact-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: #12304d;
+        line-height: 1.2;
+    }
+
+    &__contact-email {
+        font-size: 12px;
+        color: #888;
+        line-height: 1.3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__empty {
+        background: #f8fafb;
+        border-radius: 10px;
+        padding: 16px 20px;
+        margin-bottom: 12px;
+
+        p {
+            margin: 0;
+            font-size: 13px;
+            color: #888;
+            text-align: center;
+        }
+    }
+
+    /* Collapsible new contact */
+    &__new-section {
+        margin-bottom: 20px;
+    }
+
+    &__new-toggle {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        width: auto;
+        height: auto;
+        padding: 8px 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+        font-size: 13px;
+        font-weight: 700;
+        color: #008b67;
+        cursor: pointer;
+        font-family: $nunito-family;
+
+        &:hover {
+            color: darken(#008b67, 8%);
+            transform: none;
+        }
+    }
+
+    &__chevron {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.2s ease;
+
+        &.is-open {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__new-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 14px;
+        font-family: $nunito-family;
+        border: 1.5px solid #dde3ea;
+        border-radius: 10px;
+        outline: none;
+        box-sizing: border-box;
+        transition: border-color 0.15s;
+
+        &:focus {
+            border-color: #008b67;
+        }
+
+        &::placeholder {
+            color: #b0b8c0;
+        }
+    }
+
+    &__error {
+        font-size: 13px;
+        font-weight: 600;
+        color: #e93d2f;
+        margin: 0 0 12px;
+    }
+
+    &__success {
+        font-size: 13px;
+        font-weight: 600;
+        color: #008b67;
+        margin: 0 0 12px;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 12px;
+    }
+
+    &__send {
+        flex: 1;
+        width: auto;
+        height: auto;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 50px;
+        background: #008b67;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        font-family: $nunito-family;
+        cursor: pointer;
+        transition: transform 0.15s, box-shadow 0.15s;
+
+        &:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 139, 103, 0.3);
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+    }
+
+    &__cancel {
+        width: auto;
+        height: auto;
+        padding: 12px 24px;
+        border: 1.5px solid #dde3ea;
+        border-radius: 50px;
+        background: #fff;
+        color: #666;
+        font-size: 15px;
+        font-weight: 700;
+        font-family: $nunito-family;
+        cursor: pointer;
+        box-shadow: none;
+        transition: background 0.15s;
+
+        &:hover {
+            background: #f5f5f5;
+            transform: none;
+        }
+    }
+}
+
+/* slide-down transition for new contact fields */
+.slide-down-enter-active,
+.slide-down-leave-active {
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.slide-down-enter,
+.slide-down-leave-to {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+}
+
+.slide-down-enter-to,
+.slide-down-leave {
+    opacity: 1;
+    max-height: 120px;
+}
+
+@media (max-width: 480px) {
+    .invite-modal {
+        padding: 24px 20px;
+        border-radius: 12px;
+
+        &__actions {
+            flex-direction: column;
         }
     }
 }

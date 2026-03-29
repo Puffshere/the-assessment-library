@@ -28,3 +28,6 @@ $ nvm use 16
 
 ### and for this app use:
 $ nvm use 20.11.1
+
+### for tests run:
+npm run test:open

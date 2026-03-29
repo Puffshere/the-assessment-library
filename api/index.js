@@ -15,6 +15,8 @@ import contactController from './controllers/contactController.js';
 import participantsController from './controllers/participantsController.js';
 import reportsController from './controllers/reportsController.js';
 import paymentsController from './controllers/paymentsController.js';
+import kidsModeController from './controllers/kidsModeController.js';
+import childProfileController from './controllers/childProfileController.js';
 
 
 const upload = multer();
@@ -58,6 +60,8 @@ app.post('/auth/forgot-password', authController.forgotPassword);
 
 app.post('/auth/reset-password', authController.resetPassword);
 
+app.get('/auth/me', sessionsController.authenticate, authController.getMe);
+
 app.get('/dashboard', dashboardController.getDashboard);
 
 app.post('/checkout', assessmentController.checkout);
@@ -89,6 +93,17 @@ app.post('/reports/generate', sessionsController.authenticate, reportsController
 app.get('/payments/packages', paymentsController.getPackages);
 app.post('/payments/create-checkout-session', sessionsController.authenticate, paymentsController.createCheckoutSession);
 app.post('/payments/verify-and-fulfill', sessionsController.authenticate, paymentsController.verifyAndFulfill);
+
+app.post('/kids-mode/set-pin', sessionsController.authenticate, kidsModeController.setPin);
+app.post('/kids-mode/verify-pin', sessionsController.authenticate, kidsModeController.verifyPin);
+app.post('/kids-mode/change-pin', sessionsController.authenticate, kidsModeController.changePin);
+app.post('/kids-mode/reset-pin', sessionsController.authenticate, kidsModeController.resetPinWithPassword);
+app.post('/kids-mode/toggle', sessionsController.authenticate, kidsModeController.toggleKidsMode);
+
+app.get('/child-profiles', sessionsController.authenticate, childProfileController.getProfiles);
+app.post('/child-profiles', sessionsController.authenticate, childProfileController.createProfile);
+app.put('/child-profiles/:id', sessionsController.authenticate, childProfileController.updateProfile);
+app.delete('/child-profiles/:id', sessionsController.authenticate, childProfileController.deleteProfile);
 
 app.get('/participants', sessionsController.authenticate, participantsController.getParticipants);
 app.post('/participants', sessionsController.authenticate, participantsController.addParticipant);

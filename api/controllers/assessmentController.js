@@ -25,7 +25,7 @@ const checkout = async (req, res) => {
     }
 
     const userId = decoded.id || decoded._id;
-    const { assessmentId } = req.body || {};
+    const { assessmentId, childProfileId } = req.body || {};
 
     if (!assessmentId) {
       return res.status(400).json({ message: 'assessmentId is required' });
@@ -50,13 +50,19 @@ const checkout = async (req, res) => {
       });
     }
 
-    const session = await AssessmentSession.create({
+    const sessionData = {
       user: user._id,
       assessment: assessment._id,
       status: 'not_started',
       currentQuestionIndex: 0,
       answers: [],
-    });
+    };
+
+    if (childProfileId) {
+      sessionData.childProfileId = childProfileId;
+    }
+
+    const session = await AssessmentSession.create(sessionData);
 
     user.creditsBalance -= cost;
     await user.save();
@@ -119,25 +125,35 @@ const getAssessmentBySlug = async (req, res) => {
 
 const getAssessmentsForLibrary = async (req, res) => {
   try {
-    const slugs = [
-      'jessicas-first-job',
-      'rogers-new-business',
-      'allies-professional-journey',
-      'shanes-day-at-the-park',
-      'trevors-day-at-school',
-      'westons-birthday'
-    ];
+    // Optionally read the authenticated user to check kids_mode_enabled
+    let kidsMode = false;
+    const authHeader = req.headers.authorization || '';
+    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+
+    if (token) {
+      try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const userId = decoded.id || decoded._id;
+        const user = await User.findById(userId).select('kids_mode_enabled').lean();
+        if (user && user.kids_mode_enabled) {
+          kidsMode = true;
+        }
+      } catch (_) {
+        // Invalid token — fall through to standard view
+      }
+    }
+
+    const filter = { isActive: true };
+    if (kidsMode) {
+      filter['category.shelf'] = 'Kids';
+    }
 
     const assessments = await Assessment.find(
-      {
-        isActive: true,
-        slug: { $in: slugs }
-      },
-      // 👇 add category here
+      filter,
       'slug title description creditsCost estimatedCompletion wordsLength heroImageUrl category'
     ).lean();
 
-    res.json({ assessments });
+    res.json({ assessments, kidsMode });
   } catch (err) {
     console.error('Error loading assessments for library:', err);
     res.status(500).json({ message: 'Failed to load assessments' });

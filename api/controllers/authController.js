@@ -50,6 +50,8 @@ const login = async (req, res) => {
         email: user.email,
         name: user.name,
         role: user.role,
+        kids_mode_enabled: user.kids_mode_enabled,
+        has_kids_pin: !!user.kids_mode_pin,
       },
     });
   } catch (err) {
@@ -127,6 +129,8 @@ const register = async (req, res) => {
         name: user.name,
         email: user.email,
         creditsBalance: user.creditsBalance,
+        kids_mode_enabled: user.kids_mode_enabled,
+        has_kids_pin: !!user.kids_mode_pin,
       },
     });
   } catch (err) {
@@ -207,9 +211,37 @@ const resetPassword = async (req, res) => {
   }
 };
 
+const getMe = async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id).select(
+      '_id email name role kids_mode_enabled kids_mode_pin creditsBalance'
+    );
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    return res.json({
+      user: {
+        id: user._id,
+        email: user.email,
+        name: user.name,
+        role: user.role,
+        kids_mode_enabled: user.kids_mode_enabled,
+        has_kids_pin: !!user.kids_mode_pin,
+        creditsBalance: user.creditsBalance,
+      },
+    });
+  } catch (err) {
+    console.error('getMe error:', err);
+    return res.status(500).json({ message: 'Server error' });
+  }
+};
+
 module.exports = {
   login,
   register,
   forgotPassword,
   resetPassword,
+  getMe,
 };

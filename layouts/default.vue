@@ -1,11 +1,16 @@
 <template>
     <div>
+        <KidsViewBanner />
+        <div class="kids-banner-spacer" />
         <nuxt />
     </div>
 </template>
 
 <script>
+import KidsViewBanner from '~/components/KidsViewBanner.vue'
+
 export default {
+    components: { KidsViewBanner },
     head() {
         return {
             link: [
@@ -40,6 +45,10 @@ body {
 img {
     vertical-align: middle;
     border-style: none;
+}
+
+.kids-banner-spacer {
+    height: 42px;
 }
 
 .body.wp {

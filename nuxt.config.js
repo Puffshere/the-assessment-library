@@ -103,10 +103,14 @@ module.exports = {
   },
   axios: {
     // Used by server-side (SSR, serverMiddleware)
-    baseURL: process.env.API_BASE_URL || 'http://localhost:3000',
+    baseURL: process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3000'
+      : (process.env.API_BASE_URL || 'http://localhost:3000'),
 
     // Used by code running in the browser
-    browserBaseURL: process.env.BROWSER_API_BASE_URL || 'http://localhost:3000'
+    browserBaseURL: process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3000'
+      : (process.env.BROWSER_API_BASE_URL || 'http://localhost:3000')
   },
   devServer: {
     disableHostCheck: true

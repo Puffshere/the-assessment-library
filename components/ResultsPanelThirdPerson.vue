@@ -332,6 +332,10 @@ export default {
     creditsBalance: {
       type: Number,
       default: 0
+    },
+    inviteAssessmentSlug: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -599,6 +603,13 @@ export default {
       try {
         const res = await this.$axios.$get('/api/participants')
         this.participants = res
+
+        // Auto-open invite modal if directed from assessment conclusion page
+        if (this.inviteAssessmentSlug && this.participants.length) {
+          this.inviteTarget = this.participants[0]
+          this.inviteSlug = this.inviteAssessmentSlug
+          this.inviteError = null
+        }
       } catch (err) {
         console.error('Error fetching participants:', err)
       } finally {

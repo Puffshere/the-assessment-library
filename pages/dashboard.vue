@@ -24,35 +24,72 @@
                 <div v-else class="grid">
                     <div class="results-wrapper">
                         <div class="results-tabs">
-                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'first' }"
-                                @click="activeResultsView = 'first'">
-                                1st Person
-                            </div>
+                            <!-- Kids view: one tab per child profile + Players tab -->
+                            <template v-if="kidsViewActive">
+                                <div v-for="cp in childProfiles" :key="cp._id"
+                                    class="results-tab results-tab--kid"
+                                    :class="{ 'is-active': activeChildTab === cp._id }"
+                                    data-cy="child-profile-tab"
+                                    @click="switchChildTab(cp)">
+                                    {{ cp.childName }}
+                                </div>
 
-                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'second' }"
-                                @click="activeResultsView = 'second'">
-                                3rd Person
-                            </div>
+                                <div class="results-tab results-tab--players"
+                                    data-cy="players-tab"
+                                    @click="$router.push('/kids/onboarding')">
+                                    <svg class="results-tab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="6" width="20" height="12" rx="2" />
+                                        <line x1="6" y1="10" x2="6" y2="14" />
+                                        <line x1="4" y1="12" x2="8" y2="12" />
+                                        <circle cx="16" cy="10" r="1.5" />
+                                        <circle cx="19" cy="13" r="1.5" />
+                                    </svg>
+                                    <span>Players</span>
+                                </div>
+                            </template>
 
-                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'third' }"
-                                @click="activeResultsView = 'third'">
-                                <span class="tab-label-desktop">3rd Person Participants</span>
-                                <span class="tab-label-mobile">Participants</span>
-                            </div>
+                            <!-- Standard view: normal tabs -->
+                            <template v-else>
+                                <div class="results-tab" :class="{ 'is-active': activeResultsView === 'first' }"
+                                    @click="activeResultsView = 'first'">
+                                    1st Person
+                                </div>
 
-                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'fourth' }"
-                                @click="openForOthersTab">
-                                For Others
-                                <span v-if="pendingForOthersCount && !forOthersSeen" class="tab-badge">
-                                    {{ pendingForOthersCount }}
-                                </span>
-                            </div>
+                                <div class="results-tab" :class="{ 'is-active': activeResultsView === 'second' }"
+                                    @click="activeResultsView = 'second'">
+                                    3rd Person
+                                </div>
+
+                                <div class="results-tab" :class="{ 'is-active': activeResultsView === 'third' }"
+                                    @click="activeResultsView = 'third'">
+                                    <span class="tab-label-desktop">3rd Person Participants</span>
+                                    <span class="tab-label-mobile">Participants</span>
+                                </div>
+
+                                <div class="results-tab" :class="{ 'is-active': activeResultsView === 'fourth' }"
+                                    @click="openForOthersTab">
+                                    For Others
+                                    <span v-if="pendingForOthersCount && !forOthersSeen" class="tab-badge">
+                                        {{ pendingForOthersCount }}
+                                    </span>
+                                </div>
+
+                                <div v-if="childProfiles.length"
+                                    class="results-tab results-tab--viewer"
+                                    :class="{ 'is-active': activeResultsView === 'first' }"
+                                    @click="cycleViewingChild">
+                                    {{ viewingChildLabel }}
+                                </div>
+                            </template>
                         </div>
 
                         <!-- 1st person view -->
-                        <results-panel v-if="activeResultsView === 'first'" :selected-result="selectedResult"
-                            :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
-                            :assessments-completed="completedSessions.length"
+                        <kids-character-card v-if="activeResultsView === 'first' && kidsViewActive"
+                            :completed-sessions="activeChildSessions" />
+                        <results-panel v-else-if="activeResultsView === 'first'" :selected-result="selectedResult"
+                            :sessions="filteredSessions" :assessments-started="filteredSessions.length"
+                            :assessments-completed="filteredCompletedSessions.length"
                             :credits-balance="dashboard.user.creditsBalance"
                             @clear-results="selectedResult = null"
                             @credits-deducted="dashboard.user.creditsBalance = $event" />
@@ -65,6 +102,7 @@
                             :assessments-completed="completedSessions.length"
                             :completed-sessions="completedSessions"
                             :credits-balance="dashboard.user.creditsBalance"
+                            :invite-assessment-slug="$route.query.inviteAssessment || ''"
                             @clear-results="selectedResult = null"
                             @credits-deducted="dashboard.user.creditsBalance = $event" />
 
@@ -184,8 +222,80 @@
                         </div>
                     </div>
 
-                    <!-- ACCOUNT OVERVIEW -->
-                    <div class="panel">
+                    <!-- ACCOUNT OVERVIEW / ADVENTURE CARD -->
+                    <!-- No background selected: white wrapper matching character card -->
+                    <div v-if="kidsViewActive && activeChildProfile && !activeChildProfile.cardBackground"
+                        class="panel adventure-card-wrapper">
+                        <div class="adventure-card__inner" :style="adventureCardBg">
+                            <h2 class="adventure-card__title">Your Adventure</h2>
+                            <p class="adventure-card__name">{{ activeChildProfile.childName }}</p>
+                            <p v-if="activeChildProfile.characterName" class="adventure-card__char">
+                                {{ activeChildProfile.characterName }}
+                            </p>
+
+                            <div v-if="childStoriesCompleted < 3" class="adventure-card__progress">
+                                <p class="adventure-card__progress-label">
+                                    {{ childStoriesCompleted }} of 3 stories complete
+                                </p>
+                                <div class="adventure-card__bar-track">
+                                    <div class="adventure-card__bar-fill"
+                                        :style="{ width: (childStoriesCompleted / 3 * 100) + '%' }"></div>
+                                </div>
+                                <p class="adventure-card__progress-hint">
+                                    Complete 3 stories to unlock a background for your character!
+                                </p>
+                            </div>
+
+                            <div v-else class="adventure-card__unlocked">
+                                <button v-if="!showBgPicker" class="adventure-card__unlock-btn" @click="showBgPicker = true">
+                                    Choose a Background
+                                </button>
+                                <div v-else class="adventure-card__bg-picker">
+                                    <p class="adventure-card__bg-picker-label">Pick your background:</p>
+                                    <div class="adventure-card__bg-options">
+                                        <div v-for="bg in backgroundOptions" :key="bg.id"
+                                            class="adventure-card__bg-option"
+                                            :class="{ 'is-selected': activeChildProfile.cardBackground === bg.id }"
+                                            :style="{ background: bg.gradient }"
+                                            @click="selectBackground(bg.id)">
+                                        </div>
+                                    </div>
+                                    <button class="adventure-card__bg-close" @click="showBgPicker = false">Done</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Background selected: no white wrapper, gradient fills edge to edge -->
+                    <div v-else-if="kidsViewActive && activeChildProfile && activeChildProfile.cardBackground"
+                        class="adventure-card--full"
+                        :style="adventureCardBg">
+                        <h2 class="adventure-card__title">Your Adventure</h2>
+                        <p class="adventure-card__name">{{ activeChildProfile.childName }}</p>
+                        <p v-if="activeChildProfile.characterName" class="adventure-card__char">
+                            {{ activeChildProfile.characterName }}
+                        </p>
+
+                        <div class="adventure-card__unlocked">
+                            <button v-if="!showBgPicker" class="adventure-card__unlock-btn" @click="showBgPicker = true">
+                                Change Background
+                            </button>
+                            <div v-else class="adventure-card__bg-picker">
+                                <p class="adventure-card__bg-picker-label">Pick your background:</p>
+                                <div class="adventure-card__bg-options">
+                                    <div v-for="bg in backgroundOptions" :key="bg.id"
+                                        class="adventure-card__bg-option"
+                                        :class="{ 'is-selected': activeChildProfile.cardBackground === bg.id }"
+                                        :style="{ background: bg.gradient }"
+                                        @click="selectBackground(bg.id)">
+                                    </div>
+                                </div>
+                                <button class="adventure-card__bg-close" @click="showBgPicker = false">Done</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-else class="panel">
                         <h2 class="panel-title">Account Overview</h2>
                         <p class="user-name">
                             <strong>{{ dashboard.user.name || dashboard.user.email }}</strong>
@@ -202,27 +312,32 @@
                             <button class="blue small" @click="showCreditModal = true">
                                 Purchase Credits
                             </button>
-
                         </div>
                     </div>
 
                     <!-- SESSIONS -->
                     <div class="panel panel-assessments" @wheel.prevent="onAssessmentsWheel">
-                        <h2 class="panel-title">Your Assessments</h2>
+                        <h2 class="panel-title">{{ kidsViewActive ? 'Your Quests' : 'Your Assessments' }}</h2>
 
-                        <div v-if="!dashboard.sessions.length" class="empty-state">
-                            <p>You haven’t started any assessments yet.</p>
-                            <p>
-                                When you check out a book from the Library and begin an
-                                assessment, it will show up here.
-                            </p>
+                        <div v-if="!activeSessions.length" class="empty-state">
+                            <template v-if="kidsViewActive">
+                                <p>No quests yet!</p>
+                                <p>Head to the Library to start your first adventure.</p>
+                            </template>
+                            <template v-else>
+                                <p>You haven't started any assessments yet.</p>
+                                <p>
+                                    When you check out a book from the Library and begin an
+                                    assessment, it will show up here.
+                                </p>
+                            </template>
                         </div>
 
                         <!-- Scrollable list area -->
                         <div v-else class="sessions scroll-area">
                             <!-- NOT STARTED -->
                             <div v-if="notStartedSessions.length" class="section-block">
-                                <h3 style="color: #e93d2f;">Ready to Begin</h3>
+                                <h3 style="color: #e93d2f;">{{ kidsViewActive ? 'New Quests' : 'Ready to Begin' }}</h3>
                                 <hr />
                                 <ul>
                                     <li v-for="s in notStartedSessions" :key="s.id" class="session-row">
@@ -248,7 +363,7 @@
 
                             <!-- IN PROGRESS -->
                             <div v-if="inProgressSessions.length" class="section-block">
-                                <h3 style="color: #e93d2f;">In Progress</h3>
+                                <h3 style="color: #e93d2f;">{{ kidsViewActive ? 'Continue Your Quest' : 'In Progress' }}</h3>
                                 <hr />
                                 <ul>
                                     <li v-for="s in inProgressSessions" :key="s.id" class="session-row"
@@ -283,11 +398,11 @@
                             </div>
 
                             <!-- COMPLETED -->
-                            <div v-if="completedSessions.length" class="section-block">
-                                <h3 style="color: #e93d2f;">Completed</h3>
+                            <div v-if="activeCompletedSessions.length" class="section-block">
+                                <h3 style="color: #e93d2f;">{{ kidsViewActive ? 'Quests Conquered' : 'Completed' }}</h3>
                                 <hr />
                                 <ul>
-                                    <li v-for="s in completedSessions" :key="s.id" class="session-row">
+                                    <li v-for="s in activeCompletedSessions" :key="s.id" class="session-row">
                                         <div class="session-row-top">
                                             <div class="session-main">
                                                 <div class="session-title">
@@ -315,10 +430,10 @@
                             <div v-if="
                                 !notStartedSessions.length &&
                                 !inProgressSessions.length &&
-                                !completedSessions.length
+                                !activeCompletedSessions.length
                             " class="empty-state">
                                 <p>
-                                    Assessments found, but none are in-progress or completed yet.
+                                    {{ kidsViewActive ? 'No quests found yet.' : 'Assessments found, but none are in-progress or completed yet.' }}
                                 </p>
                             </div>
                         </div>
@@ -345,16 +460,26 @@ export default {
         'footer-fold': () => import('@/components/Footer'),
         'results-panel': () => import('@/components/ResultsPanel.vue'),
         'results-panel-third-person': () => import('@/components/ResultsPanelThirdPerson.vue'),
-        'credit-packages-modal': () => import('@/components/CreditPackagesModal.vue')
+        'credit-packages-modal': () => import('@/components/CreditPackagesModal.vue'),
+        'kids-character-card': () => import('@/components/KidsCharacterCard.vue')
     },
     data() {
         return {
             loading: true,
             error: null,
             showCreditModal: false,
+            showBgPicker: false,
+            backgroundOptions: [
+                { id: 'sunset', gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' },
+                { id: 'ocean', gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' },
+                { id: 'forest', gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' }
+            ],
             selectedResult: null,
             selectedForOthersResult: null,
             activeResultsView: 'first',
+            childProfiles: [],
+            activeChildTab: null,
+            viewingChildId: null,
             forOthersSeen: false,
             DstyleTitle: 'Dominance (D)',
             DstyleDescription: 'You are direct, decisive, and results-oriented.',
@@ -378,20 +503,76 @@ export default {
         }
     },
     computed: {
+        kidsViewActive() {
+            return this.$store.state.kidsViewActive
+        },
+        activeChildProfile() {
+            return this.$store.state.activeChildProfile
+        },
+        childStoriesCompleted() {
+            if (!this.activeChildProfile) return 0
+            return (this.activeChildProfile.completedAssessments || []).length
+        },
+        adventureCardBg() {
+            const bg = this.activeChildProfile && this.activeChildProfile.cardBackground
+            if (!bg) return { background: 'linear-gradient(135deg, #0f1623 0%, #1a2744 50%, #12304d 100%)' }
+            const opt = this.backgroundOptions.find(o => o.id === bg)
+            return opt ? { background: opt.gradient } : { background: 'linear-gradient(135deg, #0f1623 0%, #1a2744 50%, #12304d 100%)' }
+        },
+        // All completed sessions (unfiltered, used by results panels)
+        completedSessions() {
+            return this.dashboard.sessions.filter(s => s.status === 'completed')
+        },
+
+        // ── Context-aware session source ──────────────
+        // Returns only the sessions relevant to whoever is "active"
+        activeSessions() {
+            if (this.kidsViewActive) {
+                // Kids view: only sessions linked to the active child
+                if (!this.activeChildTab) return []
+                return this.dashboard.sessions.filter(s => s.childProfileId === this.activeChildTab)
+            }
+            if (this.viewingChildId) {
+                // Standard view with a child selected
+                return this.dashboard.sessions.filter(s => s.childProfileId === this.viewingChildId)
+            }
+            // Standard view, no child selected: parent's own (no childProfileId)
+            return this.dashboard.sessions.filter(s => !s.childProfileId)
+        },
+
         notStartedSessions() {
-            return this.dashboard.sessions.filter(
+            return this.activeSessions.filter(
                 s =>
                     s.status === 'not_started' ||
                     (!s.startedAt && s.status !== 'completed')
             )
         },
         inProgressSessions() {
-            return this.dashboard.sessions.filter(
+            return this.activeSessions.filter(
                 s => s.status === 'in_progress' && s.startedAt
             )
         },
-        completedSessions() {
-            return this.dashboard.sessions.filter(s => s.status === 'completed')
+        activeCompletedSessions() {
+            return this.activeSessions.filter(s => s.status === 'completed')
+        },
+
+        // Kids view character card: completed sessions for this child only
+        activeChildSessions() {
+            if (!this.activeChildTab) return []
+            return this.completedSessions.filter(s => s.childProfileId === this.activeChildTab)
+        },
+
+        // Standard view results panel
+        filteredSessions() {
+            return this.activeSessions
+        },
+        filteredCompletedSessions() {
+            return this.activeCompletedSessions
+        },
+        viewingChildLabel() {
+            if (!this.viewingChildId) return 'All (Parent Account)'
+            const cp = this.childProfiles.find(p => p._id === this.viewingChildId)
+            return cp ? cp.childName : 'All (Parent Account)'
         },
         selectedBreakdown() {
             if (!this.selectedResult) return null
@@ -483,8 +664,64 @@ export default {
         } finally {
             this.loading = false
         }
+
+        // Fetch child profiles for tabs (kids view) and switcher (standard view)
+        await this.fetchChildProfiles()
+
+        // Open a specific tab if requested via query param (e.g. from assessment conclusion)
+        const tab = this.$route.query.tab
+        if (tab && ['first', 'second', 'third', 'fourth'].includes(tab)) {
+            this.activeResultsView = tab
+        }
+    },
+    watch: {
+        kidsViewActive() {
+            this.fetchChildProfiles()
+        }
     },
     methods: {
+        async fetchChildProfiles() {
+            try {
+                const res = await this.$axios.$get('/api/child-profiles')
+                this.childProfiles = res.profiles || []
+                // Auto-select the active profile tab, or first profile
+                const active = this.$store.state.activeChildProfile
+                if (active && this.childProfiles.find(p => p._id === active._id)) {
+                    this.activeChildTab = active._id
+                } else if (this.childProfiles.length) {
+                    this.activeChildTab = this.childProfiles[0]._id
+                    this.$store.commit('SET_ACTIVE_CHILD_PROFILE', this.childProfiles[0])
+                }
+            } catch (err) {
+                console.error('Error fetching child profiles:', err)
+            }
+        },
+        switchChildTab(profile) {
+            this.activeChildTab = profile._id
+            this.$store.commit('SET_ACTIVE_CHILD_PROFILE', profile)
+        },
+        async selectBackground(bgId) {
+            if (!this.activeChildProfile) return
+            try {
+                const res = await this.$axios.$put(
+                    `/api/child-profiles/${this.activeChildProfile._id}`,
+                    { cardBackground: bgId }
+                )
+                this.$store.commit('SET_ACTIVE_CHILD_PROFILE', res.profile)
+                // Update local childProfiles array too
+                const idx = this.childProfiles.findIndex(p => p._id === res.profile._id)
+                if (idx !== -1) this.$set(this.childProfiles, idx, res.profile)
+            } catch (err) {
+                console.error('Error saving background:', err)
+            }
+        },
+        cycleViewingChild() {
+            this.selectedResult = null
+            // Cycle: null -> child1 -> child2 -> ... -> null
+            const ids = [null, ...this.childProfiles.map(p => p._id)]
+            const currentIdx = ids.indexOf(this.viewingChildId)
+            this.viewingChildId = ids[(currentIdx + 1) % ids.length]
+        },
         openCreditModal() {
             this.showCreditModal = true
         },
@@ -704,6 +941,10 @@ export default {
         }
     }
 
+    .results-tab--viewer {
+        margin-left: auto;
+    }
+
     .grid {
         display: flex;
         flex-wrap: wrap;
@@ -718,6 +959,171 @@ export default {
         background: #fff;
         box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.15);
         padding: 24px;
+    }
+
+    /* ── Adventure card (Kids View account panel) ──── */
+
+    // State 1: no background — white wrapper with dark inner
+    .adventure-card-wrapper {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .adventure-card__inner {
+        border-radius: 8px;
+        padding: 24px;
+        flex: 1;
+    }
+
+    // State 2: background selected — gradient fills the whole card
+    .adventure-card--full {
+        flex: 1 1 320px;
+        border-radius: 11px;
+        border: 3px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.15);
+        padding: 24px;
+        transition: background 0.4s ease;
+    }
+
+    .adventure-card__title {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin: 0 0 12px;
+    }
+
+    .adventure-card__name {
+        font-family: $font-family;
+        font-size: 22px;
+        font-weight: 900;
+        color: #fff;
+        margin: 0 0 2px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .adventure-card__char {
+        font-family: $nunito-family;
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.5);
+        font-style: italic;
+        margin: 0 0 20px;
+    }
+
+    .adventure-card__progress {
+        margin-top: 8px;
+    }
+
+    .adventure-card__progress-label {
+        font-family: $nunito-family;
+        font-size: 14px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0 0 8px;
+    }
+
+    .adventure-card__bar-track {
+        height: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .adventure-card__bar-fill {
+        height: 100%;
+        background: #0dab49;
+        border-radius: 6px;
+        transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .adventure-card__progress-hint {
+        font-family: $nunito-family;
+        font-size: 12px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.35);
+        margin: 0;
+    }
+
+    .adventure-card__unlocked {
+        margin-top: 8px;
+    }
+
+    .adventure-card__unlock-btn {
+        display: inline-block;
+        font-family: $nunito-family;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        background: #0dab49;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background: #0c9a42;
+        }
+    }
+
+    .adventure-card__bg-picker {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .adventure-card__bg-picker-label {
+        font-family: $nunito-family;
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.6);
+        margin: 0;
+    }
+
+    .adventure-card__bg-options {
+        display: flex;
+        gap: 10px;
+    }
+
+    .adventure-card__bg-option {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 3px solid transparent;
+        transition: border-color 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.08);
+        }
+
+        &.is-selected {
+            border-color: #fff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    .adventure-card__bg-close {
+        align-self: flex-start;
+        font-family: $nunito-family;
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 6px;
+        padding: 6px 14px;
+        cursor: pointer;
+        margin-top: 2px;
+
+        &:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.15);
+        }
     }
 
     .panel-assessments {
@@ -920,6 +1326,7 @@ export default {
         position: absolute;
         top: -36px;
         left: 16px;
+        right: 16px;
         display: flex;
         gap: 0px;
         z-index: 10;
@@ -982,6 +1389,37 @@ export default {
         0%   { transform: scale(0); opacity: 0; }
         70%  { transform: scale(1.2); }
         100% { transform: scale(1); opacity: 1; }
+    }
+
+    .results-tab--kid {
+        &.is-active {
+            background: #fff;
+            color: #0d4ca5;
+            font-weight: 700;
+        }
+    }
+
+    .results-tab--players {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border-style: dashed;
+        border-color: rgba(2, 91, 175, 0.35);
+        background: rgba(240, 244, 250, 0.6);
+        color: #6b7a8d;
+        font-size: 13px;
+
+        &:hover {
+            background: #e8edf4;
+            color: #143180;
+        }
+    }
+
+    .results-tab__icon {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
     }
 
     results-panel,

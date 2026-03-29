@@ -105,6 +105,7 @@ const inviteToAssessment = async (req, res) => {
     await participant.save();
 
     try {
+      if (!process.env.POSTMARK_SERVER_TOKEN) throw new Error('POSTMARK_SERVER_TOKEN not set');
       const postmark = require('postmark');
       const client = new postmark.ServerClient(process.env.POSTMARK_SERVER_TOKEN);
       const baseUrl = process.env.BASE_URL || 'http://localhost:3000';

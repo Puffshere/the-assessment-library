@@ -1,17 +1,39 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const jwt = require('jsonwebtoken');
-
-// Warn loudly at startup if BASE_URL isn't set for a live Stripe environment
-const _baseUrl = process.env.BASE_URL || '';
-const _isLive   = (process.env.STRIPE_SECRET_KEY || '').startsWith('sk_live_');
-if (_isLive && (!_baseUrl || _baseUrl.includes('localhost'))) {
-  console.error('⚠️  PAYMENTS: BASE_URL is not set (or still points to localhost) but live Stripe keys are active. Stripe success/cancel redirects will fail. Set BASE_URL=https://your-domain.com in your environment.');
-}
 
 let User = require('../models/User');
 User = User.default || User;
 
 const CreditTransaction = require('../models/CreditTransaction');
+
+// ─── Lazy Stripe initialization ───────────────────────────────────────────────
+let _stripe = null;
+let _stripeInitialized = false;
+
+function getStripe() {
+  if (_stripeInitialized) return _stripe;
+  _stripeInitialized = true;
+
+  if (!process.env.STRIPE_SECRET_KEY) {
+    console.warn('⚠️  WARNING: STRIPE_SECRET_KEY not set — payment features disabled.');
+    return null;
+  }
+
+  try {
+    _stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
+    const _baseUrl = process.env.BASE_URL || '';
+    const _isLive  = process.env.STRIPE_SECRET_KEY.startsWith('sk_live_');
+    if (_isLive && (!_baseUrl || _baseUrl.includes('localhost'))) {
+      console.error('⚠️  PAYMENTS: BASE_URL is not set (or still points to localhost) but live Stripe keys are active. Stripe success/cancel redirects will fail. Set BASE_URL=https://your-domain.com in your environment.');
+    }
+  } catch (err) {
+    console.warn('⚠️  WARNING: Failed to initialize Stripe client — payment features disabled.', err.message);
+  }
+
+  return _stripe;
+}
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 // Price IDs come from .env after running scripts/setup-stripe-products.js
 // Falls back to inline price_data if IDs are not yet set.
@@ -99,6 +121,8 @@ exports.getPackages = (req, res) => {
 };
 
 exports.createCheckoutSession = async (req, res) => {
+  const stripe = getStripe();
+  if (!stripe) return res.status(503).json({ error: 'Payment service not configured' });
   try {
     const userId = getUserIdFromReq(req);
     if (!userId) return res.status(401).json({ message: 'Not authenticated' });
@@ -162,6 +186,8 @@ exports.createCheckoutSession = async (req, res) => {
 };
 
 exports.verifyAndFulfill = async (req, res) => {
+  const stripe = getStripe();
+  if (!stripe) return res.status(503).json({ error: 'Payment service not configured' });
   try {
     const userId = getUserIdFromReq(req);
     if (!userId) return res.status(401).json({ message: 'Not authenticated' });
@@ -209,6 +235,8 @@ exports.verifyAndFulfill = async (req, res) => {
 };
 
 exports.handleWebhook = async (req, res) => {
+  const stripe = getStripe();
+  if (!stripe) return res.status(503).send('Payment service not configured');
   // Verify signature — required in all environments now that secret is configured
   const sig    = req.headers['stripe-signature'];
   const secret = process.env.STRIPE_WEBHOOK_SECRET;

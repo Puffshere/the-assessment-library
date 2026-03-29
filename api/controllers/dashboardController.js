@@ -70,6 +70,7 @@ exports.getDashboard = async function (req, res) {
             typeof s.currentQuestionIndex === 'number'
               ? s.currentQuestionIndex
               : 0,
+          childProfileId: s.childProfileId || null,
           category: a.category || null,
 
           DstyleTitle: a.DstyleTitle,

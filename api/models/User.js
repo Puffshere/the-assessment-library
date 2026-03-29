@@ -38,6 +38,14 @@ const userSchema = new mongoose.Schema(
       type: Number,
       default: 0,
       min: 0,
+    },
+    kids_mode_enabled: {
+      type: Boolean,
+      default: false,
+    },
+    kids_mode_pin: {
+      type: String,
+      default: null,
     }
   },
   {
