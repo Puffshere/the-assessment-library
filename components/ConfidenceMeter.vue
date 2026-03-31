@@ -73,4 +73,10 @@ export default {
         transition: width 600ms cubic-bezier(0.2, 0.85, 0.25, 1);
     }
 }
+
+@media (max-width: 768px) {
+    .confidenceMeter .confidence-bar {
+        box-shadow: 4px 4px 8px #12304d8c, inset 3px -3px 2px rgba(0, 0, 0, 0.2);
+    }
+}
 </style>

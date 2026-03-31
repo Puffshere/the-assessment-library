@@ -1883,30 +1883,29 @@ export default {
 
         .results-tabs {
             position: static;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0;
-            margin-bottom: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            flex-wrap: nowrap;
+            scrollbar-width: none;
+            gap: 0px;
+            margin: 0;
+            margin-bottom: -5px;
+            padding: 0 14px;
+            z-index: 10;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
 
         .tab-label-desktop { display: none; }
         .tab-label-mobile { display: inline; }
 
         .results-tab {
-            flex: 0 0 50%;
-            max-width: 50%;
-            text-align: center;
-            border-radius: 0;
-            border-bottom: 3px solid #025baf67;
-            height: auto;
-            padding: 8px 4px;
-            font-size: 13px;
-            line-height: 1.3;
-            box-sizing: border-box;
+            white-space: nowrap;
 
-            .tab-badge {
-                top: -7px;
-                right: 4px;
+            &:last-child {
+                margin-right: 14px;
             }
         }
 
