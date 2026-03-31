@@ -860,20 +860,34 @@ export default {
 @media (max-width: 600px) {
     .library {
         .header {
-            padding: 40px 16px 30px 16px;
+            padding: 0 16px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            box-shadow: none;
 
             .logo {
-                position: relative;
-                left: 0px;
-                top: 0px;
-                margin-bottom: -40px;
-                margin-top: -50px;
+                display: none;
+            }
+
+            .container {
+                padding: 0;
+                margin: 0;
             }
 
             h1 {
-                line-height: 1.25em;
-                margin-bottom: 40px;
-                margin-top: 10px;
+                font-size: 0;
+                margin: 0;
+                line-height: 56px;
+
+                span {
+                    font-size: 20px;
+                }
+            }
+
+            h4 {
+                display: none;
             }
 
             .teal {
@@ -901,6 +915,8 @@ export default {
         }
 
         .stacks {
+            padding-top: 24px;
+
             .stacks-loading {
                 .library-exterior {
                     max-width: 100%;

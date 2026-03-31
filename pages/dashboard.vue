@@ -10,6 +10,7 @@
                     <h4>See your assessments, scores, and available credits in one place.</h4>
                 </div>
             </div>
+            <span v-if="dashboard.user.name" class="mobile-greeting">{{ dashboard.user.name.split(' ')[0] }}</span>
         </section>
 
         <section class="content">
@@ -1748,6 +1749,7 @@ export default {
     }
 
     .tab-label-mobile { display: none; }
+    .mobile-greeting { display: none; }
 
     .results-tabs {
         position: absolute;
@@ -1859,21 +1861,56 @@ export default {
 @media (max-width: 768px) {
     .dashboard {
         .header {
-            padding: 40px 16px 30px;
-
-            h1 {
-                line-height: 1.25em;
-                margin-bottom: 40px;
-            }
+            padding: 0 16px;
+            height: 56px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            box-shadow: none;
 
             .logo {
-                position: relative;
-                width: 300px;
-                left: 0;
-                top: 0;
-                margin-bottom: -40px;
-                margin-top: -50px;
+                display: none;
             }
+
+            .container {
+                flex: 0 0 auto;
+                width: auto;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 0;
+                margin: 0;
+                padding: 0;
+                line-height: 56px;
+
+                span {
+                    font-size: 20px;
+                }
+            }
+
+            h4 {
+                display: none;
+            }
+
+            .mobile-greeting {
+                display: block;
+                font-size: 15px;
+                font-weight: 500;
+                color: #143180;
+                white-space: nowrap;
+            }
+
+            &:after {
+                height: 4px;
+            }
+        }
+
+        .content {
+            padding-top: 24px;
         }
 
         .grid {
