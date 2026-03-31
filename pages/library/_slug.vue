@@ -416,6 +416,27 @@ export default {
             await this.createThirdPersonSession();
         }
 
+        // If no sessionId but user is logged in and assessment is loaded,
+        // create or retrieve a session so answers are always saved to the DB
+        if (!this.sessionId && this.$store.state.loggedIn && this.assessment) {
+            try {
+                const payload = {
+                    assessmentId: this.assessment._id || this.assessment.id
+                };
+                const activeChild = this.$store.state.activeChildProfile;
+                if (this.$store.state.kidsViewActive && activeChild && activeChild._id) {
+                    payload.childProfileId = activeChild._id;
+                }
+                const res = await this.$axios.$post('/api/sessions', payload, {
+                    headers: { Authorization: `Bearer ${this.$store.state.token}` }
+                });
+                const session = res.session || res;
+                this.sessionId = session._id || session.id;
+            } catch (err) {
+                console.error('Error creating session:', err);
+            }
+        }
+
         if (!this.sessionId) return;
 
         try {

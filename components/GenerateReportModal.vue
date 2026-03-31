@@ -1,11 +1,9 @@
 <template>
   <div class="gr-backdrop" @click.self="$emit('close')">
     <div class="gr-modal">
+      <button class="modal-x-close" @click="$emit('close')" aria-label="Close">&times;</button>
 
-      <div class="gr-header">
-        <h3 class="gr-title">{{ step === 'focus' ? 'Select 3 Focus Areas' : 'Generate Full Report' }}</h3>
-        <button class="gr-close" @click="$emit('close')">✕</button>
-      </div>
+      <h3 class="gr-title">{{ step === 'focus' ? 'Select 3 Focus Areas' : 'Generate Full Report' }}</h3>
 
       <!-- ── Focus area picker (Option 1 only) ─────────────────────────────── -->
       <template v-if="step === 'focus'">
@@ -263,54 +261,54 @@ export default {
 .gr-backdrop {
   position: fixed;
   inset: 0;
+  padding-top: 116px;
+  padding-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
   background: rgba(0, 0, 0, 0.55);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  overflow-y: auto;
   z-index: 3000;
-  padding: 16px;
 }
 
 .gr-modal {
   background: #fff;
   border-radius: 12px;
-  padding: 10px 28px 28px;
+  padding: 48px 28px 28px;
   width: 100%;
   max-width: 560px;
-  max-height: 90vh;
-  overflow-y: auto;
+  flex-shrink: 0;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-  margin-top: 70px;
-}
-
-.gr-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  position: relative;
 }
 
 .gr-title {
   font-size: 20px;
   color: #12304d;
-  margin: 0;
+  margin: 0 0 8px;
 }
 
-.gr-close {
+.modal-x-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
   background: none;
   border: none;
-  font-size: 18px;
-  color: #e93d2f;
+  font-size: 24px;
+  font-weight: 700;
+  color: #e53e3e;
   cursor: pointer;
+  line-height: 1;
+  padding: 0;
   width: 32px;
   height: 32px;
-  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
-  flex-shrink: 0;
-  &:hover { color: #c0281c; }
+
+  &:hover { color: #c53030; }
 }
 
 .gr-intro {

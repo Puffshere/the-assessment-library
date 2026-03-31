@@ -113,15 +113,39 @@ export default {
         },
 
         hasCharacter() {
-            return !!(
-                this.profile &&
-                this.profile.hasCompletedFirstAssessment &&
-                this.profile.currentDiscType
-            )
+            // Show character if profile says so OR if we have live completed sessions
+            if (this.profile && this.profile.hasCompletedFirstAssessment && this.profile.currentDiscType) {
+                return true
+            }
+            // Fallback: derive from live session data (same source as Your Quests)
+            return !!(this.completedSessions && this.completedSessions.length && this.liveDiscType)
+        },
+
+        liveDiscType() {
+            // Derive dominant DISC type from completed sessions
+            if (!this.completedSessions || !this.completedSessions.length) return null
+            const totals = { D: 0, I: 0, S: 0, C: 0 }
+            let count = 0
+            for (const s of this.completedSessions) {
+                const b = s.scoreBreakdown || (s.score && s.score.breakdown)
+                if (!b) continue
+                totals.D += Number(b.D) || 0
+                totals.I += Number(b.I) || 0
+                totals.S += Number(b.S) || 0
+                totals.C += Number(b.C) || 0
+                count++
+            }
+            if (!count) return null
+            let dominant = 'D'
+            for (const trait of ['I', 'S', 'C']) {
+                if (totals[trait] > totals[dominant]) dominant = trait
+            }
+            return dominant
         },
 
         discType() {
-            return this.profile && this.profile.currentDiscType
+            // Prefer profile value, fall back to live calculation
+            return (this.profile && this.profile.currentDiscType) || this.liveDiscType
         },
 
         characterName() {

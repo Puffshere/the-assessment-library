@@ -223,76 +223,23 @@
                     </div>
 
                     <!-- ACCOUNT OVERVIEW / ADVENTURE CARD -->
-                    <!-- No background selected: white wrapper matching character card -->
-                    <div v-if="kidsViewActive && activeChildProfile && !activeChildProfile.cardBackground"
-                        class="panel adventure-card-wrapper">
-                        <div class="adventure-card__inner" :style="adventureCardBg">
-                            <h2 class="adventure-card__title">Your Adventure</h2>
-                            <p class="adventure-card__name">{{ activeChildProfile.childName }}</p>
-                            <p v-if="activeChildProfile.characterName" class="adventure-card__char">
-                                {{ activeChildProfile.characterName }}
-                            </p>
-
-                            <div v-if="childStoriesCompleted < 3" class="adventure-card__progress">
-                                <p class="adventure-card__progress-label">
-                                    {{ childStoriesCompleted }} of 3 stories complete
-                                </p>
-                                <div class="adventure-card__bar-track">
-                                    <div class="adventure-card__bar-fill"
-                                        :style="{ width: (childStoriesCompleted / 3 * 100) + '%' }"></div>
-                                </div>
-                                <p class="adventure-card__progress-hint">
-                                    Complete 3 stories to unlock a background for your character!
-                                </p>
-                            </div>
-
-                            <div v-else class="adventure-card__unlocked">
-                                <button v-if="!showBgPicker" class="adventure-card__unlock-btn" @click="showBgPicker = true">
-                                    Choose a Background
-                                </button>
-                                <div v-else class="adventure-card__bg-picker">
-                                    <p class="adventure-card__bg-picker-label">Pick your background:</p>
-                                    <div class="adventure-card__bg-options">
-                                        <div v-for="bg in backgroundOptions" :key="bg.id"
-                                            class="adventure-card__bg-option"
-                                            :class="{ 'is-selected': activeChildProfile.cardBackground === bg.id }"
-                                            :style="{ background: bg.gradient }"
-                                            @click="selectBackground(bg.id)">
-                                        </div>
-                                    </div>
-                                    <button class="adventure-card__bg-close" @click="showBgPicker = false">Done</button>
-                                </div>
-                            </div>
+                    <div v-if="kidsViewActive && activeChildProfile"
+                        :class="hasActiveBackground ? 'adventure-card-nowrap' : 'panel adventure-card-wrapper'">
+                      <div class="adventure-card"
+                          :class="{ 'is-pressed': showBgModal }"
+                          :style="adventureCardBg"
+                          @click="openBgModal">
+                        <div class="adventure-card__shimmer"></div>
+                        <div class="adventure-card__particles">
+                            <span v-for="n in 8" :key="n" class="adventure-card__star"
+                                :style="{ left: (n * 12 + 3) + '%', animationDelay: (n * 0.4) + 's' }"></span>
                         </div>
-                    </div>
-
-                    <!-- Background selected: no white wrapper, gradient fills edge to edge -->
-                    <div v-else-if="kidsViewActive && activeChildProfile && activeChildProfile.cardBackground"
-                        class="adventure-card--full"
-                        :style="adventureCardBg">
-                        <h2 class="adventure-card__title">Your Adventure</h2>
-                        <p class="adventure-card__name">{{ activeChildProfile.childName }}</p>
-                        <p v-if="activeChildProfile.characterName" class="adventure-card__char">
-                            {{ activeChildProfile.characterName }}
-                        </p>
-
-                        <div class="adventure-card__unlocked">
-                            <button v-if="!showBgPicker" class="adventure-card__unlock-btn" @click="showBgPicker = true">
-                                Change Background
-                            </button>
-                            <div v-else class="adventure-card__bg-picker">
-                                <p class="adventure-card__bg-picker-label">Pick your background:</p>
-                                <div class="adventure-card__bg-options">
-                                    <div v-for="bg in backgroundOptions" :key="bg.id"
-                                        class="adventure-card__bg-option"
-                                        :class="{ 'is-selected': activeChildProfile.cardBackground === bg.id }"
-                                        :style="{ background: bg.gradient }"
-                                        @click="selectBackground(bg.id)">
-                                    </div>
-                                </div>
-                                <button class="adventure-card__bg-close" @click="showBgPicker = false">Done</button>
-                            </div>
+                        <div class="adventure-card__content">
+                            <h2 class="adventure-card__world-name" :style="{ textShadow: '0 0 20px ' + playerThemeColor + '88, 0 0 40px ' + playerThemeColor + '44' }">
+                                {{ activeChildProfile.characterName || activeChildProfile.childName }}'s World!
+                            </h2>
                         </div>
+                      </div>
                     </div>
 
                     <div v-else class="panel">
@@ -448,6 +395,67 @@
             :show="showCreditModal"
             @close="showCreditModal = false"
         />
+
+        <!-- Background Selection Modal -->
+        <transition name="fade">
+            <div v-if="showBgModal" class="bgm-backdrop" @click.self="showBgModal = false">
+                <div class="bgm-modal">
+                    <button class="modal-x-close" @click="showBgModal = false" aria-label="Close">&times;</button>
+
+                    <h2 class="bgm-title">Choose Your World</h2>
+                    <p class="bgm-subtitle">Pick a background for your adventure card</p>
+
+                    <div class="bgm-grid">
+                        <div v-for="bg in currentThemeBackgrounds" :key="bg.file"
+                            class="bgm-card"
+                            :class="{
+                                'is-selected': bgModalSelection === bg.file,
+                                'is-unlockable': bg.canUnlock,
+                                'is-locked': !bg.unlocked && !bg.canUnlock
+                            }"
+                            @click="handleBgCardClick(bg)">
+                            <img :src="'/images/backgrounds/' + bg.file"
+                                :alt="bg.file" class="bgm-card__img"
+                                :class="{ 'is-locked': !bg.unlocked && !bg.canUnlock }" />
+
+                            <!-- Locked: needs more stories -->
+                            <div v-if="!bg.unlocked && !bg.canUnlock" class="bgm-card__lock">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                                <span>{{ bg.needMore }} more {{ bg.needMore === 1 ? 'story' : 'stories' }}</span>
+                            </div>
+
+                            <!-- Unlockable: player has a token to spend -->
+                            <div v-if="bg.canUnlock" class="bgm-card__unlockable">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                <span>Tap to unlock!</span>
+                            </div>
+
+                            <!-- Selected checkmark -->
+                            <div v-if="bg.unlocked && bgModalSelection === bg.file" class="bgm-card__check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p v-if="availableUnlockTokens > 0" class="bgm-token-hint">
+                        You have {{ availableUnlockTokens }} background{{ availableUnlockTokens > 1 ? 's' : '' }} to unlock!
+                    </p>
+
+                    <button class="bgm-confirm"
+                        :disabled="!bgModalSelection"
+                        @click="confirmBackground">
+                        Apply Background
+                    </button>
+                </div>
+            </div>
+        </transition>
     </section>
 </template>
 
@@ -468,12 +476,13 @@ export default {
             loading: true,
             error: null,
             showCreditModal: false,
-            showBgPicker: false,
-            backgroundOptions: [
-                { id: 'sunset', gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' },
-                { id: 'ocean', gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' },
-                { id: 'forest', gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' }
-            ],
+            showBgModal: false,
+            bgModalSelection: null,
+            THEME_FILES: {
+                medieval:  ['midevil-1.webp', 'midevil-2.webp', 'midevil-3.webp'],
+                scifi:     ['sci-fi-1.webp', 'sci-fi-2.webp', 'sci-fi-3.webp'],
+                videogame: ['video-game-1.webp', 'video-game-2.webp', 'video-game-3.webp'],
+            },
             selectedResult: null,
             selectedForOthersResult: null,
             activeResultsView: 'first',
@@ -510,14 +519,88 @@ export default {
             return this.$store.state.activeChildProfile
         },
         childStoriesCompleted() {
-            if (!this.activeChildProfile) return 0
-            return (this.activeChildProfile.completedAssessments || []).length
+            return this.activeCompletedSessions.length
+        },
+        playerThemeColor() {
+            if (!this.activeChildProfile) return '#4facfe'
+            const t = this.activeChildProfile.theme
+            if (t === 'medieval') return '#f5a623'
+            if (t === 'scifi') return '#4facfe'
+            if (t === 'videogame') return '#0dab49'
+            return '#4facfe'
+        },
+        hasActiveBackground() {
+            const bg = this.activeChildProfile && this.activeChildProfile.cardBackground
+            return !!(bg && bg.endsWith('.webp'))
         },
         adventureCardBg() {
             const bg = this.activeChildProfile && this.activeChildProfile.cardBackground
             if (!bg) return { background: 'linear-gradient(135deg, #0f1623 0%, #1a2744 50%, #12304d 100%)' }
-            const opt = this.backgroundOptions.find(o => o.id === bg)
-            return opt ? { background: opt.gradient } : { background: 'linear-gradient(135deg, #0f1623 0%, #1a2744 50%, #12304d 100%)' }
+            // Check if it's a webp filename (new system) or an old gradient id
+            if (bg.endsWith('.webp')) {
+                return {
+                    backgroundImage: `url(/images/backgrounds/${bg})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                }
+            }
+            return { background: 'linear-gradient(135deg, #0f1623 0%, #1a2744 50%, #12304d 100%)' }
+        },
+        themeCompletions() {
+            // Use live session data — same source as childStoriesCompleted
+            return this.activeCompletedSessions.length
+        },
+        unlockedForTheme() {
+            if (!this.activeChildProfile) return []
+            const theme = this.activeChildProfile.theme
+            const map = this.activeChildProfile.unlockedBackgrounds
+            if (!map) return []
+            return (typeof map.get === 'function' ? map.get(theme) : map[theme]) || []
+        },
+        // How many unlock tokens the player has earned but not yet used
+        availableUnlockTokens() {
+            const completions = this.themeCompletions
+            let earned = 0
+            for (const threshold of [3, 6, 9]) {
+                if (completions >= threshold) earned++
+            }
+            return Math.max(0, earned - this.unlockedForTheme.length)
+        },
+        // Next milestone the player needs to reach (for "X more stories" text)
+        nextMilestone() {
+            const completions = this.themeCompletions
+            for (const threshold of [3, 6, 9]) {
+                if (completions < threshold) return threshold
+            }
+            return null
+        },
+        currentThemeBackgrounds() {
+            if (!this.activeChildProfile) return []
+            const theme = this.activeChildProfile.theme
+            const files = this.THEME_FILES[theme] || []
+            const unlocked = this.unlockedForTheme
+            const hasTokens = this.availableUnlockTokens > 0
+            const completions = this.themeCompletions
+            const unlockedCount = unlocked.length
+            const tokens = this.availableUnlockTokens
+
+            // Next milestone the player needs to reach (after spending available tokens)
+            // e.g. 1 unlocked + 1 token = next milestone is (1+1+1)*3 = 9
+            const nextNeededMilestone = (unlockedCount + tokens + 1) * 3
+            const needMore = Math.max(0, nextNeededMilestone - completions)
+
+            return files.map((file) => {
+                const isUnlocked = unlocked.includes(file)
+                if (isUnlocked) {
+                    return { file, unlocked: true, canUnlock: false, needMore: 0 }
+                }
+                if (hasTokens) {
+                    // Player can choose ANY locked background to unlock
+                    return { file, unlocked: false, canUnlock: true, needMore: 0 }
+                }
+                // Locked, no tokens — show dynamic count to next milestone
+                return { file, unlocked: false, canUnlock: false, needMore }
+            })
         },
         // All completed sessions (unfiltered, used by results panels)
         completedSessions() {
@@ -700,20 +783,75 @@ export default {
             this.activeChildTab = profile._id
             this.$store.commit('SET_ACTIVE_CHILD_PROFILE', profile)
         },
-        async selectBackground(bgId) {
+        async selectBackground(bgFile) {
             if (!this.activeChildProfile) return
             try {
                 const res = await this.$axios.$put(
                     `/api/child-profiles/${this.activeChildProfile._id}`,
-                    { cardBackground: bgId }
+                    { cardBackground: bgFile }
                 )
                 this.$store.commit('SET_ACTIVE_CHILD_PROFILE', res.profile)
-                // Update local childProfiles array too
                 const idx = this.childProfiles.findIndex(p => p._id === res.profile._id)
                 if (idx !== -1) this.$set(this.childProfiles, idx, res.profile)
             } catch (err) {
                 console.error('Error saving background:', err)
             }
+        },
+        openBgModal() {
+            this.bgModalSelection = this.activeChildProfile.cardBackground || null
+            this.showBgModal = true
+        },
+        async handleBgCardClick(bg) {
+            if (bg.unlocked) {
+                // Already unlocked — just select it
+                this.bgModalSelection = bg.file
+            } else if (bg.canUnlock) {
+                // Player has an unlock token — unlock this background
+                await this.unlockBackground(bg.file)
+            }
+            // Otherwise locked — do nothing
+        },
+        async unlockBackground(bgFile) {
+            if (!this.activeChildProfile) return
+            try {
+                const theme = this.activeChildProfile.theme
+                const map = this.activeChildProfile.unlockedBackgrounds
+                const currentUnlocked = map
+                    ? (typeof map.get === 'function' ? map.get(theme) : map[theme]) || []
+                    : []
+                const newUnlocked = [...currentUnlocked, bgFile]
+
+                // Build the full map to send
+                const fullMap = {}
+                if (map) {
+                    // Copy existing entries from all themes
+                    if (typeof map.forEach === 'function') {
+                        map.forEach((v, k) => { fullMap[k] = v })
+                    } else {
+                        Object.assign(fullMap, map)
+                    }
+                }
+                fullMap[theme] = newUnlocked
+
+                const res = await this.$axios.$put(
+                    `/api/child-profiles/${this.activeChildProfile._id}`,
+                    { unlockedBackgrounds: fullMap }
+                )
+                this.$store.commit('SET_ACTIVE_CHILD_PROFILE', res.profile)
+                const idx = this.childProfiles.findIndex(p => p._id === res.profile._id)
+                if (idx !== -1) this.$set(this.childProfiles, idx, res.profile)
+
+                // Auto-select the newly unlocked background
+                this.bgModalSelection = bgFile
+            } catch (err) {
+                console.error('Error unlocking background:', err)
+            }
+        },
+        async confirmBackground() {
+            if (!this.bgModalSelection) return
+            await this.selectBackground(this.bgModalSelection)
+            this.showBgModal = false
+            this.bgModalSelection = null
         },
         cycleViewingChild() {
             this.selectedResult = null
@@ -964,165 +1102,454 @@ export default {
     /* ── Adventure card (Kids View account panel) ──── */
 
     // State 1: no background — white wrapper with dark inner
+    // ── Adventure Card (video-game style) ──────────
     .adventure-card-wrapper {
-        padding: 24px;
         display: flex;
         flex-direction: column;
+        cursor: pointer;
     }
 
-    .adventure-card__inner {
-        border-radius: 8px;
-        padding: 24px;
-        flex: 1;
-    }
-
-    // State 2: background selected — gradient fills the whole card
-    .adventure-card--full {
+    .adventure-card-nowrap {
         flex: 1 1 320px;
-        border-radius: 11px;
-        border: 3px solid rgba(255, 255, 255, 0.15);
-        box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.15);
-        padding: 24px;
-        transition: background 0.4s ease;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        .adventure-card {
+            border-radius: 11px;
+            border: none;
+            box-shadow: none;
+        }
     }
 
-    .adventure-card__title {
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 13px;
-        font-weight: 700;
+
+
+    .adventure-card {
+        flex: 1;
+        border-radius: 8px;
+        border: 2px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, #0a0f1e 0%, #111d35 40%, #0d1a2e 100%);
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        }
+
+        &.is-pressed {
+            transform: scale(0.97);
+        }
+    }
+
+    .adventure-card__shimmer {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            105deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.04) 45%,
+            rgba(255, 255, 255, 0.08) 50%,
+            rgba(255, 255, 255, 0.04) 55%,
+            transparent 70%
+        );
+        background-size: 300% 100%;
+        animation: ac-shimmer 4s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+    @keyframes ac-shimmer {
+        0%   { background-position: 200% 0; }
+        100% { background-position: -100% 0; }
+    }
+
+    .adventure-card__particles {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    .adventure-card__star {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0;
+        animation: ac-twinkle 3s ease-in-out infinite;
+
+        &:nth-child(odd) {
+            top: 20%;
+            width: 2px;
+            height: 2px;
+        }
+        &:nth-child(even) {
+            top: 60%;
+        }
+        &:nth-child(3n) {
+            top: 40%;
+            width: 4px;
+            height: 4px;
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    @keyframes ac-twinkle {
+        0%, 100% { opacity: 0; transform: scale(0.5); }
+        50%      { opacity: 0.7; transform: scale(1); }
+    }
+
+    .adventure-card__content {
+        position: relative;
+        z-index: 1;
+        padding: 24px 24px 20px;
+    }
+
+    .adventure-card__label {
+        font-family: $nunito-family;
+        font-size: 11px;
+        font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.06em;
-        margin: 0 0 12px;
+        letter-spacing: 0.14em;
+        color: rgba(255, 255, 255, 0.35);
+        margin: 0 0 10px;
     }
 
     .adventure-card__name {
         font-family: $font-family;
-        font-size: 22px;
+        font-size: 28px;
         font-weight: 900;
         color: #fff;
-        margin: 0 0 2px;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .adventure-card__char {
-        font-family: $nunito-family;
-        font-size: 14px;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.5);
-        font-style: italic;
-        margin: 0 0 20px;
-    }
-
-    .adventure-card__progress {
-        margin-top: 8px;
-    }
-
-    .adventure-card__progress-label {
-        font-family: $nunito-family;
-        font-size: 14px;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 0.8);
         margin: 0 0 8px;
+        line-height: 1.1;
     }
 
-    .adventure-card__bar-track {
-        height: 12px;
+    .adventure-card__world-name {
+        font-family: $font-family;
+        font-size: 32px;
+        font-weight: 900;
+        color: #fff;
+        margin: 0 0 20px;
+        line-height: 1.15;
+    }
+
+    .adventure-card__badge {
+        display: inline-block;
+        font-family: $nunito-family;
+        font-size: 12px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.85);
         background: rgba(255, 255, 255, 0.1);
-        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 4px 14px;
+        margin-bottom: 20px;
+        letter-spacing: 0.02em;
+    }
+
+    // ── XP bar ──
+    .adventure-card__xp {
+        margin-top: 4px;
+    }
+
+    .adventure-card__xp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 6px;
+    }
+
+    .adventure-card__xp-text {
+        font-family: $nunito-family;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    .adventure-card__xp-count {
+        font-family: $nunito-family;
+        font-size: 16px;
+        font-weight: 900;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(13, 171, 73, 0.5);
+    }
+
+    .adventure-card__xp-track {
+        position: relative;
+        height: 14px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 7px;
         overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.06);
         margin-bottom: 10px;
     }
 
-    .adventure-card__bar-fill {
+    .adventure-card__xp-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 100%;
-        background: #0dab49;
-        border-radius: 6px;
-        transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        background: linear-gradient(90deg, #0dab49, #2ecc71);
+        border-radius: 7px;
+        transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .adventure-card__progress-hint {
+    .adventure-card__xp-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: linear-gradient(90deg, transparent 60%, rgba(46, 204, 113, 0.6));
+        border-radius: 7px;
+        filter: blur(4px);
+        pointer-events: none;
+        transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .adventure-card__hint {
         font-family: $nunito-family;
         font-size: 12px;
         font-weight: 600;
-        color: rgba(255, 255, 255, 0.35);
+        color: rgba(255, 255, 255, 0.3);
         margin: 0;
     }
 
-    .adventure-card__unlocked {
-        margin-top: 8px;
+
+    // ── Background modal ──
+    .bgm-backdrop {
+        position: fixed;
+        inset: 0;
+        padding-top: 116px;
+        padding-bottom: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+        background: rgba(0, 0, 0, 0.65);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        overflow-y: auto;
+        z-index: 999998;
     }
 
-    .adventure-card__unlock-btn {
-        display: inline-block;
-        font-family: $nunito-family;
-        font-size: 14px;
-        font-weight: 700;
-        color: #fff;
-        background: #0dab49;
+    .bgm-modal {
+        background: linear-gradient(160deg, #0a0f1e 0%, #111d35 40%, #0d1a2e 100%);
+        border-radius: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        padding: 64px 48px 56px;
+        width: 100%;
+        max-width: 860px;
+        position: relative;
+        flex-shrink: 0;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(79, 172, 254, 0.08);
+        text-align: center;
+    }
+
+    .bgm-modal .modal-x-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: none;
         border: none;
-        border-radius: 8px;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: background 0.2s ease;
-
-        &:hover {
-            background: #0c9a42;
-        }
-    }
-
-    .adventure-card__bg-picker {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .adventure-card__bg-picker-label {
-        font-family: $nunito-family;
-        font-size: 13px;
+        font-size: 24px;
         font-weight: 700;
-        color: rgba(255, 255, 255, 0.6);
-        margin: 0;
-    }
-
-    .adventure-card__bg-options {
+        color: #e53e3e;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+        width: 32px;
+        height: 32px;
         display: flex;
-        gap: 10px;
+        align-items: center;
+        justify-content: center;
+
+        &:hover { color: #c53030; }
     }
 
-    .adventure-card__bg-option {
-        width: 60px;
-        height: 60px;
-        border-radius: 10px;
+    .bgm-title {
+        font-family: $font-family;
+        font-size: 36px;
+        font-weight: 900;
+        color: #fff;
+        margin: 0 0 8px;
+        text-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+    }
+
+    .bgm-subtitle {
+        font-family: $nunito-family;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0 0 36px;
+    }
+
+    .bgm-grid {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+
+    .bgm-card {
+        flex: 1 1 0;
+        min-height: 220px;
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
         cursor: pointer;
         border: 3px solid transparent;
-        transition: border-color 0.2s ease, transform 0.2s ease;
+        transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
-        &:hover {
-            transform: scale(1.08);
+        &:hover:not(.is-locked) {
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         &.is-selected {
-            border-color: #fff;
-            box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+            border-color: #4facfe;
+            box-shadow: 0 0 16px rgba(79, 172, 254, 0.5), 0 0 4px rgba(79, 172, 254, 0.3);
+        }
+
+        &.is-locked {
+            cursor: default;
+        }
+
+        &.is-unlockable {
+            cursor: pointer;
+            border-color: rgba(245, 166, 35, 0.4);
+            animation: bgm-unlockable-pulse 2s ease-in-out infinite;
+
+            &:hover {
+                border-color: #f5a623;
+                box-shadow: 0 0 16px rgba(245, 166, 35, 0.5);
+            }
         }
     }
 
-    .adventure-card__bg-close {
-        align-self: flex-start;
+    @keyframes bgm-unlockable-pulse {
+        0%, 100% { box-shadow: 0 0 0 rgba(245, 166, 35, 0); }
+        50%      { box-shadow: 0 0 12px rgba(245, 166, 35, 0.3); }
+    }
+
+    .bgm-card__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: filter 0.2s;
+
+        &.is-locked {
+            filter: grayscale(100%) brightness(0.4);
+        }
+    }
+
+    .bgm-card__lock {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.7);
+
+        svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        span {
+            font-family: $nunito-family;
+            font-size: 14px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    .bgm-card__unlockable {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #f5a623;
+        background: rgba(0, 0, 0, 0.35);
+
+        svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        span {
+            font-family: $nunito-family;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+
+    .bgm-token-hint {
         font-family: $nunito-family;
         font-size: 13px;
         font-weight: 700;
-        color: rgba(255, 255, 255, 0.5);
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
-        border-radius: 6px;
-        padding: 6px 14px;
-        cursor: pointer;
-        margin-top: 2px;
+        color: #f5a623;
+        margin: 0 0 16px;
+        text-shadow: 0 0 10px rgba(245, 166, 35, 0.3);
+    }
 
-        &:hover {
-            color: #fff;
-            background: rgba(255, 255, 255, 0.15);
+    .bgm-card__check {
+        position: absolute;
+        bottom: 6px;
+        right: 6px;
+        width: 24px;
+        height: 24px;
+        background: #4facfe;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(79, 172, 254, 0.5);
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    .bgm-confirm {
+        display: block;
+        width: 100%;
+        font-family: $nunito-family;
+        font-size: 20px;
+        font-weight: 900;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        background: #0ea5e9;
+        border: none;
+        border-radius: 8px;
+        height: 60px;
+        padding: 0;
+        margin: 48px 0 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(14, 165, 233, 0.35);
+        transition: background 0.15s ease, box-shadow 0.2s ease;
+
+        &:hover:not(:disabled) {
+            background: #0284c7;
+            box-shadow: 0 4px 24px rgba(14, 165, 233, 0.5);
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
         }
     }
 

@@ -175,6 +175,7 @@
   <!-- COMPARISON MODAL — outside panel to avoid stacking context issues -->
   <div v-if="showComparisonModal" class="modal-backdrop" @click.self="showComparisonModal = false">
     <div class="invite-modal comparison-modal">
+      <button class="modal-x-close" @click="showComparisonModal = false" aria-label="Close">&times;</button>
       <h3 class="modal-title">Self vs. Others Breakdown</h3>
       <p class="modal-subtitle">
         How you perceive yourself vs. how others perceive you —
@@ -229,15 +230,13 @@
         </div>
       </div>
 
-      <div class="modal-actions" style="margin-top: 20px;">
-        <button class="outline small" @click="showComparisonModal = false">Close</button>
-      </div>
     </div>
   </div>
 
   <!-- INVITE MODAL — outside panel to avoid stacking context issues -->
   <div v-if="inviteTarget" class="modal-backdrop" @click.self="closeInvite">
     <div class="invite-modal">
+      <button class="modal-x-close" @click="closeInvite" aria-label="Close">&times;</button>
       <h3 class="modal-title">Invite {{ inviteTarget.name }}</h3>
       <p class="modal-subtitle">Select one of your completed assessments:</p>
       <select v-model="inviteSlug" class="modal-select">
@@ -877,20 +876,48 @@ export default {
 .modal-backdrop {
   position: fixed;
   inset: 0;
+  padding-top: 116px;
+  padding-bottom: 40px;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  overflow-y: auto;
   z-index: 2000;
 }
 
 .invite-modal {
   background: #fff;
   border-radius: 10px;
-  padding: 28px;
+  padding: 48px 28px 28px;
   width: 90%;
   max-width: 480px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.modal-x-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #e53e3e;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #c53030;
+  }
 }
 
 .modal-title {

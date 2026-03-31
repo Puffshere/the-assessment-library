@@ -2,9 +2,7 @@
   <transition name="modal-fade">
     <div v-if="show" class="modal-backdrop" @click.self="$emit('close')">
       <div class="credits-modal">
-        <div class="modal-top-bar">
-          <button class="red" @click="$emit('close')">close</button>
-        </div>
+        <button class="modal-x-close" @click="$emit('close')" aria-label="Close">&times;</button>
 
         <div class="modal-header">
           <h2>Purchase Credits</h2>
@@ -154,31 +152,48 @@ export default {
 .modal-backdrop {
   position: fixed;
   inset: 0;
+  padding-top: 116px;
+  padding-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
   background: rgba(0, 0, 0, 0.55);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  overflow-y: auto;
   z-index: 9999;
-  padding: 16px;
 }
 
 .credits-modal {
   background: #fff;
   border-radius: 16px;
-  padding: 20px 32px 28px;
+  padding: 48px 32px 28px;
   max-width: 640px;
   width: 100%;
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
-.modal-top-bar {
+.modal-x-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #e53e3e;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 12px;
+  align-items: center;
+  justify-content: center;
 
-  button.red {
-    width: 74px;
+  &:hover {
+    color: #c53030;
   }
 }
 

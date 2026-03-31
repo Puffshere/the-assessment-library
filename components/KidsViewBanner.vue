@@ -20,6 +20,7 @@
     <transition name="modal-fade">
       <div v-if="modalMode === 'create'" class="pin-modal-backdrop" @click.self="cancelModal">
         <div class="pin-modal">
+          <button class="modal-x-close" @click="cancelModal" aria-label="Close">&times;</button>
           <h3>Create a Kids View PIN</h3>
           <p>Choose a 4-digit PIN. You'll need this to turn off Kids View.</p>
 
@@ -49,28 +50,56 @@
 
     <!-- ── Verify PIN Modal (exit Kids View) ────────── -->
     <transition name="modal-fade">
-      <div v-if="modalMode === 'verify'" class="pin-modal-backdrop" @click.self="cancelModal">
-        <div class="pin-modal">
+      <div v-if="modalMode === 'verify'" class="pin-modal-backdrop verify-backdrop" @click.self="cancelModal">
+        <div class="pin-modal verify-modal">
+          <div class="verify-stripe" />
+          <button class="modal-x-close" @click="cancelModal" aria-label="Close">&times;</button>
+
+          <div class="verify-lock">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+              stroke="#1a6cb8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+
           <h3>Enter PIN to exit Kids View</h3>
           <p>Enter your 4-digit PIN to deactivate Kids View.</p>
 
-          <div class="pin-input-wrap">
-            <input ref="verifyPinInput" v-model="verifyPinValue" type="password" maxlength="4" inputmode="numeric"
-              pattern="\d{4}" placeholder="----" class="pin-input" @keyup.enter="submitVerifyPin" />
+          <div class="verify-digits-wrap">
+            <input
+              ref="verifyPinInput"
+              v-model="verifyPinValue"
+              type="password"
+              maxlength="4"
+              inputmode="numeric"
+              pattern="\d{4}"
+              class="verify-real-input"
+              @keyup.enter="submitVerifyPin"
+            />
+            <div class="verify-digits">
+              <div v-for="i in 4" :key="i" class="verify-digit-box"
+                :class="{
+                  'is-filled': verifyPinValue.length >= i,
+                  'is-active': verifyPinValue.length === i - 1
+                }">
+                <span v-if="verifyPinValue.length >= i" class="verify-dot">&bull;</span>
+              </div>
+            </div>
           </div>
 
           <p v-if="modalError" class="pin-error">{{ modalError }}</p>
 
-          <div class="pin-actions">
-            <button class="pin-btn pin-btn--cancel" @click="cancelModal">Cancel</button>
-            <button class="pin-btn pin-btn--submit" :disabled="verifyPinValue.length !== 4 || saving"
+          <div class="verify-actions">
+            <button class="verify-confirm-btn" :disabled="verifyPinValue.length !== 4 || saving"
               @click="submitVerifyPin">
               {{ saving ? 'Verifying...' : 'Confirm' }}
             </button>
+            <button class="verify-cancel-btn" @click="cancelModal">Cancel</button>
           </div>
           <div class="pin-links">
-            <button class="pin-link" @click="openChangePin">Change PIN</button>
-            <button class="pin-link" @click="openForgotPin">Forgot PIN?</button>
+            <a class="pin-link" @click.prevent="openChangePin">Change PIN</a>
+            <a class="pin-link" @click.prevent="openForgotPin">Forgot PIN?</a>
           </div>
         </div>
       </div>
@@ -80,6 +109,7 @@
     <transition name="modal-fade">
       <div v-if="modalMode === 'change'" class="pin-modal-backdrop" @click.self="cancelModal">
         <div class="pin-modal">
+          <button class="modal-x-close" @click="cancelModal" aria-label="Close">&times;</button>
           <h3>Change Your PIN</h3>
           <p>Enter your current PIN, then choose a new one.</p>
 
@@ -112,7 +142,7 @@
               {{ saving ? 'Saving...' : 'Update PIN' }}
             </button>
           </div>
-          <button class="pin-link" @click="openForgotPin">Forgot PIN?</button>
+          <a class="pin-link" @click.prevent="openForgotPin">Forgot PIN?</a>
         </div>
       </div>
     </transition>
@@ -121,6 +151,7 @@
     <transition name="modal-fade">
       <div v-if="modalMode === 'forgot'" class="pin-modal-backdrop" @click.self="cancelModal">
         <div class="pin-modal">
+          <button class="modal-x-close" @click="cancelModal" aria-label="Close">&times;</button>
           <h3>Reset Your PIN</h3>
           <p>Enter your account password to set a new PIN.</p>
 
@@ -242,6 +273,11 @@ export default {
         await this.$axios.$post('/api/kids-mode/toggle', { enabled: false })
         this.$store.commit('SET_KIDS_VIEW_ACTIVE', false)
         this.$store.commit('SET_ACTIVE_CHILD_PROFILE', null)
+
+        // Redirect to adult dashboard if on a kids-only page
+        if (this.$route.path.startsWith('/kids')) {
+          this.$router.push('/dashboard')
+        }
       } catch (err) {
         console.error('Failed to disable Kids View:', err)
       }
@@ -543,32 +579,62 @@ $banner-height: 42px;
 .pin-modal-backdrop {
   position: fixed;
   inset: 0;
+  padding: 126px 16px 40px;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  overflow-y: auto;
   z-index: 1000001;
 }
 
 .pin-modal {
   background: #fff;
-  border-radius: 12px;
-  padding: 32px;
+  border-radius: 16px;
+  padding: 48px 28px 32px;
   width: 100%;
   max-width: 380px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  position: relative;
+  flex-shrink: 0;
 
   h3 {
     margin: 0 0 8px;
     font-size: 20px;
-    color: #222;
+    color: #1a1a2e;
+    font-weight: 700;
+    line-height: 1.3;
   }
 
   >p {
-    margin: 0 0 20px;
+    margin: 0 0 22px;
     font-size: 14px;
     color: #666;
+    line-height: 1.5;
+  }
+}
+
+.modal-x-close {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #e53e3e;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #c53030;
   }
 }
 
@@ -583,22 +649,25 @@ $banner-height: 42px;
 }
 
 .pin-input-wrap {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .pin-input {
-  width: 140px;
-  padding: 10px 16px;
+  width: 160px;
+  padding: 14px 20px;
   font-size: 24px;
   letter-spacing: 12px;
   text-align: center;
-  border: 2px solid #dde3ea;
-  border-radius: 8px;
+  border: 1.5px solid #d0d7e0;
+  border-radius: 10px;
   outline: none;
-  transition: border-color 0.2s;
+  background: #f9fafb;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 
   &:focus {
-    border-color: $secondary;
+    border-color: $banner-blue;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba($banner-blue, 0.15);
   }
 }
 
@@ -612,78 +681,214 @@ $banner-height: 42px;
   color: $danger;
   font-weight: 600;
   font-size: 13px;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 
 .pin-success {
   color: $success;
   font-weight: 600;
   font-size: 13px;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 
 .pin-actions {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   justify-content: center;
 }
 
 .pin-btn {
-  padding: 10px 24px;
-  border-radius: 8px;
+  padding: 12px 28px;
+  border-radius: 10px;
   border: none;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+  min-height: 44px;
 
   &:disabled {
-    opacity: 0.5;
+    opacity: 0.45;
     cursor: not-allowed;
   }
 }
 
 .pin-btn--cancel {
-  background: #eee;
-  color: #333;
+  background: transparent;
+  color: #555;
+  border: 1.5px solid #d0d7e0;
 
   &:hover {
-    background: #ddd;
+    border-color: #aab4c0;
+    background: #f5f6f8;
   }
 }
 
 .pin-btn--submit {
   background: $banner-blue;
   color: #fff;
+  border: 1.5px solid $banner-blue;
 
   &:hover:not(:disabled) {
-    opacity: 0.9;
+    background: darken($banner-blue, 6%);
+    border-color: darken($banner-blue, 6%);
   }
 }
 
 .pin-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 14px;
+  gap: 28px;
+  margin-top: 20px;
 }
 
 .pin-link {
-  background: none;
-  border: none;
   color: $banner-blue;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   text-decoration: underline;
-  padding: 0;
 
   &:hover {
     color: darken($banner-blue, 10%);
   }
 }
 
-/* ── Transition ────���─────────────────────────────── */
+/* ── Verify PIN modal redesign ─────────────────────── */
+
+.verify-modal {
+  background: #f0f7ff;
+  overflow: visible;
+  padding-top: 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22), 0 4px 16px rgba(0, 0, 0, 0.08);
+
+  h3 {
+    color: #12304d;
+  }
+}
+
+.verify-stripe {
+  height: 6px;
+  background: linear-gradient(to right, #e93d2f 25%, #ffbd05 25%, #ffbd05 50%, #0dab49 50%, #0dab49 75%, #1666ff 75%);
+  margin: 0 -28px;
+  border-radius: 16px 16px 0 0;
+  flex-shrink: 0;
+}
+
+.verify-lock {
+  margin: 36px auto 13px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($banner-blue, 0.08);
+  border-radius: 50%;
+}
+
+
+.verify-digits-wrap {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.verify-real-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.verify-digits {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.verify-digit-box {
+  width: 48px;
+  height: 56px;
+  border: 2px solid #d0d7e0;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &.is-active {
+    border-color: $banner-blue;
+    box-shadow: 0 0 0 3px rgba($banner-blue, 0.15);
+  }
+
+  &.is-filled {
+    border-color: $banner-blue;
+  }
+}
+
+.verify-dot {
+  font-size: 28px;
+  line-height: 1;
+  color: #12304d;
+}
+
+.verify-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.verify-confirm-btn {
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 10px;
+  border: none;
+  background: $banner-blue;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover:not(:disabled) {
+    background: darken($banner-blue, 6%);
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+.verify-cancel-btn {
+  width: 100%;
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: 1.5px solid #d0d7e0;
+  background: transparent;
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: #aab4c0;
+    background: rgba(#fff, 0.6);
+  }
+}
+
+/* ── Transition ─────────────────────────────────── */
 
 .modal-fade-enter-active,
 .modal-fade-leave-active {

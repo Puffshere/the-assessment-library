@@ -43,9 +43,9 @@ describe('Kids View', () => {
     cy.get('.pin-modal').should('be.visible')
     cy.contains('Enter PIN to exit Kids View').should('be.visible')
 
-    // Enter the correct PIN from fixture
-    cy.get('.pin-modal input.pin-input').type(testUser.kidsPin)
-    cy.get('.pin-btn--submit').click()
+    // Enter the correct PIN — verify modal uses .verify-real-input
+    cy.get('.pin-modal input.verify-real-input').type(testUser.kidsPin)
+    cy.get('.verify-confirm-btn').click()
 
     // Kids View should now be OFF
     cy.get('button.kids-view-banner__toggle.is-on').should('not.exist')
@@ -74,15 +74,15 @@ describe('Kids View', () => {
     cy.get('button.kids-view-banner__toggle').click()
     cy.get('.pin-modal').should('be.visible')
 
-    // Enter wrong PIN
-    cy.get('.pin-modal input.pin-input').type('0000')
-    cy.get('.pin-btn--submit').click()
+    // Enter wrong PIN — verify modal uses .verify-real-input
+    cy.get('.pin-modal input.verify-real-input').type('0000')
+    cy.get('.verify-confirm-btn').click()
 
     // Should show error
     cy.get('.pin-error').should('be.visible')
 
-    // Kids View should still be active
-    cy.get('.pin-btn--cancel').click()
+    // Kids View should still be active — cancel uses .verify-cancel-btn
+    cy.get('.verify-cancel-btn').click()
     cy.get('button.kids-view-banner__toggle.is-on').should('exist')
   })
 

@@ -244,6 +244,14 @@ const saveAnswer = async (req, res) => {
           }
 
           childProfile.hasCompletedFirstAssessment = true;
+
+          // ── Track completions per theme for background unlocks ──
+          const theme = childProfile.theme;
+          if (theme) {
+            const prevCount = childProfile.completionsPerTheme.get(theme) || 0;
+            childProfile.completionsPerTheme.set(theme, prevCount + 1);
+          }
+
           await childProfile.save();
         }
       } catch (err) {

@@ -210,6 +210,7 @@
         <transition name="ko-fade">
             <div v-if="menuProfile" class="ko__overlay" @click.self="closeMenu">
                 <div class="ko__menu">
+                    <button class="modal-x-close" @click="closeMenu" aria-label="Close">&times;</button>
                     <h4 class="ko__menu-title">{{ menuProfile.childName }}</h4>
                     <button class="ko__menu-item" @click="editFromMenu">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -235,6 +236,7 @@
         <transition name="ko-fade">
             <div v-if="deleteTarget" class="ko__overlay" @click.self="deleteTarget = null">
                 <div class="ko__menu">
+                    <button class="modal-x-close" @click="deleteTarget = null" aria-label="Close">&times;</button>
                     <h4 class="ko__menu-title">Delete {{ deleteTarget.childName }}?</h4>
                     <p class="ko__menu-text">This will permanently remove this player and all their progress.</p>
                     <button class="ko__menu-item ko__menu-item--danger" :disabled="deleting" @click="doDelete">
@@ -249,6 +251,7 @@
         <transition name="ko-fade">
             <div v-if="editNameProfile" class="ko__overlay" @click.self="editNameProfile = null">
                 <div class="ko__menu">
+                    <button class="modal-x-close" @click="editNameProfile = null" aria-label="Close">&times;</button>
                     <h4 class="ko__menu-title">Edit Names</h4>
                     <label class="ko__edit-label">Real Name</label>
                     <input v-model="editNameValue" type="text" class="ko__edit-input" maxlength="30"
@@ -927,15 +930,32 @@ $dark-bg: linear-gradient(135deg, #0f1623 0%, #1a2744 40%, #12304d 100%);
 
 .ko__overlay {
     position: fixed; inset: 0;
+    padding-top: 116px; padding-bottom: 40px;
+    padding-left: 20px; padding-right: 20px;
     background: rgba(0, 0, 0, 0.55);
-    display: flex; align-items: center; justify-content: center;
-    z-index: 999999; padding: 20px;
+    display: flex; align-items: flex-start; justify-content: center;
+    overflow-y: auto;
+    z-index: 999999;
 }
 
 .ko__menu {
-    background: #fff; border-radius: 16px; padding: 24px;
+    background: #fff; border-radius: 16px; padding: 48px 24px 24px;
     width: 100%; max-width: 320px; text-align: center;
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+    position: relative; flex-shrink: 0;
+}
+
+.modal-x-close {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: none; border: none;
+    font-size: 24px; font-weight: 700;
+    color: #e53e3e; cursor: pointer;
+    line-height: 1; padding: 0;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+
+    &:hover { color: #c53030; }
 }
 
 .ko__menu-title {

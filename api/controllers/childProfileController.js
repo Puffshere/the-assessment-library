@@ -94,6 +94,8 @@ const updateProfile = async (req, res) => {
       'hasCompletedFirstAssessment',
       'stats',
       'cardBackground',
+      'unlockedBackgrounds',
+      'completionsPerTheme',
       'activeProfile',
     ];
 

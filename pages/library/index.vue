@@ -100,13 +100,11 @@
 
         <!-- BOOK MODAL (never during exterior/loading) -->
         <div v-if="showBookModal && selectedBook && showShelves" class="book-modal-backdrop"
+            style="padding-top: 114px !important;"
             @click.self="closeBookModal">
             <div class="book-modal">
+                <button class="modal-x-close" @click="closeBookModal" aria-label="Close">&times;</button>
                 <div class="container">
-                    <button type="button" class="red" @click="closeBookModal" aria-label="Close">
-                        close
-                    </button>
-                    <br />
                     <h4>{{ selectedBook.title }}</h4>
                     <hr />
                     <div class="row">
@@ -419,7 +417,7 @@ export default {
                 }
 
                 this.closeBookModal()
-                this.$router.push(`/library/${book.slug}`)
+                this.$router.push(`/library/${book.slug}?session=${sessionId}`)
             } catch (err) {
                 const code = err?.response?.data?.code
                 const msg = err?.response?.data?.message
@@ -756,10 +754,13 @@ export default {
     .book-modal-backdrop {
         position: fixed;
         inset: 0;
+        padding-top: 116px;
+        padding-bottom: 40px;
         background: rgba(0, 0, 0, 0.45);
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        overflow-y: auto;
         z-index: 999;
 
         .book-modal {
@@ -768,16 +769,33 @@ export default {
             width: 100%;
             background: #ffffff;
             border-radius: 12px;
-            padding: 24px;
+            padding: 48px 24px 24px;
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
             text-align: left;
         }
 
-        .red {
+        .modal-x-close {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 90px;
+            top: 12px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            font-weight: 700;
+            color: #e53e3e;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+
+            &:hover {
+                color: #c53030;
+            }
         }
 
         h4 {

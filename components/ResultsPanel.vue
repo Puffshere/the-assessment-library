@@ -151,7 +151,7 @@
             <div v-if="showConclusionModal && conclusionHtml" class="conclusion-modal-backdrop"
                 @click.self="closeConclusionModal">
                 <div class="conclusion-modal">
-                    <button class="conclusion-modal-close red" @click="closeConclusionModal">close</button>
+                    <button class="modal-x-close" @click="closeConclusionModal" aria-label="Close">&times;</button>
 
                     <h3 class="conclusion-modal-title">Conclusion</h3>
 
@@ -641,10 +641,13 @@ export default {
 .conclusion-modal-backdrop {
     position: fixed;
     inset: 0;
+    padding-top: 116px;
+    padding-bottom: 40px;
     background: rgba(0, 0, 0, 0.55);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    overflow-y: auto;
     z-index: 2000;
 }
 
@@ -653,10 +656,9 @@ export default {
     max-width: 700px;
     width: 90%;
     border-radius: 10px;
-    padding: 24px 28px;
+    padding: 48px 28px 24px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-    max-height: 80vh;
-    overflow-y: auto;
+    flex-shrink: 0;
     position: relative;
 }
 
@@ -666,15 +668,27 @@ export default {
     color: #12304d;
 }
 
-.conclusion-modal-close {
+.modal-x-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e53e3e;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
     width: 32px;
     height: 32px;
-    padding: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-right: 20px;
+
+    &:hover {
+        color: #c53030;
+    }
 }
 
 .line {

@@ -341,7 +341,7 @@ $shadow: rgba(0, 0, 0, 0.08);
     position: fixed;
     left: 0;
     right: 0;
-    top: 64px;
+    top: 106px;
     background: #fff;
     z-index: 1000;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);

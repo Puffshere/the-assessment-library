@@ -2,21 +2,34 @@ describe('Dashboard', () => {
   beforeEach(() => {
     cy.getTestUser().then((user) => {
       cy.login(user.email, user.password)
+
+      // Ensure Kids View is OFF so standard dashboard shows
+      cy.window().its('localStorage').invoke('getItem', 'tal_token').then((token) => {
+        if (token) {
+          cy.request({
+            method: 'POST',
+            url: '/api/kids-mode/toggle',
+            headers: { Authorization: `Bearer ${token}` },
+            body: { enabled: false },
+            failOnStatusCode: false,
+          })
+        }
+      })
     })
   })
 
   it('loads the standard dashboard with correct tabs', () => {
     cy.window().then((win) => win.$nuxt.$router.push('/dashboard'))
 
-    cy.contains('.results-tab', '1st Person', { timeout: 10000 }).should('be.visible')
-    cy.contains('.results-tab', '3rd Person').should('be.visible')
-    cy.contains('.results-tab', 'For Others').should('be.visible')
+    cy.get('.results-tab', { timeout: 10000 }).contains('1st Person').should('be.visible')
+    cy.get('.results-tab').contains('3rd Person').should('be.visible')
+    cy.get('.results-tab').contains('For Others').should('be.visible')
   })
 
   it('shows Account Overview panel in standard view', () => {
     cy.window().then((win) => win.$nuxt.$router.push('/dashboard'))
 
-    cy.contains('Account Overview', { timeout: 10000 }).should('be.visible')
+    cy.contains('.panel-title', 'Account Overview', { timeout: 10000 }).should('be.visible')
     cy.contains('Available Credits').should('be.visible')
   })
 
@@ -30,10 +43,10 @@ describe('Dashboard', () => {
   it('tabs switch content when clicked', () => {
     cy.window().then((win) => win.$nuxt.$router.push('/dashboard'))
 
-    cy.contains('.results-tab', '3rd Person', { timeout: 10000 }).first().click()
+    cy.get('.results-tab', { timeout: 10000 }).contains('3rd Person').first().click()
     cy.get('.results-tab.is-active').should('contain', '3rd Person')
 
-    cy.contains('.results-tab', '1st Person').click()
+    cy.get('.results-tab').contains('1st Person').click()
     cy.get('.results-tab.is-active').should('contain', '1st Person')
   })
 
@@ -139,7 +152,7 @@ describe('Dashboard', () => {
     })
   })
 
-  it('Your Adventure card shows progress bar in Kids View', () => {
+  it('Your Adventure card shows world name in Kids View', () => {
     cy.window().its('localStorage').invoke('getItem', 'tal_token').then((token) => {
       if (!token) return
 
@@ -161,21 +174,15 @@ describe('Dashboard', () => {
         }).then(() => {
           cy.window().then((win) => {
             win.$nuxt.$store.commit('SET_KIDS_VIEW_ACTIVE', true)
+            win.$nuxt.$store.commit('SET_ACTIVE_CHILD_PROFILE', profiles[0])
             win.$nuxt.$router.push('/dashboard')
           })
 
           cy.get('[data-cy="child-profile-tab"]', { timeout: 10000 }).should('have.length.greaterThan', 0)
 
-          cy.contains('Your Adventure', { timeout: 5000 }).should('be.visible')
-
-          // Should show progress bar or background button
-          cy.get('body').then(($body) => {
-            const text = $body.text()
-            const hasProgress = text.includes('stories complete')
-            const hasUnlock = text.includes('Choose a Background') ||
-                              text.includes('Change Background')
-            expect(hasProgress || hasUnlock).to.be.true
-          })
+          // Adventure card shows "[name]'s World!" title
+          cy.get('.adventure-card__world-name', { timeout: 5000 }).should('be.visible')
+          cy.get('.adventure-card__world-name').invoke('text').should('include', "World!")
 
           // Restore
           cy.request({

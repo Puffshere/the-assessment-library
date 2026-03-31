@@ -49,6 +49,13 @@ export const mutations = {
 
   SET_ACTIVE_CHILD_PROFILE(state, profile) {
     state.activeChildProfile = profile
+    if (process.client) {
+      if (profile && profile._id) {
+        localStorage.setItem('tal_active_child_id', profile._id)
+      } else {
+        localStorage.removeItem('tal_active_child_id')
+      }
+    }
   }
 }
 
@@ -75,11 +82,19 @@ export const actions = {
     restoreAuthFromStorage({ commit, dispatch }, this.$axios)
   },
 
-  async fetchMe({ commit }) {
+  async fetchMe({ commit, dispatch }) {
     try {
       const res = await this.$axios.$get('/api/auth/me')
       commit('SET_USER', res.user)
       commit('SET_KIDS_VIEW_ACTIVE', res.user.kids_mode_enabled)
+
+      // Restore active child profile if kids mode is on and we have a saved child ID
+      if (res.user.kids_mode_enabled && process.client) {
+        const savedChildId = localStorage.getItem('tal_active_child_id')
+        if (savedChildId) {
+          dispatch('restoreChildProfile', savedChildId)
+        }
+      }
     } catch (err) {
       // Token is invalid/expired — log out
       commit('SET_LOGGED_IN', false)
@@ -94,7 +109,20 @@ export const actions = {
     }
   },
 
-  async login({ commit }, { email, password }) {
+  async restoreChildProfile({ commit }, childId) {
+    try {
+      const res = await this.$axios.$get('/api/child-profiles')
+      const profiles = res.profiles || res || []
+      const match = profiles.find(p => (p._id || p.id) === childId)
+      if (match) {
+        commit('SET_ACTIVE_CHILD_PROFILE', match)
+      }
+    } catch (err) {
+      console.error('Error restoring child profile:', err)
+    }
+  },
+
+  async login({ commit, dispatch }, { email, password }) {
     try {
       const res = await this.$axios.$post('/api/auth/login', {
         email,
@@ -111,6 +139,14 @@ export const actions = {
       if (process.client) {
         localStorage.setItem('tal_logged_in', '1')
         localStorage.setItem('tal_token', res.token)
+
+        // Restore active child profile if kids mode is on
+        if (res.user.kids_mode_enabled) {
+          const savedChildId = localStorage.getItem('tal_active_child_id')
+          if (savedChildId) {
+            dispatch('restoreChildProfile', savedChildId)
+          }
+        }
       }
 
       return res
@@ -148,7 +184,10 @@ export const actions = {
     }
   },
 
-  logout({ commit }) {
+  logout({ commit, state }) {
+    // Preserve the active child ID so it can be restored on next login
+    const keepChildId = state.activeChildProfile && state.activeChildProfile._id
+
     commit('SET_LOGGED_IN', false)
     commit('SET_USER', null)
     commit('SET_TOKEN', null)
@@ -161,6 +200,10 @@ export const actions = {
     if (process.client) {
       localStorage.removeItem('tal_logged_in')
       localStorage.removeItem('tal_token')
+      // Restore the child ID so it survives logout/login cycle
+      if (keepChildId) {
+        localStorage.setItem('tal_active_child_id', keepChildId)
+      }
     }
   }
 }

@@ -100,6 +100,17 @@ const childProfileSchema = new mongoose.Schema(
       default: '',
       trim: true,
     },
+    // Background unlock system
+    unlockedBackgrounds: {
+      type: Map,
+      of: [String],
+      default: {},
+    },
+    completionsPerTheme: {
+      type: Map,
+      of: Number,
+      default: {},
+    },
     activeProfile: {
       type: Boolean,
       default: false,
