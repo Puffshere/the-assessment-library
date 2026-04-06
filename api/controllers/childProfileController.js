@@ -1,6 +1,8 @@
 const ChildProfileModule = require('../models/ChildProfile');
 const ChildProfile = ChildProfileModule.default || ChildProfileModule;
 const AssessmentSession = require('../models/AssessmentSession');
+const StoryChapterModule = require('../models/StoryChapter');
+const StoryChapter = StoryChapterModule.default || StoryChapterModule;
 
 function getDominantDiscType(sessions) {
   const totals = { D: 0, I: 0, S: 0, C: 0 };
@@ -34,7 +36,25 @@ const getProfiles = async (req, res) => {
       .sort({ createdAt: -1 })
       .lean();
 
-    res.json({ profiles });
+    const profileIds = profiles.map(p => p._id);
+    const chapterCounts = await StoryChapter.aggregate([
+      { $match: { childProfileId: { $in: profileIds } } },
+      { $group: { _id: '$childProfileId', count: { $sum: 1 } } }
+    ]);
+    const countMap = {};
+    chapterCounts.forEach(c => { countMap[c._id.toString()] = c.count; });
+
+    const enrichedProfiles = profiles.map(p => {
+      const chaptersWritten = countMap[p._id.toString()] || 0;
+      const completedCount = p.completedAssessments ? p.completedAssessments.length : 0;
+      return {
+        ...p,
+        chaptersWritten,
+        storyTokensAvailable: completedCount - chaptersWritten,
+      };
+    });
+
+    res.json({ profiles: enrichedProfiles });
   } catch (err) {
     console.error('Error fetching child profiles:', err);
     res.status(500).json({ message: 'Server error' });

@@ -216,7 +216,8 @@ export default {
                 value: Math.round(this.stats[key] || 0),
                 color: STAT_COLORS[key]
             }))
-        }
+        },
+
     }
 }
 </script>
@@ -553,4 +554,6 @@ export default {
         height: 220px;
     }
 }
+
+
 </style>

@@ -23,367 +23,380 @@
                     {{ error }}
                 </div>
                 <div v-else class="grid">
-                    <div class="results-wrapper">
-                        <div class="results-tabs">
-                            <!-- Kids view: one tab per child profile + Players tab -->
-                            <template v-if="kidsViewActive">
-                                <div v-for="cp in childProfiles" :key="cp._id"
-                                    class="results-tab results-tab--kid"
-                                    :class="{ 'is-active': activeChildTab === cp._id }"
-                                    data-cy="child-profile-tab"
-                                    @click="switchChildTab(cp)">
-                                    {{ cp.childName }}
+
+                    <div v-if="kidsViewActive" class="story-btn-bar">
+                        <button
+                            class="story-token-btn"
+                            :disabled="storyTokens <= 0 || isGeneratingStory"
+                            @click="generateStory">
+                            <span v-if="isGeneratingStory">✨ Writing your story...</span>
+                            <span v-else-if="storyTokens > 0">✨ Add to Story ({{ storyTokens }} token{{ storyTokens !== 1 ? "s" : "" }})</span>
+                            <span v-else>Complete an assessment to unlock a chapter</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="results-wrapper">
+
+                    <div class="results-tabs">
+                        <!-- Kids view: one tab per child profile + Players tab -->
+                        <template v-if="kidsViewActive">
+                            <div v-for="cp in childProfiles" :key="cp._id"
+                                class="results-tab results-tab--kid"
+                                :class="{ 'is-active': activeChildTab === cp._id }"
+                                data-cy="child-profile-tab"
+                                @click="switchChildTab(cp)">
+                                {{ cp.childName }}
+                            </div>
+
+                            <div class="results-tab results-tab--players"
+                                data-cy="players-tab"
+                                @click="$router.push('/kids/onboarding')">
+                                <svg class="results-tab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="6" width="20" height="12" rx="2" />
+                                    <line x1="6" y1="10" x2="6" y2="14" />
+                                    <line x1="4" y1="12" x2="8" y2="12" />
+                                    <circle cx="16" cy="10" r="1.5" />
+                                    <circle cx="19" cy="13" r="1.5" />
+                                </svg>
+                                <span>Players</span>
+                            </div>
+                        </template>
+
+                        <!-- Standard view: normal tabs -->
+                        <template v-else>
+                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'first' }"
+                                @click="activeResultsView = 'first'">
+                                1st Person
+                            </div>
+
+                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'second' }"
+                                @click="activeResultsView = 'second'">
+                                3rd Person
+                            </div>
+
+                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'third' }"
+                                @click="activeResultsView = 'third'">
+                                <span class="tab-label-desktop">3rd Person Participants</span>
+                                <span class="tab-label-mobile">Participants</span>
+                            </div>
+
+                            <div class="results-tab" :class="{ 'is-active': activeResultsView === 'fourth' }"
+                                @click="openForOthersTab">
+                                For Others
+                                <span v-if="pendingForOthersCount && !forOthersSeen" class="tab-badge">
+                                    {{ pendingForOthersCount }}
+                                </span>
+                            </div>
+
+                            <div v-if="childProfiles.length"
+                                class="results-tab results-tab--viewer"
+                                :class="{ 'is-active': activeResultsView === 'first' }"
+                                @click="cycleViewingChild">
+                                {{ viewingChildLabel }}
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- 1st person view -->
+                    <kids-character-card v-if="activeResultsView === 'first' && kidsViewActive"
+                        :completed-sessions="activeChildSessions" />
+                    <results-panel v-else-if="activeResultsView === 'first'" :selected-result="selectedResult"
+                        :sessions="filteredSessions" :assessments-started="filteredSessions.length"
+                        :assessments-completed="filteredCompletedSessions.length"
+                        :credits-balance="dashboard.user.creditsBalance"
+                        @clear-results="selectedResult = null"
+                        @credits-deducted="dashboard.user.creditsBalance = $event" />
+
+                    <!-- 3rd person views -->
+                    <results-panel-third-person v-else-if="activeResultsView === 'second' || activeResultsView === 'third'"
+                        :selected-result="selectedResult"
+                        :active-view="activeResultsView"
+                        :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
+                        :assessments-completed="completedSessions.length"
+                        :completed-sessions="completedSessions"
+                        :credits-balance="dashboard.user.creditsBalance"
+                        :invite-assessment-slug="$route.query.inviteAssessment || ''"
+                        @clear-results="selectedResult = null"
+                        @credits-deducted="dashboard.user.creditsBalance = $event" />
+
+                    <!-- For Others view -->
+                    <div v-else-if="activeResultsView === 'fourth'" class="panel panel-wide panel-for-others">
+
+                        <!-- DETAIL VIEW -->
+                        <template v-if="selectedForOthersResult">
+                            <div class="results-header">
+                                <h2 class="panel-title">{{ selectedForOthersResult.assessmentTitle }}</h2>
+                                <button class="red" @click="selectedForOthersResult = null" aria-label="Back to list">Back</button>
+                            </div>
+                            <div class="panel-body">
+                                <div class="results-layout">
+                                    <div class="chart-col">
+                                        <div class="chart" v-if="forOthersBreakdown">
+                                            <div class="bar" :style="{ height: forOthersPct('D') + '%', backgroundColor: '#f44336' }" :title="'D: ' + forOthersPct('D').toFixed(1) + '%'">
+                                                <div class="label">D</div>
+                                            </div>
+                                            <div class="bar" :style="{ height: forOthersPct('I') + '%', backgroundColor: '#ffbd05' }" :title="'I: ' + forOthersPct('I').toFixed(1) + '%'">
+                                                <div class="label">I</div>
+                                            </div>
+                                            <div class="bar" :style="{ height: forOthersPct('S') + '%', backgroundColor: '#0dab49' }" :title="'S: ' + forOthersPct('S').toFixed(1) + '%'">
+                                                <div class="label">S</div>
+                                            </div>
+                                            <div class="bar" :style="{ height: forOthersPct('C') + '%', backgroundColor: '#1666ff' }" :title="'C: ' + forOthersPct('C').toFixed(1) + '%'">
+                                                <div class="label">C</div>
+                                            </div>
+                                        </div>
+                                        <p v-else class="no-data">No score breakdown available.</p>
+                                    </div>
+                                    <div class="text-col">
+                                        <h5>These are the scores you believed <strong>{{ selectedForOthersResult.inviterName }}</strong> would have gotten.</h5>
+                                        <hr class="shortLine top" />
+                                        <ul v-if="forOthersBreakdown">
+                                            <li>D: {{ forOthersPct('D').toFixed(1) }}%</li>
+                                            <li>I: {{ forOthersPct('I').toFixed(1) }}%</li>
+                                            <li>S: {{ forOthersPct('S').toFixed(1) }}%</li>
+                                            <li>C: {{ forOthersPct('C').toFixed(1) }}%</li>
+                                        </ul>
+                                    </div>
                                 </div>
+                            </div>
+                        </template>
 
-                                <div class="results-tab results-tab--players"
-                                    data-cy="players-tab"
-                                    @click="$router.push('/kids/onboarding')">
-                                    <svg class="results-tab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="2" y="6" width="20" height="12" rx="2" />
-                                        <line x1="6" y1="10" x2="6" y2="14" />
-                                        <line x1="4" y1="12" x2="8" y2="12" />
-                                        <circle cx="16" cy="10" r="1.5" />
-                                        <circle cx="19" cy="13" r="1.5" />
-                                    </svg>
-                                    <span>Players</span>
-                                </div>
-                            </template>
+                        <!-- LIST VIEW -->
+                        <template v-else>
+                            <h2 class="panel-title">Assessments I've Taken for Others</h2>
 
-                            <!-- Standard view: normal tabs -->
-                            <template v-else>
-                                <div class="results-tab" :class="{ 'is-active': activeResultsView === 'first' }"
-                                    @click="activeResultsView = 'first'">
-                                    1st Person
-                                </div>
+                            <div v-if="!dashboard.pendingInvitations.length && !dashboard.thirdPersonSessions.length" class="empty-state">
+                                <p>You haven't taken any assessments on behalf of others yet.</p>
+                                <p>When someone invites you to take an assessment, it will appear here.</p>
+                            </div>
 
-                                <div class="results-tab" :class="{ 'is-active': activeResultsView === 'second' }"
-                                    @click="activeResultsView = 'second'">
-                                    3rd Person
-                                </div>
-
-                                <div class="results-tab" :class="{ 'is-active': activeResultsView === 'third' }"
-                                    @click="activeResultsView = 'third'">
-                                    <span class="tab-label-desktop">3rd Person Participants</span>
-                                    <span class="tab-label-mobile">Participants</span>
-                                </div>
-
-                                <div class="results-tab" :class="{ 'is-active': activeResultsView === 'fourth' }"
-                                    @click="openForOthersTab">
-                                    For Others
-                                    <span v-if="pendingForOthersCount && !forOthersSeen" class="tab-badge">
-                                        {{ pendingForOthersCount }}
-                                    </span>
-                                </div>
-
-                                <div v-if="childProfiles.length"
-                                    class="results-tab results-tab--viewer"
-                                    :class="{ 'is-active': activeResultsView === 'first' }"
-                                    @click="cycleViewingChild">
-                                    {{ viewingChildLabel }}
-                                </div>
-                            </template>
-                        </div>
-
-                        <!-- 1st person view -->
-                        <kids-character-card v-if="activeResultsView === 'first' && kidsViewActive"
-                            :completed-sessions="activeChildSessions" />
-                        <results-panel v-else-if="activeResultsView === 'first'" :selected-result="selectedResult"
-                            :sessions="filteredSessions" :assessments-started="filteredSessions.length"
-                            :assessments-completed="filteredCompletedSessions.length"
-                            :credits-balance="dashboard.user.creditsBalance"
-                            @clear-results="selectedResult = null"
-                            @credits-deducted="dashboard.user.creditsBalance = $event" />
-
-                        <!-- 3rd person views -->
-                        <results-panel-third-person v-else-if="activeResultsView === 'second' || activeResultsView === 'third'"
-                            :selected-result="selectedResult"
-                            :active-view="activeResultsView"
-                            :sessions="dashboard.sessions" :assessments-started="dashboard.sessions.length"
-                            :assessments-completed="completedSessions.length"
-                            :completed-sessions="completedSessions"
-                            :credits-balance="dashboard.user.creditsBalance"
-                            :invite-assessment-slug="$route.query.inviteAssessment || ''"
-                            @clear-results="selectedResult = null"
-                            @credits-deducted="dashboard.user.creditsBalance = $event" />
-
-                        <!-- For Others view -->
-                        <div v-else-if="activeResultsView === 'fourth'" class="panel panel-wide panel-for-others">
-
-                            <!-- DETAIL VIEW -->
-                            <template v-if="selectedForOthersResult">
-                                <div class="results-header">
-                                    <h2 class="panel-title">{{ selectedForOthersResult.assessmentTitle }}</h2>
-                                    <button class="red" @click="selectedForOthersResult = null" aria-label="Back to list">Back</button>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="results-layout">
-                                        <div class="chart-col">
-                                            <div class="chart" v-if="forOthersBreakdown">
-                                                <div class="bar" :style="{ height: forOthersPct('D') + '%', backgroundColor: '#f44336' }" :title="'D: ' + forOthersPct('D').toFixed(1) + '%'">
-                                                    <div class="label">D</div>
+                            <div v-else class="sessions scroll-area">
+                                <!-- Pending invitations (link not yet clicked — no session exists) -->
+                                <div v-if="dashboard.pendingInvitations.length" class="section-block">
+                                    <h3 style="color: #e93d2f;">Awaiting Your Response</h3>
+                                    <hr />
+                                    <ul>
+                                        <li v-for="inv in dashboard.pendingInvitations" :key="String(inv.invitationId)" class="session-row">
+                                            <div class="session-row-top">
+                                                <div class="session-main">
+                                                    <div class="session-title">{{ inv.assessmentTitle }}</div>
+                                                    <div class="session-meta">
+                                                        From: <strong>{{ inv.inviterName }}</strong>
+                                                        <span v-if="inv.invitedAt" style="margin-left: 8px;">
+                                                            &middot; Invited: {{ formatDate(inv.invitedAt) }}
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                                <div class="bar" :style="{ height: forOthersPct('I') + '%', backgroundColor: '#ffbd05' }" :title="'I: ' + forOthersPct('I').toFixed(1) + '%'">
-                                                    <div class="label">I</div>
-                                                </div>
-                                                <div class="bar" :style="{ height: forOthersPct('S') + '%', backgroundColor: '#0dab49' }" :title="'S: ' + forOthersPct('S').toFixed(1) + '%'">
-                                                    <div class="label">S</div>
-                                                </div>
-                                                <div class="bar" :style="{ height: forOthersPct('C') + '%', backgroundColor: '#1666ff' }" :title="'C: ' + forOthersPct('C').toFixed(1) + '%'">
-                                                    <div class="label">C</div>
+                                                <div class="session-actions">
+                                                    <button class="blue small"
+                                                        @click="startInvitedAssessment(inv)">
+                                                        Start
+                                                    </button>
                                                 </div>
                                             </div>
-                                            <p v-else class="no-data">No score breakdown available.</p>
-                                        </div>
-                                        <div class="text-col">
-                                            <h5>These are the scores you believed <strong>{{ selectedForOthersResult.inviterName }}</strong> would have gotten.</h5>
-                                            <hr class="shortLine top" />
-                                            <ul v-if="forOthersBreakdown">
-                                                <li>D: {{ forOthersPct('D').toFixed(1) }}%</li>
-                                                <li>I: {{ forOthersPct('I').toFixed(1) }}%</li>
-                                                <li>S: {{ forOthersPct('S').toFixed(1) }}%</li>
-                                                <li>C: {{ forOthersPct('C').toFixed(1) }}%</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </template>
-
-                            <!-- LIST VIEW -->
-                            <template v-else>
-                                <h2 class="panel-title">Assessments I've Taken for Others</h2>
-
-                                <div v-if="!dashboard.pendingInvitations.length && !dashboard.thirdPersonSessions.length" class="empty-state">
-                                    <p>You haven't taken any assessments on behalf of others yet.</p>
-                                    <p>When someone invites you to take an assessment, it will appear here.</p>
+                                        </li>
+                                    </ul>
                                 </div>
 
-                                <div v-else class="sessions scroll-area">
-                                    <!-- Pending invitations (link not yet clicked — no session exists) -->
-                                    <div v-if="dashboard.pendingInvitations.length" class="section-block">
-                                        <h3 style="color: #e93d2f;">Awaiting Your Response</h3>
-                                        <hr />
-                                        <ul>
-                                            <li v-for="inv in dashboard.pendingInvitations" :key="String(inv.invitationId)" class="session-row">
-                                                <div class="session-row-top">
-                                                    <div class="session-main">
-                                                        <div class="session-title">{{ inv.assessmentTitle }}</div>
-                                                        <div class="session-meta">
-                                                            From: <strong>{{ inv.inviterName }}</strong>
-                                                            <span v-if="inv.invitedAt" style="margin-left: 8px;">
-                                                                &middot; Invited: {{ formatDate(inv.invitedAt) }}
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="session-actions">
-                                                        <button class="blue small"
-                                                            @click="startInvitedAssessment(inv)">
-                                                            Start
-                                                        </button>
+                                <!-- Sessions already started or completed -->
+                                <div v-if="dashboard.thirdPersonSessions.length" class="section-block">
+                                    <h3 v-if="dashboard.pendingInvitations.length" style="color: #0dab49;">In Progress / Completed</h3>
+                                    <hr v-if="dashboard.pendingInvitations.length" />
+                                    <ul>
+                                        <li v-for="s in dashboard.thirdPersonSessions" :key="s.id" class="session-row">
+                                            <div class="session-row-top">
+                                                <div class="session-main">
+                                                    <div class="session-title">{{ s.assessmentTitle }}</div>
+                                                    <div class="session-meta">
+                                                        For: <strong>{{ s.inviterName }}</strong>
+                                                        <span v-if="s.completedAt" style="margin-left: 8px;">
+                                                            &middot; Completed: {{ formatDate(s.completedAt) }}
+                                                        </span>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Sessions already started or completed -->
-                                    <div v-if="dashboard.thirdPersonSessions.length" class="section-block">
-                                        <h3 v-if="dashboard.pendingInvitations.length" style="color: #0dab49;">In Progress / Completed</h3>
-                                        <hr v-if="dashboard.pendingInvitations.length" />
-                                        <ul>
-                                            <li v-for="s in dashboard.thirdPersonSessions" :key="s.id" class="session-row">
-                                                <div class="session-row-top">
-                                                    <div class="session-main">
-                                                        <div class="session-title">{{ s.assessmentTitle }}</div>
-                                                        <div class="session-meta">
-                                                            For: <strong>{{ s.inviterName }}</strong>
-                                                            <span v-if="s.completedAt" style="margin-left: 8px;">
-                                                                &middot; Completed: {{ formatDate(s.completedAt) }}
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="session-actions">
-                                                        <button v-if="s.status === 'completed' && s.scoreBreakdown"
-                                                            class="outline small green"
-                                                            @click="selectedForOthersResult = s">
-                                                            View Results
-                                                        </button>
-                                                        <button v-else-if="s.status !== 'completed'"
-                                                            class="outline small"
-                                                            @click="resumeThirdPersonSession(s)">
-                                                            Resume
-                                                        </button>
-                                                    </div>
+                                                <div class="session-actions">
+                                                    <button v-if="s.status === 'completed' && s.scoreBreakdown"
+                                                        class="outline small green"
+                                                        @click="selectedForOthersResult = s">
+                                                        View Results
+                                                    </button>
+                                                    <button v-else-if="s.status !== 'completed'"
+                                                        class="outline small"
+                                                        @click="resumeThirdPersonSession(s)">
+                                                        Resume
+                                                    </button>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </template>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- ACCOUNT OVERVIEW / ADVENTURE CARD -->
+                <div v-if="kidsViewActive && activeChildProfile"
+                    :class="hasActiveBackground ? 'adventure-card-nowrap' : 'panel adventure-card-wrapper'">
+                    <div class="adventure-card"
+                        :class="{ 'is-pressed': showBgModal }"
+                        :style="adventureCardBg"
+                        @click="openBgModal">
+                        <div class="adventure-card__shimmer"></div>
+                        <div class="adventure-card__particles">
+                            <span v-for="n in 8" :key="n" class="adventure-card__star"
+                                :style="{ left: (n * 12 + 3) + '%', animationDelay: (n * 0.4) + 's' }"></span>
+                        </div>
+                        <div class="adventure-card__content">
+                            <h2 class="adventure-card__world-name" :style="{ textShadow: '0 0 20px ' + playerThemeColor + '88, 0 0 40px ' + playerThemeColor + '44' }">
+                                {{ activeChildProfile.characterName || activeChildProfile.childName }}'s World!
+                            </h2>
                         </div>
                     </div>
+                </div>
 
-                    <!-- ACCOUNT OVERVIEW / ADVENTURE CARD -->
-                    <div v-if="kidsViewActive && activeChildProfile"
-                        :class="hasActiveBackground ? 'adventure-card-nowrap' : 'panel adventure-card-wrapper'">
-                        <div class="adventure-card"
-                            :class="{ 'is-pressed': showBgModal }"
-                            :style="adventureCardBg"
-                            @click="openBgModal">
-                            <div class="adventure-card__shimmer"></div>
-                            <div class="adventure-card__particles">
-                                <span v-for="n in 8" :key="n" class="adventure-card__star"
-                                    :style="{ left: (n * 12 + 3) + '%', animationDelay: (n * 0.4) + 's' }"></span>
-                            </div>
-                            <div class="adventure-card__content">
-                                <h2 class="adventure-card__world-name" :style="{ textShadow: '0 0 20px ' + playerThemeColor + '88, 0 0 40px ' + playerThemeColor + '44' }">
-                                    {{ activeChildProfile.characterName || activeChildProfile.childName }}'s World!
-                                </h2>
-                            </div>
-                        </div>
+                <div v-else class="panel">
+                    <h2 class="panel-title">Account Overview</h2>
+                    <p class="user-name">
+                        <strong>{{ dashboard.user.name || dashboard.user.email }}</strong>
+                    </p>
+                    <p class="user-email">
+                        {{ dashboard.user.email }}
+                    </p>
+
+                    <div class="credits-card">
+                        <p class="credits-label">Available Credits</p>
+                        <p class="credits-value">
+                            {{ dashboard.user.creditsBalance }}
+                        </p>
+                        <button class="blue small" @click="showCreditModal = true">
+                            Purchase Credits
+                        </button>
                     </div>
+                </div>
 
-                    <div v-else class="panel">
-                        <h2 class="panel-title">Account Overview</h2>
-                        <p class="user-name">
-                            <strong>{{ dashboard.user.name || dashboard.user.email }}</strong>
-                        </p>
-                        <p class="user-email">
-                            {{ dashboard.user.email }}
-                        </p>
+                <!-- SESSIONS -->
+                <div class="panel panel-assessments" @wheel.prevent="onAssessmentsWheel">
+                    <h2 class="panel-title">{{ kidsViewActive ? 'Your Quests' : 'Your Assessments' }}</h2>
 
-                        <div class="credits-card">
-                            <p class="credits-label">Available Credits</p>
-                            <p class="credits-value">
-                                {{ dashboard.user.creditsBalance }}
+                    <div v-if="!activeSessions.length" class="empty-state">
+                        <template v-if="kidsViewActive">
+                            <p>No quests yet!</p>
+                            <p>Head to the Library to start your first adventure.</p>
+                        </template>
+                        <template v-else>
+                            <p>You haven't started any assessments yet.</p>
+                            <p>
+                                When you check out a book from the Library and begin an
+                                assessment, it will show up here.
                             </p>
-                            <button class="blue small" @click="showCreditModal = true">
-                                Purchase Credits
-                            </button>
-                        </div>
+                        </template>
                     </div>
 
-                    <!-- SESSIONS -->
-                    <div class="panel panel-assessments" @wheel.prevent="onAssessmentsWheel">
-                        <h2 class="panel-title">{{ kidsViewActive ? 'Your Quests' : 'Your Assessments' }}</h2>
-
-                        <div v-if="!activeSessions.length" class="empty-state">
-                            <template v-if="kidsViewActive">
-                                <p>No quests yet!</p>
-                                <p>Head to the Library to start your first adventure.</p>
-                            </template>
-                            <template v-else>
-                                <p>You haven't started any assessments yet.</p>
-                                <p>
-                                    When you check out a book from the Library and begin an
-                                    assessment, it will show up here.
-                                </p>
-                            </template>
+                    <!-- Scrollable list area -->
+                    <div v-else class="sessions scroll-area">
+                        <!-- NOT STARTED -->
+                        <div v-if="notStartedSessions.length" class="section-block">
+                            <h3 style="color: #e93d2f;">{{ kidsViewActive ? 'New Quests' : 'Ready to Begin' }}</h3>
+                            <hr />
+                            <ul>
+                                <li v-for="s in notStartedSessions" :key="s.id" class="session-row">
+                                    <div class="session-row-top">
+                                        <div class="session-main">
+                                            <div class="session-title">
+                                                {{ s.assessmentTitle }}
+                                            </div>
+                                            <div class="session-meta">
+                                                Added:
+                                                <span>{{ formatDate(s.createdAt || s.startedAt) }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="session-actions">
+                                            <button class="blue small" @click="goToSession(s)">
+                                                Start
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
 
-                        <!-- Scrollable list area -->
-                        <div v-else class="sessions scroll-area">
-                            <!-- NOT STARTED -->
-                            <div v-if="notStartedSessions.length" class="section-block">
-                                <h3 style="color: #e93d2f;">{{ kidsViewActive ? 'New Quests' : 'Ready to Begin' }}</h3>
-                                <hr />
-                                <ul>
-                                    <li v-for="s in notStartedSessions" :key="s.id" class="session-row">
-                                        <div class="session-row-top">
-                                            <div class="session-main">
-                                                <div class="session-title">
-                                                    {{ s.assessmentTitle }}
-                                                </div>
-                                                <div class="session-meta">
-                                                    Added:
-                                                    <span>{{ formatDate(s.createdAt || s.startedAt) }}</span>
-                                                </div>
+                        <!-- IN PROGRESS -->
+                        <div v-if="inProgressSessions.length" class="section-block">
+                            <h3 style="color: #e93d2f;">{{ kidsViewActive ? 'Continue Your Quest' : 'In Progress' }}</h3>
+                            <hr />
+                            <ul>
+                                <li v-for="s in inProgressSessions" :key="s.id" class="session-row"
+                                    :class="{ 'has-progress': hasProgress(s) }">
+                                    <div class="session-row-top">
+                                        <div class="session-main">
+                                            <div class="session-title">
+                                                {{ s.assessmentTitle }}
                                             </div>
-                                            <div class="session-actions">
-                                                <button class="blue small" @click="goToSession(s)">
-                                                    Start
-                                                </button>
+                                            <div class="session-meta">
+                                                Started:
+                                                <span>{{ formatDate(s.startedAt) }}</span>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
-                            </div>
+                                        <div class="session-actions">
+                                            <button class="outline small light" @click="goToSession(s)">
+                                                Resume
+                                            </button>
+                                        </div>
+                                    </div>
 
-                            <!-- IN PROGRESS -->
-                            <div v-if="inProgressSessions.length" class="section-block">
-                                <h3 style="color: #e93d2f;">{{ kidsViewActive ? 'Continue Your Quest' : 'In Progress' }}</h3>
-                                <hr />
-                                <ul>
-                                    <li v-for="s in inProgressSessions" :key="s.id" class="session-row"
-                                        :class="{ 'has-progress': hasProgress(s) }">
-                                        <div class="session-row-top">
-                                            <div class="session-main">
-                                                <div class="session-title">
-                                                    {{ s.assessmentTitle }}
-                                                </div>
-                                                <div class="session-meta">
-                                                    Started:
-                                                    <span>{{ formatDate(s.startedAt) }}</span>
-                                                </div>
+                                    <div v-if="hasProgress(s)" class="session-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-bar-inner" :style="getProgressStyle(s)"></div>
+                                        </div>
+                                        <div class="progress-label">
+                                            {{ getProgressLabel(s) }}
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- COMPLETED -->
+                        <div v-if="activeCompletedSessions.length" class="section-block">
+                            <h3 style="color: #e93d2f;">{{ kidsViewActive ? 'Quests Conquered' : 'Completed' }}</h3>
+                            <hr />
+                            <ul>
+                                <li v-for="s in activeCompletedSessions" :key="s.id" class="session-row">
+                                    <div class="session-row-top">
+                                        <div class="session-main">
+                                            <div class="session-title">
+                                                {{ s.assessmentTitle }}
                                             </div>
-                                            <div class="session-actions">
-                                                <button class="outline small light" @click="goToSession(s)">
-                                                    Resume
-                                                </button>
+                                            <div class="session-meta">
+                                                <span v-if="getTopTrait(s)" class="score-pill"
+                                                    :style="{ backgroundColor: getTraitColor(s), color: '#fff', borderRadius: '5px', padding: '1px 8px', maxHeight: '20px', marginLeft: '0px', marginRight: '10px' }">
+                                                    {{ getTopTrait(s) }}
+                                                </span>
+                                                Completed:
+                                                <span>{{ formatDate(s.completedAt) }}</span>
                                             </div>
                                         </div>
-
-                                        <div v-if="hasProgress(s)" class="session-progress">
-                                            <div class="progress-bar">
-                                                <div class="progress-bar-inner" :style="getProgressStyle(s)"></div>
-                                            </div>
-                                            <div class="progress-label">
-                                                {{ getProgressLabel(s) }}
-                                            </div>
+                                        <div class="session-actions">
+                                            <button class="outline small green" @click="viewResults(s)">
+                                                View Results
+                                            </button>
                                         </div>
-                                    </li>
-                                </ul>
-                            </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
 
-                            <!-- COMPLETED -->
-                            <div v-if="activeCompletedSessions.length" class="section-block">
-                                <h3 style="color: #e93d2f;">{{ kidsViewActive ? 'Quests Conquered' : 'Completed' }}</h3>
-                                <hr />
-                                <ul>
-                                    <li v-for="s in activeCompletedSessions" :key="s.id" class="session-row">
-                                        <div class="session-row-top">
-                                            <div class="session-main">
-                                                <div class="session-title">
-                                                    {{ s.assessmentTitle }}
-                                                </div>
-                                                <div class="session-meta">
-                                                    <span v-if="getTopTrait(s)" class="score-pill"
-                                                        :style="{ backgroundColor: getTraitColor(s), color: '#fff', borderRadius: '5px', padding: '1px 8px', maxHeight: '20px', marginLeft: '0px', marginRight: '10px' }">
-                                                        {{ getTopTrait(s) }}
-                                                    </span>
-                                                    Completed:
-                                                    <span>{{ formatDate(s.completedAt) }}</span>
-                                                </div>
-                                            </div>
-                                            <div class="session-actions">
-                                                <button class="outline small green" @click="viewResults(s)">
-                                                    View Results
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div v-if="
+                        <div v-if="
                                 !notStartedSessions.length &&
                                 !inProgressSessions.length &&
                                 !activeCompletedSessions.length
                             " class="empty-state">
-                                <p>
-                                    {{ kidsViewActive ? 'No quests found yet.' : 'Assessments found, but none are in-progress or completed yet.' }}
-                                </p>
-                            </div>
+                            <p>
+                                {{ kidsViewActive ? 'No quests found yet.' : 'Assessments found, but none are in-progress or completed yet.' }}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -479,6 +492,7 @@ export default {
     return {
       loading: true,
       error: null,
+      isGeneratingStory: false,
       showCreditModal: false,
       showBgModal: false,
       bgModalSelection: null,
@@ -773,6 +787,15 @@ export default {
 
       return topTrait;
     },
+    storyTokens() {
+      const profile = this.$store.state.activeChildProfile;
+      if (!profile) return 0;
+      const completed = profile.completedAssessments
+        ? profile.completedAssessments.length
+        : 0;
+      const written = profile.chaptersWritten || 0;
+      return Math.max(0, completed - written);
+    },
   },
   async mounted() {
     this.loading = true;
@@ -814,6 +837,27 @@ export default {
     },
   },
   methods: {
+    async generateStory() {
+      const profile = this.$store.state.activeChildProfile;
+      if (!profile || this.isGeneratingStory) return;
+      this.isGeneratingStory = true;
+      try {
+        await this.$axios.$post(`/api/story/${profile._id}/generate`);
+        this.$store.commit("SET_ACTIVE_CHILD_PROFILE", {
+          ...profile,
+          chaptersWritten: (profile.chaptersWritten || 0) + 1,
+        });
+        this.$router.push(`/kids/story/${profile._id}`);
+      } catch (err) {
+        alert(
+          err.response && err.response.data
+            ? err.response.data.message
+            : "Story generation failed."
+        );
+      } finally {
+        this.isGeneratingStory = false;
+      }
+    },
     async fetchChildProfiles() {
       try {
         const res = await this.$axios.$get("/api/child-profiles");
@@ -1124,7 +1168,7 @@ export default {
   }
 
   .content {
-    padding: 40px 16px 80px 16px;
+    padding: 20px 16px 80px 16px;
   }
 
   .status-block {
@@ -1144,8 +1188,9 @@ export default {
   .grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    margin-top: 40px;
+    gap: 0px;
+    margin-top: 0px;
+   justify-content: center;
   }
 
   .panel {
@@ -1921,6 +1966,35 @@ export default {
     }
   }
 
+  .story-btn-bar {
+    padding: 12px 0 8px;
+    margin-top: 0;
+    position: relative;
+    z-index: 20;
+  }
+
+  .story-token-btn {
+    width: auto;
+    padding: 10px 28px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0033c5, #00a8ff);
+    color: #fff;
+    border: none;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    &:hover:not(:disabled) {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
   .results-tab--players {
     margin-left: auto;
     display: flex;
@@ -2008,7 +2082,8 @@ export default {
 
     .grid {
       flex-direction: column;
-      margin-top: 10px;
+      margin-top: -20px;
+      margin-bottom: 5px;
     }
 
     .results-tabs {
@@ -2062,6 +2137,11 @@ export default {
       button {
         width: 110px;
       }
+    }
+
+    .story-btn-bar {
+      display: flex;
+justify-content: center;
     }
   }
 }

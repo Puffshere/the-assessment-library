@@ -18,6 +18,7 @@ import paymentsController from './controllers/paymentsController.js';
 import kidsModeController from './controllers/kidsModeController.js';
 import childProfileController from './controllers/childProfileController.js';
 import archieController from './controllers/archieController.js';
+import storyController from './controllers/storyController.js';
 
 
 const upload = multer();
@@ -113,6 +114,10 @@ app.get('/participants/verify-invite', sessionsController.authenticate, particip
 
 app.post('/archie/tip', sessionsController.authenticate, archieController.getTip);
 app.post('/archie/chat', sessionsController.authenticate, archieController.chat);
+
+app.get('/story/:childProfileId/chapters', sessionsController.authenticate, storyController.getChapters);
+app.post('/story/:childProfileId/generate', sessionsController.authenticate, storyController.generateChapter);
+app.put('/story/chapter/:chapterId/title', sessionsController.authenticate, storyController.updateChapterTitle);
 
 app.use((req, res, next) => {
   res.status(404).json({
