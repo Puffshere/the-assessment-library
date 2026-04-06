@@ -17,6 +17,7 @@ import reportsController from './controllers/reportsController.js';
 import paymentsController from './controllers/paymentsController.js';
 import kidsModeController from './controllers/kidsModeController.js';
 import childProfileController from './controllers/childProfileController.js';
+import archieController from './controllers/archieController.js';
 
 
 const upload = multer();
@@ -109,6 +110,9 @@ app.get('/participants', sessionsController.authenticate, participantsController
 app.post('/participants', sessionsController.authenticate, participantsController.addParticipant);
 app.post('/participants/:id/invite', sessionsController.authenticate, participantsController.inviteToAssessment);
 app.get('/participants/verify-invite', sessionsController.authenticate, participantsController.verifyInvite);
+
+app.post('/archie/tip', sessionsController.authenticate, archieController.getTip);
+app.post('/archie/chat', sessionsController.authenticate, archieController.chat);
 
 app.use((req, res, next) => {
   res.status(404).json({

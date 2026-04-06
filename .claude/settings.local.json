@@ -24,7 +24,8 @@
       "Bash(xargs grep:*)",
       "Bash(npx cypress:*)",
       "Bash(find /c/Users/shawn/Projects/the-assessment-library -type f -name *dashboard*)",
-      "Bash(find /c/Users/shawn/Projects/the-assessment-library/pages -type f -name *.vue)"
+      "Bash(find /c/Users/shawn/Projects/the-assessment-library/pages -type f -name *.vue)",
+      "Bash(npm run:*)"
     ]
   }
 }
