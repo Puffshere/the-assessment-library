@@ -53,12 +53,18 @@ const createOrGetSession = async (req, res) => {
         thirdPersonInvitationId
       });
     } else {
-      session = await AssessmentSession.findOne({
+      const query = {
         user: req.user._id,
         assessment: assessmentId,
         isThirdPerson: { $ne: true },
         status: { $in: ['not_started', 'in_progress', 'completed'] }
-      });
+      };
+      if (childProfileId) {
+        query.childProfileId = childProfileId;
+      } else {
+        query.childProfileId = null;
+      }
+      session = await AssessmentSession.findOne(query);
     }
 
     if (!session) {

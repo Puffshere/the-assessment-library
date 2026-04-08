@@ -50,22 +50,38 @@ const checkout = async (req, res) => {
       });
     }
 
-    const sessionData = {
+    // Check for an existing non-completed session scoped to this child (or parent)
+    const existingQuery = {
       user: user._id,
       assessment: assessment._id,
-      status: 'not_started',
-      currentQuestionIndex: 0,
-      answers: [],
+      status: { $in: ['not_started', 'in_progress'] },
     };
-
     if (childProfileId) {
-      sessionData.childProfileId = childProfileId;
+      existingQuery.childProfileId = childProfileId;
+    } else {
+      existingQuery.childProfileId = null;
     }
 
-    const session = await AssessmentSession.create(sessionData);
+    let session = await AssessmentSession.findOne(existingQuery);
 
-    user.creditsBalance -= cost;
-    await user.save();
+    if (!session) {
+      const sessionData = {
+        user: user._id,
+        assessment: assessment._id,
+        status: 'not_started',
+        currentQuestionIndex: 0,
+        answers: [],
+      };
+
+      if (childProfileId) {
+        sessionData.childProfileId = childProfileId;
+      }
+
+      session = await AssessmentSession.create(sessionData);
+
+      user.creditsBalance -= cost;
+      await user.save();
+    }
 
     res.json({
       success: true,

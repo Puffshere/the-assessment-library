@@ -387,7 +387,7 @@ export default {
 
                 const checkoutPayload = { assessmentId: book._id }
                 const activeChild = this.$store.state.activeChildProfile
-                if (this.$store.state.kidsViewActive && activeChild && activeChild._id) {
+                if (activeChild && activeChild._id) {
                     checkoutPayload.childProfileId = activeChild._id
                 }
 
