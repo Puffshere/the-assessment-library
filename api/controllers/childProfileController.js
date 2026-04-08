@@ -37,6 +37,8 @@ const getProfiles = async (req, res) => {
       .lean();
 
     const profileIds = profiles.map(p => p._id);
+
+    // Count story chapters per child
     const chapterCounts = await StoryChapter.aggregate([
       { $match: { childProfileId: { $in: profileIds } } },
       { $group: { _id: '$childProfileId', count: { $sum: 1 } } }
@@ -44,9 +46,17 @@ const getProfiles = async (req, res) => {
     const countMap = {};
     chapterCounts.forEach(c => { countMap[c._id.toString()] = c.count; });
 
+    // Count completed sessions per child from actual session data
+    const sessionCounts = await AssessmentSession.aggregate([
+      { $match: { childProfileId: { $in: profileIds }, status: 'completed' } },
+      { $group: { _id: '$childProfileId', count: { $sum: 1 } } }
+    ]);
+    const sessionCountMap = {};
+    sessionCounts.forEach(c => { sessionCountMap[c._id.toString()] = c.count; });
+
     const enrichedProfiles = profiles.map(p => {
       const chaptersWritten = countMap[p._id.toString()] || 0;
-      const completedCount = p.completedAssessments ? p.completedAssessments.length : 0;
+      const completedCount = sessionCountMap[p._id.toString()] || 0;
       return {
         ...p,
         chaptersWritten,

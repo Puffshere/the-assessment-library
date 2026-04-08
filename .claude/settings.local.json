@@ -28,7 +28,9 @@
       "Bash(npm run:*)",
       "Bash(curl:*)",
       "Bash(timeout:*)",
-      "Bash(find /c/Users/shawn/Projects/the-assessment-library/pages/about -type f -name *.vue)"
+      "Bash(find /c/Users/shawn/Projects/the-assessment-library/pages/about -type f -name *.vue)",
+      "Bash(grep:*)",
+      "Bash(taskkill //F //IM node.exe)"
     ]
   }
 }

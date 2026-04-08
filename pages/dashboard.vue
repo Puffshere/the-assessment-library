@@ -286,7 +286,7 @@
 
                     <!-- SESSIONS -->
                     <div class="panel panel-assessments" @wheel.prevent="onAssessmentsWheel">
-                        <h2 class="panel-title">{{ kidsViewActive ? 'Your Quests' : 'Your Assessments' }}</h2>
+                        <h2 class="panel-title">{{ kidsViewActive ? (activeChildProfile && activeChildProfile.childName ? activeChildProfile.childName + "'s Quests" : 'Your Quests') : 'Your Assessments' }}</h2>
 
                         <div v-if="!activeSessions.length" class="empty-state">
                             <template v-if="kidsViewActive">
@@ -880,13 +880,22 @@ export default {
         const res = await this.$axios.$get("/api/child-profiles");
         this.childProfiles = res.profiles || [];
         // Auto-select the active profile tab, or first profile
+        // Check store first, then fall back to localStorage (store restore may still be in-flight)
         const active = this.$store.state.activeChildProfile;
-        const freshActive = active && this.childProfiles.find((p) => p._id === active._id);
+        let freshActive = active && this.childProfiles.find((p) => p._id === active._id);
+        if (!freshActive) {
+          const savedChildId = localStorage.getItem('tal_active_child_id');
+          if (savedChildId) {
+            freshActive = this.childProfiles.find((p) => p._id === savedChildId);
+          }
+        }
         if (freshActive) {
           this.activeChildTab = freshActive._id;
+          this.viewingChildId = freshActive._id;
           this.$store.commit("SET_ACTIVE_CHILD_PROFILE", freshActive);
         } else if (this.childProfiles.length) {
           this.activeChildTab = this.childProfiles[0]._id;
+          this.viewingChildId = this.childProfiles[0]._id;
           this.$store.commit("SET_ACTIVE_CHILD_PROFILE", this.childProfiles[0]);
         }
       } catch (err) {
@@ -895,6 +904,7 @@ export default {
     },
     switchChildTab(profile) {
       this.activeChildTab = profile._id;
+      this.viewingChildId = profile._id;
       this.$store.commit("SET_ACTIVE_CHILD_PROFILE", profile);
     },
     async selectBackground(bgFile) {
@@ -979,6 +989,12 @@ export default {
       const ids = [null, ...this.childProfiles.map((p) => p._id)];
       const currentIdx = ids.indexOf(this.viewingChildId);
       this.viewingChildId = ids[(currentIdx + 1) % ids.length];
+
+      // Keep the Vuex store in sync so session creation uses the correct child
+      const match = this.viewingChildId
+        ? this.childProfiles.find((p) => p._id === this.viewingChildId)
+        : null;
+      this.$store.commit("SET_ACTIVE_CHILD_PROFILE", match || null);
     },
     openCreditModal() {
       this.showCreditModal = true;

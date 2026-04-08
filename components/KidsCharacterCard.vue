@@ -113,11 +113,6 @@ export default {
         },
 
         hasCharacter() {
-            // Show character if profile says so OR if we have live completed sessions
-            if (this.profile && this.profile.hasCompletedFirstAssessment && this.profile.currentDiscType) {
-                return true
-            }
-            // Fallback: derive from live session data (same source as Your Quests)
             return !!(this.completedSessions && this.completedSessions.length && this.liveDiscType)
         },
 
@@ -144,8 +139,7 @@ export default {
         },
 
         discType() {
-            // Prefer profile value, fall back to live calculation
-            return (this.profile && this.profile.currentDiscType) || this.liveDiscType
+            return this.liveDiscType
         },
 
         characterName() {
@@ -168,12 +162,7 @@ export default {
         },
 
         discScores() {
-            // Aggregate DISC percentages from all completed sessions
             if (!this.completedSessions || !this.completedSessions.length) {
-                // Fall back to profile stats if available
-                if (this.profile && this.profile.stats) {
-                    return null // will use profile stats directly
-                }
                 return { D: 0, I: 0, S: 0, C: 0 }
             }
 
@@ -201,11 +190,7 @@ export default {
         },
 
         stats() {
-            // Use profile stats if they exist and we have no live DISC scores
-            if (!this.discScores && this.profile && this.profile.stats) {
-                return this.profile.stats
-            }
-            return deriveStats(this.discScores || { D: 0, I: 0, S: 0, C: 0 })
+            return deriveStats(this.discScores)
         },
 
         statBars() {

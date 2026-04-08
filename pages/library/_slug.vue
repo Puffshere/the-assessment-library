@@ -452,7 +452,7 @@ export default {
                     assessmentId: this.assessment._id || this.assessment.id
                 };
                 const activeChild = this.$store.state.activeChildProfile;
-                if (this.$store.state.kidsViewActive && activeChild && activeChild._id) {
+                if (activeChild && activeChild._id) {
                     payload.childProfileId = activeChild._id;
                 }
                 const res = await this.$axios.$post('/api/sessions', payload, {
@@ -642,9 +642,8 @@ export default {
                         score: scorePayload
                     };
 
-                    // Link to active child profile when in kids view
                     const activeChild = this.$store.state.activeChildProfile;
-                    if (this.$store.state.kidsViewActive && activeChild && activeChild._id) {
+                    if (activeChild && activeChild._id) {
                         answerPayload.childProfileId = activeChild._id;
                     }
 

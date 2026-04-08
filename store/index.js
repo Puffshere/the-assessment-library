@@ -45,6 +45,9 @@ export const mutations = {
 
   SET_KIDS_VIEW_ACTIVE(state, val) {
     state.kidsViewActive = !!val
+    if (process.client) {
+      localStorage.setItem('tal_kids_view_active', val ? '1' : '0')
+    }
   },
 
   SET_ACTIVE_CHILD_PROFILE(state, profile) {
@@ -66,6 +69,13 @@ function restoreAuthFromStorage({ commit, dispatch }, axiosInstance) {
   if (savedToken || savedFlag === '1') {
     commit('SET_LOGGED_IN', true)
     commit('SET_TOKEN', savedToken)
+
+    // Restore kids view state immediately so the dashboard renders
+    // the correct view before fetchMe resolves
+    if (localStorage.getItem('tal_kids_view_active') === '1') {
+      commit('SET_KIDS_VIEW_ACTIVE', true)
+    }
+
     if (savedToken) {
       axiosInstance.setToken(savedToken, 'Bearer')
       dispatch('fetchMe')
