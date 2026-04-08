@@ -13,46 +13,55 @@
     </div>
     <div v-else class="story-page__book-wrapper">
       <div class="story-page__book" :class="{ 'is-flipping': isFlipping, 'flip-forward': flipDirection === 1, 'flip-backward': flipDirection === -1 }">
-        <div class="story-page__page story-page__page--left" :class="{ 'is-disabled': currentChapterIndex === 0 }" :style="pageStyle" @click="flipPage(-1)">
+        <div class="story-page__page story-page__page--left" :class="{ 'is-disabled': !canGoPrev }" :style="pageStyle" @click="flipPage(-1)">
           <div class="story-page__page-inner">
-            <div class="story-page__chapter-title-area">
+            <div v-if="isFirstSpreadOfChapter" class="story-page__chapter-title-area">
               <div v-if="editingTitle === currentChapter._id" class="story-page__title-edit">
                 <input v-model="titleInput" class="story-page__title-input" placeholder="Name this chapter..." @keydown.enter="saveTitle(currentChapter)" />
                 <button class="story-page__save-btn" @click.stop="saveTitle(currentChapter)">Save</button>
                 <button class="story-page__cancel-btn" @click.stop="editingTitle = null">✕</button>
               </div>
               <div v-else class="story-page__title-display" @click.stop="startEditTitle(currentChapter)">
-                <h2>{{ currentChapter.title || 'Chapter ' + currentChapter.chapterNumber }}</h2>
-                <span class="story-page__edit-hint">✏️ {{ currentChapter.title ? 'rename' : 'name this chapter' }}</span>
+                <h2>Chapter {{ currentChapter.chapterNumber }}: {{ currentChapter.title || 'Untitled' }}</h2>
+                <span class="story-page__edit-hint">✏️ rename</span>
               </div>
             </div>
-            <div class="story-page__chapter-text story-page__chapter-text--left">
-              <p v-for="(para, i) in splitContent.left" :key="i">{{ para }}</p>
+            <div class="story-page__chapter-text story-page__chapter-text--left" :class="{ 'story-page__chapter-text--no-title': !isFirstSpreadOfChapter }">
+              <p v-for="(para, i) in currentSpread.left" :key="'l'+i">{{ para }}</p>
             </div>
             <div class="story-page__left-footer">
               <span class="story-page__trait-badge">{{ currentChapter.dominantTraitAtTime }} style</span>
-              <span class="story-page__page-num">{{ (currentChapterIndex + 1) * 2 - 1 }}</span>
+              <span class="story-page__page-num">{{ leftPageNumber }}</span>
             </div>
-            <div class="story-page__click-hint story-page__click-hint--left">‹ prev</div>
+            <div v-if="canGoPrev" class="story-page__click-hint story-page__click-hint--left">‹ prev</div>
           </div>
         </div>
-        <div class="story-page__page story-page__page--right" :class="{ 'is-disabled': currentChapterIndex === chapters.length - 1 }" :style="pageStyle" @click="flipPage(1)">
+        <div class="story-page__page story-page__page--right" :class="{ 'is-disabled': !canGoNext }" :style="pageStyle" @click="flipPage(1)">
           <div class="story-page__page-inner story-page__page-inner--right">
-            <div class="story-page__illustration">
-              <div v-if="!profile || !profile.characterImage" class="story-page__illus-text">✨ Illustration coming soon</div>
-              <img v-else :src="profile.characterImage" class="story-page__char-img" />
+            <div v-if="isFirstSpreadOfChapter" class="story-page__illustration">
+              <div v-if="illustrationLoading" class="story-page__illus-text">
+                <span class="story-page__illus-spinner"></span>
+                Generating illustration...
+              </div>
+              <div v-else-if="!currentChapter.illustrationUrl" class="story-page__illus-text">✨ Illustration coming soon</div>
+              <img v-else :src="currentChapter.illustrationUrl" class="story-page__char-img" />
             </div>
-            <div class="story-page__chapter-text story-page__chapter-text--right">
-              <p v-for="(para, i) in splitContent.right" :key="i">{{ para }}</p>
+            <div class="story-page__chapter-text story-page__chapter-text--right" :class="{ 'story-page__chapter-text--no-illus': !isFirstSpreadOfChapter }">
+              <p v-for="(para, i) in currentSpread.right" :key="'r'+i">{{ para }}</p>
             </div>
             <div class="story-page__right-footer">
               <span class="story-page__date">{{ formatDate(currentChapter.createdAt) }}</span>
-              <span class="story-page__page-num">{{ (currentChapterIndex + 1) * 2 }}</span>
+              <span class="story-page__page-num">{{ rightPageNumber }}</span>
             </div>
-            <div class="story-page__click-hint story-page__click-hint--right">next ›</div>
+            <div v-if="canGoNext" class="story-page__click-hint story-page__click-hint--right">next ›</div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Hidden measurement container for pagination -->
+    <div ref="measurer" class="story-page__measurer" aria-hidden="true">
+      <div ref="measurerInner" class="story-page__measurer-inner"></div>
     </div>
   </section>
 </template>
@@ -66,22 +75,64 @@ export default {
       chapters: [],
       loading: true,
       currentChapterIndex: 0,
+      currentSpreadIndex: 0,
       isFlipping: false,
       flipDirection: 1,
       editingTitle: null,
       titleInput: '',
       bookHeight: 500,
-      isMobile: false
+      isMobile: false,
+      contentPages: [],
+      illustrationLoading: false,
+      illustrationPollTimer: null
     }
   },
   computed: {
     profile() { return this.$store.state.activeChildProfile },
     currentChapter() { return this.chapters[this.currentChapterIndex] || null },
-    splitContent() {
-      if (!this.currentChapter) return { left: [], right: [] }
-      const paras = this.currentChapter.content.split('\n\n').filter(p => p.trim())
-      const mid = Math.ceil(paras.length / 2)
-      return { left: paras.slice(0, mid), right: paras.slice(mid) }
+    paragraphs() {
+      if (!this.currentChapter) return []
+      return this.currentChapter.content.split('\n\n').filter(p => p.trim())
+    },
+    spreads() {
+      if (!this.contentPages.length) {
+        // Fallback before measurement: all text in one spread
+        const paras = this.paragraphs
+        const mid = Math.ceil(paras.length / 2)
+        return [{ left: paras.slice(0, mid), right: paras.slice(mid) }]
+      }
+      const result = []
+      for (let i = 0; i < this.contentPages.length; i += 2) {
+        result.push({
+          left: this.contentPages[i] || [],
+          right: this.contentPages[i + 1] || []
+        })
+      }
+      return result.length ? result : [{ left: this.paragraphs, right: [] }]
+    },
+    currentSpread() {
+      return this.spreads[this.currentSpreadIndex] || { left: [], right: [] }
+    },
+    isFirstSpreadOfChapter() {
+      return this.currentSpreadIndex === 0
+    },
+    canGoPrev() {
+      return this.currentSpreadIndex > 0 || this.currentChapterIndex > 0
+    },
+    canGoNext() {
+      return this.currentSpreadIndex < this.spreads.length - 1 || this.currentChapterIndex < this.chapters.length - 1
+    },
+    leftPageNumber() {
+      let page = 1
+      for (let c = 0; c < this.currentChapterIndex; c++) {
+        const ch = this.chapters[c]
+        const paras = ch.content.split('\n\n').filter(p => p.trim())
+        page += Math.max(2, Math.ceil(paras.length / 3) * 2)
+      }
+      return page + this.currentSpreadIndex * 2
+    },
+    rightPageNumber() {
+      return this.leftPageNumber + 1
     },
     pageBgStyle() {
       const bg = this.profile && this.profile.cardBackground
@@ -91,6 +142,16 @@ export default {
     pageStyle() {
       if (this.isMobile) return {}
       return { height: this.bookHeight + 'px', overflow: 'hidden', boxSizing: 'border-box' }
+    }
+  },
+  watch: {
+    currentChapter() {
+      this.currentSpreadIndex = 0
+      this.$nextTick(() => this.paginateContent())
+      this.checkIllustration()
+    },
+    bookHeight() {
+      this.$nextTick(() => this.paginateContent())
     }
   },
   async mounted() {
@@ -110,6 +171,10 @@ export default {
         document.body.style.overflow = ''
       }
       this.setBookHeight()
+      this.$nextTick(() => {
+        this.paginateContent()
+        this.checkIllustration()
+      })
     })
     window.addEventListener('resize', this.onResize)
   },
@@ -117,6 +182,7 @@ export default {
     document.documentElement.style.overflow = ''
     document.body.style.overflow = ''
     window.removeEventListener('resize', this.onResize)
+    if (this.illustrationPollTimer) clearInterval(this.illustrationPollTimer)
   },
   methods: {
     onResize() {
@@ -142,15 +208,117 @@ export default {
         this.bookHeight = window.innerHeight - navH - kidsH - headerH - padding
       })
     },
+    paginateContent() {
+      if (!this.currentChapter || this.isMobile) {
+        this.contentPages = []
+        return
+      }
+      const measurer = this.$refs.measurer
+      const measurerInner = this.$refs.measurerInner
+      if (!measurer || !measurerInner) {
+        this.contentPages = []
+        return
+      }
+
+      const paras = this.paragraphs
+      if (!paras.length) { this.contentPages = []; return }
+
+      // Set measurer width to match half the book (max-width 900px / 2 = 450px minus padding)
+      const bookEl = this.$el.querySelector('.story-page__book')
+      const pageWidth = bookEl ? bookEl.offsetWidth / 2 : 450
+      measurer.style.width = pageWidth + 'px'
+
+      // Measure each paragraph's rendered height
+      const paraHeights = paras.map(text => {
+        measurerInner.textContent = ''
+        const p = document.createElement('p')
+        p.textContent = text
+        measurerInner.appendChild(p)
+        const h = p.offsetHeight + 10 // 10px margin-bottom
+        return h
+      })
+      measurerInner.textContent = ''
+
+      // Calculate available heights for different page types
+      const totalPad = 64 // 24px top + 40px bottom padding
+      const footerH = 32
+      const titleH = 52 // title area + margin + border
+      const illustrationH = 140 // 110px img + 20px top + 10px gap
+
+      const leftFirstH = this.bookHeight - totalPad - footerH - titleH
+      const leftOtherH = this.bookHeight - totalPad - footerH
+      const rightFirstH = this.bookHeight - totalPad - footerH - illustrationH
+      const rightOtherH = this.bookHeight - totalPad - footerH
+
+      // Pack paragraphs into pages
+      const pages = []
+      let paraIdx = 0
+      let pageNum = 0
+      while (paraIdx < paras.length) {
+        const isLeftPage = pageNum % 2 === 0
+        const isFirstSpread = pageNum < 2
+        let availH
+        if (isLeftPage) availH = isFirstSpread ? leftFirstH : leftOtherH
+        else availH = isFirstSpread ? rightFirstH : rightOtherH
+
+        const page = []
+        let usedH = 0
+        while (paraIdx < paras.length) {
+          const pH = paraHeights[paraIdx]
+          if (usedH + pH > availH && page.length > 0) break
+          page.push(paras[paraIdx])
+          usedH += pH
+          paraIdx++
+        }
+        pages.push(page)
+        pageNum++
+      }
+
+      // Ensure even number of pages (left+right pairs)
+      if (pages.length % 2 !== 0) pages.push([])
+
+      this.contentPages = pages
+    },
     flipPage(direction) {
-      const next = this.currentChapterIndex + direction
-      if (next < 0 || next >= this.chapters.length || this.isFlipping) return
-      this.flipDirection = direction
-      this.isFlipping = true
-      setTimeout(() => {
-        this.currentChapterIndex = next
-        setTimeout(() => { this.isFlipping = false }, 300)
-      }, 300)
+      if (this.isFlipping) return
+      if (direction === 1) {
+        if (this.currentSpreadIndex < this.spreads.length - 1) {
+          this.flipDirection = 1
+          this.isFlipping = true
+          setTimeout(() => {
+            this.currentSpreadIndex++
+            setTimeout(() => { this.isFlipping = false }, 300)
+          }, 300)
+        } else if (this.currentChapterIndex < this.chapters.length - 1) {
+          this.flipDirection = 1
+          this.isFlipping = true
+          setTimeout(() => {
+            this.currentChapterIndex++
+            this.currentSpreadIndex = 0
+            setTimeout(() => { this.isFlipping = false }, 300)
+          }, 300)
+        }
+      } else {
+        if (this.currentSpreadIndex > 0) {
+          this.flipDirection = -1
+          this.isFlipping = true
+          setTimeout(() => {
+            this.currentSpreadIndex--
+            setTimeout(() => { this.isFlipping = false }, 300)
+          }, 300)
+        } else if (this.currentChapterIndex > 0) {
+          this.flipDirection = -1
+          this.isFlipping = true
+          setTimeout(() => {
+            this.currentChapterIndex--
+            // Go to last spread of previous chapter
+            this.$nextTick(() => {
+              this.currentSpreadIndex = Math.max(0, this.spreads.length - 1)
+            })
+            setTimeout(() => { this.isFlipping = false }, 300)
+          }, 300)
+        }
+      }
     },
     startEditTitle(chapter) { this.editingTitle = chapter._id; this.titleInput = chapter.title || '' },
     async saveTitle(chapter) {
@@ -159,6 +327,42 @@ export default {
         chapter.title = this.titleInput
         this.editingTitle = null
       } catch (err) { console.error(err) }
+    },
+    async checkIllustration() {
+      if (this.illustrationPollTimer) { clearInterval(this.illustrationPollTimer); this.illustrationPollTimer = null }
+      if (!this.currentChapter || this.currentChapter.illustrationUrl) {
+        this.illustrationLoading = false
+        return
+      }
+      // Trigger illustration generation for chapters that don't have one
+      this.illustrationLoading = true
+      try {
+        await this.$axios.$post(`/api/story/chapter/${this.currentChapter._id}/generate-illustration`)
+      } catch (err) {
+        console.error('Failed to trigger illustration generation:', err)
+      }
+      // Poll for illustration every 5 seconds
+      const chapterId = this.currentChapter._id
+      let attempts = 0
+      this.illustrationPollTimer = setInterval(async () => {
+        attempts++
+        if (attempts > 24) { // Stop after 2 minutes
+          clearInterval(this.illustrationPollTimer)
+          this.illustrationPollTimer = null
+          this.illustrationLoading = false
+          return
+        }
+        try {
+          const res = await this.$axios.$get(`/api/story/chapter/${chapterId}/illustration`)
+          if (res.illustrationUrl) {
+            // Use $set for Vue 2 reactivity
+            this.$set(this.currentChapter, 'illustrationUrl', res.illustrationUrl)
+            this.illustrationLoading = false
+            clearInterval(this.illustrationPollTimer)
+            this.illustrationPollTimer = null
+          }
+        } catch (err) { /* ignore poll errors */ }
+      }, 5000)
     },
     formatDate(d) { return new Date(d).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) }
   }
@@ -315,8 +519,21 @@ export default {
 .story-page__char-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
+
+.story-page__illus-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ddd;
+  border-top-color: #0033c5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .story-page__chapter-title-area {
   flex-shrink: 0;
@@ -371,6 +588,8 @@ export default {
     color: #0033c5; font-family: $font-family;
   }
   &--right { padding-top: 130px; }
+  &--no-title { padding-top: 0; }
+  &--no-illus { padding-top: 0; }
 }
 
 .story-page__left-footer,
@@ -442,5 +661,28 @@ export default {
   }
   .story-page__page-inner { overflow: visible; height: auto; padding-bottom: 24px; }
   .story-page__chapter-text { overflow: visible; min-height: auto; }
+}
+
+.story-page__measurer {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  visibility: hidden;
+  pointer-events: none;
+  padding: 24px 22px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.story-page__measurer-inner {
+  p {
+    font-family: $nunito-family;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: justify;
+    &:last-child { margin-bottom: 0; }
+  }
 }
 </style>
