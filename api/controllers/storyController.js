@@ -159,23 +159,25 @@ async function generateIllustration(chapterId, title, content, theme) {
     }
     const data = await response.json()
     const imageUrl = data.data[0].url
+    console.log('DALL-E temporary URL:', imageUrl)
     console.log('DALL-E returned image URL, downloading...')
 
-    // Download image and save locally
+    // Download image and save locally (use data/ dir, not static/ — Nuxt doesn't serve runtime files from static/)
     const imageResponse = await fetch(imageUrl)
     if (!imageResponse.ok) {
       console.error('Failed to download DALL-E image:', imageResponse.status)
       return
     }
     const buffer = Buffer.from(await imageResponse.arrayBuffer())
-    const illustrationsDir = path.join(process.cwd(), 'static', 'images', 'illustrations')
+    const illustrationsDir = path.join(process.cwd(), 'data', 'illustrations')
     if (!fs.existsSync(illustrationsDir)) fs.mkdirSync(illustrationsDir, { recursive: true })
     const filename = `${chapterId}.png`
     fs.writeFileSync(path.join(illustrationsDir, filename), buffer)
 
-    // Update chapter with local URL
-    const localUrl = `/images/illustrations/${filename}`
+    // Update chapter with API-served URL (served via express.static in api/index.js)
+    const localUrl = `/api/illustrations/${filename}`
     await StoryChapter.findByIdAndUpdate(chapterId, { illustrationUrl: localUrl })
+    console.log('Generated image URL:', localUrl)
     console.log('Illustration saved for chapter', chapterId.toString(), 'at', localUrl)
   } catch (err) {
     console.error('Illustration generation failed:', err)

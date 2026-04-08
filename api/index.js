@@ -39,6 +39,10 @@ if (!connectionString) {
 }
 
 app.use(express.static(path.join(__dirname, 'static')));
+
+// Serve generated illustrations from data directory (runtime-created, not in Nuxt static)
+app.use('/illustrations', express.static(path.join(process.cwd(), 'data', 'illustrations')));
+
 app.use(helmet());
 app.use(cors());
 

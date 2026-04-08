@@ -74,6 +74,9 @@ cypress/fixtures/testUser.json
 # Nuxt generate
 dist
 
+# Runtime-generated data (illustrations, etc.)
+data/
+
 # vuepress build output
 .vuepress/dist
 

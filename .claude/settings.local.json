@@ -32,7 +32,8 @@
       "Bash(grep:*)",
       "Bash(taskkill //F //IM node.exe)",
       "Bash(taskkill //F //IM nodemon.exe)",
-      "Bash(grep -E \"\\\\.\\(vue\\)$\")"
+      "Bash(grep -E \"\\\\.\\(vue\\)$\")",
+      "Bash(find /c/Users/shawn/Projects/the-assessment-library/static -type d -name *image* -o -name *illustration*)"
     ]
   }
 }
