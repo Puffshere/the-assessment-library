@@ -16,12 +16,12 @@
         <div class="story-page__page story-page__page--left" :class="{ 'is-disabled': !canGoPrev }" :style="pageStyle" @click="flipPage(-1)">
           <div class="story-page__page-inner">
             <div v-if="isFirstSpreadOfChapter" class="story-page__chapter-title-area">
-              <div v-if="editingTitle === currentChapter._id" class="story-page__title-edit">
-                <input v-model="titleInput" class="story-page__title-input" placeholder="Name this chapter..." @keydown.enter="saveTitle(currentChapter)" />
-                <button class="story-page__save-btn" @click.stop="saveTitle(currentChapter)">Save</button>
-                <button class="story-page__cancel-btn" @click.stop="editingTitle = null">✕</button>
+              <div v-if="editingTitle === currentChapter._id" class="story-page__title-edit" @click.stop @mousedown.stop>
+                <input v-model="titleInput" class="story-page__title-input" placeholder="Name this chapter..." @click.stop @mousedown.stop @keydown.stop @keydown.enter="saveTitle(currentChapter)" @keyup.stop />
+                <button class="story-page__save-btn" @click.stop="saveTitle(currentChapter)" @mousedown.stop>Save</button>
+                <button class="story-page__cancel-btn" @click.stop="editingTitle = null" @mousedown.stop>✕</button>
               </div>
-              <div v-else class="story-page__title-display" @click.stop="startEditTitle(currentChapter)">
+              <div v-else class="story-page__title-display" @click.stop="startEditTitle(currentChapter)" @mousedown.stop>
                 <h2>Chapter {{ currentChapter.chapterNumber }}: {{ currentChapter.title || 'Untitled' }}</h2>
                 <span class="story-page__edit-hint">✏️ rename</span>
               </div>
@@ -38,15 +38,10 @@
         </div>
         <div class="story-page__page story-page__page--right" :class="{ 'is-disabled': !canGoNext }" :style="pageStyle" @click="flipPage(1)">
           <div class="story-page__page-inner story-page__page-inner--right">
-            <div v-if="isFirstSpreadOfChapter" class="story-page__illustration">
-              <div v-if="illustrationLoading" class="story-page__illus-text">
-                <span class="story-page__illus-spinner"></span>
-                Generating illustration...
-              </div>
-              <div v-else-if="!currentChapter.illustrationUrl" class="story-page__illus-text">✨ Illustration coming soon</div>
-              <img v-else :src="currentChapter.illustrationUrl" class="story-page__char-img" />
+            <div v-if="isFirstSpreadOfChapter && chapterDisplayImage" class="story-page__illustration">
+              <img :src="chapterDisplayImage" class="story-page__char-img" />
             </div>
-            <div class="story-page__chapter-text story-page__chapter-text--right" :class="{ 'story-page__chapter-text--no-illus': !isFirstSpreadOfChapter }">
+            <div class="story-page__chapter-text story-page__chapter-text--right" :class="{ 'story-page__chapter-text--no-illus': !isFirstSpreadOfChapter || !chapterDisplayImage }">
               <p v-for="(para, i) in currentSpread.right" :key="'r'+i">{{ para }}</p>
             </div>
             <div class="story-page__right-footer">
@@ -83,8 +78,6 @@ export default {
       bookHeight: 500,
       isMobile: false,
       contentPages: [],
-      illustrationLoading: false,
-      illustrationPollTimer: null
     }
   },
   computed: {
@@ -134,6 +127,11 @@ export default {
     rightPageNumber() {
       return this.leftPageNumber + 1
     },
+    chapterDisplayImage() {
+      if (!this.currentChapter) return null
+      if (this.currentChapter.chapterNumber === 1) return this.currentChapter.backgroundImage || null
+      return this.currentChapter.chapterImage || null
+    },
     pageBgStyle() {
       const bg = this.profile && this.profile.cardBackground
       if (bg && bg.endsWith('.webp')) return { backgroundImage: `url(/images/backgrounds/${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }
@@ -148,7 +146,6 @@ export default {
     currentChapter() {
       this.currentSpreadIndex = 0
       this.$nextTick(() => this.paginateContent())
-      this.checkIllustration()
     },
     bookHeight() {
       this.$nextTick(() => this.paginateContent())
@@ -173,7 +170,6 @@ export default {
       this.setBookHeight()
       this.$nextTick(() => {
         this.paginateContent()
-        this.checkIllustration()
       })
     })
     window.addEventListener('resize', this.onResize)
@@ -182,7 +178,6 @@ export default {
     document.documentElement.style.overflow = ''
     document.body.style.overflow = ''
     window.removeEventListener('resize', this.onResize)
-    if (this.illustrationPollTimer) clearInterval(this.illustrationPollTimer)
   },
   methods: {
     onResize() {
@@ -244,10 +239,11 @@ export default {
       const footerH = 32
       const titleH = 52 // title area + margin + border
       const illustrationH = 140 // 110px img + 20px top + 10px gap
+      const hasImage = !!this.chapterDisplayImage
 
       const leftFirstH = this.bookHeight - totalPad - footerH - titleH
       const leftOtherH = this.bookHeight - totalPad - footerH
-      const rightFirstH = this.bookHeight - totalPad - footerH - illustrationH
+      const rightFirstH = this.bookHeight - totalPad - footerH - (hasImage ? illustrationH : 0)
       const rightOtherH = this.bookHeight - totalPad - footerH
 
       // Pack paragraphs into pages
@@ -327,42 +323,6 @@ export default {
         chapter.title = this.titleInput
         this.editingTitle = null
       } catch (err) { console.error(err) }
-    },
-    async checkIllustration() {
-      if (this.illustrationPollTimer) { clearInterval(this.illustrationPollTimer); this.illustrationPollTimer = null }
-      if (!this.currentChapter || this.currentChapter.illustrationUrl) {
-        this.illustrationLoading = false
-        return
-      }
-      // Trigger illustration generation for chapters that don't have one
-      this.illustrationLoading = true
-      try {
-        await this.$axios.$post(`/api/story/chapter/${this.currentChapter._id}/generate-illustration`)
-      } catch (err) {
-        console.error('Failed to trigger illustration generation:', err)
-      }
-      // Poll for illustration every 5 seconds
-      const chapterId = this.currentChapter._id
-      let attempts = 0
-      this.illustrationPollTimer = setInterval(async () => {
-        attempts++
-        if (attempts > 24) { // Stop after 2 minutes
-          clearInterval(this.illustrationPollTimer)
-          this.illustrationPollTimer = null
-          this.illustrationLoading = false
-          return
-        }
-        try {
-          const res = await this.$axios.$get(`/api/story/chapter/${chapterId}/illustration`)
-          if (res.illustrationUrl) {
-            // Use $set for Vue 2 reactivity
-            this.$set(this.currentChapter, 'illustrationUrl', res.illustrationUrl)
-            this.illustrationLoading = false
-            clearInterval(this.illustrationPollTimer)
-            this.illustrationPollTimer = null
-          }
-        } catch (err) { /* ignore poll errors */ }
-      }, 5000)
     },
     formatDate(d) { return new Date(d).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) }
   }
@@ -508,32 +468,11 @@ export default {
   z-index: 1;
 }
 
-.story-page__illus-text {
-  color: #bbb;
-  font-size: 11px;
-  font-style: italic;
-  text-align: center;
-  padding: 8px;
-}
-
 .story-page__char-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.story-page__illus-spinner {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #ddd;
-  border-top-color: #0033c5;
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  margin-right: 6px;
-  vertical-align: middle;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
 
 .story-page__chapter-title-area {
   flex-shrink: 0;

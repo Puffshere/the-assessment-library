@@ -1,18 +1,23 @@
 import StoryChapter from '../models/StoryChapter.js'
 import ChildProfile from '../models/ChildProfile.js'
-import path from 'path'
-import fs from 'fs'
+
+const THEME_IMAGE_PREFIX = {
+  medieval: 'medieval',
+  scifi: 'sci-fi',
+  videogame: 'video-game'
+}
+
+function getCharacterImagePath(theme, discType, gender) {
+  const prefix = THEME_IMAGE_PREFIX[theme] || theme
+  const disc = (discType || '').toLowerCase()
+  const g = (gender || '').toLowerCase()
+  return `/images/characters/${prefix}-${disc}-${g}.webp`
+}
 
 const THEME_SETTINGS = {
   scifi: 'a futuristic science fiction universe with spaceships, alien planets, and advanced technology',
   medieval: 'a fantasy medieval world with castles, magic, and mythical creatures',
   videogame: 'a colorful video game world with levels, power-ups, and epic quests'
-}
-
-const THEME_ART_STYLES = {
-  scifi: 'futuristic sci-fi digital art style with glowing neon colors and sleek technology',
-  medieval: 'fantasy storybook illustration style with warm colors, castles, and magical elements',
-  videogame: 'vibrant video game concept art style with bold colors and dynamic action'
 }
 
 const DISC_TRAITS = {
@@ -119,111 +124,30 @@ Then leave a blank line and write the story paragraphs.`
       content = lines.slice(startIdx).join('\n').trim()
     }
 
-    const chapter = new StoryChapter({ childProfileId, chapterNumber, title, content, dominantTraitAtTime: dominantTrait, statsAtTime: stats })
-    await chapter.save()
+    // Snapshot image at chapter creation time
+    let backgroundImage = null
+    let chapterImage = null
+    if (chapterNumber === 1) {
+      // Chapter 1: capture the child's current background image
+      backgroundImage = profile.cardBackground
+        ? `/images/backgrounds/${profile.cardBackground}`
+        : null
+    } else {
+      // Chapter 2+: capture sidekick image, or fall back to character image
+      if (profile.sidekick && profile.sidekick.image) {
+        chapterImage = profile.sidekick.image
+      } else {
+        chapterImage = getCharacterImagePath(profile.theme, dominantTrait, profile.gender)
+      }
+    }
 
-    // Generate illustration asynchronously (don't block response)
-    generateIllustration(chapter._id, title || `Chapter ${chapterNumber}`, content, profile.theme).catch(err => {
-      console.error('Illustration generation error:', err)
-    })
+    const chapter = new StoryChapter({ childProfileId, chapterNumber, title, content, dominantTraitAtTime: dominantTrait, statsAtTime: stats, backgroundImage, chapterImage })
+    await chapter.save()
 
     return res.json({ chapter, tokensRemaining: tokensEarned - tokensUsed - 1 })
   } catch (err) {
     console.error('generateChapter error:', err)
     return res.status(500).json({ message: 'Story generation failed.' })
-  }
-}
-
-async function generateIllustration(chapterId, title, content, theme) {
-  console.log('Triggering image generation for chapter:', chapterId.toString(), 'theme:', theme)
-  const apiKey = process.env.OPENAI_API_KEY
-  if (!apiKey) {
-    console.warn('OPENAI_API_KEY not set — skipping illustration generation')
-    return
-  }
-  const artStyle = THEME_ART_STYLES[theme] || THEME_ART_STYLES.scifi
-  const summary = content.substring(0, 300)
-  const imagePrompt = `A ${artStyle} illustration for a children's story chapter titled "${title}". Scene: ${summary}. Child-friendly, colorful, adventurous, no text or words in the image.`
-  console.log('DALL-E prompt:', imagePrompt.substring(0, 120) + '...')
-
-  try {
-    const response = await fetch('https://api.openai.com/v1/images/generations', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-      body: JSON.stringify({ model: 'dall-e-3', prompt: imagePrompt, n: 1, size: '1024x1024', quality: 'standard' })
-    })
-    if (!response.ok) {
-      const err = await response.text()
-      console.error('DALL-E API error (status ' + response.status + '):', err)
-      return
-    }
-    const data = await response.json()
-    const imageUrl = data.data[0].url
-    console.log('DALL-E temporary URL:', imageUrl)
-    console.log('DALL-E returned image URL, downloading...')
-
-    // Download image and save locally (use data/ dir, not static/ — Nuxt doesn't serve runtime files from static/)
-    const imageResponse = await fetch(imageUrl)
-    if (!imageResponse.ok) {
-      console.error('Failed to download DALL-E image:', imageResponse.status)
-      return
-    }
-    const buffer = Buffer.from(await imageResponse.arrayBuffer())
-    const illustrationsDir = path.join(process.cwd(), 'data', 'illustrations')
-    if (!fs.existsSync(illustrationsDir)) fs.mkdirSync(illustrationsDir, { recursive: true })
-    const filename = `${chapterId}.png`
-    fs.writeFileSync(path.join(illustrationsDir, filename), buffer)
-
-    // Update chapter with API-served URL (served via express.static in api/index.js)
-    const localUrl = `/api/illustrations/${filename}`
-    await StoryChapter.findByIdAndUpdate(chapterId, { illustrationUrl: localUrl })
-    console.log('Generated image URL:', localUrl)
-    console.log('Illustration saved for chapter', chapterId.toString(), 'at', localUrl)
-  } catch (err) {
-    console.error('Illustration generation failed:', err)
-  }
-}
-
-export const getChapterIllustration = async (req, res) => {
-  try {
-    const { chapterId } = req.params
-    const chapter = await StoryChapter.findById(chapterId, 'illustrationUrl')
-    if (!chapter) return res.status(404).json({ message: 'Chapter not found.' })
-    return res.json({ illustrationUrl: chapter.illustrationUrl })
-  } catch (err) {
-    return res.status(500).json({ message: 'Failed to check illustration.' })
-  }
-}
-
-export const triggerIllustration = async (req, res) => {
-  try {
-    const { chapterId } = req.params
-    const chapter = await StoryChapter.findById(chapterId)
-    if (!chapter) return res.status(404).json({ message: 'Chapter not found.' })
-
-    // If already has an illustration, return it
-    if (chapter.illustrationUrl) {
-      return res.json({ illustrationUrl: chapter.illustrationUrl, status: 'exists' })
-    }
-
-    // Look up the child profile to get the theme
-    const profile = await ChildProfile.findById(chapter.childProfileId)
-    if (!profile) return res.status(404).json({ message: 'Profile not found.' })
-    if (req.user._id.toString() !== profile.parentUserId.toString()) {
-      return res.status(403).json({ message: 'Not authorized.' })
-    }
-
-    const chapterTitle = chapter.title || `Chapter ${chapter.chapterNumber}`
-
-    // Trigger generation asynchronously
-    generateIllustration(chapter._id, chapterTitle, chapter.content, profile.theme).catch(err => {
-      console.error('Triggered illustration generation error:', err)
-    })
-
-    return res.json({ status: 'generating' })
-  } catch (err) {
-    console.error('triggerIllustration error:', err)
-    return res.status(500).json({ message: 'Failed to trigger illustration.' })
   }
 }
 
@@ -238,4 +162,4 @@ export const updateChapterTitle = async (req, res) => {
   }
 }
 
-export default { getChapters, generateChapter, updateChapterTitle, getChapterIllustration, triggerIllustration }
+export default { getChapters, generateChapter, updateChapterTitle }

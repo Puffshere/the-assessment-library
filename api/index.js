@@ -40,9 +40,6 @@ if (!connectionString) {
 
 app.use(express.static(path.join(__dirname, 'static')));
 
-// Serve generated illustrations from data directory (runtime-created, not in Nuxt static)
-app.use('/illustrations', express.static(path.join(process.cwd(), 'data', 'illustrations')));
-
 app.use(helmet());
 app.use(cors());
 
@@ -129,8 +126,6 @@ app.post('/archie/chat', sessionsController.authenticate, archieController.chat)
 app.get('/story/:childProfileId/chapters', sessionsController.authenticate, storyController.getChapters);
 app.post('/story/:childProfileId/generate', sessionsController.authenticate, storyController.generateChapter);
 app.put('/story/chapter/:chapterId/title', sessionsController.authenticate, storyController.updateChapterTitle);
-app.get('/story/chapter/:chapterId/illustration', sessionsController.authenticate, storyController.getChapterIllustration);
-app.post('/story/chapter/:chapterId/generate-illustration', sessionsController.authenticate, storyController.triggerIllustration);
 
 app.use((req, res, next) => {
   res.status(404).json({
