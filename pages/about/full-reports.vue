@@ -525,6 +525,17 @@
 <script>
 export default {
     name: 'AboutFullReports',
+    head() {
+        return {
+            title: 'Full DISC Reports | The Assessment Library',
+            meta: [
+                { hid: 'description', name: 'description', content: 'Generate personalized AI-written DISC reports from your assessment data. Earn free reports by building your confidence score, or purchase a comprehensive 20-page report anytime.' },
+                { hid: 'og:title', property: 'og:title', content: 'Full DISC Reports | The Assessment Library' },
+                { hid: 'og:description', property: 'og:description', content: 'Generate personalized AI-written DISC reports from your assessment data. Earn free reports by building your confidence score, or purchase a comprehensive 20-page report anytime.' },
+                { hid: 'og:url', property: 'og:url', content: 'https://www.theassessmentlibrary.com/about/full-reports' }
+            ]
+        }
+    },
     components: {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')

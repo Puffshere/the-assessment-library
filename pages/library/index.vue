@@ -441,8 +441,14 @@ export default {
     },
     head() {
         return {
-            title: 'Your Library | The Assessment Library',
-            meta: [{ hid: 'description', name: 'description', content: 'This is the Library including the bookshelves for The Assessment Library.' }]
+            title: 'Assessment Library | Browse Story-Based DISC Books',
+            meta: [
+                { hid: 'description', name: 'description', content: 'Browse our collection of story-based DISC personality assessments. Choose a book, live the scenario, and discover your behavioral style through engaging real-life narratives.' },
+                { hid: 'robots', name: 'robots', content: 'noindex, nofollow' },
+                { hid: 'og:title', property: 'og:title', content: 'Assessment Library | Browse Story-Based DISC Books' },
+                { hid: 'og:description', property: 'og:description', content: 'Browse our collection of story-based DISC personality assessments. Choose a book, live the scenario, and discover your behavioral style through engaging real-life narratives.' },
+                { hid: 'og:url', property: 'og:url', content: 'https://www.theassessmentlibrary.com/library' }
+            ]
         }
     }
 }

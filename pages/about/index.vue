@@ -369,6 +369,37 @@
 <script>
 export default {
     name: 'AboutPage',
+    head() {
+        return {
+            title: 'About The Assessment Library | Story-Based DISC Assessments for Adults & Kids',
+            meta: [
+                { hid: 'description', name: 'description', content: 'Learn how The Assessment Library uses interactive story-based scenarios to build evolving DISC personality profiles for adults, families, and children of all ages.' },
+                { hid: 'og:title', property: 'og:title', content: 'About The Assessment Library | Story-Based DISC Assessments for Adults & Kids' },
+                { hid: 'og:description', property: 'og:description', content: 'Learn how The Assessment Library uses interactive story-based scenarios to build evolving DISC personality profiles for adults, families, and children of all ages.' },
+                { hid: 'og:url', property: 'og:url', content: 'https://www.theassessmentlibrary.com/about' }
+            ],
+            __dangerouslyDisableSanitizers: ['script'],
+            script: [
+                {
+                    innerHTML: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "SoftwareApplication",
+                        "name": "The Assessment Library",
+                        "applicationCategory": "EducationalApplication",
+                        "description": "Story-based DISC personality assessments for adults and kids",
+                        "url": "https://www.theassessmentlibrary.com",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "0",
+                            "priceCurrency": "USD",
+                            "description": "Free to start with credit-based assessments"
+                        }
+                    }),
+                    type: 'application/ld+json'
+                }
+            ]
+        }
+    },
     components: {
         'main-nav': () => import('@/components/Nav'),
         'ConfidenceBar': () => import('@/components/ConfidenceMeter.vue'),

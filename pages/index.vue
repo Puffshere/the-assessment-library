@@ -141,9 +141,40 @@ export default {
     },
     head() {
         return {
-            title: 'The Assessment Library | Home',
+            title: 'The Assessment Library | Story-Based DISC Personality Assessments',
             meta: [
-                { hid: 'description', name: 'description', content: '' }
+                { hid: 'description', name: 'description', content: 'The world\'s first story-based DISC assessments. Build an evolving personality profile through interactive narratives for adults and kids. Discover who you are becoming — one story at a time.' },
+                { hid: 'og:title', property: 'og:title', content: 'The Assessment Library | Story-Based DISC Personality Assessments' },
+                { hid: 'og:description', property: 'og:description', content: 'The world\'s first story-based DISC assessments. Build an evolving personality profile through interactive narratives for adults and kids. Discover who you are becoming — one story at a time.' },
+                { hid: 'og:url', property: 'og:url', content: 'https://www.theassessmentlibrary.com' }
+            ],
+            __dangerouslyDisableSanitizers: ['script'],
+            script: [
+                {
+                    innerHTML: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "The Assessment Library",
+                        "url": "https://www.theassessmentlibrary.com",
+                        "description": "Story-based DISC personality assessments for adults and kids",
+                        "sameAs": []
+                    }),
+                    type: 'application/ld+json'
+                },
+                {
+                    innerHTML: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebSite",
+                        "name": "The Assessment Library",
+                        "url": "https://www.theassessmentlibrary.com",
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://www.theassessmentlibrary.com/library?q={search_term_string}",
+                            "query-input": "required name=search_term_string"
+                        }
+                    }),
+                    type: 'application/ld+json'
+                }
             ]
         }
     },

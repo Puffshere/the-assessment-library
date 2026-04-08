@@ -359,6 +359,17 @@
 <script>
 export default {
     name: 'AboutConfidence',
+    head() {
+        return {
+            title: 'Confidence Meter Explained | The Assessment Library',
+            meta: [
+                { hid: 'description', name: 'description', content: 'Understand how The Assessment Library\'s Confidence Meter measures the reliability of your DISC results. More assessments mean more accurate insights and free reports.' },
+                { hid: 'og:title', property: 'og:title', content: 'Confidence Meter Explained | The Assessment Library' },
+                { hid: 'og:description', property: 'og:description', content: 'Understand how The Assessment Library\'s Confidence Meter measures the reliability of your DISC results. More assessments mean more accurate insights and free reports.' },
+                { hid: 'og:url', property: 'og:url', content: 'https://www.theassessmentlibrary.com/about/confidence' }
+            ]
+        }
+    },
     components: {
         'main-nav': () => import('@/components/Nav'),
         'ConfidenceBar': () => import('@/components/ConfidenceMeter.vue'),

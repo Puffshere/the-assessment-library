@@ -10,7 +10,13 @@ module.exports = {
       { name: 'theme-color', content: '#01A8FF' },
       { name: 'msapplication-navbutton-color', content: '#01A8FF' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      { hid: 'description', name: 'description', content: 'A website for scenario-based, story-based assessments' }
+      { hid: 'description', name: 'description', content: 'A website for scenario-based, story-based assessments' },
+      { hid: 'robots', name: 'robots', content: 'index, follow' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'The Assessment Library' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:image', property: 'og:image', content: 'https://www.theassessmentlibrary.com/images/og-image.jpg' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@AssessmentLib' }
     ],
     link: [
       {
@@ -71,13 +77,20 @@ module.exports = {
       '/_nuxt/',
       '/.well-known/'
     ],
-    Sitemap: ''
+    Sitemap: 'https://www.theassessmentlibrary.com/sitemap.xml'
   },
   sitemap: {
     hostname: 'https://www.theassessmentlibrary.com',
     gzip: true,
     exclude: [
-      '/thank-you'
+      '/thank-you',
+      '/dashboard',
+      '/auth',
+      '/auth/login',
+      '/auth/registration',
+      '/kids',
+      '/kids/**',
+      '/thank-you-participant'
     ]
   },
   gtm: {

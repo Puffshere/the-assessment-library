@@ -27,7 +27,8 @@
       "Bash(find /c/Users/shawn/Projects/the-assessment-library/pages -type f -name *.vue)",
       "Bash(npm run:*)",
       "Bash(curl:*)",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(find /c/Users/shawn/Projects/the-assessment-library/pages/about -type f -name *.vue)"
     ]
   }
 }

@@ -772,6 +772,17 @@
 <script>
 export default {
     name: 'AboutThirdPerson',
+    head() {
+        return {
+            title: '3rd Person Assessment | See How Others Perceive You | The Assessment Library',
+            meta: [
+                { hid: 'description', name: 'description', content: 'Invite friends, family, and colleagues to take a story-based assessment as you. Compare how you see yourself with how others experience your personality and communication style.' },
+                { hid: 'og:title', property: 'og:title', content: '3rd Person Assessment | See How Others Perceive You | The Assessment Library' },
+                { hid: 'og:description', property: 'og:description', content: 'Invite friends, family, and colleagues to take a story-based assessment as you. Compare how you see yourself with how others experience your personality and communication style.' },
+                { hid: 'og:url', property: 'og:url', content: 'https://www.theassessmentlibrary.com/about/3rd-person' }
+            ]
+        }
+    },
     components: {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')

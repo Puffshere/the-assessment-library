@@ -398,6 +398,17 @@
 <script>
 export default {
     name: 'AboutFirstPerson',
+    head() {
+        return {
+            title: 'How It Works | Evolving DISC Profile | The Assessment Library',
+            meta: [
+                { hid: 'description', name: 'description', content: 'Unlike one-time personality tests, The Assessment Library builds a living DISC profile that grows with every story you complete. See how your personality evolves over time.' },
+                { hid: 'og:title', property: 'og:title', content: 'How It Works | Evolving DISC Profile | The Assessment Library' },
+                { hid: 'og:description', property: 'og:description', content: 'Unlike one-time personality tests, The Assessment Library builds a living DISC profile that grows with every story you complete. See how your personality evolves over time.' },
+                { hid: 'og:url', property: 'og:url', content: 'https://www.theassessmentlibrary.com/about/1st-person' }
+            ]
+        }
+    },
     components: {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
