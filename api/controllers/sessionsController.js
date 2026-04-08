@@ -37,7 +37,7 @@ const authenticate = async (req, res, next) => {
 
 const createOrGetSession = async (req, res) => {
   try {
-    const { assessmentId, isThirdPerson, thirdPersonParticipantId, thirdPersonInvitationId, thirdPersonForUserId, childProfileId } = req.body;
+    const { assessmentId, isThirdPerson, thirdPersonParticipantId, thirdPersonInvitationId, thirdPersonForUserId, childProfileId, isChildThirdPerson, childThirdPersonParticipantId, childThirdPersonProfileId } = req.body;
     if (!assessmentId) {
       return res.status(400).json({ message: 'assessmentId required' });
     }
@@ -75,6 +75,12 @@ const createOrGetSession = async (req, res) => {
         sessionData.thirdPersonParticipantId = thirdPersonParticipantId;
         sessionData.thirdPersonInvitationId = thirdPersonInvitationId;
         sessionData.thirdPersonForUserId = thirdPersonForUserId;
+      }
+
+      if (isChildThirdPerson) {
+        sessionData.isChildThirdPerson = true;
+        sessionData.childThirdPersonParticipantId = childThirdPersonParticipantId;
+        sessionData.childThirdPersonProfileId = childThirdPersonProfileId;
       }
 
       if (childProfileId) {
@@ -179,6 +185,27 @@ const saveAnswer = async (req, res) => {
         }
       } catch (err) {
         console.error('Error updating participant invitation on completion:', err);
+      }
+    }
+
+    // If this is a child 3rd-person session and it just completed, update the ChildParticipant invitation
+    if (isFinal && session.isChildThirdPerson && session.childThirdPersonParticipantId && session.thirdPersonInvitationId) {
+      try {
+        const ChildParticipant = require('../../server/models/ChildParticipant');
+        const childParticipant = await ChildParticipant.findById(session.childThirdPersonParticipantId);
+        if (childParticipant) {
+          const invitation = childParticipant.invitations.id(session.thirdPersonInvitationId);
+          if (invitation) {
+            invitation.status = 'completed';
+            invitation.responseSessionId = session._id;
+            if (score && score.breakdown) {
+              invitation.responseBreakdown = score.breakdown;
+            }
+            await childParticipant.save();
+          }
+        }
+      } catch (err) {
+        console.error('Error updating child participant invitation on completion:', err);
       }
     }
 

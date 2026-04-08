@@ -19,6 +19,7 @@ import kidsModeController from './controllers/kidsModeController.js';
 import childProfileController from './controllers/childProfileController.js';
 import archieController from './controllers/archieController.js';
 import storyController from './controllers/storyController.js';
+import childParticipantsController from '../server/controllers/childParticipantsController.js';
 
 
 const upload = multer();
@@ -106,6 +107,12 @@ app.get('/child-profiles', sessionsController.authenticate, childProfileControll
 app.post('/child-profiles', sessionsController.authenticate, childProfileController.createProfile);
 app.put('/child-profiles/:id', sessionsController.authenticate, childProfileController.updateProfile);
 app.delete('/child-profiles/:id', sessionsController.authenticate, childProfileController.deleteProfile);
+
+app.get('/child-participants', sessionsController.authenticate, childParticipantsController.getParticipants);
+app.post('/child-participants', sessionsController.authenticate, childParticipantsController.addParticipant);
+app.post('/child-participants/:id/invite', sessionsController.authenticate, childParticipantsController.inviteToAssessment);
+app.get('/child-participants/verify-invite', childParticipantsController.verifyInvite);
+app.post('/child-participants/guest-complete', childParticipantsController.guestComplete);
 
 app.get('/participants', sessionsController.authenticate, participantsController.getParticipants);
 app.post('/participants', sessionsController.authenticate, participantsController.addParticipant);

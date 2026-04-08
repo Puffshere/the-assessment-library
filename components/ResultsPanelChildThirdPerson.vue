@@ -3,11 +3,11 @@
   <div class="panel panel-wide">
 
     <!-- ══════════════════════════════════════════════
-         TAB 2 — HOW OTHERS SEE YOU
+         TAB 1 — HOW OTHERS SEE [childName]
     ══════════════════════════════════════════════ -->
     <template v-if="activeView === 'second'">
       <div class="results-header">
-        <h2 class="panel-title">{{ viewingChildId ? 'How Others See ' + viewingChildName : 'How Others See You' }}</h2>
+        <h2 class="panel-title">How Others See {{ childName }}</h2>
         <p v-if="thirdPersonTopTrait" class="overall-top-trait"
           :style="{ color: traitColor(thirdPersonTopTrait) }">
           <span class="overall-top-label">Perceived Dominant Trait:</span><br />
@@ -35,13 +35,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Breakdown button — shown when comparison data is available -->
-        <div v-if="firstPersonBreakdownForDisplay && thirdPersonAggregateBreakdown" class="breakdown-btn-wrap">
-          <button class="blue breakdown-btn" @click="showComparisonModal = true">
-            View Self vs. Others Breakdown
-          </button>
         </div>
       </div>
 
@@ -76,8 +69,8 @@
             </div>
           </div>
           <p v-else class="no-data">
-            No one has completed an assessment for you yet.<br />
-            Add participants on the "3rd Person Participants" tab and invite them.
+            No one has completed an assessment for {{ childName }} yet.<br />
+            Add participants on the "{{ childName }}'s Participants" tab and invite them.
           </p>
 
           <h6 class="overall-meta">
@@ -95,25 +88,18 @@
             </p>
           </h6>
         </div>
-
-        <!-- Generate Full Report button -->
-        <div class="gr-trigger-wrap">
-          <button class="gr-trigger-btn" @click="showReportModal = true">
-            Generate Full Report
-          </button>
-        </div>
       </div>
 
     </template>
 
     <!-- ══════════════════════════════════════════════
-         TAB 3 — PARTICIPANT MANAGEMENT
+         TAB 2 — [childName]'S PARTICIPANTS
     ══════════════════════════════════════════════ -->
     <template v-else>
 
       <!-- HEADER -->
       <div class="participants-header">
-        <h2 class="panel-title">{{ viewingChildId ? viewingChildName + "'s Participants" : 'Participants' }}</h2>
+        <h2 class="panel-title">{{ childName }}'s Participants</h2>
         <button class="blue small add-btn" @click="toggleAddForm">
           {{ showAddForm ? 'Cancel' : '+ Add Participant' }}
         </button>
@@ -137,7 +123,7 @@
 
         <div v-else-if="!participants.length" class="status-msg empty">
           <p>No participants yet.</p>
-          <p>Add someone above to invite them to take an assessment.</p>
+          <p>Add someone above to invite them to take an assessment for {{ childName }}.</p>
         </div>
 
         <ul v-else class="participant-list">
@@ -153,14 +139,6 @@
                   >
                     {{ inv.assessmentTitle }}: {{ statusLabel(inv.status) }}
                   </span>
-                  <span
-                    v-if="inv.status === 'completed' && confidenceScore(inv) !== null"
-                    class="inv-badge confidence-badge"
-                    :style="{ backgroundColor: '#12304d' }"
-                    :title="`Confidence: how well ${p.name} perceived your style`"
-                  >
-                    {{ confidenceScore(inv) }}% match
-                  </span>
                 </div>
               </div>
             </div>
@@ -172,73 +150,12 @@
     </template>
   </div><!-- end .panel-wide -->
 
-  <!-- COMPARISON MODAL — outside panel to avoid stacking context issues -->
-  <div v-if="showComparisonModal" class="modal-backdrop" @click.self="showComparisonModal = false">
-    <div class="invite-modal comparison-modal">
-      <button class="modal-x-close" @click="showComparisonModal = false" aria-label="Close">&times;</button>
-      <h3 class="modal-title">Self vs. Others Breakdown</h3>
-      <p class="modal-subtitle">
-        How you perceive yourself vs. how others perceive you —
-        <strong>{{ selectedAssessmentLabel }}</strong>.
-      </p>
-
-      <!-- Trait-by-trait table -->
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>Trait</th>
-            <th>You</th>
-            <th>Others</th>
-            <th>Gap</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="row in comparisonTraits" :key="row.trait">
-            <td class="trait-cell" :style="{ color: traitColor(row.trait), fontWeight: 700 }">{{ row.trait }}</td>
-            <td>{{ row.self.toFixed(1) }}%</td>
-            <td>{{ row.others.toFixed(1) }}%</td>
-            <td><span class="gap-pill" :style="{ backgroundColor: row.gapColor }">{{ row.gapLevel }}</span></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Written summary -->
-      <p class="comparison-note">{{ comparisonSummary }}</p>
-
-      <!-- Side-by-side bar chart -->
-      <div class="cp-chart-wrap">
-        <div class="cp-chart">
-          <div v-for="row in comparisonTraits" :key="'modal-cpc-' + row.trait" class="cp-trait-col">
-            <div class="cp-bar-pair">
-              <div
-                class="cp-bar-self"
-                :style="{ height: row.self + '%', backgroundColor: traitColor(row.trait) + '66' }"
-                :title="'You: ' + row.self.toFixed(1) + '%'"
-              ></div>
-              <div
-                class="cp-bar-others"
-                :style="{ height: row.others + '%', backgroundColor: traitColor(row.trait) }"
-                :title="'Others: ' + row.others.toFixed(1) + '%'"
-              ></div>
-            </div>
-            <div class="cp-bar-trait-label" :style="{ color: traitColor(row.trait) }">{{ row.trait }}</div>
-          </div>
-        </div>
-        <div class="cp-legend">
-          <span class="cp-leg-item"><span class="cp-leg-swatch cp-leg-self"></span>You</span>
-          <span class="cp-leg-item"><span class="cp-leg-swatch cp-leg-others"></span>Others</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <!-- INVITE MODAL — outside panel to avoid stacking context issues -->
   <div v-if="inviteTarget" class="modal-backdrop" @click.self="closeInvite">
     <div class="invite-modal">
       <button class="modal-x-close" @click="closeInvite" aria-label="Close">&times;</button>
       <h3 class="modal-title">Invite {{ inviteTarget.name }}</h3>
-      <p class="modal-subtitle">Select one of your completed assessments:</p>
+      <p class="modal-subtitle">Select an assessment for them to answer as {{ childName }}:</p>
       <select v-model="inviteSlug" class="modal-select">
         <option value="" disabled>Choose an assessment...</option>
         <option
@@ -266,19 +183,6 @@
     </div>
   </div>
 
-  <!-- Report modal — inside .tp-root so template has one root element -->
-  <GenerateReportModal
-    v-if="showReportModal"
-    :first-person-confidence="0"
-    :third-person-confidence="thirdPersonConfidence"
-    :fully-confident-individuals="fullyConfidentIndividuals"
-    :first-person-breakdown="firstPersonBreakdownForFilter"
-    :third-person-breakdown="thirdPersonAggregateBreakdown"
-    :credits-balance="creditsBalance"
-    @close="showReportModal = false"
-    @credits-deducted="$emit('credits-deducted', $event)"
-  />
-
   </div><!-- end .tp-root -->
 </template>
 
@@ -298,60 +202,47 @@ const TRAIT_COLORS = {
 }
 
 export default {
-  name: 'ResultsPanelThirdPerson',
+  name: 'ResultsPanelChildThirdPerson',
   components: {
-    'ConfidenceBar': () => import('@/components/ConfidenceMeter.vue'),
-    'GenerateReportModal': () => import('@/components/GenerateReportModal.vue')
+    'ConfidenceBar': () => import('@/components/ConfidenceMeter.vue')
   },
   props: {
     activeView: {
       type: String,
-      default: 'third'
+      default: 'second'
+    },
+    childProfileId: {
+      type: String,
+      default: ''
+    },
+    childName: {
+      type: String,
+      default: ''
+    },
+    childProfiles: {
+      type: Array,
+      default: () => []
+    },
+    selectedChild: {
+      type: Object,
+      default: null
     },
     completedSessions: {
       type: Array,
       default: () => []
     },
-    selectedResult: {
-      type: Object,
-      default: null
-    },
-    sessions: {
-      type: Array,
-      default: () => []
-    },
-    assessmentsStarted: {
-      type: Number,
-      default: 0
-    },
-    assessmentsCompleted: {
-      type: Number,
-      default: 0
-    },
     creditsBalance: {
       type: Number,
       default: 0
-    },
-    inviteAssessmentSlug: {
-      type: String,
-      default: ''
-    },
-    viewingChildId: {
-      type: String,
-      default: null
-    },
-    viewingChildName: {
-      type: String,
-      default: ''
     }
   },
   data() {
     return {
+      internalSelectedChild: this.selectedChild,
       participants: [],
       loading: true,
       selectedAssessmentFilter: 'all',
       thirdPersonDropdownOpen: false,
-      showComparisonModal: false,
       showAddForm: false,
       addForm: { name: '', email: '' },
       addLoading: false,
@@ -359,12 +250,11 @@ export default {
       inviteTarget: null,
       inviteSlug: '',
       inviteLoading: false,
-      inviteError: null,
-      showReportModal: false
+      inviteError: null
     }
   },
   computed: {
-    // ── "How Others See You" computed ──────────────────────────────────────
+    // ── "How Others See [childName]" computed ──────────────────────────────
     allInvitedAssessments() {
       const map = new Map()
       this.participants.forEach(p => {
@@ -442,7 +332,7 @@ export default {
     thirdPersonConfidence() {
       const count = this.completedInvitations.length
       if (this.selectedAssessmentFilter === 'all') {
-        // Same formula as 1st person: 50 completions = 100%
+        // 50 completions = 100%
         return Math.min(100, Math.round(count / 50 * 100))
       }
       // Single assessment: 10 completions = 100%
@@ -464,84 +354,11 @@ export default {
       const b = this.thirdPersonAggregateBreakdown
       return b ? b.C : 0
     },
-    firstPersonBreakdownAll() {
-      const sessions = (this.completedSessions || []).filter(s => s.scoreBreakdown)
-      if (!sessions.length) return null
-      const totals = { D: 0, I: 0, S: 0, C: 0 }
-      sessions.forEach(s => ['D', 'I', 'S', 'C'].forEach(t => {
-        totals[t] += parseFloat(s.scoreBreakdown[t]) || 0
-      }))
-      const count = sessions.length
-      return { D: totals.D / count, I: totals.I / count, S: totals.S / count, C: totals.C / count }
-    },
-    firstPersonBreakdownForFilter() {
-      if (this.selectedAssessmentFilter === 'all') return null
-      return this.completedSessionsBySlug[this.selectedAssessmentFilter] || null
-    },
-    firstPersonBreakdownForDisplay() {
-      if (this.selectedAssessmentFilter === 'all') return this.firstPersonBreakdownAll
-      return this.firstPersonBreakdownForFilter
-    },
-    comparisonTraits() {
-      const fp = this.firstPersonBreakdownForDisplay
-      const tp = this.thirdPersonAggregateBreakdown
-      if (!fp || !tp) return []
-      const NAMES = { D: 'Dominance', I: 'Influence', S: 'Steadiness', C: 'Conscientiousness' }
-      return ['D', 'I', 'S', 'C'].map(t => {
-        const self = fp[t] || 0
-        const others = tp[t] || 0
-        const diff = others - self
-        const absDiff = Math.abs(diff)
-        const gapLevel = absDiff <= 5 ? 'Close' : absDiff <= 15 ? 'Moderate' : 'Significant'
-        const gapColor = absDiff <= 5 ? '#0dab49' : absDiff <= 15 ? '#ffbd05' : '#e93d2f'
-        return { trait: t, name: NAMES[t], self, others, diff, absDiff, gapLevel, gapColor }
-      })
-    },
-    comparisonSummary() {
-      const traits = this.comparisonTraits
-      if (!traits.length) return ''
-      const significant = traits.filter(t => t.gapLevel === 'Significant')
-      const moderate = traits.filter(t => t.gapLevel === 'Moderate')
-      if (significant.length === 0 && moderate.length === 0) {
-        return 'Others perceive your personality style very similarly to how you see yourself — strong self-awareness across all traits.'
-      }
-      const parts = []
-      if (significant.length) {
-        const names = significant.map(t => {
-          const dir = t.diff > 0 ? 'higher' : 'lower'
-          return `${t.name} (others rated you ${dir})`
-        })
-        parts.push(`Significant gaps in ${names.join(' and ')}.`)
-      }
-      if (moderate.length) {
-        const names = moderate.map(t => t.name)
-        parts.push(`Moderate differences in ${names.join(' and ')}.`)
-      }
-      return parts.join(' ')
-    },
-    perceptionAccuracy() {
-      const fp = this.firstPersonBreakdownForFilter
-      const tp = this.thirdPersonAggregateBreakdown
-      if (!fp || !tp) return 0
-      const avgDiff = ['D', 'I', 'S', 'C'].reduce((sum, t) => {
-        return sum + Math.abs((fp[t] || 0) - (tp[t] || 0))
-      }, 0) / 4
-      return Math.max(0, Math.round(100 - avgDiff))
-    },
-    perceptionAccuracyColor() {
-      const score = this.perceptionAccuracy
-      if (score >= 80) return '#0dab49'
-      if (score >= 60) return '#ffbd05'
-      return '#e93d2f'
-    },
 
     // ── Participant management computed ────────────────────────────────────
     uniqueCompletedSessions() {
       const map = new Map()
-      const sessions = this.viewingChildId
-        ? this.completedSessions.filter(s => s.childProfileId === this.viewingChildId)
-        : this.completedSessions
-      for (const s of sessions) {
+      for (const s of this.completedSessions) {
         if (s.assessmentSlug && !map.has(s.assessmentSlug)) {
           map.set(s.assessmentSlug, {
             assessmentTitle: s.assessmentTitle,
@@ -553,35 +370,13 @@ export default {
     },
     noCompletedSessions() {
       return this.uniqueCompletedSessions.length === 0
-    },
-    completedSessionsBySlug() {
-      const map = {}
-      ;(this.completedSessions || []).forEach(s => {
-        if (s.assessmentSlug && s.scoreBreakdown) {
-          map[s.assessmentSlug] = s.scoreBreakdown
-        }
-      })
-      return map
-    },
-    fullyConfidentIndividuals() {
-      const results = []
-      this.participants.forEach(p => {
-        ;(p.invitations || []).forEach(inv => {
-          if (inv.status !== 'completed' || !inv.responseBreakdown) return
-          const score = this.confidenceScore(inv)
-          if (score !== null && parseFloat(score) >= 100) {
-            results.push({
-              key: p._id + '-' + inv._id,
-              label: inv.assessmentTitle + ' (' + p.name + ')'
-            })
-          }
-        })
-      })
-      return results
     }
   },
   watch: {
-    viewingChildId() {
+    selectedChild(val) {
+      this.internalSelectedChild = val
+    },
+    childProfileId() {
       this.fetchParticipants()
     }
   },
@@ -599,41 +394,16 @@ export default {
       this.selectedAssessmentFilter = slug
       this.thirdPersonDropdownOpen = false
     },
-    traitDiff(trait) {
-      const fp = this.firstPersonBreakdownForFilter
-      const tp = this.thirdPersonAggregateBreakdown
-      if (!fp || !tp) return 0
-      // positive = others perceived you higher in this trait than you actually scored
-      return (tp[trait] || 0) - (fp[trait] || 0)
-    },
-    traitDiffColor(trait) {
-      const diff = Math.abs(this.traitDiff(trait))
-      if (diff <= 5) return '#0dab49'
-      if (diff <= 15) return '#ffbd05'
-      return '#e93d2f'
-    },
 
     // ── Participant management methods ─────────────────────────────────────
     async fetchParticipants() {
       try {
-        let res
-        if (this.viewingChildId) {
-          res = await this.$axios.$get('/api/child-participants', {
-            params: { childProfileId: this.viewingChildId }
-          })
-        } else {
-          res = await this.$axios.$get('/api/participants')
-        }
+        const res = await this.$axios.$get('/api/child-participants', {
+          params: { childProfileId: this.childProfileId }
+        })
         this.participants = res
-
-        // Auto-open invite modal if directed from assessment conclusion page
-        if (this.inviteAssessmentSlug && this.participants.length) {
-          this.inviteTarget = this.participants[0]
-          this.inviteSlug = this.inviteAssessmentSlug
-          this.inviteError = null
-        }
       } catch (err) {
-        console.error('Error fetching participants:', err)
+        console.error('Error fetching child participants:', err)
       } finally {
         this.loading = false
       }
@@ -653,21 +423,16 @@ export default {
       this.addLoading = true
       this.addError = null
       try {
-        const payload = {
+        const res = await this.$axios.$post('/api/child-participants', {
           name: this.addForm.name,
-          email: this.addForm.email
-        }
-        let endpoint = '/api/participants'
-        if (this.viewingChildId) {
-          endpoint = '/api/child-participants'
-          payload.childProfileId = this.viewingChildId
-        }
-        const res = await this.$axios.$post(endpoint, payload)
+          email: this.addForm.email,
+          childProfileId: this.childProfileId
+        })
         this.participants.push(res)
         this.addForm = { name: '', email: '' }
         this.showAddForm = false
       } catch (err) {
-        console.error('Error saving participant:', err)
+        console.error('Error saving child participant:', err)
         this.addError =
           (err.response && err.response.data && err.response.data.message) ||
           'Failed to save participant. Please try again.'
@@ -690,21 +455,17 @@ export default {
       this.inviteLoading = true
       this.inviteError = null
       try {
-        const endpoint = this.viewingChildId
-          ? `/api/child-participants/${this.inviteTarget._id}/invite`
-          : `/api/participants/${this.inviteTarget._id}/invite`
-        const payload = { assessmentSlug: this.inviteSlug }
-        if (this.viewingChildId) {
-          payload.childName = this.viewingChildName
-        }
-        const res = await this.$axios.$post(endpoint, payload)
+        const res = await this.$axios.$post(
+          `/api/child-participants/${this.inviteTarget._id}/invite`,
+          { assessmentSlug: this.inviteSlug }
+        )
         const idx = this.participants.findIndex(p => p._id === this.inviteTarget._id)
         if (idx !== -1) {
           this.$set(this.participants, idx, res)
         }
         this.closeInvite()
       } catch (err) {
-        console.error('Error sending invite:', err)
+        console.error('Error sending child invite:', err)
         const status = err.response && err.response.status
         if (status === 409) {
           this.inviteError = 'This participant is already invited to that assessment.'
@@ -714,20 +475,6 @@ export default {
       } finally {
         this.inviteLoading = false
       }
-    },
-    confidenceScore(inv) {
-      if (!inv.responseBreakdown) return null
-      const inviterBreakdown = this.completedSessionsBySlug[inv.assessmentSlug]
-      if (!inviterBreakdown) return null
-
-      const traits = ['D', 'I', 'S', 'C']
-      const diffs = traits.map(t => {
-        const a = parseFloat(inviterBreakdown[t]) || 0
-        const b = parseFloat(inv.responseBreakdown[t] != null ? inv.responseBreakdown[t] : (inv.responseBreakdown.get && inv.responseBreakdown.get(t))) || 0
-        return Math.abs(a - b)
-      })
-      const avgDiff = diffs.reduce((s, d) => s + d, 0) / 4
-      return Math.max(0, 100 - avgDiff).toFixed(1)
     },
     statusLabel(status) {
       switch (status) {
@@ -752,6 +499,23 @@ export default {
 <style scoped lang="scss">
 .tp-root {
   display: contents;
+}
+
+.child-selector-bar {
+  flex: 0 0 auto;
+  padding: 0 0 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.child-selector {
+  border: 2px solid #025baf67;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  background: #fff;
 }
 
 .panel-wide {
@@ -874,11 +638,6 @@ export default {
   font-weight: 600;
 }
 
-.confidence-badge {
-  background: #12304d !important;
-  font-weight: 700;
-}
-
 .invite-btn {
   flex: 0 0 auto;
   margin-left: 12px;
@@ -970,289 +729,14 @@ export default {
   font-size: 14px;
   border: 2px solid #dcdfe6;
   border-radius: 4px;
-  padding: 9px;
+  padding: 8px 10px;
   font-family: inherit;
-  margin-bottom: 16px;
-  background: #fff;
-
-  &:focus {
-    border-color: #00679b;
-    outline: none;
-  }
+  margin-bottom: 12px;
 }
 
 .modal-actions {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.breakdown-btn-wrap {
-  margin-top: 10px;
-}
-
-.breakdown-btn {
-  transition: transform 0.2s ease;
-
-  &:focus {
-    transform: scale(0.8);
-  }
-}
-
-.cp-title {
-  font-size: 11px;
-  font-weight: 700;
-  color: #12304d;
-  margin: 0 0 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.cp-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 12px;
-  margin-bottom: 12px;
-
-  th {
-    text-align: left;
-    padding: 4px 5px;
-    border-bottom: 2px solid #dce8f0;
-    color: #12304d;
-    font-size: 10px;
-    font-weight: 700;
-  }
-
-  td {
-    padding: 5px 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  tr:last-child td {
-    border-bottom: none;
-  }
-}
-
-.gap-pill {
-  display: inline-block;
-  font-size: 9px;
-  color: #fff;
-  padding: 2px 5px;
-  border-radius: 999px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.cp-summary {
-  font-size: 11px;
-  color: #555;
-  line-height: 1.5;
-  margin: 0 0 14px;
-  font-style: italic;
-}
-
-.cp-chart-wrap {
-  width: 100%;
-}
-
-.cp-chart {
-  display: flex;
-  gap: 6px;
-  align-items: flex-end;
-  height: 100px;
-  padding-bottom: 4px;
-}
-
-.cp-trait-col {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cp-bar-pair {
-  display: flex;
-  gap: 2px;
-  align-items: flex-end;
-  height: 90px;
-  width: 100%;
-  justify-content: center;
-}
-
-.cp-bar-self,
-.cp-bar-others {
-  width: 14px;
-  min-height: 3px;
-  border-radius: 3px 3px 0 0;
-  transition: height 0.3s;
-}
-
-.cp-bar-trait-label {
-  font-size: 11px;
-  font-weight: 700;
-  margin-top: 4px;
-}
-
-.cp-legend {
-  display: flex;
-  gap: 12px;
-  margin-top: 8px;
-  font-size: 11px;
-  color: #555;
-}
-
-.cp-leg-item {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.cp-leg-swatch {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  display: inline-block;
-}
-
-.cp-leg-self {
-  background: rgba(100, 100, 100, 0.35);
-}
-
-.cp-leg-others {
-  background: #555;
-}
-
-.comparison-modal {
-  max-width: 560px;
-}
-
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
+  gap: 8px;
   margin-top: 12px;
-
-  th {
-    text-align: left;
-    padding: 6px 8px;
-    border-bottom: 2px solid #dce8f0;
-    color: #12304d;
-    font-size: 12px;
-    font-weight: 700;
-  }
-
-  td {
-    padding: 7px 8px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  tr:last-child td {
-    border-bottom: none;
-  }
-
-  .trait-cell {
-    font-size: 15px;
-  }
-}
-
-.comparison-note {
-  margin: 12px 0 0;
-  font-size: 13px;
-  color: #555;
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-.gr-trigger-wrap {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-}
-
-@media (max-width: 768px) {
-  .panel-wide {
-    height: auto;
-    min-height: 300px;
-    padding-top: 12px;
-  }
-
-  .participants-body {
-    overflow-y: visible;
-    max-height: none;
-  }
-
-  .add-form-fields {
-    flex-direction: column;
-
-    .add-input {
-      flex: 1 1 auto;
-      width: 100%;
-    }
-  }
-
-  .inv-badge-group {
-    margin-bottom: 6px;
-  }
-
-  .participants-header {
-    flex-wrap: wrap;
-
-    .add-btn {
-      flex: 0 0 100%;
-      margin-top: 8px;
-    }
-  }
-
-  .participant-row {
-    flex-wrap: wrap;
-    border-bottom: 2px solid #cccccc;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
-
-    .invite-btn {
-      margin-left: 0;
-      margin-top: 8px;
-      width: auto;
-      padding: 4px 12px;
-      font-size: 12px;
-      height: auto;
-    }
-  }
-
-  .modal-actions {
-    flex-direction: column;
-
-    button {
-      width: 100%;
-    }
-  }
-
-  .gr-trigger-wrap {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin-top: 16px;
-    text-align: center;
-  }
-}
-
-.gr-trigger-btn {
-  padding: 8px 16px;
-  background: #444;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: background 0.2s, transform 0.2s ease;
-
-  &:hover {
-    background: #333;
-  }
-
-  &:focus {
-    transform: scale(0.8);
-  }
 }
 </style>

@@ -33,6 +33,7 @@
                                 <span v-else>Complete an assessment to unlock a chapter</span>
                             </button>
                         </div>
+                        <div v-if="!kidsViewActive" class="story-btn-bar-placeholder"></div>
 
                     <div class="results-wrapper">
 
@@ -89,8 +90,7 @@
                                 </div>
 
                                 <div v-if="childProfiles.length"
-                                    class="results-tab results-tab--viewer"
-                                    :class="{ 'is-active': activeResultsView === 'first' }"
+                                    class="results-tab results-tab--viewer is-active"
                                     @click="cycleViewingChild">
                                     {{ viewingChildLabel }}
                                 </div>
@@ -116,6 +116,8 @@
                             :completed-sessions="completedSessions"
                             :credits-balance="dashboard.user.creditsBalance"
                             :invite-assessment-slug="$route.query.inviteAssessment || ''"
+                            :viewing-child-id="viewingChildId"
+                            :viewing-child-name="viewingChildLabel"
                             @clear-results="selectedResult = null"
                             @credits-deducted="dashboard.user.creditsBalance = $event" />
 
@@ -233,6 +235,7 @@
                                 </div>
                             </template>
                         </div>
+
                     </div>
 
                     <!-- ACCOUNT OVERVIEW / ADVENTURE CARD -->
@@ -486,6 +489,8 @@ export default {
     "credit-packages-modal": () =>
       import("@/components/CreditPackagesModal.vue"),
     "kids-character-card": () => import("@/components/KidsCharacterCard.vue"),
+    "results-panel-child-third-person": () =>
+      import("@/components/ResultsPanelChildThirdPerson.vue"),
   },
   data() {
     return {
@@ -511,6 +516,7 @@ export default {
       activeChildTab: null,
       viewingChildId: null,
       forOthersSeen: false,
+      selectedChildForThirdPerson: null,
       DstyleTitle: "Dominance (D)",
       DstyleDescription: "You are direct, decisive, and results-oriented.",
       IstyleTitle: "Influence (I)",
@@ -826,6 +832,8 @@ export default {
 
     // Open a specific tab if requested via query param (e.g. from assessment conclusion)
     const tab = this.$route.query.tab;
+    this.selectedChildForThirdPerson = this.childProfiles[0] || null;
+
     if (tab && ["first", "second", "third", "fourth"].includes(tab)) {
       this.activeResultsView = tab;
     }
@@ -1182,6 +1190,11 @@ export default {
 
   .results-tab--viewer {
     margin-left: auto;
+    pointer-events: auto;
+
+    &:active {
+      transform: scale(0.95) !important;
+    }
   }
 
   .grid {
@@ -1190,6 +1203,7 @@ export default {
     gap: 24px;
     margin-top: 0px;
     justify-content: center;
+    align-items: flex-start;
   }
 
   .panel {
@@ -1900,6 +1914,8 @@ export default {
     font-weight: 500;
     color: #143180;
     cursor: pointer;
+    outline: none;
+    user-select: none;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 11;
@@ -1966,12 +1982,19 @@ export default {
   }
 
   .story-btn-bar {
-    
+    min-height: 52px;
     padding: 12px 0 8px;
     margin-top: 0;
     margin-bottom: -20px;
     position: relative;
     z-index: 20;
+  }
+
+  .story-btn-bar-placeholder {
+    padding: 12px 0 8px;
+    margin-top: 0;
+    margin-bottom: -20px;
+    min-height: 52px;
   }
 
   .story-token-btn {
@@ -2144,5 +2167,15 @@ export default {
       justify-content: center;
     }
   }
+}
+
+.child-selector {
+  border: 2px solid #025baf67;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  background: #fff;
 }
 </style>

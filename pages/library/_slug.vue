@@ -14,6 +14,10 @@
             </section>
 
             <section class="questionnaire">
+                <!-- Guest Banner (child participant guest, not logged in) -->
+                <div v-if="isGuest && !$store.state.loggedIn" class="third-person-banner" style="background:#fff3cd;color:#856404;margin-bottom:0;">
+                  <span>You are completing this as a guest. Your results will only be saved if you complete the full assessment. <a href="/auth/login" style="color:#856404;font-weight:700;text-decoration:underline;">Sign in or register</a> to earn 1 free credit.</span>
+                </div>
                 <!-- 3rd Person Banner -->
                 <div v-if="isThirdPerson && thirdPersonInviterName" class="third-person-banner">
                   <span>You're answering these questions as you think <strong>{{ thirdPersonInviterName }}</strong> would answer them.</span>
@@ -261,7 +265,15 @@
 import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
-    middleware: ['auth'],
+    middleware({ store, redirect, route }) {
+        // Allow guest access for child participant invite links or explicit guest mode
+        if (route.query.guest === 'true' || (route.query.childParticipant && route.query.invitation)) {
+            return;
+        }
+        if (!store.state.loggedIn) {
+            return redirect('/auth/login?next=' + encodeURIComponent(route.fullPath));
+        }
+    },
 
     components: {
         LazyHydrate,
@@ -328,6 +340,10 @@ export default {
             thirdPersonParticipantId: this.$route.query.participant || null,
             thirdPersonInvitationId: this.$route.query.invitation || null,
             thirdPersonForUserId: null,
+
+            isChildThirdPerson: false,
+            isGuest: this.$route.query.guest === 'true',
+            childProfileId: null,
 
             // Invite modal state
             showInviteModal: false,
@@ -407,13 +423,25 @@ export default {
 
         await this.loadAssessment();
 
-        // Handle 3rd-person invite
-        if (this.$route.query.participant && this.$route.query.invitation) {
+        // Handle child participant invite
+        if (this.$route.query.childParticipant && this.$route.query.invitation) {
             await this.loadInviteContext();
+            // Guest mode: track answers in memory only, no session created
+            if (!this.isGuest && !this.sessionId) {
+                await this.createThirdPersonSession();
+            }
+        }
+        // Handle regular 3rd-person invite
+        else if (this.$route.query.participant && this.$route.query.invitation) {
+            await this.loadInviteContext();
+            if (this.isThirdPerson && !this.sessionId) {
+                await this.createThirdPersonSession();
+            }
         }
 
-        if (this.isThirdPerson && !this.sessionId) {
-            await this.createThirdPersonSession();
+        // Guest mode doesn't create sessions — answers tracked in memory
+        if (this.isGuest) {
+            return;
         }
 
         // If no sessionId but user is logged in and assessment is loaded,
@@ -507,16 +535,35 @@ export default {
         },
         async loadInviteContext() {
             try {
-                const res = await this.$axios.$get('/api/participants/verify-invite', {
-                    params: {
-                        participant: this.$route.query.participant,
-                        invitation: this.$route.query.invitation
-                    },
-                    headers: { Authorization: `Bearer ${this.$store.state.token}` }
-                });
-                this.isThirdPerson = true;
-                this.thirdPersonInviterName = res.inviterName;
-                this.thirdPersonForUserId = res.inviterUserId;
+                if (this.$route.query.childParticipant && this.$route.query.invitation) {
+                    const headers = this.$store.state.token
+                        ? { Authorization: `Bearer ${this.$store.state.token}` }
+                        : {};
+                    const res = await this.$axios.$get('/api/child-participants/verify-invite', {
+                        params: {
+                            childParticipant: this.$route.query.childParticipant,
+                            invitation: this.$route.query.invitation
+                        },
+                        headers
+                    });
+                    this.isThirdPerson = true;
+                    this.isChildThirdPerson = true;
+                    this.thirdPersonInviterName = res.childName;
+                    this.thirdPersonParticipantId = res.participantId;
+                    this.thirdPersonInvitationId = res.invitationId;
+                    this.childProfileId = res.childProfileId;
+                } else {
+                    const res = await this.$axios.$get('/api/participants/verify-invite', {
+                        params: {
+                            participant: this.$route.query.participant,
+                            invitation: this.$route.query.invitation
+                        },
+                        headers: { Authorization: `Bearer ${this.$store.state.token}` }
+                    });
+                    this.isThirdPerson = true;
+                    this.thirdPersonInviterName = res.inviterName;
+                    this.thirdPersonForUserId = res.inviterUserId;
+                }
             } catch (err) {
                 console.error('Error loading invite context:', err);
                 // Don't block the page — just proceed normally if invite context fails
@@ -525,13 +572,23 @@ export default {
         async createThirdPersonSession() {
             try {
                 if (!this.assessment || !(this.assessment._id || this.assessment.id)) return;
-                const res = await this.$axios.$post('/api/sessions', {
+                if (!this.$store.state.token) return;
+
+                const payload = {
                     assessmentId: this.assessment._id || this.assessment.id,
                     isThirdPerson: true,
                     thirdPersonParticipantId: this.thirdPersonParticipantId,
                     thirdPersonInvitationId: this.thirdPersonInvitationId,
                     thirdPersonForUserId: this.thirdPersonForUserId
-                }, {
+                };
+
+                if (this.isChildThirdPerson) {
+                    payload.isChildThirdPerson = true;
+                    payload.childThirdPersonParticipantId = this.thirdPersonParticipantId;
+                    payload.childThirdPersonProfileId = this.childProfileId;
+                }
+
+                const res = await this.$axios.$post('/api/sessions', payload, {
                     headers: { Authorization: `Bearer ${this.$store.state.token}` }
                 });
                 const session = res.session || res;
@@ -554,7 +611,13 @@ export default {
             this.selectedAnswers.push(value);
             this.currentQuestion = nextQuestion;
 
-            if (this.sessionId) {
+            // Guest mode: track in memory, save on completion via guest-complete endpoint
+            if (this.isGuest) {
+                if (isFinal) {
+                    this.calculateTotals();
+                    await this.submitGuestCompletion();
+                }
+            } else if (this.sessionId) {
                 try {
                     let scorePayload;
 
@@ -599,6 +662,22 @@ export default {
                 }
             } else if (isFinal) {
                 this.calculateTotals();
+            }
+        },
+        async submitGuestCompletion() {
+            try {
+                await this.$axios.$post('/api/child-participants/guest-complete', {
+                    childParticipantId: this.thirdPersonParticipantId,
+                    invitationId: this.thirdPersonInvitationId,
+                    scoreBreakdown: {
+                        D: Number(this.DPercentage),
+                        I: Number(this.IPercentage),
+                        S: Number(this.SPercentage),
+                        C: Number(this.CPercentage)
+                    }
+                });
+            } catch (err) {
+                console.error('Error saving guest completion:', err);
             }
         },
         openBreakdown() {
