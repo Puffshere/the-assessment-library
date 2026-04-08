@@ -686,6 +686,9 @@ export default {
         closeBreakdown() {
             this.breakdownModal = false;
             this.hasViewedBreakdown = true;
+            if (this.isGuest) {
+                this.$router.push('/thank-you-participant?childName=' + encodeURIComponent(this.thirdPersonInviterName));
+            }
         },
         async goToInvite() {
             this.showInviteModal = true;
