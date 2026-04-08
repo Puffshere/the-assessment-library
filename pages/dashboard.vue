@@ -25,6 +25,12 @@
                 <div v-else class="grid">
                   <div v-if="kidsViewActive" class="story-btn-bar">
                             <button
+                                v-if="hasExistingStory"
+                                class="story-read-btn"
+                                @click="$router.push('/kids/story/' + $store.state.activeChildProfile._id)">
+                                📖 Read My Story
+                            </button>
+                            <button
                                 class="story-token-btn"
                                 :disabled="storyTokens <= 0 || isGeneratingStory"
                                 @click="generateStory">
@@ -791,6 +797,10 @@ export default {
       });
 
       return topTrait;
+    },
+    hasExistingStory() {
+      const profile = this.$store.state.activeChildProfile;
+      return profile && (profile.chaptersWritten || 0) > 0;
     },
     storyTokens() {
       const profile = this.$store.state.activeChildProfile;
@@ -1999,6 +2009,8 @@ export default {
     margin-bottom: -20px;
     position: relative;
     z-index: 20;
+    display: flex;
+    gap: 10px;
   }
 
   .story-btn-bar-placeholder {
@@ -2027,6 +2039,23 @@ export default {
     &:disabled {
       opacity: 0.5;
       cursor: not-allowed;
+    }
+  }
+
+  .story-read-btn {
+    padding: 10px 28px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6c3dbd, #a855f7);
+    color: #fff;
+    border: none;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    &:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
     }
   }
 
