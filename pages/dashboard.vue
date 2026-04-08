@@ -871,8 +871,10 @@ export default {
         this.childProfiles = res.profiles || [];
         // Auto-select the active profile tab, or first profile
         const active = this.$store.state.activeChildProfile;
-        if (active && this.childProfiles.find((p) => p._id === active._id)) {
-          this.activeChildTab = active._id;
+        const freshActive = active && this.childProfiles.find((p) => p._id === active._id);
+        if (freshActive) {
+          this.activeChildTab = freshActive._id;
+          this.$store.commit("SET_ACTIVE_CHILD_PROFILE", freshActive);
         } else if (this.childProfiles.length) {
           this.activeChildTab = this.childProfiles[0]._id;
           this.$store.commit("SET_ACTIVE_CHILD_PROFILE", this.childProfiles[0]);
