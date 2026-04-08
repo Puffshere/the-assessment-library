@@ -1,9 +1,9 @@
 <template>
     <div>
         <KidsViewBanner />
-
-        <KidsViewBanner />
-        <ArchieButler />
+        <client-only>
+            <ArchieButler />
+        </client-only>
         <div class="kids-banner-spacer" />
         <nuxt />
     </div>
