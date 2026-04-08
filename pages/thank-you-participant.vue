@@ -18,7 +18,7 @@
                         Your perspective has been recorded. The parent will be able to see how others
                         perceive {{ childName }}'s personality style.
                     </p>
-                    <button class="cta-btn" @click="$router.push('/')">
+                    <button class="cta-btn" style="line-height: 1; vertical-align: middle;" @click="$router.push('/')">
                         Visit The Assessment Library
                     </button>
                 </div>
@@ -35,9 +35,15 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
-    computed: {
-        childName() {
-            return this.$route.query.childName || 'this child';
+    data() {
+        return {
+            childName: 'this child'
+        };
+    },
+    mounted() {
+        const name = this.$route.query.childName;
+        if (name) {
+            this.childName = name;
         }
     }
 };
@@ -53,10 +59,11 @@ export default {
 }
 
 .header {
+    margin-top: 64px;
     background: linear-gradient(135deg, #0d4ca5 0%, #143180 100%);
     color: #fff;
     text-align: center;
-    padding: 40px 20px 30px;
+    padding: 60px 16px;
     position: relative;
 
     &::after {
@@ -72,6 +79,7 @@ export default {
     h1 {
         font-family: $font-family;
         font-size: 32px;
+        color: #ffffff;
         margin: 0;
     }
 }
@@ -109,12 +117,15 @@ export default {
     color: #fff;
     border: none;
     border-radius: 8px;
-    padding: 14px 32px;
+    padding: 14px 40px;
+    width: auto;
+    white-space: nowrap;
     font-family: $font-family;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
     transition: opacity 0.2s;
+    display: inline-block;
 
     &:hover {
         opacity: 0.9;
