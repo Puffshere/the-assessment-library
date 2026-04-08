@@ -1223,6 +1223,12 @@ export default {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    height: 386px;
+    min-height: 386px;
+
+    .adventure-card {
+      min-height: 100%;
+    }
   }
 
   .adventure-card-nowrap {
@@ -1230,11 +1236,14 @@ export default {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    height: 386px;
+    min-height: 386px;
 
     .adventure-card {
       border-radius: 11px;
       border: none;
       box-shadow: none;
+      min-height: 100%;
     }
   }
 
