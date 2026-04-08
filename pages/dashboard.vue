@@ -1994,7 +1994,7 @@ export default {
     padding: 12px 0 8px;
     margin-top: 0;
     margin-bottom: -20px;
-    min-height: 52px;
+    min-height: 62px;
   }
 
   .story-token-btn {
