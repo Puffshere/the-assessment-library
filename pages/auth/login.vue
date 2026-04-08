@@ -20,7 +20,7 @@
                     <div class="card">
                         <h4>Sign in to view your Library.</h4>
 
-                        <form @submit.prevent="logIn">
+                        <form method="post" action="javascript:void(0)" @submit.prevent="logIn">
                             <div class="form-group">
                                 <input id="email" type="email" placeholder="Enter Email" v-model="form.email" required
                                     autocomplete="email" />
