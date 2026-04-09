@@ -217,13 +217,14 @@ export const actions = {
       localStorage.removeItem('tal_logged_in')
       localStorage.removeItem('tal_token')
 
-      // Save which profile was active so the dashboard restores it on next login
-      // 'all' means the parent's own view (no child selected)
-      localStorage.setItem('tal_dashboard_profile', keepChildId || 'all')
-
-      // Restore the child ID so it survives logout/login cycle
-      if (keepChildId) {
+      // In kids view, preserve which child tab was active for next login.
+      // In standard view, always reset to "all" (parent account).
+      if (wasKidsView && keepChildId) {
+        localStorage.setItem('tal_dashboard_profile', keepChildId)
         localStorage.setItem('tal_active_child_id', keepChildId)
+      } else {
+        localStorage.setItem('tal_dashboard_profile', 'all')
+        localStorage.removeItem('tal_active_child_id')
       }
 
       // Remember if kids view was active so login can redirect appropriately
