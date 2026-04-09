@@ -92,9 +92,13 @@ export const actions = {
     restoreAuthFromStorage({ commit, dispatch }, this.$axios)
   },
 
-  async fetchMe({ commit, dispatch }) {
+  async fetchMe({ commit, dispatch, state }) {
+    // Remember which token we're validating so we can bail out
+    // if a fresh login replaced it while this request was in-flight.
+    const tokenAtStart = state.token
     try {
       const res = await this.$axios.$get('/api/auth/me')
+      if (state.token !== tokenAtStart) return // a new login happened — discard
       commit('SET_USER', res.user)
       commit('SET_KIDS_VIEW_ACTIVE', res.user.kids_mode_enabled)
 
@@ -106,7 +110,8 @@ export const actions = {
         }
       }
     } catch (err) {
-      // Token is invalid/expired — log out
+      // Only clear auth if no new login happened while we were fetching
+      if (state.token !== tokenAtStart) return
       commit('SET_LOGGED_IN', false)
       commit('SET_USER', null)
       commit('SET_TOKEN', null)
