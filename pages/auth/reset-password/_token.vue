@@ -33,7 +33,7 @@
                             </p>
                         </div>
 
-                        <form v-else method="post" action="javascript:void(0)" @submit.prevent="submitReset">
+                        <form v-else @submit.prevent="submitReset">
                             <div class="form-group">
                                 <input id="password" type="password" placeholder="New password" v-model="form.password"
                                     required autocomplete="new-password" />

@@ -18,7 +18,7 @@
         <div class="portal">
             <div class="row">
                 <div class="col-12">
-                    <form method="post" action="javascript:void(0)" @submit.prevent="onSubmit" autocomplete="off">
+                    <form @submit.prevent="onSubmit" autocomplete="off">
                         <h4>Create an Account</h4>
                         <div v-if="error" class="error">
                             <p>{{ error }}</p>

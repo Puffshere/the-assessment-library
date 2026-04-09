@@ -115,16 +115,15 @@ module.exports = {
     }
   },
   axios: {
-    // Used by server-side (SSR, serverMiddleware) — needs absolute URL for SSR fetch
+    // Used by server-side (SSR, serverMiddleware)
     baseURL: process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
       : (process.env.API_BASE_URL || 'http://localhost:3000'),
 
-    // Used by code running in the browser — empty string = same-origin relative URLs,
-    // so API calls work on any domain (herokuapp.com, theassessmentlibrary.com, etc.)
+    // Used by code running in the browser
     browserBaseURL: process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : ''
+      : (process.env.BROWSER_API_BASE_URL || 'http://localhost:3000')
   },
   devServer: {
     disableHostCheck: true

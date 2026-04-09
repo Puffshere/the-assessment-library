@@ -159,7 +159,7 @@ const forgotPassword = async (req, res) => {
     user.resetPasswordExpires = new Date(expires);
     await user.save();
 
-    const resetUrl = `${process.env.BASE_URL || process.env.BROWSER_API_BASE_URL}/auth/reset-password/${token}`;
+    const resetUrl = `${process.env.BROWSER_API_BASE_URL}/auth/reset-password/${token}`;
 
     await sendPasswordResetEmail({
       to: user.email,

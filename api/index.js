@@ -40,15 +40,8 @@ if (!connectionString) {
 
 app.use(express.static(path.join(__dirname, 'static')));
 
-app.use(cors({
-  origin: [
-    'https://theassessmentlibrary.com',
-    'https://www.theassessmentlibrary.com',
-    /\.herokuapp\.com$/
-  ],
-  credentials: true
-}));
 app.use(helmet());
+app.use(cors());
 
 // Stripe webhook needs raw body — must be registered before bodyParser.json()
 app.post('/payments/webhook', express.raw({ type: 'application/json' }), paymentsController.handleWebhook);
