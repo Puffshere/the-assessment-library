@@ -254,7 +254,7 @@ export default {
 
 .kcc__locked {
     display: flex;
-    min-height: 400px;
+    height: 400px;
     background: linear-gradient(135deg, #0f1623 0%, #1a2744 50%, #12304d 100%);
     border-radius: 12px;
     overflow: hidden;
@@ -394,7 +394,7 @@ export default {
 
 .kcc__card {
     display: flex;
-    min-height: 400px;
+    height: 400px;
     background: linear-gradient(135deg, #0f1623 0%, #1a2744 50%, #12304d 100%);
     border-radius: 12px;
     overflow: hidden;
