@@ -532,6 +532,8 @@ $shadow: rgba(0, 0, 0, 0.08);
     .links.desktop {
         display: flex;
         gap: 12px;
+        position: relative;
+        left: 20px;
     }
 
     .actions.desktop {
