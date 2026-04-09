@@ -18,46 +18,121 @@
              class="story-page__flip-page"
              :class="flipDirection === 1 ? 'story-page__flip-page--fwd' : 'story-page__flip-page--bwd'"></div>
 
-        <div class="story-page__page story-page__page--left" :class="{ 'is-disabled': !canGoPrev, 'is-content-entering': contentFadingIn }" :style="pageStyle" @click="flipPage(-1)">
-          <div class="story-page__page-inner">
-            <div v-if="isFirstSpreadOfChapter" class="story-page__chapter-title-area">
-              <div v-if="editingTitle === currentChapter._id" class="story-page__title-edit" @click.stop @mousedown.stop>
-                <input v-model="titleInput" class="story-page__title-input" placeholder="Name this chapter..." @click.stop @mousedown.stop @keydown.stop @keydown.enter="saveTitle(currentChapter)" @keyup.stop />
-                <button class="story-page__save-btn" @click.stop="saveTitle(currentChapter)" @mousedown.stop>Save</button>
-                <button class="story-page__cancel-btn" @click.stop="editingTitle = null" @mousedown.stop>✕</button>
+        <!-- ═══ TABLE OF CONTENTS SPREAD ═══ -->
+        <template v-if="showToc">
+          <story-table-of-contents
+            :chapters="chapters"
+            :profile="profile"
+            :theme-files="THEME_FILES"
+            :page-style="pageStyle"
+            :content-fading-in="contentFadingIn"
+            @go-to-chapter="goToChapter"
+            @select-background="handleTocBgSave"
+            @unlock-background="handleTocBgUnlock"
+            @open-bg-modal="openBgModal"
+            @flip-forward="flipPage(1)"
+          />
+        </template>
+
+        <!-- ═══ CHAPTER CONTENT SPREAD ═══ -->
+        <template v-else>
+          <div class="story-page__page story-page__page--left" :class="{ 'is-disabled': !canGoPrev, 'is-content-entering': contentFadingIn }" :style="pageStyle" @click="flipPage(-1)">
+            <div class="story-page__page-inner">
+              <div v-if="isFirstSpreadOfChapter" class="story-page__chapter-title-area">
+                <div v-if="editingTitle === currentChapter._id" class="story-page__title-edit" @click.stop @mousedown.stop>
+                  <input v-model="titleInput" class="story-page__title-input" placeholder="Name this chapter..." @click.stop @mousedown.stop @keydown.stop @keydown.enter="saveTitle(currentChapter)" @keyup.stop />
+                  <button class="story-page__save-btn" @click.stop="saveTitle(currentChapter)" @mousedown.stop>Save</button>
+                  <button class="story-page__cancel-btn" @click.stop="editingTitle = null" @mousedown.stop>✕</button>
+                </div>
+                <div v-else class="story-page__title-display" @click.stop="startEditTitle(currentChapter)" @mousedown.stop>
+                  <h2>Chapter {{ currentChapter.chapterNumber }}: {{ currentChapter.title || 'Untitled' }}</h2>
+                  <span class="story-page__edit-hint">✏️ rename</span>
+                </div>
               </div>
-              <div v-else class="story-page__title-display" @click.stop="startEditTitle(currentChapter)" @mousedown.stop>
-                <h2>Chapter {{ currentChapter.chapterNumber }}: {{ currentChapter.title || 'Untitled' }}</h2>
-                <span class="story-page__edit-hint">✏️ rename</span>
+              <div class="story-page__chapter-text story-page__chapter-text--left" :class="{ 'story-page__chapter-text--no-title': !isFirstSpreadOfChapter }">
+                <p v-for="(para, i) in currentSpread.left" :key="'l'+i">{{ para }}</p>
               </div>
+              <div class="story-page__left-footer">
+                <button class="story-page__toc-btn" @click.stop="goToToc">Contents</button>
+                <span class="story-page__trait-badge">{{ currentChapter.dominantTraitAtTime }} style</span>
+                <span class="story-page__page-num">{{ leftPageNumber }}</span>
+              </div>
+              <div v-if="canGoPrev" class="story-page__click-hint story-page__click-hint--left">‹ prev</div>
             </div>
-            <div class="story-page__chapter-text story-page__chapter-text--left" :class="{ 'story-page__chapter-text--no-title': !isFirstSpreadOfChapter }">
-              <p v-for="(para, i) in currentSpread.left" :key="'l'+i">{{ para }}</p>
-            </div>
-            <div class="story-page__left-footer">
-              <span class="story-page__trait-badge">{{ currentChapter.dominantTraitAtTime }} style</span>
-              <span class="story-page__page-num">{{ leftPageNumber }}</span>
-            </div>
-            <div v-if="canGoPrev" class="story-page__click-hint story-page__click-hint--left">‹ prev</div>
           </div>
-        </div>
-        <div class="story-page__page story-page__page--right" :class="{ 'is-disabled': !canGoNext, 'is-content-entering': contentFadingIn }" :style="pageStyle" @click="flipPage(1)">
-          <div class="story-page__page-inner story-page__page-inner--right">
-            <div v-if="isFirstSpreadOfChapter && chapterDisplayImage" class="story-page__illustration">
-              <img :src="chapterDisplayImage" class="story-page__char-img" />
+          <div class="story-page__page story-page__page--right" :class="{ 'is-disabled': !canGoNext, 'is-content-entering': contentFadingIn }" :style="pageStyle" @click="flipPage(1)">
+            <div class="story-page__page-inner story-page__page-inner--right">
+              <div v-if="isFirstSpreadOfChapter && chapterDisplayImage" class="story-page__illustration">
+                <img :src="chapterDisplayImage" class="story-page__char-img" />
+              </div>
+              <div class="story-page__chapter-text story-page__chapter-text--right" :class="{ 'story-page__chapter-text--no-illus': !isFirstSpreadOfChapter || !chapterDisplayImage }">
+                <p v-for="(para, i) in currentSpread.right" :key="'r'+i">{{ para }}</p>
+              </div>
+              <div class="story-page__right-footer">
+                <span class="story-page__date">{{ formatDate(currentChapter.createdAt) }}</span>
+                <span class="story-page__page-num">{{ rightPageNumber }}</span>
+              </div>
+              <div v-if="canGoNext" class="story-page__click-hint story-page__click-hint--right">next ›</div>
             </div>
-            <div class="story-page__chapter-text story-page__chapter-text--right" :class="{ 'story-page__chapter-text--no-illus': !isFirstSpreadOfChapter || !chapterDisplayImage }">
-              <p v-for="(para, i) in currentSpread.right" :key="'r'+i">{{ para }}</p>
-            </div>
-            <div class="story-page__right-footer">
-              <span class="story-page__date">{{ formatDate(currentChapter.createdAt) }}</span>
-              <span class="story-page__page-num">{{ rightPageNumber }}</span>
-            </div>
-            <div v-if="canGoNext" class="story-page__click-hint story-page__click-hint--right">next ›</div>
           </div>
-        </div>
+        </template>
       </div>
     </div>
+
+    <!-- Background Selection Modal -->
+    <transition name="fade">
+      <div v-if="showBgModal" class="bgm-backdrop" @click.self="showBgModal = false">
+        <div class="bgm-modal">
+          <button class="bgm-close" @click="showBgModal = false" aria-label="Close">&times;</button>
+          <h2 class="bgm-title">Choose Your World</h2>
+          <p class="bgm-subtitle">Pick a background for your adventure card</p>
+          <div class="bgm-grid">
+            <div
+              v-for="bg in currentThemeBackgrounds"
+              :key="bg.file"
+              class="bgm-card"
+              :class="{
+                'is-selected': bgModalSelection === bg.file,
+                'is-unlockable': bg.canUnlock,
+                'is-locked': !bg.unlocked && !bg.canUnlock
+              }"
+              @click="handleBgCardClick(bg)"
+            >
+              <img
+                :src="'/images/backgrounds/' + bg.file"
+                :alt="bg.file"
+                class="bgm-card__img"
+                :class="{ 'is-locked': !bg.unlocked && !bg.canUnlock }"
+              />
+              <div v-if="!bg.unlocked && !bg.canUnlock" class="bgm-card__lock">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                <span>{{ bg.needMore }} more {{ bg.needMore === 1 ? 'story' : 'stories' }}</span>
+              </div>
+              <div v-if="bg.canUnlock" class="bgm-card__unlockable">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <span>Tap to unlock!</span>
+              </div>
+              <div v-if="bg.unlocked && bgModalSelection === bg.file" class="bgm-card__check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p v-if="availableUnlockTokens > 0" class="bgm-token-hint">
+            You have {{ availableUnlockTokens }} background{{ availableUnlockTokens > 1 ? 's' : '' }} to unlock!
+          </p>
+          <button class="bgm-confirm" :disabled="!bgModalSelection" @click="confirmBackground">
+            Apply Background
+          </button>
+        </div>
+      </div>
+    </transition>
 
     <!-- Hidden measurement container for pagination -->
     <div ref="measurer" class="story-page__measurer" aria-hidden="true">
@@ -69,11 +144,15 @@
 <script>
 export default {
   middleware: ['auth'],
-  components: { 'main-nav': () => import('@/components/Nav') },
+  components: {
+    'main-nav': () => import('@/components/Nav'),
+    'story-table-of-contents': () => import('@/components/StoryTableOfContents')
+  },
   data() {
     return {
       chapters: [],
       loading: true,
+      showToc: true,
       currentChapterIndex: 0,
       currentSpreadIndex: 0,
       isFlipping: false,
@@ -84,10 +163,56 @@ export default {
       bookHeight: 500,
       isMobile: false,
       contentPages: [],
+      showBgModal: false,
+      bgModalSelection: null,
+      THEME_FILES: {
+        medieval: ['midevil-1.webp', 'midevil-2.webp', 'midevil-3.webp'],
+        scifi: ['sci-fi-1.webp', 'sci-fi-2.webp', 'sci-fi-3.webp'],
+        videogame: ['video-game-1.webp', 'video-game-2.webp', 'video-game-3.webp']
+      }
     }
   },
   computed: {
     profile() { return this.$store.state.activeChildProfile },
+    unlockedForTheme() {
+      if (!this.profile) return []
+      const theme = this.profile.theme
+      const map = this.profile.unlockedBackgrounds
+      if (!map) return []
+      return (typeof map.get === 'function' ? map.get(theme) : map[theme]) || []
+    },
+    themeCompletions() {
+      if (!this.profile) return 0
+      const theme = this.profile.theme
+      const map = this.profile.completionsPerTheme
+      if (!theme || !map) return 0
+      if (map instanceof Map) return map.get(theme) || 0
+      return map[theme] || 0
+    },
+    availableUnlockTokens() {
+      let earned = 0
+      for (const threshold of [3, 6, 9]) {
+        if (this.themeCompletions >= threshold) earned++
+      }
+      return Math.max(0, earned - this.unlockedForTheme.length)
+    },
+    currentThemeBackgrounds() {
+      if (!this.profile) return []
+      const theme = this.profile.theme
+      const files = this.THEME_FILES[theme] || []
+      const unlocked = this.unlockedForTheme
+      const hasTokens = this.availableUnlockTokens > 0
+      const unlockedCount = unlocked.length
+      const tokens = this.availableUnlockTokens
+      const nextNeededMilestone = (unlockedCount + tokens + 1) * 3
+      const needMore = Math.max(0, nextNeededMilestone - this.themeCompletions)
+      return files.map(file => {
+        const isUnlocked = unlocked.includes(file)
+        if (isUnlocked) return { file, unlocked: true, canUnlock: false, needMore: 0 }
+        if (hasTokens) return { file, unlocked: false, canUnlock: true, needMore: 0 }
+        return { file, unlocked: false, canUnlock: false, needMore }
+      })
+    },
     currentChapter() { return this.chapters[this.currentChapterIndex] || null },
     paragraphs() {
       if (!this.currentChapter) return []
@@ -116,9 +241,11 @@ export default {
       return this.currentSpreadIndex === 0
     },
     canGoPrev() {
-      return this.currentSpreadIndex > 0 || this.currentChapterIndex > 0
+      if (this.showToc) return false
+      return true // can always go back (to prev spread, prev chapter, or TOC)
     },
     canGoNext() {
+      if (this.showToc) return this.chapters.length > 0
       return this.currentSpreadIndex < this.spreads.length - 1 || this.currentChapterIndex < this.chapters.length - 1
     },
     leftPageNumber() {
@@ -162,7 +289,8 @@ export default {
     try {
       const res = await this.$axios.$get(`/api/story/${this.$route.params.childProfileId}/chapters`)
       this.chapters = res.chapters
-      this.currentChapterIndex = this.chapters.length - 1
+      this.showToc = true
+      this.currentChapterIndex = 0
     } catch (err) { console.error(err) } finally { this.loading = false }
     this.$nextTick(() => {
       this.isMobile = window.innerWidth <= 640
@@ -305,12 +433,18 @@ export default {
       }
 
       if (direction === 1) {
-        if (this.currentSpreadIndex < this.spreads.length - 1) {
+        if (this.showToc) {
+          // TOC → first chapter
+          if (this.chapters.length) {
+            startFlip(() => { this.showToc = false; this.currentChapterIndex = 0; this.currentSpreadIndex = 0 })
+          }
+        } else if (this.currentSpreadIndex < this.spreads.length - 1) {
           startFlip(() => { this.currentSpreadIndex++ })
         } else if (this.currentChapterIndex < this.chapters.length - 1) {
           startFlip(() => { this.currentChapterIndex++; this.currentSpreadIndex = 0 })
         }
       } else {
+        if (this.showToc) return // already at the beginning
         if (this.currentSpreadIndex > 0) {
           startFlip(() => { this.currentSpreadIndex-- })
         } else if (this.currentChapterIndex > 0) {
@@ -320,7 +454,75 @@ export default {
               this.currentSpreadIndex = Math.max(0, this.spreads.length - 1)
             })
           })
+        } else {
+          // First spread of first chapter → go back to TOC
+          startFlip(() => { this.showToc = true })
         }
+      }
+    },
+    goToChapter(chapterIndex) {
+      this.showToc = false
+      this.currentChapterIndex = chapterIndex
+      this.currentSpreadIndex = 0
+      this.$nextTick(() => this.paginateContent())
+    },
+    goToToc() {
+      this.showToc = true
+    },
+    openBgModal() {
+      this.bgModalSelection = (this.profile && this.profile.cardBackground) || null
+      this.showBgModal = true
+    },
+    handleBgCardClick(bg) {
+      if (bg.unlocked) {
+        this.bgModalSelection = bg.file
+      } else if (bg.canUnlock) {
+        this.handleTocBgUnlock(bg.file)
+      }
+    },
+    async confirmBackground() {
+      if (!this.bgModalSelection) return
+      await this.handleTocBgSave(this.bgModalSelection)
+      this.showBgModal = false
+      this.bgModalSelection = null
+    },
+    async handleTocBgSave(bgFile) {
+      if (!this.profile) return
+      try {
+        const res = await this.$axios.$put(
+          `/api/child-profiles/${this.profile._id}`,
+          { cardBackground: bgFile }
+        )
+        this.$store.commit('SET_ACTIVE_CHILD_PROFILE', res.profile)
+      } catch (err) {
+        console.error('Error saving background:', err)
+      }
+    },
+    async handleTocBgUnlock(bgFile) {
+      if (!this.profile) return
+      try {
+        const theme = this.profile.theme
+        const map = this.profile.unlockedBackgrounds
+        const currentUnlocked = map
+          ? (typeof map.get === 'function' ? map.get(theme) : map[theme]) || []
+          : []
+        const newUnlocked = [...currentUnlocked, bgFile]
+        const fullMap = {}
+        if (map) {
+          if (typeof map.forEach === 'function') {
+            map.forEach((v, k) => { fullMap[k] = v })
+          } else {
+            Object.assign(fullMap, map)
+          }
+        }
+        fullMap[theme] = newUnlocked
+        const res = await this.$axios.$put(
+          `/api/child-profiles/${this.profile._id}`,
+          { unlockedBackgrounds: fullMap }
+        )
+        this.$store.commit('SET_ACTIVE_CHILD_PROFILE', res.profile)
+      } catch (err) {
+        console.error('Error unlocking background:', err)
       }
     },
     startEditTitle(chapter) { this.editingTitle = chapter._id; this.titleInput = chapter.title || '' },
@@ -554,6 +756,24 @@ export default {
   font-size: 11px; font-weight: 700; padding: 3px 10px;
   border-radius: 20px; background: rgba(0,51,197,0.08); color: #0033c5;
 }
+.story-page__toc-btn {
+  background: none;
+  border: 1px solid rgba(0,51,197,0.15);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #0033c5;
+  cursor: pointer;
+  font-family: $font-family;
+  transition: background 0.12s;
+  &:hover { background: rgba(0,51,197,0.06); }
+}
+
+.story-page__page-inner--toc-right {
+  padding: 0;
+}
+
 .story-page__date { font-size: 11px; color: #aaa; }
 
 .story-page__click-hint {
@@ -823,5 +1043,193 @@ export default {
     text-align: justify;
     &:last-child { margin-bottom: 0; }
   }
+}
+
+/* ───────────────────── BACKGROUND MODAL ───────────────────── */
+
+.fade-enter-active, .fade-leave-active { transition: opacity 0.25s; }
+.fade-enter, .fade-leave-to { opacity: 0; }
+
+.bgm-backdrop {
+  position: fixed;
+  inset: 0;
+  padding: 116px 16px 40px;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  z-index: 999998;
+}
+
+.bgm-modal {
+  background: linear-gradient(160deg, #0a0f1e 0%, #111d35 40%, #0d1a2e 100%);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 64px 48px 56px;
+  width: 100%;
+  max-width: 860px;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(79, 172, 254, 0.08);
+  text-align: center;
+}
+
+.bgm-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #e53e3e;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover { color: #c53030; }
+}
+
+.bgm-title {
+  font-family: $font-family;
+  font-size: 36px;
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 8px;
+  text-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+}
+
+.bgm-subtitle {
+  font-family: $nunito-family;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 36px;
+}
+
+.bgm-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.bgm-card {
+  flex: 1 1 0;
+  min-height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+
+  &:hover:not(.is-locked) {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  &.is-selected {
+    border-color: #4facfe;
+    box-shadow: 0 0 16px rgba(79, 172, 254, 0.5), 0 0 4px rgba(79, 172, 254, 0.3);
+  }
+  &.is-locked { cursor: default; }
+  &.is-unlockable {
+    cursor: pointer;
+    border-color: rgba(245, 166, 35, 0.4);
+    animation: bgm-pulse 2s ease-in-out infinite;
+    &:hover { border-color: #f5a623; box-shadow: 0 0 16px rgba(245, 166, 35, 0.5); }
+  }
+}
+
+@keyframes bgm-pulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(245, 166, 35, 0); }
+  50% { box-shadow: 0 0 12px rgba(245, 166, 35, 0.3); }
+}
+
+.bgm-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.2s;
+  &.is-locked { filter: grayscale(100%) brightness(0.4); }
+}
+
+.bgm-card__lock {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  svg { width: 36px; height: 36px; }
+  span { font-family: $nunito-family; font-size: 14px; font-weight: 700; color: rgba(255, 255, 255, 0.6); }
+}
+
+.bgm-card__unlockable {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #f5a623;
+  background: rgba(0, 0, 0, 0.35);
+  svg { width: 36px; height: 36px; }
+  span { font-family: $nunito-family; font-size: 14px; font-weight: 700; }
+}
+
+.bgm-card__check {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  background: #4facfe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(79, 172, 254, 0.5);
+  svg { width: 14px; height: 14px; }
+}
+
+.bgm-token-hint {
+  font-family: $nunito-family;
+  font-size: 13px;
+  font-weight: 700;
+  color: #f5a623;
+  margin: 0 0 16px;
+  text-shadow: 0 0 10px rgba(245, 166, 35, 0.3);
+}
+
+.bgm-confirm {
+  display: block;
+  width: 100%;
+  font-family: $nunito-family;
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #0ea5e9;
+  border: none;
+  border-radius: 8px;
+  height: 60px;
+  padding: 0;
+  margin: 48px 0 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.35);
+  transition: background 0.15s, box-shadow 0.2s;
+  &:hover:not(:disabled) { background: #0284c7; box-shadow: 0 4px 24px rgba(14, 165, 233, 0.5); }
+  &:disabled { opacity: 0.4; cursor: not-allowed; }
 }
 </style>
