@@ -13,7 +13,12 @@
     </div>
     <div v-else class="story-page__book-wrapper">
       <div class="story-page__book" :class="{ 'is-flipping': isFlipping, 'flip-forward': flipDirection === 1, 'flip-backward': flipDirection === -1 }">
-        <div class="story-page__page story-page__page--left" :class="{ 'is-disabled': !canGoPrev }" :style="pageStyle" @click="flipPage(-1)">
+        <!-- Flip overlay: a blank page that turns the full 180° -->
+        <div v-if="isFlipping"
+             class="story-page__flip-page"
+             :class="flipDirection === 1 ? 'story-page__flip-page--fwd' : 'story-page__flip-page--bwd'"></div>
+
+        <div class="story-page__page story-page__page--left" :class="{ 'is-disabled': !canGoPrev, 'is-content-entering': contentFadingIn }" :style="pageStyle" @click="flipPage(-1)">
           <div class="story-page__page-inner">
             <div v-if="isFirstSpreadOfChapter" class="story-page__chapter-title-area">
               <div v-if="editingTitle === currentChapter._id" class="story-page__title-edit" @click.stop @mousedown.stop>
@@ -36,7 +41,7 @@
             <div v-if="canGoPrev" class="story-page__click-hint story-page__click-hint--left">‹ prev</div>
           </div>
         </div>
-        <div class="story-page__page story-page__page--right" :class="{ 'is-disabled': !canGoNext }" :style="pageStyle" @click="flipPage(1)">
+        <div class="story-page__page story-page__page--right" :class="{ 'is-disabled': !canGoNext, 'is-content-entering': contentFadingIn }" :style="pageStyle" @click="flipPage(1)">
           <div class="story-page__page-inner story-page__page-inner--right">
             <div v-if="isFirstSpreadOfChapter && chapterDisplayImage" class="story-page__illustration">
               <img :src="chapterDisplayImage" class="story-page__char-img" />
@@ -73,6 +78,7 @@ export default {
       currentSpreadIndex: 0,
       isFlipping: false,
       flipDirection: 1,
+      contentFadingIn: false,
       editingTitle: null,
       titleInput: '',
       bookHeight: 500,
@@ -277,42 +283,43 @@ export default {
     },
     flipPage(direction) {
       if (this.isFlipping) return
+      // Overlay flips full 180° over FLIP_MS.
+      // Content swaps at SWAP_MS (just past edge-on) so it's hidden behind the overlay.
+      // Content then fades in. Everything clears at END_MS.
+      const SWAP_MS  = 380
+      const FLIP_MS  = 750
+      const END_MS   = 950
+
+      const startFlip = (swapFn) => {
+        this.flipDirection = direction
+        this.isFlipping = true
+        this.contentFadingIn = false
+        setTimeout(() => {
+          this.contentFadingIn = true
+          swapFn()
+        }, SWAP_MS)
+        setTimeout(() => {
+          this.isFlipping = false
+          this.contentFadingIn = false
+        }, END_MS)
+      }
+
       if (direction === 1) {
         if (this.currentSpreadIndex < this.spreads.length - 1) {
-          this.flipDirection = 1
-          this.isFlipping = true
-          setTimeout(() => {
-            this.currentSpreadIndex++
-            setTimeout(() => { this.isFlipping = false }, 300)
-          }, 300)
+          startFlip(() => { this.currentSpreadIndex++ })
         } else if (this.currentChapterIndex < this.chapters.length - 1) {
-          this.flipDirection = 1
-          this.isFlipping = true
-          setTimeout(() => {
-            this.currentChapterIndex++
-            this.currentSpreadIndex = 0
-            setTimeout(() => { this.isFlipping = false }, 300)
-          }, 300)
+          startFlip(() => { this.currentChapterIndex++; this.currentSpreadIndex = 0 })
         }
       } else {
         if (this.currentSpreadIndex > 0) {
-          this.flipDirection = -1
-          this.isFlipping = true
-          setTimeout(() => {
-            this.currentSpreadIndex--
-            setTimeout(() => { this.isFlipping = false }, 300)
-          }, 300)
+          startFlip(() => { this.currentSpreadIndex-- })
         } else if (this.currentChapterIndex > 0) {
-          this.flipDirection = -1
-          this.isFlipping = true
-          setTimeout(() => {
+          startFlip(() => {
             this.currentChapterIndex--
-            // Go to last spread of previous chapter
             this.$nextTick(() => {
               this.currentSpreadIndex = Math.max(0, this.spreads.length - 1)
             })
-            setTimeout(() => { this.isFlipping = false }, 300)
-          }, 300)
+          })
         }
       }
     },
@@ -416,7 +423,7 @@ export default {
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
   border-radius: 4px 12px 12px 4px;
   position: relative;
-  overflow: hidden;
+  perspective: 2400px;
 }
 
 .story-page__page {
@@ -562,28 +569,187 @@ export default {
 .story-page__page:hover .story-page__click-hint { color: rgba(0,0,0,0.35); }
 .story-page__page.is-disabled .story-page__click-hint { display: none; }
 
-.story-page__book.is-flipping.flip-forward .story-page__page--right {
-  animation: flip-forward 0.6s ease-in-out;
+/* ── 3D page-flip overlay ─────────────────────────── */
+
+// The overlay is a blank "paper" element that flips the full 180°.
+// It has a front face and back face via ::before / ::after so
+// you always see a white page surface, never mirrored content.
+
+.story-page__flip-page {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  transform-style: preserve-3d;
+  pointer-events: none;
+
+  // Front face
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+  }
+  // Back face (pre-rotated so it shows when the overlay passes 90°)
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+
+  &--fwd {
+    right: 0;
+    transform-origin: left center;
+    animation: flip-overlay-fwd 0.75s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+
+    &::before {
+      background: linear-gradient(to left, #ece8e1, #fffef8);
+      border-radius: 0 12px 12px 0;
+    }
+    &::after {
+      background: linear-gradient(to right, #ece8e1, #fffef8);
+      border-radius: 4px 0 0 4px;
+    }
+  }
+
+  &--bwd {
+    left: 0;
+    transform-origin: right center;
+    animation: flip-overlay-bwd 0.75s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+
+    &::before {
+      background: linear-gradient(to right, #ece8e1, #fffef8);
+      border-radius: 4px 0 0 4px;
+    }
+    &::after {
+      background: linear-gradient(to left, #ece8e1, #fffef8);
+      border-radius: 0 12px 12px 0;
+    }
+  }
 }
-.story-page__book.is-flipping.flip-backward .story-page__page--left {
-  animation: flip-backward 0.6s ease-in-out;
+
+// Shadow cast onto the page underneath during flip
+.story-page__book.is-flipping.flip-forward .story-page__page--left::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  border-radius: inherit;
+  animation: under-shadow-fwd 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-@keyframes flip-forward {
-  0% { transform: rotateY(0deg); }
-  50% { transform: rotateY(-90deg); }
-  100% { transform: rotateY(0deg); }
+
+.story-page__book.is-flipping.flip-backward .story-page__page--right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  border-radius: inherit;
+  animation: under-shadow-bwd 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-@keyframes flip-backward {
-  0% { transform: rotateY(0deg); }
-  50% { transform: rotateY(90deg); }
-  100% { transform: rotateY(0deg); }
+
+// Content fade-in after the swap
+.story-page__page.is-content-entering .story-page__page-inner {
+  animation: content-enter 0.5s ease-out both;
+}
+
+// ── Keyframes ──
+
+@keyframes flip-overlay-fwd {
+  0% {
+    transform: rotateY(0deg);
+    box-shadow: -2px 0 6px rgba(0,0,0,0.06);
+  }
+  40% {
+    transform: rotateY(-80deg);
+    box-shadow: -18px 10px 40px rgba(0,0,0,0.4);
+  }
+  50% {
+    transform: rotateY(-90deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  60% {
+    transform: rotateY(-100deg);
+    box-shadow: 12px 10px 35px rgba(0,0,0,0.35);
+  }
+  88% {
+    transform: rotateY(-175deg);
+    box-shadow: 5px 4px 15px rgba(0,0,0,0.12);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(-180deg);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    opacity: 0;
+  }
+}
+
+@keyframes flip-overlay-bwd {
+  0% {
+    transform: rotateY(0deg);
+    box-shadow: 2px 0 6px rgba(0,0,0,0.06);
+  }
+  40% {
+    transform: rotateY(80deg);
+    box-shadow: 18px 10px 40px rgba(0,0,0,0.4);
+  }
+  50% {
+    transform: rotateY(90deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  60% {
+    transform: rotateY(100deg);
+    box-shadow: -12px 10px 35px rgba(0,0,0,0.35);
+  }
+  88% {
+    transform: rotateY(175deg);
+    box-shadow: -5px 4px 15px rgba(0,0,0,0.12);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(180deg);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    opacity: 0;
+  }
+}
+
+// Shadow darkens as the overlay passes overhead, then lifts
+@keyframes under-shadow-fwd {
+  0%   { background: rgba(0,0,0,0); }
+  40%  { background: rgba(0,0,0,0.18); }
+  55%  { background: rgba(0,0,0,0.22); }
+  80%  { background: rgba(0,0,0,0.08); }
+  100% { background: rgba(0,0,0,0); }
+}
+
+@keyframes under-shadow-bwd {
+  0%   { background: rgba(0,0,0,0); }
+  40%  { background: rgba(0,0,0,0.18); }
+  55%  { background: rgba(0,0,0,0.22); }
+  80%  { background: rgba(0,0,0,0.08); }
+  100% { background: rgba(0,0,0,0); }
+}
+
+// New content fades in after content swap
+@keyframes content-enter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @media (max-width: 640px) {
   .story-page { overflow-y: auto !important; height: auto !important; min-height: 100vh; }
   .story-page__header { margin-top: 0; padding: 8px 12px; padding-top: 72px; }
-  .story-page__book-wrapper { padding: 12px; }
-  .story-page__book { flex-direction: column; border-radius: 12px; }
+  .story-page__book-wrapper { padding: 12px; perspective: 2400px; }
+  .story-page__book {
+    flex-direction: column;
+    border-radius: 12px;
+    perspective: none;
+    transform-style: preserve-3d;
+  }
   .story-page__page--left {
     border-right: none;
     border-bottom: 1px solid rgba(0,0,0,0.12);
@@ -600,6 +766,40 @@ export default {
   }
   .story-page__page-inner { overflow: visible; height: auto; padding-bottom: 24px; }
   .story-page__chapter-text { overflow: visible; min-height: auto; }
+
+  // Hide the half-page overlay on mobile — we flip the whole book instead
+  .story-page__flip-page { display: none !important; }
+
+  // Disable per-page shadow pseudo on mobile
+  .story-page__book.is-flipping .story-page__page--left::after,
+  .story-page__book.is-flipping .story-page__page--right::after {
+    animation: none !important;
+  }
+
+  // Mobile: the entire stacked book flips as one page
+  .story-page__book.is-flipping.flip-forward {
+    transform-origin: left center;
+    animation: mobile-flip-fwd 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
+    backface-visibility: hidden;
+  }
+  .story-page__book.is-flipping.flip-backward {
+    transform-origin: right center;
+    animation: mobile-flip-bwd 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
+    backface-visibility: hidden;
+  }
+
+  @keyframes mobile-flip-fwd {
+    0%   { transform: rotateY(0deg);   box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    40%  { transform: rotateY(-80deg); box-shadow: -20px 10px 40px rgba(0,0,0,0.4); }
+    50%  { transform: rotateY(-90deg); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    100% { transform: rotateY(0deg);   box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+  }
+  @keyframes mobile-flip-bwd {
+    0%   { transform: rotateY(0deg);  box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    40%  { transform: rotateY(80deg); box-shadow: 20px 10px 40px rgba(0,0,0,0.4); }
+    50%  { transform: rotateY(90deg); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    100% { transform: rotateY(0deg);  box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+  }
 }
 
 .story-page__measurer {
