@@ -83,6 +83,15 @@ Authentication middleware lives in `sessionsController.authenticate` and is appl
 ### Module System Note
 The codebase mixes CommonJS and ES modules. API **controllers** use `require`/`module.exports`; API **models** use `import`/`export default`. When adding new files, follow the convention of the directory.
 
+## AI Model Guidelines
+
+When generating creative content via the Anthropic API (story chapters, assessment scenarios, narrative text), always use `claude-opus-4-6` for the highest quality creative writing. This applies to:
+- Story chapter generation (`storyController.js`)
+- Assessment scenario/question generation (future work)
+- Any other user-facing narrative content
+
+Use a cheaper/faster model (e.g. `claude-sonnet-4-5` or `claude-haiku-4-5`) only for non-creative tasks like classification, summarization, or structured data extraction.
+
 ## Environment Variables
 
 Required in `.env`:

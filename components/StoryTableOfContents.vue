@@ -15,8 +15,8 @@
         <div class="toc-left__bg-chooser">
           <div class="toc-left__bg-thumb" @click="$emit('open-bg-modal')">
             <img
-              v-if="profile.cardBackground"
-              :src="`/images/backgrounds/${profile.cardBackground}`"
+              v-if="displayBackground"
+              :src="displayBackground"
               class="toc-left__bg-img"
               alt="Current background"
             />
@@ -204,6 +204,8 @@
           :key="chapter._id"
           class="toc-right__entry"
           @click="$emit('go-to-chapter', idx)"
+          @mouseenter="hoveredChapter = chapter"
+          @mouseleave="hoveredChapter = null"
         >
           <span class="toc-right__entry-number">{{ chapter.chapterNumber || idx + 1 }}.</span>
           <span class="toc-right__entry-title">{{ chapter.title || 'Untitled' }}</span>
@@ -211,6 +213,11 @@
           <span v-if="chapter.dominantTraitAtTime" class="toc-right__entry-trait" :style="{ background: traitColorFor(chapter.dominantTraitAtTime) }"></span>
           <span class="toc-right__entry-date">{{ formatDate(chapter.createdAt) }}</span>
         </div>
+      </div>
+
+      <div class="toc-right__author">
+        <span class="toc-right__author-label">Written by</span>
+        <span class="toc-right__author-name">{{ profile.childName }}</span>
       </div>
 
       <div class="toc-right__footer">i</div>
@@ -277,6 +284,7 @@ export default {
     return {
       graphMode: 'stats',
       selectedTraits: [],
+      hoveredChapter: null,
       svgWidth: 280,
       svgHeight: 160,
       graphPadLeft: 24,
@@ -322,9 +330,23 @@ export default {
     },
 
     characterImage() {
-      if (!this.profile || !this.dominantTrait) return ''
-      const char = getCharacter(this.profile.theme, this.dominantTrait, this.profile.gender)
+      if (!this.profile) return ''
+      const trait = this.hoveredChapter
+        ? this.hoveredChapter.dominantTraitAtTime
+        : this.dominantTrait
+      if (!trait) return ''
+      const char = getCharacter(this.profile.theme, trait, this.profile.gender)
       return char.imagePath
+    },
+
+    displayBackground() {
+      if (this.hoveredChapter && this.hoveredChapter.backgroundImage) {
+        return this.hoveredChapter.backgroundImage
+      }
+      if (this.profile && this.profile.cardBackground) {
+        return `/images/backgrounds/${this.profile.cardBackground}`
+      }
+      return null
     },
 
     dominantTrait() {
@@ -487,11 +509,49 @@ $border-light: #e8e4da;
       border-radius: 4px 0 0 4px;
       border-right: 1px solid rgba(0,0,0,0.12);
       background: linear-gradient(to right, #f0ede8, $paper-bg);
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; bottom: 0;
+        width: 20px;
+        background: linear-gradient(to right, rgba(0,0,0,0.06), transparent);
+        border-radius: 4px 0 0 4px;
+        pointer-events: none;
+        z-index: 2;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0;
+        width: 16px;
+        background: linear-gradient(to left, rgba(0,0,0,0.08), transparent);
+        pointer-events: none;
+        z-index: 2;
+      }
     }
     &--right {
       border-radius: 0 12px 12px 0;
       background: linear-gradient(to left, #f0ede8, $paper-bg);
       cursor: e-resize;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; bottom: 0;
+        width: 16px;
+        background: linear-gradient(to right, rgba(0,0,0,0.08), transparent);
+        pointer-events: none;
+        z-index: 2;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0;
+        width: 20px;
+        background: linear-gradient(to left, rgba(0,0,0,0.06), transparent);
+        border-radius: 0 12px 12px 0;
+        pointer-events: none;
+        z-index: 2;
+      }
     }
   }
 
@@ -564,6 +624,7 @@ $border-light: #e8e4da;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 0.2s;
   }
 
   &__bg-placeholder {
@@ -631,6 +692,7 @@ $border-light: #e8e4da;
     height: 100%;
     object-fit: contain;
     object-position: center bottom;
+    transition: opacity 0.2s;
   }
 
   &__character-placeholder {
@@ -930,6 +992,31 @@ $border-light: #e8e4da;
     font-family: 'Georgia', serif;
     font-size: 11px;
     color: #8a8475;
+  }
+
+  &__author {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+
+  &__author-label {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 10px;
+    font-style: italic;
+    color: #b0a999;
+    margin-bottom: 2px;
+  }
+
+  &__author-name {
+    display: block;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: $paper-text;
+    letter-spacing: 0.3px;
   }
 
   &__footer {

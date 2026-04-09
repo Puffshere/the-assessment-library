@@ -641,11 +641,61 @@ export default {
     border-right: 1px solid rgba(0,0,0,0.12);
     background: linear-gradient(to right, #f0ede8, #fffef8);
     cursor: w-resize;
+    // Outer edge curl shadow
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 20px;
+      background: linear-gradient(to right, rgba(0,0,0,0.06), transparent);
+      border-radius: 4px 0 0 4px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    // Spine shadow
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 16px;
+      background: linear-gradient(to left, rgba(0,0,0,0.08), transparent);
+      pointer-events: none;
+      z-index: 2;
+    }
   }
   &--right {
     border-radius: 0 12px 12px 0;
     background: linear-gradient(to left, #f0ede8, #fffef8);
     cursor: e-resize;
+    // Spine shadow
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 16px;
+      background: linear-gradient(to right, rgba(0,0,0,0.08), transparent);
+      pointer-events: none;
+      z-index: 2;
+    }
+    // Outer edge curl shadow
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 20px;
+      background: linear-gradient(to left, rgba(0,0,0,0.06), transparent);
+      border-radius: 0 12px 12px 0;
+      pointer-events: none;
+      z-index: 2;
+    }
   }
   &.is-disabled { cursor: default; }
 }
