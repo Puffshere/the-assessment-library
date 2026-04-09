@@ -90,7 +90,7 @@
 
         <div class="toc-left__graph-wrap">
           <svg
-            v-if="chapters.length > 1"
+            v-if="chapters.length > 1 || isHoverMode"
             :viewBox="`0 0 ${svgWidth} ${svgHeight}`"
             class="toc-left__graph-svg"
             preserveAspectRatio="none"
@@ -142,29 +142,62 @@
               text-anchor="middle"
               class="toc-left__graph-xlabel"
             >{{ label.text }}</text>
-            <!-- Data series -->
-            <template v-for="series in graphSeries">
-              <polyline
-                :key="'line-' + series.key"
-                :points="series.points"
-                fill="none"
-                :stroke="series.color"
-                stroke-width="1.2"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                :opacity="selectedTraits.length && !selectedTraits.includes(series.key) ? 0.15 : 1"
+            <!-- Bar chart for single chapter hover -->
+            <template v-if="isHoverMode">
+              <rect
+                v-for="bar in hoveredBars"
+                :key="'bar-' + bar.key"
+                :x="bar.x"
+                :y="bar.y"
+                :width="bar.width"
+                :height="bar.height"
+                :fill="bar.color"
+                :opacity="selectedTraits.length && !selectedTraits.includes(bar.key) ? 0.15 : 0.85"
+                rx="2"
                 style="transition: opacity 0.2s"
               />
-              <circle
-                v-for="(pt, pi) in series.coords"
-                :key="'dot-' + series.key + '-' + pi"
-                :cx="pt.x"
-                :cy="pt.y"
-                r="1.8"
-                :fill="series.color"
-                :opacity="selectedTraits.length && !selectedTraits.includes(series.key) ? 0.15 : 1"
-                style="transition: opacity 0.2s"
-              />
+              <text
+                v-for="bar in hoveredBars"
+                :key="'barval-' + bar.key"
+                :x="bar.labelX"
+                :y="bar.labelY"
+                text-anchor="middle"
+                class="toc-left__graph-barval"
+              >{{ bar.value }}</text>
+              <text
+                v-for="bar in hoveredBars"
+                :key="'barlbl-' + bar.key"
+                :x="bar.labelX"
+                :y="svgHeight - 2"
+                text-anchor="middle"
+                class="toc-left__graph-xlabel"
+              >{{ bar.label }}</text>
+            </template>
+            <!-- Line graph for all chapters -->
+            <template v-else>
+              <template v-for="series in graphSeries">
+                <polyline
+                  :key="'line-' + series.key"
+                  :points="series.points"
+                  fill="none"
+                  :stroke="series.color"
+                  stroke-width="1.2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  :opacity="selectedTraits.length && !selectedTraits.includes(series.key) ? 0.15 : 1"
+                  style="transition: opacity 0.2s"
+                />
+                <circle
+                  v-for="(pt, pi) in series.coords"
+                  :key="'dot-' + series.key + '-' + pi"
+                  :cx="pt.x"
+                  :cy="pt.y"
+                  r="1.8"
+                  :fill="series.color"
+                  :opacity="selectedTraits.length && !selectedTraits.includes(series.key) ? 0.15 : 1"
+                  style="transition: opacity 0.2s"
+                />
+              </template>
             </template>
           </svg>
           <p v-else class="toc-left__graph-empty">Complete more chapters to see trends.</p>
@@ -359,8 +392,41 @@ export default {
       return DISC_COLORS[this.dominantTrait] || '#888'
     },
 
+    isHoverMode() {
+      return !!this.hoveredChapter
+    },
+
     activeSeries() {
       return this.graphMode === 'disc' ? DISC_CONFIG : STAT_CONFIG
+    },
+
+    // Bar data for single-chapter hover view
+    hoveredBars() {
+      if (!this.hoveredChapter) return []
+      const stats = this.hoveredChapter.statsAtTime || {}
+      const plotW = this.svgWidth - this.graphPadLeft - this.graphPadRight
+      const plotH = this.svgHeight - this.graphPadTop - this.graphPadBottom
+      const series = this.activeSeries
+      const barWidth = plotW / (series.length * 2 + 1)
+      const gap = barWidth
+
+      return series.map((s, i) => {
+        const val = Math.min(100, Math.max(0, Number(stats[s.key]) || 0))
+        const barH = (val / 100) * plotH
+        const x = this.graphPadLeft + gap + i * (barWidth + gap)
+        return {
+          key: s.key,
+          label: s.label,
+          color: s.color,
+          value: val,
+          x,
+          y: this.graphPadTop + plotH - barH,
+          width: barWidth,
+          height: barH,
+          labelX: x + barWidth / 2,
+          labelY: this.graphPadTop + plotH - barH - 4
+        }
+      })
     },
 
     yRange() {
@@ -377,13 +443,11 @@ export default {
         })
       })
 
-      // Add padding (10% of range, at least 5 points)
       const range = max - min || 10
       const pad = Math.max(5, Math.ceil(range * 0.1))
       min = Math.max(0, Math.floor(min - pad))
       max = Math.min(100, Math.ceil(max + pad))
 
-      // Ensure a minimum visible range
       if (max - min < 10) {
         const mid = (max + min) / 2
         min = Math.max(0, Math.floor(mid - 5))
@@ -423,10 +487,16 @@ export default {
     },
 
     yTicks() {
+      if (this.isHoverMode) {
+        const plotH = this.svgHeight - this.graphPadTop - this.graphPadBottom
+        return [0, 50, 100].map(v => ({
+          value: v,
+          y: this.graphPadTop + plotH - (v / 100) * plotH
+        }))
+      }
       const plotH = this.svgHeight - this.graphPadTop - this.graphPadBottom
       const { min, max } = this.yRange
       const ySpan = max - min
-      // Generate 3 ticks: bottom, middle, top
       const values = [min, Math.round((min + max) / 2), max]
       return values.map(v => ({
         value: v,
@@ -435,6 +505,7 @@ export default {
     },
 
     xLabels() {
+      if (this.isHoverMode) return []
       const chapters = this.chapters
       if (chapters.length < 2) return []
       const plotW = this.svgWidth - this.graphPadLeft - this.graphPadRight
@@ -442,7 +513,6 @@ export default {
         const dt = new Date(d)
         return `${dt.getMonth() + 1}/${dt.getDate()}`
       }
-      // Show at most 5 labels evenly spaced
       const max = Math.min(chapters.length, 5)
       const step = (chapters.length - 1) / (max - 1)
       const labels = []
@@ -831,6 +901,13 @@ $border-light: #e8e4da;
     font-size: 8px;
     fill: #8a8475;
     font-family: $nunito-family;
+  }
+
+  &__graph-barval {
+    font-size: 7px;
+    fill: $paper-text;
+    font-family: $nunito-family;
+    font-weight: 700;
   }
 
   &__graph-empty {
