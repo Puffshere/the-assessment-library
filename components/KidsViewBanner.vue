@@ -2,16 +2,13 @@
   <div class="kids-view-banner">
     <div class="kids-view-banner__inner">
       <span class="kids-view-banner__label">Kids View</span>
-      <span class="kids-view-banner__toggle-wrap" :class="{ 'is-disabled': !loggedIn }">
-        <button class="kids-view-banner__toggle" :class="{ 'is-on': kidsViewActive }" :disabled="!loggedIn"
-          @click="handleToggle" :aria-pressed="kidsViewActive.toString()" role="switch" aria-label="Toggle Kids View">
+      <span class="kids-view-banner__toggle-wrap">
+        <button class="kids-view-banner__toggle" :class="{ 'is-on': isToggledOn }"
+          @click="handleToggle" :aria-pressed="isToggledOn.toString()" role="switch" aria-label="Toggle Kids View">
           <span class="kids-view-banner__toggle-knob" />
         </button>
-        <span v-if="!loggedIn" class="kids-view-banner__tooltip">
-          Please log in to enable Kids View.
-        </span>
       </span>
-      <span v-if="kidsViewActive" class="kids-view-banner__status">
+      <span v-if="isToggledOn" class="kids-view-banner__status">
         Kids View is Active
       </span>
     </div>
@@ -235,12 +232,28 @@ export default {
     hasPin() {
       return !!(this.user && this.user.has_kids_pin)
     },
+    isOnKidsOverview() {
+      return this.$route.path === '/kids-overview'
+    },
+    isToggledOn() {
+      if (!this.loggedIn) return this.isOnKidsOverview
+      return this.kidsViewActive
+    },
   },
 
   methods: {
     handleToggle() {
-      if (!this.loggedIn) return
+      // Not logged in: toggle between home and kids overview page
+      if (!this.loggedIn) {
+        if (this.isOnKidsOverview) {
+          this.$router.push('/')
+        } else {
+          this.$router.push('/kids-overview')
+        }
+        return
+      }
 
+      // Logged in: use the full PIN-protected kids view flow
       if (!this.kidsViewActive) {
         if (!this.hasPin) {
           this.openModal('create')

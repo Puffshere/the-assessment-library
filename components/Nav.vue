@@ -121,6 +121,7 @@ export default {
                         { label: 'Full Reports', to: '/about/full-reports' }
                     ]
                 },
+                { label: 'Kids', to: '/kids-overview' },
                 { label: 'Contact', to: '/contact' }
             ]
         }
