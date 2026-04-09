@@ -3,10 +3,16 @@
     <!-- LEFT PAGE -->
     <div class="story-page__page story-page__page--left" :style="pageStyle">
       <div class="toc-left">
-      <div class="toc-left__top">
-        <!-- Background Chooser -->
+      <!-- Row 1: Character, Background, Sidekick -->
+      <div class="toc-left__row">
+        <div class="toc-left__character">
+          <div class="toc-left__character-inner">
+            <img v-if="characterImage" :src="characterImage" class="toc-left__character-img" alt="Your character" />
+            <div v-else class="toc-left__character-placeholder">?</div>
+          </div>
+        </div>
+
         <div class="toc-left__bg-chooser">
-          <p class="toc-left__section-label">Background</p>
           <div class="toc-left__bg-thumb" @click="$emit('open-bg-modal')">
             <img
               v-if="profile.cardBackground"
@@ -24,7 +30,6 @@
           </div>
         </div>
 
-        <!-- Unlock Sidekick placeholder -->
         <div class="toc-left__sidekick">
           <div class="toc-left__sidekick-inner">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="toc-left__sidekick-icon">
@@ -32,6 +37,32 @@
               <path d="M7 11V7a5 5 0 0 1 10 0v4" />
             </svg>
             <span class="toc-left__sidekick-label">Unlock Sidekick</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Vehicle, Coming Soon x2 -->
+      <div class="toc-left__row">
+        <div class="toc-left__vehicle">
+          <div class="toc-left__vehicle-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="toc-left__vehicle-icon">
+              <path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1l2-3h8l2 3h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2" />
+              <circle cx="7.5" cy="17" r="2" />
+              <circle cx="16.5" cy="17" r="2" />
+            </svg>
+            <span class="toc-left__vehicle-label">Unlock Vehicle</span>
+          </div>
+        </div>
+
+        <div class="toc-left__placeholder-reward">
+          <div class="toc-left__placeholder-inner">
+            <span class="toc-left__placeholder-label">Coming Soon</span>
+          </div>
+        </div>
+
+        <div class="toc-left__placeholder-reward">
+          <div class="toc-left__placeholder-inner">
+            <span class="toc-left__placeholder-label">Coming Soon</span>
           </div>
         </div>
       </div>
@@ -191,6 +222,8 @@
 </template>
 
 <script>
+import { getCharacter } from '@/utils/characterConfig'
+
 const STAT_CONFIG = [
   { key: 'strength', label: 'Strength', color: '#e93d2f' },
   { key: 'leadership', label: 'Leadership', color: '#ff6b35' },
@@ -286,6 +319,12 @@ export default {
 
     canUnlock() {
       return this.availableUnlockTokens > 0
+    },
+
+    characterImage() {
+      if (!this.profile || !this.dominantTrait) return ''
+      const char = getCharacter(this.profile.theme, this.dominantTrait, this.profile.gender)
+      return char.imagePath
     },
 
     dominantTrait() {
@@ -482,10 +521,10 @@ $border-light: #e8e4da;
   height: 100%;
   box-sizing: border-box;
 
-  &__top {
+  &__row {
     display: flex;
-    gap: 12px;
-    margin-bottom: 14px;
+    gap: 10px;
+    margin-bottom: 10px;
   }
 
   /* Background chooser */
@@ -499,12 +538,13 @@ $border-light: #e8e4da;
   }
 
   &__bg-chooser {
-    flex-shrink: 0;
+    flex: 1;
+    min-width: 0;
   }
 
   &__bg-thumb {
-    width: 110px;
-    height: 110px;
+    width: 100%;
+    aspect-ratio: 1;
     border-radius: 8px;
     border: 2px solid $border-light;
     overflow: hidden;
@@ -538,12 +578,13 @@ $border-light: #e8e4da;
 
   /* Sidekick placeholder */
   &__sidekick {
-    flex-shrink: 0;
+    flex: 1;
+    min-width: 0;
   }
 
   &__sidekick-inner {
-    width: 110px;
-    height: 110px;
+    width: 100%;
+    aspect-ratio: 1;
     border-radius: 8px;
     background: #e4e1da;
     display: flex;
@@ -551,7 +592,6 @@ $border-light: #e8e4da;
     align-items: center;
     justify-content: center;
     gap: 6px;
-    margin-top: 18px;
     color: #9e9889;
   }
 
@@ -565,6 +605,93 @@ $border-light: #e8e4da;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.4px;
+  }
+
+  /* Character */
+  &__character {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__character-inner {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #e8f0fe, #f0f4ff);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $border-light;
+    box-sizing: border-box;
+  }
+
+  &__character-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  &__character-placeholder {
+    font-size: 28px;
+    font-weight: 700;
+    color: #b8b1a4;
+  }
+
+  /* Vehicle placeholder */
+  &__vehicle {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__vehicle-inner {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    background: #e4e1da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #9e9889;
+  }
+
+  &__vehicle-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  &__vehicle-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  /* Placeholder rewards */
+  &__placeholder-reward {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__placeholder-inner {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    background: #e4e1da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b8b1a4;
+  }
+
+  &__placeholder-label {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
   }
 
   /* Graph section */
