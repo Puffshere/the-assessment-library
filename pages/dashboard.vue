@@ -105,7 +105,9 @@
 
                         <!-- 1st person view -->
                         <kids-character-card v-if="activeResultsView === 'first' && kidsViewActive"
-                            :completed-sessions="activeChildSessions" />
+                            :completed-sessions="activeChildSessions"
+                            :selected-result="selectedResult"
+                            @clear-results="selectedResult = null" />
                         <results-panel v-else-if="activeResultsView === 'first'" :selected-result="selectedResult"
                             :sessions="filteredSessions" :assessments-started="filteredSessions.length"
                             :assessments-completed="filteredCompletedSessions.length"
@@ -879,16 +881,34 @@ export default {
       try {
         const res = await this.$axios.$get("/api/child-profiles");
         this.childProfiles = res.profiles || [];
-        // Auto-select the active profile tab, or first profile
-        // Check store first, then fall back to localStorage (store restore may still be in-flight)
+
+        // Determine which profile to restore.
+        // Priority: store > tal_dashboard_profile > tal_active_child_id > first child
         const active = this.$store.state.activeChildProfile;
         let freshActive = active && this.childProfiles.find((p) => p._id === active._id);
+
+        if (!freshActive) {
+          const savedProfile = localStorage.getItem('tal_dashboard_profile');
+          if (savedProfile === 'all') {
+            // User was on "All (Parent Account)" view — restore that
+            this.activeChildTab = this.childProfiles.length ? this.childProfiles[0]._id : null;
+            this.viewingChildId = null;
+            this.$store.commit("SET_ACTIVE_CHILD_PROFILE", null);
+            localStorage.removeItem('tal_dashboard_profile');
+            return;
+          }
+          if (savedProfile) {
+            freshActive = this.childProfiles.find((p) => p._id === savedProfile);
+          }
+        }
+
         if (!freshActive) {
           const savedChildId = localStorage.getItem('tal_active_child_id');
           if (savedChildId) {
             freshActive = this.childProfiles.find((p) => p._id === savedChildId);
           }
         }
+
         if (freshActive) {
           this.activeChildTab = freshActive._id;
           this.viewingChildId = freshActive._id;
@@ -898,6 +918,9 @@ export default {
           this.viewingChildId = this.childProfiles[0]._id;
           this.$store.commit("SET_ACTIVE_CHILD_PROFILE", this.childProfiles[0]);
         }
+
+        // Clear the one-time restore key so it doesn't override future tab switches
+        localStorage.removeItem('tal_dashboard_profile');
       } catch (err) {
         console.error("Error fetching child profiles:", err);
       }
@@ -906,6 +929,7 @@ export default {
       this.activeChildTab = profile._id;
       this.viewingChildId = profile._id;
       this.$store.commit("SET_ACTIVE_CHILD_PROFILE", profile);
+      localStorage.setItem('tal_dashboard_profile', profile._id);
     },
     async selectBackground(bgFile) {
       if (!this.activeChildProfile) return;
@@ -995,6 +1019,9 @@ export default {
         ? this.childProfiles.find((p) => p._id === this.viewingChildId)
         : null;
       this.$store.commit("SET_ACTIVE_CHILD_PROFILE", match || null);
+
+      // Persist so logout/login restores this view
+      localStorage.setItem('tal_dashboard_profile', this.viewingChildId || 'all');
     },
     openCreditModal() {
       this.showCreditModal = true;

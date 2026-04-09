@@ -37,7 +37,11 @@
                 <p class="kcc__disc-title" :style="{ color: discColor }">{{ discTitle }}</p>
 
                 <div class="kcc__stats">
-                    <div v-for="stat in statBars" :key="stat.key" class="kcc__stat">
+                    <div v-if="selectedResult" class="kcc__stats-header">
+                        <span class="kcc__stats-label">{{ selectedResult.assessmentTitle }}</span>
+                        <button class="kcc__stats-clear" @click="$emit('clear-results')">&times;</button>
+                    </div>
+                    <div v-for="stat in activeStatBars" :key="stat.key" class="kcc__stat">
                         <div class="kcc__stat-header">
                             <span class="kcc__stat-name">{{ stat.label }}</span>
                             <span class="kcc__stat-value">{{ stat.value }}</span>
@@ -100,6 +104,10 @@ export default {
         completedSessions: {
             type: Array,
             default: () => []
+        },
+        selectedResult: {
+            type: Object,
+            default: null
         }
     },
 
@@ -201,6 +209,34 @@ export default {
                 value: Math.round(this.stats[key] || 0),
                 color: STAT_COLORS[key]
             }))
+        },
+
+        selectedDiscScores() {
+            if (!this.selectedResult) return null
+            const b = this.selectedResult.scoreBreakdown || (this.selectedResult.score && this.selectedResult.score.breakdown)
+            if (!b) return null
+            return {
+                D: Number(b.D) || 0,
+                I: Number(b.I) || 0,
+                S: Number(b.S) || 0,
+                C: Number(b.C) || 0
+            }
+        },
+
+        selectedStatBars() {
+            if (!this.selectedDiscScores) return this.statBars
+            const s = deriveStats(this.selectedDiscScores)
+            const order = ['strength', 'leadership', 'speed', 'creativity', 'heart', 'wisdom']
+            return order.map(key => ({
+                key,
+                label: STAT_LABELS[key],
+                value: Math.round(s[key] || 0),
+                color: STAT_COLORS[key]
+            }))
+        },
+
+        activeStatBars() {
+            return this.selectedResult ? this.selectedStatBars : this.statBars
         },
 
     }
@@ -401,6 +437,50 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.kcc__stats-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.kcc__stats-label {
+    font-family: $nunito-family;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.kcc__stats-clear {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 50%;
+    background: #e93d2f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    padding: 0;
+    transition: background 0.15s;
+
+    &:hover {
+        background: #c62828;
+    }
 }
 
 .kcc__stat-header {

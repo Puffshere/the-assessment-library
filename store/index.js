@@ -197,6 +197,7 @@ export const actions = {
   logout({ commit, state }) {
     // Preserve the active child ID so it can be restored on next login
     const keepChildId = state.activeChildProfile && state.activeChildProfile._id
+    const wasKidsView = state.kidsViewActive
 
     commit('SET_LOGGED_IN', false)
     commit('SET_USER', null)
@@ -210,9 +211,21 @@ export const actions = {
     if (process.client) {
       localStorage.removeItem('tal_logged_in')
       localStorage.removeItem('tal_token')
+
+      // Save which profile was active so the dashboard restores it on next login
+      // 'all' means the parent's own view (no child selected)
+      localStorage.setItem('tal_dashboard_profile', keepChildId || 'all')
+
       // Restore the child ID so it survives logout/login cycle
       if (keepChildId) {
         localStorage.setItem('tal_active_child_id', keepChildId)
+      }
+
+      // Remember if kids view was active so login can redirect appropriately
+      if (wasKidsView) {
+        localStorage.setItem('tal_was_kids_view', '1')
+      } else {
+        localStorage.removeItem('tal_was_kids_view')
       }
     }
   }

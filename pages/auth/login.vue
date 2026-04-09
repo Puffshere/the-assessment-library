@@ -81,12 +81,18 @@ export default {
             this.loading = true;
 
             try {
-                await this.login({
+                const res = await this.login({
                     email: this.form.email,
                     password: this.form.password
                 });
 
-                const next = this.$route.query.next || '/dashboard';
+                let next = this.$route.query.next;
+                if (!next) {
+                    // If the user was in kids view when they logged out, go to onboarding
+                    const wasKids = localStorage.getItem('tal_was_kids_view') === '1';
+                    next = wasKids ? '/kids/onboarding' : '/dashboard';
+                }
+                localStorage.removeItem('tal_was_kids_view');
                 this.$router.push(next);
 
             } catch (e) {
