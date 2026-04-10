@@ -1,11 +1,5 @@
 'use strict';
 
-function getAnthropic() {
-  const Anthropic = require('@anthropic-ai/sdk');
-  const Client = Anthropic.default || Anthropic;
-  return new Client({ apiKey: process.env.ANTHROPIC_API_KEY });
-}
-
 function getOpenAI() {
   const { OpenAI } = require('openai');
   return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -200,13 +194,23 @@ async function generateSingleAssessment(config) {
   const rawNodeMap = buildNodeMap(questionsPerPlaythrough);
   const nodeMap = calcNextQuestions(rawNodeMap);
   const claudePrompt = buildClaudePrompt(config, nodeMap);
-  const anthropic = getAnthropic();
-  const message = await anthropic.messages.create({
-    model: 'claude-opus-4-6',
-    max_tokens: 16000,
-    messages: [{ role: 'user', content: claudePrompt }],
-  });
-  const rawText = message.content[0].text.trim();
+  const claudeResponse = await axios.post(
+    'https://api.anthropic.com/v1/messages',
+    {
+      model: 'claude-opus-4-6',
+      max_tokens: 16000,
+      messages: [{ role: 'user', content: claudePrompt }],
+    },
+    {
+      headers: {
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'content-type': 'application/json',
+      },
+      timeout: 600000,
+    }
+  );
+  const rawText = claudeResponse.data.content[0].text.trim();
   let storyData;
   try {
     storyData = JSON.parse(rawText);
