@@ -20,6 +20,8 @@ import childProfileController from './controllers/childProfileController.js';
 import archieController from './controllers/archieController.js';
 import storyController from './controllers/storyController.js';
 import childParticipantsController from '../server/controllers/childParticipantsController.js';
+import adminController from './controllers/adminController.js';
+import adminAuth from './middleware/adminAuth.js';
 
 
 const upload = multer();
@@ -126,6 +128,17 @@ app.post('/archie/chat', sessionsController.authenticate, archieController.chat)
 app.get('/story/:childProfileId/chapters', sessionsController.authenticate, storyController.getChapters);
 app.post('/story/:childProfileId/generate', sessionsController.authenticate, storyController.generateChapter);
 app.put('/story/chapter/:chapterId/title', sessionsController.authenticate, storyController.updateChapterTitle);
+
+app.post('/admin/verify', (req, res) => {
+  const secret = process.env.ADMIN_SECRET;
+  if (!secret) return res.status(500).json({ error: 'ADMIN_SECRET not set.' });
+  if (req.body && req.body.adminSecret === secret) return res.json({ ok: true });
+  return res.status(401).json({ error: 'Unauthorized.' });
+});
+app.post('/admin/generate', adminAuth, adminController.generateAssessments);
+app.get('/admin/assessments', adminAuth, adminController.listAssessments);
+app.patch('/admin/assessments/:id/toggle', adminAuth, adminController.toggleAssessment);
+app.delete('/admin/assessments/:id', adminAuth, adminController.deleteAssessment);
 
 app.use((req, res, next) => {
   res.status(404).json({
