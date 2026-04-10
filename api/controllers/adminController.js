@@ -1,5 +1,7 @@
 'use strict';
 
+const jobs = {};
+
 function getOpenAI() {
   const { OpenAI } = require('openai');
   return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -285,39 +287,44 @@ async function generateSingleAssessment(config) {
   return { _id: assessment._id, slug: assessment.slug, title: assessment.title, heroImageUrl };
 }
 
+async function runGenerationJob(jobId, config) {
+  jobs[jobId] = { status: 'running', progress: 'Claude is writing your story...', results: [], errors: [] };
+  try {
+    const count = Math.min(parseInt(config.batchCount) || 1, 20);
+    for (let i = 0; i < count; i++) {
+      let iterTitle = count === 1 ? config.title : config.title + ' ' + (i + 1);
+      let iterSlug = slugify(iterTitle);
+      const existing = await Assessment.findOne({ slug: iterSlug });
+      if (existing) iterSlug = iterSlug + '-' + Date.now();
+      jobs[jobId].progress = 'Generating assessment ' + (i + 1) + ' of ' + count + '...';
+      try {
+        const result = await generateSingleAssessment({ ...config, title: iterTitle, slug: iterSlug });
+        jobs[jobId].results.push(result);
+      } catch (err) {
+        jobs[jobId].errors.push({ index: i + 1, error: err.message });
+      }
+    }
+    jobs[jobId].status = 'done';
+  } catch (err) {
+    jobs[jobId].status = 'error';
+    jobs[jobId].error = err.message;
+  }
+}
+
 async function generateAssessments(req, res) {
-  const {
-    title, protagonist, brief, instructions,
-    shelf, genre, subcategories, questionsPerPlaythrough,
-    wordCount, creditsCost, imageStyle, imagePromptOverride,
-    batchCount = 1, batchVariation = 'protagonist'
-  } = req.body;
-  if (!title || !brief || !protagonist) {
+  const config = req.body;
+  if (!config.title || !config.brief || !config.protagonist) {
     return res.status(400).json({ error: 'title, protagonist, and brief are required.' });
   }
-  const results = [];
-  const errors = [];
-  const count = Math.min(parseInt(batchCount) || 1, 20);
-  for (let i = 0; i < count; i++) {
-    let iterTitle = count === 1 ? title : title + ' ' + (i + 1);
-    let iterSlug = slugify(iterTitle);
-    const existing = await Assessment.findOne({ slug: iterSlug });
-    if (existing) iterSlug = iterSlug + '-' + Date.now();
-    try {
-      const result = await generateSingleAssessment({
-        title: iterTitle, slug: iterSlug, protagonist, brief, instructions,
-        shelf, genre, subcategories: Array.isArray(subcategories) ? subcategories : [],
-        questionsPerPlaythrough, wordCount, creditsCost,
-        imageStyle: imageStyle || 'illustrated', imagePromptOverride,
-        batchIndex: i, batchVariation, batchTotal: count,
-      });
-      results.push(result);
-    } catch (err) {
-      console.error('[adminController] Error on assessment ' + (i+1) + ':', err);
-      errors.push({ index: i + 1, error: err.message });
-    }
-  }
-  res.json({ success: true, generated: results.length, failed: errors.length, results, errors });
+  const jobId = Date.now() + '-' + Math.random().toString(36).slice(2);
+  res.json({ jobId });
+  runGenerationJob(jobId, config);
+}
+
+async function getJobStatus(req, res) {
+  const job = jobs[req.params.jobId];
+  if (!job) return res.status(404).json({ error: 'Job not found.' });
+  res.json(job);
 }
 
 async function listAssessments(req, res) {
@@ -361,4 +368,4 @@ async function deleteAssessment(req, res) {
   }
 }
 
-module.exports = { generateAssessments, listAssessments, toggleAssessment, deleteAssessment };
+module.exports = { generateAssessments, getJobStatus, listAssessments, toggleAssessment, deleteAssessment };

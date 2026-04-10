@@ -354,28 +354,47 @@ export default {
           batchVariation: this.form.batchVariation,
         }, {
           headers: { 'x-admin-secret': adminSecret },
-          timeout: 600000,
+          timeout: 30000,
         })
         clearInterval(progressTimer)
-        this.progress = 95
-        this.addLog('Saving to MongoDB...', 'active')
-        const data = res.data
-        this.progress = 100
-        if (data.results && data.results.length > 0) {
-          this.generationResults = data.results
-          data.results.forEach(r => { this.addLog('Created: "' + r.title + '" — /library/' + r.slug, 'success') })
-        }
-        if (data.errors && data.errors.length > 0) {
-          data.errors.forEach(e => { this.addLog('Error on assessment ' + e.index + ': ' + e.error, 'error') })
-        }
-        this.addLog('')
-        this.addLog('Done. ' + data.generated + ' created, ' + data.failed + ' failed.', 'success')
+        const { jobId } = res.data
+        this.addLog('Job started — polling for results...', 'active')
+        await this.pollJob(jobId, adminSecret)
       } catch (err) {
         this.progress = 0
         this.addLog('Error: ' + (err.response?.data?.error || err.message), 'error')
       } finally {
         this.generating = false
       }
+    },
+    async pollJob(jobId, adminSecret) {
+      const poll = async () => {
+        try {
+          const res = await this.$axios.get('/api/admin/jobs/' + jobId, {
+            headers: { 'x-admin-secret': adminSecret },
+          })
+          const job = res.data
+          if (job.progress) this.addLog(job.progress, 'active')
+          if (this.progress < 90) this.progress = Math.min(90, this.progress + 5)
+          if (job.status === 'done') {
+            this.progress = 100
+            this.generationResults = job.results
+            job.results.forEach(r => { this.addLog('Created: "' + r.title + '" — /library/' + r.slug, 'success') })
+            if (job.errors.length > 0) {
+              job.errors.forEach(e => { this.addLog('Error: ' + e.error, 'error') })
+            }
+            this.addLog('Done. ' + job.results.length + ' created, ' + job.errors.length + ' failed.', 'success')
+          } else if (job.status === 'error') {
+            this.progress = 0
+            this.addLog('Error: ' + job.error, 'error')
+          } else {
+            setTimeout(poll, 4000)
+          }
+        } catch (err) {
+          this.addLog('Polling error: ' + err.message, 'error')
+        }
+      }
+      await poll()
     },
     async loadLibrary() {
       this.libraryLoading = true

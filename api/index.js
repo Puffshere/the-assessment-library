@@ -136,6 +136,7 @@ app.post('/admin/verify', (req, res) => {
   return res.status(401).json({ error: 'Unauthorized.' });
 });
 app.post('/admin/generate', adminAuth, adminController.generateAssessments);
+app.get('/admin/jobs/:jobId', adminAuth, adminController.getJobStatus);
 app.get('/admin/assessments', adminAuth, adminController.listAssessments);
 app.patch('/admin/assessments/:id/toggle', adminAuth, adminController.toggleAssessment);
 app.delete('/admin/assessments/:id', adminAuth, adminController.deleteAssessment);
