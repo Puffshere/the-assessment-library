@@ -35,15 +35,6 @@ const categorySchema = new mongoose.Schema(
     subcategories: [
       {
         type: String,
-        enum: [
-          'Relationships',
-          'Career',
-          'Sports',
-          'School',
-          'Playground',
-          'Personal Growth',
-          'Life Skills'
-        ]
       }
     ]
   },
