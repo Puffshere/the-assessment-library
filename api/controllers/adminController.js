@@ -215,10 +215,16 @@ async function generateSingleAssessment(config) {
   const rawText = claudeResponse.data.content[0].text.trim();
   let storyData;
   try {
-    storyData = JSON.parse(rawText);
-  } catch (e) {
-    const cleaned = rawText.replace(/^```json\n?/, '').replace(/\n?```$/, '').trim();
+    const cleaned = rawText
+      .replace(/^```json\s*/i, '')
+      .replace(/^```\s*/i, '')
+      .replace(/\s*```$/i, '')
+      .trim();
     storyData = JSON.parse(cleaned);
+  } catch (e) {
+    const match = rawText.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error('Claude did not return valid JSON. Raw: ' + rawText.slice(0, 200));
+    storyData = JSON.parse(match[0]);
   }
   const processedQuestions = storyData.questions.map((q, i) => {
     const node = nodeMap[i];
