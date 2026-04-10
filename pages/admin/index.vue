@@ -218,29 +218,65 @@
       </div>
     </div>
     <div v-if="imageTarget" class="modal-backdrop" @click.self="imageTarget = null">
-      <div class="modal-card" style="max-width:520px">
-        <h2>Manage cover image</h2>
-        <p style="color:var(--color-text-secondary);font-size:13px;margin-bottom:1rem">{{ imageTarget.title }}</p>
+      <div class="modal-card" style="max-width:580px">
+        <h2>Cover image — {{ imageTarget.title }}</h2>
 
-        <div v-if="imageTarget.heroImageUrl && !imageTarget.heroImageUrl.includes('default')" style="margin-bottom:1rem">
-          <img :src="imageTarget.heroImageUrl" style="width:100%;height:200px;object-fit:cover;border-radius:8px;border:0.5px solid var(--color-border-tertiary)" />
-        </div>
-        <div v-else style="height:100px;background:var(--color-background-secondary);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:13px;color:var(--color-text-secondary)">No cover image</div>
-
-        <div class="field" style="margin-bottom:1rem">
-          <label>Paste image URL</label>
-          <input v-model="imageUrl" type="text" placeholder="https://..." />
+        <!-- Current image -->
+        <div style="margin-bottom:1.25rem">
+          <img v-if="imageTarget.heroImageUrl && !imageTarget.heroImageUrl.includes('default')" :src="imageTarget.heroImageUrl" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:0.5px solid var(--color-border-tertiary)" />
+          <div v-else style="height:100px;background:var(--color-background-secondary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--color-text-secondary)">No cover image yet</div>
         </div>
 
-        <div class="field" style="margin-bottom:1rem">
-          <label>Or regenerate with DALL-E 3</label>
-          <input v-model="imagePrompt" type="text" :placeholder="'A book cover for ' + imageTarget.title + '...'" />
+        <!-- Tab toggle -->
+        <div style="display:flex;gap:8px;margin-bottom:1.25rem">
+          <button class="tab-btn" :class="{ active: imageTab === 'style' }" @click="imageTab = 'style'">Change Style</button>
+          <button class="tab-btn" :class="{ active: imageTab === 'content' }" @click="imageTab = 'content'">Edit Content</button>
+          <button class="tab-btn" :class="{ active: imageTab === 'url' }" @click="imageTab = 'url'">Paste URL</button>
         </div>
 
-        <div class="modal-actions">
+        <!-- STYLE TAB -->
+        <div v-if="imageTab === 'style'">
+          <div class="field" style="margin-bottom:1rem">
+            <label>Pick a style — keeps the same subject, changes the art direction</label>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px">
+              <button v-for="style in imageStyles" :key="style.label"
+                class="tag" :class="{ active: imageStyleSelected === style.label }"
+                @click="imageStyleSelected = style.label; imagePrompt = style.prompt">
+                {{ style.label }}
+              </button>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:1rem">
+            <label>Custom style prompt <span class="label-note">(auto-filled from selection, editable)</span></label>
+            <textarea v-model="imagePrompt" rows="3" :placeholder="'Regenerate the cover for ' + imageTarget.title + ' in a new art style...'"></textarea>
+          </div>
+        </div>
+
+        <!-- CONTENT TAB -->
+        <div v-if="imageTab === 'content'">
+          <div class="info-note" style="margin-bottom:1rem">Describe what you want to change about the image content — characters, setting, mood, colors, composition.</div>
+          <div class="field" style="margin-bottom:1rem">
+            <label>What should change?</label>
+            <textarea v-model="imageContentEdit" rows="3" placeholder="e.g. Make the main character a girl instead of a boy. Change the setting to a beach at sunset. Add more vibrant colors."></textarea>
+          </div>
+          <div class="field" style="margin-bottom:1rem">
+            <label>Full image prompt <span class="label-note">(auto-built, editable)</span></label>
+            <textarea v-model="imagePrompt" rows="3" :placeholder="'A book cover for ' + imageTarget.title + '...'"></textarea>
+          </div>
+        </div>
+
+        <!-- URL TAB -->
+        <div v-if="imageTab === 'url'">
+          <div class="field" style="margin-bottom:1rem">
+            <label>Paste image URL directly</label>
+            <input v-model="imageUrl" type="text" placeholder="https://..." />
+          </div>
+        </div>
+
+        <div class="modal-actions" style="margin-top:0.5rem">
           <button class="action-btn" @click="imageTarget = null">Cancel</button>
-          <button class="action-btn" :disabled="imageLoading || !imageUrl" @click="saveImageUrl">Save URL</button>
-          <button class="generate-btn" style="flex:1;padding:10px;font-size:14px;margin-top:0" :disabled="imageLoading" @click="regenerateImage">
+          <button v-if="imageTab === 'url'" class="action-btn" :disabled="imageLoading || !imageUrl" @click="saveImageUrl">Save URL</button>
+          <button v-else class="generate-btn" style="flex:1;padding:10px;font-size:14px;margin-top:0" :disabled="imageLoading || !imagePrompt" @click="regenerateImage">
             {{ imageLoading ? 'Generating...' : 'Generate with DALL-E 3' }}
           </button>
         </div>
@@ -404,6 +440,19 @@ export default {
       imagePrompt: '',
       imageLoading: false,
       imageError: '',
+      imageTab: 'style',
+      imageStyleSelected: '',
+      imageContentEdit: '',
+      imageStyles: [
+        { label: 'Illustrated', prompt: 'Reimagine this book cover in a warm, editorial illustrated style with rich colors and hand-drawn feel. Keep the same subject and story concept.' },
+        { label: 'Watercolor', prompt: 'Reimagine this book cover in a beautiful watercolor painting style with soft washes of color and painterly texture. Keep the same subject and story concept.' },
+        { label: 'Cinematic', prompt: 'Reimagine this book cover in a cinematic photorealistic style with dramatic lighting and movie poster composition. Keep the same subject and story concept.' },
+        { label: 'Pixel Art', prompt: 'Reimagine this book cover in a vibrant retro pixel art style with clean pixels and bold colors. Keep the same subject and story concept.' },
+        { label: 'Oil Painting', prompt: 'Reimagine this book cover as a classical oil painting with rich textures and dramatic brushwork. Keep the same subject and story concept.' },
+        { label: 'Minimalist', prompt: 'Reimagine this book cover in a clean minimalist design style with simple shapes, limited color palette and modern typography feel. Keep the same subject and story concept.' },
+        { label: 'Comic Book', prompt: 'Reimagine this book cover in a bold comic book illustration style with strong outlines and vibrant flat colors. Keep the same subject and story concept.' },
+        { label: 'Photorealistic', prompt: 'Reimagine this book cover as a highly detailed photorealistic image with professional photography lighting. Keep the same subject and story concept.' },
+      ],
       customShelves: [],
       shelvesLoading: false,
       shelfSaving: false,
@@ -486,6 +535,18 @@ export default {
   mounted() {
     if (!sessionStorage.getItem('tal_admin_secret')) {
       this.$router.replace('/admin/login')
+    }
+  },
+  watch: {
+    imageContentEdit(val) {
+      if (this.imageTab === 'content' && val && this.imageTarget) {
+        this.imagePrompt = 'Book cover for "' + this.imageTarget.title + '". ' + val + '. High quality, professional book cover illustration.'
+      }
+    },
+    imageTab(val) {
+      if (val === 'style') {
+        this.imagePrompt = this.imageStyleSelected ? this.imageStyles.find(s => s.label === this.imageStyleSelected)?.prompt || '' : ''
+      }
     }
   },
   methods: {
@@ -614,6 +675,9 @@ export default {
       this.imageTarget = a
       this.imageUrl = a.heroImageUrl || ''
       this.imagePrompt = ''
+      this.imageContentEdit = ''
+      this.imageStyleSelected = ''
+      this.imageTab = 'style'
       this.imageError = ''
     },
     async loadFeatured() {

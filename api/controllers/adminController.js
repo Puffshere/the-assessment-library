@@ -283,17 +283,16 @@ async function generateSingleAssessment(config, jobId) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       if (attempt > 1) {
-        if (jobId) jobs[jobId].progress = 'Attempt ' + attempt + '/3 — retrying Claude generation...';
+        if (jobId) jobs[jobId].progress = 'Attempt ' + attempt + '/3 — retrying...';
+        rawText = '';
+        const retryPrompt = claudePrompt + '\n\nCRITICAL: Your previous attempt failed validation. Output ONLY raw valid JSON starting with { and ending with }. No markdown, no backticks, no explanation whatsoever.';
         const retryResponse = await axios.post(
           'https://api.anthropic.com/v1/messages',
           {
             model: 'claude-opus-4-6',
             max_tokens: 32000,
             stream: true,
-            messages: [
-              { role: 'user', content: claudePrompt },
-              { role: 'assistant', content: 'I will generate the complete assessment JSON now:\n\n{' },
-            ],
+            messages: [{ role: 'user', content: retryPrompt }],
           },
           {
             headers: {
@@ -305,7 +304,6 @@ async function generateSingleAssessment(config, jobId) {
             timeout: 0,
           }
         );
-        rawText = '{';
         await new Promise((resolve, reject) => {
           let buffer = '';
           retryResponse.data.on('data', (chunk) => {
@@ -321,7 +319,7 @@ async function generateSingleAssessment(config, jobId) {
                 const parsed = JSON.parse(data);
                 if (parsed.type === 'content_block_delta' && parsed.delta?.text) {
                   rawText += parsed.delta.text;
-                  if (jobId) jobs[jobId].progress = 'Attempt ' + attempt + ' — Claude writing... (' + rawText.length + ' chars)';
+                  if (jobId) jobs[jobId].progress = 'Attempt ' + attempt + '/3 — writing... (' + rawText.length + ' chars)';
                 }
               } catch(e) {}
             }
