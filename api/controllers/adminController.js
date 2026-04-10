@@ -89,7 +89,7 @@ The Assessment Library presents users with interactive stories. As the user make
 - Subcategories: ${subcategories.join(', ')}
 - Protagonist & setting: ${protagonist}
 - Questions per playthrough: ${questionsPerPlaythrough}
-- Target words per node: ~${wordsPerNode} words
+- Target words per node: ~${wordsPerNode} words (be concise, prioritize completing all nodes over length)
 - Total nodes to generate: ${nodeMap.length}
 
 ## Story brief
@@ -200,7 +200,7 @@ async function generateSingleAssessment(config) {
     'https://api.anthropic.com/v1/messages',
     {
       model: 'claude-opus-4-6',
-      max_tokens: 16000,
+      max_tokens: 32000,
       messages: [{ role: 'user', content: claudePrompt }],
     },
     {
