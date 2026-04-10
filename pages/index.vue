@@ -130,6 +130,42 @@
         </section>
 
         <footer-fold />
+
+        <!-- FEATURED NEW RELEASE MODAL -->
+        <transition name="modal-fade">
+            <div v-if="showFeaturedModal" class="featured-backdrop" @click.self="closeFeaturedModal">
+                <div class="featured-modal">
+                    <button class="featured-close" @click="closeFeaturedModal" aria-label="Close">&times;</button>
+                    <div class="featured-header">
+                        <div class="featured-shimmer"></div>
+                        <span class="featured-eyebrow">Just Added</span>
+                        <h2 class="featured-title">{{ featuredData.title }}</h2>
+                        <p v-if="featuredData.message" class="featured-message">{{ featuredData.message }}</p>
+                    </div>
+                    <div class="featured-cards">
+                        <div v-for="book in featuredData.assessments" :key="book._id" class="featured-card" @click="goToBook(book)">
+                            <div class="featured-card-img">
+                                <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="book.title" />
+                                <div v-else class="featured-card-placeholder">{{ book.title }}</div>
+                                <div class="featured-card-overlay">
+                                    <span class="featured-card-cta">Read Now →</span>
+                                </div>
+                            </div>
+                            <div class="featured-card-info">
+                                <p class="featured-card-title">{{ book.title }}</p>
+                                <p class="featured-card-desc">{{ book.description }}</p>
+                                <span class="featured-card-cost">{{ book.creditsCost }} credit<span v-if="book.creditsCost !== 1">s</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-actions">
+                        <button class="featured-btn-primary" @click="goToLibrary">Browse Full Library</button>
+                        <button class="featured-btn-ghost" @click="closeFeaturedModal">Maybe Later</button>
+                    </div>
+                </div>
+            </div>
+        </transition>
+
     </section>
 </template>
 
@@ -138,6 +174,27 @@ export default {
     components: {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
+    },
+    data() {
+        return {
+            showFeaturedModal: false,
+            featuredData: { title: '', message: '', assessments: [] },
+        }
+    },
+    async mounted() {
+        if (process.client && !this.$store.state.kidsViewActive) {
+            const seen = sessionStorage.getItem('tal_featured_seen');
+            if (!seen) {
+                try {
+                    const res = await this.$axios.$get('/api/featured-release');
+                    if (res.isActive && res.assessments && res.assessments.length > 0) {
+                        this.featuredData = res;
+                        setTimeout(() => { this.showFeaturedModal = true; }, 800);
+                        sessionStorage.setItem('tal_featured_seen', '1');
+                    }
+                } catch(e) { console.error(e); }
+            }
+        }
     },
     head() {
         return {
@@ -179,6 +236,17 @@ export default {
         }
     },
     methods: {
+        closeFeaturedModal() {
+            this.showFeaturedModal = false;
+        },
+        goToLibrary() {
+            this.showFeaturedModal = false;
+            this.$router.push('/library');
+        },
+        goToBook(book) {
+            this.showFeaturedModal = false;
+            this.$router.push('/library/' + book.slug);
+        },
         jumpToLogin(event) {
             event?.target?.blur()
             this.$router.push('/auth/login')
@@ -562,4 +630,239 @@ export default {
         }
     }
 }
+
+.modal-fade-enter-active, .modal-fade-leave-active { transition: opacity 0.3s ease; }
+.modal-fade-enter, .modal-fade-leave-to { opacity: 0; }
+
+.featured-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 9999;
+    padding: 140px 20px 60px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+}
+.featured-modal {
+    background: #fff;
+    border-radius: 20px;
+    max-width: 780px;
+    width: 100%;
+    max-height: calc(100vh - 200px);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+}
+.featured-header {
+    position: relative;
+    background: linear-gradient(135deg, #12304d 0%, #1a4a70 50%, #12304d 100%);
+    padding: 24px 32px 20px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+.featured-shimmer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.06) 45%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.06) 55%, transparent 70%);
+    background-size: 300% 100%;
+    animation: featured-shimmer 4s ease-in-out infinite;
+}
+@keyframes featured-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -100% 0; }
+}
+.featured-eyebrow {
+    display: inline-block;
+    background: linear-gradient(135deg, rgb(160,120,40), rgb(255,220,120), rgb(160,120,40));
+    color: rgb(55,28,5);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+.featured-title {
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    position: relative;
+    z-index: 1;
+}
+.featured-message {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.featured-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.15s;
+    line-height: 1;
+    padding: 0;
+}
+.featured-close:hover { background: rgba(255,255,255,0.25); }
+.featured-cards {
+    display: flex;
+    gap: 12px;
+    padding: 16px 24px 0;
+    overflow-x: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.featured-card {
+    flex: 0 0 180px;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 0.5px solid rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #fff;
+}
+.featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.featured-card-img {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+}
+.featured-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.featured-card:hover .featured-card-img img { transform: scale(1.05); }
+.featured-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(18,48,77,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.featured-card:hover .featured-card-overlay { opacity: 1; }
+.featured-card-cta {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+.featured-card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    padding: 12px;
+    text-align: center;
+}
+.featured-card-info {
+    padding: 8px 10px;
+}
+.featured-card-title {
+    font-size: 13px;
+    font-weight: 700;
+    font-style: italic;
+    margin: 0 0 4px;
+    color: #12304d;
+}
+.featured-card-desc {
+    font-size: 11px;
+    color: #777;
+    margin: 0 0 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+.featured-card-cost {
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    background: #12304d;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+.featured-actions {
+    display: flex;
+    gap: 12px;
+    padding: 14px 24px 20px;
+    justify-content: center;
+}
+.featured-btn-primary {
+    background: #12304d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 36px;
+    height: 44px;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+.featured-btn-primary:hover { background: #1a4a70; }
+.featured-btn-ghost {
+    background: transparent;
+    color: #666;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 0 36px;
+    height: 44px;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+.featured-btn-ghost:hover { background: #f5f5f5; color: #333; }
 </style>

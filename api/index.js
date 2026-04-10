@@ -23,6 +23,7 @@ import childParticipantsController from '../server/controllers/childParticipants
 import adminController from './controllers/adminController.js';
 import adminAuth from './middleware/adminAuth.js';
 const customShelfController = require('./controllers/customShelfController');
+const featuredReleaseController = require('./controllers/featuredReleaseController');
 
 
 const upload = multer();
@@ -151,6 +152,10 @@ app.patch('/admin/shelves/:id', adminAuth, customShelfController.updateShelf);
 app.patch('/admin/shelves/:id/toggle', adminAuth, customShelfController.toggleShelf);
 app.patch('/admin/shelves/:id/archive', adminAuth, customShelfController.archiveShelf);
 app.delete('/admin/shelves/:id', adminAuth, customShelfController.deleteShelf);
+
+app.get('/featured-release', featuredReleaseController.getPublic);
+app.get('/admin/featured-release', adminAuth, featuredReleaseController.getAdmin);
+app.patch('/admin/featured-release', adminAuth, featuredReleaseController.update);
 
 app.use((req, res, next) => {
   res.status(404).json({

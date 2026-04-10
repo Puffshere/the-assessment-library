@@ -10,6 +10,7 @@
           <button class="tab-btn" :class="{ active: tab === 'create' }" @click="tab = 'create'">Create</button>
           <button class="tab-btn" :class="{ active: tab === 'library' }" @click="tab = 'library'; loadLibrary()">Library</button>
           <button class="tab-btn" :class="{ active: tab === 'shelves' }" @click="tab = 'shelves'; loadShelves()">Shelves</button>
+          <button class="tab-btn" :class="{ active: tab === 'featured' }" @click="tab = 'featured'; loadFeatured()">Featured</button>
           <button class="sign-out-btn" @click="signOut">Sign out</button>
         </div>
       </div>
@@ -251,7 +252,7 @@
 
       <!-- Create new shelf -->
       <div class="card">
-        <div class="card-title">Create custom shelf</div>
+        <div class="card-title">{{ editingShelf ? 'Edit shelf: ' + editingShelf.name : 'Create custom shelf' }}</div>
         <div class="field-row-2" style="margin-bottom:16px">
           <div class="field">
             <label>Shelf name</label>
@@ -288,9 +289,10 @@
             </div>
           </div>
         </div>
-        <button class="generate-btn" style="margin-top:0" :disabled="!newShelf.name || newShelf.assessmentIds.length === 0 || shelfSaving" @click="createShelf">
-          {{ shelfSaving ? 'Saving...' : 'Create shelf' }}
+        <button class="generate-btn" style="margin-top:0" :disabled="!newShelf.name || newShelf.assessmentIds.length === 0 || shelfSaving" @click="editingShelf ? saveEditShelf() : createShelf()">
+          {{ shelfSaving ? 'Saving...' : editingShelf ? 'Save changes' : 'Create shelf' }}
         </button>
+        <button v-if="editingShelf" class="action-btn" style="margin-top:8px;width:100%" @click="editingShelf = null; newShelf = { name: '', section: 'Adult', position: 'top', expiresAt: '', assessmentIds: [] }">Cancel edit</button>
         <p v-if="shelfError" style="color:#A32D2D;font-size:13px;margin-top:8px">{{ shelfError }}</p>
       </div>
 
@@ -323,6 +325,7 @@
               <div class="actions">
                 <button class="action-btn" @click="toggleCustomShelf(shelf)">{{ shelf.isActive ? 'Hide' : 'Activate' }}</button>
                 <button class="action-btn" @click="toggleArchiveShelf(shelf)">{{ shelf.isArchived ? 'Restore' : 'Archive' }}</button>
+                <button v-if="shelf.type === 'custom'" class="action-btn" @click="editShelf(shelf)">Edit</button>
                 <button v-if="shelf.type === 'custom'" class="action-btn danger" @click="deleteCustomShelf(shelf)">Delete</button>
               </div>
             </div>
@@ -333,6 +336,49 @@
         </div>
       </div>
 
+    </div>
+
+    <div v-if="tab === 'featured'" class="admin-body">
+      <div class="card">
+        <div class="card-title">New release modal</div>
+        <div class="info-note" style="margin-bottom:1.25rem">This modal pops up once per session on the homepage for non-kids view users. Toggle it active to enable it.</div>
+
+        <div class="field-row-2" style="margin-bottom:16px">
+          <div class="field">
+            <label>Modal status</label>
+            <div class="shelf-toggle">
+              <button class="shelf-btn" :class="{ active: featured.isActive }" type="button" @click="featured.isActive = true">Active — show modal</button>
+              <button class="shelf-btn" :class="{ active: !featured.isActive }" type="button" @click="featured.isActive = false">Inactive — hide modal</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>Modal title</label>
+            <input v-model="featured.title" type="text" placeholder="e.g. New Releases, Just Added, Featured This Week" />
+          </div>
+        </div>
+
+        <div class="field" style="margin-bottom:16px">
+          <label>Message <span class="label-note">(optional — shown above the assessment cards)</span></label>
+          <textarea v-model="featured.message" rows="3" placeholder="e.g. We just added new stories to the library! Check them out before everyone else does."></textarea>
+        </div>
+
+        <div class="field" style="margin-bottom:16px">
+          <label>Featured assessments</label>
+          <div class="assessment-picker">
+            <div v-for="a in library" :key="a._id" class="picker-item" :class="{ selected: featured.assessmentIds.includes(a._id) }" @click="toggleFeaturedAssessment(a._id)">
+              <span class="picker-check">{{ featured.assessmentIds.includes(a._id) ? '✓' : '' }}</span>
+              <span class="picker-title">{{ a.title }}</span>
+              <span class="picker-shelf">{{ a.shelf }}</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="generate-btn" style="margin-top:0" :disabled="featuredSaving" @click="saveFeatured">
+          {{ featuredSaving ? 'Saving...' : 'Save featured modal' }}
+        </button>
+        <p v-if="featuredError" style="color:#A32D2D;font-size:13px;margin-top:8px">{{ featuredError }}</p>
+        <p v-if="featuredSuccess" style="color:#3B6D11;font-size:13px;margin-top:8px">{{ featuredSuccess }}</p>
+      </div>
     </div>
 
   </div>
@@ -362,6 +408,11 @@ export default {
       shelvesLoading: false,
       shelfSaving: false,
       shelfError: '',
+      editingShelf: null,
+      featured: { isActive: false, title: 'New Releases', message: '', assessmentIds: [] },
+      featuredSaving: false,
+      featuredError: '',
+      featuredSuccess: '',
       newShelf: {
         name: '',
         section: 'Adult',
@@ -564,6 +615,83 @@ export default {
       this.imageUrl = a.heroImageUrl || ''
       this.imagePrompt = ''
       this.imageError = ''
+    },
+    async loadFeatured() {
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        const res = await this.$axios.get('/api/admin/featured-release', { headers: { 'x-admin-secret': adminSecret } })
+        const d = res.data
+        this.featured = {
+          isActive: d.isActive,
+          title: d.title || 'New Releases',
+          message: d.message || '',
+          assessmentIds: (d.assessments || []).map(a => a._id),
+        }
+        if (this.library.length === 0) await this.loadLibrary()
+      } catch(err) { console.error(err) }
+    },
+    toggleFeaturedAssessment(id) {
+      const idx = this.featured.assessmentIds.indexOf(id)
+      if (idx === -1) { this.featured.assessmentIds.push(id) }
+      else { this.featured.assessmentIds.splice(idx, 1) }
+    },
+    async saveFeatured() {
+      this.featuredSaving = true
+      this.featuredError = ''
+      this.featuredSuccess = ''
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        await this.$axios.patch('/api/admin/featured-release', this.featured, { headers: { 'x-admin-secret': adminSecret } })
+        this.featuredSuccess = 'Saved successfully.'
+        setTimeout(() => { this.featuredSuccess = '' }, 3000)
+      } catch(err) {
+        this.featuredError = err.response?.data?.error || err.message
+      } finally {
+        this.featuredSaving = false
+      }
+    },
+    editShelf(shelf) {
+      this.editingShelf = shelf
+      this.newShelf = {
+        name: shelf.name,
+        section: shelf.section,
+        position: shelf.position || 'top',
+        expiresAt: shelf.expiresAt ? new Date(shelf.expiresAt).toISOString().slice(0,16) : '',
+        assessmentIds: (shelf.assessments || []).map(a => a._id),
+      }
+      this.$nextTick(() => {
+        const el = document.querySelector('.admin-body')
+        if (el) el.scrollTo({ top: 0, behavior: 'smooth' })
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      })
+    },
+    async saveEditShelf() {
+      this.shelfSaving = true
+      this.shelfError = ''
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        await this.$axios.patch('/api/admin/shelves/' + this.editingShelf._id, {
+          name: this.newShelf.name,
+          section: this.newShelf.section,
+          position: this.newShelf.position,
+          expiresAt: this.newShelf.expiresAt || null,
+          assessmentIds: this.newShelf.assessmentIds,
+        }, { headers: { 'x-admin-secret': adminSecret } })
+        const shelf = this.customShelves.find(s => s._id === this.editingShelf._id)
+        if (shelf) {
+          shelf.name = this.newShelf.name
+          shelf.section = this.newShelf.section
+          shelf.position = this.newShelf.position
+          shelf.expiresAt = this.newShelf.expiresAt || null
+          shelf.assessments = this.library.filter(a => this.newShelf.assessmentIds.includes(a._id))
+        }
+        this.editingShelf = null
+        this.newShelf = { name: '', section: 'Adult', position: 'top', expiresAt: '', assessmentIds: [] }
+      } catch(err) {
+        this.shelfError = err.response?.data?.error || err.message
+      } finally {
+        this.shelfSaving = false
+      }
     },
     async saveImageUrl() {
       const adminSecret = sessionStorage.getItem('tal_admin_secret')

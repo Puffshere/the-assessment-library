@@ -14,7 +14,6 @@
 
         <!-- Stacks wrapper -->
         <section class="stacks">
-            <div class="container">
 
                 <transition name="stacks-fade" mode="out-in" appear>
                     <div :key="showShelves ? 'shelves' : 'exterior'">
@@ -26,44 +25,57 @@
 
                         <!-- SHELVES -->
                         <div v-else class="stacks-shelves">
-                            <div class="backpanel" aria-hidden="true"></div>
 
-                            <div v-if="loadError" class="status error">{{ loadError }}</div>
-                            <div v-else-if="!allAdultShelves.length && !allKidsShelves.length" class="status">
-                                No assessments are available in your library yet.
-                            </div>
-
-                            <!-- ADULT SECTION -->
-                            <div v-if="!kidsViewActive && allAdultShelves.length">
+                            <!-- ADULT SECTION HEADER - outside container -->
+                            <div v-if="!kidsViewActive && allAdultShelves.length" class="section-shelf-wrap">
                                 <div class="shelf section-shelf">
                                     <span class="section-divider-label">Adult</span>
                                 </div>
-                                <div v-for="shelf in allAdultShelves" :key="shelf._id">
-                                    <div class="shelf"></div>
-                                    <div class="row shelf-row">
-                                        <h4>{{ shelf.name }}</h4>
-                                        <div class="scroll-track">
-                                            <div v-for="book in shelf.assessments" :key="book._id || book.slug" class="book-card" @click="openBookModal(book)">
-                                                <div class="hero-box" :class="{ disabled: isBookDisabled(book) }">
-                                                    <div class="hero-box-inner" tabindex="0">
-                                                        <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`" class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }" loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
-                                                        <div v-else class="hero-placeholder"><span>{{ book.title }}</span></div>
+                            </div>
+
+                            <div class="container">
+                                <div class="backpanel" aria-hidden="true"></div>
+
+                                <div v-if="loadError" class="status error">{{ loadError }}</div>
+                                <div v-else-if="!allAdultShelves.length && !allKidsShelves.length" class="status">
+                                    No assessments are available in your library yet.
+                                </div>
+
+                                <!-- ADULT SECTION -->
+                                <div v-if="!kidsViewActive && allAdultShelves.length">
+                                    <div v-for="shelf in allAdultShelves" :key="shelf._id">
+                                        <div class="shelf"></div>
+                                        <div class="row shelf-row">
+                                            <h4>{{ shelf.name }}</h4>
+                                            <div class="scroll-track">
+                                                <div v-for="book in shelf.assessments" :key="book._id || book.slug" class="book-card" @click="openBookModal(book)">
+                                                    <div class="hero-box" :class="{ disabled: isBookDisabled(book) }">
+                                                        <div class="hero-box-inner" tabindex="0">
+                                                            <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`" class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }" loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                                            <div v-else class="hero-placeholder"><span>{{ book.title }}</span></div>
+                                                        </div>
                                                     </div>
+                                                    <p class="title">{{ book.title }}</p>
+                                                    <p class="description">{{ book.description }}</p>
                                                 </div>
-                                                <p class="title">{{ book.title }}</p>
-                                                <p class="description">{{ book.description }}</p>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="shelf"></div>
                                 </div>
-                                <div class="shelf"></div>
+
                             </div>
 
-                            <!-- KIDS SECTION -->
-                            <div v-if="allKidsShelves.length">
+                            <!-- KIDS SECTION HEADER - outside container -->
+                            <div v-if="allKidsShelves.length" class="section-shelf-wrap">
                                 <div class="shelf section-shelf">
                                     <span class="section-divider-label">Kids</span>
                                 </div>
+                            </div>
+
+                            <div v-if="allKidsShelves.length" class="container">
+                                <div class="backpanel" aria-hidden="true"></div>
+                                <!-- KIDS SECTION -->
                                 <div v-for="shelf in allKidsShelves" :key="shelf._id">
                                     <div class="shelf"></div>
                                     <div class="row shelf-row">
@@ -89,8 +101,6 @@
                     </div>
                 </transition>
 
-
-            </div>
         </section>
 
         <!-- BOOK MODAL (never during exterior/loading) -->
@@ -549,11 +559,13 @@ export default {
         .stacks-loading {
             position: relative;
             z-index: 1;
+            max-width: 1140px;
+            margin: 0 auto;
 
             .library-exterior {
                 display: block;
                 width: 100%;
-                max-width: calc(100% - 120px);
+                max-width: 1140px;
                 margin: 0 auto;
                 border-radius: 10px;
                 box-shadow: 5px 5px 10px #412604;
@@ -603,7 +615,7 @@ export default {
                 bottom: 0;
                 width: 20px;
                 background-color: rgb(100, 55, 13);
-                z-index: 2;
+                z-index: 1;
                 pointer-events: none;
                 border-radius: 3px;
                 box-shadow: 5px 5px 10px #412604;
@@ -625,7 +637,7 @@ export default {
             margin-left: 60px;
             background-color: rgba(112, 71, 9, 0.185);
             position: relative;
-            z-index: 1;
+            z-index: 4;
             width: 155px;
             padding: 5px 5px 5px 10px;
             border: 1px solid #38240a;
@@ -1022,6 +1034,8 @@ export default {
     margin-bottom: 0;
     margin-left: 60px;
     width: 155px;
+    position: relative;
+    z-index: 4;
 }
 .scroll-track {
     display: flex;
@@ -1029,7 +1043,7 @@ export default {
     flex-wrap: nowrap;
     gap: 16px;
     overflow-x: auto;
-    padding: 8px 4px 12px;
+    padding: 20px 4px 20px;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
@@ -1111,29 +1125,89 @@ export default {
     overflow: hidden;
     line-height: 1.4;
 }
+.section-shelf-wrap {
+    position: relative;
+    z-index: 10;
+    margin: 30px -40px 0;
+}
 .section-shelf {
     position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
-    height: 40px !important;
-    margin: 40px 10px 0 !important;
+    justify-content: center;
+    height: 54px !important;
+    margin: 0 -8px !important;
+    background: linear-gradient(
+        135deg,
+        rgb(160, 120, 40) 0%,
+        rgb(210, 175, 80) 15%,
+        rgb(255, 220, 120) 35%,
+        rgb(235, 200, 105) 50%,
+        rgb(205, 165, 75) 65%,
+        rgb(245, 215, 115) 80%,
+        rgb(160, 120, 40) 100%
+    ) !important;
+    border-radius: 3px !important;
+    box-shadow:
+        0 -3px 6px rgba(0,0,0,0.5),
+        0 4px 8px rgba(0,0,0,0.4),
+        6px 6px 12px rgba(65,38,4,0.7),
+        -6px 6px 12px rgba(65,38,4,0.7),
+        0 2px 4px rgba(255,255,255,0.25) inset,
+        0 -2px 4px rgba(0,0,0,0.35) inset !important;
+    border-top: 1px solid rgba(255, 245, 190, 0.7) !important;
+    border-bottom: 2px solid rgba(80, 50, 5, 0.9) !important;
+    border-left: 1px solid rgba(180, 140, 60, 0.8) !important;
+    border-right: 1px solid rgba(180, 140, 60, 0.8) !important;
+    overflow: hidden !important;
 }
-.section-divider-label {
+
+.section-shelf::before {
+    content: '';
     position: absolute;
-    left: 60px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgb(100, 55, 13);
-    color: #fff8ee;
-    font-family: Georgia, serif;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 5px 20px;
-    border: 1px solid #38240a;
-    box-shadow: 5px 5px 10px #412604;
-    z-index: 3;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.12) 45%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.12) 55%,
+        transparent 70%
+    );
+    background-size: 300% 100%;
+    animation: brass-shimmer 12s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
 }
+
+@keyframes brass-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -100% 0; }
+}
+
+.section-divider-label {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    background: transparent !important;
+    color: rgb(55, 28, 5) !important;
+    font-family: Georgia, serif !important;
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    padding: 8px 32px !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 2;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    text-shadow:
+        0 1px 0 rgba(255,220,120,0.7),
+        0 2px 0 rgba(255,210,100,0.4),
+        0 -1px 0 rgba(0,0,0,0.4),
+        0 -2px 1px rgba(0,0,0,0.2),
+        1px 1px 3px rgba(0,0,0,0.3) !important;
+}
+
 </style>
