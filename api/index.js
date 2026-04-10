@@ -22,6 +22,7 @@ import storyController from './controllers/storyController.js';
 import childParticipantsController from '../server/controllers/childParticipantsController.js';
 import adminController from './controllers/adminController.js';
 import adminAuth from './middleware/adminAuth.js';
+const customShelfController = require('./controllers/customShelfController');
 
 
 const upload = multer();
@@ -142,6 +143,14 @@ app.patch('/admin/assessments/:id/toggle', adminAuth, adminController.toggleAsse
 app.delete('/admin/assessments/:id', adminAuth, adminController.deleteAssessment);
 app.post('/admin/assessments/:id/regenerate-image', adminAuth, adminController.regenerateImage);
 app.patch('/admin/assessments/:id/image', adminAuth, adminController.updateAssessmentImage);
+
+app.get('/shelves', customShelfController.getPublicShelves);
+app.get('/admin/shelves', adminAuth, customShelfController.listShelves);
+app.post('/admin/shelves', adminAuth, customShelfController.createShelf);
+app.patch('/admin/shelves/:id', adminAuth, customShelfController.updateShelf);
+app.patch('/admin/shelves/:id/toggle', adminAuth, customShelfController.toggleShelf);
+app.patch('/admin/shelves/:id/archive', adminAuth, customShelfController.archiveShelf);
+app.delete('/admin/shelves/:id', adminAuth, customShelfController.deleteShelf);
 
 app.use((req, res, next) => {
   res.status(404).json({

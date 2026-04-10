@@ -9,6 +9,7 @@
         <div class="header-actions">
           <button class="tab-btn" :class="{ active: tab === 'create' }" @click="tab = 'create'">Create</button>
           <button class="tab-btn" :class="{ active: tab === 'library' }" @click="tab = 'library'; loadLibrary()">Library</button>
+          <button class="tab-btn" :class="{ active: tab === 'shelves' }" @click="tab = 'shelves'; loadShelves()">Shelves</button>
           <button class="sign-out-btn" @click="signOut">Sign out</button>
         </div>
       </div>
@@ -245,6 +246,85 @@
         <p v-if="imageError" style="color:#A32D2D;font-size:12px;margin-top:8px">{{ imageError }}</p>
       </div>
     </div>
+
+    <div v-if="tab === 'shelves'" class="admin-body">
+
+      <!-- Create new shelf -->
+      <div class="card">
+        <div class="card-title">Create custom shelf</div>
+        <div class="field-row-2" style="margin-bottom:16px">
+          <div class="field">
+            <label>Shelf name</label>
+            <input v-model="newShelf.name" type="text" placeholder="e.g. Featured This Week, Holiday Special" />
+          </div>
+          <div class="field">
+            <label>Section</label>
+            <select v-model="newShelf.section">
+              <option value="Adult">Adult</option>
+              <option value="Kids">Kids</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row-2" style="margin-bottom:16px">
+          <div class="field">
+            <label>Position on library page</label>
+            <select v-model="newShelf.position">
+              <option value="top">Top of section (featured)</option>
+              <option value="bottom">Bottom of section</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Expiry date <span class="label-note">(optional — leave blank for permanent)</span></label>
+            <input v-model="newShelf.expiresAt" type="datetime-local" />
+          </div>
+        </div>
+        <div class="field" style="margin-bottom:16px">
+          <label>Select assessments for this shelf</label>
+          <div class="assessment-picker">
+            <div v-for="a in library" :key="a._id" class="picker-item" :class="{ selected: newShelf.assessmentIds.includes(a._id) }" @click="toggleShelfAssessment(a._id)">
+              <span class="picker-check">{{ newShelf.assessmentIds.includes(a._id) ? '✓' : '' }}</span>
+              <span class="picker-title">{{ a.title }}</span>
+              <span class="picker-shelf">{{ a.shelf }}</span>
+            </div>
+          </div>
+        </div>
+        <button class="generate-btn" style="margin-top:0" :disabled="!newShelf.name || newShelf.assessmentIds.length === 0 || shelfSaving" @click="createShelf">
+          {{ shelfSaving ? 'Saving...' : 'Create shelf' }}
+        </button>
+        <p v-if="shelfError" style="color:#A32D2D;font-size:13px;margin-top:8px">{{ shelfError }}</p>
+      </div>
+
+      <!-- Existing shelves -->
+      <div class="card">
+        <div class="card-title">All custom shelves ({{ customShelves.length }})</div>
+        <div v-if="shelvesLoading" class="loading-msg">Loading...</div>
+        <div v-else-if="customShelves.length === 0" class="loading-msg">No custom shelves yet.</div>
+        <div v-else>
+          <div v-for="shelf in customShelves" :key="shelf._id" class="shelf-item" :class="{ archived: shelf.isArchived }">
+            <div class="shelf-item-header">
+              <div>
+                <span class="shelf-item-name">{{ shelf.name }}</span>
+                <span class="shelf-item-meta">{{ shelf.section }} · {{ shelf.position }} · {{ shelf.assessments ? shelf.assessments.length : 0 }} assessments</span>
+                <span v-if="shelf.expiresAt" class="shelf-item-meta">· expires {{ formatExpiry(shelf.expiresAt) }}</span>
+                <span v-if="shelf.isArchived" class="status-pill inactive" style="margin-left:8px">Archived</span>
+                <span v-else-if="shelf.isActive" class="status-pill active" style="margin-left:8px">Live</span>
+                <span v-else class="status-pill inactive" style="margin-left:8px">Hidden</span>
+              </div>
+              <div class="actions">
+                <button class="action-btn" @click="toggleCustomShelf(shelf)">{{ shelf.isActive ? 'Hide' : 'Activate' }}</button>
+                <button class="action-btn" @click="toggleArchiveShelf(shelf)">{{ shelf.isArchived ? 'Restore' : 'Archive' }}</button>
+                <button class="action-btn danger" @click="deleteCustomShelf(shelf)">Delete</button>
+              </div>
+            </div>
+            <div v-if="shelf.assessments && shelf.assessments.length" class="shelf-item-books">
+              <span v-for="a in shelf.assessments" :key="a._id" class="shelf-book-tag">{{ a.title }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </template>
 
@@ -268,6 +348,17 @@ export default {
       imagePrompt: '',
       imageLoading: false,
       imageError: '',
+      customShelves: [],
+      shelvesLoading: false,
+      shelfSaving: false,
+      shelfError: '',
+      newShelf: {
+        name: '',
+        section: 'Adult',
+        position: 'top',
+        expiresAt: '',
+        assessmentIds: [],
+      },
       customTagInput: '',
       availableTags: [
         'Career', 'Personal Growth', 'Leadership', 'Relationships', 'Teamwork',
@@ -500,6 +591,57 @@ export default {
         this.imageLoading = false
       }
     },
+    async loadShelves() {
+      this.shelvesLoading = true
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        const res = await this.$axios.get('/api/admin/shelves', { headers: { 'x-admin-secret': adminSecret } })
+        this.customShelves = res.data.shelves
+        if (this.library.length === 0) await this.loadLibrary()
+      } catch(err) { console.error(err) } finally { this.shelvesLoading = false }
+    },
+    toggleShelfAssessment(id) {
+      const idx = this.newShelf.assessmentIds.indexOf(id)
+      if (idx === -1) { this.newShelf.assessmentIds.push(id) }
+      else { this.newShelf.assessmentIds.splice(idx, 1) }
+    },
+    async createShelf() {
+      this.shelfSaving = true
+      this.shelfError = ''
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        const res = await this.$axios.post('/api/admin/shelves', this.newShelf, { headers: { 'x-admin-secret': adminSecret } })
+        this.customShelves.unshift({ ...res.data.shelf, assessments: this.library.filter(a => this.newShelf.assessmentIds.includes(a._id)) })
+        this.newShelf = { name: '', section: 'Adult', position: 'top', expiresAt: '', assessmentIds: [] }
+      } catch(err) { this.shelfError = err.response?.data?.error || err.message } finally { this.shelfSaving = false }
+    },
+    async toggleCustomShelf(shelf) {
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        const res = await this.$axios.patch('/api/admin/shelves/' + shelf._id + '/toggle', {}, { headers: { 'x-admin-secret': adminSecret } })
+        shelf.isActive = res.data.isActive
+      } catch(err) { console.error(err) }
+    },
+    async toggleArchiveShelf(shelf) {
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        const res = await this.$axios.patch('/api/admin/shelves/' + shelf._id + '/archive', {}, { headers: { 'x-admin-secret': adminSecret } })
+        shelf.isArchived = res.data.isArchived
+        shelf.isActive = false
+      } catch(err) { console.error(err) }
+    },
+    async deleteCustomShelf(shelf) {
+      if (!confirm('Delete shelf "' + shelf.name + '"? This cannot be undone.')) return
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        await this.$axios.delete('/api/admin/shelves/' + shelf._id, { headers: { 'x-admin-secret': adminSecret } })
+        this.customShelves = this.customShelves.filter(s => s._id !== shelf._id)
+      } catch(err) { console.error(err) }
+    },
+    formatExpiry(date) {
+      if (!date) return ''
+      return new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+    },
     async deleteAssessment() {
       if (!this.deleteTarget) return
       const adminSecret = sessionStorage.getItem('tal_admin_secret')
@@ -591,4 +733,53 @@ textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
 .modal-card h2 { font-size: 18px; font-weight: 500; margin-bottom: 0.75rem; }
 .modal-card p { font-size: 14px; color: var(--color-text-secondary, #666); margin-bottom: 1.5rem; line-height: 1.6; }
 .modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.assessment-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 280px;
+  overflow-y: auto;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: 8px;
+  padding: 8px;
+}
+.picker-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.picker-item:hover { background: var(--color-background-secondary); }
+.picker-item.selected { background: #EEEDFE; }
+.picker-check {
+  width: 18px;
+  height: 18px;
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #534AB7;
+  flex-shrink: 0;
+}
+.picker-item.selected .picker-check { background: #534AB7; color: #fff; border-color: #534AB7; }
+.picker-title { font-size: 13px; flex: 1; }
+.picker-shelf { font-size: 11px; color: var(--color-text-secondary); background: var(--color-background-secondary); padding: 2px 8px; border-radius: 20px; }
+.shelf-item {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 10px;
+  transition: opacity 0.15s;
+}
+.shelf-item.archived { opacity: 0.5; }
+.shelf-item-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.shelf-item-name { font-size: 15px; font-weight: 500; display: block; margin-bottom: 4px; }
+.shelf-item-meta { font-size: 12px; color: var(--color-text-secondary); margin-right: 4px; }
+.shelf-item-books { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.shelf-book-tag { font-size: 11px; padding: 3px 10px; background: var(--color-background-secondary); border-radius: 20px; color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); }
 </style>

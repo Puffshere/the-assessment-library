@@ -166,7 +166,7 @@ const getAssessmentsForLibrary = async (req, res) => {
 
     const assessments = await Assessment.find(
       filter,
-      'slug title description creditsCost estimatedCompletion wordsLength heroImageUrl category'
+      'slug title description creditsCost estimatedCompletion wordsLength heroImageUrl category genre'
     ).lean();
 
     res.json({ assessments, kidsMode });

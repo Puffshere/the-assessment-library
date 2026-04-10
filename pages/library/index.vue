@@ -28,68 +28,135 @@
                         <div v-else class="stacks-shelves">
                             <div class="backpanel" aria-hidden="true"></div>
 
-                            <!-- KIDS VIEW: sub-shelves grouped by subcategory -->
-                            <template v-if="kidsViewActive">
-                                <template v-for="shelf in subcategoryShelves">
-                                    <div :key="shelf.name + '-divider'" class="shelf"></div>
-                                    <div :key="shelf.name + '-row'" class="row shelf-row">
-                                        <h4>{{ shelf.name }}</h4>
-
-                                        <div v-for="book in shelf.books"
-                                            :key="(book._id || book.slug) + '-' + shelf.name" class="col-6 book-card">
-                                            <div class="hero-box" :class="{ disabled: isBookDisabled(book) }"
-                                                @click="openBookModal(book)">
-                                                <span class="badge badge--kids">Coming Soon!</span>
-
-                                                <div class="hero-box-inner" tabindex="0">
-                                                    <img v-if="book.heroImageUrl" :src="book.heroImageUrl"
-                                                        :alt="`Cover for ${book.title}`" class="hero-img"
-                                                        :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
-                                                        loading="lazy"
-                                                        @load="markHeroLoaded(book._id || book.slug)" />
-                                                </div>
-                                            </div>
-
-                                            <p class="title">{{ book.title }}</p>
-                                            <p>{{ book.description }}</p>
-                                        </div>
-                                    </div>
-                                </template>
-                            </template>
-
-                            <!-- STANDARD VIEW: all non-Kids books on a single shelf -->
-                            <template v-else>
-                                <div class="shelf"></div>
-                                <div class="row shelf-row">
-                                    <h4>Adult Shelf</h4>
-
-                                    <div v-for="book in libraryBooks" :key="book._id || book.slug"
-                                        class="col-6 book-card">
-                                        <div class="hero-box" :class="{ disabled: isBookDisabled(book) }"
-                                            @click="openBookModal(book)">
-                                            <span class="badge badge--adult">Coming Soon!</span>
-
-                                            <div class="hero-box-inner" tabindex="0">
-                                                <img v-if="book.heroImageUrl" :src="book.heroImageUrl"
-                                                    :alt="`Cover for ${book.title}`" class="hero-img"
-                                                    :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }"
-                                                    loading="lazy"
-                                                    @load="markHeroLoaded(book._id || book.slug)" />
-                                            </div>
-                                        </div>
-
-                                        <p class="title">{{ book.title }}</p>
-                                        <p>{{ book.description }}</p>
-                                    </div>
-                                </div>
-                            </template>
-
-                            <div class="shelf"></div>
-
                             <div v-if="loadError" class="status error">{{ loadError }}</div>
                             <div v-else-if="!libraryBooks.length" class="status">
                                 No assessments are available in your library yet.
                             </div>
+
+                            <!-- ADULT SECTION -->
+                            <div v-if="!kidsViewActive && (adultShelves.length || adultCustomShelves.length)">
+                                <div class="shelf section-shelf">
+                                    <span class="section-divider-label">Adult</span>
+                                </div>
+                                <div v-for="shelf in adultCustomShelves.filter(s => s.position === 'top')" :key="'custom-adult-top-' + shelf._id">
+                                    <div class="shelf"></div>
+                                    <div class="row shelf-row">
+                                        <h4>{{ shelf.name }}</h4>
+                                        <div class="scroll-track">
+                                            <div v-for="book in shelf.assessments" :key="book._id || book.slug" class="book-card" @click="openBookModal(book)">
+                                                <div class="hero-box" :class="{ disabled: isBookDisabled(book) }">
+                                                    <div class="hero-box-inner" tabindex="0">
+                                                        <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`" class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }" loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                                        <div v-else class="hero-placeholder"><span>{{ book.title }}</span></div>
+                                                    </div>
+                                                </div>
+                                                <p class="title">{{ book.title }}</p>
+                                                <p class="description">{{ book.description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-for="shelf in adultShelves" :key="'adult-' + shelf.genre">
+                                    <div class="shelf"></div>
+                                    <div class="row shelf-row">
+                                        <h4>{{ shelf.genre }}</h4>
+                                        <div class="scroll-track">
+                                            <div v-for="book in shelf.books" :key="book._id || book.slug" class="book-card" @click="openBookModal(book)">
+                                                <div class="hero-box" :class="{ disabled: isBookDisabled(book) }">
+                                                    <div class="hero-box-inner" tabindex="0">
+                                                        <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`" class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }" loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                                        <div v-else class="hero-placeholder"><span>{{ book.title }}</span></div>
+                                                    </div>
+                                                </div>
+                                                <p class="title">{{ book.title }}</p>
+                                                <p class="description">{{ book.description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-for="shelf in adultCustomShelves.filter(s => s.position === 'bottom')" :key="'custom-adult-bottom-' + shelf._id">
+                                    <div class="shelf"></div>
+                                    <div class="row shelf-row">
+                                        <h4>{{ shelf.name }}</h4>
+                                        <div class="scroll-track">
+                                            <div v-for="book in shelf.assessments" :key="book._id || book.slug" class="book-card" @click="openBookModal(book)">
+                                                <div class="hero-box" :class="{ disabled: isBookDisabled(book) }">
+                                                    <div class="hero-box-inner" tabindex="0">
+                                                        <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`" class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }" loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                                        <div v-else class="hero-placeholder"><span>{{ book.title }}</span></div>
+                                                    </div>
+                                                </div>
+                                                <p class="title">{{ book.title }}</p>
+                                                <p class="description">{{ book.description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shelf"></div>
+                            </div>
+
+                            <!-- KIDS SECTION -->
+                            <div v-if="kidsShelves.length || kidsCustomShelves.length">
+                                <div class="shelf section-shelf">
+                                    <span class="section-divider-label">Kids</span>
+                                </div>
+                                <div v-for="shelf in kidsCustomShelves.filter(s => s.position === 'top')" :key="'custom-kids-top-' + shelf._id">
+                                    <div class="shelf"></div>
+                                    <div class="row shelf-row">
+                                        <h4>{{ shelf.name }}</h4>
+                                        <div class="scroll-track">
+                                            <div v-for="book in shelf.assessments" :key="book._id || book.slug" class="book-card" @click="openBookModal(book)">
+                                                <div class="hero-box" :class="{ disabled: isBookDisabled(book) }">
+                                                    <div class="hero-box-inner" tabindex="0">
+                                                        <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`" class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }" loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                                        <div v-else class="hero-placeholder"><span>{{ book.title }}</span></div>
+                                                    </div>
+                                                </div>
+                                                <p class="title">{{ book.title }}</p>
+                                                <p class="description">{{ book.description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-for="shelf in kidsShelves" :key="'kids-' + shelf.genre">
+                                    <div class="shelf"></div>
+                                    <div class="row shelf-row">
+                                        <h4>{{ shelf.genre }}</h4>
+                                        <div class="scroll-track">
+                                            <div v-for="book in shelf.books" :key="book._id || book.slug" class="book-card" @click="openBookModal(book)">
+                                                <div class="hero-box" :class="{ disabled: isBookDisabled(book) }">
+                                                    <div class="hero-box-inner" tabindex="0">
+                                                        <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`" class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }" loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                                        <div v-else class="hero-placeholder"><span>{{ book.title }}</span></div>
+                                                    </div>
+                                                </div>
+                                                <p class="title">{{ book.title }}</p>
+                                                <p class="description">{{ book.description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-for="shelf in kidsCustomShelves.filter(s => s.position === 'bottom')" :key="'custom-kids-bottom-' + shelf._id">
+                                    <div class="shelf"></div>
+                                    <div class="row shelf-row">
+                                        <h4>{{ shelf.name }}</h4>
+                                        <div class="scroll-track">
+                                            <div v-for="book in shelf.assessments" :key="book._id || book.slug" class="book-card" @click="openBookModal(book)">
+                                                <div class="hero-box" :class="{ disabled: isBookDisabled(book) }">
+                                                    <div class="hero-box-inner" tabindex="0">
+                                                        <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`" class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }" loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                                        <div v-else class="hero-placeholder"><span>{{ book.title }}</span></div>
+                                                    </div>
+                                                </div>
+                                                <p class="title">{{ book.title }}</p>
+                                                <p class="description">{{ book.description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shelf"></div>
+                            </div>
+
                         </div>
                     </div>
                 </transition>
@@ -210,6 +277,7 @@ export default {
             libraryBooks: [],
 
             heroLoaded: {},
+            customShelves: [],
 
             showExterior: true,
             showShelves: false,
@@ -239,21 +307,48 @@ export default {
          * Group them by each subcategory so the UI can render themed sub-shelves.
          * A book with multiple subcategories appears on each matching shelf.
          */
-        subcategoryShelves() {
+        adultCustomShelves() {
+            const now = new Date();
+            return this.customShelves.filter(s =>
+                s.section === 'Adult' &&
+                s.isActive &&
+                !s.isArchived &&
+                (!s.expiresAt || new Date(s.expiresAt) > now) &&
+                s.assessments && s.assessments.length > 0
+            );
+        },
+        kidsCustomShelves() {
+            const now = new Date();
+            return this.customShelves.filter(s =>
+                s.section === 'Kids' &&
+                s.isActive &&
+                !s.isArchived &&
+                (!s.expiresAt || new Date(s.expiresAt) > now) &&
+                s.assessments && s.assessments.length > 0
+            );
+        },
+        adultShelves() {
             const map = {}
             for (const book of this.libraryBooks) {
-                const subs = (book.category && book.category.subcategories) || []
-                if (subs.length === 0) {
-                    if (!map['Other']) map['Other'] = []
-                    map['Other'].push(book)
-                } else {
-                    for (const sub of subs) {
-                        if (!map[sub]) map[sub] = []
-                        map[sub].push(book)
-                    }
-                }
+                if (book.category?.shelf !== 'Adult') continue
+                const genre = book.genre || 'General'
+                if (!map[genre]) map[genre] = []
+                map[genre].push(book)
             }
-            return Object.keys(map).sort().map(name => ({ name, books: map[name] }))
+            return Object.keys(map).sort().map(genre => ({ genre, books: map[genre] }))
+        },
+        kidsShelves() {
+            const map = {}
+            for (const book of this.libraryBooks) {
+                if (book.category?.shelf !== 'Kids') continue
+                const genre = book.genre || 'General'
+                if (!map[genre]) map[genre] = []
+                map[genre].push(book)
+            }
+            return Object.keys(map).sort().map(genre => ({ genre, books: map[genre] }))
+        },
+        subcategoryShelves() {
+            return this.kidsViewActive ? this.kidsShelves : this.adultShelves
         }
     },
     watch: {
@@ -287,6 +382,7 @@ export default {
         this.startExteriorTimer()
 
         this.fetchAssessments()
+        this.fetchCustomShelves()
     },
     beforeDestroy() {
         if (this._exteriorTimer) clearTimeout(this._exteriorTimer)
@@ -432,6 +528,14 @@ export default {
                 }
             } finally {
                 this.checkingOut = false
+            }
+        },
+        async fetchCustomShelves() {
+            try {
+                const res = await this.$axios.$get('/api/shelves');
+                this.customShelves = res.shelves || [];
+            } catch(err) {
+                console.error('Failed to load custom shelves:', err);
             }
         },
         markHeroLoaded(id) {
@@ -991,5 +1095,130 @@ export default {
             }
         }
     }
+}
+.shelf-row {
+    display: block;
+    max-width: calc(100% - 120px);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.shelf-row > h4 {
+    margin-top: -30px;
+    margin-bottom: 0;
+    margin-left: 60px;
+    width: 155px;
+}
+.scroll-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 8px 4px 12px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100,55,13,0.4) transparent;
+}
+.scroll-track::-webkit-scrollbar { height: 6px; }
+.scroll-track::-webkit-scrollbar-track { background: transparent; }
+.scroll-track::-webkit-scrollbar-thumb { background: rgba(100,55,13,0.4); border-radius: 3px; }
+.scroll-track .book-card {
+    flex: 0 0 200px;
+    min-width: 200px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+}
+.scroll-track .book-card .hero-box {
+    position: relative;
+    margin: 10px auto 0;
+    background: linear-gradient(135deg, #e93d2f 0%, #ffbd05 25%, #0dab49 50%, #1666ff 100%);
+    padding: 2px;
+    border-radius: 16px;
+    transition: transform 0.28s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+.scroll-track .book-card .hero-box:hover {
+    transform: translateY(-8px) scale(1.02) rotateZ(-0.4deg);
+    box-shadow: 8px 10px 20px rgba(0,0,0,0.35);
+}
+.scroll-track .book-card .hero-box.disabled { cursor: not-allowed; }
+.scroll-track .book-card .hero-box-inner {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll-track .book-card .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(6px);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.scroll-track .book-card .hero-img--loaded { filter: blur(0); opacity: 1; }
+.scroll-track .book-card .hero-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+}
+.scroll-track .book-card .hero-placeholder span {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    text-align: center;
+    line-height: 1.4;
+}
+.scroll-track .book-card .title {
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 14px;
+}
+.scroll-track .book-card .description {
+    font-size: 12px;
+    color: #555;
+    padding: 0 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+.section-shelf {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px !important;
+    margin: 40px 10px 0 !important;
+}
+.section-divider-label {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(100, 55, 13);
+    color: #fff8ee;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 20px;
+    border: 1px solid #38240a;
+    box-shadow: 5px 5px 10px #412604;
+    z-index: 3;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 </style>

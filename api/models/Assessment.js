@@ -62,6 +62,8 @@ const assessmentSchema = new mongoose.Schema(
       default: 4000
     },
 
+    genre: { type: String, default: '' },
+
     category: categorySchema,
 
     DstyleTitle: String,

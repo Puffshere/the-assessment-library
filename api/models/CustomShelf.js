@@ -1,0 +1,12 @@
+'use strict';
+const mongoose = require('mongoose');
+const customShelfSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  section: { type: String, enum: ['Adult', 'Kids'], default: 'Adult' },
+  isActive: { type: Boolean, default: true },
+  isArchived: { type: Boolean, default: false },
+  expiresAt: { type: Date, default: null },
+  assessmentIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Assessment' }],
+  position: { type: String, enum: ['top', 'bottom'], default: 'top' },
+}, { timestamps: true });
+module.exports = mongoose.model('CustomShelf', customShelfSchema);
