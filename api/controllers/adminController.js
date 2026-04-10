@@ -2,11 +2,6 @@
 
 const jobs = {};
 
-function getOpenAI() {
-  const { OpenAI } = require('openai');
-  return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-}
-
 const Backblaze = require('backblaze-b2');
 const axios = require('axios');
 
@@ -159,16 +154,25 @@ Set nextQuestion to 0 for all answers — the controller will inject correct poi
 }
 
 async function generateAndUploadImage(prompt, slug) {
-  const openai = getOpenAI();
-  const imgResponse = await openai.images.generate({
-    model: 'dall-e-3',
-    prompt: prompt,
-    n: 1,
-    size: '1024x1024',
-    quality: 'hd',
-    style: 'vivid',
-  });
-  const imageUrl = imgResponse.data[0].url;
+  const dalleResponse = await axios.post(
+    'https://api.openai.com/v1/images/generations',
+    {
+      model: 'dall-e-3',
+      prompt: prompt,
+      n: 1,
+      size: '1024x1024',
+      quality: 'hd',
+      style: 'vivid',
+    },
+    {
+      headers: {
+        'Authorization': 'Bearer ' + process.env.OPENAI_API_KEY,
+        'Content-Type': 'application/json',
+      },
+      timeout: 120000,
+    }
+  );
+  const imageUrl = dalleResponse.data.data[0].url;
   const imgBuffer = await axios.get(imageUrl, { responseType: 'arraybuffer' });
   const imageData = Buffer.from(imgBuffer.data);
   const b2 = new Backblaze({
