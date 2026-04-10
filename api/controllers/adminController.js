@@ -189,18 +189,20 @@ async function generateAndUploadImage(prompt, slug) {
   return 'https://f004.backblazeb2.com/file/library-assessments/' + fileName;
 }
 
-async function generateSingleAssessment(config) {
+async function generateSingleAssessment(config, jobId) {
 
   const questionsPerPlaythrough = parseInt(config.questionsPerPlaythrough) || 10;
   const wordCount = parseInt(config.wordCount) || 5200;
   const rawNodeMap = buildNodeMap(questionsPerPlaythrough);
   const nodeMap = calcNextQuestions(rawNodeMap);
   const claudePrompt = buildClaudePrompt(config, nodeMap);
+  let rawText = '';
   const claudeResponse = await axios.post(
     'https://api.anthropic.com/v1/messages',
     {
       model: 'claude-opus-4-6',
       max_tokens: 32000,
+      stream: true,
       messages: [{ role: 'user', content: claudePrompt }],
     },
     {
@@ -209,10 +211,31 @@ async function generateSingleAssessment(config) {
         'anthropic-version': '2023-06-01',
         'content-type': 'application/json',
       },
-      timeout: 600000,
+      responseType: 'stream',
+      timeout: 0,
     }
   );
-  const rawText = claudeResponse.data.content[0].text.trim();
+
+  await new Promise((resolve, reject) => {
+    claudeResponse.data.on('data', (chunk) => {
+      const lines = chunk.toString().split('\n').filter(l => l.trim());
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          const data = line.slice(6).trim();
+          if (data === '[DONE]') return;
+          try {
+            const parsed = JSON.parse(data);
+            if (parsed.type === 'content_block_delta' && parsed.delta?.text) {
+              rawText += parsed.delta.text;
+              jobs[jobId].progress = 'Claude writing... (' + rawText.length + ' chars so far)';
+            }
+          } catch (e) {}
+        }
+      }
+    });
+    claudeResponse.data.on('end', resolve);
+    claudeResponse.data.on('error', reject);
+  });
   let storyData;
   try {
     const cleaned = rawText
@@ -304,7 +327,7 @@ async function runGenerationJob(jobId, config) {
       if (existing) iterSlug = iterSlug + '-' + Date.now();
       jobs[jobId].progress = 'Generating assessment ' + (i + 1) + ' of ' + count + '...';
       try {
-        const result = await generateSingleAssessment({ ...config, title: iterTitle, slug: iterSlug });
+        const result = await generateSingleAssessment({ ...config, title: iterTitle, slug: iterSlug }, jobId);
         jobs[jobId].results.push(result);
       } catch (err) {
         jobs[jobId].errors.push({ index: i + 1, error: err.message });
