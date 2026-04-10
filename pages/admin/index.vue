@@ -182,14 +182,21 @@
           </thead>
           <tbody>
             <tr v-for="a in library" :key="a._id">
-              <td><a :href="'/library/' + a.slug" target="_blank" class="result-link">{{ a.title }}</a></td>
+              <td>
+                <a :href="'/library/' + a.slug" target="_blank" class="result-link">{{ a.title }}</a>
+                <div style="margin-top:6px">
+                  <img v-if="a.heroImageUrl && !a.heroImageUrl.includes('default')" :src="a.heroImageUrl" style="width:48px;height:48px;object-fit:cover;border-radius:4px;border:0.5px solid var(--color-border-tertiary)" />
+                  <span v-else style="font-size:11px;color:var(--color-text-tertiary)">No image</span>
+                </div>
+              </td>
               <td>{{ a.shelf }}</td>
               <td>{{ a.creditsCost }}</td>
               <td>{{ a.questionCount }}</td>
               <td>{{ a.estimatedCompletion }} min</td>
               <td><span class="status-pill" :class="a.isActive ? 'active' : 'inactive'">{{ a.isActive ? 'Active' : 'Hidden' }}</span></td>
-              <td class="actions">
+              <td class="actions" style="min-width:200px">
                 <button class="action-btn" @click="toggleAssessment(a)">{{ a.isActive ? 'Hide' : 'Activate' }}</button>
+                <button class="action-btn" @click="openImageManager(a)">Image</button>
                 <button class="action-btn danger" @click="confirmDelete(a)">Delete</button>
               </td>
             </tr>
@@ -206,6 +213,36 @@
           <button class="action-btn" @click="deleteTarget = null">Cancel</button>
           <button class="action-btn danger" @click="deleteAssessment">Delete permanently</button>
         </div>
+      </div>
+    </div>
+    <div v-if="imageTarget" class="modal-backdrop" @click.self="imageTarget = null">
+      <div class="modal-card" style="max-width:520px">
+        <h2>Manage cover image</h2>
+        <p style="color:var(--color-text-secondary);font-size:13px;margin-bottom:1rem">{{ imageTarget.title }}</p>
+
+        <div v-if="imageTarget.heroImageUrl && !imageTarget.heroImageUrl.includes('default')" style="margin-bottom:1rem">
+          <img :src="imageTarget.heroImageUrl" style="width:100%;height:200px;object-fit:cover;border-radius:8px;border:0.5px solid var(--color-border-tertiary)" />
+        </div>
+        <div v-else style="height:100px;background:var(--color-background-secondary);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:13px;color:var(--color-text-secondary)">No cover image</div>
+
+        <div class="field" style="margin-bottom:1rem">
+          <label>Paste image URL</label>
+          <input v-model="imageUrl" type="text" placeholder="https://..." />
+        </div>
+
+        <div class="field" style="margin-bottom:1rem">
+          <label>Or regenerate with DALL-E 3</label>
+          <input v-model="imagePrompt" type="text" :placeholder="'A book cover for ' + imageTarget.title + '...'" />
+        </div>
+
+        <div class="modal-actions">
+          <button class="action-btn" @click="imageTarget = null">Cancel</button>
+          <button class="action-btn" :disabled="imageLoading || !imageUrl" @click="saveImageUrl">Save URL</button>
+          <button class="generate-btn" style="flex:1;padding:10px;font-size:14px;margin-top:0" :disabled="imageLoading" @click="regenerateImage">
+            {{ imageLoading ? 'Generating...' : 'Generate with DALL-E 3' }}
+          </button>
+        </div>
+        <p v-if="imageError" style="color:#A32D2D;font-size:12px;margin-top:8px">{{ imageError }}</p>
       </div>
     </div>
   </div>
@@ -226,6 +263,11 @@ export default {
       library: [],
       libraryLoading: false,
       deleteTarget: null,
+      imageTarget: null,
+      imageUrl: '',
+      imagePrompt: '',
+      imageLoading: false,
+      imageError: '',
       customTagInput: '',
       availableTags: [
         'Career', 'Personal Growth', 'Leadership', 'Relationships', 'Teamwork',
@@ -416,6 +458,48 @@ export default {
       } catch (err) { console.error('Toggle failed:', err) }
     },
     confirmDelete(a) { this.deleteTarget = a },
+    openImageManager(a) {
+      this.imageTarget = a
+      this.imageUrl = a.heroImageUrl || ''
+      this.imagePrompt = ''
+      this.imageError = ''
+    },
+    async saveImageUrl() {
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        this.imageLoading = true
+        const res = await this.$axios.patch(
+          '/api/admin/assessments/' + this.imageTarget._id + '/image',
+          { heroImageUrl: this.imageUrl },
+          { headers: { 'x-admin-secret': adminSecret } }
+        )
+        this.imageTarget.heroImageUrl = res.data.heroImageUrl
+        this.imageTarget = null
+      } catch (err) {
+        this.imageError = err.response?.data?.error || err.message
+      } finally {
+        this.imageLoading = false
+      }
+    },
+    async regenerateImage() {
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        this.imageLoading = true
+        this.imageError = ''
+        const res = await this.$axios.post(
+          '/api/admin/assessments/' + this.imageTarget._id + '/regenerate-image',
+          { prompt: this.imagePrompt },
+          { headers: { 'x-admin-secret': adminSecret }, timeout: 120000 }
+        )
+        this.imageTarget.heroImageUrl = res.data.heroImageUrl
+        this.imageUrl = res.data.heroImageUrl
+        this.imageError = ''
+      } catch (err) {
+        this.imageError = err.response?.data?.error || err.message
+      } finally {
+        this.imageLoading = false
+      }
+    },
     async deleteAssessment() {
       if (!this.deleteTarget) return
       const adminSecret = sessionStorage.getItem('tal_admin_secret')

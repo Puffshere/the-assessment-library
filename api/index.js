@@ -140,6 +140,8 @@ app.get('/admin/jobs/:jobId', adminAuth, adminController.getJobStatus);
 app.get('/admin/assessments', adminAuth, adminController.listAssessments);
 app.patch('/admin/assessments/:id/toggle', adminAuth, adminController.toggleAssessment);
 app.delete('/admin/assessments/:id', adminAuth, adminController.deleteAssessment);
+app.post('/admin/assessments/:id/regenerate-image', adminAuth, adminController.regenerateImage);
+app.patch('/admin/assessments/:id/image', adminAuth, adminController.updateAssessmentImage);
 
 app.use((req, res, next) => {
   res.status(404).json({

@@ -289,6 +289,7 @@ async function generateSingleAssessment(config, jobId) {
     heroImageUrl = await generateAndUploadImage(imagePrompt, config.slug);
   } catch (imgErr) {
     console.error('[adminController] Image generation failed:', imgErr.message);
+    console.error('[adminController] Image error details:', imgErr.response?.data || imgErr.stack);
   }
   const assessmentDoc = {
     slug: config.slug,
@@ -363,13 +364,13 @@ async function listAssessments(req, res) {
 
   try {
     const assessments = await Assessment.find({})
-      .select('slug title creditsCost isActive category estimatedCompletion wordsLength createdAt questions')
+      .select('slug title creditsCost isActive category estimatedCompletion wordsLength createdAt questions heroImageUrl')
       .sort({ createdAt: -1 });
     const list = assessments.map(a => ({
       _id: a._id, slug: a.slug, title: a.title, creditsCost: a.creditsCost,
       isActive: a.isActive, shelf: a.category?.shelf, subcategories: a.category?.subcategories,
       estimatedCompletion: a.estimatedCompletion, wordsLength: a.wordsLength,
-      questionCount: a.questions?.length || 0, createdAt: a.createdAt,
+      questionCount: a.questions?.length || 0, createdAt: a.createdAt, heroImageUrl: a.heroImageUrl,
     }));
     res.json({ assessments: list });
   } catch (err) {
@@ -400,4 +401,39 @@ async function deleteAssessment(req, res) {
   }
 }
 
-module.exports = { generateAssessments, getJobStatus, listAssessments, toggleAssessment, deleteAssessment };
+async function regenerateImage(req, res) {
+  const adminSecret = process.env.ADMIN_SECRET;
+  const token = req.headers['x-admin-secret'] || req.body?.adminSecret;
+  if (!token || token !== adminSecret) return res.status(401).json({ error: 'Unauthorized.' });
+
+  try {
+    const assessment = await Assessment.findById(req.params.id);
+    if (!assessment) return res.status(404).json({ error: 'Not found.' });
+
+    const prompt = req.body.prompt ||
+      'A beautiful illustrated book cover for a story called "' + assessment.title + '". ' +
+      (assessment.description || '') + ' Editorial illustration style, warm colors, professional.';
+
+    const heroImageUrl = await generateAndUploadImage(prompt, assessment.slug);
+    assessment.heroImageUrl = heroImageUrl;
+    await assessment.save();
+    res.json({ heroImageUrl });
+  } catch (err) {
+    console.error('[regenerateImage] Error:', err.message, err.response?.data);
+    res.status(500).json({ error: err.message });
+  }
+}
+
+async function updateAssessmentImage(req, res) {
+  try {
+    const assessment = await Assessment.findById(req.params.id);
+    if (!assessment) return res.status(404).json({ error: 'Not found.' });
+    assessment.heroImageUrl = req.body.heroImageUrl;
+    await assessment.save();
+    res.json({ heroImageUrl: assessment.heroImageUrl });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+}
+
+module.exports = { generateAssessments, getJobStatus, listAssessments, toggleAssessment, deleteAssessment, regenerateImage, updateAssessmentImage };
