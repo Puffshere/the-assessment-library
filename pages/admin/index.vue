@@ -294,26 +294,36 @@
         <p v-if="shelfError" style="color:#A32D2D;font-size:13px;margin-top:8px">{{ shelfError }}</p>
       </div>
 
-      <!-- Existing shelves -->
+      <!-- All shelves unified list -->
       <div class="card">
-        <div class="card-title">All custom shelves ({{ customShelves.length }})</div>
+        <div class="card-title">All shelves ({{ customShelves.length }})</div>
         <div v-if="shelvesLoading" class="loading-msg">Loading...</div>
-        <div v-else-if="customShelves.length === 0" class="loading-msg">No custom shelves yet.</div>
+        <div v-else-if="customShelves.length === 0" class="loading-msg">No shelves yet. Generate some assessments first to auto-create genre shelves.</div>
         <div v-else>
+          <div style="display:flex;gap:8px;margin-bottom:1rem;flex-wrap:wrap">
+            <span style="font-size:12px;padding:3px 10px;border-radius:20px;background:#EEEDFE;color:#3C3489;border:0.5px solid #7F77DD">Custom</span>
+            <span style="font-size:12px;padding:3px 10px;border-radius:20px;background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)">Genre (auto)</span>
+          </div>
           <div v-for="shelf in customShelves" :key="shelf._id" class="shelf-item" :class="{ archived: shelf.isArchived }">
             <div class="shelf-item-header">
-              <div>
-                <span class="shelf-item-name">{{ shelf.name }}</span>
-                <span class="shelf-item-meta">{{ shelf.section }} · {{ shelf.position }} · {{ shelf.assessments ? shelf.assessments.length : 0 }} assessments</span>
+              <div style="flex:1;min-width:0">
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px">
+                  <span class="shelf-item-name">{{ shelf.name }}</span>
+                  <span v-if="shelf.type === 'custom'" style="font-size:11px;padding:2px 8px;border-radius:20px;background:#EEEDFE;color:#3C3489;border:0.5px solid #7F77DD">Custom</span>
+                  <span v-else style="font-size:11px;padding:2px 8px;border-radius:20px;background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)">Genre</span>
+                  <span v-if="shelf.isArchived" class="status-pill inactive">Archived</span>
+                  <span v-else-if="shelf.isActive" class="status-pill active">Live</span>
+                  <span v-else class="status-pill inactive">Hidden</span>
+                </div>
+                <span class="shelf-item-meta">{{ shelf.section }}</span>
+                <span v-if="shelf.type === 'custom'" class="shelf-item-meta">· {{ shelf.position }} · {{ shelf.assessments ? shelf.assessments.length : 0 }} assessments</span>
+                <span v-else class="shelf-item-meta">· {{ shelf.assessments ? shelf.assessments.length : 0 }} assessments</span>
                 <span v-if="shelf.expiresAt" class="shelf-item-meta">· expires {{ formatExpiry(shelf.expiresAt) }}</span>
-                <span v-if="shelf.isArchived" class="status-pill inactive" style="margin-left:8px">Archived</span>
-                <span v-else-if="shelf.isActive" class="status-pill active" style="margin-left:8px">Live</span>
-                <span v-else class="status-pill inactive" style="margin-left:8px">Hidden</span>
               </div>
               <div class="actions">
                 <button class="action-btn" @click="toggleCustomShelf(shelf)">{{ shelf.isActive ? 'Hide' : 'Activate' }}</button>
                 <button class="action-btn" @click="toggleArchiveShelf(shelf)">{{ shelf.isArchived ? 'Restore' : 'Archive' }}</button>
-                <button class="action-btn danger" @click="deleteCustomShelf(shelf)">Delete</button>
+                <button v-if="shelf.type === 'custom'" class="action-btn danger" @click="deleteCustomShelf(shelf)">Delete</button>
               </div>
             </div>
             <div v-if="shelf.assessments && shelf.assessments.length" class="shelf-item-books">

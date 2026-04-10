@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const customShelfSchema = new mongoose.Schema({
   name: { type: String, required: true },
   section: { type: String, enum: ['Adult', 'Kids'], default: 'Adult' },
+  type: { type: String, enum: ['custom', 'genre'], default: 'custom' },
+  genre: { type: String, default: '' },
   isActive: { type: Boolean, default: true },
   isArchived: { type: Boolean, default: false },
   expiresAt: { type: Date, default: null },
