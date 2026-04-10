@@ -174,7 +174,7 @@ async function generateAndUploadImage(prompt, slug) {
     applicationKey: process.env.BACKBLAZE_APP_KEY,
   });
   await b2.authorize();
-  const uploadUrlResponse = await b2.getUploadUrl({ bucketId: '820e21a42cafaa2279bd0d14' });
+  const uploadUrlResponse = await b2.getUploadUrl({ bucketId: 'fc2a726ed9b77e6c9dd50b1d' });
   const fileName = 'assessments/' + slug + '-cover-' + Date.now() + '.jpg';
   await b2.uploadFile({
     uploadUrl: uploadUrlResponse.data.uploadUrl,
@@ -184,7 +184,7 @@ async function generateAndUploadImage(prompt, slug) {
     contentType: 'image/jpeg',
   });
   const downloadUrl = uploadUrlResponse.data.uploadUrl.split('/b2api')[0];
-  return 'https://f002.backblazeb2.com/file/theassessmentlibrary/' + fileName;
+  return 'https://f004.backblazeb2.com/file/library-assessments/' + fileName;
 }
 
 async function generateSingleAssessment(config) {

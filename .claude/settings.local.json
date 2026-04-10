@@ -35,7 +35,10 @@
       "Bash(grep -E \"\\\\.\\(vue\\)$\")",
       "Bash(find /c/Users/shawn/Projects/the-assessment-library/static -type d -name *image* -o -name *illustration*)",
       "Bash(find /c/Users/shawn/Projects/the-assessment-library -type f -name *character* -o -name *sidekick* -o -name *archie*)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(pm2 list:*)",
+      "Bash(npx pm2:*)",
+      "Bash(heroku:*)"
     ]
   }
 }
