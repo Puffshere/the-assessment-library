@@ -34,10 +34,15 @@
                         <div class="line"></div>
 
                         <div class="question-wrapper">
-                            <div v-if="isClient" v-html="questions[currentQuestion - 1].question"></div>
+                            <div v-if="isClient" v-html="visibleQuestionPage"></div>
+                            <div v-if="questionPages.length > 1" class="pagination-controls">
+                                <button v-if="questionPage > 0" class="page-btn" @click="questionPage--">← Back</button>
+                                <span class="page-indicator">{{ questionPage + 1 }} / {{ questionPages.length }}</span>
+                                <button v-if="questionPage < questionPages.length - 1" class="page-btn next-btn" @click="questionPage++">Continue reading →</button>
+                            </div>
                         </div>
 
-                        <div class="answers">
+                        <div v-if="questionPage === questionPages.length - 1" class="answers">
                             <button class="answerButtons"
                                 v-for="(answer, index) in questions[currentQuestion - 1].answers" :key="index"
                                 @click="selectAnswer(answer)">
@@ -354,10 +359,28 @@ export default {
             inviteNewEmail: '',
             inviteLoading: false,
             inviteError: '',
-            inviteSuccess: ''
+            inviteSuccess: '',
+            questionPage: 0,
         };
     },
     computed: {
+        questionPages() {
+            if (!this.isClient) return [''];
+            const q = this.questions[this.currentQuestion - 1];
+            if (!q || !q.question) return [''];
+            const div = document.createElement('div');
+            div.innerHTML = q.question;
+            const paragraphs = Array.from(div.querySelectorAll('p'));
+            if (paragraphs.length <= 4) return [q.question];
+            const pages = [];
+            for (let i = 0; i < paragraphs.length; i += 4) {
+                pages.push(paragraphs.slice(i, i + 4).map(p => p.outerHTML).join(''));
+            }
+            return pages;
+        },
+        visibleQuestionPage() {
+            return this.questionPages[this.questionPage] || '';
+        },
         kidsViewActive() {
             return this.$store.state.kidsViewActive;
         },
@@ -610,6 +633,7 @@ export default {
 
             this.selectedAnswers.push(value);
             this.currentQuestion = nextQuestion;
+            this.questionPage = 0;
 
             // Guest mode: track in memory, save on completion via guest-complete endpoint
             if (this.isGuest) {
@@ -912,7 +936,7 @@ export default {
             position: relative;
             background: #fff;
             z-index: 2;
-            min-height: 585px;
+            min-height: 100vh;
             padding: 0 20px 60px;
             margin-left: 360px;
             box-sizing: border-box;
@@ -1622,5 +1646,42 @@ export default {
             flex-direction: column;
         }
     }
+}
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    flex-wrap: wrap;
+}
+.page-btn {
+    background: transparent;
+    border: 1.5px solid #213c85;
+    color: #213c85;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: none;
+    transition: all 0.15s;
+    width: auto;
+    height: auto;
+    line-height: 1.4;
+}
+.page-btn:hover {
+    background: #213c85;
+    color: #fff;
+    transform: none;
+}
+.next-btn {
+    margin-left: auto;
+}
+.page-indicator {
+    font-size: 13px;
+    color: #999;
 }
 </style>
