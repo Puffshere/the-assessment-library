@@ -217,20 +217,23 @@ async function generateSingleAssessment(config, jobId) {
   );
 
   await new Promise((resolve, reject) => {
+    let buffer = '';
     claudeResponse.data.on('data', (chunk) => {
-      const lines = chunk.toString().split('\n').filter(l => l.trim());
+      buffer += chunk.toString();
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
       for (const line of lines) {
-        if (line.startsWith('data: ')) {
-          const data = line.slice(6).trim();
-          if (data === '[DONE]') return;
-          try {
-            const parsed = JSON.parse(data);
-            if (parsed.type === 'content_block_delta' && parsed.delta?.text) {
-              rawText += parsed.delta.text;
-              jobs[jobId].progress = 'Claude writing... (' + rawText.length + ' chars so far)';
-            }
-          } catch (e) {}
-        }
+        const trimmed = line.trim();
+        if (!trimmed.startsWith('data: ')) continue;
+        const data = trimmed.slice(6).trim();
+        if (data === '[DONE]') continue;
+        try {
+          const parsed = JSON.parse(data);
+          if (parsed.type === 'content_block_delta' && parsed.delta?.text) {
+            rawText += parsed.delta.text;
+            if (jobId) jobs[jobId].progress = 'Claude writing... (' + rawText.length + ' chars so far)';
+          }
+        } catch (e) {}
       }
     });
     claudeResponse.data.on('end', resolve);
