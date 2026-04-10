@@ -244,17 +244,101 @@ async function generateSingleAssessment(config, jobId) {
     claudeResponse.data.on('error', reject);
   });
   let storyData;
-  try {
-    const cleaned = rawText
+
+  const parseClaudeResponse = (text) => {
+    const cleaned = text
       .replace(/^```json\s*/i, '')
       .replace(/^```\s*/i, '')
       .replace(/\s*```$/i, '')
       .trim();
-    storyData = JSON.parse(cleaned);
-  } catch (e) {
-    const match = rawText.match(/\{[\s\S]*\}/);
-    if (!match) throw new Error('Claude did not return valid JSON. Raw: ' + rawText.slice(0, 200));
-    storyData = JSON.parse(match[0]);
+    try {
+      return JSON.parse(cleaned);
+    } catch(e) {
+      const match = text.match(/\{[\s\S]*\}/);
+      if (match) return JSON.parse(match[0]);
+      throw new Error('No valid JSON found in response');
+    }
+  };
+
+  const validateStoryData = (data, nodeMap) => {
+    if (!data.questions || !Array.isArray(data.questions)) throw new Error('Missing questions array');
+    if (!data.conclusionNode) throw new Error('Missing conclusionNode');
+    if (!data.conclusionNode.dominanceConclusion) throw new Error('Missing dominanceConclusion');
+    if (!data.conclusionNode.influenceConclusion) throw new Error('Missing influenceConclusion');
+    if (!data.conclusionNode.steadinessConclusion) throw new Error('Missing steadinessConclusion');
+    if (!data.conclusionNode.conscientiousnessConclusion) throw new Error('Missing conscientiousnessConclusion');
+    const expectedQuestions = nodeMap.filter(n => n.type !== 'conclusion').length;
+    if (data.questions.length < expectedQuestions * 0.8) {
+      throw new Error('Too few questions: got ' + data.questions.length + ', expected ~' + expectedQuestions);
+    }
+    for (let i = 0; i < data.questions.length; i++) {
+      const q = data.questions[i];
+      if (!q.chapter) throw new Error('Question ' + (i+1) + ' missing chapter field');
+      if (!q.answers || q.answers.length !== 4) throw new Error('Question ' + (i+1) + ' must have exactly 4 answers');
+    }
+    return true;
+  };
+
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      if (attempt > 1) {
+        if (jobId) jobs[jobId].progress = 'Attempt ' + attempt + '/3 — retrying Claude generation...';
+        const retryResponse = await axios.post(
+          'https://api.anthropic.com/v1/messages',
+          {
+            model: 'claude-opus-4-6',
+            max_tokens: 32000,
+            stream: true,
+            messages: [
+              { role: 'user', content: claudePrompt },
+              { role: 'assistant', content: 'I will generate the complete assessment JSON now:\n\n{' },
+            ],
+          },
+          {
+            headers: {
+              'x-api-key': process.env.ANTHROPIC_API_KEY,
+              'anthropic-version': '2023-06-01',
+              'content-type': 'application/json',
+            },
+            responseType: 'stream',
+            timeout: 0,
+          }
+        );
+        rawText = '{';
+        await new Promise((resolve, reject) => {
+          let buffer = '';
+          retryResponse.data.on('data', (chunk) => {
+            buffer += chunk.toString();
+            const lines = buffer.split('\n');
+            buffer = lines.pop();
+            for (const line of lines) {
+              const trimmed = line.trim();
+              if (!trimmed.startsWith('data: ')) continue;
+              const data = trimmed.slice(6).trim();
+              if (data === '[DONE]') continue;
+              try {
+                const parsed = JSON.parse(data);
+                if (parsed.type === 'content_block_delta' && parsed.delta?.text) {
+                  rawText += parsed.delta.text;
+                  if (jobId) jobs[jobId].progress = 'Attempt ' + attempt + ' — Claude writing... (' + rawText.length + ' chars)';
+                }
+              } catch(e) {}
+            }
+          });
+          retryResponse.data.on('end', resolve);
+          retryResponse.data.on('error', reject);
+        });
+      }
+
+      storyData = parseClaudeResponse(rawText);
+      validateStoryData(storyData, nodeMap);
+      break;
+    } catch(err) {
+      lastError = err;
+      console.error('[adminController] Attempt ' + attempt + ' failed:', err.message);
+      if (attempt === 3) throw new Error('Generation failed after 3 attempts. Last error: ' + lastError.message);
+    }
   }
   const processedQuestions = storyData.questions.map((q, i) => {
     const node = nodeMap[i];
