@@ -826,6 +826,9 @@ export default {
     gap: 12px;
     padding: 14px 24px 20px;
     justify-content: center;
+    background: linear-gradient(135deg, #12304d 0%, #1a4a70 50%, #12304d 100%);
+    border-radius: 0 0 20px 20px;
+    margin-top: 8px;
 }
 .featured-btn-primary {
     background: #12304d;
@@ -848,8 +851,8 @@ export default {
 .featured-btn-primary:hover { background: #1a4a70; }
 .featured-btn-ghost {
     background: transparent;
-    color: #666;
-    border: 1.5px solid #ddd;
+    color: rgba(255,255,255,0.7);
+    border: 1.5px solid rgba(255,255,255,0.3);
     border-radius: 8px;
     padding: 0 36px;
     height: 44px;
@@ -864,5 +867,5 @@ export default {
     justify-content: center;
     line-height: 1;
 }
-.featured-btn-ghost:hover { background: #f5f5f5; color: #333; }
+.featured-btn-ghost:hover { background: rgba(255,255,255,0.1); color: #fff; }
 </style>
