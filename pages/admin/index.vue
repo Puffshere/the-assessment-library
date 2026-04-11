@@ -191,10 +191,19 @@
                   <span v-else style="font-size:11px;color:var(--color-text-tertiary)">No image</span>
                 </div>
               </td>
-              <td>{{ a.shelf }}</td>
-              <td>{{ a.creditsCost }}</td>
+              <td>
+                <select class="inline-select" :value="a.shelf" @change="inlineUpdate(a, 'shelf', $event.target.value)">
+                  <option value="Adult">Adult</option>
+                  <option value="Kids">Kids</option>
+                </select>
+              </td>
+              <td>
+                <input class="inline-input" type="number" min="0" :value="a.creditsCost" @change="inlineUpdate(a, 'creditsCost', Number($event.target.value))" />
+              </td>
               <td>{{ a.questionCount }}</td>
-              <td>{{ a.estimatedCompletion }} min</td>
+              <td>
+                <input class="inline-input" type="number" min="1" :value="a.estimatedCompletion" @change="inlineUpdate(a, 'estimatedCompletion', Number($event.target.value))" style="width:50px" /> min
+              </td>
               <td><span class="status-pill" :class="a.isActive ? 'active' : 'inactive'">{{ a.isActive ? 'Active' : 'Hidden' }}</span></td>
               <td class="actions" style="min-width:200px">
                 <button class="action-btn" @click="toggleAssessment(a)">{{ a.isActive ? 'Hide' : 'Activate' }}</button>
@@ -338,37 +347,90 @@
         <div v-if="shelvesLoading" class="loading-msg">Loading...</div>
         <div v-else-if="customShelves.length === 0" class="loading-msg">No shelves yet. Generate some assessments first to auto-create genre shelves.</div>
         <div v-else>
-          <div style="display:flex;gap:8px;margin-bottom:1rem;flex-wrap:wrap">
+          <div style="display:flex;gap:8px;margin-bottom:1rem;flex-wrap:wrap;align-items:center">
             <span style="font-size:12px;padding:3px 10px;border-radius:20px;background:#EEEDFE;color:#3C3489;border:0.5px solid #7F77DD">Custom</span>
             <span style="font-size:12px;padding:3px 10px;border-radius:20px;background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)">Genre (auto)</span>
+            <span style="font-size:11px;color:var(--color-text-tertiary);margin-left:auto">Drag to reorder</span>
           </div>
-          <div v-for="shelf in customShelves" :key="shelf._id" class="shelf-item" :class="{ archived: shelf.isArchived }">
-            <div class="shelf-item-header">
-              <div style="flex:1;min-width:0">
-                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px">
-                  <span class="shelf-item-name">{{ shelf.name }}</span>
-                  <span v-if="shelf.type === 'custom'" style="font-size:11px;padding:2px 8px;border-radius:20px;background:#EEEDFE;color:#3C3489;border:0.5px solid #7F77DD">Custom</span>
-                  <span v-else style="font-size:11px;padding:2px 8px;border-radius:20px;background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)">Genre</span>
-                  <span v-if="shelf.isArchived" class="status-pill inactive">Archived</span>
-                  <span v-else-if="shelf.isActive" class="status-pill active">Live</span>
-                  <span v-else class="status-pill inactive">Hidden</span>
+
+          <!-- ADULT SHELVES -->
+          <div v-if="adultShelvesAdmin.length" style="margin-bottom:1.5rem">
+            <div style="font-size:12px;font-weight:600;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px">Adult shelves</div>
+            <div class="drag-list" @dragover.prevent @drop="onDrop('Adult')">
+              <div v-for="(shelf, idx) in adultShelvesAdmin" :key="shelf._id"
+                class="shelf-item" :class="{ archived: shelf.isArchived, 'drag-over': dragOverId === shelf._id }"
+                draggable="true"
+                @dragstart="onDragStart(shelf, idx, 'Adult')"
+                @dragenter.prevent="onDragEnter(shelf)"
+                @dragleave="onDragLeave(shelf)"
+                @dragend="onDragEnd">
+                <div class="shelf-item-header">
+                  <div class="drag-handle" title="Drag to reorder">⠿</div>
+                  <div style="flex:1;min-width:0">
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px">
+                      <span class="shelf-item-name">{{ shelf.name }}</span>
+                      <span v-if="shelf.type === 'custom'" style="font-size:11px;padding:2px 8px;border-radius:20px;background:#EEEDFE;color:#3C3489;border:0.5px solid #7F77DD">Custom</span>
+                      <span v-else style="font-size:11px;padding:2px 8px;border-radius:20px;background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)">Genre</span>
+                      <span v-if="shelf.isArchived" class="status-pill inactive">Archived</span>
+                      <span v-else-if="shelf.isActive" class="status-pill active">Live</span>
+                      <span v-else class="status-pill inactive">Hidden</span>
+                    </div>
+                    <span class="shelf-item-meta">{{ shelf.assessments ? shelf.assessments.length : 0 }} assessments</span>
+                    <span v-if="shelf.expiresAt" class="shelf-item-meta">· expires {{ formatExpiry(shelf.expiresAt) }}</span>
+                  </div>
+                  <div class="actions">
+                    <button class="action-btn" @click="toggleCustomShelf(shelf)">{{ shelf.isActive ? 'Hide' : 'Activate' }}</button>
+                    <button class="action-btn" @click="toggleArchiveShelf(shelf)">{{ shelf.isArchived ? 'Restore' : 'Archive' }}</button>
+                    <button v-if="shelf.type === 'custom'" class="action-btn" @click="editShelf(shelf)">Edit</button>
+                    <button v-if="shelf.type === 'custom'" class="action-btn danger" @click="deleteCustomShelf(shelf)">Delete</button>
+                  </div>
                 </div>
-                <span class="shelf-item-meta">{{ shelf.section }}</span>
-                <span v-if="shelf.type === 'custom'" class="shelf-item-meta">· {{ shelf.position }} · {{ shelf.assessments ? shelf.assessments.length : 0 }} assessments</span>
-                <span v-else class="shelf-item-meta">· {{ shelf.assessments ? shelf.assessments.length : 0 }} assessments</span>
-                <span v-if="shelf.expiresAt" class="shelf-item-meta">· expires {{ formatExpiry(shelf.expiresAt) }}</span>
+                <div v-if="shelf.assessments && shelf.assessments.length" class="shelf-item-books">
+                  <span v-for="a in shelf.assessments" :key="a._id" class="shelf-book-tag">{{ a.title }}</span>
+                </div>
               </div>
-              <div class="actions">
-                <button class="action-btn" @click="toggleCustomShelf(shelf)">{{ shelf.isActive ? 'Hide' : 'Activate' }}</button>
-                <button class="action-btn" @click="toggleArchiveShelf(shelf)">{{ shelf.isArchived ? 'Restore' : 'Archive' }}</button>
-                <button v-if="shelf.type === 'custom'" class="action-btn" @click="editShelf(shelf)">Edit</button>
-                <button v-if="shelf.type === 'custom'" class="action-btn danger" @click="deleteCustomShelf(shelf)">Delete</button>
-              </div>
-            </div>
-            <div v-if="shelf.assessments && shelf.assessments.length" class="shelf-item-books">
-              <span v-for="a in shelf.assessments" :key="a._id" class="shelf-book-tag">{{ a.title }}</span>
             </div>
           </div>
+
+          <!-- KIDS SHELVES -->
+          <div v-if="kidsShelvesAdmin.length">
+            <div style="font-size:12px;font-weight:600;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px">Kids shelves</div>
+            <div class="drag-list" @dragover.prevent @drop="onDrop('Kids')">
+              <div v-for="(shelf, idx) in kidsShelvesAdmin" :key="shelf._id"
+                class="shelf-item" :class="{ archived: shelf.isArchived, 'drag-over': dragOverId === shelf._id }"
+                draggable="true"
+                @dragstart="onDragStart(shelf, idx, 'Kids')"
+                @dragenter.prevent="onDragEnter(shelf)"
+                @dragleave="onDragLeave(shelf)"
+                @dragend="onDragEnd">
+                <div class="shelf-item-header">
+                  <div class="drag-handle" title="Drag to reorder">⠿</div>
+                  <div style="flex:1;min-width:0">
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px">
+                      <span class="shelf-item-name">{{ shelf.name }}</span>
+                      <span v-if="shelf.type === 'custom'" style="font-size:11px;padding:2px 8px;border-radius:20px;background:#EEEDFE;color:#3C3489;border:0.5px solid #7F77DD">Custom</span>
+                      <span v-else style="font-size:11px;padding:2px 8px;border-radius:20px;background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)">Genre</span>
+                      <span v-if="shelf.isArchived" class="status-pill inactive">Archived</span>
+                      <span v-else-if="shelf.isActive" class="status-pill active">Live</span>
+                      <span v-else class="status-pill inactive">Hidden</span>
+                    </div>
+                    <span class="shelf-item-meta">{{ shelf.assessments ? shelf.assessments.length : 0 }} assessments</span>
+                    <span v-if="shelf.expiresAt" class="shelf-item-meta">· expires {{ formatExpiry(shelf.expiresAt) }}</span>
+                  </div>
+                  <div class="actions">
+                    <button class="action-btn" @click="toggleCustomShelf(shelf)">{{ shelf.isActive ? 'Hide' : 'Activate' }}</button>
+                    <button class="action-btn" @click="toggleArchiveShelf(shelf)">{{ shelf.isArchived ? 'Restore' : 'Archive' }}</button>
+                    <button v-if="shelf.type === 'custom'" class="action-btn" @click="editShelf(shelf)">Edit</button>
+                    <button v-if="shelf.type === 'custom'" class="action-btn danger" @click="deleteCustomShelf(shelf)">Delete</button>
+                  </div>
+                </div>
+                <div v-if="shelf.assessments && shelf.assessments.length" class="shelf-item-books">
+                  <span v-for="a in shelf.assessments" :key="a._id" class="shelf-book-tag">{{ a.title }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -458,6 +520,9 @@ export default {
       shelfSaving: false,
       shelfError: '',
       editingShelf: null,
+      dragShelf: null,
+      dragSection: null,
+      dragOverId: null,
       featured: { isActive: false, title: 'New Releases', message: '', assessmentIds: [] },
       featuredSaving: false,
       featuredError: '',
@@ -505,6 +570,12 @@ export default {
     }
   },
   computed: {
+    adultShelvesAdmin() {
+      return this.customShelves.filter(s => s.section === 'Adult').sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
+    },
+    kidsShelvesAdmin() {
+      return this.customShelves.filter(s => s.section === 'Kids').sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
+    },
     estMinutes() {
       return Math.max(1, Math.round((this.form.wordCount || 5200) / 200))
     },
@@ -651,6 +722,17 @@ export default {
       }
       await poll()
     },
+    async inlineUpdate(a, field, value) {
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        await this.$axios.patch('/api/admin/assessments/' + a._id, { [field]: value }, { headers: { 'x-admin-secret': adminSecret } })
+        a[field] = value
+        if (field === 'shelf') a.shelf = value
+      } catch (err) {
+        console.error('Inline update failed:', err)
+        alert('Failed to update: ' + (err.response?.data?.error || err.message))
+      }
+    },
     async loadLibrary() {
       this.libraryLoading = true
       const adminSecret = sessionStorage.getItem('tal_admin_secret')
@@ -713,6 +795,43 @@ export default {
       } finally {
         this.featuredSaving = false
       }
+    },
+    onDragStart(shelf, idx, section) {
+      this.dragShelf = shelf
+      this.dragSection = section
+    },
+    onDragEnter(shelf) {
+      if (this.dragShelf && shelf._id !== this.dragShelf._id) {
+        this.dragOverId = shelf._id
+      }
+    },
+    onDragLeave(shelf) {
+      if (this.dragOverId === shelf._id) this.dragOverId = null
+    },
+    onDragEnd() {
+      this.dragShelf = null
+      this.dragSection = null
+      this.dragOverId = null
+    },
+    async onDrop(section) {
+      if (!this.dragShelf || this.dragSection !== section) { this.onDragEnd(); return }
+      const list = section === 'Adult' ? this.adultShelvesAdmin : this.kidsShelvesAdmin
+      const fromIdx = list.findIndex(s => s._id === this.dragShelf._id)
+      const toIdx = list.findIndex(s => s._id === this.dragOverId)
+      if (fromIdx === -1 || toIdx === -1 || fromIdx === toIdx) { this.onDragEnd(); return }
+      const ids = list.map(s => s._id)
+      const [moved] = ids.splice(fromIdx, 1)
+      ids.splice(toIdx, 0, moved)
+      const order = ids.map((id, i) => ({ id, sortOrder: i }))
+      order.forEach(o => {
+        const s = this.customShelves.find(sh => sh._id === o.id)
+        if (s) s.sortOrder = o.sortOrder
+      })
+      this.onDragEnd()
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        await this.$axios.patch('/api/admin/shelves-reorder', { order }, { headers: { 'x-admin-secret': adminSecret } })
+      } catch(err) { console.error('Reorder failed:', err) }
     },
     editShelf(shelf) {
       this.editingShelf = shelf
@@ -922,6 +1041,10 @@ textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
 .lib-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .lib-table th { text-align: left; padding: 8px 10px; font-weight: 500; border-bottom: 0.5px solid var(--color-border-secondary, rgba(0,0,0,0.2)); color: var(--color-text-secondary, #666); }
 .lib-table td { padding: 10px; border-bottom: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,0.08)); vertical-align: middle; }
+.inline-input { width: 60px; padding: 4px 6px; border: 0.5px solid var(--color-border-tertiary); border-radius: 6px; font-size: 13px; font-family: inherit; text-align: center; background: transparent; transition: border-color 0.15s; }
+.inline-input:focus { border-color: #534AB7; outline: none; }
+.inline-select { padding: 4px 6px; border: 0.5px solid var(--color-border-tertiary); border-radius: 6px; font-size: 13px; font-family: inherit; background: transparent; cursor: pointer; transition: border-color 0.15s; }
+.inline-select:focus { border-color: #534AB7; outline: none; }
 .status-pill { padding: 3px 8px; border-radius: 20px; font-size: 11px; font-weight: 500; }
 .status-pill.active { background: #EAF3DE; color: #27500A; border: 0.5px solid #639922; }
 .status-pill.inactive { background: var(--color-background-secondary, #f0f0f0); color: var(--color-text-secondary, #666); border: 0.5px solid var(--color-border-tertiary); }
@@ -976,9 +1099,25 @@ textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 10px;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  cursor: grab;
+  background: #fff;
 }
+.shelf-item:active { cursor: grabbing; }
 .shelf-item.archived { opacity: 0.5; }
+.shelf-item.drag-over { border-color: #534AB7; box-shadow: 0 0 0 2px rgba(83,74,183,0.2); }
+.drag-handle {
+  font-size: 18px;
+  color: var(--color-text-tertiary);
+  cursor: grab;
+  user-select: none;
+  padding: 0 8px 0 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+.drag-handle:active { cursor: grabbing; }
+.drag-list { min-height: 20px; }
 .shelf-item-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
 .shelf-item-name { font-size: 15px; font-weight: 500; display: block; margin-bottom: 4px; }
 .shelf-item-meta { font-size: 12px; color: var(--color-text-secondary); margin-right: 4px; }

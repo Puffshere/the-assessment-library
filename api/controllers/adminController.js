@@ -450,13 +450,13 @@ async function listAssessments(req, res) {
 
   try {
     const assessments = await Assessment.find({})
-      .select('slug title creditsCost isActive category estimatedCompletion wordsLength createdAt questions heroImageUrl')
+      .select('slug title creditsCost isActive category estimatedCompletion wordsLength createdAt questions heroImageUrl genre description')
       .sort({ createdAt: -1 });
     const list = assessments.map(a => ({
       _id: a._id, slug: a.slug, title: a.title, creditsCost: a.creditsCost,
       isActive: a.isActive, shelf: a.category?.shelf, subcategories: a.category?.subcategories,
       estimatedCompletion: a.estimatedCompletion, wordsLength: a.wordsLength,
-      questionCount: a.questions?.length || 0, createdAt: a.createdAt, heroImageUrl: a.heroImageUrl,
+      questionCount: a.questions?.length || 0, createdAt: a.createdAt, heroImageUrl: a.heroImageUrl, genre: a.genre || '', description: a.description || '',
     }));
     res.json({ assessments: list });
   } catch (err) {
@@ -481,6 +481,25 @@ async function deleteAssessment(req, res) {
 
   try {
     await Assessment.findByIdAndDelete(req.params.id);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+}
+
+async function updateAssessment(req, res) {
+  try {
+    const assessment = await Assessment.findById(req.params.id);
+    if (!assessment) return res.status(404).json({ error: 'Not found.' });
+    const allowed = ['creditsCost', 'estimatedCompletion', 'wordsLength', 'title', 'description', 'genre'];
+    for (const key of allowed) {
+      if (req.body[key] !== undefined) assessment[key] = req.body[key];
+    }
+    if (req.body.shelf !== undefined && assessment.category) {
+      assessment.category.shelf = req.body.shelf;
+      assessment.markModified('category');
+    }
+    await assessment.save();
     res.json({ success: true });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -522,4 +541,4 @@ async function updateAssessmentImage(req, res) {
   }
 }
 
-module.exports = { generateAssessments, getJobStatus, listAssessments, toggleAssessment, deleteAssessment, regenerateImage, updateAssessmentImage };
+module.exports = { generateAssessments, getJobStatus, listAssessments, toggleAssessment, deleteAssessment, updateAssessment, regenerateImage, updateAssessmentImage };

@@ -29,6 +29,7 @@
                             <!-- ADULT SECTION HEADER - outside container -->
                             <div v-if="!kidsViewActive && allAdultShelves.length" class="section-shelf-wrap">
                                 <div class="shelf section-shelf">
+                                    <div class="section-shelf-shimmer"></div>
                                     <span class="section-divider-label">Adult</span>
                                 </div>
                             </div>
@@ -69,6 +70,7 @@
                             <!-- KIDS SECTION HEADER - outside container -->
                             <div v-if="allKidsShelves.length" class="section-shelf-wrap">
                                 <div class="shelf section-shelf">
+                                    <div class="section-shelf-shimmer"></div>
                                     <span class="section-divider-label">Kids</span>
                                 </div>
                             </div>
@@ -253,12 +255,7 @@ export default {
                 !s.isArchived &&
                 (!s.expiresAt || new Date(s.expiresAt) > now) &&
                 s.assessments && s.assessments.length > 0
-            ).sort((a, b) => {
-                if (a.type === 'custom' && a.position === 'top') return -1;
-                if (b.type === 'custom' && b.position === 'top') return 1;
-                if (a.type === 'genre' && b.type === 'genre') return a.name.localeCompare(b.name);
-                return 0;
-            });
+            ).sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
         },
         allKidsShelves() {
             const now = new Date();
@@ -268,12 +265,7 @@ export default {
                 !s.isArchived &&
                 (!s.expiresAt || new Date(s.expiresAt) > now) &&
                 s.assessments && s.assessments.length > 0
-            ).sort((a, b) => {
-                if (a.type === 'custom' && a.position === 'top') return -1;
-                if (b.type === 'custom' && b.position === 'top') return 1;
-                if (a.type === 'genre' && b.type === 'genre') return a.name.localeCompare(b.name);
-                return 0;
-            });
+            ).sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
         }
     },
     watch: {
@@ -1163,8 +1155,7 @@ export default {
     overflow: hidden !important;
 }
 
-.section-shelf::before {
-    content: '';
+.section-shelf-shimmer {
     position: absolute;
     inset: 0;
     background: linear-gradient(

@@ -31,7 +31,7 @@ async function syncGenreShelves() {
 async function listShelves(req, res) {
   try {
     await syncGenreShelves();
-    const shelves = await CustomShelf.find({}).sort({ type: 1, createdAt: -1 });
+    const shelves = await CustomShelf.find({}).sort({ section: 1, sortOrder: 1, createdAt: -1 });
     const populated = await Promise.all(shelves.map(async s => {
       let assessments = [];
       if (s.type === 'genre') {
@@ -106,7 +106,7 @@ async function getPublicShelves(req, res) {
       isActive: true,
       isArchived: false,
       $or: [{ expiresAt: null }, { expiresAt: { $gt: now } }]
-    }).sort({ type: 1, createdAt: -1 });
+    }).sort({ section: 1, sortOrder: 1, createdAt: -1 });
 
     const populated = await Promise.all(shelves.map(async s => {
       let assessments = [];
@@ -129,4 +129,15 @@ async function getPublicShelves(req, res) {
   } catch(err) { res.status(500).json({ error: err.message }); }
 }
 
-module.exports = { listShelves, createShelf, updateShelf, toggleShelf, archiveShelf, deleteShelf, getPublicShelves };
+async function reorderShelves(req, res) {
+  try {
+    const { order } = req.body;
+    if (!Array.isArray(order)) return res.status(400).json({ error: 'order must be an array of { id, sortOrder }' });
+    await Promise.all(order.map(item =>
+      CustomShelf.findByIdAndUpdate(item.id, { sortOrder: item.sortOrder })
+    ));
+    res.json({ success: true });
+  } catch(err) { res.status(500).json({ error: err.message }); }
+}
+
+module.exports = { listShelves, createShelf, updateShelf, toggleShelf, archiveShelf, deleteShelf, getPublicShelves, reorderShelves };

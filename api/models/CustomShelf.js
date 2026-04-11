@@ -10,5 +10,6 @@ const customShelfSchema = new mongoose.Schema({
   expiresAt: { type: Date, default: null },
   assessmentIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Assessment' }],
   position: { type: String, enum: ['top', 'bottom'], default: 'top' },
+  sortOrder: { type: Number, default: 0 },
 }, { timestamps: true });
 module.exports = mongoose.model('CustomShelf', customShelfSchema);

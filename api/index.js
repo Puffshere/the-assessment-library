@@ -140,6 +140,7 @@ app.post('/admin/verify', (req, res) => {
 app.post('/admin/generate', adminAuth, adminController.generateAssessments);
 app.get('/admin/jobs/:jobId', adminAuth, adminController.getJobStatus);
 app.get('/admin/assessments', adminAuth, adminController.listAssessments);
+app.patch('/admin/assessments/:id', adminAuth, adminController.updateAssessment);
 app.patch('/admin/assessments/:id/toggle', adminAuth, adminController.toggleAssessment);
 app.delete('/admin/assessments/:id', adminAuth, adminController.deleteAssessment);
 app.post('/admin/assessments/:id/regenerate-image', adminAuth, adminController.regenerateImage);
@@ -147,6 +148,7 @@ app.patch('/admin/assessments/:id/image', adminAuth, adminController.updateAsses
 
 app.get('/shelves', customShelfController.getPublicShelves);
 app.get('/admin/shelves', adminAuth, customShelfController.listShelves);
+app.patch('/admin/shelves-reorder', adminAuth, customShelfController.reorderShelves);
 app.post('/admin/shelves', adminAuth, customShelfController.createShelf);
 app.patch('/admin/shelves/:id', adminAuth, customShelfController.updateShelf);
 app.patch('/admin/shelves/:id/toggle', adminAuth, customShelfController.toggleShelf);
