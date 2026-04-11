@@ -68,30 +68,11 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/gtm',
-    '@nuxtjs/sitemap',
     '@nuxtjs/robots',
   ],
   robots: {
     UserAgent: '*',
-    Disallow: [
-      '/_nuxt/',
-      '/.well-known/'
-    ],
-    Sitemap: 'https://www.theassessmentlibrary.com/sitemap.xml'
-  },
-  sitemap: {
-    hostname: 'https://www.theassessmentlibrary.com',
-    gzip: true,
-    exclude: [
-      '/thank-you',
-      '/dashboard',
-      '/auth',
-      '/auth/login',
-      '/auth/registration',
-      '/kids',
-      '/kids/**',
-      '/thank-you-participant'
-    ]
+    Disallow: '/'
   },
   gtm: {
     id: 'GTM-NR3GL66',
