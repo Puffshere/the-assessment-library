@@ -38,6 +38,9 @@ module.exports = {
       { src: 'https://www.google.com/recaptcha/api.js?render=explicit', async: true, defer: true }
     ]
   },
+  css: [
+    '@/assets/scss/_header-shimmer.scss'
+  ],
   loading: { color: '#fff' },
   plugins: [
     {

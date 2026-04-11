@@ -51,6 +51,20 @@
         </div>
 
         <div class="overall-layout">
+          <!-- Recent 3rd person assessment cover -->
+          <div v-if="featuredThirdPersonAssessment" class="recent-cover" @click="openThirdPersonBreakdown" style="cursor:pointer">
+            <div class="recent-cover-img">
+              <img v-if="featuredThirdPersonAssessment.heroImageUrl && !featuredThirdPersonAssessment.heroImageUrl.includes('default-cover')"
+                :src="featuredThirdPersonAssessment.heroImageUrl"
+                :alt="featuredThirdPersonAssessment.assessmentTitle" />
+              <div v-else class="recent-cover-placeholder">
+                <span>{{ featuredThirdPersonAssessment.assessmentTitle }}</span>
+              </div>
+            </div>
+            <p class="recent-cover-title">{{ featuredThirdPersonAssessment.assessmentTitle }}</p>
+            <p class="recent-cover-label">Last completed</p>
+          </div>
+
           <div v-if="thirdPersonAggregateBreakdown" class="overall-chart">
             <div class="chart">
               <div class="bar" :style="{ height: aggD + '%', backgroundColor: '#f44336' }"
@@ -233,6 +247,18 @@
     </div>
   </div>
 
+  <!-- 3RD PERSON CONCLUSION MODAL -->
+  <div v-if="showBreakdownModal" class="conclusion-modal-backdrop" @click.self="closeBreakdownModal()">
+    <div class="conclusion-modal">
+      <button class="modal-x-close" @click="closeBreakdownModal()" aria-label="Close">&times;</button>
+      <h3 class="conclusion-modal-title">Conclusion</h3>
+      <p v-if="breakdownTimeline" style="font-weight: 700;" class="chapter" v-html="breakdownTimeline"></p>
+      <div class="line" :class="'line-' + breakdownTopTrait"></div>
+      <div v-if="breakdownConclusionHtml" v-html="breakdownConclusionHtml"></div>
+      <p v-else class="loading-conclusion">Loading conclusion...</p>
+    </div>
+  </div>
+
   <!-- INVITE MODAL — outside panel to avoid stacking context issues -->
   <div v-if="inviteTarget" class="modal-backdrop" @click.self="closeInvite">
     <div class="invite-modal">
@@ -343,6 +369,10 @@ export default {
     viewingChildName: {
       type: String,
       default: ''
+    },
+    thirdPersonSessions: {
+      type: Array,
+      default: () => []
     }
   },
   data() {
@@ -360,7 +390,11 @@ export default {
       inviteSlug: '',
       inviteLoading: false,
       inviteError: null,
-      showReportModal: false
+      showReportModal: false,
+      showBreakdownModal: false,
+      breakdownTopTrait: '',
+      breakdownTimeline: '',
+      breakdownConclusionHtml: ''
     }
   },
   computed: {
@@ -438,6 +472,21 @@ export default {
       if (!entries.length) return null
       entries.sort((a, b) => b[1] - a[1])
       return entries[0][0]
+    },
+    featuredThirdPersonAssessment() {
+      // Use completedInvitations (assessments others completed ABOUT this user)
+      const invitations = this.completedInvitations
+      if (!invitations.length) return null
+      // Pick the most recent completed invitation
+      const latest = invitations[0]
+      // Look up heroImageUrl from 1st-person sessions or 3rd-person sessions by slug
+      const allSessions = [...(this.sessions || []), ...(this.thirdPersonSessions || [])]
+      const match = allSessions.find(s => s.assessmentSlug === latest.assessmentSlug && s.heroImageUrl)
+      return {
+        assessmentTitle: latest.assessmentTitle || '',
+        assessmentSlug: latest.assessmentSlug || '',
+        heroImageUrl: match ? match.heroImageUrl : ''
+      }
     },
     thirdPersonConfidence() {
       const count = this.completedInvitations.length
@@ -594,6 +643,46 @@ export default {
     },
     traitColor(trait) {
       return TRAIT_COLORS[trait] || '#143180'
+    },
+    closeBreakdownModal() {
+      this.showBreakdownModal = false
+      if (process.client) document.body.style.overflow = ''
+    },
+    async openThirdPersonBreakdown() {
+      const feat = this.featuredThirdPersonAssessment
+      if (!feat) return
+      this.pickAssessmentFilter(feat.assessmentSlug)
+      // Determine the dominant trait from the 3rd person aggregate for this assessment
+      const b = this.thirdPersonAggregateBreakdown
+      if (b) {
+        const entries = Object.entries(b).filter(([t]) => ['D', 'I', 'S', 'C'].includes(t))
+        entries.sort((a, b) => b[1] - a[1])
+        this.breakdownTopTrait = entries[0] ? entries[0][0] : 'D'
+      } else {
+        this.breakdownTopTrait = 'D'
+      }
+      // Fetch the conclusion text from the assessment
+      this.breakdownTimeline = ''
+      this.breakdownConclusionHtml = ''
+      this.showBreakdownModal = true
+      if (process.client) document.body.style.overflow = 'hidden'
+      try {
+        const res = await this.$axios.$get('/api/assessments/' + feat.assessmentSlug)
+        const assessment = res.assessment || res
+        if (assessment && Array.isArray(assessment.questions) && assessment.questions.length) {
+          const lastQ = assessment.questions[assessment.questions.length - 1]
+          this.breakdownTimeline = lastQ.timeline || ''
+          switch (this.breakdownTopTrait) {
+            case 'D': this.breakdownConclusionHtml = lastQ.dominanceConclusion || ''; break
+            case 'I': this.breakdownConclusionHtml = lastQ.influenceConclusion || ''; break
+            case 'S': this.breakdownConclusionHtml = lastQ.steadinessConclusion || ''; break
+            case 'C': this.breakdownConclusionHtml = lastQ.conscientiousnessConclusion || ''; break
+          }
+        }
+      } catch (err) {
+        console.error('Error fetching conclusion:', err)
+        this.breakdownConclusionHtml = '<p>Could not load conclusion.</p>'
+      }
     },
     pickAssessmentFilter(slug) {
       this.selectedAssessmentFilter = slug
@@ -987,11 +1076,17 @@ export default {
   flex-wrap: wrap;
 }
 
+.dropdown-button {
+  width: 270px;
+}
+
 .breakdown-btn-wrap {
   margin-top: 10px;
 }
 
 .breakdown-btn {
+  white-space: nowrap;
+  min-width: 270px;
   transition: transform 0.2s ease;
 
   &:focus {
@@ -1254,5 +1349,118 @@ export default {
   &:focus {
     transform: scale(0.8);
   }
+}
+
+.conclusion-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    padding: 140px 20px 40px;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2000;
+}
+.conclusion-modal {
+    background: #ffffff;
+    max-width: 800px;
+    width: 90%;
+    max-height: calc(100vh - 220px);
+    border-radius: 10px;
+    padding: 48px 40px 32px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+    position: relative;
+    overflow-y: auto;
+}
+.conclusion-modal-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #12304d;
+}
+.conclusion-modal .chapter {
+    margin: 0;
+    padding: 0 0 12px;
+}
+.conclusion-modal .line {
+    height: 6px;
+    width: 170px;
+    margin-bottom: 16px;
+}
+.line-D { background: #e93d2f; }
+.line-I { background: #ffbd05; }
+.line-S { background: #0dab49; }
+.line-C { background: #1666ff; }
+.loading-conclusion {
+    color: #999;
+    font-style: italic;
+}
+
+.recent-cover {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+    z-index: 1;
+}
+.recent-cover-img {
+    width: 100px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+.recent-cover-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.recent-cover-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    text-align: center;
+    line-height: 1.3;
+}
+.recent-cover-title {
+    margin: 6px 0 0;
+    font-size: 11px;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    color: #12304d;
+    line-height: 1.2;
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.recent-cover-label {
+    margin: 2px 0 0;
+    font-size: 9px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+@media (max-width: 768px) {
+    .recent-cover {
+        display: none;
+    }
 }
 </style>

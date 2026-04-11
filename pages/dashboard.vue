@@ -113,6 +113,7 @@
                             :assessments-completed="filteredCompletedSessions.length"
                             :credits-balance="dashboard.user.creditsBalance"
                             @clear-results="selectedResult = null"
+                            @select-result="viewResults($event)"
                             @credits-deducted="dashboard.user.creditsBalance = $event" />
 
                         <!-- 3rd person views -->
@@ -126,6 +127,7 @@
                             :invite-assessment-slug="$route.query.inviteAssessment || ''"
                             :viewing-child-id="viewingChildId"
                             :viewing-child-name="viewingChildLabel"
+                            :third-person-sessions="dashboard.thirdPersonSessions"
                             @clear-results="selectedResult = null"
                             @credits-deducted="dashboard.user.creditsBalance = $event" />
 

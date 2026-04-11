@@ -1,0 +1,42 @@
+section.header {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+section.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0.02) 35%,
+      transparent 55%,
+      rgba(0, 0, 0, 0.03) 100%
+    ),
+    linear-gradient(
+      120deg,
+      transparent 38%,
+      rgba(255, 255, 255, 0.04) 44%,
+      rgba(255, 255, 255, 0.15) 49%,
+      rgba(255, 255, 255, 0.15) 51%,
+      rgba(255, 255, 255, 0.04) 56%,
+      transparent 62%
+    );
+  background-size: 100% 100%, 500% 100%;
+  background-repeat: no-repeat;
+  animation: header-shimmer 12s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+section.header > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes header-shimmer {
+  0% { background-position: 0 0, 250% 0; }
+  100% { background-position: 0 0, -100% 0; }
+}

@@ -172,48 +172,99 @@
     </div>
 
     <div v-if="tab === 'library'" class="admin-body">
-      <div class="card">
-        <div class="card-title">All assessments ({{ library.length }})</div>
-        <div v-if="libraryLoading" class="loading-msg">Loading...</div>
-        <div v-else-if="library.length === 0" class="loading-msg">No assessments found.</div>
-        <table v-else class="lib-table">
-          <thead>
-            <tr>
-              <th>Title</th><th>Shelf</th><th>Credits</th><th>Questions</th><th>Est. time</th><th>Status</th><th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="a in library" :key="a._id">
-              <td>
-                <a :href="'/library/' + a.slug" target="_blank" class="result-link">{{ a.title }}</a>
-                <div style="margin-top:6px">
-                  <img v-if="a.heroImageUrl && !a.heroImageUrl.includes('default')" :src="a.heroImageUrl" style="width:48px;height:48px;object-fit:cover;border-radius:4px;border:0.5px solid var(--color-border-tertiary)" />
-                  <span v-else style="font-size:11px;color:var(--color-text-tertiary)">No image</span>
-                </div>
-              </td>
-              <td>
-                <select class="inline-select" :value="a.shelf" @change="inlineUpdate(a, 'shelf', $event.target.value)">
-                  <option value="Adult">Adult</option>
-                  <option value="Kids">Kids</option>
-                </select>
-              </td>
-              <td>
-                <input class="inline-input" type="number" min="0" :value="a.creditsCost" @change="inlineUpdate(a, 'creditsCost', Number($event.target.value))" />
-              </td>
-              <td>{{ a.questionCount }}</td>
-              <td>
-                <input class="inline-input" type="number" min="1" :value="a.estimatedCompletion" @change="inlineUpdate(a, 'estimatedCompletion', Number($event.target.value))" style="width:50px" /> min
-              </td>
-              <td><span class="status-pill" :class="a.isActive ? 'active' : 'inactive'">{{ a.isActive ? 'Active' : 'Hidden' }}</span></td>
-              <td class="actions" style="min-width:200px">
-                <button class="action-btn" @click="toggleAssessment(a)">{{ a.isActive ? 'Hide' : 'Activate' }}</button>
-                <button class="action-btn" @click="openImageManager(a)">Image</button>
-                <button class="action-btn danger" @click="confirmDelete(a)">Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div v-if="libraryLoading" class="card"><div class="loading-msg">Loading...</div></div>
+      <div v-else-if="library.length === 0" class="card"><div class="loading-msg">No assessments found.</div></div>
+      <template v-else>
+
+        <!-- ADULT TABLE -->
+        <div class="card">
+          <div class="card-title-row">
+            <div class="card-title" style="margin-bottom:0">Adult Assessments ({{ adultLibrary.length }})</div>
+            <select v-if="adultShelfOptions.length" v-model="adultShelfFilter" class="shelf-filter-select">
+              <option value="all">All shelves</option>
+              <option v-for="s in adultShelfOptions" :key="s._id" :value="s._id">{{ s.name }}</option>
+            </select>
+          </div>
+          <div v-if="adultLibrary.length === 0" class="loading-msg">No adult assessments{{ adultShelfFilter !== 'all' ? ' on this shelf' : '' }}.</div>
+          <table v-else class="lib-table">
+            <thead>
+              <tr>
+                <th>Title</th><th>Genre</th><th>Credits</th><th>Questions</th><th>Est. time</th><th>Status</th><th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="a in adultLibrary" :key="a._id">
+                <td>
+                  <a :href="'/library/' + a.slug" target="_blank" class="result-link">{{ a.title }}</a>
+                  <div style="margin-top:6px">
+                    <img v-if="a.heroImageUrl && !a.heroImageUrl.includes('default')" :src="a.heroImageUrl" style="width:48px;height:48px;object-fit:cover;border-radius:4px;border:0.5px solid var(--color-border-tertiary)" />
+                    <span v-else style="font-size:11px;color:var(--color-text-tertiary)">No image</span>
+                  </div>
+                </td>
+                <td><span class="genre-tag">{{ a.genre || 'General' }}</span></td>
+                <td>
+                  <input class="inline-input" type="number" min="0" :value="a.creditsCost" @change="inlineUpdate(a, 'creditsCost', Number($event.target.value))" />
+                </td>
+                <td>{{ a.questionCount }}</td>
+                <td>
+                  <input class="inline-input" type="number" min="1" :value="a.estimatedCompletion" @change="inlineUpdate(a, 'estimatedCompletion', Number($event.target.value))" style="width:50px" /> min
+                </td>
+                <td><span class="status-pill" :class="a.isActive ? 'active' : 'inactive'">{{ a.isActive ? 'Active' : 'Hidden' }}</span></td>
+                <td class="actions" style="min-width:200px">
+                  <button class="action-btn" @click="toggleAssessment(a)">{{ a.isActive ? 'Hide' : 'Activate' }}</button>
+                  <button class="action-btn" @click="openImageManager(a)">Image</button>
+                  <button class="action-btn danger" @click="confirmDelete(a)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- KIDS TABLE -->
+        <div class="card">
+          <div class="card-title-row">
+            <div class="card-title" style="margin-bottom:0">Kids Assessments ({{ kidsLibrary.length }})</div>
+            <select v-if="kidsShelfOptions.length" v-model="kidsShelfFilter" class="shelf-filter-select">
+              <option value="all">All shelves</option>
+              <option v-for="s in kidsShelfOptions" :key="s._id" :value="s._id">{{ s.name }}</option>
+            </select>
+          </div>
+          <div v-if="kidsLibrary.length === 0" class="loading-msg">No kids assessments{{ kidsShelfFilter !== 'all' ? ' on this shelf' : '' }}.</div>
+          <table v-else class="lib-table">
+            <thead>
+              <tr>
+                <th>Title</th><th>Genre</th><th>Credits</th><th>Questions</th><th>Est. time</th><th>Status</th><th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="a in kidsLibrary" :key="a._id">
+                <td>
+                  <a :href="'/library/' + a.slug" target="_blank" class="result-link">{{ a.title }}</a>
+                  <div style="margin-top:6px">
+                    <img v-if="a.heroImageUrl && !a.heroImageUrl.includes('default')" :src="a.heroImageUrl" style="width:48px;height:48px;object-fit:cover;border-radius:4px;border:0.5px solid var(--color-border-tertiary)" />
+                    <span v-else style="font-size:11px;color:var(--color-text-tertiary)">No image</span>
+                  </div>
+                </td>
+                <td><span class="genre-tag">{{ a.genre || 'General' }}</span></td>
+                <td>
+                  <input class="inline-input" type="number" min="0" :value="a.creditsCost" @change="inlineUpdate(a, 'creditsCost', Number($event.target.value))" />
+                </td>
+                <td>{{ a.questionCount }}</td>
+                <td>
+                  <input class="inline-input" type="number" min="1" :value="a.estimatedCompletion" @change="inlineUpdate(a, 'estimatedCompletion', Number($event.target.value))" style="width:50px" /> min
+                </td>
+                <td><span class="status-pill" :class="a.isActive ? 'active' : 'inactive'">{{ a.isActive ? 'Active' : 'Hidden' }}</span></td>
+                <td class="actions" style="min-width:200px">
+                  <button class="action-btn" @click="toggleAssessment(a)">{{ a.isActive ? 'Hide' : 'Activate' }}</button>
+                  <button class="action-btn" @click="openImageManager(a)">Image</button>
+                  <button class="action-btn danger" @click="confirmDelete(a)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </template>
     </div>
 
     <div v-if="deleteTarget" class="modal-backdrop" @click.self="deleteTarget = null">
@@ -496,6 +547,9 @@ export default {
       generationResults: [],
       library: [],
       libraryLoading: false,
+      adultShelfFilter: 'all',
+      kidsShelfFilter: 'all',
+      libraryShelves: [],
       deleteTarget: null,
       imageTarget: null,
       imageUrl: '',
@@ -570,6 +624,30 @@ export default {
     }
   },
   computed: {
+    adultLibrary() {
+      const list = this.library.filter(a => a.shelf === 'Adult')
+      if (this.adultShelfFilter === 'all') return list
+      const shelf = this.libraryShelves.find(s => s._id === this.adultShelfFilter)
+      if (!shelf) return list
+      if (shelf.type === 'genre') return list.filter(a => a.genre === shelf.genre)
+      const ids = (shelf.assessments || []).map(a => a._id)
+      return list.filter(a => ids.includes(a._id))
+    },
+    kidsLibrary() {
+      const list = this.library.filter(a => a.shelf === 'Kids')
+      if (this.kidsShelfFilter === 'all') return list
+      const shelf = this.libraryShelves.find(s => s._id === this.kidsShelfFilter)
+      if (!shelf) return list
+      if (shelf.type === 'genre') return list.filter(a => a.genre === shelf.genre)
+      const ids = (shelf.assessments || []).map(a => a._id)
+      return list.filter(a => ids.includes(a._id))
+    },
+    adultShelfOptions() {
+      return this.libraryShelves.filter(s => s.section === 'Adult')
+    },
+    kidsShelfOptions() {
+      return this.libraryShelves.filter(s => s.section === 'Kids')
+    },
     adultShelvesAdmin() {
       return this.customShelves.filter(s => s.section === 'Adult').sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
     },
@@ -737,8 +815,12 @@ export default {
       this.libraryLoading = true
       const adminSecret = sessionStorage.getItem('tal_admin_secret')
       try {
-        const res = await this.$axios.get('/api/admin/assessments', { headers: { 'x-admin-secret': adminSecret } })
-        this.library = res.data.assessments
+        const [assessRes, shelvesRes] = await Promise.all([
+          this.$axios.get('/api/admin/assessments', { headers: { 'x-admin-secret': adminSecret } }),
+          this.$axios.get('/api/admin/shelves', { headers: { 'x-admin-secret': adminSecret } }).catch(() => ({ data: { shelves: [] } }))
+        ])
+        this.library = assessRes.data.assessments
+        this.libraryShelves = shelvesRes.data.shelves || []
       } catch (err) {
         console.error('Failed to load library:', err)
       } finally {
@@ -1041,6 +1123,10 @@ textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
 .lib-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .lib-table th { text-align: left; padding: 8px 10px; font-weight: 500; border-bottom: 0.5px solid var(--color-border-secondary, rgba(0,0,0,0.2)); color: var(--color-text-secondary, #666); }
 .lib-table td { padding: 10px; border-bottom: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,0.08)); vertical-align: middle; }
+.card-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap; }
+.shelf-filter-select { padding: 5px 10px; border: 0.5px solid var(--color-border-secondary); border-radius: 6px; font-size: 13px; font-family: inherit; background: transparent; cursor: pointer; min-width: 160px; }
+.shelf-filter-select:focus { border-color: #534AB7; outline: none; }
+.genre-tag { font-size: 11px; padding: 2px 8px; border-radius: 20px; background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); white-space: nowrap; }
 .inline-input { width: 60px; padding: 4px 6px; border: 0.5px solid var(--color-border-tertiary); border-radius: 6px; font-size: 13px; font-family: inherit; text-align: center; background: transparent; transition: border-color 0.15s; }
 .inline-input:focus { border-color: #534AB7; outline: none; }
 .inline-select { padding: 4px 6px; border: 0.5px solid var(--color-border-tertiary); border-radius: 6px; font-size: 13px; font-family: inherit; background: transparent; cursor: pointer; transition: border-color 0.15s; }

@@ -40,7 +40,7 @@ exports.getDashboard = async function (req, res) {
       .populate(
         'assessment',
         // ⬇️ include the style fields from Assessment, plus what you already had
-        'title slug category ' +
+        'title slug category heroImageUrl ' +
           'DstyleTitle IstyleTitle SstyleTitle CstyleTitle ' +
           'DstyleDescription IstyleDescription SstyleDescription CstyleDescription'
       )
@@ -82,6 +82,7 @@ exports.getDashboard = async function (req, res) {
           IstyleDescription: a.IstyleDescription,
           SstyleDescription: a.SstyleDescription,
           CstyleDescription: a.CstyleDescription,
+          heroImageUrl: a.heroImageUrl || '',
         };
       });
 
@@ -94,7 +95,7 @@ exports.getDashboard = async function (req, res) {
         path: 'thirdPersonParticipantId',
         populate: { path: 'invitedBy', select: 'name email' }
       })
-      .populate('assessment', 'title slug')
+      .populate('assessment', 'title slug heroImageUrl')
       .sort({ updatedAt: -1 })
       .lean();
 
@@ -114,6 +115,7 @@ exports.getDashboard = async function (req, res) {
         scoreBreakdown: hasScore && s.score.breakdown ? s.score.breakdown : null,
         participantId: s.thirdPersonParticipantId ? (s.thirdPersonParticipantId._id || s.thirdPersonParticipantId) : null,
         invitationId: s.thirdPersonInvitationId || null,
+        heroImageUrl: a.heroImageUrl || '',
       };
     });
 

@@ -78,7 +78,7 @@
                         No DISC breakdown available for this assessment yet.
                     </p>
                     <button v-if="selectedResult && topTrait && conclusionHtml" class="conclusion-button"
-                        :style="{ backgroundColor: topTraitColor }" @click="showConclusionModal = true">
+                        :style="{ backgroundColor: topTraitColor }" @click="openConclusionModal">
                         Breakdown
                     </button>
                 </div>
@@ -104,6 +104,20 @@
 
             <!-- OVERALL VIEW -->
             <div v-else class="overall-layout">
+                <!-- Recent assessment cover (absolutely positioned) -->
+                <div v-if="featuredAssessment && hasData" class="recent-cover" @click="$emit('select-result', featuredAssessment)" style="cursor:pointer">
+                    <div class="recent-cover-img">
+                        <img v-if="featuredAssessment.heroImageUrl && !featuredAssessment.heroImageUrl.includes('default-cover')"
+                            :src="featuredAssessment.heroImageUrl"
+                            :alt="featuredAssessment.assessmentTitle" />
+                        <div v-else class="recent-cover-placeholder">
+                            <span>{{ featuredAssessment.assessmentTitle }}</span>
+                        </div>
+                    </div>
+                    <p class="recent-cover-title">{{ featuredAssessment.assessmentTitle }}</p>
+                    <p class="recent-cover-label">Last completed</p>
+                </div>
+
                 <div v-if="hasData" class="overall-chart">
                     <div class="chart">
                         <div class="bar" :style="{ height: dPercent + '%', backgroundColor: '#f44336' }"
@@ -333,6 +347,19 @@ export default {
                 default:
                     return '#143180'
             }
+        },
+        featuredAssessment() {
+            const completed = this.sessions.filter(s => s.status === 'completed' && s.scoreBreakdown)
+            if (!completed.length) return null
+            // If a specific assessment is selected via category filter, show the most recent of that category
+            if (this.selectedCategory !== 'all') {
+                const filtered = completed.filter(s => {
+                    const shelf = s.category && s.category.shelf
+                    return shelf === this.selectedCategory
+                })
+                return filtered[0] || completed[0]
+            }
+            return completed[0]
         },
         firstPersonConfidence() {
             // 100% confidence reached at 50 completed assessments
@@ -564,8 +591,13 @@ export default {
             this.selectedCategoryFilter = val
             this.dropdownOpen = false
         },
+        openConclusionModal() {
+            this.showConclusionModal = true
+            if (process.client) document.body.style.overflow = 'hidden'
+        },
         closeConclusionModal() {
             this.showConclusionModal = false
+            if (process.client) document.body.style.overflow = ''
         }
     }
 }
@@ -641,25 +673,26 @@ export default {
 .conclusion-modal-backdrop {
     position: fixed;
     inset: 0;
-    padding-top: 116px;
-    padding-bottom: 40px;
+    padding: 140px 20px 40px;
     background: rgba(0, 0, 0, 0.55);
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    overflow-y: auto;
+    overflow: hidden;
     z-index: 2000;
 }
 
 .conclusion-modal {
     background: #ffffff;
-    max-width: 700px;
+    max-width: 800px;
     width: 90%;
+    max-height: calc(100vh - 220px);
     border-radius: 10px;
-    padding: 48px 28px 24px;
+    padding: 48px 40px 32px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     flex-shrink: 0;
     position: relative;
+    overflow-y: auto;
 }
 
 .conclusion-modal-title {
@@ -781,6 +814,68 @@ export default {
     align-items: center;
     justify-content: center;
 
+    .recent-cover {
+        position: absolute;
+        left: 20px;
+        bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 110px;
+        z-index: 1;
+    }
+    .recent-cover-img {
+        width: 100px;
+        height: 120px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+    .recent-cover-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        font-family: Georgia, serif;
+        text-align: center;
+        line-height: 1.3;
+    }
+    .recent-cover-title {
+        margin: 6px 0 0;
+        font-size: 11px;
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+        color: #12304d;
+        line-height: 1.2;
+        max-width: 110px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .recent-cover-label {
+        margin: 2px 0 0;
+        font-size: 9px;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
     .overall-chart {
         width: 60%;
         max-width: 420px;
@@ -814,7 +909,7 @@ export default {
         font-size: 14px;
         color: #fff;
         cursor: pointer;
-        width: 180px;
+        width: 270px;
         text-align: left;
         display: flex;
         justify-content: space-between;
@@ -920,6 +1015,10 @@ export default {
     .overall-layout {
         align-items: stretch;
         margin-bottom: -30px;
+
+        .recent-cover {
+            display: none;
+        }
 
         .overall-chart {
             width: 100%;
