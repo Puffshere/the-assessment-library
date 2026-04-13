@@ -203,6 +203,14 @@ async function generateSingleAssessment(config, jobId) {
   const rawNodeMap = buildNodeMap(questionsPerPlaythrough);
   const nodeMap = calcNextQuestions(rawNodeMap);
   const claudePrompt = buildClaudePrompt(config, nodeMap);
+
+  // Cost estimate: ~800 tokens per node output + ~2000 token prompt
+  // claude-opus-4-6: $5/M input, $25/M output
+  const estInputTokens = Math.round(claudePrompt.length / 4);
+  const estOutputTokens = nodeMap.length * 800;
+  const estCost = (estInputTokens / 1000000 * 5) + (estOutputTokens / 1000000 * 25);
+  if (jobId) jobs[jobId].progress = 'Estimated cost: ~$' + estCost.toFixed(2) + ' (' + nodeMap.length + ' nodes, ~' + estOutputTokens + ' output tokens)';
+
   let rawText = '';
   const claudeResponse = await axios.post(
     'https://api.anthropic.com/v1/messages',
@@ -286,7 +294,7 @@ async function generateSingleAssessment(config, jobId) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       if (attempt > 1) {
-        if (jobId) jobs[jobId].progress = 'Attempt ' + attempt + '/3 — retrying...';
+        if (jobId) jobs[jobId].progress = 'Attempt ' + attempt + '/3 — retrying after: ' + (lastError ? lastError.message.slice(0, 80) : 'unknown error');
         rawText = '';
         const retryPrompt = claudePrompt + '\n\nCRITICAL: Your previous attempt failed validation. Output ONLY raw valid JSON starting with { and ending with }. No markdown, no backticks, no explanation whatsoever.';
         const retryResponse = await axios.post(
@@ -334,10 +342,15 @@ async function generateSingleAssessment(config, jobId) {
 
       storyData = parseClaudeResponse(rawText);
       validateStoryData(storyData, nodeMap);
+      if (jobId) jobs[jobId].progress = 'Validation passed — processing ' + (storyData.questions ? storyData.questions.length : 0) + ' questions...';
       break;
     } catch(err) {
       lastError = err;
+      const reason = err.message.includes('JSON') || err.message.includes('token') || err.message.includes('Unexpected')
+        ? 'JSON parse error: ' + err.message.slice(0, 120)
+        : 'Validation failed: ' + err.message;
       console.error('[adminController] Attempt ' + attempt + ' failed:', err.message);
+      if (jobId) jobs[jobId].progress = 'Attempt ' + attempt + '/3 failed — ' + reason;
       if (attempt === 3) throw new Error('Generation failed after 3 attempts. Last error: ' + lastError.message);
     }
   }
