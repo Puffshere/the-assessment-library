@@ -46,6 +46,10 @@ const userSchema = new mongoose.Schema(
     kids_mode_pin: {
       type: String,
       default: null,
+    },
+    lastLoginAt: {
+      type: Date,
+      default: null,
     }
   },
   {

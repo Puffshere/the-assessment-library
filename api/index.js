@@ -25,6 +25,8 @@ import adminAuth from './middleware/adminAuth.js';
 const customShelfController = require('./controllers/customShelfController');
 const featuredReleaseController = require('./controllers/featuredReleaseController');
 const ratingController = require('./controllers/ratingController');
+const metricsController = require('./controllers/metricsController');
+const userAdminController = require('./controllers/userAdminController');
 
 
 const upload = multer();
@@ -158,10 +160,15 @@ app.patch('/admin/shelves/:id', adminAuth, customShelfController.updateShelf);
 app.patch('/admin/shelves/:id/toggle', adminAuth, customShelfController.toggleShelf);
 app.patch('/admin/shelves/:id/archive', adminAuth, customShelfController.archiveShelf);
 app.delete('/admin/shelves/:id', adminAuth, customShelfController.deleteShelf);
+app.patch('/admin/shelves-remove-assessment', adminAuth, customShelfController.removeAssessmentFromShelf);
+app.patch('/admin/shelves-remove-assessment-all', adminAuth, customShelfController.removeAssessmentFromAllShelves);
 
 app.get('/featured-release', featuredReleaseController.getPublic);
 app.get('/admin/featured-release', adminAuth, featuredReleaseController.getAdmin);
 app.patch('/admin/featured-release', adminAuth, featuredReleaseController.update);
+app.get('/admin/metrics', adminAuth, metricsController.getMetrics);
+app.get('/admin/users', adminAuth, userAdminController.listUsers);
+app.patch('/admin/users/:id/credits', adminAuth, userAdminController.adjustCredits);
 
 app.use((req, res, next) => {
   res.status(404).json({

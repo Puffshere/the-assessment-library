@@ -112,8 +112,11 @@ ${nodeMap.map((n, i) => {
 9. Write the assessment description field (2-3 sentences, marketing copy for the library shelf).
 10. Keep narrative prose vivid, grounded, and emotionally resonant.
 
-## Output format
-Respond ONLY with valid JSON. No markdown fences, no preamble, no explanation.
+## Output format — CRITICAL
+Respond with ONLY valid JSON. No markdown, no backticks, no explanation.
+Do not include any text before or after the JSON object.
+Do not wrap the response in \`\`\`json\`\`\` code blocks.
+Your entire response must be a single JSON object starting with { and ending with }.
 
 {
   "description": "...",

@@ -140,4 +140,22 @@ async function reorderShelves(req, res) {
   } catch(err) { res.status(500).json({ error: err.message }); }
 }
 
-module.exports = { listShelves, createShelf, updateShelf, toggleShelf, archiveShelf, deleteShelf, getPublicShelves, reorderShelves };
+async function removeAssessmentFromShelf(req, res) {
+  try {
+    const { shelfId, assessmentId } = req.body;
+    if (!shelfId || !assessmentId) return res.status(400).json({ error: 'shelfId and assessmentId required.' });
+    await CustomShelf.findByIdAndUpdate(shelfId, { $pull: { assessmentIds: assessmentId } });
+    res.json({ success: true });
+  } catch(err) { res.status(500).json({ error: err.message }); }
+}
+
+async function removeAssessmentFromAllShelves(req, res) {
+  try {
+    const { assessmentId } = req.body;
+    if (!assessmentId) return res.status(400).json({ error: 'assessmentId required.' });
+    await CustomShelf.updateMany({}, { $pull: { assessmentIds: assessmentId } });
+    res.json({ success: true });
+  } catch(err) { res.status(500).json({ error: err.message }); }
+}
+
+module.exports = { listShelves, createShelf, updateShelf, toggleShelf, archiveShelf, deleteShelf, getPublicShelves, reorderShelves, removeAssessmentFromShelf, removeAssessmentFromAllShelves };

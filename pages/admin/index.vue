@@ -9,8 +9,10 @@
         <div class="header-actions">
           <button class="tab-btn" :class="{ active: tab === 'create' }" @click="tab = 'create'">Create</button>
           <button class="tab-btn" :class="{ active: tab === 'library' }" @click="tab = 'library'; loadLibrary()">Library</button>
-          <button class="tab-btn" :class="{ active: tab === 'shelves' }" @click="tab = 'shelves'; loadShelves()">Shelves</button>
+          <button class="tab-btn" :class="{ active: tab === 'shelves' }" @click="tab = 'shelves'; loadShelves(); loadTopRatedConfig()">Shelves</button>
           <button class="tab-btn" :class="{ active: tab === 'featured' }" @click="tab = 'featured'; loadFeatured(); loadTopRatedConfig()">Featured</button>
+          <button class="tab-btn" :class="{ active: tab === 'metrics' }" @click="tab = 'metrics'; loadMetrics()">Metrics</button>
+          <button class="tab-btn" :class="{ active: tab === 'users' }" @click="tab = 'users'; loadUsers()">Users</button>
           <button class="sign-out-btn" @click="signOut">Sign out</button>
         </div>
       </div>
@@ -346,6 +348,43 @@
 
     <div v-if="tab === 'shelves'" class="admin-body">
 
+      <!-- Assessment shelf search -->
+      <div class="card">
+        <div class="card-title">Find assessment on shelves</div>
+        <div class="field" style="margin-bottom:12px;position:relative">
+          <label>Search by title</label>
+          <input v-model="shelfSearch" type="text" placeholder="Start typing an assessment title..." @input="shelfSearchSelected = null" />
+          <div v-if="shelfSearch && !shelfSearchSelected && shelfSearchResults.length" class="search-dropdown">
+            <div v-for="a in shelfSearchResults" :key="a._id" class="search-item" @click="selectShelfSearchResult(a)">
+              <span>{{ a.title }}</span>
+              <span style="font-size:11px;color:var(--color-text-tertiary);margin-left:auto">{{ a.shelf }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div v-if="shelfSearchSelected" class="search-result-card">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+            <img v-if="shelfSearchSelected.heroImageUrl && !shelfSearchSelected.heroImageUrl.includes('default')" :src="shelfSearchSelected.heroImageUrl" style="width:40px;height:40px;object-fit:cover;border-radius:4px" />
+            <div>
+              <div style="font-weight:600;font-size:14px">{{ shelfSearchSelected.title }}</div>
+              <div style="font-size:12px;color:var(--color-text-secondary)">{{ shelfSearchSelected.shelf }} · {{ shelfSearchSelected.genre || 'No genre' }}</div>
+            </div>
+          </div>
+
+          <div v-if="shelfSearchShelves.length === 0" style="font-size:13px;color:var(--color-text-tertiary);padding:8px 0">This assessment is not on any custom shelves.</div>
+          <div v-else>
+            <div style="font-size:12px;font-weight:600;color:var(--color-text-secondary);margin-bottom:6px">On {{ shelfSearchShelves.length }} shelf{{ shelfSearchShelves.length !== 1 ? 'es' : '' }}:</div>
+            <div v-for="s in shelfSearchShelves" :key="s._id" class="search-shelf-row">
+              <span class="search-shelf-name">{{ s.name }}</span>
+              <span style="font-size:11px;color:var(--color-text-tertiary)">{{ s.section }} · {{ s.type }}</span>
+              <button class="action-btn danger" style="margin-left:auto" @click="removeFromShelf(s._id, shelfSearchSelected._id)">Remove</button>
+            </div>
+          </div>
+
+          <button v-if="shelfSearchShelves.length > 1" class="action-btn danger" style="margin-top:10px;width:100%" @click="removeFromAllShelves(shelfSearchSelected._id)">Remove from all shelves</button>
+        </div>
+      </div>
+
       <!-- Create new shelf -->
       <div class="card">
         <div class="card-title">{{ editingShelf ? 'Edit shelf: ' + editingShelf.name : 'Create custom shelf' }}</div>
@@ -390,6 +429,29 @@
         </button>
         <button v-if="editingShelf" class="action-btn" style="margin-top:8px;width:100%" @click="editingShelf = null; newShelf = { name: '', section: 'Adult', position: 'top', expiresAt: '', assessmentIds: [] }">Cancel edit</button>
         <p v-if="shelfError" style="color:#A32D2D;font-size:13px;margin-top:8px">{{ shelfError }}</p>
+      </div>
+
+      <!-- TOP RATED SHELF CONFIG -->
+      <div class="card">
+        <div class="card-title">Top Rated shelf</div>
+        <div class="info-note" style="margin-bottom:1rem">Shows the highest-rated assessments as a special shelf at the top of the library. Only assessments with at least 1 rating appear.</div>
+        <div class="field-row-2" style="margin-bottom:16px">
+          <div class="field">
+            <label>Number of assessments to show</label>
+            <input v-model.number="topRatedLimit" type="number" min="1" max="20" style="width:80px" />
+          </div>
+          <div class="field">
+            <label>Status</label>
+            <div class="shelf-toggle">
+              <button class="shelf-btn" :class="{ active: topRatedEnabled }" type="button" @click="topRatedEnabled = true">Enabled</button>
+              <button class="shelf-btn" :class="{ active: !topRatedEnabled }" type="button" @click="topRatedEnabled = false">Disabled</button>
+            </div>
+          </div>
+        </div>
+        <button class="generate-btn" style="margin-top:0" :disabled="topRatedSaving" @click="saveTopRatedConfig">
+          {{ topRatedSaving ? 'Saving...' : 'Save top rated config' }}
+        </button>
+        <p v-if="topRatedSuccess" style="color:#3B6D11;font-size:13px;margin-top:8px">{{ topRatedSuccess }}</p>
       </div>
 
       <!-- All shelves unified list -->
@@ -553,6 +615,230 @@
       </div>
     </div>
 
+    <!-- METRICS TAB -->
+    <div v-if="tab === 'metrics'" class="admin-body">
+      <div v-if="metricsLoading" class="card"><div class="loading-msg">Loading metrics...</div></div>
+      <template v-else-if="metrics">
+
+        <!-- Overview cards -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">{{ metrics.users.total }}</div>
+            <div class="metric-label">Total Users</div>
+            <div class="metric-sub">+{{ metrics.users.newLast30 }} last 30d · +{{ metrics.users.newLast7 }} last 7d</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">{{ metrics.sessions.completed }}</div>
+            <div class="metric-label">Assessments Completed</div>
+            <div class="metric-sub">{{ metrics.sessions.inProgress }} in progress · {{ metrics.sessions.total }} total started</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">{{ metrics.sessions.completedLast30 }}</div>
+            <div class="metric-label">Completed (30 days)</div>
+            <div class="metric-sub">{{ metrics.sessions.completedLast7 }} in last 7 days</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">{{ metrics.users.kidsMode }}</div>
+            <div class="metric-label">Kids Mode Users</div>
+            <div class="metric-sub">{{ metrics.users.childProfiles }} child profiles created</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">{{ metrics.participants.total }}</div>
+            <div class="metric-label">3rd Person Participants</div>
+            <div class="metric-sub">{{ metrics.sessions.thirdPersonCompleted }} of {{ metrics.sessions.thirdPerson }} completed</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">{{ metrics.credits.totalPurchased }}</div>
+            <div class="metric-label">Credits Purchased</div>
+            <div class="metric-sub">{{ metrics.credits.totalSpent }} credits spent on assessments</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">{{ metrics.assessments.active }} / {{ metrics.assessments.total }}</div>
+            <div class="metric-label">Active Assessments</div>
+            <div class="metric-sub">{{ metrics.assessments.total - metrics.assessments.active }} hidden</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">{{ metrics.ratings.average }} ★</div>
+            <div class="metric-label">Average Rating</div>
+            <div class="metric-sub">{{ metrics.ratings.total }} total ratings submitted</div>
+          </div>
+        </div>
+
+        <!-- Growth Line Graph -->
+        <div v-if="activeGrowthData.length > 1" class="card">
+          <div class="card-title-row">
+            <div class="card-title" style="margin-bottom:0">{{ graphLabels[graphMode].title }}</div>
+            <div class="graph-dd">
+              <div class="graph-dd-trigger" tabindex="0" @click="graphDdOpen = !graphDdOpen" @blur="graphDdOpen = false">
+                <span class="graph-dd-dot" :style="{ background: graphLabels[graphMode].color }"></span>
+                {{ graphLabels[graphMode].tab }}
+                <span class="graph-dd-chevron">▾</span>
+              </div>
+              <div v-if="graphDdOpen" class="graph-dd-menu">
+                <div v-for="mode in ['users', 'participants', 'completions']" :key="mode"
+                  class="graph-dd-option" :class="{ 'graph-dd-active': graphMode === mode }"
+                  @mousedown.prevent="graphMode = mode; graphDdOpen = false">
+                  <span class="graph-dd-dot" :style="{ background: graphLabels[mode].color }"></span>
+                  {{ graphLabels[mode].tab }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="line-graph-wrap">
+            <svg class="line-graph" viewBox="0 0 600 200" preserveAspectRatio="none">
+              <!-- Grid lines -->
+              <line v-for="i in 4" :key="'grid-' + i" :x1="0" :y1="i * 40" :x2="600" :y2="i * 40" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+              <!-- Area fill -->
+              <polygon :points="userGrowthAreaPoints" :fill="graphLabels[graphMode].areaColor" />
+              <!-- Line -->
+              <polyline :points="userGrowthLinePoints" fill="none" :stroke="graphLabels[graphMode].color" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />
+              <!-- Dots -->
+              <circle v-for="(pt, i) in userGrowthPoints" :key="'dot-' + i" :cx="pt.x" :cy="pt.y" r="4" :fill="graphLabels[graphMode].color" stroke="#fff" stroke-width="2" />
+            </svg>
+            <div class="line-graph-labels">
+              <span v-for="(pt, i) in userGrowthPoints" :key="'lbl-' + i" class="line-graph-label" :style="{ left: (pt.x / 600 * 100) + '%' }">
+                <span class="line-graph-month">{{ formatMonthShort(pt.label) }}</span>
+                <span class="line-graph-value" :style="{ color: graphLabels[graphMode].color }">{{ pt.total }}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DISC Distribution -->
+        <div class="card">
+          <div class="card-title">DISC Distribution (all completed assessments)</div>
+          <div v-if="metrics.discDistribution.length" class="disc-bars">
+            <div v-for="d in metrics.discDistribution" :key="d._id" class="disc-bar-row">
+              <span class="disc-bar-label" :style="{ color: discColor(d._id) }">{{ d._id }}</span>
+              <div class="disc-bar-track">
+                <div class="disc-bar-fill" :style="{ width: discPercent(d.count) + '%', backgroundColor: discColor(d._id) }"></div>
+              </div>
+              <span class="disc-bar-count">{{ d.count }} ({{ discPercent(d.count) }}%)</span>
+            </div>
+          </div>
+          <div v-else class="loading-msg">No DISC data yet.</div>
+        </div>
+
+        <!-- Top Assessments + Top Rated side by side -->
+        <div class="metrics-row">
+          <div class="card" style="flex:1">
+            <div class="card-title">Most Taken Assessments</div>
+            <div v-for="(a, i) in metrics.topAssessments" :key="'top-' + i" class="metrics-list-item">
+              <span class="metrics-rank">{{ i + 1 }}</span>
+              <span class="metrics-list-title">{{ a.title }}</span>
+              <span class="metrics-list-badge">{{ a.shelf }}</span>
+              <span class="metrics-list-count">{{ a.count }} completions</span>
+            </div>
+            <div v-if="!metrics.topAssessments.length" class="loading-msg">No data yet.</div>
+          </div>
+          <div class="card" style="flex:1">
+            <div class="card-title">Highest Rated Assessments</div>
+            <div v-for="(a, i) in metrics.topRatedAssessments" :key="'rated-' + i" class="metrics-list-item">
+              <span class="metrics-rank">{{ i + 1 }}</span>
+              <span class="metrics-list-title">{{ a.title }}</span>
+              <span class="metrics-list-badge">{{ a.shelf }}</span>
+              <span class="metrics-list-count">{{ a.ratingAvg }} ★ ({{ a.ratingCount }})</span>
+            </div>
+            <div v-if="!metrics.topRatedAssessments.length" class="loading-msg">No ratings yet.</div>
+          </div>
+        </div>
+
+        <!-- Trends -->
+        <div class="metrics-row">
+          <div class="card" style="flex:1">
+            <div class="card-title">User Signups (6 months)</div>
+            <div v-for="m in metrics.signupsByMonth" :key="'su-' + m._id.year + '-' + m._id.month" class="metrics-trend-row">
+              <span class="metrics-trend-label">{{ formatMonth(m) }}</span>
+              <div class="metrics-trend-track">
+                <div class="metrics-trend-fill" :style="{ width: trendPercent(m.count, metrics.signupsByMonth) + '%' }"></div>
+              </div>
+              <span class="metrics-trend-count">{{ m.count }}</span>
+            </div>
+            <div v-if="!metrics.signupsByMonth.length" class="loading-msg">No data yet.</div>
+          </div>
+          <div class="card" style="flex:1">
+            <div class="card-title">Completions (6 months)</div>
+            <div v-for="m in metrics.completionsByMonth" :key="'cm-' + m._id.year + '-' + m._id.month" class="metrics-trend-row">
+              <span class="metrics-trend-label">{{ formatMonth(m) }}</span>
+              <div class="metrics-trend-track">
+                <div class="metrics-trend-fill metrics-trend-fill--green" :style="{ width: trendPercent(m.count, metrics.completionsByMonth) + '%' }"></div>
+              </div>
+              <span class="metrics-trend-count">{{ m.count }}</span>
+            </div>
+            <div v-if="!metrics.completionsByMonth.length" class="loading-msg">No data yet.</div>
+          </div>
+        </div>
+
+        <!-- Recent Completions -->
+        <div class="card">
+          <div class="card-title">Recent Completions</div>
+          <div v-for="(c, i) in metrics.recentCompletions" :key="'rc-' + i" class="metrics-list-item">
+            <span class="metrics-list-title">{{ c.userName }}</span>
+            <span class="metrics-list-badge">{{ c.assessmentTitle }}</span>
+            <span class="metrics-list-count">{{ new Date(c.completedAt).toLocaleDateString() }}</span>
+          </div>
+          <div v-if="!metrics.recentCompletions.length" class="loading-msg">No completions yet.</div>
+        </div>
+
+      </template>
+    </div>
+
+    <!-- USERS TAB -->
+    <div v-if="tab === 'users'" class="admin-body">
+      <div class="card">
+        <div class="card-title-row">
+          <div class="card-title" style="margin-bottom:0">All Users ({{ filteredUsers.length }}{{ usersSearch ? ' of ' + adminUsers.length : '' }})</div>
+          <input v-model="usersSearch" type="text" placeholder="Search by name or email..." class="users-search-input" />
+        </div>
+
+        <div v-if="usersLoading" class="loading-msg">Loading users...</div>
+        <div v-else-if="adminUsers.length === 0" class="loading-msg">No users found.</div>
+        <div v-else class="users-table-wrap">
+          <table class="lib-table">
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Signed up</th>
+                <th>Last login</th>
+                <th>Last assessment</th>
+                <th>Completed</th>
+                <th>Credits</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="u in filteredUsers" :key="u._id">
+                <td>
+                  <div class="user-cell-name">{{ u.name || '—' }}</div>
+                  <div class="user-cell-email">{{ u.email }}</div>
+                  <span v-if="u.kidsMode" class="user-badge-kids">Kids</span>
+                </td>
+                <td>{{ fmtDate(u.createdAt) }}</td>
+                <td>{{ fmtDate(u.lastLoginAt) }}</td>
+                <td>
+                  <div>{{ fmtDate(u.lastCompletedAt) }}</div>
+                  <div v-if="u.lastAssessmentTitle" class="user-cell-assess">{{ u.lastAssessmentTitle }}</div>
+                </td>
+                <td>{{ u.completedCount }}</td>
+                <td>
+                  <span class="user-credits">{{ u.creditsBalance }}</span>
+                </td>
+                <td>
+                  <div v-if="creditEditId === u._id" class="credit-edit-row">
+                    <input v-model.number="creditEditAmount" type="number" min="1" class="credit-edit-input" />
+                    <span class="action-btn" @click="adjustCredits(u, creditEditAmount)">+</span>
+                    <span class="action-btn danger" @click="adjustCredits(u, -creditEditAmount)">−</span>
+                    <span class="action-btn" @click="creditEditId = null">✕</span>
+                  </div>
+                  <span v-else class="action-btn" @click="openCreditEdit(u._id)">Credits</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -597,6 +883,8 @@ export default {
       shelfSaving: false,
       shelfError: '',
       editingShelf: null,
+      shelfSearch: '',
+      shelfSearchSelected: null,
       dragShelf: null,
       dragSection: null,
       dragOverId: null,
@@ -604,6 +892,15 @@ export default {
       featuredSaving: false,
       featuredError: '',
       featuredSuccess: '',
+      adminUsers: [],
+      usersLoading: false,
+      usersSearch: '',
+      creditEditId: null,
+      creditEditAmount: 1,
+      metrics: null,
+      metricsLoading: false,
+      graphMode: 'users',
+      graphDdOpen: false,
       topRatedLimit: 3,
       topRatedEnabled: true,
       topRatedSaving: false,
@@ -651,6 +948,58 @@ export default {
     }
   },
   computed: {
+    filteredUsers() {
+      if (!this.usersSearch || this.usersSearch.length < 2) return this.adminUsers
+      const q = this.usersSearch.toLowerCase()
+      return this.adminUsers.filter(u => (u.name + ' ' + u.email).toLowerCase().includes(q))
+    },
+    shelfSearchResults() {
+      if (!this.shelfSearch || this.shelfSearch.length < 2) return []
+      const q = this.shelfSearch.toLowerCase()
+      return this.library.filter(a => a.title.toLowerCase().includes(q)).slice(0, 8)
+    },
+    shelfSearchShelves() {
+      if (!this.shelfSearchSelected) return []
+      const id = this.shelfSearchSelected._id
+      return this.customShelves.filter(s =>
+        s.type === 'custom' && s.assessmentIds && s.assessmentIds.includes(id)
+      )
+    },
+    graphLabels() {
+      return {
+        users: { title: 'User Growth', tab: 'Users', color: '#534AB7', areaColor: 'rgba(83,74,183,0.1)' },
+        participants: { title: '3rd Party Participant Growth', tab: 'Participants', color: '#e93d2f', areaColor: 'rgba(233,61,47,0.1)' },
+        completions: { title: 'Assessment Completions Growth', tab: 'Completions', color: '#0dab49', areaColor: 'rgba(13,171,73,0.1)' },
+      }
+    },
+    activeGrowthData() {
+      if (!this.metrics) return []
+      const map = { users: 'userGrowth', participants: 'participantGrowth', completions: 'completionGrowth' }
+      return this.metrics[map[this.graphMode]] || []
+    },
+    userGrowthPoints() {
+      const data = this.activeGrowthData
+      if (data.length < 2) return []
+      const max = Math.max(...data.map(d => d.total), 1)
+      const min = Math.min(...data.map(d => d.total), 0)
+      const range = max - min || 1
+      const padding = 20
+      return data.map((d, i) => ({
+        x: padding + (i / (data.length - 1)) * (600 - padding * 2),
+        y: padding + (1 - (d.total - min) / range) * (200 - padding * 2),
+        total: d.total,
+        label: d.label,
+      }))
+    },
+    userGrowthLinePoints() {
+      return this.userGrowthPoints.map(p => p.x + ',' + p.y).join(' ')
+    },
+    userGrowthAreaPoints() {
+      if (!this.userGrowthPoints.length) return ''
+      const pts = this.userGrowthPoints
+      const first = pts[0].x + ',180 ' + pts.map(p => p.x + ',' + p.y).join(' ') + ' ' + pts[pts.length - 1].x + ',180'
+      return first
+    },
     adultLibrary() {
       const list = this.library.filter(a => a.shelf === 'Adult')
       if (this.adultShelfFilter === 'all') return list
@@ -726,6 +1075,18 @@ export default {
     }
   },
   methods: {
+    discColor(trait) {
+      return { D: '#e93d2f', I: '#ffbd05', S: '#0dab49', C: '#1666ff' }[trait] || '#999'
+    },
+    discPercent(count) {
+      if (!this.metrics || !this.metrics.discDistribution.length) return 0
+      const total = this.metrics.discDistribution.reduce((s, d) => s + d.count, 0)
+      return total ? Math.round(count / total * 100) : 0
+    },
+    trendPercent(count, arr) {
+      const max = Math.max(...arr.map(m => m.count), 1)
+      return Math.round(count / max * 100)
+    },
     signOut() {
       sessionStorage.removeItem('tal_admin_secret')
       this.$router.push('/admin/login')
@@ -870,6 +1231,77 @@ export default {
       this.imageStyleSelected = ''
       this.imageTab = 'style'
       this.imageError = ''
+    },
+    async loadUsers() {
+      this.usersLoading = true
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        const res = await this.$axios.get('/api/admin/users', { headers: { 'x-admin-secret': adminSecret } })
+        this.adminUsers = res.data.users || []
+      } catch(err) { console.error('Failed to load users:', err) }
+      finally { this.usersLoading = false }
+    },
+    openCreditEdit(userId) {
+      this.creditEditId = this.creditEditId === userId ? null : userId
+      this.creditEditAmount = 1
+    },
+    async adjustCredits(user, amount) {
+      if (amount < 0 && !confirm('Remove ' + Math.abs(amount) + ' credit(s) from ' + (user.name || user.email) + '?')) return
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        const res = await this.$axios.patch('/api/admin/users/' + user._id + '/credits', { amount }, { headers: { 'x-admin-secret': adminSecret } })
+        user.creditsBalance = res.data.creditsBalance
+        this.creditEditId = null
+      } catch(err) {
+        alert('Failed: ' + (err.response?.data?.error || err.message))
+      }
+    },
+    fmtDate(d) {
+      if (!d) return '—'
+      return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+    },
+    async loadMetrics() {
+      this.metricsLoading = true
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        const res = await this.$axios.get('/api/admin/metrics', { headers: { 'x-admin-secret': adminSecret } })
+        this.metrics = res.data
+      } catch(err) { console.error('Failed to load metrics:', err) }
+      finally { this.metricsLoading = false }
+    },
+    formatMonthShort(label) {
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+      return months[(label.month || 1) - 1]
+    },
+    formatMonth(m) {
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+      return months[(m._id.month || 1) - 1] + ' ' + m._id.year
+    },
+    selectShelfSearchResult(a) {
+      this.shelfSearchSelected = a
+      this.shelfSearch = a.title
+    },
+    async removeFromShelf(shelfId, assessmentId) {
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        await this.$axios.patch('/api/admin/shelves-remove-assessment', { shelfId, assessmentId }, { headers: { 'x-admin-secret': adminSecret } })
+        const shelf = this.customShelves.find(s => s._id === shelfId)
+        if (shelf) {
+          shelf.assessmentIds = (shelf.assessmentIds || []).filter(id => id !== assessmentId)
+          if (shelf.assessments) shelf.assessments = shelf.assessments.filter(a => a._id !== assessmentId)
+        }
+      } catch(err) { console.error('Remove failed:', err) }
+    },
+    async removeFromAllShelves(assessmentId) {
+      if (!confirm('Remove this assessment from all custom shelves?')) return
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        await this.$axios.patch('/api/admin/shelves-remove-assessment-all', { assessmentId }, { headers: { 'x-admin-secret': adminSecret } })
+        this.customShelves.forEach(s => {
+          if (s.assessmentIds) s.assessmentIds = s.assessmentIds.filter(id => id !== assessmentId)
+          if (s.assessments) s.assessments = s.assessments.filter(a => a._id !== assessmentId)
+        })
+      } catch(err) { console.error('Remove all failed:', err) }
     },
     loadTopRatedConfig() {
       if (process.client) {
@@ -1249,4 +1681,265 @@ textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
 .shelf-item-meta { font-size: 12px; color: var(--color-text-secondary); margin-right: 4px; }
 .shelf-item-books { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .shelf-book-tag { font-size: 11px; padding: 3px 10px; background: var(--color-background-secondary); border-radius: 20px; color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); }
+
+/* ── Metrics tab only ── */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.metric-card {
+  background: #fff;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+.metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #12304d;
+  line-height: 1.2;
+}
+.metric-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.metric-sub {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin-top: 6px;
+}
+.metrics-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 0;
+}
+.metrics-row .card { margin-bottom: 16px; }
+.metrics-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+  font-size: 13px;
+}
+.metrics-list-item:last-child { border-bottom: none; }
+.metrics-rank {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+.metrics-list-title { flex: 1; font-weight: 500; }
+.metrics-list-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+  border: 0.5px solid var(--color-border-tertiary);
+}
+.metrics-list-count {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.disc-bars { padding: 8px 0; }
+.disc-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.disc-bar-label {
+  width: 20px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+}
+.disc-bar-track {
+  flex: 1;
+  height: 24px;
+  background: var(--color-background-secondary);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.disc-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+.disc-bar-count {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  width: 80px;
+  text-align: right;
+}
+.metrics-trend-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.metrics-trend-label {
+  width: 70px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+.metrics-trend-track {
+  flex: 1;
+  height: 18px;
+  background: var(--color-background-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.metrics-trend-fill {
+  height: 100%;
+  background: #534AB7;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+.metrics-trend-fill--green { background: #0dab49; }
+.metrics-trend-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  width: 30px;
+  text-align: right;
+}
+.line-graph-wrap {
+  position: relative;
+  padding-bottom: 40px;
+}
+.line-graph {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+.line-graph-labels {
+  position: relative;
+  height: 36px;
+}
+.line-graph-label {
+  position: absolute;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line-graph-month {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}
+.line-graph-value {
+  font-size: 12px;
+  font-weight: 700;
+}
+.graph-dd { position: relative; }
+.graph-dd-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: 6px;
+  background: var(--color-background-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  color: #12304d;
+  cursor: pointer;
+  outline: none;
+}
+.graph-dd-trigger:hover { border-color: var(--color-border-secondary); }
+.graph-dd-trigger:focus { border-color: #534AB7; }
+.graph-dd-chevron { font-size: 10px; color: var(--color-text-tertiary); }
+.graph-dd-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.graph-dd-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: #fff;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  z-index: 10;
+  overflow: hidden;
+  min-width: 140px;
+}
+.graph-dd-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+.graph-dd-option:hover { background: var(--color-background-secondary); }
+.graph-dd-active { color: #534AB7; font-weight: 600; }
+.graph-dd-option:not(:last-child) { border-bottom: 0.5px solid var(--color-border-tertiary); }
+/* ── Users tab ── */
+.users-search-input {
+  padding: 5px 10px;
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  width: 220px;
+}
+.users-search-input:focus { border-color: #534AB7; outline: none; }
+.users-table-wrap { overflow-x: auto; }
+.user-cell-name { font-weight: 600; font-size: 13px; }
+.user-cell-email { font-size: 11px; color: var(--color-text-secondary); }
+.user-cell-assess { font-size: 11px; color: var(--color-text-tertiary); font-style: italic; margin-top: 2px; }
+.user-badge-kids {
+  display: inline-block;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 20px;
+  background: #EAF3DE;
+  color: #27500A;
+  border: 0.5px solid #639922;
+  margin-top: 3px;
+}
+.user-credits {
+  font-weight: 700;
+  font-size: 15px;
+  color: #12304d;
+}
+.credit-edit-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.credit-edit-input {
+  width: 50px;
+  padding: 3px 5px;
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  font-family: inherit;
+}
+@media (max-width: 900px) {
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .metrics-row { flex-direction: column; }
+}
 </style>

@@ -36,6 +36,8 @@ const login = async (req, res) => {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
 
+    User.updateOne({ _id: user._id }, { lastLoginAt: new Date() }).exec();
+
     const token = jwt.sign(
       { id: user._id, email: user.email },
       process.env.JWT_SECRET,
