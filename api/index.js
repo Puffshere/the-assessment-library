@@ -24,6 +24,7 @@ import adminController from './controllers/adminController.js';
 import adminAuth from './middleware/adminAuth.js';
 const customShelfController = require('./controllers/customShelfController');
 const featuredReleaseController = require('./controllers/featuredReleaseController');
+const ratingController = require('./controllers/ratingController');
 
 
 const upload = multer();
@@ -82,7 +83,10 @@ app.post('/sessions/:id/answer', sessionsController.authenticate, sessionsContro
 
 app.get('/assessments', assessmentController.getAssessmentsForLibrary);
 
+app.get('/assessments/top-rated', ratingController.getTopRated);
 app.get('/assessments/:slug', assessmentController.getAssessmentBySlug);
+app.post('/assessments/:id/rate', ratingController.rateAssessment);
+app.get('/assessments/:id/rating', ratingController.getUserRating);
 
 app.post('/contact', contactController.submitContact);
 

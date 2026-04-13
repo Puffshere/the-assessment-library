@@ -260,6 +260,13 @@
             </div>
         </transition>
 
+        <star-rating-popup v-if="showRatingPopup"
+            :show="showRatingPopup"
+            :assessment-id="assessment ? (assessment._id || assessment.id || '') : ''"
+            :assessment-title="displayTitle"
+            @close="showRatingPopup = false"
+        />
+
         <LazyHydrate when-visible>
             <footer-fold></footer-fold>
         </LazyHydrate>
@@ -283,7 +290,8 @@ export default {
     components: {
         LazyHydrate,
         'main-nav': () => import('@/components/Nav'),
-        'footer-fold': () => import('@/components/Footer')
+        'footer-fold': () => import('@/components/Footer'),
+        'star-rating-popup': () => import('@/components/StarRatingPopup')
     },
     head() {
         return {
@@ -338,6 +346,7 @@ export default {
                 'You notice details and think things through. You like clear rules, careful plans, and helping the team solve tricky problems the right way.',
             breakdownModal: false,
             hasViewedBreakdown: false,
+            showRatingPopup: false,
             isClient: false,
             questions: [],
             isThirdPerson: false,
@@ -711,6 +720,8 @@ export default {
             this.hasViewedBreakdown = true;
             if (this.isGuest) {
                 this.$router.push('/thank-you-participant?childName=' + encodeURIComponent(this.thirdPersonInviterName));
+            } else if (this.$store.state.loggedIn && !this.showRatingPopup) {
+                setTimeout(() => { this.showRatingPopup = true; }, 500);
             }
         },
         async goToInvite() {

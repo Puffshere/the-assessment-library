@@ -38,8 +38,32 @@
                                 <div class="backpanel" aria-hidden="true"></div>
 
                                 <div v-if="loadError" class="status error">{{ loadError }}</div>
-                                <div v-else-if="!allAdultShelves.length && !allKidsShelves.length" class="status">
+                                <div v-else-if="!allAdultShelves.length && !allKidsShelves.length && !topRatedAssessments.length" class="status">
                                     No assessments are available in your library yet.
+                                </div>
+
+                                <!-- TOP RATED SHELF -->
+                                <div v-if="topRatedAssessments.length && !kidsViewActive">
+                                    <div class="shelf top-rated-shelf">
+                                        <span class="top-rated-label">★ Top Rated</span>
+                                    </div>
+                                    <div class="row shelf-row">
+                                        <div class="scroll-track">
+                                            <div v-for="book in topRatedAssessments" :key="'tr-' + book._id" class="book-card" @click="openBookModal(book)">
+                                                <div class="book-rating">
+                                                    <span v-for="n in 5" :key="'star-' + n" class="rating-star" :class="{ filled: n <= Math.round(book.ratingAvg) }">★</span>
+                                                </div>
+                                                <div class="hero-box" :class="{ disabled: isBookDisabled(book) }">
+                                                    <div class="hero-box-inner" tabindex="0">
+                                                        <img v-if="book.heroImageUrl && !book.heroImageUrl.includes('default-cover')" :src="book.heroImageUrl" :alt="`Cover for ${book.title}`" class="hero-img" :class="{ 'hero-img--loaded': heroLoaded[book._id || book.slug] }" loading="lazy" @load="markHeroLoaded(book._id || book.slug)" />
+                                                        <div v-else class="hero-placeholder"><span>{{ book.title }}</span></div>
+                                                    </div>
+                                                </div>
+                                                <p class="title">{{ book.title }}</p>
+                                                <p class="description">{{ book.description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- ADULT SECTION -->
@@ -113,7 +137,9 @@
                 <button class="modal-x-close" @click="closeBookModal" aria-label="Close">&times;</button>
                 <div class="container">
                     <h4>{{ selectedBook.title }}</h4>
-                    <hr />
+                    <div class="modal-rating">
+                        <span v-for="n in 5" :key="'modal-star-' + n" class="rating-star" :class="{ filled: n <= Math.round(selectedBook.ratingAvg || 0) }">★</span>
+                    </div>
                     <div class="row">
                         <div class="col-6">
                             <p>
@@ -121,7 +147,7 @@
                             </p>
                         </div>
                         <div class="col-6">
-                            <p style="font-style: italic; color: #e93d2f;">
+                            <p style="font-style: italic; color: #e93d2f; background: rgba(233, 61, 47, 0.06); padding: 10px 12px; border-radius: 6px;">
                                 It is very important to answer the question as if you are the character in the story to
                                 get the most accurate assessment.
                             </p>
@@ -218,6 +244,7 @@ export default {
 
             heroLoaded: {},
             customShelves: [],
+            topRatedAssessments: [],
 
             showExterior: true,
             showShelves: false,
@@ -300,6 +327,7 @@ export default {
 
         this.fetchAssessments()
         this.fetchCustomShelves()
+        this.fetchTopRated()
     },
     beforeDestroy() {
         if (this._exteriorTimer) clearTimeout(this._exteriorTimer)
@@ -447,6 +475,17 @@ export default {
                 this.checkingOut = false
             }
         },
+        async fetchTopRated() {
+            try {
+                const enabled = localStorage.getItem('tal_top_rated_enabled') !== 'false'
+                if (!enabled) return
+                const limit = parseInt(localStorage.getItem('tal_top_rated_limit')) || 3
+                const res = await this.$axios.$get('/api/assessments/top-rated?limit=' + limit)
+                this.topRatedAssessments = res.assessments || []
+            } catch(err) {
+                console.error('Failed to load top rated:', err)
+            }
+        },
         async fetchCustomShelves() {
             try {
                 const res = await this.$axios.$get('/api/shelves');
@@ -554,9 +593,31 @@ export default {
             max-width: 1140px;
             margin: 0 auto;
 
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 20px;
+                background-color: rgb(100, 55, 13);
+                z-index: 2;
+                pointer-events: none;
+                border-radius: 3px;
+                box-shadow: 5px 5px 10px #412604;
+            }
+
+            &::before {
+                left: 40px;
+            }
+
+            &::after {
+                right: 40px;
+            }
+
             .library-exterior {
                 display: block;
-                width: 100%;
+                width: calc(100% - 120px);
                 max-width: 1140px;
                 margin: 0 auto;
                 border-radius: 10px;
@@ -638,7 +699,7 @@ export default {
 
         .shelf {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             height: 20px;
             margin: 30px 10px;
             background-color: rgb(100, 55, 13);
@@ -798,9 +859,20 @@ export default {
             width: 100%;
             background: #ffffff;
             border-radius: 12px;
-            padding: 48px 24px 24px;
+            padding: 68px 24px 24px;
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
             text-align: left;
+            overflow: hidden;
+        }
+
+        .book-modal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: rgba(233, 61, 47, 0.15);
         }
 
         .modal-x-close {
@@ -1035,15 +1107,13 @@ export default {
     flex-wrap: nowrap;
     gap: 16px;
     overflow-x: auto;
-    padding: 20px 4px 20px;
+    padding: 0 4px 0;
+    margin-bottom: -5px;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(100,55,13,0.4) transparent;
+    scrollbar-width: none;
 }
-.scroll-track::-webkit-scrollbar { height: 6px; }
-.scroll-track::-webkit-scrollbar-track { background: transparent; }
-.scroll-track::-webkit-scrollbar-thumb { background: rgba(100,55,13,0.4); border-radius: 3px; }
+.scroll-track::-webkit-scrollbar { display: none; }
 .scroll-track .book-card {
     flex: 0 0 200px;
     min-width: 200px;
@@ -1116,6 +1186,47 @@ export default {
     -webkit-box-orient: vertical;
     overflow: hidden;
     line-height: 1.4;
+}
+.modal-rating {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 2px;
+}
+.modal-rating .rating-star {
+    font-size: 22px;
+}
+.book-rating {
+    margin: 0 0 -4px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    line-height: 1;
+}
+.rating-star {
+    color: #ddd;
+    font-size: 16px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.rating-star.filled {
+    color: #ffbd05;
+}
+.top-rated-shelf {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #12304d 0%, #1a4a70 50%, #12304d 100%) !important;
+    height: 36px !important;
+    border-radius: 3px;
+}
+.top-rated-label {
+    color: #ffbd05;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 .section-shelf-wrap {
     position: relative;

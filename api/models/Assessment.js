@@ -64,6 +64,9 @@ const assessmentSchema = new mongoose.Schema(
 
     genre: { type: String, default: '' },
 
+    ratingAvg: { type: Number, default: 0 },
+    ratingCount: { type: Number, default: 0 },
+
     category: categorySchema,
 
     DstyleTitle: String,

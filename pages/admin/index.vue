@@ -10,7 +10,7 @@
           <button class="tab-btn" :class="{ active: tab === 'create' }" @click="tab = 'create'">Create</button>
           <button class="tab-btn" :class="{ active: tab === 'library' }" @click="tab = 'library'; loadLibrary()">Library</button>
           <button class="tab-btn" :class="{ active: tab === 'shelves' }" @click="tab = 'shelves'; loadShelves()">Shelves</button>
-          <button class="tab-btn" :class="{ active: tab === 'featured' }" @click="tab = 'featured'; loadFeatured()">Featured</button>
+          <button class="tab-btn" :class="{ active: tab === 'featured' }" @click="tab = 'featured'; loadFeatured(); loadTopRatedConfig()">Featured</button>
           <button class="sign-out-btn" @click="signOut">Sign out</button>
         </div>
       </div>
@@ -528,6 +528,29 @@
         <p v-if="featuredError" style="color:#A32D2D;font-size:13px;margin-top:8px">{{ featuredError }}</p>
         <p v-if="featuredSuccess" style="color:#3B6D11;font-size:13px;margin-top:8px">{{ featuredSuccess }}</p>
       </div>
+
+      <!-- TOP RATED SHELF CONFIG -->
+      <div class="card">
+        <div class="card-title">Top Rated shelf</div>
+        <div class="info-note" style="margin-bottom:1rem">Shows the highest-rated assessments as a special shelf at the top of the library. Only assessments with at least 1 rating appear.</div>
+        <div class="field-row-2" style="margin-bottom:16px">
+          <div class="field">
+            <label>Number of assessments to show</label>
+            <input v-model.number="topRatedLimit" type="number" min="1" max="20" style="width:80px" />
+          </div>
+          <div class="field">
+            <label>Status</label>
+            <div class="shelf-toggle">
+              <button class="shelf-btn" :class="{ active: topRatedEnabled }" type="button" @click="topRatedEnabled = true">Enabled</button>
+              <button class="shelf-btn" :class="{ active: !topRatedEnabled }" type="button" @click="topRatedEnabled = false">Disabled</button>
+            </div>
+          </div>
+        </div>
+        <button class="generate-btn" style="margin-top:0" :disabled="topRatedSaving" @click="saveTopRatedConfig">
+          {{ topRatedSaving ? 'Saving...' : 'Save top rated config' }}
+        </button>
+        <p v-if="topRatedSuccess" style="color:#3B6D11;font-size:13px;margin-top:8px">{{ topRatedSuccess }}</p>
+      </div>
     </div>
 
   </div>
@@ -581,6 +604,10 @@ export default {
       featuredSaving: false,
       featuredError: '',
       featuredSuccess: '',
+      topRatedLimit: 3,
+      topRatedEnabled: true,
+      topRatedSaving: false,
+      topRatedSuccess: '',
       newShelf: {
         name: '',
         section: 'Adult',
@@ -843,6 +870,19 @@ export default {
       this.imageStyleSelected = ''
       this.imageTab = 'style'
       this.imageError = ''
+    },
+    loadTopRatedConfig() {
+      if (process.client) {
+        this.topRatedLimit = parseInt(localStorage.getItem('tal_top_rated_limit')) || 3
+        this.topRatedEnabled = localStorage.getItem('tal_top_rated_enabled') !== 'false'
+      }
+    },
+    saveTopRatedConfig() {
+      this.topRatedSaving = true
+      localStorage.setItem('tal_top_rated_limit', this.topRatedLimit)
+      localStorage.setItem('tal_top_rated_enabled', this.topRatedEnabled)
+      this.topRatedSuccess = 'Saved.'
+      setTimeout(() => { this.topRatedSuccess = ''; this.topRatedSaving = false }, 1500)
     },
     async loadFeatured() {
       const adminSecret = sessionStorage.getItem('tal_admin_secret')
