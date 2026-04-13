@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="slug-root">
         <section class="page">
             <main-nav></main-nav>
 
-            <section class="title">
+            <section class="title" :style="kidsViewActive ? { marginTop: '42px' } : {}">
                 <div class="shadow">
                     <div style="padding: 30px 0 20px 0;">
                         <h1>{{ displayTitle }}</h1>
@@ -25,31 +25,27 @@
                 <img :src="heroImage" :alt="heroAltText" :class="['hero-illustration', imageClass]" />
 
                 <div class="container">
-                    <!-- QUESTION FLOW -->
-                    <div v-if="currentQuestion !== totalQuestions && questions[currentQuestion - 1]"
-                        :key="currentQuestion">
-                        <p style="font-weight: 700;" class="chapter" v-html="questions[currentQuestion - 1].timeline">
-                        </p>
+                    <div class="container-scroll">
+                        <!-- QUESTION FLOW -->
+                        <div v-if="currentQuestion !== totalQuestions && questions[currentQuestion - 1]"
+                            :key="currentQuestion">
+                            <p style="font-weight: 700;" class="chapter" v-html="questions[currentQuestion - 1].timeline">
+                            </p>
 
-                        <div class="line"></div>
+                            <div class="line"></div>
 
-                        <div class="question-wrapper">
-                            <div v-if="isClient" v-html="visibleQuestionPage"></div>
-                            <div v-if="questionPages.length > 1" class="pagination-controls">
-                                <button v-if="questionPage > 0" class="page-btn" @click="questionPage--">← Back</button>
-                                <span class="page-indicator">{{ questionPage + 1 }} / {{ questionPages.length }}</span>
-                                <button v-if="questionPage < questionPages.length - 1" class="page-btn next-btn" @click="questionPage++">Continue reading →</button>
+                            <div class="question-wrapper">
+                                <div v-if="isClient" v-html="visibleQuestionPage"></div>
+                            </div>
+
+                            <div v-if="questionPage === questionPages.length - 1" class="answers">
+                                <button class="answerButtons"
+                                    v-for="(answer, index) in questions[currentQuestion - 1].answers" :key="index"
+                                    @click="selectAnswer(answer)">
+                                    <span class="selection" v-html="answer.text"></span>
+                                </button>
                             </div>
                         </div>
-
-                        <div v-if="questionPage === questionPages.length - 1" class="answers">
-                            <button class="answerButtons"
-                                v-for="(answer, index) in questions[currentQuestion - 1].answers" :key="index"
-                                @click="selectAnswer(answer)">
-                                <span class="selection" v-html="answer.text"></span>
-                            </button>
-                        </div>
-                    </div>
 
                     <!-- FINAL CONCLUSION PAGE -->
                     <div v-else-if="questions[currentQuestion - 1]">
@@ -116,8 +112,16 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </section>
+
+            <div v-if="questionPages.length > 1" class="pagination-controls">
+                <button v-if="questionPage > 0" class="page-btn" @click="questionPage--">← Back</button>
+                <span class="page-indicator">{{ questionPage + 1 }} / {{ questionPages.length }}</span>
+                <button v-if="questionPage < questionPages.length - 1" class="page-btn next-btn" @click="questionPage++">Continue reading →</button>
+            </div>
+
         </section>
 
         <!-- BREAKDOWN MODAL (unchanged) -->
@@ -267,9 +271,6 @@
             @close="showRatingPopup = false"
         />
 
-        <LazyHydrate when-visible>
-            <footer-fold></footer-fold>
-        </LazyHydrate>
     </div>
 </template>
 
@@ -450,7 +451,17 @@ export default {
             };
         }
     },
+    beforeDestroy() {
+        if (process.client) {
+            document.documentElement.style.overflow = '';
+            document.body.style.overflow = '';
+        }
+    },
     async mounted() {
+        if (process.client) {
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+        }
         this.isClient = true;
 
         await this.loadAssessment();
@@ -872,10 +883,21 @@ export default {
 @import '~assets/scss/vars';
 @import '~assets/scss/new-styles';
 
+.slug-root {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 .page {
     z-index: 10;
     color: #213c85;
     position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-top: 64px;
 
     background: linear-gradient(to right, #1f232e 50%, #ffffff 50%);
 
@@ -888,7 +910,7 @@ export default {
     }
 
     .title {
-        margin-top: 64px;
+        margin-top: 0;
         padding: 0px 0 15px 0;
         margin-bottom: 0px;
         text-align: center;
@@ -918,7 +940,6 @@ export default {
         padding: 0;
         font-family: $nunito-family;
         position: relative;
-        min-height: 58vh;
 
         .third-person-banner {
             position: relative;
@@ -947,10 +968,13 @@ export default {
             position: relative;
             background: #fff;
             z-index: 2;
-            min-height: 100vh;
-            padding: 0 20px 60px;
+            height: calc(100vh - 220px);
+            padding: 0;
             margin-left: 360px;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
 
         .chapter {
@@ -1263,8 +1287,7 @@ export default {
     .page {
         .questionnaire {
             .container {
-                min-height: 543px !important;
-                padding: 0 16px 60px;
+                min-height: 0 !important;
             }
         }
     }
@@ -1289,8 +1312,8 @@ export default {
 
             .container {
                 margin-left: 0;
-                padding: 20px 16px 40px;
-                min-height: auto;
+                padding: 0;
+                min-height: 0;
             }
 
             .post-breakdown-card-wrap {
@@ -1658,14 +1681,33 @@ export default {
         }
     }
 }
+.container-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0 20px 60px;
+}
 .pagination-controls {
+    position: fixed;
+    bottom: 0;
+    left: 360px;
+    width: calc(100% - 360px - 360px);
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 24px;
-    padding-top: 16px;
+    padding: 12px 20px;
     border-top: 1px solid #eee;
-    flex-wrap: wrap;
+    background: #fff;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .pagination-controls {
+        left: 0;
+        width: 100%;
+    }
 }
 .page-btn {
     background: transparent;

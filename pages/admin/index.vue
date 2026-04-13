@@ -658,7 +658,7 @@
             <div class="metric-sub">{{ metrics.assessments.total - metrics.assessments.active }} hidden</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value">{{ metrics.ratings.average }} ★</div>
+            <div class="metric-value">{{ metrics.ratings.average }} <span class="metric-star">★</span></div>
             <div class="metric-label">Average Rating</div>
             <div class="metric-sub">{{ metrics.ratings.total }} total ratings submitted</div>
           </div>
@@ -1709,6 +1709,13 @@ textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
   margin-top: 4px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+}
+.metric-star {
+  color: #ffbd05;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  position: relative;
+  top: -1px;
+  margin-left: 5px;
 }
 .metric-sub {
   font-size: 11px;
