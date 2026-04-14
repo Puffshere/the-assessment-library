@@ -135,12 +135,21 @@
           <div class="field">
             <label>Image style</label>
             <select v-model="form.imageStyle">
-              <option value="illustrated">Illustrated book cover (warm, editorial)</option>
-              <option value="painterly">Painterly / watercolor</option>
-              <option value="cinematic">Cinematic / photorealistic</option>
-              <option value="flat">Flat design / graphic</option>
+              <option value="illustrated">Illustrated book cover (warm editorial)</option>
+              <option value="painterly">Painterly watercolor</option>
+              <option value="cinematic">Cinematic photorealistic</option>
+              <option value="flat">Flat design graphic</option>
               <option value="pixel">Pixel art (great for kids)</option>
+              <option value="stock-photo">Studio photograph (real people stock photo style)</option>
+              <option value="anime">Anime manga style</option>
+              <option value="storybook">Storybook illustration (children's book style)</option>
+              <option value="oil-painting">Oil painting (classic textured)</option>
+              <option value="3d-pixar">3D rendered Pixar style</option>
+              <option value="comic-book">Comic book graphic novel</option>
+              <option value="minimalist">Minimalist abstract</option>
+              <option value="custom">Custom (enter your own prompt)</option>
             </select>
+            <textarea v-if="form.imageStyle === 'custom'" v-model="form.customImagePrompt" rows="3" placeholder="Describe exactly what you want the image to look like…" style="margin-top:6px;width:100%;resize:vertical" />
           </div>
           <div class="field">
             <label>Image prompt override <span class="label-note">(optional)</span></label>
@@ -148,6 +157,30 @@
           </div>
         </div>
         <span class="hint" style="display:block;margin-top:8px">DALL-E 3 (hd quality) → Backblaze B2. One cover per assessment.</span>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Add to shelves</div>
+        <div v-if="createShelvesLoading" class="hint">Loading shelves…</div>
+        <div v-else-if="!createShelvesFiltered.length" class="hint">No active shelves found.</div>
+        <div v-else>
+          <div v-if="createShelvesAdult.length" class="shelf-toggle-section">
+            <strong class="shelf-toggle-heading">Adult</strong>
+            <label v-for="shelf in createShelvesAdult" :key="shelf._id" class="shelf-toggle">
+              <input type="checkbox" :value="shelf._id" v-model="form.selectedShelfIds" />
+              <span class="shelf-toggle-slider"></span>
+              <span class="shelf-toggle-name">{{ shelf.name }}</span>
+            </label>
+          </div>
+          <div v-if="createShelvesKids.length" class="shelf-toggle-section">
+            <strong class="shelf-toggle-heading">Kids</strong>
+            <label v-for="shelf in createShelvesKids" :key="shelf._id" class="shelf-toggle">
+              <input type="checkbox" :value="shelf._id" v-model="form.selectedShelfIds" />
+              <span class="shelf-toggle-slider"></span>
+              <span class="shelf-toggle-name">{{ shelf.name }}</span>
+            </label>
+          </div>
+        </div>
       </div>
 
       <button class="generate-btn" :disabled="generating || !canGenerate" @click="generate">
@@ -869,14 +902,18 @@ export default {
       imageStyleSelected: '',
       imageContentEdit: '',
       imageStyles: [
-        { label: 'Illustrated', prompt: 'Reimagine this book cover in a warm, editorial illustrated style with rich colors and hand-drawn feel. Keep the same subject and story concept.' },
-        { label: 'Watercolor', prompt: 'Reimagine this book cover in a beautiful watercolor painting style with soft washes of color and painterly texture. Keep the same subject and story concept.' },
-        { label: 'Cinematic', prompt: 'Reimagine this book cover in a cinematic photorealistic style with dramatic lighting and movie poster composition. Keep the same subject and story concept.' },
-        { label: 'Pixel Art', prompt: 'Reimagine this book cover in a vibrant retro pixel art style with clean pixels and bold colors. Keep the same subject and story concept.' },
-        { label: 'Oil Painting', prompt: 'Reimagine this book cover as a classical oil painting with rich textures and dramatic brushwork. Keep the same subject and story concept.' },
-        { label: 'Minimalist', prompt: 'Reimagine this book cover in a clean minimalist design style with simple shapes, limited color palette and modern typography feel. Keep the same subject and story concept.' },
-        { label: 'Comic Book', prompt: 'Reimagine this book cover in a bold comic book illustration style with strong outlines and vibrant flat colors. Keep the same subject and story concept.' },
-        { label: 'Photorealistic', prompt: 'Reimagine this book cover as a highly detailed photorealistic image with professional photography lighting. Keep the same subject and story concept.' },
+        { label: 'Illustrated', prompt: 'Reimagine this book cover in a warm, editorial illustrated style with rich colors, hand-drawn linework, and a cozy bookish feel. Keep the same subject and story concept.' },
+        { label: 'Watercolor', prompt: 'Reimagine this book cover as a painterly watercolor with soft translucent washes, visible paper texture, wet-on-wet blending, and gentle color bleeds at the edges. Keep the same subject and story concept.' },
+        { label: 'Cinematic', prompt: 'Reimagine this book cover in a cinematic photorealistic style with dramatic volumetric lighting, shallow depth of field, lens flare, and a widescreen movie-poster composition. Keep the same subject and story concept.' },
+        { label: 'Flat Design', prompt: 'Reimagine this book cover as a flat design graphic with bold geometric shapes, clean vector lines, a limited bright color palette, and no gradients or textures. Keep the same subject and story concept.' },
+        { label: 'Pixel Art', prompt: 'Reimagine this book cover in a vibrant retro pixel art style with crisp individual pixels, a 16-bit color palette, and nostalgic video-game charm. Keep the same subject and story concept.' },
+        { label: 'Stock Photo', prompt: 'Reimagine this book cover as a professional studio photograph of real people with soft directional lighting, neutral studio backdrop, and natural skin tones in a commercial stock-photo style. Keep the same subject and story concept.' },
+        { label: 'Anime', prompt: 'Reimagine this book cover in a Japanese anime/manga style with large expressive eyes, dynamic action lines, cel-shaded coloring, and dramatic speed-line backgrounds. Keep the same subject and story concept.' },
+        { label: 'Storybook', prompt: 'Reimagine this book cover as a whimsical children\'s storybook illustration with soft rounded characters, gentle pastel tones, playful compositions, and a warm bedtime-story atmosphere. Keep the same subject and story concept.' },
+        { label: 'Oil Painting', prompt: 'Reimagine this book cover as a classical oil painting with thick impasto brushstrokes, visible canvas texture, rich chiaroscuro lighting, and a Renaissance gallery feel. Keep the same subject and story concept.' },
+        { label: '3D Pixar', prompt: 'Reimagine this book cover in a 3D rendered Pixar/Disney animation style with smooth subsurface-scattered skin, exaggerated proportions, bright saturated colors, and global illumination rendering. Keep the same subject and story concept.' },
+        { label: 'Comic Book', prompt: 'Reimagine this book cover in a bold comic book graphic novel style with heavy black ink outlines, Ben-Day dot shading, dynamic panel-style composition, and vivid flat colors. Keep the same subject and story concept.' },
+        { label: 'Minimalist', prompt: 'Reimagine this book cover in a minimalist abstract style with sparse negative space, one or two accent colors, simple symbolic shapes, and clean sans-serif typography feel. Keep the same subject and story concept.' },
       ],
       customShelves: [],
       shelvesLoading: false,
@@ -944,10 +981,23 @@ export default {
         batchVariation: 'protagonist',
         imageStyle: 'illustrated',
         imagePromptOverride: '',
+        customImagePrompt: '',
+        selectedShelfIds: [],
       },
+      createShelves: [],
+      createShelvesLoading: false,
     }
   },
   computed: {
+    createShelvesFiltered() {
+      return this.createShelves.filter(s => s.isActive && !s.isArchived)
+    },
+    createShelvesAdult() {
+      return this.createShelvesFiltered.filter(s => s.section === 'Adult')
+    },
+    createShelvesKids() {
+      return this.createShelvesFiltered.filter(s => s.section === 'Kids')
+    },
     filteredUsers() {
       if (!this.usersSearch || this.usersSearch.length < 2) return this.adminUsers
       const q = this.usersSearch.toLowerCase()
@@ -1060,6 +1110,8 @@ export default {
   mounted() {
     if (!sessionStorage.getItem('tal_admin_secret')) {
       this.$router.replace('/admin/login')
+    } else {
+      this.loadCreateShelves()
     }
   },
   watch: {
@@ -1075,6 +1127,31 @@ export default {
     }
   },
   methods: {
+    async loadCreateShelves() {
+      this.createShelvesLoading = true
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      try {
+        const res = await this.$axios.get('/api/admin/shelves', { headers: { 'x-admin-secret': adminSecret } })
+        this.createShelves = res.data.shelves || []
+      } catch (err) { console.error('Failed to load shelves for Create tab:', err) }
+      finally { this.createShelvesLoading = false }
+    },
+    async addToSelectedShelves(assessmentIds) {
+      if (!this.form.selectedShelfIds.length || !assessmentIds.length) return
+      const adminSecret = sessionStorage.getItem('tal_admin_secret')
+      for (const shelfId of this.form.selectedShelfIds) {
+        try {
+          const shelf = this.createShelves.find(s => s._id === shelfId)
+          if (!shelf) continue
+          const existing = (shelf.assessmentIds || []).map(id => typeof id === 'object' ? id._id || id : id)
+          const updated = [...existing, ...assessmentIds.filter(id => !existing.includes(id))]
+          await this.$axios.patch('/api/admin/shelves/' + shelfId, { assessmentIds: updated }, { headers: { 'x-admin-secret': adminSecret } })
+          this.addLog('Added to shelf: ' + shelf.name, 'success')
+        } catch (err) {
+          this.addLog('Failed to add to shelf ' + shelfId + ': ' + err.message, 'error')
+        }
+      }
+    },
     discColor(trait) {
       return { D: '#e93d2f', I: '#ffbd05', S: '#0dab49', C: '#1666ff' }[trait] || '#999'
     },
@@ -1142,6 +1219,7 @@ export default {
           creditsCost: this.form.creditsCost,
           imageStyle: this.form.imageStyle,
           imagePromptOverride: this.form.imagePromptOverride,
+          customImagePrompt: this.form.customImagePrompt,
           batchCount: this.form.batchCount,
           batchVariation: this.form.batchVariation,
         }, {
@@ -1176,6 +1254,8 @@ export default {
               job.errors.forEach(e => { this.addLog('Error: ' + e.error, 'error') })
             }
             this.addLog('Done. ' + job.results.length + ' created, ' + job.errors.length + ' failed.', 'success')
+            const newIds = job.results.map(r => r._id).filter(Boolean)
+            if (newIds.length) await this.addToSelectedShelves(newIds)
           } else if (job.status === 'error') {
             this.progress = 0
             this.addLog('Error: ' + job.error, 'error')
@@ -1949,4 +2029,14 @@ textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
   .metrics-grid { grid-template-columns: repeat(2, 1fr); }
   .metrics-row { flex-direction: column; }
 }
+.shelf-toggle-section { margin-bottom: 12px; }
+.shelf-toggle-section:last-child { margin-bottom: 0; }
+.shelf-toggle-heading { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--color-text-secondary, #555); }
+.shelf-toggle { display: inline-flex; align-items: center; gap: 8px; margin: 0 16px 8px 0; cursor: pointer; font-size: 14px; }
+.shelf-toggle input { display: none; }
+.shelf-toggle-slider { position: relative; width: 36px; height: 20px; background: var(--color-border-secondary, #ccc); border-radius: 10px; transition: background 0.2s; flex-shrink: 0; }
+.shelf-toggle-slider::after { content: ''; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; background: #fff; border-radius: 50%; transition: transform 0.2s; }
+.shelf-toggle input:checked + .shelf-toggle-slider { background: #534AB7; }
+.shelf-toggle input:checked + .shelf-toggle-slider::after { transform: translateX(16px); }
+.shelf-toggle-name { color: var(--color-text-primary, #1a1a1a); }
 </style>

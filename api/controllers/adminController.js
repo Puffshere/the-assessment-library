@@ -69,8 +69,24 @@ function calcNextQuestions(nodeMap) {
   });
 }
 
+const IMAGE_STYLE_PROMPTS = {
+  'illustrated': 'Warm editorial illustration with hand-drawn linework, rich layered colors, crosshatching details, and a cozy bookish feel. Rendered like a premium book jacket by a professional illustrator. NOT photorealistic, NOT 3D rendered, NOT watercolor, NOT flat vector, NOT pixel art.',
+  'painterly': 'Painterly watercolor artwork with soft translucent washes, visible wet paper texture, wet-on-wet color bleeds, and unpainted white edges. Loose brushwork with pigment pooling in creases. NOT digital, NOT photorealistic, NOT sharp lines, NOT flat design, NOT illustration.',
+  'cinematic': 'Cinematic photorealistic scene with dramatic volumetric lighting, shallow depth of field bokeh, anamorphic lens flare, and widescreen movie-poster composition. Hyper-detailed like a film still from a Hollywood blockbuster. NOT illustrated, NOT painted, NOT cartoon, NOT flat, NOT pixel art.',
+  'flat': 'Flat vector graphic design with bold geometric shapes, perfectly clean edges, a limited palette of 4-5 bright colors, and zero gradients or textures. Modern infographic poster aesthetic. NOT photorealistic, NOT illustrated, NOT painterly, NOT 3D, NOT textured.',
+  'pixel': 'Retro 16-bit pixel art with crisp visible individual pixels, a limited color palette, dithering for shading, and nostalgic video-game sprite charm. Every element built from square pixels. NOT smooth, NOT photorealistic, NOT illustrated, NOT high-resolution, NOT 3D.',
+  'stock-photo': 'Professional studio photograph of real people with soft three-point lighting, clean neutral backdrop, natural skin tones and pores, and commercial stock-photo composition. Shot on a DSLR with a 50mm lens. NOT illustrated, NOT painted, NOT cartoon, NOT stylized, NOT AI-looking.',
+  'anime': 'Japanese anime cel art with large expressive eyes, sharp cel-shaded coloring, dynamic speed lines, dramatic hair highlights, and vivid saturated backgrounds. Manga panel aesthetic. NOT Western cartoon, NOT photorealistic, NOT watercolor, NOT 3D rendered, NOT pixel art.',
+  'storybook': "Whimsical children's storybook illustration with soft rounded characters, gentle pastel gouache tones, playful exaggerated proportions, and a warm bedtime-story glow. Hand-painted nursery book aesthetic. NOT photorealistic, NOT dark, NOT anime, NOT flat vector, NOT pixel art.",
+  '3d-pixar': '3D rendered Pixar-style CGI with smooth subsurface-scattered skin, exaggerated cartoon proportions, bright saturated global illumination, and soft ambient occlusion shadows. Clean CG render like a Disney movie poster. NOT 2D, NOT illustrated, NOT photorealistic, NOT painted, NOT pixel art.',
+  'oil-painting': 'Classical oil painting with thick impasto brushstrokes, visible canvas weave texture, rich chiaroscuro lighting, and warm Renaissance gallery color tones. Heavy paint layering like a museum masterwork. NOT digital, NOT flat, NOT photorealistic, NOT illustration, NOT watercolor.',
+  'comic-book': 'Bold comic book art with thick black ink outlines, halftone Ben-Day dot shading, dynamic action-panel composition, and vivid flat colors. Graphic novel cover aesthetic. NOT illustration, NOT watercolor, NOT photorealistic, NOT 3D, NOT anime.',
+  'minimalist': 'Minimalist abstract design with vast negative space, one or two accent colors maximum, simple geometric symbolic shapes, and stark clean composition. Swiss design poster aesthetic. NOT detailed, NOT photorealistic, NOT illustrated, NOT busy, NOT textured.',
+};
+
 function buildClaudePrompt(config, nodeMap) {
   const { title, protagonist, brief, instructions, shelf, subcategories, genre, questionsPerPlaythrough, wordCount, imageStyle } = config;
+  const imageStyleDesc = IMAGE_STYLE_PROMPTS[imageStyle] || imageStyle;
   const wordsPerNode = Math.round(wordCount / (questionsPerPlaythrough + 1));
   return `You are a master storyteller and DISC assessment architect. Your task is to generate a complete, production-ready DISC story assessment for The Assessment Library platform.
 
@@ -128,7 +144,7 @@ Your entire response must be a single JSON object starting with { and ending wit
   "IstyleDescription": "...",
   "SstyleDescription": "...",
   "CstyleDescription": "...",
-  "imagePromptSuggestion": "A detailed DALL-E 3 prompt for the cover in ${imageStyle} style",
+  "imagePromptSuggestion": "A detailed DALL-E 3 prompt for the cover in this style: ${imageStyleDesc}",
   "questions": [
     {
       "chapter": "Chapter 1: ...",
@@ -387,7 +403,13 @@ async function generateSingleAssessment(config, jobId) {
   const allQuestions = [...processedQuestions, conclusionNode];
   let heroImageUrl = '/images/default-cover.jpg';
   try {
-    const imagePrompt = config.imagePromptOverride || storyData.imagePromptSuggestion;
+    const styleDirective = IMAGE_STYLE_PROMPTS[config.imageStyle] || '';
+    const basePrompt = config.imagePromptOverride
+      || (config.imageStyle === 'custom' && config.customImagePrompt)
+      || storyData.imagePromptSuggestion;
+    const imagePrompt = styleDirective
+      ? styleDirective + ' — ' + basePrompt
+      : basePrompt;
     heroImageUrl = await generateAndUploadImage(imagePrompt, config.slug);
   } catch (imgErr) {
     console.error('[adminController] Image generation failed:', imgErr.message);
