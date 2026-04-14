@@ -625,7 +625,7 @@ export default {
             }
 
             .status {
-                margin-top: 30px;
+                margin-top: 0px;
                 font-style: italic;
                 font-size: 24px;
                 font-weight: 400;
@@ -1232,6 +1232,9 @@ export default {
     position: relative;
     z-index: 10;
     margin: 30px -40px 0;
+}
+.stacks-shelves > .section-shelf-wrap:first-child {
+    margin-top: 0px;
 }
 .section-shelf {
     position: relative;

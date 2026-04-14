@@ -31,3 +31,5 @@ $ nvm use 20.11.1
 
 ### for tests run:
 npm run test:open
+
+also nvm use 16.20.2
