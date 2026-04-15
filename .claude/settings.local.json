@@ -38,7 +38,11 @@
       "Bash(echo \"exit: $?\")",
       "Bash(pm2 list:*)",
       "Bash(npx pm2:*)",
-      "Bash(heroku:*)"
+      "Bash(heroku:*)",
+      "Bash(find /c/Users/shawn/Projects/the-assessment-library/components -name *[Bb]utton* -o -name *[Ff]orm*)",
+      "Bash(grep -A 20 '\"\"browserslist\"\"' /c/Users/shawn/Projects/the-assessment-library/package.json)",
+      "Bash(find /c/Users/shawn/Projects/the-assessment-library/assets -name *.scss)",
+      "Bash(npx nuxt:*)"
     ]
   }
 }

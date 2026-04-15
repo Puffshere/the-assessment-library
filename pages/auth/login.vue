@@ -89,10 +89,11 @@ export default {
                 let next = this.$route.query.next;
                 if (!next) {
                     // If the user was in kids view when they logged out, go to onboarding
-                    const wasKids = localStorage.getItem('tal_was_kids_view') === '1';
+                    let wasKids = false;
+                    try { wasKids = localStorage.getItem('tal_was_kids_view') === '1'; } catch {}
                     next = wasKids ? '/kids/onboarding' : '/dashboard';
                 }
-                localStorage.removeItem('tal_was_kids_view');
+                try { localStorage.removeItem('tal_was_kids_view'); } catch {}
                 this.$router.push(next);
 
             } catch (e) {

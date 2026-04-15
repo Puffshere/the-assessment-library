@@ -1,3 +1,14 @@
+// Safari Private Browsing throws on localStorage access
+function safeGetItem(key) {
+  try { return window.localStorage.getItem(key) } catch { return null }
+}
+function safeSetItem(key, val) {
+  try { window.localStorage.setItem(key, val) } catch { /* ignore */ }
+}
+function safeRemoveItem(key) {
+  try { window.localStorage.removeItem(key) } catch { /* ignore */ }
+}
+
 export const state = () => ({
   loggedIn: false,
   user: null,
@@ -46,7 +57,7 @@ export const mutations = {
   SET_KIDS_VIEW_ACTIVE(state, val) {
     state.kidsViewActive = !!val
     if (process.client) {
-      localStorage.setItem('tal_kids_view_active', val ? '1' : '0')
+      safeSetItem('tal_kids_view_active', val ? '1' : '0')
     }
   },
 
@@ -54,9 +65,9 @@ export const mutations = {
     state.activeChildProfile = profile
     if (process.client) {
       if (profile && profile._id) {
-        localStorage.setItem('tal_active_child_id', profile._id)
+        safeSetItem('tal_active_child_id', profile._id)
       } else {
-        localStorage.removeItem('tal_active_child_id')
+        safeRemoveItem('tal_active_child_id')
       }
     }
   }
@@ -64,15 +75,15 @@ export const mutations = {
 
 function restoreAuthFromStorage({ commit, dispatch }, axiosInstance) {
   if (!process.client) return
-  const savedFlag  = localStorage.getItem('tal_logged_in')
-  const savedToken = localStorage.getItem('tal_token')
+  const savedFlag  = safeGetItem('tal_logged_in')
+  const savedToken = safeGetItem('tal_token')
   if (savedToken || savedFlag === '1') {
     commit('SET_LOGGED_IN', true)
     commit('SET_TOKEN', savedToken)
 
     // Restore kids view state immediately so the dashboard renders
     // the correct view before fetchMe resolves
-    if (localStorage.getItem('tal_kids_view_active') === '1') {
+    if (safeGetItem('tal_kids_view_active') === '1') {
       commit('SET_KIDS_VIEW_ACTIVE', true)
     }
 
@@ -104,7 +115,7 @@ export const actions = {
 
       // Restore active child profile if kids mode is on and we have a saved child ID
       if (res.user.kids_mode_enabled && process.client) {
-        const savedChildId = localStorage.getItem('tal_active_child_id')
+        const savedChildId = safeGetItem('tal_active_child_id')
         if (savedChildId) {
           dispatch('restoreChildProfile', savedChildId)
         }
@@ -118,8 +129,8 @@ export const actions = {
       commit('SET_KIDS_VIEW_ACTIVE', false)
       this.$axios.setToken(false)
       if (process.client) {
-        localStorage.removeItem('tal_logged_in')
-        localStorage.removeItem('tal_token')
+        safeRemoveItem('tal_logged_in')
+        safeRemoveItem('tal_token')
       }
     }
   },
@@ -152,12 +163,12 @@ export const actions = {
       this.$axios.setToken(res.token, 'Bearer')
 
       if (process.client) {
-        localStorage.setItem('tal_logged_in', '1')
-        localStorage.setItem('tal_token', res.token)
+        safeSetItem('tal_logged_in', '1')
+        safeSetItem('tal_token', res.token)
 
         // Restore active child profile if kids mode is on
         if (res.user.kids_mode_enabled) {
-          const savedChildId = localStorage.getItem('tal_active_child_id')
+          const savedChildId = safeGetItem('tal_active_child_id')
           if (savedChildId) {
             dispatch('restoreChildProfile', savedChildId)
           }
@@ -188,8 +199,8 @@ export const actions = {
       this.$axios.setToken(res.token, 'Bearer')
 
       if (process.client) {
-        localStorage.setItem('tal_logged_in', '1')
-        localStorage.setItem('tal_token', res.token)
+        safeSetItem('tal_logged_in', '1')
+        safeSetItem('tal_token', res.token)
       }
 
       return res
@@ -214,24 +225,24 @@ export const actions = {
     this.$axios.setToken(false)
 
     if (process.client) {
-      localStorage.removeItem('tal_logged_in')
-      localStorage.removeItem('tal_token')
+      safeRemoveItem('tal_logged_in')
+      safeRemoveItem('tal_token')
 
       // In kids view, preserve which child tab was active for next login.
       // In standard view, always reset to "all" (parent account).
       if (wasKidsView && keepChildId) {
-        localStorage.setItem('tal_dashboard_profile', keepChildId)
-        localStorage.setItem('tal_active_child_id', keepChildId)
+        safeSetItem('tal_dashboard_profile', keepChildId)
+        safeSetItem('tal_active_child_id', keepChildId)
       } else {
-        localStorage.setItem('tal_dashboard_profile', 'all')
-        localStorage.removeItem('tal_active_child_id')
+        safeSetItem('tal_dashboard_profile', 'all')
+        safeRemoveItem('tal_active_child_id')
       }
 
       // Remember if kids view was active so login can redirect appropriately
       if (wasKidsView) {
-        localStorage.setItem('tal_was_kids_view', '1')
+        safeSetItem('tal_was_kids_view', '1')
       } else {
-        localStorage.removeItem('tal_was_kids_view')
+        safeRemoveItem('tal_was_kids_view')
       }
     }
   }
