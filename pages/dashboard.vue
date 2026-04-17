@@ -2134,6 +2134,18 @@ export default {
   }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard {
+    .header {
+      .logo {
+        width: 140px;
+        left: 16px;
+        top: -5px;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .dashboard {
     .header {

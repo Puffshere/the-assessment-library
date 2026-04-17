@@ -983,6 +983,29 @@ export default {
     right: 16px;
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .overall-layout {
+    .overall-chart {
+      width: 50%;
+      max-width: 340px;
+    }
+
+    .overall-meta {
+      right: 16px;
+
+      p {
+        font-size: 12px;
+        margin: 4px 0;
+      }
+
+      span {
+        font-size: 16px !important;
+        margin-left: 6px !important;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
     .panel-wide {
         height: auto !important;

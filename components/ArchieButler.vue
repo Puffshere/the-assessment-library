@@ -1,6 +1,6 @@
 <template>
     <transition name="archie-slide">
-        <div v-if="isVisible && isLoggedIn && !!$store.state.user" class="archie" :class="{ 'archie--collapsed': isCollapsed, 'archie--chat': isChatMode }">
+        <div v-if="isVisible && isLoggedIn && !!$store.state.user" class="archie" :class="{ 'archie--collapsed': isCollapsed, 'archie--chat': isChatMode, 'archie--hide-mobile': hideOnMobile }">
 
             <!-- Collapsed pill -->
             <button v-if="isCollapsed" class="archie__pill" @click="expand" aria-label="Open Archie">
@@ -217,6 +217,13 @@ export default {
 
     kidsViewActive() {
       return this.$store.state.kidsViewActive;
+    },
+
+    hideOnMobile() {
+      const path = this.$route.path;
+      const isTakingAssessment = path.startsWith("/library/") && path.length > "/library/".length;
+      const isKidsStory = path.startsWith("/kids/story/");
+      return isTakingAssessment || isKidsStory;
     },
   },
 
@@ -873,5 +880,11 @@ export default {
   &:hover { background: darken($primary, 8%); }
   &:active { transform: scale(0.95); }
   &:disabled { opacity: 0.4; cursor: not-allowed; }
+}
+
+@media (max-width: 1180px) {
+  .archie--hide-mobile {
+    display: none !important;
+  }
 }
 </style>
