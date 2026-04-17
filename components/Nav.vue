@@ -528,7 +528,7 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
-@media (min-width: 960px) and (max-width: 1024px) {
+@media (min-width: 960px) and (max-width: 1180px) {
     .main-nav .brand {
         margin-left: 10px;
         flex: 0 1 auto;

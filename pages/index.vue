@@ -522,14 +522,17 @@ export default {
     }
 }
 
-/* ── Tablet: 768px – 1024px ── */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* ── Tablet: 768px – 1180px ── */
+@media (min-width: 768px) and (max-width: 1180px) {
     .home {
         .header {
             .logo {
-                width: 180px;
-                left: 20px;
-                top: -10px;
+                width: 150px;
+                position: relative;
+                left: auto;
+                top: auto;
+                display: block;
+                margin: -20px auto -30px;
             }
         }
 
@@ -546,21 +549,40 @@ export default {
 
             .row {
                 display: flex;
+                flex-wrap: nowrap;
                 align-items: flex-start;
-                justify-content: center;
                 gap: 20px;
             }
 
+            .col-6 {
+                width: 50% !important;
+                float: none;
+            }
+
             img {
-                max-width: 100%;
+                width: 100%;
             }
 
             .text {
                 text-align: right;
+
+                .line-break {
+                    display: none;
+                }
             }
         }
 
         .personality {
+            padding-top: 40px;
+
+            .green {
+                top: 260px;
+            }
+
+            p {
+                max-width: 45%;
+            }
+
             img {
                 width: 70%;
                 margin-top: 140px;

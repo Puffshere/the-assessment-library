@@ -205,7 +205,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1180px) {
     .footer {
         padding: 10px 24px 20px;
         margin-bottom: 0;
@@ -232,7 +232,7 @@
 
         .logo {
             position: absolute;
-            bottom: 0;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             width: 140px;
