@@ -2134,7 +2134,7 @@ export default {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1180px) {
   .dashboard {
     .header {
       .logo {

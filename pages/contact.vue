@@ -250,6 +250,18 @@ export default {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1180px) {
+    .library {
+        .header {
+            .logo {
+                width: 140px;
+                left: 16px;
+                top: -5px;
+            }
+        }
+    }
+}
+
 @media (max-width: 600px) {
     .library {
         .header {
