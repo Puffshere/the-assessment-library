@@ -254,7 +254,7 @@ export default {
     .library {
         .header {
             .logo {
-                width: 140px;
+                width: 100px;
                 left: 16px;
                 top: -5px;
             }

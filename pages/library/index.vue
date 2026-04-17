@@ -962,8 +962,9 @@ export default {
     .library {
         .header {
             .logo {
-                width: 140px;
-                left: 16px;
+                width: 90px;
+                left: 50%;
+                transform: translateX(-50%);
                 top: -5px;
             }
         }
