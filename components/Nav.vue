@@ -528,6 +528,42 @@ $shadow: rgba(0, 0, 0, 0.08);
     }
 }
 
+@media (min-width: 960px) and (max-width: 1024px) {
+    .main-nav .brand {
+        margin-left: 10px;
+        flex: 0 1 auto;
+    }
+
+    .links.desktop {
+        gap: 0;
+        left: 0;
+        flex-shrink: 0;
+    }
+
+    .link {
+        padding: 6px 3px;
+        font-size: 11px;
+    }
+
+    .actions.desktop {
+        margin-right: 15px;
+        flex-shrink: 0;
+        align-items: center;
+    }
+
+    .user-greeting {
+        position: static;
+        transform: none;
+        font-size: 11px;
+        padding: 0 6px;
+        line-height: 38px;
+    }
+
+    .green {
+        margin-left: 0;
+    }
+}
+
 @media (min-width: 960px) {
     .links.desktop {
         display: flex;

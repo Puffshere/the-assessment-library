@@ -522,6 +522,54 @@ export default {
     }
 }
 
+/* ── Tablet: 768px – 1024px ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .home {
+        .header {
+            .logo {
+                width: 180px;
+                left: 20px;
+                top: -10px;
+            }
+        }
+
+        .worlds-first {
+            padding: 5px 16px 5px;
+
+            img {
+                margin-top: 0px;
+            }
+        }
+
+        .learn {
+            margin: 0 40px;
+
+            .row {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            .text {
+                text-align: right;
+            }
+        }
+
+        .personality {
+            img {
+                width: 70%;
+                margin-top: 140px;
+                margin-bottom: -30px;
+            }
+        }
+    }
+}
+
 @media (max-width: 600px) {
     .home {
         .line-break {
