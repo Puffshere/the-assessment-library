@@ -110,9 +110,15 @@ ${instructions ? '## Special instructions\n' + instructions : ''}
 
 ## Node structure to generate
 ${nodeMap.map((n, i) => {
-  if (n.type === 'generic') return 'Node ' + (i+1) + ': GENERIC convergence chapter (Round ' + n.round + ') — everyone sees this';
-  if (n.type === 'branch') return 'Node ' + (i+1) + ': BRANCH variant (Round ' + n.round + ', ' + n.trait + ' trait)';
-  if (n.type === 'conclusion') return 'Node ' + (i+1) + ': CONCLUSION — 4 separate endings based on dominant DISC trait';
+  if (n.type === 'generic') {
+      const chapterNum = (2 * n.round) - 1;
+      return 'Node ' + (i+1) + ': GENERIC convergence chapter — must use "Chapter ' + chapterNum + ': <title>" (Round ' + n.round + ', everyone sees this)';
+  }
+  if (n.type === 'branch') {
+      const chapterNum = 2 * n.round;
+      return 'Node ' + (i+1) + ': BRANCH variant — must use "Chapter ' + chapterNum + ': <title>" (Round ' + n.round + ', ' + n.trait + ' trait, all 4 variants share Chapter ' + chapterNum + ' but can have different titles)';
+  }
+  if (n.type === 'conclusion') return 'Node ' + (i+1) + ': CONCLUSION — must use "Final Chapter: <title>" (4 separate endings, no chapter number)';
   return '';
 }).join('\n')}
 
@@ -120,7 +126,7 @@ ${nodeMap.map((n, i) => {
 1. Every generic node question must have EXACTLY 4 answers — one per DISC trait in order (value 1=D, 2=I, 3=S, 4=C).
 2. Every branch node question must also have EXACTLY 4 answers (value 1, 2, 3, 4).
 3. Story prose (the "question" field) should be rich narrative — place the reader inside the scene.
-4. Chapter names should feel like book chapter titles.
+4. Each node has a pre-assigned chapter label specified in the node map above. You MUST use the exact "Chapter X:" prefix specified for each node — do NOT compute your own chapter numbers. The chapter sequence the player experiences must be consecutive (1, 2, 3, 4, 5, 6...) ending with "Final Chapter".
 5. Timeline field is a brief scene-setting timestamp (e.g. "Monday Morning").
 6. Branch nodes continue the specific trait path naturally — D=decisive/bold, I=energetic/social, S=steady/supportive, C=analytical/methodical.
 7. Convergence nodes bring all paths back together naturally.
@@ -130,46 +136,49 @@ ${nodeMap.map((n, i) => {
 
 ## Output format — CRITICAL
 Respond with ONLY valid JSON. No markdown, no backticks, no explanation.
-Do not include any text before or after the JSON object.
-Do not wrap the response in \`\`\`json\`\`\` code blocks.
-Your entire response must be a single JSON object starting with { and ending with }.
+
+The JSON object MUST have these top-level keys in this EXACT order. The conclusionNode MUST come BEFORE questions to ensure it is generated first:
 
 {
-  "description": "...",
-  "DstyleTitle": "The Leader",
-  "IstyleTitle": "The Motivator",
-  "SstyleTitle": "The Supporter",
-  "CstyleTitle": "The Analyzer",
-  "DstyleDescription": "...",
-  "IstyleDescription": "...",
-  "SstyleDescription": "...",
-  "CstyleDescription": "...",
-  "imagePromptSuggestion": "A detailed DALL-E 3 prompt for the cover in this style: ${imageStyleDesc}",
+  "description": "<2-3 sentence marketing description>",
+  "DstyleTitle": "<title for D-dominant ending>",
+  "DstyleDescription": "<description for D-dominant personality>",
+  "IstyleTitle": "<title for I-dominant ending>",
+  "IstyleDescription": "<description for I-dominant personality>",
+  "SstyleTitle": "<title for S-dominant ending>",
+  "SstyleDescription": "<description for S-dominant personality>",
+  "CstyleTitle": "<title for C-dominant ending>",
+  "CstyleDescription": "<description for C-dominant personality>",
+  "imagePromptSuggestion": "<DALL-E prompt using ${imageStyleDesc}>",
+  "conclusionNode": {
+    "chapter": "Final Chapter: <title>",
+    "timeline": "<scene-setting timestamp>",
+    "dominanceConclusion": "<rich D-dominant ending narrative>",
+    "influenceConclusion": "<rich I-dominant ending narrative>",
+    "steadinessConclusion": "<rich S-dominant ending narrative>",
+    "conscientiousnessConclusion": "<rich C-dominant ending narrative>"
+  },
   "questions": [
     {
-      "chapter": "Chapter 1: ...",
-      "timeline": "...",
-      "question": "<p>Rich narrative prose...</p>",
+      "chapter": "Chapter X: <title>",
+      "timeline": "<scene-setting timestamp>",
+      "question": "<rich narrative prose for this scene>",
       "answers": [
-        { "text": "...", "value": 1, "nextQuestion": 0 },
-        { "text": "...", "value": 2, "nextQuestion": 0 },
-        { "text": "...", "value": 3, "nextQuestion": 0 },
-        { "text": "...", "value": 4, "nextQuestion": 0 }
+        { "value": 1, "text": "<D-flavored choice>", "nextQuestion": <integer> },
+        { "value": 2, "text": "<I-flavored choice>", "nextQuestion": <integer> },
+        { "value": 3, "text": "<S-flavored choice>", "nextQuestion": <integer> },
+        { "value": 4, "text": "<C-flavored choice>", "nextQuestion": <integer> }
       ]
     }
-  ],
-  "conclusionNode": {
-    "chapter": "Conclusion: ...",
-    "timeline": "...",
-    "dominanceConclusion": "<p>...</p>",
-    "influenceConclusion": "<p>...</p>",
-    "steadinessConclusion": "<p>...</p>",
-    "conscientiousnessConclusion": "<p>...</p>",
-    "answers": []
-  }
+  ]
 }
 
-Set nextQuestion to 0 for all answers — the controller will inject correct pointers after generation.`;
+CRITICAL FIELD REQUIREMENTS:
+- The conclusionNode MUST be present at the top level (not nested inside questions[]).
+- The conclusionNode MUST contain ALL FOUR conclusion fields: dominanceConclusion, influenceConclusion, steadinessConclusion, conscientiousnessConclusion.
+- The conclusionNode MUST come BEFORE the questions array in your output.
+- Each question's answers array MUST have EXACTLY 4 entries with values 1, 2, 3, 4 in that order.
+- Field names are case-sensitive — match them exactly.`;
 }
 
 async function generateAndUploadImage(prompt, slug) {
