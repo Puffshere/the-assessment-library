@@ -2239,7 +2239,9 @@ export default {
     }
 
     .panel,
-    .panel-assessments {
+    .panel-assessments,
+    .adventure-card-nowrap,
+    .adventure-card-wrapper {
       flex: 0 0 100%;
       max-width: 100%;
       width: 100%;
@@ -2261,7 +2263,21 @@ export default {
 
     .story-btn-bar {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .story-read-btn,
+    .story-token-btn {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .story-token-btn {
+      margin-bottom: 10px;
     }
   }
 }

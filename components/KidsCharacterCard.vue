@@ -551,8 +551,8 @@ export default {
 
 @media (max-width: 768px) {
     .kcc__locked {
-        flex-direction: column;
-        min-height: auto;
+        flex-direction: column-reverse;
+        height: auto;
     }
 
     .kcc__locked-info {
@@ -570,8 +570,8 @@ export default {
     }
 
     .kcc__card {
-        flex-direction: column;
-        min-height: auto;
+        flex-direction: column-reverse;
+        height: auto;
     }
 
     .kcc__info {
@@ -590,11 +590,13 @@ export default {
     .kcc__image-wrap {
         flex: none;
         max-width: 100%;
-        height: 280px;
+        height: auto;
     }
 
     .kcc__image {
         object-position: center bottom;
+        height: auto;
+        width: 100%;
     }
 }
 
@@ -616,7 +618,7 @@ export default {
     }
 
     .kcc__image-wrap {
-        height: 220px;
+        height: auto;
     }
 }
 
