@@ -968,6 +968,10 @@ export default {
                 top: -5px;
             }
         }
+
+        .section-shelf-wrap {
+            margin-top: 0;
+        }
     }
 }
 
@@ -1030,10 +1034,22 @@ export default {
 
         .stacks {
             padding-top: 24px;
+            padding-bottom: 24px;
 
             .stacks-loading {
+                &::before {
+                    left: 8px;
+                    width: 12px;
+                }
+
+                &::after {
+                    right: 8px;
+                    width: 12px;
+                }
+
                 .library-exterior {
                     max-width: 100%;
+                    width: calc(100% - 40px);
                 }
             }
 
@@ -1086,8 +1102,12 @@ export default {
             }
         }
 
+        .section-shelf-wrap {
+            margin-top: 0;
+        }
+
         .book-modal-backdrop {
-            margin-top: 30px;
+            margin-top: 10px;
 
             .book-modal {
                 margin: 0 16px;
@@ -1095,7 +1115,7 @@ export default {
             }
 
             h4 {
-                padding-top: 30px;
+                padding-top: 50px;
             }
         }
     }

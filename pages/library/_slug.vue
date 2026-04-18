@@ -3,7 +3,7 @@
         <section class="page">
             <main-nav></main-nav>
 
-            <section class="title" :style="kidsViewActive ? { marginTop: '42px' } : {}">
+            <section class="title">
                 <div class="shadow">
                     <div style="padding: 30px 0 20px 0;">
                         <h1>{{ displayTitle }}</h1>
@@ -1333,6 +1333,14 @@ export default {
 
         .title button {
             display: none;
+        }
+
+        .title h1 {
+            padding-bottom: 10px;
+        }
+
+        .title h3 {
+            line-height: 1.2;
         }
 
         .questionnaire {
