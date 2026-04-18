@@ -1297,6 +1297,36 @@ export default {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page {
+    .questionnaire {
+      .hero-illustration {
+        position: static;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
+
+      .container {
+        margin-left: 0;
+        width: 100%;
+        height: calc(100vh - 220px - 280px);
+      }
+    }
+  }
+
+  .pagination-controls {
+    left: 0;
+    width: 100%;
+  }
+
+  .page-btn {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 768px) {
     .page {
         background: #f5f5f5;
@@ -1701,6 +1731,36 @@ export default {
     z-index: 100;
     box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
     box-sizing: border-box;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page {
+        .questionnaire {
+            .hero-illustration {
+                position: static;
+                width: 100%;
+                height: 280px;
+                object-fit: cover;
+                object-position: center top;
+                display: block;
+            }
+
+            .container {
+                margin-left: 0;
+                width: 100%;
+                height: calc(100vh - 220px - 280px);
+            }
+        }
+    }
+
+    .pagination-controls {
+        left: 0;
+        width: 100%;
+    }
+
+    .page-btn {
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 768px) {
