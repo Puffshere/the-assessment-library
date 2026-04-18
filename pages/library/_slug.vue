@@ -1763,6 +1763,35 @@ export default {
     }
 }
 
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .page {
+        .questionnaire {
+            .hero-illustration {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 360px;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+                display: block;
+            }
+
+            .container {
+                margin-left: 360px;
+                width: calc(100% - 360px);
+                height: calc(100vh - 220px);
+            }
+        }
+    }
+
+    .pagination-controls {
+        left: 360px;
+        width: calc(100% - 360px);
+    }
+}
+
 @media (max-width: 768px) {
     .pagination-controls {
         left: 0;
