@@ -2279,6 +2279,12 @@ export default {
     .story-token-btn {
       margin-bottom: 10px;
     }
+
+    .story-btn-bar-placeholder {
+      min-height: 0;
+      padding: 0;
+      margin: 0;
+    }
   }
 }
 
