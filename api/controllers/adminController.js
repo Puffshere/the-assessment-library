@@ -217,8 +217,8 @@ async function generateAndUploadImage(prompt, slug) {
     data: imageData,
     contentType: 'image/jpeg',
   });
-  const downloadUrl = uploadUrlResponse.data.uploadUrl.split('/b2api')[0];
-  return 'https://f004.backblazeb2.com/file/library-assessments/' + fileName;
+  const base = process.env.IMAGE_CDN_URL || 'https://f004.backblazeb2.com/file/library-assessments';
+  return base + '/' + fileName;
 }
 
 async function generateSingleAssessment(config, jobId) {
