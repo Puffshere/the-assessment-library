@@ -33,3 +33,6 @@ $ nvm use 20.11.1
 npm run test:open
 
 also nvm use 16.20.2
+
+### for claude run:
+npx @anthropic-ai/claude-code

@@ -42,7 +42,10 @@
       "Bash(find /c/Users/shawn/Projects/the-assessment-library/components -name *[Bb]utton* -o -name *[Ff]orm*)",
       "Bash(grep -A 20 '\"\"browserslist\"\"' /c/Users/shawn/Projects/the-assessment-library/package.json)",
       "Bash(find /c/Users/shawn/Projects/the-assessment-library/assets -name *.scss)",
-      "Bash(npx nuxt:*)"
+      "Bash(npx nuxt:*)",
+      "Bash(git log *)",
+      "Bash(npm uninstall *)",
+      "Bash(git add *)"
     ]
   }
 }

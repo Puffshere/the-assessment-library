@@ -118,10 +118,11 @@ export default {
                         { label: 'Confidence', to: '/about/confidence' },
                         { label: '1st Person', to: '/about/1st-person' },
                         { label: '3rd Person', to: '/about/3rd-person' },
+                        { label: 'Kids', to: '/kids-overview' },
                         { label: 'Full Reports', to: '/about/full-reports' }
                     ]
                 },
-                { label: 'Kids', to: '/kids-overview' },
+                
                 { label: 'Contact', to: '/contact' }
             ]
         }
@@ -217,6 +218,10 @@ $shadow: rgba(0, 0, 0, 0.08);
         box-shadow: 0 6px 18px $shadow;
         background: rgba($paper, 0.98);
         backdrop-filter: saturate(120%) blur(6px);
+    }
+
+    .desktop {
+        margin-left: 20px;
     }
 
     .bar {
