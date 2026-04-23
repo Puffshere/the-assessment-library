@@ -60,7 +60,6 @@ The core domain is **scenario-based DISC personality assessments**:
 | POST | `/api/sessions/:id/answer` | sessionsController (auth required) |
 | POST | `/api/credits/add-one` | creditsController (auth required) |
 | POST | `/api/contact` | contactController |
-| POST | `/api/upload` | uploadController |
 
 Authentication middleware lives in `sessionsController.authenticate` and is applied per-route.
 

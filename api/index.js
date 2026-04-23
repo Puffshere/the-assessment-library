@@ -2,11 +2,9 @@ import express from 'express';
 import helmet from 'helmet';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import multer from 'multer';
 import cors from 'cors';
 import path from 'path';
 import * as authController from './controllers/authController.js';
-import uploadController from './controllers/uploadController';
 import assessmentController from './controllers/assessmentController.js';
 import dashboardController from './controllers/dashboardController.js';
 import sessionsController from './controllers/sessionsController.js';
@@ -29,7 +27,6 @@ const metricsController = require('./controllers/metricsController');
 const userAdminController = require('./controllers/userAdminController');
 
 
-const upload = multer();
 const app = express();
 
 const connectionString = process.env.MONGO_URI
@@ -91,10 +88,6 @@ app.post('/assessments/:id/rate', ratingController.rateAssessment);
 app.get('/assessments/:id/rating', ratingController.getUserRating);
 
 app.post('/contact', contactController.submitContact);
-
-app.post('/upload', upload.single('file'), (req, res) => {
-  uploadController.upload(req, res);
-});
 
 app.post(
   '/credits/add-one',
