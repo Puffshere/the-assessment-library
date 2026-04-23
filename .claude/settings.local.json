@@ -45,7 +45,10 @@
       "Bash(npx nuxt:*)",
       "Bash(git log *)",
       "Bash(npm uninstall *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(dig *)",
+      "PowerShell(Resolve-DnsName *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
