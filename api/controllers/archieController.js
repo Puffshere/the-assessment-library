@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 const TRAIT_CONTEXT = {
   D: 'Dominance — direct, results-oriented, decisive, competitive, and driven by challenges',
   I: 'Influence — enthusiastic, optimistic, collaborative, and motivated by social recognition',
