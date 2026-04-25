@@ -60,7 +60,13 @@
                         <div class="ko__achievements">
                             <div class="ko__ach-slot" v-for="ach in achievementSlots" :key="ach.key">
                                 <div class="ko__ach-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    <img
+                                        v-if="ach.key === 'background' && p.cardBackground && p.cardBackground.endsWith('.webp')"
+                                        :src="'/images/backgrounds/' + p.cardBackground"
+                                        :alt="ach.label + ' equipped'"
+                                        class="ko__ach-thumb"
+                                    />
+                                    <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round">
                                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                                         <path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -715,6 +721,14 @@ $dark-bg: linear-gradient(135deg, #0f1623 0%, #1a2744 40%, #12304d 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
     display: flex; align-items: center; justify-content: center;
     svg { width: 14px; height: 14px; color: rgba(255, 255, 255, 0.2); }
+}
+
+.ko__ach-thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    display: block;
 }
 
 .ko__ach-label {
