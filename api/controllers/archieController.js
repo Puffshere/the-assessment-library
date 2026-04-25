@@ -1,4 +1,68 @@
 const fetch = require('node-fetch');
+const AssessmentSession = require('../models/AssessmentSession');
+
+async function getUserPersonalization(userId) {
+  try {
+    const sessions = await AssessmentSession
+      .find({ user: userId, isThirdPerson: { $ne: true } })
+      .select('status score assessment completedAt startedAt')
+      .populate('assessment', 'title')
+      .sort({ updatedAt: -1 })
+      .lean();
+
+    const completed = sessions.filter(s => s.status === 'completed');
+    const inProgress = sessions.filter(s => s.status === 'in_progress');
+
+    // Aggregate dominant trait across completed sessions
+    const traitTotals = { D: 0, I: 0, S: 0, C: 0 };
+    let scoredCount = 0;
+    completed.forEach(s => {
+      if (s.score && s.score.breakdown) {
+        const breakdown = s.score.breakdown;
+        if (typeof breakdown.D === 'number') {
+          traitTotals.D += breakdown.D;
+          traitTotals.I += breakdown.I || 0;
+          traitTotals.S += breakdown.S || 0;
+          traitTotals.C += breakdown.C || 0;
+          scoredCount++;
+        }
+      }
+    });
+
+    let dominantTrait = null;
+    if (scoredCount > 0) {
+      let topScore = -1;
+      Object.entries(traitTotals).forEach(([trait, score]) => {
+        if (score > topScore) {
+          topScore = score;
+          dominantTrait = trait;
+        }
+      });
+    }
+
+    const recentTitles = sessions.slice(0, 3)
+      .map(s => s.assessment && s.assessment.title)
+      .filter(Boolean);
+
+    return {
+      startedCount: sessions.length,
+      completedCount: completed.length,
+      inProgressCount: inProgress.length,
+      dominantTrait,
+      recentTitles,
+    };
+  } catch (err) {
+    console.error('Archie getUserPersonalization error:', err);
+    return {
+      startedCount: 0,
+      completedCount: 0,
+      inProgressCount: 0,
+      dominantTrait: null,
+      recentTitles: [],
+    };
+  }
+}
+
 const TRAIT_CONTEXT = {
   D: 'Dominance — direct, results-oriented, decisive, competitive, and driven by challenges',
   I: 'Influence — enthusiastic, optimistic, collaborative, and motivated by social recognition',
@@ -17,6 +81,11 @@ const PAGE_GUIDANCE = {
 
 export const getTip = async (req, res) => {
   const { trait, pageContext, userName, isKidsMode, childName, childCharacterName, childDiscType, childStats, childCompletedCount } = req.body
+
+  let personalization = null;
+  if (!isKidsMode && req.user && req.user._id) {
+    personalization = await getUserPersonalization(req.user._id);
+  }
 
   const traitDescription = TRAIT_CONTEXT[trait] || TRAIT_CONTEXT.general
   const pageGuidance = PAGE_GUIDANCE[pageContext] || PAGE_GUIDANCE.default
@@ -39,9 +108,24 @@ export const getTip = async (req, res) => {
     ? `Their character is named ${childCharacterName} and their dominant trait is ${childDiscType || 'unknown'}. ${roundedStats ? `Their top stats are: Heart ${roundedStats.heart}, Speed ${roundedStats.speed}, Wisdom ${roundedStats.wisdom}, Creativity ${roundedStats.creativity}, Strength ${roundedStats.strength}, Leadership ${roundedStats.leadership}.` : ''} They have completed ${childCompletedCount || 0} assessments.`
     : 'They are just getting started.'
 
+  let adultUserPrompt;
+  if (personalization && personalization.completedCount > 0 && personalization.dominantTrait) {
+    const traitDesc = TRAIT_CONTEXT[personalization.dominantTrait] || TRAIT_CONTEXT.general;
+    const recencyHint = personalization.recentTitles.length > 0
+      ? ` Their most recent assessment was "${personalization.recentTitles[0]}".`
+      : '';
+    adultUserPrompt = `The user's first name is ${userName || 'there'}. They have completed ${personalization.completedCount} assessment${personalization.completedCount === 1 ? '' : 's'} and have ${personalization.inProgressCount} in progress.${recencyHint} Their dominant DISC trait based on their assessment history is: ${traitDesc}. Context: ${pageGuidance}. Give them a relevant, encouraging tip that reflects their actual progress and trait — do not suggest they take their first assessment.`;
+  } else if (personalization && personalization.startedCount > 0) {
+    adultUserPrompt = `The user's first name is ${userName || 'there'}. They have started ${personalization.startedCount} assessment${personalization.startedCount === 1 ? '' : 's'} but haven't completed any yet. Context: ${pageGuidance}. Encourage them to finish what they've started.`;
+  } else {
+    // No history — original fallback
+    const traitDescription = TRAIT_CONTEXT[trait] || TRAIT_CONTEXT.general;
+    adultUserPrompt = `The user's first name is ${userName || 'there'}. Their dominant personality trait is: ${traitDescription}. Context: ${pageGuidance}.`;
+  }
+
   const userPrompt = isKidsMode
     ? `You are talking to a child named <strong>${childName}</strong>. ${childContext} Context: ${pageGuidance} Write one fun encouraging tip that references their actual character or stats. Keep it under 35 words. Make it feel exciting!`
-    : `${firstName ? `The user's first name is ${firstName}. Use their name naturally near the start of your message to make it feel personal — make it stand out.` : ''} Their dominant personality trait is: ${traitDescription}. Context: ${pageGuidance} Write a single personalized tip or insight for them right now. Keep it under 45 words.`
+    : adultUserPrompt
 
   try {
     const response = await fetch('https://api.anthropic.com/v1/messages', {
