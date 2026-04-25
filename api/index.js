@@ -3,6 +3,7 @@ import helmet from 'helmet';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 import path from 'path';
 import * as authController from './controllers/authController.js';
 import assessmentController from './controllers/assessmentController.js';
@@ -46,6 +47,8 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 app.use(helmet());
 app.use(cors());
+app.use(cookieParser());
+app.use(require('./middleware/csrfProtection'));
 
 // Stripe webhook needs raw body — must be registered before bodyParser.json()
 app.post('/payments/webhook', express.raw({ type: 'application/json' }), paymentsController.handleWebhook);
@@ -64,15 +67,17 @@ app.post('/auth/login', authController.login);
 
 app.post('/auth/register', authController.register);
 
+app.post('/auth/logout', authController.logout);
+
 app.post('/auth/forgot-password', authController.forgotPassword);
 
 app.post('/auth/reset-password', authController.resetPassword);
 
 app.get('/auth/me', sessionsController.authenticate, authController.getMe);
 
-app.get('/dashboard', dashboardController.getDashboard);
+app.get('/dashboard', sessionsController.authenticate, dashboardController.getDashboard);
 
-app.post('/checkout', assessmentController.checkout);
+app.post('/checkout', sessionsController.authenticate, assessmentController.checkout);
 
 app.post('/book/:id/mark-started/', assessmentController.markSessionStarted);
 
@@ -80,12 +85,12 @@ app.post('/sessions', sessionsController.authenticate, sessionsController.create
 app.get('/sessions/:id', sessionsController.authenticate, sessionsController.getSessionById);
 app.post('/sessions/:id/answer', sessionsController.authenticate, sessionsController.saveAnswer);
 
-app.get('/assessments', assessmentController.getAssessmentsForLibrary);
+app.get('/assessments', sessionsController.optionalAuthenticate, assessmentController.getAssessmentsForLibrary);
 
 app.get('/assessments/top-rated', ratingController.getTopRated);
 app.get('/assessments/:slug', assessmentController.getAssessmentBySlug);
-app.post('/assessments/:id/rate', ratingController.rateAssessment);
-app.get('/assessments/:id/rating', ratingController.getUserRating);
+app.post('/assessments/:id/rate', sessionsController.optionalAuthenticate, ratingController.rateAssessment);
+app.get('/assessments/:id/rating', sessionsController.optionalAuthenticate, ratingController.getUserRating);
 
 app.post('/contact', contactController.submitContact);
 

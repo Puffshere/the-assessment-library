@@ -7,12 +7,18 @@ const AssessmentSession = require('../models/AssessmentSession');
 
 const authenticate = async (req, res, next) => {
   try {
-    const authHeader = req.headers.authorization || '';
-    if (!authHeader.startsWith('Bearer ')) {
+    let token = null;
+    if (req.cookies && req.cookies.tal_token) {
+      token = req.cookies.tal_token;
+    } else {
+      const authHeader = req.headers.authorization || '';
+      if (authHeader.startsWith('Bearer ')) {
+        token = authHeader.slice(7);
+      }
+    }
+    if (!token) {
       return res.status(401).json({ message: 'No auth token provided' });
     }
-
-    const token = authHeader.slice(7);
 
     let decoded;
     try {
@@ -32,6 +38,43 @@ const authenticate = async (req, res, next) => {
   } catch (err) {
     console.error('Auth error (sessionsController.authenticate):', err);
     res.status(500).json({ message: 'Server error' });
+  }
+};
+
+const optionalAuthenticate = async (req, res, next) => {
+  try {
+    let token = null;
+    if (req.cookies && req.cookies.tal_token) {
+      token = req.cookies.tal_token;
+    } else {
+      const authHeader = req.headers.authorization || '';
+      if (authHeader.startsWith('Bearer ')) {
+        token = authHeader.slice(7);
+      }
+    }
+
+    if (!token) {
+      req.user = null;
+      return next();
+    }
+
+    let decoded;
+    try {
+      decoded = jwt.verify(token, process.env.JWT_SECRET);
+    } catch (err) {
+      // Invalid token — treat as anonymous, don't error
+      req.user = null;
+      return next();
+    }
+
+    const userId = decoded.id || decoded._id;
+    const user = await User.findById(userId).select('-password');
+    req.user = user || null;
+    return next();
+  } catch (err) {
+    console.error('optionalAuthenticate error:', err);
+    req.user = null;
+    return next();
   }
 };
 
@@ -307,6 +350,7 @@ const saveAnswer = async (req, res) => {
 
 module.exports = {
   authenticate,
+  optionalAuthenticate,
   createOrGetSession,
   getSessionById,
   saveAnswer

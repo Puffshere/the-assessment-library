@@ -95,6 +95,31 @@ function restoreAuthFromStorage({ commit, dispatch }, axiosInstance) {
 }
 
 export const actions = {
+  async nuxtServerInit({ commit }, { req, $axios }) {
+    // Server-side only — runs before middleware on every full-page request
+    if (!req || !req.headers || !req.headers.cookie) return
+
+    const cookieHeader = req.headers.cookie
+    const tokenMatch = cookieHeader.match(/tal_token=([^;]+)/)
+    if (!tokenMatch) return
+
+    try {
+      // Forward the cookie header to the API call so /api/auth/me sees the same cookie
+      const res = await $axios.$get('/api/auth/me', {
+        headers: { cookie: cookieHeader }
+      })
+
+      if (res && res.user) {
+        commit('SET_LOGGED_IN', true)
+        commit('SET_USER', res.user)
+        commit('SET_KIDS_VIEW_ACTIVE', !!res.user.kids_mode_enabled)
+      }
+    } catch (err) {
+      // Invalid/expired cookie or API error — leave Vuex in default unauthenticated state.
+      // The middleware will redirect to login if necessary, which is correct behavior.
+    }
+  },
+
   nuxtClientInit({ commit, dispatch }) {
     restoreAuthFromStorage({ commit, dispatch }, this.$axios)
   },
@@ -121,8 +146,17 @@ export const actions = {
         }
       }
     } catch (err) {
-      // Only clear auth if no new login happened while we were fetching
       if (state.token !== tokenAtStart) return
+
+      // Only clear auth state on a genuine 401 (token actually invalid/expired).
+      // Network errors, 500s, timeouts, etc. should leave auth state alone —
+      // the user might just have a transient connectivity issue.
+      const status = err && err.response && err.response.status
+      if (status !== 401) {
+        console.warn('fetchMe failed with non-401 error, keeping auth state:', status, err && err.message)
+        return
+      }
+
       commit('SET_LOGGED_IN', false)
       commit('SET_USER', null)
       commit('SET_TOKEN', null)
@@ -157,14 +191,10 @@ export const actions = {
 
       commit('SET_LOGGED_IN', true)
       commit('SET_USER', res.user)
-      commit('SET_TOKEN', res.token)
       commit('SET_KIDS_VIEW_ACTIVE', res.user.kids_mode_enabled)
-
-      this.$axios.setToken(res.token, 'Bearer')
 
       if (process.client) {
         safeSetItem('tal_logged_in', '1')
-        safeSetItem('tal_token', res.token)
 
         // Restore active child profile if kids mode is on
         if (res.user.kids_mode_enabled) {
@@ -193,14 +223,10 @@ export const actions = {
 
       commit('SET_LOGGED_IN', true)
       commit('SET_USER', res.user)
-      commit('SET_TOKEN', res.token)
       commit('SET_KIDS_VIEW_ACTIVE', res.user.kids_mode_enabled)
-
-      this.$axios.setToken(res.token, 'Bearer')
 
       if (process.client) {
         safeSetItem('tal_logged_in', '1')
-        safeSetItem('tal_token', res.token)
       }
 
       return res
@@ -210,7 +236,14 @@ export const actions = {
     }
   },
 
-  logout({ commit, state }) {
+  async logout({ commit, state }) {
+    try {
+      await this.$axios.$post('/api/auth/logout')
+    } catch (err) {
+      // Best-effort — proceed with client cleanup even if the API call fails
+      console.warn('Logout API call failed:', err)
+    }
+
     // Preserve the active child ID so it can be restored on next login
     const keepChildId = state.activeChildProfile && state.activeChildProfile._id
     const wasKidsView = state.kidsViewActive

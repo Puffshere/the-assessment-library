@@ -1,38 +1,14 @@
-const jwt = require('jsonwebtoken');
-
-let User = require('../models/User');
-User = User.default || User;
-
 const Assessment = require('../models/Assessment');
 const AssessmentSession = require('../models/AssessmentSession');
 
 const checkout = async (req, res) => {
   try {
-    const authHeader = req.headers.authorization || '';
-    const token = authHeader.startsWith('Bearer ')
-      ? authHeader.slice(7)
-      : null;
-
-    if (!token) {
-      return res.status(401).json({ message: 'Not authenticated' });
-    }
-
-    let decoded;
-    try {
-      decoded = jwt.verify(token, process.env.JWT_SECRET);
-    } catch (err) {
-      return res.status(401).json({ message: 'Invalid or expired token' });
-    }
-
-    const userId = decoded.id || decoded._id;
+    const user = req.user;
     const { assessmentId, childProfileId } = req.body || {};
 
     if (!assessmentId) {
       return res.status(400).json({ message: 'assessmentId is required' });
     }
-
-    const user = await User.findById(userId);
-    if (!user) return res.status(404).json({ message: 'User not found' });
 
     const assessment = await Assessment.findById(assessmentId);
     if (!assessment || !assessment.isActive) {
@@ -141,23 +117,8 @@ const getAssessmentBySlug = async (req, res) => {
 
 const getAssessmentsForLibrary = async (req, res) => {
   try {
-    // Optionally read the authenticated user to check kids_mode_enabled
-    let kidsMode = false;
-    const authHeader = req.headers.authorization || '';
-    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
-
-    if (token) {
-      try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const userId = decoded.id || decoded._id;
-        const user = await User.findById(userId).select('kids_mode_enabled').lean();
-        if (user && user.kids_mode_enabled) {
-          kidsMode = true;
-        }
-      } catch (_) {
-        // Invalid token — fall through to standard view
-      }
-    }
+    const user = req.user || null;
+    const kidsMode = !!(user && user.kids_mode_enabled);
 
     const filter = { isActive: true };
     if (kidsMode) {

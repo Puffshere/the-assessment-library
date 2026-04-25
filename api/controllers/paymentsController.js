@@ -1,5 +1,3 @@
-const jwt = require('jsonwebtoken');
-
 let User = require('../models/User');
 User = User.default || User;
 
@@ -73,18 +71,6 @@ const CREDIT_PACKAGES = [
   },
 ];
 
-function getUserIdFromReq(req) {
-  const authHeader = req.headers.authorization || '';
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
-  if (!token) return null;
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    return (decoded.id || decoded._id || '').toString();
-  } catch (e) {
-    return null;
-  }
-}
-
 async function fulfillCredits(userId, credits, packageId, paymentReference, note) {
   const existing = await CreditTransaction.findOne({ paymentReference });
   if (existing) return { alreadyFulfilled: true, creditsAdded: existing.credits };
@@ -124,8 +110,7 @@ exports.createCheckoutSession = async (req, res) => {
   const stripe = getStripe();
   if (!stripe) return res.status(503).json({ error: 'Payment service not configured' });
   try {
-    const userId = getUserIdFromReq(req);
-    if (!userId) return res.status(401).json({ message: 'Not authenticated' });
+    const userId = req.user._id.toString();
 
     const { packageId, billingMode = 'one_time' } = req.body;
     const pkg = CREDIT_PACKAGES.find(p => p.id === packageId);
@@ -189,8 +174,7 @@ exports.verifyAndFulfill = async (req, res) => {
   const stripe = getStripe();
   if (!stripe) return res.status(503).json({ error: 'Payment service not configured' });
   try {
-    const userId = getUserIdFromReq(req);
-    if (!userId) return res.status(401).json({ message: 'Not authenticated' });
+    const userId = req.user._id.toString();
 
     const { sessionId } = req.body;
     if (!sessionId) return res.status(400).json({ message: 'Missing session_id' });

@@ -51,7 +51,7 @@ module.exports = {
     //'~plugins/persisted-state.client.js',
     '~plugins/filters.js',
     '~plugins/region-select.js',
-    '~/plugins/auth-state.client.js',
+    { src: '~/plugins/csrf-axios.js', mode: 'client' },
     {
       src: '~plugins/webp-modernizr.js',
       ssr: false
@@ -69,6 +69,7 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/axios',
+    'cookie-universal-nuxt',
     '@nuxtjs/gtm',
     '@nuxtjs/robots',
   ],
@@ -107,7 +108,9 @@ module.exports = {
     // relative URLs, so API calls work on any domain without configuration
     browserBaseURL: process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : ''
+      : '',
+
+    credentials: true
   },
   devServer: {
     disableHostCheck: true

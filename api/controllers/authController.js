@@ -10,6 +10,24 @@ const Participant = require('../models/Participant');
 const Assessment = require('../models/Assessment');
 const { sendPasswordResetEmail } = require('../utils/postmarkClient');
 
+const cookieOptions = () => ({
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production',
+  sameSite: 'lax',
+  maxAge: 7 * 24 * 60 * 60 * 1000,  // 7 days
+  path: '/',
+});
+
+const csrfCookieOptions = () => ({
+  httpOnly: false,  // JS must be able to read this to send it as a header
+  secure: process.env.NODE_ENV === 'production',
+  sameSite: 'lax',
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+  path: '/',
+});
+
+const generateCsrfToken = () => crypto.randomBytes(32).toString('hex');
+
 const login = async (req, res) => {
   try {
     let { email, password } = req.body;
@@ -43,6 +61,9 @@ const login = async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: '7d' }
     );
+
+    res.cookie('tal_token', token, cookieOptions());
+    res.cookie('tal_csrf', generateCsrfToken(), csrfCookieOptions());
 
     return res.json({
       message: 'Logged in successfully',
@@ -122,6 +143,9 @@ const register = async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: '7d' }
     );
+
+    res.cookie('tal_token', token, cookieOptions());
+    res.cookie('tal_csrf', generateCsrfToken(), csrfCookieOptions());
 
     res.json({
       success: true,
@@ -240,9 +264,22 @@ const getMe = async (req, res) => {
   }
 };
 
+const logout = async (req, res) => {
+  const clearOpts = {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    path: '/',
+  };
+  res.clearCookie('tal_token', clearOpts);
+  res.clearCookie('tal_csrf', { ...clearOpts, httpOnly: false });
+  return res.json({ message: 'Logged out' });
+};
+
 module.exports = {
   login,
   register,
+  logout,
   forgotPassword,
   resetPassword,
   getMe,

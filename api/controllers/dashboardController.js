@@ -1,8 +1,3 @@
-const jwt = require('jsonwebtoken');
-
-let User = require('../models/User');
-User = User.default || User;
-
 require('../models/Assessment');
 
 const AssessmentSession = require('../models/AssessmentSession');
@@ -10,31 +5,7 @@ const Participant = require('../models/Participant');
 
 exports.getDashboard = async function (req, res) {
   try {
-    const authHeader = req.headers.authorization || '';
-    let token = null;
-
-    if (authHeader.startsWith('Bearer ')) {
-      token = authHeader.slice(7);
-    }
-
-    if (!token) {
-      return res.status(401).json({ message: 'No auth token provided' });
-    }
-
-    let decoded;
-    try {
-      decoded = jwt.verify(token, process.env.JWT_SECRET);
-    } catch (err) {
-      console.error('JWT verify error in dashboard:', err);
-      return res.status(401).json({ message: 'Invalid or expired token' });
-    }
-
-    const userId = decoded.id || decoded._id;
-
-    const user = await User.findById(userId).select('-password');
-    if (!user) {
-      return res.status(401).json({ message: 'User not found' });
-    }
+    const user = req.user;
 
     const sessions = await AssessmentSession.find({ user: user._id, isThirdPerson: { $ne: true } })
       .populate(

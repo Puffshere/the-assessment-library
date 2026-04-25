@@ -1,23 +1,12 @@
 'use strict';
-const jwt = require('jsonwebtoken');
 
 let Assessment, Rating;
 try { const m = require('../models/Assessment'); Assessment = m.default || m; } catch(e) { Assessment = require('../models/Assessment'); }
 try { const m = require('../models/Rating'); Rating = m.default || m; } catch(e) { Rating = require('../models/Rating'); }
 
-function getUserId(req) {
-  const auth = req.headers.authorization || '';
-  const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
-  if (!token) return null;
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    return decoded.id || decoded._id;
-  } catch(e) { return null; }
-}
-
 async function rateAssessment(req, res) {
   try {
-    const userId = getUserId(req);
+    const userId = req.user ? req.user._id.toString() : null;
     if (!userId) return res.status(401).json({ error: 'Not authenticated.' });
 
     const { rating } = req.body;
@@ -52,7 +41,7 @@ async function rateAssessment(req, res) {
 
 async function getUserRating(req, res) {
   try {
-    const userId = getUserId(req);
+    const userId = req.user ? req.user._id.toString() : null;
     if (!userId) return res.json({ userRating: null });
 
     const existing = await Rating.findOne({ assessment: req.params.id, user: userId });
