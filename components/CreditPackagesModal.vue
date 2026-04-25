@@ -109,25 +109,15 @@ export default {
       }
     },
 
-    getToken() {
-      return (
-        this.$store.state.token ||
-        (process.client && localStorage.getItem('tal_token')) ||
-        null
-      );
-    },
-
     async selectPackage(pkg) {
       if (this.redirecting) return;
       this.errorMsg = '';
       this.redirecting = true;
 
       try {
-        const token = this.getToken();
         const res = await this.$axios.$post(
           '/api/payments/create-checkout-session',
-          { packageId: pkg.id, billingMode: this.billingMode },
-          token ? { headers: { Authorization: `Bearer ${token}` } } : {}
+          { packageId: pkg.id, billingMode: this.billingMode }
         );
 
         if (res && res.url) {

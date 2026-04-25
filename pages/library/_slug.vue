@@ -498,9 +498,7 @@ export default {
                 if (activeChild && activeChild._id) {
                     payload.childProfileId = activeChild._id;
                 }
-                const res = await this.$axios.$post('/api/sessions', payload, {
-                    headers: { Authorization: `Bearer ${this.$store.state.token}` }
-                });
+                const res = await this.$axios.$post('/api/sessions', payload);
                 const session = res.session || res;
                 this.sessionId = session._id || session.id;
             } catch (err) {
@@ -542,14 +540,7 @@ export default {
             }
         },
         async loadSession() {
-            const res = await this.$axios.$get(
-                `/api/sessions/${this.sessionId}`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${this.$store.state.token}`
-                    }
-                }
-            );
+            const res = await this.$axios.$get(`/api/sessions/${this.sessionId}`);
 
             const session = res.session || res;
             if (!session) return;
@@ -579,15 +570,11 @@ export default {
         async loadInviteContext() {
             try {
                 if (this.$route.query.childParticipant && this.$route.query.invitation) {
-                    const headers = this.$store.state.token
-                        ? { Authorization: `Bearer ${this.$store.state.token}` }
-                        : {};
                     const res = await this.$axios.$get('/api/child-participants/verify-invite', {
                         params: {
                             childParticipant: this.$route.query.childParticipant,
                             invitation: this.$route.query.invitation
-                        },
-                        headers
+                        }
                     });
                     this.isThirdPerson = true;
                     this.isChildThirdPerson = true;
@@ -600,8 +587,7 @@ export default {
                         params: {
                             participant: this.$route.query.participant,
                             invitation: this.$route.query.invitation
-                        },
-                        headers: { Authorization: `Bearer ${this.$store.state.token}` }
+                        }
                     });
                     this.isThirdPerson = true;
                     this.thirdPersonInviterName = res.inviterName;
@@ -615,7 +601,7 @@ export default {
         async createThirdPersonSession() {
             try {
                 if (!this.assessment || !(this.assessment._id || this.assessment.id)) return;
-                if (!this.$store.state.token) return;
+                if (!this.$store.state.loggedIn) return;
 
                 const payload = {
                     assessmentId: this.assessment._id || this.assessment.id,
@@ -631,9 +617,7 @@ export default {
                     payload.childThirdPersonProfileId = this.childProfileId;
                 }
 
-                const res = await this.$axios.$post('/api/sessions', payload, {
-                    headers: { Authorization: `Bearer ${this.$store.state.token}` }
-                });
+                const res = await this.$axios.$post('/api/sessions', payload);
                 const session = res.session || res;
                 this.sessionId = session._id || session.id;
             } catch (err) {
@@ -693,12 +677,7 @@ export default {
 
                     await this.$axios.$post(
                         `/api/sessions/${this.sessionId}/answer`,
-                        answerPayload,
-                        {
-                            headers: {
-                                Authorization: `Bearer ${this.$store.state.token}`
-                            }
-                        }
+                        answerPayload
                     );
                 } catch (err) {
                     console.error('Error saving answer:', err);

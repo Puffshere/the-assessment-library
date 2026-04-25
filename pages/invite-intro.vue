@@ -95,12 +95,7 @@ export default {
 
         try {
             const res = await this.$axios.$get(
-                `/api/participants/verify-invite?participant=${this.participantId}&invitation=${this.invitationId}`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${this.$store.state.token}`
-                    }
-                }
+                `/api/participants/verify-invite?participant=${this.participantId}&invitation=${this.invitationId}`
             )
             this.inviterName = res.inviterName || ''
             this.assessmentTitle = res.assessmentTitle || ''

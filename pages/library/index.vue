@@ -424,8 +424,6 @@ export default {
             this.checkingOut = true
 
             try {
-                const token = this.$store.state.token
-
                 const checkoutPayload = { assessmentId: book._id }
                 const activeChild = this.$store.state.activeChildProfile
                 if (activeChild && activeChild._id) {
@@ -434,10 +432,7 @@ export default {
 
                 const res = await this.$axios.$post(
                     '/api/checkout',
-                    checkoutPayload,
-                    token
-                        ? { headers: { Authorization: `Bearer ${token}` } }
-                        : {}
+                    checkoutPayload
                 )
 
                 if (res.user) {

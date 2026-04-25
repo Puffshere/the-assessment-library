@@ -787,24 +787,9 @@ export default {
         'main-nav': () => import('@/components/Nav'),
         'footer-fold': () => import('@/components/Footer')
     },
-    data() {
-        return {
-            isAuthenticated: false
-        }
-    },
-    mounted() {
-        if (process.client) {
-            const talToken = localStorage.getItem('tal_token')
-            const talLoggedIn = localStorage.getItem('tal_logged_in')
-            let fromState = false
-            const storedState = localStorage.getItem('a24x7')
-            if (storedState) {
-                try {
-                    const parsed = JSON.parse(storedState)
-                    fromState = !!(parsed.auth && parsed.auth.isAuthenticated)
-                } catch (e) { }
-            }
-            this.isAuthenticated = !!talToken || talLoggedIn === '1' || fromState
+    computed: {
+        isAuthenticated() {
+            return this.$store.state.loggedIn
         }
     },
     methods: {

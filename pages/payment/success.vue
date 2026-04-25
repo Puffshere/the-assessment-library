@@ -80,15 +80,9 @@ export default {
     }
 
     try {
-      const token =
-        this.$store.state.token ||
-        (process.client && localStorage.getItem('tal_token')) ||
-        null;
-
       const res = await this.$axios.$post(
         '/api/payments/verify-and-fulfill',
-        { sessionId },
-        token ? { headers: { Authorization: `Bearer ${token}` } } : {}
+        { sessionId }
       );
 
       this.creditsAdded   = res.creditsAdded   || 0;

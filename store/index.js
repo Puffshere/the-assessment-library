@@ -12,7 +12,6 @@ function safeRemoveItem(key) {
 export const state = () => ({
   loggedIn: false,
   user: null,
-  token: null,
 
   sessionsByAssessmentId: {},
 
@@ -26,9 +25,6 @@ export const mutations = {
   },
   SET_USER(state, user) {
     state.user = user
-  },
-  SET_TOKEN(state, token) {
-    state.token = token
   },
 
   SET_CREDITS(state, balance) {
@@ -73,27 +69,6 @@ export const mutations = {
   }
 }
 
-function restoreAuthFromStorage({ commit, dispatch }, axiosInstance) {
-  if (!process.client) return
-  const savedFlag  = safeGetItem('tal_logged_in')
-  const savedToken = safeGetItem('tal_token')
-  if (savedToken || savedFlag === '1') {
-    commit('SET_LOGGED_IN', true)
-    commit('SET_TOKEN', savedToken)
-
-    // Restore kids view state immediately so the dashboard renders
-    // the correct view before fetchMe resolves
-    if (safeGetItem('tal_kids_view_active') === '1') {
-      commit('SET_KIDS_VIEW_ACTIVE', true)
-    }
-
-    if (savedToken) {
-      axiosInstance.setToken(savedToken, 'Bearer')
-      dispatch('fetchMe')
-    }
-  }
-}
-
 export const actions = {
   async nuxtServerInit({ commit }, { req, $axios }) {
     // Server-side only — runs before middleware on every full-page request
@@ -120,21 +95,13 @@ export const actions = {
     }
   },
 
-  nuxtClientInit({ commit, dispatch }) {
-    restoreAuthFromStorage({ commit, dispatch }, this.$axios)
-  },
-
-  initFromStorage({ commit, dispatch }) {
-    restoreAuthFromStorage({ commit, dispatch }, this.$axios)
-  },
-
   async fetchMe({ commit, dispatch, state }) {
-    // Remember which token we're validating so we can bail out
-    // if a fresh login replaced it while this request was in-flight.
-    const tokenAtStart = state.token
+    // Remember whether we're logged in so we can bail out
+    // if logout fired while this request was in-flight.
+    const loggedInAtStart = state.loggedIn
     try {
       const res = await this.$axios.$get('/api/auth/me')
-      if (state.token !== tokenAtStart) return // a new login happened — discard
+      if (state.loggedIn !== loggedInAtStart) return // logout happened — discard
       commit('SET_USER', res.user)
       commit('SET_KIDS_VIEW_ACTIVE', res.user.kids_mode_enabled)
 
@@ -146,9 +113,9 @@ export const actions = {
         }
       }
     } catch (err) {
-      if (state.token !== tokenAtStart) return
+      if (state.loggedIn !== loggedInAtStart) return
 
-      // Only clear auth state on a genuine 401 (token actually invalid/expired).
+      // Only clear auth state on a genuine 401 (cookie actually invalid/expired).
       // Network errors, 500s, timeouts, etc. should leave auth state alone —
       // the user might just have a transient connectivity issue.
       const status = err && err.response && err.response.status
@@ -159,13 +126,7 @@ export const actions = {
 
       commit('SET_LOGGED_IN', false)
       commit('SET_USER', null)
-      commit('SET_TOKEN', null)
       commit('SET_KIDS_VIEW_ACTIVE', false)
-      this.$axios.setToken(false)
-      if (process.client) {
-        safeRemoveItem('tal_logged_in')
-        safeRemoveItem('tal_token')
-      }
     }
   },
 
@@ -193,15 +154,11 @@ export const actions = {
       commit('SET_USER', res.user)
       commit('SET_KIDS_VIEW_ACTIVE', res.user.kids_mode_enabled)
 
-      if (process.client) {
-        safeSetItem('tal_logged_in', '1')
-
-        // Restore active child profile if kids mode is on
-        if (res.user.kids_mode_enabled) {
-          const savedChildId = safeGetItem('tal_active_child_id')
-          if (savedChildId) {
-            dispatch('restoreChildProfile', savedChildId)
-          }
+      // Restore active child profile if kids mode is on
+      if (process.client && res.user.kids_mode_enabled) {
+        const savedChildId = safeGetItem('tal_active_child_id')
+        if (savedChildId) {
+          dispatch('restoreChildProfile', savedChildId)
         }
       }
 
@@ -225,10 +182,6 @@ export const actions = {
       commit('SET_USER', res.user)
       commit('SET_KIDS_VIEW_ACTIVE', res.user.kids_mode_enabled)
 
-      if (process.client) {
-        safeSetItem('tal_logged_in', '1')
-      }
-
       return res
     } catch (err) {
       const msg = err?.response?.data?.message || 'Registration failed'
@@ -250,17 +203,11 @@ export const actions = {
 
     commit('SET_LOGGED_IN', false)
     commit('SET_USER', null)
-    commit('SET_TOKEN', null)
     commit('CLEAR_SESSIONS')
     commit('SET_KIDS_VIEW_ACTIVE', false)
     commit('SET_ACTIVE_CHILD_PROFILE', null)
 
-    this.$axios.setToken(false)
-
     if (process.client) {
-      safeRemoveItem('tal_logged_in')
-      safeRemoveItem('tal_token')
-
       // In kids view, preserve which child tab was active for next login.
       // In standard view, always reset to "all" (parent account).
       if (wasKidsView && keepChildId) {
