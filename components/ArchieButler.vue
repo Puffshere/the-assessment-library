@@ -183,7 +183,9 @@ export default {
     cacheKey() {
       const userId = (this.user && (this.user._id || this.user.id)) || 'anon';
       const mode = this.$store.state.kidsViewActive ? 'kids' : 'adult';
-      return `archie_${userId}_${this.pageContext}_${mode}`;
+      const profile = this.$store.state.activeChildProfile;
+      const childPart = mode === 'kids' ? `_${(profile && profile._id) || 'none'}` : '';
+      return `archie_${userId}_${this.pageContext}_${mode}${childPart}`;
     },
 
     kidsViewActive() {
@@ -215,9 +217,8 @@ export default {
       this.fetchTip(false);
     },
 
-    "$store.state.activeChildProfile"(val) {
-      if (val && this.$store.state.kidsViewActive) {
-        localStorage.removeItem(this.cacheKey);
+    "$store.state.activeChildProfile"() {
+      if (this.$store.state.kidsViewActive) {
         this.fetchTip(false);
       }
     },

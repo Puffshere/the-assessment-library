@@ -4,7 +4,7 @@ const AssessmentSession = require('../models/AssessmentSession');
 async function getUserPersonalization(userId) {
   try {
     const sessions = await AssessmentSession
-      .find({ user: userId, isThirdPerson: { $ne: true } })
+      .find({ user: userId, isThirdPerson: { $ne: true }, childProfileId: null })
       .select('status score assessment completedAt startedAt')
       .populate('assessment', 'title')
       .sort({ updatedAt: -1 })
