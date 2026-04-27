@@ -87,9 +87,7 @@ export const getTip = async (req, res) => {
     personalization = await getUserPersonalization(req.user._id);
   }
 
-  const traitDescription = TRAIT_CONTEXT[trait] || TRAIT_CONTEXT.general
   const pageGuidance = PAGE_GUIDANCE[pageContext] || PAGE_GUIDANCE.default
-  const firstName = userName ? userName.split(' ')[0] : null
 
   const systemPrompt = isKidsMode
     ? `You are Archie, a friendly and enthusiastic guide for The Assessment Library. You are talking directly to a child. Use simple, fun, encouraging language a 8-12 year old would love. Keep responses to 2 short sentences max. Be warm and exciting. No jargon. Plain text only. Never start with I. When you use the child's name in your response, always wrap it in <strong> tags like this: <strong>Allie</strong>. Never use asterisks, markdown, or any special formatting characters in your response. Plain text only.`
@@ -118,7 +116,7 @@ export const getTip = async (req, res) => {
   } else if (personalization && personalization.startedCount > 0) {
     adultUserPrompt = `The user's first name is ${userName || 'there'}. They have started ${personalization.startedCount} assessment${personalization.startedCount === 1 ? '' : 's'} but haven't completed any yet. Context: ${pageGuidance}. Encourage them to finish what they've started.`;
   } else {
-    // No history — original fallback
+    // Unauthenticated fallback (no req.user / no history) — frontend-supplied trait usage here is intentional.
     const traitDescription = TRAIT_CONTEXT[trait] || TRAIT_CONTEXT.general;
     adultUserPrompt = `The user's first name is ${userName || 'there'}. Their dominant personality trait is: ${traitDescription}. Context: ${pageGuidance}.`;
   }
@@ -161,14 +159,36 @@ export const getTip = async (req, res) => {
 
 export const chat = async (req, res) => {
   const { message, history, trait, pageContext, userName, isKidsMode, childName, childCharacterName, childDiscType, childStats, childCompletedCount } = req.body
-  const traitDescription = TRAIT_CONTEXT[trait] || TRAIT_CONTEXT.general
-  const firstName = userName ? userName.split(' ')[0] : null
+
+  let personalization = null;
+  if (!isKidsMode && req.user && req.user._id) {
+    personalization = await getUserPersonalization(req.user._id);
+  }
+
   const systemPrompt = isKidsMode
     ? `You are Archie, a friendly and enthusiastic guide for The Assessment Library. You are talking directly to a child. Use simple, fun, encouraging language a 8-12 year old would love. Keep responses to 2-3 short sentences max. Be warm and exciting. No jargon. No asterisks or markdown. Plain text only. Never start with I. When you use the child's name wrap it in <strong> tags.`
     : `You are Archie, the AI guide for The Assessment Library. You are warm, knowledgeable, and slightly witty. Answer questions helpfully and concisely — 2-4 sentences max. No markdown, no asterisks, plain text only. Never start with I or As Archie. When addressing the user by name wrap it in <strong> tags.`
+
+  let adultContextNote;
+  if (personalization && personalization.completedCount > 0 && personalization.dominantTrait) {
+    const traitDesc = TRAIT_CONTEXT[personalization.dominantTrait] || TRAIT_CONTEXT.general;
+    const recencyHint = personalization.recentTitles.length > 0
+      ? ` Most recent: "${personalization.recentTitles[0]}".`
+      : '';
+    adultContextNote = `User: ${userName || 'unknown'}. Dominant DISC trait (from history): ${traitDesc}. Completed ${personalization.completedCount} assessment${personalization.completedCount === 1 ? '' : 's'}, ${personalization.inProgressCount} in progress.${recencyHint} Current page: ${pageContext || 'unknown'}.`;
+  } else if (personalization && personalization.startedCount > 0) {
+    adultContextNote = `User: ${userName || 'unknown'}. Has started ${personalization.startedCount} assessment${personalization.startedCount === 1 ? '' : 's'} but completed none yet. Current page: ${pageContext || 'unknown'}.`;
+  } else if (req.user) {
+    adultContextNote = `User: ${userName || 'unknown'}. No assessment history yet. Current page: ${pageContext || 'unknown'}.`;
+  } else {
+    // Unauthenticated fallback — frontend-supplied trait usage here is intentional.
+    const traitDescription = TRAIT_CONTEXT[trait] || TRAIT_CONTEXT.general;
+    adultContextNote = `User: ${userName || 'unknown'}. Dominant DISC trait: ${traitDescription}. Current page: ${pageContext || 'unknown'}.`;
+  }
+
   const contextNote = isKidsMode
     ? `Child: ${childName || 'unknown'}. Character: ${childCharacterName || 'unknown'}. Disc type: ${childDiscType || 'unknown'}. Stats: ${childStats ? JSON.stringify(childStats) : 'none'}. Completed: ${childCompletedCount || 0}.`
-    : `User: ${firstName || 'unknown'}. Dominant DISC trait: ${traitDescription}. Current page: ${pageContext || 'unknown'}.`
+    : adultContextNote
   const messages = [
     { role: 'user', content: `Context: ${contextNote}` },
     { role: 'assistant', content: 'Got it, I have full context about this user.' },

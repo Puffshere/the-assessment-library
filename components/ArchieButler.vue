@@ -150,13 +150,6 @@ export default {
     };
   },
 
-  props: {
-    traitOverride: {
-      type: String,
-      default: null,
-    },
-  },
-
   computed: {
     isLoggedIn() {
       return !!this.$store.state.loggedIn;
@@ -164,30 +157,6 @@ export default {
 
     user() {
       return this.$store.state.user;
-    },
-
-    dominantTrait() {
-      if (this.traitOverride) return this.traitOverride;
-
-      // fallback — read from Vuex sessions
-      const sessions = this.$store.state.sessionsByAssessmentId;
-      let topTrait = null;
-      let topScore = -1;
-      if (sessions) {
-        Object.values(sessions).forEach((session) => {
-          if (session && session.score && session.score.breakdown) {
-            Object.entries(session.score.breakdown).forEach(
-              ([trait, score]) => {
-                if (score > topScore) {
-                  topScore = score;
-                  topTrait = trait;
-                }
-              }
-            );
-          }
-        });
-      }
-      return topTrait || "general";
     },
 
     pageContext() {
@@ -212,7 +181,9 @@ export default {
     },
 
     cacheKey() {
-      return `archie_${this.dominantTrait}_${this.pageContext}_${this.$store.state.kidsViewActive ? 'kids' : 'adult'}`;
+      const userId = (this.user && (this.user._id || this.user.id)) || 'anon';
+      const mode = this.$store.state.kidsViewActive ? 'kids' : 'adult';
+      return `archie_${userId}_${this.pageContext}_${mode}`;
     },
 
     kidsViewActive() {
@@ -253,7 +224,6 @@ export default {
   },
 
   mounted() {
-    Object.keys(localStorage).filter(k => k.startsWith('archie_')).forEach(k => localStorage.removeItem(k));
     if (this.isLoggedIn && this.pageContext) {
       this.fetchTip(false);
     }
@@ -309,8 +279,6 @@ export default {
 
       this.isLoading = true;
 
-      console.log('ARCHIE DEBUG', JSON.stringify(this.$store.state.activeChildProfile));
-      console.log('ARCHIE DEBUG', this.$store.state.kidsViewActive);
       const profile = this.$store.state.activeChildProfile;
       let childStats = null;
       if (profile) {
@@ -350,7 +318,6 @@ export default {
       }
       try {
         const res = await this.$axios.$post("/api/archie/tip", {
-          trait: this.dominantTrait,
           pageContext: this.pageContext,
           userName: this.user ? this.user.name : null,
           isKidsMode: this.$store.state.kidsViewActive,
@@ -448,7 +415,6 @@ export default {
         const res = await this.$axios.$post('/api/archie/chat', {
           message: text,
           history: this.chatHistory.slice(-10),
-          trait: this.dominantTrait,
           pageContext: this.pageContext,
           userName: this.user ? this.user.name : null,
           isKidsMode: this.$store.state.kidsViewActive,
