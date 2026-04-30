@@ -983,7 +983,7 @@ export default {
     right: 16px;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
   .overall-layout {
     .overall-chart {
       width: 50%;

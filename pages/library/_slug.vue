@@ -1276,7 +1276,7 @@ export default {
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
   .page {
     .questionnaire {
       .hero-illustration {
@@ -1720,7 +1720,7 @@ export default {
     box-sizing: border-box;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
     .page {
         .questionnaire {
             .hero-illustration {

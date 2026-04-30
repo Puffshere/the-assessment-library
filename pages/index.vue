@@ -523,7 +523,7 @@ export default {
 }
 
 /* ── Tablet: 768px – 1180px ── */
-@media (min-width: 768px) and (max-width: 1180px) {
+@media (min-width: 601px) and (max-width: 1180px) {
     .home {
         .header {
             .logo {
