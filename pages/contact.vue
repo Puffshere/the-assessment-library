@@ -352,6 +352,8 @@ export default {
 @media (orientation: landscape) and (min-width: 800px) and (max-width: 900px) and (max-height: 600px) {
     .library {
         .header {
+            padding-top: 56px;
+
             .logo {
                 width: 90px;
                 left: 50%;
