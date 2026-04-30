@@ -4,8 +4,9 @@
             <main-nav></main-nav>
 
             <section class="title">
+                <img :src="heroImage" :alt="heroAltText" :class="['hero-illustration-fold', imageClass]" />
                 <div class="shadow">
-                    <div style="padding: 30px 0 20px 0;">
+                    <div class="title-text">
                         <h1>{{ displayTitle }}</h1>
                         <h3 v-if="questions[currentQuestion - 1]" class="chapter"
                             v-html="questions[currentQuestion - 1].chapter"></h3>
@@ -899,6 +900,14 @@ export default {
             position: absolute;
             right: 20px;
             top: 20px;
+        }
+
+        .hero-illustration-fold {
+            display: none;
+        }
+
+        .title-text {
+            padding: 30px 0 20px 0;
         }
 
         h1 {
@@ -1814,63 +1823,119 @@ export default {
     color: #999;
 }
 
-/* Galaxy Z Fold 4 — open portrait (~690x701): image left, content right, paginated */
+/* Galaxy Z Fold 4 — open portrait (~690x701): image into title header, content full width below */
 @media (min-width: 601px) and (max-width: 767px) and (orientation: portrait) {
     .page {
-        .questionnaire {
-            .hero-illustration {
+        .title {
+            padding: 0;
+            display: flex;
+            align-items: stretch;
+            text-align: left;
+            position: relative;
+            z-index: 3;
+            box-shadow: 5px 5px 10px #0814368e;
+
+            .hero-illustration-fold {
                 display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                width: 240px;
-                height: 100%;
+                width: 200px;
+                height: auto;
+                align-self: stretch;
                 object-fit: cover;
                 object-position: center center;
+                flex-shrink: 0;
+            }
+
+            .shadow {
+                flex: 1;
+                box-shadow: none;
+            }
+
+            .title-text {
+                padding: 20px 16px 16px;
+            }
+        }
+
+        .questionnaire {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+
+            .hero-illustration {
+                display: none;
             }
 
             .container {
-                margin-left: 240px;
-                width: calc(100% - 240px);
-                height: calc(100vh - 220px);
+                flex: 1;
+                margin-left: 0;
+                width: 100%;
+                height: auto;
+                min-height: 0;
             }
         }
     }
 
     .pagination-controls {
-        left: 240px;
-        width: calc(100% - 240px);
+        left: 0;
+        width: 100%;
     }
 }
 
-/* Galaxy Z Fold 4 — open landscape (~829x564): image left, content right, paginated */
+/* Galaxy Z Fold 4 — open landscape (~829x564): image into title header, content full width below */
 @media (orientation: landscape) and (min-width: 800px) and (max-width: 900px) and (max-height: 600px) {
     .page {
-        .questionnaire {
-            .hero-illustration {
+        .title {
+            padding: 0;
+            display: flex;
+            align-items: stretch;
+            text-align: left;
+            position: relative;
+            z-index: 3;
+            box-shadow: 5px 5px 10px #0814368e;
+
+            .hero-illustration-fold {
                 display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                width: 280px;
-                height: 100%;
+                width: 240px;
+                height: auto;
+                align-self: stretch;
                 object-fit: cover;
                 object-position: center center;
+                flex-shrink: 0;
+            }
+
+            .shadow {
+                flex: 1;
+                box-shadow: none;
+            }
+
+            .title-text {
+                padding: 20px 16px 16px;
+            }
+        }
+
+        .questionnaire {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+
+            .hero-illustration {
+                display: none;
             }
 
             .container {
-                margin-left: 280px;
-                width: calc(100% - 280px);
-                height: calc(100vh - 220px);
+                flex: 1;
+                margin-left: 0;
+                width: 100%;
+                height: auto;
+                min-height: 0;
             }
         }
     }
 
     .pagination-controls {
-        left: 280px;
-        width: calc(100% - 280px);
+        left: 0;
+        width: 100%;
     }
 }
 </style>
