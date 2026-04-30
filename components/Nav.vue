@@ -598,6 +598,15 @@ $shadow: rgba(0, 0, 0, 0.08);
 
 @media (min-width: 600px) {}
 
+/* Galaxy Z Fold 4 — open landscape (~829x564): cap drawer height so it scrolls */
+@media (orientation: landscape) and (min-width: 800px) and (max-width: 900px) and (max-height: 600px) {
+    .mobile-drawer.mobile {
+        max-height: calc(100vh - 106px - 16px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 /* ── About dropdown ──────────────────────────────────────────────────────── */
 
 .nav-dropdown-wrap {

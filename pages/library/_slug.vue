@@ -1813,4 +1813,64 @@ export default {
     font-size: 13px;
     color: #999;
 }
+
+/* Galaxy Z Fold 4 — open portrait (~690x701): image left, content right, paginated */
+@media (min-width: 601px) and (max-width: 767px) and (orientation: portrait) {
+    .page {
+        .questionnaire {
+            .hero-illustration {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 240px;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+
+            .container {
+                margin-left: 240px;
+                width: calc(100% - 240px);
+                height: calc(100vh - 220px);
+            }
+        }
+    }
+
+    .pagination-controls {
+        left: 240px;
+        width: calc(100% - 240px);
+    }
+}
+
+/* Galaxy Z Fold 4 — open landscape (~829x564): image left, content right, paginated */
+@media (orientation: landscape) and (min-width: 800px) and (max-width: 900px) and (max-height: 600px) {
+    .page {
+        .questionnaire {
+            .hero-illustration {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 280px;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+
+            .container {
+                margin-left: 280px;
+                width: calc(100% - 280px);
+                height: calc(100vh - 220px);
+            }
+        }
+    }
+
+    .pagination-controls {
+        left: 280px;
+        width: calc(100% - 280px);
+    }
+}
 </style>

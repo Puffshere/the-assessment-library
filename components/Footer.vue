@@ -285,4 +285,37 @@
         }
     }
 }
+
+/* Galaxy Z Fold 4 — open portrait (~690x701) */
+@media (min-width: 601px) and (max-width: 767px) and (orientation: portrait) {
+    .footer {
+        .row {
+            flex-wrap: wrap;
+        }
+
+        .col-4 {
+            float: none;
+            width: 100%;
+            margin: 0.5rem 0;
+            padding-top: 10px;
+        }
+
+        .logo {
+            position: relative;
+            bottom: auto;
+            left: auto;
+            transform: none;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
+        .links {
+            margin-top: 10px;
+        }
+
+        .contact-title {
+            margin-top: 10px;
+        }
+    }
+}
 </style>
