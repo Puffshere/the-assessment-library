@@ -425,6 +425,7 @@ export default {
         setTimeout(() => {
           this.contentFadingIn = true
           swapFn()
+          if (typeof window !== 'undefined') window.scrollTo(0, 0)
         }, SWAP_MS)
         setTimeout(() => {
           this.isFlipping = false
@@ -465,9 +466,11 @@ export default {
       this.currentChapterIndex = chapterIndex
       this.currentSpreadIndex = 0
       this.$nextTick(() => this.paginateContent())
+      if (typeof window !== 'undefined') window.scrollTo(0, 0)
     },
     goToToc() {
       this.showToc = true
+      if (typeof window !== 'undefined') window.scrollTo(0, 0)
     },
     openBgModal() {
       this.bgModalSelection = (this.profile && this.profile.cardBackground) || null

@@ -1361,6 +1361,10 @@ export default {
                 }
             }
         }
+
+        .container-scroll {
+            padding-bottom: 120px;
+        }
     }
 }
 
@@ -1875,7 +1879,7 @@ export default {
         }
 
         .container-scroll {
-            padding-bottom: 86px;
+            padding-bottom: 120px;
         }
     }
 
@@ -1937,7 +1941,7 @@ export default {
         }
 
         .container-scroll {
-            padding-bottom: 86px;
+            padding-bottom: 120px;
         }
     }
 
