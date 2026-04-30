@@ -1343,4 +1343,45 @@ export default {
         1px 1px 3px rgba(0,0,0,0.3) !important;
 }
 
+/* Galaxy Z Fold 4 — open portrait (~690x701): compact header, logo hidden */
+@media (min-width: 601px) and (max-width: 767px) and (orientation: portrait) {
+    .library {
+        .header {
+            padding: 0 16px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            box-shadow: none;
+
+            .logo {
+                display: none;
+            }
+
+            .container {
+                padding: 0;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: 0;
+                margin: 0;
+                line-height: 56px;
+
+                span {
+                    font-size: 20px;
+                }
+            }
+
+            h4 {
+                display: none;
+            }
+
+            &:after {
+                height: 4px;
+            }
+        }
+    }
+}
+
 </style>
