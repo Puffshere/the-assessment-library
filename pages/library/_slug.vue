@@ -1873,6 +1873,10 @@ export default {
                 min-height: 0;
             }
         }
+
+        .container-scroll {
+            padding-bottom: 70px;
+        }
     }
 
     .pagination-controls {
@@ -1930,6 +1934,10 @@ export default {
                 height: auto;
                 min-height: 0;
             }
+        }
+
+        .container-scroll {
+            padding-bottom: 70px;
         }
     }
 
