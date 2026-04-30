@@ -347,4 +347,18 @@ export default {
         }
     }
 }
+
+/* Galaxy Z Fold 4 — open landscape (~829x564): logo centered above text */
+@media (orientation: landscape) and (min-width: 800px) and (max-width: 900px) and (max-height: 600px) {
+    .library {
+        .header {
+            .logo {
+                width: 90px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -5px;
+            }
+        }
+    }
+}
 </style>
