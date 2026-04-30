@@ -1343,6 +1343,17 @@ export default {
         1px 1px 3px rgba(0,0,0,0.3) !important;
 }
 
+/* Galaxy Z Fold 4 — open landscape (~829x564): nudge logo 15px down */
+@media (orientation: landscape) and (min-width: 800px) and (max-width: 900px) and (max-height: 600px) {
+    .library {
+        .header {
+            .logo {
+                top: 10px;
+            }
+        }
+    }
+}
+
 /* Galaxy Z Fold 4 — open portrait (~690x701): compact header, logo hidden */
 @media (min-width: 601px) and (max-width: 767px) and (orientation: portrait) {
     .library {

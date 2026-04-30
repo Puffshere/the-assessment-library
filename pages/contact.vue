@@ -356,7 +356,7 @@ export default {
                 width: 90px;
                 left: 50%;
                 transform: translateX(-50%);
-                top: -5px;
+                top: 10px;
             }
         }
     }
