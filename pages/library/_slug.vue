@@ -1875,7 +1875,7 @@ export default {
         }
 
         .container-scroll {
-            padding-bottom: 70px;
+            padding-bottom: 86px;
         }
     }
 
@@ -1937,7 +1937,7 @@ export default {
         }
 
         .container-scroll {
-            padding-bottom: 70px;
+            padding-bottom: 86px;
         }
     }
 
